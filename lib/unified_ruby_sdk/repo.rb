@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoBranchQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoBranchResponse) }
-    def create_repo_branch(repo_branch:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_repo_branch - Create a branch
-      request = Models::Operations::CreateRepoBranchRequest.new(
+    sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoBranch2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoBranch2Response) }
+    def create_repo_branch2(repo_branch:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_repo_branch2 - Create a branch
+      request = Models::Operations::CreateRepoBranch2Request.new(
         repo_branch: repo_branch,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateRepoBranchRequest,
+        Models::Operations::CreateRepoBranch2Request,
         base_url,
         '/repo/{connection_id}/branch',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateRepoBranchRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateRepoBranch2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createRepoBranch',
+        operation_id: 'createRepoBranch2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoBranch)
-          response = Models::Operations::CreateRepoBranchResponse.new(
+          response = Models::Operations::CreateRepoBranch2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoCommitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoCommitResponse) }
-    def create_repo_commit(repo_commit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_repo_commit - Create a commit
-      request = Models::Operations::CreateRepoCommitRequest.new(
+    sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoCommit2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoCommit2Response) }
+    def create_repo_commit2(repo_commit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_repo_commit2 - Create a commit
+      request = Models::Operations::CreateRepoCommit2Request.new(
         repo_commit: repo_commit,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateRepoCommitRequest,
+        Models::Operations::CreateRepoCommit2Request,
         base_url,
         '/repo/{connection_id}/commit',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateRepoCommitRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateRepoCommit2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createRepoCommit',
+        operation_id: 'createRepoCommit2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoCommit)
-          response = Models::Operations::CreateRepoCommitResponse.new(
+          response = Models::Operations::CreateRepoCommit2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoOrganizationResponse) }
-    def create_repo_organization(repo_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_repo_organization - Create an organization
-      request = Models::Operations::CreateRepoOrganizationRequest.new(
+    sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoOrganization2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoOrganization2Response) }
+    def create_repo_organization2(repo_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_repo_organization2 - Create an organization
+      request = Models::Operations::CreateRepoOrganization2Request.new(
         repo_organization: repo_organization,
         connection_id: connection_id,
         fields_: fields_,
@@ -307,7 +307,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateRepoOrganizationRequest,
+        Models::Operations::CreateRepoOrganization2Request,
         base_url,
         '/repo/{connection_id}/organization',
         request
@@ -325,7 +325,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateRepoOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateRepoOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -341,7 +341,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createRepoOrganization',
+        operation_id: 'createRepoOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -401,7 +401,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoOrganization)
-          response = Models::Operations::CreateRepoOrganizationResponse.new(
+          response = Models::Operations::CreateRepoOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -423,10 +423,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoPullrequestQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoPullrequestResponse) }
-    def create_repo_pullrequest(repo_pullrequest:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_repo_pullrequest - Create a pullrequest
-      request = Models::Operations::CreateRepoPullrequestRequest.new(
+    sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoPullrequest2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoPullrequest2Response) }
+    def create_repo_pullrequest2(repo_pullrequest:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_repo_pullrequest2 - Create a pullrequest
+      request = Models::Operations::CreateRepoPullrequest2Request.new(
         repo_pullrequest: repo_pullrequest,
         connection_id: connection_id,
         fields_: fields_,
@@ -435,7 +435,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateRepoPullrequestRequest,
+        Models::Operations::CreateRepoPullrequest2Request,
         base_url,
         '/repo/{connection_id}/pullrequest',
         request
@@ -453,7 +453,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateRepoPullrequestRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateRepoPullrequest2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -469,7 +469,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createRepoPullrequest',
+        operation_id: 'createRepoPullrequest2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -529,7 +529,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoPullrequest)
-          response = Models::Operations::CreateRepoPullrequestResponse.new(
+          response = Models::Operations::CreateRepoPullrequest2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -551,10 +551,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoRepositoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoRepositoryResponse) }
-    def create_repo_repository(repo_repository:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_repo_repository - Create a repository
-      request = Models::Operations::CreateRepoRepositoryRequest.new(
+    sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoRepository2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoRepository2Response) }
+    def create_repo_repository2(repo_repository:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_repo_repository2 - Create a repository
+      request = Models::Operations::CreateRepoRepository2Request.new(
         repo_repository: repo_repository,
         connection_id: connection_id,
         fields_: fields_,
@@ -563,7 +563,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateRepoRepositoryRequest,
+        Models::Operations::CreateRepoRepository2Request,
         base_url,
         '/repo/{connection_id}/repository',
         request
@@ -581,7 +581,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateRepoRepositoryRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateRepoRepository2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -597,7 +597,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createRepoRepository',
+        operation_id: 'createRepoRepository2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -657,7 +657,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoRepository)
-          response = Models::Operations::CreateRepoRepositoryResponse.new(
+          response = Models::Operations::CreateRepoRepository2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -679,10 +679,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoBranchQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoBranchResponse) }
-    def get_repo_branch(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_repo_branch - Retrieve a branch
-      request = Models::Operations::GetRepoBranchRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoBranch2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoBranch2Response) }
+    def get_repo_branch2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_repo_branch2 - Retrieve a branch
+      request = Models::Operations::GetRepoBranch2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -691,14 +691,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetRepoBranchRequest,
+        Models::Operations::GetRepoBranch2Request,
         base_url,
         '/repo/{connection_id}/branch/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetRepoBranchRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetRepoBranch2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -714,7 +714,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getRepoBranch',
+        operation_id: 'getRepoBranch2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -773,7 +773,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoBranch)
-          response = Models::Operations::GetRepoBranchResponse.new(
+          response = Models::Operations::GetRepoBranch2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -795,10 +795,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoCommitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoCommitResponse) }
-    def get_repo_commit(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_repo_commit - Retrieve a commit
-      request = Models::Operations::GetRepoCommitRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoCommit2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoCommit2Response) }
+    def get_repo_commit2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_repo_commit2 - Retrieve a commit
+      request = Models::Operations::GetRepoCommit2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -807,14 +807,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetRepoCommitRequest,
+        Models::Operations::GetRepoCommit2Request,
         base_url,
         '/repo/{connection_id}/commit/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetRepoCommitRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetRepoCommit2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -830,7 +830,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getRepoCommit',
+        operation_id: 'getRepoCommit2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -889,7 +889,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoCommit)
-          response = Models::Operations::GetRepoCommitResponse.new(
+          response = Models::Operations::GetRepoCommit2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -911,10 +911,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoOrganizationResponse) }
-    def get_repo_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_repo_organization - Retrieve an organization
-      request = Models::Operations::GetRepoOrganizationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoOrganization2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoOrganization2Response) }
+    def get_repo_organization2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_repo_organization2 - Retrieve an organization
+      request = Models::Operations::GetRepoOrganization2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -923,14 +923,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetRepoOrganizationRequest,
+        Models::Operations::GetRepoOrganization2Request,
         base_url,
         '/repo/{connection_id}/organization/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetRepoOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetRepoOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -946,7 +946,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getRepoOrganization',
+        operation_id: 'getRepoOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1005,7 +1005,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoOrganization)
-          response = Models::Operations::GetRepoOrganizationResponse.new(
+          response = Models::Operations::GetRepoOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1027,10 +1027,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoPullrequestQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoPullrequestResponse) }
-    def get_repo_pullrequest(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_repo_pullrequest - Retrieve a pullrequest
-      request = Models::Operations::GetRepoPullrequestRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoPullrequest2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoPullrequest2Response) }
+    def get_repo_pullrequest2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_repo_pullrequest2 - Retrieve a pullrequest
+      request = Models::Operations::GetRepoPullrequest2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1039,14 +1039,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetRepoPullrequestRequest,
+        Models::Operations::GetRepoPullrequest2Request,
         base_url,
         '/repo/{connection_id}/pullrequest/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetRepoPullrequestRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetRepoPullrequest2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1062,7 +1062,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getRepoPullrequest',
+        operation_id: 'getRepoPullrequest2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1121,7 +1121,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoPullrequest)
-          response = Models::Operations::GetRepoPullrequestResponse.new(
+          response = Models::Operations::GetRepoPullrequest2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1143,10 +1143,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoRepositoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoRepositoryResponse) }
-    def get_repo_repository(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_repo_repository - Retrieve a repository
-      request = Models::Operations::GetRepoRepositoryRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoRepository2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoRepository2Response) }
+    def get_repo_repository2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_repo_repository2 - Retrieve a repository
+      request = Models::Operations::GetRepoRepository2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1155,14 +1155,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetRepoRepositoryRequest,
+        Models::Operations::GetRepoRepository2Request,
         base_url,
         '/repo/{connection_id}/repository/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetRepoRepositoryRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetRepoRepository2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1178,7 +1178,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getRepoRepository',
+        operation_id: 'getRepoRepository2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1237,7 +1237,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoRepository)
-          response = Models::Operations::GetRepoRepositoryResponse.new(
+          response = Models::Operations::GetRepoRepository2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1259,20 +1259,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListRepoBranchesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoBranchesResponse) }
-    def list_repo_branches(request:, timeout_ms: nil)
-      # list_repo_branches - List all branches
+    sig { params(request: Models::Operations::ListRepoBranches2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoBranches2Response) }
+    def list_repo_branches2(request:, timeout_ms: nil)
+      # list_repo_branches2 - List all branches
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListRepoBranchesRequest,
+        Models::Operations::ListRepoBranches2Request,
         base_url,
         '/repo/{connection_id}/branch',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListRepoBranchesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListRepoBranches2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1288,7 +1288,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listRepoBranches',
+        operation_id: 'listRepoBranches2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1347,7 +1347,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::RepoBranch))
-          response = Models::Operations::ListRepoBranchesResponse.new(
+          response = Models::Operations::ListRepoBranches2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1369,20 +1369,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListRepoCommitsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoCommitsResponse) }
-    def list_repo_commits(request:, timeout_ms: nil)
-      # list_repo_commits - List all commits
+    sig { params(request: Models::Operations::ListRepoCommits2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoCommits2Response) }
+    def list_repo_commits2(request:, timeout_ms: nil)
+      # list_repo_commits2 - List all commits
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListRepoCommitsRequest,
+        Models::Operations::ListRepoCommits2Request,
         base_url,
         '/repo/{connection_id}/commit',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListRepoCommitsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListRepoCommits2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1398,7 +1398,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listRepoCommits',
+        operation_id: 'listRepoCommits2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1457,7 +1457,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::RepoCommit))
-          response = Models::Operations::ListRepoCommitsResponse.new(
+          response = Models::Operations::ListRepoCommits2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1479,20 +1479,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListRepoOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoOrganizationsResponse) }
-    def list_repo_organizations(request:, timeout_ms: nil)
-      # list_repo_organizations - List all organizations
+    sig { params(request: Models::Operations::ListRepoOrganizations2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoOrganizations2Response) }
+    def list_repo_organizations2(request:, timeout_ms: nil)
+      # list_repo_organizations2 - List all organizations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListRepoOrganizationsRequest,
+        Models::Operations::ListRepoOrganizations2Request,
         base_url,
         '/repo/{connection_id}/organization',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListRepoOrganizationsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListRepoOrganizations2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1508,7 +1508,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listRepoOrganizations',
+        operation_id: 'listRepoOrganizations2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1567,7 +1567,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::RepoOrganization))
-          response = Models::Operations::ListRepoOrganizationsResponse.new(
+          response = Models::Operations::ListRepoOrganizations2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1589,20 +1589,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListRepoPullrequestsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoPullrequestsResponse) }
-    def list_repo_pullrequests(request:, timeout_ms: nil)
-      # list_repo_pullrequests - List all pullrequests
+    sig { params(request: Models::Operations::ListRepoPullrequests2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoPullrequests2Response) }
+    def list_repo_pullrequests2(request:, timeout_ms: nil)
+      # list_repo_pullrequests2 - List all pullrequests
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListRepoPullrequestsRequest,
+        Models::Operations::ListRepoPullrequests2Request,
         base_url,
         '/repo/{connection_id}/pullrequest',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListRepoPullrequestsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListRepoPullrequests2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1618,7 +1618,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listRepoPullrequests',
+        operation_id: 'listRepoPullrequests2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1677,7 +1677,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::RepoPullrequest))
-          response = Models::Operations::ListRepoPullrequestsResponse.new(
+          response = Models::Operations::ListRepoPullrequests2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1699,20 +1699,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListRepoRepositoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoRepositoriesResponse) }
-    def list_repo_repositories(request:, timeout_ms: nil)
-      # list_repo_repositories - List all repositories
+    sig { params(request: Models::Operations::ListRepoRepositories2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoRepositories2Response) }
+    def list_repo_repositories2(request:, timeout_ms: nil)
+      # list_repo_repositories2 - List all repositories
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListRepoRepositoriesRequest,
+        Models::Operations::ListRepoRepositories2Request,
         base_url,
         '/repo/{connection_id}/repository',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListRepoRepositoriesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListRepoRepositories2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1728,7 +1728,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listRepoRepositories',
+        operation_id: 'listRepoRepositories2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1787,7 +1787,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::RepoRepository))
-          response = Models::Operations::ListRepoRepositoriesResponse.new(
+          response = Models::Operations::ListRepoRepositories2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1809,13 +1809,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchRepoBranchRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoBranchResponse) }
-    def patch_repo_branch(request:, timeout_ms: nil)
-      # patch_repo_branch - Update a branch
+    sig { params(request: Models::Operations::PatchRepoBranch2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoBranch2Response) }
+    def patch_repo_branch2(request:, timeout_ms: nil)
+      # patch_repo_branch2 - Update a branch
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchRepoBranchRequest,
+        Models::Operations::PatchRepoBranch2Request,
         base_url,
         '/repo/{connection_id}/branch/{id}',
         request
@@ -1833,7 +1833,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchRepoBranchRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchRepoBranch2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1849,7 +1849,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchRepoBranch',
+        operation_id: 'patchRepoBranch2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1909,7 +1909,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoBranch)
-          response = Models::Operations::PatchRepoBranchResponse.new(
+          response = Models::Operations::PatchRepoBranch2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1931,13 +1931,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchRepoCommitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoCommitResponse) }
-    def patch_repo_commit(request:, timeout_ms: nil)
-      # patch_repo_commit - Update a commit
+    sig { params(request: Models::Operations::PatchRepoCommit2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoCommit2Response) }
+    def patch_repo_commit2(request:, timeout_ms: nil)
+      # patch_repo_commit2 - Update a commit
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchRepoCommitRequest,
+        Models::Operations::PatchRepoCommit2Request,
         base_url,
         '/repo/{connection_id}/commit/{id}',
         request
@@ -1955,7 +1955,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchRepoCommitRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchRepoCommit2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1971,7 +1971,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchRepoCommit',
+        operation_id: 'patchRepoCommit2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2031,7 +2031,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoCommit)
-          response = Models::Operations::PatchRepoCommitResponse.new(
+          response = Models::Operations::PatchRepoCommit2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2053,13 +2053,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchRepoOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoOrganizationResponse) }
-    def patch_repo_organization(request:, timeout_ms: nil)
-      # patch_repo_organization - Update an organization
+    sig { params(request: Models::Operations::PatchRepoOrganization2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoOrganization2Response) }
+    def patch_repo_organization2(request:, timeout_ms: nil)
+      # patch_repo_organization2 - Update an organization
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchRepoOrganizationRequest,
+        Models::Operations::PatchRepoOrganization2Request,
         base_url,
         '/repo/{connection_id}/organization/{id}',
         request
@@ -2077,7 +2077,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchRepoOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchRepoOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2093,7 +2093,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchRepoOrganization',
+        operation_id: 'patchRepoOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2153,7 +2153,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoOrganization)
-          response = Models::Operations::PatchRepoOrganizationResponse.new(
+          response = Models::Operations::PatchRepoOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2175,13 +2175,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchRepoPullrequestRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoPullrequestResponse) }
-    def patch_repo_pullrequest(request:, timeout_ms: nil)
-      # patch_repo_pullrequest - Update a pullrequest
+    sig { params(request: Models::Operations::PatchRepoPullrequest2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoPullrequest2Response) }
+    def patch_repo_pullrequest2(request:, timeout_ms: nil)
+      # patch_repo_pullrequest2 - Update a pullrequest
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchRepoPullrequestRequest,
+        Models::Operations::PatchRepoPullrequest2Request,
         base_url,
         '/repo/{connection_id}/pullrequest/{id}',
         request
@@ -2199,7 +2199,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchRepoPullrequestRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchRepoPullrequest2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2215,7 +2215,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchRepoPullrequest',
+        operation_id: 'patchRepoPullrequest2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2275,7 +2275,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoPullrequest)
-          response = Models::Operations::PatchRepoPullrequestResponse.new(
+          response = Models::Operations::PatchRepoPullrequest2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2297,13 +2297,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchRepoRepositoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoRepositoryResponse) }
-    def patch_repo_repository(request:, timeout_ms: nil)
-      # patch_repo_repository - Update a repository
+    sig { params(request: Models::Operations::PatchRepoRepository2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoRepository2Response) }
+    def patch_repo_repository2(request:, timeout_ms: nil)
+      # patch_repo_repository2 - Update a repository
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchRepoRepositoryRequest,
+        Models::Operations::PatchRepoRepository2Request,
         base_url,
         '/repo/{connection_id}/repository/{id}',
         request
@@ -2321,7 +2321,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchRepoRepositoryRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchRepoRepository2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2337,7 +2337,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchRepoRepository',
+        operation_id: 'patchRepoRepository2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2397,7 +2397,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoRepository)
-          response = Models::Operations::PatchRepoRepositoryResponse.new(
+          response = Models::Operations::PatchRepoRepository2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2419,17 +2419,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoBranchResponse) }
-    def remove_repo_branch(connection_id:, id:, timeout_ms: nil)
-      # remove_repo_branch - Remove a branch
-      request = Models::Operations::RemoveRepoBranchRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoBranch2Response) }
+    def remove_repo_branch2(connection_id:, id:, timeout_ms: nil)
+      # remove_repo_branch2 - Remove a branch
+      request = Models::Operations::RemoveRepoBranch2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveRepoBranchRequest,
+        Models::Operations::RemoveRepoBranch2Request,
         base_url,
         '/repo/{connection_id}/branch/{id}',
         request
@@ -2451,7 +2451,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeRepoBranch',
+        operation_id: 'removeRepoBranch2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2506,7 +2506,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoBranchResponse.new(
+        return Models::Operations::RemoveRepoBranch2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2523,7 +2523,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoBranchResponse.new(
+        return Models::Operations::RemoveRepoBranch2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2533,17 +2533,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoCommitResponse) }
-    def remove_repo_commit(connection_id:, id:, timeout_ms: nil)
-      # remove_repo_commit - Remove a commit
-      request = Models::Operations::RemoveRepoCommitRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoCommit2Response) }
+    def remove_repo_commit2(connection_id:, id:, timeout_ms: nil)
+      # remove_repo_commit2 - Remove a commit
+      request = Models::Operations::RemoveRepoCommit2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveRepoCommitRequest,
+        Models::Operations::RemoveRepoCommit2Request,
         base_url,
         '/repo/{connection_id}/commit/{id}',
         request
@@ -2565,7 +2565,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeRepoCommit',
+        operation_id: 'removeRepoCommit2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2620,7 +2620,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoCommitResponse.new(
+        return Models::Operations::RemoveRepoCommit2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2637,7 +2637,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoCommitResponse.new(
+        return Models::Operations::RemoveRepoCommit2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2647,17 +2647,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoOrganizationResponse) }
-    def remove_repo_organization(connection_id:, id:, timeout_ms: nil)
-      # remove_repo_organization - Remove an organization
-      request = Models::Operations::RemoveRepoOrganizationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoOrganization2Response) }
+    def remove_repo_organization2(connection_id:, id:, timeout_ms: nil)
+      # remove_repo_organization2 - Remove an organization
+      request = Models::Operations::RemoveRepoOrganization2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveRepoOrganizationRequest,
+        Models::Operations::RemoveRepoOrganization2Request,
         base_url,
         '/repo/{connection_id}/organization/{id}',
         request
@@ -2679,7 +2679,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeRepoOrganization',
+        operation_id: 'removeRepoOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2734,7 +2734,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoOrganizationResponse.new(
+        return Models::Operations::RemoveRepoOrganization2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2751,7 +2751,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoOrganizationResponse.new(
+        return Models::Operations::RemoveRepoOrganization2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2761,17 +2761,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoPullrequestResponse) }
-    def remove_repo_pullrequest(connection_id:, id:, timeout_ms: nil)
-      # remove_repo_pullrequest - Remove a pullrequest
-      request = Models::Operations::RemoveRepoPullrequestRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoPullrequest2Response) }
+    def remove_repo_pullrequest2(connection_id:, id:, timeout_ms: nil)
+      # remove_repo_pullrequest2 - Remove a pullrequest
+      request = Models::Operations::RemoveRepoPullrequest2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveRepoPullrequestRequest,
+        Models::Operations::RemoveRepoPullrequest2Request,
         base_url,
         '/repo/{connection_id}/pullrequest/{id}',
         request
@@ -2793,7 +2793,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeRepoPullrequest',
+        operation_id: 'removeRepoPullrequest2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2848,7 +2848,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoPullrequestResponse.new(
+        return Models::Operations::RemoveRepoPullrequest2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2865,7 +2865,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoPullrequestResponse.new(
+        return Models::Operations::RemoveRepoPullrequest2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2875,17 +2875,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoRepositoryResponse) }
-    def remove_repo_repository(connection_id:, id:, timeout_ms: nil)
-      # remove_repo_repository - Remove a repository
-      request = Models::Operations::RemoveRepoRepositoryRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoRepository2Response) }
+    def remove_repo_repository2(connection_id:, id:, timeout_ms: nil)
+      # remove_repo_repository2 - Remove a repository
+      request = Models::Operations::RemoveRepoRepository2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveRepoRepositoryRequest,
+        Models::Operations::RemoveRepoRepository2Request,
         base_url,
         '/repo/{connection_id}/repository/{id}',
         request
@@ -2907,7 +2907,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeRepoRepository',
+        operation_id: 'removeRepoRepository2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2962,7 +2962,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoRepositoryResponse.new(
+        return Models::Operations::RemoveRepoRepository2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2979,7 +2979,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoRepositoryResponse.new(
+        return Models::Operations::RemoveRepoRepository2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2989,13 +2989,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateRepoBranchRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoBranchResponse) }
-    def update_repo_branch(request:, timeout_ms: nil)
-      # update_repo_branch - Update a branch
+    sig { params(request: Models::Operations::UpdateRepoBranch2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoBranch2Response) }
+    def update_repo_branch2(request:, timeout_ms: nil)
+      # update_repo_branch2 - Update a branch
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateRepoBranchRequest,
+        Models::Operations::UpdateRepoBranch2Request,
         base_url,
         '/repo/{connection_id}/branch/{id}',
         request
@@ -3013,7 +3013,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateRepoBranchRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateRepoBranch2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -3029,7 +3029,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateRepoBranch',
+        operation_id: 'updateRepoBranch2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3089,7 +3089,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoBranch)
-          response = Models::Operations::UpdateRepoBranchResponse.new(
+          response = Models::Operations::UpdateRepoBranch2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -3111,13 +3111,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateRepoCommitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoCommitResponse) }
-    def update_repo_commit(request:, timeout_ms: nil)
-      # update_repo_commit - Update a commit
+    sig { params(request: Models::Operations::UpdateRepoCommit2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoCommit2Response) }
+    def update_repo_commit2(request:, timeout_ms: nil)
+      # update_repo_commit2 - Update a commit
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateRepoCommitRequest,
+        Models::Operations::UpdateRepoCommit2Request,
         base_url,
         '/repo/{connection_id}/commit/{id}',
         request
@@ -3135,7 +3135,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateRepoCommitRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateRepoCommit2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -3151,7 +3151,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateRepoCommit',
+        operation_id: 'updateRepoCommit2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3211,7 +3211,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoCommit)
-          response = Models::Operations::UpdateRepoCommitResponse.new(
+          response = Models::Operations::UpdateRepoCommit2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -3233,13 +3233,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateRepoOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoOrganizationResponse) }
-    def update_repo_organization(request:, timeout_ms: nil)
-      # update_repo_organization - Update an organization
+    sig { params(request: Models::Operations::UpdateRepoOrganization2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoOrganization2Response) }
+    def update_repo_organization2(request:, timeout_ms: nil)
+      # update_repo_organization2 - Update an organization
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateRepoOrganizationRequest,
+        Models::Operations::UpdateRepoOrganization2Request,
         base_url,
         '/repo/{connection_id}/organization/{id}',
         request
@@ -3257,7 +3257,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateRepoOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateRepoOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -3273,7 +3273,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateRepoOrganization',
+        operation_id: 'updateRepoOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3333,7 +3333,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoOrganization)
-          response = Models::Operations::UpdateRepoOrganizationResponse.new(
+          response = Models::Operations::UpdateRepoOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -3355,13 +3355,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateRepoPullrequestRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoPullrequestResponse) }
-    def update_repo_pullrequest(request:, timeout_ms: nil)
-      # update_repo_pullrequest - Update a pullrequest
+    sig { params(request: Models::Operations::UpdateRepoPullrequest2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoPullrequest2Response) }
+    def update_repo_pullrequest2(request:, timeout_ms: nil)
+      # update_repo_pullrequest2 - Update a pullrequest
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateRepoPullrequestRequest,
+        Models::Operations::UpdateRepoPullrequest2Request,
         base_url,
         '/repo/{connection_id}/pullrequest/{id}',
         request
@@ -3379,7 +3379,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateRepoPullrequestRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateRepoPullrequest2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -3395,7 +3395,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateRepoPullrequest',
+        operation_id: 'updateRepoPullrequest2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3455,7 +3455,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoPullrequest)
-          response = Models::Operations::UpdateRepoPullrequestResponse.new(
+          response = Models::Operations::UpdateRepoPullrequest2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -3477,13 +3477,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateRepoRepositoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoRepositoryResponse) }
-    def update_repo_repository(request:, timeout_ms: nil)
-      # update_repo_repository - Update a repository
+    sig { params(request: Models::Operations::UpdateRepoRepository2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoRepository2Response) }
+    def update_repo_repository2(request:, timeout_ms: nil)
+      # update_repo_repository2 - Update a repository
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateRepoRepositoryRequest,
+        Models::Operations::UpdateRepoRepository2Request,
         base_url,
         '/repo/{connection_id}/repository/{id}',
         request
@@ -3501,7 +3501,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateRepoRepositoryRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateRepoRepository2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -3517,7 +3517,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateRepoRepository',
+        operation_id: 'updateRepoRepository2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3577,7 +3577,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoRepository)
-          response = Models::Operations::UpdateRepoRepositoryResponse.new(
+          response = Models::Operations::UpdateRepoRepository2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

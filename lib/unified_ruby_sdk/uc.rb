@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(uc_comment: Models::Shared::UcComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcCommentResponse) }
-    def create_uc_comment(uc_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_uc_comment - Create a comment
-      request = Models::Operations::CreateUcCommentRequest.new(
+    sig { params(uc_comment: Models::Shared::UcComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcComment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcComment2Response) }
+    def create_uc_comment2(uc_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_uc_comment2 - Create a comment
+      request = Models::Operations::CreateUcComment2Request.new(
         uc_comment: uc_comment,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateUcCommentRequest,
+        Models::Operations::CreateUcComment2Request,
         base_url,
         '/uc/{connection_id}/comment',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateUcCommentRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateUcComment2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createUcComment',
+        operation_id: 'createUcComment2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcComment)
-          response = Models::Operations::CreateUcCommentResponse.new(
+          response = Models::Operations::CreateUcComment2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(uc_contact: Models::Shared::UcContact, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcContactResponse) }
-    def create_uc_contact(uc_contact:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_uc_contact - Create a contact
-      request = Models::Operations::CreateUcContactRequest.new(
+    sig { params(uc_contact: Models::Shared::UcContact, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcContact2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcContact2Response) }
+    def create_uc_contact2(uc_contact:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_uc_contact2 - Create a contact
+      request = Models::Operations::CreateUcContact2Request.new(
         uc_contact: uc_contact,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateUcContactRequest,
+        Models::Operations::CreateUcContact2Request,
         base_url,
         '/uc/{connection_id}/contact',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateUcContactRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateUcContact2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createUcContact',
+        operation_id: 'createUcContact2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcContact)
-          response = Models::Operations::CreateUcContactResponse.new(
+          response = Models::Operations::CreateUcContact2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(uc_recording: Models::Shared::UcRecording, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcRecordingResponse) }
-    def create_uc_recording(uc_recording:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_uc_recording - Create a recording
-      request = Models::Operations::CreateUcRecordingRequest.new(
+    sig { params(uc_recording: Models::Shared::UcRecording, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcRecording2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcRecording2Response) }
+    def create_uc_recording2(uc_recording:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_uc_recording2 - Create a recording
+      request = Models::Operations::CreateUcRecording2Request.new(
         uc_recording: uc_recording,
         connection_id: connection_id,
         fields_: fields_,
@@ -307,7 +307,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateUcRecordingRequest,
+        Models::Operations::CreateUcRecording2Request,
         base_url,
         '/uc/{connection_id}/recording',
         request
@@ -325,7 +325,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateUcRecordingRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateUcRecording2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -341,7 +341,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createUcRecording',
+        operation_id: 'createUcRecording2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -401,7 +401,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcRecording)
-          response = Models::Operations::CreateUcRecordingResponse.new(
+          response = Models::Operations::CreateUcRecording2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -423,10 +423,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcCallQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcCallResponse) }
-    def get_uc_call(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_uc_call - Retrieve a call
-      request = Models::Operations::GetUcCallRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcCall2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcCall2Response) }
+    def get_uc_call2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_uc_call2 - Retrieve a call
+      request = Models::Operations::GetUcCall2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -435,14 +435,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetUcCallRequest,
+        Models::Operations::GetUcCall2Request,
         base_url,
         '/uc/{connection_id}/call/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetUcCallRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetUcCall2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -458,7 +458,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getUcCall',
+        operation_id: 'getUcCall2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -517,7 +517,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcCall)
-          response = Models::Operations::GetUcCallResponse.new(
+          response = Models::Operations::GetUcCall2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -539,10 +539,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcCommentResponse) }
-    def get_uc_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_uc_comment - Retrieve a comment
-      request = Models::Operations::GetUcCommentRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcComment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcComment2Response) }
+    def get_uc_comment2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_uc_comment2 - Retrieve a comment
+      request = Models::Operations::GetUcComment2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -551,14 +551,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetUcCommentRequest,
+        Models::Operations::GetUcComment2Request,
         base_url,
         '/uc/{connection_id}/comment/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetUcCommentRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetUcComment2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -574,7 +574,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getUcComment',
+        operation_id: 'getUcComment2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -633,7 +633,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcComment)
-          response = Models::Operations::GetUcCommentResponse.new(
+          response = Models::Operations::GetUcComment2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -655,10 +655,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcContactResponse) }
-    def get_uc_contact(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_uc_contact - Retrieve a contact
-      request = Models::Operations::GetUcContactRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcContact2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcContact2Response) }
+    def get_uc_contact2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_uc_contact2 - Retrieve a contact
+      request = Models::Operations::GetUcContact2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -667,14 +667,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetUcContactRequest,
+        Models::Operations::GetUcContact2Request,
         base_url,
         '/uc/{connection_id}/contact/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetUcContactRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetUcContact2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -690,7 +690,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getUcContact',
+        operation_id: 'getUcContact2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -749,7 +749,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcContact)
-          response = Models::Operations::GetUcContactResponse.new(
+          response = Models::Operations::GetUcContact2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -771,10 +771,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcRecordingResponse) }
-    def get_uc_recording(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_uc_recording - Retrieve a recording
-      request = Models::Operations::GetUcRecordingRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcRecording2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcRecording2Response) }
+    def get_uc_recording2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_uc_recording2 - Retrieve a recording
+      request = Models::Operations::GetUcRecording2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -783,14 +783,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetUcRecordingRequest,
+        Models::Operations::GetUcRecording2Request,
         base_url,
         '/uc/{connection_id}/recording/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetUcRecordingRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetUcRecording2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -806,7 +806,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getUcRecording',
+        operation_id: 'getUcRecording2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -865,7 +865,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcRecording)
-          response = Models::Operations::GetUcRecordingResponse.new(
+          response = Models::Operations::GetUcRecording2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -887,20 +887,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListUcCallsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcCallsResponse) }
-    def list_uc_calls(request:, timeout_ms: nil)
-      # list_uc_calls - List all calls
+    sig { params(request: Models::Operations::ListUcCalls2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcCalls2Response) }
+    def list_uc_calls2(request:, timeout_ms: nil)
+      # list_uc_calls2 - List all calls
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListUcCallsRequest,
+        Models::Operations::ListUcCalls2Request,
         base_url,
         '/uc/{connection_id}/call',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListUcCallsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListUcCalls2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -916,7 +916,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listUcCalls',
+        operation_id: 'listUcCalls2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -975,7 +975,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::UcCall))
-          response = Models::Operations::ListUcCallsResponse.new(
+          response = Models::Operations::ListUcCalls2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -997,20 +997,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListUcCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcCommentsResponse) }
-    def list_uc_comments(request:, timeout_ms: nil)
-      # list_uc_comments - List all comments
+    sig { params(request: Models::Operations::ListUcComments2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcComments2Response) }
+    def list_uc_comments2(request:, timeout_ms: nil)
+      # list_uc_comments2 - List all comments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListUcCommentsRequest,
+        Models::Operations::ListUcComments2Request,
         base_url,
         '/uc/{connection_id}/comment',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListUcCommentsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListUcComments2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1026,7 +1026,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listUcComments',
+        operation_id: 'listUcComments2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1085,7 +1085,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::UcComment))
-          response = Models::Operations::ListUcCommentsResponse.new(
+          response = Models::Operations::ListUcComments2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1107,20 +1107,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListUcContactsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcContactsResponse) }
-    def list_uc_contacts(request:, timeout_ms: nil)
-      # list_uc_contacts - List all contacts
+    sig { params(request: Models::Operations::ListUcContacts2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcContacts2Response) }
+    def list_uc_contacts2(request:, timeout_ms: nil)
+      # list_uc_contacts2 - List all contacts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListUcContactsRequest,
+        Models::Operations::ListUcContacts2Request,
         base_url,
         '/uc/{connection_id}/contact',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListUcContactsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListUcContacts2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1136,7 +1136,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listUcContacts',
+        operation_id: 'listUcContacts2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1195,7 +1195,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::UcContact))
-          response = Models::Operations::ListUcContactsResponse.new(
+          response = Models::Operations::ListUcContacts2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1217,20 +1217,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListUcRecordingsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcRecordingsResponse) }
-    def list_uc_recordings(request:, timeout_ms: nil)
-      # list_uc_recordings - List all recordings
+    sig { params(request: Models::Operations::ListUcRecordings2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcRecordings2Response) }
+    def list_uc_recordings2(request:, timeout_ms: nil)
+      # list_uc_recordings2 - List all recordings
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListUcRecordingsRequest,
+        Models::Operations::ListUcRecordings2Request,
         base_url,
         '/uc/{connection_id}/recording',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListUcRecordingsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListUcRecordings2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1246,7 +1246,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listUcRecordings',
+        operation_id: 'listUcRecordings2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1305,7 +1305,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::UcRecording))
-          response = Models::Operations::ListUcRecordingsResponse.new(
+          response = Models::Operations::ListUcRecordings2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1327,13 +1327,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchUcCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcCommentResponse) }
-    def patch_uc_comment(request:, timeout_ms: nil)
-      # patch_uc_comment - Update a comment
+    sig { params(request: Models::Operations::PatchUcComment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcComment2Response) }
+    def patch_uc_comment2(request:, timeout_ms: nil)
+      # patch_uc_comment2 - Update a comment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchUcCommentRequest,
+        Models::Operations::PatchUcComment2Request,
         base_url,
         '/uc/{connection_id}/comment/{id}',
         request
@@ -1351,7 +1351,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchUcCommentRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchUcComment2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1367,7 +1367,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchUcComment',
+        operation_id: 'patchUcComment2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1427,7 +1427,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcComment)
-          response = Models::Operations::PatchUcCommentResponse.new(
+          response = Models::Operations::PatchUcComment2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1449,13 +1449,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchUcContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcContactResponse) }
-    def patch_uc_contact(request:, timeout_ms: nil)
-      # patch_uc_contact - Update a contact
+    sig { params(request: Models::Operations::PatchUcContact2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcContact2Response) }
+    def patch_uc_contact2(request:, timeout_ms: nil)
+      # patch_uc_contact2 - Update a contact
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchUcContactRequest,
+        Models::Operations::PatchUcContact2Request,
         base_url,
         '/uc/{connection_id}/contact/{id}',
         request
@@ -1473,7 +1473,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchUcContactRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchUcContact2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1489,7 +1489,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchUcContact',
+        operation_id: 'patchUcContact2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1549,7 +1549,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcContact)
-          response = Models::Operations::PatchUcContactResponse.new(
+          response = Models::Operations::PatchUcContact2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1571,13 +1571,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchUcRecordingRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcRecordingResponse) }
-    def patch_uc_recording(request:, timeout_ms: nil)
-      # patch_uc_recording - Update a recording
+    sig { params(request: Models::Operations::PatchUcRecording2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcRecording2Response) }
+    def patch_uc_recording2(request:, timeout_ms: nil)
+      # patch_uc_recording2 - Update a recording
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchUcRecordingRequest,
+        Models::Operations::PatchUcRecording2Request,
         base_url,
         '/uc/{connection_id}/recording/{id}',
         request
@@ -1595,7 +1595,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchUcRecordingRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchUcRecording2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1611,7 +1611,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchUcRecording',
+        operation_id: 'patchUcRecording2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1671,7 +1671,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcRecording)
-          response = Models::Operations::PatchUcRecordingResponse.new(
+          response = Models::Operations::PatchUcRecording2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1693,17 +1693,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcCommentResponse) }
-    def remove_uc_comment(connection_id:, id:, timeout_ms: nil)
-      # remove_uc_comment - Remove a comment
-      request = Models::Operations::RemoveUcCommentRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcComment2Response) }
+    def remove_uc_comment2(connection_id:, id:, timeout_ms: nil)
+      # remove_uc_comment2 - Remove a comment
+      request = Models::Operations::RemoveUcComment2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveUcCommentRequest,
+        Models::Operations::RemoveUcComment2Request,
         base_url,
         '/uc/{connection_id}/comment/{id}',
         request
@@ -1725,7 +1725,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeUcComment',
+        operation_id: 'removeUcComment2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1780,7 +1780,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveUcCommentResponse.new(
+        return Models::Operations::RemoveUcComment2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1797,7 +1797,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveUcCommentResponse.new(
+        return Models::Operations::RemoveUcComment2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1807,17 +1807,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcContactResponse) }
-    def remove_uc_contact(connection_id:, id:, timeout_ms: nil)
-      # remove_uc_contact - Remove a contact
-      request = Models::Operations::RemoveUcContactRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcContact2Response) }
+    def remove_uc_contact2(connection_id:, id:, timeout_ms: nil)
+      # remove_uc_contact2 - Remove a contact
+      request = Models::Operations::RemoveUcContact2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveUcContactRequest,
+        Models::Operations::RemoveUcContact2Request,
         base_url,
         '/uc/{connection_id}/contact/{id}',
         request
@@ -1839,7 +1839,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeUcContact',
+        operation_id: 'removeUcContact2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1894,7 +1894,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveUcContactResponse.new(
+        return Models::Operations::RemoveUcContact2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1911,7 +1911,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveUcContactResponse.new(
+        return Models::Operations::RemoveUcContact2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1921,17 +1921,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcRecordingResponse) }
-    def remove_uc_recording(connection_id:, id:, timeout_ms: nil)
-      # remove_uc_recording - Remove a recording
-      request = Models::Operations::RemoveUcRecordingRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcRecording2Response) }
+    def remove_uc_recording2(connection_id:, id:, timeout_ms: nil)
+      # remove_uc_recording2 - Remove a recording
+      request = Models::Operations::RemoveUcRecording2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveUcRecordingRequest,
+        Models::Operations::RemoveUcRecording2Request,
         base_url,
         '/uc/{connection_id}/recording/{id}',
         request
@@ -1953,7 +1953,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeUcRecording',
+        operation_id: 'removeUcRecording2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2008,7 +2008,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveUcRecordingResponse.new(
+        return Models::Operations::RemoveUcRecording2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2025,7 +2025,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveUcRecordingResponse.new(
+        return Models::Operations::RemoveUcRecording2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2035,13 +2035,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateUcCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcCommentResponse) }
-    def update_uc_comment(request:, timeout_ms: nil)
-      # update_uc_comment - Update a comment
+    sig { params(request: Models::Operations::UpdateUcComment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcComment2Response) }
+    def update_uc_comment2(request:, timeout_ms: nil)
+      # update_uc_comment2 - Update a comment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateUcCommentRequest,
+        Models::Operations::UpdateUcComment2Request,
         base_url,
         '/uc/{connection_id}/comment/{id}',
         request
@@ -2059,7 +2059,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateUcCommentRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateUcComment2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2075,7 +2075,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateUcComment',
+        operation_id: 'updateUcComment2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2135,7 +2135,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcComment)
-          response = Models::Operations::UpdateUcCommentResponse.new(
+          response = Models::Operations::UpdateUcComment2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2157,13 +2157,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateUcContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcContactResponse) }
-    def update_uc_contact(request:, timeout_ms: nil)
-      # update_uc_contact - Update a contact
+    sig { params(request: Models::Operations::UpdateUcContact2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcContact2Response) }
+    def update_uc_contact2(request:, timeout_ms: nil)
+      # update_uc_contact2 - Update a contact
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateUcContactRequest,
+        Models::Operations::UpdateUcContact2Request,
         base_url,
         '/uc/{connection_id}/contact/{id}',
         request
@@ -2181,7 +2181,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateUcContactRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateUcContact2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2197,7 +2197,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateUcContact',
+        operation_id: 'updateUcContact2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2257,7 +2257,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcContact)
-          response = Models::Operations::UpdateUcContactResponse.new(
+          response = Models::Operations::UpdateUcContact2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2279,13 +2279,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateUcRecordingRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcRecordingResponse) }
-    def update_uc_recording(request:, timeout_ms: nil)
-      # update_uc_recording - Update a recording
+    sig { params(request: Models::Operations::UpdateUcRecording2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcRecording2Response) }
+    def update_uc_recording2(request:, timeout_ms: nil)
+      # update_uc_recording2 - Update a recording
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateUcRecordingRequest,
+        Models::Operations::UpdateUcRecording2Request,
         base_url,
         '/uc/{connection_id}/recording/{id}',
         request
@@ -2303,7 +2303,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateUcRecordingRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateUcRecording2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2319,7 +2319,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateUcRecording',
+        operation_id: 'updateUcRecording2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2379,7 +2379,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcRecording)
-          response = Models::Operations::UpdateUcRecordingResponse.new(
+          response = Models::Operations::UpdateUcRecording2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(calendar_webinar: Models::Shared::CalendarWebinar, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarWebinarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarWebinarResponse) }
-    def create_calendar_webinar(calendar_webinar:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_calendar_webinar - Create a webinar
-      request = Models::Operations::CreateCalendarWebinarRequest.new(
+    sig { params(calendar_webinar: Models::Shared::CalendarWebinar, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarWebinar2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarWebinar2Response) }
+    def create_calendar_webinar2(calendar_webinar:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_calendar_webinar2 - Create a webinar
+      request = Models::Operations::CreateCalendarWebinar2Request.new(
         calendar_webinar: calendar_webinar,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCalendarWebinarRequest,
+        Models::Operations::CreateCalendarWebinar2Request,
         base_url,
         '/calendar/{connection_id}/webinar',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCalendarWebinarRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCalendarWebinar2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCalendarWebinar',
+        operation_id: 'createCalendarWebinar2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarWebinar)
-          response = Models::Operations::CreateCalendarWebinarResponse.new(
+          response = Models::Operations::CreateCalendarWebinar2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarWebinarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarWebinarResponse) }
-    def get_calendar_webinar(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_calendar_webinar - Retrieve a webinar
-      request = Models::Operations::GetCalendarWebinarRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarWebinar2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarWebinar2Response) }
+    def get_calendar_webinar2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_calendar_webinar2 - Retrieve a webinar
+      request = Models::Operations::GetCalendarWebinar2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCalendarWebinarRequest,
+        Models::Operations::GetCalendarWebinar2Request,
         base_url,
         '/calendar/{connection_id}/webinar/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCalendarWebinarRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCalendarWebinar2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCalendarWebinar',
+        operation_id: 'getCalendarWebinar2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarWebinar)
-          response = Models::Operations::GetCalendarWebinarResponse.new(
+          response = Models::Operations::GetCalendarWebinar2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCalendarWebinarsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarWebinarsResponse) }
-    def list_calendar_webinars(request:, timeout_ms: nil)
-      # list_calendar_webinars - List all webinars
+    sig { params(request: Models::Operations::ListCalendarWebinars2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarWebinars2Response) }
+    def list_calendar_webinars2(request:, timeout_ms: nil)
+      # list_calendar_webinars2 - List all webinars
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCalendarWebinarsRequest,
+        Models::Operations::ListCalendarWebinars2Request,
         base_url,
         '/calendar/{connection_id}/webinar',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCalendarWebinarsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCalendarWebinars2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCalendarWebinars',
+        operation_id: 'listCalendarWebinars2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CalendarWebinar))
-          response = Models::Operations::ListCalendarWebinarsResponse.new(
+          response = Models::Operations::ListCalendarWebinars2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCalendarWebinarRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarWebinarResponse) }
-    def patch_calendar_webinar(request:, timeout_ms: nil)
-      # patch_calendar_webinar - Update a webinar
+    sig { params(request: Models::Operations::PatchCalendarWebinar2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarWebinar2Response) }
+    def patch_calendar_webinar2(request:, timeout_ms: nil)
+      # patch_calendar_webinar2 - Update a webinar
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCalendarWebinarRequest,
+        Models::Operations::PatchCalendarWebinar2Request,
         base_url,
         '/calendar/{connection_id}/webinar/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCalendarWebinarRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCalendarWebinar2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCalendarWebinar',
+        operation_id: 'patchCalendarWebinar2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarWebinar)
-          response = Models::Operations::PatchCalendarWebinarResponse.new(
+          response = Models::Operations::PatchCalendarWebinar2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarWebinarResponse) }
-    def remove_calendar_webinar(connection_id:, id:, timeout_ms: nil)
-      # remove_calendar_webinar - Remove a webinar
-      request = Models::Operations::RemoveCalendarWebinarRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarWebinar2Response) }
+    def remove_calendar_webinar2(connection_id:, id:, timeout_ms: nil)
+      # remove_calendar_webinar2 - Remove a webinar
+      request = Models::Operations::RemoveCalendarWebinar2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCalendarWebinarRequest,
+        Models::Operations::RemoveCalendarWebinar2Request,
         base_url,
         '/calendar/{connection_id}/webinar/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCalendarWebinar',
+        operation_id: 'removeCalendarWebinar2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCalendarWebinarResponse.new(
+        return Models::Operations::RemoveCalendarWebinar2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCalendarWebinarResponse.new(
+        return Models::Operations::RemoveCalendarWebinar2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCalendarWebinarRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarWebinarResponse) }
-    def update_calendar_webinar(request:, timeout_ms: nil)
-      # update_calendar_webinar - Update a webinar
+    sig { params(request: Models::Operations::UpdateCalendarWebinar2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarWebinar2Response) }
+    def update_calendar_webinar2(request:, timeout_ms: nil)
+      # update_calendar_webinar2 - Update a webinar
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCalendarWebinarRequest,
+        Models::Operations::UpdateCalendarWebinar2Request,
         base_url,
         '/calendar/{connection_id}/webinar/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCalendarWebinarRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCalendarWebinar2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCalendarWebinar',
+        operation_id: 'updateCalendarWebinar2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarWebinar)
-          response = Models::Operations::UpdateCalendarWebinarResponse.new(
+          response = Models::Operations::UpdateCalendarWebinar2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

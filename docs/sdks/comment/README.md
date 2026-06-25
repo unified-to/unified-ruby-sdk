@@ -5,32 +5,32 @@
 
 ### Available Operations
 
-* [create_kms_comment](#create_kms_comment) - Create a comment
-* [create_task_comment](#create_task_comment) - Create a comment
-* [create_uc_comment](#create_uc_comment) - Create a comment
-* [get_kms_comment](#get_kms_comment) - Retrieve a comment
-* [get_task_comment](#get_task_comment) - Retrieve a comment
-* [get_uc_comment](#get_uc_comment) - Retrieve a comment
-* [list_kms_comments](#list_kms_comments) - List all comments
-* [list_task_comments](#list_task_comments) - List all comments
-* [list_uc_comments](#list_uc_comments) - List all comments
-* [patch_kms_comment](#patch_kms_comment) - Update a comment
-* [patch_task_comment](#patch_task_comment) - Update a comment
-* [patch_uc_comment](#patch_uc_comment) - Update a comment
-* [remove_kms_comment](#remove_kms_comment) - Remove a comment
-* [remove_task_comment](#remove_task_comment) - Remove a comment
-* [remove_uc_comment](#remove_uc_comment) - Remove a comment
-* [update_kms_comment](#update_kms_comment) - Update a comment
-* [update_task_comment](#update_task_comment) - Update a comment
-* [update_uc_comment](#update_uc_comment) - Update a comment
+* [create_kms_comment2](#create_kms_comment2) - Create a comment
+* [create_task_comment2](#create_task_comment2) - Create a comment
+* [create_uc_comment2](#create_uc_comment2) - Create a comment
+* [get_kms_comment2](#get_kms_comment2) - Retrieve a comment
+* [get_task_comment2](#get_task_comment2) - Retrieve a comment
+* [get_uc_comment2](#get_uc_comment2) - Retrieve a comment
+* [list_kms_comments2](#list_kms_comments2) - List all comments
+* [list_task_comments2](#list_task_comments2) - List all comments
+* [list_uc_comments2](#list_uc_comments2) - List all comments
+* [patch_kms_comment2](#patch_kms_comment2) - Update a comment
+* [patch_task_comment2](#patch_task_comment2) - Update a comment
+* [patch_uc_comment2](#patch_uc_comment2) - Update a comment
+* [remove_kms_comment2](#remove_kms_comment2) - Remove a comment
+* [remove_task_comment2](#remove_task_comment2) - Remove a comment
+* [remove_uc_comment2](#remove_uc_comment2) - Remove a comment
+* [update_kms_comment2](#update_kms_comment2) - Update a comment
+* [update_task_comment2](#update_task_comment2) - Update a comment
+* [update_uc_comment2](#update_uc_comment2) - Update a comment
 
-## create_kms_comment
+## create_kms_comment2
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="createKmsComment2" method="post" path="/kms/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -41,7 +41,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.comment.create_kms_comment(kms_comment: Models::Shared::KmsComment.new(), connection_id: '<id>')
+res = s.comment.create_kms_comment2(kms_comment: Models::Shared::KmsComment.new(), connection_id: '<id>')
 
 unless res.kms_comment.nil?
   # handle response
@@ -55,12 +55,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `kms_comment`                                                                                                                                    | [Models::Shared::KmsComment](../../models/shared/kmscomment.md)                                                                                  | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateKmsCommentQueryParamFields](../../models/operations/createkmscommentqueryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateKmsComment2QueryParamFields](../../models/operations/createkmscomment2queryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateKmsCommentResponse)](../../models/operations/createkmscommentresponse.md)**
+**[T.nilable(Models::Operations::CreateKmsComment2Response)](../../models/operations/createkmscomment2response.md)**
 
 ### Errors
 
@@ -68,13 +68,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_task_comment
+## create_task_comment2
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="createTaskComment2" method="post" path="/task/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -85,7 +85,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.comment.create_task_comment(task_comment: Models::Shared::TaskComment.new(), connection_id: '<id>')
+res = s.comment.create_task_comment2(task_comment: Models::Shared::TaskComment.new(), connection_id: '<id>')
 
 unless res.task_comment.nil?
   # handle response
@@ -99,12 +99,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `task_comment`                                                                                                                                   | [Models::Shared::TaskComment](../../models/shared/taskcomment.md)                                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateTaskCommentQueryParamFields](../../models/operations/createtaskcommentqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateTaskComment2QueryParamFields](../../models/operations/createtaskcomment2queryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateTaskCommentResponse)](../../models/operations/createtaskcommentresponse.md)**
+**[T.nilable(Models::Operations::CreateTaskComment2Response)](../../models/operations/createtaskcomment2response.md)**
 
 ### Errors
 
@@ -112,13 +112,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_uc_comment
+## create_uc_comment2
 
 Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="createUcComment2" method="post" path="/uc/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -129,7 +129,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.comment.create_uc_comment(uc_comment: Models::Shared::UcComment.new(), connection_id: '<id>')
+res = s.comment.create_uc_comment2(uc_comment: Models::Shared::UcComment.new(), connection_id: '<id>')
 
 unless res.uc_comment.nil?
   # handle response
@@ -143,12 +143,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `uc_comment`                                                                                                                                     | [Models::Shared::UcComment](../../models/shared/uccomment.md)                                                                                    | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateUcCommentQueryParamFields](../../models/operations/createuccommentqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateUcComment2QueryParamFields](../../models/operations/createuccomment2queryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateUcCommentResponse)](../../models/operations/createuccommentresponse.md)**
+**[T.nilable(Models::Operations::CreateUcComment2Response)](../../models/operations/createuccomment2response.md)**
 
 ### Errors
 
@@ -156,13 +156,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_kms_comment
+## get_kms_comment2
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getKmsComment" method="get" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getKmsComment2" method="get" path="/kms/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -173,7 +173,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.comment.get_kms_comment(connection_id: '<id>', id: '<id>')
+res = s.comment.get_kms_comment2(connection_id: '<id>', id: '<id>')
 
 unless res.kms_comment.nil?
   # handle response
@@ -187,12 +187,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Comment                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetKmsCommentQueryParamFields](../../models/operations/getkmscommentqueryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetKmsComment2QueryParamFields](../../models/operations/getkmscomment2queryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetKmsCommentResponse)](../../models/operations/getkmscommentresponse.md)**
+**[T.nilable(Models::Operations::GetKmsComment2Response)](../../models/operations/getkmscomment2response.md)**
 
 ### Errors
 
@@ -200,13 +200,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_task_comment
+## get_task_comment2
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getTaskComment" method="get" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getTaskComment2" method="get" path="/task/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -217,7 +217,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.comment.get_task_comment(connection_id: '<id>', id: '<id>')
+res = s.comment.get_task_comment2(connection_id: '<id>', id: '<id>')
 
 unless res.task_comment.nil?
   # handle response
@@ -231,12 +231,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Comment                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetTaskCommentQueryParamFields](../../models/operations/gettaskcommentqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetTaskComment2QueryParamFields](../../models/operations/gettaskcomment2queryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetTaskCommentResponse)](../../models/operations/gettaskcommentresponse.md)**
+**[T.nilable(Models::Operations::GetTaskComment2Response)](../../models/operations/gettaskcomment2response.md)**
 
 ### Errors
 
@@ -244,13 +244,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_uc_comment
+## get_uc_comment2
 
 Retrieve a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getUcComment" method="get" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getUcComment2" method="get" path="/uc/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -261,7 +261,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.comment.get_uc_comment(connection_id: '<id>', id: '<id>')
+res = s.comment.get_uc_comment2(connection_id: '<id>', id: '<id>')
 
 unless res.uc_comment.nil?
   # handle response
@@ -275,12 +275,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Comment                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetUcCommentQueryParamFields](../../models/operations/getuccommentqueryparamfields.md)>                            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetUcComment2QueryParamFields](../../models/operations/getuccomment2queryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetUcCommentResponse)](../../models/operations/getuccommentresponse.md)**
+**[T.nilable(Models::Operations::GetUcComment2Response)](../../models/operations/getuccomment2response.md)**
 
 ### Errors
 
@@ -288,13 +288,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_kms_comments
+## list_kms_comments2
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listKmsComments" method="get" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="listKmsComments2" method="get" path="/kms/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -305,11 +305,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListKmsCommentsRequest.new(
+req = Models::Operations::ListKmsComments2Request.new(
   connection_id: '<id>',
 )
 
-res = s.comment.list_kms_comments(request: req)
+res = s.comment.list_kms_comments2(request: req)
 
 unless res.kms_comments.nil?
   # handle response
@@ -319,13 +319,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Models::Operations::ListKmsCommentsRequest](../../models/operations/listkmscommentsrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListKmsComments2Request](../../models/operations/listkmscomments2request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListKmsCommentsResponse)](../../models/operations/listkmscommentsresponse.md)**
+**[T.nilable(Models::Operations::ListKmsComments2Response)](../../models/operations/listkmscomments2response.md)**
 
 ### Errors
 
@@ -333,13 +333,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_task_comments
+## list_task_comments2
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listTaskComments" method="get" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="listTaskComments2" method="get" path="/task/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -350,11 +350,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListTaskCommentsRequest.new(
+req = Models::Operations::ListTaskComments2Request.new(
   connection_id: '<id>',
 )
 
-res = s.comment.list_task_comments(request: req)
+res = s.comment.list_task_comments2(request: req)
 
 unless res.task_comments.nil?
   # handle response
@@ -364,13 +364,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::ListTaskCommentsRequest](../../models/operations/listtaskcommentsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListTaskComments2Request](../../models/operations/listtaskcomments2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListTaskCommentsResponse)](../../models/operations/listtaskcommentsresponse.md)**
+**[T.nilable(Models::Operations::ListTaskComments2Response)](../../models/operations/listtaskcomments2response.md)**
 
 ### Errors
 
@@ -378,13 +378,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_uc_comments
+## list_uc_comments2
 
 List all comments
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listUcComments" method="get" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="listUcComments2" method="get" path="/uc/{connection_id}/comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -395,11 +395,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListUcCommentsRequest.new(
+req = Models::Operations::ListUcComments2Request.new(
   connection_id: '<id>',
 )
 
-res = s.comment.list_uc_comments(request: req)
+res = s.comment.list_uc_comments2(request: req)
 
 unless res.uc_comments.nil?
   # handle response
@@ -409,60 +409,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [Models::Operations::ListUcCommentsRequest](../../models/operations/listuccommentsrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
-
-### Response
-
-**[T.nilable(Models::Operations::ListUcCommentsResponse)](../../models/operations/listuccommentsresponse.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## patch_kms_comment
-
-Update a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchKmsCommentRequest.new(
-  kms_comment: Models::Shared::KmsComment.new(),
-  connection_id: '<id>',
-  id: '<id>',
-)
-
-res = s.comment.patch_kms_comment(request: req)
-
-unless res.kms_comment.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
 | Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Models::Operations::PatchKmsCommentRequest](../../models/operations/patchkmscommentrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| `request`                                                                                       | [Models::Operations::ListUcComments2Request](../../models/operations/listuccomments2request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchKmsCommentResponse)](../../models/operations/patchkmscommentresponse.md)**
+**[T.nilable(Models::Operations::ListUcComments2Response)](../../models/operations/listuccomments2response.md)**
 
 ### Errors
 
@@ -470,13 +423,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_task_comment
+## patch_kms_comment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchKmsComment2" method="patch" path="/kms/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -487,233 +440,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchTaskCommentRequest.new(
-  task_comment: Models::Shared::TaskComment.new(),
-  connection_id: '<id>',
-  id: '<id>',
-)
-
-res = s.comment.patch_task_comment(request: req)
-
-unless res.task_comment.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::PatchTaskCommentRequest](../../models/operations/patchtaskcommentrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
-
-### Response
-
-**[T.nilable(Models::Operations::PatchTaskCommentResponse)](../../models/operations/patchtaskcommentresponse.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## patch_uc_comment
-
-Update a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchUcCommentRequest.new(
-  uc_comment: Models::Shared::UcComment.new(),
-  connection_id: '<id>',
-  id: '<id>',
-)
-
-res = s.comment.patch_uc_comment(request: req)
-
-unless res.uc_comment.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [Models::Operations::PatchUcCommentRequest](../../models/operations/patchuccommentrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
-
-### Response
-
-**[T.nilable(Models::Operations::PatchUcCommentResponse)](../../models/operations/patchuccommentresponse.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## remove_kms_comment
-
-Remove a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="removeKmsComment" method="delete" path="/kms/{connection_id}/comment/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.comment.remove_kms_comment(connection_id: '<id>', id: '<id>')
-
-if res.status_code == 200
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Comment    |
-
-### Response
-
-**[T.nilable(Models::Operations::RemoveKmsCommentResponse)](../../models/operations/removekmscommentresponse.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## remove_task_comment
-
-Remove a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="removeTaskComment" method="delete" path="/task/{connection_id}/comment/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.comment.remove_task_comment(connection_id: '<id>', id: '<id>')
-
-if res.status_code == 200
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Comment    |
-
-### Response
-
-**[T.nilable(Models::Operations::RemoveTaskCommentResponse)](../../models/operations/removetaskcommentresponse.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## remove_uc_comment
-
-Remove a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="removeUcComment" method="delete" path="/uc/{connection_id}/comment/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.comment.remove_uc_comment(connection_id: '<id>', id: '<id>')
-
-if res.status_code == 200
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Comment    |
-
-### Response
-
-**[T.nilable(Models::Operations::RemoveUcCommentResponse)](../../models/operations/removeuccommentresponse.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## update_kms_comment
-
-Update a comment
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateKmsCommentRequest.new(
+req = Models::Operations::PatchKmsComment2Request.new(
   kms_comment: Models::Shared::KmsComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.comment.update_kms_comment(request: req)
+res = s.comment.patch_kms_comment2(request: req)
 
 unless res.kms_comment.nil?
   # handle response
@@ -725,11 +458,11 @@ end
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::UpdateKmsCommentRequest](../../models/operations/updatekmscommentrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| `request`                                                                                         | [Models::Operations::PatchKmsComment2Request](../../models/operations/patchkmscomment2request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateKmsCommentResponse)](../../models/operations/updatekmscommentresponse.md)**
+**[T.nilable(Models::Operations::PatchKmsComment2Response)](../../models/operations/patchkmscomment2response.md)**
 
 ### Errors
 
@@ -737,13 +470,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_task_comment
+## patch_task_comment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchTaskComment2" method="patch" path="/task/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -754,13 +487,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateTaskCommentRequest.new(
+req = Models::Operations::PatchTaskComment2Request.new(
   task_comment: Models::Shared::TaskComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.comment.update_task_comment(request: req)
+res = s.comment.patch_task_comment2(request: req)
 
 unless res.task_comment.nil?
   # handle response
@@ -772,11 +505,11 @@ end
 
 | Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::UpdateTaskCommentRequest](../../models/operations/updatetaskcommentrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| `request`                                                                                           | [Models::Operations::PatchTaskComment2Request](../../models/operations/patchtaskcomment2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateTaskCommentResponse)](../../models/operations/updatetaskcommentresponse.md)**
+**[T.nilable(Models::Operations::PatchTaskComment2Response)](../../models/operations/patchtaskcomment2response.md)**
 
 ### Errors
 
@@ -784,13 +517,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_uc_comment
+## patch_uc_comment2
 
 Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchUcComment2" method="patch" path="/uc/{connection_id}/comment/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -801,13 +534,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateUcCommentRequest.new(
+req = Models::Operations::PatchUcComment2Request.new(
   uc_comment: Models::Shared::UcComment.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.comment.update_uc_comment(request: req)
+res = s.comment.patch_uc_comment2(request: req)
 
 unless res.uc_comment.nil?
   # handle response
@@ -819,11 +552,278 @@ end
 
 | Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Models::Operations::UpdateUcCommentRequest](../../models/operations/updateuccommentrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| `request`                                                                                       | [Models::Operations::PatchUcComment2Request](../../models/operations/patchuccomment2request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateUcCommentResponse)](../../models/operations/updateuccommentresponse.md)**
+**[T.nilable(Models::Operations::PatchUcComment2Response)](../../models/operations/patchuccomment2response.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_kms_comment2
+
+Remove a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeKmsComment2" method="delete" path="/kms/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.comment.remove_kms_comment2(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Comment    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveKmsComment2Response)](../../models/operations/removekmscomment2response.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_task_comment2
+
+Remove a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeTaskComment2" method="delete" path="/task/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.comment.remove_task_comment2(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Comment    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveTaskComment2Response)](../../models/operations/removetaskcomment2response.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_uc_comment2
+
+Remove a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeUcComment2" method="delete" path="/uc/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.comment.remove_uc_comment2(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Comment    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveUcComment2Response)](../../models/operations/removeuccomment2response.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_kms_comment2
+
+Update a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateKmsComment2" method="put" path="/kms/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateKmsComment2Request.new(
+  kms_comment: Models::Shared::KmsComment.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.comment.update_kms_comment2(request: req)
+
+unless res.kms_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::UpdateKmsComment2Request](../../models/operations/updatekmscomment2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateKmsComment2Response)](../../models/operations/updatekmscomment2response.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_task_comment2
+
+Update a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateTaskComment2" method="put" path="/task/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateTaskComment2Request.new(
+  task_comment: Models::Shared::TaskComment.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.comment.update_task_comment2(request: req)
+
+unless res.task_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::UpdateTaskComment2Request](../../models/operations/updatetaskcomment2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateTaskComment2Response)](../../models/operations/updatetaskcomment2response.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_uc_comment2
+
+Update a comment
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateUcComment2" method="put" path="/uc/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateUcComment2Request.new(
+  uc_comment: Models::Shared::UcComment.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.comment.update_uc_comment2(request: req)
+
+unless res.uc_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::UpdateUcComment2Request](../../models/operations/updateuccomment2request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateUcComment2Response)](../../models/operations/updateuccomment2response.md)**
 
 ### Errors
 

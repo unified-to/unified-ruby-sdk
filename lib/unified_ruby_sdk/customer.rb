@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ticketing_customer: Models::Shared::TicketingCustomer, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingCustomerQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingCustomerResponse) }
-    def create_ticketing_customer(ticketing_customer:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_ticketing_customer - Create a customer
-      request = Models::Operations::CreateTicketingCustomerRequest.new(
+    sig { params(ticketing_customer: Models::Shared::TicketingCustomer, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingCustomer2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingCustomer2Response) }
+    def create_ticketing_customer2(ticketing_customer:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_ticketing_customer2 - Create a customer
+      request = Models::Operations::CreateTicketingCustomer2Request.new(
         ticketing_customer: ticketing_customer,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateTicketingCustomerRequest,
+        Models::Operations::CreateTicketingCustomer2Request,
         base_url,
         '/ticketing/{connection_id}/customer',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateTicketingCustomerRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateTicketingCustomer2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createTicketingCustomer',
+        operation_id: 'createTicketingCustomer2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TicketingCustomer)
-          response = Models::Operations::CreateTicketingCustomerResponse.new(
+          response = Models::Operations::CreateTicketingCustomer2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingCustomerQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingCustomerResponse) }
-    def get_ticketing_customer(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_ticketing_customer - Retrieve a customer
-      request = Models::Operations::GetTicketingCustomerRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingCustomer2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingCustomer2Response) }
+    def get_ticketing_customer2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_ticketing_customer2 - Retrieve a customer
+      request = Models::Operations::GetTicketingCustomer2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetTicketingCustomerRequest,
+        Models::Operations::GetTicketingCustomer2Request,
         base_url,
         '/ticketing/{connection_id}/customer/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetTicketingCustomerRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetTicketingCustomer2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getTicketingCustomer',
+        operation_id: 'getTicketingCustomer2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TicketingCustomer)
-          response = Models::Operations::GetTicketingCustomerResponse.new(
+          response = Models::Operations::GetTicketingCustomer2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListTicketingCustomersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTicketingCustomersResponse) }
-    def list_ticketing_customers(request:, timeout_ms: nil)
-      # list_ticketing_customers - List all customers
+    sig { params(request: Models::Operations::ListTicketingCustomers2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTicketingCustomers2Response) }
+    def list_ticketing_customers2(request:, timeout_ms: nil)
+      # list_ticketing_customers2 - List all customers
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListTicketingCustomersRequest,
+        Models::Operations::ListTicketingCustomers2Request,
         base_url,
         '/ticketing/{connection_id}/customer',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListTicketingCustomersRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListTicketingCustomers2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listTicketingCustomers',
+        operation_id: 'listTicketingCustomers2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::TicketingCustomer))
-          response = Models::Operations::ListTicketingCustomersResponse.new(
+          response = Models::Operations::ListTicketingCustomers2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchTicketingCustomerRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTicketingCustomerResponse) }
-    def patch_ticketing_customer(request:, timeout_ms: nil)
-      # patch_ticketing_customer - Update a customer
+    sig { params(request: Models::Operations::PatchTicketingCustomer2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTicketingCustomer2Response) }
+    def patch_ticketing_customer2(request:, timeout_ms: nil)
+      # patch_ticketing_customer2 - Update a customer
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchTicketingCustomerRequest,
+        Models::Operations::PatchTicketingCustomer2Request,
         base_url,
         '/ticketing/{connection_id}/customer/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchTicketingCustomerRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchTicketingCustomer2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchTicketingCustomer',
+        operation_id: 'patchTicketingCustomer2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TicketingCustomer)
-          response = Models::Operations::PatchTicketingCustomerResponse.new(
+          response = Models::Operations::PatchTicketingCustomer2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTicketingCustomerResponse) }
-    def remove_ticketing_customer(connection_id:, id:, timeout_ms: nil)
-      # remove_ticketing_customer - Remove a customer
-      request = Models::Operations::RemoveTicketingCustomerRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTicketingCustomer2Response) }
+    def remove_ticketing_customer2(connection_id:, id:, timeout_ms: nil)
+      # remove_ticketing_customer2 - Remove a customer
+      request = Models::Operations::RemoveTicketingCustomer2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveTicketingCustomerRequest,
+        Models::Operations::RemoveTicketingCustomer2Request,
         base_url,
         '/ticketing/{connection_id}/customer/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeTicketingCustomer',
+        operation_id: 'removeTicketingCustomer2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveTicketingCustomerResponse.new(
+        return Models::Operations::RemoveTicketingCustomer2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveTicketingCustomerResponse.new(
+        return Models::Operations::RemoveTicketingCustomer2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateTicketingCustomerRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTicketingCustomerResponse) }
-    def update_ticketing_customer(request:, timeout_ms: nil)
-      # update_ticketing_customer - Update a customer
+    sig { params(request: Models::Operations::UpdateTicketingCustomer2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTicketingCustomer2Response) }
+    def update_ticketing_customer2(request:, timeout_ms: nil)
+      # update_ticketing_customer2 - Update a customer
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateTicketingCustomerRequest,
+        Models::Operations::UpdateTicketingCustomer2Request,
         base_url,
         '/ticketing/{connection_id}/customer/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateTicketingCustomerRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateTicketingCustomer2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateTicketingCustomer',
+        operation_id: 'updateTicketingCustomer2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TicketingCustomer)
-          response = Models::Operations::UpdateTicketingCustomerResponse.new(
+          response = Models::Operations::UpdateTicketingCustomer2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

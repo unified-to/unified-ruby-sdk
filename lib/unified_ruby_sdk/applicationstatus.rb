@@ -39,20 +39,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAtsApplicationstatusesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsApplicationstatusesResponse) }
-    def list_ats_applicationstatuses(request:, timeout_ms: nil)
-      # list_ats_applicationstatuses - List all applicationstatuses
+    sig { params(request: Models::Operations::ListAtsApplicationstatuses2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsApplicationstatuses2Response) }
+    def list_ats_applicationstatuses2(request:, timeout_ms: nil)
+      # list_ats_applicationstatuses2 - List all applicationstatuses
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAtsApplicationstatusesRequest,
+        Models::Operations::ListAtsApplicationstatuses2Request,
         base_url,
         '/ats/{connection_id}/applicationstatus',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAtsApplicationstatusesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAtsApplicationstatuses2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -68,7 +68,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAtsApplicationstatuses',
+        operation_id: 'listAtsApplicationstatuses2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -127,7 +127,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsStatus))
-          response = Models::Operations::ListAtsApplicationstatusesResponse.new(
+          response = Models::Operations::ListAtsApplicationstatuses2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingPurchaseorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingPurchaseorderResponse) }
-    def create_accounting_purchaseorder(accounting_purchaseorder:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_accounting_purchaseorder - Create a purchaseorder
-      request = Models::Operations::CreateAccountingPurchaseorderRequest.new(
+    sig { params(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingPurchaseorder2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingPurchaseorder2Response) }
+    def create_accounting_purchaseorder2(accounting_purchaseorder:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_accounting_purchaseorder2 - Create a purchaseorder
+      request = Models::Operations::CreateAccountingPurchaseorder2Request.new(
         accounting_purchaseorder: accounting_purchaseorder,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAccountingPurchaseorderRequest,
+        Models::Operations::CreateAccountingPurchaseorder2Request,
         base_url,
         '/accounting/{connection_id}/purchaseorder',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAccountingPurchaseorderRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAccountingPurchaseorder2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAccountingPurchaseorder',
+        operation_id: 'createAccountingPurchaseorder2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingPurchaseorder)
-          response = Models::Operations::CreateAccountingPurchaseorderResponse.new(
+          response = Models::Operations::CreateAccountingPurchaseorder2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingPurchaseorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingPurchaseorderResponse) }
-    def get_accounting_purchaseorder(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_accounting_purchaseorder - Retrieve a purchaseorder
-      request = Models::Operations::GetAccountingPurchaseorderRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingPurchaseorder2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingPurchaseorder2Response) }
+    def get_accounting_purchaseorder2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_accounting_purchaseorder2 - Retrieve a purchaseorder
+      request = Models::Operations::GetAccountingPurchaseorder2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAccountingPurchaseorderRequest,
+        Models::Operations::GetAccountingPurchaseorder2Request,
         base_url,
         '/accounting/{connection_id}/purchaseorder/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAccountingPurchaseorderRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAccountingPurchaseorder2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAccountingPurchaseorder',
+        operation_id: 'getAccountingPurchaseorder2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingPurchaseorder)
-          response = Models::Operations::GetAccountingPurchaseorderResponse.new(
+          response = Models::Operations::GetAccountingPurchaseorder2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAccountingPurchaseordersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingPurchaseordersResponse) }
-    def list_accounting_purchaseorders(request:, timeout_ms: nil)
-      # list_accounting_purchaseorders - List all purchaseorders
+    sig { params(request: Models::Operations::ListAccountingPurchaseorders2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingPurchaseorders2Response) }
+    def list_accounting_purchaseorders2(request:, timeout_ms: nil)
+      # list_accounting_purchaseorders2 - List all purchaseorders
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAccountingPurchaseordersRequest,
+        Models::Operations::ListAccountingPurchaseorders2Request,
         base_url,
         '/accounting/{connection_id}/purchaseorder',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAccountingPurchaseordersRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAccountingPurchaseorders2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAccountingPurchaseorders',
+        operation_id: 'listAccountingPurchaseorders2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AccountingPurchaseorder))
-          response = Models::Operations::ListAccountingPurchaseordersResponse.new(
+          response = Models::Operations::ListAccountingPurchaseorders2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAccountingPurchaseorderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingPurchaseorderResponse) }
-    def patch_accounting_purchaseorder(request:, timeout_ms: nil)
-      # patch_accounting_purchaseorder - Update a purchaseorder
+    sig { params(request: Models::Operations::PatchAccountingPurchaseorder2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingPurchaseorder2Response) }
+    def patch_accounting_purchaseorder2(request:, timeout_ms: nil)
+      # patch_accounting_purchaseorder2 - Update a purchaseorder
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAccountingPurchaseorderRequest,
+        Models::Operations::PatchAccountingPurchaseorder2Request,
         base_url,
         '/accounting/{connection_id}/purchaseorder/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAccountingPurchaseorderRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAccountingPurchaseorder2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAccountingPurchaseorder',
+        operation_id: 'patchAccountingPurchaseorder2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingPurchaseorder)
-          response = Models::Operations::PatchAccountingPurchaseorderResponse.new(
+          response = Models::Operations::PatchAccountingPurchaseorder2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingPurchaseorderResponse) }
-    def remove_accounting_purchaseorder(connection_id:, id:, timeout_ms: nil)
-      # remove_accounting_purchaseorder - Remove a purchaseorder
-      request = Models::Operations::RemoveAccountingPurchaseorderRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingPurchaseorder2Response) }
+    def remove_accounting_purchaseorder2(connection_id:, id:, timeout_ms: nil)
+      # remove_accounting_purchaseorder2 - Remove a purchaseorder
+      request = Models::Operations::RemoveAccountingPurchaseorder2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAccountingPurchaseorderRequest,
+        Models::Operations::RemoveAccountingPurchaseorder2Request,
         base_url,
         '/accounting/{connection_id}/purchaseorder/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAccountingPurchaseorder',
+        operation_id: 'removeAccountingPurchaseorder2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAccountingPurchaseorderResponse.new(
+        return Models::Operations::RemoveAccountingPurchaseorder2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAccountingPurchaseorderResponse.new(
+        return Models::Operations::RemoveAccountingPurchaseorder2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAccountingPurchaseorderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingPurchaseorderResponse) }
-    def update_accounting_purchaseorder(request:, timeout_ms: nil)
-      # update_accounting_purchaseorder - Update a purchaseorder
+    sig { params(request: Models::Operations::UpdateAccountingPurchaseorder2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingPurchaseorder2Response) }
+    def update_accounting_purchaseorder2(request:, timeout_ms: nil)
+      # update_accounting_purchaseorder2 - Update a purchaseorder
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAccountingPurchaseorderRequest,
+        Models::Operations::UpdateAccountingPurchaseorder2Request,
         base_url,
         '/accounting/{connection_id}/purchaseorder/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAccountingPurchaseorderRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAccountingPurchaseorder2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAccountingPurchaseorder',
+        operation_id: 'updateAccountingPurchaseorder2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingPurchaseorder)
-          response = Models::Operations::UpdateAccountingPurchaseorderResponse.new(
+          response = Models::Operations::UpdateAccountingPurchaseorder2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

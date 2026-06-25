@@ -5,16 +5,16 @@
 
 ### Available Operations
 
-* [get_signing_template](#get_signing_template) - Retrieve a template
-* [list_signing_templates](#list_signing_templates) - List all templates
+* [get_signing_template2](#get_signing_template2) - Retrieve a template
+* [list_signing_templates2](#list_signing_templates2) - List all templates
 
-## get_signing_template
+## get_signing_template2
 
 Retrieve a template
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getSigningTemplate" method="get" path="/signing/{connection_id}/template/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getSigningTemplate2" method="get" path="/signing/{connection_id}/template/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -25,7 +25,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.template.get_signing_template(connection_id: '<id>', id: '<id>')
+res = s.template.get_signing_template2(connection_id: '<id>', id: '<id>')
 
 unless res.signing_template.nil?
   # handle response
@@ -39,12 +39,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Template                                                                                                                               |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetSigningTemplateQueryParamFields](../../models/operations/getsigningtemplatequeryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetSigningTemplate2QueryParamFields](../../models/operations/getsigningtemplate2queryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetSigningTemplateResponse)](../../models/operations/getsigningtemplateresponse.md)**
+**[T.nilable(Models::Operations::GetSigningTemplate2Response)](../../models/operations/getsigningtemplate2response.md)**
 
 ### Errors
 
@@ -52,13 +52,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_signing_templates
+## list_signing_templates2
 
 List all templates
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listSigningTemplates" method="get" path="/signing/{connection_id}/template" -->
+<!-- UsageSnippet language="ruby" operationID="listSigningTemplates2" method="get" path="/signing/{connection_id}/template" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -69,11 +69,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListSigningTemplatesRequest.new(
+req = Models::Operations::ListSigningTemplates2Request.new(
   connection_id: '<id>',
 )
 
-res = s.template.list_signing_templates(request: req)
+res = s.template.list_signing_templates2(request: req)
 
 unless res.signing_templates.nil?
   # handle response
@@ -83,13 +83,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [Models::Operations::ListSigningTemplatesRequest](../../models/operations/listsigningtemplatesrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::ListSigningTemplates2Request](../../models/operations/listsigningtemplates2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListSigningTemplatesResponse)](../../models/operations/listsigningtemplatesresponse.md)**
+**[T.nilable(Models::Operations::ListSigningTemplates2Response)](../../models/operations/listsigningtemplates2response.md)**
 
 ### Errors
 

@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::UcRecording
   def contact_name=(str_); end
   def contact_phone(); end
   def contact_phone=(str_); end
+  def contacts(); end
+  def contacts=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def end_at(); end

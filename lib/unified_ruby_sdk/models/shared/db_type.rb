@@ -19,6 +19,7 @@ module UnifiedRubySDK
           MSSQL = new('mssql')
           MARIADB = new('mariadb')
           SUPABASE = new('supabase')
+          SNOWFLAKE = new('snowflake')
         end
       end
     end

@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(shipping_rate: Models::Shared::ShippingRate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateShippingRateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateShippingRateResponse) }
-    def create_shipping_rate(shipping_rate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_shipping_rate - Create a rate
-      request = Models::Operations::CreateShippingRateRequest.new(
+    sig { params(shipping_rate: Models::Shared::ShippingRate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateShippingRate2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateShippingRate2Response) }
+    def create_shipping_rate2(shipping_rate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_shipping_rate2 - Create a rate
+      request = Models::Operations::CreateShippingRate2Request.new(
         shipping_rate: shipping_rate,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateShippingRateRequest,
+        Models::Operations::CreateShippingRate2Request,
         base_url,
         '/shipping/{connection_id}/rate',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateShippingRateRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateShippingRate2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createShippingRate',
+        operation_id: 'createShippingRate2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ShippingRate)
-          response = Models::Operations::CreateShippingRateResponse.new(
+          response = Models::Operations::CreateShippingRate2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

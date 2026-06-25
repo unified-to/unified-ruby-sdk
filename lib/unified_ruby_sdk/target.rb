@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsTargetQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsTargetResponse) }
-    def get_ads_target(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_ads_target - Retrieve a target
-      request = Models::Operations::GetAdsTargetRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsTarget2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsTarget2Response) }
+    def get_ads_target2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_ads_target2 - Retrieve a target
+      request = Models::Operations::GetAdsTarget2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAdsTargetRequest,
+        Models::Operations::GetAdsTarget2Request,
         base_url,
         '/ads/{connection_id}/target/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAdsTargetRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAdsTarget2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAdsTarget',
+        operation_id: 'getAdsTarget2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsTarget)
-          response = Models::Operations::GetAdsTargetResponse.new(
+          response = Models::Operations::GetAdsTarget2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAdsTargetsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsTargetsResponse) }
-    def list_ads_targets(request:, timeout_ms: nil)
-      # list_ads_targets - List all targets
+    sig { params(request: Models::Operations::ListAdsTargets2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsTargets2Response) }
+    def list_ads_targets2(request:, timeout_ms: nil)
+      # list_ads_targets2 - List all targets
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAdsTargetsRequest,
+        Models::Operations::ListAdsTargets2Request,
         base_url,
         '/ads/{connection_id}/target',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAdsTargetsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAdsTargets2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAdsTargets',
+        operation_id: 'listAdsTargets2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AdsTarget))
-          response = Models::Operations::ListAdsTargetsResponse.new(
+          response = Models::Operations::ListAdsTargets2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

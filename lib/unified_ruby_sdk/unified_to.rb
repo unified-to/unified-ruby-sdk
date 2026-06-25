@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ads, :ad, :campaign, :creative, :group, :insertionorder, :promoted, :target, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :event, :link, :recording, :webinar, :clubs, :location, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :bankaccount, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :template, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :verification, :request
+    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :ads, :ad, :campaign, :creative, :group, :insertionorder, :promoted, :target, :analytics, :event, :property, :session, :visitor, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :link, :recording, :webinar, :clubs, :location, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :datastore, :database, :query, :record, :table, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :bankaccount, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :template, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :verification, :request
 
     sig do
       params(
@@ -105,6 +105,11 @@ module UnifiedRubySDK
       @insertionorder = Insertionorder.new(@sdk_configuration)
       @promoted = Promoted.new(@sdk_configuration)
       @target = Target.new(@sdk_configuration)
+      @analytics = Analytics.new(@sdk_configuration)
+      @event = Event.new(@sdk_configuration)
+      @property = Property.new(@sdk_configuration)
+      @session = Session.new(@sdk_configuration)
+      @visitor = Visitor.new(@sdk_configuration)
       @assessment = Assessment.new(@sdk_configuration)
       @package = Package.new(@sdk_configuration)
       @ats = Ats.new(@sdk_configuration)
@@ -119,7 +124,6 @@ module UnifiedRubySDK
       @scorecard = Scorecard.new(@sdk_configuration)
       @calendar = Calendar.new(@sdk_configuration)
       @busy = Busy.new(@sdk_configuration)
-      @event = Event.new(@sdk_configuration)
       @link = Link.new(@sdk_configuration)
       @recording = Recording.new(@sdk_configuration)
       @webinar = Webinar.new(@sdk_configuration)
@@ -139,6 +143,11 @@ module UnifiedRubySDK
       @deal = Deal.new(@sdk_configuration)
       @lead = Lead.new(@sdk_configuration)
       @pipeline = Pipeline.new(@sdk_configuration)
+      @datastore = Datastore.new(@sdk_configuration)
+      @database = Database.new(@sdk_configuration)
+      @query = Query.new(@sdk_configuration)
+      @record = Record.new(@sdk_configuration)
+      @table = Table.new(@sdk_configuration)
       @enrich = Enrich.new(@sdk_configuration)
       @person = Person.new(@sdk_configuration)
       @forms = Forms.new(@sdk_configuration)

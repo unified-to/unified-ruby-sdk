@@ -5,20 +5,20 @@
 
 ### Available Operations
 
-* [create_calendar_webinar](#create_calendar_webinar) - Create a webinar
-* [get_calendar_webinar](#get_calendar_webinar) - Retrieve a webinar
-* [list_calendar_webinars](#list_calendar_webinars) - List all webinars
-* [patch_calendar_webinar](#patch_calendar_webinar) - Update a webinar
-* [remove_calendar_webinar](#remove_calendar_webinar) - Remove a webinar
-* [update_calendar_webinar](#update_calendar_webinar) - Update a webinar
+* [create_calendar_webinar2](#create_calendar_webinar2) - Create a webinar
+* [get_calendar_webinar2](#get_calendar_webinar2) - Retrieve a webinar
+* [list_calendar_webinars2](#list_calendar_webinars2) - List all webinars
+* [patch_calendar_webinar2](#patch_calendar_webinar2) - Update a webinar
+* [remove_calendar_webinar2](#remove_calendar_webinar2) - Remove a webinar
+* [update_calendar_webinar2](#update_calendar_webinar2) - Update a webinar
 
-## create_calendar_webinar
+## create_calendar_webinar2
 
 Create a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCalendarWebinar" method="post" path="/calendar/{connection_id}/webinar" -->
+<!-- UsageSnippet language="ruby" operationID="createCalendarWebinar2" method="post" path="/calendar/{connection_id}/webinar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.webinar.create_calendar_webinar(calendar_webinar: Models::Shared::CalendarWebinar.new(), connection_id: '<id>')
+res = s.webinar.create_calendar_webinar2(calendar_webinar: Models::Shared::CalendarWebinar.new(), connection_id: '<id>')
 
 unless res.calendar_webinar.nil?
   # handle response
@@ -43,12 +43,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `calendar_webinar`                                                                                                                               | [Models::Shared::CalendarWebinar](../../models/shared/calendarwebinar.md)                                                                        | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCalendarWebinarQueryParamFields](../../models/operations/createcalendarwebinarqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCalendarWebinar2QueryParamFields](../../models/operations/createcalendarwebinar2queryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCalendarWebinarResponse)](../../models/operations/createcalendarwebinarresponse.md)**
+**[T.nilable(Models::Operations::CreateCalendarWebinar2Response)](../../models/operations/createcalendarwebinar2response.md)**
 
 ### Errors
 
@@ -56,13 +56,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_calendar_webinar
+## get_calendar_webinar2
 
 Retrieve a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCalendarWebinar" method="get" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCalendarWebinar2" method="get" path="/calendar/{connection_id}/webinar/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -73,7 +73,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.webinar.get_calendar_webinar(connection_id: '<id>', id: '<id>')
+res = s.webinar.get_calendar_webinar2(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_webinar.nil?
   # handle response
@@ -87,12 +87,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Webinar                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCalendarWebinarQueryParamFields](../../models/operations/getcalendarwebinarqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCalendarWebinar2QueryParamFields](../../models/operations/getcalendarwebinar2queryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCalendarWebinarResponse)](../../models/operations/getcalendarwebinarresponse.md)**
+**[T.nilable(Models::Operations::GetCalendarWebinar2Response)](../../models/operations/getcalendarwebinar2response.md)**
 
 ### Errors
 
@@ -100,13 +100,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_calendar_webinars
+## list_calendar_webinars2
 
 List all webinars
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCalendarWebinars" method="get" path="/calendar/{connection_id}/webinar" -->
+<!-- UsageSnippet language="ruby" operationID="listCalendarWebinars2" method="get" path="/calendar/{connection_id}/webinar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -117,11 +117,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCalendarWebinarsRequest.new(
+req = Models::Operations::ListCalendarWebinars2Request.new(
   connection_id: '<id>',
 )
 
-res = s.webinar.list_calendar_webinars(request: req)
+res = s.webinar.list_calendar_webinars2(request: req)
 
 unless res.calendar_webinars.nil?
   # handle response
@@ -131,13 +131,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [Models::Operations::ListCalendarWebinarsRequest](../../models/operations/listcalendarwebinarsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::ListCalendarWebinars2Request](../../models/operations/listcalendarwebinars2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCalendarWebinarsResponse)](../../models/operations/listcalendarwebinarsresponse.md)**
+**[T.nilable(Models::Operations::ListCalendarWebinars2Response)](../../models/operations/listcalendarwebinars2response.md)**
 
 ### Errors
 
@@ -145,13 +145,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_calendar_webinar
+## patch_calendar_webinar2
 
 Update a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCalendarWebinar" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCalendarWebinar2" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -162,13 +162,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCalendarWebinarRequest.new(
+req = Models::Operations::PatchCalendarWebinar2Request.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.webinar.patch_calendar_webinar(request: req)
+res = s.webinar.patch_calendar_webinar2(request: req)
 
 unless res.calendar_webinar.nil?
   # handle response
@@ -178,13 +178,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [Models::Operations::PatchCalendarWebinarRequest](../../models/operations/patchcalendarwebinarrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::PatchCalendarWebinar2Request](../../models/operations/patchcalendarwebinar2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCalendarWebinarResponse)](../../models/operations/patchcalendarwebinarresponse.md)**
+**[T.nilable(Models::Operations::PatchCalendarWebinar2Response)](../../models/operations/patchcalendarwebinar2response.md)**
 
 ### Errors
 
@@ -192,13 +192,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_calendar_webinar
+## remove_calendar_webinar2
 
 Remove a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeCalendarWebinar" method="delete" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeCalendarWebinar2" method="delete" path="/calendar/{connection_id}/webinar/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -209,7 +209,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.webinar.remove_calendar_webinar(connection_id: '<id>', id: '<id>')
+res = s.webinar.remove_calendar_webinar2(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -226,7 +226,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveCalendarWebinarResponse)](../../models/operations/removecalendarwebinarresponse.md)**
+**[T.nilable(Models::Operations::RemoveCalendarWebinar2Response)](../../models/operations/removecalendarwebinar2response.md)**
 
 ### Errors
 
@@ -234,13 +234,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_calendar_webinar
+## update_calendar_webinar2
 
 Update a webinar
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCalendarWebinar" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCalendarWebinar2" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -251,13 +251,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateCalendarWebinarRequest.new(
+req = Models::Operations::UpdateCalendarWebinar2Request.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.webinar.update_calendar_webinar(request: req)
+res = s.webinar.update_calendar_webinar2(request: req)
 
 unless res.calendar_webinar.nil?
   # handle response
@@ -267,13 +267,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                   | [Models::Operations::UpdateCalendarWebinarRequest](../../models/operations/updatecalendarwebinarrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::UpdateCalendarWebinar2Request](../../models/operations/updatecalendarwebinar2request.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateCalendarWebinarResponse)](../../models/operations/updatecalendarwebinarresponse.md)**
+**[T.nilable(Models::Operations::UpdateCalendarWebinar2Response)](../../models/operations/updatecalendarwebinar2response.md)**
 
 ### Errors
 

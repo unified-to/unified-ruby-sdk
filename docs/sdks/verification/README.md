@@ -5,22 +5,22 @@
 
 ### Available Operations
 
-* [create_verification_request](#create_verification_request) - Create a request
-* [get_verification_package](#get_verification_package) - Retrieve a package
-* [get_verification_request](#get_verification_request) - Retrieve a request
-* [list_verification_packages](#list_verification_packages) - List all packages
-* [list_verification_requests](#list_verification_requests) - List all requests
-* [patch_verification_request](#patch_verification_request) - Update a request
-* [remove_verification_request](#remove_verification_request) - Remove a request
-* [update_verification_request](#update_verification_request) - Update a request
+* [create_verification_request2](#create_verification_request2) - Create a request
+* [get_verification_package2](#get_verification_package2) - Retrieve a package
+* [get_verification_request2](#get_verification_request2) - Retrieve a request
+* [list_verification_packages2](#list_verification_packages2) - List all packages
+* [list_verification_requests2](#list_verification_requests2) - List all requests
+* [patch_verification_request2](#patch_verification_request2) - Update a request
+* [remove_verification_request2](#remove_verification_request2) - Remove a request
+* [update_verification_request2](#update_verification_request2) - Update a request
 
-## create_verification_request
+## create_verification_request2
 
 Create a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="ruby" operationID="createVerificationRequest2" method="post" path="/verification/{connection_id}/request" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -31,7 +31,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.verification.create_verification_request(verification_request: Models::Shared::VerificationRequest.new(), connection_id: '<id>')
+res = s.verification.create_verification_request2(verification_request: Models::Shared::VerificationRequest.new(), connection_id: '<id>')
 
 unless res.verification_request.nil?
   # handle response
@@ -41,16 +41,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `verification_request`                                                                                                                           | [Models::Shared::VerificationRequest](../../models/shared/verificationrequest.md)                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
-| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateVerificationRequestQueryParamFields](../../models/operations/createverificationrequestqueryparamfields.md)>  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
-| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `verification_request`                                                                                                                            | [Models::Shared::VerificationRequest](../../models/shared/verificationrequest.md)                                                                 | :heavy_check_mark:                                                                                                                                | N/A                                                                                                                                               |
+| `connection_id`                                                                                                                                   | *::String*                                                                                                                                        | :heavy_check_mark:                                                                                                                                | ID of the connection                                                                                                                              |
+| `fields_`                                                                                                                                         | T::Array<[Models::Operations::CreateVerificationRequest2QueryParamFields](../../models/operations/createverificationrequest2queryparamfields.md)> | :heavy_minus_sign:                                                                                                                                | Fields to return                                                                                                                                  |
+| `raw`                                                                                                                                             | *T.nilable(::String)*                                                                                                                             | :heavy_minus_sign:                                                                                                                                | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar  |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateVerificationRequestResponse)](../../models/operations/createverificationrequestresponse.md)**
+**[T.nilable(Models::Operations::CreateVerificationRequest2Response)](../../models/operations/createverificationrequest2response.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_verification_package
+## get_verification_package2
 
 Retrieve a package
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getVerificationPackage" method="get" path="/verification/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getVerificationPackage2" method="get" path="/verification/{connection_id}/package/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -75,7 +75,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.verification.get_verification_package(connection_id: '<id>', id: '<id>')
+res = s.verification.get_verification_package2(connection_id: '<id>', id: '<id>')
 
 unless res.verification_package.nil?
   # handle response
@@ -89,12 +89,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Package                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetVerificationPackageQueryParamFields](../../models/operations/getverificationpackagequeryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetVerificationPackage2QueryParamFields](../../models/operations/getverificationpackage2queryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetVerificationPackageResponse)](../../models/operations/getverificationpackageresponse.md)**
+**[T.nilable(Models::Operations::GetVerificationPackage2Response)](../../models/operations/getverificationpackage2response.md)**
 
 ### Errors
 
@@ -102,13 +102,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_verification_request
+## get_verification_request2
 
 Retrieve a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getVerificationRequest" method="get" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getVerificationRequest2" method="get" path="/verification/{connection_id}/request/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -119,7 +119,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.verification.get_verification_request(connection_id: '<id>', id: '<id>')
+res = s.verification.get_verification_request2(connection_id: '<id>', id: '<id>')
 
 unless res.verification_request.nil?
   # handle response
@@ -133,12 +133,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Request                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetVerificationRequestQueryParamFields](../../models/operations/getverificationrequestqueryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetVerificationRequest2QueryParamFields](../../models/operations/getverificationrequest2queryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetVerificationRequestResponse)](../../models/operations/getverificationrequestresponse.md)**
+**[T.nilable(Models::Operations::GetVerificationRequest2Response)](../../models/operations/getverificationrequest2response.md)**
 
 ### Errors
 
@@ -146,13 +146,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_verification_packages
+## list_verification_packages2
 
 List all packages
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listVerificationPackages" method="get" path="/verification/{connection_id}/package" -->
+<!-- UsageSnippet language="ruby" operationID="listVerificationPackages2" method="get" path="/verification/{connection_id}/package" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -163,11 +163,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListVerificationPackagesRequest.new(
+req = Models::Operations::ListVerificationPackages2Request.new(
   connection_id: '<id>',
 )
 
-res = s.verification.list_verification_packages(request: req)
+res = s.verification.list_verification_packages2(request: req)
 
 unless res.verification_packages.nil?
   # handle response
@@ -177,13 +177,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                         | [Models::Operations::ListVerificationPackagesRequest](../../models/operations/listverificationpackagesrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [Models::Operations::ListVerificationPackages2Request](../../models/operations/listverificationpackages2request.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListVerificationPackagesResponse)](../../models/operations/listverificationpackagesresponse.md)**
+**[T.nilable(Models::Operations::ListVerificationPackages2Response)](../../models/operations/listverificationpackages2response.md)**
 
 ### Errors
 
@@ -191,13 +191,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_verification_requests
+## list_verification_requests2
 
 List all requests
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listVerificationRequests" method="get" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="ruby" operationID="listVerificationRequests2" method="get" path="/verification/{connection_id}/request" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -208,11 +208,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListVerificationRequestsRequest.new(
+req = Models::Operations::ListVerificationRequests2Request.new(
   connection_id: '<id>',
 )
 
-res = s.verification.list_verification_requests(request: req)
+res = s.verification.list_verification_requests2(request: req)
 
 unless res.verification_requests.nil?
   # handle response
@@ -222,13 +222,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                         | [Models::Operations::ListVerificationRequestsRequest](../../models/operations/listverificationrequestsrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [Models::Operations::ListVerificationRequests2Request](../../models/operations/listverificationrequests2request.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListVerificationRequestsResponse)](../../models/operations/listverificationrequestsresponse.md)**
+**[T.nilable(Models::Operations::ListVerificationRequests2Response)](../../models/operations/listverificationrequests2response.md)**
 
 ### Errors
 
@@ -236,13 +236,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_verification_request
+## patch_verification_request2
 
 Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchVerificationRequest2" method="patch" path="/verification/{connection_id}/request/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -253,13 +253,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchVerificationRequestRequest.new(
+req = Models::Operations::PatchVerificationRequest2Request.new(
   verification_request: Models::Shared::VerificationRequest.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.verification.patch_verification_request(request: req)
+res = s.verification.patch_verification_request2(request: req)
 
 unless res.verification_request.nil?
   # handle response
@@ -269,13 +269,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                         | [Models::Operations::PatchVerificationRequestRequest](../../models/operations/patchverificationrequestrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [Models::Operations::PatchVerificationRequest2Request](../../models/operations/patchverificationrequest2request.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchVerificationRequestResponse)](../../models/operations/patchverificationrequestresponse.md)**
+**[T.nilable(Models::Operations::PatchVerificationRequest2Response)](../../models/operations/patchverificationrequest2response.md)**
 
 ### Errors
 
@@ -283,13 +283,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_verification_request
+## remove_verification_request2
 
 Remove a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeVerificationRequest" method="delete" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeVerificationRequest2" method="delete" path="/verification/{connection_id}/request/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -300,7 +300,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.verification.remove_verification_request(connection_id: '<id>', id: '<id>')
+res = s.verification.remove_verification_request2(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -317,7 +317,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveVerificationRequestResponse)](../../models/operations/removeverificationrequestresponse.md)**
+**[T.nilable(Models::Operations::RemoveVerificationRequest2Response)](../../models/operations/removeverificationrequest2response.md)**
 
 ### Errors
 
@@ -325,13 +325,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_verification_request
+## update_verification_request2
 
 Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateVerificationRequest2" method="put" path="/verification/{connection_id}/request/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -342,13 +342,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateVerificationRequestRequest.new(
+req = Models::Operations::UpdateVerificationRequest2Request.new(
   verification_request: Models::Shared::VerificationRequest.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.verification.update_verification_request(request: req)
+res = s.verification.update_verification_request2(request: req)
 
 unless res.verification_request.nil?
   # handle response
@@ -358,13 +358,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                           | [Models::Operations::UpdateVerificationRequestRequest](../../models/operations/updateverificationrequestrequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                             | [Models::Operations::UpdateVerificationRequest2Request](../../models/operations/updateverificationrequest2request.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateVerificationRequestResponse)](../../models/operations/updateverificationrequestresponse.md)**
+**[T.nilable(Models::Operations::UpdateVerificationRequest2Response)](../../models/operations/updateverificationrequest2response.md)**
 
 ### Errors
 

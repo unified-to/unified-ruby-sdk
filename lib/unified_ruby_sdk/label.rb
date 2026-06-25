@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(shipping_label: Models::Shared::ShippingLabel, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateShippingLabelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateShippingLabelResponse) }
-    def create_shipping_label(shipping_label:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_shipping_label - Create a label
-      request = Models::Operations::CreateShippingLabelRequest.new(
+    sig { params(shipping_label: Models::Shared::ShippingLabel, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateShippingLabel2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateShippingLabel2Response) }
+    def create_shipping_label2(shipping_label:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_shipping_label2 - Create a label
+      request = Models::Operations::CreateShippingLabel2Request.new(
         shipping_label: shipping_label,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateShippingLabelRequest,
+        Models::Operations::CreateShippingLabel2Request,
         base_url,
         '/shipping/{connection_id}/label',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateShippingLabelRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateShippingLabel2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createShippingLabel',
+        operation_id: 'createShippingLabel2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ShippingLabel)
-          response = Models::Operations::CreateShippingLabelResponse.new(
+          response = Models::Operations::CreateShippingLabel2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingLabelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingLabelResponse) }
-    def get_shipping_label(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_shipping_label - Retrieve a label
-      request = Models::Operations::GetShippingLabelRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingLabel2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingLabel2Response) }
+    def get_shipping_label2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_shipping_label2 - Retrieve a label
+      request = Models::Operations::GetShippingLabel2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetShippingLabelRequest,
+        Models::Operations::GetShippingLabel2Request,
         base_url,
         '/shipping/{connection_id}/label/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetShippingLabelRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetShippingLabel2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getShippingLabel',
+        operation_id: 'getShippingLabel2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ShippingLabel)
-          response = Models::Operations::GetShippingLabelResponse.new(
+          response = Models::Operations::GetShippingLabel2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListShippingLabelsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingLabelsResponse) }
-    def list_shipping_labels(request:, timeout_ms: nil)
-      # list_shipping_labels - List all labels
+    sig { params(request: Models::Operations::ListShippingLabels2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingLabels2Response) }
+    def list_shipping_labels2(request:, timeout_ms: nil)
+      # list_shipping_labels2 - List all labels
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListShippingLabelsRequest,
+        Models::Operations::ListShippingLabels2Request,
         base_url,
         '/shipping/{connection_id}/label',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListShippingLabelsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListShippingLabels2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listShippingLabels',
+        operation_id: 'listShippingLabels2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ShippingLabel))
-          response = Models::Operations::ListShippingLabelsResponse.new(
+          response = Models::Operations::ListShippingLabels2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchShippingLabelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchShippingLabelResponse) }
-    def patch_shipping_label(request:, timeout_ms: nil)
-      # patch_shipping_label - Update a label
+    sig { params(request: Models::Operations::PatchShippingLabel2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchShippingLabel2Response) }
+    def patch_shipping_label2(request:, timeout_ms: nil)
+      # patch_shipping_label2 - Update a label
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchShippingLabelRequest,
+        Models::Operations::PatchShippingLabel2Request,
         base_url,
         '/shipping/{connection_id}/label/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchShippingLabelRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchShippingLabel2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchShippingLabel',
+        operation_id: 'patchShippingLabel2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ShippingLabel)
-          response = Models::Operations::PatchShippingLabelResponse.new(
+          response = Models::Operations::PatchShippingLabel2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveShippingLabelResponse) }
-    def remove_shipping_label(connection_id:, id:, timeout_ms: nil)
-      # remove_shipping_label - Remove a label
-      request = Models::Operations::RemoveShippingLabelRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveShippingLabel2Response) }
+    def remove_shipping_label2(connection_id:, id:, timeout_ms: nil)
+      # remove_shipping_label2 - Remove a label
+      request = Models::Operations::RemoveShippingLabel2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveShippingLabelRequest,
+        Models::Operations::RemoveShippingLabel2Request,
         base_url,
         '/shipping/{connection_id}/label/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeShippingLabel',
+        operation_id: 'removeShippingLabel2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveShippingLabelResponse.new(
+        return Models::Operations::RemoveShippingLabel2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveShippingLabelResponse.new(
+        return Models::Operations::RemoveShippingLabel2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateShippingLabelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateShippingLabelResponse) }
-    def update_shipping_label(request:, timeout_ms: nil)
-      # update_shipping_label - Update a label
+    sig { params(request: Models::Operations::UpdateShippingLabel2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateShippingLabel2Response) }
+    def update_shipping_label2(request:, timeout_ms: nil)
+      # update_shipping_label2 - Update a label
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateShippingLabelRequest,
+        Models::Operations::UpdateShippingLabel2Request,
         base_url,
         '/shipping/{connection_id}/label/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateShippingLabelRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateShippingLabel2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateShippingLabel',
+        operation_id: 'updateShippingLabel2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ShippingLabel)
-          response = Models::Operations::UpdateShippingLabelResponse.new(
+          response = Models::Operations::UpdateShippingLabel2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

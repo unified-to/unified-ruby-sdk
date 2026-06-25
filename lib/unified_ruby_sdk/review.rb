@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_review: Models::Shared::CommerceReview, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceReviewResponse) }
-    def create_commerce_review(commerce_review:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_commerce_review - Create a review
-      request = Models::Operations::CreateCommerceReviewRequest.new(
+    sig { params(commerce_review: Models::Shared::CommerceReview, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceReview2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceReview2Response) }
+    def create_commerce_review2(commerce_review:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_commerce_review2 - Create a review
+      request = Models::Operations::CreateCommerceReview2Request.new(
         commerce_review: commerce_review,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCommerceReviewRequest,
+        Models::Operations::CreateCommerceReview2Request,
         base_url,
         '/commerce/{connection_id}/review',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCommerceReviewRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCommerceReview2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCommerceReview',
+        operation_id: 'createCommerceReview2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceReview)
-          response = Models::Operations::CreateCommerceReviewResponse.new(
+          response = Models::Operations::CreateCommerceReview2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceReviewResponse) }
-    def get_commerce_review(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_commerce_review - Retrieve a review
-      request = Models::Operations::GetCommerceReviewRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceReview2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceReview2Response) }
+    def get_commerce_review2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_commerce_review2 - Retrieve a review
+      request = Models::Operations::GetCommerceReview2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCommerceReviewRequest,
+        Models::Operations::GetCommerceReview2Request,
         base_url,
         '/commerce/{connection_id}/review/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCommerceReviewRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCommerceReview2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCommerceReview',
+        operation_id: 'getCommerceReview2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceReview)
-          response = Models::Operations::GetCommerceReviewResponse.new(
+          response = Models::Operations::GetCommerceReview2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCommerceReviewsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceReviewsResponse) }
-    def list_commerce_reviews(request:, timeout_ms: nil)
-      # list_commerce_reviews - List all reviews
+    sig { params(request: Models::Operations::ListCommerceReviews2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceReviews2Response) }
+    def list_commerce_reviews2(request:, timeout_ms: nil)
+      # list_commerce_reviews2 - List all reviews
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCommerceReviewsRequest,
+        Models::Operations::ListCommerceReviews2Request,
         base_url,
         '/commerce/{connection_id}/review',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCommerceReviewsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCommerceReviews2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCommerceReviews',
+        operation_id: 'listCommerceReviews2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CommerceReview))
-          response = Models::Operations::ListCommerceReviewsResponse.new(
+          response = Models::Operations::ListCommerceReviews2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCommerceReviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceReviewResponse) }
-    def patch_commerce_review(request:, timeout_ms: nil)
-      # patch_commerce_review - Update a review
+    sig { params(request: Models::Operations::PatchCommerceReview2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceReview2Response) }
+    def patch_commerce_review2(request:, timeout_ms: nil)
+      # patch_commerce_review2 - Update a review
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCommerceReviewRequest,
+        Models::Operations::PatchCommerceReview2Request,
         base_url,
         '/commerce/{connection_id}/review/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCommerceReviewRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCommerceReview2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCommerceReview',
+        operation_id: 'patchCommerceReview2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceReview)
-          response = Models::Operations::PatchCommerceReviewResponse.new(
+          response = Models::Operations::PatchCommerceReview2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceReviewResponse) }
-    def remove_commerce_review(connection_id:, id:, timeout_ms: nil)
-      # remove_commerce_review - Remove a review
-      request = Models::Operations::RemoveCommerceReviewRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceReview2Response) }
+    def remove_commerce_review2(connection_id:, id:, timeout_ms: nil)
+      # remove_commerce_review2 - Remove a review
+      request = Models::Operations::RemoveCommerceReview2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCommerceReviewRequest,
+        Models::Operations::RemoveCommerceReview2Request,
         base_url,
         '/commerce/{connection_id}/review/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCommerceReview',
+        operation_id: 'removeCommerceReview2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceReviewResponse.new(
+        return Models::Operations::RemoveCommerceReview2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceReviewResponse.new(
+        return Models::Operations::RemoveCommerceReview2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCommerceReviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceReviewResponse) }
-    def update_commerce_review(request:, timeout_ms: nil)
-      # update_commerce_review - Update a review
+    sig { params(request: Models::Operations::UpdateCommerceReview2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceReview2Response) }
+    def update_commerce_review2(request:, timeout_ms: nil)
+      # update_commerce_review2 - Update a review
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCommerceReviewRequest,
+        Models::Operations::UpdateCommerceReview2Request,
         base_url,
         '/commerce/{connection_id}/review/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceReviewRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceReview2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCommerceReview',
+        operation_id: 'updateCommerceReview2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceReview)
-          response = Models::Operations::UpdateCommerceReviewResponse.new(
+          response = Models::Operations::UpdateCommerceReview2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

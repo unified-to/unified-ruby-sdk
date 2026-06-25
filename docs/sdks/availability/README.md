@@ -5,15 +5,15 @@
 
 ### Available Operations
 
-* [list_commerce_availabilities](#list_commerce_availabilities) - List all availabilities
+* [list_commerce_availabilities2](#list_commerce_availabilities2) - List all availabilities
 
-## list_commerce_availabilities
+## list_commerce_availabilities2
 
 List all availabilities
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCommerceAvailabilities" method="get" path="/commerce/{connection_id}/availability" -->
+<!-- UsageSnippet language="ruby" operationID="listCommerceAvailabilities2" method="get" path="/commerce/{connection_id}/availability" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -24,11 +24,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCommerceAvailabilitiesRequest.new(
+req = Models::Operations::ListCommerceAvailabilities2Request.new(
   connection_id: '<id>',
 )
 
-res = s.availability.list_commerce_availabilities(request: req)
+res = s.availability.list_commerce_availabilities2(request: req)
 
 unless res.commerce_availabilities.nil?
   # handle response
@@ -38,13 +38,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [Models::Operations::ListCommerceAvailabilitiesRequest](../../models/operations/listcommerceavailabilitiesrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                               | [Models::Operations::ListCommerceAvailabilities2Request](../../models/operations/listcommerceavailabilities2request.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCommerceAvailabilitiesResponse)](../../models/operations/listcommerceavailabilitiesresponse.md)**
+**[T.nilable(Models::Operations::ListCommerceAvailabilities2Response)](../../models/operations/listcommerceavailabilities2response.md)**
 
 ### Errors
 

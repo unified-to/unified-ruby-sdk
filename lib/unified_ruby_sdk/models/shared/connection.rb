@@ -22,14 +22,6 @@ module UnifiedRubySDK
         # An authentication object that represents a specific authorized user's connection to an integration.
         field :auth, Crystalline::Nilable.new(Models::Shared::PropertyConnectionAuth), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth') } }
 
-        field :auth_aws_arn, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth_aws_arn') } }
-
-        field :auth_azure_keyvault_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth_azure_keyvault_id') } }
-
-        field :auth_gcp_secret_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth_gcp_secret_name') } }
-
-        field :auth_hashi_vault_path, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth_hashi_vault_path') } }
-
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :external_xref, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_xref') } }
@@ -54,16 +46,12 @@ module UnifiedRubySDK
 
         field :environment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('environment') } }
 
-        sig { params(categories: T::Array[Models::Shared::PropertyConnectionCategories], integration_type: ::String, permissions: T::Array[Models::Shared::PropertyConnectionPermissions], auth: T.nilable(Models::Shared::PropertyConnectionAuth), auth_aws_arn: T.nilable(::String), auth_azure_keyvault_id: T.nilable(::String), auth_gcp_secret_name: T.nilable(::String), auth_hashi_vault_path: T.nilable(::String), created_at: T.nilable(::DateTime), external_xref: T.nilable(::String), id: T.nilable(::String), integration_name: T.nilable(::String), is_paused: T.nilable(T::Boolean), last_healthy_at: T.nilable(::DateTime), last_unhealthy_at: T.nilable(::DateTime), secretsmanager_id: T.nilable(::String), secretsmanager_key: T.nilable(::String), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
-        def initialize(categories:, integration_type:, permissions:, auth: nil, auth_aws_arn: nil, auth_azure_keyvault_id: nil, auth_gcp_secret_name: nil, auth_hashi_vault_path: nil, created_at: nil, external_xref: nil, id: nil, integration_name: nil, is_paused: nil, last_healthy_at: nil, last_unhealthy_at: nil, secretsmanager_id: nil, secretsmanager_key: nil, updated_at: nil, workspace_id: nil, environment: 'Production')
+        sig { params(categories: T::Array[Models::Shared::PropertyConnectionCategories], integration_type: ::String, permissions: T::Array[Models::Shared::PropertyConnectionPermissions], auth: T.nilable(Models::Shared::PropertyConnectionAuth), created_at: T.nilable(::DateTime), external_xref: T.nilable(::String), id: T.nilable(::String), integration_name: T.nilable(::String), is_paused: T.nilable(T::Boolean), last_healthy_at: T.nilable(::DateTime), last_unhealthy_at: T.nilable(::DateTime), secretsmanager_id: T.nilable(::String), secretsmanager_key: T.nilable(::String), updated_at: T.nilable(::DateTime), workspace_id: T.nilable(::String), environment: T.nilable(::String)).void }
+        def initialize(categories:, integration_type:, permissions:, auth: nil, created_at: nil, external_xref: nil, id: nil, integration_name: nil, is_paused: nil, last_healthy_at: nil, last_unhealthy_at: nil, secretsmanager_id: nil, secretsmanager_key: nil, updated_at: nil, workspace_id: nil, environment: 'Production')
           @categories = categories
           @integration_type = integration_type
           @permissions = permissions
           @auth = auth
-          @auth_aws_arn = auth_aws_arn
-          @auth_azure_keyvault_id = auth_azure_keyvault_id
-          @auth_gcp_secret_name = auth_gcp_secret_name
-          @auth_hashi_vault_path = auth_hashi_vault_path
           @created_at = created_at
           @external_xref = external_xref
           @id = id
@@ -85,10 +73,6 @@ module UnifiedRubySDK
           return false unless @integration_type == other.integration_type
           return false unless @permissions == other.permissions
           return false unless @auth == other.auth
-          return false unless @auth_aws_arn == other.auth_aws_arn
-          return false unless @auth_azure_keyvault_id == other.auth_azure_keyvault_id
-          return false unless @auth_gcp_secret_name == other.auth_gcp_secret_name
-          return false unless @auth_hashi_vault_path == other.auth_hashi_vault_path
           return false unless @created_at == other.created_at
           return false unless @external_xref == other.external_xref
           return false unless @id == other.id

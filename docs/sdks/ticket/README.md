@@ -5,20 +5,20 @@
 
 ### Available Operations
 
-* [create_ticketing_ticket](#create_ticketing_ticket) - Create a ticket
-* [get_ticketing_ticket](#get_ticketing_ticket) - Retrieve a ticket
-* [list_ticketing_tickets](#list_ticketing_tickets) - List all tickets
-* [patch_ticketing_ticket](#patch_ticketing_ticket) - Update a ticket
-* [remove_ticketing_ticket](#remove_ticketing_ticket) - Remove a ticket
-* [update_ticketing_ticket](#update_ticketing_ticket) - Update a ticket
+* [create_ticketing_ticket2](#create_ticketing_ticket2) - Create a ticket
+* [get_ticketing_ticket2](#get_ticketing_ticket2) - Retrieve a ticket
+* [list_ticketing_tickets2](#list_ticketing_tickets2) - List all tickets
+* [patch_ticketing_ticket2](#patch_ticketing_ticket2) - Update a ticket
+* [remove_ticketing_ticket2](#remove_ticketing_ticket2) - Remove a ticket
+* [update_ticketing_ticket2](#update_ticketing_ticket2) - Update a ticket
 
-## create_ticketing_ticket
+## create_ticketing_ticket2
 
 Create a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createTicketingTicket" method="post" path="/ticketing/{connection_id}/ticket" -->
+<!-- UsageSnippet language="ruby" operationID="createTicketingTicket2" method="post" path="/ticketing/{connection_id}/ticket" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ticket.create_ticketing_ticket(ticketing_ticket: Models::Shared::TicketingTicket.new(), connection_id: '<id>')
+res = s.ticket.create_ticketing_ticket2(ticketing_ticket: Models::Shared::TicketingTicket.new(), connection_id: '<id>')
 
 unless res.ticketing_ticket.nil?
   # handle response
@@ -43,12 +43,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `ticketing_ticket`                                                                                                                               | [Models::Shared::TicketingTicket](../../models/shared/ticketingticket.md)                                                                        | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateTicketingTicketQueryParamFields](../../models/operations/createticketingticketqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateTicketingTicket2QueryParamFields](../../models/operations/createticketingticket2queryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateTicketingTicketResponse)](../../models/operations/createticketingticketresponse.md)**
+**[T.nilable(Models::Operations::CreateTicketingTicket2Response)](../../models/operations/createticketingticket2response.md)**
 
 ### Errors
 
@@ -56,13 +56,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_ticketing_ticket
+## get_ticketing_ticket2
 
 Retrieve a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getTicketingTicket" method="get" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getTicketingTicket2" method="get" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -73,7 +73,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ticket.get_ticketing_ticket(connection_id: '<id>', id: '<id>')
+res = s.ticket.get_ticketing_ticket2(connection_id: '<id>', id: '<id>')
 
 unless res.ticketing_ticket.nil?
   # handle response
@@ -87,12 +87,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Ticket                                                                                                                                 |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetTicketingTicketQueryParamFields](../../models/operations/getticketingticketqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetTicketingTicket2QueryParamFields](../../models/operations/getticketingticket2queryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetTicketingTicketResponse)](../../models/operations/getticketingticketresponse.md)**
+**[T.nilable(Models::Operations::GetTicketingTicket2Response)](../../models/operations/getticketingticket2response.md)**
 
 ### Errors
 
@@ -100,13 +100,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_ticketing_tickets
+## list_ticketing_tickets2
 
 List all tickets
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listTicketingTickets" method="get" path="/ticketing/{connection_id}/ticket" -->
+<!-- UsageSnippet language="ruby" operationID="listTicketingTickets2" method="get" path="/ticketing/{connection_id}/ticket" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -117,11 +117,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListTicketingTicketsRequest.new(
+req = Models::Operations::ListTicketingTickets2Request.new(
   connection_id: '<id>',
 )
 
-res = s.ticket.list_ticketing_tickets(request: req)
+res = s.ticket.list_ticketing_tickets2(request: req)
 
 unless res.ticketing_tickets.nil?
   # handle response
@@ -131,13 +131,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [Models::Operations::ListTicketingTicketsRequest](../../models/operations/listticketingticketsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::ListTicketingTickets2Request](../../models/operations/listticketingtickets2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListTicketingTicketsResponse)](../../models/operations/listticketingticketsresponse.md)**
+**[T.nilable(Models::Operations::ListTicketingTickets2Response)](../../models/operations/listticketingtickets2response.md)**
 
 ### Errors
 
@@ -145,13 +145,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_ticketing_ticket
+## patch_ticketing_ticket2
 
 Update a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchTicketingTicket" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchTicketingTicket2" method="patch" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -162,13 +162,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchTicketingTicketRequest.new(
+req = Models::Operations::PatchTicketingTicket2Request.new(
   ticketing_ticket: Models::Shared::TicketingTicket.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.ticket.patch_ticketing_ticket(request: req)
+res = s.ticket.patch_ticketing_ticket2(request: req)
 
 unless res.ticketing_ticket.nil?
   # handle response
@@ -178,13 +178,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [Models::Operations::PatchTicketingTicketRequest](../../models/operations/patchticketingticketrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::PatchTicketingTicket2Request](../../models/operations/patchticketingticket2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchTicketingTicketResponse)](../../models/operations/patchticketingticketresponse.md)**
+**[T.nilable(Models::Operations::PatchTicketingTicket2Response)](../../models/operations/patchticketingticket2response.md)**
 
 ### Errors
 
@@ -192,13 +192,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_ticketing_ticket
+## remove_ticketing_ticket2
 
 Remove a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeTicketingTicket" method="delete" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeTicketingTicket2" method="delete" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -209,7 +209,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ticket.remove_ticketing_ticket(connection_id: '<id>', id: '<id>')
+res = s.ticket.remove_ticketing_ticket2(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -226,7 +226,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveTicketingTicketResponse)](../../models/operations/removeticketingticketresponse.md)**
+**[T.nilable(Models::Operations::RemoveTicketingTicket2Response)](../../models/operations/removeticketingticket2response.md)**
 
 ### Errors
 
@@ -234,13 +234,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_ticketing_ticket
+## update_ticketing_ticket2
 
 Update a ticket
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateTicketingTicket" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateTicketingTicket2" method="put" path="/ticketing/{connection_id}/ticket/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -251,13 +251,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateTicketingTicketRequest.new(
+req = Models::Operations::UpdateTicketingTicket2Request.new(
   ticketing_ticket: Models::Shared::TicketingTicket.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.ticket.update_ticketing_ticket(request: req)
+res = s.ticket.update_ticketing_ticket2(request: req)
 
 unless res.ticketing_ticket.nil?
   # handle response
@@ -267,13 +267,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                   | [Models::Operations::UpdateTicketingTicketRequest](../../models/operations/updateticketingticketrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::UpdateTicketingTicket2Request](../../models/operations/updateticketingticket2request.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateTicketingTicketResponse)](../../models/operations/updateticketingticketresponse.md)**
+**[T.nilable(Models::Operations::UpdateTicketingTicket2Response)](../../models/operations/updateticketingticket2response.md)**
 
 ### Errors
 

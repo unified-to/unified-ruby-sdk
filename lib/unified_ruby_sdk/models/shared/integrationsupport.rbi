@@ -52,8 +52,12 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_course_id=(str_); end
   def list_customer_id(); end
   def list_customer_id=(str_); end
+  def list_database_id(); end
+  def list_database_id=(str_); end
   def list_deal_id(); end
   def list_deal_id=(str_); end
+  def list_dimension(); end
+  def list_dimension=(str_); end
   def list_document_id(); end
   def list_document_id=(str_); end
   def list_end_lt(); end
@@ -94,6 +98,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_list_id=(str_); end
   def list_location_id(); end
   def list_location_id=(str_); end
+  def list_medium(); end
+  def list_medium=(str_); end
   def list_member_id(); end
   def list_member_id=(str_); end
   def list_offset(); end
@@ -118,6 +124,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_pipeline_id=(str_); end
   def list_project_id(); end
   def list_project_id=(str_); end
+  def list_property_id(); end
+  def list_property_id=(str_); end
   def list_query(); end
   def list_query=(str_); end
   def list_raw_fields(); end
@@ -130,6 +138,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_root_id=(str_); end
   def list_saleschannel_id(); end
   def list_saleschannel_id=(str_); end
+  def list_session_id(); end
+  def list_session_id=(str_); end
   def list_shipment_id(); end
   def list_shipment_id=(str_); end
   def list_size(); end
@@ -140,6 +150,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_sort_by_name=(str_); end
   def list_sort_by_updated_at(); end
   def list_sort_by_updated_at=(str_); end
+  def list_source(); end
+  def list_source=(str_); end
   def list_space_id(); end
   def list_space_id=(str_); end
   def list_start_gte(); end
@@ -148,6 +160,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_status=(str_); end
   def list_student_id(); end
   def list_student_id=(str_); end
+  def list_table_id(); end
+  def list_table_id=(str_); end
   def list_task_id(); end
   def list_task_id=(str_); end
   def list_teacher_id(); end
@@ -164,6 +178,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_user_id=(str_); end
   def list_user_mentioned_id(); end
   def list_user_mentioned_id=(str_); end
+  def list_visitor_id(); end
+  def list_visitor_id=(str_); end
   def methods(); end
   def methods=(str_); end
   def native_webhook_calendar_id(); end
@@ -176,6 +192,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_company_id=(str_); end
   def native_webhook_course_id(); end
   def native_webhook_course_id=(str_); end
+  def native_webhook_database_id(); end
+  def native_webhook_database_id=(str_); end
   def native_webhook_event_id(); end
   def native_webhook_event_id=(str_); end
   def native_webhook_form_id(); end
@@ -194,16 +212,24 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_parent_id=(str_); end
   def native_webhook_project_id(); end
   def native_webhook_project_id=(str_); end
+  def native_webhook_property_id(); end
+  def native_webhook_property_id=(str_); end
+  def native_webhook_session_id(); end
+  def native_webhook_session_id=(str_); end
   def native_webhook_shipment_id(); end
   def native_webhook_shipment_id=(str_); end
   def native_webhook_student_id(); end
   def native_webhook_student_id=(str_); end
+  def native_webhook_table_id(); end
+  def native_webhook_table_id=(str_); end
   def native_webhook_task_id(); end
   def native_webhook_task_id=(str_); end
   def native_webhook_template_id(); end
   def native_webhook_template_id=(str_); end
   def native_webhook_type(); end
   def native_webhook_type=(str_); end
+  def native_webhook_visitor_id(); end
+  def native_webhook_visitor_id=(str_); end
   def outbound_fields(); end
   def outbound_fields=(str_); end
   def raw_objects(); end
@@ -254,6 +280,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_course_id=(str_); end
   def virtual_webhook_customer_id(); end
   def virtual_webhook_customer_id=(str_); end
+  def virtual_webhook_database_id(); end
+  def virtual_webhook_database_id=(str_); end
   def virtual_webhook_deal_id(); end
   def virtual_webhook_deal_id=(str_); end
   def virtual_webhook_end_lt(); end
@@ -306,12 +334,16 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_pipeline_id=(str_); end
   def virtual_webhook_project_id(); end
   def virtual_webhook_project_id=(str_); end
+  def virtual_webhook_property_id(); end
+  def virtual_webhook_property_id=(str_); end
   def virtual_webhook_reference(); end
   def virtual_webhook_reference=(str_); end
   def virtual_webhook_repo_id(); end
   def virtual_webhook_repo_id=(str_); end
   def virtual_webhook_saleschannel_id(); end
   def virtual_webhook_saleschannel_id=(str_); end
+  def virtual_webhook_session_id(); end
+  def virtual_webhook_session_id=(str_); end
   def virtual_webhook_shipment_id(); end
   def virtual_webhook_shipment_id=(str_); end
   def virtual_webhook_space_id(); end
@@ -322,6 +354,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_status=(str_); end
   def virtual_webhook_student_id(); end
   def virtual_webhook_student_id=(str_); end
+  def virtual_webhook_table_id(); end
+  def virtual_webhook_table_id=(str_); end
   def virtual_webhook_task_id(); end
   def virtual_webhook_task_id=(str_); end
   def virtual_webhook_template_id(); end
@@ -336,6 +370,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_user_id=(str_); end
   def virtual_webhook_user_mentioned_id(); end
   def virtual_webhook_user_mentioned_id=(str_); end
+  def virtual_webhook_visitor_id(); end
+  def virtual_webhook_visitor_id=(str_); end
   def webhook_events(); end
   def webhook_events=(str_); end
 end

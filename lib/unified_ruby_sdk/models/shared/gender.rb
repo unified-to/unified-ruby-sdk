@@ -15,6 +15,9 @@ module UnifiedRubySDK
         enums do
           MALE = new('MALE')
           FEMALE = new('FEMALE')
+          INTERSEX = new('INTERSEX')
+          TRANS = new('TRANS')
+          NON_BINARY = new('NON_BINARY')
         end
       end
     end

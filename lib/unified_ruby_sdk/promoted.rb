@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsPromotedQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsPromotedResponse) }
-    def get_ads_promoted(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_ads_promoted - Retrieve a promoted
-      request = Models::Operations::GetAdsPromotedRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsPromoted2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsPromoted2Response) }
+    def get_ads_promoted2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_ads_promoted2 - Retrieve a promoted
+      request = Models::Operations::GetAdsPromoted2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAdsPromotedRequest,
+        Models::Operations::GetAdsPromoted2Request,
         base_url,
         '/ads/{connection_id}/promoted/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAdsPromotedRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAdsPromoted2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAdsPromoted',
+        operation_id: 'getAdsPromoted2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsPromoted)
-          response = Models::Operations::GetAdsPromotedResponse.new(
+          response = Models::Operations::GetAdsPromoted2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAdsPromotedsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsPromotedsResponse) }
-    def list_ads_promoteds(request:, timeout_ms: nil)
-      # list_ads_promoteds - List all promoteds
+    sig { params(request: Models::Operations::ListAdsPromoteds2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsPromoteds2Response) }
+    def list_ads_promoteds2(request:, timeout_ms: nil)
+      # list_ads_promoteds2 - List all promoteds
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAdsPromotedsRequest,
+        Models::Operations::ListAdsPromoteds2Request,
         base_url,
         '/ads/{connection_id}/promoted',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAdsPromotedsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAdsPromoteds2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAdsPromoteds',
+        operation_id: 'listAdsPromoteds2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AdsPromoted))
-          response = Models::Operations::ListAdsPromotedsResponse.new(
+          response = Models::Operations::ListAdsPromoteds2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

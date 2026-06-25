@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMessagingChannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingChannelResponse) }
-    def get_messaging_channel(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_messaging_channel - Retrieve a channel
-      request = Models::Operations::GetMessagingChannelRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMessagingChannel2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingChannel2Response) }
+    def get_messaging_channel2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_messaging_channel2 - Retrieve a channel
+      request = Models::Operations::GetMessagingChannel2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetMessagingChannelRequest,
+        Models::Operations::GetMessagingChannel2Request,
         base_url,
         '/messaging/{connection_id}/channel/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetMessagingChannelRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetMessagingChannel2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getMessagingChannel',
+        operation_id: 'getMessagingChannel2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MessagingChannel)
-          response = Models::Operations::GetMessagingChannelResponse.new(
+          response = Models::Operations::GetMessagingChannel2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListMessagingChannelsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMessagingChannelsResponse) }
-    def list_messaging_channels(request:, timeout_ms: nil)
-      # list_messaging_channels - List all channels
+    sig { params(request: Models::Operations::ListMessagingChannels2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMessagingChannels2Response) }
+    def list_messaging_channels2(request:, timeout_ms: nil)
+      # list_messaging_channels2 - List all channels
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListMessagingChannelsRequest,
+        Models::Operations::ListMessagingChannels2Request,
         base_url,
         '/messaging/{connection_id}/channel',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListMessagingChannelsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListMessagingChannels2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listMessagingChannels',
+        operation_id: 'listMessagingChannels2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::MessagingChannel))
-          response = Models::Operations::ListMessagingChannelsResponse.new(
+          response = Models::Operations::ListMessagingChannels2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

@@ -5,20 +5,20 @@
 
 ### Available Operations
 
-* [create_accounting_account](#create_accounting_account) - Create an account
-* [get_accounting_account](#get_accounting_account) - Retrieve an account
-* [list_accounting_accounts](#list_accounting_accounts) - List all accounts
-* [patch_accounting_account](#patch_accounting_account) - Update an account
-* [remove_accounting_account](#remove_accounting_account) - Remove an account
-* [update_accounting_account](#update_accounting_account) - Update an account
+* [create_accounting_account2](#create_accounting_account2) - Create an account
+* [get_accounting_account2](#get_accounting_account2) - Retrieve an account
+* [list_accounting_accounts2](#list_accounting_accounts2) - List all accounts
+* [patch_accounting_account2](#patch_accounting_account2) - Update an account
+* [remove_accounting_account2](#remove_accounting_account2) - Remove an account
+* [update_accounting_account2](#update_accounting_account2) - Update an account
 
-## create_accounting_account
+## create_accounting_account2
 
 Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingAccount2" method="post" path="/accounting/{connection_id}/account" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.account.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
+res = s.account.create_accounting_account2(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
 
 unless res.accounting_account.nil?
   # handle response
@@ -48,7 +48,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateAccountingAccountResponse)](../../models/operations/createaccountingaccountresponse.md)**
+**[T.nilable(Models::Operations::CreateAccountingAccount2Response)](../../models/operations/createaccountingaccount2response.md)**
 
 ### Errors
 
@@ -56,13 +56,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_accounting_account
+## get_accounting_account2
 
 Retrieve an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getAccountingAccount" method="get" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getAccountingAccount2" method="get" path="/accounting/{connection_id}/account/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -73,7 +73,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.account.get_accounting_account(connection_id: '<id>', id: '<id>')
+res = s.account.get_accounting_account2(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_account.nil?
   # handle response
@@ -92,7 +92,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::GetAccountingAccountResponse)](../../models/operations/getaccountingaccountresponse.md)**
+**[T.nilable(Models::Operations::GetAccountingAccount2Response)](../../models/operations/getaccountingaccount2response.md)**
 
 ### Errors
 
@@ -100,13 +100,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_accounting_accounts
+## list_accounting_accounts2
 
 List all accounts
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listAccountingAccounts" method="get" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="ruby" operationID="listAccountingAccounts2" method="get" path="/accounting/{connection_id}/account" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -117,11 +117,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListAccountingAccountsRequest.new(
+req = Models::Operations::ListAccountingAccounts2Request.new(
   connection_id: '<id>',
 )
 
-res = s.account.list_accounting_accounts(request: req)
+res = s.account.list_accounting_accounts2(request: req)
 
 unless res.accounting_accounts.nil?
   # handle response
@@ -131,13 +131,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                     | [Models::Operations::ListAccountingAccountsRequest](../../models/operations/listaccountingaccountsrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::ListAccountingAccounts2Request](../../models/operations/listaccountingaccounts2request.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListAccountingAccountsResponse)](../../models/operations/listaccountingaccountsresponse.md)**
+**[T.nilable(Models::Operations::ListAccountingAccounts2Response)](../../models/operations/listaccountingaccounts2response.md)**
 
 ### Errors
 
@@ -145,13 +145,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_accounting_account
+## patch_accounting_account2
 
 Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingAccount2" method="patch" path="/accounting/{connection_id}/account/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -162,13 +162,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchAccountingAccountRequest.new(
+req = Models::Operations::PatchAccountingAccount2Request.new(
   accounting_account: Models::Shared::AccountingAccount.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.account.patch_accounting_account(request: req)
+res = s.account.patch_accounting_account2(request: req)
 
 unless res.accounting_account.nil?
   # handle response
@@ -178,13 +178,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                     | [Models::Operations::PatchAccountingAccountRequest](../../models/operations/patchaccountingaccountrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::PatchAccountingAccount2Request](../../models/operations/patchaccountingaccount2request.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchAccountingAccountResponse)](../../models/operations/patchaccountingaccountresponse.md)**
+**[T.nilable(Models::Operations::PatchAccountingAccount2Response)](../../models/operations/patchaccountingaccount2response.md)**
 
 ### Errors
 
@@ -192,13 +192,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_accounting_account
+## remove_accounting_account2
 
 Remove an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeAccountingAccount" method="delete" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeAccountingAccount2" method="delete" path="/accounting/{connection_id}/account/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -209,7 +209,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.account.remove_accounting_account(connection_id: '<id>', id: '<id>')
+res = s.account.remove_accounting_account2(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -226,7 +226,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveAccountingAccountResponse)](../../models/operations/removeaccountingaccountresponse.md)**
+**[T.nilable(Models::Operations::RemoveAccountingAccount2Response)](../../models/operations/removeaccountingaccount2response.md)**
 
 ### Errors
 
@@ -234,13 +234,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_accounting_account
+## update_accounting_account2
 
 Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingAccount2" method="put" path="/accounting/{connection_id}/account/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -251,13 +251,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateAccountingAccountRequest.new(
+req = Models::Operations::UpdateAccountingAccount2Request.new(
   accounting_account: Models::Shared::AccountingAccount.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.account.update_accounting_account(request: req)
+res = s.account.update_accounting_account2(request: req)
 
 unless res.accounting_account.nil?
   # handle response
@@ -267,13 +267,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                       | [Models::Operations::UpdateAccountingAccountRequest](../../models/operations/updateaccountingaccountrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::UpdateAccountingAccount2Request](../../models/operations/updateaccountingaccount2request.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateAccountingAccountResponse)](../../models/operations/updateaccountingaccountresponse.md)**
+**[T.nilable(Models::Operations::UpdateAccountingAccount2Response)](../../models/operations/updateaccountingaccount2response.md)**
 
 ### Errors
 

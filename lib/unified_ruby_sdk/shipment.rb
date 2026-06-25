@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(shipping_shipment: Models::Shared::ShippingShipment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateShippingShipmentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateShippingShipmentResponse) }
-    def create_shipping_shipment(shipping_shipment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_shipping_shipment - Create a shipment
-      request = Models::Operations::CreateShippingShipmentRequest.new(
+    sig { params(shipping_shipment: Models::Shared::ShippingShipment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateShippingShipment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateShippingShipment2Response) }
+    def create_shipping_shipment2(shipping_shipment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_shipping_shipment2 - Create a shipment
+      request = Models::Operations::CreateShippingShipment2Request.new(
         shipping_shipment: shipping_shipment,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateShippingShipmentRequest,
+        Models::Operations::CreateShippingShipment2Request,
         base_url,
         '/shipping/{connection_id}/shipment',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateShippingShipmentRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateShippingShipment2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createShippingShipment',
+        operation_id: 'createShippingShipment2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ShippingShipment)
-          response = Models::Operations::CreateShippingShipmentResponse.new(
+          response = Models::Operations::CreateShippingShipment2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingShipmentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingShipmentResponse) }
-    def get_shipping_shipment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_shipping_shipment - Retrieve a shipment
-      request = Models::Operations::GetShippingShipmentRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingShipment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingShipment2Response) }
+    def get_shipping_shipment2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_shipping_shipment2 - Retrieve a shipment
+      request = Models::Operations::GetShippingShipment2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetShippingShipmentRequest,
+        Models::Operations::GetShippingShipment2Request,
         base_url,
         '/shipping/{connection_id}/shipment/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetShippingShipmentRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetShippingShipment2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getShippingShipment',
+        operation_id: 'getShippingShipment2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ShippingShipment)
-          response = Models::Operations::GetShippingShipmentResponse.new(
+          response = Models::Operations::GetShippingShipment2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListShippingShipmentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingShipmentsResponse) }
-    def list_shipping_shipments(request:, timeout_ms: nil)
-      # list_shipping_shipments - List all shipments
+    sig { params(request: Models::Operations::ListShippingShipments2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingShipments2Response) }
+    def list_shipping_shipments2(request:, timeout_ms: nil)
+      # list_shipping_shipments2 - List all shipments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListShippingShipmentsRequest,
+        Models::Operations::ListShippingShipments2Request,
         base_url,
         '/shipping/{connection_id}/shipment',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListShippingShipmentsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListShippingShipments2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listShippingShipments',
+        operation_id: 'listShippingShipments2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ShippingShipment))
-          response = Models::Operations::ListShippingShipmentsResponse.new(
+          response = Models::Operations::ListShippingShipments2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchShippingShipmentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchShippingShipmentResponse) }
-    def patch_shipping_shipment(request:, timeout_ms: nil)
-      # patch_shipping_shipment - Update a shipment
+    sig { params(request: Models::Operations::PatchShippingShipment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchShippingShipment2Response) }
+    def patch_shipping_shipment2(request:, timeout_ms: nil)
+      # patch_shipping_shipment2 - Update a shipment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchShippingShipmentRequest,
+        Models::Operations::PatchShippingShipment2Request,
         base_url,
         '/shipping/{connection_id}/shipment/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchShippingShipmentRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchShippingShipment2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchShippingShipment',
+        operation_id: 'patchShippingShipment2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ShippingShipment)
-          response = Models::Operations::PatchShippingShipmentResponse.new(
+          response = Models::Operations::PatchShippingShipment2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveShippingShipmentResponse) }
-    def remove_shipping_shipment(connection_id:, id:, timeout_ms: nil)
-      # remove_shipping_shipment - Remove a shipment
-      request = Models::Operations::RemoveShippingShipmentRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveShippingShipment2Response) }
+    def remove_shipping_shipment2(connection_id:, id:, timeout_ms: nil)
+      # remove_shipping_shipment2 - Remove a shipment
+      request = Models::Operations::RemoveShippingShipment2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveShippingShipmentRequest,
+        Models::Operations::RemoveShippingShipment2Request,
         base_url,
         '/shipping/{connection_id}/shipment/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeShippingShipment',
+        operation_id: 'removeShippingShipment2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveShippingShipmentResponse.new(
+        return Models::Operations::RemoveShippingShipment2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveShippingShipmentResponse.new(
+        return Models::Operations::RemoveShippingShipment2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateShippingShipmentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateShippingShipmentResponse) }
-    def update_shipping_shipment(request:, timeout_ms: nil)
-      # update_shipping_shipment - Update a shipment
+    sig { params(request: Models::Operations::UpdateShippingShipment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateShippingShipment2Response) }
+    def update_shipping_shipment2(request:, timeout_ms: nil)
+      # update_shipping_shipment2 - Update a shipment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateShippingShipmentRequest,
+        Models::Operations::UpdateShippingShipment2Request,
         base_url,
         '/shipping/{connection_id}/shipment/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateShippingShipmentRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateShippingShipment2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateShippingShipment',
+        operation_id: 'updateShippingShipment2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ShippingShipment)
-          response = Models::Operations::UpdateShippingShipmentResponse.new(
+          response = Models::Operations::UpdateShippingShipment2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

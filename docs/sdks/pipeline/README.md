@@ -5,20 +5,20 @@
 
 ### Available Operations
 
-* [create_crm_pipeline](#create_crm_pipeline) - Create a pipeline
-* [get_crm_pipeline](#get_crm_pipeline) - Retrieve a pipeline
-* [list_crm_pipelines](#list_crm_pipelines) - List all pipelines
-* [patch_crm_pipeline](#patch_crm_pipeline) - Update a pipeline
-* [remove_crm_pipeline](#remove_crm_pipeline) - Remove a pipeline
-* [update_crm_pipeline](#update_crm_pipeline) - Update a pipeline
+* [create_crm_pipeline2](#create_crm_pipeline2) - Create a pipeline
+* [get_crm_pipeline2](#get_crm_pipeline2) - Retrieve a pipeline
+* [list_crm_pipelines2](#list_crm_pipelines2) - List all pipelines
+* [patch_crm_pipeline2](#patch_crm_pipeline2) - Update a pipeline
+* [remove_crm_pipeline2](#remove_crm_pipeline2) - Remove a pipeline
+* [update_crm_pipeline2](#update_crm_pipeline2) - Update a pipeline
 
-## create_crm_pipeline
+## create_crm_pipeline2
 
 Create a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmPipeline2" method="post" path="/crm/{connection_id}/pipeline" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.pipeline.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(), connection_id: '<id>')
+res = s.pipeline.create_crm_pipeline2(crm_pipeline: Models::Shared::CrmPipeline.new(), connection_id: '<id>')
 
 unless res.crm_pipeline.nil?
   # handle response
@@ -43,12 +43,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `crm_pipeline`                                                                                                                                   | [Models::Shared::CrmPipeline](../../models/shared/crmpipeline.md)                                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCrmPipelineQueryParamFields](../../models/operations/createcrmpipelinequeryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCrmPipeline2QueryParamFields](../../models/operations/createcrmpipeline2queryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCrmPipelineResponse)](../../models/operations/createcrmpipelineresponse.md)**
+**[T.nilable(Models::Operations::CreateCrmPipeline2Response)](../../models/operations/createcrmpipeline2response.md)**
 
 ### Errors
 
@@ -56,13 +56,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_crm_pipeline
+## get_crm_pipeline2
 
 Retrieve a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCrmPipeline" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCrmPipeline2" method="get" path="/crm/{connection_id}/pipeline/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -73,7 +73,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.pipeline.get_crm_pipeline(connection_id: '<id>', id: '<id>')
+res = s.pipeline.get_crm_pipeline2(connection_id: '<id>', id: '<id>')
 
 unless res.crm_pipeline.nil?
   # handle response
@@ -87,12 +87,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Pipeline                                                                                                                               |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCrmPipelineQueryParamFields](../../models/operations/getcrmpipelinequeryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCrmPipeline2QueryParamFields](../../models/operations/getcrmpipeline2queryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCrmPipelineResponse)](../../models/operations/getcrmpipelineresponse.md)**
+**[T.nilable(Models::Operations::GetCrmPipeline2Response)](../../models/operations/getcrmpipeline2response.md)**
 
 ### Errors
 
@@ -100,13 +100,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_crm_pipelines
+## list_crm_pipelines2
 
 List all pipelines
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCrmPipelines" method="get" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="ruby" operationID="listCrmPipelines2" method="get" path="/crm/{connection_id}/pipeline" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -117,11 +117,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCrmPipelinesRequest.new(
+req = Models::Operations::ListCrmPipelines2Request.new(
   connection_id: '<id>',
 )
 
-res = s.pipeline.list_crm_pipelines(request: req)
+res = s.pipeline.list_crm_pipelines2(request: req)
 
 unless res.crm_pipelines.nil?
   # handle response
@@ -131,13 +131,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::ListCrmPipelinesRequest](../../models/operations/listcrmpipelinesrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListCrmPipelines2Request](../../models/operations/listcrmpipelines2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCrmPipelinesResponse)](../../models/operations/listcrmpipelinesresponse.md)**
+**[T.nilable(Models::Operations::ListCrmPipelines2Response)](../../models/operations/listcrmpipelines2response.md)**
 
 ### Errors
 
@@ -145,13 +145,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_crm_pipeline
+## patch_crm_pipeline2
 
 Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmPipeline2" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -162,13 +162,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCrmPipelineRequest.new(
+req = Models::Operations::PatchCrmPipeline2Request.new(
   crm_pipeline: Models::Shared::CrmPipeline.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.pipeline.patch_crm_pipeline(request: req)
+res = s.pipeline.patch_crm_pipeline2(request: req)
 
 unless res.crm_pipeline.nil?
   # handle response
@@ -178,13 +178,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::PatchCrmPipelineRequest](../../models/operations/patchcrmpipelinerequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::PatchCrmPipeline2Request](../../models/operations/patchcrmpipeline2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCrmPipelineResponse)](../../models/operations/patchcrmpipelineresponse.md)**
+**[T.nilable(Models::Operations::PatchCrmPipeline2Response)](../../models/operations/patchcrmpipeline2response.md)**
 
 ### Errors
 
@@ -192,13 +192,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_crm_pipeline
+## remove_crm_pipeline2
 
 Remove a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeCrmPipeline" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeCrmPipeline2" method="delete" path="/crm/{connection_id}/pipeline/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -209,7 +209,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.pipeline.remove_crm_pipeline(connection_id: '<id>', id: '<id>')
+res = s.pipeline.remove_crm_pipeline2(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -226,7 +226,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveCrmPipelineResponse)](../../models/operations/removecrmpipelineresponse.md)**
+**[T.nilable(Models::Operations::RemoveCrmPipeline2Response)](../../models/operations/removecrmpipeline2response.md)**
 
 ### Errors
 
@@ -234,13 +234,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_crm_pipeline
+## update_crm_pipeline2
 
 Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmPipeline2" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -251,13 +251,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateCrmPipelineRequest.new(
+req = Models::Operations::UpdateCrmPipeline2Request.new(
   crm_pipeline: Models::Shared::CrmPipeline.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.pipeline.update_crm_pipeline(request: req)
+res = s.pipeline.update_crm_pipeline2(request: req)
 
 unless res.crm_pipeline.nil?
   # handle response
@@ -267,13 +267,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::UpdateCrmPipelineRequest](../../models/operations/updatecrmpipelinerequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::UpdateCrmPipeline2Request](../../models/operations/updatecrmpipeline2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateCrmPipelineResponse)](../../models/operations/updatecrmpipelineresponse.md)**
+**[T.nilable(Models::Operations::UpdateCrmPipeline2Response)](../../models/operations/updatecrmpipeline2response.md)**
 
 ### Errors
 

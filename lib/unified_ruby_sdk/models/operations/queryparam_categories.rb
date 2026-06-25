@@ -37,11 +37,13 @@ module UnifiedRubySDK
           CALENDAR = new('calendar')
           VERIFICATION = new('verification')
           ADS = new('ads')
+          ANALYTICS = new('analytics')
           FORMS = new('forms')
           SHIPPING = new('shipping')
           ASSESSMENT = new('assessment')
           SIGNING = new('signing')
           CLUBS = new('clubs')
+          DATASTORE = new('datastore')
         end
       end
     end

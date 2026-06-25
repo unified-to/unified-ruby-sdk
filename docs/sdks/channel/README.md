@@ -5,16 +5,16 @@
 
 ### Available Operations
 
-* [get_messaging_channel](#get_messaging_channel) - Retrieve a channel
-* [list_messaging_channels](#list_messaging_channels) - List all channels
+* [get_messaging_channel2](#get_messaging_channel2) - Retrieve a channel
+* [list_messaging_channels2](#list_messaging_channels2) - List all channels
 
-## get_messaging_channel
+## get_messaging_channel2
 
 Retrieve a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getMessagingChannel" method="get" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getMessagingChannel2" method="get" path="/messaging/{connection_id}/channel/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -25,7 +25,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.channel.get_messaging_channel(connection_id: '<id>', id: '<id>')
+res = s.channel.get_messaging_channel2(connection_id: '<id>', id: '<id>')
 
 unless res.messaging_channel.nil?
   # handle response
@@ -39,12 +39,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Channel                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetMessagingChannelQueryParamFields](../../models/operations/getmessagingchannelqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetMessagingChannel2QueryParamFields](../../models/operations/getmessagingchannel2queryparamfields.md)>            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetMessagingChannelResponse)](../../models/operations/getmessagingchannelresponse.md)**
+**[T.nilable(Models::Operations::GetMessagingChannel2Response)](../../models/operations/getmessagingchannel2response.md)**
 
 ### Errors
 
@@ -52,13 +52,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_messaging_channels
+## list_messaging_channels2
 
 List all channels
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listMessagingChannels" method="get" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="ruby" operationID="listMessagingChannels2" method="get" path="/messaging/{connection_id}/channel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -69,11 +69,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListMessagingChannelsRequest.new(
+req = Models::Operations::ListMessagingChannels2Request.new(
   connection_id: '<id>',
 )
 
-res = s.channel.list_messaging_channels(request: req)
+res = s.channel.list_messaging_channels2(request: req)
 
 unless res.messaging_channels.nil?
   # handle response
@@ -83,13 +83,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                   | [Models::Operations::ListMessagingChannelsRequest](../../models/operations/listmessagingchannelsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::ListMessagingChannels2Request](../../models/operations/listmessagingchannels2request.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListMessagingChannelsResponse)](../../models/operations/listmessagingchannelsresponse.md)**
+**[T.nilable(Models::Operations::ListMessagingChannels2Response)](../../models/operations/listmessagingchannels2response.md)**
 
 ### Errors
 

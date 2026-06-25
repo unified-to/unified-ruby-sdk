@@ -5,20 +5,20 @@
 
 ### Available Operations
 
-* [create_ads_ad](#create_ads_ad) - Create an ad
-* [get_ads_ad](#get_ads_ad) - Retrieve an ad
-* [list_ads_ads](#list_ads_ads) - List all ads
-* [patch_ads_ad](#patch_ads_ad) - Update an ad
-* [remove_ads_ad](#remove_ads_ad) - Remove an ad
-* [update_ads_ad](#update_ads_ad) - Update an ad
+* [create_ads_ad2](#create_ads_ad2) - Create an ad
+* [get_ads_ad2](#get_ads_ad2) - Retrieve an ad
+* [list_ads_ads2](#list_ads_ads2) - List all ads
+* [patch_ads_ad2](#patch_ads_ad2) - Update an ad
+* [remove_ads_ad2](#remove_ads_ad2) - Remove an ad
+* [update_ads_ad2](#update_ads_ad2) - Update an ad
 
-## create_ads_ad
+## create_ads_ad2
 
 Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsAd2" method="post" path="/ads/{connection_id}/ad" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ad.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(), connection_id: '<id>')
+res = s.ad.create_ads_ad2(ads_ad: Models::Shared::AdsAd.new(), connection_id: '<id>')
 
 unless res.ads_ad.nil?
   # handle response
@@ -43,12 +43,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `ads_ad`                                                                                                                                         | [Models::Shared::AdsAd](../../models/shared/adsad.md)                                                                                            | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAdsAdQueryParamFields](../../models/operations/createadsadqueryparamfields.md)>                              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAdsAd2QueryParamFields](../../models/operations/createadsad2queryparamfields.md)>                            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateAdsAdResponse)](../../models/operations/createadsadresponse.md)**
+**[T.nilable(Models::Operations::CreateAdsAd2Response)](../../models/operations/createadsad2response.md)**
 
 ### Errors
 
@@ -56,13 +56,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_ads_ad
+## get_ads_ad2
 
 Retrieve an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getAdsAd" method="get" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getAdsAd2" method="get" path="/ads/{connection_id}/ad/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -73,7 +73,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ad.get_ads_ad(connection_id: '<id>', id: '<id>')
+res = s.ad.get_ads_ad2(connection_id: '<id>', id: '<id>')
 
 unless res.ads_ad.nil?
   # handle response
@@ -87,12 +87,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Ad                                                                                                                                     |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAdsAdQueryParamFields](../../models/operations/getadsadqueryparamfields.md)>                                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAdsAd2QueryParamFields](../../models/operations/getadsad2queryparamfields.md)>                                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetAdsAdResponse)](../../models/operations/getadsadresponse.md)**
+**[T.nilable(Models::Operations::GetAdsAd2Response)](../../models/operations/getadsad2response.md)**
 
 ### Errors
 
@@ -100,13 +100,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_ads_ads
+## list_ads_ads2
 
 List all ads
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listAdsAds" method="get" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="ruby" operationID="listAdsAds2" method="get" path="/ads/{connection_id}/ad" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -117,11 +117,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListAdsAdsRequest.new(
+req = Models::Operations::ListAdsAds2Request.new(
   connection_id: '<id>',
 )
 
-res = s.ad.list_ads_ads(request: req)
+res = s.ad.list_ads_ads2(request: req)
 
 unless res.ads_ads.nil?
   # handle response
@@ -131,13 +131,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [Models::Operations::ListAdsAdsRequest](../../models/operations/listadsadsrequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [Models::Operations::ListAdsAds2Request](../../models/operations/listadsads2request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListAdsAdsResponse)](../../models/operations/listadsadsresponse.md)**
+**[T.nilable(Models::Operations::ListAdsAds2Response)](../../models/operations/listadsads2response.md)**
 
 ### Errors
 
@@ -145,13 +145,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_ads_ad
+## patch_ads_ad2
 
 Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsAd2" method="patch" path="/ads/{connection_id}/ad/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -162,13 +162,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchAdsAdRequest.new(
+req = Models::Operations::PatchAdsAd2Request.new(
   ads_ad: Models::Shared::AdsAd.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.ad.patch_ads_ad(request: req)
+res = s.ad.patch_ads_ad2(request: req)
 
 unless res.ads_ad.nil?
   # handle response
@@ -178,13 +178,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| `request`                                                                             | [Models::Operations::PatchAdsAdRequest](../../models/operations/patchadsadrequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [Models::Operations::PatchAdsAd2Request](../../models/operations/patchadsad2request.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchAdsAdResponse)](../../models/operations/patchadsadresponse.md)**
+**[T.nilable(Models::Operations::PatchAdsAd2Response)](../../models/operations/patchadsad2response.md)**
 
 ### Errors
 
@@ -192,13 +192,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_ads_ad
+## remove_ads_ad2
 
 Remove an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeAdsAd" method="delete" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeAdsAd2" method="delete" path="/ads/{connection_id}/ad/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -209,7 +209,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ad.remove_ads_ad(connection_id: '<id>', id: '<id>')
+res = s.ad.remove_ads_ad2(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -226,7 +226,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveAdsAdResponse)](../../models/operations/removeadsadresponse.md)**
+**[T.nilable(Models::Operations::RemoveAdsAd2Response)](../../models/operations/removeadsad2response.md)**
 
 ### Errors
 
@@ -234,13 +234,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_ads_ad
+## update_ads_ad2
 
 Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsAd2" method="put" path="/ads/{connection_id}/ad/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -251,13 +251,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateAdsAdRequest.new(
+req = Models::Operations::UpdateAdsAd2Request.new(
   ads_ad: Models::Shared::AdsAd.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.ad.update_ads_ad(request: req)
+res = s.ad.update_ads_ad2(request: req)
 
 unless res.ads_ad.nil?
   # handle response
@@ -267,13 +267,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [Models::Operations::UpdateAdsAdRequest](../../models/operations/updateadsadrequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [Models::Operations::UpdateAdsAd2Request](../../models/operations/updateadsad2request.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateAdsAdResponse)](../../models/operations/updateadsadresponse.md)**
+**[T.nilable(Models::Operations::UpdateAdsAd2Response)](../../models/operations/updateadsad2response.md)**
 
 ### Errors
 

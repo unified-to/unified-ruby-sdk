@@ -5,22 +5,22 @@
 
 ### Available Operations
 
-* [create_passthrough_json](#create_passthrough_json) - Passthrough POST
-* [create_passthrough_raw](#create_passthrough_raw) - Passthrough POST
-* [list_passthroughs](#list_passthroughs) - Passthrough GET
-* [patch_passthrough_json](#patch_passthrough_json) - Passthrough PUT
-* [patch_passthrough_raw](#patch_passthrough_raw) - Passthrough PUT
-* [remove_passthrough](#remove_passthrough) - Passthrough DELETE
-* [update_passthrough_json](#update_passthrough_json) - Passthrough PUT
-* [update_passthrough_raw](#update_passthrough_raw) - Passthrough PUT
+* [create_passthrough2_json](#create_passthrough2_json) - Passthrough POST
+* [create_passthrough2_raw](#create_passthrough2_raw) - Passthrough POST
+* [list_passthroughs2](#list_passthroughs2) - Passthrough GET
+* [patch_passthrough2_json](#patch_passthrough2_json) - Passthrough PUT
+* [patch_passthrough2_raw](#patch_passthrough2_raw) - Passthrough PUT
+* [remove_passthrough2](#remove_passthrough2) - Passthrough DELETE
+* [update_passthrough2_json](#update_passthrough2_json) - Passthrough PUT
+* [update_passthrough2_raw](#update_passthrough2_raw) - Passthrough PUT
 
-## create_passthrough_json
+## create_passthrough2_json
 
 Passthrough POST
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPassthrough_json" method="post" path="/passthrough/{connection_id}/{path}" -->
+<!-- UsageSnippet language="ruby" operationID="createPassthrough2_json" method="post" path="/passthrough/{connection_id}/{path}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -31,7 +31,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.create_passthrough_json(connection_id: '<id>', path: '/var/log')
+res = s.passthrough.create_passthrough2_json(connection_id: '<id>', path: '/net')
 
 if res.status_code == 200
   # handle response
@@ -50,7 +50,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::CreatePassthroughJsonResponse)](../../models/operations/createpassthroughjsonresponse.md)**
+**[T.nilable(Models::Operations::CreatePassthrough2JsonResponse)](../../models/operations/createpassthrough2jsonresponse.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_passthrough_raw
+## create_passthrough2_raw
 
 Passthrough POST
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPassthrough_raw" method="post" path="/passthrough/{connection_id}/{path}" -->
+<!-- UsageSnippet language="ruby" operationID="createPassthrough2_raw" method="post" path="/passthrough/{connection_id}/{path}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -75,7 +75,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.create_passthrough_raw(connection_id: '<id>', path: '/var/log')
+res = s.passthrough.create_passthrough2_raw(connection_id: '<id>', path: '/net')
 
 if res.status_code == 200
   # handle response
@@ -94,7 +94,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::CreatePassthroughRawResponse)](../../models/operations/createpassthroughrawresponse.md)**
+**[T.nilable(Models::Operations::CreatePassthrough2RawResponse)](../../models/operations/createpassthrough2rawresponse.md)**
 
 ### Errors
 
@@ -102,13 +102,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_passthroughs
+## list_passthroughs2
 
 Passthrough GET
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listPassthroughs" method="get" path="/passthrough/{connection_id}/{path}" -->
+<!-- UsageSnippet language="ruby" operationID="listPassthroughs2" method="get" path="/passthrough/{connection_id}/{path}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -119,7 +119,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.list_passthroughs(connection_id: '<id>', path: '/System')
+res = s.passthrough.list_passthroughs2(connection_id: '<id>', path: '/usr/local/src')
 
 if res.status_code == 200
   # handle response
@@ -137,7 +137,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::ListPassthroughsResponse)](../../models/operations/listpassthroughsresponse.md)**
+**[T.nilable(Models::Operations::ListPassthroughs2Response)](../../models/operations/listpassthroughs2response.md)**
 
 ### Errors
 
@@ -145,13 +145,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_passthrough_json
+## patch_passthrough2_json
 
 Passthrough PUT
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPassthrough_json" method="patch" path="/passthrough/{connection_id}/{path}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPassthrough2_json" method="patch" path="/passthrough/{connection_id}/{path}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -162,7 +162,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.patch_passthrough_json(connection_id: '<id>', path: '/System')
+res = s.passthrough.patch_passthrough2_json(connection_id: '<id>', path: '/usr/X11R6')
 
 if res.status_code == 200
   # handle response
@@ -181,7 +181,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchPassthroughJsonResponse)](../../models/operations/patchpassthroughjsonresponse.md)**
+**[T.nilable(Models::Operations::PatchPassthrough2JsonResponse)](../../models/operations/patchpassthrough2jsonresponse.md)**
 
 ### Errors
 
@@ -189,13 +189,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_passthrough_raw
+## patch_passthrough2_raw
 
 Passthrough PUT
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPassthrough_raw" method="patch" path="/passthrough/{connection_id}/{path}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPassthrough2_raw" method="patch" path="/passthrough/{connection_id}/{path}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -206,7 +206,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.patch_passthrough_raw(connection_id: '<id>', path: '/System')
+res = s.passthrough.patch_passthrough2_raw(connection_id: '<id>', path: '/usr/X11R6')
 
 if res.status_code == 200
   # handle response
@@ -225,7 +225,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchPassthroughRawResponse)](../../models/operations/patchpassthroughrawresponse.md)**
+**[T.nilable(Models::Operations::PatchPassthrough2RawResponse)](../../models/operations/patchpassthrough2rawresponse.md)**
 
 ### Errors
 
@@ -233,13 +233,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_passthrough
+## remove_passthrough2
 
 Passthrough DELETE
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removePassthrough" method="delete" path="/passthrough/{connection_id}/{path}" -->
+<!-- UsageSnippet language="ruby" operationID="removePassthrough2" method="delete" path="/passthrough/{connection_id}/{path}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -250,7 +250,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.remove_passthrough(connection_id: '<id>', path: '/bin')
+res = s.passthrough.remove_passthrough2(connection_id: '<id>', path: '/usr/include')
 
 if res.status_code == 200
   # handle response
@@ -268,7 +268,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemovePassthroughResponse)](../../models/operations/removepassthroughresponse.md)**
+**[T.nilable(Models::Operations::RemovePassthrough2Response)](../../models/operations/removepassthrough2response.md)**
 
 ### Errors
 
@@ -276,13 +276,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_passthrough_json
+## update_passthrough2_json
 
 Passthrough PUT
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePassthrough_json" method="put" path="/passthrough/{connection_id}/{path}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePassthrough2_json" method="put" path="/passthrough/{connection_id}/{path}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -293,7 +293,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.update_passthrough_json(connection_id: '<id>', path: '/var/tmp')
+res = s.passthrough.update_passthrough2_json(connection_id: '<id>', path: '/home/user/dir')
 
 if res.status_code == 200
   # handle response
@@ -312,7 +312,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdatePassthroughJsonResponse)](../../models/operations/updatepassthroughjsonresponse.md)**
+**[T.nilable(Models::Operations::UpdatePassthrough2JsonResponse)](../../models/operations/updatepassthrough2jsonresponse.md)**
 
 ### Errors
 
@@ -320,13 +320,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_passthrough_raw
+## update_passthrough2_raw
 
 Passthrough PUT
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePassthrough_raw" method="put" path="/passthrough/{connection_id}/{path}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePassthrough2_raw" method="put" path="/passthrough/{connection_id}/{path}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -337,7 +337,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.passthrough.update_passthrough_raw(connection_id: '<id>', path: '/var/tmp')
+res = s.passthrough.update_passthrough2_raw(connection_id: '<id>', path: '/home/user/dir')
 
 if res.status_code == 200
   # handle response
@@ -356,7 +356,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdatePassthroughRawResponse)](../../models/operations/updatepassthroughrawresponse.md)**
+**[T.nilable(Models::Operations::UpdatePassthrough2RawResponse)](../../models/operations/updatepassthrough2rawresponse.md)**
 
 ### Errors
 

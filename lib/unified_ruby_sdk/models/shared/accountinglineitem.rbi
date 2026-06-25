@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::AccountingLineitem
   def created_at=(str_); end
   def discount_amount(); end
   def discount_amount=(str_); end
+  def fees(); end
+  def fees=(str_); end
   def id(); end
   def id=(str_); end
   def item_description(); end

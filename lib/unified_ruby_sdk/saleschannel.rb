@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_saleschannel: Models::Shared::CommerceSaleschannel, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceSaleschannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceSaleschannelResponse) }
-    def create_commerce_saleschannel(commerce_saleschannel:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_commerce_saleschannel - Create a saleschannel
-      request = Models::Operations::CreateCommerceSaleschannelRequest.new(
+    sig { params(commerce_saleschannel: Models::Shared::CommerceSaleschannel, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceSaleschannel2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceSaleschannel2Response) }
+    def create_commerce_saleschannel2(commerce_saleschannel:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_commerce_saleschannel2 - Create a saleschannel
+      request = Models::Operations::CreateCommerceSaleschannel2Request.new(
         commerce_saleschannel: commerce_saleschannel,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCommerceSaleschannelRequest,
+        Models::Operations::CreateCommerceSaleschannel2Request,
         base_url,
         '/commerce/{connection_id}/saleschannel',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCommerceSaleschannelRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCommerceSaleschannel2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCommerceSaleschannel',
+        operation_id: 'createCommerceSaleschannel2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceSaleschannel)
-          response = Models::Operations::CreateCommerceSaleschannelResponse.new(
+          response = Models::Operations::CreateCommerceSaleschannel2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceSaleschannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceSaleschannelResponse) }
-    def get_commerce_saleschannel(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_commerce_saleschannel - Retrieve a saleschannel
-      request = Models::Operations::GetCommerceSaleschannelRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceSaleschannel2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceSaleschannel2Response) }
+    def get_commerce_saleschannel2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_commerce_saleschannel2 - Retrieve a saleschannel
+      request = Models::Operations::GetCommerceSaleschannel2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCommerceSaleschannelRequest,
+        Models::Operations::GetCommerceSaleschannel2Request,
         base_url,
         '/commerce/{connection_id}/saleschannel/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCommerceSaleschannelRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCommerceSaleschannel2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCommerceSaleschannel',
+        operation_id: 'getCommerceSaleschannel2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceSaleschannel)
-          response = Models::Operations::GetCommerceSaleschannelResponse.new(
+          response = Models::Operations::GetCommerceSaleschannel2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCommerceSaleschannelsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceSaleschannelsResponse) }
-    def list_commerce_saleschannels(request:, timeout_ms: nil)
-      # list_commerce_saleschannels - List all saleschannels
+    sig { params(request: Models::Operations::ListCommerceSaleschannels2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceSaleschannels2Response) }
+    def list_commerce_saleschannels2(request:, timeout_ms: nil)
+      # list_commerce_saleschannels2 - List all saleschannels
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCommerceSaleschannelsRequest,
+        Models::Operations::ListCommerceSaleschannels2Request,
         base_url,
         '/commerce/{connection_id}/saleschannel',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCommerceSaleschannelsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCommerceSaleschannels2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCommerceSaleschannels',
+        operation_id: 'listCommerceSaleschannels2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CommerceSaleschannel))
-          response = Models::Operations::ListCommerceSaleschannelsResponse.new(
+          response = Models::Operations::ListCommerceSaleschannels2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCommerceSaleschannelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceSaleschannelResponse) }
-    def patch_commerce_saleschannel(request:, timeout_ms: nil)
-      # patch_commerce_saleschannel - Update a saleschannel
+    sig { params(request: Models::Operations::PatchCommerceSaleschannel2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceSaleschannel2Response) }
+    def patch_commerce_saleschannel2(request:, timeout_ms: nil)
+      # patch_commerce_saleschannel2 - Update a saleschannel
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCommerceSaleschannelRequest,
+        Models::Operations::PatchCommerceSaleschannel2Request,
         base_url,
         '/commerce/{connection_id}/saleschannel/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCommerceSaleschannelRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCommerceSaleschannel2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCommerceSaleschannel',
+        operation_id: 'patchCommerceSaleschannel2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceSaleschannel)
-          response = Models::Operations::PatchCommerceSaleschannelResponse.new(
+          response = Models::Operations::PatchCommerceSaleschannel2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceSaleschannelResponse) }
-    def remove_commerce_saleschannel(connection_id:, id:, timeout_ms: nil)
-      # remove_commerce_saleschannel - Remove a saleschannel
-      request = Models::Operations::RemoveCommerceSaleschannelRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceSaleschannel2Response) }
+    def remove_commerce_saleschannel2(connection_id:, id:, timeout_ms: nil)
+      # remove_commerce_saleschannel2 - Remove a saleschannel
+      request = Models::Operations::RemoveCommerceSaleschannel2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCommerceSaleschannelRequest,
+        Models::Operations::RemoveCommerceSaleschannel2Request,
         base_url,
         '/commerce/{connection_id}/saleschannel/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCommerceSaleschannel',
+        operation_id: 'removeCommerceSaleschannel2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceSaleschannelResponse.new(
+        return Models::Operations::RemoveCommerceSaleschannel2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceSaleschannelResponse.new(
+        return Models::Operations::RemoveCommerceSaleschannel2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCommerceSaleschannelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceSaleschannelResponse) }
-    def update_commerce_saleschannel(request:, timeout_ms: nil)
-      # update_commerce_saleschannel - Update a saleschannel
+    sig { params(request: Models::Operations::UpdateCommerceSaleschannel2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceSaleschannel2Response) }
+    def update_commerce_saleschannel2(request:, timeout_ms: nil)
+      # update_commerce_saleschannel2 - Update a saleschannel
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCommerceSaleschannelRequest,
+        Models::Operations::UpdateCommerceSaleschannel2Request,
         base_url,
         '/commerce/{connection_id}/saleschannel/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceSaleschannelRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceSaleschannel2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCommerceSaleschannel',
+        operation_id: 'updateCommerceSaleschannel2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceSaleschannel)
-          response = Models::Operations::UpdateCommerceSaleschannelResponse.new(
+          response = Models::Operations::UpdateCommerceSaleschannel2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

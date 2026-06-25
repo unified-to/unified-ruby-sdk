@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughJsonResponse) }
-    def create_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
-      # create_passthrough_json - Passthrough POST
-      request = Models::Operations::CreatePassthroughJsonRequest.new(
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthrough2JsonResponse) }
+    def create_passthrough2_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+      # create_passthrough2_json - Passthrough POST
+      request = Models::Operations::CreatePassthrough2JsonRequest.new(
         connection_id: connection_id,
         path: path,
         request_body: request_body,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreatePassthroughJsonRequest,
+        Models::Operations::CreatePassthrough2JsonRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -68,7 +68,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreatePassthroughJsonRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreatePassthrough2JsonRequest, request, nil)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -84,7 +84,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createPassthrough_json',
+        operation_id: 'createPassthrough2_json',
         security_source: @sdk_configuration.security_source
       )
 
@@ -141,7 +141,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::CreatePassthroughJsonResponse.new(
+        return Models::Operations::CreatePassthrough2JsonResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -154,7 +154,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::CreatePassthroughJsonResponse.new(
+        return Models::Operations::CreatePassthrough2JsonResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -174,7 +174,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
-          response = Models::Operations::CreatePassthroughJsonResponse.new(
+          response = Models::Operations::CreatePassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -192,7 +192,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::CreatePassthroughJsonResponse.new(
+          return Models::Operations::CreatePassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -208,7 +208,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::CreatePassthroughJsonResponse.new(
+          return Models::Operations::CreatePassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -224,7 +224,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::CreatePassthroughJsonResponse.new(
+          return Models::Operations::CreatePassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -240,7 +240,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::CreatePassthroughJsonResponse.new(
+          return Models::Operations::CreatePassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -254,10 +254,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughRawResponse) }
-    def create_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
-      # create_passthrough_raw - Passthrough POST
-      request = Models::Operations::CreatePassthroughRawRequest.new(
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthrough2RawResponse) }
+    def create_passthrough2_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+      # create_passthrough2_raw - Passthrough POST
+      request = Models::Operations::CreatePassthrough2RawRequest.new(
         connection_id: connection_id,
         path: path,
         request_body: request_body,
@@ -266,7 +266,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreatePassthroughRawRequest,
+        Models::Operations::CreatePassthrough2RawRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -283,7 +283,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreatePassthroughRawRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreatePassthrough2RawRequest, request, nil)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -299,7 +299,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createPassthrough_raw',
+        operation_id: 'createPassthrough2_raw',
         security_source: @sdk_configuration.security_source
       )
 
@@ -356,7 +356,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::CreatePassthroughRawResponse.new(
+        return Models::Operations::CreatePassthrough2RawResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -369,7 +369,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::CreatePassthroughRawResponse.new(
+        return Models::Operations::CreatePassthrough2RawResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -389,7 +389,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
-          response = Models::Operations::CreatePassthroughRawResponse.new(
+          response = Models::Operations::CreatePassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -407,7 +407,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::CreatePassthroughRawResponse.new(
+          return Models::Operations::CreatePassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -423,7 +423,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::CreatePassthroughRawResponse.new(
+          return Models::Operations::CreatePassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -439,7 +439,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::CreatePassthroughRawResponse.new(
+          return Models::Operations::CreatePassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -455,7 +455,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::CreatePassthroughRawResponse.new(
+          return Models::Operations::CreatePassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -469,10 +469,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPassthroughsResponse) }
-    def list_passthroughs(connection_id:, path:, query: nil, timeout_ms: nil)
-      # list_passthroughs - Passthrough GET
-      request = Models::Operations::ListPassthroughsRequest.new(
+    sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPassthroughs2Response) }
+    def list_passthroughs2(connection_id:, path:, query: nil, timeout_ms: nil)
+      # list_passthroughs2 - Passthrough GET
+      request = Models::Operations::ListPassthroughs2Request.new(
         connection_id: connection_id,
         path: path,
         query: query
@@ -480,14 +480,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListPassthroughsRequest,
+        Models::Operations::ListPassthroughs2Request,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListPassthroughsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListPassthroughs2Request, request, nil)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -503,7 +503,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listPassthroughs',
+        operation_id: 'listPassthroughs2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -559,7 +559,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::ListPassthroughsResponse.new(
+        return Models::Operations::ListPassthroughs2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -572,7 +572,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::ListPassthroughsResponse.new(
+        return Models::Operations::ListPassthroughs2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -592,7 +592,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
-          response = Models::Operations::ListPassthroughsResponse.new(
+          response = Models::Operations::ListPassthroughs2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -610,7 +610,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::ListPassthroughsResponse.new(
+          return Models::Operations::ListPassthroughs2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -626,7 +626,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::ListPassthroughsResponse.new(
+          return Models::Operations::ListPassthroughs2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -642,7 +642,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::ListPassthroughsResponse.new(
+          return Models::Operations::ListPassthroughs2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -658,7 +658,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::ListPassthroughsResponse.new(
+          return Models::Operations::ListPassthroughs2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -672,10 +672,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughJsonResponse) }
-    def patch_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
-      # patch_passthrough_json - Passthrough PUT
-      request = Models::Operations::PatchPassthroughJsonRequest.new(
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthrough2JsonResponse) }
+    def patch_passthrough2_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+      # patch_passthrough2_json - Passthrough PUT
+      request = Models::Operations::PatchPassthrough2JsonRequest.new(
         connection_id: connection_id,
         path: path,
         request_body: request_body,
@@ -684,7 +684,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchPassthroughJsonRequest,
+        Models::Operations::PatchPassthrough2JsonRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -701,7 +701,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchPassthroughJsonRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchPassthrough2JsonRequest, request, nil)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -717,7 +717,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchPassthrough_json',
+        operation_id: 'patchPassthrough2_json',
         security_source: @sdk_configuration.security_source
       )
 
@@ -774,7 +774,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::PatchPassthroughJsonResponse.new(
+        return Models::Operations::PatchPassthrough2JsonResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -787,7 +787,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::PatchPassthroughJsonResponse.new(
+        return Models::Operations::PatchPassthrough2JsonResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -807,7 +807,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
-          response = Models::Operations::PatchPassthroughJsonResponse.new(
+          response = Models::Operations::PatchPassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -825,7 +825,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::PatchPassthroughJsonResponse.new(
+          return Models::Operations::PatchPassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -841,7 +841,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::PatchPassthroughJsonResponse.new(
+          return Models::Operations::PatchPassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -857,7 +857,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::PatchPassthroughJsonResponse.new(
+          return Models::Operations::PatchPassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -873,7 +873,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::PatchPassthroughJsonResponse.new(
+          return Models::Operations::PatchPassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -887,10 +887,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughRawResponse) }
-    def patch_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
-      # patch_passthrough_raw - Passthrough PUT
-      request = Models::Operations::PatchPassthroughRawRequest.new(
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthrough2RawResponse) }
+    def patch_passthrough2_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+      # patch_passthrough2_raw - Passthrough PUT
+      request = Models::Operations::PatchPassthrough2RawRequest.new(
         connection_id: connection_id,
         path: path,
         request_body: request_body,
@@ -899,7 +899,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchPassthroughRawRequest,
+        Models::Operations::PatchPassthrough2RawRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -916,7 +916,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchPassthroughRawRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchPassthrough2RawRequest, request, nil)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -932,7 +932,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchPassthrough_raw',
+        operation_id: 'patchPassthrough2_raw',
         security_source: @sdk_configuration.security_source
       )
 
@@ -989,7 +989,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::PatchPassthroughRawResponse.new(
+        return Models::Operations::PatchPassthrough2RawResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1002,7 +1002,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::PatchPassthroughRawResponse.new(
+        return Models::Operations::PatchPassthrough2RawResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1022,7 +1022,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
-          response = Models::Operations::PatchPassthroughRawResponse.new(
+          response = Models::Operations::PatchPassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1040,7 +1040,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::PatchPassthroughRawResponse.new(
+          return Models::Operations::PatchPassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1056,7 +1056,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::PatchPassthroughRawResponse.new(
+          return Models::Operations::PatchPassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1072,7 +1072,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::PatchPassthroughRawResponse.new(
+          return Models::Operations::PatchPassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1088,7 +1088,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::PatchPassthroughRawResponse.new(
+          return Models::Operations::PatchPassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1102,10 +1102,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePassthroughResponse) }
-    def remove_passthrough(connection_id:, path:, query: nil, timeout_ms: nil)
-      # remove_passthrough - Passthrough DELETE
-      request = Models::Operations::RemovePassthroughRequest.new(
+    sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePassthrough2Response) }
+    def remove_passthrough2(connection_id:, path:, query: nil, timeout_ms: nil)
+      # remove_passthrough2 - Passthrough DELETE
+      request = Models::Operations::RemovePassthrough2Request.new(
         connection_id: connection_id,
         path: path,
         query: query
@@ -1113,14 +1113,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemovePassthroughRequest,
+        Models::Operations::RemovePassthrough2Request,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::RemovePassthroughRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::RemovePassthrough2Request, request, nil)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1136,7 +1136,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removePassthrough',
+        operation_id: 'removePassthrough2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1192,7 +1192,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemovePassthroughResponse.new(
+        return Models::Operations::RemovePassthrough2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1205,7 +1205,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemovePassthroughResponse.new(
+        return Models::Operations::RemovePassthrough2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1225,7 +1225,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
-          response = Models::Operations::RemovePassthroughResponse.new(
+          response = Models::Operations::RemovePassthrough2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1243,7 +1243,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::RemovePassthroughResponse.new(
+          return Models::Operations::RemovePassthrough2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1259,7 +1259,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::RemovePassthroughResponse.new(
+          return Models::Operations::RemovePassthrough2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1275,7 +1275,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::RemovePassthroughResponse.new(
+          return Models::Operations::RemovePassthrough2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1291,7 +1291,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::RemovePassthroughResponse.new(
+          return Models::Operations::RemovePassthrough2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1305,10 +1305,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughJsonResponse) }
-    def update_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
-      # update_passthrough_json - Passthrough PUT
-      request = Models::Operations::UpdatePassthroughJsonRequest.new(
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthrough2JsonResponse) }
+    def update_passthrough2_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+      # update_passthrough2_json - Passthrough PUT
+      request = Models::Operations::UpdatePassthrough2JsonRequest.new(
         connection_id: connection_id,
         path: path,
         request_body: request_body,
@@ -1317,7 +1317,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdatePassthroughJsonRequest,
+        Models::Operations::UpdatePassthrough2JsonRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -1334,7 +1334,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdatePassthroughJsonRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdatePassthrough2JsonRequest, request, nil)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1350,7 +1350,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updatePassthrough_json',
+        operation_id: 'updatePassthrough2_json',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1407,7 +1407,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::UpdatePassthroughJsonResponse.new(
+        return Models::Operations::UpdatePassthrough2JsonResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1420,7 +1420,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::UpdatePassthroughJsonResponse.new(
+        return Models::Operations::UpdatePassthrough2JsonResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1440,7 +1440,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
-          response = Models::Operations::UpdatePassthroughJsonResponse.new(
+          response = Models::Operations::UpdatePassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1458,7 +1458,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::UpdatePassthroughJsonResponse.new(
+          return Models::Operations::UpdatePassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1474,7 +1474,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::UpdatePassthroughJsonResponse.new(
+          return Models::Operations::UpdatePassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1490,7 +1490,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::UpdatePassthroughJsonResponse.new(
+          return Models::Operations::UpdatePassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1506,7 +1506,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::UpdatePassthroughJsonResponse.new(
+          return Models::Operations::UpdatePassthrough2JsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1520,10 +1520,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughRawResponse) }
-    def update_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
-      # update_passthrough_raw - Passthrough PUT
-      request = Models::Operations::UpdatePassthroughRawRequest.new(
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthrough2RawResponse) }
+    def update_passthrough2_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+      # update_passthrough2_raw - Passthrough PUT
+      request = Models::Operations::UpdatePassthrough2RawRequest.new(
         connection_id: connection_id,
         path: path,
         request_body: request_body,
@@ -1532,7 +1532,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdatePassthroughRawRequest,
+        Models::Operations::UpdatePassthrough2RawRequest,
         base_url,
         '/passthrough/{connection_id}/{path}',
         request
@@ -1549,7 +1549,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdatePassthroughRawRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdatePassthrough2RawRequest, request, nil)
       headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1565,7 +1565,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updatePassthrough_raw',
+        operation_id: 'updatePassthrough2_raw',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1622,7 +1622,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::UpdatePassthroughRawResponse.new(
+        return Models::Operations::UpdatePassthrough2RawResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1635,7 +1635,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::UpdatePassthroughRawResponse.new(
+        return Models::Operations::UpdatePassthrough2RawResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1655,7 +1655,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
-          response = Models::Operations::UpdatePassthroughRawResponse.new(
+          response = Models::Operations::UpdatePassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1673,7 +1673,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::UpdatePassthroughRawResponse.new(
+          return Models::Operations::UpdatePassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1689,7 +1689,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::UpdatePassthroughRawResponse.new(
+          return Models::Operations::UpdatePassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1705,7 +1705,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::UpdatePassthroughRawResponse.new(
+          return Models::Operations::UpdatePassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1721,7 +1721,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::UpdatePassthroughRawResponse.new(
+          return Models::Operations::UpdatePassthrough2RawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

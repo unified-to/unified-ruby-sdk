@@ -5,20 +5,20 @@
 
 ### Available Operations
 
-* [create_repo_branch](#create_repo_branch) - Create a branch
-* [get_repo_branch](#get_repo_branch) - Retrieve a branch
-* [list_repo_branches](#list_repo_branches) - List all branches
-* [patch_repo_branch](#patch_repo_branch) - Update a branch
-* [remove_repo_branch](#remove_repo_branch) - Remove a branch
-* [update_repo_branch](#update_repo_branch) - Update a branch
+* [create_repo_branch2](#create_repo_branch2) - Create a branch
+* [get_repo_branch2](#get_repo_branch2) - Retrieve a branch
+* [list_repo_branches2](#list_repo_branches2) - List all branches
+* [patch_repo_branch2](#patch_repo_branch2) - Update a branch
+* [remove_repo_branch2](#remove_repo_branch2) - Remove a branch
+* [update_repo_branch2](#update_repo_branch2) - Update a branch
 
-## create_repo_branch
+## create_repo_branch2
 
 Create a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="ruby" operationID="createRepoBranch2" method="post" path="/repo/{connection_id}/branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.branch.create_repo_branch(repo_branch: Models::Shared::RepoBranch.new(
+res = s.branch.create_repo_branch2(repo_branch: Models::Shared::RepoBranch.new(
   name: '<value>',
   repo_id: '<id>',
 ), connection_id: '<id>')
@@ -46,12 +46,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `repo_branch`                                                                                                                                    | [Models::Shared::RepoBranch](../../models/shared/repobranch.md)                                                                                  | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateRepoBranchQueryParamFields](../../models/operations/createrepobranchqueryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateRepoBranch2QueryParamFields](../../models/operations/createrepobranch2queryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateRepoBranchResponse)](../../models/operations/createrepobranchresponse.md)**
+**[T.nilable(Models::Operations::CreateRepoBranch2Response)](../../models/operations/createrepobranch2response.md)**
 
 ### Errors
 
@@ -59,13 +59,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_repo_branch
+## get_repo_branch2
 
 Retrieve a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getRepoBranch" method="get" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getRepoBranch2" method="get" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -76,7 +76,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.branch.get_repo_branch(connection_id: '<id>', id: '<id>')
+res = s.branch.get_repo_branch2(connection_id: '<id>', id: '<id>')
 
 unless res.repo_branch.nil?
   # handle response
@@ -90,12 +90,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Branch                                                                                                                                 |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetRepoBranchQueryParamFields](../../models/operations/getrepobranchqueryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetRepoBranch2QueryParamFields](../../models/operations/getrepobranch2queryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetRepoBranchResponse)](../../models/operations/getrepobranchresponse.md)**
+**[T.nilable(Models::Operations::GetRepoBranch2Response)](../../models/operations/getrepobranch2response.md)**
 
 ### Errors
 
@@ -103,13 +103,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_repo_branches
+## list_repo_branches2
 
 List all branches
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listRepoBranches" method="get" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="ruby" operationID="listRepoBranches2" method="get" path="/repo/{connection_id}/branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -120,11 +120,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListRepoBranchesRequest.new(
+req = Models::Operations::ListRepoBranches2Request.new(
   connection_id: '<id>',
 )
 
-res = s.branch.list_repo_branches(request: req)
+res = s.branch.list_repo_branches2(request: req)
 
 unless res.repo_branches.nil?
   # handle response
@@ -134,13 +134,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::ListRepoBranchesRequest](../../models/operations/listrepobranchesrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListRepoBranches2Request](../../models/operations/listrepobranches2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListRepoBranchesResponse)](../../models/operations/listrepobranchesresponse.md)**
+**[T.nilable(Models::Operations::ListRepoBranches2Response)](../../models/operations/listrepobranches2response.md)**
 
 ### Errors
 
@@ -148,13 +148,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_repo_branch
+## patch_repo_branch2
 
 Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchRepoBranch2" method="patch" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -165,7 +165,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchRepoBranchRequest.new(
+req = Models::Operations::PatchRepoBranch2Request.new(
   repo_branch: Models::Shared::RepoBranch.new(
     name: '<value>',
     repo_id: '<id>',
@@ -174,7 +174,7 @@ req = Models::Operations::PatchRepoBranchRequest.new(
   id: '<id>',
 )
 
-res = s.branch.patch_repo_branch(request: req)
+res = s.branch.patch_repo_branch2(request: req)
 
 unless res.repo_branch.nil?
   # handle response
@@ -184,13 +184,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Models::Operations::PatchRepoBranchRequest](../../models/operations/patchrepobranchrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::PatchRepoBranch2Request](../../models/operations/patchrepobranch2request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchRepoBranchResponse)](../../models/operations/patchrepobranchresponse.md)**
+**[T.nilable(Models::Operations::PatchRepoBranch2Response)](../../models/operations/patchrepobranch2response.md)**
 
 ### Errors
 
@@ -198,13 +198,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_repo_branch
+## remove_repo_branch2
 
 Remove a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeRepoBranch" method="delete" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeRepoBranch2" method="delete" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -215,7 +215,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.branch.remove_repo_branch(connection_id: '<id>', id: '<id>')
+res = s.branch.remove_repo_branch2(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -232,7 +232,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveRepoBranchResponse)](../../models/operations/removerepobranchresponse.md)**
+**[T.nilable(Models::Operations::RemoveRepoBranch2Response)](../../models/operations/removerepobranch2response.md)**
 
 ### Errors
 
@@ -240,13 +240,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_repo_branch
+## update_repo_branch2
 
 Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateRepoBranch2" method="put" path="/repo/{connection_id}/branch/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -257,7 +257,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateRepoBranchRequest.new(
+req = Models::Operations::UpdateRepoBranch2Request.new(
   repo_branch: Models::Shared::RepoBranch.new(
     name: '<value>',
     repo_id: '<id>',
@@ -266,7 +266,7 @@ req = Models::Operations::UpdateRepoBranchRequest.new(
   id: '<id>',
 )
 
-res = s.branch.update_repo_branch(request: req)
+res = s.branch.update_repo_branch2(request: req)
 
 unless res.repo_branch.nil?
   # handle response
@@ -276,13 +276,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::UpdateRepoBranchRequest](../../models/operations/updaterepobranchrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::UpdateRepoBranch2Request](../../models/operations/updaterepobranch2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateRepoBranchResponse)](../../models/operations/updaterepobranchresponse.md)**
+**[T.nilable(Models::Operations::UpdateRepoBranch2Response)](../../models/operations/updaterepobranch2response.md)**
 
 ### Errors
 

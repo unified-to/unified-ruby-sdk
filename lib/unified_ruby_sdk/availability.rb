@@ -39,20 +39,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCommerceAvailabilitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceAvailabilitiesResponse) }
-    def list_commerce_availabilities(request:, timeout_ms: nil)
-      # list_commerce_availabilities - List all availabilities
+    sig { params(request: Models::Operations::ListCommerceAvailabilities2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceAvailabilities2Response) }
+    def list_commerce_availabilities2(request:, timeout_ms: nil)
+      # list_commerce_availabilities2 - List all availabilities
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCommerceAvailabilitiesRequest,
+        Models::Operations::ListCommerceAvailabilities2Request,
         base_url,
         '/commerce/{connection_id}/availability',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCommerceAvailabilitiesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCommerceAvailabilities2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -68,7 +68,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCommerceAvailabilities',
+        operation_id: 'listCommerceAvailabilities2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -127,7 +127,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CommerceAvailability))
-          response = Models::Operations::ListCommerceAvailabilitiesResponse.new(
+          response = Models::Operations::ListCommerceAvailabilities2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

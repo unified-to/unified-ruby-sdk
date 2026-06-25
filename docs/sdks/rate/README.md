@@ -5,15 +5,15 @@
 
 ### Available Operations
 
-* [create_shipping_rate](#create_shipping_rate) - Create a rate
+* [create_shipping_rate2](#create_shipping_rate2) - Create a rate
 
-## create_shipping_rate
+## create_shipping_rate2
 
 Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="ruby" operationID="createShippingRate2" method="post" path="/shipping/{connection_id}/rate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -24,7 +24,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.rate.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.new(), connection_id: '<id>')
+res = s.rate.create_shipping_rate2(shipping_rate: Models::Shared::ShippingRate.new(), connection_id: '<id>')
 
 unless res.shipping_rate.nil?
   # handle response
@@ -38,12 +38,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `shipping_rate`                                                                                                                                  | [Models::Shared::ShippingRate](../../models/shared/shippingrate.md)                                                                              | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateShippingRateQueryParamFields](../../models/operations/createshippingratequeryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateShippingRate2QueryParamFields](../../models/operations/createshippingrate2queryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateShippingRateResponse)](../../models/operations/createshippingrateresponse.md)**
+**[T.nilable(Models::Operations::CreateShippingRate2Response)](../../models/operations/createshippingrate2response.md)**
 
 ### Errors
 

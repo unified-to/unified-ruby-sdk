@@ -5,16 +5,16 @@
 
 ### Available Operations
 
-* [get_accounting_cashflow](#get_accounting_cashflow) - Retrieve a cashflow
-* [list_accounting_cashflows](#list_accounting_cashflows) - List all cashflows
+* [get_accounting_cashflow2](#get_accounting_cashflow2) - Retrieve a cashflow
+* [list_accounting_cashflows2](#list_accounting_cashflows2) - List all cashflows
 
-## get_accounting_cashflow
+## get_accounting_cashflow2
 
 Retrieve a cashflow
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getAccountingCashflow" method="get" path="/accounting/{connection_id}/cashflow/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getAccountingCashflow2" method="get" path="/accounting/{connection_id}/cashflow/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -25,7 +25,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.cashflow.get_accounting_cashflow(connection_id: '<id>', id: '<id>')
+res = s.cashflow.get_accounting_cashflow2(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_cashflow.nil?
   # handle response
@@ -39,12 +39,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Cashflow                                                                                                                               |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAccountingCashflowQueryParamFields](../../models/operations/getaccountingcashflowqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAccountingCashflow2QueryParamFields](../../models/operations/getaccountingcashflow2queryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetAccountingCashflowResponse)](../../models/operations/getaccountingcashflowresponse.md)**
+**[T.nilable(Models::Operations::GetAccountingCashflow2Response)](../../models/operations/getaccountingcashflow2response.md)**
 
 ### Errors
 
@@ -52,13 +52,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_accounting_cashflows
+## list_accounting_cashflows2
 
 List all cashflows
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listAccountingCashflows" method="get" path="/accounting/{connection_id}/cashflow" -->
+<!-- UsageSnippet language="ruby" operationID="listAccountingCashflows2" method="get" path="/accounting/{connection_id}/cashflow" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -69,11 +69,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListAccountingCashflowsRequest.new(
+req = Models::Operations::ListAccountingCashflows2Request.new(
   connection_id: '<id>',
 )
 
-res = s.cashflow.list_accounting_cashflows(request: req)
+res = s.cashflow.list_accounting_cashflows2(request: req)
 
 unless res.accounting_cashflows.nil?
   # handle response
@@ -83,13 +83,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                       | [Models::Operations::ListAccountingCashflowsRequest](../../models/operations/listaccountingcashflowsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::ListAccountingCashflows2Request](../../models/operations/listaccountingcashflows2request.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListAccountingCashflowsResponse)](../../models/operations/listaccountingcashflowsresponse.md)**
+**[T.nilable(Models::Operations::ListAccountingCashflows2Response)](../../models/operations/listaccountingcashflows2response.md)**
 
 ### Errors
 

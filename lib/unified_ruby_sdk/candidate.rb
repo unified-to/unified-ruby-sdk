@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_candidate: Models::Shared::AtsCandidate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsCandidateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsCandidateResponse) }
-    def create_ats_candidate(ats_candidate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_ats_candidate - Create a candidate
-      request = Models::Operations::CreateAtsCandidateRequest.new(
+    sig { params(ats_candidate: Models::Shared::AtsCandidate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsCandidate2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsCandidate2Response) }
+    def create_ats_candidate2(ats_candidate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_ats_candidate2 - Create a candidate
+      request = Models::Operations::CreateAtsCandidate2Request.new(
         ats_candidate: ats_candidate,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAtsCandidateRequest,
+        Models::Operations::CreateAtsCandidate2Request,
         base_url,
         '/ats/{connection_id}/candidate',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsCandidateRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsCandidate2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAtsCandidate',
+        operation_id: 'createAtsCandidate2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCandidate)
-          response = Models::Operations::CreateAtsCandidateResponse.new(
+          response = Models::Operations::CreateAtsCandidate2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsCandidateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsCandidateResponse) }
-    def get_ats_candidate(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_ats_candidate - Retrieve a candidate
-      request = Models::Operations::GetAtsCandidateRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsCandidate2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsCandidate2Response) }
+    def get_ats_candidate2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_ats_candidate2 - Retrieve a candidate
+      request = Models::Operations::GetAtsCandidate2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAtsCandidateRequest,
+        Models::Operations::GetAtsCandidate2Request,
         base_url,
         '/ats/{connection_id}/candidate/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAtsCandidateRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAtsCandidate2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAtsCandidate',
+        operation_id: 'getAtsCandidate2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCandidate)
-          response = Models::Operations::GetAtsCandidateResponse.new(
+          response = Models::Operations::GetAtsCandidate2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAtsCandidatesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsCandidatesResponse) }
-    def list_ats_candidates(request:, timeout_ms: nil)
-      # list_ats_candidates - List all candidates
+    sig { params(request: Models::Operations::ListAtsCandidates2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsCandidates2Response) }
+    def list_ats_candidates2(request:, timeout_ms: nil)
+      # list_ats_candidates2 - List all candidates
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAtsCandidatesRequest,
+        Models::Operations::ListAtsCandidates2Request,
         base_url,
         '/ats/{connection_id}/candidate',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAtsCandidatesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAtsCandidates2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAtsCandidates',
+        operation_id: 'listAtsCandidates2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsCandidate))
-          response = Models::Operations::ListAtsCandidatesResponse.new(
+          response = Models::Operations::ListAtsCandidates2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAtsCandidateRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsCandidateResponse) }
-    def patch_ats_candidate(request:, timeout_ms: nil)
-      # patch_ats_candidate - Update a candidate
+    sig { params(request: Models::Operations::PatchAtsCandidate2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsCandidate2Response) }
+    def patch_ats_candidate2(request:, timeout_ms: nil)
+      # patch_ats_candidate2 - Update a candidate
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAtsCandidateRequest,
+        Models::Operations::PatchAtsCandidate2Request,
         base_url,
         '/ats/{connection_id}/candidate/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsCandidateRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsCandidate2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAtsCandidate',
+        operation_id: 'patchAtsCandidate2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCandidate)
-          response = Models::Operations::PatchAtsCandidateResponse.new(
+          response = Models::Operations::PatchAtsCandidate2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsCandidateResponse) }
-    def remove_ats_candidate(connection_id:, id:, timeout_ms: nil)
-      # remove_ats_candidate - Remove a candidate
-      request = Models::Operations::RemoveAtsCandidateRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsCandidate2Response) }
+    def remove_ats_candidate2(connection_id:, id:, timeout_ms: nil)
+      # remove_ats_candidate2 - Remove a candidate
+      request = Models::Operations::RemoveAtsCandidate2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAtsCandidateRequest,
+        Models::Operations::RemoveAtsCandidate2Request,
         base_url,
         '/ats/{connection_id}/candidate/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAtsCandidate',
+        operation_id: 'removeAtsCandidate2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAtsCandidateResponse.new(
+        return Models::Operations::RemoveAtsCandidate2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAtsCandidateResponse.new(
+        return Models::Operations::RemoveAtsCandidate2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAtsCandidateRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsCandidateResponse) }
-    def update_ats_candidate(request:, timeout_ms: nil)
-      # update_ats_candidate - Update a candidate
+    sig { params(request: Models::Operations::UpdateAtsCandidate2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsCandidate2Response) }
+    def update_ats_candidate2(request:, timeout_ms: nil)
+      # update_ats_candidate2 - Update a candidate
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAtsCandidateRequest,
+        Models::Operations::UpdateAtsCandidate2Request,
         base_url,
         '/ats/{connection_id}/candidate/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsCandidateRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsCandidate2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAtsCandidate',
+        operation_id: 'updateAtsCandidate2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsCandidate)
-          response = Models::Operations::UpdateAtsCandidateResponse.new(
+          response = Models::Operations::UpdateAtsCandidate2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

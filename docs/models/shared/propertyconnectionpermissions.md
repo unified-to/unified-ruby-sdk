@@ -231,6 +231,14 @@
 | `ADS_INSERTIONORDER_WRITE`       | ads_insertionorder_write         |
 | `ADS_TARGET_READ`                | ads_target_read                  |
 | `ADS_PROMOTED_READ`              | ads_promoted_read                |
+| `ANALYTICS_PROPERTY_READ`        | analytics_property_read          |
+| `ANALYTICS_PROPERTY_WRITE`       | analytics_property_write         |
+| `ANALYTICS_EVENT_READ`           | analytics_event_read             |
+| `ANALYTICS_EVENT_WRITE`          | analytics_event_write            |
+| `ANALYTICS_SESSION_READ`         | analytics_session_read           |
+| `ANALYTICS_VISITOR_READ`         | analytics_visitor_read           |
+| `ANALYTICS_VISITOR_WRITE`        | analytics_visitor_write          |
+| `ANALYTICS_REPORT_READ`          | analytics_report_read            |
 | `FORMS_FORM_READ`                | forms_form_read                  |
 | `FORMS_FORM_WRITE`               | forms_form_write                 |
 | `FORMS_SUBMISSION_READ`          | forms_submission_read            |
@@ -257,3 +265,11 @@
 | `CLUBS_LOCATION_WRITE`           | clubs_location_write             |
 | `CLUBS_EVENT_READ`               | clubs_event_read                 |
 | `CLUBS_EVENT_WRITE`              | clubs_event_write                |
+| `DATASTORE_DATABASE_READ`        | datastore_database_read          |
+| `DATASTORE_DATABASE_WRITE`       | datastore_database_write         |
+| `DATASTORE_TABLE_READ`           | datastore_table_read             |
+| `DATASTORE_TABLE_WRITE`          | datastore_table_write            |
+| `DATASTORE_RECORD_READ`          | datastore_record_read            |
+| `DATASTORE_RECORD_WRITE`         | datastore_record_write           |
+| `DATASTORE_QUERY_READ`           | datastore_query_read             |
+| `DATASTORE_QUERY_WRITE`          | datastore_query_write            |

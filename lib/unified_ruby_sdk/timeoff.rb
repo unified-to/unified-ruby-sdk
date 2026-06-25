@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_timeoff: Models::Shared::HrisTimeoff, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisTimeoffQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisTimeoffResponse) }
-    def create_hris_timeoff(hris_timeoff:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_hris_timeoff - Create a timeoff
-      request = Models::Operations::CreateHrisTimeoffRequest.new(
+    sig { params(hris_timeoff: Models::Shared::HrisTimeoff, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisTimeoff2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisTimeoff2Response) }
+    def create_hris_timeoff2(hris_timeoff:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_hris_timeoff2 - Create a timeoff
+      request = Models::Operations::CreateHrisTimeoff2Request.new(
         hris_timeoff: hris_timeoff,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateHrisTimeoffRequest,
+        Models::Operations::CreateHrisTimeoff2Request,
         base_url,
         '/hris/{connection_id}/timeoff',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateHrisTimeoffRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateHrisTimeoff2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createHrisTimeoff',
+        operation_id: 'createHrisTimeoff2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisTimeoff)
-          response = Models::Operations::CreateHrisTimeoffResponse.new(
+          response = Models::Operations::CreateHrisTimeoff2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisTimeoffQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeoffResponse) }
-    def get_hris_timeoff(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_hris_timeoff - Retrieve a timeoff
-      request = Models::Operations::GetHrisTimeoffRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisTimeoff2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeoff2Response) }
+    def get_hris_timeoff2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_hris_timeoff2 - Retrieve a timeoff
+      request = Models::Operations::GetHrisTimeoff2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetHrisTimeoffRequest,
+        Models::Operations::GetHrisTimeoff2Request,
         base_url,
         '/hris/{connection_id}/timeoff/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetHrisTimeoffRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetHrisTimeoff2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getHrisTimeoff',
+        operation_id: 'getHrisTimeoff2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisTimeoff)
-          response = Models::Operations::GetHrisTimeoffResponse.new(
+          response = Models::Operations::GetHrisTimeoff2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListHrisTimeoffsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisTimeoffsResponse) }
-    def list_hris_timeoffs(request:, timeout_ms: nil)
-      # list_hris_timeoffs - List all timeoffs
+    sig { params(request: Models::Operations::ListHrisTimeoffs2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisTimeoffs2Response) }
+    def list_hris_timeoffs2(request:, timeout_ms: nil)
+      # list_hris_timeoffs2 - List all timeoffs
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListHrisTimeoffsRequest,
+        Models::Operations::ListHrisTimeoffs2Request,
         base_url,
         '/hris/{connection_id}/timeoff',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListHrisTimeoffsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListHrisTimeoffs2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listHrisTimeoffs',
+        operation_id: 'listHrisTimeoffs2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::HrisTimeoff))
-          response = Models::Operations::ListHrisTimeoffsResponse.new(
+          response = Models::Operations::ListHrisTimeoffs2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchHrisTimeoffRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisTimeoffResponse) }
-    def patch_hris_timeoff(request:, timeout_ms: nil)
-      # patch_hris_timeoff - Update a timeoff
+    sig { params(request: Models::Operations::PatchHrisTimeoff2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisTimeoff2Response) }
+    def patch_hris_timeoff2(request:, timeout_ms: nil)
+      # patch_hris_timeoff2 - Update a timeoff
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchHrisTimeoffRequest,
+        Models::Operations::PatchHrisTimeoff2Request,
         base_url,
         '/hris/{connection_id}/timeoff/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchHrisTimeoffRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchHrisTimeoff2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchHrisTimeoff',
+        operation_id: 'patchHrisTimeoff2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisTimeoff)
-          response = Models::Operations::PatchHrisTimeoffResponse.new(
+          response = Models::Operations::PatchHrisTimeoff2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisTimeoffResponse) }
-    def remove_hris_timeoff(connection_id:, id:, timeout_ms: nil)
-      # remove_hris_timeoff - Remove a timeoff
-      request = Models::Operations::RemoveHrisTimeoffRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisTimeoff2Response) }
+    def remove_hris_timeoff2(connection_id:, id:, timeout_ms: nil)
+      # remove_hris_timeoff2 - Remove a timeoff
+      request = Models::Operations::RemoveHrisTimeoff2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveHrisTimeoffRequest,
+        Models::Operations::RemoveHrisTimeoff2Request,
         base_url,
         '/hris/{connection_id}/timeoff/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeHrisTimeoff',
+        operation_id: 'removeHrisTimeoff2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisTimeoffResponse.new(
+        return Models::Operations::RemoveHrisTimeoff2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisTimeoffResponse.new(
+        return Models::Operations::RemoveHrisTimeoff2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateHrisTimeoffRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisTimeoffResponse) }
-    def update_hris_timeoff(request:, timeout_ms: nil)
-      # update_hris_timeoff - Update a timeoff
+    sig { params(request: Models::Operations::UpdateHrisTimeoff2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisTimeoff2Response) }
+    def update_hris_timeoff2(request:, timeout_ms: nil)
+      # update_hris_timeoff2 - Update a timeoff
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateHrisTimeoffRequest,
+        Models::Operations::UpdateHrisTimeoff2Request,
         base_url,
         '/hris/{connection_id}/timeoff/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateHrisTimeoffRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateHrisTimeoff2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateHrisTimeoff',
+        operation_id: 'updateHrisTimeoff2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisTimeoff)
-          response = Models::Operations::UpdateHrisTimeoffResponse.new(
+          response = Models::Operations::UpdateHrisTimeoff2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

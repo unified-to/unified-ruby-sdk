@@ -2935,3 +2935,11 @@ Based on:
 - Speakeasy CLI 1.605.0 (2.684.0) https://github.com/speakeasy-api/speakeasy
 ### Generated
 - [ruby v0.67.80] .
+
+## 2026-06-25 00:49:15
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.605.0 (2.684.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [ruby v0.67.81] .

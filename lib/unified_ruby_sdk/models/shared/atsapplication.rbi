@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::AtsApplication
   def offers=(str_); end
   def original_status(); end
   def original_status=(str_); end
+  def original_substatus(); end
+  def original_substatus=(str_); end
   def raw(); end
   def raw=(str_); end
   def rejected_at(); end

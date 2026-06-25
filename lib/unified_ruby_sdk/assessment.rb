@@ -39,17 +39,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(assessment_package: Models::Shared::AssessmentPackage, connection_id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAssessmentPackageResponse) }
-    def create_assessment_package(assessment_package:, connection_id:, timeout_ms: nil)
-      # create_assessment_package - Create an assessment package
-      request = Models::Operations::CreateAssessmentPackageRequest.new(
+    sig { params(assessment_package: Models::Shared::AssessmentPackage, connection_id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAssessmentPackage2Response) }
+    def create_assessment_package2(assessment_package:, connection_id:, timeout_ms: nil)
+      # create_assessment_package2 - Create an assessment package
+      request = Models::Operations::CreateAssessmentPackage2Request.new(
         assessment_package: assessment_package,
         connection_id: connection_id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAssessmentPackageRequest,
+        Models::Operations::CreateAssessmentPackage2Request,
         base_url,
         '/assessment/{connection_id}/package',
         request
@@ -82,7 +82,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAssessmentPackage',
+        operation_id: 'createAssessmentPackage2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -141,7 +141,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AssessmentPackage)
-          response = Models::Operations::CreateAssessmentPackageResponse.new(
+          response = Models::Operations::CreateAssessmentPackage2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -163,17 +163,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAssessmentPackageResponse) }
-    def get_assessment_package(connection_id:, id:, timeout_ms: nil)
-      # get_assessment_package - Get an assessment package
-      request = Models::Operations::GetAssessmentPackageRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAssessmentPackage2Response) }
+    def get_assessment_package2(connection_id:, id:, timeout_ms: nil)
+      # get_assessment_package2 - Get an assessment package
+      request = Models::Operations::GetAssessmentPackage2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAssessmentPackageRequest,
+        Models::Operations::GetAssessmentPackage2Request,
         base_url,
         '/assessment/{connection_id}/package/{id}',
         request
@@ -195,7 +195,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAssessmentPackage',
+        operation_id: 'getAssessmentPackage2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -253,7 +253,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AssessmentPackage)
-          response = Models::Operations::GetAssessmentPackageResponse.new(
+          response = Models::Operations::GetAssessmentPackage2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -275,10 +275,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, limit: T.nilable(::Float), offset: T.nilable(::Float), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAssessmentPackagesResponse) }
-    def list_assessment_packages(connection_id:, limit: nil, offset: nil, timeout_ms: nil)
-      # list_assessment_packages - List assessment packages
-      request = Models::Operations::ListAssessmentPackagesRequest.new(
+    sig { params(connection_id: ::String, limit: T.nilable(::Float), offset: T.nilable(::Float), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAssessmentPackages2Response) }
+    def list_assessment_packages2(connection_id:, limit: nil, offset: nil, timeout_ms: nil)
+      # list_assessment_packages2 - List assessment packages
+      request = Models::Operations::ListAssessmentPackages2Request.new(
         connection_id: connection_id,
         limit: limit,
         offset: offset
@@ -286,14 +286,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAssessmentPackagesRequest,
+        Models::Operations::ListAssessmentPackages2Request,
         base_url,
         '/assessment/{connection_id}/package',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAssessmentPackagesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAssessmentPackages2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -309,7 +309,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAssessmentPackages',
+        operation_id: 'listAssessmentPackages2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -368,7 +368,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AssessmentPackage))
-          response = Models::Operations::ListAssessmentPackagesResponse.new(
+          response = Models::Operations::ListAssessmentPackages2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -390,13 +390,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAssessmentOrderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAssessmentOrderResponse) }
-    def patch_assessment_order(request:, timeout_ms: nil)
-      # patch_assessment_order - Update an order
+    sig { params(request: Models::Operations::PatchAssessmentOrder2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAssessmentOrder2Response) }
+    def patch_assessment_order2(request:, timeout_ms: nil)
+      # patch_assessment_order2 - Update an order
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAssessmentOrderRequest,
+        Models::Operations::PatchAssessmentOrder2Request,
         base_url,
         '/assessment/{connection_id}/order/{id}',
         request
@@ -414,7 +414,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAssessmentOrderRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAssessmentOrder2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -430,7 +430,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAssessmentOrder',
+        operation_id: 'patchAssessmentOrder2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -490,7 +490,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AssessmentOrder)
-          response = Models::Operations::PatchAssessmentOrderResponse.new(
+          response = Models::Operations::PatchAssessmentOrder2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -512,10 +512,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(assessment_package: Models::Shared::AssessmentPackage, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAssessmentPackageResponse) }
-    def patch_assessment_package(assessment_package:, connection_id:, id:, timeout_ms: nil)
-      # patch_assessment_package - Update an assessment package
-      request = Models::Operations::PatchAssessmentPackageRequest.new(
+    sig { params(assessment_package: Models::Shared::AssessmentPackage, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAssessmentPackage2Response) }
+    def patch_assessment_package2(assessment_package:, connection_id:, id:, timeout_ms: nil)
+      # patch_assessment_package2 - Update an assessment package
+      request = Models::Operations::PatchAssessmentPackage2Request.new(
         assessment_package: assessment_package,
         connection_id: connection_id,
         id: id
@@ -523,7 +523,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAssessmentPackageRequest,
+        Models::Operations::PatchAssessmentPackage2Request,
         base_url,
         '/assessment/{connection_id}/package/{id}',
         request
@@ -556,7 +556,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAssessmentPackage',
+        operation_id: 'patchAssessmentPackage2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -615,7 +615,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AssessmentPackage)
-          response = Models::Operations::PatchAssessmentPackageResponse.new(
+          response = Models::Operations::PatchAssessmentPackage2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -637,17 +637,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAssessmentPackageResponse) }
-    def remove_assessment_package(connection_id:, id:, timeout_ms: nil)
-      # remove_assessment_package - Delete an assessment package
-      request = Models::Operations::RemoveAssessmentPackageRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAssessmentPackage2Response) }
+    def remove_assessment_package2(connection_id:, id:, timeout_ms: nil)
+      # remove_assessment_package2 - Delete an assessment package
+      request = Models::Operations::RemoveAssessmentPackage2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAssessmentPackageRequest,
+        Models::Operations::RemoveAssessmentPackage2Request,
         base_url,
         '/assessment/{connection_id}/package/{id}',
         request
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAssessmentPackage',
+        operation_id: 'removeAssessmentPackage2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -724,7 +724,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAssessmentPackageResponse.new(
+        return Models::Operations::RemoveAssessmentPackage2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -741,7 +741,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAssessmentPackageResponse.new(
+        return Models::Operations::RemoveAssessmentPackage2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -751,13 +751,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAssessmentOrderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAssessmentOrderResponse) }
-    def update_assessment_order(request:, timeout_ms: nil)
-      # update_assessment_order - Update an order
+    sig { params(request: Models::Operations::UpdateAssessmentOrder2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAssessmentOrder2Response) }
+    def update_assessment_order2(request:, timeout_ms: nil)
+      # update_assessment_order2 - Update an order
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAssessmentOrderRequest,
+        Models::Operations::UpdateAssessmentOrder2Request,
         base_url,
         '/assessment/{connection_id}/order/{id}',
         request
@@ -775,7 +775,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAssessmentOrderRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAssessmentOrder2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -791,7 +791,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAssessmentOrder',
+        operation_id: 'updateAssessmentOrder2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -851,7 +851,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AssessmentOrder)
-          response = Models::Operations::UpdateAssessmentOrderResponse.new(
+          response = Models::Operations::UpdateAssessmentOrder2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -873,10 +873,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(assessment_package: Models::Shared::AssessmentPackage, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAssessmentPackageResponse) }
-    def update_assessment_package(assessment_package:, connection_id:, id:, timeout_ms: nil)
-      # update_assessment_package - Update an assessment package
-      request = Models::Operations::UpdateAssessmentPackageRequest.new(
+    sig { params(assessment_package: Models::Shared::AssessmentPackage, connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAssessmentPackage2Response) }
+    def update_assessment_package2(assessment_package:, connection_id:, id:, timeout_ms: nil)
+      # update_assessment_package2 - Update an assessment package
+      request = Models::Operations::UpdateAssessmentPackage2Request.new(
         assessment_package: assessment_package,
         connection_id: connection_id,
         id: id
@@ -884,7 +884,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAssessmentPackageRequest,
+        Models::Operations::UpdateAssessmentPackage2Request,
         base_url,
         '/assessment/{connection_id}/package/{id}',
         request
@@ -917,7 +917,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAssessmentPackage',
+        operation_id: 'updateAssessmentPackage2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -976,7 +976,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AssessmentPackage)
-          response = Models::Operations::UpdateAssessmentPackageResponse.new(
+          response = Models::Operations::UpdateAssessmentPackage2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

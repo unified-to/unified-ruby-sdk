@@ -20,6 +20,10 @@ class UnifiedRubySDK::Models::Shared::HrisTimeoff
   def company_id=(str_); end
   def created_at(); end
   def created_at=(str_); end
+  def duration(); end
+  def duration=(str_); end
+  def duration_type(); end
+  def duration_type=(str_); end
   def end_at(); end
   def end_at=(str_); end
   def id(); end

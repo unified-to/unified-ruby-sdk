@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ads_organization: Models::Shared::AdsOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsOrganizationResponse) }
-    def create_ads_organization(ads_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_ads_organization - Create an organization
-      request = Models::Operations::CreateAdsOrganizationRequest.new(
+    sig { params(ads_organization: Models::Shared::AdsOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsOrganization2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsOrganization2Response) }
+    def create_ads_organization2(ads_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_ads_organization2 - Create an organization
+      request = Models::Operations::CreateAdsOrganization2Request.new(
         ads_organization: ads_organization,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAdsOrganizationRequest,
+        Models::Operations::CreateAdsOrganization2Request,
         base_url,
         '/ads/{connection_id}/organization',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAdsOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAdsOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAdsOrganization',
+        operation_id: 'createAdsOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsOrganization)
-          response = Models::Operations::CreateAdsOrganizationResponse.new(
+          response = Models::Operations::CreateAdsOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoOrganizationResponse) }
-    def create_repo_organization(repo_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_repo_organization - Create an organization
-      request = Models::Operations::CreateRepoOrganizationRequest.new(
+    sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoOrganization2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoOrganization2Response) }
+    def create_repo_organization2(repo_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_repo_organization2 - Create an organization
+      request = Models::Operations::CreateRepoOrganization2Request.new(
         repo_organization: repo_organization,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateRepoOrganizationRequest,
+        Models::Operations::CreateRepoOrganization2Request,
         base_url,
         '/repo/{connection_id}/organization',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateRepoOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateRepoOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createRepoOrganization',
+        operation_id: 'createRepoOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoOrganization)
-          response = Models::Operations::CreateRepoOrganizationResponse.new(
+          response = Models::Operations::CreateRepoOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrganizationResponse) }
-    def get_accounting_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_accounting_organization - Retrieve an organization
-      request = Models::Operations::GetAccountingOrganizationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingOrganization2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrganization2Response) }
+    def get_accounting_organization2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_accounting_organization2 - Retrieve an organization
+      request = Models::Operations::GetAccountingOrganization2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -307,14 +307,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAccountingOrganizationRequest,
+        Models::Operations::GetAccountingOrganization2Request,
         base_url,
         '/accounting/{connection_id}/organization/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAccountingOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAccountingOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -330,7 +330,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAccountingOrganization',
+        operation_id: 'getAccountingOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -389,7 +389,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingOrganization)
-          response = Models::Operations::GetAccountingOrganizationResponse.new(
+          response = Models::Operations::GetAccountingOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -411,10 +411,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsOrganizationResponse) }
-    def get_ads_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_ads_organization - Retrieve an organization
-      request = Models::Operations::GetAdsOrganizationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsOrganization2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsOrganization2Response) }
+    def get_ads_organization2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_ads_organization2 - Retrieve an organization
+      request = Models::Operations::GetAdsOrganization2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -423,14 +423,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAdsOrganizationRequest,
+        Models::Operations::GetAdsOrganization2Request,
         base_url,
         '/ads/{connection_id}/organization/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAdsOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAdsOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -446,7 +446,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAdsOrganization',
+        operation_id: 'getAdsOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -505,7 +505,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsOrganization)
-          response = Models::Operations::GetAdsOrganizationResponse.new(
+          response = Models::Operations::GetAdsOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -527,10 +527,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoOrganizationResponse) }
-    def get_repo_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_repo_organization - Retrieve an organization
-      request = Models::Operations::GetRepoOrganizationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoOrganization2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoOrganization2Response) }
+    def get_repo_organization2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_repo_organization2 - Retrieve an organization
+      request = Models::Operations::GetRepoOrganization2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -539,14 +539,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetRepoOrganizationRequest,
+        Models::Operations::GetRepoOrganization2Request,
         base_url,
         '/repo/{connection_id}/organization/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetRepoOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetRepoOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -562,7 +562,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getRepoOrganization',
+        operation_id: 'getRepoOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -621,7 +621,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoOrganization)
-          response = Models::Operations::GetRepoOrganizationResponse.new(
+          response = Models::Operations::GetRepoOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -643,20 +643,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAccountingOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingOrganizationsResponse) }
-    def list_accounting_organizations(request:, timeout_ms: nil)
-      # list_accounting_organizations - List all organizations
+    sig { params(request: Models::Operations::ListAccountingOrganizations2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingOrganizations2Response) }
+    def list_accounting_organizations2(request:, timeout_ms: nil)
+      # list_accounting_organizations2 - List all organizations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAccountingOrganizationsRequest,
+        Models::Operations::ListAccountingOrganizations2Request,
         base_url,
         '/accounting/{connection_id}/organization',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAccountingOrganizationsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAccountingOrganizations2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -672,7 +672,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAccountingOrganizations',
+        operation_id: 'listAccountingOrganizations2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -731,7 +731,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AccountingOrganization))
-          response = Models::Operations::ListAccountingOrganizationsResponse.new(
+          response = Models::Operations::ListAccountingOrganizations2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -753,20 +753,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAdsOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsOrganizationsResponse) }
-    def list_ads_organizations(request:, timeout_ms: nil)
-      # list_ads_organizations - List all organizations
+    sig { params(request: Models::Operations::ListAdsOrganizations2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsOrganizations2Response) }
+    def list_ads_organizations2(request:, timeout_ms: nil)
+      # list_ads_organizations2 - List all organizations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAdsOrganizationsRequest,
+        Models::Operations::ListAdsOrganizations2Request,
         base_url,
         '/ads/{connection_id}/organization',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAdsOrganizationsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAdsOrganizations2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -782,7 +782,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAdsOrganizations',
+        operation_id: 'listAdsOrganizations2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -841,7 +841,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AdsOrganization))
-          response = Models::Operations::ListAdsOrganizationsResponse.new(
+          response = Models::Operations::ListAdsOrganizations2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -863,20 +863,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListRepoOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoOrganizationsResponse) }
-    def list_repo_organizations(request:, timeout_ms: nil)
-      # list_repo_organizations - List all organizations
+    sig { params(request: Models::Operations::ListRepoOrganizations2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoOrganizations2Response) }
+    def list_repo_organizations2(request:, timeout_ms: nil)
+      # list_repo_organizations2 - List all organizations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListRepoOrganizationsRequest,
+        Models::Operations::ListRepoOrganizations2Request,
         base_url,
         '/repo/{connection_id}/organization',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListRepoOrganizationsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListRepoOrganizations2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -892,7 +892,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listRepoOrganizations',
+        operation_id: 'listRepoOrganizations2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -951,7 +951,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::RepoOrganization))
-          response = Models::Operations::ListRepoOrganizationsResponse.new(
+          response = Models::Operations::ListRepoOrganizations2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -973,13 +973,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAdsOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsOrganizationResponse) }
-    def patch_ads_organization(request:, timeout_ms: nil)
-      # patch_ads_organization - Update an organization
+    sig { params(request: Models::Operations::PatchAdsOrganization2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsOrganization2Response) }
+    def patch_ads_organization2(request:, timeout_ms: nil)
+      # patch_ads_organization2 - Update an organization
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAdsOrganizationRequest,
+        Models::Operations::PatchAdsOrganization2Request,
         base_url,
         '/ads/{connection_id}/organization/{id}',
         request
@@ -997,7 +997,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAdsOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAdsOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1013,7 +1013,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAdsOrganization',
+        operation_id: 'patchAdsOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1073,7 +1073,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsOrganization)
-          response = Models::Operations::PatchAdsOrganizationResponse.new(
+          response = Models::Operations::PatchAdsOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1095,13 +1095,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchRepoOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoOrganizationResponse) }
-    def patch_repo_organization(request:, timeout_ms: nil)
-      # patch_repo_organization - Update an organization
+    sig { params(request: Models::Operations::PatchRepoOrganization2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoOrganization2Response) }
+    def patch_repo_organization2(request:, timeout_ms: nil)
+      # patch_repo_organization2 - Update an organization
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchRepoOrganizationRequest,
+        Models::Operations::PatchRepoOrganization2Request,
         base_url,
         '/repo/{connection_id}/organization/{id}',
         request
@@ -1119,7 +1119,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchRepoOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchRepoOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1135,7 +1135,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchRepoOrganization',
+        operation_id: 'patchRepoOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1195,7 +1195,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoOrganization)
-          response = Models::Operations::PatchRepoOrganizationResponse.new(
+          response = Models::Operations::PatchRepoOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1217,17 +1217,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsOrganizationResponse) }
-    def remove_ads_organization(connection_id:, id:, timeout_ms: nil)
-      # remove_ads_organization - Remove an organization
-      request = Models::Operations::RemoveAdsOrganizationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsOrganization2Response) }
+    def remove_ads_organization2(connection_id:, id:, timeout_ms: nil)
+      # remove_ads_organization2 - Remove an organization
+      request = Models::Operations::RemoveAdsOrganization2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAdsOrganizationRequest,
+        Models::Operations::RemoveAdsOrganization2Request,
         base_url,
         '/ads/{connection_id}/organization/{id}',
         request
@@ -1249,7 +1249,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAdsOrganization',
+        operation_id: 'removeAdsOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1304,7 +1304,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAdsOrganizationResponse.new(
+        return Models::Operations::RemoveAdsOrganization2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1321,7 +1321,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAdsOrganizationResponse.new(
+        return Models::Operations::RemoveAdsOrganization2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1331,17 +1331,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoOrganizationResponse) }
-    def remove_repo_organization(connection_id:, id:, timeout_ms: nil)
-      # remove_repo_organization - Remove an organization
-      request = Models::Operations::RemoveRepoOrganizationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoOrganization2Response) }
+    def remove_repo_organization2(connection_id:, id:, timeout_ms: nil)
+      # remove_repo_organization2 - Remove an organization
+      request = Models::Operations::RemoveRepoOrganization2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveRepoOrganizationRequest,
+        Models::Operations::RemoveRepoOrganization2Request,
         base_url,
         '/repo/{connection_id}/organization/{id}',
         request
@@ -1363,7 +1363,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeRepoOrganization',
+        operation_id: 'removeRepoOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1418,7 +1418,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoOrganizationResponse.new(
+        return Models::Operations::RemoveRepoOrganization2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1435,7 +1435,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoOrganizationResponse.new(
+        return Models::Operations::RemoveRepoOrganization2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1445,13 +1445,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAdsOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsOrganizationResponse) }
-    def update_ads_organization(request:, timeout_ms: nil)
-      # update_ads_organization - Update an organization
+    sig { params(request: Models::Operations::UpdateAdsOrganization2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsOrganization2Response) }
+    def update_ads_organization2(request:, timeout_ms: nil)
+      # update_ads_organization2 - Update an organization
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAdsOrganizationRequest,
+        Models::Operations::UpdateAdsOrganization2Request,
         base_url,
         '/ads/{connection_id}/organization/{id}',
         request
@@ -1469,7 +1469,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAdsOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAdsOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1485,7 +1485,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAdsOrganization',
+        operation_id: 'updateAdsOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1545,7 +1545,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsOrganization)
-          response = Models::Operations::UpdateAdsOrganizationResponse.new(
+          response = Models::Operations::UpdateAdsOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1567,13 +1567,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateRepoOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoOrganizationResponse) }
-    def update_repo_organization(request:, timeout_ms: nil)
-      # update_repo_organization - Update an organization
+    sig { params(request: Models::Operations::UpdateRepoOrganization2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoOrganization2Response) }
+    def update_repo_organization2(request:, timeout_ms: nil)
+      # update_repo_organization2 - Update an organization
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateRepoOrganizationRequest,
+        Models::Operations::UpdateRepoOrganization2Request,
         base_url,
         '/repo/{connection_id}/organization/{id}',
         request
@@ -1591,7 +1591,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateRepoOrganizationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateRepoOrganization2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1607,7 +1607,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateRepoOrganization',
+        operation_id: 'updateRepoOrganization2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1667,7 +1667,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoOrganization)
-          response = Models::Operations::UpdateRepoOrganizationResponse.new(
+          response = Models::Operations::UpdateRepoOrganization2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

@@ -17,10 +17,10 @@ module UnifiedRubySDK
           ACTIVE = new('ACTIVE')
           PAUSED = new('PAUSED')
           ARCHIVED = new('ARCHIVED')
-          PROCESSING = new('PROCESSING')
-          PROCESSING_FAILED = new('PROCESSING_FAILED')
           DRAFT = new('DRAFT')
           SCHEDULED_FOR_DELETION = new('SCHEDULED_FOR_DELETION')
+          PROCESSING = new('PROCESSING')
+          PROCESSING_FAILED = new('PROCESSING_FAILED')
         end
       end
     end

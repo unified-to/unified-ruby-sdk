@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_inventory: Models::Shared::CommerceInventory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceInventoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceInventoryResponse) }
-    def create_commerce_inventory(commerce_inventory:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_commerce_inventory - Create an inventory
-      request = Models::Operations::CreateCommerceInventoryRequest.new(
+    sig { params(commerce_inventory: Models::Shared::CommerceInventory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceInventory2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceInventory2Response) }
+    def create_commerce_inventory2(commerce_inventory:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_commerce_inventory2 - Create an inventory
+      request = Models::Operations::CreateCommerceInventory2Request.new(
         commerce_inventory: commerce_inventory,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCommerceInventoryRequest,
+        Models::Operations::CreateCommerceInventory2Request,
         base_url,
         '/commerce/{connection_id}/inventory',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCommerceInventoryRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCommerceInventory2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCommerceInventory',
+        operation_id: 'createCommerceInventory2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceInventory)
-          response = Models::Operations::CreateCommerceInventoryResponse.new(
+          response = Models::Operations::CreateCommerceInventory2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceInventoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceInventoryResponse) }
-    def get_commerce_inventory(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_commerce_inventory - Retrieve an inventory
-      request = Models::Operations::GetCommerceInventoryRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceInventory2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceInventory2Response) }
+    def get_commerce_inventory2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_commerce_inventory2 - Retrieve an inventory
+      request = Models::Operations::GetCommerceInventory2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCommerceInventoryRequest,
+        Models::Operations::GetCommerceInventory2Request,
         base_url,
         '/commerce/{connection_id}/inventory/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCommerceInventoryRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCommerceInventory2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCommerceInventory',
+        operation_id: 'getCommerceInventory2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceInventory)
-          response = Models::Operations::GetCommerceInventoryResponse.new(
+          response = Models::Operations::GetCommerceInventory2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCommerceInventoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceInventoriesResponse) }
-    def list_commerce_inventories(request:, timeout_ms: nil)
-      # list_commerce_inventories - List all inventories
+    sig { params(request: Models::Operations::ListCommerceInventories2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceInventories2Response) }
+    def list_commerce_inventories2(request:, timeout_ms: nil)
+      # list_commerce_inventories2 - List all inventories
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCommerceInventoriesRequest,
+        Models::Operations::ListCommerceInventories2Request,
         base_url,
         '/commerce/{connection_id}/inventory',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCommerceInventoriesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCommerceInventories2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCommerceInventories',
+        operation_id: 'listCommerceInventories2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CommerceInventory))
-          response = Models::Operations::ListCommerceInventoriesResponse.new(
+          response = Models::Operations::ListCommerceInventories2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCommerceInventoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceInventoryResponse) }
-    def patch_commerce_inventory(request:, timeout_ms: nil)
-      # patch_commerce_inventory - Update an inventory
+    sig { params(request: Models::Operations::PatchCommerceInventory2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceInventory2Response) }
+    def patch_commerce_inventory2(request:, timeout_ms: nil)
+      # patch_commerce_inventory2 - Update an inventory
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCommerceInventoryRequest,
+        Models::Operations::PatchCommerceInventory2Request,
         base_url,
         '/commerce/{connection_id}/inventory/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCommerceInventoryRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCommerceInventory2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCommerceInventory',
+        operation_id: 'patchCommerceInventory2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceInventory)
-          response = Models::Operations::PatchCommerceInventoryResponse.new(
+          response = Models::Operations::PatchCommerceInventory2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceInventoryResponse) }
-    def remove_commerce_inventory(connection_id:, id:, timeout_ms: nil)
-      # remove_commerce_inventory - Remove an inventory
-      request = Models::Operations::RemoveCommerceInventoryRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceInventory2Response) }
+    def remove_commerce_inventory2(connection_id:, id:, timeout_ms: nil)
+      # remove_commerce_inventory2 - Remove an inventory
+      request = Models::Operations::RemoveCommerceInventory2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCommerceInventoryRequest,
+        Models::Operations::RemoveCommerceInventory2Request,
         base_url,
         '/commerce/{connection_id}/inventory/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCommerceInventory',
+        operation_id: 'removeCommerceInventory2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceInventoryResponse.new(
+        return Models::Operations::RemoveCommerceInventory2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceInventoryResponse.new(
+        return Models::Operations::RemoveCommerceInventory2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCommerceInventoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceInventoryResponse) }
-    def update_commerce_inventory(request:, timeout_ms: nil)
-      # update_commerce_inventory - Update an inventory
+    sig { params(request: Models::Operations::UpdateCommerceInventory2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceInventory2Response) }
+    def update_commerce_inventory2(request:, timeout_ms: nil)
+      # update_commerce_inventory2 - Update an inventory
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCommerceInventoryRequest,
+        Models::Operations::UpdateCommerceInventory2Request,
         base_url,
         '/commerce/{connection_id}/inventory/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceInventoryRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceInventory2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCommerceInventory',
+        operation_id: 'updateCommerceInventory2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceInventory)
-          response = Models::Operations::UpdateCommerceInventoryResponse.new(
+          response = Models::Operations::UpdateCommerceInventory2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

@@ -5,20 +5,20 @@
 
 ### Available Operations
 
-* [create_kms_page](#create_kms_page) - Create a page
-* [get_kms_page](#get_kms_page) - Retrieve a page
-* [list_kms_pages](#list_kms_pages) - List all pages
-* [patch_kms_page](#patch_kms_page) - Update a page
-* [remove_kms_page](#remove_kms_page) - Remove a page
-* [update_kms_page](#update_kms_page) - Update a page
+* [create_kms_page2](#create_kms_page2) - Create a page
+* [get_kms_page2](#get_kms_page2) - Retrieve a page
+* [list_kms_pages2](#list_kms_pages2) - List all pages
+* [patch_kms_page2](#patch_kms_page2) - Update a page
+* [remove_kms_page2](#remove_kms_page2) - Remove a page
+* [update_kms_page2](#update_kms_page2) - Update a page
 
-## create_kms_page
+## create_kms_page2
 
 Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="ruby" operationID="createKmsPage2" method="post" path="/kms/{connection_id}/page" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -29,8 +29,8 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.page.create_kms_page(kms_page: Models::Shared::KmsPage.new(
-  type: Models::Shared::KmsPageType::TEXT,
+res = s.page.create_kms_page2(kms_page: Models::Shared::KmsPage.new(
+  type: Models::Shared::KmsPageType::OTHER,
 ), connection_id: '<id>')
 
 unless res.kms_page.nil?
@@ -45,12 +45,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `kms_page`                                                                                                                                       | [Models::Shared::KmsPage](../../models/shared/kmspage.md)                                                                                        | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateKmsPageQueryParamFields](../../models/operations/createkmspagequeryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateKmsPage2QueryParamFields](../../models/operations/createkmspage2queryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateKmsPageResponse)](../../models/operations/createkmspageresponse.md)**
+**[T.nilable(Models::Operations::CreateKmsPage2Response)](../../models/operations/createkmspage2response.md)**
 
 ### Errors
 
@@ -58,13 +58,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_kms_page
+## get_kms_page2
 
 Retrieve a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getKmsPage" method="get" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getKmsPage2" method="get" path="/kms/{connection_id}/page/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -75,7 +75,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.page.get_kms_page(connection_id: '<id>', id: '<id>')
+res = s.page.get_kms_page2(connection_id: '<id>', id: '<id>')
 
 unless res.kms_page.nil?
   # handle response
@@ -89,12 +89,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Page                                                                                                                                   |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetKmsPageQueryParamFields](../../models/operations/getkmspagequeryparamfields.md)>                                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetKmsPage2QueryParamFields](../../models/operations/getkmspage2queryparamfields.md)>                              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetKmsPageResponse)](../../models/operations/getkmspageresponse.md)**
+**[T.nilable(Models::Operations::GetKmsPage2Response)](../../models/operations/getkmspage2response.md)**
 
 ### Errors
 
@@ -102,13 +102,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_kms_pages
+## list_kms_pages2
 
 List all pages
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listKmsPages" method="get" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="ruby" operationID="listKmsPages2" method="get" path="/kms/{connection_id}/page" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -119,11 +119,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListKmsPagesRequest.new(
+req = Models::Operations::ListKmsPages2Request.new(
   connection_id: '<id>',
 )
 
-res = s.page.list_kms_pages(request: req)
+res = s.page.list_kms_pages2(request: req)
 
 unless res.kms_pages.nil?
   # handle response
@@ -133,13 +133,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [Models::Operations::ListKmsPagesRequest](../../models/operations/listkmspagesrequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [Models::Operations::ListKmsPages2Request](../../models/operations/listkmspages2request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListKmsPagesResponse)](../../models/operations/listkmspagesresponse.md)**
+**[T.nilable(Models::Operations::ListKmsPages2Response)](../../models/operations/listkmspages2response.md)**
 
 ### Errors
 
@@ -147,13 +147,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_kms_page
+## patch_kms_page2
 
 Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchKmsPage2" method="patch" path="/kms/{connection_id}/page/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -164,7 +164,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchKmsPageRequest.new(
+req = Models::Operations::PatchKmsPage2Request.new(
   kms_page: Models::Shared::KmsPage.new(
     type: Models::Shared::KmsPageType::OTHER,
   ),
@@ -172,7 +172,7 @@ req = Models::Operations::PatchKmsPageRequest.new(
   id: '<id>',
 )
 
-res = s.page.patch_kms_page(request: req)
+res = s.page.patch_kms_page2(request: req)
 
 unless res.kms_page.nil?
   # handle response
@@ -182,13 +182,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [Models::Operations::PatchKmsPageRequest](../../models/operations/patchkmspagerequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [Models::Operations::PatchKmsPage2Request](../../models/operations/patchkmspage2request.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchKmsPageResponse)](../../models/operations/patchkmspageresponse.md)**
+**[T.nilable(Models::Operations::PatchKmsPage2Response)](../../models/operations/patchkmspage2response.md)**
 
 ### Errors
 
@@ -196,13 +196,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_kms_page
+## remove_kms_page2
 
 Remove a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeKmsPage" method="delete" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeKmsPage2" method="delete" path="/kms/{connection_id}/page/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -213,7 +213,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.page.remove_kms_page(connection_id: '<id>', id: '<id>')
+res = s.page.remove_kms_page2(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -230,7 +230,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveKmsPageResponse)](../../models/operations/removekmspageresponse.md)**
+**[T.nilable(Models::Operations::RemoveKmsPage2Response)](../../models/operations/removekmspage2response.md)**
 
 ### Errors
 
@@ -238,13 +238,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_kms_page
+## update_kms_page2
 
 Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateKmsPage2" method="put" path="/kms/{connection_id}/page/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -255,15 +255,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateKmsPageRequest.new(
+req = Models::Operations::UpdateKmsPage2Request.new(
   kms_page: Models::Shared::KmsPage.new(
-    type: Models::Shared::KmsPageType::OTHER,
+    type: Models::Shared::KmsPageType::MARKDOWN,
   ),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.page.update_kms_page(request: req)
+res = s.page.update_kms_page2(request: req)
 
 unless res.kms_page.nil?
   # handle response
@@ -273,13 +273,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `request`                                                                                   | [Models::Operations::UpdateKmsPageRequest](../../models/operations/updatekmspagerequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::UpdateKmsPage2Request](../../models/operations/updatekmspage2request.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateKmsPageResponse)](../../models/operations/updatekmspageresponse.md)**
+**[T.nilable(Models::Operations::UpdateKmsPage2Response)](../../models/operations/updatekmspage2response.md)**
 
 ### Errors
 

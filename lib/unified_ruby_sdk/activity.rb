@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_activity: Models::Shared::AtsActivity, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsActivityResponse) }
-    def create_ats_activity(ats_activity:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_ats_activity - Create an activity
-      request = Models::Operations::CreateAtsActivityRequest.new(
+    sig { params(ats_activity: Models::Shared::AtsActivity, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsActivity2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsActivity2Response) }
+    def create_ats_activity2(ats_activity:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_ats_activity2 - Create an activity
+      request = Models::Operations::CreateAtsActivity2Request.new(
         ats_activity: ats_activity,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAtsActivityRequest,
+        Models::Operations::CreateAtsActivity2Request,
         base_url,
         '/ats/{connection_id}/activity',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsActivityRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsActivity2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAtsActivity',
+        operation_id: 'createAtsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsActivity)
-          response = Models::Operations::CreateAtsActivityResponse.new(
+          response = Models::Operations::CreateAtsActivity2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_activity: Models::Shared::LmsActivity, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsActivityResponse) }
-    def create_lms_activity(lms_activity:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_lms_activity - Create an activity
-      request = Models::Operations::CreateLmsActivityRequest.new(
+    sig { params(lms_activity: Models::Shared::LmsActivity, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsActivity2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsActivity2Response) }
+    def create_lms_activity2(lms_activity:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_lms_activity2 - Create an activity
+      request = Models::Operations::CreateLmsActivity2Request.new(
         lms_activity: lms_activity,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateLmsActivityRequest,
+        Models::Operations::CreateLmsActivity2Request,
         base_url,
         '/lms/{connection_id}/activity',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateLmsActivityRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateLmsActivity2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createLmsActivity',
+        operation_id: 'createLmsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsActivity)
-          response = Models::Operations::CreateLmsActivityResponse.new(
+          response = Models::Operations::CreateLmsActivity2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsActivityResponse) }
-    def get_ats_activity(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_ats_activity - Retrieve an activity
-      request = Models::Operations::GetAtsActivityRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsActivity2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsActivity2Response) }
+    def get_ats_activity2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_ats_activity2 - Retrieve an activity
+      request = Models::Operations::GetAtsActivity2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -307,14 +307,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAtsActivityRequest,
+        Models::Operations::GetAtsActivity2Request,
         base_url,
         '/ats/{connection_id}/activity/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAtsActivityRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAtsActivity2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -330,7 +330,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAtsActivity',
+        operation_id: 'getAtsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -389,7 +389,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsActivity)
-          response = Models::Operations::GetAtsActivityResponse.new(
+          response = Models::Operations::GetAtsActivity2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -411,10 +411,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsActivityResponse) }
-    def get_clubs_activity(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_clubs_activity - Retrieve an activity
-      request = Models::Operations::GetClubsActivityRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsActivity2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsActivity2Response) }
+    def get_clubs_activity2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_clubs_activity2 - Retrieve an activity
+      request = Models::Operations::GetClubsActivity2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -423,14 +423,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetClubsActivityRequest,
+        Models::Operations::GetClubsActivity2Request,
         base_url,
         '/clubs/{connection_id}/activity/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetClubsActivityRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetClubsActivity2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -446,7 +446,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getClubsActivity',
+        operation_id: 'getClubsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -505,7 +505,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ClubsActivity)
-          response = Models::Operations::GetClubsActivityResponse.new(
+          response = Models::Operations::GetClubsActivity2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -527,10 +527,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsActivityResponse) }
-    def get_lms_activity(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_lms_activity - Retrieve an activity
-      request = Models::Operations::GetLmsActivityRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsActivity2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsActivity2Response) }
+    def get_lms_activity2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_lms_activity2 - Retrieve an activity
+      request = Models::Operations::GetLmsActivity2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -539,14 +539,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetLmsActivityRequest,
+        Models::Operations::GetLmsActivity2Request,
         base_url,
         '/lms/{connection_id}/activity/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetLmsActivityRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetLmsActivity2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -562,7 +562,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getLmsActivity',
+        operation_id: 'getLmsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -621,7 +621,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsActivity)
-          response = Models::Operations::GetLmsActivityResponse.new(
+          response = Models::Operations::GetLmsActivity2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -643,20 +643,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAtsActivitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsActivitiesResponse) }
-    def list_ats_activities(request:, timeout_ms: nil)
-      # list_ats_activities - List all activities
+    sig { params(request: Models::Operations::ListAtsActivities2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsActivities2Response) }
+    def list_ats_activities2(request:, timeout_ms: nil)
+      # list_ats_activities2 - List all activities
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAtsActivitiesRequest,
+        Models::Operations::ListAtsActivities2Request,
         base_url,
         '/ats/{connection_id}/activity',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAtsActivitiesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAtsActivities2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -672,7 +672,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAtsActivities',
+        operation_id: 'listAtsActivities2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -731,7 +731,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsActivity))
-          response = Models::Operations::ListAtsActivitiesResponse.new(
+          response = Models::Operations::ListAtsActivities2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -753,20 +753,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListClubsActivitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsActivitiesResponse) }
-    def list_clubs_activities(request:, timeout_ms: nil)
-      # list_clubs_activities - List all activities
+    sig { params(request: Models::Operations::ListClubsActivities2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsActivities2Response) }
+    def list_clubs_activities2(request:, timeout_ms: nil)
+      # list_clubs_activities2 - List all activities
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListClubsActivitiesRequest,
+        Models::Operations::ListClubsActivities2Request,
         base_url,
         '/clubs/{connection_id}/activity',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListClubsActivitiesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListClubsActivities2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -782,7 +782,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listClubsActivities',
+        operation_id: 'listClubsActivities2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -841,7 +841,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ClubsActivity))
-          response = Models::Operations::ListClubsActivitiesResponse.new(
+          response = Models::Operations::ListClubsActivities2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -863,20 +863,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListLmsActivitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsActivitiesResponse) }
-    def list_lms_activities(request:, timeout_ms: nil)
-      # list_lms_activities - List all activities
+    sig { params(request: Models::Operations::ListLmsActivities2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsActivities2Response) }
+    def list_lms_activities2(request:, timeout_ms: nil)
+      # list_lms_activities2 - List all activities
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListLmsActivitiesRequest,
+        Models::Operations::ListLmsActivities2Request,
         base_url,
         '/lms/{connection_id}/activity',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListLmsActivitiesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListLmsActivities2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -892,7 +892,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listLmsActivities',
+        operation_id: 'listLmsActivities2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -951,7 +951,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::LmsActivity))
-          response = Models::Operations::ListLmsActivitiesResponse.new(
+          response = Models::Operations::ListLmsActivities2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -973,13 +973,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAtsActivityRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsActivityResponse) }
-    def patch_ats_activity(request:, timeout_ms: nil)
-      # patch_ats_activity - Update an activity
+    sig { params(request: Models::Operations::PatchAtsActivity2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsActivity2Response) }
+    def patch_ats_activity2(request:, timeout_ms: nil)
+      # patch_ats_activity2 - Update an activity
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAtsActivityRequest,
+        Models::Operations::PatchAtsActivity2Request,
         base_url,
         '/ats/{connection_id}/activity/{id}',
         request
@@ -997,7 +997,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsActivityRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsActivity2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1013,7 +1013,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAtsActivity',
+        operation_id: 'patchAtsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1073,7 +1073,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsActivity)
-          response = Models::Operations::PatchAtsActivityResponse.new(
+          response = Models::Operations::PatchAtsActivity2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1095,13 +1095,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchLmsActivityRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsActivityResponse) }
-    def patch_lms_activity(request:, timeout_ms: nil)
-      # patch_lms_activity - Update an activity
+    sig { params(request: Models::Operations::PatchLmsActivity2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsActivity2Response) }
+    def patch_lms_activity2(request:, timeout_ms: nil)
+      # patch_lms_activity2 - Update an activity
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchLmsActivityRequest,
+        Models::Operations::PatchLmsActivity2Request,
         base_url,
         '/lms/{connection_id}/activity/{id}',
         request
@@ -1119,7 +1119,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchLmsActivityRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchLmsActivity2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1135,7 +1135,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchLmsActivity',
+        operation_id: 'patchLmsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1195,7 +1195,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsActivity)
-          response = Models::Operations::PatchLmsActivityResponse.new(
+          response = Models::Operations::PatchLmsActivity2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1217,17 +1217,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsActivityResponse) }
-    def remove_ats_activity(connection_id:, id:, timeout_ms: nil)
-      # remove_ats_activity - Remove an activity
-      request = Models::Operations::RemoveAtsActivityRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsActivity2Response) }
+    def remove_ats_activity2(connection_id:, id:, timeout_ms: nil)
+      # remove_ats_activity2 - Remove an activity
+      request = Models::Operations::RemoveAtsActivity2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAtsActivityRequest,
+        Models::Operations::RemoveAtsActivity2Request,
         base_url,
         '/ats/{connection_id}/activity/{id}',
         request
@@ -1249,7 +1249,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAtsActivity',
+        operation_id: 'removeAtsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1304,7 +1304,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAtsActivityResponse.new(
+        return Models::Operations::RemoveAtsActivity2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1321,7 +1321,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAtsActivityResponse.new(
+        return Models::Operations::RemoveAtsActivity2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1331,17 +1331,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsActivityResponse) }
-    def remove_lms_activity(connection_id:, id:, timeout_ms: nil)
-      # remove_lms_activity - Remove an activity
-      request = Models::Operations::RemoveLmsActivityRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsActivity2Response) }
+    def remove_lms_activity2(connection_id:, id:, timeout_ms: nil)
+      # remove_lms_activity2 - Remove an activity
+      request = Models::Operations::RemoveLmsActivity2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveLmsActivityRequest,
+        Models::Operations::RemoveLmsActivity2Request,
         base_url,
         '/lms/{connection_id}/activity/{id}',
         request
@@ -1363,7 +1363,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeLmsActivity',
+        operation_id: 'removeLmsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1418,7 +1418,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveLmsActivityResponse.new(
+        return Models::Operations::RemoveLmsActivity2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1435,7 +1435,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveLmsActivityResponse.new(
+        return Models::Operations::RemoveLmsActivity2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1445,13 +1445,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAtsActivityRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsActivityResponse) }
-    def update_ats_activity(request:, timeout_ms: nil)
-      # update_ats_activity - Update an activity
+    sig { params(request: Models::Operations::UpdateAtsActivity2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsActivity2Response) }
+    def update_ats_activity2(request:, timeout_ms: nil)
+      # update_ats_activity2 - Update an activity
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAtsActivityRequest,
+        Models::Operations::UpdateAtsActivity2Request,
         base_url,
         '/ats/{connection_id}/activity/{id}',
         request
@@ -1469,7 +1469,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsActivityRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsActivity2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1485,7 +1485,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAtsActivity',
+        operation_id: 'updateAtsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1545,7 +1545,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsActivity)
-          response = Models::Operations::UpdateAtsActivityResponse.new(
+          response = Models::Operations::UpdateAtsActivity2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1567,13 +1567,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateLmsActivityRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsActivityResponse) }
-    def update_lms_activity(request:, timeout_ms: nil)
-      # update_lms_activity - Update an activity
+    sig { params(request: Models::Operations::UpdateLmsActivity2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsActivity2Response) }
+    def update_lms_activity2(request:, timeout_ms: nil)
+      # update_lms_activity2 - Update an activity
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateLmsActivityRequest,
+        Models::Operations::UpdateLmsActivity2Request,
         base_url,
         '/lms/{connection_id}/activity/{id}',
         request
@@ -1591,7 +1591,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateLmsActivityRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateLmsActivity2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1607,7 +1607,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateLmsActivity',
+        operation_id: 'updateLmsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1667,7 +1667,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsActivity)
-          response = Models::Operations::UpdateLmsActivityResponse.new(
+          response = Models::Operations::UpdateLmsActivity2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

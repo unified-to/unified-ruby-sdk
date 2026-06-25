@@ -127,6 +127,11 @@
 | `ADS_INSERTIONORDER`       | ads_insertionorder         |
 | `ADS_TARGET`               | ads_target                 |
 | `ADS_PROMOTED`             | ads_promoted               |
+| `ANALYTICS_PROPERTY`       | analytics_property         |
+| `ANALYTICS_EVENT`          | analytics_event            |
+| `ANALYTICS_SESSION`        | analytics_session          |
+| `ANALYTICS_VISITOR`        | analytics_visitor          |
+| `ANALYTICS_REPORT`         | analytics_report           |
 | `FORMS_FORM`               | forms_form                 |
 | `FORMS_SUBMISSION`         | forms_submission           |
 | `SHIPPING_CARRIER`         | shipping_carrier           |
@@ -142,3 +147,7 @@
 | `CLUBS_ACTIVITY`           | clubs_activity             |
 | `CLUBS_LOCATION`           | clubs_location             |
 | `CLUBS_EVENT`              | clubs_event                |
+| `DATASTORE_DATABASE`       | datastore_database         |
+| `DATASTORE_TABLE`          | datastore_table            |
+| `DATASTORE_RECORD`         | datastore_record           |
+| `DATASTORE_QUERY`          | datastore_query            |

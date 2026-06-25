@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsActivityResponse) }
-    def get_clubs_activity(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_clubs_activity - Retrieve an activity
-      request = Models::Operations::GetClubsActivityRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsActivity2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsActivity2Response) }
+    def get_clubs_activity2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_clubs_activity2 - Retrieve an activity
+      request = Models::Operations::GetClubsActivity2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetClubsActivityRequest,
+        Models::Operations::GetClubsActivity2Request,
         base_url,
         '/clubs/{connection_id}/activity/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetClubsActivityRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetClubsActivity2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getClubsActivity',
+        operation_id: 'getClubsActivity2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ClubsActivity)
-          response = Models::Operations::GetClubsActivityResponse.new(
+          response = Models::Operations::GetClubsActivity2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,10 +155,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsEventResponse) }
-    def get_clubs_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_clubs_event - Retrieve an event
-      request = Models::Operations::GetClubsEventRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsEvent2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsEvent2Response) }
+    def get_clubs_event2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_clubs_event2 - Retrieve an event
+      request = Models::Operations::GetClubsEvent2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -167,14 +167,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetClubsEventRequest,
+        Models::Operations::GetClubsEvent2Request,
         base_url,
         '/clubs/{connection_id}/event/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetClubsEventRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetClubsEvent2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -190,7 +190,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getClubsEvent',
+        operation_id: 'getClubsEvent2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -249,7 +249,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ClubsEvent)
-          response = Models::Operations::GetClubsEventResponse.new(
+          response = Models::Operations::GetClubsEvent2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -271,10 +271,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsGroupResponse) }
-    def get_clubs_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_clubs_group - Retrieve a group
-      request = Models::Operations::GetClubsGroupRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsGroup2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsGroup2Response) }
+    def get_clubs_group2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_clubs_group2 - Retrieve a group
+      request = Models::Operations::GetClubsGroup2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -283,14 +283,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetClubsGroupRequest,
+        Models::Operations::GetClubsGroup2Request,
         base_url,
         '/clubs/{connection_id}/group/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetClubsGroupRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetClubsGroup2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -306,7 +306,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getClubsGroup',
+        operation_id: 'getClubsGroup2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -365,7 +365,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ClubsGroup)
-          response = Models::Operations::GetClubsGroupResponse.new(
+          response = Models::Operations::GetClubsGroup2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -387,10 +387,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsLocationResponse) }
-    def get_clubs_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_clubs_location - Retrieve a location
-      request = Models::Operations::GetClubsLocationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsLocation2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsLocation2Response) }
+    def get_clubs_location2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_clubs_location2 - Retrieve a location
+      request = Models::Operations::GetClubsLocation2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -399,14 +399,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetClubsLocationRequest,
+        Models::Operations::GetClubsLocation2Request,
         base_url,
         '/clubs/{connection_id}/location/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetClubsLocationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetClubsLocation2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -422,7 +422,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getClubsLocation',
+        operation_id: 'getClubsLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -481,7 +481,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ClubsLocation)
-          response = Models::Operations::GetClubsLocationResponse.new(
+          response = Models::Operations::GetClubsLocation2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -503,10 +503,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsMemberQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsMemberResponse) }
-    def get_clubs_member(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_clubs_member - Retrieve a member
-      request = Models::Operations::GetClubsMemberRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsMember2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsMember2Response) }
+    def get_clubs_member2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_clubs_member2 - Retrieve a member
+      request = Models::Operations::GetClubsMember2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -515,14 +515,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetClubsMemberRequest,
+        Models::Operations::GetClubsMember2Request,
         base_url,
         '/clubs/{connection_id}/member/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetClubsMemberRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetClubsMember2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -538,7 +538,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getClubsMember',
+        operation_id: 'getClubsMember2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -597,7 +597,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ClubsMember)
-          response = Models::Operations::GetClubsMemberResponse.new(
+          response = Models::Operations::GetClubsMember2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -619,20 +619,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListClubsActivitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsActivitiesResponse) }
-    def list_clubs_activities(request:, timeout_ms: nil)
-      # list_clubs_activities - List all activities
+    sig { params(request: Models::Operations::ListClubsActivities2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsActivities2Response) }
+    def list_clubs_activities2(request:, timeout_ms: nil)
+      # list_clubs_activities2 - List all activities
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListClubsActivitiesRequest,
+        Models::Operations::ListClubsActivities2Request,
         base_url,
         '/clubs/{connection_id}/activity',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListClubsActivitiesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListClubsActivities2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -648,7 +648,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listClubsActivities',
+        operation_id: 'listClubsActivities2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -707,7 +707,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ClubsActivity))
-          response = Models::Operations::ListClubsActivitiesResponse.new(
+          response = Models::Operations::ListClubsActivities2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -729,20 +729,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListClubsEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsEventsResponse) }
-    def list_clubs_events(request:, timeout_ms: nil)
-      # list_clubs_events - List all events
+    sig { params(request: Models::Operations::ListClubsEvents2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsEvents2Response) }
+    def list_clubs_events2(request:, timeout_ms: nil)
+      # list_clubs_events2 - List all events
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListClubsEventsRequest,
+        Models::Operations::ListClubsEvents2Request,
         base_url,
         '/clubs/{connection_id}/event',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListClubsEventsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListClubsEvents2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -758,7 +758,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listClubsEvents',
+        operation_id: 'listClubsEvents2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -817,7 +817,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ClubsEvent))
-          response = Models::Operations::ListClubsEventsResponse.new(
+          response = Models::Operations::ListClubsEvents2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -839,20 +839,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListClubsGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsGroupsResponse) }
-    def list_clubs_groups(request:, timeout_ms: nil)
-      # list_clubs_groups - List all groups
+    sig { params(request: Models::Operations::ListClubsGroups2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsGroups2Response) }
+    def list_clubs_groups2(request:, timeout_ms: nil)
+      # list_clubs_groups2 - List all groups
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListClubsGroupsRequest,
+        Models::Operations::ListClubsGroups2Request,
         base_url,
         '/clubs/{connection_id}/group',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListClubsGroupsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListClubsGroups2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -868,7 +868,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listClubsGroups',
+        operation_id: 'listClubsGroups2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -927,7 +927,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ClubsGroup))
-          response = Models::Operations::ListClubsGroupsResponse.new(
+          response = Models::Operations::ListClubsGroups2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -949,20 +949,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListClubsLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsLocationsResponse) }
-    def list_clubs_locations(request:, timeout_ms: nil)
-      # list_clubs_locations - List all locations
+    sig { params(request: Models::Operations::ListClubsLocations2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsLocations2Response) }
+    def list_clubs_locations2(request:, timeout_ms: nil)
+      # list_clubs_locations2 - List all locations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListClubsLocationsRequest,
+        Models::Operations::ListClubsLocations2Request,
         base_url,
         '/clubs/{connection_id}/location',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListClubsLocationsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListClubsLocations2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -978,7 +978,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listClubsLocations',
+        operation_id: 'listClubsLocations2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1037,7 +1037,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ClubsLocation))
-          response = Models::Operations::ListClubsLocationsResponse.new(
+          response = Models::Operations::ListClubsLocations2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1059,20 +1059,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListClubsMembersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsMembersResponse) }
-    def list_clubs_members(request:, timeout_ms: nil)
-      # list_clubs_members - List all members
+    sig { params(request: Models::Operations::ListClubsMembers2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsMembers2Response) }
+    def list_clubs_members2(request:, timeout_ms: nil)
+      # list_clubs_members2 - List all members
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListClubsMembersRequest,
+        Models::Operations::ListClubsMembers2Request,
         base_url,
         '/clubs/{connection_id}/member',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListClubsMembersRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListClubsMembers2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1088,7 +1088,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listClubsMembers',
+        operation_id: 'listClubsMembers2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1147,7 +1147,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ClubsMember))
-          response = Models::Operations::ListClubsMembersResponse.new(
+          response = Models::Operations::ListClubsMembers2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

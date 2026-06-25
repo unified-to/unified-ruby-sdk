@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_journal: Models::Shared::AccountingJournal, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingJournalQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingJournalResponse) }
-    def create_accounting_journal(accounting_journal:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_accounting_journal - Create a journal
-      request = Models::Operations::CreateAccountingJournalRequest.new(
+    sig { params(accounting_journal: Models::Shared::AccountingJournal, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingJournal2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingJournal2Response) }
+    def create_accounting_journal2(accounting_journal:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_accounting_journal2 - Create a journal
+      request = Models::Operations::CreateAccountingJournal2Request.new(
         accounting_journal: accounting_journal,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAccountingJournalRequest,
+        Models::Operations::CreateAccountingJournal2Request,
         base_url,
         '/accounting/{connection_id}/journal',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAccountingJournalRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAccountingJournal2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAccountingJournal',
+        operation_id: 'createAccountingJournal2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingJournal)
-          response = Models::Operations::CreateAccountingJournalResponse.new(
+          response = Models::Operations::CreateAccountingJournal2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingJournalQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingJournalResponse) }
-    def get_accounting_journal(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_accounting_journal - Retrieve a journal
-      request = Models::Operations::GetAccountingJournalRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingJournal2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingJournal2Response) }
+    def get_accounting_journal2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_accounting_journal2 - Retrieve a journal
+      request = Models::Operations::GetAccountingJournal2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAccountingJournalRequest,
+        Models::Operations::GetAccountingJournal2Request,
         base_url,
         '/accounting/{connection_id}/journal/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAccountingJournalRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAccountingJournal2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAccountingJournal',
+        operation_id: 'getAccountingJournal2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingJournal)
-          response = Models::Operations::GetAccountingJournalResponse.new(
+          response = Models::Operations::GetAccountingJournal2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAccountingJournalsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingJournalsResponse) }
-    def list_accounting_journals(request:, timeout_ms: nil)
-      # list_accounting_journals - List all journals
+    sig { params(request: Models::Operations::ListAccountingJournals2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingJournals2Response) }
+    def list_accounting_journals2(request:, timeout_ms: nil)
+      # list_accounting_journals2 - List all journals
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAccountingJournalsRequest,
+        Models::Operations::ListAccountingJournals2Request,
         base_url,
         '/accounting/{connection_id}/journal',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAccountingJournalsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAccountingJournals2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAccountingJournals',
+        operation_id: 'listAccountingJournals2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AccountingJournal))
-          response = Models::Operations::ListAccountingJournalsResponse.new(
+          response = Models::Operations::ListAccountingJournals2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAccountingJournalRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingJournalResponse) }
-    def patch_accounting_journal(request:, timeout_ms: nil)
-      # patch_accounting_journal - Update a journal
+    sig { params(request: Models::Operations::PatchAccountingJournal2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingJournal2Response) }
+    def patch_accounting_journal2(request:, timeout_ms: nil)
+      # patch_accounting_journal2 - Update a journal
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAccountingJournalRequest,
+        Models::Operations::PatchAccountingJournal2Request,
         base_url,
         '/accounting/{connection_id}/journal/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAccountingJournalRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAccountingJournal2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAccountingJournal',
+        operation_id: 'patchAccountingJournal2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingJournal)
-          response = Models::Operations::PatchAccountingJournalResponse.new(
+          response = Models::Operations::PatchAccountingJournal2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingJournalResponse) }
-    def remove_accounting_journal(connection_id:, id:, timeout_ms: nil)
-      # remove_accounting_journal - Remove a journal
-      request = Models::Operations::RemoveAccountingJournalRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingJournal2Response) }
+    def remove_accounting_journal2(connection_id:, id:, timeout_ms: nil)
+      # remove_accounting_journal2 - Remove a journal
+      request = Models::Operations::RemoveAccountingJournal2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAccountingJournalRequest,
+        Models::Operations::RemoveAccountingJournal2Request,
         base_url,
         '/accounting/{connection_id}/journal/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAccountingJournal',
+        operation_id: 'removeAccountingJournal2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAccountingJournalResponse.new(
+        return Models::Operations::RemoveAccountingJournal2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAccountingJournalResponse.new(
+        return Models::Operations::RemoveAccountingJournal2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAccountingJournalRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingJournalResponse) }
-    def update_accounting_journal(request:, timeout_ms: nil)
-      # update_accounting_journal - Update a journal
+    sig { params(request: Models::Operations::UpdateAccountingJournal2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingJournal2Response) }
+    def update_accounting_journal2(request:, timeout_ms: nil)
+      # update_accounting_journal2 - Update a journal
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAccountingJournalRequest,
+        Models::Operations::UpdateAccountingJournal2Request,
         base_url,
         '/accounting/{connection_id}/journal/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAccountingJournalRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAccountingJournal2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAccountingJournal',
+        operation_id: 'updateAccountingJournal2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingJournal)
-          response = Models::Operations::UpdateAccountingJournalResponse.new(
+          response = Models::Operations::UpdateAccountingJournal2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

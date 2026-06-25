@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceLocationResponse) }
-    def create_commerce_location(commerce_location:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_commerce_location - Create a location
-      request = Models::Operations::CreateCommerceLocationRequest.new(
+    sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceLocation2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceLocation2Response) }
+    def create_commerce_location2(commerce_location:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_commerce_location2 - Create a location
+      request = Models::Operations::CreateCommerceLocation2Request.new(
         commerce_location: commerce_location,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCommerceLocationRequest,
+        Models::Operations::CreateCommerceLocation2Request,
         base_url,
         '/commerce/{connection_id}/location',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCommerceLocationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCommerceLocation2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCommerceLocation',
+        operation_id: 'createCommerceLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceLocation)
-          response = Models::Operations::CreateCommerceLocationResponse.new(
+          response = Models::Operations::CreateCommerceLocation2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_location: Models::Shared::HrisLocation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisLocationResponse) }
-    def create_hris_location(hris_location:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_hris_location - Create a location
-      request = Models::Operations::CreateHrisLocationRequest.new(
+    sig { params(hris_location: Models::Shared::HrisLocation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisLocation2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisLocation2Response) }
+    def create_hris_location2(hris_location:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_hris_location2 - Create a location
+      request = Models::Operations::CreateHrisLocation2Request.new(
         hris_location: hris_location,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateHrisLocationRequest,
+        Models::Operations::CreateHrisLocation2Request,
         base_url,
         '/hris/{connection_id}/location',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateHrisLocationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateHrisLocation2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createHrisLocation',
+        operation_id: 'createHrisLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisLocation)
-          response = Models::Operations::CreateHrisLocationResponse.new(
+          response = Models::Operations::CreateHrisLocation2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsLocationResponse) }
-    def get_clubs_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_clubs_location - Retrieve a location
-      request = Models::Operations::GetClubsLocationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsLocation2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsLocation2Response) }
+    def get_clubs_location2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_clubs_location2 - Retrieve a location
+      request = Models::Operations::GetClubsLocation2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -307,14 +307,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetClubsLocationRequest,
+        Models::Operations::GetClubsLocation2Request,
         base_url,
         '/clubs/{connection_id}/location/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetClubsLocationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetClubsLocation2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -330,7 +330,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getClubsLocation',
+        operation_id: 'getClubsLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -389,7 +389,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ClubsLocation)
-          response = Models::Operations::GetClubsLocationResponse.new(
+          response = Models::Operations::GetClubsLocation2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -411,10 +411,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceLocationResponse) }
-    def get_commerce_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_commerce_location - Retrieve a location
-      request = Models::Operations::GetCommerceLocationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceLocation2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceLocation2Response) }
+    def get_commerce_location2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_commerce_location2 - Retrieve a location
+      request = Models::Operations::GetCommerceLocation2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -423,14 +423,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCommerceLocationRequest,
+        Models::Operations::GetCommerceLocation2Request,
         base_url,
         '/commerce/{connection_id}/location/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCommerceLocationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCommerceLocation2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -446,7 +446,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCommerceLocation',
+        operation_id: 'getCommerceLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -505,7 +505,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceLocation)
-          response = Models::Operations::GetCommerceLocationResponse.new(
+          response = Models::Operations::GetCommerceLocation2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -527,10 +527,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisLocationResponse) }
-    def get_hris_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_hris_location - Retrieve a location
-      request = Models::Operations::GetHrisLocationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisLocation2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisLocation2Response) }
+    def get_hris_location2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_hris_location2 - Retrieve a location
+      request = Models::Operations::GetHrisLocation2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -539,14 +539,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetHrisLocationRequest,
+        Models::Operations::GetHrisLocation2Request,
         base_url,
         '/hris/{connection_id}/location/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetHrisLocationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetHrisLocation2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -562,7 +562,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getHrisLocation',
+        operation_id: 'getHrisLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -621,7 +621,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisLocation)
-          response = Models::Operations::GetHrisLocationResponse.new(
+          response = Models::Operations::GetHrisLocation2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -643,20 +643,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListClubsLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsLocationsResponse) }
-    def list_clubs_locations(request:, timeout_ms: nil)
-      # list_clubs_locations - List all locations
+    sig { params(request: Models::Operations::ListClubsLocations2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsLocations2Response) }
+    def list_clubs_locations2(request:, timeout_ms: nil)
+      # list_clubs_locations2 - List all locations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListClubsLocationsRequest,
+        Models::Operations::ListClubsLocations2Request,
         base_url,
         '/clubs/{connection_id}/location',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListClubsLocationsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListClubsLocations2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -672,7 +672,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listClubsLocations',
+        operation_id: 'listClubsLocations2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -731,7 +731,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ClubsLocation))
-          response = Models::Operations::ListClubsLocationsResponse.new(
+          response = Models::Operations::ListClubsLocations2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -753,20 +753,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCommerceLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceLocationsResponse) }
-    def list_commerce_locations(request:, timeout_ms: nil)
-      # list_commerce_locations - List all locations
+    sig { params(request: Models::Operations::ListCommerceLocations2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceLocations2Response) }
+    def list_commerce_locations2(request:, timeout_ms: nil)
+      # list_commerce_locations2 - List all locations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCommerceLocationsRequest,
+        Models::Operations::ListCommerceLocations2Request,
         base_url,
         '/commerce/{connection_id}/location',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCommerceLocationsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCommerceLocations2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -782,7 +782,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCommerceLocations',
+        operation_id: 'listCommerceLocations2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -841,7 +841,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CommerceLocation))
-          response = Models::Operations::ListCommerceLocationsResponse.new(
+          response = Models::Operations::ListCommerceLocations2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -863,20 +863,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListHrisLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisLocationsResponse) }
-    def list_hris_locations(request:, timeout_ms: nil)
-      # list_hris_locations - List all locations
+    sig { params(request: Models::Operations::ListHrisLocations2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisLocations2Response) }
+    def list_hris_locations2(request:, timeout_ms: nil)
+      # list_hris_locations2 - List all locations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListHrisLocationsRequest,
+        Models::Operations::ListHrisLocations2Request,
         base_url,
         '/hris/{connection_id}/location',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListHrisLocationsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListHrisLocations2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -892,7 +892,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listHrisLocations',
+        operation_id: 'listHrisLocations2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -951,7 +951,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::HrisLocation))
-          response = Models::Operations::ListHrisLocationsResponse.new(
+          response = Models::Operations::ListHrisLocations2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -973,13 +973,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCommerceLocationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceLocationResponse) }
-    def patch_commerce_location(request:, timeout_ms: nil)
-      # patch_commerce_location - Update a location
+    sig { params(request: Models::Operations::PatchCommerceLocation2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceLocation2Response) }
+    def patch_commerce_location2(request:, timeout_ms: nil)
+      # patch_commerce_location2 - Update a location
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCommerceLocationRequest,
+        Models::Operations::PatchCommerceLocation2Request,
         base_url,
         '/commerce/{connection_id}/location/{id}',
         request
@@ -997,7 +997,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCommerceLocationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCommerceLocation2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1013,7 +1013,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCommerceLocation',
+        operation_id: 'patchCommerceLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1073,7 +1073,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceLocation)
-          response = Models::Operations::PatchCommerceLocationResponse.new(
+          response = Models::Operations::PatchCommerceLocation2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1095,13 +1095,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchHrisLocationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisLocationResponse) }
-    def patch_hris_location(request:, timeout_ms: nil)
-      # patch_hris_location - Update a location
+    sig { params(request: Models::Operations::PatchHrisLocation2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisLocation2Response) }
+    def patch_hris_location2(request:, timeout_ms: nil)
+      # patch_hris_location2 - Update a location
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchHrisLocationRequest,
+        Models::Operations::PatchHrisLocation2Request,
         base_url,
         '/hris/{connection_id}/location/{id}',
         request
@@ -1119,7 +1119,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchHrisLocationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchHrisLocation2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1135,7 +1135,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchHrisLocation',
+        operation_id: 'patchHrisLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1195,7 +1195,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisLocation)
-          response = Models::Operations::PatchHrisLocationResponse.new(
+          response = Models::Operations::PatchHrisLocation2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1217,17 +1217,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceLocationResponse) }
-    def remove_commerce_location(connection_id:, id:, timeout_ms: nil)
-      # remove_commerce_location - Remove a location
-      request = Models::Operations::RemoveCommerceLocationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceLocation2Response) }
+    def remove_commerce_location2(connection_id:, id:, timeout_ms: nil)
+      # remove_commerce_location2 - Remove a location
+      request = Models::Operations::RemoveCommerceLocation2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCommerceLocationRequest,
+        Models::Operations::RemoveCommerceLocation2Request,
         base_url,
         '/commerce/{connection_id}/location/{id}',
         request
@@ -1249,7 +1249,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCommerceLocation',
+        operation_id: 'removeCommerceLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1304,7 +1304,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceLocationResponse.new(
+        return Models::Operations::RemoveCommerceLocation2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1321,7 +1321,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceLocationResponse.new(
+        return Models::Operations::RemoveCommerceLocation2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1331,17 +1331,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisLocationResponse) }
-    def remove_hris_location(connection_id:, id:, timeout_ms: nil)
-      # remove_hris_location - Remove a location
-      request = Models::Operations::RemoveHrisLocationRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisLocation2Response) }
+    def remove_hris_location2(connection_id:, id:, timeout_ms: nil)
+      # remove_hris_location2 - Remove a location
+      request = Models::Operations::RemoveHrisLocation2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveHrisLocationRequest,
+        Models::Operations::RemoveHrisLocation2Request,
         base_url,
         '/hris/{connection_id}/location/{id}',
         request
@@ -1363,7 +1363,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeHrisLocation',
+        operation_id: 'removeHrisLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1418,7 +1418,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisLocationResponse.new(
+        return Models::Operations::RemoveHrisLocation2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1435,7 +1435,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisLocationResponse.new(
+        return Models::Operations::RemoveHrisLocation2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1445,13 +1445,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCommerceLocationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceLocationResponse) }
-    def update_commerce_location(request:, timeout_ms: nil)
-      # update_commerce_location - Update a location
+    sig { params(request: Models::Operations::UpdateCommerceLocation2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceLocation2Response) }
+    def update_commerce_location2(request:, timeout_ms: nil)
+      # update_commerce_location2 - Update a location
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCommerceLocationRequest,
+        Models::Operations::UpdateCommerceLocation2Request,
         base_url,
         '/commerce/{connection_id}/location/{id}',
         request
@@ -1469,7 +1469,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceLocationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceLocation2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1485,7 +1485,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCommerceLocation',
+        operation_id: 'updateCommerceLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1545,7 +1545,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceLocation)
-          response = Models::Operations::UpdateCommerceLocationResponse.new(
+          response = Models::Operations::UpdateCommerceLocation2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1567,13 +1567,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateHrisLocationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisLocationResponse) }
-    def update_hris_location(request:, timeout_ms: nil)
-      # update_hris_location - Update a location
+    sig { params(request: Models::Operations::UpdateHrisLocation2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisLocation2Response) }
+    def update_hris_location2(request:, timeout_ms: nil)
+      # update_hris_location2 - Update a location
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateHrisLocationRequest,
+        Models::Operations::UpdateHrisLocation2Request,
         base_url,
         '/hris/{connection_id}/location/{id}',
         request
@@ -1591,7 +1591,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateHrisLocationRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateHrisLocation2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1607,7 +1607,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateHrisLocation',
+        operation_id: 'updateHrisLocation2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1667,7 +1667,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisLocation)
-          response = Models::Operations::UpdateHrisLocationResponse.new(
+          response = Models::Operations::UpdateHrisLocation2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

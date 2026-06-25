@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::AccountingSalesorder
   def created_at=(str_); end
   def currency(); end
   def currency=(str_); end
+  def fees(); end
+  def fees=(str_); end
   def id(); end
   def id=(str_); end
   def lineitems(); end

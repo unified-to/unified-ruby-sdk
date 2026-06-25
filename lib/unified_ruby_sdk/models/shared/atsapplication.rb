@@ -34,6 +34,8 @@ module UnifiedRubySDK
 
         field :original_status, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_status') } }
 
+        field :original_substatus, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_substatus') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :rejected_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rejected_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -48,8 +50,8 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(answers: T.nilable(T::Array[Models::Shared::AtsApplicationAnswer]), applied_at: T.nilable(::DateTime), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), hired_at: T.nilable(::DateTime), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), offers: T.nilable(T::Array[Models::Shared::AtsOffer]), original_status: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), rejected_at: T.nilable(::DateTime), rejected_reason: T.nilable(::String), source: T.nilable(::String), status: T.nilable(Models::Shared::AtsApplicationStatus), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(answers: nil, applied_at: nil, candidate_id: nil, created_at: nil, hired_at: nil, id: nil, job_id: nil, metadata: nil, offers: nil, original_status: nil, raw: nil, rejected_at: nil, rejected_reason: nil, source: nil, status: nil, updated_at: nil, user_id: nil)
+        sig { params(answers: T.nilable(T::Array[Models::Shared::AtsApplicationAnswer]), applied_at: T.nilable(::DateTime), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), hired_at: T.nilable(::DateTime), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), offers: T.nilable(T::Array[Models::Shared::AtsOffer]), original_status: T.nilable(::String), original_substatus: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), rejected_at: T.nilable(::DateTime), rejected_reason: T.nilable(::String), source: T.nilable(::String), status: T.nilable(Models::Shared::AtsApplicationStatus), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(answers: nil, applied_at: nil, candidate_id: nil, created_at: nil, hired_at: nil, id: nil, job_id: nil, metadata: nil, offers: nil, original_status: nil, original_substatus: nil, raw: nil, rejected_at: nil, rejected_reason: nil, source: nil, status: nil, updated_at: nil, user_id: nil)
           @answers = answers
           @applied_at = applied_at
           @candidate_id = candidate_id
@@ -60,6 +62,7 @@ module UnifiedRubySDK
           @metadata = metadata
           @offers = offers
           @original_status = original_status
+          @original_substatus = original_substatus
           @raw = raw
           @rejected_at = rejected_at
           @rejected_reason = rejected_reason
@@ -82,6 +85,7 @@ module UnifiedRubySDK
           return false unless @metadata == other.metadata
           return false unless @offers == other.offers
           return false unless @original_status == other.original_status
+          return false unless @original_substatus == other.original_substatus
           return false unless @raw == other.raw
           return false unless @rejected_at == other.rejected_at
           return false unless @rejected_reason == other.rejected_reason

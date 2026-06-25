@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_taxrate: Models::Shared::AccountingTaxrate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingTaxrateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTaxrateResponse) }
-    def create_accounting_taxrate(accounting_taxrate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_accounting_taxrate - Create a taxrate
-      request = Models::Operations::CreateAccountingTaxrateRequest.new(
+    sig { params(accounting_taxrate: Models::Shared::AccountingTaxrate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingTaxrate2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTaxrate2Response) }
+    def create_accounting_taxrate2(accounting_taxrate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_accounting_taxrate2 - Create a taxrate
+      request = Models::Operations::CreateAccountingTaxrate2Request.new(
         accounting_taxrate: accounting_taxrate,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAccountingTaxrateRequest,
+        Models::Operations::CreateAccountingTaxrate2Request,
         base_url,
         '/accounting/{connection_id}/taxrate',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAccountingTaxrateRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAccountingTaxrate2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAccountingTaxrate',
+        operation_id: 'createAccountingTaxrate2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingTaxrate)
-          response = Models::Operations::CreateAccountingTaxrateResponse.new(
+          response = Models::Operations::CreateAccountingTaxrate2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingTaxrateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTaxrateResponse) }
-    def get_accounting_taxrate(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_accounting_taxrate - Retrieve a taxrate
-      request = Models::Operations::GetAccountingTaxrateRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingTaxrate2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTaxrate2Response) }
+    def get_accounting_taxrate2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_accounting_taxrate2 - Retrieve a taxrate
+      request = Models::Operations::GetAccountingTaxrate2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAccountingTaxrateRequest,
+        Models::Operations::GetAccountingTaxrate2Request,
         base_url,
         '/accounting/{connection_id}/taxrate/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAccountingTaxrateRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAccountingTaxrate2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAccountingTaxrate',
+        operation_id: 'getAccountingTaxrate2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingTaxrate)
-          response = Models::Operations::GetAccountingTaxrateResponse.new(
+          response = Models::Operations::GetAccountingTaxrate2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAccountingTaxratesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingTaxratesResponse) }
-    def list_accounting_taxrates(request:, timeout_ms: nil)
-      # list_accounting_taxrates - List all taxrates
+    sig { params(request: Models::Operations::ListAccountingTaxrates2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingTaxrates2Response) }
+    def list_accounting_taxrates2(request:, timeout_ms: nil)
+      # list_accounting_taxrates2 - List all taxrates
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAccountingTaxratesRequest,
+        Models::Operations::ListAccountingTaxrates2Request,
         base_url,
         '/accounting/{connection_id}/taxrate',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAccountingTaxratesRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAccountingTaxrates2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAccountingTaxrates',
+        operation_id: 'listAccountingTaxrates2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AccountingTaxrate))
-          response = Models::Operations::ListAccountingTaxratesResponse.new(
+          response = Models::Operations::ListAccountingTaxrates2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAccountingTaxrateRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingTaxrateResponse) }
-    def patch_accounting_taxrate(request:, timeout_ms: nil)
-      # patch_accounting_taxrate - Update a taxrate
+    sig { params(request: Models::Operations::PatchAccountingTaxrate2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingTaxrate2Response) }
+    def patch_accounting_taxrate2(request:, timeout_ms: nil)
+      # patch_accounting_taxrate2 - Update a taxrate
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAccountingTaxrateRequest,
+        Models::Operations::PatchAccountingTaxrate2Request,
         base_url,
         '/accounting/{connection_id}/taxrate/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAccountingTaxrateRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAccountingTaxrate2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAccountingTaxrate',
+        operation_id: 'patchAccountingTaxrate2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingTaxrate)
-          response = Models::Operations::PatchAccountingTaxrateResponse.new(
+          response = Models::Operations::PatchAccountingTaxrate2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingTaxrateResponse) }
-    def remove_accounting_taxrate(connection_id:, id:, timeout_ms: nil)
-      # remove_accounting_taxrate - Remove a taxrate
-      request = Models::Operations::RemoveAccountingTaxrateRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingTaxrate2Response) }
+    def remove_accounting_taxrate2(connection_id:, id:, timeout_ms: nil)
+      # remove_accounting_taxrate2 - Remove a taxrate
+      request = Models::Operations::RemoveAccountingTaxrate2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAccountingTaxrateRequest,
+        Models::Operations::RemoveAccountingTaxrate2Request,
         base_url,
         '/accounting/{connection_id}/taxrate/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAccountingTaxrate',
+        operation_id: 'removeAccountingTaxrate2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAccountingTaxrateResponse.new(
+        return Models::Operations::RemoveAccountingTaxrate2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAccountingTaxrateResponse.new(
+        return Models::Operations::RemoveAccountingTaxrate2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAccountingTaxrateRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingTaxrateResponse) }
-    def update_accounting_taxrate(request:, timeout_ms: nil)
-      # update_accounting_taxrate - Update a taxrate
+    sig { params(request: Models::Operations::UpdateAccountingTaxrate2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingTaxrate2Response) }
+    def update_accounting_taxrate2(request:, timeout_ms: nil)
+      # update_accounting_taxrate2 - Update a taxrate
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAccountingTaxrateRequest,
+        Models::Operations::UpdateAccountingTaxrate2Request,
         base_url,
         '/accounting/{connection_id}/taxrate/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAccountingTaxrateRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAccountingTaxrate2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAccountingTaxrate',
+        operation_id: 'updateAccountingTaxrate2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingTaxrate)
-          response = Models::Operations::UpdateAccountingTaxrateResponse.new(
+          response = Models::Operations::UpdateAccountingTaxrate2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

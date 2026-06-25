@@ -24,17 +24,23 @@ module UnifiedRubySDK
 
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :summary, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('summary') } }
+
+        field :summary_download_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('summary_download_url') } }
+
         field :transcript_download_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transcript_download_url') } }
 
         field :transcripts, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarRecordingTranscript)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transcripts') } }
 
-        sig { params(attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), end_at: T.nilable(::DateTime), language: T.nilable(::String), recording_download_url: T.nilable(::String), start_at: T.nilable(::DateTime), transcript_download_url: T.nilable(::String), transcripts: T.nilable(T::Array[Models::Shared::CalendarRecordingTranscript])).void }
-        def initialize(attendees: nil, end_at: nil, language: nil, recording_download_url: nil, start_at: nil, transcript_download_url: nil, transcripts: nil)
+        sig { params(attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), end_at: T.nilable(::DateTime), language: T.nilable(::String), recording_download_url: T.nilable(::String), start_at: T.nilable(::DateTime), summary: T.nilable(::String), summary_download_url: T.nilable(::String), transcript_download_url: T.nilable(::String), transcripts: T.nilable(T::Array[Models::Shared::CalendarRecordingTranscript])).void }
+        def initialize(attendees: nil, end_at: nil, language: nil, recording_download_url: nil, start_at: nil, summary: nil, summary_download_url: nil, transcript_download_url: nil, transcripts: nil)
           @attendees = attendees
           @end_at = end_at
           @language = language
           @recording_download_url = recording_download_url
           @start_at = start_at
+          @summary = summary
+          @summary_download_url = summary_download_url
           @transcript_download_url = transcript_download_url
           @transcripts = transcripts
         end
@@ -47,6 +53,8 @@ module UnifiedRubySDK
           return false unless @language == other.language
           return false unless @recording_download_url == other.recording_download_url
           return false unless @start_at == other.start_at
+          return false unless @summary == other.summary
+          return false unless @summary_download_url == other.summary_download_url
           return false unless @transcript_download_url == other.transcript_download_url
           return false unless @transcripts == other.transcripts
           true

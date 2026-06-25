@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(calendar_link: Models::Shared::CalendarLink, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarLinkResponse) }
-    def create_calendar_link(calendar_link:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_calendar_link - Create a link
-      request = Models::Operations::CreateCalendarLinkRequest.new(
+    sig { params(calendar_link: Models::Shared::CalendarLink, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarLink2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarLink2Response) }
+    def create_calendar_link2(calendar_link:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_calendar_link2 - Create a link
+      request = Models::Operations::CreateCalendarLink2Request.new(
         calendar_link: calendar_link,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCalendarLinkRequest,
+        Models::Operations::CreateCalendarLink2Request,
         base_url,
         '/calendar/{connection_id}/link',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCalendarLinkRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCalendarLink2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCalendarLink',
+        operation_id: 'createCalendarLink2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarLink)
-          response = Models::Operations::CreateCalendarLinkResponse.new(
+          response = Models::Operations::CreateCalendarLink2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePaymentLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentLinkResponse) }
-    def create_payment_link(payment_link:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_payment_link - Create a link
-      request = Models::Operations::CreatePaymentLinkRequest.new(
+    sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePaymentLink2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentLink2Response) }
+    def create_payment_link2(payment_link:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_payment_link2 - Create a link
+      request = Models::Operations::CreatePaymentLink2Request.new(
         payment_link: payment_link,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreatePaymentLinkRequest,
+        Models::Operations::CreatePaymentLink2Request,
         base_url,
         '/payment/{connection_id}/link',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreatePaymentLinkRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreatePaymentLink2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createPaymentLink',
+        operation_id: 'createPaymentLink2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::PaymentLink)
-          response = Models::Operations::CreatePaymentLinkResponse.new(
+          response = Models::Operations::CreatePaymentLink2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarLinkResponse) }
-    def get_calendar_link(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_calendar_link - Retrieve a link
-      request = Models::Operations::GetCalendarLinkRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarLink2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarLink2Response) }
+    def get_calendar_link2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_calendar_link2 - Retrieve a link
+      request = Models::Operations::GetCalendarLink2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -307,14 +307,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCalendarLinkRequest,
+        Models::Operations::GetCalendarLink2Request,
         base_url,
         '/calendar/{connection_id}/link/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCalendarLinkRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCalendarLink2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -330,7 +330,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCalendarLink',
+        operation_id: 'getCalendarLink2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -389,7 +389,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarLink)
-          response = Models::Operations::GetCalendarLinkResponse.new(
+          response = Models::Operations::GetCalendarLink2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -411,10 +411,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentLinkResponse) }
-    def get_payment_link(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_payment_link - Retrieve a link
-      request = Models::Operations::GetPaymentLinkRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentLink2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentLink2Response) }
+    def get_payment_link2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_payment_link2 - Retrieve a link
+      request = Models::Operations::GetPaymentLink2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -423,14 +423,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetPaymentLinkRequest,
+        Models::Operations::GetPaymentLink2Request,
         base_url,
         '/payment/{connection_id}/link/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetPaymentLinkRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetPaymentLink2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -446,7 +446,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getPaymentLink',
+        operation_id: 'getPaymentLink2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -505,7 +505,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::PaymentLink)
-          response = Models::Operations::GetPaymentLinkResponse.new(
+          response = Models::Operations::GetPaymentLink2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -527,20 +527,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCalendarLinksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarLinksResponse) }
-    def list_calendar_links(request:, timeout_ms: nil)
-      # list_calendar_links - List all links
+    sig { params(request: Models::Operations::ListCalendarLinks2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarLinks2Response) }
+    def list_calendar_links2(request:, timeout_ms: nil)
+      # list_calendar_links2 - List all links
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCalendarLinksRequest,
+        Models::Operations::ListCalendarLinks2Request,
         base_url,
         '/calendar/{connection_id}/link',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCalendarLinksRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCalendarLinks2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -556,7 +556,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCalendarLinks',
+        operation_id: 'listCalendarLinks2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -615,7 +615,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CalendarLink))
-          response = Models::Operations::ListCalendarLinksResponse.new(
+          response = Models::Operations::ListCalendarLinks2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -637,20 +637,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListPaymentLinksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentLinksResponse) }
-    def list_payment_links(request:, timeout_ms: nil)
-      # list_payment_links - List all links
+    sig { params(request: Models::Operations::ListPaymentLinks2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentLinks2Response) }
+    def list_payment_links2(request:, timeout_ms: nil)
+      # list_payment_links2 - List all links
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListPaymentLinksRequest,
+        Models::Operations::ListPaymentLinks2Request,
         base_url,
         '/payment/{connection_id}/link',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListPaymentLinksRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListPaymentLinks2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -666,7 +666,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listPaymentLinks',
+        operation_id: 'listPaymentLinks2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -725,7 +725,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::PaymentLink))
-          response = Models::Operations::ListPaymentLinksResponse.new(
+          response = Models::Operations::ListPaymentLinks2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -747,13 +747,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCalendarLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarLinkResponse) }
-    def patch_calendar_link(request:, timeout_ms: nil)
-      # patch_calendar_link - Update a link
+    sig { params(request: Models::Operations::PatchCalendarLink2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarLink2Response) }
+    def patch_calendar_link2(request:, timeout_ms: nil)
+      # patch_calendar_link2 - Update a link
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCalendarLinkRequest,
+        Models::Operations::PatchCalendarLink2Request,
         base_url,
         '/calendar/{connection_id}/link/{id}',
         request
@@ -771,7 +771,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCalendarLinkRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCalendarLink2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -787,7 +787,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCalendarLink',
+        operation_id: 'patchCalendarLink2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -847,7 +847,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarLink)
-          response = Models::Operations::PatchCalendarLinkResponse.new(
+          response = Models::Operations::PatchCalendarLink2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -869,13 +869,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchPaymentLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentLinkResponse) }
-    def patch_payment_link(request:, timeout_ms: nil)
-      # patch_payment_link - Update a link
+    sig { params(request: Models::Operations::PatchPaymentLink2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentLink2Response) }
+    def patch_payment_link2(request:, timeout_ms: nil)
+      # patch_payment_link2 - Update a link
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchPaymentLinkRequest,
+        Models::Operations::PatchPaymentLink2Request,
         base_url,
         '/payment/{connection_id}/link/{id}',
         request
@@ -893,7 +893,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchPaymentLinkRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchPaymentLink2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -909,7 +909,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchPaymentLink',
+        operation_id: 'patchPaymentLink2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -969,7 +969,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::PaymentLink)
-          response = Models::Operations::PatchPaymentLinkResponse.new(
+          response = Models::Operations::PatchPaymentLink2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -991,17 +991,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarLinkResponse) }
-    def remove_calendar_link(connection_id:, id:, timeout_ms: nil)
-      # remove_calendar_link - Remove a link
-      request = Models::Operations::RemoveCalendarLinkRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarLink2Response) }
+    def remove_calendar_link2(connection_id:, id:, timeout_ms: nil)
+      # remove_calendar_link2 - Remove a link
+      request = Models::Operations::RemoveCalendarLink2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCalendarLinkRequest,
+        Models::Operations::RemoveCalendarLink2Request,
         base_url,
         '/calendar/{connection_id}/link/{id}',
         request
@@ -1023,7 +1023,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCalendarLink',
+        operation_id: 'removeCalendarLink2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1078,7 +1078,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCalendarLinkResponse.new(
+        return Models::Operations::RemoveCalendarLink2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1095,7 +1095,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCalendarLinkResponse.new(
+        return Models::Operations::RemoveCalendarLink2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1105,17 +1105,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentLinkResponse) }
-    def remove_payment_link(connection_id:, id:, timeout_ms: nil)
-      # remove_payment_link - Remove a link
-      request = Models::Operations::RemovePaymentLinkRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentLink2Response) }
+    def remove_payment_link2(connection_id:, id:, timeout_ms: nil)
+      # remove_payment_link2 - Remove a link
+      request = Models::Operations::RemovePaymentLink2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemovePaymentLinkRequest,
+        Models::Operations::RemovePaymentLink2Request,
         base_url,
         '/payment/{connection_id}/link/{id}',
         request
@@ -1137,7 +1137,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removePaymentLink',
+        operation_id: 'removePaymentLink2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1192,7 +1192,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemovePaymentLinkResponse.new(
+        return Models::Operations::RemovePaymentLink2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1209,7 +1209,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemovePaymentLinkResponse.new(
+        return Models::Operations::RemovePaymentLink2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1219,13 +1219,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCalendarLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarLinkResponse) }
-    def update_calendar_link(request:, timeout_ms: nil)
-      # update_calendar_link - Update a link
+    sig { params(request: Models::Operations::UpdateCalendarLink2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarLink2Response) }
+    def update_calendar_link2(request:, timeout_ms: nil)
+      # update_calendar_link2 - Update a link
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCalendarLinkRequest,
+        Models::Operations::UpdateCalendarLink2Request,
         base_url,
         '/calendar/{connection_id}/link/{id}',
         request
@@ -1243,7 +1243,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCalendarLinkRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCalendarLink2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1259,7 +1259,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCalendarLink',
+        operation_id: 'updateCalendarLink2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1319,7 +1319,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarLink)
-          response = Models::Operations::UpdateCalendarLinkResponse.new(
+          response = Models::Operations::UpdateCalendarLink2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1341,13 +1341,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdatePaymentLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentLinkResponse) }
-    def update_payment_link(request:, timeout_ms: nil)
-      # update_payment_link - Update a link
+    sig { params(request: Models::Operations::UpdatePaymentLink2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentLink2Response) }
+    def update_payment_link2(request:, timeout_ms: nil)
+      # update_payment_link2 - Update a link
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdatePaymentLinkRequest,
+        Models::Operations::UpdatePaymentLink2Request,
         base_url,
         '/payment/{connection_id}/link/{id}',
         request
@@ -1365,7 +1365,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdatePaymentLinkRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdatePaymentLink2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1381,7 +1381,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updatePaymentLink',
+        operation_id: 'updatePaymentLink2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1441,7 +1441,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::PaymentLink)
-          response = Models::Operations::UpdatePaymentLinkResponse.new(
+          response = Models::Operations::UpdatePaymentLink2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

@@ -5,16 +5,16 @@
 
 ### Available Operations
 
-* [get_ads_target](#get_ads_target) - Retrieve a target
-* [list_ads_targets](#list_ads_targets) - List all targets
+* [get_ads_target2](#get_ads_target2) - Retrieve a target
+* [list_ads_targets2](#list_ads_targets2) - List all targets
 
-## get_ads_target
+## get_ads_target2
 
 Retrieve a target
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getAdsTarget" method="get" path="/ads/{connection_id}/target/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getAdsTarget2" method="get" path="/ads/{connection_id}/target/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -25,7 +25,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.target.get_ads_target(connection_id: '<id>', id: '<id>')
+res = s.target.get_ads_target2(connection_id: '<id>', id: '<id>')
 
 unless res.ads_target.nil?
   # handle response
@@ -39,12 +39,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Target                                                                                                                                 |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAdsTargetQueryParamFields](../../models/operations/getadstargetqueryparamfields.md)>                            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAdsTarget2QueryParamFields](../../models/operations/getadstarget2queryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetAdsTargetResponse)](../../models/operations/getadstargetresponse.md)**
+**[T.nilable(Models::Operations::GetAdsTarget2Response)](../../models/operations/getadstarget2response.md)**
 
 ### Errors
 
@@ -52,13 +52,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_ads_targets
+## list_ads_targets2
 
 List all targets
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listAdsTargets" method="get" path="/ads/{connection_id}/target" -->
+<!-- UsageSnippet language="ruby" operationID="listAdsTargets2" method="get" path="/ads/{connection_id}/target" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -69,11 +69,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListAdsTargetsRequest.new(
+req = Models::Operations::ListAdsTargets2Request.new(
   connection_id: '<id>',
 )
 
-res = s.target.list_ads_targets(request: req)
+res = s.target.list_ads_targets2(request: req)
 
 unless res.ads_targets.nil?
   # handle response
@@ -83,13 +83,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
-| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `request`                                                                                     | [Models::Operations::ListAdsTargetsRequest](../../models/operations/listadstargetsrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::ListAdsTargets2Request](../../models/operations/listadstargets2request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListAdsTargetsResponse)](../../models/operations/listadstargetsresponse.md)**
+**[T.nilable(Models::Operations::ListAdsTargets2Response)](../../models/operations/listadstargets2response.md)**
 
 ### Errors
 

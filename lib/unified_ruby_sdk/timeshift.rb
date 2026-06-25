@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_timeshift: Models::Shared::HrisTimeshift, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisTimeshiftQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisTimeshiftResponse) }
-    def create_hris_timeshift(hris_timeshift:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_hris_timeshift - Create a timeshift
-      request = Models::Operations::CreateHrisTimeshiftRequest.new(
+    sig { params(hris_timeshift: Models::Shared::HrisTimeshift, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisTimeshift2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisTimeshift2Response) }
+    def create_hris_timeshift2(hris_timeshift:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_hris_timeshift2 - Create a timeshift
+      request = Models::Operations::CreateHrisTimeshift2Request.new(
         hris_timeshift: hris_timeshift,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateHrisTimeshiftRequest,
+        Models::Operations::CreateHrisTimeshift2Request,
         base_url,
         '/hris/{connection_id}/timeshift',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateHrisTimeshiftRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateHrisTimeshift2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createHrisTimeshift',
+        operation_id: 'createHrisTimeshift2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisTimeshift)
-          response = Models::Operations::CreateHrisTimeshiftResponse.new(
+          response = Models::Operations::CreateHrisTimeshift2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisTimeshiftQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeshiftResponse) }
-    def get_hris_timeshift(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_hris_timeshift - Retrieve a timeshift
-      request = Models::Operations::GetHrisTimeshiftRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisTimeshift2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeshift2Response) }
+    def get_hris_timeshift2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_hris_timeshift2 - Retrieve a timeshift
+      request = Models::Operations::GetHrisTimeshift2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetHrisTimeshiftRequest,
+        Models::Operations::GetHrisTimeshift2Request,
         base_url,
         '/hris/{connection_id}/timeshift/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetHrisTimeshiftRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetHrisTimeshift2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getHrisTimeshift',
+        operation_id: 'getHrisTimeshift2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisTimeshift)
-          response = Models::Operations::GetHrisTimeshiftResponse.new(
+          response = Models::Operations::GetHrisTimeshift2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListHrisTimeshiftsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisTimeshiftsResponse) }
-    def list_hris_timeshifts(request:, timeout_ms: nil)
-      # list_hris_timeshifts - List all timeshifts
+    sig { params(request: Models::Operations::ListHrisTimeshifts2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisTimeshifts2Response) }
+    def list_hris_timeshifts2(request:, timeout_ms: nil)
+      # list_hris_timeshifts2 - List all timeshifts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListHrisTimeshiftsRequest,
+        Models::Operations::ListHrisTimeshifts2Request,
         base_url,
         '/hris/{connection_id}/timeshift',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListHrisTimeshiftsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListHrisTimeshifts2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listHrisTimeshifts',
+        operation_id: 'listHrisTimeshifts2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::HrisTimeshift))
-          response = Models::Operations::ListHrisTimeshiftsResponse.new(
+          response = Models::Operations::ListHrisTimeshifts2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchHrisTimeshiftRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisTimeshiftResponse) }
-    def patch_hris_timeshift(request:, timeout_ms: nil)
-      # patch_hris_timeshift - Update a timeshift
+    sig { params(request: Models::Operations::PatchHrisTimeshift2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisTimeshift2Response) }
+    def patch_hris_timeshift2(request:, timeout_ms: nil)
+      # patch_hris_timeshift2 - Update a timeshift
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchHrisTimeshiftRequest,
+        Models::Operations::PatchHrisTimeshift2Request,
         base_url,
         '/hris/{connection_id}/timeshift/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchHrisTimeshiftRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchHrisTimeshift2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchHrisTimeshift',
+        operation_id: 'patchHrisTimeshift2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisTimeshift)
-          response = Models::Operations::PatchHrisTimeshiftResponse.new(
+          response = Models::Operations::PatchHrisTimeshift2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisTimeshiftResponse) }
-    def remove_hris_timeshift(connection_id:, id:, timeout_ms: nil)
-      # remove_hris_timeshift - Remove a timeshift
-      request = Models::Operations::RemoveHrisTimeshiftRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisTimeshift2Response) }
+    def remove_hris_timeshift2(connection_id:, id:, timeout_ms: nil)
+      # remove_hris_timeshift2 - Remove a timeshift
+      request = Models::Operations::RemoveHrisTimeshift2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveHrisTimeshiftRequest,
+        Models::Operations::RemoveHrisTimeshift2Request,
         base_url,
         '/hris/{connection_id}/timeshift/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeHrisTimeshift',
+        operation_id: 'removeHrisTimeshift2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisTimeshiftResponse.new(
+        return Models::Operations::RemoveHrisTimeshift2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisTimeshiftResponse.new(
+        return Models::Operations::RemoveHrisTimeshift2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateHrisTimeshiftRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisTimeshiftResponse) }
-    def update_hris_timeshift(request:, timeout_ms: nil)
-      # update_hris_timeshift - Update a timeshift
+    sig { params(request: Models::Operations::UpdateHrisTimeshift2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisTimeshift2Response) }
+    def update_hris_timeshift2(request:, timeout_ms: nil)
+      # update_hris_timeshift2 - Update a timeshift
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateHrisTimeshiftRequest,
+        Models::Operations::UpdateHrisTimeshift2Request,
         base_url,
         '/hris/{connection_id}/timeshift/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateHrisTimeshiftRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateHrisTimeshift2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateHrisTimeshift',
+        operation_id: 'updateHrisTimeshift2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisTimeshift)
-          response = Models::Operations::UpdateHrisTimeshiftResponse.new(
+          response = Models::Operations::UpdateHrisTimeshift2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_benefit: Models::Shared::HrisBenefit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisBenefitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisBenefitResponse) }
-    def create_hris_benefit(hris_benefit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_hris_benefit - Create a benefit
-      request = Models::Operations::CreateHrisBenefitRequest.new(
+    sig { params(hris_benefit: Models::Shared::HrisBenefit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisBenefit2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisBenefit2Response) }
+    def create_hris_benefit2(hris_benefit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_hris_benefit2 - Create a benefit
+      request = Models::Operations::CreateHrisBenefit2Request.new(
         hris_benefit: hris_benefit,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateHrisBenefitRequest,
+        Models::Operations::CreateHrisBenefit2Request,
         base_url,
         '/hris/{connection_id}/benefit',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateHrisBenefitRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateHrisBenefit2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createHrisBenefit',
+        operation_id: 'createHrisBenefit2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisBenefit)
-          response = Models::Operations::CreateHrisBenefitResponse.new(
+          response = Models::Operations::CreateHrisBenefit2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisBenefitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisBenefitResponse) }
-    def get_hris_benefit(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_hris_benefit - Retrieve a benefit
-      request = Models::Operations::GetHrisBenefitRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisBenefit2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisBenefit2Response) }
+    def get_hris_benefit2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_hris_benefit2 - Retrieve a benefit
+      request = Models::Operations::GetHrisBenefit2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetHrisBenefitRequest,
+        Models::Operations::GetHrisBenefit2Request,
         base_url,
         '/hris/{connection_id}/benefit/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetHrisBenefitRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetHrisBenefit2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getHrisBenefit',
+        operation_id: 'getHrisBenefit2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisBenefit)
-          response = Models::Operations::GetHrisBenefitResponse.new(
+          response = Models::Operations::GetHrisBenefit2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListHrisBenefitsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisBenefitsResponse) }
-    def list_hris_benefits(request:, timeout_ms: nil)
-      # list_hris_benefits - List all benefits
+    sig { params(request: Models::Operations::ListHrisBenefits2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisBenefits2Response) }
+    def list_hris_benefits2(request:, timeout_ms: nil)
+      # list_hris_benefits2 - List all benefits
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListHrisBenefitsRequest,
+        Models::Operations::ListHrisBenefits2Request,
         base_url,
         '/hris/{connection_id}/benefit',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListHrisBenefitsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListHrisBenefits2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listHrisBenefits',
+        operation_id: 'listHrisBenefits2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::HrisBenefit))
-          response = Models::Operations::ListHrisBenefitsResponse.new(
+          response = Models::Operations::ListHrisBenefits2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchHrisBenefitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisBenefitResponse) }
-    def patch_hris_benefit(request:, timeout_ms: nil)
-      # patch_hris_benefit - Update a benefit
+    sig { params(request: Models::Operations::PatchHrisBenefit2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisBenefit2Response) }
+    def patch_hris_benefit2(request:, timeout_ms: nil)
+      # patch_hris_benefit2 - Update a benefit
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchHrisBenefitRequest,
+        Models::Operations::PatchHrisBenefit2Request,
         base_url,
         '/hris/{connection_id}/benefit/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchHrisBenefitRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchHrisBenefit2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchHrisBenefit',
+        operation_id: 'patchHrisBenefit2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisBenefit)
-          response = Models::Operations::PatchHrisBenefitResponse.new(
+          response = Models::Operations::PatchHrisBenefit2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisBenefitResponse) }
-    def remove_hris_benefit(connection_id:, id:, timeout_ms: nil)
-      # remove_hris_benefit - Remove a benefit
-      request = Models::Operations::RemoveHrisBenefitRequest.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisBenefit2Response) }
+    def remove_hris_benefit2(connection_id:, id:, timeout_ms: nil)
+      # remove_hris_benefit2 - Remove a benefit
+      request = Models::Operations::RemoveHrisBenefit2Request.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveHrisBenefitRequest,
+        Models::Operations::RemoveHrisBenefit2Request,
         base_url,
         '/hris/{connection_id}/benefit/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeHrisBenefit',
+        operation_id: 'removeHrisBenefit2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisBenefitResponse.new(
+        return Models::Operations::RemoveHrisBenefit2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisBenefitResponse.new(
+        return Models::Operations::RemoveHrisBenefit2Response.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateHrisBenefitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisBenefitResponse) }
-    def update_hris_benefit(request:, timeout_ms: nil)
-      # update_hris_benefit - Update a benefit
+    sig { params(request: Models::Operations::UpdateHrisBenefit2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisBenefit2Response) }
+    def update_hris_benefit2(request:, timeout_ms: nil)
+      # update_hris_benefit2 - Update a benefit
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateHrisBenefitRequest,
+        Models::Operations::UpdateHrisBenefit2Request,
         base_url,
         '/hris/{connection_id}/benefit/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateHrisBenefitRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateHrisBenefit2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateHrisBenefit',
+        operation_id: 'updateHrisBenefit2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisBenefit)
-          response = Models::Operations::UpdateHrisBenefitResponse.new(
+          response = Models::Operations::UpdateHrisBenefit2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

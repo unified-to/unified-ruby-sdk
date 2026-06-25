@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCashflowQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCashflowResponse) }
-    def get_accounting_cashflow(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_accounting_cashflow - Retrieve a cashflow
-      request = Models::Operations::GetAccountingCashflowRequest.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCashflow2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCashflow2Response) }
+    def get_accounting_cashflow2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_accounting_cashflow2 - Retrieve a cashflow
+      request = Models::Operations::GetAccountingCashflow2Request.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAccountingCashflowRequest,
+        Models::Operations::GetAccountingCashflow2Request,
         base_url,
         '/accounting/{connection_id}/cashflow/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAccountingCashflowRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAccountingCashflow2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAccountingCashflow',
+        operation_id: 'getAccountingCashflow2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingCashflow)
-          response = Models::Operations::GetAccountingCashflowResponse.new(
+          response = Models::Operations::GetAccountingCashflow2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAccountingCashflowsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingCashflowsResponse) }
-    def list_accounting_cashflows(request:, timeout_ms: nil)
-      # list_accounting_cashflows - List all cashflows
+    sig { params(request: Models::Operations::ListAccountingCashflows2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingCashflows2Response) }
+    def list_accounting_cashflows2(request:, timeout_ms: nil)
+      # list_accounting_cashflows2 - List all cashflows
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAccountingCashflowsRequest,
+        Models::Operations::ListAccountingCashflows2Request,
         base_url,
         '/accounting/{connection_id}/cashflow',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAccountingCashflowsRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAccountingCashflows2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAccountingCashflows',
+        operation_id: 'listAccountingCashflows2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AccountingCashflow))
-          response = Models::Operations::ListAccountingCashflowsResponse.new(
+          response = Models::Operations::ListAccountingCashflows2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

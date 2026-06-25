@@ -26,6 +26,10 @@ module UnifiedRubySDK
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :duration, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration') } }
+
+        field :duration_type, Crystalline::Nilable.new(Models::Shared::DurationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration_type'), 'decoder': Utils.enum_from_string(Models::Shared::DurationType, true) } }
+
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
@@ -44,14 +48,16 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(user_id: ::String, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), comments: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_paid: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HrisTimeoffStatus), type: T.nilable(Models::Shared::HrisTimeoffType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(user_id:, approved_at: nil, approver_user_id: nil, comments: nil, company_id: nil, created_at: nil, end_at: nil, id: nil, is_paid: nil, raw: nil, reason: nil, start_at: nil, status: nil, type: nil, updated_at: nil)
+        sig { params(user_id: ::String, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), comments: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), duration: T.nilable(::Float), duration_type: T.nilable(Models::Shared::DurationType), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_paid: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HrisTimeoffStatus), type: T.nilable(Models::Shared::HrisTimeoffType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(user_id:, approved_at: nil, approver_user_id: nil, comments: nil, company_id: nil, created_at: nil, duration: nil, duration_type: nil, end_at: nil, id: nil, is_paid: nil, raw: nil, reason: nil, start_at: nil, status: nil, type: nil, updated_at: nil)
           @user_id = user_id
           @approved_at = approved_at
           @approver_user_id = approver_user_id
           @comments = comments
           @company_id = company_id
           @created_at = created_at
+          @duration = duration
+          @duration_type = duration_type
           @end_at = end_at
           @id = id
           @is_paid = is_paid
@@ -72,6 +78,8 @@ module UnifiedRubySDK
           return false unless @comments == other.comments
           return false unless @company_id == other.company_id
           return false unless @created_at == other.created_at
+          return false unless @duration == other.duration
+          return false unless @duration_type == other.duration_type
           return false unless @end_at == other.end_at
           return false unless @id == other.id
           return false unless @is_paid == other.is_paid

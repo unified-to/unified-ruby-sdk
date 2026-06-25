@@ -39,20 +39,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListEnrichPeopleRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListEnrichPeopleResponse) }
-    def list_enrich_people(request:, timeout_ms: nil)
-      # list_enrich_people - Retrieve enrichment information for a person
+    sig { params(request: Models::Operations::ListEnrichPeople2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListEnrichPeople2Response) }
+    def list_enrich_people2(request:, timeout_ms: nil)
+      # list_enrich_people2 - Retrieve enrichment information for a person
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListEnrichPeopleRequest,
+        Models::Operations::ListEnrichPeople2Request,
         base_url,
         '/enrich/{connection_id}/person',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListEnrichPeopleRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListEnrichPeople2Request, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -68,7 +68,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listEnrichPeople',
+        operation_id: 'listEnrichPeople2',
         security_source: @sdk_configuration.security_source
       )
 
@@ -127,7 +127,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::EnrichPerson)
-          response = Models::Operations::ListEnrichPeopleResponse.new(
+          response = Models::Operations::ListEnrichPeople2Response.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

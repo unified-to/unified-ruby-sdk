@@ -18,6 +18,10 @@ class UnifiedRubySDK::Models::Shared::CalendarRecordingMedia
   def recording_download_url=(str_); end
   def start_at(); end
   def start_at=(str_); end
+  def summary(); end
+  def summary=(str_); end
+  def summary_download_url(); end
+  def summary_download_url=(str_); end
   def transcript_download_url(); end
   def transcript_download_url=(str_); end
   def transcripts(); end

@@ -135,6 +135,11 @@ module UnifiedRubySDK
           ADS_INSERTIONORDER = new('ads_insertionorder')
           ADS_TARGET = new('ads_target')
           ADS_PROMOTED = new('ads_promoted')
+          ANALYTICS_PROPERTY = new('analytics_property')
+          ANALYTICS_EVENT = new('analytics_event')
+          ANALYTICS_SESSION = new('analytics_session')
+          ANALYTICS_VISITOR = new('analytics_visitor')
+          ANALYTICS_REPORT = new('analytics_report')
           FORMS_FORM = new('forms_form')
           FORMS_SUBMISSION = new('forms_submission')
           SHIPPING_CARRIER = new('shipping_carrier')
@@ -150,6 +155,10 @@ module UnifiedRubySDK
           CLUBS_ACTIVITY = new('clubs_activity')
           CLUBS_LOCATION = new('clubs_location')
           CLUBS_EVENT = new('clubs_event')
+          DATASTORE_DATABASE = new('datastore_database')
+          DATASTORE_TABLE = new('datastore_table')
+          DATASTORE_RECORD = new('datastore_record')
+          DATASTORE_QUERY = new('datastore_query')
         end
       end
     end
