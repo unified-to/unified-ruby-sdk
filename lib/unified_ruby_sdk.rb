@@ -151,6 +151,7 @@ module UnifiedRubySDK
   autoload :Login, 'unified_ruby_sdk/login'
   autoload :Issue, 'unified_ruby_sdk/issue'
   autoload :Webhook, 'unified_ruby_sdk/webhook'
+  autoload :Secretsmanager, 'unified_ruby_sdk/secretsmanager'
   autoload :Verification, 'unified_ruby_sdk/verification'
   autoload :Request, 'unified_ruby_sdk/request'
   module Models

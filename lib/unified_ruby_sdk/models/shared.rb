@@ -398,6 +398,8 @@ module UnifiedRubySDK
       autoload :ScimUser, 'unified_ruby_sdk/models/shared/scimuser.rb'
       autoload :ScimUserGroups, 'unified_ruby_sdk/models/shared/scimusergroups.rb'
       autoload :ScimUserGroupsType, 'unified_ruby_sdk/models/shared/scimusergroups_type.rb'
+      autoload :SecretsManager, 'unified_ruby_sdk/models/shared/secretsmanager.rb'
+      autoload :SecretsManagerType, 'unified_ruby_sdk/models/shared/secretsmanager_type.rb'
       autoload :Security, 'unified_ruby_sdk/models/shared/security.rb'
       autoload :ShippingCarrier, 'unified_ruby_sdk/models/shared/shippingcarrier.rb'
       autoload :ShippingCustomsItem, 'unified_ruby_sdk/models/shared/shippingcustomsitem.rb'

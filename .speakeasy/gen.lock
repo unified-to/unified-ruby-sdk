@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: c3bf9a4edbf195d7a0df4f685b85df77
+  docChecksum: e80047cabd365ca694ea12fcbaf92665
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.81
-  configChecksum: 466e39bf6168d2c31b7422df44b44e3a
+  releaseVersion: 0.67.82
+  configChecksum: 4412bb11cf784bc7ffbd004fafd7eae2
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -353,6 +353,7 @@ generatedFiles:
   - docs/models/operations/createunifiedenvironmentresponse.md
   - docs/models/operations/createunifiedwebhookrequest.md
   - docs/models/operations/createunifiedwebhookresponse.md
+  - docs/models/operations/createunifiedworkspacesecretsmanagerresponse.md
   - docs/models/operations/createverificationrequest2queryparamfields.md
   - docs/models/operations/createverificationrequest2request.md
   - docs/models/operations/createverificationrequest2response.md
@@ -752,6 +753,8 @@ generatedFiles:
   - docs/models/operations/getunifiedissueresponse.md
   - docs/models/operations/getunifiedwebhookrequest.md
   - docs/models/operations/getunifiedwebhookresponse.md
+  - docs/models/operations/getunifiedworkspacesecretsmanagerrequest.md
+  - docs/models/operations/getunifiedworkspacesecretsmanagerresponse.md
   - docs/models/operations/getverificationpackage2queryparamfields.md
   - docs/models/operations/getverificationpackage2request.md
   - docs/models/operations/getverificationpackage2response.md
@@ -1180,6 +1183,8 @@ generatedFiles:
   - docs/models/operations/listunifiedissuesresponse.md
   - docs/models/operations/listunifiedwebhooksrequest.md
   - docs/models/operations/listunifiedwebhooksresponse.md
+  - docs/models/operations/listunifiedworkspacesecretsmanagersrequest.md
+  - docs/models/operations/listunifiedworkspacesecretsmanagersresponse.md
   - docs/models/operations/listverificationpackages2queryparamfields.md
   - docs/models/operations/listverificationpackages2request.md
   - docs/models/operations/listverificationpackages2response.md
@@ -1722,6 +1727,8 @@ generatedFiles:
   - docs/models/operations/removeunifiedenvironmentresponse.md
   - docs/models/operations/removeunifiedwebhookrequest.md
   - docs/models/operations/removeunifiedwebhookresponse.md
+  - docs/models/operations/removeunifiedworkspacesecretsmanagerrequest.md
+  - docs/models/operations/removeunifiedworkspacesecretsmanagerresponse.md
   - docs/models/operations/removeverificationrequest2request.md
   - docs/models/operations/removeverificationrequest2response.md
   - docs/models/operations/updateaccountingaccount2queryparamfields.md
@@ -2839,6 +2846,8 @@ generatedFiles:
   - docs/models/shared/searchlinkedinurl.md
   - docs/models/shared/searchname.md
   - docs/models/shared/searchtwitter.md
+  - docs/models/shared/secretsmanager.md
+  - docs/models/shared/secretsmanagertype.md
   - docs/models/shared/security.md
   - docs/models/shared/sexualorientation.md
   - docs/models/shared/shippingcarrier.md
@@ -3112,6 +3121,7 @@ generatedFiles:
   - docs/sdks/salesorder/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
+  - docs/sdks/secretsmanager/README.md
   - docs/sdks/session/README.md
   - docs/sdks/shipment/README.md
   - docs/sdks/shipping/README.md
@@ -3892,6 +3902,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_request.rbi
   - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_response.rb
   - lib/unified_ruby_sdk/models/operations/createunifiedwebhook_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createunifiedworkspacesecretsmanager_response.rb
+  - lib/unified_ruby_sdk/models/operations/createunifiedworkspacesecretsmanager_response.rbi
   - lib/unified_ruby_sdk/models/operations/createverificationrequest2_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createverificationrequest2_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createverificationrequest2_request.rb
@@ -4690,6 +4702,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_request.rbi
   - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_response.rb
   - lib/unified_ruby_sdk/models/operations/getunifiedwebhook_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getunifiedworkspacesecretsmanager_request.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedworkspacesecretsmanager_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getunifiedworkspacesecretsmanager_response.rb
+  - lib/unified_ruby_sdk/models/operations/getunifiedworkspacesecretsmanager_response.rbi
   - lib/unified_ruby_sdk/models/operations/getverificationpackage2_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getverificationpackage2_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getverificationpackage2_request.rb
@@ -5546,6 +5562,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_request.rbi
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_response.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listunifiedworkspacesecretsmanagers_request.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedworkspacesecretsmanagers_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listunifiedworkspacesecretsmanagers_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiedworkspacesecretsmanagers_response.rbi
   - lib/unified_ruby_sdk/models/operations/listverificationpackages2_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listverificationpackages2_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listverificationpackages2_request.rb
@@ -6630,6 +6650,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_response.rb
   - lib/unified_ruby_sdk/models/operations/removeunifiedwebhook_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeunifiedworkspacesecretsmanager_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeunifiedworkspacesecretsmanager_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeunifiedworkspacesecretsmanager_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeunifiedworkspacesecretsmanager_response.rbi
   - lib/unified_ruby_sdk/models/operations/removeverificationrequest2_request.rb
   - lib/unified_ruby_sdk/models/operations/removeverificationrequest2_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeverificationrequest2_response.rb
@@ -8865,6 +8889,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/search_name.rbi
   - lib/unified_ruby_sdk/models/shared/search_twitter.rb
   - lib/unified_ruby_sdk/models/shared/search_twitter.rbi
+  - lib/unified_ruby_sdk/models/shared/secretsmanager.rb
+  - lib/unified_ruby_sdk/models/shared/secretsmanager.rbi
+  - lib/unified_ruby_sdk/models/shared/secretsmanager_type.rb
+  - lib/unified_ruby_sdk/models/shared/secretsmanager_type.rbi
   - lib/unified_ruby_sdk/models/shared/security.rb
   - lib/unified_ruby_sdk/models/shared/security.rbi
   - lib/unified_ruby_sdk/models/shared/sexualorientation.rb
@@ -9210,6 +9238,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/sdk_hooks/types.rb
   - lib/unified_ruby_sdk/sdkconfiguration.rb
   - lib/unified_ruby_sdk/sdkconfiguration.rbi
+  - lib/unified_ruby_sdk/secretsmanager.rb
   - lib/unified_ruby_sdk/session.rb
   - lib/unified_ruby_sdk/shipment.rb
   - lib/unified_ruby_sdk/shipping.rb
@@ -21812,5 +21841,30 @@ examples:
       responses:
         "200":
           application/json: {}
+  createUnifiedWorkspaceSecretsmanager:
+    speakeasy-default-create-unified-workspace-secretsmanager:
+      requestBody:
+        application/json: {"auth": {}, "name": "<value>", "type": "hashicorp"}
+      responses:
+        "200":
+          application/json: {"auth": {"key": "<value>", "key1": "<value>"}, "name": "<value>", "type": "gcp"}
+  getUnifiedWorkspaceSecretsmanager:
+    speakeasy-default-get-unified-workspace-secretsmanager:
+      parameters:
+        path:
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"auth": {"key": "<value>"}, "name": "<value>", "type": "gcp"}
+  listUnifiedWorkspaceSecretsmanagers:
+    speakeasy-default-list-unified-workspace-secretsmanagers:
+      responses:
+        "200":
+          application/json: [{"auth": {"key": "<value>"}, "name": "<value>", "type": "hashicorp"}]
+  removeUnifiedWorkspaceSecretsmanager:
+    speakeasy-default-remove-unified-workspace-secretsmanager:
+      parameters:
+        path:
+          id: "<id>"
 examplesVersion: 1.0.2
 generatedTests: {}
