@@ -23,12 +23,12 @@ module UnifiedRubySDK
           CLOSED_AT = new('closed_at')
           PRIORITY = new('priority')
           CATEGORY_ID = new('category_id')
-          CATEGORY = new('category')
           SOURCE = new('source')
           SOURCE_REF = new('source_ref')
           TAGS = new('tags')
           USER_ID = new('user_id')
           URL = new('url')
+          DUE_AT = new('due_at')
           RAW = new('raw')
         end
       end

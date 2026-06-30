@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::MarketingMember
+  def company(); end
+  def company=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def emails(); end

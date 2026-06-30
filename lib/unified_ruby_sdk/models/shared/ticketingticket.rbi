@@ -8,8 +8,6 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::TicketingTicket
-  def category(); end
-  def category=(str_); end
   def category_id(); end
   def category_id=(str_); end
   def closed_at(); end
@@ -20,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::TicketingTicket
   def customer_id=(str_); end
   def description(); end
   def description=(str_); end
+  def due_at(); end
+  def due_at=(str_); end
   def id(); end
   def id=(str_); end
   def priority(); end

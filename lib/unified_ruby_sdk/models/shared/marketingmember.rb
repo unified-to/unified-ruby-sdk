@@ -14,6 +14,8 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
+        field :company, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company') } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # An array of email addresses for this member
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MarketingEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
@@ -36,8 +38,9 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::MarketingEmail]), first_name: T.nilable(::String), id: T.nilable(::String), last_name: T.nilable(::String), list_ids: T.nilable(T::Array[::String]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::MarketingMemberStatus), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, emails: nil, first_name: nil, id: nil, last_name: nil, list_ids: nil, name: nil, raw: nil, status: nil, tags: nil, updated_at: nil)
+        sig { params(company: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::MarketingEmail]), first_name: T.nilable(::String), id: T.nilable(::String), last_name: T.nilable(::String), list_ids: T.nilable(T::Array[::String]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::MarketingMemberStatus), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(company: nil, created_at: nil, emails: nil, first_name: nil, id: nil, last_name: nil, list_ids: nil, name: nil, raw: nil, status: nil, tags: nil, updated_at: nil)
+          @company = company
           @created_at = created_at
           @emails = emails
           @first_name = first_name
@@ -54,6 +57,7 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @company == other.company
           return false unless @created_at == other.created_at
           return false unless @emails == other.emails
           return false unless @first_name == other.first_name

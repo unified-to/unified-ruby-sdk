@@ -14,8 +14,6 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :category, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category') } }
-
         field :category_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_id') } }
 
         field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -25,6 +23,8 @@ module UnifiedRubySDK
         field :customer_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_id') } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
+        field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -48,14 +48,14 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(category: T.nilable(::String), category_id: T.nilable(::String), closed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), priority: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), source_ref: T.nilable(::String), status: T.nilable(Models::Shared::TicketingTicketStatus), subject: T.nilable(::String), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(category: nil, category_id: nil, closed_at: nil, created_at: nil, customer_id: nil, description: nil, id: nil, priority: nil, raw: nil, source: nil, source_ref: nil, status: nil, subject: nil, tags: nil, updated_at: nil, url: nil, user_id: nil)
-          @category = category
+        sig { params(category_id: T.nilable(::String), closed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), due_at: T.nilable(::DateTime), id: T.nilable(::String), priority: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), source_ref: T.nilable(::String), status: T.nilable(Models::Shared::TicketingTicketStatus), subject: T.nilable(::String), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(category_id: nil, closed_at: nil, created_at: nil, customer_id: nil, description: nil, due_at: nil, id: nil, priority: nil, raw: nil, source: nil, source_ref: nil, status: nil, subject: nil, tags: nil, updated_at: nil, url: nil, user_id: nil)
           @category_id = category_id
           @closed_at = closed_at
           @created_at = created_at
           @customer_id = customer_id
           @description = description
+          @due_at = due_at
           @id = id
           @priority = priority
           @raw = raw
@@ -72,12 +72,12 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
-          return false unless @category == other.category
           return false unless @category_id == other.category_id
           return false unless @closed_at == other.closed_at
           return false unless @created_at == other.created_at
           return false unless @customer_id == other.customer_id
           return false unless @description == other.description
+          return false unless @due_at == other.due_at
           return false unless @id == other.id
           return false unless @priority == other.priority
           return false unless @raw == other.raw

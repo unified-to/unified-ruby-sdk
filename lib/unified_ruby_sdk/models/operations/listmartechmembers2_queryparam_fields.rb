@@ -19,6 +19,7 @@ module UnifiedRubySDK
           NAME = new('name')
           FIRST_NAME = new('first_name')
           LAST_NAME = new('last_name')
+          COMPANY = new('company')
           EMAILS = new('emails')
           LIST_IDS = new('list_ids')
           TAGS = new('tags')
