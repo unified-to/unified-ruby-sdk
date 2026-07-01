@@ -37,6 +37,9 @@ module UnifiedRubySDK
           CLICK_RATE = new('click_rate')
           LAST_CLICK_AT = new('last_click_at')
           LINKS = new('links')
+          HUMAN_OPENS_TOTAL = new('human_opens_total')
+          HUMAN_UNIQUE_OPENS = new('human_unique_opens')
+          HUMAN_OPEN_RATE = new('human_open_rate')
           RAW = new('raw')
         end
       end

@@ -22,9 +22,9 @@ module UnifiedRubySDK
 
         field :type, Crystalline::Nilable.new(Models::Shared::AdsReportMetricsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AdsReportMetricsType, true) } }
 
-        field :value, Crystalline::Nilable.new(Crystalline::Union.new(::Float, ::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+        field :value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
-        sig { params(ad: T.nilable(Models::Shared::PropertyAdsReportMetricsAd), campaign: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaign), group: T.nilable(Models::Shared::PropertyAdsReportMetricsGroup), type: T.nilable(Models::Shared::AdsReportMetricsType), value: T.nilable(T.any(::Float, ::String))).void }
+        sig { params(ad: T.nilable(Models::Shared::PropertyAdsReportMetricsAd), campaign: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaign), group: T.nilable(Models::Shared::PropertyAdsReportMetricsGroup), type: T.nilable(Models::Shared::AdsReportMetricsType), value: T.nilable(::Float)).void }
         def initialize(ad: nil, campaign: nil, group: nil, type: nil, value: nil)
           @ad = ad
           @campaign = campaign

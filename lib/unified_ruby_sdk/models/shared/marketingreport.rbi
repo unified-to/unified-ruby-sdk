@@ -26,6 +26,12 @@ class UnifiedRubySDK::Models::Shared::MarketingReport
   def forwards_opens=(str_); end
   def hard_bounces(); end
   def hard_bounces=(str_); end
+  def human_open_rate(); end
+  def human_open_rate=(str_); end
+  def human_opens_total(); end
+  def human_opens_total=(str_); end
+  def human_unique_opens(); end
+  def human_unique_opens=(str_); end
   def id(); end
   def id=(str_); end
   def last_click_at(); end

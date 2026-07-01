@@ -70,6 +70,7 @@ module UnifiedRubySDK
   autoload :Crm, 'unified_ruby_sdk/crm'
   autoload :Deal, 'unified_ruby_sdk/deal'
   autoload :Lead, 'unified_ruby_sdk/lead'
+  autoload :Picklist, 'unified_ruby_sdk/picklist'
   autoload :Pipeline, 'unified_ruby_sdk/pipeline'
   autoload :Datastore, 'unified_ruby_sdk/datastore'
   autoload :Database, 'unified_ruby_sdk/database'

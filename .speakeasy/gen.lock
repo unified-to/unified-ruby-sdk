@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 0ab332c4c2b7f7b52bec30489a92cd2f
+  docChecksum: 0714bf8a422e154dbdfe42e827bb9c8e
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.83
-  configChecksum: 4d0d2240d88312a0d0310d8824741a82
+  releaseVersion: 0.67.84
+  configChecksum: b4106afddfa50be58d8dfe9c6a27b3f8
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -964,6 +964,9 @@ generatedFiles:
   - docs/models/operations/listcrmleads2queryparamfields.md
   - docs/models/operations/listcrmleads2request.md
   - docs/models/operations/listcrmleads2response.md
+  - docs/models/operations/listcrmpicklists2queryparamfields.md
+  - docs/models/operations/listcrmpicklists2request.md
+  - docs/models/operations/listcrmpicklists2response.md
   - docs/models/operations/listcrmpipelines2queryparamfields.md
   - docs/models/operations/listcrmpipelines2request.md
   - docs/models/operations/listcrmpipelines2response.md
@@ -2188,7 +2191,6 @@ generatedFiles:
   - docs/models/shared/atsmetadata.md
   - docs/models/shared/atsmetadata1.md
   - docs/models/shared/atsmetadata5.md
-  - docs/models/shared/atsmetadatavalue.md
   - docs/models/shared/atsoffer.md
   - docs/models/shared/atsofferstatus.md
   - docs/models/shared/atsreference.md
@@ -2287,6 +2289,8 @@ generatedFiles:
   - docs/models/shared/crmmetadataschemas1.md
   - docs/models/shared/crmmetadataschemas5.md
   - docs/models/shared/crmmetadatavalue.md
+  - docs/models/shared/crmpicklist.md
+  - docs/models/shared/crmpicklisttype.md
   - docs/models/shared/crmpipeline.md
   - docs/models/shared/crmreference.md
   - docs/models/shared/crmstage.md
@@ -3098,6 +3102,7 @@ generatedFiles:
   - docs/sdks/payout/README.md
   - docs/sdks/payslip/README.md
   - docs/sdks/person/README.md
+  - docs/sdks/picklist/README.md
   - docs/sdks/pipeline/README.md
   - docs/sdks/profitloss/README.md
   - docs/sdks/project/README.md
@@ -5124,6 +5129,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listcrmleads2_request.rbi
   - lib/unified_ruby_sdk/models/operations/listcrmleads2_response.rb
   - lib/unified_ruby_sdk/models/operations/listcrmleads2_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcrmpicklists2_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmpicklists2_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcrmpicklists2_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmpicklists2_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcrmpicklists2_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmpicklists2_response.rbi
   - lib/unified_ruby_sdk/models/operations/listcrmpipelines2_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listcrmpipelines2_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listcrmpipelines2_request.rb
@@ -7573,8 +7584,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsmetadata_1.rbi
   - lib/unified_ruby_sdk/models/shared/atsmetadata_5.rb
   - lib/unified_ruby_sdk/models/shared/atsmetadata_5.rbi
-  - lib/unified_ruby_sdk/models/shared/atsmetadata_value.rb
-  - lib/unified_ruby_sdk/models/shared/atsmetadata_value.rbi
   - lib/unified_ruby_sdk/models/shared/atsoffer.rb
   - lib/unified_ruby_sdk/models/shared/atsoffer.rbi
   - lib/unified_ruby_sdk/models/shared/atsoffer_status.rb
@@ -7771,6 +7780,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_5.rbi
   - lib/unified_ruby_sdk/models/shared/crmmetadata_value.rb
   - lib/unified_ruby_sdk/models/shared/crmmetadata_value.rbi
+  - lib/unified_ruby_sdk/models/shared/crmpicklist.rb
+  - lib/unified_ruby_sdk/models/shared/crmpicklist.rbi
+  - lib/unified_ruby_sdk/models/shared/crmpicklist_type.rb
+  - lib/unified_ruby_sdk/models/shared/crmpicklist_type.rbi
   - lib/unified_ruby_sdk/models/shared/crmpipeline.rb
   - lib/unified_ruby_sdk/models/shared/crmpipeline.rbi
   - lib/unified_ruby_sdk/models/shared/crmreference.rb
@@ -9211,6 +9224,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/payout.rb
   - lib/unified_ruby_sdk/payslip.rb
   - lib/unified_ruby_sdk/person.rb
+  - lib/unified_ruby_sdk/picklist.rb
   - lib/unified_ruby_sdk/pipeline.rb
   - lib/unified_ruby_sdk/profitloss.rb
   - lib/unified_ruby_sdk/project.rb
@@ -21866,5 +21880,13 @@ examples:
       parameters:
         path:
           id: "<id>"
+  listCrmPicklists2:
+    speakeasy-default-list-crm-picklists2:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>"}]
 examplesVersion: 1.0.2
 generatedTests: {}

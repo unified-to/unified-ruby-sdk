@@ -65,6 +65,7 @@ module UnifiedRubySDK
           CRM_EVENT = new('crm_event')
           CRM_LEAD = new('crm_lead')
           CRM_PIPELINE = new('crm_pipeline')
+          CRM_PICKLIST = new('crm_picklist')
           HRIS_EMPLOYEE = new('hris_employee')
           HRIS_GROUP = new('hris_group')
           HRIS_PAYSLIP = new('hris_payslip')

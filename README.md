@@ -744,6 +744,7 @@ end
 * [list_crm_deals2](docs/sdks/crm/README.md#list_crm_deals2) - List all deals
 * [list_crm_events2](docs/sdks/crm/README.md#list_crm_events2) - List all events
 * [list_crm_leads2](docs/sdks/crm/README.md#list_crm_leads2) - List all leads
+* [list_crm_picklists2](docs/sdks/crm/README.md#list_crm_picklists2) - List all picklists
 * [list_crm_pipelines2](docs/sdks/crm/README.md#list_crm_pipelines2) - List all pipelines
 * [patch_crm_company2](docs/sdks/crm/README.md#patch_crm_company2) - Update a company
 * [patch_crm_contact2](docs/sdks/crm/README.md#patch_crm_contact2) - Update a contact
@@ -1421,6 +1422,10 @@ end
 ### [person](docs/sdks/person/README.md)
 
 * [list_enrich_people2](docs/sdks/person/README.md#list_enrich_people2) - Retrieve enrichment information for a person
+
+### [picklist](docs/sdks/picklist/README.md)
+
+* [list_crm_picklists2](docs/sdks/picklist/README.md#list_crm_picklists2) - List all picklists
 
 ### [pipeline](docs/sdks/pipeline/README.md)
 
