@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentRefund2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentRefund2Response) }
-    def get_payment_refund2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_payment_refund2 - Retrieve a refund
-      request = Models::Operations::GetPaymentRefund2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentRefundQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentRefundResponse) }
+    def get_payment_refund(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_payment_refund - Retrieve a refund
+      request = Models::Operations::GetPaymentRefundRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetPaymentRefund2Request,
+        Models::Operations::GetPaymentRefundRequest,
         base_url,
         '/payment/{connection_id}/refund/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetPaymentRefund2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetPaymentRefundRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getPaymentRefund2',
+        operation_id: 'getPaymentRefund',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::PaymentRefund)
-          response = Models::Operations::GetPaymentRefund2Response.new(
+          response = Models::Operations::GetPaymentRefundResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListPaymentRefunds2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentRefunds2Response) }
-    def list_payment_refunds2(request:, timeout_ms: nil)
-      # list_payment_refunds2 - List all refunds
+    sig { params(request: Models::Operations::ListPaymentRefundsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentRefundsResponse) }
+    def list_payment_refunds(request:, timeout_ms: nil)
+      # list_payment_refunds - List all refunds
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListPaymentRefunds2Request,
+        Models::Operations::ListPaymentRefundsRequest,
         base_url,
         '/payment/{connection_id}/refund',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListPaymentRefunds2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListPaymentRefundsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listPaymentRefunds2',
+        operation_id: 'listPaymentRefunds',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::PaymentRefund))
-          response = Models::Operations::ListPaymentRefunds2Response.new(
+          response = Models::Operations::ListPaymentRefundsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

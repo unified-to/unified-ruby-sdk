@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsScorecard2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsScorecard2Response) }
-    def create_ats_scorecard2(ats_scorecard:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_ats_scorecard2 - Create a scorecard
-      request = Models::Operations::CreateAtsScorecard2Request.new(
+    sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsScorecardQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsScorecardResponse) }
+    def create_ats_scorecard(ats_scorecard:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_ats_scorecard - Create a scorecard
+      request = Models::Operations::CreateAtsScorecardRequest.new(
         ats_scorecard: ats_scorecard,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAtsScorecard2Request,
+        Models::Operations::CreateAtsScorecardRequest,
         base_url,
         '/ats/{connection_id}/scorecard',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsScorecard2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsScorecardRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAtsScorecard2',
+        operation_id: 'createAtsScorecard',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsScorecard)
-          response = Models::Operations::CreateAtsScorecard2Response.new(
+          response = Models::Operations::CreateAtsScorecardResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsScorecard2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsScorecard2Response) }
-    def get_ats_scorecard2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_ats_scorecard2 - Retrieve a scorecard
-      request = Models::Operations::GetAtsScorecard2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsScorecardQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsScorecardResponse) }
+    def get_ats_scorecard(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_ats_scorecard - Retrieve a scorecard
+      request = Models::Operations::GetAtsScorecardRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAtsScorecard2Request,
+        Models::Operations::GetAtsScorecardRequest,
         base_url,
         '/ats/{connection_id}/scorecard/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAtsScorecard2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAtsScorecardRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAtsScorecard2',
+        operation_id: 'getAtsScorecard',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsScorecard)
-          response = Models::Operations::GetAtsScorecard2Response.new(
+          response = Models::Operations::GetAtsScorecardResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAtsScorecards2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsScorecards2Response) }
-    def list_ats_scorecards2(request:, timeout_ms: nil)
-      # list_ats_scorecards2 - List all scorecards
+    sig { params(request: Models::Operations::ListAtsScorecardsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsScorecardsResponse) }
+    def list_ats_scorecards(request:, timeout_ms: nil)
+      # list_ats_scorecards - List all scorecards
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAtsScorecards2Request,
+        Models::Operations::ListAtsScorecardsRequest,
         base_url,
         '/ats/{connection_id}/scorecard',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAtsScorecards2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAtsScorecardsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAtsScorecards2',
+        operation_id: 'listAtsScorecards',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsScorecard))
-          response = Models::Operations::ListAtsScorecards2Response.new(
+          response = Models::Operations::ListAtsScorecardsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAtsScorecard2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsScorecard2Response) }
-    def patch_ats_scorecard2(request:, timeout_ms: nil)
-      # patch_ats_scorecard2 - Update a scorecard
+    sig { params(request: Models::Operations::PatchAtsScorecardRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsScorecardResponse) }
+    def patch_ats_scorecard(request:, timeout_ms: nil)
+      # patch_ats_scorecard - Update a scorecard
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAtsScorecard2Request,
+        Models::Operations::PatchAtsScorecardRequest,
         base_url,
         '/ats/{connection_id}/scorecard/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsScorecard2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsScorecardRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAtsScorecard2',
+        operation_id: 'patchAtsScorecard',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsScorecard)
-          response = Models::Operations::PatchAtsScorecard2Response.new(
+          response = Models::Operations::PatchAtsScorecardResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsScorecard2Response) }
-    def remove_ats_scorecard2(connection_id:, id:, timeout_ms: nil)
-      # remove_ats_scorecard2 - Remove a scorecard
-      request = Models::Operations::RemoveAtsScorecard2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsScorecardResponse) }
+    def remove_ats_scorecard(connection_id:, id:, timeout_ms: nil)
+      # remove_ats_scorecard - Remove a scorecard
+      request = Models::Operations::RemoveAtsScorecardRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAtsScorecard2Request,
+        Models::Operations::RemoveAtsScorecardRequest,
         base_url,
         '/ats/{connection_id}/scorecard/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAtsScorecard2',
+        operation_id: 'removeAtsScorecard',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAtsScorecard2Response.new(
+        return Models::Operations::RemoveAtsScorecardResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAtsScorecard2Response.new(
+        return Models::Operations::RemoveAtsScorecardResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAtsScorecard2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsScorecard2Response) }
-    def update_ats_scorecard2(request:, timeout_ms: nil)
-      # update_ats_scorecard2 - Update a scorecard
+    sig { params(request: Models::Operations::UpdateAtsScorecardRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsScorecardResponse) }
+    def update_ats_scorecard(request:, timeout_ms: nil)
+      # update_ats_scorecard - Update a scorecard
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAtsScorecard2Request,
+        Models::Operations::UpdateAtsScorecardRequest,
         base_url,
         '/ats/{connection_id}/scorecard/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsScorecard2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsScorecardRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAtsScorecard2',
+        operation_id: 'updateAtsScorecard',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsScorecard)
-          response = Models::Operations::UpdateAtsScorecard2Response.new(
+          response = Models::Operations::UpdateAtsScorecardResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

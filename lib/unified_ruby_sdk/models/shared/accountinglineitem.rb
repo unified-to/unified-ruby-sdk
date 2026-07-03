@@ -18,6 +18,8 @@ module UnifiedRubySDK
 
         field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
 
+        field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :discount_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('discount_amount') } }
@@ -56,10 +58,11 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), discount_amount: T.nilable(::Float), fees: T.nilable(T::Array[Models::Shared::AccountingFee]), id: T.nilable(::String), item_description: T.nilable(::String), item_id: T.nilable(::String), item_name: T.nilable(::String), item_sku: T.nilable(::String), item_variants: T.nilable(T::Array[Models::Shared::AccountingReference]), locations: T.nilable(T::Array[Models::Shared::AccountingReference]), notes: T.nilable(::String), refund_amount: T.nilable(::Float), refunded_at: T.nilable(::DateTime), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, category_ids: nil, created_at: nil, discount_amount: nil, fees: nil, id: nil, item_description: nil, item_id: nil, item_name: nil, item_sku: nil, item_variants: nil, locations: nil, notes: nil, refund_amount: nil, refunded_at: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), discount_amount: T.nilable(::Float), fees: T.nilable(T::Array[Models::Shared::AccountingFee]), id: T.nilable(::String), item_description: T.nilable(::String), item_id: T.nilable(::String), item_name: T.nilable(::String), item_sku: T.nilable(::String), item_variants: T.nilable(T::Array[Models::Shared::AccountingReference]), locations: T.nilable(T::Array[Models::Shared::AccountingReference]), notes: T.nilable(::String), refund_amount: T.nilable(::Float), refunded_at: T.nilable(::DateTime), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, category_ids: nil, contact_id: nil, created_at: nil, discount_amount: nil, fees: nil, id: nil, item_description: nil, item_id: nil, item_name: nil, item_sku: nil, item_variants: nil, locations: nil, notes: nil, refund_amount: nil, refunded_at: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil, updated_at: nil)
           @account_id = account_id
           @category_ids = category_ids
+          @contact_id = contact_id
           @created_at = created_at
           @discount_amount = discount_amount
           @fees = fees
@@ -86,6 +89,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @account_id == other.account_id
           return false unless @category_ids == other.category_ids
+          return false unless @contact_id == other.contact_id
           return false unless @created_at == other.created_at
           return false unless @discount_amount == other.discount_amount
           return false unless @fees == other.fees

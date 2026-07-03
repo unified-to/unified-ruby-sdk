@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMessagingMessage2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMessagingMessage2Response) }
-    def create_messaging_message2(messaging_message:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_messaging_message2 - Create a message
-      request = Models::Operations::CreateMessagingMessage2Request.new(
+    sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMessagingMessageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMessagingMessageResponse) }
+    def create_messaging_message(messaging_message:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_messaging_message - Create a message
+      request = Models::Operations::CreateMessagingMessageRequest.new(
         messaging_message: messaging_message,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateMessagingMessage2Request,
+        Models::Operations::CreateMessagingMessageRequest,
         base_url,
         '/messaging/{connection_id}/message',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateMessagingMessage2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateMessagingMessageRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createMessagingMessage2',
+        operation_id: 'createMessagingMessage',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MessagingMessage)
-          response = Models::Operations::CreateMessagingMessage2Response.new(
+          response = Models::Operations::CreateMessagingMessageResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMessagingMessage2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingMessage2Response) }
-    def get_messaging_message2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_messaging_message2 - Retrieve a message
-      request = Models::Operations::GetMessagingMessage2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMessagingMessageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingMessageResponse) }
+    def get_messaging_message(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_messaging_message - Retrieve a message
+      request = Models::Operations::GetMessagingMessageRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetMessagingMessage2Request,
+        Models::Operations::GetMessagingMessageRequest,
         base_url,
         '/messaging/{connection_id}/message/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetMessagingMessage2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetMessagingMessageRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getMessagingMessage2',
+        operation_id: 'getMessagingMessage',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MessagingMessage)
-          response = Models::Operations::GetMessagingMessage2Response.new(
+          response = Models::Operations::GetMessagingMessageResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListMessagingMessages2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMessagingMessages2Response) }
-    def list_messaging_messages2(request:, timeout_ms: nil)
-      # list_messaging_messages2 - List all messages
+    sig { params(request: Models::Operations::ListMessagingMessagesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMessagingMessagesResponse) }
+    def list_messaging_messages(request:, timeout_ms: nil)
+      # list_messaging_messages - List all messages
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListMessagingMessages2Request,
+        Models::Operations::ListMessagingMessagesRequest,
         base_url,
         '/messaging/{connection_id}/message',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListMessagingMessages2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListMessagingMessagesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listMessagingMessages2',
+        operation_id: 'listMessagingMessages',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::MessagingMessage))
-          response = Models::Operations::ListMessagingMessages2Response.new(
+          response = Models::Operations::ListMessagingMessagesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchMessagingMessage2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMessagingMessage2Response) }
-    def patch_messaging_message2(request:, timeout_ms: nil)
-      # patch_messaging_message2 - Update a message
+    sig { params(request: Models::Operations::PatchMessagingMessageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMessagingMessageResponse) }
+    def patch_messaging_message(request:, timeout_ms: nil)
+      # patch_messaging_message - Update a message
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchMessagingMessage2Request,
+        Models::Operations::PatchMessagingMessageRequest,
         base_url,
         '/messaging/{connection_id}/message/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchMessagingMessage2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchMessagingMessageRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchMessagingMessage2',
+        operation_id: 'patchMessagingMessage',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MessagingMessage)
-          response = Models::Operations::PatchMessagingMessage2Response.new(
+          response = Models::Operations::PatchMessagingMessageResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMessagingMessage2Response) }
-    def remove_messaging_message2(connection_id:, id:, timeout_ms: nil)
-      # remove_messaging_message2 - Remove a message
-      request = Models::Operations::RemoveMessagingMessage2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMessagingMessageResponse) }
+    def remove_messaging_message(connection_id:, id:, timeout_ms: nil)
+      # remove_messaging_message - Remove a message
+      request = Models::Operations::RemoveMessagingMessageRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveMessagingMessage2Request,
+        Models::Operations::RemoveMessagingMessageRequest,
         base_url,
         '/messaging/{connection_id}/message/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeMessagingMessage2',
+        operation_id: 'removeMessagingMessage',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveMessagingMessage2Response.new(
+        return Models::Operations::RemoveMessagingMessageResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveMessagingMessage2Response.new(
+        return Models::Operations::RemoveMessagingMessageResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateMessagingMessage2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMessagingMessage2Response) }
-    def update_messaging_message2(request:, timeout_ms: nil)
-      # update_messaging_message2 - Update a message
+    sig { params(request: Models::Operations::UpdateMessagingMessageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMessagingMessageResponse) }
+    def update_messaging_message(request:, timeout_ms: nil)
+      # update_messaging_message - Update a message
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateMessagingMessage2Request,
+        Models::Operations::UpdateMessagingMessageRequest,
         base_url,
         '/messaging/{connection_id}/message/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateMessagingMessage2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateMessagingMessageRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateMessagingMessage2',
+        operation_id: 'updateMessagingMessage',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MessagingMessage)
-          response = Models::Operations::UpdateMessagingMessage2Response.new(
+          response = Models::Operations::UpdateMessagingMessageResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

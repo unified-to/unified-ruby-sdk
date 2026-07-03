@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_bankaccount: Models::Shared::HrisBankaccount, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisBankaccount2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisBankaccount2Response) }
-    def create_hris_bankaccount2(hris_bankaccount:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_hris_bankaccount2 - Create a bankaccount
-      request = Models::Operations::CreateHrisBankaccount2Request.new(
+    sig { params(hris_bankaccount: Models::Shared::HrisBankaccount, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisBankaccountQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisBankaccountResponse) }
+    def create_hris_bankaccount(hris_bankaccount:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_hris_bankaccount - Create a bankaccount
+      request = Models::Operations::CreateHrisBankaccountRequest.new(
         hris_bankaccount: hris_bankaccount,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateHrisBankaccount2Request,
+        Models::Operations::CreateHrisBankaccountRequest,
         base_url,
         '/hris/{connection_id}/bankaccount',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateHrisBankaccount2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateHrisBankaccountRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createHrisBankaccount2',
+        operation_id: 'createHrisBankaccount',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisBankaccount)
-          response = Models::Operations::CreateHrisBankaccount2Response.new(
+          response = Models::Operations::CreateHrisBankaccountResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisBankaccount2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisBankaccount2Response) }
-    def get_hris_bankaccount2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_hris_bankaccount2 - Retrieve a bankaccount
-      request = Models::Operations::GetHrisBankaccount2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisBankaccountQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisBankaccountResponse) }
+    def get_hris_bankaccount(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_hris_bankaccount - Retrieve a bankaccount
+      request = Models::Operations::GetHrisBankaccountRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetHrisBankaccount2Request,
+        Models::Operations::GetHrisBankaccountRequest,
         base_url,
         '/hris/{connection_id}/bankaccount/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetHrisBankaccount2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetHrisBankaccountRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getHrisBankaccount2',
+        operation_id: 'getHrisBankaccount',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisBankaccount)
-          response = Models::Operations::GetHrisBankaccount2Response.new(
+          response = Models::Operations::GetHrisBankaccountResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListHrisBankaccounts2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisBankaccounts2Response) }
-    def list_hris_bankaccounts2(request:, timeout_ms: nil)
-      # list_hris_bankaccounts2 - List all bankaccounts
+    sig { params(request: Models::Operations::ListHrisBankaccountsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisBankaccountsResponse) }
+    def list_hris_bankaccounts(request:, timeout_ms: nil)
+      # list_hris_bankaccounts - List all bankaccounts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListHrisBankaccounts2Request,
+        Models::Operations::ListHrisBankaccountsRequest,
         base_url,
         '/hris/{connection_id}/bankaccount',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListHrisBankaccounts2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListHrisBankaccountsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listHrisBankaccounts2',
+        operation_id: 'listHrisBankaccounts',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::HrisBankaccount))
-          response = Models::Operations::ListHrisBankaccounts2Response.new(
+          response = Models::Operations::ListHrisBankaccountsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchHrisBankaccount2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisBankaccount2Response) }
-    def patch_hris_bankaccount2(request:, timeout_ms: nil)
-      # patch_hris_bankaccount2 - Update a bankaccount
+    sig { params(request: Models::Operations::PatchHrisBankaccountRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisBankaccountResponse) }
+    def patch_hris_bankaccount(request:, timeout_ms: nil)
+      # patch_hris_bankaccount - Update a bankaccount
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchHrisBankaccount2Request,
+        Models::Operations::PatchHrisBankaccountRequest,
         base_url,
         '/hris/{connection_id}/bankaccount/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchHrisBankaccount2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchHrisBankaccountRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchHrisBankaccount2',
+        operation_id: 'patchHrisBankaccount',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisBankaccount)
-          response = Models::Operations::PatchHrisBankaccount2Response.new(
+          response = Models::Operations::PatchHrisBankaccountResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisBankaccount2Response) }
-    def remove_hris_bankaccount2(connection_id:, id:, timeout_ms: nil)
-      # remove_hris_bankaccount2 - Remove a bankaccount
-      request = Models::Operations::RemoveHrisBankaccount2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisBankaccountResponse) }
+    def remove_hris_bankaccount(connection_id:, id:, timeout_ms: nil)
+      # remove_hris_bankaccount - Remove a bankaccount
+      request = Models::Operations::RemoveHrisBankaccountRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveHrisBankaccount2Request,
+        Models::Operations::RemoveHrisBankaccountRequest,
         base_url,
         '/hris/{connection_id}/bankaccount/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeHrisBankaccount2',
+        operation_id: 'removeHrisBankaccount',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisBankaccount2Response.new(
+        return Models::Operations::RemoveHrisBankaccountResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisBankaccount2Response.new(
+        return Models::Operations::RemoveHrisBankaccountResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateHrisBankaccount2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisBankaccount2Response) }
-    def update_hris_bankaccount2(request:, timeout_ms: nil)
-      # update_hris_bankaccount2 - Update a bankaccount
+    sig { params(request: Models::Operations::UpdateHrisBankaccountRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisBankaccountResponse) }
+    def update_hris_bankaccount(request:, timeout_ms: nil)
+      # update_hris_bankaccount - Update a bankaccount
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateHrisBankaccount2Request,
+        Models::Operations::UpdateHrisBankaccountRequest,
         base_url,
         '/hris/{connection_id}/bankaccount/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateHrisBankaccount2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateHrisBankaccountRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateHrisBankaccount2',
+        operation_id: 'updateHrisBankaccount',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisBankaccount)
-          response = Models::Operations::UpdateHrisBankaccount2Response.new(
+          response = Models::Operations::UpdateHrisBankaccountResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

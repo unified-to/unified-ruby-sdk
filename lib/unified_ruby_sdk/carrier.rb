@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingCarrier2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingCarrier2Response) }
-    def get_shipping_carrier2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_shipping_carrier2 - Retrieve a carrier
-      request = Models::Operations::GetShippingCarrier2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingCarrierQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingCarrierResponse) }
+    def get_shipping_carrier(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_shipping_carrier - Retrieve a carrier
+      request = Models::Operations::GetShippingCarrierRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetShippingCarrier2Request,
+        Models::Operations::GetShippingCarrierRequest,
         base_url,
         '/shipping/{connection_id}/carrier/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetShippingCarrier2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetShippingCarrierRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getShippingCarrier2',
+        operation_id: 'getShippingCarrier',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ShippingCarrier)
-          response = Models::Operations::GetShippingCarrier2Response.new(
+          response = Models::Operations::GetShippingCarrierResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListShippingCarriers2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingCarriers2Response) }
-    def list_shipping_carriers2(request:, timeout_ms: nil)
-      # list_shipping_carriers2 - List all carriers
+    sig { params(request: Models::Operations::ListShippingCarriersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingCarriersResponse) }
+    def list_shipping_carriers(request:, timeout_ms: nil)
+      # list_shipping_carriers - List all carriers
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListShippingCarriers2Request,
+        Models::Operations::ListShippingCarriersRequest,
         base_url,
         '/shipping/{connection_id}/carrier',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListShippingCarriers2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListShippingCarriersRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listShippingCarriers2',
+        operation_id: 'listShippingCarriers',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ShippingCarrier))
-          response = Models::Operations::ListShippingCarriers2Response.new(
+          response = Models::Operations::ListShippingCarriersResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

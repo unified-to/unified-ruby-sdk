@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(verification_request: Models::Shared::VerificationRequest, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateVerificationRequest2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateVerificationRequest2Response) }
-    def create_verification_request2(verification_request:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_verification_request2 - Create a request
-      request = Models::Operations::CreateVerificationRequest2Request.new(
+    sig { params(verification_request: Models::Shared::VerificationRequest, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateVerificationRequestQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateVerificationRequestResponse) }
+    def create_verification_request(verification_request:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_verification_request - Create a request
+      request = Models::Operations::CreateVerificationRequestRequest.new(
         verification_request: verification_request,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateVerificationRequest2Request,
+        Models::Operations::CreateVerificationRequestRequest,
         base_url,
         '/verification/{connection_id}/request',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateVerificationRequest2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateVerificationRequestRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createVerificationRequest2',
+        operation_id: 'createVerificationRequest',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::VerificationRequest)
-          response = Models::Operations::CreateVerificationRequest2Response.new(
+          response = Models::Operations::CreateVerificationRequestResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetVerificationRequest2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetVerificationRequest2Response) }
-    def get_verification_request2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_verification_request2 - Retrieve a request
-      request = Models::Operations::GetVerificationRequest2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetVerificationRequestQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetVerificationRequestResponse) }
+    def get_verification_request(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_verification_request - Retrieve a request
+      request = Models::Operations::GetVerificationRequestRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetVerificationRequest2Request,
+        Models::Operations::GetVerificationRequestRequest,
         base_url,
         '/verification/{connection_id}/request/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetVerificationRequest2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetVerificationRequestRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getVerificationRequest2',
+        operation_id: 'getVerificationRequest',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::VerificationRequest)
-          response = Models::Operations::GetVerificationRequest2Response.new(
+          response = Models::Operations::GetVerificationRequestResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListVerificationRequests2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListVerificationRequests2Response) }
-    def list_verification_requests2(request:, timeout_ms: nil)
-      # list_verification_requests2 - List all requests
+    sig { params(request: Models::Operations::ListVerificationRequestsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListVerificationRequestsResponse) }
+    def list_verification_requests(request:, timeout_ms: nil)
+      # list_verification_requests - List all requests
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListVerificationRequests2Request,
+        Models::Operations::ListVerificationRequestsRequest,
         base_url,
         '/verification/{connection_id}/request',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListVerificationRequests2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListVerificationRequestsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listVerificationRequests2',
+        operation_id: 'listVerificationRequests',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::VerificationRequest))
-          response = Models::Operations::ListVerificationRequests2Response.new(
+          response = Models::Operations::ListVerificationRequestsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchVerificationRequest2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchVerificationRequest2Response) }
-    def patch_verification_request2(request:, timeout_ms: nil)
-      # patch_verification_request2 - Update a request
+    sig { params(request: Models::Operations::PatchVerificationRequestRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchVerificationRequestResponse) }
+    def patch_verification_request(request:, timeout_ms: nil)
+      # patch_verification_request - Update a request
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchVerificationRequest2Request,
+        Models::Operations::PatchVerificationRequestRequest,
         base_url,
         '/verification/{connection_id}/request/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchVerificationRequest2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchVerificationRequestRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchVerificationRequest2',
+        operation_id: 'patchVerificationRequest',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::VerificationRequest)
-          response = Models::Operations::PatchVerificationRequest2Response.new(
+          response = Models::Operations::PatchVerificationRequestResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveVerificationRequest2Response) }
-    def remove_verification_request2(connection_id:, id:, timeout_ms: nil)
-      # remove_verification_request2 - Remove a request
-      request = Models::Operations::RemoveVerificationRequest2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveVerificationRequestResponse) }
+    def remove_verification_request(connection_id:, id:, timeout_ms: nil)
+      # remove_verification_request - Remove a request
+      request = Models::Operations::RemoveVerificationRequestRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveVerificationRequest2Request,
+        Models::Operations::RemoveVerificationRequestRequest,
         base_url,
         '/verification/{connection_id}/request/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeVerificationRequest2',
+        operation_id: 'removeVerificationRequest',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveVerificationRequest2Response.new(
+        return Models::Operations::RemoveVerificationRequestResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveVerificationRequest2Response.new(
+        return Models::Operations::RemoveVerificationRequestResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateVerificationRequest2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateVerificationRequest2Response) }
-    def update_verification_request2(request:, timeout_ms: nil)
-      # update_verification_request2 - Update a request
+    sig { params(request: Models::Operations::UpdateVerificationRequestRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateVerificationRequestResponse) }
+    def update_verification_request(request:, timeout_ms: nil)
+      # update_verification_request - Update a request
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateVerificationRequest2Request,
+        Models::Operations::UpdateVerificationRequestRequest,
         base_url,
         '/verification/{connection_id}/request/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateVerificationRequest2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateVerificationRequestRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateVerificationRequest2',
+        operation_id: 'updateVerificationRequest',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::VerificationRequest)
-          response = Models::Operations::UpdateVerificationRequest2Response.new(
+          response = Models::Operations::UpdateVerificationRequestResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(marketing_campaign: Models::Shared::MarketingCampaign, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechCampaign2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechCampaign2Response) }
-    def create_martech_campaign2(marketing_campaign:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_martech_campaign2 - Create a campaign
-      request = Models::Operations::CreateMartechCampaign2Request.new(
+    sig { params(marketing_campaign: Models::Shared::MarketingCampaign, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechCampaignResponse) }
+    def create_martech_campaign(marketing_campaign:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_martech_campaign - Create a campaign
+      request = Models::Operations::CreateMartechCampaignRequest.new(
         marketing_campaign: marketing_campaign,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateMartechCampaign2Request,
+        Models::Operations::CreateMartechCampaignRequest,
         base_url,
         '/martech/{connection_id}/campaign',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateMartechCampaign2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateMartechCampaignRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createMartechCampaign2',
+        operation_id: 'createMartechCampaign',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingCampaign)
-          response = Models::Operations::CreateMartechCampaign2Response.new(
+          response = Models::Operations::CreateMartechCampaignResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(marketing_list: Models::Shared::MarketingList, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechList2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechList2Response) }
-    def create_martech_list2(marketing_list:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_martech_list2 - Create a list
-      request = Models::Operations::CreateMartechList2Request.new(
+    sig { params(marketing_list: Models::Shared::MarketingList, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechListQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechListResponse) }
+    def create_martech_list(marketing_list:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_martech_list - Create a list
+      request = Models::Operations::CreateMartechListRequest.new(
         marketing_list: marketing_list,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateMartechList2Request,
+        Models::Operations::CreateMartechListRequest,
         base_url,
         '/martech/{connection_id}/list',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateMartechList2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateMartechListRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createMartechList2',
+        operation_id: 'createMartechList',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingList)
-          response = Models::Operations::CreateMartechList2Response.new(
+          response = Models::Operations::CreateMartechListResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(marketing_member: Models::Shared::MarketingMember, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechMember2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechMember2Response) }
-    def create_martech_member2(marketing_member:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_martech_member2 - Create a member
-      request = Models::Operations::CreateMartechMember2Request.new(
+    sig { params(marketing_member: Models::Shared::MarketingMember, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechMemberQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechMemberResponse) }
+    def create_martech_member(marketing_member:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_martech_member - Create a member
+      request = Models::Operations::CreateMartechMemberRequest.new(
         marketing_member: marketing_member,
         connection_id: connection_id,
         fields_: fields_,
@@ -307,7 +307,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateMartechMember2Request,
+        Models::Operations::CreateMartechMemberRequest,
         base_url,
         '/martech/{connection_id}/member',
         request
@@ -325,7 +325,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateMartechMember2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateMartechMemberRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -341,7 +341,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createMartechMember2',
+        operation_id: 'createMartechMember',
         security_source: @sdk_configuration.security_source
       )
 
@@ -401,7 +401,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingMember)
-          response = Models::Operations::CreateMartechMember2Response.new(
+          response = Models::Operations::CreateMartechMemberResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -423,10 +423,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechCampaign2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechCampaign2Response) }
-    def get_martech_campaign2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_martech_campaign2 - Retrieve a campaign
-      request = Models::Operations::GetMartechCampaign2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechCampaignResponse) }
+    def get_martech_campaign(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_martech_campaign - Retrieve a campaign
+      request = Models::Operations::GetMartechCampaignRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -435,14 +435,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetMartechCampaign2Request,
+        Models::Operations::GetMartechCampaignRequest,
         base_url,
         '/martech/{connection_id}/campaign/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetMartechCampaign2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetMartechCampaignRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -458,7 +458,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getMartechCampaign2',
+        operation_id: 'getMartechCampaign',
         security_source: @sdk_configuration.security_source
       )
 
@@ -517,7 +517,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingCampaign)
-          response = Models::Operations::GetMartechCampaign2Response.new(
+          response = Models::Operations::GetMartechCampaignResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -539,10 +539,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechList2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechList2Response) }
-    def get_martech_list2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_martech_list2 - Retrieve a list
-      request = Models::Operations::GetMartechList2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechListQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechListResponse) }
+    def get_martech_list(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_martech_list - Retrieve a list
+      request = Models::Operations::GetMartechListRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -551,14 +551,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetMartechList2Request,
+        Models::Operations::GetMartechListRequest,
         base_url,
         '/martech/{connection_id}/list/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetMartechList2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetMartechListRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -574,7 +574,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getMartechList2',
+        operation_id: 'getMartechList',
         security_source: @sdk_configuration.security_source
       )
 
@@ -633,7 +633,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingList)
-          response = Models::Operations::GetMartechList2Response.new(
+          response = Models::Operations::GetMartechListResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -655,10 +655,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechMember2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechMember2Response) }
-    def get_martech_member2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_martech_member2 - Retrieve a member
-      request = Models::Operations::GetMartechMember2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechMemberQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechMemberResponse) }
+    def get_martech_member(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_martech_member - Retrieve a member
+      request = Models::Operations::GetMartechMemberRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -667,14 +667,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetMartechMember2Request,
+        Models::Operations::GetMartechMemberRequest,
         base_url,
         '/martech/{connection_id}/member/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetMartechMember2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetMartechMemberRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -690,7 +690,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getMartechMember2',
+        operation_id: 'getMartechMember',
         security_source: @sdk_configuration.security_source
       )
 
@@ -749,7 +749,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingMember)
-          response = Models::Operations::GetMartechMember2Response.new(
+          response = Models::Operations::GetMartechMemberResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -771,20 +771,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListMartechCampaigns2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechCampaigns2Response) }
-    def list_martech_campaigns2(request:, timeout_ms: nil)
-      # list_martech_campaigns2 - List all campaigns
+    sig { params(request: Models::Operations::ListMartechCampaignsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechCampaignsResponse) }
+    def list_martech_campaigns(request:, timeout_ms: nil)
+      # list_martech_campaigns - List all campaigns
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListMartechCampaigns2Request,
+        Models::Operations::ListMartechCampaignsRequest,
         base_url,
         '/martech/{connection_id}/campaign',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListMartechCampaigns2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListMartechCampaignsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -800,7 +800,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listMartechCampaigns2',
+        operation_id: 'listMartechCampaigns',
         security_source: @sdk_configuration.security_source
       )
 
@@ -859,7 +859,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::MarketingCampaign))
-          response = Models::Operations::ListMartechCampaigns2Response.new(
+          response = Models::Operations::ListMartechCampaignsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -881,20 +881,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListMartechLists2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechLists2Response) }
-    def list_martech_lists2(request:, timeout_ms: nil)
-      # list_martech_lists2 - List all lists
+    sig { params(request: Models::Operations::ListMartechListsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechListsResponse) }
+    def list_martech_lists(request:, timeout_ms: nil)
+      # list_martech_lists - List all lists
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListMartechLists2Request,
+        Models::Operations::ListMartechListsRequest,
         base_url,
         '/martech/{connection_id}/list',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListMartechLists2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListMartechListsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -910,7 +910,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listMartechLists2',
+        operation_id: 'listMartechLists',
         security_source: @sdk_configuration.security_source
       )
 
@@ -969,7 +969,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::MarketingList))
-          response = Models::Operations::ListMartechLists2Response.new(
+          response = Models::Operations::ListMartechListsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -991,20 +991,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListMartechMembers2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechMembers2Response) }
-    def list_martech_members2(request:, timeout_ms: nil)
-      # list_martech_members2 - List all members
+    sig { params(request: Models::Operations::ListMartechMembersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechMembersResponse) }
+    def list_martech_members(request:, timeout_ms: nil)
+      # list_martech_members - List all members
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListMartechMembers2Request,
+        Models::Operations::ListMartechMembersRequest,
         base_url,
         '/martech/{connection_id}/member',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListMartechMembers2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListMartechMembersRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1020,7 +1020,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listMartechMembers2',
+        operation_id: 'listMartechMembers',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1079,7 +1079,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::MarketingMember))
-          response = Models::Operations::ListMartechMembers2Response.new(
+          response = Models::Operations::ListMartechMembersResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1101,20 +1101,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListMartechReports2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechReports2Response) }
-    def list_martech_reports2(request:, timeout_ms: nil)
-      # list_martech_reports2 - List all reports
+    sig { params(request: Models::Operations::ListMartechReportsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechReportsResponse) }
+    def list_martech_reports(request:, timeout_ms: nil)
+      # list_martech_reports - List all reports
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListMartechReports2Request,
+        Models::Operations::ListMartechReportsRequest,
         base_url,
         '/martech/{connection_id}/report',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListMartechReports2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListMartechReportsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1130,7 +1130,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listMartechReports2',
+        operation_id: 'listMartechReports',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1189,7 +1189,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::MarketingReport))
-          response = Models::Operations::ListMartechReports2Response.new(
+          response = Models::Operations::ListMartechReportsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1211,13 +1211,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchMartechCampaign2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechCampaign2Response) }
-    def patch_martech_campaign2(request:, timeout_ms: nil)
-      # patch_martech_campaign2 - Update a campaign
+    sig { params(request: Models::Operations::PatchMartechCampaignRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechCampaignResponse) }
+    def patch_martech_campaign(request:, timeout_ms: nil)
+      # patch_martech_campaign - Update a campaign
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchMartechCampaign2Request,
+        Models::Operations::PatchMartechCampaignRequest,
         base_url,
         '/martech/{connection_id}/campaign/{id}',
         request
@@ -1235,7 +1235,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchMartechCampaign2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchMartechCampaignRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1251,7 +1251,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchMartechCampaign2',
+        operation_id: 'patchMartechCampaign',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1311,7 +1311,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingCampaign)
-          response = Models::Operations::PatchMartechCampaign2Response.new(
+          response = Models::Operations::PatchMartechCampaignResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1333,13 +1333,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchMartechList2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechList2Response) }
-    def patch_martech_list2(request:, timeout_ms: nil)
-      # patch_martech_list2 - Update a list
+    sig { params(request: Models::Operations::PatchMartechListRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechListResponse) }
+    def patch_martech_list(request:, timeout_ms: nil)
+      # patch_martech_list - Update a list
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchMartechList2Request,
+        Models::Operations::PatchMartechListRequest,
         base_url,
         '/martech/{connection_id}/list/{id}',
         request
@@ -1357,7 +1357,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchMartechList2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchMartechListRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1373,7 +1373,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchMartechList2',
+        operation_id: 'patchMartechList',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1433,7 +1433,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingList)
-          response = Models::Operations::PatchMartechList2Response.new(
+          response = Models::Operations::PatchMartechListResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1455,13 +1455,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchMartechMember2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechMember2Response) }
-    def patch_martech_member2(request:, timeout_ms: nil)
-      # patch_martech_member2 - Update a member
+    sig { params(request: Models::Operations::PatchMartechMemberRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechMemberResponse) }
+    def patch_martech_member(request:, timeout_ms: nil)
+      # patch_martech_member - Update a member
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchMartechMember2Request,
+        Models::Operations::PatchMartechMemberRequest,
         base_url,
         '/martech/{connection_id}/member/{id}',
         request
@@ -1479,7 +1479,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchMartechMember2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchMartechMemberRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1495,7 +1495,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchMartechMember2',
+        operation_id: 'patchMartechMember',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1555,7 +1555,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingMember)
-          response = Models::Operations::PatchMartechMember2Response.new(
+          response = Models::Operations::PatchMartechMemberResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1577,17 +1577,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechCampaign2Response) }
-    def remove_martech_campaign2(connection_id:, id:, timeout_ms: nil)
-      # remove_martech_campaign2 - Remove a campaign
-      request = Models::Operations::RemoveMartechCampaign2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechCampaignResponse) }
+    def remove_martech_campaign(connection_id:, id:, timeout_ms: nil)
+      # remove_martech_campaign - Remove a campaign
+      request = Models::Operations::RemoveMartechCampaignRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveMartechCampaign2Request,
+        Models::Operations::RemoveMartechCampaignRequest,
         base_url,
         '/martech/{connection_id}/campaign/{id}',
         request
@@ -1609,7 +1609,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeMartechCampaign2',
+        operation_id: 'removeMartechCampaign',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1664,7 +1664,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveMartechCampaign2Response.new(
+        return Models::Operations::RemoveMartechCampaignResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1681,7 +1681,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveMartechCampaign2Response.new(
+        return Models::Operations::RemoveMartechCampaignResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1691,17 +1691,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechList2Response) }
-    def remove_martech_list2(connection_id:, id:, timeout_ms: nil)
-      # remove_martech_list2 - Remove a list
-      request = Models::Operations::RemoveMartechList2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechListResponse) }
+    def remove_martech_list(connection_id:, id:, timeout_ms: nil)
+      # remove_martech_list - Remove a list
+      request = Models::Operations::RemoveMartechListRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveMartechList2Request,
+        Models::Operations::RemoveMartechListRequest,
         base_url,
         '/martech/{connection_id}/list/{id}',
         request
@@ -1723,7 +1723,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeMartechList2',
+        operation_id: 'removeMartechList',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1778,7 +1778,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveMartechList2Response.new(
+        return Models::Operations::RemoveMartechListResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1795,7 +1795,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveMartechList2Response.new(
+        return Models::Operations::RemoveMartechListResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1805,17 +1805,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechMember2Response) }
-    def remove_martech_member2(connection_id:, id:, timeout_ms: nil)
-      # remove_martech_member2 - Remove a member
-      request = Models::Operations::RemoveMartechMember2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechMemberResponse) }
+    def remove_martech_member(connection_id:, id:, timeout_ms: nil)
+      # remove_martech_member - Remove a member
+      request = Models::Operations::RemoveMartechMemberRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveMartechMember2Request,
+        Models::Operations::RemoveMartechMemberRequest,
         base_url,
         '/martech/{connection_id}/member/{id}',
         request
@@ -1837,7 +1837,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeMartechMember2',
+        operation_id: 'removeMartechMember',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1892,7 +1892,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveMartechMember2Response.new(
+        return Models::Operations::RemoveMartechMemberResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1909,7 +1909,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveMartechMember2Response.new(
+        return Models::Operations::RemoveMartechMemberResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1919,13 +1919,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateMartechCampaign2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechCampaign2Response) }
-    def update_martech_campaign2(request:, timeout_ms: nil)
-      # update_martech_campaign2 - Update a campaign
+    sig { params(request: Models::Operations::UpdateMartechCampaignRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechCampaignResponse) }
+    def update_martech_campaign(request:, timeout_ms: nil)
+      # update_martech_campaign - Update a campaign
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateMartechCampaign2Request,
+        Models::Operations::UpdateMartechCampaignRequest,
         base_url,
         '/martech/{connection_id}/campaign/{id}',
         request
@@ -1943,7 +1943,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateMartechCampaign2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateMartechCampaignRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1959,7 +1959,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateMartechCampaign2',
+        operation_id: 'updateMartechCampaign',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2019,7 +2019,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingCampaign)
-          response = Models::Operations::UpdateMartechCampaign2Response.new(
+          response = Models::Operations::UpdateMartechCampaignResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2041,13 +2041,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateMartechList2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechList2Response) }
-    def update_martech_list2(request:, timeout_ms: nil)
-      # update_martech_list2 - Update a list
+    sig { params(request: Models::Operations::UpdateMartechListRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechListResponse) }
+    def update_martech_list(request:, timeout_ms: nil)
+      # update_martech_list - Update a list
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateMartechList2Request,
+        Models::Operations::UpdateMartechListRequest,
         base_url,
         '/martech/{connection_id}/list/{id}',
         request
@@ -2065,7 +2065,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateMartechList2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateMartechListRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2081,7 +2081,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateMartechList2',
+        operation_id: 'updateMartechList',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2141,7 +2141,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingList)
-          response = Models::Operations::UpdateMartechList2Response.new(
+          response = Models::Operations::UpdateMartechListResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2163,13 +2163,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateMartechMember2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechMember2Response) }
-    def update_martech_member2(request:, timeout_ms: nil)
-      # update_martech_member2 - Update a member
+    sig { params(request: Models::Operations::UpdateMartechMemberRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechMemberResponse) }
+    def update_martech_member(request:, timeout_ms: nil)
+      # update_martech_member - Update a member
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateMartechMember2Request,
+        Models::Operations::UpdateMartechMemberRequest,
         base_url,
         '/martech/{connection_id}/member/{id}',
         request
@@ -2187,7 +2187,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateMartechMember2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateMartechMemberRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2203,7 +2203,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateMartechMember2',
+        operation_id: 'updateMartechMember',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2263,7 +2263,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MarketingMember)
-          response = Models::Operations::UpdateMartechMember2Response.new(
+          response = Models::Operations::UpdateMartechMemberResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

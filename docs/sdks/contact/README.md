@@ -5,32 +5,32 @@
 
 ### Available Operations
 
-* [create_accounting_contact2](#create_accounting_contact2) - Create a contact
-* [create_crm_contact2](#create_crm_contact2) - Create a contact
-* [create_uc_contact2](#create_uc_contact2) - Create a contact
-* [get_accounting_contact2](#get_accounting_contact2) - Retrieve a contact
-* [get_crm_contact2](#get_crm_contact2) - Retrieve a contact
-* [get_uc_contact2](#get_uc_contact2) - Retrieve a contact
-* [list_accounting_contacts2](#list_accounting_contacts2) - List all contacts
-* [list_crm_contacts2](#list_crm_contacts2) - List all contacts
-* [list_uc_contacts2](#list_uc_contacts2) - List all contacts
-* [patch_accounting_contact2](#patch_accounting_contact2) - Update a contact
-* [patch_crm_contact2](#patch_crm_contact2) - Update a contact
-* [patch_uc_contact2](#patch_uc_contact2) - Update a contact
-* [remove_accounting_contact2](#remove_accounting_contact2) - Remove a contact
-* [remove_crm_contact2](#remove_crm_contact2) - Remove a contact
-* [remove_uc_contact2](#remove_uc_contact2) - Remove a contact
-* [update_accounting_contact2](#update_accounting_contact2) - Update a contact
-* [update_crm_contact2](#update_crm_contact2) - Update a contact
-* [update_uc_contact2](#update_uc_contact2) - Update a contact
+* [create_accounting_contact](#create_accounting_contact) - Create a contact
+* [create_crm_contact](#create_crm_contact) - Create a contact
+* [create_uc_contact](#create_uc_contact) - Create a contact
+* [get_accounting_contact](#get_accounting_contact) - Retrieve a contact
+* [get_crm_contact](#get_crm_contact) - Retrieve a contact
+* [get_uc_contact](#get_uc_contact) - Retrieve a contact
+* [list_accounting_contacts](#list_accounting_contacts) - List all contacts
+* [list_crm_contacts](#list_crm_contacts) - List all contacts
+* [list_uc_contacts](#list_uc_contacts) - List all contacts
+* [patch_accounting_contact](#patch_accounting_contact) - Update a contact
+* [patch_crm_contact](#patch_crm_contact) - Update a contact
+* [patch_uc_contact](#patch_uc_contact) - Update a contact
+* [remove_accounting_contact](#remove_accounting_contact) - Remove a contact
+* [remove_crm_contact](#remove_crm_contact) - Remove a contact
+* [remove_uc_contact](#remove_uc_contact) - Remove a contact
+* [update_accounting_contact](#update_accounting_contact) - Update a contact
+* [update_crm_contact](#update_crm_contact) - Update a contact
+* [update_uc_contact](#update_uc_contact) - Update a contact
 
-## create_accounting_contact2
+## create_accounting_contact
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingContact2" method="post" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -41,7 +41,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.contact.create_accounting_contact2(accounting_contact: Models::Shared::AccountingContact.new(), connection_id: '<id>')
+res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::AccountingContact.new(), connection_id: '<id>')
 
 unless res.accounting_contact.nil?
   # handle response
@@ -55,12 +55,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `accounting_contact`                                                                                                                             | [Models::Shared::AccountingContact](../../models/shared/accountingcontact.md)                                                                    | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAccountingContact2QueryParamFields](../../models/operations/createaccountingcontact2queryparamfields.md)>    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAccountingContactQueryParamFields](../../models/operations/createaccountingcontactqueryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateAccountingContact2Response)](../../models/operations/createaccountingcontact2response.md)**
+**[T.nilable(Models::Operations::CreateAccountingContactResponse)](../../models/operations/createaccountingcontactresponse.md)**
 
 ### Errors
 
@@ -68,13 +68,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_crm_contact2
+## create_crm_contact
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmContact2" method="post" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -85,7 +85,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.contact.create_crm_contact2(crm_contact: Models::Shared::CrmContact.new(), connection_id: '<id>')
+res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(), connection_id: '<id>')
 
 unless res.crm_contact.nil?
   # handle response
@@ -99,12 +99,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `crm_contact`                                                                                                                                    | [Models::Shared::CrmContact](../../models/shared/crmcontact.md)                                                                                  | :heavy_check_mark:                                                                                                                               | A contact represents a person that optionally is associated with a deal and/or a company                                                         |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCrmContact2QueryParamFields](../../models/operations/createcrmcontact2queryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCrmContactQueryParamFields](../../models/operations/createcrmcontactqueryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCrmContact2Response)](../../models/operations/createcrmcontact2response.md)**
+**[T.nilable(Models::Operations::CreateCrmContactResponse)](../../models/operations/createcrmcontactresponse.md)**
 
 ### Errors
 
@@ -112,13 +112,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_uc_contact2
+## create_uc_contact
 
 Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcContact2" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -129,7 +129,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.contact.create_uc_contact2(uc_contact: Models::Shared::UcContact.new(), connection_id: '<id>')
+res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(), connection_id: '<id>')
 
 unless res.uc_contact.nil?
   # handle response
@@ -143,12 +143,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `uc_contact`                                                                                                                                     | [Models::Shared::UcContact](../../models/shared/uccontact.md)                                                                                    | :heavy_check_mark:                                                                                                                               | A contact represents a person that optionally is associated with a call                                                                          |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateUcContact2QueryParamFields](../../models/operations/createuccontact2queryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateUcContactQueryParamFields](../../models/operations/createuccontactqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateUcContact2Response)](../../models/operations/createuccontact2response.md)**
+**[T.nilable(Models::Operations::CreateUcContactResponse)](../../models/operations/createuccontactresponse.md)**
 
 ### Errors
 
@@ -156,13 +156,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_accounting_contact2
+## get_accounting_contact
 
 Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getAccountingContact2" method="get" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getAccountingContact" method="get" path="/accounting/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -173,7 +173,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.contact.get_accounting_contact2(connection_id: '<id>', id: '<id>')
+res = s.contact.get_accounting_contact(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_contact.nil?
   # handle response
@@ -187,12 +187,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Contact                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAccountingContact2QueryParamFields](../../models/operations/getaccountingcontact2queryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAccountingContactQueryParamFields](../../models/operations/getaccountingcontactqueryparamfields.md)>            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetAccountingContact2Response)](../../models/operations/getaccountingcontact2response.md)**
+**[T.nilable(Models::Operations::GetAccountingContactResponse)](../../models/operations/getaccountingcontactresponse.md)**
 
 ### Errors
 
@@ -200,13 +200,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_crm_contact2
+## get_crm_contact
 
 Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCrmContact2" method="get" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCrmContact" method="get" path="/crm/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -217,7 +217,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.contact.get_crm_contact2(connection_id: '<id>', id: '<id>')
+res = s.contact.get_crm_contact(connection_id: '<id>', id: '<id>')
 
 unless res.crm_contact.nil?
   # handle response
@@ -231,12 +231,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Contact                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCrmContact2QueryParamFields](../../models/operations/getcrmcontact2queryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCrmContactQueryParamFields](../../models/operations/getcrmcontactqueryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCrmContact2Response)](../../models/operations/getcrmcontact2response.md)**
+**[T.nilable(Models::Operations::GetCrmContactResponse)](../../models/operations/getcrmcontactresponse.md)**
 
 ### Errors
 
@@ -244,13 +244,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_uc_contact2
+## get_uc_contact
 
 Retrieve a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getUcContact2" method="get" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getUcContact" method="get" path="/uc/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -261,7 +261,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.contact.get_uc_contact2(connection_id: '<id>', id: '<id>')
+res = s.contact.get_uc_contact(connection_id: '<id>', id: '<id>')
 
 unless res.uc_contact.nil?
   # handle response
@@ -275,12 +275,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Contact                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetUcContact2QueryParamFields](../../models/operations/getuccontact2queryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetUcContactQueryParamFields](../../models/operations/getuccontactqueryparamfields.md)>                            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetUcContact2Response)](../../models/operations/getuccontact2response.md)**
+**[T.nilable(Models::Operations::GetUcContactResponse)](../../models/operations/getuccontactresponse.md)**
 
 ### Errors
 
@@ -288,13 +288,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_accounting_contacts2
+## list_accounting_contacts
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listAccountingContacts2" method="get" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="listAccountingContacts" method="get" path="/accounting/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -305,11 +305,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListAccountingContacts2Request.new(
+req = Models::Operations::ListAccountingContactsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.contact.list_accounting_contacts2(request: req)
+res = s.contact.list_accounting_contacts(request: req)
 
 unless res.accounting_contacts.nil?
   # handle response
@@ -319,13 +319,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                       | [Models::Operations::ListAccountingContacts2Request](../../models/operations/listaccountingcontacts2request.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::ListAccountingContactsRequest](../../models/operations/listaccountingcontactsrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListAccountingContacts2Response)](../../models/operations/listaccountingcontacts2response.md)**
+**[T.nilable(Models::Operations::ListAccountingContactsResponse)](../../models/operations/listaccountingcontactsresponse.md)**
 
 ### Errors
 
@@ -333,13 +333,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_crm_contacts2
+## list_crm_contacts
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCrmContacts2" method="get" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="listCrmContacts" method="get" path="/crm/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -350,11 +350,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCrmContacts2Request.new(
+req = Models::Operations::ListCrmContactsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.contact.list_crm_contacts2(request: req)
+res = s.contact.list_crm_contacts(request: req)
 
 unless res.crm_contacts.nil?
   # handle response
@@ -364,13 +364,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::ListCrmContacts2Request](../../models/operations/listcrmcontacts2request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::ListCrmContactsRequest](../../models/operations/listcrmcontactsrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCrmContacts2Response)](../../models/operations/listcrmcontacts2response.md)**
+**[T.nilable(Models::Operations::ListCrmContactsResponse)](../../models/operations/listcrmcontactsresponse.md)**
 
 ### Errors
 
@@ -378,13 +378,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_uc_contacts2
+## list_uc_contacts
 
 List all contacts
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listUcContacts2" method="get" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="listUcContacts" method="get" path="/uc/{connection_id}/contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -395,11 +395,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListUcContacts2Request.new(
+req = Models::Operations::ListUcContactsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.contact.list_uc_contacts2(request: req)
+res = s.contact.list_uc_contacts(request: req)
 
 unless res.uc_contacts.nil?
   # handle response
@@ -409,13 +409,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Models::Operations::ListUcContacts2Request](../../models/operations/listuccontacts2request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::ListUcContactsRequest](../../models/operations/listuccontactsrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListUcContacts2Response)](../../models/operations/listuccontacts2response.md)**
+**[T.nilable(Models::Operations::ListUcContactsResponse)](../../models/operations/listuccontactsresponse.md)**
 
 ### Errors
 
@@ -423,13 +423,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_accounting_contact2
+## patch_accounting_contact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingContact2" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -440,13 +440,280 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchAccountingContact2Request.new(
+req = Models::Operations::PatchAccountingContactRequest.new(
   accounting_contact: Models::Shared::AccountingContact.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.contact.patch_accounting_contact2(request: req)
+res = s.contact.patch_accounting_contact(request: req)
+
+unless res.accounting_contact.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::PatchAccountingContactRequest](../../models/operations/patchaccountingcontactrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchAccountingContactResponse)](../../models/operations/patchaccountingcontactresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## patch_crm_contact
+
+Update a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchCrmContactRequest.new(
+  crm_contact: Models::Shared::CrmContact.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.contact.patch_crm_contact(request: req)
+
+unless res.crm_contact.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::PatchCrmContactRequest](../../models/operations/patchcrmcontactrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchCrmContactResponse)](../../models/operations/patchcrmcontactresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## patch_uc_contact
+
+Update a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchUcContactRequest.new(
+  uc_contact: Models::Shared::UcContact.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.contact.patch_uc_contact(request: req)
+
+unless res.uc_contact.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::PatchUcContactRequest](../../models/operations/patchuccontactrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchUcContactResponse)](../../models/operations/patchuccontactresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_accounting_contact
+
+Remove a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeAccountingContact" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.contact.remove_accounting_contact(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveAccountingContactResponse)](../../models/operations/removeaccountingcontactresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_crm_contact
+
+Remove a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeCrmContact" method="delete" path="/crm/{connection_id}/contact/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.contact.remove_crm_contact(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveCrmContactResponse)](../../models/operations/removecrmcontactresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_uc_contact
+
+Remove a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeUcContact" method="delete" path="/uc/{connection_id}/contact/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.contact.remove_uc_contact(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveUcContactResponse)](../../models/operations/removeuccontactresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_accounting_contact
+
+Update a contact
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateAccountingContactRequest.new(
+  accounting_contact: Models::Shared::AccountingContact.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.contact.update_accounting_contact(request: req)
 
 unless res.accounting_contact.nil?
   # handle response
@@ -458,11 +725,11 @@ end
 
 | Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                       | [Models::Operations::PatchAccountingContact2Request](../../models/operations/patchaccountingcontact2request.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| `request`                                                                                                       | [Models::Operations::UpdateAccountingContactRequest](../../models/operations/updateaccountingcontactrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchAccountingContact2Response)](../../models/operations/patchaccountingcontact2response.md)**
+**[T.nilable(Models::Operations::UpdateAccountingContactResponse)](../../models/operations/updateaccountingcontactresponse.md)**
 
 ### Errors
 
@@ -470,13 +737,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_crm_contact2
+## update_crm_contact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmContact2" method="patch" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -487,13 +754,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCrmContact2Request.new(
+req = Models::Operations::UpdateCrmContactRequest.new(
   crm_contact: Models::Shared::CrmContact.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.contact.patch_crm_contact2(request: req)
+res = s.contact.update_crm_contact(request: req)
 
 unless res.crm_contact.nil?
   # handle response
@@ -505,11 +772,11 @@ end
 
 | Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
 | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::PatchCrmContact2Request](../../models/operations/patchcrmcontact2request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| `request`                                                                                         | [Models::Operations::UpdateCrmContactRequest](../../models/operations/updatecrmcontactrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCrmContact2Response)](../../models/operations/patchcrmcontact2response.md)**
+**[T.nilable(Models::Operations::UpdateCrmContactResponse)](../../models/operations/updatecrmcontactresponse.md)**
 
 ### Errors
 
@@ -517,13 +784,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_uc_contact2
+## update_uc_contact
 
 Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchUcContact2" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -534,13 +801,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchUcContact2Request.new(
+req = Models::Operations::UpdateUcContactRequest.new(
   uc_contact: Models::Shared::UcContact.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.contact.patch_uc_contact2(request: req)
+res = s.contact.update_uc_contact(request: req)
 
 unless res.uc_contact.nil?
   # handle response
@@ -552,278 +819,11 @@ end
 
 | Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Models::Operations::PatchUcContact2Request](../../models/operations/patchuccontact2request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| `request`                                                                                       | [Models::Operations::UpdateUcContactRequest](../../models/operations/updateuccontactrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchUcContact2Response)](../../models/operations/patchuccontact2response.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## remove_accounting_contact2
-
-Remove a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="removeAccountingContact2" method="delete" path="/accounting/{connection_id}/contact/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.contact.remove_accounting_contact2(connection_id: '<id>', id: '<id>')
-
-if res.status_code == 200
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
-
-### Response
-
-**[T.nilable(Models::Operations::RemoveAccountingContact2Response)](../../models/operations/removeaccountingcontact2response.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## remove_crm_contact2
-
-Remove a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="removeCrmContact2" method="delete" path="/crm/{connection_id}/contact/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.contact.remove_crm_contact2(connection_id: '<id>', id: '<id>')
-
-if res.status_code == 200
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
-
-### Response
-
-**[T.nilable(Models::Operations::RemoveCrmContact2Response)](../../models/operations/removecrmcontact2response.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## remove_uc_contact2
-
-Remove a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="removeUcContact2" method="delete" path="/uc/{connection_id}/contact/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.contact.remove_uc_contact2(connection_id: '<id>', id: '<id>')
-
-if res.status_code == 200
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter            | Type                 | Required             | Description          |
-| -------------------- | -------------------- | -------------------- | -------------------- |
-| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
-| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Contact    |
-
-### Response
-
-**[T.nilable(Models::Operations::RemoveUcContact2Response)](../../models/operations/removeuccontact2response.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## update_accounting_contact2
-
-Update a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="updateAccountingContact2" method="put" path="/accounting/{connection_id}/contact/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateAccountingContact2Request.new(
-  accounting_contact: Models::Shared::AccountingContact.new(),
-  connection_id: '<id>',
-  id: '<id>',
-)
-
-res = s.contact.update_accounting_contact2(request: req)
-
-unless res.accounting_contact.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                         | [Models::Operations::UpdateAccountingContact2Request](../../models/operations/updateaccountingcontact2request.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
-
-### Response
-
-**[T.nilable(Models::Operations::UpdateAccountingContact2Response)](../../models/operations/updateaccountingcontact2response.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## update_crm_contact2
-
-Update a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="updateCrmContact2" method="put" path="/crm/{connection_id}/contact/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCrmContact2Request.new(
-  crm_contact: Models::Shared::CrmContact.new(),
-  connection_id: '<id>',
-  id: '<id>',
-)
-
-res = s.contact.update_crm_contact2(request: req)
-
-unless res.crm_contact.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::UpdateCrmContact2Request](../../models/operations/updatecrmcontact2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
-
-### Response
-
-**[T.nilable(Models::Operations::UpdateCrmContact2Response)](../../models/operations/updatecrmcontact2response.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## update_uc_contact2
-
-Update a contact
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="updateUcContact2" method="put" path="/uc/{connection_id}/contact/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateUcContact2Request.new(
-  uc_contact: Models::Shared::UcContact.new(),
-  connection_id: '<id>',
-  id: '<id>',
-)
-
-res = s.contact.update_uc_contact2(request: req)
-
-unless res.uc_contact.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::UpdateUcContact2Request](../../models/operations/updateuccontact2request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
-
-### Response
-
-**[T.nilable(Models::Operations::UpdateUcContact2Response)](../../models/operations/updateuccontact2response.md)**
+**[T.nilable(Models::Operations::UpdateUcContactResponse)](../../models/operations/updateuccontactresponse.md)**
 
 ### Errors
 

@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingReport2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingReport2Response) }
-    def get_accounting_report2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_accounting_report2 - Retrieve a report
-      request = Models::Operations::GetAccountingReport2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingReportQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingReportResponse) }
+    def get_accounting_report(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_accounting_report - Retrieve a report
+      request = Models::Operations::GetAccountingReportRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAccountingReport2Request,
+        Models::Operations::GetAccountingReportRequest,
         base_url,
         '/accounting/{connection_id}/report/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAccountingReport2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAccountingReportRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAccountingReport2',
+        operation_id: 'getAccountingReport',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingReport)
-          response = Models::Operations::GetAccountingReport2Response.new(
+          response = Models::Operations::GetAccountingReportResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAccountingReports2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingReports2Response) }
-    def list_accounting_reports2(request:, timeout_ms: nil)
-      # list_accounting_reports2 - List all reports
+    sig { params(request: Models::Operations::ListAccountingReportsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingReportsResponse) }
+    def list_accounting_reports(request:, timeout_ms: nil)
+      # list_accounting_reports - List all reports
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAccountingReports2Request,
+        Models::Operations::ListAccountingReportsRequest,
         base_url,
         '/accounting/{connection_id}/report',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAccountingReports2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAccountingReportsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAccountingReports2',
+        operation_id: 'listAccountingReports',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AccountingReport))
-          response = Models::Operations::ListAccountingReports2Response.new(
+          response = Models::Operations::ListAccountingReportsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -265,20 +265,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAdsReports2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsReports2Response) }
-    def list_ads_reports2(request:, timeout_ms: nil)
-      # list_ads_reports2 - List all reports
+    sig { params(request: Models::Operations::ListAdsReportsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsReportsResponse) }
+    def list_ads_reports(request:, timeout_ms: nil)
+      # list_ads_reports - List all reports
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAdsReports2Request,
+        Models::Operations::ListAdsReportsRequest,
         base_url,
         '/ads/{connection_id}/report',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAdsReports2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAdsReportsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -294,7 +294,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAdsReports2',
+        operation_id: 'listAdsReports',
         security_source: @sdk_configuration.security_source
       )
 
@@ -353,7 +353,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AdsReport))
-          response = Models::Operations::ListAdsReports2Response.new(
+          response = Models::Operations::ListAdsReportsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -375,20 +375,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAnalyticsReports2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAnalyticsReports2Response) }
-    def list_analytics_reports2(request:, timeout_ms: nil)
-      # list_analytics_reports2 - List all reports
+    sig { params(request: Models::Operations::ListAnalyticsReportsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAnalyticsReportsResponse) }
+    def list_analytics_reports(request:, timeout_ms: nil)
+      # list_analytics_reports - List all reports
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAnalyticsReports2Request,
+        Models::Operations::ListAnalyticsReportsRequest,
         base_url,
         '/analytics/{connection_id}/report',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAnalyticsReports2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAnalyticsReportsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -404,7 +404,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAnalyticsReports2',
+        operation_id: 'listAnalyticsReports',
         security_source: @sdk_configuration.security_source
       )
 
@@ -463,7 +463,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AnalyticsReport))
-          response = Models::Operations::ListAnalyticsReports2Response.new(
+          response = Models::Operations::ListAnalyticsReportsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -485,20 +485,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListMartechReports2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechReports2Response) }
-    def list_martech_reports2(request:, timeout_ms: nil)
-      # list_martech_reports2 - List all reports
+    sig { params(request: Models::Operations::ListMartechReportsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechReportsResponse) }
+    def list_martech_reports(request:, timeout_ms: nil)
+      # list_martech_reports - List all reports
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListMartechReports2Request,
+        Models::Operations::ListMartechReportsRequest,
         base_url,
         '/martech/{connection_id}/report',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListMartechReports2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListMartechReportsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -514,7 +514,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listMartechReports2',
+        operation_id: 'listMartechReports',
         security_source: @sdk_configuration.security_source
       )
 
@@ -573,7 +573,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::MarketingReport))
-          response = Models::Operations::ListMartechReports2Response.new(
+          response = Models::Operations::ListMartechReportsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

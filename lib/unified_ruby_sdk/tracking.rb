@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingTracking2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingTracking2Response) }
-    def get_shipping_tracking2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_shipping_tracking2 - Retrieve a tracking
-      request = Models::Operations::GetShippingTracking2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingTrackingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingTrackingResponse) }
+    def get_shipping_tracking(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_shipping_tracking - Retrieve a tracking
+      request = Models::Operations::GetShippingTrackingRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetShippingTracking2Request,
+        Models::Operations::GetShippingTrackingRequest,
         base_url,
         '/shipping/{connection_id}/tracking/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetShippingTracking2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetShippingTrackingRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getShippingTracking2',
+        operation_id: 'getShippingTracking',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ShippingTracking)
-          response = Models::Operations::GetShippingTracking2Response.new(
+          response = Models::Operations::GetShippingTrackingResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListShippingTrackings2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingTrackings2Response) }
-    def list_shipping_trackings2(request:, timeout_ms: nil)
-      # list_shipping_trackings2 - List all trackings
+    sig { params(request: Models::Operations::ListShippingTrackingsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingTrackingsResponse) }
+    def list_shipping_trackings(request:, timeout_ms: nil)
+      # list_shipping_trackings - List all trackings
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListShippingTrackings2Request,
+        Models::Operations::ListShippingTrackingsRequest,
         base_url,
         '/shipping/{connection_id}/tracking',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListShippingTrackings2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListShippingTrackingsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listShippingTrackings2',
+        operation_id: 'listShippingTrackings',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ShippingTracking))
-          response = Models::Operations::ListShippingTrackings2Response.new(
+          response = Models::Operations::ListShippingTrackingsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

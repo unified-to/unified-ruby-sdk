@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMetadataMetadata2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMetadataMetadata2Response) }
-    def create_metadata_metadata2(metadata_metadata:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_metadata_metadata2 - Create a metadata
-      request = Models::Operations::CreateMetadataMetadata2Request.new(
+    sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMetadataMetadataQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMetadataMetadataResponse) }
+    def create_metadata_metadata(metadata_metadata:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_metadata_metadata - Create a metadata
+      request = Models::Operations::CreateMetadataMetadataRequest.new(
         metadata_metadata: metadata_metadata,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateMetadataMetadata2Request,
+        Models::Operations::CreateMetadataMetadataRequest,
         base_url,
         '/metadata/{connection_id}/metadata',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateMetadataMetadata2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateMetadataMetadataRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createMetadataMetadata2',
+        operation_id: 'createMetadataMetadata',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MetadataMetadata)
-          response = Models::Operations::CreateMetadataMetadata2Response.new(
+          response = Models::Operations::CreateMetadataMetadataResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMetadataMetadata2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMetadataMetadata2Response) }
-    def get_metadata_metadata2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_metadata_metadata2 - Retrieve a metadata
-      request = Models::Operations::GetMetadataMetadata2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMetadataMetadataQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMetadataMetadataResponse) }
+    def get_metadata_metadata(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_metadata_metadata - Retrieve a metadata
+      request = Models::Operations::GetMetadataMetadataRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetMetadataMetadata2Request,
+        Models::Operations::GetMetadataMetadataRequest,
         base_url,
         '/metadata/{connection_id}/metadata/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetMetadataMetadata2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetMetadataMetadataRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getMetadataMetadata2',
+        operation_id: 'getMetadataMetadata',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MetadataMetadata)
-          response = Models::Operations::GetMetadataMetadata2Response.new(
+          response = Models::Operations::GetMetadataMetadataResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListMetadataMetadatas2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMetadataMetadatas2Response) }
-    def list_metadata_metadatas2(request:, timeout_ms: nil)
-      # list_metadata_metadatas2 - List all metadatas
+    sig { params(request: Models::Operations::ListMetadataMetadatasRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMetadataMetadatasResponse) }
+    def list_metadata_metadatas(request:, timeout_ms: nil)
+      # list_metadata_metadatas - List all metadatas
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListMetadataMetadatas2Request,
+        Models::Operations::ListMetadataMetadatasRequest,
         base_url,
         '/metadata/{connection_id}/metadata',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListMetadataMetadatas2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListMetadataMetadatasRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listMetadataMetadatas2',
+        operation_id: 'listMetadataMetadatas',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::MetadataMetadata))
-          response = Models::Operations::ListMetadataMetadatas2Response.new(
+          response = Models::Operations::ListMetadataMetadatasResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchMetadataMetadata2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMetadataMetadata2Response) }
-    def patch_metadata_metadata2(request:, timeout_ms: nil)
-      # patch_metadata_metadata2 - Update a metadata
+    sig { params(request: Models::Operations::PatchMetadataMetadataRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMetadataMetadataResponse) }
+    def patch_metadata_metadata(request:, timeout_ms: nil)
+      # patch_metadata_metadata - Update a metadata
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchMetadataMetadata2Request,
+        Models::Operations::PatchMetadataMetadataRequest,
         base_url,
         '/metadata/{connection_id}/metadata/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchMetadataMetadata2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchMetadataMetadataRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchMetadataMetadata2',
+        operation_id: 'patchMetadataMetadata',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MetadataMetadata)
-          response = Models::Operations::PatchMetadataMetadata2Response.new(
+          response = Models::Operations::PatchMetadataMetadataResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMetadataMetadata2Response) }
-    def remove_metadata_metadata2(connection_id:, id:, timeout_ms: nil)
-      # remove_metadata_metadata2 - Remove a metadata
-      request = Models::Operations::RemoveMetadataMetadata2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMetadataMetadataResponse) }
+    def remove_metadata_metadata(connection_id:, id:, timeout_ms: nil)
+      # remove_metadata_metadata - Remove a metadata
+      request = Models::Operations::RemoveMetadataMetadataRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveMetadataMetadata2Request,
+        Models::Operations::RemoveMetadataMetadataRequest,
         base_url,
         '/metadata/{connection_id}/metadata/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeMetadataMetadata2',
+        operation_id: 'removeMetadataMetadata',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveMetadataMetadata2Response.new(
+        return Models::Operations::RemoveMetadataMetadataResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveMetadataMetadata2Response.new(
+        return Models::Operations::RemoveMetadataMetadataResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateMetadataMetadata2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMetadataMetadata2Response) }
-    def update_metadata_metadata2(request:, timeout_ms: nil)
-      # update_metadata_metadata2 - Update a metadata
+    sig { params(request: Models::Operations::UpdateMetadataMetadataRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMetadataMetadataResponse) }
+    def update_metadata_metadata(request:, timeout_ms: nil)
+      # update_metadata_metadata - Update a metadata
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateMetadataMetadata2Request,
+        Models::Operations::UpdateMetadataMetadataRequest,
         base_url,
         '/metadata/{connection_id}/metadata/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateMetadataMetadata2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateMetadataMetadataRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateMetadataMetadata2',
+        operation_id: 'updateMetadataMetadata',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MetadataMetadata)
-          response = Models::Operations::UpdateMetadataMetadata2Response.new(
+          response = Models::Operations::UpdateMetadataMetadataResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

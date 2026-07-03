@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoCommit2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoCommit2Response) }
-    def create_repo_commit2(repo_commit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_repo_commit2 - Create a commit
-      request = Models::Operations::CreateRepoCommit2Request.new(
+    sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoCommitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoCommitResponse) }
+    def create_repo_commit(repo_commit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_repo_commit - Create a commit
+      request = Models::Operations::CreateRepoCommitRequest.new(
         repo_commit: repo_commit,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateRepoCommit2Request,
+        Models::Operations::CreateRepoCommitRequest,
         base_url,
         '/repo/{connection_id}/commit',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateRepoCommit2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateRepoCommitRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createRepoCommit2',
+        operation_id: 'createRepoCommit',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoCommit)
-          response = Models::Operations::CreateRepoCommit2Response.new(
+          response = Models::Operations::CreateRepoCommitResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoCommit2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoCommit2Response) }
-    def get_repo_commit2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_repo_commit2 - Retrieve a commit
-      request = Models::Operations::GetRepoCommit2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoCommitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoCommitResponse) }
+    def get_repo_commit(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_repo_commit - Retrieve a commit
+      request = Models::Operations::GetRepoCommitRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetRepoCommit2Request,
+        Models::Operations::GetRepoCommitRequest,
         base_url,
         '/repo/{connection_id}/commit/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetRepoCommit2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetRepoCommitRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getRepoCommit2',
+        operation_id: 'getRepoCommit',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoCommit)
-          response = Models::Operations::GetRepoCommit2Response.new(
+          response = Models::Operations::GetRepoCommitResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListRepoCommits2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoCommits2Response) }
-    def list_repo_commits2(request:, timeout_ms: nil)
-      # list_repo_commits2 - List all commits
+    sig { params(request: Models::Operations::ListRepoCommitsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoCommitsResponse) }
+    def list_repo_commits(request:, timeout_ms: nil)
+      # list_repo_commits - List all commits
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListRepoCommits2Request,
+        Models::Operations::ListRepoCommitsRequest,
         base_url,
         '/repo/{connection_id}/commit',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListRepoCommits2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListRepoCommitsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listRepoCommits2',
+        operation_id: 'listRepoCommits',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::RepoCommit))
-          response = Models::Operations::ListRepoCommits2Response.new(
+          response = Models::Operations::ListRepoCommitsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchRepoCommit2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoCommit2Response) }
-    def patch_repo_commit2(request:, timeout_ms: nil)
-      # patch_repo_commit2 - Update a commit
+    sig { params(request: Models::Operations::PatchRepoCommitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoCommitResponse) }
+    def patch_repo_commit(request:, timeout_ms: nil)
+      # patch_repo_commit - Update a commit
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchRepoCommit2Request,
+        Models::Operations::PatchRepoCommitRequest,
         base_url,
         '/repo/{connection_id}/commit/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchRepoCommit2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchRepoCommitRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchRepoCommit2',
+        operation_id: 'patchRepoCommit',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoCommit)
-          response = Models::Operations::PatchRepoCommit2Response.new(
+          response = Models::Operations::PatchRepoCommitResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoCommit2Response) }
-    def remove_repo_commit2(connection_id:, id:, timeout_ms: nil)
-      # remove_repo_commit2 - Remove a commit
-      request = Models::Operations::RemoveRepoCommit2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoCommitResponse) }
+    def remove_repo_commit(connection_id:, id:, timeout_ms: nil)
+      # remove_repo_commit - Remove a commit
+      request = Models::Operations::RemoveRepoCommitRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveRepoCommit2Request,
+        Models::Operations::RemoveRepoCommitRequest,
         base_url,
         '/repo/{connection_id}/commit/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeRepoCommit2',
+        operation_id: 'removeRepoCommit',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoCommit2Response.new(
+        return Models::Operations::RemoveRepoCommitResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoCommit2Response.new(
+        return Models::Operations::RemoveRepoCommitResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateRepoCommit2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoCommit2Response) }
-    def update_repo_commit2(request:, timeout_ms: nil)
-      # update_repo_commit2 - Update a commit
+    sig { params(request: Models::Operations::UpdateRepoCommitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoCommitResponse) }
+    def update_repo_commit(request:, timeout_ms: nil)
+      # update_repo_commit - Update a commit
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateRepoCommit2Request,
+        Models::Operations::UpdateRepoCommitRequest,
         base_url,
         '/repo/{connection_id}/commit/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateRepoCommit2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateRepoCommitRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateRepoCommit2',
+        operation_id: 'updateRepoCommit',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoCommit)
-          response = Models::Operations::UpdateRepoCommit2Response.new(
+          response = Models::Operations::UpdateRepoCommitResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

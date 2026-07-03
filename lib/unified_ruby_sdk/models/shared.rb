@@ -63,6 +63,8 @@ module UnifiedRubySDK
       autoload :AccountingTransactionLineItem, 'unified_ruby_sdk/models/shared/accountingtransactionlineitem.rb'
       autoload :AccountingTrialbalance, 'unified_ruby_sdk/models/shared/accountingtrialbalance.rb'
       autoload :AccountingTrialbalanceSubItem, 'unified_ruby_sdk/models/shared/accountingtrialbalancesubitem.rb'
+      autoload :AccountingVendorcredit, 'unified_ruby_sdk/models/shared/accountingvendorcredit.rb'
+      autoload :AccountingVendorcreditStatus, 'unified_ruby_sdk/models/shared/accountingvendorcredit_status.rb'
       autoload :AdSchedule, 'unified_ruby_sdk/models/shared/adschedule.rb'
       autoload :AdsAd, 'unified_ruby_sdk/models/shared/adsad.rb'
       autoload :AdsAdStatus, 'unified_ruby_sdk/models/shared/adsad_status.rb'

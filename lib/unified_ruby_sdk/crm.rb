@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_company: Models::Shared::CrmCompany, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmCompany2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmCompany2Response) }
-    def create_crm_company2(crm_company:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_crm_company2 - Create a company
-      request = Models::Operations::CreateCrmCompany2Request.new(
+    sig { params(crm_company: Models::Shared::CrmCompany, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmCompanyResponse) }
+    def create_crm_company(crm_company:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_crm_company - Create a company
+      request = Models::Operations::CreateCrmCompanyRequest.new(
         crm_company: crm_company,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCrmCompany2Request,
+        Models::Operations::CreateCrmCompanyRequest,
         base_url,
         '/crm/{connection_id}/company',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCrmCompany2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCrmCompanyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCrmCompany2',
+        operation_id: 'createCrmCompany',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmCompany)
-          response = Models::Operations::CreateCrmCompany2Response.new(
+          response = Models::Operations::CreateCrmCompanyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_contact: Models::Shared::CrmContact, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmContact2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmContact2Response) }
-    def create_crm_contact2(crm_contact:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_crm_contact2 - Create a contact
-      request = Models::Operations::CreateCrmContact2Request.new(
+    sig { params(crm_contact: Models::Shared::CrmContact, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmContactResponse) }
+    def create_crm_contact(crm_contact:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_crm_contact - Create a contact
+      request = Models::Operations::CreateCrmContactRequest.new(
         crm_contact: crm_contact,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCrmContact2Request,
+        Models::Operations::CreateCrmContactRequest,
         base_url,
         '/crm/{connection_id}/contact',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCrmContact2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCrmContactRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCrmContact2',
+        operation_id: 'createCrmContact',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmContact)
-          response = Models::Operations::CreateCrmContact2Response.new(
+          response = Models::Operations::CreateCrmContactResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmDeal2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmDeal2Response) }
-    def create_crm_deal2(crm_deal:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_crm_deal2 - Create a deal
-      request = Models::Operations::CreateCrmDeal2Request.new(
+    sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmDealQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmDealResponse) }
+    def create_crm_deal(crm_deal:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_crm_deal - Create a deal
+      request = Models::Operations::CreateCrmDealRequest.new(
         crm_deal: crm_deal,
         connection_id: connection_id,
         fields_: fields_,
@@ -307,7 +307,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCrmDeal2Request,
+        Models::Operations::CreateCrmDealRequest,
         base_url,
         '/crm/{connection_id}/deal',
         request
@@ -325,7 +325,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCrmDeal2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCrmDealRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -341,7 +341,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCrmDeal2',
+        operation_id: 'createCrmDeal',
         security_source: @sdk_configuration.security_source
       )
 
@@ -401,7 +401,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmDeal)
-          response = Models::Operations::CreateCrmDeal2Response.new(
+          response = Models::Operations::CreateCrmDealResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -423,10 +423,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmEvent2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmEvent2Response) }
-    def create_crm_event2(crm_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_crm_event2 - Create an event
-      request = Models::Operations::CreateCrmEvent2Request.new(
+    sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmEventResponse) }
+    def create_crm_event(crm_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_crm_event - Create an event
+      request = Models::Operations::CreateCrmEventRequest.new(
         crm_event: crm_event,
         connection_id: connection_id,
         fields_: fields_,
@@ -435,7 +435,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCrmEvent2Request,
+        Models::Operations::CreateCrmEventRequest,
         base_url,
         '/crm/{connection_id}/event',
         request
@@ -453,7 +453,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCrmEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCrmEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -469,7 +469,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCrmEvent2',
+        operation_id: 'createCrmEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -529,7 +529,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmEvent)
-          response = Models::Operations::CreateCrmEvent2Response.new(
+          response = Models::Operations::CreateCrmEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -551,10 +551,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_lead: Models::Shared::CrmLead, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmLead2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmLead2Response) }
-    def create_crm_lead2(crm_lead:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_crm_lead2 - Create a lead
-      request = Models::Operations::CreateCrmLead2Request.new(
+    sig { params(crm_lead: Models::Shared::CrmLead, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmLeadQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmLeadResponse) }
+    def create_crm_lead(crm_lead:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_crm_lead - Create a lead
+      request = Models::Operations::CreateCrmLeadRequest.new(
         crm_lead: crm_lead,
         connection_id: connection_id,
         fields_: fields_,
@@ -563,7 +563,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCrmLead2Request,
+        Models::Operations::CreateCrmLeadRequest,
         base_url,
         '/crm/{connection_id}/lead',
         request
@@ -581,7 +581,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCrmLead2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCrmLeadRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -597,7 +597,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCrmLead2',
+        operation_id: 'createCrmLead',
         security_source: @sdk_configuration.security_source
       )
 
@@ -657,7 +657,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmLead)
-          response = Models::Operations::CreateCrmLead2Response.new(
+          response = Models::Operations::CreateCrmLeadResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -679,10 +679,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmPipeline2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmPipeline2Response) }
-    def create_crm_pipeline2(crm_pipeline:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_crm_pipeline2 - Create a pipeline
-      request = Models::Operations::CreateCrmPipeline2Request.new(
+    sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmPipelineQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmPipelineResponse) }
+    def create_crm_pipeline(crm_pipeline:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_crm_pipeline - Create a pipeline
+      request = Models::Operations::CreateCrmPipelineRequest.new(
         crm_pipeline: crm_pipeline,
         connection_id: connection_id,
         fields_: fields_,
@@ -691,7 +691,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCrmPipeline2Request,
+        Models::Operations::CreateCrmPipelineRequest,
         base_url,
         '/crm/{connection_id}/pipeline',
         request
@@ -709,7 +709,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCrmPipeline2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCrmPipelineRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -725,7 +725,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCrmPipeline2',
+        operation_id: 'createCrmPipeline',
         security_source: @sdk_configuration.security_source
       )
 
@@ -785,7 +785,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmPipeline)
-          response = Models::Operations::CreateCrmPipeline2Response.new(
+          response = Models::Operations::CreateCrmPipelineResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -807,10 +807,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmCompany2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmCompany2Response) }
-    def get_crm_company2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_crm_company2 - Retrieve a company
-      request = Models::Operations::GetCrmCompany2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmCompanyResponse) }
+    def get_crm_company(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_crm_company - Retrieve a company
+      request = Models::Operations::GetCrmCompanyRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -819,14 +819,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCrmCompany2Request,
+        Models::Operations::GetCrmCompanyRequest,
         base_url,
         '/crm/{connection_id}/company/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCrmCompany2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCrmCompanyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -842,7 +842,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCrmCompany2',
+        operation_id: 'getCrmCompany',
         security_source: @sdk_configuration.security_source
       )
 
@@ -901,7 +901,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmCompany)
-          response = Models::Operations::GetCrmCompany2Response.new(
+          response = Models::Operations::GetCrmCompanyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -923,10 +923,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmContact2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmContact2Response) }
-    def get_crm_contact2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_crm_contact2 - Retrieve a contact
-      request = Models::Operations::GetCrmContact2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmContactResponse) }
+    def get_crm_contact(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_crm_contact - Retrieve a contact
+      request = Models::Operations::GetCrmContactRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -935,14 +935,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCrmContact2Request,
+        Models::Operations::GetCrmContactRequest,
         base_url,
         '/crm/{connection_id}/contact/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCrmContact2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCrmContactRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -958,7 +958,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCrmContact2',
+        operation_id: 'getCrmContact',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1017,7 +1017,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmContact)
-          response = Models::Operations::GetCrmContact2Response.new(
+          response = Models::Operations::GetCrmContactResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1039,10 +1039,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmDeal2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmDeal2Response) }
-    def get_crm_deal2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_crm_deal2 - Retrieve a deal
-      request = Models::Operations::GetCrmDeal2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmDealQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmDealResponse) }
+    def get_crm_deal(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_crm_deal - Retrieve a deal
+      request = Models::Operations::GetCrmDealRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1051,14 +1051,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCrmDeal2Request,
+        Models::Operations::GetCrmDealRequest,
         base_url,
         '/crm/{connection_id}/deal/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCrmDeal2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCrmDealRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1074,7 +1074,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCrmDeal2',
+        operation_id: 'getCrmDeal',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1133,7 +1133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmDeal)
-          response = Models::Operations::GetCrmDeal2Response.new(
+          response = Models::Operations::GetCrmDealResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1155,10 +1155,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmEvent2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmEvent2Response) }
-    def get_crm_event2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_crm_event2 - Retrieve an event
-      request = Models::Operations::GetCrmEvent2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmEventResponse) }
+    def get_crm_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_crm_event - Retrieve an event
+      request = Models::Operations::GetCrmEventRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1167,14 +1167,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCrmEvent2Request,
+        Models::Operations::GetCrmEventRequest,
         base_url,
         '/crm/{connection_id}/event/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCrmEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCrmEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1190,7 +1190,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCrmEvent2',
+        operation_id: 'getCrmEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1249,7 +1249,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmEvent)
-          response = Models::Operations::GetCrmEvent2Response.new(
+          response = Models::Operations::GetCrmEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1271,10 +1271,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmLead2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmLead2Response) }
-    def get_crm_lead2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_crm_lead2 - Retrieve a lead
-      request = Models::Operations::GetCrmLead2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmLeadQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmLeadResponse) }
+    def get_crm_lead(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_crm_lead - Retrieve a lead
+      request = Models::Operations::GetCrmLeadRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1283,14 +1283,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCrmLead2Request,
+        Models::Operations::GetCrmLeadRequest,
         base_url,
         '/crm/{connection_id}/lead/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCrmLead2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCrmLeadRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1306,7 +1306,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCrmLead2',
+        operation_id: 'getCrmLead',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1365,7 +1365,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmLead)
-          response = Models::Operations::GetCrmLead2Response.new(
+          response = Models::Operations::GetCrmLeadResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1387,10 +1387,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmPipeline2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmPipeline2Response) }
-    def get_crm_pipeline2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_crm_pipeline2 - Retrieve a pipeline
-      request = Models::Operations::GetCrmPipeline2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmPipelineQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmPipelineResponse) }
+    def get_crm_pipeline(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_crm_pipeline - Retrieve a pipeline
+      request = Models::Operations::GetCrmPipelineRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -1399,14 +1399,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCrmPipeline2Request,
+        Models::Operations::GetCrmPipelineRequest,
         base_url,
         '/crm/{connection_id}/pipeline/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCrmPipeline2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCrmPipelineRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1422,7 +1422,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCrmPipeline2',
+        operation_id: 'getCrmPipeline',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1481,7 +1481,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmPipeline)
-          response = Models::Operations::GetCrmPipeline2Response.new(
+          response = Models::Operations::GetCrmPipelineResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1503,20 +1503,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCrmCompanies2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmCompanies2Response) }
-    def list_crm_companies2(request:, timeout_ms: nil)
-      # list_crm_companies2 - List all companies
+    sig { params(request: Models::Operations::ListCrmCompaniesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmCompaniesResponse) }
+    def list_crm_companies(request:, timeout_ms: nil)
+      # list_crm_companies - List all companies
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCrmCompanies2Request,
+        Models::Operations::ListCrmCompaniesRequest,
         base_url,
         '/crm/{connection_id}/company',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCrmCompanies2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCrmCompaniesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1532,7 +1532,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCrmCompanies2',
+        operation_id: 'listCrmCompanies',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1591,7 +1591,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CrmCompany))
-          response = Models::Operations::ListCrmCompanies2Response.new(
+          response = Models::Operations::ListCrmCompaniesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1613,20 +1613,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCrmContacts2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmContacts2Response) }
-    def list_crm_contacts2(request:, timeout_ms: nil)
-      # list_crm_contacts2 - List all contacts
+    sig { params(request: Models::Operations::ListCrmContactsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmContactsResponse) }
+    def list_crm_contacts(request:, timeout_ms: nil)
+      # list_crm_contacts - List all contacts
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCrmContacts2Request,
+        Models::Operations::ListCrmContactsRequest,
         base_url,
         '/crm/{connection_id}/contact',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCrmContacts2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCrmContactsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1642,7 +1642,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCrmContacts2',
+        operation_id: 'listCrmContacts',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1701,7 +1701,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CrmContact))
-          response = Models::Operations::ListCrmContacts2Response.new(
+          response = Models::Operations::ListCrmContactsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1723,20 +1723,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCrmDeals2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmDeals2Response) }
-    def list_crm_deals2(request:, timeout_ms: nil)
-      # list_crm_deals2 - List all deals
+    sig { params(request: Models::Operations::ListCrmDealsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmDealsResponse) }
+    def list_crm_deals(request:, timeout_ms: nil)
+      # list_crm_deals - List all deals
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCrmDeals2Request,
+        Models::Operations::ListCrmDealsRequest,
         base_url,
         '/crm/{connection_id}/deal',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCrmDeals2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCrmDealsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1752,7 +1752,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCrmDeals2',
+        operation_id: 'listCrmDeals',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1811,7 +1811,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CrmDeal))
-          response = Models::Operations::ListCrmDeals2Response.new(
+          response = Models::Operations::ListCrmDealsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1833,20 +1833,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCrmEvents2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmEvents2Response) }
-    def list_crm_events2(request:, timeout_ms: nil)
-      # list_crm_events2 - List all events
+    sig { params(request: Models::Operations::ListCrmEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmEventsResponse) }
+    def list_crm_events(request:, timeout_ms: nil)
+      # list_crm_events - List all events
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCrmEvents2Request,
+        Models::Operations::ListCrmEventsRequest,
         base_url,
         '/crm/{connection_id}/event',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCrmEvents2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCrmEventsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1862,7 +1862,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCrmEvents2',
+        operation_id: 'listCrmEvents',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1921,7 +1921,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CrmEvent))
-          response = Models::Operations::ListCrmEvents2Response.new(
+          response = Models::Operations::ListCrmEventsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1943,20 +1943,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCrmLeads2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmLeads2Response) }
-    def list_crm_leads2(request:, timeout_ms: nil)
-      # list_crm_leads2 - List all leads
+    sig { params(request: Models::Operations::ListCrmLeadsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmLeadsResponse) }
+    def list_crm_leads(request:, timeout_ms: nil)
+      # list_crm_leads - List all leads
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCrmLeads2Request,
+        Models::Operations::ListCrmLeadsRequest,
         base_url,
         '/crm/{connection_id}/lead',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCrmLeads2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCrmLeadsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1972,7 +1972,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCrmLeads2',
+        operation_id: 'listCrmLeads',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2031,7 +2031,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CrmLead))
-          response = Models::Operations::ListCrmLeads2Response.new(
+          response = Models::Operations::ListCrmLeadsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2053,20 +2053,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCrmPicklists2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmPicklists2Response) }
-    def list_crm_picklists2(request:, timeout_ms: nil)
-      # list_crm_picklists2 - List all picklists
+    sig { params(request: Models::Operations::ListCrmPicklistsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmPicklistsResponse) }
+    def list_crm_picklists(request:, timeout_ms: nil)
+      # list_crm_picklists - List all picklists
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCrmPicklists2Request,
+        Models::Operations::ListCrmPicklistsRequest,
         base_url,
         '/crm/{connection_id}/picklist',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCrmPicklists2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCrmPicklistsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2082,7 +2082,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCrmPicklists2',
+        operation_id: 'listCrmPicklists',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2141,7 +2141,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CrmPicklist))
-          response = Models::Operations::ListCrmPicklists2Response.new(
+          response = Models::Operations::ListCrmPicklistsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2163,20 +2163,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCrmPipelines2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmPipelines2Response) }
-    def list_crm_pipelines2(request:, timeout_ms: nil)
-      # list_crm_pipelines2 - List all pipelines
+    sig { params(request: Models::Operations::ListCrmPipelinesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmPipelinesResponse) }
+    def list_crm_pipelines(request:, timeout_ms: nil)
+      # list_crm_pipelines - List all pipelines
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCrmPipelines2Request,
+        Models::Operations::ListCrmPipelinesRequest,
         base_url,
         '/crm/{connection_id}/pipeline',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCrmPipelines2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCrmPipelinesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2192,7 +2192,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCrmPipelines2',
+        operation_id: 'listCrmPipelines',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2251,7 +2251,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CrmPipeline))
-          response = Models::Operations::ListCrmPipelines2Response.new(
+          response = Models::Operations::ListCrmPipelinesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2273,13 +2273,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCrmCompany2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmCompany2Response) }
-    def patch_crm_company2(request:, timeout_ms: nil)
-      # patch_crm_company2 - Update a company
+    sig { params(request: Models::Operations::PatchCrmCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmCompanyResponse) }
+    def patch_crm_company(request:, timeout_ms: nil)
+      # patch_crm_company - Update a company
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCrmCompany2Request,
+        Models::Operations::PatchCrmCompanyRequest,
         base_url,
         '/crm/{connection_id}/company/{id}',
         request
@@ -2297,7 +2297,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCrmCompany2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCrmCompanyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2313,7 +2313,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCrmCompany2',
+        operation_id: 'patchCrmCompany',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2373,7 +2373,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmCompany)
-          response = Models::Operations::PatchCrmCompany2Response.new(
+          response = Models::Operations::PatchCrmCompanyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2395,13 +2395,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCrmContact2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmContact2Response) }
-    def patch_crm_contact2(request:, timeout_ms: nil)
-      # patch_crm_contact2 - Update a contact
+    sig { params(request: Models::Operations::PatchCrmContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmContactResponse) }
+    def patch_crm_contact(request:, timeout_ms: nil)
+      # patch_crm_contact - Update a contact
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCrmContact2Request,
+        Models::Operations::PatchCrmContactRequest,
         base_url,
         '/crm/{connection_id}/contact/{id}',
         request
@@ -2419,7 +2419,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCrmContact2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCrmContactRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2435,7 +2435,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCrmContact2',
+        operation_id: 'patchCrmContact',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2495,7 +2495,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmContact)
-          response = Models::Operations::PatchCrmContact2Response.new(
+          response = Models::Operations::PatchCrmContactResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2517,13 +2517,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCrmDeal2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmDeal2Response) }
-    def patch_crm_deal2(request:, timeout_ms: nil)
-      # patch_crm_deal2 - Update a deal
+    sig { params(request: Models::Operations::PatchCrmDealRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmDealResponse) }
+    def patch_crm_deal(request:, timeout_ms: nil)
+      # patch_crm_deal - Update a deal
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCrmDeal2Request,
+        Models::Operations::PatchCrmDealRequest,
         base_url,
         '/crm/{connection_id}/deal/{id}',
         request
@@ -2541,7 +2541,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCrmDeal2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCrmDealRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2557,7 +2557,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCrmDeal2',
+        operation_id: 'patchCrmDeal',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2617,7 +2617,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmDeal)
-          response = Models::Operations::PatchCrmDeal2Response.new(
+          response = Models::Operations::PatchCrmDealResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2639,13 +2639,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCrmEvent2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmEvent2Response) }
-    def patch_crm_event2(request:, timeout_ms: nil)
-      # patch_crm_event2 - Update an event
+    sig { params(request: Models::Operations::PatchCrmEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmEventResponse) }
+    def patch_crm_event(request:, timeout_ms: nil)
+      # patch_crm_event - Update an event
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCrmEvent2Request,
+        Models::Operations::PatchCrmEventRequest,
         base_url,
         '/crm/{connection_id}/event/{id}',
         request
@@ -2663,7 +2663,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCrmEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCrmEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2679,7 +2679,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCrmEvent2',
+        operation_id: 'patchCrmEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2739,7 +2739,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmEvent)
-          response = Models::Operations::PatchCrmEvent2Response.new(
+          response = Models::Operations::PatchCrmEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2761,13 +2761,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCrmLead2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmLead2Response) }
-    def patch_crm_lead2(request:, timeout_ms: nil)
-      # patch_crm_lead2 - Update a lead
+    sig { params(request: Models::Operations::PatchCrmLeadRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmLeadResponse) }
+    def patch_crm_lead(request:, timeout_ms: nil)
+      # patch_crm_lead - Update a lead
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCrmLead2Request,
+        Models::Operations::PatchCrmLeadRequest,
         base_url,
         '/crm/{connection_id}/lead/{id}',
         request
@@ -2785,7 +2785,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCrmLead2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCrmLeadRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2801,7 +2801,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCrmLead2',
+        operation_id: 'patchCrmLead',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2861,7 +2861,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmLead)
-          response = Models::Operations::PatchCrmLead2Response.new(
+          response = Models::Operations::PatchCrmLeadResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2883,13 +2883,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCrmPipeline2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmPipeline2Response) }
-    def patch_crm_pipeline2(request:, timeout_ms: nil)
-      # patch_crm_pipeline2 - Update a pipeline
+    sig { params(request: Models::Operations::PatchCrmPipelineRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmPipelineResponse) }
+    def patch_crm_pipeline(request:, timeout_ms: nil)
+      # patch_crm_pipeline - Update a pipeline
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCrmPipeline2Request,
+        Models::Operations::PatchCrmPipelineRequest,
         base_url,
         '/crm/{connection_id}/pipeline/{id}',
         request
@@ -2907,7 +2907,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCrmPipeline2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCrmPipelineRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2923,7 +2923,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCrmPipeline2',
+        operation_id: 'patchCrmPipeline',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2983,7 +2983,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmPipeline)
-          response = Models::Operations::PatchCrmPipeline2Response.new(
+          response = Models::Operations::PatchCrmPipelineResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -3005,17 +3005,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmCompany2Response) }
-    def remove_crm_company2(connection_id:, id:, timeout_ms: nil)
-      # remove_crm_company2 - Remove a company
-      request = Models::Operations::RemoveCrmCompany2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmCompanyResponse) }
+    def remove_crm_company(connection_id:, id:, timeout_ms: nil)
+      # remove_crm_company - Remove a company
+      request = Models::Operations::RemoveCrmCompanyRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCrmCompany2Request,
+        Models::Operations::RemoveCrmCompanyRequest,
         base_url,
         '/crm/{connection_id}/company/{id}',
         request
@@ -3037,7 +3037,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCrmCompany2',
+        operation_id: 'removeCrmCompany',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3092,7 +3092,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmCompany2Response.new(
+        return Models::Operations::RemoveCrmCompanyResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3109,7 +3109,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmCompany2Response.new(
+        return Models::Operations::RemoveCrmCompanyResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3119,17 +3119,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmContact2Response) }
-    def remove_crm_contact2(connection_id:, id:, timeout_ms: nil)
-      # remove_crm_contact2 - Remove a contact
-      request = Models::Operations::RemoveCrmContact2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmContactResponse) }
+    def remove_crm_contact(connection_id:, id:, timeout_ms: nil)
+      # remove_crm_contact - Remove a contact
+      request = Models::Operations::RemoveCrmContactRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCrmContact2Request,
+        Models::Operations::RemoveCrmContactRequest,
         base_url,
         '/crm/{connection_id}/contact/{id}',
         request
@@ -3151,7 +3151,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCrmContact2',
+        operation_id: 'removeCrmContact',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3206,7 +3206,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmContact2Response.new(
+        return Models::Operations::RemoveCrmContactResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3223,7 +3223,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmContact2Response.new(
+        return Models::Operations::RemoveCrmContactResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3233,17 +3233,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmDeal2Response) }
-    def remove_crm_deal2(connection_id:, id:, timeout_ms: nil)
-      # remove_crm_deal2 - Remove a deal
-      request = Models::Operations::RemoveCrmDeal2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmDealResponse) }
+    def remove_crm_deal(connection_id:, id:, timeout_ms: nil)
+      # remove_crm_deal - Remove a deal
+      request = Models::Operations::RemoveCrmDealRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCrmDeal2Request,
+        Models::Operations::RemoveCrmDealRequest,
         base_url,
         '/crm/{connection_id}/deal/{id}',
         request
@@ -3265,7 +3265,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCrmDeal2',
+        operation_id: 'removeCrmDeal',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3320,7 +3320,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmDeal2Response.new(
+        return Models::Operations::RemoveCrmDealResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3337,7 +3337,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmDeal2Response.new(
+        return Models::Operations::RemoveCrmDealResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3347,17 +3347,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmEvent2Response) }
-    def remove_crm_event2(connection_id:, id:, timeout_ms: nil)
-      # remove_crm_event2 - Remove an event
-      request = Models::Operations::RemoveCrmEvent2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmEventResponse) }
+    def remove_crm_event(connection_id:, id:, timeout_ms: nil)
+      # remove_crm_event - Remove an event
+      request = Models::Operations::RemoveCrmEventRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCrmEvent2Request,
+        Models::Operations::RemoveCrmEventRequest,
         base_url,
         '/crm/{connection_id}/event/{id}',
         request
@@ -3379,7 +3379,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCrmEvent2',
+        operation_id: 'removeCrmEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3434,7 +3434,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmEvent2Response.new(
+        return Models::Operations::RemoveCrmEventResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3451,7 +3451,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmEvent2Response.new(
+        return Models::Operations::RemoveCrmEventResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3461,17 +3461,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmLead2Response) }
-    def remove_crm_lead2(connection_id:, id:, timeout_ms: nil)
-      # remove_crm_lead2 - Remove a lead
-      request = Models::Operations::RemoveCrmLead2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmLeadResponse) }
+    def remove_crm_lead(connection_id:, id:, timeout_ms: nil)
+      # remove_crm_lead - Remove a lead
+      request = Models::Operations::RemoveCrmLeadRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCrmLead2Request,
+        Models::Operations::RemoveCrmLeadRequest,
         base_url,
         '/crm/{connection_id}/lead/{id}',
         request
@@ -3493,7 +3493,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCrmLead2',
+        operation_id: 'removeCrmLead',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3548,7 +3548,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmLead2Response.new(
+        return Models::Operations::RemoveCrmLeadResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3565,7 +3565,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmLead2Response.new(
+        return Models::Operations::RemoveCrmLeadResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3575,17 +3575,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmPipeline2Response) }
-    def remove_crm_pipeline2(connection_id:, id:, timeout_ms: nil)
-      # remove_crm_pipeline2 - Remove a pipeline
-      request = Models::Operations::RemoveCrmPipeline2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmPipelineResponse) }
+    def remove_crm_pipeline(connection_id:, id:, timeout_ms: nil)
+      # remove_crm_pipeline - Remove a pipeline
+      request = Models::Operations::RemoveCrmPipelineRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCrmPipeline2Request,
+        Models::Operations::RemoveCrmPipelineRequest,
         base_url,
         '/crm/{connection_id}/pipeline/{id}',
         request
@@ -3607,7 +3607,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCrmPipeline2',
+        operation_id: 'removeCrmPipeline',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3662,7 +3662,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmPipeline2Response.new(
+        return Models::Operations::RemoveCrmPipelineResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3679,7 +3679,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmPipeline2Response.new(
+        return Models::Operations::RemoveCrmPipelineResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -3689,13 +3689,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCrmCompany2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmCompany2Response) }
-    def update_crm_company2(request:, timeout_ms: nil)
-      # update_crm_company2 - Update a company
+    sig { params(request: Models::Operations::UpdateCrmCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmCompanyResponse) }
+    def update_crm_company(request:, timeout_ms: nil)
+      # update_crm_company - Update a company
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCrmCompany2Request,
+        Models::Operations::UpdateCrmCompanyRequest,
         base_url,
         '/crm/{connection_id}/company/{id}',
         request
@@ -3713,7 +3713,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCrmCompany2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCrmCompanyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -3729,7 +3729,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCrmCompany2',
+        operation_id: 'updateCrmCompany',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3789,7 +3789,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmCompany)
-          response = Models::Operations::UpdateCrmCompany2Response.new(
+          response = Models::Operations::UpdateCrmCompanyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -3811,13 +3811,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCrmContact2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmContact2Response) }
-    def update_crm_contact2(request:, timeout_ms: nil)
-      # update_crm_contact2 - Update a contact
+    sig { params(request: Models::Operations::UpdateCrmContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmContactResponse) }
+    def update_crm_contact(request:, timeout_ms: nil)
+      # update_crm_contact - Update a contact
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCrmContact2Request,
+        Models::Operations::UpdateCrmContactRequest,
         base_url,
         '/crm/{connection_id}/contact/{id}',
         request
@@ -3835,7 +3835,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCrmContact2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCrmContactRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -3851,7 +3851,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCrmContact2',
+        operation_id: 'updateCrmContact',
         security_source: @sdk_configuration.security_source
       )
 
@@ -3911,7 +3911,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmContact)
-          response = Models::Operations::UpdateCrmContact2Response.new(
+          response = Models::Operations::UpdateCrmContactResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -3933,13 +3933,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCrmDeal2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmDeal2Response) }
-    def update_crm_deal2(request:, timeout_ms: nil)
-      # update_crm_deal2 - Update a deal
+    sig { params(request: Models::Operations::UpdateCrmDealRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmDealResponse) }
+    def update_crm_deal(request:, timeout_ms: nil)
+      # update_crm_deal - Update a deal
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCrmDeal2Request,
+        Models::Operations::UpdateCrmDealRequest,
         base_url,
         '/crm/{connection_id}/deal/{id}',
         request
@@ -3957,7 +3957,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCrmDeal2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCrmDealRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -3973,7 +3973,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCrmDeal2',
+        operation_id: 'updateCrmDeal',
         security_source: @sdk_configuration.security_source
       )
 
@@ -4033,7 +4033,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmDeal)
-          response = Models::Operations::UpdateCrmDeal2Response.new(
+          response = Models::Operations::UpdateCrmDealResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -4055,13 +4055,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCrmEvent2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmEvent2Response) }
-    def update_crm_event2(request:, timeout_ms: nil)
-      # update_crm_event2 - Update an event
+    sig { params(request: Models::Operations::UpdateCrmEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmEventResponse) }
+    def update_crm_event(request:, timeout_ms: nil)
+      # update_crm_event - Update an event
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCrmEvent2Request,
+        Models::Operations::UpdateCrmEventRequest,
         base_url,
         '/crm/{connection_id}/event/{id}',
         request
@@ -4079,7 +4079,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCrmEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCrmEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -4095,7 +4095,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCrmEvent2',
+        operation_id: 'updateCrmEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -4155,7 +4155,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmEvent)
-          response = Models::Operations::UpdateCrmEvent2Response.new(
+          response = Models::Operations::UpdateCrmEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -4177,13 +4177,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCrmLead2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmLead2Response) }
-    def update_crm_lead2(request:, timeout_ms: nil)
-      # update_crm_lead2 - Update a lead
+    sig { params(request: Models::Operations::UpdateCrmLeadRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmLeadResponse) }
+    def update_crm_lead(request:, timeout_ms: nil)
+      # update_crm_lead - Update a lead
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCrmLead2Request,
+        Models::Operations::UpdateCrmLeadRequest,
         base_url,
         '/crm/{connection_id}/lead/{id}',
         request
@@ -4201,7 +4201,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCrmLead2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCrmLeadRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -4217,7 +4217,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCrmLead2',
+        operation_id: 'updateCrmLead',
         security_source: @sdk_configuration.security_source
       )
 
@@ -4277,7 +4277,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmLead)
-          response = Models::Operations::UpdateCrmLead2Response.new(
+          response = Models::Operations::UpdateCrmLeadResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -4299,13 +4299,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCrmPipeline2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmPipeline2Response) }
-    def update_crm_pipeline2(request:, timeout_ms: nil)
-      # update_crm_pipeline2 - Update a pipeline
+    sig { params(request: Models::Operations::UpdateCrmPipelineRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmPipelineResponse) }
+    def update_crm_pipeline(request:, timeout_ms: nil)
+      # update_crm_pipeline - Update a pipeline
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCrmPipeline2Request,
+        Models::Operations::UpdateCrmPipelineRequest,
         base_url,
         '/crm/{connection_id}/pipeline/{id}',
         request
@@ -4323,7 +4323,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCrmPipeline2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCrmPipelineRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -4339,7 +4339,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCrmPipeline2',
+        operation_id: 'updateCrmPipeline',
         security_source: @sdk_configuration.security_source
       )
 
@@ -4399,7 +4399,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmPipeline)
-          response = Models::Operations::UpdateCrmPipeline2Response.new(
+          response = Models::Operations::UpdateCrmPipelineResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

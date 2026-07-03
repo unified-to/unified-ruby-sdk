@@ -5,20 +5,20 @@
 
 ### Available Operations
 
-* [create_ats_interview2](#create_ats_interview2) - Create an interview
-* [get_ats_interview2](#get_ats_interview2) - Retrieve an interview
-* [list_ats_interviews2](#list_ats_interviews2) - List all interviews
-* [patch_ats_interview2](#patch_ats_interview2) - Update an interview
-* [remove_ats_interview2](#remove_ats_interview2) - Remove an interview
-* [update_ats_interview2](#update_ats_interview2) - Update an interview
+* [create_ats_interview](#create_ats_interview) - Create an interview
+* [get_ats_interview](#get_ats_interview) - Retrieve an interview
+* [list_ats_interviews](#list_ats_interviews) - List all interviews
+* [patch_ats_interview](#patch_ats_interview) - Update an interview
+* [remove_ats_interview](#remove_ats_interview) - Remove an interview
+* [update_ats_interview](#update_ats_interview) - Update an interview
 
-## create_ats_interview2
+## create_ats_interview
 
 Create an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsInterview2" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.interview.create_ats_interview2(ats_interview: Models::Shared::AtsInterview.new(), connection_id: '<id>')
+res = s.interview.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(), connection_id: '<id>')
 
 unless res.ats_interview.nil?
   # handle response
@@ -43,12 +43,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `ats_interview`                                                                                                                                  | [Models::Shared::AtsInterview](../../models/shared/atsinterview.md)                                                                              | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAtsInterview2QueryParamFields](../../models/operations/createatsinterview2queryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAtsInterviewQueryParamFields](../../models/operations/createatsinterviewqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateAtsInterview2Response)](../../models/operations/createatsinterview2response.md)**
+**[T.nilable(Models::Operations::CreateAtsInterviewResponse)](../../models/operations/createatsinterviewresponse.md)**
 
 ### Errors
 
@@ -56,13 +56,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_ats_interview2
+## get_ats_interview
 
 Retrieve an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getAtsInterview2" method="get" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getAtsInterview" method="get" path="/ats/{connection_id}/interview/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -73,7 +73,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.interview.get_ats_interview2(connection_id: '<id>', id: '<id>')
+res = s.interview.get_ats_interview(connection_id: '<id>', id: '<id>')
 
 unless res.ats_interview.nil?
   # handle response
@@ -87,12 +87,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Interview                                                                                                                              |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAtsInterview2QueryParamFields](../../models/operations/getatsinterview2queryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAtsInterviewQueryParamFields](../../models/operations/getatsinterviewqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetAtsInterview2Response)](../../models/operations/getatsinterview2response.md)**
+**[T.nilable(Models::Operations::GetAtsInterviewResponse)](../../models/operations/getatsinterviewresponse.md)**
 
 ### Errors
 
@@ -100,13 +100,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_ats_interviews2
+## list_ats_interviews
 
 List all interviews
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listAtsInterviews2" method="get" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="ruby" operationID="listAtsInterviews" method="get" path="/ats/{connection_id}/interview" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -117,11 +117,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListAtsInterviews2Request.new(
+req = Models::Operations::ListAtsInterviewsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.interview.list_ats_interviews2(request: req)
+res = s.interview.list_ats_interviews(request: req)
 
 unless res.ats_interviews.nil?
   # handle response
@@ -131,13 +131,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::ListAtsInterviews2Request](../../models/operations/listatsinterviews2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListAtsInterviewsRequest](../../models/operations/listatsinterviewsrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListAtsInterviews2Response)](../../models/operations/listatsinterviews2response.md)**
+**[T.nilable(Models::Operations::ListAtsInterviewsResponse)](../../models/operations/listatsinterviewsresponse.md)**
 
 ### Errors
 
@@ -145,13 +145,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_ats_interview2
+## patch_ats_interview
 
 Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsInterview2" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -162,13 +162,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchAtsInterview2Request.new(
+req = Models::Operations::PatchAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.interview.patch_ats_interview2(request: req)
+res = s.interview.patch_ats_interview(request: req)
 
 unless res.ats_interview.nil?
   # handle response
@@ -178,13 +178,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::PatchAtsInterview2Request](../../models/operations/patchatsinterview2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::PatchAtsInterviewRequest](../../models/operations/patchatsinterviewrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchAtsInterview2Response)](../../models/operations/patchatsinterview2response.md)**
+**[T.nilable(Models::Operations::PatchAtsInterviewResponse)](../../models/operations/patchatsinterviewresponse.md)**
 
 ### Errors
 
@@ -192,13 +192,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_ats_interview2
+## remove_ats_interview
 
 Remove an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeAtsInterview2" method="delete" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeAtsInterview" method="delete" path="/ats/{connection_id}/interview/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -209,7 +209,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.interview.remove_ats_interview2(connection_id: '<id>', id: '<id>')
+res = s.interview.remove_ats_interview(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -226,7 +226,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveAtsInterview2Response)](../../models/operations/removeatsinterview2response.md)**
+**[T.nilable(Models::Operations::RemoveAtsInterviewResponse)](../../models/operations/removeatsinterviewresponse.md)**
 
 ### Errors
 
@@ -234,13 +234,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_ats_interview2
+## update_ats_interview
 
 Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsInterview2" method="put" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -251,13 +251,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateAtsInterview2Request.new(
+req = Models::Operations::UpdateAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.interview.update_ats_interview2(request: req)
+res = s.interview.update_ats_interview(request: req)
 
 unless res.ats_interview.nil?
   # handle response
@@ -267,13 +267,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::UpdateAtsInterview2Request](../../models/operations/updateatsinterview2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::UpdateAtsInterviewRequest](../../models/operations/updateatsinterviewrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateAtsInterview2Response)](../../models/operations/updateatsinterview2response.md)**
+**[T.nilable(Models::Operations::UpdateAtsInterviewResponse)](../../models/operations/updateatsinterviewresponse.md)**
 
 ### Errors
 

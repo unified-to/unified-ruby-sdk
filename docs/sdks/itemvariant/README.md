@@ -5,20 +5,20 @@
 
 ### Available Operations
 
-* [create_commerce_itemvariant2](#create_commerce_itemvariant2) - Create an itemvariant
-* [get_commerce_itemvariant2](#get_commerce_itemvariant2) - Retrieve an itemvariant
-* [list_commerce_itemvariants2](#list_commerce_itemvariants2) - List all itemvariants
-* [patch_commerce_itemvariant2](#patch_commerce_itemvariant2) - Update an itemvariant
-* [remove_commerce_itemvariant2](#remove_commerce_itemvariant2) - Remove an itemvariant
-* [update_commerce_itemvariant2](#update_commerce_itemvariant2) - Update an itemvariant
+* [create_commerce_itemvariant](#create_commerce_itemvariant) - Create an itemvariant
+* [get_commerce_itemvariant](#get_commerce_itemvariant) - Retrieve an itemvariant
+* [list_commerce_itemvariants](#list_commerce_itemvariants) - List all itemvariants
+* [patch_commerce_itemvariant](#patch_commerce_itemvariant) - Update an itemvariant
+* [remove_commerce_itemvariant](#remove_commerce_itemvariant) - Remove an itemvariant
+* [update_commerce_itemvariant](#update_commerce_itemvariant) - Update an itemvariant
 
-## create_commerce_itemvariant2
+## create_commerce_itemvariant
 
 Create an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceItemvariant2" method="post" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.itemvariant.create_commerce_itemvariant2(commerce_itemvariant: Models::Shared::CommerceItemvariant.new(), connection_id: '<id>')
+res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Shared::CommerceItemvariant.new(), connection_id: '<id>')
 
 unless res.commerce_itemvariant.nil?
   # handle response
@@ -39,16 +39,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `commerce_itemvariant`                                                                                                                            | [Models::Shared::CommerceItemvariant](../../models/shared/commerceitemvariant.md)                                                                 | :heavy_check_mark:                                                                                                                                | N/A                                                                                                                                               |
-| `connection_id`                                                                                                                                   | *::String*                                                                                                                                        | :heavy_check_mark:                                                                                                                                | ID of the connection                                                                                                                              |
-| `fields_`                                                                                                                                         | T::Array<[Models::Operations::CreateCommerceItemvariant2QueryParamFields](../../models/operations/createcommerceitemvariant2queryparamfields.md)> | :heavy_minus_sign:                                                                                                                                | Fields to return                                                                                                                                  |
-| `raw`                                                                                                                                             | *T.nilable(::String)*                                                                                                                             | :heavy_minus_sign:                                                                                                                                | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar  |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `commerce_itemvariant`                                                                                                                           | [Models::Shared::CommerceItemvariant](../../models/shared/commerceitemvariant.md)                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceItemvariantQueryParamFields](../../models/operations/createcommerceitemvariantqueryparamfields.md)>  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCommerceItemvariant2Response)](../../models/operations/createcommerceitemvariant2response.md)**
+**[T.nilable(Models::Operations::CreateCommerceItemvariantResponse)](../../models/operations/createcommerceitemvariantresponse.md)**
 
 ### Errors
 
@@ -56,13 +56,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_commerce_itemvariant2
+## get_commerce_itemvariant
 
 Retrieve an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCommerceItemvariant2" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCommerceItemvariant" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -73,7 +73,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.itemvariant.get_commerce_itemvariant2(connection_id: '<id>', id: '<id>')
+res = s.itemvariant.get_commerce_itemvariant(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_itemvariant.nil?
   # handle response
@@ -87,12 +87,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Itemvariant                                                                                                                            |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceItemvariant2QueryParamFields](../../models/operations/getcommerceitemvariant2queryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceItemvariantQueryParamFields](../../models/operations/getcommerceitemvariantqueryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCommerceItemvariant2Response)](../../models/operations/getcommerceitemvariant2response.md)**
+**[T.nilable(Models::Operations::GetCommerceItemvariantResponse)](../../models/operations/getcommerceitemvariantresponse.md)**
 
 ### Errors
 
@@ -100,13 +100,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_commerce_itemvariants2
+## list_commerce_itemvariants
 
 List all itemvariants
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCommerceItemvariants2" method="get" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="ruby" operationID="listCommerceItemvariants" method="get" path="/commerce/{connection_id}/itemvariant" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -117,11 +117,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCommerceItemvariants2Request.new(
+req = Models::Operations::ListCommerceItemvariantsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.itemvariant.list_commerce_itemvariants2(request: req)
+res = s.itemvariant.list_commerce_itemvariants(request: req)
 
 unless res.commerce_itemvariants.nil?
   # handle response
@@ -131,13 +131,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                           | [Models::Operations::ListCommerceItemvariants2Request](../../models/operations/listcommerceitemvariants2request.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::ListCommerceItemvariantsRequest](../../models/operations/listcommerceitemvariantsrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCommerceItemvariants2Response)](../../models/operations/listcommerceitemvariants2response.md)**
+**[T.nilable(Models::Operations::ListCommerceItemvariantsResponse)](../../models/operations/listcommerceitemvariantsresponse.md)**
 
 ### Errors
 
@@ -145,13 +145,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_commerce_itemvariant2
+## patch_commerce_itemvariant
 
 Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceItemvariant2" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -162,13 +162,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCommerceItemvariant2Request.new(
+req = Models::Operations::PatchCommerceItemvariantRequest.new(
   commerce_itemvariant: Models::Shared::CommerceItemvariant.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.itemvariant.patch_commerce_itemvariant2(request: req)
+res = s.itemvariant.patch_commerce_itemvariant(request: req)
 
 unless res.commerce_itemvariant.nil?
   # handle response
@@ -178,13 +178,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                           | [Models::Operations::PatchCommerceItemvariant2Request](../../models/operations/patchcommerceitemvariant2request.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::PatchCommerceItemvariantRequest](../../models/operations/patchcommerceitemvariantrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCommerceItemvariant2Response)](../../models/operations/patchcommerceitemvariant2response.md)**
+**[T.nilable(Models::Operations::PatchCommerceItemvariantResponse)](../../models/operations/patchcommerceitemvariantresponse.md)**
 
 ### Errors
 
@@ -192,13 +192,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_commerce_itemvariant2
+## remove_commerce_itemvariant
 
 Remove an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeCommerceItemvariant2" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeCommerceItemvariant" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -209,7 +209,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.itemvariant.remove_commerce_itemvariant2(connection_id: '<id>', id: '<id>')
+res = s.itemvariant.remove_commerce_itemvariant(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -226,7 +226,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveCommerceItemvariant2Response)](../../models/operations/removecommerceitemvariant2response.md)**
+**[T.nilable(Models::Operations::RemoveCommerceItemvariantResponse)](../../models/operations/removecommerceitemvariantresponse.md)**
 
 ### Errors
 
@@ -234,13 +234,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_commerce_itemvariant2
+## update_commerce_itemvariant
 
 Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceItemvariant2" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -251,13 +251,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateCommerceItemvariant2Request.new(
+req = Models::Operations::UpdateCommerceItemvariantRequest.new(
   commerce_itemvariant: Models::Shared::CommerceItemvariant.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.itemvariant.update_commerce_itemvariant2(request: req)
+res = s.itemvariant.update_commerce_itemvariant(request: req)
 
 unless res.commerce_itemvariant.nil?
   # handle response
@@ -267,13 +267,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [Models::Operations::UpdateCommerceItemvariant2Request](../../models/operations/updatecommerceitemvariant2request.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [Models::Operations::UpdateCommerceItemvariantRequest](../../models/operations/updatecommerceitemvariantrequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateCommerceItemvariant2Response)](../../models/operations/updatecommerceitemvariant2response.md)**
+**[T.nilable(Models::Operations::UpdateCommerceItemvariantResponse)](../../models/operations/updatecommerceitemvariantresponse.md)**
 
 ### Errors
 

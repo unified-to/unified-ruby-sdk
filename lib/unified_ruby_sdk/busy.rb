@@ -39,20 +39,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCalendarBusies2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarBusies2Response) }
-    def list_calendar_busies2(request:, timeout_ms: nil)
-      # list_calendar_busies2 - List all busies
+    sig { params(request: Models::Operations::ListCalendarBusiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarBusiesResponse) }
+    def list_calendar_busies(request:, timeout_ms: nil)
+      # list_calendar_busies - List all busies
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCalendarBusies2Request,
+        Models::Operations::ListCalendarBusiesRequest,
         base_url,
         '/calendar/{connection_id}/busy',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCalendarBusies2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCalendarBusiesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -68,7 +68,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCalendarBusies2',
+        operation_id: 'listCalendarBusies',
         security_source: @sdk_configuration.security_source
       )
 
@@ -127,7 +127,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CalendarBusy))
-          response = Models::Operations::ListCalendarBusies2Response.new(
+          response = Models::Operations::ListCalendarBusiesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

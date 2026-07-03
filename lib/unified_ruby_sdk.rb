@@ -25,6 +25,7 @@ module UnifiedRubySDK
   autoload :Taxrate, 'unified_ruby_sdk/taxrate'
   autoload :Transaction, 'unified_ruby_sdk/transaction'
   autoload :Trialbalance, 'unified_ruby_sdk/trialbalance'
+  autoload :Vendorcredit, 'unified_ruby_sdk/vendorcredit'
   autoload :Ads, 'unified_ruby_sdk/ads'
   autoload :Ad, 'unified_ruby_sdk/ad'
   autoload :Campaign, 'unified_ruby_sdk/campaign'

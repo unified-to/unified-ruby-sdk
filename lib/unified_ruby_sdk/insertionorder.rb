@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ads_insertionorder: Models::Shared::AdsInsertionorder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsInsertionorder2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsInsertionorder2Response) }
-    def create_ads_insertionorder2(ads_insertionorder:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_ads_insertionorder2 - Create an insertionorder
-      request = Models::Operations::CreateAdsInsertionorder2Request.new(
+    sig { params(ads_insertionorder: Models::Shared::AdsInsertionorder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsInsertionorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsInsertionorderResponse) }
+    def create_ads_insertionorder(ads_insertionorder:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_ads_insertionorder - Create an insertionorder
+      request = Models::Operations::CreateAdsInsertionorderRequest.new(
         ads_insertionorder: ads_insertionorder,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAdsInsertionorder2Request,
+        Models::Operations::CreateAdsInsertionorderRequest,
         base_url,
         '/ads/{connection_id}/insertionorder',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAdsInsertionorder2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAdsInsertionorderRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAdsInsertionorder2',
+        operation_id: 'createAdsInsertionorder',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsInsertionorder)
-          response = Models::Operations::CreateAdsInsertionorder2Response.new(
+          response = Models::Operations::CreateAdsInsertionorderResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsInsertionorder2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsInsertionorder2Response) }
-    def get_ads_insertionorder2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_ads_insertionorder2 - Retrieve an insertionorder
-      request = Models::Operations::GetAdsInsertionorder2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsInsertionorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsInsertionorderResponse) }
+    def get_ads_insertionorder(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_ads_insertionorder - Retrieve an insertionorder
+      request = Models::Operations::GetAdsInsertionorderRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAdsInsertionorder2Request,
+        Models::Operations::GetAdsInsertionorderRequest,
         base_url,
         '/ads/{connection_id}/insertionorder/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAdsInsertionorder2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAdsInsertionorderRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAdsInsertionorder2',
+        operation_id: 'getAdsInsertionorder',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsInsertionorder)
-          response = Models::Operations::GetAdsInsertionorder2Response.new(
+          response = Models::Operations::GetAdsInsertionorderResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAdsInsertionorders2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsInsertionorders2Response) }
-    def list_ads_insertionorders2(request:, timeout_ms: nil)
-      # list_ads_insertionorders2 - List all insertionorders
+    sig { params(request: Models::Operations::ListAdsInsertionordersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsInsertionordersResponse) }
+    def list_ads_insertionorders(request:, timeout_ms: nil)
+      # list_ads_insertionorders - List all insertionorders
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAdsInsertionorders2Request,
+        Models::Operations::ListAdsInsertionordersRequest,
         base_url,
         '/ads/{connection_id}/insertionorder',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAdsInsertionorders2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAdsInsertionordersRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAdsInsertionorders2',
+        operation_id: 'listAdsInsertionorders',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AdsInsertionorder))
-          response = Models::Operations::ListAdsInsertionorders2Response.new(
+          response = Models::Operations::ListAdsInsertionordersResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAdsInsertionorder2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsInsertionorder2Response) }
-    def patch_ads_insertionorder2(request:, timeout_ms: nil)
-      # patch_ads_insertionorder2 - Update an insertionorder
+    sig { params(request: Models::Operations::PatchAdsInsertionorderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsInsertionorderResponse) }
+    def patch_ads_insertionorder(request:, timeout_ms: nil)
+      # patch_ads_insertionorder - Update an insertionorder
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAdsInsertionorder2Request,
+        Models::Operations::PatchAdsInsertionorderRequest,
         base_url,
         '/ads/{connection_id}/insertionorder/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAdsInsertionorder2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAdsInsertionorderRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAdsInsertionorder2',
+        operation_id: 'patchAdsInsertionorder',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsInsertionorder)
-          response = Models::Operations::PatchAdsInsertionorder2Response.new(
+          response = Models::Operations::PatchAdsInsertionorderResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsInsertionorder2Response) }
-    def remove_ads_insertionorder2(connection_id:, id:, timeout_ms: nil)
-      # remove_ads_insertionorder2 - Remove an insertionorder
-      request = Models::Operations::RemoveAdsInsertionorder2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsInsertionorderResponse) }
+    def remove_ads_insertionorder(connection_id:, id:, timeout_ms: nil)
+      # remove_ads_insertionorder - Remove an insertionorder
+      request = Models::Operations::RemoveAdsInsertionorderRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAdsInsertionorder2Request,
+        Models::Operations::RemoveAdsInsertionorderRequest,
         base_url,
         '/ads/{connection_id}/insertionorder/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAdsInsertionorder2',
+        operation_id: 'removeAdsInsertionorder',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAdsInsertionorder2Response.new(
+        return Models::Operations::RemoveAdsInsertionorderResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAdsInsertionorder2Response.new(
+        return Models::Operations::RemoveAdsInsertionorderResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAdsInsertionorder2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsInsertionorder2Response) }
-    def update_ads_insertionorder2(request:, timeout_ms: nil)
-      # update_ads_insertionorder2 - Update an insertionorder
+    sig { params(request: Models::Operations::UpdateAdsInsertionorderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsInsertionorderResponse) }
+    def update_ads_insertionorder(request:, timeout_ms: nil)
+      # update_ads_insertionorder - Update an insertionorder
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAdsInsertionorder2Request,
+        Models::Operations::UpdateAdsInsertionorderRequest,
         base_url,
         '/ads/{connection_id}/insertionorder/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAdsInsertionorder2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAdsInsertionorderRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAdsInsertionorder2',
+        operation_id: 'updateAdsInsertionorder',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsInsertionorder)
-          response = Models::Operations::UpdateAdsInsertionorder2Response.new(
+          response = Models::Operations::UpdateAdsInsertionorderResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

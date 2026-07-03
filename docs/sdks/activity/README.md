@@ -5,28 +5,28 @@
 
 ### Available Operations
 
-* [create_ats_activity2](#create_ats_activity2) - Create an activity
-* [create_lms_activity2](#create_lms_activity2) - Create an activity
-* [get_ats_activity2](#get_ats_activity2) - Retrieve an activity
-* [get_clubs_activity2](#get_clubs_activity2) - Retrieve an activity
-* [get_lms_activity2](#get_lms_activity2) - Retrieve an activity
-* [list_ats_activities2](#list_ats_activities2) - List all activities
-* [list_clubs_activities2](#list_clubs_activities2) - List all activities
-* [list_lms_activities2](#list_lms_activities2) - List all activities
-* [patch_ats_activity2](#patch_ats_activity2) - Update an activity
-* [patch_lms_activity2](#patch_lms_activity2) - Update an activity
-* [remove_ats_activity2](#remove_ats_activity2) - Remove an activity
-* [remove_lms_activity2](#remove_lms_activity2) - Remove an activity
-* [update_ats_activity2](#update_ats_activity2) - Update an activity
-* [update_lms_activity2](#update_lms_activity2) - Update an activity
+* [create_ats_activity](#create_ats_activity) - Create an activity
+* [create_lms_activity](#create_lms_activity) - Create an activity
+* [get_ats_activity](#get_ats_activity) - Retrieve an activity
+* [get_clubs_activity](#get_clubs_activity) - Retrieve an activity
+* [get_lms_activity](#get_lms_activity) - Retrieve an activity
+* [list_ats_activities](#list_ats_activities) - List all activities
+* [list_clubs_activities](#list_clubs_activities) - List all activities
+* [list_lms_activities](#list_lms_activities) - List all activities
+* [patch_ats_activity](#patch_ats_activity) - Update an activity
+* [patch_lms_activity](#patch_lms_activity) - Update an activity
+* [remove_ats_activity](#remove_ats_activity) - Remove an activity
+* [remove_lms_activity](#remove_lms_activity) - Remove an activity
+* [update_ats_activity](#update_ats_activity) - Update an activity
+* [update_lms_activity](#update_lms_activity) - Update an activity
 
-## create_ats_activity2
+## create_ats_activity
 
 Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsActivity2" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -37,7 +37,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.activity.create_ats_activity2(ats_activity: Models::Shared::AtsActivity.new(), connection_id: '<id>')
+res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(), connection_id: '<id>')
 
 unless res.ats_activity.nil?
   # handle response
@@ -51,12 +51,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `ats_activity`                                                                                                                                   | [Models::Shared::AtsActivity](../../models/shared/atsactivity.md)                                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAtsActivity2QueryParamFields](../../models/operations/createatsactivity2queryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAtsActivityQueryParamFields](../../models/operations/createatsactivityqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateAtsActivity2Response)](../../models/operations/createatsactivity2response.md)**
+**[T.nilable(Models::Operations::CreateAtsActivityResponse)](../../models/operations/createatsactivityresponse.md)**
 
 ### Errors
 
@@ -64,13 +64,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_lms_activity2
+## create_lms_activity
 
 Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsActivity2" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -81,7 +81,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.activity.create_lms_activity2(lms_activity: Models::Shared::LmsActivity.new(), connection_id: '<id>')
+res = s.activity.create_lms_activity(lms_activity: Models::Shared::LmsActivity.new(), connection_id: '<id>')
 
 unless res.lms_activity.nil?
   # handle response
@@ -95,12 +95,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `lms_activity`                                                                                                                                   | [Models::Shared::LmsActivity](../../models/shared/lmsactivity.md)                                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateLmsActivity2QueryParamFields](../../models/operations/createlmsactivity2queryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateLmsActivityQueryParamFields](../../models/operations/createlmsactivityqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateLmsActivity2Response)](../../models/operations/createlmsactivity2response.md)**
+**[T.nilable(Models::Operations::CreateLmsActivityResponse)](../../models/operations/createlmsactivityresponse.md)**
 
 ### Errors
 
@@ -108,13 +108,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_ats_activity2
+## get_ats_activity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getAtsActivity2" method="get" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getAtsActivity" method="get" path="/ats/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -125,7 +125,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.activity.get_ats_activity2(connection_id: '<id>', id: '<id>')
+res = s.activity.get_ats_activity(connection_id: '<id>', id: '<id>')
 
 unless res.ats_activity.nil?
   # handle response
@@ -139,12 +139,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Activity                                                                                                                               |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAtsActivity2QueryParamFields](../../models/operations/getatsactivity2queryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAtsActivityQueryParamFields](../../models/operations/getatsactivityqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetAtsActivity2Response)](../../models/operations/getatsactivity2response.md)**
+**[T.nilable(Models::Operations::GetAtsActivityResponse)](../../models/operations/getatsactivityresponse.md)**
 
 ### Errors
 
@@ -152,13 +152,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_clubs_activity2
+## get_clubs_activity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getClubsActivity2" method="get" path="/clubs/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getClubsActivity" method="get" path="/clubs/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -169,7 +169,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.activity.get_clubs_activity2(connection_id: '<id>', id: '<id>')
+res = s.activity.get_clubs_activity(connection_id: '<id>', id: '<id>')
 
 unless res.clubs_activity.nil?
   # handle response
@@ -183,12 +183,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Activity                                                                                                                               |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetClubsActivity2QueryParamFields](../../models/operations/getclubsactivity2queryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetClubsActivityQueryParamFields](../../models/operations/getclubsactivityqueryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetClubsActivity2Response)](../../models/operations/getclubsactivity2response.md)**
+**[T.nilable(Models::Operations::GetClubsActivityResponse)](../../models/operations/getclubsactivityresponse.md)**
 
 ### Errors
 
@@ -196,13 +196,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_lms_activity2
+## get_lms_activity
 
 Retrieve an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getLmsActivity2" method="get" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getLmsActivity" method="get" path="/lms/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -213,7 +213,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.activity.get_lms_activity2(connection_id: '<id>', id: '<id>')
+res = s.activity.get_lms_activity(connection_id: '<id>', id: '<id>')
 
 unless res.lms_activity.nil?
   # handle response
@@ -227,12 +227,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Activity                                                                                                                               |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetLmsActivity2QueryParamFields](../../models/operations/getlmsactivity2queryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetLmsActivityQueryParamFields](../../models/operations/getlmsactivityqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetLmsActivity2Response)](../../models/operations/getlmsactivity2response.md)**
+**[T.nilable(Models::Operations::GetLmsActivityResponse)](../../models/operations/getlmsactivityresponse.md)**
 
 ### Errors
 
@@ -240,13 +240,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_ats_activities2
+## list_ats_activities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listAtsActivities2" method="get" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="ruby" operationID="listAtsActivities" method="get" path="/ats/{connection_id}/activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -257,11 +257,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListAtsActivities2Request.new(
+req = Models::Operations::ListAtsActivitiesRequest.new(
   connection_id: '<id>',
 )
 
-res = s.activity.list_ats_activities2(request: req)
+res = s.activity.list_ats_activities(request: req)
 
 unless res.ats_activities.nil?
   # handle response
@@ -271,13 +271,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::ListAtsActivities2Request](../../models/operations/listatsactivities2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListAtsActivitiesRequest](../../models/operations/listatsactivitiesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListAtsActivities2Response)](../../models/operations/listatsactivities2response.md)**
+**[T.nilable(Models::Operations::ListAtsActivitiesResponse)](../../models/operations/listatsactivitiesresponse.md)**
 
 ### Errors
 
@@ -285,13 +285,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_clubs_activities2
+## list_clubs_activities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listClubsActivities2" method="get" path="/clubs/{connection_id}/activity" -->
+<!-- UsageSnippet language="ruby" operationID="listClubsActivities" method="get" path="/clubs/{connection_id}/activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -302,11 +302,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListClubsActivities2Request.new(
+req = Models::Operations::ListClubsActivitiesRequest.new(
   connection_id: '<id>',
 )
 
-res = s.activity.list_clubs_activities2(request: req)
+res = s.activity.list_clubs_activities(request: req)
 
 unless res.clubs_activities.nil?
   # handle response
@@ -316,13 +316,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [Models::Operations::ListClubsActivities2Request](../../models/operations/listclubsactivities2request.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::ListClubsActivitiesRequest](../../models/operations/listclubsactivitiesrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListClubsActivities2Response)](../../models/operations/listclubsactivities2response.md)**
+**[T.nilable(Models::Operations::ListClubsActivitiesResponse)](../../models/operations/listclubsactivitiesresponse.md)**
 
 ### Errors
 
@@ -330,13 +330,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_lms_activities2
+## list_lms_activities
 
 List all activities
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listLmsActivities2" method="get" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="ruby" operationID="listLmsActivities" method="get" path="/lms/{connection_id}/activity" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -347,11 +347,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListLmsActivities2Request.new(
+req = Models::Operations::ListLmsActivitiesRequest.new(
   connection_id: '<id>',
 )
 
-res = s.activity.list_lms_activities2(request: req)
+res = s.activity.list_lms_activities(request: req)
 
 unless res.lms_activities.nil?
   # handle response
@@ -361,13 +361,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::ListLmsActivities2Request](../../models/operations/listlmsactivities2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListLmsActivitiesRequest](../../models/operations/listlmsactivitiesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListLmsActivities2Response)](../../models/operations/listlmsactivities2response.md)**
+**[T.nilable(Models::Operations::ListLmsActivitiesResponse)](../../models/operations/listlmsactivitiesresponse.md)**
 
 ### Errors
 
@@ -375,13 +375,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_ats_activity2
+## patch_ats_activity
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsActivity2" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -392,13 +392,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchAtsActivity2Request.new(
+req = Models::Operations::PatchAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.activity.patch_ats_activity2(request: req)
+res = s.activity.patch_ats_activity(request: req)
 
 unless res.ats_activity.nil?
   # handle response
@@ -408,13 +408,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::PatchAtsActivity2Request](../../models/operations/patchatsactivity2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::PatchAtsActivityRequest](../../models/operations/patchatsactivityrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchAtsActivity2Response)](../../models/operations/patchatsactivity2response.md)**
+**[T.nilable(Models::Operations::PatchAtsActivityResponse)](../../models/operations/patchatsactivityresponse.md)**
 
 ### Errors
 
@@ -422,13 +422,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_lms_activity2
+## patch_lms_activity
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsActivity2" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -439,13 +439,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchLmsActivity2Request.new(
+req = Models::Operations::PatchLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.activity.patch_lms_activity2(request: req)
+res = s.activity.patch_lms_activity(request: req)
 
 unless res.lms_activity.nil?
   # handle response
@@ -455,13 +455,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::PatchLmsActivity2Request](../../models/operations/patchlmsactivity2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::PatchLmsActivityRequest](../../models/operations/patchlmsactivityrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchLmsActivity2Response)](../../models/operations/patchlmsactivity2response.md)**
+**[T.nilable(Models::Operations::PatchLmsActivityResponse)](../../models/operations/patchlmsactivityresponse.md)**
 
 ### Errors
 
@@ -469,13 +469,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_ats_activity2
+## remove_ats_activity
 
 Remove an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeAtsActivity2" method="delete" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeAtsActivity" method="delete" path="/ats/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -486,7 +486,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.activity.remove_ats_activity2(connection_id: '<id>', id: '<id>')
+res = s.activity.remove_ats_activity(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -503,7 +503,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveAtsActivity2Response)](../../models/operations/removeatsactivity2response.md)**
+**[T.nilable(Models::Operations::RemoveAtsActivityResponse)](../../models/operations/removeatsactivityresponse.md)**
 
 ### Errors
 
@@ -511,13 +511,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_lms_activity2
+## remove_lms_activity
 
 Remove an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeLmsActivity2" method="delete" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeLmsActivity" method="delete" path="/lms/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -528,7 +528,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.activity.remove_lms_activity2(connection_id: '<id>', id: '<id>')
+res = s.activity.remove_lms_activity(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -545,7 +545,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveLmsActivity2Response)](../../models/operations/removelmsactivity2response.md)**
+**[T.nilable(Models::Operations::RemoveLmsActivityResponse)](../../models/operations/removelmsactivityresponse.md)**
 
 ### Errors
 
@@ -553,13 +553,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_ats_activity2
+## update_ats_activity
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsActivity2" method="put" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -570,13 +570,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateAtsActivity2Request.new(
+req = Models::Operations::UpdateAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.activity.update_ats_activity2(request: req)
+res = s.activity.update_ats_activity(request: req)
 
 unless res.ats_activity.nil?
   # handle response
@@ -586,13 +586,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::UpdateAtsActivity2Request](../../models/operations/updateatsactivity2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::UpdateAtsActivityRequest](../../models/operations/updateatsactivityrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateAtsActivity2Response)](../../models/operations/updateatsactivity2response.md)**
+**[T.nilable(Models::Operations::UpdateAtsActivityResponse)](../../models/operations/updateatsactivityresponse.md)**
 
 ### Errors
 
@@ -600,13 +600,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_lms_activity2
+## update_lms_activity
 
 Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsActivity2" method="put" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -617,13 +617,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateLmsActivity2Request.new(
+req = Models::Operations::UpdateLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.activity.update_lms_activity2(request: req)
+res = s.activity.update_lms_activity(request: req)
 
 unless res.lms_activity.nil?
   # handle response
@@ -633,13 +633,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::UpdateLmsActivity2Request](../../models/operations/updatelmsactivity2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::UpdateLmsActivityRequest](../../models/operations/updatelmsactivityrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateLmsActivity2Response)](../../models/operations/updatelmsactivity2response.md)**
+**[T.nilable(Models::Operations::UpdateLmsActivityResponse)](../../models/operations/updatelmsactivityresponse.md)**
 
 ### Errors
 

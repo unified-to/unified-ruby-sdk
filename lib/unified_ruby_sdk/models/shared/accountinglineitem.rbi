@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Shared::AccountingLineitem
   def account_id=(str_); end
   def category_ids(); end
   def category_ids=(str_); end
+  def contact_id(); end
+  def contact_id=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def discount_amount(); end

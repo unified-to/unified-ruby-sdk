@@ -1,0 +1,19 @@
+# typed: true
+# frozen_string_literal: true
+
+
+class UnifiedRubySDK::Models::Operations::ListDatastoreRecordsResponse
+  extend ::Crystalline::MetadataFields::ClassMethods
+end
+
+
+class UnifiedRubySDK::Models::Operations::ListDatastoreRecordsResponse
+  def content_type(); end
+  def content_type=(str_); end
+  def status_code(); end
+  def status_code=(str_); end
+  def raw_response(); end
+  def raw_response=(str_); end
+  def datastore_records(); end
+  def datastore_records=(str_); end
+end

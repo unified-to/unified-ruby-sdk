@@ -5,28 +5,28 @@
 
 ### Available Operations
 
-* [create_ads_organization2](#create_ads_organization2) - Create an organization
-* [create_repo_organization2](#create_repo_organization2) - Create an organization
-* [get_accounting_organization2](#get_accounting_organization2) - Retrieve an organization
-* [get_ads_organization2](#get_ads_organization2) - Retrieve an organization
-* [get_repo_organization2](#get_repo_organization2) - Retrieve an organization
-* [list_accounting_organizations2](#list_accounting_organizations2) - List all organizations
-* [list_ads_organizations2](#list_ads_organizations2) - List all organizations
-* [list_repo_organizations2](#list_repo_organizations2) - List all organizations
-* [patch_ads_organization2](#patch_ads_organization2) - Update an organization
-* [patch_repo_organization2](#patch_repo_organization2) - Update an organization
-* [remove_ads_organization2](#remove_ads_organization2) - Remove an organization
-* [remove_repo_organization2](#remove_repo_organization2) - Remove an organization
-* [update_ads_organization2](#update_ads_organization2) - Update an organization
-* [update_repo_organization2](#update_repo_organization2) - Update an organization
+* [create_ads_organization](#create_ads_organization) - Create an organization
+* [create_repo_organization](#create_repo_organization) - Create an organization
+* [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
+* [get_ads_organization](#get_ads_organization) - Retrieve an organization
+* [get_repo_organization](#get_repo_organization) - Retrieve an organization
+* [list_accounting_organizations](#list_accounting_organizations) - List all organizations
+* [list_ads_organizations](#list_ads_organizations) - List all organizations
+* [list_repo_organizations](#list_repo_organizations) - List all organizations
+* [patch_ads_organization](#patch_ads_organization) - Update an organization
+* [patch_repo_organization](#patch_repo_organization) - Update an organization
+* [remove_ads_organization](#remove_ads_organization) - Remove an organization
+* [remove_repo_organization](#remove_repo_organization) - Remove an organization
+* [update_ads_organization](#update_ads_organization) - Update an organization
+* [update_repo_organization](#update_repo_organization) - Update an organization
 
-## create_ads_organization2
+## create_ads_organization
 
 Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsOrganization2" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -37,7 +37,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.organization.create_ads_organization2(ads_organization: Models::Shared::AdsOrganization.new(), connection_id: '<id>')
+res = s.organization.create_ads_organization(ads_organization: Models::Shared::AdsOrganization.new(), connection_id: '<id>')
 
 unless res.ads_organization.nil?
   # handle response
@@ -51,12 +51,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `ads_organization`                                                                                                                               | [Models::Shared::AdsOrganization](../../models/shared/adsorganization.md)                                                                        | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAdsOrganization2QueryParamFields](../../models/operations/createadsorganization2queryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAdsOrganizationQueryParamFields](../../models/operations/createadsorganizationqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateAdsOrganization2Response)](../../models/operations/createadsorganization2response.md)**
+**[T.nilable(Models::Operations::CreateAdsOrganizationResponse)](../../models/operations/createadsorganizationresponse.md)**
 
 ### Errors
 
@@ -64,13 +64,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_repo_organization2
+## create_repo_organization
 
 Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createRepoOrganization2" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="ruby" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -81,7 +81,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.organization.create_repo_organization2(repo_organization: Models::Shared::RepoOrganization.new(), connection_id: '<id>')
+res = s.organization.create_repo_organization(repo_organization: Models::Shared::RepoOrganization.new(), connection_id: '<id>')
 
 unless res.repo_organization.nil?
   # handle response
@@ -95,12 +95,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `repo_organization`                                                                                                                              | [Models::Shared::RepoOrganization](../../models/shared/repoorganization.md)                                                                      | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateRepoOrganization2QueryParamFields](../../models/operations/createrepoorganization2queryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateRepoOrganizationQueryParamFields](../../models/operations/createrepoorganizationqueryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateRepoOrganization2Response)](../../models/operations/createrepoorganization2response.md)**
+**[T.nilable(Models::Operations::CreateRepoOrganizationResponse)](../../models/operations/createrepoorganizationresponse.md)**
 
 ### Errors
 
@@ -108,13 +108,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_accounting_organization2
+## get_accounting_organization
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getAccountingOrganization2" method="get" path="/accounting/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getAccountingOrganization" method="get" path="/accounting/{connection_id}/organization/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -125,7 +125,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.organization.get_accounting_organization2(connection_id: '<id>', id: '<id>')
+res = s.organization.get_accounting_organization(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_organization.nil?
   # handle response
@@ -135,16 +135,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                                                                   | *::String*                                                                                                                                        | :heavy_check_mark:                                                                                                                                | ID of the connection                                                                                                                              |
-| `id`                                                                                                                                              | *::String*                                                                                                                                        | :heavy_check_mark:                                                                                                                                | ID of the Organization                                                                                                                            |
-| `fields_`                                                                                                                                         | T::Array<[Models::Operations::GetAccountingOrganization2QueryParamFields](../../models/operations/getaccountingorganization2queryparamfields.md)> | :heavy_minus_sign:                                                                                                                                | Fields to return                                                                                                                                  |
-| `raw`                                                                                                                                             | *T.nilable(::String)*                                                                                                                             | :heavy_minus_sign:                                                                                                                                | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar  |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Organization                                                                                                                           |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAccountingOrganizationQueryParamFields](../../models/operations/getaccountingorganizationqueryparamfields.md)>  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetAccountingOrganization2Response)](../../models/operations/getaccountingorganization2response.md)**
+**[T.nilable(Models::Operations::GetAccountingOrganizationResponse)](../../models/operations/getaccountingorganizationresponse.md)**
 
 ### Errors
 
@@ -152,13 +152,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_ads_organization2
+## get_ads_organization
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getAdsOrganization2" method="get" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getAdsOrganization" method="get" path="/ads/{connection_id}/organization/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -169,7 +169,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.organization.get_ads_organization2(connection_id: '<id>', id: '<id>')
+res = s.organization.get_ads_organization(connection_id: '<id>', id: '<id>')
 
 unless res.ads_organization.nil?
   # handle response
@@ -183,12 +183,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Organization                                                                                                                           |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAdsOrganization2QueryParamFields](../../models/operations/getadsorganization2queryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAdsOrganizationQueryParamFields](../../models/operations/getadsorganizationqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetAdsOrganization2Response)](../../models/operations/getadsorganization2response.md)**
+**[T.nilable(Models::Operations::GetAdsOrganizationResponse)](../../models/operations/getadsorganizationresponse.md)**
 
 ### Errors
 
@@ -196,13 +196,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_repo_organization2
+## get_repo_organization
 
 Retrieve an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getRepoOrganization2" method="get" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getRepoOrganization" method="get" path="/repo/{connection_id}/organization/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -213,7 +213,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.organization.get_repo_organization2(connection_id: '<id>', id: '<id>')
+res = s.organization.get_repo_organization(connection_id: '<id>', id: '<id>')
 
 unless res.repo_organization.nil?
   # handle response
@@ -227,12 +227,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Organization                                                                                                                           |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetRepoOrganization2QueryParamFields](../../models/operations/getrepoorganization2queryparamfields.md)>            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetRepoOrganizationQueryParamFields](../../models/operations/getrepoorganizationqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetRepoOrganization2Response)](../../models/operations/getrepoorganization2response.md)**
+**[T.nilable(Models::Operations::GetRepoOrganizationResponse)](../../models/operations/getrepoorganizationresponse.md)**
 
 ### Errors
 
@@ -240,13 +240,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_accounting_organizations2
+## list_accounting_organizations
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listAccountingOrganizations2" method="get" path="/accounting/{connection_id}/organization" -->
+<!-- UsageSnippet language="ruby" operationID="listAccountingOrganizations" method="get" path="/accounting/{connection_id}/organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -257,11 +257,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListAccountingOrganizations2Request.new(
+req = Models::Operations::ListAccountingOrganizationsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.organization.list_accounting_organizations2(request: req)
+res = s.organization.list_accounting_organizations(request: req)
 
 unless res.accounting_organizations.nil?
   # handle response
@@ -271,13 +271,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                 | [Models::Operations::ListAccountingOrganizations2Request](../../models/operations/listaccountingorganizations2request.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                               | [Models::Operations::ListAccountingOrganizationsRequest](../../models/operations/listaccountingorganizationsrequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListAccountingOrganizations2Response)](../../models/operations/listaccountingorganizations2response.md)**
+**[T.nilable(Models::Operations::ListAccountingOrganizationsResponse)](../../models/operations/listaccountingorganizationsresponse.md)**
 
 ### Errors
 
@@ -285,13 +285,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_ads_organizations2
+## list_ads_organizations
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listAdsOrganizations2" method="get" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="ruby" operationID="listAdsOrganizations" method="get" path="/ads/{connection_id}/organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -302,11 +302,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListAdsOrganizations2Request.new(
+req = Models::Operations::ListAdsOrganizationsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.organization.list_ads_organizations2(request: req)
+res = s.organization.list_ads_organizations(request: req)
 
 unless res.ads_organizations.nil?
   # handle response
@@ -316,13 +316,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                   | [Models::Operations::ListAdsOrganizations2Request](../../models/operations/listadsorganizations2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::ListAdsOrganizationsRequest](../../models/operations/listadsorganizationsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListAdsOrganizations2Response)](../../models/operations/listadsorganizations2response.md)**
+**[T.nilable(Models::Operations::ListAdsOrganizationsResponse)](../../models/operations/listadsorganizationsresponse.md)**
 
 ### Errors
 
@@ -330,13 +330,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_repo_organizations2
+## list_repo_organizations
 
 List all organizations
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listRepoOrganizations2" method="get" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="ruby" operationID="listRepoOrganizations" method="get" path="/repo/{connection_id}/organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -347,11 +347,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListRepoOrganizations2Request.new(
+req = Models::Operations::ListRepoOrganizationsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.organization.list_repo_organizations2(request: req)
+res = s.organization.list_repo_organizations(request: req)
 
 unless res.repo_organizations.nil?
   # handle response
@@ -361,13 +361,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                     | [Models::Operations::ListRepoOrganizations2Request](../../models/operations/listrepoorganizations2request.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::ListRepoOrganizationsRequest](../../models/operations/listrepoorganizationsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListRepoOrganizations2Response)](../../models/operations/listrepoorganizations2response.md)**
+**[T.nilable(Models::Operations::ListRepoOrganizationsResponse)](../../models/operations/listrepoorganizationsresponse.md)**
 
 ### Errors
 
@@ -375,13 +375,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_ads_organization2
+## patch_ads_organization
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsOrganization2" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -392,13 +392,191 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchAdsOrganization2Request.new(
+req = Models::Operations::PatchAdsOrganizationRequest.new(
   ads_organization: Models::Shared::AdsOrganization.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.organization.patch_ads_organization2(request: req)
+res = s.organization.patch_ads_organization(request: req)
+
+unless res.ads_organization.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::PatchAdsOrganizationRequest](../../models/operations/patchadsorganizationrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchAdsOrganizationResponse)](../../models/operations/patchadsorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## patch_repo_organization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchRepoOrganizationRequest.new(
+  repo_organization: Models::Shared::RepoOrganization.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.organization.patch_repo_organization(request: req)
+
+unless res.repo_organization.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::PatchRepoOrganizationRequest](../../models/operations/patchrepoorganizationrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchRepoOrganizationResponse)](../../models/operations/patchrepoorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_ads_organization
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeAdsOrganization" method="delete" path="/ads/{connection_id}/organization/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.organization.remove_ads_organization(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter              | Type                   | Required               | Description            |
+| ---------------------- | ---------------------- | ---------------------- | ---------------------- |
+| `connection_id`        | *::String*             | :heavy_check_mark:     | ID of the connection   |
+| `id`                   | *::String*             | :heavy_check_mark:     | ID of the Organization |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveAdsOrganizationResponse)](../../models/operations/removeadsorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_repo_organization
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeRepoOrganization" method="delete" path="/repo/{connection_id}/organization/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.organization.remove_repo_organization(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter              | Type                   | Required               | Description            |
+| ---------------------- | ---------------------- | ---------------------- | ---------------------- |
+| `connection_id`        | *::String*             | :heavy_check_mark:     | ID of the connection   |
+| `id`                   | *::String*             | :heavy_check_mark:     | ID of the Organization |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveRepoOrganizationResponse)](../../models/operations/removerepoorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_ads_organization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateAdsOrganizationRequest.new(
+  ads_organization: Models::Shared::AdsOrganization.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.organization.update_ads_organization(request: req)
 
 unless res.ads_organization.nil?
   # handle response
@@ -410,11 +588,11 @@ end
 
 | Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
 | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                   | [Models::Operations::PatchAdsOrganization2Request](../../models/operations/patchadsorganization2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| `request`                                                                                                   | [Models::Operations::UpdateAdsOrganizationRequest](../../models/operations/updateadsorganizationrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchAdsOrganization2Response)](../../models/operations/patchadsorganization2response.md)**
+**[T.nilable(Models::Operations::UpdateAdsOrganizationResponse)](../../models/operations/updateadsorganizationresponse.md)**
 
 ### Errors
 
@@ -422,13 +600,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_repo_organization2
+## update_repo_organization
 
 Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchRepoOrganization2" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -439,13 +617,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchRepoOrganization2Request.new(
+req = Models::Operations::UpdateRepoOrganizationRequest.new(
   repo_organization: Models::Shared::RepoOrganization.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.organization.patch_repo_organization2(request: req)
+res = s.organization.update_repo_organization(request: req)
 
 unless res.repo_organization.nil?
   # handle response
@@ -457,189 +635,11 @@ end
 
 | Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                     | [Models::Operations::PatchRepoOrganization2Request](../../models/operations/patchrepoorganization2request.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| `request`                                                                                                     | [Models::Operations::UpdateRepoOrganizationRequest](../../models/operations/updaterepoorganizationrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchRepoOrganization2Response)](../../models/operations/patchrepoorganization2response.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## remove_ads_organization2
-
-Remove an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="removeAdsOrganization2" method="delete" path="/ads/{connection_id}/organization/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.organization.remove_ads_organization2(connection_id: '<id>', id: '<id>')
-
-if res.status_code == 200
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter              | Type                   | Required               | Description            |
-| ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| `connection_id`        | *::String*             | :heavy_check_mark:     | ID of the connection   |
-| `id`                   | *::String*             | :heavy_check_mark:     | ID of the Organization |
-
-### Response
-
-**[T.nilable(Models::Operations::RemoveAdsOrganization2Response)](../../models/operations/removeadsorganization2response.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## remove_repo_organization2
-
-Remove an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="removeRepoOrganization2" method="delete" path="/repo/{connection_id}/organization/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.organization.remove_repo_organization2(connection_id: '<id>', id: '<id>')
-
-if res.status_code == 200
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter              | Type                   | Required               | Description            |
-| ---------------------- | ---------------------- | ---------------------- | ---------------------- |
-| `connection_id`        | *::String*             | :heavy_check_mark:     | ID of the connection   |
-| `id`                   | *::String*             | :heavy_check_mark:     | ID of the Organization |
-
-### Response
-
-**[T.nilable(Models::Operations::RemoveRepoOrganization2Response)](../../models/operations/removerepoorganization2response.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## update_ads_organization2
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="updateAdsOrganization2" method="put" path="/ads/{connection_id}/organization/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateAdsOrganization2Request.new(
-  ads_organization: Models::Shared::AdsOrganization.new(),
-  connection_id: '<id>',
-  id: '<id>',
-)
-
-res = s.organization.update_ads_organization2(request: req)
-
-unless res.ads_organization.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                     | [Models::Operations::UpdateAdsOrganization2Request](../../models/operations/updateadsorganization2request.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
-
-### Response
-
-**[T.nilable(Models::Operations::UpdateAdsOrganization2Response)](../../models/operations/updateadsorganization2response.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## update_repo_organization2
-
-Update an organization
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="updateRepoOrganization2" method="put" path="/repo/{connection_id}/organization/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateRepoOrganization2Request.new(
-  repo_organization: Models::Shared::RepoOrganization.new(),
-  connection_id: '<id>',
-  id: '<id>',
-)
-
-res = s.organization.update_repo_organization2(request: req)
-
-unless res.repo_organization.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                       | [Models::Operations::UpdateRepoOrganization2Request](../../models/operations/updaterepoorganization2request.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
-
-### Response
-
-**[T.nilable(Models::Operations::UpdateRepoOrganization2Response)](../../models/operations/updaterepoorganization2response.md)**
+**[T.nilable(Models::Operations::UpdateRepoOrganizationResponse)](../../models/operations/updaterepoorganizationresponse.md)**
 
 ### Errors
 

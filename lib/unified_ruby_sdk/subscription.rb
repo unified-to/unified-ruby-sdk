@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePaymentSubscription2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentSubscription2Response) }
-    def create_payment_subscription2(payment_subscription:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_payment_subscription2 - Create a subscription
-      request = Models::Operations::CreatePaymentSubscription2Request.new(
+    sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePaymentSubscriptionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentSubscriptionResponse) }
+    def create_payment_subscription(payment_subscription:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_payment_subscription - Create a subscription
+      request = Models::Operations::CreatePaymentSubscriptionRequest.new(
         payment_subscription: payment_subscription,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreatePaymentSubscription2Request,
+        Models::Operations::CreatePaymentSubscriptionRequest,
         base_url,
         '/payment/{connection_id}/subscription',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreatePaymentSubscription2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreatePaymentSubscriptionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createPaymentSubscription2',
+        operation_id: 'createPaymentSubscription',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::PaymentSubscription)
-          response = Models::Operations::CreatePaymentSubscription2Response.new(
+          response = Models::Operations::CreatePaymentSubscriptionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentSubscription2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentSubscription2Response) }
-    def get_payment_subscription2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_payment_subscription2 - Retrieve a subscription
-      request = Models::Operations::GetPaymentSubscription2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentSubscriptionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentSubscriptionResponse) }
+    def get_payment_subscription(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_payment_subscription - Retrieve a subscription
+      request = Models::Operations::GetPaymentSubscriptionRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetPaymentSubscription2Request,
+        Models::Operations::GetPaymentSubscriptionRequest,
         base_url,
         '/payment/{connection_id}/subscription/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetPaymentSubscription2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetPaymentSubscriptionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getPaymentSubscription2',
+        operation_id: 'getPaymentSubscription',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::PaymentSubscription)
-          response = Models::Operations::GetPaymentSubscription2Response.new(
+          response = Models::Operations::GetPaymentSubscriptionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListPaymentSubscriptions2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentSubscriptions2Response) }
-    def list_payment_subscriptions2(request:, timeout_ms: nil)
-      # list_payment_subscriptions2 - List all subscriptions
+    sig { params(request: Models::Operations::ListPaymentSubscriptionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentSubscriptionsResponse) }
+    def list_payment_subscriptions(request:, timeout_ms: nil)
+      # list_payment_subscriptions - List all subscriptions
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListPaymentSubscriptions2Request,
+        Models::Operations::ListPaymentSubscriptionsRequest,
         base_url,
         '/payment/{connection_id}/subscription',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListPaymentSubscriptions2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListPaymentSubscriptionsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listPaymentSubscriptions2',
+        operation_id: 'listPaymentSubscriptions',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::PaymentSubscription))
-          response = Models::Operations::ListPaymentSubscriptions2Response.new(
+          response = Models::Operations::ListPaymentSubscriptionsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchPaymentSubscription2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentSubscription2Response) }
-    def patch_payment_subscription2(request:, timeout_ms: nil)
-      # patch_payment_subscription2 - Update a subscription
+    sig { params(request: Models::Operations::PatchPaymentSubscriptionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentSubscriptionResponse) }
+    def patch_payment_subscription(request:, timeout_ms: nil)
+      # patch_payment_subscription - Update a subscription
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchPaymentSubscription2Request,
+        Models::Operations::PatchPaymentSubscriptionRequest,
         base_url,
         '/payment/{connection_id}/subscription/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchPaymentSubscription2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchPaymentSubscriptionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchPaymentSubscription2',
+        operation_id: 'patchPaymentSubscription',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::PaymentSubscription)
-          response = Models::Operations::PatchPaymentSubscription2Response.new(
+          response = Models::Operations::PatchPaymentSubscriptionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentSubscription2Response) }
-    def remove_payment_subscription2(connection_id:, id:, timeout_ms: nil)
-      # remove_payment_subscription2 - Remove a subscription
-      request = Models::Operations::RemovePaymentSubscription2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentSubscriptionResponse) }
+    def remove_payment_subscription(connection_id:, id:, timeout_ms: nil)
+      # remove_payment_subscription - Remove a subscription
+      request = Models::Operations::RemovePaymentSubscriptionRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemovePaymentSubscription2Request,
+        Models::Operations::RemovePaymentSubscriptionRequest,
         base_url,
         '/payment/{connection_id}/subscription/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removePaymentSubscription2',
+        operation_id: 'removePaymentSubscription',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemovePaymentSubscription2Response.new(
+        return Models::Operations::RemovePaymentSubscriptionResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemovePaymentSubscription2Response.new(
+        return Models::Operations::RemovePaymentSubscriptionResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdatePaymentSubscription2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentSubscription2Response) }
-    def update_payment_subscription2(request:, timeout_ms: nil)
-      # update_payment_subscription2 - Update a subscription
+    sig { params(request: Models::Operations::UpdatePaymentSubscriptionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentSubscriptionResponse) }
+    def update_payment_subscription(request:, timeout_ms: nil)
+      # update_payment_subscription - Update a subscription
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdatePaymentSubscription2Request,
+        Models::Operations::UpdatePaymentSubscriptionRequest,
         base_url,
         '/payment/{connection_id}/subscription/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdatePaymentSubscription2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdatePaymentSubscriptionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updatePaymentSubscription2',
+        operation_id: 'updatePaymentSubscription',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::PaymentSubscription)
-          response = Models::Operations::UpdatePaymentSubscription2Response.new(
+          response = Models::Operations::UpdatePaymentSubscriptionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

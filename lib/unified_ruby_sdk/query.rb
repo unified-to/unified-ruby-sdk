@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(datastore_query: Models::Shared::DatastoreQuery, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateDatastoreQuery2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateDatastoreQuery2Response) }
-    def create_datastore_query2(datastore_query:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_datastore_query2 - Create a query
-      request = Models::Operations::CreateDatastoreQuery2Request.new(
+    sig { params(datastore_query: Models::Shared::DatastoreQuery, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateDatastoreQueryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateDatastoreQueryResponse) }
+    def create_datastore_query(datastore_query:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_datastore_query - Create a query
+      request = Models::Operations::CreateDatastoreQueryRequest.new(
         datastore_query: datastore_query,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateDatastoreQuery2Request,
+        Models::Operations::CreateDatastoreQueryRequest,
         base_url,
         '/datastore/{connection_id}/query',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateDatastoreQuery2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateDatastoreQueryRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createDatastoreQuery2',
+        operation_id: 'createDatastoreQuery',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::DatastoreQuery)
-          response = Models::Operations::CreateDatastoreQuery2Response.new(
+          response = Models::Operations::CreateDatastoreQueryResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

@@ -5,20 +5,20 @@
 
 ### Available Operations
 
-* [create_forms_form2](#create_forms_form2) - Create a form
-* [get_forms_form2](#get_forms_form2) - Retrieve a form
-* [list_forms_forms2](#list_forms_forms2) - List all forms
-* [patch_forms_form2](#patch_forms_form2) - Update a form
-* [remove_forms_form2](#remove_forms_form2) - Remove a form
-* [update_forms_form2](#update_forms_form2) - Update a form
+* [create_forms_form](#create_forms_form) - Create a form
+* [get_forms_form](#get_forms_form) - Retrieve a form
+* [list_forms_forms](#list_forms_forms) - List all forms
+* [patch_forms_form](#patch_forms_form) - Update a form
+* [remove_forms_form](#remove_forms_form) - Remove a form
+* [update_forms_form](#update_forms_form) - Update a form
 
-## create_forms_form2
+## create_forms_form
 
 Create a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createFormsForm2" method="post" path="/forms/{connection_id}/form" -->
+<!-- UsageSnippet language="ruby" operationID="createFormsForm" method="post" path="/forms/{connection_id}/form" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -29,7 +29,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.form.create_forms_form2(forms_form: Models::Shared::FormsForm.new(), connection_id: '<id>')
+res = s.form.create_forms_form(forms_form: Models::Shared::FormsForm.new(), connection_id: '<id>')
 
 unless res.forms_form.nil?
   # handle response
@@ -43,12 +43,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `forms_form`                                                                                                                                     | [Models::Shared::FormsForm](../../models/shared/formsform.md)                                                                                    | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateFormsForm2QueryParamFields](../../models/operations/createformsform2queryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateFormsFormQueryParamFields](../../models/operations/createformsformqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateFormsForm2Response)](../../models/operations/createformsform2response.md)**
+**[T.nilable(Models::Operations::CreateFormsFormResponse)](../../models/operations/createformsformresponse.md)**
 
 ### Errors
 
@@ -56,13 +56,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_forms_form2
+## get_forms_form
 
 Retrieve a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getFormsForm2" method="get" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getFormsForm" method="get" path="/forms/{connection_id}/form/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -73,7 +73,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.form.get_forms_form2(connection_id: '<id>', id: '<id>')
+res = s.form.get_forms_form(connection_id: '<id>', id: '<id>')
 
 unless res.forms_form.nil?
   # handle response
@@ -87,12 +87,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Form                                                                                                                                   |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetFormsForm2QueryParamFields](../../models/operations/getformsform2queryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetFormsFormQueryParamFields](../../models/operations/getformsformqueryparamfields.md)>                            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetFormsForm2Response)](../../models/operations/getformsform2response.md)**
+**[T.nilable(Models::Operations::GetFormsFormResponse)](../../models/operations/getformsformresponse.md)**
 
 ### Errors
 
@@ -100,13 +100,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_forms_forms2
+## list_forms_forms
 
 List all forms
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listFormsForms2" method="get" path="/forms/{connection_id}/form" -->
+<!-- UsageSnippet language="ruby" operationID="listFormsForms" method="get" path="/forms/{connection_id}/form" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -117,11 +117,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListFormsForms2Request.new(
+req = Models::Operations::ListFormsFormsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.form.list_forms_forms2(request: req)
+res = s.form.list_forms_forms(request: req)
 
 unless res.forms_forms.nil?
   # handle response
@@ -131,13 +131,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Models::Operations::ListFormsForms2Request](../../models/operations/listformsforms2request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::ListFormsFormsRequest](../../models/operations/listformsformsrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListFormsForms2Response)](../../models/operations/listformsforms2response.md)**
+**[T.nilable(Models::Operations::ListFormsFormsResponse)](../../models/operations/listformsformsresponse.md)**
 
 ### Errors
 
@@ -145,13 +145,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_forms_form2
+## patch_forms_form
 
 Update a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchFormsForm2" method="patch" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchFormsForm" method="patch" path="/forms/{connection_id}/form/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -162,13 +162,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchFormsForm2Request.new(
+req = Models::Operations::PatchFormsFormRequest.new(
   forms_form: Models::Shared::FormsForm.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.form.patch_forms_form2(request: req)
+res = s.form.patch_forms_form(request: req)
 
 unless res.forms_form.nil?
   # handle response
@@ -178,13 +178,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Models::Operations::PatchFormsForm2Request](../../models/operations/patchformsform2request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::PatchFormsFormRequest](../../models/operations/patchformsformrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchFormsForm2Response)](../../models/operations/patchformsform2response.md)**
+**[T.nilable(Models::Operations::PatchFormsFormResponse)](../../models/operations/patchformsformresponse.md)**
 
 ### Errors
 
@@ -192,13 +192,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_forms_form2
+## remove_forms_form
 
 Remove a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeFormsForm2" method="delete" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeFormsForm" method="delete" path="/forms/{connection_id}/form/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -209,7 +209,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.form.remove_forms_form2(connection_id: '<id>', id: '<id>')
+res = s.form.remove_forms_form(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -226,7 +226,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveFormsForm2Response)](../../models/operations/removeformsform2response.md)**
+**[T.nilable(Models::Operations::RemoveFormsFormResponse)](../../models/operations/removeformsformresponse.md)**
 
 ### Errors
 
@@ -234,13 +234,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_forms_form2
+## update_forms_form
 
 Update a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateFormsForm2" method="put" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateFormsForm" method="put" path="/forms/{connection_id}/form/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -251,13 +251,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateFormsForm2Request.new(
+req = Models::Operations::UpdateFormsFormRequest.new(
   forms_form: Models::Shared::FormsForm.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.form.update_forms_form2(request: req)
+res = s.form.update_forms_form(request: req)
 
 unless res.forms_form.nil?
   # handle response
@@ -267,13 +267,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::UpdateFormsForm2Request](../../models/operations/updateformsform2request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::UpdateFormsFormRequest](../../models/operations/updateformsformrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateFormsForm2Response)](../../models/operations/updateformsform2response.md)**
+**[T.nilable(Models::Operations::UpdateFormsFormResponse)](../../models/operations/updateformsformresponse.md)**
 
 ### Errors
 

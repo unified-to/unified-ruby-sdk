@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_item: Models::Shared::CommerceItem, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceItem2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceItem2Response) }
-    def create_commerce_item2(commerce_item:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_commerce_item2 - Create an item
-      request = Models::Operations::CreateCommerceItem2Request.new(
+    sig { params(commerce_item: Models::Shared::CommerceItem, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceItemQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceItemResponse) }
+    def create_commerce_item(commerce_item:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_commerce_item - Create an item
+      request = Models::Operations::CreateCommerceItemRequest.new(
         commerce_item: commerce_item,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCommerceItem2Request,
+        Models::Operations::CreateCommerceItemRequest,
         base_url,
         '/commerce/{connection_id}/item',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCommerceItem2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCommerceItemRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCommerceItem2',
+        operation_id: 'createCommerceItem',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItem)
-          response = Models::Operations::CreateCommerceItem2Response.new(
+          response = Models::Operations::CreateCommerceItemResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceItem2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceItem2Response) }
-    def get_commerce_item2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_commerce_item2 - Retrieve an item
-      request = Models::Operations::GetCommerceItem2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceItemQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceItemResponse) }
+    def get_commerce_item(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_commerce_item - Retrieve an item
+      request = Models::Operations::GetCommerceItemRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCommerceItem2Request,
+        Models::Operations::GetCommerceItemRequest,
         base_url,
         '/commerce/{connection_id}/item/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCommerceItem2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCommerceItemRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCommerceItem2',
+        operation_id: 'getCommerceItem',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItem)
-          response = Models::Operations::GetCommerceItem2Response.new(
+          response = Models::Operations::GetCommerceItemResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCommerceItems2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceItems2Response) }
-    def list_commerce_items2(request:, timeout_ms: nil)
-      # list_commerce_items2 - List all items
+    sig { params(request: Models::Operations::ListCommerceItemsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceItemsResponse) }
+    def list_commerce_items(request:, timeout_ms: nil)
+      # list_commerce_items - List all items
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCommerceItems2Request,
+        Models::Operations::ListCommerceItemsRequest,
         base_url,
         '/commerce/{connection_id}/item',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCommerceItems2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCommerceItemsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCommerceItems2',
+        operation_id: 'listCommerceItems',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CommerceItem))
-          response = Models::Operations::ListCommerceItems2Response.new(
+          response = Models::Operations::ListCommerceItemsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCommerceItem2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceItem2Response) }
-    def patch_commerce_item2(request:, timeout_ms: nil)
-      # patch_commerce_item2 - Update an item
+    sig { params(request: Models::Operations::PatchCommerceItemRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceItemResponse) }
+    def patch_commerce_item(request:, timeout_ms: nil)
+      # patch_commerce_item - Update an item
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCommerceItem2Request,
+        Models::Operations::PatchCommerceItemRequest,
         base_url,
         '/commerce/{connection_id}/item/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCommerceItem2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCommerceItemRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCommerceItem2',
+        operation_id: 'patchCommerceItem',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItem)
-          response = Models::Operations::PatchCommerceItem2Response.new(
+          response = Models::Operations::PatchCommerceItemResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceItem2Response) }
-    def remove_commerce_item2(connection_id:, id:, timeout_ms: nil)
-      # remove_commerce_item2 - Remove an item
-      request = Models::Operations::RemoveCommerceItem2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceItemResponse) }
+    def remove_commerce_item(connection_id:, id:, timeout_ms: nil)
+      # remove_commerce_item - Remove an item
+      request = Models::Operations::RemoveCommerceItemRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCommerceItem2Request,
+        Models::Operations::RemoveCommerceItemRequest,
         base_url,
         '/commerce/{connection_id}/item/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCommerceItem2',
+        operation_id: 'removeCommerceItem',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceItem2Response.new(
+        return Models::Operations::RemoveCommerceItemResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceItem2Response.new(
+        return Models::Operations::RemoveCommerceItemResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCommerceItem2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceItem2Response) }
-    def update_commerce_item2(request:, timeout_ms: nil)
-      # update_commerce_item2 - Update an item
+    sig { params(request: Models::Operations::UpdateCommerceItemRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceItemResponse) }
+    def update_commerce_item(request:, timeout_ms: nil)
+      # update_commerce_item - Update an item
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCommerceItem2Request,
+        Models::Operations::UpdateCommerceItemRequest,
         base_url,
         '/commerce/{connection_id}/item/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceItem2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceItemRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCommerceItem2',
+        operation_id: 'updateCommerceItem',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceItem)
-          response = Models::Operations::UpdateCommerceItem2Response.new(
+          response = Models::Operations::UpdateCommerceItemResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

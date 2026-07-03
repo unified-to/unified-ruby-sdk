@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_deduction: Models::Shared::HrisDeduction, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisDeduction2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeduction2Response) }
-    def create_hris_deduction2(hris_deduction:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_hris_deduction2 - Create a deduction
-      request = Models::Operations::CreateHrisDeduction2Request.new(
+    sig { params(hris_deduction: Models::Shared::HrisDeduction, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisDeductionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeductionResponse) }
+    def create_hris_deduction(hris_deduction:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_hris_deduction - Create a deduction
+      request = Models::Operations::CreateHrisDeductionRequest.new(
         hris_deduction: hris_deduction,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateHrisDeduction2Request,
+        Models::Operations::CreateHrisDeductionRequest,
         base_url,
         '/hris/{connection_id}/deduction',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateHrisDeduction2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateHrisDeductionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createHrisDeduction2',
+        operation_id: 'createHrisDeduction',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisDeduction)
-          response = Models::Operations::CreateHrisDeduction2Response.new(
+          response = Models::Operations::CreateHrisDeductionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisDeduction2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeduction2Response) }
-    def get_hris_deduction2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_hris_deduction2 - Retrieve a deduction
-      request = Models::Operations::GetHrisDeduction2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisDeductionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeductionResponse) }
+    def get_hris_deduction(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_hris_deduction - Retrieve a deduction
+      request = Models::Operations::GetHrisDeductionRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetHrisDeduction2Request,
+        Models::Operations::GetHrisDeductionRequest,
         base_url,
         '/hris/{connection_id}/deduction/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetHrisDeduction2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetHrisDeductionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getHrisDeduction2',
+        operation_id: 'getHrisDeduction',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisDeduction)
-          response = Models::Operations::GetHrisDeduction2Response.new(
+          response = Models::Operations::GetHrisDeductionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListHrisDeductions2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisDeductions2Response) }
-    def list_hris_deductions2(request:, timeout_ms: nil)
-      # list_hris_deductions2 - List all deductions
+    sig { params(request: Models::Operations::ListHrisDeductionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisDeductionsResponse) }
+    def list_hris_deductions(request:, timeout_ms: nil)
+      # list_hris_deductions - List all deductions
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListHrisDeductions2Request,
+        Models::Operations::ListHrisDeductionsRequest,
         base_url,
         '/hris/{connection_id}/deduction',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListHrisDeductions2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListHrisDeductionsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listHrisDeductions2',
+        operation_id: 'listHrisDeductions',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::HrisDeduction))
-          response = Models::Operations::ListHrisDeductions2Response.new(
+          response = Models::Operations::ListHrisDeductionsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchHrisDeduction2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisDeduction2Response) }
-    def patch_hris_deduction2(request:, timeout_ms: nil)
-      # patch_hris_deduction2 - Update a deduction
+    sig { params(request: Models::Operations::PatchHrisDeductionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisDeductionResponse) }
+    def patch_hris_deduction(request:, timeout_ms: nil)
+      # patch_hris_deduction - Update a deduction
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchHrisDeduction2Request,
+        Models::Operations::PatchHrisDeductionRequest,
         base_url,
         '/hris/{connection_id}/deduction/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchHrisDeduction2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchHrisDeductionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchHrisDeduction2',
+        operation_id: 'patchHrisDeduction',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisDeduction)
-          response = Models::Operations::PatchHrisDeduction2Response.new(
+          response = Models::Operations::PatchHrisDeductionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisDeduction2Response) }
-    def remove_hris_deduction2(connection_id:, id:, timeout_ms: nil)
-      # remove_hris_deduction2 - Remove a deduction
-      request = Models::Operations::RemoveHrisDeduction2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisDeductionResponse) }
+    def remove_hris_deduction(connection_id:, id:, timeout_ms: nil)
+      # remove_hris_deduction - Remove a deduction
+      request = Models::Operations::RemoveHrisDeductionRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveHrisDeduction2Request,
+        Models::Operations::RemoveHrisDeductionRequest,
         base_url,
         '/hris/{connection_id}/deduction/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeHrisDeduction2',
+        operation_id: 'removeHrisDeduction',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisDeduction2Response.new(
+        return Models::Operations::RemoveHrisDeductionResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisDeduction2Response.new(
+        return Models::Operations::RemoveHrisDeductionResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateHrisDeduction2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisDeduction2Response) }
-    def update_hris_deduction2(request:, timeout_ms: nil)
-      # update_hris_deduction2 - Update a deduction
+    sig { params(request: Models::Operations::UpdateHrisDeductionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisDeductionResponse) }
+    def update_hris_deduction(request:, timeout_ms: nil)
+      # update_hris_deduction - Update a deduction
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateHrisDeduction2Request,
+        Models::Operations::UpdateHrisDeductionRequest,
         base_url,
         '/hris/{connection_id}/deduction/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateHrisDeduction2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateHrisDeductionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateHrisDeduction2',
+        operation_id: 'updateHrisDeduction',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisDeduction)
-          response = Models::Operations::UpdateHrisDeduction2Response.new(
+          response = Models::Operations::UpdateHrisDeductionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

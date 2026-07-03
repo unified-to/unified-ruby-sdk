@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisPayslip2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisPayslip2Response) }
-    def get_hris_payslip2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_hris_payslip2 - Retrieve a payslip
-      request = Models::Operations::GetHrisPayslip2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisPayslipQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisPayslipResponse) }
+    def get_hris_payslip(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_hris_payslip - Retrieve a payslip
+      request = Models::Operations::GetHrisPayslipRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetHrisPayslip2Request,
+        Models::Operations::GetHrisPayslipRequest,
         base_url,
         '/hris/{connection_id}/payslip/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetHrisPayslip2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetHrisPayslipRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getHrisPayslip2',
+        operation_id: 'getHrisPayslip',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisPayslip)
-          response = Models::Operations::GetHrisPayslip2Response.new(
+          response = Models::Operations::GetHrisPayslipResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListHrisPayslips2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisPayslips2Response) }
-    def list_hris_payslips2(request:, timeout_ms: nil)
-      # list_hris_payslips2 - List all payslips
+    sig { params(request: Models::Operations::ListHrisPayslipsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisPayslipsResponse) }
+    def list_hris_payslips(request:, timeout_ms: nil)
+      # list_hris_payslips - List all payslips
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListHrisPayslips2Request,
+        Models::Operations::ListHrisPayslipsRequest,
         base_url,
         '/hris/{connection_id}/payslip',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListHrisPayslips2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListHrisPayslipsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listHrisPayslips2',
+        operation_id: 'listHrisPayslips',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::HrisPayslip))
-          response = Models::Operations::ListHrisPayslips2Response.new(
+          response = Models::Operations::ListHrisPayslipsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

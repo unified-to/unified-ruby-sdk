@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(analytics_property: Models::Shared::AnalyticsProperty, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAnalyticsProperty2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAnalyticsProperty2Response) }
-    def create_analytics_property2(analytics_property:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_analytics_property2 - Create a property
-      request = Models::Operations::CreateAnalyticsProperty2Request.new(
+    sig { params(analytics_property: Models::Shared::AnalyticsProperty, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAnalyticsPropertyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAnalyticsPropertyResponse) }
+    def create_analytics_property(analytics_property:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_analytics_property - Create a property
+      request = Models::Operations::CreateAnalyticsPropertyRequest.new(
         analytics_property: analytics_property,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAnalyticsProperty2Request,
+        Models::Operations::CreateAnalyticsPropertyRequest,
         base_url,
         '/analytics/{connection_id}/property',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAnalyticsProperty2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAnalyticsPropertyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAnalyticsProperty2',
+        operation_id: 'createAnalyticsProperty',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AnalyticsProperty)
-          response = Models::Operations::CreateAnalyticsProperty2Response.new(
+          response = Models::Operations::CreateAnalyticsPropertyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAnalyticsProperty2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAnalyticsProperty2Response) }
-    def get_analytics_property2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_analytics_property2 - Retrieve a property
-      request = Models::Operations::GetAnalyticsProperty2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAnalyticsPropertyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAnalyticsPropertyResponse) }
+    def get_analytics_property(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_analytics_property - Retrieve a property
+      request = Models::Operations::GetAnalyticsPropertyRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAnalyticsProperty2Request,
+        Models::Operations::GetAnalyticsPropertyRequest,
         base_url,
         '/analytics/{connection_id}/property/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAnalyticsProperty2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAnalyticsPropertyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAnalyticsProperty2',
+        operation_id: 'getAnalyticsProperty',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AnalyticsProperty)
-          response = Models::Operations::GetAnalyticsProperty2Response.new(
+          response = Models::Operations::GetAnalyticsPropertyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAnalyticsProperties2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAnalyticsProperties2Response) }
-    def list_analytics_properties2(request:, timeout_ms: nil)
-      # list_analytics_properties2 - List all properties
+    sig { params(request: Models::Operations::ListAnalyticsPropertiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAnalyticsPropertiesResponse) }
+    def list_analytics_properties(request:, timeout_ms: nil)
+      # list_analytics_properties - List all properties
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAnalyticsProperties2Request,
+        Models::Operations::ListAnalyticsPropertiesRequest,
         base_url,
         '/analytics/{connection_id}/property',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAnalyticsProperties2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAnalyticsPropertiesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAnalyticsProperties2',
+        operation_id: 'listAnalyticsProperties',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AnalyticsProperty))
-          response = Models::Operations::ListAnalyticsProperties2Response.new(
+          response = Models::Operations::ListAnalyticsPropertiesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAnalyticsProperty2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAnalyticsProperty2Response) }
-    def patch_analytics_property2(request:, timeout_ms: nil)
-      # patch_analytics_property2 - Update a property
+    sig { params(request: Models::Operations::PatchAnalyticsPropertyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAnalyticsPropertyResponse) }
+    def patch_analytics_property(request:, timeout_ms: nil)
+      # patch_analytics_property - Update a property
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAnalyticsProperty2Request,
+        Models::Operations::PatchAnalyticsPropertyRequest,
         base_url,
         '/analytics/{connection_id}/property/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAnalyticsProperty2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAnalyticsPropertyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAnalyticsProperty2',
+        operation_id: 'patchAnalyticsProperty',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AnalyticsProperty)
-          response = Models::Operations::PatchAnalyticsProperty2Response.new(
+          response = Models::Operations::PatchAnalyticsPropertyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAnalyticsProperty2Response) }
-    def remove_analytics_property2(connection_id:, id:, timeout_ms: nil)
-      # remove_analytics_property2 - Remove a property
-      request = Models::Operations::RemoveAnalyticsProperty2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAnalyticsPropertyResponse) }
+    def remove_analytics_property(connection_id:, id:, timeout_ms: nil)
+      # remove_analytics_property - Remove a property
+      request = Models::Operations::RemoveAnalyticsPropertyRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAnalyticsProperty2Request,
+        Models::Operations::RemoveAnalyticsPropertyRequest,
         base_url,
         '/analytics/{connection_id}/property/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAnalyticsProperty2',
+        operation_id: 'removeAnalyticsProperty',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAnalyticsProperty2Response.new(
+        return Models::Operations::RemoveAnalyticsPropertyResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAnalyticsProperty2Response.new(
+        return Models::Operations::RemoveAnalyticsPropertyResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAnalyticsProperty2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAnalyticsProperty2Response) }
-    def update_analytics_property2(request:, timeout_ms: nil)
-      # update_analytics_property2 - Update a property
+    sig { params(request: Models::Operations::UpdateAnalyticsPropertyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAnalyticsPropertyResponse) }
+    def update_analytics_property(request:, timeout_ms: nil)
+      # update_analytics_property - Update a property
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAnalyticsProperty2Request,
+        Models::Operations::UpdateAnalyticsPropertyRequest,
         base_url,
         '/analytics/{connection_id}/property/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAnalyticsProperty2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAnalyticsPropertyRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAnalyticsProperty2',
+        operation_id: 'updateAnalyticsProperty',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AnalyticsProperty)
-          response = Models::Operations::UpdateAnalyticsProperty2Response.new(
+          response = Models::Operations::UpdateAnalyticsPropertyResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

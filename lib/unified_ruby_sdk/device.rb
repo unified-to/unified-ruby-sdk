@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_device: Models::Shared::HrisDevice, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisDevice2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDevice2Response) }
-    def create_hris_device2(hris_device:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_hris_device2 - Create a device
-      request = Models::Operations::CreateHrisDevice2Request.new(
+    sig { params(hris_device: Models::Shared::HrisDevice, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisDeviceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeviceResponse) }
+    def create_hris_device(hris_device:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_hris_device - Create a device
+      request = Models::Operations::CreateHrisDeviceRequest.new(
         hris_device: hris_device,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateHrisDevice2Request,
+        Models::Operations::CreateHrisDeviceRequest,
         base_url,
         '/hris/{connection_id}/device',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateHrisDevice2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateHrisDeviceRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createHrisDevice2',
+        operation_id: 'createHrisDevice',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisDevice)
-          response = Models::Operations::CreateHrisDevice2Response.new(
+          response = Models::Operations::CreateHrisDeviceResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisDevice2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDevice2Response) }
-    def get_hris_device2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_hris_device2 - Retrieve a device
-      request = Models::Operations::GetHrisDevice2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisDeviceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeviceResponse) }
+    def get_hris_device(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_hris_device - Retrieve a device
+      request = Models::Operations::GetHrisDeviceRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetHrisDevice2Request,
+        Models::Operations::GetHrisDeviceRequest,
         base_url,
         '/hris/{connection_id}/device/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetHrisDevice2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetHrisDeviceRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getHrisDevice2',
+        operation_id: 'getHrisDevice',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisDevice)
-          response = Models::Operations::GetHrisDevice2Response.new(
+          response = Models::Operations::GetHrisDeviceResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListHrisDevices2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisDevices2Response) }
-    def list_hris_devices2(request:, timeout_ms: nil)
-      # list_hris_devices2 - List all devices
+    sig { params(request: Models::Operations::ListHrisDevicesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisDevicesResponse) }
+    def list_hris_devices(request:, timeout_ms: nil)
+      # list_hris_devices - List all devices
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListHrisDevices2Request,
+        Models::Operations::ListHrisDevicesRequest,
         base_url,
         '/hris/{connection_id}/device',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListHrisDevices2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListHrisDevicesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listHrisDevices2',
+        operation_id: 'listHrisDevices',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::HrisDevice))
-          response = Models::Operations::ListHrisDevices2Response.new(
+          response = Models::Operations::ListHrisDevicesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchHrisDevice2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisDevice2Response) }
-    def patch_hris_device2(request:, timeout_ms: nil)
-      # patch_hris_device2 - Update a device
+    sig { params(request: Models::Operations::PatchHrisDeviceRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisDeviceResponse) }
+    def patch_hris_device(request:, timeout_ms: nil)
+      # patch_hris_device - Update a device
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchHrisDevice2Request,
+        Models::Operations::PatchHrisDeviceRequest,
         base_url,
         '/hris/{connection_id}/device/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchHrisDevice2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchHrisDeviceRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchHrisDevice2',
+        operation_id: 'patchHrisDevice',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisDevice)
-          response = Models::Operations::PatchHrisDevice2Response.new(
+          response = Models::Operations::PatchHrisDeviceResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisDevice2Response) }
-    def remove_hris_device2(connection_id:, id:, timeout_ms: nil)
-      # remove_hris_device2 - Remove a device
-      request = Models::Operations::RemoveHrisDevice2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisDeviceResponse) }
+    def remove_hris_device(connection_id:, id:, timeout_ms: nil)
+      # remove_hris_device - Remove a device
+      request = Models::Operations::RemoveHrisDeviceRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveHrisDevice2Request,
+        Models::Operations::RemoveHrisDeviceRequest,
         base_url,
         '/hris/{connection_id}/device/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeHrisDevice2',
+        operation_id: 'removeHrisDevice',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisDevice2Response.new(
+        return Models::Operations::RemoveHrisDeviceResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisDevice2Response.new(
+        return Models::Operations::RemoveHrisDeviceResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateHrisDevice2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisDevice2Response) }
-    def update_hris_device2(request:, timeout_ms: nil)
-      # update_hris_device2 - Update a device
+    sig { params(request: Models::Operations::UpdateHrisDeviceRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisDeviceResponse) }
+    def update_hris_device(request:, timeout_ms: nil)
+      # update_hris_device - Update a device
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateHrisDevice2Request,
+        Models::Operations::UpdateHrisDeviceRequest,
         base_url,
         '/hris/{connection_id}/device/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateHrisDevice2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateHrisDeviceRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateHrisDevice2',
+        operation_id: 'updateHrisDevice',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisDevice)
-          response = Models::Operations::UpdateHrisDevice2Response.new(
+          response = Models::Operations::UpdateHrisDeviceResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

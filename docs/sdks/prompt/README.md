@@ -5,15 +5,15 @@
 
 ### Available Operations
 
-* [create_genai_prompt2](#create_genai_prompt2) - Create a prompt
+* [create_genai_prompt](#create_genai_prompt) - Create a prompt
 
-## create_genai_prompt2
+## create_genai_prompt
 
 Create a prompt
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiPrompt2" method="post" path="/genai/{connection_id}/prompt" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -24,7 +24,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.prompt.create_genai_prompt2(genai_prompt: Models::Shared::GenaiPrompt.new(), connection_id: '<id>')
+res = s.prompt.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(), connection_id: '<id>')
 
 unless res.genai_prompt.nil?
   # handle response
@@ -38,12 +38,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `genai_prompt`                                                                                                                                   | [Models::Shared::GenaiPrompt](../../models/shared/genaiprompt.md)                                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateGenaiPrompt2QueryParamFields](../../models/operations/creategenaiprompt2queryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateGenaiPromptQueryParamFields](../../models/operations/creategenaipromptqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateGenaiPrompt2Response)](../../models/operations/creategenaiprompt2response.md)**
+**[T.nilable(Models::Operations::CreateGenaiPromptResponse)](../../models/operations/creategenaipromptresponse.md)**
 
 ### Errors
 

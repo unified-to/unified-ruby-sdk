@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(genai_prompt: Models::Shared::GenaiPrompt, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiPrompt2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiPrompt2Response) }
-    def create_genai_prompt2(genai_prompt:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_genai_prompt2 - Create a prompt
-      request = Models::Operations::CreateGenaiPrompt2Request.new(
+    sig { params(genai_prompt: Models::Shared::GenaiPrompt, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiPromptQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiPromptResponse) }
+    def create_genai_prompt(genai_prompt:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_genai_prompt - Create a prompt
+      request = Models::Operations::CreateGenaiPromptRequest.new(
         genai_prompt: genai_prompt,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateGenaiPrompt2Request,
+        Models::Operations::CreateGenaiPromptRequest,
         base_url,
         '/genai/{connection_id}/prompt',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateGenaiPrompt2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateGenaiPromptRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createGenaiPrompt2',
+        operation_id: 'createGenaiPrompt',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::GenaiPrompt)
-          response = Models::Operations::CreateGenaiPrompt2Response.new(
+          response = Models::Operations::CreateGenaiPromptResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

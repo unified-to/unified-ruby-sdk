@@ -5,76 +5,76 @@
 
 ### Available Operations
 
-* [create_hris_bankaccount2](#create_hris_bankaccount2) - Create a bankaccount
-* [create_hris_benefit2](#create_hris_benefit2) - Create a benefit
-* [create_hris_company2](#create_hris_company2) - Create a company
-* [create_hris_deduction2](#create_hris_deduction2) - Create a deduction
-* [create_hris_device2](#create_hris_device2) - Create a device
-* [create_hris_employee2](#create_hris_employee2) - Create an employee
-* [create_hris_group2](#create_hris_group2) - Create a group
-* [create_hris_location2](#create_hris_location2) - Create a location
-* [create_hris_timeoff2](#create_hris_timeoff2) - Create a timeoff
-* [create_hris_timeshift2](#create_hris_timeshift2) - Create a timeshift
-* [get_hris_bankaccount2](#get_hris_bankaccount2) - Retrieve a bankaccount
-* [get_hris_benefit2](#get_hris_benefit2) - Retrieve a benefit
-* [get_hris_company2](#get_hris_company2) - Retrieve a company
-* [get_hris_deduction2](#get_hris_deduction2) - Retrieve a deduction
-* [get_hris_device2](#get_hris_device2) - Retrieve a device
-* [get_hris_employee2](#get_hris_employee2) - Retrieve an employee
-* [get_hris_group2](#get_hris_group2) - Retrieve a group
-* [get_hris_location2](#get_hris_location2) - Retrieve a location
-* [get_hris_payslip2](#get_hris_payslip2) - Retrieve a payslip
-* [get_hris_timeoff2](#get_hris_timeoff2) - Retrieve a timeoff
-* [get_hris_timeshift2](#get_hris_timeshift2) - Retrieve a timeshift
-* [list_hris_bankaccounts2](#list_hris_bankaccounts2) - List all bankaccounts
-* [list_hris_benefits2](#list_hris_benefits2) - List all benefits
-* [list_hris_companies2](#list_hris_companies2) - List all companies
-* [list_hris_deductions2](#list_hris_deductions2) - List all deductions
-* [list_hris_devices2](#list_hris_devices2) - List all devices
-* [list_hris_employees2](#list_hris_employees2) - List all employees
-* [list_hris_groups2](#list_hris_groups2) - List all groups
-* [list_hris_locations2](#list_hris_locations2) - List all locations
-* [list_hris_payslips2](#list_hris_payslips2) - List all payslips
-* [list_hris_timeoffs2](#list_hris_timeoffs2) - List all timeoffs
-* [list_hris_timeshifts2](#list_hris_timeshifts2) - List all timeshifts
-* [patch_hris_bankaccount2](#patch_hris_bankaccount2) - Update a bankaccount
-* [patch_hris_benefit2](#patch_hris_benefit2) - Update a benefit
-* [patch_hris_company2](#patch_hris_company2) - Update a company
-* [patch_hris_deduction2](#patch_hris_deduction2) - Update a deduction
-* [patch_hris_device2](#patch_hris_device2) - Update a device
-* [patch_hris_employee2](#patch_hris_employee2) - Update an employee
-* [patch_hris_group2](#patch_hris_group2) - Update a group
-* [patch_hris_location2](#patch_hris_location2) - Update a location
-* [patch_hris_timeoff2](#patch_hris_timeoff2) - Update a timeoff
-* [patch_hris_timeshift2](#patch_hris_timeshift2) - Update a timeshift
-* [remove_hris_bankaccount2](#remove_hris_bankaccount2) - Remove a bankaccount
-* [remove_hris_benefit2](#remove_hris_benefit2) - Remove a benefit
-* [remove_hris_company2](#remove_hris_company2) - Remove a company
-* [remove_hris_deduction2](#remove_hris_deduction2) - Remove a deduction
-* [remove_hris_device2](#remove_hris_device2) - Remove a device
-* [remove_hris_employee2](#remove_hris_employee2) - Remove an employee
-* [remove_hris_group2](#remove_hris_group2) - Remove a group
-* [remove_hris_location2](#remove_hris_location2) - Remove a location
-* [remove_hris_timeoff2](#remove_hris_timeoff2) - Remove a timeoff
-* [remove_hris_timeshift2](#remove_hris_timeshift2) - Remove a timeshift
-* [update_hris_bankaccount2](#update_hris_bankaccount2) - Update a bankaccount
-* [update_hris_benefit2](#update_hris_benefit2) - Update a benefit
-* [update_hris_company2](#update_hris_company2) - Update a company
-* [update_hris_deduction2](#update_hris_deduction2) - Update a deduction
-* [update_hris_device2](#update_hris_device2) - Update a device
-* [update_hris_employee2](#update_hris_employee2) - Update an employee
-* [update_hris_group2](#update_hris_group2) - Update a group
-* [update_hris_location2](#update_hris_location2) - Update a location
-* [update_hris_timeoff2](#update_hris_timeoff2) - Update a timeoff
-* [update_hris_timeshift2](#update_hris_timeshift2) - Update a timeshift
+* [create_hris_bankaccount](#create_hris_bankaccount) - Create a bankaccount
+* [create_hris_benefit](#create_hris_benefit) - Create a benefit
+* [create_hris_company](#create_hris_company) - Create a company
+* [create_hris_deduction](#create_hris_deduction) - Create a deduction
+* [create_hris_device](#create_hris_device) - Create a device
+* [create_hris_employee](#create_hris_employee) - Create an employee
+* [create_hris_group](#create_hris_group) - Create a group
+* [create_hris_location](#create_hris_location) - Create a location
+* [create_hris_timeoff](#create_hris_timeoff) - Create a timeoff
+* [create_hris_timeshift](#create_hris_timeshift) - Create a timeshift
+* [get_hris_bankaccount](#get_hris_bankaccount) - Retrieve a bankaccount
+* [get_hris_benefit](#get_hris_benefit) - Retrieve a benefit
+* [get_hris_company](#get_hris_company) - Retrieve a company
+* [get_hris_deduction](#get_hris_deduction) - Retrieve a deduction
+* [get_hris_device](#get_hris_device) - Retrieve a device
+* [get_hris_employee](#get_hris_employee) - Retrieve an employee
+* [get_hris_group](#get_hris_group) - Retrieve a group
+* [get_hris_location](#get_hris_location) - Retrieve a location
+* [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
+* [get_hris_timeoff](#get_hris_timeoff) - Retrieve a timeoff
+* [get_hris_timeshift](#get_hris_timeshift) - Retrieve a timeshift
+* [list_hris_bankaccounts](#list_hris_bankaccounts) - List all bankaccounts
+* [list_hris_benefits](#list_hris_benefits) - List all benefits
+* [list_hris_companies](#list_hris_companies) - List all companies
+* [list_hris_deductions](#list_hris_deductions) - List all deductions
+* [list_hris_devices](#list_hris_devices) - List all devices
+* [list_hris_employees](#list_hris_employees) - List all employees
+* [list_hris_groups](#list_hris_groups) - List all groups
+* [list_hris_locations](#list_hris_locations) - List all locations
+* [list_hris_payslips](#list_hris_payslips) - List all payslips
+* [list_hris_timeoffs](#list_hris_timeoffs) - List all timeoffs
+* [list_hris_timeshifts](#list_hris_timeshifts) - List all timeshifts
+* [patch_hris_bankaccount](#patch_hris_bankaccount) - Update a bankaccount
+* [patch_hris_benefit](#patch_hris_benefit) - Update a benefit
+* [patch_hris_company](#patch_hris_company) - Update a company
+* [patch_hris_deduction](#patch_hris_deduction) - Update a deduction
+* [patch_hris_device](#patch_hris_device) - Update a device
+* [patch_hris_employee](#patch_hris_employee) - Update an employee
+* [patch_hris_group](#patch_hris_group) - Update a group
+* [patch_hris_location](#patch_hris_location) - Update a location
+* [patch_hris_timeoff](#patch_hris_timeoff) - Update a timeoff
+* [patch_hris_timeshift](#patch_hris_timeshift) - Update a timeshift
+* [remove_hris_bankaccount](#remove_hris_bankaccount) - Remove a bankaccount
+* [remove_hris_benefit](#remove_hris_benefit) - Remove a benefit
+* [remove_hris_company](#remove_hris_company) - Remove a company
+* [remove_hris_deduction](#remove_hris_deduction) - Remove a deduction
+* [remove_hris_device](#remove_hris_device) - Remove a device
+* [remove_hris_employee](#remove_hris_employee) - Remove an employee
+* [remove_hris_group](#remove_hris_group) - Remove a group
+* [remove_hris_location](#remove_hris_location) - Remove a location
+* [remove_hris_timeoff](#remove_hris_timeoff) - Remove a timeoff
+* [remove_hris_timeshift](#remove_hris_timeshift) - Remove a timeshift
+* [update_hris_bankaccount](#update_hris_bankaccount) - Update a bankaccount
+* [update_hris_benefit](#update_hris_benefit) - Update a benefit
+* [update_hris_company](#update_hris_company) - Update a company
+* [update_hris_deduction](#update_hris_deduction) - Update a deduction
+* [update_hris_device](#update_hris_device) - Update a device
+* [update_hris_employee](#update_hris_employee) - Update an employee
+* [update_hris_group](#update_hris_group) - Update a group
+* [update_hris_location](#update_hris_location) - Update a location
+* [update_hris_timeoff](#update_hris_timeoff) - Update a timeoff
+* [update_hris_timeshift](#update_hris_timeshift) - Update a timeshift
 
-## create_hris_bankaccount2
+## create_hris_bankaccount
 
 Create a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisBankaccount2" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -85,7 +85,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_bankaccount2(hris_bankaccount: Models::Shared::HrisBankaccount.new(), connection_id: '<id>')
+res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBankaccount.new(), connection_id: '<id>')
 
 unless res.hris_bankaccount.nil?
   # handle response
@@ -99,12 +99,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `hris_bankaccount`                                                                                                                               | [Models::Shared::HrisBankaccount](../../models/shared/hrisbankaccount.md)                                                                        | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisBankaccount2QueryParamFields](../../models/operations/createhrisbankaccount2queryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisBankaccountQueryParamFields](../../models/operations/createhrisbankaccountqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateHrisBankaccount2Response)](../../models/operations/createhrisbankaccount2response.md)**
+**[T.nilable(Models::Operations::CreateHrisBankaccountResponse)](../../models/operations/createhrisbankaccountresponse.md)**
 
 ### Errors
 
@@ -112,13 +112,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_hris_benefit2
+## create_hris_benefit
 
 Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisBenefit2" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -129,7 +129,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_benefit2(hris_benefit: Models::Shared::HrisBenefit.new(), connection_id: '<id>')
+res = s.hris.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
   # handle response
@@ -143,12 +143,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `hris_benefit`                                                                                                                                   | [Models::Shared::HrisBenefit](../../models/shared/hrisbenefit.md)                                                                                | :heavy_check_mark:                                                                                                                               | Company-wide benefit plans available to employees.                                                                                               |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisBenefit2QueryParamFields](../../models/operations/createhrisbenefit2queryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisBenefitQueryParamFields](../../models/operations/createhrisbenefitqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateHrisBenefit2Response)](../../models/operations/createhrisbenefit2response.md)**
+**[T.nilable(Models::Operations::CreateHrisBenefitResponse)](../../models/operations/createhrisbenefitresponse.md)**
 
 ### Errors
 
@@ -156,13 +156,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_hris_company2
+## create_hris_company
 
 Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisCompany2" method="post" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -173,7 +173,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_company2(hris_company: Models::Shared::HrisCompany.new(), connection_id: '<id>')
+res = s.hris.create_hris_company(hris_company: Models::Shared::HrisCompany.new(), connection_id: '<id>')
 
 unless res.hris_company.nil?
   # handle response
@@ -187,12 +187,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `hris_company`                                                                                                                                   | [Models::Shared::HrisCompany](../../models/shared/hriscompany.md)                                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisCompany2QueryParamFields](../../models/operations/createhriscompany2queryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisCompanyQueryParamFields](../../models/operations/createhriscompanyqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateHrisCompany2Response)](../../models/operations/createhriscompany2response.md)**
+**[T.nilable(Models::Operations::CreateHrisCompanyResponse)](../../models/operations/createhriscompanyresponse.md)**
 
 ### Errors
 
@@ -200,13 +200,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_hris_deduction2
+## create_hris_deduction
 
 Create a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisDeduction2" method="post" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -217,7 +217,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_deduction2(hris_deduction: Models::Shared::HrisDeduction.new(), connection_id: '<id>')
+res = s.hris.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction.new(), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
   # handle response
@@ -231,12 +231,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `hris_deduction`                                                                                                                                 | [Models::Shared::HrisDeduction](../../models/shared/hrisdeduction.md)                                                                            | :heavy_check_mark:                                                                                                                               | Employee-specific deduction/benefit enrolment.                                                                                                   |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisDeduction2QueryParamFields](../../models/operations/createhrisdeduction2queryparamfields.md)>            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisDeductionQueryParamFields](../../models/operations/createhrisdeductionqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateHrisDeduction2Response)](../../models/operations/createhrisdeduction2response.md)**
+**[T.nilable(Models::Operations::CreateHrisDeductionResponse)](../../models/operations/createhrisdeductionresponse.md)**
 
 ### Errors
 
@@ -244,13 +244,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_hris_device2
+## create_hris_device
 
 Create a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisDevice2" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -261,7 +261,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_device2(hris_device: Models::Shared::HrisDevice.new(), connection_id: '<id>')
+res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(), connection_id: '<id>')
 
 unless res.hris_device.nil?
   # handle response
@@ -275,12 +275,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `hris_device`                                                                                                                                    | [Models::Shared::HrisDevice](../../models/shared/hrisdevice.md)                                                                                  | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisDevice2QueryParamFields](../../models/operations/createhrisdevice2queryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisDeviceQueryParamFields](../../models/operations/createhrisdevicequeryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateHrisDevice2Response)](../../models/operations/createhrisdevice2response.md)**
+**[T.nilable(Models::Operations::CreateHrisDeviceResponse)](../../models/operations/createhrisdeviceresponse.md)**
 
 ### Errors
 
@@ -288,13 +288,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_hris_employee2
+## create_hris_employee
 
 Create an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisEmployee2" method="post" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -305,7 +305,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_employee2(hris_employee: Models::Shared::HrisEmployee.new(), connection_id: '<id>')
+res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.new(), connection_id: '<id>')
 
 unless res.hris_employee.nil?
   # handle response
@@ -319,12 +319,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `hris_employee`                                                                                                                                  | [Models::Shared::HrisEmployee](../../models/shared/hrisemployee.md)                                                                              | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisEmployee2QueryParamFields](../../models/operations/createhrisemployee2queryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisEmployeeQueryParamFields](../../models/operations/createhrisemployeequeryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateHrisEmployee2Response)](../../models/operations/createhrisemployee2response.md)**
+**[T.nilable(Models::Operations::CreateHrisEmployeeResponse)](../../models/operations/createhrisemployeeresponse.md)**
 
 ### Errors
 
@@ -332,13 +332,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_hris_group2
+## create_hris_group
 
 Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisGroup2" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -349,7 +349,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_group2(hris_group: Models::Shared::HrisGroup.new(), connection_id: '<id>')
+res = s.hris.create_hris_group(hris_group: Models::Shared::HrisGroup.new(), connection_id: '<id>')
 
 unless res.hris_group.nil?
   # handle response
@@ -363,12 +363,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `hris_group`                                                                                                                                     | [Models::Shared::HrisGroup](../../models/shared/hrisgroup.md)                                                                                    | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisGroup2QueryParamFields](../../models/operations/createhrisgroup2queryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisGroupQueryParamFields](../../models/operations/createhrisgroupqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateHrisGroup2Response)](../../models/operations/createhrisgroup2response.md)**
+**[T.nilable(Models::Operations::CreateHrisGroupResponse)](../../models/operations/createhrisgroupresponse.md)**
 
 ### Errors
 
@@ -376,13 +376,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_hris_location2
+## create_hris_location
 
 Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisLocation2" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -393,7 +393,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_location2(hris_location: Models::Shared::HrisLocation.new(), connection_id: '<id>')
+res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.new(), connection_id: '<id>')
 
 unless res.hris_location.nil?
   # handle response
@@ -407,12 +407,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `hris_location`                                                                                                                                  | [Models::Shared::HrisLocation](../../models/shared/hrislocation.md)                                                                              | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisLocation2QueryParamFields](../../models/operations/createhrislocation2queryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisLocationQueryParamFields](../../models/operations/createhrislocationqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateHrisLocation2Response)](../../models/operations/createhrislocation2response.md)**
+**[T.nilable(Models::Operations::CreateHrisLocationResponse)](../../models/operations/createhrislocationresponse.md)**
 
 ### Errors
 
@@ -420,13 +420,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_hris_timeoff2
+## create_hris_timeoff
 
 Create a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisTimeoff2" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -437,7 +437,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_timeoff2(hris_timeoff: Models::Shared::HrisTimeoff.new(
+res = s.hris.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
   user_id: '<id>',
 ), connection_id: '<id>')
 
@@ -453,12 +453,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `hris_timeoff`                                                                                                                                   | [Models::Shared::HrisTimeoff](../../models/shared/hristimeoff.md)                                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisTimeoff2QueryParamFields](../../models/operations/createhristimeoff2queryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisTimeoffQueryParamFields](../../models/operations/createhristimeoffqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateHrisTimeoff2Response)](../../models/operations/createhristimeoff2response.md)**
+**[T.nilable(Models::Operations::CreateHrisTimeoffResponse)](../../models/operations/createhristimeoffresponse.md)**
 
 ### Errors
 
@@ -466,13 +466,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_hris_timeshift2
+## create_hris_timeshift
 
 Create a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisTimeshift2" method="post" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -483,7 +483,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_timeshift2(hris_timeshift: Models::Shared::HrisTimeshift.new(
+res = s.hris.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
   employee_user_id: '<id>',
 ), connection_id: '<id>')
 
@@ -499,12 +499,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `hris_timeshift`                                                                                                                                 | [Models::Shared::HrisTimeshift](../../models/shared/hristimeshift.md)                                                                            | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisTimeshift2QueryParamFields](../../models/operations/createhristimeshift2queryparamfields.md)>            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisTimeshiftQueryParamFields](../../models/operations/createhristimeshiftqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateHrisTimeshift2Response)](../../models/operations/createhristimeshift2response.md)**
+**[T.nilable(Models::Operations::CreateHrisTimeshiftResponse)](../../models/operations/createhristimeshiftresponse.md)**
 
 ### Errors
 
@@ -512,13 +512,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_hris_bankaccount2
+## get_hris_bankaccount
 
 Retrieve a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisBankaccount2" method="get" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisBankaccount" method="get" path="/hris/{connection_id}/bankaccount/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -529,7 +529,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.get_hris_bankaccount2(connection_id: '<id>', id: '<id>')
+res = s.hris.get_hris_bankaccount(connection_id: '<id>', id: '<id>')
 
 unless res.hris_bankaccount.nil?
   # handle response
@@ -543,12 +543,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Bankaccount                                                                                                                            |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisBankaccount2QueryParamFields](../../models/operations/gethrisbankaccount2queryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisBankaccountQueryParamFields](../../models/operations/gethrisbankaccountqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisBankaccount2Response)](../../models/operations/gethrisbankaccount2response.md)**
+**[T.nilable(Models::Operations::GetHrisBankaccountResponse)](../../models/operations/gethrisbankaccountresponse.md)**
 
 ### Errors
 
@@ -556,13 +556,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_hris_benefit2
+## get_hris_benefit
 
 Retrieve a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisBenefit2" method="get" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisBenefit" method="get" path="/hris/{connection_id}/benefit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -573,7 +573,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.get_hris_benefit2(connection_id: '<id>', id: '<id>')
+res = s.hris.get_hris_benefit(connection_id: '<id>', id: '<id>')
 
 unless res.hris_benefit.nil?
   # handle response
@@ -587,12 +587,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Benefit                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisBenefit2QueryParamFields](../../models/operations/gethrisbenefit2queryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisBenefitQueryParamFields](../../models/operations/gethrisbenefitqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisBenefit2Response)](../../models/operations/gethrisbenefit2response.md)**
+**[T.nilable(Models::Operations::GetHrisBenefitResponse)](../../models/operations/gethrisbenefitresponse.md)**
 
 ### Errors
 
@@ -600,13 +600,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_hris_company2
+## get_hris_company
 
 Retrieve a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisCompany2" method="get" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisCompany" method="get" path="/hris/{connection_id}/company/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -617,7 +617,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.get_hris_company2(connection_id: '<id>', id: '<id>')
+res = s.hris.get_hris_company(connection_id: '<id>', id: '<id>')
 
 unless res.hris_company.nil?
   # handle response
@@ -631,12 +631,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Company                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisCompany2QueryParamFields](../../models/operations/gethriscompany2queryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisCompanyQueryParamFields](../../models/operations/gethriscompanyqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisCompany2Response)](../../models/operations/gethriscompany2response.md)**
+**[T.nilable(Models::Operations::GetHrisCompanyResponse)](../../models/operations/gethriscompanyresponse.md)**
 
 ### Errors
 
@@ -644,13 +644,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_hris_deduction2
+## get_hris_deduction
 
 Retrieve a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisDeduction2" method="get" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisDeduction" method="get" path="/hris/{connection_id}/deduction/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -661,7 +661,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.get_hris_deduction2(connection_id: '<id>', id: '<id>')
+res = s.hris.get_hris_deduction(connection_id: '<id>', id: '<id>')
 
 unless res.hris_deduction.nil?
   # handle response
@@ -675,12 +675,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Deduction                                                                                                                              |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisDeduction2QueryParamFields](../../models/operations/gethrisdeduction2queryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisDeductionQueryParamFields](../../models/operations/gethrisdeductionqueryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisDeduction2Response)](../../models/operations/gethrisdeduction2response.md)**
+**[T.nilable(Models::Operations::GetHrisDeductionResponse)](../../models/operations/gethrisdeductionresponse.md)**
 
 ### Errors
 
@@ -688,13 +688,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_hris_device2
+## get_hris_device
 
 Retrieve a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisDevice2" method="get" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisDevice" method="get" path="/hris/{connection_id}/device/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -705,7 +705,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.get_hris_device2(connection_id: '<id>', id: '<id>')
+res = s.hris.get_hris_device(connection_id: '<id>', id: '<id>')
 
 unless res.hris_device.nil?
   # handle response
@@ -719,12 +719,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Device                                                                                                                                 |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisDevice2QueryParamFields](../../models/operations/gethrisdevice2queryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisDeviceQueryParamFields](../../models/operations/gethrisdevicequeryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisDevice2Response)](../../models/operations/gethrisdevice2response.md)**
+**[T.nilable(Models::Operations::GetHrisDeviceResponse)](../../models/operations/gethrisdeviceresponse.md)**
 
 ### Errors
 
@@ -732,13 +732,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_hris_employee2
+## get_hris_employee
 
 Retrieve an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisEmployee2" method="get" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisEmployee" method="get" path="/hris/{connection_id}/employee/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -749,7 +749,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.get_hris_employee2(connection_id: '<id>', id: '<id>')
+res = s.hris.get_hris_employee(connection_id: '<id>', id: '<id>')
 
 unless res.hris_employee.nil?
   # handle response
@@ -763,12 +763,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Employee                                                                                                                               |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisEmployee2QueryParamFields](../../models/operations/gethrisemployee2queryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisEmployeeQueryParamFields](../../models/operations/gethrisemployeequeryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisEmployee2Response)](../../models/operations/gethrisemployee2response.md)**
+**[T.nilable(Models::Operations::GetHrisEmployeeResponse)](../../models/operations/gethrisemployeeresponse.md)**
 
 ### Errors
 
@@ -776,13 +776,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_hris_group2
+## get_hris_group
 
 Retrieve a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisGroup2" method="get" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisGroup" method="get" path="/hris/{connection_id}/group/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -793,7 +793,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.get_hris_group2(connection_id: '<id>', id: '<id>')
+res = s.hris.get_hris_group(connection_id: '<id>', id: '<id>')
 
 unless res.hris_group.nil?
   # handle response
@@ -807,12 +807,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Group                                                                                                                                  |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisGroup2QueryParamFields](../../models/operations/gethrisgroup2queryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisGroupQueryParamFields](../../models/operations/gethrisgroupqueryparamfields.md)>                            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisGroup2Response)](../../models/operations/gethrisgroup2response.md)**
+**[T.nilable(Models::Operations::GetHrisGroupResponse)](../../models/operations/gethrisgroupresponse.md)**
 
 ### Errors
 
@@ -820,13 +820,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_hris_location2
+## get_hris_location
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisLocation2" method="get" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisLocation" method="get" path="/hris/{connection_id}/location/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -837,7 +837,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.get_hris_location2(connection_id: '<id>', id: '<id>')
+res = s.hris.get_hris_location(connection_id: '<id>', id: '<id>')
 
 unless res.hris_location.nil?
   # handle response
@@ -851,12 +851,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Location                                                                                                                               |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisLocation2QueryParamFields](../../models/operations/gethrislocation2queryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisLocationQueryParamFields](../../models/operations/gethrislocationqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisLocation2Response)](../../models/operations/gethrislocation2response.md)**
+**[T.nilable(Models::Operations::GetHrisLocationResponse)](../../models/operations/gethrislocationresponse.md)**
 
 ### Errors
 
@@ -864,13 +864,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_hris_payslip2
+## get_hris_payslip
 
 Retrieve a payslip
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisPayslip2" method="get" path="/hris/{connection_id}/payslip/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -881,7 +881,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.get_hris_payslip2(connection_id: '<id>', id: '<id>')
+res = s.hris.get_hris_payslip(connection_id: '<id>', id: '<id>')
 
 unless res.hris_payslip.nil?
   # handle response
@@ -895,12 +895,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Payslip                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisPayslip2QueryParamFields](../../models/operations/gethrispayslip2queryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisPayslipQueryParamFields](../../models/operations/gethrispayslipqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisPayslip2Response)](../../models/operations/gethrispayslip2response.md)**
+**[T.nilable(Models::Operations::GetHrisPayslipResponse)](../../models/operations/gethrispayslipresponse.md)**
 
 ### Errors
 
@@ -908,13 +908,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_hris_timeoff2
+## get_hris_timeoff
 
 Retrieve a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisTimeoff2" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisTimeoff" method="get" path="/hris/{connection_id}/timeoff/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -925,7 +925,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.get_hris_timeoff2(connection_id: '<id>', id: '<id>')
+res = s.hris.get_hris_timeoff(connection_id: '<id>', id: '<id>')
 
 unless res.hris_timeoff.nil?
   # handle response
@@ -939,12 +939,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Timeoff                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisTimeoff2QueryParamFields](../../models/operations/gethristimeoff2queryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisTimeoffQueryParamFields](../../models/operations/gethristimeoffqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisTimeoff2Response)](../../models/operations/gethristimeoff2response.md)**
+**[T.nilable(Models::Operations::GetHrisTimeoffResponse)](../../models/operations/gethristimeoffresponse.md)**
 
 ### Errors
 
@@ -952,13 +952,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_hris_timeshift2
+## get_hris_timeshift
 
 Retrieve a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisTimeshift2" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisTimeshift" method="get" path="/hris/{connection_id}/timeshift/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -969,7 +969,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.get_hris_timeshift2(connection_id: '<id>', id: '<id>')
+res = s.hris.get_hris_timeshift(connection_id: '<id>', id: '<id>')
 
 unless res.hris_timeshift.nil?
   # handle response
@@ -983,12 +983,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Timeshift                                                                                                                              |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisTimeshift2QueryParamFields](../../models/operations/gethristimeshift2queryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisTimeshiftQueryParamFields](../../models/operations/gethristimeshiftqueryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisTimeshift2Response)](../../models/operations/gethristimeshift2response.md)**
+**[T.nilable(Models::Operations::GetHrisTimeshiftResponse)](../../models/operations/gethristimeshiftresponse.md)**
 
 ### Errors
 
@@ -996,13 +996,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_bankaccounts2
+## list_hris_bankaccounts
 
 List all bankaccounts
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisBankaccounts2" method="get" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisBankaccounts" method="get" path="/hris/{connection_id}/bankaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1013,11 +1013,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisBankaccounts2Request.new(
+req = Models::Operations::ListHrisBankaccountsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.hris.list_hris_bankaccounts2(request: req)
+res = s.hris.list_hris_bankaccounts(request: req)
 
 unless res.hris_bankaccounts.nil?
   # handle response
@@ -1027,13 +1027,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                   | [Models::Operations::ListHrisBankaccounts2Request](../../models/operations/listhrisbankaccounts2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::ListHrisBankaccountsRequest](../../models/operations/listhrisbankaccountsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisBankaccounts2Response)](../../models/operations/listhrisbankaccounts2response.md)**
+**[T.nilable(Models::Operations::ListHrisBankaccountsResponse)](../../models/operations/listhrisbankaccountsresponse.md)**
 
 ### Errors
 
@@ -1041,13 +1041,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_benefits2
+## list_hris_benefits
 
 List all benefits
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisBenefits2" method="get" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisBenefits" method="get" path="/hris/{connection_id}/benefit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1058,11 +1058,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisBenefits2Request.new(
+req = Models::Operations::ListHrisBenefitsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.hris.list_hris_benefits2(request: req)
+res = s.hris.list_hris_benefits(request: req)
 
 unless res.hris_benefits.nil?
   # handle response
@@ -1072,13 +1072,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::ListHrisBenefits2Request](../../models/operations/listhrisbenefits2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListHrisBenefitsRequest](../../models/operations/listhrisbenefitsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisBenefits2Response)](../../models/operations/listhrisbenefits2response.md)**
+**[T.nilable(Models::Operations::ListHrisBenefitsResponse)](../../models/operations/listhrisbenefitsresponse.md)**
 
 ### Errors
 
@@ -1086,13 +1086,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_companies2
+## list_hris_companies
 
 List all companies
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisCompanies2" method="get" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisCompanies" method="get" path="/hris/{connection_id}/company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1103,11 +1103,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisCompanies2Request.new(
+req = Models::Operations::ListHrisCompaniesRequest.new(
   connection_id: '<id>',
 )
 
-res = s.hris.list_hris_companies2(request: req)
+res = s.hris.list_hris_companies(request: req)
 
 unless res.hris_companies.nil?
   # handle response
@@ -1117,13 +1117,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::ListHrisCompanies2Request](../../models/operations/listhriscompanies2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListHrisCompaniesRequest](../../models/operations/listhriscompaniesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisCompanies2Response)](../../models/operations/listhriscompanies2response.md)**
+**[T.nilable(Models::Operations::ListHrisCompaniesResponse)](../../models/operations/listhriscompaniesresponse.md)**
 
 ### Errors
 
@@ -1131,13 +1131,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_deductions2
+## list_hris_deductions
 
 List all deductions
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisDeductions2" method="get" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisDeductions" method="get" path="/hris/{connection_id}/deduction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1148,11 +1148,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisDeductions2Request.new(
+req = Models::Operations::ListHrisDeductionsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.hris.list_hris_deductions2(request: req)
+res = s.hris.list_hris_deductions(request: req)
 
 unless res.hris_deductions.nil?
   # handle response
@@ -1162,13 +1162,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::ListHrisDeductions2Request](../../models/operations/listhrisdeductions2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListHrisDeductionsRequest](../../models/operations/listhrisdeductionsrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisDeductions2Response)](../../models/operations/listhrisdeductions2response.md)**
+**[T.nilable(Models::Operations::ListHrisDeductionsResponse)](../../models/operations/listhrisdeductionsresponse.md)**
 
 ### Errors
 
@@ -1176,13 +1176,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_devices2
+## list_hris_devices
 
 List all devices
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisDevices2" method="get" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisDevices" method="get" path="/hris/{connection_id}/device" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1193,11 +1193,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisDevices2Request.new(
+req = Models::Operations::ListHrisDevicesRequest.new(
   connection_id: '<id>',
 )
 
-res = s.hris.list_hris_devices2(request: req)
+res = s.hris.list_hris_devices(request: req)
 
 unless res.hris_devices.nil?
   # handle response
@@ -1207,13 +1207,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::ListHrisDevices2Request](../../models/operations/listhrisdevices2request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::ListHrisDevicesRequest](../../models/operations/listhrisdevicesrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisDevices2Response)](../../models/operations/listhrisdevices2response.md)**
+**[T.nilable(Models::Operations::ListHrisDevicesResponse)](../../models/operations/listhrisdevicesresponse.md)**
 
 ### Errors
 
@@ -1221,13 +1221,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_employees2
+## list_hris_employees
 
 List all employees
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisEmployees2" method="get" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisEmployees" method="get" path="/hris/{connection_id}/employee" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1238,11 +1238,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisEmployees2Request.new(
+req = Models::Operations::ListHrisEmployeesRequest.new(
   connection_id: '<id>',
 )
 
-res = s.hris.list_hris_employees2(request: req)
+res = s.hris.list_hris_employees(request: req)
 
 unless res.hris_employees.nil?
   # handle response
@@ -1252,13 +1252,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::ListHrisEmployees2Request](../../models/operations/listhrisemployees2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListHrisEmployeesRequest](../../models/operations/listhrisemployeesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisEmployees2Response)](../../models/operations/listhrisemployees2response.md)**
+**[T.nilable(Models::Operations::ListHrisEmployeesResponse)](../../models/operations/listhrisemployeesresponse.md)**
 
 ### Errors
 
@@ -1266,13 +1266,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_groups2
+## list_hris_groups
 
 List all groups
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisGroups2" method="get" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisGroups" method="get" path="/hris/{connection_id}/group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1283,11 +1283,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisGroups2Request.new(
+req = Models::Operations::ListHrisGroupsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.hris.list_hris_groups2(request: req)
+res = s.hris.list_hris_groups(request: req)
 
 unless res.hris_groups.nil?
   # handle response
@@ -1297,13 +1297,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Models::Operations::ListHrisGroups2Request](../../models/operations/listhrisgroups2request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::ListHrisGroupsRequest](../../models/operations/listhrisgroupsrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisGroups2Response)](../../models/operations/listhrisgroups2response.md)**
+**[T.nilable(Models::Operations::ListHrisGroupsResponse)](../../models/operations/listhrisgroupsresponse.md)**
 
 ### Errors
 
@@ -1311,13 +1311,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_locations2
+## list_hris_locations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisLocations2" method="get" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisLocations" method="get" path="/hris/{connection_id}/location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1328,11 +1328,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisLocations2Request.new(
+req = Models::Operations::ListHrisLocationsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.hris.list_hris_locations2(request: req)
+res = s.hris.list_hris_locations(request: req)
 
 unless res.hris_locations.nil?
   # handle response
@@ -1342,13 +1342,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::ListHrisLocations2Request](../../models/operations/listhrislocations2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListHrisLocationsRequest](../../models/operations/listhrislocationsrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisLocations2Response)](../../models/operations/listhrislocations2response.md)**
+**[T.nilable(Models::Operations::ListHrisLocationsResponse)](../../models/operations/listhrislocationsresponse.md)**
 
 ### Errors
 
@@ -1356,13 +1356,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_payslips2
+## list_hris_payslips
 
 List all payslips
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisPayslips2" method="get" path="/hris/{connection_id}/payslip" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1373,11 +1373,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisPayslips2Request.new(
+req = Models::Operations::ListHrisPayslipsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.hris.list_hris_payslips2(request: req)
+res = s.hris.list_hris_payslips(request: req)
 
 unless res.hris_payslips.nil?
   # handle response
@@ -1387,13 +1387,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::ListHrisPayslips2Request](../../models/operations/listhrispayslips2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListHrisPayslipsRequest](../../models/operations/listhrispayslipsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisPayslips2Response)](../../models/operations/listhrispayslips2response.md)**
+**[T.nilable(Models::Operations::ListHrisPayslipsResponse)](../../models/operations/listhrispayslipsresponse.md)**
 
 ### Errors
 
@@ -1401,13 +1401,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_timeoffs2
+## list_hris_timeoffs
 
 List all timeoffs
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisTimeoffs2" method="get" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisTimeoffs" method="get" path="/hris/{connection_id}/timeoff" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1418,11 +1418,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisTimeoffs2Request.new(
+req = Models::Operations::ListHrisTimeoffsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.hris.list_hris_timeoffs2(request: req)
+res = s.hris.list_hris_timeoffs(request: req)
 
 unless res.hris_timeoffs.nil?
   # handle response
@@ -1432,13 +1432,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::ListHrisTimeoffs2Request](../../models/operations/listhristimeoffs2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListHrisTimeoffsRequest](../../models/operations/listhristimeoffsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisTimeoffs2Response)](../../models/operations/listhristimeoffs2response.md)**
+**[T.nilable(Models::Operations::ListHrisTimeoffsResponse)](../../models/operations/listhristimeoffsresponse.md)**
 
 ### Errors
 
@@ -1446,13 +1446,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_timeshifts2
+## list_hris_timeshifts
 
 List all timeshifts
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisTimeshifts2" method="get" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisTimeshifts" method="get" path="/hris/{connection_id}/timeshift" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1463,11 +1463,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisTimeshifts2Request.new(
+req = Models::Operations::ListHrisTimeshiftsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.hris.list_hris_timeshifts2(request: req)
+res = s.hris.list_hris_timeshifts(request: req)
 
 unless res.hris_timeshifts.nil?
   # handle response
@@ -1477,13 +1477,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::ListHrisTimeshifts2Request](../../models/operations/listhristimeshifts2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListHrisTimeshiftsRequest](../../models/operations/listhristimeshiftsrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisTimeshifts2Response)](../../models/operations/listhristimeshifts2response.md)**
+**[T.nilable(Models::Operations::ListHrisTimeshiftsResponse)](../../models/operations/listhristimeshiftsresponse.md)**
 
 ### Errors
 
@@ -1491,13 +1491,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_hris_bankaccount2
+## patch_hris_bankaccount
 
 Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisBankaccount2" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1508,13 +1508,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchHrisBankaccount2Request.new(
+req = Models::Operations::PatchHrisBankaccountRequest.new(
   hris_bankaccount: Models::Shared::HrisBankaccount.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.patch_hris_bankaccount2(request: req)
+res = s.hris.patch_hris_bankaccount(request: req)
 
 unless res.hris_bankaccount.nil?
   # handle response
@@ -1524,13 +1524,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                   | [Models::Operations::PatchHrisBankaccount2Request](../../models/operations/patchhrisbankaccount2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::PatchHrisBankaccountRequest](../../models/operations/patchhrisbankaccountrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchHrisBankaccount2Response)](../../models/operations/patchhrisbankaccount2response.md)**
+**[T.nilable(Models::Operations::PatchHrisBankaccountResponse)](../../models/operations/patchhrisbankaccountresponse.md)**
 
 ### Errors
 
@@ -1538,13 +1538,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_hris_benefit2
+## patch_hris_benefit
 
 Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisBenefit2" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1555,13 +1555,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchHrisBenefit2Request.new(
+req = Models::Operations::PatchHrisBenefitRequest.new(
   hris_benefit: Models::Shared::HrisBenefit.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.patch_hris_benefit2(request: req)
+res = s.hris.patch_hris_benefit(request: req)
 
 unless res.hris_benefit.nil?
   # handle response
@@ -1571,13 +1571,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::PatchHrisBenefit2Request](../../models/operations/patchhrisbenefit2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::PatchHrisBenefitRequest](../../models/operations/patchhrisbenefitrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchHrisBenefit2Response)](../../models/operations/patchhrisbenefit2response.md)**
+**[T.nilable(Models::Operations::PatchHrisBenefitResponse)](../../models/operations/patchhrisbenefitresponse.md)**
 
 ### Errors
 
@@ -1585,13 +1585,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_hris_company2
+## patch_hris_company
 
 Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisCompany2" method="patch" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1602,13 +1602,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchHrisCompany2Request.new(
+req = Models::Operations::PatchHrisCompanyRequest.new(
   hris_company: Models::Shared::HrisCompany.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.patch_hris_company2(request: req)
+res = s.hris.patch_hris_company(request: req)
 
 unless res.hris_company.nil?
   # handle response
@@ -1618,13 +1618,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::PatchHrisCompany2Request](../../models/operations/patchhriscompany2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::PatchHrisCompanyRequest](../../models/operations/patchhriscompanyrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchHrisCompany2Response)](../../models/operations/patchhriscompany2response.md)**
+**[T.nilable(Models::Operations::PatchHrisCompanyResponse)](../../models/operations/patchhriscompanyresponse.md)**
 
 ### Errors
 
@@ -1632,13 +1632,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_hris_deduction2
+## patch_hris_deduction
 
 Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisDeduction2" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1649,13 +1649,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchHrisDeduction2Request.new(
+req = Models::Operations::PatchHrisDeductionRequest.new(
   hris_deduction: Models::Shared::HrisDeduction.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.patch_hris_deduction2(request: req)
+res = s.hris.patch_hris_deduction(request: req)
 
 unless res.hris_deduction.nil?
   # handle response
@@ -1665,13 +1665,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::PatchHrisDeduction2Request](../../models/operations/patchhrisdeduction2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::PatchHrisDeductionRequest](../../models/operations/patchhrisdeductionrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchHrisDeduction2Response)](../../models/operations/patchhrisdeduction2response.md)**
+**[T.nilable(Models::Operations::PatchHrisDeductionResponse)](../../models/operations/patchhrisdeductionresponse.md)**
 
 ### Errors
 
@@ -1679,13 +1679,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_hris_device2
+## patch_hris_device
 
 Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisDevice2" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1696,13 +1696,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchHrisDevice2Request.new(
+req = Models::Operations::PatchHrisDeviceRequest.new(
   hris_device: Models::Shared::HrisDevice.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.patch_hris_device2(request: req)
+res = s.hris.patch_hris_device(request: req)
 
 unless res.hris_device.nil?
   # handle response
@@ -1712,13 +1712,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::PatchHrisDevice2Request](../../models/operations/patchhrisdevice2request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::PatchHrisDeviceRequest](../../models/operations/patchhrisdevicerequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchHrisDevice2Response)](../../models/operations/patchhrisdevice2response.md)**
+**[T.nilable(Models::Operations::PatchHrisDeviceResponse)](../../models/operations/patchhrisdeviceresponse.md)**
 
 ### Errors
 
@@ -1726,13 +1726,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_hris_employee2
+## patch_hris_employee
 
 Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisEmployee2" method="patch" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1743,13 +1743,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchHrisEmployee2Request.new(
+req = Models::Operations::PatchHrisEmployeeRequest.new(
   hris_employee: Models::Shared::HrisEmployee.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.patch_hris_employee2(request: req)
+res = s.hris.patch_hris_employee(request: req)
 
 unless res.hris_employee.nil?
   # handle response
@@ -1759,13 +1759,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::PatchHrisEmployee2Request](../../models/operations/patchhrisemployee2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::PatchHrisEmployeeRequest](../../models/operations/patchhrisemployeerequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchHrisEmployee2Response)](../../models/operations/patchhrisemployee2response.md)**
+**[T.nilable(Models::Operations::PatchHrisEmployeeResponse)](../../models/operations/patchhrisemployeeresponse.md)**
 
 ### Errors
 
@@ -1773,13 +1773,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_hris_group2
+## patch_hris_group
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisGroup2" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1790,13 +1790,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchHrisGroup2Request.new(
+req = Models::Operations::PatchHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.patch_hris_group2(request: req)
+res = s.hris.patch_hris_group(request: req)
 
 unless res.hris_group.nil?
   # handle response
@@ -1806,13 +1806,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `request`                                                                                       | [Models::Operations::PatchHrisGroup2Request](../../models/operations/patchhrisgroup2request.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::PatchHrisGroupRequest](../../models/operations/patchhrisgrouprequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchHrisGroup2Response)](../../models/operations/patchhrisgroup2response.md)**
+**[T.nilable(Models::Operations::PatchHrisGroupResponse)](../../models/operations/patchhrisgroupresponse.md)**
 
 ### Errors
 
@@ -1820,13 +1820,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_hris_location2
+## patch_hris_location
 
 Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisLocation2" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1837,13 +1837,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchHrisLocation2Request.new(
+req = Models::Operations::PatchHrisLocationRequest.new(
   hris_location: Models::Shared::HrisLocation.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.patch_hris_location2(request: req)
+res = s.hris.patch_hris_location(request: req)
 
 unless res.hris_location.nil?
   # handle response
@@ -1853,13 +1853,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::PatchHrisLocation2Request](../../models/operations/patchhrislocation2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::PatchHrisLocationRequest](../../models/operations/patchhrislocationrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchHrisLocation2Response)](../../models/operations/patchhrislocation2response.md)**
+**[T.nilable(Models::Operations::PatchHrisLocationResponse)](../../models/operations/patchhrislocationresponse.md)**
 
 ### Errors
 
@@ -1867,13 +1867,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_hris_timeoff2
+## patch_hris_timeoff
 
 Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisTimeoff2" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1884,7 +1884,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchHrisTimeoff2Request.new(
+req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
     user_id: '<id>',
   ),
@@ -1892,7 +1892,7 @@ req = Models::Operations::PatchHrisTimeoff2Request.new(
   id: '<id>',
 )
 
-res = s.hris.patch_hris_timeoff2(request: req)
+res = s.hris.patch_hris_timeoff(request: req)
 
 unless res.hris_timeoff.nil?
   # handle response
@@ -1902,13 +1902,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::PatchHrisTimeoff2Request](../../models/operations/patchhristimeoff2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::PatchHrisTimeoffRequest](../../models/operations/patchhristimeoffrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchHrisTimeoff2Response)](../../models/operations/patchhristimeoff2response.md)**
+**[T.nilable(Models::Operations::PatchHrisTimeoffResponse)](../../models/operations/patchhristimeoffresponse.md)**
 
 ### Errors
 
@@ -1916,13 +1916,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_hris_timeshift2
+## patch_hris_timeshift
 
 Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisTimeshift2" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1933,7 +1933,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchHrisTimeshift2Request.new(
+req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
     employee_user_id: '<id>',
   ),
@@ -1941,7 +1941,7 @@ req = Models::Operations::PatchHrisTimeshift2Request.new(
   id: '<id>',
 )
 
-res = s.hris.patch_hris_timeshift2(request: req)
+res = s.hris.patch_hris_timeshift(request: req)
 
 unless res.hris_timeshift.nil?
   # handle response
@@ -1951,13 +1951,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::PatchHrisTimeshift2Request](../../models/operations/patchhristimeshift2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::PatchHrisTimeshiftRequest](../../models/operations/patchhristimeshiftrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchHrisTimeshift2Response)](../../models/operations/patchhristimeshift2response.md)**
+**[T.nilable(Models::Operations::PatchHrisTimeshiftResponse)](../../models/operations/patchhristimeshiftresponse.md)**
 
 ### Errors
 
@@ -1965,13 +1965,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_hris_bankaccount2
+## remove_hris_bankaccount
 
 Remove a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeHrisBankaccount2" method="delete" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeHrisBankaccount" method="delete" path="/hris/{connection_id}/bankaccount/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1982,7 +1982,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.remove_hris_bankaccount2(connection_id: '<id>', id: '<id>')
+res = s.hris.remove_hris_bankaccount(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1999,7 +1999,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveHrisBankaccount2Response)](../../models/operations/removehrisbankaccount2response.md)**
+**[T.nilable(Models::Operations::RemoveHrisBankaccountResponse)](../../models/operations/removehrisbankaccountresponse.md)**
 
 ### Errors
 
@@ -2007,13 +2007,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_hris_benefit2
+## remove_hris_benefit
 
 Remove a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeHrisBenefit2" method="delete" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeHrisBenefit" method="delete" path="/hris/{connection_id}/benefit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2024,7 +2024,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.remove_hris_benefit2(connection_id: '<id>', id: '<id>')
+res = s.hris.remove_hris_benefit(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2041,7 +2041,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveHrisBenefit2Response)](../../models/operations/removehrisbenefit2response.md)**
+**[T.nilable(Models::Operations::RemoveHrisBenefitResponse)](../../models/operations/removehrisbenefitresponse.md)**
 
 ### Errors
 
@@ -2049,13 +2049,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_hris_company2
+## remove_hris_company
 
 Remove a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeHrisCompany2" method="delete" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeHrisCompany" method="delete" path="/hris/{connection_id}/company/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2066,7 +2066,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.remove_hris_company2(connection_id: '<id>', id: '<id>')
+res = s.hris.remove_hris_company(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2083,7 +2083,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveHrisCompany2Response)](../../models/operations/removehriscompany2response.md)**
+**[T.nilable(Models::Operations::RemoveHrisCompanyResponse)](../../models/operations/removehriscompanyresponse.md)**
 
 ### Errors
 
@@ -2091,13 +2091,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_hris_deduction2
+## remove_hris_deduction
 
 Remove a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeHrisDeduction2" method="delete" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeHrisDeduction" method="delete" path="/hris/{connection_id}/deduction/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2108,7 +2108,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.remove_hris_deduction2(connection_id: '<id>', id: '<id>')
+res = s.hris.remove_hris_deduction(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2125,7 +2125,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveHrisDeduction2Response)](../../models/operations/removehrisdeduction2response.md)**
+**[T.nilable(Models::Operations::RemoveHrisDeductionResponse)](../../models/operations/removehrisdeductionresponse.md)**
 
 ### Errors
 
@@ -2133,13 +2133,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_hris_device2
+## remove_hris_device
 
 Remove a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeHrisDevice2" method="delete" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeHrisDevice" method="delete" path="/hris/{connection_id}/device/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2150,7 +2150,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.remove_hris_device2(connection_id: '<id>', id: '<id>')
+res = s.hris.remove_hris_device(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2167,7 +2167,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveHrisDevice2Response)](../../models/operations/removehrisdevice2response.md)**
+**[T.nilable(Models::Operations::RemoveHrisDeviceResponse)](../../models/operations/removehrisdeviceresponse.md)**
 
 ### Errors
 
@@ -2175,13 +2175,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_hris_employee2
+## remove_hris_employee
 
 Remove an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeHrisEmployee2" method="delete" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeHrisEmployee" method="delete" path="/hris/{connection_id}/employee/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2192,7 +2192,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.remove_hris_employee2(connection_id: '<id>', id: '<id>')
+res = s.hris.remove_hris_employee(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2209,7 +2209,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveHrisEmployee2Response)](../../models/operations/removehrisemployee2response.md)**
+**[T.nilable(Models::Operations::RemoveHrisEmployeeResponse)](../../models/operations/removehrisemployeeresponse.md)**
 
 ### Errors
 
@@ -2217,13 +2217,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_hris_group2
+## remove_hris_group
 
 Remove a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeHrisGroup2" method="delete" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeHrisGroup" method="delete" path="/hris/{connection_id}/group/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2234,7 +2234,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.remove_hris_group2(connection_id: '<id>', id: '<id>')
+res = s.hris.remove_hris_group(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2251,7 +2251,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveHrisGroup2Response)](../../models/operations/removehrisgroup2response.md)**
+**[T.nilable(Models::Operations::RemoveHrisGroupResponse)](../../models/operations/removehrisgroupresponse.md)**
 
 ### Errors
 
@@ -2259,13 +2259,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_hris_location2
+## remove_hris_location
 
 Remove a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeHrisLocation2" method="delete" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeHrisLocation" method="delete" path="/hris/{connection_id}/location/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2276,7 +2276,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.remove_hris_location2(connection_id: '<id>', id: '<id>')
+res = s.hris.remove_hris_location(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2293,7 +2293,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveHrisLocation2Response)](../../models/operations/removehrislocation2response.md)**
+**[T.nilable(Models::Operations::RemoveHrisLocationResponse)](../../models/operations/removehrislocationresponse.md)**
 
 ### Errors
 
@@ -2301,13 +2301,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_hris_timeoff2
+## remove_hris_timeoff
 
 Remove a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeHrisTimeoff2" method="delete" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeHrisTimeoff" method="delete" path="/hris/{connection_id}/timeoff/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2318,7 +2318,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.remove_hris_timeoff2(connection_id: '<id>', id: '<id>')
+res = s.hris.remove_hris_timeoff(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2335,7 +2335,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveHrisTimeoff2Response)](../../models/operations/removehristimeoff2response.md)**
+**[T.nilable(Models::Operations::RemoveHrisTimeoffResponse)](../../models/operations/removehristimeoffresponse.md)**
 
 ### Errors
 
@@ -2343,13 +2343,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_hris_timeshift2
+## remove_hris_timeshift
 
 Remove a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeHrisTimeshift2" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeHrisTimeshift" method="delete" path="/hris/{connection_id}/timeshift/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2360,7 +2360,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.remove_hris_timeshift2(connection_id: '<id>', id: '<id>')
+res = s.hris.remove_hris_timeshift(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -2377,7 +2377,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveHrisTimeshift2Response)](../../models/operations/removehristimeshift2response.md)**
+**[T.nilable(Models::Operations::RemoveHrisTimeshiftResponse)](../../models/operations/removehristimeshiftresponse.md)**
 
 ### Errors
 
@@ -2385,13 +2385,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_hris_bankaccount2
+## update_hris_bankaccount
 
 Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisBankaccount2" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2402,13 +2402,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateHrisBankaccount2Request.new(
+req = Models::Operations::UpdateHrisBankaccountRequest.new(
   hris_bankaccount: Models::Shared::HrisBankaccount.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.update_hris_bankaccount2(request: req)
+res = s.hris.update_hris_bankaccount(request: req)
 
 unless res.hris_bankaccount.nil?
   # handle response
@@ -2418,13 +2418,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                     | [Models::Operations::UpdateHrisBankaccount2Request](../../models/operations/updatehrisbankaccount2request.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::UpdateHrisBankaccountRequest](../../models/operations/updatehrisbankaccountrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateHrisBankaccount2Response)](../../models/operations/updatehrisbankaccount2response.md)**
+**[T.nilable(Models::Operations::UpdateHrisBankaccountResponse)](../../models/operations/updatehrisbankaccountresponse.md)**
 
 ### Errors
 
@@ -2432,13 +2432,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_hris_benefit2
+## update_hris_benefit
 
 Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisBenefit2" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2449,13 +2449,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateHrisBenefit2Request.new(
+req = Models::Operations::UpdateHrisBenefitRequest.new(
   hris_benefit: Models::Shared::HrisBenefit.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.update_hris_benefit2(request: req)
+res = s.hris.update_hris_benefit(request: req)
 
 unless res.hris_benefit.nil?
   # handle response
@@ -2465,13 +2465,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::UpdateHrisBenefit2Request](../../models/operations/updatehrisbenefit2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::UpdateHrisBenefitRequest](../../models/operations/updatehrisbenefitrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateHrisBenefit2Response)](../../models/operations/updatehrisbenefit2response.md)**
+**[T.nilable(Models::Operations::UpdateHrisBenefitResponse)](../../models/operations/updatehrisbenefitresponse.md)**
 
 ### Errors
 
@@ -2479,13 +2479,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_hris_company2
+## update_hris_company
 
 Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisCompany2" method="put" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2496,13 +2496,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateHrisCompany2Request.new(
+req = Models::Operations::UpdateHrisCompanyRequest.new(
   hris_company: Models::Shared::HrisCompany.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.update_hris_company2(request: req)
+res = s.hris.update_hris_company(request: req)
 
 unless res.hris_company.nil?
   # handle response
@@ -2512,13 +2512,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::UpdateHrisCompany2Request](../../models/operations/updatehriscompany2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::UpdateHrisCompanyRequest](../../models/operations/updatehriscompanyrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateHrisCompany2Response)](../../models/operations/updatehriscompany2response.md)**
+**[T.nilable(Models::Operations::UpdateHrisCompanyResponse)](../../models/operations/updatehriscompanyresponse.md)**
 
 ### Errors
 
@@ -2526,13 +2526,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_hris_deduction2
+## update_hris_deduction
 
 Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisDeduction2" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2543,13 +2543,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateHrisDeduction2Request.new(
+req = Models::Operations::UpdateHrisDeductionRequest.new(
   hris_deduction: Models::Shared::HrisDeduction.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.update_hris_deduction2(request: req)
+res = s.hris.update_hris_deduction(request: req)
 
 unless res.hris_deduction.nil?
   # handle response
@@ -2559,13 +2559,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [Models::Operations::UpdateHrisDeduction2Request](../../models/operations/updatehrisdeduction2request.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::UpdateHrisDeductionRequest](../../models/operations/updatehrisdeductionrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateHrisDeduction2Response)](../../models/operations/updatehrisdeduction2response.md)**
+**[T.nilable(Models::Operations::UpdateHrisDeductionResponse)](../../models/operations/updatehrisdeductionresponse.md)**
 
 ### Errors
 
@@ -2573,13 +2573,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_hris_device2
+## update_hris_device
 
 Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisDevice2" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2590,13 +2590,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateHrisDevice2Request.new(
+req = Models::Operations::UpdateHrisDeviceRequest.new(
   hris_device: Models::Shared::HrisDevice.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.update_hris_device2(request: req)
+res = s.hris.update_hris_device(request: req)
 
 unless res.hris_device.nil?
   # handle response
@@ -2606,13 +2606,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::UpdateHrisDevice2Request](../../models/operations/updatehrisdevice2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::UpdateHrisDeviceRequest](../../models/operations/updatehrisdevicerequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateHrisDevice2Response)](../../models/operations/updatehrisdevice2response.md)**
+**[T.nilable(Models::Operations::UpdateHrisDeviceResponse)](../../models/operations/updatehrisdeviceresponse.md)**
 
 ### Errors
 
@@ -2620,13 +2620,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_hris_employee2
+## update_hris_employee
 
 Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisEmployee2" method="put" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2637,13 +2637,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateHrisEmployee2Request.new(
+req = Models::Operations::UpdateHrisEmployeeRequest.new(
   hris_employee: Models::Shared::HrisEmployee.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.update_hris_employee2(request: req)
+res = s.hris.update_hris_employee(request: req)
 
 unless res.hris_employee.nil?
   # handle response
@@ -2653,13 +2653,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::UpdateHrisEmployee2Request](../../models/operations/updatehrisemployee2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::UpdateHrisEmployeeRequest](../../models/operations/updatehrisemployeerequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateHrisEmployee2Response)](../../models/operations/updatehrisemployee2response.md)**
+**[T.nilable(Models::Operations::UpdateHrisEmployeeResponse)](../../models/operations/updatehrisemployeeresponse.md)**
 
 ### Errors
 
@@ -2667,13 +2667,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_hris_group2
+## update_hris_group
 
 Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisGroup2" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2684,13 +2684,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateHrisGroup2Request.new(
+req = Models::Operations::UpdateHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.update_hris_group2(request: req)
+res = s.hris.update_hris_group(request: req)
 
 unless res.hris_group.nil?
   # handle response
@@ -2700,13 +2700,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::UpdateHrisGroup2Request](../../models/operations/updatehrisgroup2request.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::UpdateHrisGroupRequest](../../models/operations/updatehrisgrouprequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateHrisGroup2Response)](../../models/operations/updatehrisgroup2response.md)**
+**[T.nilable(Models::Operations::UpdateHrisGroupResponse)](../../models/operations/updatehrisgroupresponse.md)**
 
 ### Errors
 
@@ -2714,13 +2714,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_hris_location2
+## update_hris_location
 
 Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisLocation2" method="put" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2731,13 +2731,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateHrisLocation2Request.new(
+req = Models::Operations::UpdateHrisLocationRequest.new(
   hris_location: Models::Shared::HrisLocation.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.hris.update_hris_location2(request: req)
+res = s.hris.update_hris_location(request: req)
 
 unless res.hris_location.nil?
   # handle response
@@ -2747,13 +2747,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::UpdateHrisLocation2Request](../../models/operations/updatehrislocation2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::UpdateHrisLocationRequest](../../models/operations/updatehrislocationrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateHrisLocation2Response)](../../models/operations/updatehrislocation2response.md)**
+**[T.nilable(Models::Operations::UpdateHrisLocationResponse)](../../models/operations/updatehrislocationresponse.md)**
 
 ### Errors
 
@@ -2761,13 +2761,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_hris_timeoff2
+## update_hris_timeoff
 
 Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisTimeoff2" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2778,7 +2778,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateHrisTimeoff2Request.new(
+req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
     user_id: '<id>',
   ),
@@ -2786,7 +2786,7 @@ req = Models::Operations::UpdateHrisTimeoff2Request.new(
   id: '<id>',
 )
 
-res = s.hris.update_hris_timeoff2(request: req)
+res = s.hris.update_hris_timeoff(request: req)
 
 unless res.hris_timeoff.nil?
   # handle response
@@ -2796,13 +2796,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::UpdateHrisTimeoff2Request](../../models/operations/updatehristimeoff2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::UpdateHrisTimeoffRequest](../../models/operations/updatehristimeoffrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateHrisTimeoff2Response)](../../models/operations/updatehristimeoff2response.md)**
+**[T.nilable(Models::Operations::UpdateHrisTimeoffResponse)](../../models/operations/updatehristimeoffresponse.md)**
 
 ### Errors
 
@@ -2810,13 +2810,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_hris_timeshift2
+## update_hris_timeshift
 
 Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisTimeshift2" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2827,7 +2827,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateHrisTimeshift2Request.new(
+req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
     employee_user_id: '<id>',
   ),
@@ -2835,7 +2835,7 @@ req = Models::Operations::UpdateHrisTimeshift2Request.new(
   id: '<id>',
 )
 
-res = s.hris.update_hris_timeshift2(request: req)
+res = s.hris.update_hris_timeshift(request: req)
 
 unless res.hris_timeshift.nil?
   # handle response
@@ -2845,13 +2845,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [Models::Operations::UpdateHrisTimeshift2Request](../../models/operations/updatehristimeshift2request.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::UpdateHrisTimeshiftRequest](../../models/operations/updatehristimeshiftrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateHrisTimeshift2Response)](../../models/operations/updatehristimeshift2response.md)**
+**[T.nilable(Models::Operations::UpdateHrisTimeshiftResponse)](../../models/operations/updatehristimeshiftresponse.md)**
 
 ### Errors
 

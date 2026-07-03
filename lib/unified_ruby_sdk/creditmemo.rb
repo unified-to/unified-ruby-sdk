@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_creditmemo: Models::Shared::AccountingCreditmemo, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingCreditmemo2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCreditmemo2Response) }
-    def create_accounting_creditmemo2(accounting_creditmemo:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_accounting_creditmemo2 - Create a creditmemo
-      request = Models::Operations::CreateAccountingCreditmemo2Request.new(
+    sig { params(accounting_creditmemo: Models::Shared::AccountingCreditmemo, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingCreditmemoQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCreditmemoResponse) }
+    def create_accounting_creditmemo(accounting_creditmemo:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_accounting_creditmemo - Create a creditmemo
+      request = Models::Operations::CreateAccountingCreditmemoRequest.new(
         accounting_creditmemo: accounting_creditmemo,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAccountingCreditmemo2Request,
+        Models::Operations::CreateAccountingCreditmemoRequest,
         base_url,
         '/accounting/{connection_id}/creditmemo',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAccountingCreditmemo2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAccountingCreditmemoRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAccountingCreditmemo2',
+        operation_id: 'createAccountingCreditmemo',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingCreditmemo)
-          response = Models::Operations::CreateAccountingCreditmemo2Response.new(
+          response = Models::Operations::CreateAccountingCreditmemoResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCreditmemo2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCreditmemo2Response) }
-    def get_accounting_creditmemo2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_accounting_creditmemo2 - Retrieve a creditmemo
-      request = Models::Operations::GetAccountingCreditmemo2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCreditmemoQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCreditmemoResponse) }
+    def get_accounting_creditmemo(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_accounting_creditmemo - Retrieve a creditmemo
+      request = Models::Operations::GetAccountingCreditmemoRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAccountingCreditmemo2Request,
+        Models::Operations::GetAccountingCreditmemoRequest,
         base_url,
         '/accounting/{connection_id}/creditmemo/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAccountingCreditmemo2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAccountingCreditmemoRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAccountingCreditmemo2',
+        operation_id: 'getAccountingCreditmemo',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingCreditmemo)
-          response = Models::Operations::GetAccountingCreditmemo2Response.new(
+          response = Models::Operations::GetAccountingCreditmemoResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAccountingCreditmemoes2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingCreditmemoes2Response) }
-    def list_accounting_creditmemoes2(request:, timeout_ms: nil)
-      # list_accounting_creditmemoes2 - List all creditmemoes
+    sig { params(request: Models::Operations::ListAccountingCreditmemoesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingCreditmemoesResponse) }
+    def list_accounting_creditmemoes(request:, timeout_ms: nil)
+      # list_accounting_creditmemoes - List all creditmemoes
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAccountingCreditmemoes2Request,
+        Models::Operations::ListAccountingCreditmemoesRequest,
         base_url,
         '/accounting/{connection_id}/creditmemo',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAccountingCreditmemoes2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAccountingCreditmemoesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAccountingCreditmemoes2',
+        operation_id: 'listAccountingCreditmemoes',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AccountingCreditmemo))
-          response = Models::Operations::ListAccountingCreditmemoes2Response.new(
+          response = Models::Operations::ListAccountingCreditmemoesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAccountingCreditmemo2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingCreditmemo2Response) }
-    def patch_accounting_creditmemo2(request:, timeout_ms: nil)
-      # patch_accounting_creditmemo2 - Update a creditmemo
+    sig { params(request: Models::Operations::PatchAccountingCreditmemoRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingCreditmemoResponse) }
+    def patch_accounting_creditmemo(request:, timeout_ms: nil)
+      # patch_accounting_creditmemo - Update a creditmemo
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAccountingCreditmemo2Request,
+        Models::Operations::PatchAccountingCreditmemoRequest,
         base_url,
         '/accounting/{connection_id}/creditmemo/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAccountingCreditmemo2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAccountingCreditmemoRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAccountingCreditmemo2',
+        operation_id: 'patchAccountingCreditmemo',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingCreditmemo)
-          response = Models::Operations::PatchAccountingCreditmemo2Response.new(
+          response = Models::Operations::PatchAccountingCreditmemoResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingCreditmemo2Response) }
-    def remove_accounting_creditmemo2(connection_id:, id:, timeout_ms: nil)
-      # remove_accounting_creditmemo2 - Remove a creditmemo
-      request = Models::Operations::RemoveAccountingCreditmemo2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingCreditmemoResponse) }
+    def remove_accounting_creditmemo(connection_id:, id:, timeout_ms: nil)
+      # remove_accounting_creditmemo - Remove a creditmemo
+      request = Models::Operations::RemoveAccountingCreditmemoRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAccountingCreditmemo2Request,
+        Models::Operations::RemoveAccountingCreditmemoRequest,
         base_url,
         '/accounting/{connection_id}/creditmemo/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAccountingCreditmemo2',
+        operation_id: 'removeAccountingCreditmemo',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAccountingCreditmemo2Response.new(
+        return Models::Operations::RemoveAccountingCreditmemoResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAccountingCreditmemo2Response.new(
+        return Models::Operations::RemoveAccountingCreditmemoResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAccountingCreditmemo2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingCreditmemo2Response) }
-    def update_accounting_creditmemo2(request:, timeout_ms: nil)
-      # update_accounting_creditmemo2 - Update a creditmemo
+    sig { params(request: Models::Operations::UpdateAccountingCreditmemoRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingCreditmemoResponse) }
+    def update_accounting_creditmemo(request:, timeout_ms: nil)
+      # update_accounting_creditmemo - Update a creditmemo
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAccountingCreditmemo2Request,
+        Models::Operations::UpdateAccountingCreditmemoRequest,
         base_url,
         '/accounting/{connection_id}/creditmemo/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAccountingCreditmemo2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAccountingCreditmemoRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAccountingCreditmemo2',
+        operation_id: 'updateAccountingCreditmemo',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingCreditmemo)
-          response = Models::Operations::UpdateAccountingCreditmemo2Response.new(
+          response = Models::Operations::UpdateAccountingCreditmemoResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

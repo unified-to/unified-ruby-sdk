@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_employee: Models::Shared::HrisEmployee, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisEmployee2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisEmployee2Response) }
-    def create_hris_employee2(hris_employee:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_hris_employee2 - Create an employee
-      request = Models::Operations::CreateHrisEmployee2Request.new(
+    sig { params(hris_employee: Models::Shared::HrisEmployee, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisEmployeeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisEmployeeResponse) }
+    def create_hris_employee(hris_employee:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_hris_employee - Create an employee
+      request = Models::Operations::CreateHrisEmployeeRequest.new(
         hris_employee: hris_employee,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateHrisEmployee2Request,
+        Models::Operations::CreateHrisEmployeeRequest,
         base_url,
         '/hris/{connection_id}/employee',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateHrisEmployee2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateHrisEmployeeRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createHrisEmployee2',
+        operation_id: 'createHrisEmployee',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisEmployee)
-          response = Models::Operations::CreateHrisEmployee2Response.new(
+          response = Models::Operations::CreateHrisEmployeeResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisEmployee2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisEmployee2Response) }
-    def get_hris_employee2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_hris_employee2 - Retrieve an employee
-      request = Models::Operations::GetHrisEmployee2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisEmployeeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisEmployeeResponse) }
+    def get_hris_employee(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_hris_employee - Retrieve an employee
+      request = Models::Operations::GetHrisEmployeeRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetHrisEmployee2Request,
+        Models::Operations::GetHrisEmployeeRequest,
         base_url,
         '/hris/{connection_id}/employee/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetHrisEmployee2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetHrisEmployeeRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getHrisEmployee2',
+        operation_id: 'getHrisEmployee',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisEmployee)
-          response = Models::Operations::GetHrisEmployee2Response.new(
+          response = Models::Operations::GetHrisEmployeeResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListHrisEmployees2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisEmployees2Response) }
-    def list_hris_employees2(request:, timeout_ms: nil)
-      # list_hris_employees2 - List all employees
+    sig { params(request: Models::Operations::ListHrisEmployeesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisEmployeesResponse) }
+    def list_hris_employees(request:, timeout_ms: nil)
+      # list_hris_employees - List all employees
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListHrisEmployees2Request,
+        Models::Operations::ListHrisEmployeesRequest,
         base_url,
         '/hris/{connection_id}/employee',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListHrisEmployees2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListHrisEmployeesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listHrisEmployees2',
+        operation_id: 'listHrisEmployees',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::HrisEmployee))
-          response = Models::Operations::ListHrisEmployees2Response.new(
+          response = Models::Operations::ListHrisEmployeesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchHrisEmployee2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisEmployee2Response) }
-    def patch_hris_employee2(request:, timeout_ms: nil)
-      # patch_hris_employee2 - Update an employee
+    sig { params(request: Models::Operations::PatchHrisEmployeeRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisEmployeeResponse) }
+    def patch_hris_employee(request:, timeout_ms: nil)
+      # patch_hris_employee - Update an employee
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchHrisEmployee2Request,
+        Models::Operations::PatchHrisEmployeeRequest,
         base_url,
         '/hris/{connection_id}/employee/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchHrisEmployee2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchHrisEmployeeRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchHrisEmployee2',
+        operation_id: 'patchHrisEmployee',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisEmployee)
-          response = Models::Operations::PatchHrisEmployee2Response.new(
+          response = Models::Operations::PatchHrisEmployeeResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisEmployee2Response) }
-    def remove_hris_employee2(connection_id:, id:, timeout_ms: nil)
-      # remove_hris_employee2 - Remove an employee
-      request = Models::Operations::RemoveHrisEmployee2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisEmployeeResponse) }
+    def remove_hris_employee(connection_id:, id:, timeout_ms: nil)
+      # remove_hris_employee - Remove an employee
+      request = Models::Operations::RemoveHrisEmployeeRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveHrisEmployee2Request,
+        Models::Operations::RemoveHrisEmployeeRequest,
         base_url,
         '/hris/{connection_id}/employee/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeHrisEmployee2',
+        operation_id: 'removeHrisEmployee',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisEmployee2Response.new(
+        return Models::Operations::RemoveHrisEmployeeResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisEmployee2Response.new(
+        return Models::Operations::RemoveHrisEmployeeResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateHrisEmployee2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisEmployee2Response) }
-    def update_hris_employee2(request:, timeout_ms: nil)
-      # update_hris_employee2 - Update an employee
+    sig { params(request: Models::Operations::UpdateHrisEmployeeRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisEmployeeResponse) }
+    def update_hris_employee(request:, timeout_ms: nil)
+      # update_hris_employee - Update an employee
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateHrisEmployee2Request,
+        Models::Operations::UpdateHrisEmployeeRequest,
         base_url,
         '/hris/{connection_id}/employee/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateHrisEmployee2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateHrisEmployeeRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateHrisEmployee2',
+        operation_id: 'updateHrisEmployee',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisEmployee)
-          response = Models::Operations::UpdateHrisEmployee2Response.new(
+          response = Models::Operations::UpdateHrisEmployeeResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

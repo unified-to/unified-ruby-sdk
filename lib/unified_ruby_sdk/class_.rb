@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_class: Models::Shared::LmsClass, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsClass2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsClass2Response) }
-    def create_lms_class2(lms_class:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_lms_class2 - Create a class
-      request = Models::Operations::CreateLmsClass2Request.new(
+    sig { params(lms_class: Models::Shared::LmsClass, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsClassQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsClassResponse) }
+    def create_lms_class(lms_class:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_lms_class - Create a class
+      request = Models::Operations::CreateLmsClassRequest.new(
         lms_class: lms_class,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateLmsClass2Request,
+        Models::Operations::CreateLmsClassRequest,
         base_url,
         '/lms/{connection_id}/class',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateLmsClass2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateLmsClassRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createLmsClass2',
+        operation_id: 'createLmsClass',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsClass)
-          response = Models::Operations::CreateLmsClass2Response.new(
+          response = Models::Operations::CreateLmsClassResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsClass2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsClass2Response) }
-    def get_lms_class2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_lms_class2 - Retrieve a class
-      request = Models::Operations::GetLmsClass2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsClassQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsClassResponse) }
+    def get_lms_class(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_lms_class - Retrieve a class
+      request = Models::Operations::GetLmsClassRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetLmsClass2Request,
+        Models::Operations::GetLmsClassRequest,
         base_url,
         '/lms/{connection_id}/class/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetLmsClass2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetLmsClassRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getLmsClass2',
+        operation_id: 'getLmsClass',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsClass)
-          response = Models::Operations::GetLmsClass2Response.new(
+          response = Models::Operations::GetLmsClassResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListLmsClasses2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsClasses2Response) }
-    def list_lms_classes2(request:, timeout_ms: nil)
-      # list_lms_classes2 - List all classes
+    sig { params(request: Models::Operations::ListLmsClassesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsClassesResponse) }
+    def list_lms_classes(request:, timeout_ms: nil)
+      # list_lms_classes - List all classes
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListLmsClasses2Request,
+        Models::Operations::ListLmsClassesRequest,
         base_url,
         '/lms/{connection_id}/class',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListLmsClasses2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListLmsClassesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listLmsClasses2',
+        operation_id: 'listLmsClasses',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::LmsClass))
-          response = Models::Operations::ListLmsClasses2Response.new(
+          response = Models::Operations::ListLmsClassesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchLmsClass2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsClass2Response) }
-    def patch_lms_class2(request:, timeout_ms: nil)
-      # patch_lms_class2 - Update a class
+    sig { params(request: Models::Operations::PatchLmsClassRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsClassResponse) }
+    def patch_lms_class(request:, timeout_ms: nil)
+      # patch_lms_class - Update a class
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchLmsClass2Request,
+        Models::Operations::PatchLmsClassRequest,
         base_url,
         '/lms/{connection_id}/class/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchLmsClass2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchLmsClassRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchLmsClass2',
+        operation_id: 'patchLmsClass',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsClass)
-          response = Models::Operations::PatchLmsClass2Response.new(
+          response = Models::Operations::PatchLmsClassResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsClass2Response) }
-    def remove_lms_class2(connection_id:, id:, timeout_ms: nil)
-      # remove_lms_class2 - Remove a class
-      request = Models::Operations::RemoveLmsClass2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsClassResponse) }
+    def remove_lms_class(connection_id:, id:, timeout_ms: nil)
+      # remove_lms_class - Remove a class
+      request = Models::Operations::RemoveLmsClassRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveLmsClass2Request,
+        Models::Operations::RemoveLmsClassRequest,
         base_url,
         '/lms/{connection_id}/class/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeLmsClass2',
+        operation_id: 'removeLmsClass',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveLmsClass2Response.new(
+        return Models::Operations::RemoveLmsClassResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveLmsClass2Response.new(
+        return Models::Operations::RemoveLmsClassResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateLmsClass2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsClass2Response) }
-    def update_lms_class2(request:, timeout_ms: nil)
-      # update_lms_class2 - Update a class
+    sig { params(request: Models::Operations::UpdateLmsClassRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsClassResponse) }
+    def update_lms_class(request:, timeout_ms: nil)
+      # update_lms_class - Update a class
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateLmsClass2Request,
+        Models::Operations::UpdateLmsClassRequest,
         base_url,
         '/lms/{connection_id}/class/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateLmsClass2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateLmsClassRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateLmsClass2',
+        operation_id: 'updateLmsClass',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsClass)
-          response = Models::Operations::UpdateLmsClass2Response.new(
+          response = Models::Operations::UpdateLmsClassResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

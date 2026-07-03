@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingProfitloss2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingProfitloss2Response) }
-    def get_accounting_profitloss2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_accounting_profitloss2 - Retrieve a profitloss
-      request = Models::Operations::GetAccountingProfitloss2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingProfitlossQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingProfitlossResponse) }
+    def get_accounting_profitloss(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_accounting_profitloss - Retrieve a profitloss
+      request = Models::Operations::GetAccountingProfitlossRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAccountingProfitloss2Request,
+        Models::Operations::GetAccountingProfitlossRequest,
         base_url,
         '/accounting/{connection_id}/profitloss/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAccountingProfitloss2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAccountingProfitlossRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAccountingProfitloss2',
+        operation_id: 'getAccountingProfitloss',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingProfitloss)
-          response = Models::Operations::GetAccountingProfitloss2Response.new(
+          response = Models::Operations::GetAccountingProfitlossResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAccountingProfitlosses2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingProfitlosses2Response) }
-    def list_accounting_profitlosses2(request:, timeout_ms: nil)
-      # list_accounting_profitlosses2 - List all profitlosses
+    sig { params(request: Models::Operations::ListAccountingProfitlossesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingProfitlossesResponse) }
+    def list_accounting_profitlosses(request:, timeout_ms: nil)
+      # list_accounting_profitlosses - List all profitlosses
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAccountingProfitlosses2Request,
+        Models::Operations::ListAccountingProfitlossesRequest,
         base_url,
         '/accounting/{connection_id}/profitloss',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAccountingProfitlosses2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAccountingProfitlossesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAccountingProfitlosses2',
+        operation_id: 'listAccountingProfitlosses',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AccountingProfitloss))
-          response = Models::Operations::ListAccountingProfitlosses2Response.new(
+          response = Models::Operations::ListAccountingProfitlossesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

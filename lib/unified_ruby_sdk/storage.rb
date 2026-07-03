@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateStorageFile2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateStorageFile2Response) }
-    def create_storage_file2(storage_file:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_storage_file2 - Create a file
-      request = Models::Operations::CreateStorageFile2Request.new(
+    sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateStorageFileQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateStorageFileResponse) }
+    def create_storage_file(storage_file:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_storage_file - Create a file
+      request = Models::Operations::CreateStorageFileRequest.new(
         storage_file: storage_file,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateStorageFile2Request,
+        Models::Operations::CreateStorageFileRequest,
         base_url,
         '/storage/{connection_id}/file',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateStorageFile2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateStorageFileRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createStorageFile2',
+        operation_id: 'createStorageFile',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::StorageFile)
-          response = Models::Operations::CreateStorageFile2Response.new(
+          response = Models::Operations::CreateStorageFileResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetStorageFile2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetStorageFile2Response) }
-    def get_storage_file2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_storage_file2 - Retrieve a file
-      request = Models::Operations::GetStorageFile2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetStorageFileQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetStorageFileResponse) }
+    def get_storage_file(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_storage_file - Retrieve a file
+      request = Models::Operations::GetStorageFileRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetStorageFile2Request,
+        Models::Operations::GetStorageFileRequest,
         base_url,
         '/storage/{connection_id}/file/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetStorageFile2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetStorageFileRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getStorageFile2',
+        operation_id: 'getStorageFile',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::StorageFile)
-          response = Models::Operations::GetStorageFile2Response.new(
+          response = Models::Operations::GetStorageFileResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListStorageFiles2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListStorageFiles2Response) }
-    def list_storage_files2(request:, timeout_ms: nil)
-      # list_storage_files2 - List all files
+    sig { params(request: Models::Operations::ListStorageFilesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListStorageFilesResponse) }
+    def list_storage_files(request:, timeout_ms: nil)
+      # list_storage_files - List all files
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListStorageFiles2Request,
+        Models::Operations::ListStorageFilesRequest,
         base_url,
         '/storage/{connection_id}/file',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListStorageFiles2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListStorageFilesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listStorageFiles2',
+        operation_id: 'listStorageFiles',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::StorageFile))
-          response = Models::Operations::ListStorageFiles2Response.new(
+          response = Models::Operations::ListStorageFilesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchStorageFile2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchStorageFile2Response) }
-    def patch_storage_file2(request:, timeout_ms: nil)
-      # patch_storage_file2 - Update a file
+    sig { params(request: Models::Operations::PatchStorageFileRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchStorageFileResponse) }
+    def patch_storage_file(request:, timeout_ms: nil)
+      # patch_storage_file - Update a file
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchStorageFile2Request,
+        Models::Operations::PatchStorageFileRequest,
         base_url,
         '/storage/{connection_id}/file/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchStorageFile2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchStorageFileRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchStorageFile2',
+        operation_id: 'patchStorageFile',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::StorageFile)
-          response = Models::Operations::PatchStorageFile2Response.new(
+          response = Models::Operations::PatchStorageFileResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveStorageFile2Response) }
-    def remove_storage_file2(connection_id:, id:, timeout_ms: nil)
-      # remove_storage_file2 - Remove a file
-      request = Models::Operations::RemoveStorageFile2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveStorageFileResponse) }
+    def remove_storage_file(connection_id:, id:, timeout_ms: nil)
+      # remove_storage_file - Remove a file
+      request = Models::Operations::RemoveStorageFileRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveStorageFile2Request,
+        Models::Operations::RemoveStorageFileRequest,
         base_url,
         '/storage/{connection_id}/file/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeStorageFile2',
+        operation_id: 'removeStorageFile',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveStorageFile2Response.new(
+        return Models::Operations::RemoveStorageFileResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveStorageFile2Response.new(
+        return Models::Operations::RemoveStorageFileResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateStorageFile2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateStorageFile2Response) }
-    def update_storage_file2(request:, timeout_ms: nil)
-      # update_storage_file2 - Update a file
+    sig { params(request: Models::Operations::UpdateStorageFileRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateStorageFileResponse) }
+    def update_storage_file(request:, timeout_ms: nil)
+      # update_storage_file - Update a file
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateStorageFile2Request,
+        Models::Operations::UpdateStorageFileRequest,
         base_url,
         '/storage/{connection_id}/file/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateStorageFile2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateStorageFileRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateStorageFile2',
+        operation_id: 'updateStorageFile',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::StorageFile)
-          response = Models::Operations::UpdateStorageFile2Response.new(
+          response = Models::Operations::UpdateStorageFileResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

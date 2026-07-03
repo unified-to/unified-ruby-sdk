@@ -5,16 +5,16 @@
 
 ### Available Operations
 
-* [get_accounting_balancesheet2](#get_accounting_balancesheet2) - Retrieve a balancesheet
-* [list_accounting_balancesheets2](#list_accounting_balancesheets2) - List all balancesheets
+* [get_accounting_balancesheet](#get_accounting_balancesheet) - Retrieve a balancesheet
+* [list_accounting_balancesheets](#list_accounting_balancesheets) - List all balancesheets
 
-## get_accounting_balancesheet2
+## get_accounting_balancesheet
 
 Retrieve a balancesheet
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getAccountingBalancesheet2" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getAccountingBalancesheet" method="get" path="/accounting/{connection_id}/balancesheet/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -25,7 +25,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.balancesheet.get_accounting_balancesheet2(connection_id: '<id>', id: '<id>')
+res = s.balancesheet.get_accounting_balancesheet(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_balancesheet.nil?
   # handle response
@@ -35,16 +35,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `connection_id`                                                                                                                                   | *::String*                                                                                                                                        | :heavy_check_mark:                                                                                                                                | ID of the connection                                                                                                                              |
-| `id`                                                                                                                                              | *::String*                                                                                                                                        | :heavy_check_mark:                                                                                                                                | ID of the Balancesheet                                                                                                                            |
-| `fields_`                                                                                                                                         | T::Array<[Models::Operations::GetAccountingBalancesheet2QueryParamFields](../../models/operations/getaccountingbalancesheet2queryparamfields.md)> | :heavy_minus_sign:                                                                                                                                | Fields to return                                                                                                                                  |
-| `raw`                                                                                                                                             | *T.nilable(::String)*                                                                                                                             | :heavy_minus_sign:                                                                                                                                | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar  |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Balancesheet                                                                                                                           |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAccountingBalancesheetQueryParamFields](../../models/operations/getaccountingbalancesheetqueryparamfields.md)>  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetAccountingBalancesheet2Response)](../../models/operations/getaccountingbalancesheet2response.md)**
+**[T.nilable(Models::Operations::GetAccountingBalancesheetResponse)](../../models/operations/getaccountingbalancesheetresponse.md)**
 
 ### Errors
 
@@ -52,13 +52,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_accounting_balancesheets2
+## list_accounting_balancesheets
 
 List all balancesheets
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listAccountingBalancesheets2" method="get" path="/accounting/{connection_id}/balancesheet" -->
+<!-- UsageSnippet language="ruby" operationID="listAccountingBalancesheets" method="get" path="/accounting/{connection_id}/balancesheet" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -69,11 +69,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListAccountingBalancesheets2Request.new(
+req = Models::Operations::ListAccountingBalancesheetsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.balancesheet.list_accounting_balancesheets2(request: req)
+res = s.balancesheet.list_accounting_balancesheets(request: req)
 
 unless res.accounting_balancesheets.nil?
   # handle response
@@ -83,13 +83,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                                 | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                 | [Models::Operations::ListAccountingBalancesheets2Request](../../models/operations/listaccountingbalancesheets2request.md) | :heavy_check_mark:                                                                                                        | The request object to use for the request.                                                                                |
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                               | [Models::Operations::ListAccountingBalancesheetsRequest](../../models/operations/listaccountingbalancesheetsrequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListAccountingBalancesheets2Response)](../../models/operations/listaccountingbalancesheets2response.md)**
+**[T.nilable(Models::Operations::ListAccountingBalancesheetsResponse)](../../models/operations/listaccountingbalancesheetsresponse.md)**
 
 ### Errors
 

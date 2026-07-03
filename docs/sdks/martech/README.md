@@ -5,33 +5,33 @@
 
 ### Available Operations
 
-* [create_martech_campaign2](#create_martech_campaign2) - Create a campaign
-* [create_martech_list2](#create_martech_list2) - Create a list
-* [create_martech_member2](#create_martech_member2) - Create a member
-* [get_martech_campaign2](#get_martech_campaign2) - Retrieve a campaign
-* [get_martech_list2](#get_martech_list2) - Retrieve a list
-* [get_martech_member2](#get_martech_member2) - Retrieve a member
-* [list_martech_campaigns2](#list_martech_campaigns2) - List all campaigns
-* [list_martech_lists2](#list_martech_lists2) - List all lists
-* [list_martech_members2](#list_martech_members2) - List all members
-* [list_martech_reports2](#list_martech_reports2) - List all reports
-* [patch_martech_campaign2](#patch_martech_campaign2) - Update a campaign
-* [patch_martech_list2](#patch_martech_list2) - Update a list
-* [patch_martech_member2](#patch_martech_member2) - Update a member
-* [remove_martech_campaign2](#remove_martech_campaign2) - Remove a campaign
-* [remove_martech_list2](#remove_martech_list2) - Remove a list
-* [remove_martech_member2](#remove_martech_member2) - Remove a member
-* [update_martech_campaign2](#update_martech_campaign2) - Update a campaign
-* [update_martech_list2](#update_martech_list2) - Update a list
-* [update_martech_member2](#update_martech_member2) - Update a member
+* [create_martech_campaign](#create_martech_campaign) - Create a campaign
+* [create_martech_list](#create_martech_list) - Create a list
+* [create_martech_member](#create_martech_member) - Create a member
+* [get_martech_campaign](#get_martech_campaign) - Retrieve a campaign
+* [get_martech_list](#get_martech_list) - Retrieve a list
+* [get_martech_member](#get_martech_member) - Retrieve a member
+* [list_martech_campaigns](#list_martech_campaigns) - List all campaigns
+* [list_martech_lists](#list_martech_lists) - List all lists
+* [list_martech_members](#list_martech_members) - List all members
+* [list_martech_reports](#list_martech_reports) - List all reports
+* [patch_martech_campaign](#patch_martech_campaign) - Update a campaign
+* [patch_martech_list](#patch_martech_list) - Update a list
+* [patch_martech_member](#patch_martech_member) - Update a member
+* [remove_martech_campaign](#remove_martech_campaign) - Remove a campaign
+* [remove_martech_list](#remove_martech_list) - Remove a list
+* [remove_martech_member](#remove_martech_member) - Remove a member
+* [update_martech_campaign](#update_martech_campaign) - Update a campaign
+* [update_martech_list](#update_martech_list) - Update a list
+* [update_martech_member](#update_martech_member) - Update a member
 
-## create_martech_campaign2
+## create_martech_campaign
 
 Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createMartechCampaign2" method="post" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="ruby" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -42,7 +42,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.create_martech_campaign2(marketing_campaign: Models::Shared::MarketingCampaign.new(), connection_id: '<id>')
+res = s.martech.create_martech_campaign(marketing_campaign: Models::Shared::MarketingCampaign.new(), connection_id: '<id>')
 
 unless res.marketing_campaign.nil?
   # handle response
@@ -56,12 +56,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `marketing_campaign`                                                                                                                             | [Models::Shared::MarketingCampaign](../../models/shared/marketingcampaign.md)                                                                    | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateMartechCampaign2QueryParamFields](../../models/operations/createmartechcampaign2queryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateMartechCampaignQueryParamFields](../../models/operations/createmartechcampaignqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateMartechCampaign2Response)](../../models/operations/createmartechcampaign2response.md)**
+**[T.nilable(Models::Operations::CreateMartechCampaignResponse)](../../models/operations/createmartechcampaignresponse.md)**
 
 ### Errors
 
@@ -69,13 +69,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_martech_list2
+## create_martech_list
 
 Create a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createMartechList2" method="post" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="ruby" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -86,7 +86,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.create_martech_list2(marketing_list: Models::Shared::MarketingList.new(), connection_id: '<id>')
+res = s.martech.create_martech_list(marketing_list: Models::Shared::MarketingList.new(), connection_id: '<id>')
 
 unless res.marketing_list.nil?
   # handle response
@@ -100,12 +100,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `marketing_list`                                                                                                                                 | [Models::Shared::MarketingList](../../models/shared/marketinglist.md)                                                                            | :heavy_check_mark:                                                                                                                               | Mailing List                                                                                                                                     |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateMartechList2QueryParamFields](../../models/operations/createmartechlist2queryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateMartechListQueryParamFields](../../models/operations/createmartechlistqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateMartechList2Response)](../../models/operations/createmartechlist2response.md)**
+**[T.nilable(Models::Operations::CreateMartechListResponse)](../../models/operations/createmartechlistresponse.md)**
 
 ### Errors
 
@@ -113,13 +113,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_martech_member2
+## create_martech_member
 
 Create a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createMartechMember2" method="post" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="ruby" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -130,7 +130,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.create_martech_member2(marketing_member: Models::Shared::MarketingMember.new(), connection_id: '<id>')
+res = s.martech.create_martech_member(marketing_member: Models::Shared::MarketingMember.new(), connection_id: '<id>')
 
 unless res.marketing_member.nil?
   # handle response
@@ -144,12 +144,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `marketing_member`                                                                                                                               | [Models::Shared::MarketingMember](../../models/shared/marketingmember.md)                                                                        | :heavy_check_mark:                                                                                                                               | A member represents a person                                                                                                                     |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateMartechMember2QueryParamFields](../../models/operations/createmartechmember2queryparamfields.md)>            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateMartechMemberQueryParamFields](../../models/operations/createmartechmemberqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateMartechMember2Response)](../../models/operations/createmartechmember2response.md)**
+**[T.nilable(Models::Operations::CreateMartechMemberResponse)](../../models/operations/createmartechmemberresponse.md)**
 
 ### Errors
 
@@ -157,13 +157,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_martech_campaign2
+## get_martech_campaign
 
 Retrieve a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getMartechCampaign2" method="get" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getMartechCampaign" method="get" path="/martech/{connection_id}/campaign/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -174,7 +174,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.get_martech_campaign2(connection_id: '<id>', id: '<id>')
+res = s.martech.get_martech_campaign(connection_id: '<id>', id: '<id>')
 
 unless res.marketing_campaign.nil?
   # handle response
@@ -188,12 +188,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Campaign                                                                                                                               |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetMartechCampaign2QueryParamFields](../../models/operations/getmartechcampaign2queryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetMartechCampaignQueryParamFields](../../models/operations/getmartechcampaignqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetMartechCampaign2Response)](../../models/operations/getmartechcampaign2response.md)**
+**[T.nilable(Models::Operations::GetMartechCampaignResponse)](../../models/operations/getmartechcampaignresponse.md)**
 
 ### Errors
 
@@ -201,13 +201,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_martech_list2
+## get_martech_list
 
 Retrieve a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getMartechList2" method="get" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getMartechList" method="get" path="/martech/{connection_id}/list/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -218,7 +218,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.get_martech_list2(connection_id: '<id>', id: '<id>')
+res = s.martech.get_martech_list(connection_id: '<id>', id: '<id>')
 
 unless res.marketing_list.nil?
   # handle response
@@ -232,12 +232,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the List                                                                                                                                   |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetMartechList2QueryParamFields](../../models/operations/getmartechlist2queryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetMartechListQueryParamFields](../../models/operations/getmartechlistqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetMartechList2Response)](../../models/operations/getmartechlist2response.md)**
+**[T.nilable(Models::Operations::GetMartechListResponse)](../../models/operations/getmartechlistresponse.md)**
 
 ### Errors
 
@@ -245,13 +245,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_martech_member2
+## get_martech_member
 
 Retrieve a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getMartechMember2" method="get" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getMartechMember" method="get" path="/martech/{connection_id}/member/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -262,7 +262,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.get_martech_member2(connection_id: '<id>', id: '<id>')
+res = s.martech.get_martech_member(connection_id: '<id>', id: '<id>')
 
 unless res.marketing_member.nil?
   # handle response
@@ -276,12 +276,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Member                                                                                                                                 |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetMartechMember2QueryParamFields](../../models/operations/getmartechmember2queryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetMartechMemberQueryParamFields](../../models/operations/getmartechmemberqueryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetMartechMember2Response)](../../models/operations/getmartechmember2response.md)**
+**[T.nilable(Models::Operations::GetMartechMemberResponse)](../../models/operations/getmartechmemberresponse.md)**
 
 ### Errors
 
@@ -289,13 +289,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_martech_campaigns2
+## list_martech_campaigns
 
 List all campaigns
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listMartechCampaigns2" method="get" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="ruby" operationID="listMartechCampaigns" method="get" path="/martech/{connection_id}/campaign" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -306,11 +306,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListMartechCampaigns2Request.new(
+req = Models::Operations::ListMartechCampaignsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.martech.list_martech_campaigns2(request: req)
+res = s.martech.list_martech_campaigns(request: req)
 
 unless res.marketing_campaigns.nil?
   # handle response
@@ -320,13 +320,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                   | [Models::Operations::ListMartechCampaigns2Request](../../models/operations/listmartechcampaigns2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::ListMartechCampaignsRequest](../../models/operations/listmartechcampaignsrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListMartechCampaigns2Response)](../../models/operations/listmartechcampaigns2response.md)**
+**[T.nilable(Models::Operations::ListMartechCampaignsResponse)](../../models/operations/listmartechcampaignsresponse.md)**
 
 ### Errors
 
@@ -334,13 +334,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_martech_lists2
+## list_martech_lists
 
 List all lists
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listMartechLists2" method="get" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="ruby" operationID="listMartechLists" method="get" path="/martech/{connection_id}/list" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -351,11 +351,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListMartechLists2Request.new(
+req = Models::Operations::ListMartechListsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.martech.list_martech_lists2(request: req)
+res = s.martech.list_martech_lists(request: req)
 
 unless res.marketing_lists.nil?
   # handle response
@@ -365,13 +365,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::ListMartechLists2Request](../../models/operations/listmartechlists2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListMartechListsRequest](../../models/operations/listmartechlistsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListMartechLists2Response)](../../models/operations/listmartechlists2response.md)**
+**[T.nilable(Models::Operations::ListMartechListsResponse)](../../models/operations/listmartechlistsresponse.md)**
 
 ### Errors
 
@@ -379,13 +379,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_martech_members2
+## list_martech_members
 
 List all members
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listMartechMembers2" method="get" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="ruby" operationID="listMartechMembers" method="get" path="/martech/{connection_id}/member" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -396,11 +396,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListMartechMembers2Request.new(
+req = Models::Operations::ListMartechMembersRequest.new(
   connection_id: '<id>',
 )
 
-res = s.martech.list_martech_members2(request: req)
+res = s.martech.list_martech_members(request: req)
 
 unless res.marketing_members.nil?
   # handle response
@@ -410,13 +410,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::ListMartechMembers2Request](../../models/operations/listmartechmembers2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListMartechMembersRequest](../../models/operations/listmartechmembersrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListMartechMembers2Response)](../../models/operations/listmartechmembers2response.md)**
+**[T.nilable(Models::Operations::ListMartechMembersResponse)](../../models/operations/listmartechmembersresponse.md)**
 
 ### Errors
 
@@ -424,13 +424,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_martech_reports2
+## list_martech_reports
 
 List all reports
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listMartechReports2" method="get" path="/martech/{connection_id}/report" -->
+<!-- UsageSnippet language="ruby" operationID="listMartechReports" method="get" path="/martech/{connection_id}/report" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -441,11 +441,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListMartechReports2Request.new(
+req = Models::Operations::ListMartechReportsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.martech.list_martech_reports2(request: req)
+res = s.martech.list_martech_reports(request: req)
 
 unless res.marketing_reports.nil?
   # handle response
@@ -455,13 +455,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::ListMartechReports2Request](../../models/operations/listmartechreports2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListMartechReportsRequest](../../models/operations/listmartechreportsrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListMartechReports2Response)](../../models/operations/listmartechreports2response.md)**
+**[T.nilable(Models::Operations::ListMartechReportsResponse)](../../models/operations/listmartechreportsresponse.md)**
 
 ### Errors
 
@@ -469,13 +469,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_martech_campaign2
+## patch_martech_campaign
 
 Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMartechCampaign2" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -486,13 +486,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchMartechCampaign2Request.new(
+req = Models::Operations::PatchMartechCampaignRequest.new(
   marketing_campaign: Models::Shared::MarketingCampaign.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.martech.patch_martech_campaign2(request: req)
+res = s.martech.patch_martech_campaign(request: req)
 
 unless res.marketing_campaign.nil?
   # handle response
@@ -502,13 +502,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                   | [Models::Operations::PatchMartechCampaign2Request](../../models/operations/patchmartechcampaign2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::PatchMartechCampaignRequest](../../models/operations/patchmartechcampaignrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchMartechCampaign2Response)](../../models/operations/patchmartechcampaign2response.md)**
+**[T.nilable(Models::Operations::PatchMartechCampaignResponse)](../../models/operations/patchmartechcampaignresponse.md)**
 
 ### Errors
 
@@ -516,13 +516,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_martech_list2
+## patch_martech_list
 
 Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMartechList2" method="patch" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -533,13 +533,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchMartechList2Request.new(
+req = Models::Operations::PatchMartechListRequest.new(
   marketing_list: Models::Shared::MarketingList.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.martech.patch_martech_list2(request: req)
+res = s.martech.patch_martech_list(request: req)
 
 unless res.marketing_list.nil?
   # handle response
@@ -549,13 +549,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::PatchMartechList2Request](../../models/operations/patchmartechlist2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::PatchMartechListRequest](../../models/operations/patchmartechlistrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchMartechList2Response)](../../models/operations/patchmartechlist2response.md)**
+**[T.nilable(Models::Operations::PatchMartechListResponse)](../../models/operations/patchmartechlistresponse.md)**
 
 ### Errors
 
@@ -563,13 +563,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_martech_member2
+## patch_martech_member
 
 Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMartechMember2" method="patch" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -580,13 +580,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchMartechMember2Request.new(
+req = Models::Operations::PatchMartechMemberRequest.new(
   marketing_member: Models::Shared::MarketingMember.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.martech.patch_martech_member2(request: req)
+res = s.martech.patch_martech_member(request: req)
 
 unless res.marketing_member.nil?
   # handle response
@@ -596,13 +596,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::PatchMartechMember2Request](../../models/operations/patchmartechmember2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::PatchMartechMemberRequest](../../models/operations/patchmartechmemberrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchMartechMember2Response)](../../models/operations/patchmartechmember2response.md)**
+**[T.nilable(Models::Operations::PatchMartechMemberResponse)](../../models/operations/patchmartechmemberresponse.md)**
 
 ### Errors
 
@@ -610,13 +610,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_martech_campaign2
+## remove_martech_campaign
 
 Remove a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeMartechCampaign2" method="delete" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeMartechCampaign" method="delete" path="/martech/{connection_id}/campaign/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -627,7 +627,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.remove_martech_campaign2(connection_id: '<id>', id: '<id>')
+res = s.martech.remove_martech_campaign(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -644,7 +644,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveMartechCampaign2Response)](../../models/operations/removemartechcampaign2response.md)**
+**[T.nilable(Models::Operations::RemoveMartechCampaignResponse)](../../models/operations/removemartechcampaignresponse.md)**
 
 ### Errors
 
@@ -652,13 +652,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_martech_list2
+## remove_martech_list
 
 Remove a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeMartechList2" method="delete" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeMartechList" method="delete" path="/martech/{connection_id}/list/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -669,7 +669,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.remove_martech_list2(connection_id: '<id>', id: '<id>')
+res = s.martech.remove_martech_list(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -686,7 +686,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveMartechList2Response)](../../models/operations/removemartechlist2response.md)**
+**[T.nilable(Models::Operations::RemoveMartechListResponse)](../../models/operations/removemartechlistresponse.md)**
 
 ### Errors
 
@@ -694,13 +694,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_martech_member2
+## remove_martech_member
 
 Remove a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeMartechMember2" method="delete" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeMartechMember" method="delete" path="/martech/{connection_id}/member/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -711,7 +711,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.remove_martech_member2(connection_id: '<id>', id: '<id>')
+res = s.martech.remove_martech_member(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -728,7 +728,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveMartechMember2Response)](../../models/operations/removemartechmember2response.md)**
+**[T.nilable(Models::Operations::RemoveMartechMemberResponse)](../../models/operations/removemartechmemberresponse.md)**
 
 ### Errors
 
@@ -736,13 +736,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_martech_campaign2
+## update_martech_campaign
 
 Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMartechCampaign2" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -753,13 +753,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateMartechCampaign2Request.new(
+req = Models::Operations::UpdateMartechCampaignRequest.new(
   marketing_campaign: Models::Shared::MarketingCampaign.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.martech.update_martech_campaign2(request: req)
+res = s.martech.update_martech_campaign(request: req)
 
 unless res.marketing_campaign.nil?
   # handle response
@@ -769,13 +769,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                     | [Models::Operations::UpdateMartechCampaign2Request](../../models/operations/updatemartechcampaign2request.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::UpdateMartechCampaignRequest](../../models/operations/updatemartechcampaignrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateMartechCampaign2Response)](../../models/operations/updatemartechcampaign2response.md)**
+**[T.nilable(Models::Operations::UpdateMartechCampaignResponse)](../../models/operations/updatemartechcampaignresponse.md)**
 
 ### Errors
 
@@ -783,13 +783,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_martech_list2
+## update_martech_list
 
 Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMartechList2" method="put" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -800,13 +800,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateMartechList2Request.new(
+req = Models::Operations::UpdateMartechListRequest.new(
   marketing_list: Models::Shared::MarketingList.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.martech.update_martech_list2(request: req)
+res = s.martech.update_martech_list(request: req)
 
 unless res.marketing_list.nil?
   # handle response
@@ -816,13 +816,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::UpdateMartechList2Request](../../models/operations/updatemartechlist2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::UpdateMartechListRequest](../../models/operations/updatemartechlistrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateMartechList2Response)](../../models/operations/updatemartechlist2response.md)**
+**[T.nilable(Models::Operations::UpdateMartechListResponse)](../../models/operations/updatemartechlistresponse.md)**
 
 ### Errors
 
@@ -830,13 +830,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_martech_member2
+## update_martech_member
 
 Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMartechMember2" method="put" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -847,13 +847,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateMartechMember2Request.new(
+req = Models::Operations::UpdateMartechMemberRequest.new(
   marketing_member: Models::Shared::MarketingMember.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.martech.update_martech_member2(request: req)
+res = s.martech.update_martech_member(request: req)
 
 unless res.marketing_member.nil?
   # handle response
@@ -863,13 +863,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [Models::Operations::UpdateMartechMember2Request](../../models/operations/updatemartechmember2request.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::UpdateMartechMemberRequest](../../models/operations/updatemartechmemberrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateMartechMember2Response)](../../models/operations/updatemartechmember2response.md)**
+**[T.nilable(Models::Operations::UpdateMartechMemberResponse)](../../models/operations/updatemartechmemberresponse.md)**
 
 ### Errors
 

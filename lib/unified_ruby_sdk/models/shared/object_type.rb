@@ -19,6 +19,7 @@ module UnifiedRubySDK
           ACCOUNTING_CONTACT = new('accounting_contact')
           ACCOUNTING_INVOICE = new('accounting_invoice')
           ACCOUNTING_BILL = new('accounting_bill')
+          ACCOUNTING_VENDORCREDIT = new('accounting_vendorcredit')
           ACCOUNTING_CREDITMEMO = new('accounting_creditmemo')
           ACCOUNTING_TAXRATE = new('accounting_taxrate')
           ACCOUNTING_ORGANIZATION = new('accounting_organization')

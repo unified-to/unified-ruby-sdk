@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoBranch2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoBranch2Response) }
-    def create_repo_branch2(repo_branch:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_repo_branch2 - Create a branch
-      request = Models::Operations::CreateRepoBranch2Request.new(
+    sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoBranchQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoBranchResponse) }
+    def create_repo_branch(repo_branch:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_repo_branch - Create a branch
+      request = Models::Operations::CreateRepoBranchRequest.new(
         repo_branch: repo_branch,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateRepoBranch2Request,
+        Models::Operations::CreateRepoBranchRequest,
         base_url,
         '/repo/{connection_id}/branch',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateRepoBranch2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateRepoBranchRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createRepoBranch2',
+        operation_id: 'createRepoBranch',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoBranch)
-          response = Models::Operations::CreateRepoBranch2Response.new(
+          response = Models::Operations::CreateRepoBranchResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoBranch2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoBranch2Response) }
-    def get_repo_branch2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_repo_branch2 - Retrieve a branch
-      request = Models::Operations::GetRepoBranch2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoBranchQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoBranchResponse) }
+    def get_repo_branch(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_repo_branch - Retrieve a branch
+      request = Models::Operations::GetRepoBranchRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetRepoBranch2Request,
+        Models::Operations::GetRepoBranchRequest,
         base_url,
         '/repo/{connection_id}/branch/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetRepoBranch2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetRepoBranchRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getRepoBranch2',
+        operation_id: 'getRepoBranch',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoBranch)
-          response = Models::Operations::GetRepoBranch2Response.new(
+          response = Models::Operations::GetRepoBranchResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListRepoBranches2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoBranches2Response) }
-    def list_repo_branches2(request:, timeout_ms: nil)
-      # list_repo_branches2 - List all branches
+    sig { params(request: Models::Operations::ListRepoBranchesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoBranchesResponse) }
+    def list_repo_branches(request:, timeout_ms: nil)
+      # list_repo_branches - List all branches
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListRepoBranches2Request,
+        Models::Operations::ListRepoBranchesRequest,
         base_url,
         '/repo/{connection_id}/branch',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListRepoBranches2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListRepoBranchesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listRepoBranches2',
+        operation_id: 'listRepoBranches',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::RepoBranch))
-          response = Models::Operations::ListRepoBranches2Response.new(
+          response = Models::Operations::ListRepoBranchesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchRepoBranch2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoBranch2Response) }
-    def patch_repo_branch2(request:, timeout_ms: nil)
-      # patch_repo_branch2 - Update a branch
+    sig { params(request: Models::Operations::PatchRepoBranchRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoBranchResponse) }
+    def patch_repo_branch(request:, timeout_ms: nil)
+      # patch_repo_branch - Update a branch
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchRepoBranch2Request,
+        Models::Operations::PatchRepoBranchRequest,
         base_url,
         '/repo/{connection_id}/branch/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchRepoBranch2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchRepoBranchRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchRepoBranch2',
+        operation_id: 'patchRepoBranch',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoBranch)
-          response = Models::Operations::PatchRepoBranch2Response.new(
+          response = Models::Operations::PatchRepoBranchResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoBranch2Response) }
-    def remove_repo_branch2(connection_id:, id:, timeout_ms: nil)
-      # remove_repo_branch2 - Remove a branch
-      request = Models::Operations::RemoveRepoBranch2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoBranchResponse) }
+    def remove_repo_branch(connection_id:, id:, timeout_ms: nil)
+      # remove_repo_branch - Remove a branch
+      request = Models::Operations::RemoveRepoBranchRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveRepoBranch2Request,
+        Models::Operations::RemoveRepoBranchRequest,
         base_url,
         '/repo/{connection_id}/branch/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeRepoBranch2',
+        operation_id: 'removeRepoBranch',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoBranch2Response.new(
+        return Models::Operations::RemoveRepoBranchResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveRepoBranch2Response.new(
+        return Models::Operations::RemoveRepoBranchResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateRepoBranch2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoBranch2Response) }
-    def update_repo_branch2(request:, timeout_ms: nil)
-      # update_repo_branch2 - Update a branch
+    sig { params(request: Models::Operations::UpdateRepoBranchRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoBranchResponse) }
+    def update_repo_branch(request:, timeout_ms: nil)
+      # update_repo_branch - Update a branch
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateRepoBranch2Request,
+        Models::Operations::UpdateRepoBranchRequest,
         base_url,
         '/repo/{connection_id}/branch/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateRepoBranch2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateRepoBranchRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateRepoBranch2',
+        operation_id: 'updateRepoBranch',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::RepoBranch)
-          response = Models::Operations::UpdateRepoBranch2Response.new(
+          response = Models::Operations::UpdateRepoBranchResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

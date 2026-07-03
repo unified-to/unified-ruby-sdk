@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_document: Models::Shared::AtsDocument, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsDocument2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsDocument2Response) }
-    def create_ats_document2(ats_document:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_ats_document2 - Create a document
-      request = Models::Operations::CreateAtsDocument2Request.new(
+    sig { params(ats_document: Models::Shared::AtsDocument, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsDocumentResponse) }
+    def create_ats_document(ats_document:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_ats_document - Create a document
+      request = Models::Operations::CreateAtsDocumentRequest.new(
         ats_document: ats_document,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAtsDocument2Request,
+        Models::Operations::CreateAtsDocumentRequest,
         base_url,
         '/ats/{connection_id}/document',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsDocument2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAtsDocument2',
+        operation_id: 'createAtsDocument',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsDocument)
-          response = Models::Operations::CreateAtsDocument2Response.new(
+          response = Models::Operations::CreateAtsDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(signing_document: Models::Shared::SigningDocument, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateSigningDocument2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateSigningDocument2Response) }
-    def create_signing_document2(signing_document:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_signing_document2 - Create a document
-      request = Models::Operations::CreateSigningDocument2Request.new(
+    sig { params(signing_document: Models::Shared::SigningDocument, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateSigningDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateSigningDocumentResponse) }
+    def create_signing_document(signing_document:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_signing_document - Create a document
+      request = Models::Operations::CreateSigningDocumentRequest.new(
         signing_document: signing_document,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateSigningDocument2Request,
+        Models::Operations::CreateSigningDocumentRequest,
         base_url,
         '/signing/{connection_id}/document',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateSigningDocument2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateSigningDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createSigningDocument2',
+        operation_id: 'createSigningDocument',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::SigningDocument)
-          response = Models::Operations::CreateSigningDocument2Response.new(
+          response = Models::Operations::CreateSigningDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsDocument2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsDocument2Response) }
-    def get_ats_document2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_ats_document2 - Retrieve a document
-      request = Models::Operations::GetAtsDocument2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsDocumentResponse) }
+    def get_ats_document(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_ats_document - Retrieve a document
+      request = Models::Operations::GetAtsDocumentRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -307,14 +307,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAtsDocument2Request,
+        Models::Operations::GetAtsDocumentRequest,
         base_url,
         '/ats/{connection_id}/document/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAtsDocument2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAtsDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -330,7 +330,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAtsDocument2',
+        operation_id: 'getAtsDocument',
         security_source: @sdk_configuration.security_source
       )
 
@@ -389,7 +389,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsDocument)
-          response = Models::Operations::GetAtsDocument2Response.new(
+          response = Models::Operations::GetAtsDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -411,10 +411,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSigningDocument2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSigningDocument2Response) }
-    def get_signing_document2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_signing_document2 - Retrieve a document
-      request = Models::Operations::GetSigningDocument2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSigningDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSigningDocumentResponse) }
+    def get_signing_document(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_signing_document - Retrieve a document
+      request = Models::Operations::GetSigningDocumentRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -423,14 +423,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetSigningDocument2Request,
+        Models::Operations::GetSigningDocumentRequest,
         base_url,
         '/signing/{connection_id}/document/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetSigningDocument2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetSigningDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -446,7 +446,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getSigningDocument2',
+        operation_id: 'getSigningDocument',
         security_source: @sdk_configuration.security_source
       )
 
@@ -505,7 +505,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::SigningDocument)
-          response = Models::Operations::GetSigningDocument2Response.new(
+          response = Models::Operations::GetSigningDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -527,20 +527,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAtsDocuments2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsDocuments2Response) }
-    def list_ats_documents2(request:, timeout_ms: nil)
-      # list_ats_documents2 - List all documents
+    sig { params(request: Models::Operations::ListAtsDocumentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsDocumentsResponse) }
+    def list_ats_documents(request:, timeout_ms: nil)
+      # list_ats_documents - List all documents
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAtsDocuments2Request,
+        Models::Operations::ListAtsDocumentsRequest,
         base_url,
         '/ats/{connection_id}/document',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAtsDocuments2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAtsDocumentsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -556,7 +556,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAtsDocuments2',
+        operation_id: 'listAtsDocuments',
         security_source: @sdk_configuration.security_source
       )
 
@@ -615,7 +615,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsDocument))
-          response = Models::Operations::ListAtsDocuments2Response.new(
+          response = Models::Operations::ListAtsDocumentsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -637,20 +637,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListSigningDocuments2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSigningDocuments2Response) }
-    def list_signing_documents2(request:, timeout_ms: nil)
-      # list_signing_documents2 - List all documents
+    sig { params(request: Models::Operations::ListSigningDocumentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSigningDocumentsResponse) }
+    def list_signing_documents(request:, timeout_ms: nil)
+      # list_signing_documents - List all documents
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListSigningDocuments2Request,
+        Models::Operations::ListSigningDocumentsRequest,
         base_url,
         '/signing/{connection_id}/document',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListSigningDocuments2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListSigningDocumentsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -666,7 +666,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listSigningDocuments2',
+        operation_id: 'listSigningDocuments',
         security_source: @sdk_configuration.security_source
       )
 
@@ -725,7 +725,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::SigningDocument))
-          response = Models::Operations::ListSigningDocuments2Response.new(
+          response = Models::Operations::ListSigningDocumentsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -747,13 +747,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAtsDocument2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsDocument2Response) }
-    def patch_ats_document2(request:, timeout_ms: nil)
-      # patch_ats_document2 - Update a document
+    sig { params(request: Models::Operations::PatchAtsDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsDocumentResponse) }
+    def patch_ats_document(request:, timeout_ms: nil)
+      # patch_ats_document - Update a document
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAtsDocument2Request,
+        Models::Operations::PatchAtsDocumentRequest,
         base_url,
         '/ats/{connection_id}/document/{id}',
         request
@@ -771,7 +771,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsDocument2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -787,7 +787,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAtsDocument2',
+        operation_id: 'patchAtsDocument',
         security_source: @sdk_configuration.security_source
       )
 
@@ -847,7 +847,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsDocument)
-          response = Models::Operations::PatchAtsDocument2Response.new(
+          response = Models::Operations::PatchAtsDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -869,13 +869,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchSigningDocument2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchSigningDocument2Response) }
-    def patch_signing_document2(request:, timeout_ms: nil)
-      # patch_signing_document2 - Update a document
+    sig { params(request: Models::Operations::PatchSigningDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchSigningDocumentResponse) }
+    def patch_signing_document(request:, timeout_ms: nil)
+      # patch_signing_document - Update a document
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchSigningDocument2Request,
+        Models::Operations::PatchSigningDocumentRequest,
         base_url,
         '/signing/{connection_id}/document/{id}',
         request
@@ -893,7 +893,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchSigningDocument2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchSigningDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -909,7 +909,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchSigningDocument2',
+        operation_id: 'patchSigningDocument',
         security_source: @sdk_configuration.security_source
       )
 
@@ -969,7 +969,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::SigningDocument)
-          response = Models::Operations::PatchSigningDocument2Response.new(
+          response = Models::Operations::PatchSigningDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -991,17 +991,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsDocument2Response) }
-    def remove_ats_document2(connection_id:, id:, timeout_ms: nil)
-      # remove_ats_document2 - Remove a document
-      request = Models::Operations::RemoveAtsDocument2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsDocumentResponse) }
+    def remove_ats_document(connection_id:, id:, timeout_ms: nil)
+      # remove_ats_document - Remove a document
+      request = Models::Operations::RemoveAtsDocumentRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAtsDocument2Request,
+        Models::Operations::RemoveAtsDocumentRequest,
         base_url,
         '/ats/{connection_id}/document/{id}',
         request
@@ -1023,7 +1023,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAtsDocument2',
+        operation_id: 'removeAtsDocument',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1078,7 +1078,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAtsDocument2Response.new(
+        return Models::Operations::RemoveAtsDocumentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1095,7 +1095,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAtsDocument2Response.new(
+        return Models::Operations::RemoveAtsDocumentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1105,17 +1105,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveSigningDocument2Response) }
-    def remove_signing_document2(connection_id:, id:, timeout_ms: nil)
-      # remove_signing_document2 - Remove a document
-      request = Models::Operations::RemoveSigningDocument2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveSigningDocumentResponse) }
+    def remove_signing_document(connection_id:, id:, timeout_ms: nil)
+      # remove_signing_document - Remove a document
+      request = Models::Operations::RemoveSigningDocumentRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveSigningDocument2Request,
+        Models::Operations::RemoveSigningDocumentRequest,
         base_url,
         '/signing/{connection_id}/document/{id}',
         request
@@ -1137,7 +1137,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeSigningDocument2',
+        operation_id: 'removeSigningDocument',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1192,7 +1192,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveSigningDocument2Response.new(
+        return Models::Operations::RemoveSigningDocumentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1209,7 +1209,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveSigningDocument2Response.new(
+        return Models::Operations::RemoveSigningDocumentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1219,13 +1219,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAtsDocument2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsDocument2Response) }
-    def update_ats_document2(request:, timeout_ms: nil)
-      # update_ats_document2 - Update a document
+    sig { params(request: Models::Operations::UpdateAtsDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsDocumentResponse) }
+    def update_ats_document(request:, timeout_ms: nil)
+      # update_ats_document - Update a document
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAtsDocument2Request,
+        Models::Operations::UpdateAtsDocumentRequest,
         base_url,
         '/ats/{connection_id}/document/{id}',
         request
@@ -1243,7 +1243,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsDocument2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1259,7 +1259,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAtsDocument2',
+        operation_id: 'updateAtsDocument',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1319,7 +1319,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsDocument)
-          response = Models::Operations::UpdateAtsDocument2Response.new(
+          response = Models::Operations::UpdateAtsDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1341,13 +1341,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateSigningDocument2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateSigningDocument2Response) }
-    def update_signing_document2(request:, timeout_ms: nil)
-      # update_signing_document2 - Update a document
+    sig { params(request: Models::Operations::UpdateSigningDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateSigningDocumentResponse) }
+    def update_signing_document(request:, timeout_ms: nil)
+      # update_signing_document - Update a document
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateSigningDocument2Request,
+        Models::Operations::UpdateSigningDocumentRequest,
         base_url,
         '/signing/{connection_id}/document/{id}',
         request
@@ -1365,7 +1365,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateSigningDocument2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateSigningDocumentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1381,7 +1381,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateSigningDocument2',
+        operation_id: 'updateSigningDocument',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1441,7 +1441,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::SigningDocument)
-          response = Models::Operations::UpdateSigningDocument2Response.new(
+          response = Models::Operations::UpdateSigningDocumentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

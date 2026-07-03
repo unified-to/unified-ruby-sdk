@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_reservation: Models::Shared::CommerceReservation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceReservation2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceReservation2Response) }
-    def create_commerce_reservation2(commerce_reservation:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_commerce_reservation2 - Create a reservation
-      request = Models::Operations::CreateCommerceReservation2Request.new(
+    sig { params(commerce_reservation: Models::Shared::CommerceReservation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceReservationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceReservationResponse) }
+    def create_commerce_reservation(commerce_reservation:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_commerce_reservation - Create a reservation
+      request = Models::Operations::CreateCommerceReservationRequest.new(
         commerce_reservation: commerce_reservation,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCommerceReservation2Request,
+        Models::Operations::CreateCommerceReservationRequest,
         base_url,
         '/commerce/{connection_id}/reservation',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCommerceReservation2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCommerceReservationRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCommerceReservation2',
+        operation_id: 'createCommerceReservation',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceReservation)
-          response = Models::Operations::CreateCommerceReservation2Response.new(
+          response = Models::Operations::CreateCommerceReservationResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceReservation2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceReservation2Response) }
-    def get_commerce_reservation2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_commerce_reservation2 - Retrieve a reservation
-      request = Models::Operations::GetCommerceReservation2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceReservationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceReservationResponse) }
+    def get_commerce_reservation(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_commerce_reservation - Retrieve a reservation
+      request = Models::Operations::GetCommerceReservationRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCommerceReservation2Request,
+        Models::Operations::GetCommerceReservationRequest,
         base_url,
         '/commerce/{connection_id}/reservation/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCommerceReservation2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCommerceReservationRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCommerceReservation2',
+        operation_id: 'getCommerceReservation',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceReservation)
-          response = Models::Operations::GetCommerceReservation2Response.new(
+          response = Models::Operations::GetCommerceReservationResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCommerceReservations2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceReservations2Response) }
-    def list_commerce_reservations2(request:, timeout_ms: nil)
-      # list_commerce_reservations2 - List all reservations
+    sig { params(request: Models::Operations::ListCommerceReservationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceReservationsResponse) }
+    def list_commerce_reservations(request:, timeout_ms: nil)
+      # list_commerce_reservations - List all reservations
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCommerceReservations2Request,
+        Models::Operations::ListCommerceReservationsRequest,
         base_url,
         '/commerce/{connection_id}/reservation',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCommerceReservations2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCommerceReservationsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCommerceReservations2',
+        operation_id: 'listCommerceReservations',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CommerceReservation))
-          response = Models::Operations::ListCommerceReservations2Response.new(
+          response = Models::Operations::ListCommerceReservationsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCommerceReservation2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceReservation2Response) }
-    def patch_commerce_reservation2(request:, timeout_ms: nil)
-      # patch_commerce_reservation2 - Update a reservation
+    sig { params(request: Models::Operations::PatchCommerceReservationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceReservationResponse) }
+    def patch_commerce_reservation(request:, timeout_ms: nil)
+      # patch_commerce_reservation - Update a reservation
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCommerceReservation2Request,
+        Models::Operations::PatchCommerceReservationRequest,
         base_url,
         '/commerce/{connection_id}/reservation/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCommerceReservation2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCommerceReservationRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCommerceReservation2',
+        operation_id: 'patchCommerceReservation',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceReservation)
-          response = Models::Operations::PatchCommerceReservation2Response.new(
+          response = Models::Operations::PatchCommerceReservationResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceReservation2Response) }
-    def remove_commerce_reservation2(connection_id:, id:, timeout_ms: nil)
-      # remove_commerce_reservation2 - Remove a reservation
-      request = Models::Operations::RemoveCommerceReservation2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceReservationResponse) }
+    def remove_commerce_reservation(connection_id:, id:, timeout_ms: nil)
+      # remove_commerce_reservation - Remove a reservation
+      request = Models::Operations::RemoveCommerceReservationRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCommerceReservation2Request,
+        Models::Operations::RemoveCommerceReservationRequest,
         base_url,
         '/commerce/{connection_id}/reservation/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCommerceReservation2',
+        operation_id: 'removeCommerceReservation',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceReservation2Response.new(
+        return Models::Operations::RemoveCommerceReservationResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceReservation2Response.new(
+        return Models::Operations::RemoveCommerceReservationResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCommerceReservation2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceReservation2Response) }
-    def update_commerce_reservation2(request:, timeout_ms: nil)
-      # update_commerce_reservation2 - Update a reservation
+    sig { params(request: Models::Operations::UpdateCommerceReservationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceReservationResponse) }
+    def update_commerce_reservation(request:, timeout_ms: nil)
+      # update_commerce_reservation - Update a reservation
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCommerceReservation2Request,
+        Models::Operations::UpdateCommerceReservationRequest,
         base_url,
         '/commerce/{connection_id}/reservation/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceReservation2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceReservationRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCommerceReservation2',
+        operation_id: 'updateCommerceReservation',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceReservation)
-          response = Models::Operations::UpdateCommerceReservation2Response.new(
+          response = Models::Operations::UpdateCommerceReservationResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

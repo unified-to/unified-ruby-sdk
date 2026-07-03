@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(datastore_database: Models::Shared::DatastoreDatabase, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateDatastoreDatabase2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateDatastoreDatabase2Response) }
-    def create_datastore_database2(datastore_database:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_datastore_database2 - Create a database
-      request = Models::Operations::CreateDatastoreDatabase2Request.new(
+    sig { params(datastore_database: Models::Shared::DatastoreDatabase, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateDatastoreDatabaseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateDatastoreDatabaseResponse) }
+    def create_datastore_database(datastore_database:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_datastore_database - Create a database
+      request = Models::Operations::CreateDatastoreDatabaseRequest.new(
         datastore_database: datastore_database,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateDatastoreDatabase2Request,
+        Models::Operations::CreateDatastoreDatabaseRequest,
         base_url,
         '/datastore/{connection_id}/database',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateDatastoreDatabase2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateDatastoreDatabaseRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createDatastoreDatabase2',
+        operation_id: 'createDatastoreDatabase',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::DatastoreDatabase)
-          response = Models::Operations::CreateDatastoreDatabase2Response.new(
+          response = Models::Operations::CreateDatastoreDatabaseResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetDatastoreDatabase2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetDatastoreDatabase2Response) }
-    def get_datastore_database2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_datastore_database2 - Retrieve a database
-      request = Models::Operations::GetDatastoreDatabase2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetDatastoreDatabaseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetDatastoreDatabaseResponse) }
+    def get_datastore_database(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_datastore_database - Retrieve a database
+      request = Models::Operations::GetDatastoreDatabaseRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetDatastoreDatabase2Request,
+        Models::Operations::GetDatastoreDatabaseRequest,
         base_url,
         '/datastore/{connection_id}/database/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetDatastoreDatabase2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetDatastoreDatabaseRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getDatastoreDatabase2',
+        operation_id: 'getDatastoreDatabase',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::DatastoreDatabase)
-          response = Models::Operations::GetDatastoreDatabase2Response.new(
+          response = Models::Operations::GetDatastoreDatabaseResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListDatastoreDatabases2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListDatastoreDatabases2Response) }
-    def list_datastore_databases2(request:, timeout_ms: nil)
-      # list_datastore_databases2 - List all databases
+    sig { params(request: Models::Operations::ListDatastoreDatabasesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListDatastoreDatabasesResponse) }
+    def list_datastore_databases(request:, timeout_ms: nil)
+      # list_datastore_databases - List all databases
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListDatastoreDatabases2Request,
+        Models::Operations::ListDatastoreDatabasesRequest,
         base_url,
         '/datastore/{connection_id}/database',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListDatastoreDatabases2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListDatastoreDatabasesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listDatastoreDatabases2',
+        operation_id: 'listDatastoreDatabases',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::DatastoreDatabase))
-          response = Models::Operations::ListDatastoreDatabases2Response.new(
+          response = Models::Operations::ListDatastoreDatabasesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchDatastoreDatabase2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchDatastoreDatabase2Response) }
-    def patch_datastore_database2(request:, timeout_ms: nil)
-      # patch_datastore_database2 - Update a database
+    sig { params(request: Models::Operations::PatchDatastoreDatabaseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchDatastoreDatabaseResponse) }
+    def patch_datastore_database(request:, timeout_ms: nil)
+      # patch_datastore_database - Update a database
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchDatastoreDatabase2Request,
+        Models::Operations::PatchDatastoreDatabaseRequest,
         base_url,
         '/datastore/{connection_id}/database/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchDatastoreDatabase2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchDatastoreDatabaseRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchDatastoreDatabase2',
+        operation_id: 'patchDatastoreDatabase',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::DatastoreDatabase)
-          response = Models::Operations::PatchDatastoreDatabase2Response.new(
+          response = Models::Operations::PatchDatastoreDatabaseResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveDatastoreDatabase2Response) }
-    def remove_datastore_database2(connection_id:, id:, timeout_ms: nil)
-      # remove_datastore_database2 - Remove a database
-      request = Models::Operations::RemoveDatastoreDatabase2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveDatastoreDatabaseResponse) }
+    def remove_datastore_database(connection_id:, id:, timeout_ms: nil)
+      # remove_datastore_database - Remove a database
+      request = Models::Operations::RemoveDatastoreDatabaseRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveDatastoreDatabase2Request,
+        Models::Operations::RemoveDatastoreDatabaseRequest,
         base_url,
         '/datastore/{connection_id}/database/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeDatastoreDatabase2',
+        operation_id: 'removeDatastoreDatabase',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveDatastoreDatabase2Response.new(
+        return Models::Operations::RemoveDatastoreDatabaseResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveDatastoreDatabase2Response.new(
+        return Models::Operations::RemoveDatastoreDatabaseResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateDatastoreDatabase2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateDatastoreDatabase2Response) }
-    def update_datastore_database2(request:, timeout_ms: nil)
-      # update_datastore_database2 - Update a database
+    sig { params(request: Models::Operations::UpdateDatastoreDatabaseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateDatastoreDatabaseResponse) }
+    def update_datastore_database(request:, timeout_ms: nil)
+      # update_datastore_database - Update a database
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateDatastoreDatabase2Request,
+        Models::Operations::UpdateDatastoreDatabaseRequest,
         base_url,
         '/datastore/{connection_id}/database/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateDatastoreDatabase2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateDatastoreDatabaseRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateDatastoreDatabase2',
+        operation_id: 'updateDatastoreDatabase',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::DatastoreDatabase)
-          response = Models::Operations::UpdateDatastoreDatabase2Response.new(
+          response = Models::Operations::UpdateDatastoreDatabaseResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(forms_form: Models::Shared::FormsForm, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateFormsForm2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateFormsForm2Response) }
-    def create_forms_form2(forms_form:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_forms_form2 - Create a form
-      request = Models::Operations::CreateFormsForm2Request.new(
+    sig { params(forms_form: Models::Shared::FormsForm, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateFormsFormQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateFormsFormResponse) }
+    def create_forms_form(forms_form:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_forms_form - Create a form
+      request = Models::Operations::CreateFormsFormRequest.new(
         forms_form: forms_form,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateFormsForm2Request,
+        Models::Operations::CreateFormsFormRequest,
         base_url,
         '/forms/{connection_id}/form',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateFormsForm2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateFormsFormRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createFormsForm2',
+        operation_id: 'createFormsForm',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::FormsForm)
-          response = Models::Operations::CreateFormsForm2Response.new(
+          response = Models::Operations::CreateFormsFormResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetFormsForm2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsForm2Response) }
-    def get_forms_form2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_forms_form2 - Retrieve a form
-      request = Models::Operations::GetFormsForm2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetFormsFormQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsFormResponse) }
+    def get_forms_form(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_forms_form - Retrieve a form
+      request = Models::Operations::GetFormsFormRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetFormsForm2Request,
+        Models::Operations::GetFormsFormRequest,
         base_url,
         '/forms/{connection_id}/form/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetFormsForm2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetFormsFormRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getFormsForm2',
+        operation_id: 'getFormsForm',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::FormsForm)
-          response = Models::Operations::GetFormsForm2Response.new(
+          response = Models::Operations::GetFormsFormResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListFormsForms2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListFormsForms2Response) }
-    def list_forms_forms2(request:, timeout_ms: nil)
-      # list_forms_forms2 - List all forms
+    sig { params(request: Models::Operations::ListFormsFormsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListFormsFormsResponse) }
+    def list_forms_forms(request:, timeout_ms: nil)
+      # list_forms_forms - List all forms
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListFormsForms2Request,
+        Models::Operations::ListFormsFormsRequest,
         base_url,
         '/forms/{connection_id}/form',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListFormsForms2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListFormsFormsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listFormsForms2',
+        operation_id: 'listFormsForms',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::FormsForm))
-          response = Models::Operations::ListFormsForms2Response.new(
+          response = Models::Operations::ListFormsFormsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchFormsForm2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchFormsForm2Response) }
-    def patch_forms_form2(request:, timeout_ms: nil)
-      # patch_forms_form2 - Update a form
+    sig { params(request: Models::Operations::PatchFormsFormRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchFormsFormResponse) }
+    def patch_forms_form(request:, timeout_ms: nil)
+      # patch_forms_form - Update a form
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchFormsForm2Request,
+        Models::Operations::PatchFormsFormRequest,
         base_url,
         '/forms/{connection_id}/form/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchFormsForm2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchFormsFormRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchFormsForm2',
+        operation_id: 'patchFormsForm',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::FormsForm)
-          response = Models::Operations::PatchFormsForm2Response.new(
+          response = Models::Operations::PatchFormsFormResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveFormsForm2Response) }
-    def remove_forms_form2(connection_id:, id:, timeout_ms: nil)
-      # remove_forms_form2 - Remove a form
-      request = Models::Operations::RemoveFormsForm2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveFormsFormResponse) }
+    def remove_forms_form(connection_id:, id:, timeout_ms: nil)
+      # remove_forms_form - Remove a form
+      request = Models::Operations::RemoveFormsFormRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveFormsForm2Request,
+        Models::Operations::RemoveFormsFormRequest,
         base_url,
         '/forms/{connection_id}/form/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeFormsForm2',
+        operation_id: 'removeFormsForm',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveFormsForm2Response.new(
+        return Models::Operations::RemoveFormsFormResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveFormsForm2Response.new(
+        return Models::Operations::RemoveFormsFormResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateFormsForm2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateFormsForm2Response) }
-    def update_forms_form2(request:, timeout_ms: nil)
-      # update_forms_form2 - Update a form
+    sig { params(request: Models::Operations::UpdateFormsFormRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateFormsFormResponse) }
+    def update_forms_form(request:, timeout_ms: nil)
+      # update_forms_form - Update a form
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateFormsForm2Request,
+        Models::Operations::UpdateFormsFormRequest,
         base_url,
         '/forms/{connection_id}/form/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateFormsForm2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateFormsFormRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateFormsForm2',
+        operation_id: 'updateFormsForm',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::FormsForm)
-          response = Models::Operations::UpdateFormsForm2Response.new(
+          response = Models::Operations::UpdateFormsFormResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

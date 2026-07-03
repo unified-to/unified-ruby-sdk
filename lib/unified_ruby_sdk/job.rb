@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsJob2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsJob2Response) }
-    def create_ats_job2(ats_job:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_ats_job2 - Create a job
-      request = Models::Operations::CreateAtsJob2Request.new(
+    sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsJobResponse) }
+    def create_ats_job(ats_job:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_ats_job - Create a job
+      request = Models::Operations::CreateAtsJobRequest.new(
         ats_job: ats_job,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAtsJob2Request,
+        Models::Operations::CreateAtsJobRequest,
         base_url,
         '/ats/{connection_id}/job',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAtsJob2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAtsJobRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAtsJob2',
+        operation_id: 'createAtsJob',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsJob)
-          response = Models::Operations::CreateAtsJob2Response.new(
+          response = Models::Operations::CreateAtsJobResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsJob2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsJob2Response) }
-    def get_ats_job2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_ats_job2 - Retrieve a job
-      request = Models::Operations::GetAtsJob2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsJobResponse) }
+    def get_ats_job(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_ats_job - Retrieve a job
+      request = Models::Operations::GetAtsJobRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAtsJob2Request,
+        Models::Operations::GetAtsJobRequest,
         base_url,
         '/ats/{connection_id}/job/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAtsJob2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAtsJobRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAtsJob2',
+        operation_id: 'getAtsJob',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsJob)
-          response = Models::Operations::GetAtsJob2Response.new(
+          response = Models::Operations::GetAtsJobResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAtsJobs2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsJobs2Response) }
-    def list_ats_jobs2(request:, timeout_ms: nil)
-      # list_ats_jobs2 - List all jobs
+    sig { params(request: Models::Operations::ListAtsJobsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsJobsResponse) }
+    def list_ats_jobs(request:, timeout_ms: nil)
+      # list_ats_jobs - List all jobs
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAtsJobs2Request,
+        Models::Operations::ListAtsJobsRequest,
         base_url,
         '/ats/{connection_id}/job',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAtsJobs2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAtsJobsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAtsJobs2',
+        operation_id: 'listAtsJobs',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AtsJob))
-          response = Models::Operations::ListAtsJobs2Response.new(
+          response = Models::Operations::ListAtsJobsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAtsJob2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsJob2Response) }
-    def patch_ats_job2(request:, timeout_ms: nil)
-      # patch_ats_job2 - Update a job
+    sig { params(request: Models::Operations::PatchAtsJobRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsJobResponse) }
+    def patch_ats_job(request:, timeout_ms: nil)
+      # patch_ats_job - Update a job
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAtsJob2Request,
+        Models::Operations::PatchAtsJobRequest,
         base_url,
         '/ats/{connection_id}/job/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAtsJob2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAtsJobRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAtsJob2',
+        operation_id: 'patchAtsJob',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsJob)
-          response = Models::Operations::PatchAtsJob2Response.new(
+          response = Models::Operations::PatchAtsJobResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsJob2Response) }
-    def remove_ats_job2(connection_id:, id:, timeout_ms: nil)
-      # remove_ats_job2 - Remove a job
-      request = Models::Operations::RemoveAtsJob2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsJobResponse) }
+    def remove_ats_job(connection_id:, id:, timeout_ms: nil)
+      # remove_ats_job - Remove a job
+      request = Models::Operations::RemoveAtsJobRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAtsJob2Request,
+        Models::Operations::RemoveAtsJobRequest,
         base_url,
         '/ats/{connection_id}/job/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAtsJob2',
+        operation_id: 'removeAtsJob',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAtsJob2Response.new(
+        return Models::Operations::RemoveAtsJobResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAtsJob2Response.new(
+        return Models::Operations::RemoveAtsJobResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAtsJob2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsJob2Response) }
-    def update_ats_job2(request:, timeout_ms: nil)
-      # update_ats_job2 - Update a job
+    sig { params(request: Models::Operations::UpdateAtsJobRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsJobResponse) }
+    def update_ats_job(request:, timeout_ms: nil)
+      # update_ats_job - Update a job
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAtsJob2Request,
+        Models::Operations::UpdateAtsJobRequest,
         base_url,
         '/ats/{connection_id}/job/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAtsJob2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAtsJobRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAtsJob2',
+        operation_id: 'updateAtsJob',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AtsJob)
-          response = Models::Operations::UpdateAtsJob2Response.new(
+          response = Models::Operations::UpdateAtsJobResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

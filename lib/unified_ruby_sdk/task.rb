@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskComment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskComment2Response) }
-    def create_task_comment2(task_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_task_comment2 - Create a comment
-      request = Models::Operations::CreateTaskComment2Request.new(
+    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskCommentResponse) }
+    def create_task_comment(task_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_task_comment - Create a comment
+      request = Models::Operations::CreateTaskCommentRequest.new(
         task_comment: task_comment,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateTaskComment2Request,
+        Models::Operations::CreateTaskCommentRequest,
         base_url,
         '/task/{connection_id}/comment',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateTaskComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateTaskCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createTaskComment2',
+        operation_id: 'createTaskComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskComment)
-          response = Models::Operations::CreateTaskComment2Response.new(
+          response = Models::Operations::CreateTaskCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskProject2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskProject2Response) }
-    def create_task_project2(task_project:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_task_project2 - Create a project
-      request = Models::Operations::CreateTaskProject2Request.new(
+    sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskProjectQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskProjectResponse) }
+    def create_task_project(task_project:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_task_project - Create a project
+      request = Models::Operations::CreateTaskProjectRequest.new(
         task_project: task_project,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateTaskProject2Request,
+        Models::Operations::CreateTaskProjectRequest,
         base_url,
         '/task/{connection_id}/project',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateTaskProject2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateTaskProjectRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createTaskProject2',
+        operation_id: 'createTaskProject',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskProject)
-          response = Models::Operations::CreateTaskProject2Response.new(
+          response = Models::Operations::CreateTaskProjectResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_task: Models::Shared::TaskTask, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskTask2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskTask2Response) }
-    def create_task_task2(task_task:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_task_task2 - Create a task
-      request = Models::Operations::CreateTaskTask2Request.new(
+    sig { params(task_task: Models::Shared::TaskTask, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskTaskQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskTaskResponse) }
+    def create_task_task(task_task:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_task_task - Create a task
+      request = Models::Operations::CreateTaskTaskRequest.new(
         task_task: task_task,
         connection_id: connection_id,
         fields_: fields_,
@@ -307,7 +307,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateTaskTask2Request,
+        Models::Operations::CreateTaskTaskRequest,
         base_url,
         '/task/{connection_id}/task',
         request
@@ -325,7 +325,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateTaskTask2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateTaskTaskRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -341,7 +341,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createTaskTask2',
+        operation_id: 'createTaskTask',
         security_source: @sdk_configuration.security_source
       )
 
@@ -401,7 +401,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskTask)
-          response = Models::Operations::CreateTaskTask2Response.new(
+          response = Models::Operations::CreateTaskTaskResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -423,10 +423,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskChange2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskChange2Response) }
-    def get_task_change2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_task_change2 - Retrieve a change
-      request = Models::Operations::GetTaskChange2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskChangeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskChangeResponse) }
+    def get_task_change(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_task_change - Retrieve a change
+      request = Models::Operations::GetTaskChangeRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -435,14 +435,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetTaskChange2Request,
+        Models::Operations::GetTaskChangeRequest,
         base_url,
         '/task/{connection_id}/change/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetTaskChange2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetTaskChangeRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -458,7 +458,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getTaskChange2',
+        operation_id: 'getTaskChange',
         security_source: @sdk_configuration.security_source
       )
 
@@ -517,7 +517,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskChange)
-          response = Models::Operations::GetTaskChange2Response.new(
+          response = Models::Operations::GetTaskChangeResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -539,10 +539,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskComment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskComment2Response) }
-    def get_task_comment2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_task_comment2 - Retrieve a comment
-      request = Models::Operations::GetTaskComment2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskCommentResponse) }
+    def get_task_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_task_comment - Retrieve a comment
+      request = Models::Operations::GetTaskCommentRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -551,14 +551,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetTaskComment2Request,
+        Models::Operations::GetTaskCommentRequest,
         base_url,
         '/task/{connection_id}/comment/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetTaskComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetTaskCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -574,7 +574,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getTaskComment2',
+        operation_id: 'getTaskComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -633,7 +633,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskComment)
-          response = Models::Operations::GetTaskComment2Response.new(
+          response = Models::Operations::GetTaskCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -655,10 +655,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskProject2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskProject2Response) }
-    def get_task_project2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_task_project2 - Retrieve a project
-      request = Models::Operations::GetTaskProject2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskProjectQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskProjectResponse) }
+    def get_task_project(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_task_project - Retrieve a project
+      request = Models::Operations::GetTaskProjectRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -667,14 +667,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetTaskProject2Request,
+        Models::Operations::GetTaskProjectRequest,
         base_url,
         '/task/{connection_id}/project/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetTaskProject2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetTaskProjectRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -690,7 +690,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getTaskProject2',
+        operation_id: 'getTaskProject',
         security_source: @sdk_configuration.security_source
       )
 
@@ -749,7 +749,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskProject)
-          response = Models::Operations::GetTaskProject2Response.new(
+          response = Models::Operations::GetTaskProjectResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -771,10 +771,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskTask2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskTask2Response) }
-    def get_task_task2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_task_task2 - Retrieve a task
-      request = Models::Operations::GetTaskTask2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskTaskQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskTaskResponse) }
+    def get_task_task(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_task_task - Retrieve a task
+      request = Models::Operations::GetTaskTaskRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -783,14 +783,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetTaskTask2Request,
+        Models::Operations::GetTaskTaskRequest,
         base_url,
         '/task/{connection_id}/task/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetTaskTask2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetTaskTaskRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -806,7 +806,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getTaskTask2',
+        operation_id: 'getTaskTask',
         security_source: @sdk_configuration.security_source
       )
 
@@ -865,7 +865,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskTask)
-          response = Models::Operations::GetTaskTask2Response.new(
+          response = Models::Operations::GetTaskTaskResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -887,20 +887,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListTaskChanges2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskChanges2Response) }
-    def list_task_changes2(request:, timeout_ms: nil)
-      # list_task_changes2 - List all changes
+    sig { params(request: Models::Operations::ListTaskChangesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskChangesResponse) }
+    def list_task_changes(request:, timeout_ms: nil)
+      # list_task_changes - List all changes
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListTaskChanges2Request,
+        Models::Operations::ListTaskChangesRequest,
         base_url,
         '/task/{connection_id}/change',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListTaskChanges2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListTaskChangesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -916,7 +916,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listTaskChanges2',
+        operation_id: 'listTaskChanges',
         security_source: @sdk_configuration.security_source
       )
 
@@ -975,7 +975,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::TaskChange))
-          response = Models::Operations::ListTaskChanges2Response.new(
+          response = Models::Operations::ListTaskChangesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -997,20 +997,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListTaskComments2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskComments2Response) }
-    def list_task_comments2(request:, timeout_ms: nil)
-      # list_task_comments2 - List all comments
+    sig { params(request: Models::Operations::ListTaskCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskCommentsResponse) }
+    def list_task_comments(request:, timeout_ms: nil)
+      # list_task_comments - List all comments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListTaskComments2Request,
+        Models::Operations::ListTaskCommentsRequest,
         base_url,
         '/task/{connection_id}/comment',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListTaskComments2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListTaskCommentsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1026,7 +1026,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listTaskComments2',
+        operation_id: 'listTaskComments',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1085,7 +1085,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::TaskComment))
-          response = Models::Operations::ListTaskComments2Response.new(
+          response = Models::Operations::ListTaskCommentsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1107,20 +1107,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListTaskProjects2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskProjects2Response) }
-    def list_task_projects2(request:, timeout_ms: nil)
-      # list_task_projects2 - List all projects
+    sig { params(request: Models::Operations::ListTaskProjectsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskProjectsResponse) }
+    def list_task_projects(request:, timeout_ms: nil)
+      # list_task_projects - List all projects
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListTaskProjects2Request,
+        Models::Operations::ListTaskProjectsRequest,
         base_url,
         '/task/{connection_id}/project',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListTaskProjects2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListTaskProjectsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1136,7 +1136,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listTaskProjects2',
+        operation_id: 'listTaskProjects',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1195,7 +1195,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::TaskProject))
-          response = Models::Operations::ListTaskProjects2Response.new(
+          response = Models::Operations::ListTaskProjectsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1217,20 +1217,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListTaskTasks2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskTasks2Response) }
-    def list_task_tasks2(request:, timeout_ms: nil)
-      # list_task_tasks2 - List all tasks
+    sig { params(request: Models::Operations::ListTaskTasksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskTasksResponse) }
+    def list_task_tasks(request:, timeout_ms: nil)
+      # list_task_tasks - List all tasks
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListTaskTasks2Request,
+        Models::Operations::ListTaskTasksRequest,
         base_url,
         '/task/{connection_id}/task',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListTaskTasks2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListTaskTasksRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1246,7 +1246,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listTaskTasks2',
+        operation_id: 'listTaskTasks',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1305,7 +1305,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::TaskTask))
-          response = Models::Operations::ListTaskTasks2Response.new(
+          response = Models::Operations::ListTaskTasksResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1327,13 +1327,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchTaskComment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskComment2Response) }
-    def patch_task_comment2(request:, timeout_ms: nil)
-      # patch_task_comment2 - Update a comment
+    sig { params(request: Models::Operations::PatchTaskCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskCommentResponse) }
+    def patch_task_comment(request:, timeout_ms: nil)
+      # patch_task_comment - Update a comment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchTaskComment2Request,
+        Models::Operations::PatchTaskCommentRequest,
         base_url,
         '/task/{connection_id}/comment/{id}',
         request
@@ -1351,7 +1351,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchTaskComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchTaskCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1367,7 +1367,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchTaskComment2',
+        operation_id: 'patchTaskComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1427,7 +1427,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskComment)
-          response = Models::Operations::PatchTaskComment2Response.new(
+          response = Models::Operations::PatchTaskCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1449,13 +1449,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchTaskProject2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskProject2Response) }
-    def patch_task_project2(request:, timeout_ms: nil)
-      # patch_task_project2 - Update a project
+    sig { params(request: Models::Operations::PatchTaskProjectRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskProjectResponse) }
+    def patch_task_project(request:, timeout_ms: nil)
+      # patch_task_project - Update a project
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchTaskProject2Request,
+        Models::Operations::PatchTaskProjectRequest,
         base_url,
         '/task/{connection_id}/project/{id}',
         request
@@ -1473,7 +1473,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchTaskProject2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchTaskProjectRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1489,7 +1489,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchTaskProject2',
+        operation_id: 'patchTaskProject',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1549,7 +1549,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskProject)
-          response = Models::Operations::PatchTaskProject2Response.new(
+          response = Models::Operations::PatchTaskProjectResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1571,13 +1571,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchTaskTask2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskTask2Response) }
-    def patch_task_task2(request:, timeout_ms: nil)
-      # patch_task_task2 - Update a task
+    sig { params(request: Models::Operations::PatchTaskTaskRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskTaskResponse) }
+    def patch_task_task(request:, timeout_ms: nil)
+      # patch_task_task - Update a task
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchTaskTask2Request,
+        Models::Operations::PatchTaskTaskRequest,
         base_url,
         '/task/{connection_id}/task/{id}',
         request
@@ -1595,7 +1595,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchTaskTask2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchTaskTaskRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1611,7 +1611,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchTaskTask2',
+        operation_id: 'patchTaskTask',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1671,7 +1671,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskTask)
-          response = Models::Operations::PatchTaskTask2Response.new(
+          response = Models::Operations::PatchTaskTaskResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1693,17 +1693,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskComment2Response) }
-    def remove_task_comment2(connection_id:, id:, timeout_ms: nil)
-      # remove_task_comment2 - Remove a comment
-      request = Models::Operations::RemoveTaskComment2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskCommentResponse) }
+    def remove_task_comment(connection_id:, id:, timeout_ms: nil)
+      # remove_task_comment - Remove a comment
+      request = Models::Operations::RemoveTaskCommentRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveTaskComment2Request,
+        Models::Operations::RemoveTaskCommentRequest,
         base_url,
         '/task/{connection_id}/comment/{id}',
         request
@@ -1725,7 +1725,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeTaskComment2',
+        operation_id: 'removeTaskComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1780,7 +1780,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveTaskComment2Response.new(
+        return Models::Operations::RemoveTaskCommentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1797,7 +1797,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveTaskComment2Response.new(
+        return Models::Operations::RemoveTaskCommentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1807,17 +1807,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskProject2Response) }
-    def remove_task_project2(connection_id:, id:, timeout_ms: nil)
-      # remove_task_project2 - Remove a project
-      request = Models::Operations::RemoveTaskProject2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskProjectResponse) }
+    def remove_task_project(connection_id:, id:, timeout_ms: nil)
+      # remove_task_project - Remove a project
+      request = Models::Operations::RemoveTaskProjectRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveTaskProject2Request,
+        Models::Operations::RemoveTaskProjectRequest,
         base_url,
         '/task/{connection_id}/project/{id}',
         request
@@ -1839,7 +1839,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeTaskProject2',
+        operation_id: 'removeTaskProject',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1894,7 +1894,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveTaskProject2Response.new(
+        return Models::Operations::RemoveTaskProjectResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1911,7 +1911,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveTaskProject2Response.new(
+        return Models::Operations::RemoveTaskProjectResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1921,17 +1921,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskTask2Response) }
-    def remove_task_task2(connection_id:, id:, timeout_ms: nil)
-      # remove_task_task2 - Remove a task
-      request = Models::Operations::RemoveTaskTask2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskTaskResponse) }
+    def remove_task_task(connection_id:, id:, timeout_ms: nil)
+      # remove_task_task - Remove a task
+      request = Models::Operations::RemoveTaskTaskRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveTaskTask2Request,
+        Models::Operations::RemoveTaskTaskRequest,
         base_url,
         '/task/{connection_id}/task/{id}',
         request
@@ -1953,7 +1953,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeTaskTask2',
+        operation_id: 'removeTaskTask',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2008,7 +2008,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveTaskTask2Response.new(
+        return Models::Operations::RemoveTaskTaskResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2025,7 +2025,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveTaskTask2Response.new(
+        return Models::Operations::RemoveTaskTaskResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2035,13 +2035,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateTaskComment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskComment2Response) }
-    def update_task_comment2(request:, timeout_ms: nil)
-      # update_task_comment2 - Update a comment
+    sig { params(request: Models::Operations::UpdateTaskCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskCommentResponse) }
+    def update_task_comment(request:, timeout_ms: nil)
+      # update_task_comment - Update a comment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateTaskComment2Request,
+        Models::Operations::UpdateTaskCommentRequest,
         base_url,
         '/task/{connection_id}/comment/{id}',
         request
@@ -2059,7 +2059,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateTaskComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateTaskCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2075,7 +2075,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateTaskComment2',
+        operation_id: 'updateTaskComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2135,7 +2135,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskComment)
-          response = Models::Operations::UpdateTaskComment2Response.new(
+          response = Models::Operations::UpdateTaskCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2157,13 +2157,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateTaskProject2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskProject2Response) }
-    def update_task_project2(request:, timeout_ms: nil)
-      # update_task_project2 - Update a project
+    sig { params(request: Models::Operations::UpdateTaskProjectRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskProjectResponse) }
+    def update_task_project(request:, timeout_ms: nil)
+      # update_task_project - Update a project
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateTaskProject2Request,
+        Models::Operations::UpdateTaskProjectRequest,
         base_url,
         '/task/{connection_id}/project/{id}',
         request
@@ -2181,7 +2181,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateTaskProject2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateTaskProjectRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2197,7 +2197,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateTaskProject2',
+        operation_id: 'updateTaskProject',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2257,7 +2257,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskProject)
-          response = Models::Operations::UpdateTaskProject2Response.new(
+          response = Models::Operations::UpdateTaskProjectResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2279,13 +2279,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateTaskTask2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskTask2Response) }
-    def update_task_task2(request:, timeout_ms: nil)
-      # update_task_task2 - Update a task
+    sig { params(request: Models::Operations::UpdateTaskTaskRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskTaskResponse) }
+    def update_task_task(request:, timeout_ms: nil)
+      # update_task_task - Update a task
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateTaskTask2Request,
+        Models::Operations::UpdateTaskTaskRequest,
         base_url,
         '/task/{connection_id}/task/{id}',
         request
@@ -2303,7 +2303,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateTaskTask2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateTaskTaskRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2319,7 +2319,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateTaskTask2',
+        operation_id: 'updateTaskTask',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2379,7 +2379,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskTask)
-          response = Models::Operations::UpdateTaskTask2Response.new(
+          response = Models::Operations::UpdateTaskTaskResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

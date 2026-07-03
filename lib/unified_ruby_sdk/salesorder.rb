@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(accounting_salesorder: Models::Shared::AccountingSalesorder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingSalesorder2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingSalesorder2Response) }
-    def create_accounting_salesorder2(accounting_salesorder:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_accounting_salesorder2 - Create a salesorder
-      request = Models::Operations::CreateAccountingSalesorder2Request.new(
+    sig { params(accounting_salesorder: Models::Shared::AccountingSalesorder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingSalesorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingSalesorderResponse) }
+    def create_accounting_salesorder(accounting_salesorder:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_accounting_salesorder - Create a salesorder
+      request = Models::Operations::CreateAccountingSalesorderRequest.new(
         accounting_salesorder: accounting_salesorder,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAccountingSalesorder2Request,
+        Models::Operations::CreateAccountingSalesorderRequest,
         base_url,
         '/accounting/{connection_id}/salesorder',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAccountingSalesorder2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAccountingSalesorderRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAccountingSalesorder2',
+        operation_id: 'createAccountingSalesorder',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingSalesorder)
-          response = Models::Operations::CreateAccountingSalesorder2Response.new(
+          response = Models::Operations::CreateAccountingSalesorderResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingSalesorder2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingSalesorder2Response) }
-    def get_accounting_salesorder2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_accounting_salesorder2 - Retrieve a salesorder
-      request = Models::Operations::GetAccountingSalesorder2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingSalesorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingSalesorderResponse) }
+    def get_accounting_salesorder(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_accounting_salesorder - Retrieve a salesorder
+      request = Models::Operations::GetAccountingSalesorderRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAccountingSalesorder2Request,
+        Models::Operations::GetAccountingSalesorderRequest,
         base_url,
         '/accounting/{connection_id}/salesorder/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAccountingSalesorder2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAccountingSalesorderRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAccountingSalesorder2',
+        operation_id: 'getAccountingSalesorder',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingSalesorder)
-          response = Models::Operations::GetAccountingSalesorder2Response.new(
+          response = Models::Operations::GetAccountingSalesorderResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAccountingSalesorders2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingSalesorders2Response) }
-    def list_accounting_salesorders2(request:, timeout_ms: nil)
-      # list_accounting_salesorders2 - List all salesorders
+    sig { params(request: Models::Operations::ListAccountingSalesordersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingSalesordersResponse) }
+    def list_accounting_salesorders(request:, timeout_ms: nil)
+      # list_accounting_salesorders - List all salesorders
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAccountingSalesorders2Request,
+        Models::Operations::ListAccountingSalesordersRequest,
         base_url,
         '/accounting/{connection_id}/salesorder',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAccountingSalesorders2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAccountingSalesordersRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAccountingSalesorders2',
+        operation_id: 'listAccountingSalesorders',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AccountingSalesorder))
-          response = Models::Operations::ListAccountingSalesorders2Response.new(
+          response = Models::Operations::ListAccountingSalesordersResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAccountingSalesorder2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingSalesorder2Response) }
-    def patch_accounting_salesorder2(request:, timeout_ms: nil)
-      # patch_accounting_salesorder2 - Update a salesorder
+    sig { params(request: Models::Operations::PatchAccountingSalesorderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingSalesorderResponse) }
+    def patch_accounting_salesorder(request:, timeout_ms: nil)
+      # patch_accounting_salesorder - Update a salesorder
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAccountingSalesorder2Request,
+        Models::Operations::PatchAccountingSalesorderRequest,
         base_url,
         '/accounting/{connection_id}/salesorder/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAccountingSalesorder2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAccountingSalesorderRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAccountingSalesorder2',
+        operation_id: 'patchAccountingSalesorder',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingSalesorder)
-          response = Models::Operations::PatchAccountingSalesorder2Response.new(
+          response = Models::Operations::PatchAccountingSalesorderResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingSalesorder2Response) }
-    def remove_accounting_salesorder2(connection_id:, id:, timeout_ms: nil)
-      # remove_accounting_salesorder2 - Remove a salesorder
-      request = Models::Operations::RemoveAccountingSalesorder2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingSalesorderResponse) }
+    def remove_accounting_salesorder(connection_id:, id:, timeout_ms: nil)
+      # remove_accounting_salesorder - Remove a salesorder
+      request = Models::Operations::RemoveAccountingSalesorderRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAccountingSalesorder2Request,
+        Models::Operations::RemoveAccountingSalesorderRequest,
         base_url,
         '/accounting/{connection_id}/salesorder/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAccountingSalesorder2',
+        operation_id: 'removeAccountingSalesorder',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAccountingSalesorder2Response.new(
+        return Models::Operations::RemoveAccountingSalesorderResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAccountingSalesorder2Response.new(
+        return Models::Operations::RemoveAccountingSalesorderResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAccountingSalesorder2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingSalesorder2Response) }
-    def update_accounting_salesorder2(request:, timeout_ms: nil)
-      # update_accounting_salesorder2 - Update a salesorder
+    sig { params(request: Models::Operations::UpdateAccountingSalesorderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingSalesorderResponse) }
+    def update_accounting_salesorder(request:, timeout_ms: nil)
+      # update_accounting_salesorder - Update a salesorder
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAccountingSalesorder2Request,
+        Models::Operations::UpdateAccountingSalesorderRequest,
         base_url,
         '/accounting/{connection_id}/salesorder/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAccountingSalesorder2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAccountingSalesorderRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAccountingSalesorder2',
+        operation_id: 'updateAccountingSalesorder',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingSalesorder)
-          response = Models::Operations::UpdateAccountingSalesorder2Response.new(
+          response = Models::Operations::UpdateAccountingSalesorderResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

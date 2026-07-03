@@ -5,16 +5,16 @@
 
 ### Available Operations
 
-* [get_hris_payslip2](#get_hris_payslip2) - Retrieve a payslip
-* [list_hris_payslips2](#list_hris_payslips2) - List all payslips
+* [get_hris_payslip](#get_hris_payslip) - Retrieve a payslip
+* [list_hris_payslips](#list_hris_payslips) - List all payslips
 
-## get_hris_payslip2
+## get_hris_payslip
 
 Retrieve a payslip
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getHrisPayslip2" method="get" path="/hris/{connection_id}/payslip/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getHrisPayslip" method="get" path="/hris/{connection_id}/payslip/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -25,7 +25,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.payslip.get_hris_payslip2(connection_id: '<id>', id: '<id>')
+res = s.payslip.get_hris_payslip(connection_id: '<id>', id: '<id>')
 
 unless res.hris_payslip.nil?
   # handle response
@@ -39,12 +39,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Payslip                                                                                                                                |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisPayslip2QueryParamFields](../../models/operations/gethrispayslip2queryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisPayslipQueryParamFields](../../models/operations/gethrispayslipqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetHrisPayslip2Response)](../../models/operations/gethrispayslip2response.md)**
+**[T.nilable(Models::Operations::GetHrisPayslipResponse)](../../models/operations/gethrispayslipresponse.md)**
 
 ### Errors
 
@@ -52,13 +52,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_hris_payslips2
+## list_hris_payslips
 
 List all payslips
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listHrisPayslips2" method="get" path="/hris/{connection_id}/payslip" -->
+<!-- UsageSnippet language="ruby" operationID="listHrisPayslips" method="get" path="/hris/{connection_id}/payslip" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -69,11 +69,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListHrisPayslips2Request.new(
+req = Models::Operations::ListHrisPayslipsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.payslip.list_hris_payslips2(request: req)
+res = s.payslip.list_hris_payslips(request: req)
 
 unless res.hris_payslips.nil?
   # handle response
@@ -83,13 +83,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
-| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `request`                                                                                           | [Models::Operations::ListHrisPayslips2Request](../../models/operations/listhrispayslips2request.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListHrisPayslipsRequest](../../models/operations/listhrispayslipsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListHrisPayslips2Response)](../../models/operations/listhrispayslips2response.md)**
+**[T.nilable(Models::Operations::ListHrisPayslipsResponse)](../../models/operations/listhrispayslipsresponse.md)**
 
 ### Errors
 

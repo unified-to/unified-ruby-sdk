@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingBalancesheet2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingBalancesheet2Response) }
-    def get_accounting_balancesheet2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_accounting_balancesheet2 - Retrieve a balancesheet
-      request = Models::Operations::GetAccountingBalancesheet2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingBalancesheetQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingBalancesheetResponse) }
+    def get_accounting_balancesheet(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_accounting_balancesheet - Retrieve a balancesheet
+      request = Models::Operations::GetAccountingBalancesheetRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAccountingBalancesheet2Request,
+        Models::Operations::GetAccountingBalancesheetRequest,
         base_url,
         '/accounting/{connection_id}/balancesheet/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAccountingBalancesheet2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAccountingBalancesheetRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAccountingBalancesheet2',
+        operation_id: 'getAccountingBalancesheet',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AccountingBalancesheet)
-          response = Models::Operations::GetAccountingBalancesheet2Response.new(
+          response = Models::Operations::GetAccountingBalancesheetResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAccountingBalancesheets2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingBalancesheets2Response) }
-    def list_accounting_balancesheets2(request:, timeout_ms: nil)
-      # list_accounting_balancesheets2 - List all balancesheets
+    sig { params(request: Models::Operations::ListAccountingBalancesheetsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingBalancesheetsResponse) }
+    def list_accounting_balancesheets(request:, timeout_ms: nil)
+      # list_accounting_balancesheets - List all balancesheets
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAccountingBalancesheets2Request,
+        Models::Operations::ListAccountingBalancesheetsRequest,
         base_url,
         '/accounting/{connection_id}/balancesheet',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAccountingBalancesheets2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAccountingBalancesheetsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAccountingBalancesheets2',
+        operation_id: 'listAccountingBalancesheets',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AccountingBalancesheet))
-          response = Models::Operations::ListAccountingBalancesheets2Response.new(
+          response = Models::Operations::ListAccountingBalancesheetsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

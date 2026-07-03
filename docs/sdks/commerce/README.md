@@ -5,63 +5,63 @@
 
 ### Available Operations
 
-* [create_commerce_collection2](#create_commerce_collection2) - Create a collection
-* [create_commerce_inventory2](#create_commerce_inventory2) - Create an inventory
-* [create_commerce_item2](#create_commerce_item2) - Create an item
-* [create_commerce_itemvariant2](#create_commerce_itemvariant2) - Create an itemvariant
-* [create_commerce_location2](#create_commerce_location2) - Create a location
-* [create_commerce_reservation2](#create_commerce_reservation2) - Create a reservation
-* [create_commerce_review2](#create_commerce_review2) - Create a review
-* [create_commerce_saleschannel2](#create_commerce_saleschannel2) - Create a saleschannel
-* [get_commerce_collection2](#get_commerce_collection2) - Retrieve a collection
-* [get_commerce_inventory2](#get_commerce_inventory2) - Retrieve an inventory
-* [get_commerce_item2](#get_commerce_item2) - Retrieve an item
-* [get_commerce_itemvariant2](#get_commerce_itemvariant2) - Retrieve an itemvariant
-* [get_commerce_location2](#get_commerce_location2) - Retrieve a location
-* [get_commerce_reservation2](#get_commerce_reservation2) - Retrieve a reservation
-* [get_commerce_review2](#get_commerce_review2) - Retrieve a review
-* [get_commerce_saleschannel2](#get_commerce_saleschannel2) - Retrieve a saleschannel
-* [list_commerce_availabilities2](#list_commerce_availabilities2) - List all availabilities
-* [list_commerce_collections2](#list_commerce_collections2) - List all collections
-* [list_commerce_inventories2](#list_commerce_inventories2) - List all inventories
-* [list_commerce_items2](#list_commerce_items2) - List all items
-* [list_commerce_itemvariants2](#list_commerce_itemvariants2) - List all itemvariants
-* [list_commerce_locations2](#list_commerce_locations2) - List all locations
-* [list_commerce_reservations2](#list_commerce_reservations2) - List all reservations
-* [list_commerce_reviews2](#list_commerce_reviews2) - List all reviews
-* [list_commerce_saleschannels2](#list_commerce_saleschannels2) - List all saleschannels
-* [patch_commerce_collection2](#patch_commerce_collection2) - Update a collection
-* [patch_commerce_inventory2](#patch_commerce_inventory2) - Update an inventory
-* [patch_commerce_item2](#patch_commerce_item2) - Update an item
-* [patch_commerce_itemvariant2](#patch_commerce_itemvariant2) - Update an itemvariant
-* [patch_commerce_location2](#patch_commerce_location2) - Update a location
-* [patch_commerce_reservation2](#patch_commerce_reservation2) - Update a reservation
-* [patch_commerce_review2](#patch_commerce_review2) - Update a review
-* [patch_commerce_saleschannel2](#patch_commerce_saleschannel2) - Update a saleschannel
-* [remove_commerce_collection2](#remove_commerce_collection2) - Remove a collection
-* [remove_commerce_inventory2](#remove_commerce_inventory2) - Remove an inventory
-* [remove_commerce_item2](#remove_commerce_item2) - Remove an item
-* [remove_commerce_itemvariant2](#remove_commerce_itemvariant2) - Remove an itemvariant
-* [remove_commerce_location2](#remove_commerce_location2) - Remove a location
-* [remove_commerce_reservation2](#remove_commerce_reservation2) - Remove a reservation
-* [remove_commerce_review2](#remove_commerce_review2) - Remove a review
-* [remove_commerce_saleschannel2](#remove_commerce_saleschannel2) - Remove a saleschannel
-* [update_commerce_collection2](#update_commerce_collection2) - Update a collection
-* [update_commerce_inventory2](#update_commerce_inventory2) - Update an inventory
-* [update_commerce_item2](#update_commerce_item2) - Update an item
-* [update_commerce_itemvariant2](#update_commerce_itemvariant2) - Update an itemvariant
-* [update_commerce_location2](#update_commerce_location2) - Update a location
-* [update_commerce_reservation2](#update_commerce_reservation2) - Update a reservation
-* [update_commerce_review2](#update_commerce_review2) - Update a review
-* [update_commerce_saleschannel2](#update_commerce_saleschannel2) - Update a saleschannel
+* [create_commerce_collection](#create_commerce_collection) - Create a collection
+* [create_commerce_inventory](#create_commerce_inventory) - Create an inventory
+* [create_commerce_item](#create_commerce_item) - Create an item
+* [create_commerce_itemvariant](#create_commerce_itemvariant) - Create an itemvariant
+* [create_commerce_location](#create_commerce_location) - Create a location
+* [create_commerce_reservation](#create_commerce_reservation) - Create a reservation
+* [create_commerce_review](#create_commerce_review) - Create a review
+* [create_commerce_saleschannel](#create_commerce_saleschannel) - Create a saleschannel
+* [get_commerce_collection](#get_commerce_collection) - Retrieve a collection
+* [get_commerce_inventory](#get_commerce_inventory) - Retrieve an inventory
+* [get_commerce_item](#get_commerce_item) - Retrieve an item
+* [get_commerce_itemvariant](#get_commerce_itemvariant) - Retrieve an itemvariant
+* [get_commerce_location](#get_commerce_location) - Retrieve a location
+* [get_commerce_reservation](#get_commerce_reservation) - Retrieve a reservation
+* [get_commerce_review](#get_commerce_review) - Retrieve a review
+* [get_commerce_saleschannel](#get_commerce_saleschannel) - Retrieve a saleschannel
+* [list_commerce_availabilities](#list_commerce_availabilities) - List all availabilities
+* [list_commerce_collections](#list_commerce_collections) - List all collections
+* [list_commerce_inventories](#list_commerce_inventories) - List all inventories
+* [list_commerce_items](#list_commerce_items) - List all items
+* [list_commerce_itemvariants](#list_commerce_itemvariants) - List all itemvariants
+* [list_commerce_locations](#list_commerce_locations) - List all locations
+* [list_commerce_reservations](#list_commerce_reservations) - List all reservations
+* [list_commerce_reviews](#list_commerce_reviews) - List all reviews
+* [list_commerce_saleschannels](#list_commerce_saleschannels) - List all saleschannels
+* [patch_commerce_collection](#patch_commerce_collection) - Update a collection
+* [patch_commerce_inventory](#patch_commerce_inventory) - Update an inventory
+* [patch_commerce_item](#patch_commerce_item) - Update an item
+* [patch_commerce_itemvariant](#patch_commerce_itemvariant) - Update an itemvariant
+* [patch_commerce_location](#patch_commerce_location) - Update a location
+* [patch_commerce_reservation](#patch_commerce_reservation) - Update a reservation
+* [patch_commerce_review](#patch_commerce_review) - Update a review
+* [patch_commerce_saleschannel](#patch_commerce_saleschannel) - Update a saleschannel
+* [remove_commerce_collection](#remove_commerce_collection) - Remove a collection
+* [remove_commerce_inventory](#remove_commerce_inventory) - Remove an inventory
+* [remove_commerce_item](#remove_commerce_item) - Remove an item
+* [remove_commerce_itemvariant](#remove_commerce_itemvariant) - Remove an itemvariant
+* [remove_commerce_location](#remove_commerce_location) - Remove a location
+* [remove_commerce_reservation](#remove_commerce_reservation) - Remove a reservation
+* [remove_commerce_review](#remove_commerce_review) - Remove a review
+* [remove_commerce_saleschannel](#remove_commerce_saleschannel) - Remove a saleschannel
+* [update_commerce_collection](#update_commerce_collection) - Update a collection
+* [update_commerce_inventory](#update_commerce_inventory) - Update an inventory
+* [update_commerce_item](#update_commerce_item) - Update an item
+* [update_commerce_itemvariant](#update_commerce_itemvariant) - Update an itemvariant
+* [update_commerce_location](#update_commerce_location) - Update a location
+* [update_commerce_reservation](#update_commerce_reservation) - Update a reservation
+* [update_commerce_review](#update_commerce_review) - Update a review
+* [update_commerce_saleschannel](#update_commerce_saleschannel) - Update a saleschannel
 
-## create_commerce_collection2
+## create_commerce_collection
 
 Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceCollection2" method="post" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -72,7 +72,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_collection2(commerce_collection: Models::Shared::CommerceCollection.new(
+res = s.commerce.create_commerce_collection(commerce_collection: Models::Shared::CommerceCollection.new(
   name: '<value>',
 ), connection_id: '<id>')
 
@@ -88,12 +88,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `commerce_collection`                                                                                                                            | [Models::Shared::CommerceCollection](../../models/shared/commercecollection.md)                                                                  | :heavy_check_mark:                                                                                                                               | A collection of items/products/services                                                                                                          |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceCollection2QueryParamFields](../../models/operations/createcommercecollection2queryparamfields.md)>  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceCollectionQueryParamFields](../../models/operations/createcommercecollectionqueryparamfields.md)>    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCommerceCollection2Response)](../../models/operations/createcommercecollection2response.md)**
+**[T.nilable(Models::Operations::CreateCommerceCollectionResponse)](../../models/operations/createcommercecollectionresponse.md)**
 
 ### Errors
 
@@ -101,13 +101,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_commerce_inventory2
+## create_commerce_inventory
 
 Create an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceInventory2" method="post" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -118,7 +118,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_inventory2(commerce_inventory: Models::Shared::CommerceInventory.new(), connection_id: '<id>')
+res = s.commerce.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(), connection_id: '<id>')
 
 unless res.commerce_inventory.nil?
   # handle response
@@ -132,12 +132,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `commerce_inventory`                                                                                                                             | [Models::Shared::CommerceInventory](../../models/shared/commerceinventory.md)                                                                    | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceInventory2QueryParamFields](../../models/operations/createcommerceinventory2queryparamfields.md)>    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceInventoryQueryParamFields](../../models/operations/createcommerceinventoryqueryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCommerceInventory2Response)](../../models/operations/createcommerceinventory2response.md)**
+**[T.nilable(Models::Operations::CreateCommerceInventoryResponse)](../../models/operations/createcommerceinventoryresponse.md)**
 
 ### Errors
 
@@ -145,13 +145,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_commerce_item2
+## create_commerce_item
 
 Create an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceItem2" method="post" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -162,7 +162,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_item2(commerce_item: Models::Shared::CommerceItem.new(), connection_id: '<id>')
+res = s.commerce.create_commerce_item(commerce_item: Models::Shared::CommerceItem.new(), connection_id: '<id>')
 
 unless res.commerce_item.nil?
   # handle response
@@ -176,12 +176,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `commerce_item`                                                                                                                                  | [Models::Shared::CommerceItem](../../models/shared/commerceitem.md)                                                                              | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceItem2QueryParamFields](../../models/operations/createcommerceitem2queryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceItemQueryParamFields](../../models/operations/createcommerceitemqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCommerceItem2Response)](../../models/operations/createcommerceitem2response.md)**
+**[T.nilable(Models::Operations::CreateCommerceItemResponse)](../../models/operations/createcommerceitemresponse.md)**
 
 ### Errors
 
@@ -189,13 +189,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_commerce_itemvariant2
+## create_commerce_itemvariant
 
 Create an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceItemvariant2" method="post" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -206,7 +206,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_itemvariant2(commerce_itemvariant: Models::Shared::CommerceItemvariant.new(), connection_id: '<id>')
+res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Shared::CommerceItemvariant.new(), connection_id: '<id>')
 
 unless res.commerce_itemvariant.nil?
   # handle response
@@ -216,16 +216,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `commerce_itemvariant`                                                                                                                            | [Models::Shared::CommerceItemvariant](../../models/shared/commerceitemvariant.md)                                                                 | :heavy_check_mark:                                                                                                                                | N/A                                                                                                                                               |
-| `connection_id`                                                                                                                                   | *::String*                                                                                                                                        | :heavy_check_mark:                                                                                                                                | ID of the connection                                                                                                                              |
-| `fields_`                                                                                                                                         | T::Array<[Models::Operations::CreateCommerceItemvariant2QueryParamFields](../../models/operations/createcommerceitemvariant2queryparamfields.md)> | :heavy_minus_sign:                                                                                                                                | Fields to return                                                                                                                                  |
-| `raw`                                                                                                                                             | *T.nilable(::String)*                                                                                                                             | :heavy_minus_sign:                                                                                                                                | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar  |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `commerce_itemvariant`                                                                                                                           | [Models::Shared::CommerceItemvariant](../../models/shared/commerceitemvariant.md)                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceItemvariantQueryParamFields](../../models/operations/createcommerceitemvariantqueryparamfields.md)>  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCommerceItemvariant2Response)](../../models/operations/createcommerceitemvariant2response.md)**
+**[T.nilable(Models::Operations::CreateCommerceItemvariantResponse)](../../models/operations/createcommerceitemvariantresponse.md)**
 
 ### Errors
 
@@ -233,13 +233,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_commerce_location2
+## create_commerce_location
 
 Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceLocation2" method="post" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -250,7 +250,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_location2(commerce_location: Models::Shared::CommerceLocation.new(), connection_id: '<id>')
+res = s.commerce.create_commerce_location(commerce_location: Models::Shared::CommerceLocation.new(), connection_id: '<id>')
 
 unless res.commerce_location.nil?
   # handle response
@@ -264,12 +264,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `commerce_location`                                                                                                                              | [Models::Shared::CommerceLocation](../../models/shared/commercelocation.md)                                                                      | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceLocation2QueryParamFields](../../models/operations/createcommercelocation2queryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceLocationQueryParamFields](../../models/operations/createcommercelocationqueryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCommerceLocation2Response)](../../models/operations/createcommercelocation2response.md)**
+**[T.nilable(Models::Operations::CreateCommerceLocationResponse)](../../models/operations/createcommercelocationresponse.md)**
 
 ### Errors
 
@@ -277,13 +277,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_commerce_reservation2
+## create_commerce_reservation
 
 Create a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceReservation2" method="post" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -294,7 +294,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_reservation2(commerce_reservation: Models::Shared::CommerceReservation.new(), connection_id: '<id>')
+res = s.commerce.create_commerce_reservation(commerce_reservation: Models::Shared::CommerceReservation.new(), connection_id: '<id>')
 
 unless res.commerce_reservation.nil?
   # handle response
@@ -304,16 +304,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `commerce_reservation`                                                                                                                            | [Models::Shared::CommerceReservation](../../models/shared/commercereservation.md)                                                                 | :heavy_check_mark:                                                                                                                                | N/A                                                                                                                                               |
-| `connection_id`                                                                                                                                   | *::String*                                                                                                                                        | :heavy_check_mark:                                                                                                                                | ID of the connection                                                                                                                              |
-| `fields_`                                                                                                                                         | T::Array<[Models::Operations::CreateCommerceReservation2QueryParamFields](../../models/operations/createcommercereservation2queryparamfields.md)> | :heavy_minus_sign:                                                                                                                                | Fields to return                                                                                                                                  |
-| `raw`                                                                                                                                             | *T.nilable(::String)*                                                                                                                             | :heavy_minus_sign:                                                                                                                                | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar  |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `commerce_reservation`                                                                                                                           | [Models::Shared::CommerceReservation](../../models/shared/commercereservation.md)                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceReservationQueryParamFields](../../models/operations/createcommercereservationqueryparamfields.md)>  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCommerceReservation2Response)](../../models/operations/createcommercereservation2response.md)**
+**[T.nilable(Models::Operations::CreateCommerceReservationResponse)](../../models/operations/createcommercereservationresponse.md)**
 
 ### Errors
 
@@ -321,13 +321,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_commerce_review2
+## create_commerce_review
 
 Create a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceReview2" method="post" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -338,7 +338,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_review2(commerce_review: Models::Shared::CommerceReview.new(), connection_id: '<id>')
+res = s.commerce.create_commerce_review(commerce_review: Models::Shared::CommerceReview.new(), connection_id: '<id>')
 
 unless res.commerce_review.nil?
   # handle response
@@ -352,12 +352,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `commerce_review`                                                                                                                                | [Models::Shared::CommerceReview](../../models/shared/commercereview.md)                                                                          | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceReview2QueryParamFields](../../models/operations/createcommercereview2queryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCommerceReviewQueryParamFields](../../models/operations/createcommercereviewqueryparamfields.md)>            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCommerceReview2Response)](../../models/operations/createcommercereview2response.md)**
+**[T.nilable(Models::Operations::CreateCommerceReviewResponse)](../../models/operations/createcommercereviewresponse.md)**
 
 ### Errors
 
@@ -365,13 +365,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## create_commerce_saleschannel2
+## create_commerce_saleschannel
 
 Create a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceSaleschannel2" method="post" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -382,7 +382,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.create_commerce_saleschannel2(commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(), connection_id: '<id>')
+res = s.commerce.create_commerce_saleschannel(commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(), connection_id: '<id>')
 
 unless res.commerce_saleschannel.nil?
   # handle response
@@ -392,16 +392,16 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `commerce_saleschannel`                                                                                                                             | [Models::Shared::CommerceSaleschannel](../../models/shared/commercesaleschannel.md)                                                                 | :heavy_check_mark:                                                                                                                                  | N/A                                                                                                                                                 |
-| `connection_id`                                                                                                                                     | *::String*                                                                                                                                          | :heavy_check_mark:                                                                                                                                  | ID of the connection                                                                                                                                |
-| `fields_`                                                                                                                                           | T::Array<[Models::Operations::CreateCommerceSaleschannel2QueryParamFields](../../models/operations/createcommercesaleschannel2queryparamfields.md)> | :heavy_minus_sign:                                                                                                                                  | Fields to return                                                                                                                                    |
-| `raw`                                                                                                                                               | *T.nilable(::String)*                                                                                                                               | :heavy_minus_sign:                                                                                                                                  | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar    |
+| Parameter                                                                                                                                         | Type                                                                                                                                              | Required                                                                                                                                          | Description                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `commerce_saleschannel`                                                                                                                           | [Models::Shared::CommerceSaleschannel](../../models/shared/commercesaleschannel.md)                                                               | :heavy_check_mark:                                                                                                                                | N/A                                                                                                                                               |
+| `connection_id`                                                                                                                                   | *::String*                                                                                                                                        | :heavy_check_mark:                                                                                                                                | ID of the connection                                                                                                                              |
+| `fields_`                                                                                                                                         | T::Array<[Models::Operations::CreateCommerceSaleschannelQueryParamFields](../../models/operations/createcommercesaleschannelqueryparamfields.md)> | :heavy_minus_sign:                                                                                                                                | Fields to return                                                                                                                                  |
+| `raw`                                                                                                                                             | *T.nilable(::String)*                                                                                                                             | :heavy_minus_sign:                                                                                                                                | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar  |
 
 ### Response
 
-**[T.nilable(Models::Operations::CreateCommerceSaleschannel2Response)](../../models/operations/createcommercesaleschannel2response.md)**
+**[T.nilable(Models::Operations::CreateCommerceSaleschannelResponse)](../../models/operations/createcommercesaleschannelresponse.md)**
 
 ### Errors
 
@@ -409,13 +409,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_commerce_collection2
+## get_commerce_collection
 
 Retrieve a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCommerceCollection2" method="get" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCommerceCollection" method="get" path="/commerce/{connection_id}/collection/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -426,7 +426,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.get_commerce_collection2(connection_id: '<id>', id: '<id>')
+res = s.commerce.get_commerce_collection(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_collection.nil?
   # handle response
@@ -440,12 +440,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Collection                                                                                                                             |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceCollection2QueryParamFields](../../models/operations/getcommercecollection2queryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceCollectionQueryParamFields](../../models/operations/getcommercecollectionqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCommerceCollection2Response)](../../models/operations/getcommercecollection2response.md)**
+**[T.nilable(Models::Operations::GetCommerceCollectionResponse)](../../models/operations/getcommercecollectionresponse.md)**
 
 ### Errors
 
@@ -453,13 +453,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_commerce_inventory2
+## get_commerce_inventory
 
 Retrieve an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCommerceInventory2" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCommerceInventory" method="get" path="/commerce/{connection_id}/inventory/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -470,7 +470,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.get_commerce_inventory2(connection_id: '<id>', id: '<id>')
+res = s.commerce.get_commerce_inventory(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_inventory.nil?
   # handle response
@@ -484,12 +484,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Inventory                                                                                                                              |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceInventory2QueryParamFields](../../models/operations/getcommerceinventory2queryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceInventoryQueryParamFields](../../models/operations/getcommerceinventoryqueryparamfields.md)>            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCommerceInventory2Response)](../../models/operations/getcommerceinventory2response.md)**
+**[T.nilable(Models::Operations::GetCommerceInventoryResponse)](../../models/operations/getcommerceinventoryresponse.md)**
 
 ### Errors
 
@@ -497,13 +497,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_commerce_item2
+## get_commerce_item
 
 Retrieve an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCommerceItem2" method="get" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCommerceItem" method="get" path="/commerce/{connection_id}/item/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -514,7 +514,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.get_commerce_item2(connection_id: '<id>', id: '<id>')
+res = s.commerce.get_commerce_item(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_item.nil?
   # handle response
@@ -528,12 +528,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Item                                                                                                                                   |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceItem2QueryParamFields](../../models/operations/getcommerceitem2queryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceItemQueryParamFields](../../models/operations/getcommerceitemqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCommerceItem2Response)](../../models/operations/getcommerceitem2response.md)**
+**[T.nilable(Models::Operations::GetCommerceItemResponse)](../../models/operations/getcommerceitemresponse.md)**
 
 ### Errors
 
@@ -541,13 +541,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_commerce_itemvariant2
+## get_commerce_itemvariant
 
 Retrieve an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCommerceItemvariant2" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCommerceItemvariant" method="get" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -558,7 +558,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.get_commerce_itemvariant2(connection_id: '<id>', id: '<id>')
+res = s.commerce.get_commerce_itemvariant(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_itemvariant.nil?
   # handle response
@@ -572,12 +572,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Itemvariant                                                                                                                            |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceItemvariant2QueryParamFields](../../models/operations/getcommerceitemvariant2queryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceItemvariantQueryParamFields](../../models/operations/getcommerceitemvariantqueryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCommerceItemvariant2Response)](../../models/operations/getcommerceitemvariant2response.md)**
+**[T.nilable(Models::Operations::GetCommerceItemvariantResponse)](../../models/operations/getcommerceitemvariantresponse.md)**
 
 ### Errors
 
@@ -585,13 +585,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_commerce_location2
+## get_commerce_location
 
 Retrieve a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCommerceLocation2" method="get" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCommerceLocation" method="get" path="/commerce/{connection_id}/location/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -602,7 +602,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.get_commerce_location2(connection_id: '<id>', id: '<id>')
+res = s.commerce.get_commerce_location(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_location.nil?
   # handle response
@@ -616,12 +616,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Location                                                                                                                               |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceLocation2QueryParamFields](../../models/operations/getcommercelocation2queryparamfields.md)>            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceLocationQueryParamFields](../../models/operations/getcommercelocationqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCommerceLocation2Response)](../../models/operations/getcommercelocation2response.md)**
+**[T.nilable(Models::Operations::GetCommerceLocationResponse)](../../models/operations/getcommercelocationresponse.md)**
 
 ### Errors
 
@@ -629,13 +629,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_commerce_reservation2
+## get_commerce_reservation
 
 Retrieve a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCommerceReservation2" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCommerceReservation" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -646,7 +646,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.get_commerce_reservation2(connection_id: '<id>', id: '<id>')
+res = s.commerce.get_commerce_reservation(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_reservation.nil?
   # handle response
@@ -660,12 +660,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Reservation                                                                                                                            |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceReservation2QueryParamFields](../../models/operations/getcommercereservation2queryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceReservationQueryParamFields](../../models/operations/getcommercereservationqueryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCommerceReservation2Response)](../../models/operations/getcommercereservation2response.md)**
+**[T.nilable(Models::Operations::GetCommerceReservationResponse)](../../models/operations/getcommercereservationresponse.md)**
 
 ### Errors
 
@@ -673,13 +673,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_commerce_review2
+## get_commerce_review
 
 Retrieve a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCommerceReview2" method="get" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCommerceReview" method="get" path="/commerce/{connection_id}/review/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -690,7 +690,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.get_commerce_review2(connection_id: '<id>', id: '<id>')
+res = s.commerce.get_commerce_review(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_review.nil?
   # handle response
@@ -704,12 +704,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Review                                                                                                                                 |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceReview2QueryParamFields](../../models/operations/getcommercereview2queryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceReviewQueryParamFields](../../models/operations/getcommercereviewqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCommerceReview2Response)](../../models/operations/getcommercereview2response.md)**
+**[T.nilable(Models::Operations::GetCommerceReviewResponse)](../../models/operations/getcommercereviewresponse.md)**
 
 ### Errors
 
@@ -717,13 +717,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_commerce_saleschannel2
+## get_commerce_saleschannel
 
 Retrieve a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="getCommerceSaleschannel2" method="get" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="getCommerceSaleschannel" method="get" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -734,7 +734,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.get_commerce_saleschannel2(connection_id: '<id>', id: '<id>')
+res = s.commerce.get_commerce_saleschannel(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_saleschannel.nil?
   # handle response
@@ -748,12 +748,12 @@ end
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
 | `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Saleschannel                                                                                                                           |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceSaleschannel2QueryParamFields](../../models/operations/getcommercesaleschannel2queryparamfields.md)>    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceSaleschannelQueryParamFields](../../models/operations/getcommercesaleschannelqueryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
 | `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
 
 ### Response
 
-**[T.nilable(Models::Operations::GetCommerceSaleschannel2Response)](../../models/operations/getcommercesaleschannel2response.md)**
+**[T.nilable(Models::Operations::GetCommerceSaleschannelResponse)](../../models/operations/getcommercesaleschannelresponse.md)**
 
 ### Errors
 
@@ -761,13 +761,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_commerce_availabilities2
+## list_commerce_availabilities
 
 List all availabilities
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCommerceAvailabilities2" method="get" path="/commerce/{connection_id}/availability" -->
+<!-- UsageSnippet language="ruby" operationID="listCommerceAvailabilities" method="get" path="/commerce/{connection_id}/availability" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -778,11 +778,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCommerceAvailabilities2Request.new(
+req = Models::Operations::ListCommerceAvailabilitiesRequest.new(
   connection_id: '<id>',
 )
 
-res = s.commerce.list_commerce_availabilities2(request: req)
+res = s.commerce.list_commerce_availabilities(request: req)
 
 unless res.commerce_availabilities.nil?
   # handle response
@@ -792,13 +792,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                               | [Models::Operations::ListCommerceAvailabilities2Request](../../models/operations/listcommerceavailabilities2request.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                             | [Models::Operations::ListCommerceAvailabilitiesRequest](../../models/operations/listcommerceavailabilitiesrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCommerceAvailabilities2Response)](../../models/operations/listcommerceavailabilities2response.md)**
+**[T.nilable(Models::Operations::ListCommerceAvailabilitiesResponse)](../../models/operations/listcommerceavailabilitiesresponse.md)**
 
 ### Errors
 
@@ -806,13 +806,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_commerce_collections2
+## list_commerce_collections
 
 List all collections
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCommerceCollections2" method="get" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="ruby" operationID="listCommerceCollections" method="get" path="/commerce/{connection_id}/collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -823,11 +823,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCommerceCollections2Request.new(
+req = Models::Operations::ListCommerceCollectionsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.commerce.list_commerce_collections2(request: req)
+res = s.commerce.list_commerce_collections(request: req)
 
 unless res.commerce_collections.nil?
   # handle response
@@ -837,13 +837,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                         | [Models::Operations::ListCommerceCollections2Request](../../models/operations/listcommercecollections2request.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::ListCommerceCollectionsRequest](../../models/operations/listcommercecollectionsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCommerceCollections2Response)](../../models/operations/listcommercecollections2response.md)**
+**[T.nilable(Models::Operations::ListCommerceCollectionsResponse)](../../models/operations/listcommercecollectionsresponse.md)**
 
 ### Errors
 
@@ -851,13 +851,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_commerce_inventories2
+## list_commerce_inventories
 
 List all inventories
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCommerceInventories2" method="get" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="ruby" operationID="listCommerceInventories" method="get" path="/commerce/{connection_id}/inventory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -868,11 +868,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCommerceInventories2Request.new(
+req = Models::Operations::ListCommerceInventoriesRequest.new(
   connection_id: '<id>',
 )
 
-res = s.commerce.list_commerce_inventories2(request: req)
+res = s.commerce.list_commerce_inventories(request: req)
 
 unless res.commerce_inventories.nil?
   # handle response
@@ -882,13 +882,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                         | [Models::Operations::ListCommerceInventories2Request](../../models/operations/listcommerceinventories2request.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::ListCommerceInventoriesRequest](../../models/operations/listcommerceinventoriesrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCommerceInventories2Response)](../../models/operations/listcommerceinventories2response.md)**
+**[T.nilable(Models::Operations::ListCommerceInventoriesResponse)](../../models/operations/listcommerceinventoriesresponse.md)**
 
 ### Errors
 
@@ -896,13 +896,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_commerce_items2
+## list_commerce_items
 
 List all items
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCommerceItems2" method="get" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="ruby" operationID="listCommerceItems" method="get" path="/commerce/{connection_id}/item" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -913,11 +913,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCommerceItems2Request.new(
+req = Models::Operations::ListCommerceItemsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.commerce.list_commerce_items2(request: req)
+res = s.commerce.list_commerce_items(request: req)
 
 unless res.commerce_items.nil?
   # handle response
@@ -927,13 +927,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::ListCommerceItems2Request](../../models/operations/listcommerceitems2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListCommerceItemsRequest](../../models/operations/listcommerceitemsrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCommerceItems2Response)](../../models/operations/listcommerceitems2response.md)**
+**[T.nilable(Models::Operations::ListCommerceItemsResponse)](../../models/operations/listcommerceitemsresponse.md)**
 
 ### Errors
 
@@ -941,13 +941,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_commerce_itemvariants2
+## list_commerce_itemvariants
 
 List all itemvariants
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCommerceItemvariants2" method="get" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="ruby" operationID="listCommerceItemvariants" method="get" path="/commerce/{connection_id}/itemvariant" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -958,11 +958,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCommerceItemvariants2Request.new(
+req = Models::Operations::ListCommerceItemvariantsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.commerce.list_commerce_itemvariants2(request: req)
+res = s.commerce.list_commerce_itemvariants(request: req)
 
 unless res.commerce_itemvariants.nil?
   # handle response
@@ -972,13 +972,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                           | [Models::Operations::ListCommerceItemvariants2Request](../../models/operations/listcommerceitemvariants2request.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::ListCommerceItemvariantsRequest](../../models/operations/listcommerceitemvariantsrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCommerceItemvariants2Response)](../../models/operations/listcommerceitemvariants2response.md)**
+**[T.nilable(Models::Operations::ListCommerceItemvariantsResponse)](../../models/operations/listcommerceitemvariantsresponse.md)**
 
 ### Errors
 
@@ -986,13 +986,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_commerce_locations2
+## list_commerce_locations
 
 List all locations
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCommerceLocations2" method="get" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="ruby" operationID="listCommerceLocations" method="get" path="/commerce/{connection_id}/location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1003,11 +1003,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCommerceLocations2Request.new(
+req = Models::Operations::ListCommerceLocationsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.commerce.list_commerce_locations2(request: req)
+res = s.commerce.list_commerce_locations(request: req)
 
 unless res.commerce_locations.nil?
   # handle response
@@ -1017,13 +1017,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                     | [Models::Operations::ListCommerceLocations2Request](../../models/operations/listcommercelocations2request.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::ListCommerceLocationsRequest](../../models/operations/listcommercelocationsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCommerceLocations2Response)](../../models/operations/listcommercelocations2response.md)**
+**[T.nilable(Models::Operations::ListCommerceLocationsResponse)](../../models/operations/listcommercelocationsresponse.md)**
 
 ### Errors
 
@@ -1031,13 +1031,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_commerce_reservations2
+## list_commerce_reservations
 
 List all reservations
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCommerceReservations2" method="get" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="ruby" operationID="listCommerceReservations" method="get" path="/commerce/{connection_id}/reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1048,11 +1048,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCommerceReservations2Request.new(
+req = Models::Operations::ListCommerceReservationsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.commerce.list_commerce_reservations2(request: req)
+res = s.commerce.list_commerce_reservations(request: req)
 
 unless res.commerce_reservations.nil?
   # handle response
@@ -1062,13 +1062,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                           | [Models::Operations::ListCommerceReservations2Request](../../models/operations/listcommercereservations2request.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::ListCommerceReservationsRequest](../../models/operations/listcommercereservationsrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCommerceReservations2Response)](../../models/operations/listcommercereservations2response.md)**
+**[T.nilable(Models::Operations::ListCommerceReservationsResponse)](../../models/operations/listcommercereservationsresponse.md)**
 
 ### Errors
 
@@ -1076,13 +1076,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_commerce_reviews2
+## list_commerce_reviews
 
 List all reviews
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCommerceReviews2" method="get" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="ruby" operationID="listCommerceReviews" method="get" path="/commerce/{connection_id}/review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1093,11 +1093,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCommerceReviews2Request.new(
+req = Models::Operations::ListCommerceReviewsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.commerce.list_commerce_reviews2(request: req)
+res = s.commerce.list_commerce_reviews(request: req)
 
 unless res.commerce_reviews.nil?
   # handle response
@@ -1107,13 +1107,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [Models::Operations::ListCommerceReviews2Request](../../models/operations/listcommercereviews2request.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::ListCommerceReviewsRequest](../../models/operations/listcommercereviewsrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCommerceReviews2Response)](../../models/operations/listcommercereviews2response.md)**
+**[T.nilable(Models::Operations::ListCommerceReviewsResponse)](../../models/operations/listcommercereviewsresponse.md)**
 
 ### Errors
 
@@ -1121,13 +1121,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_commerce_saleschannels2
+## list_commerce_saleschannels
 
 List all saleschannels
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCommerceSaleschannels2" method="get" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="ruby" operationID="listCommerceSaleschannels" method="get" path="/commerce/{connection_id}/saleschannel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1138,11 +1138,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCommerceSaleschannels2Request.new(
+req = Models::Operations::ListCommerceSaleschannelsRequest.new(
   connection_id: '<id>',
 )
 
-res = s.commerce.list_commerce_saleschannels2(request: req)
+res = s.commerce.list_commerce_saleschannels(request: req)
 
 unless res.commerce_saleschannels.nil?
   # handle response
@@ -1152,13 +1152,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [Models::Operations::ListCommerceSaleschannels2Request](../../models/operations/listcommercesaleschannels2request.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [Models::Operations::ListCommerceSaleschannelsRequest](../../models/operations/listcommercesaleschannelsrequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCommerceSaleschannels2Response)](../../models/operations/listcommercesaleschannels2response.md)**
+**[T.nilable(Models::Operations::ListCommerceSaleschannelsResponse)](../../models/operations/listcommercesaleschannelsresponse.md)**
 
 ### Errors
 
@@ -1166,13 +1166,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_commerce_collection2
+## patch_commerce_collection
 
 Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceCollection2" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1183,7 +1183,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCommerceCollection2Request.new(
+req = Models::Operations::PatchCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     name: '<value>',
   ),
@@ -1191,7 +1191,7 @@ req = Models::Operations::PatchCommerceCollection2Request.new(
   id: '<id>',
 )
 
-res = s.commerce.patch_commerce_collection2(request: req)
+res = s.commerce.patch_commerce_collection(request: req)
 
 unless res.commerce_collection.nil?
   # handle response
@@ -1201,13 +1201,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                         | [Models::Operations::PatchCommerceCollection2Request](../../models/operations/patchcommercecollection2request.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::PatchCommerceCollectionRequest](../../models/operations/patchcommercecollectionrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCommerceCollection2Response)](../../models/operations/patchcommercecollection2response.md)**
+**[T.nilable(Models::Operations::PatchCommerceCollectionResponse)](../../models/operations/patchcommercecollectionresponse.md)**
 
 ### Errors
 
@@ -1215,13 +1215,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_commerce_inventory2
+## patch_commerce_inventory
 
 Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceInventory2" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1232,13 +1232,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCommerceInventory2Request.new(
+req = Models::Operations::PatchCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.patch_commerce_inventory2(request: req)
+res = s.commerce.patch_commerce_inventory(request: req)
 
 unless res.commerce_inventory.nil?
   # handle response
@@ -1248,13 +1248,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                       | [Models::Operations::PatchCommerceInventory2Request](../../models/operations/patchcommerceinventory2request.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::PatchCommerceInventoryRequest](../../models/operations/patchcommerceinventoryrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCommerceInventory2Response)](../../models/operations/patchcommerceinventory2response.md)**
+**[T.nilable(Models::Operations::PatchCommerceInventoryResponse)](../../models/operations/patchcommerceinventoryresponse.md)**
 
 ### Errors
 
@@ -1262,13 +1262,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_commerce_item2
+## patch_commerce_item
 
 Update an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceItem2" method="patch" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1279,13 +1279,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCommerceItem2Request.new(
+req = Models::Operations::PatchCommerceItemRequest.new(
   commerce_item: Models::Shared::CommerceItem.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.patch_commerce_item2(request: req)
+res = s.commerce.patch_commerce_item(request: req)
 
 unless res.commerce_item.nil?
   # handle response
@@ -1295,13 +1295,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
-| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `request`                                                                                             | [Models::Operations::PatchCommerceItem2Request](../../models/operations/patchcommerceitem2request.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::PatchCommerceItemRequest](../../models/operations/patchcommerceitemrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCommerceItem2Response)](../../models/operations/patchcommerceitem2response.md)**
+**[T.nilable(Models::Operations::PatchCommerceItemResponse)](../../models/operations/patchcommerceitemresponse.md)**
 
 ### Errors
 
@@ -1309,13 +1309,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_commerce_itemvariant2
+## patch_commerce_itemvariant
 
 Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceItemvariant2" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1326,13 +1326,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCommerceItemvariant2Request.new(
+req = Models::Operations::PatchCommerceItemvariantRequest.new(
   commerce_itemvariant: Models::Shared::CommerceItemvariant.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.patch_commerce_itemvariant2(request: req)
+res = s.commerce.patch_commerce_itemvariant(request: req)
 
 unless res.commerce_itemvariant.nil?
   # handle response
@@ -1342,13 +1342,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                           | [Models::Operations::PatchCommerceItemvariant2Request](../../models/operations/patchcommerceitemvariant2request.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::PatchCommerceItemvariantRequest](../../models/operations/patchcommerceitemvariantrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCommerceItemvariant2Response)](../../models/operations/patchcommerceitemvariant2response.md)**
+**[T.nilable(Models::Operations::PatchCommerceItemvariantResponse)](../../models/operations/patchcommerceitemvariantresponse.md)**
 
 ### Errors
 
@@ -1356,13 +1356,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_commerce_location2
+## patch_commerce_location
 
 Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceLocation2" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1373,13 +1373,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCommerceLocation2Request.new(
+req = Models::Operations::PatchCommerceLocationRequest.new(
   commerce_location: Models::Shared::CommerceLocation.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.patch_commerce_location2(request: req)
+res = s.commerce.patch_commerce_location(request: req)
 
 unless res.commerce_location.nil?
   # handle response
@@ -1389,13 +1389,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                     | [Models::Operations::PatchCommerceLocation2Request](../../models/operations/patchcommercelocation2request.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::PatchCommerceLocationRequest](../../models/operations/patchcommercelocationrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCommerceLocation2Response)](../../models/operations/patchcommercelocation2response.md)**
+**[T.nilable(Models::Operations::PatchCommerceLocationResponse)](../../models/operations/patchcommercelocationresponse.md)**
 
 ### Errors
 
@@ -1403,13 +1403,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_commerce_reservation2
+## patch_commerce_reservation
 
 Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceReservation2" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1420,13 +1420,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCommerceReservation2Request.new(
+req = Models::Operations::PatchCommerceReservationRequest.new(
   commerce_reservation: Models::Shared::CommerceReservation.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.patch_commerce_reservation2(request: req)
+res = s.commerce.patch_commerce_reservation(request: req)
 
 unless res.commerce_reservation.nil?
   # handle response
@@ -1436,13 +1436,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                           | [Models::Operations::PatchCommerceReservation2Request](../../models/operations/patchcommercereservation2request.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::PatchCommerceReservationRequest](../../models/operations/patchcommercereservationrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCommerceReservation2Response)](../../models/operations/patchcommercereservation2response.md)**
+**[T.nilable(Models::Operations::PatchCommerceReservationResponse)](../../models/operations/patchcommercereservationresponse.md)**
 
 ### Errors
 
@@ -1450,13 +1450,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_commerce_review2
+## patch_commerce_review
 
 Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceReview2" method="patch" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1467,13 +1467,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCommerceReview2Request.new(
+req = Models::Operations::PatchCommerceReviewRequest.new(
   commerce_review: Models::Shared::CommerceReview.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.patch_commerce_review2(request: req)
+res = s.commerce.patch_commerce_review(request: req)
 
 unless res.commerce_review.nil?
   # handle response
@@ -1483,13 +1483,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                 | [Models::Operations::PatchCommerceReview2Request](../../models/operations/patchcommercereview2request.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::PatchCommerceReviewRequest](../../models/operations/patchcommercereviewrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCommerceReview2Response)](../../models/operations/patchcommercereview2response.md)**
+**[T.nilable(Models::Operations::PatchCommerceReviewResponse)](../../models/operations/patchcommercereviewresponse.md)**
 
 ### Errors
 
@@ -1497,13 +1497,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_commerce_saleschannel2
+## patch_commerce_saleschannel
 
 Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceSaleschannel2" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1514,13 +1514,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::PatchCommerceSaleschannel2Request.new(
+req = Models::Operations::PatchCommerceSaleschannelRequest.new(
   commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.patch_commerce_saleschannel2(request: req)
+res = s.commerce.patch_commerce_saleschannel(request: req)
 
 unless res.commerce_saleschannel.nil?
   # handle response
@@ -1530,13 +1530,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [Models::Operations::PatchCommerceSaleschannel2Request](../../models/operations/patchcommercesaleschannel2request.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [Models::Operations::PatchCommerceSaleschannelRequest](../../models/operations/patchcommercesaleschannelrequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::PatchCommerceSaleschannel2Response)](../../models/operations/patchcommercesaleschannel2response.md)**
+**[T.nilable(Models::Operations::PatchCommerceSaleschannelResponse)](../../models/operations/patchcommercesaleschannelresponse.md)**
 
 ### Errors
 
@@ -1544,13 +1544,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_commerce_collection2
+## remove_commerce_collection
 
 Remove a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeCommerceCollection2" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeCommerceCollection" method="delete" path="/commerce/{connection_id}/collection/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1561,7 +1561,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.remove_commerce_collection2(connection_id: '<id>', id: '<id>')
+res = s.commerce.remove_commerce_collection(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1578,7 +1578,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveCommerceCollection2Response)](../../models/operations/removecommercecollection2response.md)**
+**[T.nilable(Models::Operations::RemoveCommerceCollectionResponse)](../../models/operations/removecommercecollectionresponse.md)**
 
 ### Errors
 
@@ -1586,13 +1586,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_commerce_inventory2
+## remove_commerce_inventory
 
 Remove an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeCommerceInventory2" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeCommerceInventory" method="delete" path="/commerce/{connection_id}/inventory/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1603,7 +1603,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.remove_commerce_inventory2(connection_id: '<id>', id: '<id>')
+res = s.commerce.remove_commerce_inventory(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1620,7 +1620,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveCommerceInventory2Response)](../../models/operations/removecommerceinventory2response.md)**
+**[T.nilable(Models::Operations::RemoveCommerceInventoryResponse)](../../models/operations/removecommerceinventoryresponse.md)**
 
 ### Errors
 
@@ -1628,13 +1628,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_commerce_item2
+## remove_commerce_item
 
 Remove an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeCommerceItem2" method="delete" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeCommerceItem" method="delete" path="/commerce/{connection_id}/item/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1645,7 +1645,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.remove_commerce_item2(connection_id: '<id>', id: '<id>')
+res = s.commerce.remove_commerce_item(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1662,7 +1662,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveCommerceItem2Response)](../../models/operations/removecommerceitem2response.md)**
+**[T.nilable(Models::Operations::RemoveCommerceItemResponse)](../../models/operations/removecommerceitemresponse.md)**
 
 ### Errors
 
@@ -1670,13 +1670,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_commerce_itemvariant2
+## remove_commerce_itemvariant
 
 Remove an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeCommerceItemvariant2" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeCommerceItemvariant" method="delete" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1687,7 +1687,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.remove_commerce_itemvariant2(connection_id: '<id>', id: '<id>')
+res = s.commerce.remove_commerce_itemvariant(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1704,7 +1704,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveCommerceItemvariant2Response)](../../models/operations/removecommerceitemvariant2response.md)**
+**[T.nilable(Models::Operations::RemoveCommerceItemvariantResponse)](../../models/operations/removecommerceitemvariantresponse.md)**
 
 ### Errors
 
@@ -1712,13 +1712,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_commerce_location2
+## remove_commerce_location
 
 Remove a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeCommerceLocation2" method="delete" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeCommerceLocation" method="delete" path="/commerce/{connection_id}/location/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1729,7 +1729,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.remove_commerce_location2(connection_id: '<id>', id: '<id>')
+res = s.commerce.remove_commerce_location(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1746,7 +1746,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveCommerceLocation2Response)](../../models/operations/removecommercelocation2response.md)**
+**[T.nilable(Models::Operations::RemoveCommerceLocationResponse)](../../models/operations/removecommercelocationresponse.md)**
 
 ### Errors
 
@@ -1754,13 +1754,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_commerce_reservation2
+## remove_commerce_reservation
 
 Remove a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeCommerceReservation2" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeCommerceReservation" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1771,7 +1771,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.remove_commerce_reservation2(connection_id: '<id>', id: '<id>')
+res = s.commerce.remove_commerce_reservation(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1788,7 +1788,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveCommerceReservation2Response)](../../models/operations/removecommercereservation2response.md)**
+**[T.nilable(Models::Operations::RemoveCommerceReservationResponse)](../../models/operations/removecommercereservationresponse.md)**
 
 ### Errors
 
@@ -1796,13 +1796,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_commerce_review2
+## remove_commerce_review
 
 Remove a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeCommerceReview2" method="delete" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeCommerceReview" method="delete" path="/commerce/{connection_id}/review/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1813,7 +1813,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.remove_commerce_review2(connection_id: '<id>', id: '<id>')
+res = s.commerce.remove_commerce_review(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1830,7 +1830,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveCommerceReview2Response)](../../models/operations/removecommercereview2response.md)**
+**[T.nilable(Models::Operations::RemoveCommerceReviewResponse)](../../models/operations/removecommercereviewresponse.md)**
 
 ### Errors
 
@@ -1838,13 +1838,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_commerce_saleschannel2
+## remove_commerce_saleschannel
 
 Remove a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="removeCommerceSaleschannel2" method="delete" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="removeCommerceSaleschannel" method="delete" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1855,7 +1855,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.commerce.remove_commerce_saleschannel2(connection_id: '<id>', id: '<id>')
+res = s.commerce.remove_commerce_saleschannel(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
   # handle response
@@ -1872,7 +1872,7 @@ end
 
 ### Response
 
-**[T.nilable(Models::Operations::RemoveCommerceSaleschannel2Response)](../../models/operations/removecommercesaleschannel2response.md)**
+**[T.nilable(Models::Operations::RemoveCommerceSaleschannelResponse)](../../models/operations/removecommercesaleschannelresponse.md)**
 
 ### Errors
 
@@ -1880,13 +1880,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_commerce_collection2
+## update_commerce_collection
 
 Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceCollection2" method="put" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1897,7 +1897,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateCommerceCollection2Request.new(
+req = Models::Operations::UpdateCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     name: '<value>',
   ),
@@ -1905,7 +1905,7 @@ req = Models::Operations::UpdateCommerceCollection2Request.new(
   id: '<id>',
 )
 
-res = s.commerce.update_commerce_collection2(request: req)
+res = s.commerce.update_commerce_collection(request: req)
 
 unless res.commerce_collection.nil?
   # handle response
@@ -1915,13 +1915,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                           | [Models::Operations::UpdateCommerceCollection2Request](../../models/operations/updatecommercecollection2request.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::UpdateCommerceCollectionRequest](../../models/operations/updatecommercecollectionrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateCommerceCollection2Response)](../../models/operations/updatecommercecollection2response.md)**
+**[T.nilable(Models::Operations::UpdateCommerceCollectionResponse)](../../models/operations/updatecommercecollectionresponse.md)**
 
 ### Errors
 
@@ -1929,13 +1929,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_commerce_inventory2
+## update_commerce_inventory
 
 Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceInventory2" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1946,13 +1946,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateCommerceInventory2Request.new(
+req = Models::Operations::UpdateCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.update_commerce_inventory2(request: req)
+res = s.commerce.update_commerce_inventory(request: req)
 
 unless res.commerce_inventory.nil?
   # handle response
@@ -1962,13 +1962,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                         | [Models::Operations::UpdateCommerceInventory2Request](../../models/operations/updatecommerceinventory2request.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::UpdateCommerceInventoryRequest](../../models/operations/updatecommerceinventoryrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateCommerceInventory2Response)](../../models/operations/updatecommerceinventory2response.md)**
+**[T.nilable(Models::Operations::UpdateCommerceInventoryResponse)](../../models/operations/updatecommerceinventoryresponse.md)**
 
 ### Errors
 
@@ -1976,13 +1976,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_commerce_item2
+## update_commerce_item
 
 Update an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceItem2" method="put" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -1993,13 +1993,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateCommerceItem2Request.new(
+req = Models::Operations::UpdateCommerceItemRequest.new(
   commerce_item: Models::Shared::CommerceItem.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.update_commerce_item2(request: req)
+res = s.commerce.update_commerce_item(request: req)
 
 unless res.commerce_item.nil?
   # handle response
@@ -2009,13 +2009,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::UpdateCommerceItem2Request](../../models/operations/updatecommerceitem2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::UpdateCommerceItemRequest](../../models/operations/updatecommerceitemrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateCommerceItem2Response)](../../models/operations/updatecommerceitem2response.md)**
+**[T.nilable(Models::Operations::UpdateCommerceItemResponse)](../../models/operations/updatecommerceitemresponse.md)**
 
 ### Errors
 
@@ -2023,13 +2023,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_commerce_itemvariant2
+## update_commerce_itemvariant
 
 Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceItemvariant2" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2040,13 +2040,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateCommerceItemvariant2Request.new(
+req = Models::Operations::UpdateCommerceItemvariantRequest.new(
   commerce_itemvariant: Models::Shared::CommerceItemvariant.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.update_commerce_itemvariant2(request: req)
+res = s.commerce.update_commerce_itemvariant(request: req)
 
 unless res.commerce_itemvariant.nil?
   # handle response
@@ -2056,13 +2056,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [Models::Operations::UpdateCommerceItemvariant2Request](../../models/operations/updatecommerceitemvariant2request.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [Models::Operations::UpdateCommerceItemvariantRequest](../../models/operations/updatecommerceitemvariantrequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateCommerceItemvariant2Response)](../../models/operations/updatecommerceitemvariant2response.md)**
+**[T.nilable(Models::Operations::UpdateCommerceItemvariantResponse)](../../models/operations/updatecommerceitemvariantresponse.md)**
 
 ### Errors
 
@@ -2070,13 +2070,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_commerce_location2
+## update_commerce_location
 
 Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceLocation2" method="put" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2087,13 +2087,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateCommerceLocation2Request.new(
+req = Models::Operations::UpdateCommerceLocationRequest.new(
   commerce_location: Models::Shared::CommerceLocation.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.update_commerce_location2(request: req)
+res = s.commerce.update_commerce_location(request: req)
 
 unless res.commerce_location.nil?
   # handle response
@@ -2103,13 +2103,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                       | [Models::Operations::UpdateCommerceLocation2Request](../../models/operations/updatecommercelocation2request.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::UpdateCommerceLocationRequest](../../models/operations/updatecommercelocationrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateCommerceLocation2Response)](../../models/operations/updatecommercelocation2response.md)**
+**[T.nilable(Models::Operations::UpdateCommerceLocationResponse)](../../models/operations/updatecommercelocationresponse.md)**
 
 ### Errors
 
@@ -2117,13 +2117,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_commerce_reservation2
+## update_commerce_reservation
 
 Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceReservation2" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2134,13 +2134,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateCommerceReservation2Request.new(
+req = Models::Operations::UpdateCommerceReservationRequest.new(
   commerce_reservation: Models::Shared::CommerceReservation.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.update_commerce_reservation2(request: req)
+res = s.commerce.update_commerce_reservation(request: req)
 
 unless res.commerce_reservation.nil?
   # handle response
@@ -2150,13 +2150,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
-| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                             | [Models::Operations::UpdateCommerceReservation2Request](../../models/operations/updatecommercereservation2request.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+| Parameter                                                                                                           | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                           | [Models::Operations::UpdateCommerceReservationRequest](../../models/operations/updatecommercereservationrequest.md) | :heavy_check_mark:                                                                                                  | The request object to use for the request.                                                                          |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateCommerceReservation2Response)](../../models/operations/updatecommercereservation2response.md)**
+**[T.nilable(Models::Operations::UpdateCommerceReservationResponse)](../../models/operations/updatecommercereservationresponse.md)**
 
 ### Errors
 
@@ -2164,13 +2164,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_commerce_review2
+## update_commerce_review
 
 Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceReview2" method="put" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2181,13 +2181,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateCommerceReview2Request.new(
+req = Models::Operations::UpdateCommerceReviewRequest.new(
   commerce_review: Models::Shared::CommerceReview.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.update_commerce_review2(request: req)
+res = s.commerce.update_commerce_review(request: req)
 
 unless res.commerce_review.nil?
   # handle response
@@ -2197,13 +2197,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                   | [Models::Operations::UpdateCommerceReview2Request](../../models/operations/updatecommercereview2request.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::UpdateCommerceReviewRequest](../../models/operations/updatecommercereviewrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateCommerceReview2Response)](../../models/operations/updatecommercereview2response.md)**
+**[T.nilable(Models::Operations::UpdateCommerceReviewResponse)](../../models/operations/updatecommercereviewresponse.md)**
 
 ### Errors
 
@@ -2211,13 +2211,13 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_commerce_saleschannel2
+## update_commerce_saleschannel
 
 Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceSaleschannel2" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -2228,13 +2228,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::UpdateCommerceSaleschannel2Request.new(
+req = Models::Operations::UpdateCommerceSaleschannelRequest.new(
   commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(),
   connection_id: '<id>',
   id: '<id>',
 )
 
-res = s.commerce.update_commerce_saleschannel2(request: req)
+res = s.commerce.update_commerce_saleschannel(request: req)
 
 unless res.commerce_saleschannel.nil?
   # handle response
@@ -2244,13 +2244,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                               | [Models::Operations::UpdateCommerceSaleschannel2Request](../../models/operations/updatecommercesaleschannel2request.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                             | [Models::Operations::UpdateCommerceSaleschannelRequest](../../models/operations/updatecommercesaleschannelrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::UpdateCommerceSaleschannel2Response)](../../models/operations/updatecommercesaleschannel2response.md)**
+**[T.nilable(Models::Operations::UpdateCommerceSaleschannelResponse)](../../models/operations/updatecommercesaleschannelresponse.md)**
 
 ### Errors
 

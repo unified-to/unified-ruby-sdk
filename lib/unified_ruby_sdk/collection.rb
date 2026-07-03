@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(commerce_collection: Models::Shared::CommerceCollection, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceCollection2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceCollection2Response) }
-    def create_commerce_collection2(commerce_collection:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_commerce_collection2 - Create a collection
-      request = Models::Operations::CreateCommerceCollection2Request.new(
+    sig { params(commerce_collection: Models::Shared::CommerceCollection, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceCollectionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceCollectionResponse) }
+    def create_commerce_collection(commerce_collection:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_commerce_collection - Create a collection
+      request = Models::Operations::CreateCommerceCollectionRequest.new(
         commerce_collection: commerce_collection,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCommerceCollection2Request,
+        Models::Operations::CreateCommerceCollectionRequest,
         base_url,
         '/commerce/{connection_id}/collection',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCommerceCollection2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCommerceCollectionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCommerceCollection2',
+        operation_id: 'createCommerceCollection',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceCollection)
-          response = Models::Operations::CreateCommerceCollection2Response.new(
+          response = Models::Operations::CreateCommerceCollectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(lms_collection: Models::Shared::LmsCollection, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsCollection2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsCollection2Response) }
-    def create_lms_collection2(lms_collection:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_lms_collection2 - Create a collection
-      request = Models::Operations::CreateLmsCollection2Request.new(
+    sig { params(lms_collection: Models::Shared::LmsCollection, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsCollectionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsCollectionResponse) }
+    def create_lms_collection(lms_collection:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_lms_collection - Create a collection
+      request = Models::Operations::CreateLmsCollectionRequest.new(
         lms_collection: lms_collection,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateLmsCollection2Request,
+        Models::Operations::CreateLmsCollectionRequest,
         base_url,
         '/lms/{connection_id}/collection',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateLmsCollection2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateLmsCollectionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createLmsCollection2',
+        operation_id: 'createLmsCollection',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsCollection)
-          response = Models::Operations::CreateLmsCollection2Response.new(
+          response = Models::Operations::CreateLmsCollectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceCollection2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceCollection2Response) }
-    def get_commerce_collection2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_commerce_collection2 - Retrieve a collection
-      request = Models::Operations::GetCommerceCollection2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceCollectionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceCollectionResponse) }
+    def get_commerce_collection(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_commerce_collection - Retrieve a collection
+      request = Models::Operations::GetCommerceCollectionRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -307,14 +307,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCommerceCollection2Request,
+        Models::Operations::GetCommerceCollectionRequest,
         base_url,
         '/commerce/{connection_id}/collection/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCommerceCollection2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCommerceCollectionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -330,7 +330,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCommerceCollection2',
+        operation_id: 'getCommerceCollection',
         security_source: @sdk_configuration.security_source
       )
 
@@ -389,7 +389,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceCollection)
-          response = Models::Operations::GetCommerceCollection2Response.new(
+          response = Models::Operations::GetCommerceCollectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -411,10 +411,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsCollection2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsCollection2Response) }
-    def get_lms_collection2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_lms_collection2 - Retrieve a collection
-      request = Models::Operations::GetLmsCollection2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsCollectionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsCollectionResponse) }
+    def get_lms_collection(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_lms_collection - Retrieve a collection
+      request = Models::Operations::GetLmsCollectionRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -423,14 +423,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetLmsCollection2Request,
+        Models::Operations::GetLmsCollectionRequest,
         base_url,
         '/lms/{connection_id}/collection/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetLmsCollection2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetLmsCollectionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -446,7 +446,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getLmsCollection2',
+        operation_id: 'getLmsCollection',
         security_source: @sdk_configuration.security_source
       )
 
@@ -505,7 +505,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsCollection)
-          response = Models::Operations::GetLmsCollection2Response.new(
+          response = Models::Operations::GetLmsCollectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -527,20 +527,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCommerceCollections2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceCollections2Response) }
-    def list_commerce_collections2(request:, timeout_ms: nil)
-      # list_commerce_collections2 - List all collections
+    sig { params(request: Models::Operations::ListCommerceCollectionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceCollectionsResponse) }
+    def list_commerce_collections(request:, timeout_ms: nil)
+      # list_commerce_collections - List all collections
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCommerceCollections2Request,
+        Models::Operations::ListCommerceCollectionsRequest,
         base_url,
         '/commerce/{connection_id}/collection',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCommerceCollections2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCommerceCollectionsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -556,7 +556,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCommerceCollections2',
+        operation_id: 'listCommerceCollections',
         security_source: @sdk_configuration.security_source
       )
 
@@ -615,7 +615,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CommerceCollection))
-          response = Models::Operations::ListCommerceCollections2Response.new(
+          response = Models::Operations::ListCommerceCollectionsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -637,20 +637,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListLmsCollections2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsCollections2Response) }
-    def list_lms_collections2(request:, timeout_ms: nil)
-      # list_lms_collections2 - List all collections
+    sig { params(request: Models::Operations::ListLmsCollectionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsCollectionsResponse) }
+    def list_lms_collections(request:, timeout_ms: nil)
+      # list_lms_collections - List all collections
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListLmsCollections2Request,
+        Models::Operations::ListLmsCollectionsRequest,
         base_url,
         '/lms/{connection_id}/collection',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListLmsCollections2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListLmsCollectionsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -666,7 +666,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listLmsCollections2',
+        operation_id: 'listLmsCollections',
         security_source: @sdk_configuration.security_source
       )
 
@@ -725,7 +725,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::LmsCollection))
-          response = Models::Operations::ListLmsCollections2Response.new(
+          response = Models::Operations::ListLmsCollectionsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -747,13 +747,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCommerceCollection2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceCollection2Response) }
-    def patch_commerce_collection2(request:, timeout_ms: nil)
-      # patch_commerce_collection2 - Update a collection
+    sig { params(request: Models::Operations::PatchCommerceCollectionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceCollectionResponse) }
+    def patch_commerce_collection(request:, timeout_ms: nil)
+      # patch_commerce_collection - Update a collection
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCommerceCollection2Request,
+        Models::Operations::PatchCommerceCollectionRequest,
         base_url,
         '/commerce/{connection_id}/collection/{id}',
         request
@@ -771,7 +771,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCommerceCollection2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCommerceCollectionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -787,7 +787,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCommerceCollection2',
+        operation_id: 'patchCommerceCollection',
         security_source: @sdk_configuration.security_source
       )
 
@@ -847,7 +847,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceCollection)
-          response = Models::Operations::PatchCommerceCollection2Response.new(
+          response = Models::Operations::PatchCommerceCollectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -869,13 +869,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchLmsCollection2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsCollection2Response) }
-    def patch_lms_collection2(request:, timeout_ms: nil)
-      # patch_lms_collection2 - Update a collection
+    sig { params(request: Models::Operations::PatchLmsCollectionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsCollectionResponse) }
+    def patch_lms_collection(request:, timeout_ms: nil)
+      # patch_lms_collection - Update a collection
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchLmsCollection2Request,
+        Models::Operations::PatchLmsCollectionRequest,
         base_url,
         '/lms/{connection_id}/collection/{id}',
         request
@@ -893,7 +893,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchLmsCollection2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchLmsCollectionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -909,7 +909,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchLmsCollection2',
+        operation_id: 'patchLmsCollection',
         security_source: @sdk_configuration.security_source
       )
 
@@ -969,7 +969,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsCollection)
-          response = Models::Operations::PatchLmsCollection2Response.new(
+          response = Models::Operations::PatchLmsCollectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -991,17 +991,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceCollection2Response) }
-    def remove_commerce_collection2(connection_id:, id:, timeout_ms: nil)
-      # remove_commerce_collection2 - Remove a collection
-      request = Models::Operations::RemoveCommerceCollection2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceCollectionResponse) }
+    def remove_commerce_collection(connection_id:, id:, timeout_ms: nil)
+      # remove_commerce_collection - Remove a collection
+      request = Models::Operations::RemoveCommerceCollectionRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCommerceCollection2Request,
+        Models::Operations::RemoveCommerceCollectionRequest,
         base_url,
         '/commerce/{connection_id}/collection/{id}',
         request
@@ -1023,7 +1023,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCommerceCollection2',
+        operation_id: 'removeCommerceCollection',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1078,7 +1078,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceCollection2Response.new(
+        return Models::Operations::RemoveCommerceCollectionResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1095,7 +1095,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCommerceCollection2Response.new(
+        return Models::Operations::RemoveCommerceCollectionResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1105,17 +1105,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsCollection2Response) }
-    def remove_lms_collection2(connection_id:, id:, timeout_ms: nil)
-      # remove_lms_collection2 - Remove a collection
-      request = Models::Operations::RemoveLmsCollection2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsCollectionResponse) }
+    def remove_lms_collection(connection_id:, id:, timeout_ms: nil)
+      # remove_lms_collection - Remove a collection
+      request = Models::Operations::RemoveLmsCollectionRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveLmsCollection2Request,
+        Models::Operations::RemoveLmsCollectionRequest,
         base_url,
         '/lms/{connection_id}/collection/{id}',
         request
@@ -1137,7 +1137,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeLmsCollection2',
+        operation_id: 'removeLmsCollection',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1192,7 +1192,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveLmsCollection2Response.new(
+        return Models::Operations::RemoveLmsCollectionResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1209,7 +1209,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveLmsCollection2Response.new(
+        return Models::Operations::RemoveLmsCollectionResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1219,13 +1219,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCommerceCollection2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceCollection2Response) }
-    def update_commerce_collection2(request:, timeout_ms: nil)
-      # update_commerce_collection2 - Update a collection
+    sig { params(request: Models::Operations::UpdateCommerceCollectionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceCollectionResponse) }
+    def update_commerce_collection(request:, timeout_ms: nil)
+      # update_commerce_collection - Update a collection
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCommerceCollection2Request,
+        Models::Operations::UpdateCommerceCollectionRequest,
         base_url,
         '/commerce/{connection_id}/collection/{id}',
         request
@@ -1243,7 +1243,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceCollection2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCommerceCollectionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1259,7 +1259,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCommerceCollection2',
+        operation_id: 'updateCommerceCollection',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1319,7 +1319,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CommerceCollection)
-          response = Models::Operations::UpdateCommerceCollection2Response.new(
+          response = Models::Operations::UpdateCommerceCollectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1341,13 +1341,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateLmsCollection2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsCollection2Response) }
-    def update_lms_collection2(request:, timeout_ms: nil)
-      # update_lms_collection2 - Update a collection
+    sig { params(request: Models::Operations::UpdateLmsCollectionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsCollectionResponse) }
+    def update_lms_collection(request:, timeout_ms: nil)
+      # update_lms_collection - Update a collection
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateLmsCollection2Request,
+        Models::Operations::UpdateLmsCollectionRequest,
         base_url,
         '/lms/{connection_id}/collection/{id}',
         request
@@ -1365,7 +1365,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateLmsCollection2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateLmsCollectionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1381,7 +1381,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateLmsCollection2',
+        operation_id: 'updateLmsCollection',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1441,7 +1441,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::LmsCollection)
-          response = Models::Operations::UpdateLmsCollection2Response.new(
+          response = Models::Operations::UpdateLmsCollectionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

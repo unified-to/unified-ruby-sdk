@@ -5,15 +5,15 @@
 
 ### Available Operations
 
-* [list_calendar_busies2](#list_calendar_busies2) - List all busies
+* [list_calendar_busies](#list_calendar_busies) - List all busies
 
-## list_calendar_busies2
+## list_calendar_busies
 
 List all busies
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="listCalendarBusies2" method="get" path="/calendar/{connection_id}/busy" -->
+<!-- UsageSnippet language="ruby" operationID="listCalendarBusies" method="get" path="/calendar/{connection_id}/busy" -->
 ```ruby
 require 'unified_ruby_sdk'
 
@@ -24,11 +24,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-req = Models::Operations::ListCalendarBusies2Request.new(
+req = Models::Operations::ListCalendarBusiesRequest.new(
   connection_id: '<id>',
 )
 
-res = s.busy.list_calendar_busies2(request: req)
+res = s.busy.list_calendar_busies(request: req)
 
 unless res.calendar_busies.nil?
   # handle response
@@ -38,13 +38,13 @@ end
 
 ### Parameters
 
-| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                               | [Models::Operations::ListCalendarBusies2Request](../../models/operations/listcalendarbusies2request.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListCalendarBusiesRequest](../../models/operations/listcalendarbusiesrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
 
 ### Response
 
-**[T.nilable(Models::Operations::ListCalendarBusies2Response)](../../models/operations/listcalendarbusies2response.md)**
+**[T.nilable(Models::Operations::ListCalendarBusiesResponse)](../../models/operations/listcalendarbusiesresponse.md)**
 
 ### Errors
 

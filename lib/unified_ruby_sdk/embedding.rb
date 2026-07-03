@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(genai_embedding: Models::Shared::GenaiEmbedding, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiEmbedding2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiEmbedding2Response) }
-    def create_genai_embedding2(genai_embedding:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_genai_embedding2 - Create an embedding
-      request = Models::Operations::CreateGenaiEmbedding2Request.new(
+    sig { params(genai_embedding: Models::Shared::GenaiEmbedding, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiEmbeddingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiEmbeddingResponse) }
+    def create_genai_embedding(genai_embedding:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_genai_embedding - Create an embedding
+      request = Models::Operations::CreateGenaiEmbeddingRequest.new(
         genai_embedding: genai_embedding,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateGenaiEmbedding2Request,
+        Models::Operations::CreateGenaiEmbeddingRequest,
         base_url,
         '/genai/{connection_id}/embedding',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateGenaiEmbedding2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateGenaiEmbeddingRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createGenaiEmbedding2',
+        operation_id: 'createGenaiEmbedding',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::GenaiEmbedding)
-          response = Models::Operations::CreateGenaiEmbedding2Response.new(
+          response = Models::Operations::CreateGenaiEmbeddingResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

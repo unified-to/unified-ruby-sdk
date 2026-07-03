@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateKmsComment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsComment2Response) }
-    def create_kms_comment2(kms_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_kms_comment2 - Create a comment
-      request = Models::Operations::CreateKmsComment2Request.new(
+    sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateKmsCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsCommentResponse) }
+    def create_kms_comment(kms_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_kms_comment - Create a comment
+      request = Models::Operations::CreateKmsCommentRequest.new(
         kms_comment: kms_comment,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateKmsComment2Request,
+        Models::Operations::CreateKmsCommentRequest,
         base_url,
         '/kms/{connection_id}/comment',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateKmsComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateKmsCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createKmsComment2',
+        operation_id: 'createKmsComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::KmsComment)
-          response = Models::Operations::CreateKmsComment2Response.new(
+          response = Models::Operations::CreateKmsCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskComment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskComment2Response) }
-    def create_task_comment2(task_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_task_comment2 - Create a comment
-      request = Models::Operations::CreateTaskComment2Request.new(
+    sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskCommentResponse) }
+    def create_task_comment(task_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_task_comment - Create a comment
+      request = Models::Operations::CreateTaskCommentRequest.new(
         task_comment: task_comment,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateTaskComment2Request,
+        Models::Operations::CreateTaskCommentRequest,
         base_url,
         '/task/{connection_id}/comment',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateTaskComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateTaskCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createTaskComment2',
+        operation_id: 'createTaskComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskComment)
-          response = Models::Operations::CreateTaskComment2Response.new(
+          response = Models::Operations::CreateTaskCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(uc_comment: Models::Shared::UcComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcComment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcComment2Response) }
-    def create_uc_comment2(uc_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_uc_comment2 - Create a comment
-      request = Models::Operations::CreateUcComment2Request.new(
+    sig { params(uc_comment: Models::Shared::UcComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcCommentResponse) }
+    def create_uc_comment(uc_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_uc_comment - Create a comment
+      request = Models::Operations::CreateUcCommentRequest.new(
         uc_comment: uc_comment,
         connection_id: connection_id,
         fields_: fields_,
@@ -307,7 +307,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateUcComment2Request,
+        Models::Operations::CreateUcCommentRequest,
         base_url,
         '/uc/{connection_id}/comment',
         request
@@ -325,7 +325,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateUcComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateUcCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -341,7 +341,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createUcComment2',
+        operation_id: 'createUcComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -401,7 +401,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcComment)
-          response = Models::Operations::CreateUcComment2Response.new(
+          response = Models::Operations::CreateUcCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -423,10 +423,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetKmsComment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsComment2Response) }
-    def get_kms_comment2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_kms_comment2 - Retrieve a comment
-      request = Models::Operations::GetKmsComment2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetKmsCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsCommentResponse) }
+    def get_kms_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_kms_comment - Retrieve a comment
+      request = Models::Operations::GetKmsCommentRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -435,14 +435,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetKmsComment2Request,
+        Models::Operations::GetKmsCommentRequest,
         base_url,
         '/kms/{connection_id}/comment/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetKmsComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetKmsCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -458,7 +458,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getKmsComment2',
+        operation_id: 'getKmsComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -517,7 +517,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::KmsComment)
-          response = Models::Operations::GetKmsComment2Response.new(
+          response = Models::Operations::GetKmsCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -539,10 +539,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskComment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskComment2Response) }
-    def get_task_comment2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_task_comment2 - Retrieve a comment
-      request = Models::Operations::GetTaskComment2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskCommentResponse) }
+    def get_task_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_task_comment - Retrieve a comment
+      request = Models::Operations::GetTaskCommentRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -551,14 +551,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetTaskComment2Request,
+        Models::Operations::GetTaskCommentRequest,
         base_url,
         '/task/{connection_id}/comment/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetTaskComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetTaskCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -574,7 +574,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getTaskComment2',
+        operation_id: 'getTaskComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -633,7 +633,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskComment)
-          response = Models::Operations::GetTaskComment2Response.new(
+          response = Models::Operations::GetTaskCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -655,10 +655,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcComment2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcComment2Response) }
-    def get_uc_comment2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_uc_comment2 - Retrieve a comment
-      request = Models::Operations::GetUcComment2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcCommentResponse) }
+    def get_uc_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_uc_comment - Retrieve a comment
+      request = Models::Operations::GetUcCommentRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -667,14 +667,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetUcComment2Request,
+        Models::Operations::GetUcCommentRequest,
         base_url,
         '/uc/{connection_id}/comment/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetUcComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetUcCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -690,7 +690,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getUcComment2',
+        operation_id: 'getUcComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -749,7 +749,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcComment)
-          response = Models::Operations::GetUcComment2Response.new(
+          response = Models::Operations::GetUcCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -771,20 +771,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListKmsComments2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsComments2Response) }
-    def list_kms_comments2(request:, timeout_ms: nil)
-      # list_kms_comments2 - List all comments
+    sig { params(request: Models::Operations::ListKmsCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsCommentsResponse) }
+    def list_kms_comments(request:, timeout_ms: nil)
+      # list_kms_comments - List all comments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListKmsComments2Request,
+        Models::Operations::ListKmsCommentsRequest,
         base_url,
         '/kms/{connection_id}/comment',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListKmsComments2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListKmsCommentsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -800,7 +800,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listKmsComments2',
+        operation_id: 'listKmsComments',
         security_source: @sdk_configuration.security_source
       )
 
@@ -859,7 +859,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::KmsComment))
-          response = Models::Operations::ListKmsComments2Response.new(
+          response = Models::Operations::ListKmsCommentsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -881,20 +881,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListTaskComments2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskComments2Response) }
-    def list_task_comments2(request:, timeout_ms: nil)
-      # list_task_comments2 - List all comments
+    sig { params(request: Models::Operations::ListTaskCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskCommentsResponse) }
+    def list_task_comments(request:, timeout_ms: nil)
+      # list_task_comments - List all comments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListTaskComments2Request,
+        Models::Operations::ListTaskCommentsRequest,
         base_url,
         '/task/{connection_id}/comment',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListTaskComments2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListTaskCommentsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -910,7 +910,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listTaskComments2',
+        operation_id: 'listTaskComments',
         security_source: @sdk_configuration.security_source
       )
 
@@ -969,7 +969,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::TaskComment))
-          response = Models::Operations::ListTaskComments2Response.new(
+          response = Models::Operations::ListTaskCommentsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -991,20 +991,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListUcComments2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcComments2Response) }
-    def list_uc_comments2(request:, timeout_ms: nil)
-      # list_uc_comments2 - List all comments
+    sig { params(request: Models::Operations::ListUcCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcCommentsResponse) }
+    def list_uc_comments(request:, timeout_ms: nil)
+      # list_uc_comments - List all comments
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListUcComments2Request,
+        Models::Operations::ListUcCommentsRequest,
         base_url,
         '/uc/{connection_id}/comment',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListUcComments2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListUcCommentsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1020,7 +1020,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listUcComments2',
+        operation_id: 'listUcComments',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1079,7 +1079,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::UcComment))
-          response = Models::Operations::ListUcComments2Response.new(
+          response = Models::Operations::ListUcCommentsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1101,13 +1101,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchKmsComment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsComment2Response) }
-    def patch_kms_comment2(request:, timeout_ms: nil)
-      # patch_kms_comment2 - Update a comment
+    sig { params(request: Models::Operations::PatchKmsCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsCommentResponse) }
+    def patch_kms_comment(request:, timeout_ms: nil)
+      # patch_kms_comment - Update a comment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchKmsComment2Request,
+        Models::Operations::PatchKmsCommentRequest,
         base_url,
         '/kms/{connection_id}/comment/{id}',
         request
@@ -1125,7 +1125,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchKmsComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchKmsCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1141,7 +1141,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchKmsComment2',
+        operation_id: 'patchKmsComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1201,7 +1201,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::KmsComment)
-          response = Models::Operations::PatchKmsComment2Response.new(
+          response = Models::Operations::PatchKmsCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1223,13 +1223,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchTaskComment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskComment2Response) }
-    def patch_task_comment2(request:, timeout_ms: nil)
-      # patch_task_comment2 - Update a comment
+    sig { params(request: Models::Operations::PatchTaskCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskCommentResponse) }
+    def patch_task_comment(request:, timeout_ms: nil)
+      # patch_task_comment - Update a comment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchTaskComment2Request,
+        Models::Operations::PatchTaskCommentRequest,
         base_url,
         '/task/{connection_id}/comment/{id}',
         request
@@ -1247,7 +1247,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchTaskComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchTaskCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1263,7 +1263,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchTaskComment2',
+        operation_id: 'patchTaskComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1323,7 +1323,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskComment)
-          response = Models::Operations::PatchTaskComment2Response.new(
+          response = Models::Operations::PatchTaskCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1345,13 +1345,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchUcComment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcComment2Response) }
-    def patch_uc_comment2(request:, timeout_ms: nil)
-      # patch_uc_comment2 - Update a comment
+    sig { params(request: Models::Operations::PatchUcCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcCommentResponse) }
+    def patch_uc_comment(request:, timeout_ms: nil)
+      # patch_uc_comment - Update a comment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchUcComment2Request,
+        Models::Operations::PatchUcCommentRequest,
         base_url,
         '/uc/{connection_id}/comment/{id}',
         request
@@ -1369,7 +1369,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchUcComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchUcCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1385,7 +1385,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchUcComment2',
+        operation_id: 'patchUcComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1445,7 +1445,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcComment)
-          response = Models::Operations::PatchUcComment2Response.new(
+          response = Models::Operations::PatchUcCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1467,17 +1467,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveKmsComment2Response) }
-    def remove_kms_comment2(connection_id:, id:, timeout_ms: nil)
-      # remove_kms_comment2 - Remove a comment
-      request = Models::Operations::RemoveKmsComment2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveKmsCommentResponse) }
+    def remove_kms_comment(connection_id:, id:, timeout_ms: nil)
+      # remove_kms_comment - Remove a comment
+      request = Models::Operations::RemoveKmsCommentRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveKmsComment2Request,
+        Models::Operations::RemoveKmsCommentRequest,
         base_url,
         '/kms/{connection_id}/comment/{id}',
         request
@@ -1499,7 +1499,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeKmsComment2',
+        operation_id: 'removeKmsComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1554,7 +1554,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveKmsComment2Response.new(
+        return Models::Operations::RemoveKmsCommentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1571,7 +1571,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveKmsComment2Response.new(
+        return Models::Operations::RemoveKmsCommentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1581,17 +1581,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskComment2Response) }
-    def remove_task_comment2(connection_id:, id:, timeout_ms: nil)
-      # remove_task_comment2 - Remove a comment
-      request = Models::Operations::RemoveTaskComment2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskCommentResponse) }
+    def remove_task_comment(connection_id:, id:, timeout_ms: nil)
+      # remove_task_comment - Remove a comment
+      request = Models::Operations::RemoveTaskCommentRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveTaskComment2Request,
+        Models::Operations::RemoveTaskCommentRequest,
         base_url,
         '/task/{connection_id}/comment/{id}',
         request
@@ -1613,7 +1613,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeTaskComment2',
+        operation_id: 'removeTaskComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1668,7 +1668,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveTaskComment2Response.new(
+        return Models::Operations::RemoveTaskCommentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1685,7 +1685,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveTaskComment2Response.new(
+        return Models::Operations::RemoveTaskCommentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1695,17 +1695,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcComment2Response) }
-    def remove_uc_comment2(connection_id:, id:, timeout_ms: nil)
-      # remove_uc_comment2 - Remove a comment
-      request = Models::Operations::RemoveUcComment2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcCommentResponse) }
+    def remove_uc_comment(connection_id:, id:, timeout_ms: nil)
+      # remove_uc_comment - Remove a comment
+      request = Models::Operations::RemoveUcCommentRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveUcComment2Request,
+        Models::Operations::RemoveUcCommentRequest,
         base_url,
         '/uc/{connection_id}/comment/{id}',
         request
@@ -1727,7 +1727,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeUcComment2',
+        operation_id: 'removeUcComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1782,7 +1782,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveUcComment2Response.new(
+        return Models::Operations::RemoveUcCommentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1799,7 +1799,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveUcComment2Response.new(
+        return Models::Operations::RemoveUcCommentResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1809,13 +1809,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateKmsComment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsComment2Response) }
-    def update_kms_comment2(request:, timeout_ms: nil)
-      # update_kms_comment2 - Update a comment
+    sig { params(request: Models::Operations::UpdateKmsCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsCommentResponse) }
+    def update_kms_comment(request:, timeout_ms: nil)
+      # update_kms_comment - Update a comment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateKmsComment2Request,
+        Models::Operations::UpdateKmsCommentRequest,
         base_url,
         '/kms/{connection_id}/comment/{id}',
         request
@@ -1833,7 +1833,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateKmsComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateKmsCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1849,7 +1849,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateKmsComment2',
+        operation_id: 'updateKmsComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1909,7 +1909,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::KmsComment)
-          response = Models::Operations::UpdateKmsComment2Response.new(
+          response = Models::Operations::UpdateKmsCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1931,13 +1931,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateTaskComment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskComment2Response) }
-    def update_task_comment2(request:, timeout_ms: nil)
-      # update_task_comment2 - Update a comment
+    sig { params(request: Models::Operations::UpdateTaskCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskCommentResponse) }
+    def update_task_comment(request:, timeout_ms: nil)
+      # update_task_comment - Update a comment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateTaskComment2Request,
+        Models::Operations::UpdateTaskCommentRequest,
         base_url,
         '/task/{connection_id}/comment/{id}',
         request
@@ -1955,7 +1955,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateTaskComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateTaskCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1971,7 +1971,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateTaskComment2',
+        operation_id: 'updateTaskComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2031,7 +2031,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::TaskComment)
-          response = Models::Operations::UpdateTaskComment2Response.new(
+          response = Models::Operations::UpdateTaskCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2053,13 +2053,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateUcComment2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcComment2Response) }
-    def update_uc_comment2(request:, timeout_ms: nil)
-      # update_uc_comment2 - Update a comment
+    sig { params(request: Models::Operations::UpdateUcCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcCommentResponse) }
+    def update_uc_comment(request:, timeout_ms: nil)
+      # update_uc_comment - Update a comment
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateUcComment2Request,
+        Models::Operations::UpdateUcCommentRequest,
         base_url,
         '/uc/{connection_id}/comment/{id}',
         request
@@ -2077,7 +2077,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateUcComment2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateUcCommentRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2093,7 +2093,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateUcComment2',
+        operation_id: 'updateUcComment',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2153,7 +2153,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::UcComment)
-          response = Models::Operations::UpdateUcComment2Response.new(
+          response = Models::Operations::UpdateUcCommentResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

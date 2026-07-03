@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(ads_group: Models::Shared::AdsGroup, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsGroup2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsGroup2Response) }
-    def create_ads_group2(ads_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_ads_group2 - Create a group
-      request = Models::Operations::CreateAdsGroup2Request.new(
+    sig { params(ads_group: Models::Shared::AdsGroup, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsGroupResponse) }
+    def create_ads_group(ads_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_ads_group - Create a group
+      request = Models::Operations::CreateAdsGroupRequest.new(
         ads_group: ads_group,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAdsGroup2Request,
+        Models::Operations::CreateAdsGroupRequest,
         base_url,
         '/ads/{connection_id}/group',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAdsGroup2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAdsGroupRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAdsGroup2',
+        operation_id: 'createAdsGroup',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsGroup)
-          response = Models::Operations::CreateAdsGroup2Response.new(
+          response = Models::Operations::CreateAdsGroupResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisGroup2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisGroup2Response) }
-    def create_hris_group2(hris_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_hris_group2 - Create a group
-      request = Models::Operations::CreateHrisGroup2Request.new(
+    sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisGroupResponse) }
+    def create_hris_group(hris_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_hris_group - Create a group
+      request = Models::Operations::CreateHrisGroupRequest.new(
         hris_group: hris_group,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateHrisGroup2Request,
+        Models::Operations::CreateHrisGroupRequest,
         base_url,
         '/hris/{connection_id}/group',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateHrisGroup2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateHrisGroupRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createHrisGroup2',
+        operation_id: 'createHrisGroup',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisGroup)
-          response = Models::Operations::CreateHrisGroup2Response.new(
+          response = Models::Operations::CreateHrisGroupResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -419,10 +419,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsGroup2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsGroup2Response) }
-    def get_ads_group2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_ads_group2 - Retrieve a group
-      request = Models::Operations::GetAdsGroup2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsGroupResponse) }
+    def get_ads_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_ads_group - Retrieve a group
+      request = Models::Operations::GetAdsGroupRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -431,14 +431,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAdsGroup2Request,
+        Models::Operations::GetAdsGroupRequest,
         base_url,
         '/ads/{connection_id}/group/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAdsGroup2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAdsGroupRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -454,7 +454,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAdsGroup2',
+        operation_id: 'getAdsGroup',
         security_source: @sdk_configuration.security_source
       )
 
@@ -513,7 +513,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsGroup)
-          response = Models::Operations::GetAdsGroup2Response.new(
+          response = Models::Operations::GetAdsGroupResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -535,10 +535,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsGroup2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsGroup2Response) }
-    def get_clubs_group2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_clubs_group2 - Retrieve a group
-      request = Models::Operations::GetClubsGroup2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsGroupResponse) }
+    def get_clubs_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_clubs_group - Retrieve a group
+      request = Models::Operations::GetClubsGroupRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -547,14 +547,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetClubsGroup2Request,
+        Models::Operations::GetClubsGroupRequest,
         base_url,
         '/clubs/{connection_id}/group/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetClubsGroup2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetClubsGroupRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -570,7 +570,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getClubsGroup2',
+        operation_id: 'getClubsGroup',
         security_source: @sdk_configuration.security_source
       )
 
@@ -629,7 +629,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ClubsGroup)
-          response = Models::Operations::GetClubsGroup2Response.new(
+          response = Models::Operations::GetClubsGroupResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -651,10 +651,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisGroup2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisGroup2Response) }
-    def get_hris_group2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_hris_group2 - Retrieve a group
-      request = Models::Operations::GetHrisGroup2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisGroupResponse) }
+    def get_hris_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_hris_group - Retrieve a group
+      request = Models::Operations::GetHrisGroupRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -663,14 +663,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetHrisGroup2Request,
+        Models::Operations::GetHrisGroupRequest,
         base_url,
         '/hris/{connection_id}/group/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetHrisGroup2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetHrisGroupRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -686,7 +686,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getHrisGroup2',
+        operation_id: 'getHrisGroup',
         security_source: @sdk_configuration.security_source
       )
 
@@ -745,7 +745,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisGroup)
-          response = Models::Operations::GetHrisGroup2Response.new(
+          response = Models::Operations::GetHrisGroupResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -879,20 +879,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAdsGroups2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsGroups2Response) }
-    def list_ads_groups2(request:, timeout_ms: nil)
-      # list_ads_groups2 - List all groups
+    sig { params(request: Models::Operations::ListAdsGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsGroupsResponse) }
+    def list_ads_groups(request:, timeout_ms: nil)
+      # list_ads_groups - List all groups
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAdsGroups2Request,
+        Models::Operations::ListAdsGroupsRequest,
         base_url,
         '/ads/{connection_id}/group',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAdsGroups2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAdsGroupsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -908,7 +908,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAdsGroups2',
+        operation_id: 'listAdsGroups',
         security_source: @sdk_configuration.security_source
       )
 
@@ -967,7 +967,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AdsGroup))
-          response = Models::Operations::ListAdsGroups2Response.new(
+          response = Models::Operations::ListAdsGroupsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -989,20 +989,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListClubsGroups2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsGroups2Response) }
-    def list_clubs_groups2(request:, timeout_ms: nil)
-      # list_clubs_groups2 - List all groups
+    sig { params(request: Models::Operations::ListClubsGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsGroupsResponse) }
+    def list_clubs_groups(request:, timeout_ms: nil)
+      # list_clubs_groups - List all groups
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListClubsGroups2Request,
+        Models::Operations::ListClubsGroupsRequest,
         base_url,
         '/clubs/{connection_id}/group',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListClubsGroups2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListClubsGroupsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1018,7 +1018,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listClubsGroups2',
+        operation_id: 'listClubsGroups',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1077,7 +1077,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ClubsGroup))
-          response = Models::Operations::ListClubsGroups2Response.new(
+          response = Models::Operations::ListClubsGroupsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1099,20 +1099,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListHrisGroups2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisGroups2Response) }
-    def list_hris_groups2(request:, timeout_ms: nil)
-      # list_hris_groups2 - List all groups
+    sig { params(request: Models::Operations::ListHrisGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisGroupsResponse) }
+    def list_hris_groups(request:, timeout_ms: nil)
+      # list_hris_groups - List all groups
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListHrisGroups2Request,
+        Models::Operations::ListHrisGroupsRequest,
         base_url,
         '/hris/{connection_id}/group',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListHrisGroups2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListHrisGroupsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1128,7 +1128,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listHrisGroups2',
+        operation_id: 'listHrisGroups',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1187,7 +1187,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::HrisGroup))
-          response = Models::Operations::ListHrisGroups2Response.new(
+          response = Models::Operations::ListHrisGroupsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1319,13 +1319,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchAdsGroup2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsGroup2Response) }
-    def patch_ads_group2(request:, timeout_ms: nil)
-      # patch_ads_group2 - Update a group
+    sig { params(request: Models::Operations::PatchAdsGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsGroupResponse) }
+    def patch_ads_group(request:, timeout_ms: nil)
+      # patch_ads_group - Update a group
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchAdsGroup2Request,
+        Models::Operations::PatchAdsGroupRequest,
         base_url,
         '/ads/{connection_id}/group/{id}',
         request
@@ -1343,7 +1343,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchAdsGroup2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchAdsGroupRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1359,7 +1359,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchAdsGroup2',
+        operation_id: 'patchAdsGroup',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1419,7 +1419,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsGroup)
-          response = Models::Operations::PatchAdsGroup2Response.new(
+          response = Models::Operations::PatchAdsGroupResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1441,13 +1441,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchHrisGroup2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisGroup2Response) }
-    def patch_hris_group2(request:, timeout_ms: nil)
-      # patch_hris_group2 - Update a group
+    sig { params(request: Models::Operations::PatchHrisGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisGroupResponse) }
+    def patch_hris_group(request:, timeout_ms: nil)
+      # patch_hris_group - Update a group
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchHrisGroup2Request,
+        Models::Operations::PatchHrisGroupRequest,
         base_url,
         '/hris/{connection_id}/group/{id}',
         request
@@ -1465,7 +1465,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchHrisGroup2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchHrisGroupRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1481,7 +1481,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchHrisGroup2',
+        operation_id: 'patchHrisGroup',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1541,7 +1541,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisGroup)
-          response = Models::Operations::PatchHrisGroup2Response.new(
+          response = Models::Operations::PatchHrisGroupResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1688,17 +1688,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsGroup2Response) }
-    def remove_ads_group2(connection_id:, id:, timeout_ms: nil)
-      # remove_ads_group2 - Remove a group
-      request = Models::Operations::RemoveAdsGroup2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsGroupResponse) }
+    def remove_ads_group(connection_id:, id:, timeout_ms: nil)
+      # remove_ads_group - Remove a group
+      request = Models::Operations::RemoveAdsGroupRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveAdsGroup2Request,
+        Models::Operations::RemoveAdsGroupRequest,
         base_url,
         '/ads/{connection_id}/group/{id}',
         request
@@ -1720,7 +1720,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeAdsGroup2',
+        operation_id: 'removeAdsGroup',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1775,7 +1775,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAdsGroup2Response.new(
+        return Models::Operations::RemoveAdsGroupResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1792,7 +1792,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveAdsGroup2Response.new(
+        return Models::Operations::RemoveAdsGroupResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1802,17 +1802,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisGroup2Response) }
-    def remove_hris_group2(connection_id:, id:, timeout_ms: nil)
-      # remove_hris_group2 - Remove a group
-      request = Models::Operations::RemoveHrisGroup2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisGroupResponse) }
+    def remove_hris_group(connection_id:, id:, timeout_ms: nil)
+      # remove_hris_group - Remove a group
+      request = Models::Operations::RemoveHrisGroupRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveHrisGroup2Request,
+        Models::Operations::RemoveHrisGroupRequest,
         base_url,
         '/hris/{connection_id}/group/{id}',
         request
@@ -1834,7 +1834,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeHrisGroup2',
+        operation_id: 'removeHrisGroup',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1889,7 +1889,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisGroup2Response.new(
+        return Models::Operations::RemoveHrisGroupResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1906,7 +1906,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveHrisGroup2Response.new(
+        return Models::Operations::RemoveHrisGroupResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -2030,13 +2030,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateAdsGroup2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsGroup2Response) }
-    def update_ads_group2(request:, timeout_ms: nil)
-      # update_ads_group2 - Update a group
+    sig { params(request: Models::Operations::UpdateAdsGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsGroupResponse) }
+    def update_ads_group(request:, timeout_ms: nil)
+      # update_ads_group - Update a group
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateAdsGroup2Request,
+        Models::Operations::UpdateAdsGroupRequest,
         base_url,
         '/ads/{connection_id}/group/{id}',
         request
@@ -2054,7 +2054,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateAdsGroup2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateAdsGroupRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2070,7 +2070,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateAdsGroup2',
+        operation_id: 'updateAdsGroup',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2130,7 +2130,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AdsGroup)
-          response = Models::Operations::UpdateAdsGroup2Response.new(
+          response = Models::Operations::UpdateAdsGroupResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2152,13 +2152,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateHrisGroup2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisGroup2Response) }
-    def update_hris_group2(request:, timeout_ms: nil)
-      # update_hris_group2 - Update a group
+    sig { params(request: Models::Operations::UpdateHrisGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisGroupResponse) }
+    def update_hris_group(request:, timeout_ms: nil)
+      # update_hris_group - Update a group
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateHrisGroup2Request,
+        Models::Operations::UpdateHrisGroupRequest,
         base_url,
         '/hris/{connection_id}/group/{id}',
         request
@@ -2176,7 +2176,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateHrisGroup2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateHrisGroupRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2192,7 +2192,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateHrisGroup2',
+        operation_id: 'updateHrisGroup',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2252,7 +2252,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::HrisGroup)
-          response = Models::Operations::UpdateHrisGroup2Response.new(
+          response = Models::Operations::UpdateHrisGroupResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

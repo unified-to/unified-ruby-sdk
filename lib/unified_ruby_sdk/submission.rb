@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetFormsSubmission2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsSubmission2Response) }
-    def get_forms_submission2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_forms_submission2 - Retrieve a submission
-      request = Models::Operations::GetFormsSubmission2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetFormsSubmissionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsSubmissionResponse) }
+    def get_forms_submission(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_forms_submission - Retrieve a submission
+      request = Models::Operations::GetFormsSubmissionRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -51,14 +51,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetFormsSubmission2Request,
+        Models::Operations::GetFormsSubmissionRequest,
         base_url,
         '/forms/{connection_id}/submission/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetFormsSubmission2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetFormsSubmissionRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -74,7 +74,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getFormsSubmission2',
+        operation_id: 'getFormsSubmission',
         security_source: @sdk_configuration.security_source
       )
 
@@ -133,7 +133,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::FormsSubmission)
-          response = Models::Operations::GetFormsSubmission2Response.new(
+          response = Models::Operations::GetFormsSubmissionResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -155,20 +155,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListFormsSubmissions2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListFormsSubmissions2Response) }
-    def list_forms_submissions2(request:, timeout_ms: nil)
-      # list_forms_submissions2 - List all submissions
+    sig { params(request: Models::Operations::ListFormsSubmissionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListFormsSubmissionsResponse) }
+    def list_forms_submissions(request:, timeout_ms: nil)
+      # list_forms_submissions - List all submissions
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListFormsSubmissions2Request,
+        Models::Operations::ListFormsSubmissionsRequest,
         base_url,
         '/forms/{connection_id}/submission',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListFormsSubmissions2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListFormsSubmissionsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -184,7 +184,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listFormsSubmissions2',
+        operation_id: 'listFormsSubmissions',
         security_source: @sdk_configuration.security_source
       )
 
@@ -243,7 +243,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::FormsSubmission))
-          response = Models::Operations::ListFormsSubmissions2Response.new(
+          response = Models::Operations::ListFormsSubmissionsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(analytics_event: Models::Shared::AnalyticsEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAnalyticsEvent2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAnalyticsEvent2Response) }
-    def create_analytics_event2(analytics_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_analytics_event2 - Create an event
-      request = Models::Operations::CreateAnalyticsEvent2Request.new(
+    sig { params(analytics_event: Models::Shared::AnalyticsEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAnalyticsEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAnalyticsEventResponse) }
+    def create_analytics_event(analytics_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_analytics_event - Create an event
+      request = Models::Operations::CreateAnalyticsEventRequest.new(
         analytics_event: analytics_event,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateAnalyticsEvent2Request,
+        Models::Operations::CreateAnalyticsEventRequest,
         base_url,
         '/analytics/{connection_id}/event',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateAnalyticsEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateAnalyticsEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createAnalyticsEvent2',
+        operation_id: 'createAnalyticsEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AnalyticsEvent)
-          response = Models::Operations::CreateAnalyticsEvent2Response.new(
+          response = Models::Operations::CreateAnalyticsEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(calendar_event: Models::Shared::CalendarEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarEvent2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarEvent2Response) }
-    def create_calendar_event2(calendar_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_calendar_event2 - Create an event
-      request = Models::Operations::CreateCalendarEvent2Request.new(
+    sig { params(calendar_event: Models::Shared::CalendarEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarEventResponse) }
+    def create_calendar_event(calendar_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_calendar_event - Create an event
+      request = Models::Operations::CreateCalendarEventRequest.new(
         calendar_event: calendar_event,
         connection_id: connection_id,
         fields_: fields_,
@@ -179,7 +179,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCalendarEvent2Request,
+        Models::Operations::CreateCalendarEventRequest,
         base_url,
         '/calendar/{connection_id}/event',
         request
@@ -197,7 +197,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCalendarEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCalendarEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -213,7 +213,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCalendarEvent2',
+        operation_id: 'createCalendarEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -273,7 +273,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarEvent)
-          response = Models::Operations::CreateCalendarEvent2Response.new(
+          response = Models::Operations::CreateCalendarEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -295,10 +295,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmEvent2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmEvent2Response) }
-    def create_crm_event2(crm_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_crm_event2 - Create an event
-      request = Models::Operations::CreateCrmEvent2Request.new(
+    sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmEventResponse) }
+    def create_crm_event(crm_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_crm_event - Create an event
+      request = Models::Operations::CreateCrmEventRequest.new(
         crm_event: crm_event,
         connection_id: connection_id,
         fields_: fields_,
@@ -307,7 +307,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateCrmEvent2Request,
+        Models::Operations::CreateCrmEventRequest,
         base_url,
         '/crm/{connection_id}/event',
         request
@@ -325,7 +325,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateCrmEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateCrmEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -341,7 +341,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createCrmEvent2',
+        operation_id: 'createCrmEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -401,7 +401,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmEvent)
-          response = Models::Operations::CreateCrmEvent2Response.new(
+          response = Models::Operations::CreateCrmEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -423,10 +423,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAnalyticsEvent2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAnalyticsEvent2Response) }
-    def get_analytics_event2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_analytics_event2 - Retrieve an event
-      request = Models::Operations::GetAnalyticsEvent2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAnalyticsEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAnalyticsEventResponse) }
+    def get_analytics_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_analytics_event - Retrieve an event
+      request = Models::Operations::GetAnalyticsEventRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -435,14 +435,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetAnalyticsEvent2Request,
+        Models::Operations::GetAnalyticsEventRequest,
         base_url,
         '/analytics/{connection_id}/event/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetAnalyticsEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetAnalyticsEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -458,7 +458,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getAnalyticsEvent2',
+        operation_id: 'getAnalyticsEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -517,7 +517,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::AnalyticsEvent)
-          response = Models::Operations::GetAnalyticsEvent2Response.new(
+          response = Models::Operations::GetAnalyticsEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -539,10 +539,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarEvent2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarEvent2Response) }
-    def get_calendar_event2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_calendar_event2 - Retrieve an event
-      request = Models::Operations::GetCalendarEvent2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarEventResponse) }
+    def get_calendar_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_calendar_event - Retrieve an event
+      request = Models::Operations::GetCalendarEventRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -551,14 +551,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCalendarEvent2Request,
+        Models::Operations::GetCalendarEventRequest,
         base_url,
         '/calendar/{connection_id}/event/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCalendarEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCalendarEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -574,7 +574,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCalendarEvent2',
+        operation_id: 'getCalendarEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -633,7 +633,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarEvent)
-          response = Models::Operations::GetCalendarEvent2Response.new(
+          response = Models::Operations::GetCalendarEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -655,10 +655,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsEvent2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsEvent2Response) }
-    def get_clubs_event2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_clubs_event2 - Retrieve an event
-      request = Models::Operations::GetClubsEvent2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsEventResponse) }
+    def get_clubs_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_clubs_event - Retrieve an event
+      request = Models::Operations::GetClubsEventRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -667,14 +667,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetClubsEvent2Request,
+        Models::Operations::GetClubsEventRequest,
         base_url,
         '/clubs/{connection_id}/event/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetClubsEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetClubsEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -690,7 +690,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getClubsEvent2',
+        operation_id: 'getClubsEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -749,7 +749,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::ClubsEvent)
-          response = Models::Operations::GetClubsEvent2Response.new(
+          response = Models::Operations::GetClubsEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -771,10 +771,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmEvent2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmEvent2Response) }
-    def get_crm_event2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_crm_event2 - Retrieve an event
-      request = Models::Operations::GetCrmEvent2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmEventResponse) }
+    def get_crm_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_crm_event - Retrieve an event
+      request = Models::Operations::GetCrmEventRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -783,14 +783,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetCrmEvent2Request,
+        Models::Operations::GetCrmEventRequest,
         base_url,
         '/crm/{connection_id}/event/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetCrmEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetCrmEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -806,7 +806,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getCrmEvent2',
+        operation_id: 'getCrmEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -865,7 +865,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmEvent)
-          response = Models::Operations::GetCrmEvent2Response.new(
+          response = Models::Operations::GetCrmEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -887,20 +887,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListAnalyticsEvents2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAnalyticsEvents2Response) }
-    def list_analytics_events2(request:, timeout_ms: nil)
-      # list_analytics_events2 - List all events
+    sig { params(request: Models::Operations::ListAnalyticsEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAnalyticsEventsResponse) }
+    def list_analytics_events(request:, timeout_ms: nil)
+      # list_analytics_events - List all events
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListAnalyticsEvents2Request,
+        Models::Operations::ListAnalyticsEventsRequest,
         base_url,
         '/analytics/{connection_id}/event',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListAnalyticsEvents2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListAnalyticsEventsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -916,7 +916,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listAnalyticsEvents2',
+        operation_id: 'listAnalyticsEvents',
         security_source: @sdk_configuration.security_source
       )
 
@@ -975,7 +975,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::AnalyticsEvent))
-          response = Models::Operations::ListAnalyticsEvents2Response.new(
+          response = Models::Operations::ListAnalyticsEventsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -997,20 +997,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCalendarEvents2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarEvents2Response) }
-    def list_calendar_events2(request:, timeout_ms: nil)
-      # list_calendar_events2 - List all events
+    sig { params(request: Models::Operations::ListCalendarEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarEventsResponse) }
+    def list_calendar_events(request:, timeout_ms: nil)
+      # list_calendar_events - List all events
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCalendarEvents2Request,
+        Models::Operations::ListCalendarEventsRequest,
         base_url,
         '/calendar/{connection_id}/event',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCalendarEvents2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCalendarEventsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1026,7 +1026,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCalendarEvents2',
+        operation_id: 'listCalendarEvents',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1085,7 +1085,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CalendarEvent))
-          response = Models::Operations::ListCalendarEvents2Response.new(
+          response = Models::Operations::ListCalendarEventsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1107,20 +1107,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListClubsEvents2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsEvents2Response) }
-    def list_clubs_events2(request:, timeout_ms: nil)
-      # list_clubs_events2 - List all events
+    sig { params(request: Models::Operations::ListClubsEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsEventsResponse) }
+    def list_clubs_events(request:, timeout_ms: nil)
+      # list_clubs_events - List all events
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListClubsEvents2Request,
+        Models::Operations::ListClubsEventsRequest,
         base_url,
         '/clubs/{connection_id}/event',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListClubsEvents2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListClubsEventsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1136,7 +1136,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listClubsEvents2',
+        operation_id: 'listClubsEvents',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1195,7 +1195,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::ClubsEvent))
-          response = Models::Operations::ListClubsEvents2Response.new(
+          response = Models::Operations::ListClubsEventsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1217,20 +1217,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListCrmEvents2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmEvents2Response) }
-    def list_crm_events2(request:, timeout_ms: nil)
-      # list_crm_events2 - List all events
+    sig { params(request: Models::Operations::ListCrmEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmEventsResponse) }
+    def list_crm_events(request:, timeout_ms: nil)
+      # list_crm_events - List all events
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListCrmEvents2Request,
+        Models::Operations::ListCrmEventsRequest,
         base_url,
         '/crm/{connection_id}/event',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListCrmEvents2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListCrmEventsRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1246,7 +1246,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listCrmEvents2',
+        operation_id: 'listCrmEvents',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1305,7 +1305,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::CrmEvent))
-          response = Models::Operations::ListCrmEvents2Response.new(
+          response = Models::Operations::ListCrmEventsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1327,13 +1327,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCalendarEvent2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarEvent2Response) }
-    def patch_calendar_event2(request:, timeout_ms: nil)
-      # patch_calendar_event2 - Update an event
+    sig { params(request: Models::Operations::PatchCalendarEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarEventResponse) }
+    def patch_calendar_event(request:, timeout_ms: nil)
+      # patch_calendar_event - Update an event
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCalendarEvent2Request,
+        Models::Operations::PatchCalendarEventRequest,
         base_url,
         '/calendar/{connection_id}/event/{id}',
         request
@@ -1351,7 +1351,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCalendarEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCalendarEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1367,7 +1367,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCalendarEvent2',
+        operation_id: 'patchCalendarEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1427,7 +1427,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarEvent)
-          response = Models::Operations::PatchCalendarEvent2Response.new(
+          response = Models::Operations::PatchCalendarEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1449,13 +1449,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchCrmEvent2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmEvent2Response) }
-    def patch_crm_event2(request:, timeout_ms: nil)
-      # patch_crm_event2 - Update an event
+    sig { params(request: Models::Operations::PatchCrmEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmEventResponse) }
+    def patch_crm_event(request:, timeout_ms: nil)
+      # patch_crm_event - Update an event
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchCrmEvent2Request,
+        Models::Operations::PatchCrmEventRequest,
         base_url,
         '/crm/{connection_id}/event/{id}',
         request
@@ -1473,7 +1473,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchCrmEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchCrmEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1489,7 +1489,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchCrmEvent2',
+        operation_id: 'patchCrmEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1549,7 +1549,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmEvent)
-          response = Models::Operations::PatchCrmEvent2Response.new(
+          response = Models::Operations::PatchCrmEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1571,13 +1571,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchMessagingEvent2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMessagingEvent2Response) }
-    def patch_messaging_event2(request:, timeout_ms: nil)
-      # patch_messaging_event2 - Update an event
+    sig { params(request: Models::Operations::PatchMessagingEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMessagingEventResponse) }
+    def patch_messaging_event(request:, timeout_ms: nil)
+      # patch_messaging_event - Update an event
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchMessagingEvent2Request,
+        Models::Operations::PatchMessagingEventRequest,
         base_url,
         '/messaging/{connection_id}/event/{id}',
         request
@@ -1595,7 +1595,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchMessagingEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchMessagingEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1611,7 +1611,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchMessagingEvent2',
+        operation_id: 'patchMessagingEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1671,7 +1671,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MessagingEvent)
-          response = Models::Operations::PatchMessagingEvent2Response.new(
+          response = Models::Operations::PatchMessagingEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -1693,17 +1693,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarEvent2Response) }
-    def remove_calendar_event2(connection_id:, id:, timeout_ms: nil)
-      # remove_calendar_event2 - Remove an event
-      request = Models::Operations::RemoveCalendarEvent2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarEventResponse) }
+    def remove_calendar_event(connection_id:, id:, timeout_ms: nil)
+      # remove_calendar_event - Remove an event
+      request = Models::Operations::RemoveCalendarEventRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCalendarEvent2Request,
+        Models::Operations::RemoveCalendarEventRequest,
         base_url,
         '/calendar/{connection_id}/event/{id}',
         request
@@ -1725,7 +1725,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCalendarEvent2',
+        operation_id: 'removeCalendarEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1780,7 +1780,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCalendarEvent2Response.new(
+        return Models::Operations::RemoveCalendarEventResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1797,7 +1797,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCalendarEvent2Response.new(
+        return Models::Operations::RemoveCalendarEventResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1807,17 +1807,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmEvent2Response) }
-    def remove_crm_event2(connection_id:, id:, timeout_ms: nil)
-      # remove_crm_event2 - Remove an event
-      request = Models::Operations::RemoveCrmEvent2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmEventResponse) }
+    def remove_crm_event(connection_id:, id:, timeout_ms: nil)
+      # remove_crm_event - Remove an event
+      request = Models::Operations::RemoveCrmEventRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveCrmEvent2Request,
+        Models::Operations::RemoveCrmEventRequest,
         base_url,
         '/crm/{connection_id}/event/{id}',
         request
@@ -1839,7 +1839,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeCrmEvent2',
+        operation_id: 'removeCrmEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -1894,7 +1894,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmEvent2Response.new(
+        return Models::Operations::RemoveCrmEventResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1911,7 +1911,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveCrmEvent2Response.new(
+        return Models::Operations::RemoveCrmEventResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -1921,13 +1921,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCalendarEvent2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarEvent2Response) }
-    def update_calendar_event2(request:, timeout_ms: nil)
-      # update_calendar_event2 - Update an event
+    sig { params(request: Models::Operations::UpdateCalendarEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarEventResponse) }
+    def update_calendar_event(request:, timeout_ms: nil)
+      # update_calendar_event - Update an event
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCalendarEvent2Request,
+        Models::Operations::UpdateCalendarEventRequest,
         base_url,
         '/calendar/{connection_id}/event/{id}',
         request
@@ -1945,7 +1945,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCalendarEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCalendarEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -1961,7 +1961,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCalendarEvent2',
+        operation_id: 'updateCalendarEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2021,7 +2021,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CalendarEvent)
-          response = Models::Operations::UpdateCalendarEvent2Response.new(
+          response = Models::Operations::UpdateCalendarEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2043,13 +2043,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateCrmEvent2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmEvent2Response) }
-    def update_crm_event2(request:, timeout_ms: nil)
-      # update_crm_event2 - Update an event
+    sig { params(request: Models::Operations::UpdateCrmEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmEventResponse) }
+    def update_crm_event(request:, timeout_ms: nil)
+      # update_crm_event - Update an event
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateCrmEvent2Request,
+        Models::Operations::UpdateCrmEventRequest,
         base_url,
         '/crm/{connection_id}/event/{id}',
         request
@@ -2067,7 +2067,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateCrmEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateCrmEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2083,7 +2083,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateCrmEvent2',
+        operation_id: 'updateCrmEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2143,7 +2143,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::CrmEvent)
-          response = Models::Operations::UpdateCrmEvent2Response.new(
+          response = Models::Operations::UpdateCrmEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -2165,13 +2165,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateMessagingEvent2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMessagingEvent2Response) }
-    def update_messaging_event2(request:, timeout_ms: nil)
-      # update_messaging_event2 - Update an event
+    sig { params(request: Models::Operations::UpdateMessagingEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMessagingEventResponse) }
+    def update_messaging_event(request:, timeout_ms: nil)
+      # update_messaging_event - Update an event
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateMessagingEvent2Request,
+        Models::Operations::UpdateMessagingEventRequest,
         base_url,
         '/messaging/{connection_id}/event/{id}',
         request
@@ -2189,7 +2189,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateMessagingEvent2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateMessagingEventRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -2205,7 +2205,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateMessagingEvent2',
+        operation_id: 'updateMessagingEvent',
         security_source: @sdk_configuration.security_source
       )
 
@@ -2265,7 +2265,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::MessagingEvent)
-          response = Models::Operations::UpdateMessagingEvent2Response.new(
+          response = Models::Operations::UpdateMessagingEventResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

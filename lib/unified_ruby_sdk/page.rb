@@ -39,10 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateKmsPage2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsPage2Response) }
-    def create_kms_page2(kms_page:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # create_kms_page2 - Create a page
-      request = Models::Operations::CreateKmsPage2Request.new(
+    sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateKmsPageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsPageResponse) }
+    def create_kms_page(kms_page:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # create_kms_page - Create a page
+      request = Models::Operations::CreateKmsPageRequest.new(
         kms_page: kms_page,
         connection_id: connection_id,
         fields_: fields_,
@@ -51,7 +51,7 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::CreateKmsPage2Request,
+        Models::Operations::CreateKmsPageRequest,
         base_url,
         '/kms/{connection_id}/page',
         request
@@ -69,7 +69,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::CreateKmsPage2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::CreateKmsPageRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -85,7 +85,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'createKmsPage2',
+        operation_id: 'createKmsPage',
         security_source: @sdk_configuration.security_source
       )
 
@@ -145,7 +145,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::KmsPage)
-          response = Models::Operations::CreateKmsPage2Response.new(
+          response = Models::Operations::CreateKmsPageResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -167,10 +167,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetKmsPage2QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsPage2Response) }
-    def get_kms_page2(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
-      # get_kms_page2 - Retrieve a page
-      request = Models::Operations::GetKmsPage2Request.new(
+    sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetKmsPageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsPageResponse) }
+    def get_kms_page(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
+      # get_kms_page - Retrieve a page
+      request = Models::Operations::GetKmsPageRequest.new(
         connection_id: connection_id,
         id: id,
         fields_: fields_,
@@ -179,14 +179,14 @@ module UnifiedRubySDK
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetKmsPage2Request,
+        Models::Operations::GetKmsPageRequest,
         base_url,
         '/kms/{connection_id}/page/{id}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetKmsPage2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetKmsPageRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -202,7 +202,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getKmsPage2',
+        operation_id: 'getKmsPage',
         security_source: @sdk_configuration.security_source
       )
 
@@ -261,7 +261,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::KmsPage)
-          response = Models::Operations::GetKmsPage2Response.new(
+          response = Models::Operations::GetKmsPageResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -283,20 +283,20 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::ListKmsPages2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsPages2Response) }
-    def list_kms_pages2(request:, timeout_ms: nil)
-      # list_kms_pages2 - List all pages
+    sig { params(request: Models::Operations::ListKmsPagesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsPagesResponse) }
+    def list_kms_pages(request:, timeout_ms: nil)
+      # list_kms_pages - List all pages
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::ListKmsPages2Request,
+        Models::Operations::ListKmsPagesRequest,
         base_url,
         '/kms/{connection_id}/page',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::ListKmsPages2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::ListKmsPagesRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -312,7 +312,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'listKmsPages2',
+        operation_id: 'listKmsPages',
         security_source: @sdk_configuration.security_source
       )
 
@@ -371,7 +371,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Crystalline::Array.new(Models::Shared::KmsPage))
-          response = Models::Operations::ListKmsPages2Response.new(
+          response = Models::Operations::ListKmsPagesResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -393,13 +393,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::PatchKmsPage2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsPage2Response) }
-    def patch_kms_page2(request:, timeout_ms: nil)
-      # patch_kms_page2 - Update a page
+    sig { params(request: Models::Operations::PatchKmsPageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsPageResponse) }
+    def patch_kms_page(request:, timeout_ms: nil)
+      # patch_kms_page - Update a page
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::PatchKmsPage2Request,
+        Models::Operations::PatchKmsPageRequest,
         base_url,
         '/kms/{connection_id}/page/{id}',
         request
@@ -417,7 +417,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::PatchKmsPage2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::PatchKmsPageRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -433,7 +433,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'patchKmsPage2',
+        operation_id: 'patchKmsPage',
         security_source: @sdk_configuration.security_source
       )
 
@@ -493,7 +493,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::KmsPage)
-          response = Models::Operations::PatchKmsPage2Response.new(
+          response = Models::Operations::PatchKmsPageResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,
@@ -515,17 +515,17 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveKmsPage2Response) }
-    def remove_kms_page2(connection_id:, id:, timeout_ms: nil)
-      # remove_kms_page2 - Remove a page
-      request = Models::Operations::RemoveKmsPage2Request.new(
+    sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveKmsPageResponse) }
+    def remove_kms_page(connection_id:, id:, timeout_ms: nil)
+      # remove_kms_page - Remove a page
+      request = Models::Operations::RemoveKmsPageRequest.new(
         connection_id: connection_id,
         id: id
       )
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::RemoveKmsPage2Request,
+        Models::Operations::RemoveKmsPageRequest,
         base_url,
         '/kms/{connection_id}/page/{id}',
         request
@@ -547,7 +547,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'removeKmsPage2',
+        operation_id: 'removeKmsPage',
         security_source: @sdk_configuration.security_source
       )
 
@@ -602,7 +602,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveKmsPage2Response.new(
+        return Models::Operations::RemoveKmsPageResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -619,7 +619,7 @@ module UnifiedRubySDK
           ),
           response: http_response
         )
-        return Models::Operations::RemoveKmsPage2Response.new(
+        return Models::Operations::RemoveKmsPageResponse.new(
           status_code: http_response.status,
           content_type: content_type,
           raw_response: http_response,
@@ -629,13 +629,13 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::UpdateKmsPage2Request, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsPage2Response) }
-    def update_kms_page2(request:, timeout_ms: nil)
-      # update_kms_page2 - Update a page
+    sig { params(request: Models::Operations::UpdateKmsPageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsPageResponse) }
+    def update_kms_page(request:, timeout_ms: nil)
+      # update_kms_page - Update a page
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::UpdateKmsPage2Request,
+        Models::Operations::UpdateKmsPageRequest,
         base_url,
         '/kms/{connection_id}/page/{id}',
         request
@@ -653,7 +653,7 @@ module UnifiedRubySDK
       else
         body = data
       end
-      query_params = Utils.get_query_params(Models::Operations::UpdateKmsPage2Request, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::UpdateKmsPageRequest, request, nil)
       headers['Accept'] = 'application/json'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -669,7 +669,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'updateKmsPage2',
+        operation_id: 'updateKmsPage',
         security_source: @sdk_configuration.security_source
       )
 
@@ -729,7 +729,7 @@ module UnifiedRubySDK
           )
           response_data = http_response.env.response_body
           obj = Crystalline.unmarshal_json(JSON.parse(response_data), Models::Shared::KmsPage)
-          response = Models::Operations::UpdateKmsPage2Response.new(
+          response = Models::Operations::UpdateKmsPageResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

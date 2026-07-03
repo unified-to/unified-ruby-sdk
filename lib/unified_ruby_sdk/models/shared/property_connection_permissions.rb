@@ -23,6 +23,8 @@ module UnifiedRubySDK
           ACCOUNTING_INVOICE_WRITE = new('accounting_invoice_write')
           ACCOUNTING_BILL_READ = new('accounting_bill_read')
           ACCOUNTING_BILL_WRITE = new('accounting_bill_write')
+          ACCOUNTING_VENDORCREDIT_READ = new('accounting_vendorcredit_read')
+          ACCOUNTING_VENDORCREDIT_WRITE = new('accounting_vendorcredit_write')
           ACCOUNTING_CREDITMEMO_READ = new('accounting_creditmemo_read')
           ACCOUNTING_CREDITMEMO_WRITE = new('accounting_creditmemo_write')
           ACCOUNTING_CONTACT_READ = new('accounting_contact_read')
