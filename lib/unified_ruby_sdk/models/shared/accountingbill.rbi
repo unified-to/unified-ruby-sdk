@@ -56,6 +56,8 @@ class UnifiedRubySDK::Models::Shared::AccountingBill
   def status=(str_); end
   def tax_amount(); end
   def tax_amount=(str_); end
+  def term(); end
+  def term=(str_); end
   def total_amount(); end
   def total_amount=(str_); end
   def updated_at(); end

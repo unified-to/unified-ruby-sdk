@@ -33,6 +33,7 @@ module UnifiedRubySDK
           CURRENCY = new('currency')
           NOTES = new('notes')
           REFUND_REASON = new('refund_reason')
+          TERM = new('term')
           LINEITEMS = new('lineitems')
           STATUS = new('status')
           URL = new('url')

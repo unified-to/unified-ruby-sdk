@@ -24,26 +24,38 @@ module UnifiedRubySDK
 
         field :labels, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('labels') } }
 
+        field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :repo_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('repo_id') } }
 
+        field :source_branch_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source_branch_id') } }
+
         field :status, Crystalline::Nilable.new(Models::Shared::RepoPullrequestStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::RepoPullrequestStatus, true) } }
+
+        field :target_branch_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('target_branch_id') } }
+
+        field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-        sig { params(closed_at: T.nilable(::DateTime), commit_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), id: T.nilable(::String), labels: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), repo_id: T.nilable(::String), status: T.nilable(Models::Shared::RepoPullrequestStatus), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-        def initialize(closed_at: nil, commit_ids: nil, created_at: nil, id: nil, labels: nil, raw: nil, repo_id: nil, status: nil, updated_at: nil, user_ids: nil)
+        sig { params(closed_at: T.nilable(::DateTime), commit_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), id: T.nilable(::String), labels: T.nilable(T::Array[::String]), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), repo_id: T.nilable(::String), source_branch_id: T.nilable(::String), status: T.nilable(Models::Shared::RepoPullrequestStatus), target_branch_id: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        def initialize(closed_at: nil, commit_ids: nil, created_at: nil, id: nil, labels: nil, notes: nil, raw: nil, repo_id: nil, source_branch_id: nil, status: nil, target_branch_id: nil, title: nil, updated_at: nil, user_ids: nil)
           @closed_at = closed_at
           @commit_ids = commit_ids
           @created_at = created_at
           @id = id
           @labels = labels
+          @notes = notes
           @raw = raw
           @repo_id = repo_id
+          @source_branch_id = source_branch_id
           @status = status
+          @target_branch_id = target_branch_id
+          @title = title
           @updated_at = updated_at
           @user_ids = user_ids
         end
@@ -56,9 +68,13 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @id == other.id
           return false unless @labels == other.labels
+          return false unless @notes == other.notes
           return false unless @raw == other.raw
           return false unless @repo_id == other.repo_id
+          return false unless @source_branch_id == other.source_branch_id
           return false unless @status == other.status
+          return false unless @target_branch_id == other.target_branch_id
+          return false unless @title == other.title
           return false unless @updated_at == other.updated_at
           return false unless @user_ids == other.user_ids
           true

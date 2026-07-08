@@ -22,6 +22,12 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :lines_added, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lines_added') } }
+
+        field :lines_changed, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lines_changed') } }
+
+        field :lines_deleted, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lines_deleted') } }
+
         field :message, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -30,12 +36,15 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(repo_id: ::String, branch_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), message: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(repo_id:, branch_id: nil, created_at: nil, id: nil, message: nil, raw: nil, updated_at: nil, user_id: nil)
+        sig { params(repo_id: ::String, branch_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), lines_added: T.nilable(::Float), lines_changed: T.nilable(::Float), lines_deleted: T.nilable(::Float), message: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(repo_id:, branch_id: nil, created_at: nil, id: nil, lines_added: nil, lines_changed: nil, lines_deleted: nil, message: nil, raw: nil, updated_at: nil, user_id: nil)
           @repo_id = repo_id
           @branch_id = branch_id
           @created_at = created_at
           @id = id
+          @lines_added = lines_added
+          @lines_changed = lines_changed
+          @lines_deleted = lines_deleted
           @message = message
           @raw = raw
           @updated_at = updated_at
@@ -49,6 +58,9 @@ module UnifiedRubySDK
           return false unless @branch_id == other.branch_id
           return false unless @created_at == other.created_at
           return false unless @id == other.id
+          return false unless @lines_added == other.lines_added
+          return false unless @lines_changed == other.lines_changed
+          return false unless @lines_deleted == other.lines_deleted
           return false unless @message == other.message
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at

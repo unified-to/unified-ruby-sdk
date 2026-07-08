@@ -18,12 +18,20 @@ class UnifiedRubySDK::Models::Shared::RepoPullrequest
   def id=(str_); end
   def labels(); end
   def labels=(str_); end
+  def notes(); end
+  def notes=(str_); end
   def raw(); end
   def raw=(str_); end
   def repo_id(); end
   def repo_id=(str_); end
+  def source_branch_id(); end
+  def source_branch_id=(str_); end
   def status(); end
   def status=(str_); end
+  def target_branch_id(); end
+  def target_branch_id=(str_); end
+  def title(); end
+  def title=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def user_ids(); end

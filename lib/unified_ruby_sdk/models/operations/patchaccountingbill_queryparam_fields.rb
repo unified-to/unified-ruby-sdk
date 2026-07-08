@@ -15,6 +15,7 @@ module UnifiedRubySDK
         enums do
           ID = new('id')
           BILL_NUMBER = new('bill_number')
+          TERM = new('term')
           CREATED_AT = new('created_at')
           UPDATED_AT = new('updated_at')
           DUE_AT = new('due_at')

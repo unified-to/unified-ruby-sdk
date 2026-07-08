@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 502f35e1ff844f424e389bb82875f82b
+  docChecksum: 36db861f05f44b7805fc4b06dc0cb471
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.85
-  configChecksum: 32fee9b53af174ea1a3051e583b33726
+  releaseVersion: 0.67.86
+  configChecksum: 9454a2822c88a1e5c213229febf3eba3
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2100,6 +2100,7 @@ generatedFiles:
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/accountinginvoicepaymentcollectionmethod.md
   - docs/models/shared/accountinginvoicestatus.md
+  - docs/models/shared/accountinginvoiceterm.md
   - docs/models/shared/accountinginvoicetype.md
   - docs/models/shared/accountingjournal.md
   - docs/models/shared/accountingjournallineitem.md
@@ -2922,6 +2923,7 @@ generatedFiles:
   - docs/models/shared/tax.md
   - docs/models/shared/taxespaidby.md
   - docs/models/shared/taxexemption.md
+  - docs/models/shared/term.md
   - docs/models/shared/ticketingcategory.md
   - docs/models/shared/ticketingcustomer.md
   - docs/models/shared/ticketingemail.md
@@ -7424,6 +7426,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_payment_collection_method.rbi
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_status.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_status.rbi
+  - lib/unified_ruby_sdk/models/shared/accountinginvoice_term.rb
+  - lib/unified_ruby_sdk/models/shared/accountinginvoice_term.rbi
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_type.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_type.rbi
   - lib/unified_ruby_sdk/models/shared/accountingjournal.rb
@@ -9066,6 +9070,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/tax_exemption.rbi
   - lib/unified_ruby_sdk/models/shared/taxes_paid_by.rb
   - lib/unified_ruby_sdk/models/shared/taxes_paid_by.rbi
+  - lib/unified_ruby_sdk/models/shared/term.rb
+  - lib/unified_ruby_sdk/models/shared/term.rbi
   - lib/unified_ruby_sdk/models/shared/ticketingcategory.rb
   - lib/unified_ruby_sdk/models/shared/ticketingcategory.rbi
   - lib/unified_ruby_sdk/models/shared/ticketingcustomer.rb

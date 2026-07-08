@@ -16,6 +16,12 @@ class UnifiedRubySDK::Models::Shared::RepoCommit
   def created_at=(str_); end
   def id(); end
   def id=(str_); end
+  def lines_added(); end
+  def lines_added=(str_); end
+  def lines_changed(); end
+  def lines_changed=(str_); end
+  def lines_deleted(); end
+  def lines_deleted=(str_); end
   def message(); end
   def message=(str_); end
   def raw(); end

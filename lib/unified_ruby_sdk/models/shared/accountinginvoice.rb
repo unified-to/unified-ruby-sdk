@@ -64,6 +64,8 @@ module UnifiedRubySDK
 
         field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
+        field :term, Crystalline::Nilable.new(Models::Shared::AccountingInvoiceTerm), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('term'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingInvoiceTerm, true) } }
+
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::AccountingInvoiceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingInvoiceType, true) } }
@@ -72,8 +74,8 @@ module UnifiedRubySDK
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), balance_amount: T.nilable(::Float), cancelled_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), discount_amount: T.nilable(::Float), due_at: T.nilable(::DateTime), id: T.nilable(::String), invoice_number: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), notes: T.nilable(::String), organization_id: T.nilable(::String), paid_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_collection_method: T.nilable(Models::Shared::AccountingInvoicePaymentCollectionMethod), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), refund_amount: T.nilable(::Float), refund_reason: T.nilable(::String), refunded_at: T.nilable(::DateTime), send: T.nilable(T::Boolean), status: T.nilable(Models::Shared::AccountingInvoiceStatus), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::AccountingInvoiceType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(attachments: nil, balance_amount: nil, cancelled_at: nil, contact_id: nil, created_at: nil, currency: nil, discount_amount: nil, due_at: nil, id: nil, invoice_number: nil, lineitems: nil, notes: nil, organization_id: nil, paid_amount: nil, paid_at: nil, payment_collection_method: nil, posted_at: nil, raw: nil, reference: nil, refund_amount: nil, refund_reason: nil, refunded_at: nil, send: nil, status: nil, tax_amount: nil, total_amount: nil, type: nil, updated_at: nil, url: nil)
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), balance_amount: T.nilable(::Float), cancelled_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), discount_amount: T.nilable(::Float), due_at: T.nilable(::DateTime), id: T.nilable(::String), invoice_number: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), notes: T.nilable(::String), organization_id: T.nilable(::String), paid_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_collection_method: T.nilable(Models::Shared::AccountingInvoicePaymentCollectionMethod), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), refund_amount: T.nilable(::Float), refund_reason: T.nilable(::String), refunded_at: T.nilable(::DateTime), send: T.nilable(T::Boolean), status: T.nilable(Models::Shared::AccountingInvoiceStatus), tax_amount: T.nilable(::Float), term: T.nilable(Models::Shared::AccountingInvoiceTerm), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::AccountingInvoiceType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(attachments: nil, balance_amount: nil, cancelled_at: nil, contact_id: nil, created_at: nil, currency: nil, discount_amount: nil, due_at: nil, id: nil, invoice_number: nil, lineitems: nil, notes: nil, organization_id: nil, paid_amount: nil, paid_at: nil, payment_collection_method: nil, posted_at: nil, raw: nil, reference: nil, refund_amount: nil, refund_reason: nil, refunded_at: nil, send: nil, status: nil, tax_amount: nil, term: nil, total_amount: nil, type: nil, updated_at: nil, url: nil)
           @attachments = attachments
           @balance_amount = balance_amount
           @cancelled_at = cancelled_at
@@ -99,6 +101,7 @@ module UnifiedRubySDK
           @send = send
           @status = status
           @tax_amount = tax_amount
+          @term = term
           @total_amount = total_amount
           @type = type
           @updated_at = updated_at
@@ -133,6 +136,7 @@ module UnifiedRubySDK
           return false unless @send == other.send
           return false unless @status == other.status
           return false unless @tax_amount == other.tax_amount
+          return false unless @term == other.term
           return false unless @total_amount == other.total_amount
           return false unless @type == other.type
           return false unless @updated_at == other.updated_at
