@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::AccountingCreditmemo
   def due_at=(str_); end
   def id(); end
   def id=(str_); end
+  def invoice_id(); end
+  def invoice_id=(str_); end
   def lineitems(); end
   def lineitems=(str_); end
   def notes(); end

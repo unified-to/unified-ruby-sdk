@@ -32,6 +32,7 @@ module UnifiedRubySDK
           BCC = new('bcc')
           SUB_TYPE = new('sub_type')
           COMPANY_ID = new('company_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

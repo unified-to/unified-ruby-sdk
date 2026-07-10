@@ -29,6 +29,7 @@ module UnifiedRubySDK
           BALANCE_AMOUNT = new('balance_amount')
           CREDITMEMO_NUMBER = new('creditmemo_number')
           CONTACT_ID = new('contact_id')
+          INVOICE_ID = new('invoice_id')
           CURRENCY = new('currency')
           NOTES = new('notes')
           REFUND_REASON = new('refund_reason')

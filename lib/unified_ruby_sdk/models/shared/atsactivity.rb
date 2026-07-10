@@ -40,6 +40,8 @@ module UnifiedRubySDK
 
         field :job_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :sub_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_type') } }
@@ -54,8 +56,8 @@ module UnifiedRubySDK
         # id values of the recruiters associated with the activity.
         field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-        sig { params(application_id: T.nilable(::String), bcc: T.nilable(T::Array[Models::Shared::AtsEmail]), candidate_id: T.nilable(::String), cc: T.nilable(T::Array[Models::Shared::AtsEmail]), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_ids: T.nilable(T::Array[::String]), from: T.nilable(Models::Shared::PropertyAtsActivityFrom), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sub_type: T.nilable(::String), title: T.nilable(::String), to: T.nilable(T::Array[Models::Shared::AtsEmail]), type: T.nilable(Models::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-        def initialize(application_id: nil, bcc: nil, candidate_id: nil, cc: nil, company_id: nil, created_at: nil, description: nil, document_ids: nil, from: nil, id: nil, interview_id: nil, is_private: nil, job_id: nil, raw: nil, sub_type: nil, title: nil, to: nil, type: nil, updated_at: nil, user_ids: nil)
+        sig { params(application_id: T.nilable(::String), bcc: T.nilable(T::Array[Models::Shared::AtsEmail]), candidate_id: T.nilable(::String), cc: T.nilable(T::Array[Models::Shared::AtsEmail]), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_ids: T.nilable(T::Array[::String]), from: T.nilable(Models::Shared::PropertyAtsActivityFrom), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), sub_type: T.nilable(::String), title: T.nilable(::String), to: T.nilable(T::Array[Models::Shared::AtsEmail]), type: T.nilable(Models::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        def initialize(application_id: nil, bcc: nil, candidate_id: nil, cc: nil, company_id: nil, created_at: nil, description: nil, document_ids: nil, from: nil, id: nil, interview_id: nil, is_private: nil, job_id: nil, metadata: nil, raw: nil, sub_type: nil, title: nil, to: nil, type: nil, updated_at: nil, user_ids: nil)
           @application_id = application_id
           @bcc = bcc
           @candidate_id = candidate_id
@@ -69,6 +71,7 @@ module UnifiedRubySDK
           @interview_id = interview_id
           @is_private = is_private
           @job_id = job_id
+          @metadata = metadata
           @raw = raw
           @sub_type = sub_type
           @title = title
@@ -94,6 +97,7 @@ module UnifiedRubySDK
           return false unless @interview_id == other.interview_id
           return false unless @is_private == other.is_private
           return false unless @job_id == other.job_id
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @sub_type == other.sub_type
           return false unless @title == other.title

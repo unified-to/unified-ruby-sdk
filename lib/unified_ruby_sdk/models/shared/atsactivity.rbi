@@ -34,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::AtsActivity
   def is_private=(str_); end
   def job_id(); end
   def job_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def sub_type(); end
