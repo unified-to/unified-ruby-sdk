@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Operations::ListTaskChangesRequest
   def offset=(str_); end
   def order(); end
   def order=(str_); end
+  def project_id(); end
+  def project_id=(str_); end
   def query(); end
   def query=(str_); end
   def raw(); end
