@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::AccountingVendorcredit
   def account_id(); end
   def account_id=(str_); end
+  def apply_amount(); end
+  def apply_amount=(str_); end
   def balance_amount(); end
   def balance_amount=(str_); end
   def bill_id(); end

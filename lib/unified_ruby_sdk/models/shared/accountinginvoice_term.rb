@@ -14,8 +14,11 @@ module UnifiedRubySDK
 
         enums do
           ON_RECEIPT = new('ON_RECEIPT')
+          NET_7 = new('NET_7')
           NET_10 = new('NET_10')
           NET_15 = new('NET_15')
+          NET_20 = new('NET_20')
+          NET_25 = new('NET_25')
           NET_30 = new('NET_30')
           NET_60 = new('NET_60')
         end

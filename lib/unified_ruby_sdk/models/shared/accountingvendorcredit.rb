@@ -16,6 +16,8 @@ module UnifiedRubySDK
 
         field :account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
 
+        field :apply_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('apply_amount') } }
+
         field :balance_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance_amount') } }
 
         field :bill_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bill_id') } }
@@ -46,9 +48,10 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), balance_amount: T.nilable(::Float), bill_id: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), due_at: T.nilable(::DateTime), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), notes: T.nilable(::String), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AccountingVendorcreditStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, balance_amount: nil, bill_id: nil, contact_id: nil, created_at: nil, currency: nil, due_at: nil, id: nil, lineitems: nil, notes: nil, organization_id: nil, posted_at: nil, raw: nil, status: nil, total_amount: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), apply_amount: T.nilable(::Float), balance_amount: T.nilable(::Float), bill_id: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), due_at: T.nilable(::DateTime), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), notes: T.nilable(::String), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AccountingVendorcreditStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, apply_amount: nil, balance_amount: nil, bill_id: nil, contact_id: nil, created_at: nil, currency: nil, due_at: nil, id: nil, lineitems: nil, notes: nil, organization_id: nil, posted_at: nil, raw: nil, status: nil, total_amount: nil, updated_at: nil)
           @account_id = account_id
+          @apply_amount = apply_amount
           @balance_amount = balance_amount
           @bill_id = bill_id
           @contact_id = contact_id
@@ -70,6 +73,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @account_id == other.account_id
+          return false unless @apply_amount == other.apply_amount
           return false unless @balance_amount == other.balance_amount
           return false unless @bill_id == other.bill_id
           return false unless @contact_id == other.contact_id

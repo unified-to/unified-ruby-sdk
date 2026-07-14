@@ -18,6 +18,8 @@ module UnifiedRubySDK
 
         field :ad_type, Crystalline::Nilable.new(Models::Shared::AdType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ad_type'), 'decoder': Utils.enum_from_string(Models::Shared::AdType, true) } }
 
+        field :advertiser_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('advertiser_name') } }
+
         field :campaign_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign_id') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -40,6 +42,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :logo_creative_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('logo_creative_id') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
@@ -56,10 +60,11 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(ad_copy: T.nilable(::String), ad_type: T.nilable(Models::Shared::AdType), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_asset_url: T.nilable(::String), creative_ids: T.nilable(T::Array[::String]), cta: T.nilable(::String), description: T.nilable(::String), display_url: T.nilable(::String), final_url: T.nilable(::String), group_id: T.nilable(::String), headline: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), path1: T.nilable(::String), path2: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AdsAdStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(ad_copy: nil, ad_type: nil, campaign_id: nil, created_at: nil, creative_asset_url: nil, creative_ids: nil, cta: nil, description: nil, display_url: nil, final_url: nil, group_id: nil, headline: nil, id: nil, name: nil, organization_id: nil, path1: nil, path2: nil, promoted: nil, raw: nil, status: nil, updated_at: nil)
+        sig { params(ad_copy: T.nilable(::String), ad_type: T.nilable(Models::Shared::AdType), advertiser_name: T.nilable(::String), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_asset_url: T.nilable(::String), creative_ids: T.nilable(T::Array[::String]), cta: T.nilable(::String), description: T.nilable(::String), display_url: T.nilable(::String), final_url: T.nilable(::String), group_id: T.nilable(::String), headline: T.nilable(::String), id: T.nilable(::String), logo_creative_id: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), path1: T.nilable(::String), path2: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AdsAdStatus), updated_at: T.nilable(::DateTime)).void }
+        def initialize(ad_copy: nil, ad_type: nil, advertiser_name: nil, campaign_id: nil, created_at: nil, creative_asset_url: nil, creative_ids: nil, cta: nil, description: nil, display_url: nil, final_url: nil, group_id: nil, headline: nil, id: nil, logo_creative_id: nil, name: nil, organization_id: nil, path1: nil, path2: nil, promoted: nil, raw: nil, status: nil, updated_at: nil)
           @ad_copy = ad_copy
           @ad_type = ad_type
+          @advertiser_name = advertiser_name
           @campaign_id = campaign_id
           @created_at = created_at
           @creative_asset_url = creative_asset_url
@@ -71,6 +76,7 @@ module UnifiedRubySDK
           @group_id = group_id
           @headline = headline
           @id = id
+          @logo_creative_id = logo_creative_id
           @name = name
           @organization_id = organization_id
           @path1 = path1
@@ -86,6 +92,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @ad_copy == other.ad_copy
           return false unless @ad_type == other.ad_type
+          return false unless @advertiser_name == other.advertiser_name
           return false unless @campaign_id == other.campaign_id
           return false unless @created_at == other.created_at
           return false unless @creative_asset_url == other.creative_asset_url
@@ -97,6 +104,7 @@ module UnifiedRubySDK
           return false unless @group_id == other.group_id
           return false unless @headline == other.headline
           return false unless @id == other.id
+          return false unless @logo_creative_id == other.logo_creative_id
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
           return false unless @path1 == other.path1

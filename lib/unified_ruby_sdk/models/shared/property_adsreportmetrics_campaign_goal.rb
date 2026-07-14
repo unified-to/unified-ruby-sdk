@@ -15,6 +15,7 @@ module UnifiedRubySDK
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           BRAND_AWARENESS = new('BRAND_AWARENESS')
+          ENGAGEMENT = new('ENGAGEMENT')
           REACH = new('REACH')
           WEBSITE_TRAFFIC = new('WEBSITE_TRAFFIC')
           LEADS = new('LEADS')

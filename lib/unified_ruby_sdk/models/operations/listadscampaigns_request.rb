@@ -20,6 +20,8 @@ module UnifiedRubySDK
         # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListAdsCampaignsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
+        field :goal, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'goal', 'style': 'form', 'explode': true } }
+
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
@@ -40,11 +42,12 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAdsCampaignsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), org_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), status: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, end_lt: nil, fields_: nil, limit: nil, offset: nil, order: nil, org_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, status: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAdsCampaignsQueryParamFields]), goal: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), org_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), status: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, end_lt: nil, fields_: nil, goal: nil, limit: nil, offset: nil, order: nil, org_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, status: nil, updated_gte: nil)
           @connection_id = connection_id
           @end_lt = end_lt
           @fields_ = fields_
+          @goal = goal
           @limit = limit
           @offset = offset
           @order = order
@@ -63,6 +66,7 @@ module UnifiedRubySDK
           return false unless @connection_id == other.connection_id
           return false unless @end_lt == other.end_lt
           return false unless @fields_ == other.fields_
+          return false unless @goal == other.goal
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order

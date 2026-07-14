@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Operations::ListAdsCampaignsRequest
   def end_lt=(str_); end
   def fields_(); end
   def fields_=(str_); end
+  def goal(); end
+  def goal=(str_); end
   def limit(); end
   def limit=(str_); end
   def offset(); end

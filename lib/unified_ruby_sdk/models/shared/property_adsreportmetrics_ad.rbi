@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsAd
   def ad_copy=(str_); end
   def ad_type(); end
   def ad_type=(str_); end
+  def advertiser_name(); end
+  def advertiser_name=(str_); end
   def campaign_id(); end
   def campaign_id=(str_); end
   def created_at(); end
@@ -34,6 +36,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsAd
   def headline=(str_); end
   def id(); end
   def id=(str_); end
+  def logo_creative_id(); end
+  def logo_creative_id=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end

@@ -70,6 +70,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_form_id=(str_); end
   def list_fulltext(); end
   def list_fulltext=(str_); end
+  def list_goal(); end
+  def list_goal=(str_); end
   def list_group_id(); end
   def list_group_id=(str_); end
   def list_instructor_id(); end

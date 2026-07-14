@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 765c9a8f026f994299cd84192f56c8b0
+  docChecksum: e58e7c5b7a4389898dcda6779b875038
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.88
-  configChecksum: a5b7ed08fe35ec2c36f2649adf562291
+  releaseVersion: 0.67.89
+  configChecksum: b4dd3494312c3bcead9f5452c0314134
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -212,6 +212,9 @@ generatedFiles:
   - docs/models/operations/createhrisdevicequeryparamfields.md
   - docs/models/operations/createhrisdevicerequest.md
   - docs/models/operations/createhrisdeviceresponse.md
+  - docs/models/operations/createhrisdocumentqueryparamfields.md
+  - docs/models/operations/createhrisdocumentrequest.md
+  - docs/models/operations/createhrisdocumentresponse.md
   - docs/models/operations/createhrisemployeequeryparamfields.md
   - docs/models/operations/createhrisemployeerequest.md
   - docs/models/operations/createhrisemployeeresponse.md
@@ -587,6 +590,9 @@ generatedFiles:
   - docs/models/operations/gethrisdevicequeryparamfields.md
   - docs/models/operations/gethrisdevicerequest.md
   - docs/models/operations/gethrisdeviceresponse.md
+  - docs/models/operations/gethrisdocumentqueryparamfields.md
+  - docs/models/operations/gethrisdocumentrequest.md
+  - docs/models/operations/gethrisdocumentresponse.md
   - docs/models/operations/gethrisemployeequeryparamfields.md
   - docs/models/operations/gethrisemployeerequest.md
   - docs/models/operations/gethrisemployeeresponse.md
@@ -1016,6 +1022,9 @@ generatedFiles:
   - docs/models/operations/listhrisdevicesqueryparamfields.md
   - docs/models/operations/listhrisdevicesrequest.md
   - docs/models/operations/listhrisdevicesresponse.md
+  - docs/models/operations/listhrisdocumentsqueryparamfields.md
+  - docs/models/operations/listhrisdocumentsrequest.md
+  - docs/models/operations/listhrisdocumentsresponse.md
   - docs/models/operations/listhrisemployeesqueryparamfields.md
   - docs/models/operations/listhrisemployeesrequest.md
   - docs/models/operations/listhrisemployeesresponse.md
@@ -1379,6 +1388,9 @@ generatedFiles:
   - docs/models/operations/patchhrisdevicequeryparamfields.md
   - docs/models/operations/patchhrisdevicerequest.md
   - docs/models/operations/patchhrisdeviceresponse.md
+  - docs/models/operations/patchhrisdocumentqueryparamfields.md
+  - docs/models/operations/patchhrisdocumentrequest.md
+  - docs/models/operations/patchhrisdocumentresponse.md
   - docs/models/operations/patchhrisemployeequeryparamfields.md
   - docs/models/operations/patchhrisemployeerequest.md
   - docs/models/operations/patchhrisemployeeresponse.md
@@ -1646,6 +1658,8 @@ generatedFiles:
   - docs/models/operations/removehrisdeductionresponse.md
   - docs/models/operations/removehrisdevicerequest.md
   - docs/models/operations/removehrisdeviceresponse.md
+  - docs/models/operations/removehrisdocumentrequest.md
+  - docs/models/operations/removehrisdocumentresponse.md
   - docs/models/operations/removehrisemployeerequest.md
   - docs/models/operations/removehrisemployeeresponse.md
   - docs/models/operations/removehrisgrouprequest.md
@@ -1924,6 +1938,9 @@ generatedFiles:
   - docs/models/operations/updatehrisdevicequeryparamfields.md
   - docs/models/operations/updatehrisdevicerequest.md
   - docs/models/operations/updatehrisdeviceresponse.md
+  - docs/models/operations/updatehrisdocumentqueryparamfields.md
+  - docs/models/operations/updatehrisdocumentrequest.md
+  - docs/models/operations/updatehrisdocumentresponse.md
   - docs/models/operations/updatehrisemployeequeryparamfields.md
   - docs/models/operations/updatehrisemployeerequest.md
   - docs/models/operations/updatehrisemployeeresponse.md
@@ -2379,6 +2396,8 @@ generatedFiles:
   - docs/models/shared/hrisdeductionfrequency.md
   - docs/models/shared/hrisdeductiontype.md
   - docs/models/shared/hrisdevice.md
+  - docs/models/shared/hrisdocument.md
+  - docs/models/shared/hrisdocumenttype.md
   - docs/models/shared/hrisemail.md
   - docs/models/shared/hrisemailtype.md
   - docs/models/shared/hrisemployee.md
@@ -2462,6 +2481,7 @@ generatedFiles:
   - docs/models/shared/listexpand.md
   - docs/models/shared/listformid.md
   - docs/models/shared/listfulltext.md
+  - docs/models/shared/listgoal.md
   - docs/models/shared/listgroupid.md
   - docs/models/shared/listinstructorid.md
   - docs/models/shared/listinterviewid.md
@@ -3647,6 +3667,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createhrisdevice_request.rbi
   - lib/unified_ruby_sdk/models/operations/createhrisdevice_response.rb
   - lib/unified_ruby_sdk/models/operations/createhrisdevice_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisdocument_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisdocument_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisdocument_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisdocument_response.rbi
   - lib/unified_ruby_sdk/models/operations/createhrisemployee_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createhrisemployee_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createhrisemployee_request.rb
@@ -4397,6 +4423,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/gethrisdevice_request.rbi
   - lib/unified_ruby_sdk/models/operations/gethrisdevice_response.rb
   - lib/unified_ruby_sdk/models/operations/gethrisdevice_response.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisdocument_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisdocument_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisdocument_request.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisdocument_response.rbi
   - lib/unified_ruby_sdk/models/operations/gethrisemployee_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/gethrisemployee_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/gethrisemployee_request.rb
@@ -5255,6 +5287,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listhrisdevices_request.rbi
   - lib/unified_ruby_sdk/models/operations/listhrisdevices_response.rb
   - lib/unified_ruby_sdk/models/operations/listhrisdevices_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisdocuments_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisdocuments_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisdocuments_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisdocuments_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisdocuments_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisdocuments_response.rbi
   - lib/unified_ruby_sdk/models/operations/listhrisemployees_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listhrisemployees_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listhrisemployees_request.rb
@@ -5981,6 +6019,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchhrisdevice_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrisdevice_response.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisdevice_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisdocument_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisdocument_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisdocument_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisdocument_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrisemployee_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisemployee_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrisemployee_request.rb
@@ -6515,6 +6559,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removehrisdevice_request.rbi
   - lib/unified_ruby_sdk/models/operations/removehrisdevice_response.rb
   - lib/unified_ruby_sdk/models/operations/removehrisdevice_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removehrisdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisdocument_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removehrisdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisdocument_response.rbi
   - lib/unified_ruby_sdk/models/operations/removehrisemployee_request.rb
   - lib/unified_ruby_sdk/models/operations/removehrisemployee_request.rbi
   - lib/unified_ruby_sdk/models/operations/removehrisemployee_response.rb
@@ -7071,6 +7119,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatehrisdevice_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrisdevice_response.rb
   - lib/unified_ruby_sdk/models/operations/updatehrisdevice_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisdocument_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisdocument_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisdocument_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisdocument_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisdocument_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisdocument_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrisemployee_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatehrisemployee_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrisemployee_request.rb
@@ -7982,6 +8036,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hrisdeduction_type.rbi
   - lib/unified_ruby_sdk/models/shared/hrisdevice.rb
   - lib/unified_ruby_sdk/models/shared/hrisdevice.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisdocument.rb
+  - lib/unified_ruby_sdk/models/shared/hrisdocument.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisdocument_type.rb
+  - lib/unified_ruby_sdk/models/shared/hrisdocument_type.rbi
   - lib/unified_ruby_sdk/models/shared/hrisemail.rb
   - lib/unified_ruby_sdk/models/shared/hrisemail.rbi
   - lib/unified_ruby_sdk/models/shared/hrisemail_type.rb
@@ -8148,6 +8206,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_form_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_fulltext.rb
   - lib/unified_ruby_sdk/models/shared/list_fulltext.rbi
+  - lib/unified_ruby_sdk/models/shared/list_goal.rb
+  - lib/unified_ruby_sdk/models/shared/list_goal.rbi
   - lib/unified_ruby_sdk/models/shared/list_group_id.rb
   - lib/unified_ruby_sdk/models/shared/list_group_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_instructor_id.rb
@@ -22344,6 +22404,61 @@ examples:
           application/json: {"fields": {}}
   updateDatastoreTable:
     speakeasy-default-update-datastore-table:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createHrisDocument:
+    speakeasy-default-create-hris-document:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getHrisDocument:
+    speakeasy-default-get-hris-document:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listHrisDocuments:
+    speakeasy-default-list-hris-documents:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchHrisDocument:
+    speakeasy-default-patch-hris-document:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeHrisDocument:
+    speakeasy-default-remove-hris-document:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisDocument:
+    speakeasy-default-update-hris-document:
       parameters:
         path:
           connection_id: "<id>"

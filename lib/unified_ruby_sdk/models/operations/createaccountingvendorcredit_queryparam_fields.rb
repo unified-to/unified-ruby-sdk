@@ -28,6 +28,7 @@ module UnifiedRubySDK
           LINEITEMS = new('lineitems')
           STATUS = new('status')
           ORGANIZATION_ID = new('organization_id')
+          APPLY_AMOUNT = new('apply_amount')
           RAW = new('raw')
         end
       end

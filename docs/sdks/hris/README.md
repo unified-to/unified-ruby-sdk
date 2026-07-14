@@ -10,6 +10,7 @@
 * [create_hris_company](#create_hris_company) - Create a company
 * [create_hris_deduction](#create_hris_deduction) - Create a deduction
 * [create_hris_device](#create_hris_device) - Create a device
+* [create_hris_document](#create_hris_document) - Create a document
 * [create_hris_employee](#create_hris_employee) - Create an employee
 * [create_hris_group](#create_hris_group) - Create a group
 * [create_hris_location](#create_hris_location) - Create a location
@@ -20,6 +21,7 @@
 * [get_hris_company](#get_hris_company) - Retrieve a company
 * [get_hris_deduction](#get_hris_deduction) - Retrieve a deduction
 * [get_hris_device](#get_hris_device) - Retrieve a device
+* [get_hris_document](#get_hris_document) - Retrieve a document
 * [get_hris_employee](#get_hris_employee) - Retrieve an employee
 * [get_hris_group](#get_hris_group) - Retrieve a group
 * [get_hris_location](#get_hris_location) - Retrieve a location
@@ -31,6 +33,7 @@
 * [list_hris_companies](#list_hris_companies) - List all companies
 * [list_hris_deductions](#list_hris_deductions) - List all deductions
 * [list_hris_devices](#list_hris_devices) - List all devices
+* [list_hris_documents](#list_hris_documents) - List all documents
 * [list_hris_employees](#list_hris_employees) - List all employees
 * [list_hris_groups](#list_hris_groups) - List all groups
 * [list_hris_locations](#list_hris_locations) - List all locations
@@ -42,6 +45,7 @@
 * [patch_hris_company](#patch_hris_company) - Update a company
 * [patch_hris_deduction](#patch_hris_deduction) - Update a deduction
 * [patch_hris_device](#patch_hris_device) - Update a device
+* [patch_hris_document](#patch_hris_document) - Update a document
 * [patch_hris_employee](#patch_hris_employee) - Update an employee
 * [patch_hris_group](#patch_hris_group) - Update a group
 * [patch_hris_location](#patch_hris_location) - Update a location
@@ -52,6 +56,7 @@
 * [remove_hris_company](#remove_hris_company) - Remove a company
 * [remove_hris_deduction](#remove_hris_deduction) - Remove a deduction
 * [remove_hris_device](#remove_hris_device) - Remove a device
+* [remove_hris_document](#remove_hris_document) - Remove a document
 * [remove_hris_employee](#remove_hris_employee) - Remove an employee
 * [remove_hris_group](#remove_hris_group) - Remove a group
 * [remove_hris_location](#remove_hris_location) - Remove a location
@@ -62,6 +67,7 @@
 * [update_hris_company](#update_hris_company) - Update a company
 * [update_hris_deduction](#update_hris_deduction) - Update a deduction
 * [update_hris_device](#update_hris_device) - Update a device
+* [update_hris_document](#update_hris_document) - Update a document
 * [update_hris_employee](#update_hris_employee) - Update an employee
 * [update_hris_group](#update_hris_group) - Update a group
 * [update_hris_location](#update_hris_location) - Update a location
@@ -281,6 +287,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateHrisDeviceResponse)](../../models/operations/createhrisdeviceresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_hris_document
+
+Create a document
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.create_hris_document(hris_document: Models::Shared::HrisDocument.new(), connection_id: '<id>')
+
+unless res.hris_document.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `hris_document`                                                                                                                                  | [Models::Shared::HrisDocument](../../models/shared/hrisdocument.md)                                                                              | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisDocumentQueryParamFields](../../models/operations/createhrisdocumentqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateHrisDocumentResponse)](../../models/operations/createhrisdocumentresponse.md)**
 
 ### Errors
 
@@ -725,6 +775,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHrisDeviceResponse)](../../models/operations/gethrisdeviceresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_hris_document
+
+Retrieve a document
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHrisDocument" method="get" path="/hris/{connection_id}/document/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.get_hris_document(connection_id: '<id>', id: '<id>')
+
+unless res.hris_document.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Document                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHrisDocumentQueryParamFields](../../models/operations/gethrisdocumentqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHrisDocumentResponse)](../../models/operations/gethrisdocumentresponse.md)**
 
 ### Errors
 
@@ -1214,6 +1308,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListHrisDevicesResponse)](../../models/operations/listhrisdevicesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_hris_documents
+
+List all documents
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHrisDocuments" method="get" path="/hris/{connection_id}/document" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHrisDocumentsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.hris.list_hris_documents(request: req)
+
+unless res.hris_documents.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListHrisDocumentsRequest](../../models/operations/listhrisdocumentsrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHrisDocumentsResponse)](../../models/operations/listhrisdocumentsresponse.md)**
 
 ### Errors
 
@@ -1726,6 +1865,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_hris_document
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchHrisDocumentRequest.new(
+  hris_document: Models::Shared::HrisDocument.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.hris.patch_hris_document(request: req)
+
+unless res.hris_document.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::PatchHrisDocumentRequest](../../models/operations/patchhrisdocumentrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchHrisDocumentResponse)](../../models/operations/patchhrisdocumentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_hris_employee
 
 Update an employee
@@ -2175,6 +2361,48 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_hris_document
+
+Remove a document
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeHrisDocument" method="delete" path="/hris/{connection_id}/document/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.remove_hris_document(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Document   |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveHrisDocumentResponse)](../../models/operations/removehrisdocumentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_hris_employee
 
 Remove an employee
@@ -2613,6 +2841,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateHrisDeviceResponse)](../../models/operations/updatehrisdeviceresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_hris_document
+
+Update a document
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateHrisDocumentRequest.new(
+  hris_document: Models::Shared::HrisDocument.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.hris.update_hris_document(request: req)
+
+unless res.hris_document.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::UpdateHrisDocumentRequest](../../models/operations/updatehrisdocumentrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateHrisDocumentResponse)](../../models/operations/updatehrisdocumentresponse.md)**
 
 ### Errors
 
