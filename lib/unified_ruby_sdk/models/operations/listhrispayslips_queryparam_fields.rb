@@ -18,6 +18,7 @@ module UnifiedRubySDK
           UPDATED_AT = new('updated_at')
           USER_ID = new('user_id')
           COMPANY_ID = new('company_id')
+          PAYMENT_REFERENCE = new('payment_reference')
           PAYMENT_TYPE = new('payment_type')
           PAID_AT = new('paid_at')
           START_AT = new('start_at')

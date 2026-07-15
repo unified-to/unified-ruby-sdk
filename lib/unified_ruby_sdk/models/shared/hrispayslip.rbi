@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::HrisPayslip
   def net_amount=(str_); end
   def paid_at(); end
   def paid_at=(str_); end
+  def payment_reference(); end
+  def payment_reference=(str_); end
   def payment_type(); end
   def payment_type=(str_); end
   def raw(); end

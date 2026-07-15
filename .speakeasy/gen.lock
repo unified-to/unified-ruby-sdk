@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: e58e7c5b7a4389898dcda6779b875038
+  docChecksum: 37f0bcef1ef1eca49684f622cd72a3f4
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.89
-  configChecksum: b4dd3494312c3bcead9f5452c0314134
+  releaseVersion: 0.67.90
+  configChecksum: 5f9da140ec4867bc7cccfc92ab156dd2
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -605,6 +605,9 @@ generatedFiles:
   - docs/models/operations/gethrispayslipqueryparamfields.md
   - docs/models/operations/gethrispaysliprequest.md
   - docs/models/operations/gethrispayslipresponse.md
+  - docs/models/operations/gethristaxonomyqueryparamfields.md
+  - docs/models/operations/gethristaxonomyrequest.md
+  - docs/models/operations/gethristaxonomyresponse.md
   - docs/models/operations/gethristimeoffqueryparamfields.md
   - docs/models/operations/gethristimeoffrequest.md
   - docs/models/operations/gethristimeoffresponse.md
@@ -1037,6 +1040,9 @@ generatedFiles:
   - docs/models/operations/listhrispayslipsqueryparamfields.md
   - docs/models/operations/listhrispayslipsrequest.md
   - docs/models/operations/listhrispayslipsresponse.md
+  - docs/models/operations/listhristaxonomiesqueryparamfields.md
+  - docs/models/operations/listhristaxonomiesrequest.md
+  - docs/models/operations/listhristaxonomiesresponse.md
   - docs/models/operations/listhristimeoffsqueryparamfields.md
   - docs/models/operations/listhristimeoffsrequest.md
   - docs/models/operations/listhristimeoffsresponse.md
@@ -2419,6 +2425,8 @@ generatedFiles:
   - docs/models/shared/hrispayslip.md
   - docs/models/shared/hrispayslipdetail.md
   - docs/models/shared/hrispayslipdetailtype.md
+  - docs/models/shared/hristaxonomy.md
+  - docs/models/shared/hristaxonomytype.md
   - docs/models/shared/hristelephone.md
   - docs/models/shared/hristelephonetype.md
   - docs/models/shared/hristimeoff.md
@@ -2514,6 +2522,7 @@ generatedFiles:
   - docs/models/shared/listrawfields.md
   - docs/models/shared/listreference.md
   - docs/models/shared/listrepoid.md
+  - docs/models/shared/listroleid.md
   - docs/models/shared/listrootid.md
   - docs/models/shared/listsaleschannelid.md
   - docs/models/shared/listsessionid.md
@@ -3181,6 +3190,7 @@ generatedFiles:
   - docs/sdks/table/README.md
   - docs/sdks/target/README.md
   - docs/sdks/task/README.md
+  - docs/sdks/taxonomy/README.md
   - docs/sdks/taxrate/README.md
   - docs/sdks/template/README.md
   - docs/sdks/ticket/README.md
@@ -4453,6 +4463,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/gethrispayslip_request.rbi
   - lib/unified_ruby_sdk/models/operations/gethrispayslip_response.rb
   - lib/unified_ruby_sdk/models/operations/gethrispayslip_response.rbi
+  - lib/unified_ruby_sdk/models/operations/gethristaxonomy_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/gethristaxonomy_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/gethristaxonomy_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethristaxonomy_request.rbi
+  - lib/unified_ruby_sdk/models/operations/gethristaxonomy_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethristaxonomy_response.rbi
   - lib/unified_ruby_sdk/models/operations/gethristimeoff_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/gethristimeoff_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/gethristimeoff_request.rb
@@ -5317,6 +5333,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listhrispayslips_request.rbi
   - lib/unified_ruby_sdk/models/operations/listhrispayslips_response.rb
   - lib/unified_ruby_sdk/models/operations/listhrispayslips_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listhristaxonomies_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listhristaxonomies_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listhristaxonomies_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhristaxonomies_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listhristaxonomies_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhristaxonomies_response.rbi
   - lib/unified_ruby_sdk/models/operations/listhristimeoffs_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listhristimeoffs_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listhristimeoffs_request.rb
@@ -8082,6 +8104,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hrispayslipdetail.rbi
   - lib/unified_ruby_sdk/models/shared/hrispayslipdetail_type.rb
   - lib/unified_ruby_sdk/models/shared/hrispayslipdetail_type.rbi
+  - lib/unified_ruby_sdk/models/shared/hristaxonomy.rb
+  - lib/unified_ruby_sdk/models/shared/hristaxonomy.rbi
+  - lib/unified_ruby_sdk/models/shared/hristaxonomy_type.rb
+  - lib/unified_ruby_sdk/models/shared/hristaxonomy_type.rbi
   - lib/unified_ruby_sdk/models/shared/hristelephone.rb
   - lib/unified_ruby_sdk/models/shared/hristelephone.rbi
   - lib/unified_ruby_sdk/models/shared/hristelephone_type.rb
@@ -8272,6 +8298,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_reference.rbi
   - lib/unified_ruby_sdk/models/shared/list_repo_id.rb
   - lib/unified_ruby_sdk/models/shared/list_repo_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_role_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_role_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_root_id.rb
   - lib/unified_ruby_sdk/models/shared/list_root_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_saleschannel_id.rb
@@ -9390,6 +9418,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/table.rb
   - lib/unified_ruby_sdk/target.rb
   - lib/unified_ruby_sdk/task.rb
+  - lib/unified_ruby_sdk/taxonomy.rb
   - lib/unified_ruby_sdk/taxrate.rb
   - lib/unified_ruby_sdk/template.rb
   - lib/unified_ruby_sdk/ticket.rb
@@ -22468,5 +22497,22 @@ examples:
       responses:
         "200":
           application/json: {}
+  getHrisTaxonomy:
+    speakeasy-default-get-hris-taxonomy:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listHrisTaxonomies:
+    speakeasy-default-list-hris-taxonomies:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}

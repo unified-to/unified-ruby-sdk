@@ -79,6 +79,7 @@ module UnifiedRubySDK
           HRIS_BENEFIT = new('hris_benefit')
           HRIS_BANKACCOUNT = new('hris_bankaccount')
           HRIS_DOCUMENT = new('hris_document')
+          HRIS_TAXONOMY = new('hris_taxonomy')
           MARTECH_LIST = new('martech_list')
           MARTECH_MEMBER = new('martech_member')
           MARTECH_CAMPAIGN = new('martech_campaign')

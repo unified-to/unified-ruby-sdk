@@ -94,6 +94,7 @@ module UnifiedRubySDK
   autoload :Device, 'unified_ruby_sdk/device'
   autoload :Employee, 'unified_ruby_sdk/employee'
   autoload :Payslip, 'unified_ruby_sdk/payslip'
+  autoload :Taxonomy, 'unified_ruby_sdk/taxonomy'
   autoload :Timeoff, 'unified_ruby_sdk/timeoff'
   autoload :Timeshift, 'unified_ruby_sdk/timeshift'
   autoload :Kms, 'unified_ruby_sdk/kms'
