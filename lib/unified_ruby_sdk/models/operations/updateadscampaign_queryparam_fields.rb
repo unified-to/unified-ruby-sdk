@@ -19,6 +19,7 @@ module UnifiedRubySDK
           NAME = new('name')
           ORGANIZATION_ID = new('organization_id')
           STATUS = new('status')
+          EFFECTIVE_STATUS = new('effective_status')
           START_AT = new('start_at')
           END_AT = new('end_at')
           BUDGET_AMOUNT = new('budget_amount')

@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsCampaign
   def created_at=(str_); end
   def currency(); end
   def currency=(str_); end
+  def effective_status(); end
+  def effective_status=(str_); end
   def end_at(); end
   def end_at=(str_); end
   def frequency_cap(); end
