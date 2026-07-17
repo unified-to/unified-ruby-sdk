@@ -544,6 +544,7 @@ module UnifiedRubySDK
       autoload :ListDealId, 'unified_ruby_sdk/models/shared/list_deal_id.rb'
       autoload :ListDimension, 'unified_ruby_sdk/models/shared/list_dimension.rb'
       autoload :ListDocumentId, 'unified_ruby_sdk/models/shared/list_document_id.rb'
+      autoload :ListEffectiveStatus, 'unified_ruby_sdk/models/shared/list_effective_status.rb'
       autoload :ListEndLt, 'unified_ruby_sdk/models/shared/list_end_lt.rb'
       autoload :ListEventId, 'unified_ruby_sdk/models/shared/list_event_id.rb'
       autoload :ListExpand, 'unified_ruby_sdk/models/shared/list_expand.rb'

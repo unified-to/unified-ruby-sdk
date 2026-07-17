@@ -60,6 +60,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_dimension=(str_); end
   def list_document_id(); end
   def list_document_id=(str_); end
+  def list_effective_status(); end
+  def list_effective_status=(str_); end
   def list_end_lt(); end
   def list_end_lt=(str_); end
   def list_event_id(); end

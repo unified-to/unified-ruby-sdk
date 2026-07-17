@@ -22,7 +22,7 @@ generation:
   flattenGlobalSecurity: true
   telemetryEnabled: false
 ruby:
-  version: 0.67.91
+  version: 0.67.92
   additionalDependencies:
     development: {}
     runtime: {}
