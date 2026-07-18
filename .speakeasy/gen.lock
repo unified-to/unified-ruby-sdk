@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: c20cc0103001f7589cc7477ec75e8585
+  docChecksum: 3b22e3eb6058fda75068b7b68db79d73
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.92
-  configChecksum: 62db3b3aee39996bed81b491cd80ac5a
+  releaseVersion: 0.67.93
+  configChecksum: 1ca615429ed08c1f47b1af88f1947e77
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2164,6 +2164,7 @@ generatedFiles:
   - docs/models/shared/adscreativestatus.md
   - docs/models/shared/adsgroup.md
   - docs/models/shared/adsgroupbudgetperiod.md
+  - docs/models/shared/adsgroupeffectivestatus.md
   - docs/models/shared/adsgroupstatus.md
   - docs/models/shared/adsgrouptype.md
   - docs/models/shared/adsinsertionorder.md
@@ -2732,6 +2733,7 @@ generatedFiles:
   - docs/models/shared/propertyadsreportmetricsgroupbudgetallocationtype.md
   - docs/models/shared/propertyadsreportmetricsgroupbudgetperiod.md
   - docs/models/shared/propertyadsreportmetricsgroupbudgetunit.md
+  - docs/models/shared/propertyadsreportmetricsgroupeffectivestatus.md
   - docs/models/shared/propertyadsreportmetricsgroupfrequencycap.md
   - docs/models/shared/propertyadsreportmetricsgroupfrequencycaptimeunit.md
   - docs/models/shared/propertyadsreportmetricsgroupoptimizationgoal.md
@@ -7587,6 +7589,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/adsgroup.rbi
   - lib/unified_ruby_sdk/models/shared/adsgroup_budget_period.rb
   - lib/unified_ruby_sdk/models/shared/adsgroup_budget_period.rbi
+  - lib/unified_ruby_sdk/models/shared/adsgroup_effective_status.rb
+  - lib/unified_ruby_sdk/models/shared/adsgroup_effective_status.rbi
   - lib/unified_ruby_sdk/models/shared/adsgroup_status.rb
   - lib/unified_ruby_sdk/models/shared/adsgroup_status.rbi
   - lib/unified_ruby_sdk/models/shared/adsgroup_type.rb
@@ -8721,6 +8725,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_budget_period.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_budget_unit.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_budget_unit.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_effective_status.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_effective_status.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_frequency_cap.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_frequency_cap.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_frequency_cap_time_unit.rb

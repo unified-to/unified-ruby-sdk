@@ -38,6 +38,8 @@ module UnifiedRubySDK
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
+        field :effective_status, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupEffectiveStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('effective_status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupEffectiveStatus, true) } }
+
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :frequency_cap, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupFrequencyCap), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency_cap') } }
@@ -72,8 +74,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(bid_amount: T.nilable(::Float), bid_strategy: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBidStrategy), billing_event: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBillingEvent), budget_allocation_type: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetAllocationType), budget_amount: T.nilable(::Float), budget_max_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetPeriod), budget_unit: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_ids: T.nilable(T::Array[::String]), currency: T.nilable(::String), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupFrequencyCap), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), insertionorder_id: T.nilable(::String), name: T.nilable(::String), optimization_goal: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupOptimizationGoal), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupPacing), parent_id: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupStatus), targeting: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargeting), type: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(bid_amount: nil, bid_strategy: nil, billing_event: nil, budget_allocation_type: nil, budget_amount: nil, budget_max_amount: nil, budget_period: nil, budget_unit: nil, campaign_id: nil, created_at: nil, creative_ids: nil, currency: nil, end_at: nil, frequency_cap: nil, has_eu_political_ads: nil, id: nil, insertionorder_id: nil, name: nil, optimization_goal: nil, organization_id: nil, pacing: nil, parent_id: nil, promoted: nil, raw: nil, start_at: nil, status: nil, targeting: nil, type: nil, updated_at: nil)
+        sig { params(bid_amount: T.nilable(::Float), bid_strategy: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBidStrategy), billing_event: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBillingEvent), budget_allocation_type: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetAllocationType), budget_amount: T.nilable(::Float), budget_max_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetPeriod), budget_unit: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_ids: T.nilable(T::Array[::String]), currency: T.nilable(::String), effective_status: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupEffectiveStatus), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupFrequencyCap), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), insertionorder_id: T.nilable(::String), name: T.nilable(::String), optimization_goal: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupOptimizationGoal), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupPacing), parent_id: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupStatus), targeting: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargeting), type: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(bid_amount: nil, bid_strategy: nil, billing_event: nil, budget_allocation_type: nil, budget_amount: nil, budget_max_amount: nil, budget_period: nil, budget_unit: nil, campaign_id: nil, created_at: nil, creative_ids: nil, currency: nil, effective_status: nil, end_at: nil, frequency_cap: nil, has_eu_political_ads: nil, id: nil, insertionorder_id: nil, name: nil, optimization_goal: nil, organization_id: nil, pacing: nil, parent_id: nil, promoted: nil, raw: nil, start_at: nil, status: nil, targeting: nil, type: nil, updated_at: nil)
           @bid_amount = bid_amount
           @bid_strategy = bid_strategy
           @billing_event = billing_event
@@ -86,6 +88,7 @@ module UnifiedRubySDK
           @created_at = created_at
           @creative_ids = creative_ids
           @currency = currency
+          @effective_status = effective_status
           @end_at = end_at
           @frequency_cap = frequency_cap
           @has_eu_political_ads = has_eu_political_ads
@@ -120,6 +123,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @creative_ids == other.creative_ids
           return false unless @currency == other.currency
+          return false unless @effective_status == other.effective_status
           return false unless @end_at == other.end_at
           return false unless @frequency_cap == other.frequency_cap
           return false unless @has_eu_political_ads == other.has_eu_political_ads

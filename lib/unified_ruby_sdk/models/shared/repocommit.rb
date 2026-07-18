@@ -30,14 +30,16 @@ module UnifiedRubySDK
 
         field :message, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
 
+        field :pullrequest_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pullrequest_ids') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(repo_id: ::String, branch_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), lines_added: T.nilable(::Float), lines_changed: T.nilable(::Float), lines_deleted: T.nilable(::Float), message: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(repo_id:, branch_id: nil, created_at: nil, id: nil, lines_added: nil, lines_changed: nil, lines_deleted: nil, message: nil, raw: nil, updated_at: nil, user_id: nil)
+        sig { params(repo_id: ::String, branch_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), lines_added: T.nilable(::Float), lines_changed: T.nilable(::Float), lines_deleted: T.nilable(::Float), message: T.nilable(::String), pullrequest_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(repo_id:, branch_id: nil, created_at: nil, id: nil, lines_added: nil, lines_changed: nil, lines_deleted: nil, message: nil, pullrequest_ids: nil, raw: nil, updated_at: nil, user_id: nil)
           @repo_id = repo_id
           @branch_id = branch_id
           @created_at = created_at
@@ -46,6 +48,7 @@ module UnifiedRubySDK
           @lines_changed = lines_changed
           @lines_deleted = lines_deleted
           @message = message
+          @pullrequest_ids = pullrequest_ids
           @raw = raw
           @updated_at = updated_at
           @user_id = user_id
@@ -62,6 +65,7 @@ module UnifiedRubySDK
           return false unless @lines_changed == other.lines_changed
           return false unless @lines_deleted == other.lines_deleted
           return false unless @message == other.message
+          return false unless @pullrequest_ids == other.pullrequest_ids
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id

@@ -24,7 +24,6 @@ module UnifiedRubySDK
           AD_TYPE = new('ad_type')
           ADVERTISER_NAME = new('advertiser_name')
           CREATIVE_IDS = new('creative_ids')
-          LOGO_CREATIVE_ID = new('logo_creative_id')
           CREATIVE_ASSET_URL = new('creative_asset_url')
           AD_COPY = new('ad_copy')
           HEADLINE = new('headline')
@@ -35,6 +34,7 @@ module UnifiedRubySDK
           PATH1 = new('path1')
           PATH2 = new('path2')
           PROMOTED = new('promoted')
+          LOGO_CREATIVE_ID = new('logo_creative_id')
           RAW = new('raw')
         end
       end

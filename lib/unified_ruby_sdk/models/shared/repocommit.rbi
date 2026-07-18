@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::RepoCommit
   def lines_deleted=(str_); end
   def message(); end
   def message=(str_); end
+  def pullrequest_ids(); end
+  def pullrequest_ids=(str_); end
   def raw(); end
   def raw=(str_); end
   def updated_at(); end

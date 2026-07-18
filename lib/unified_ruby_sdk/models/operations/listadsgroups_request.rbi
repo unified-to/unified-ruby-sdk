@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Operations::ListAdsGroupsRequest
   def connection_id=(str_); end
   def campaign_id(); end
   def campaign_id=(str_); end
+  def effective_status(); end
+  def effective_status=(str_); end
   def end_lt(); end
   def end_lt=(str_); end
   def fields_(); end

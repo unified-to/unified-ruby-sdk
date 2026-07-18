@@ -33,6 +33,7 @@ module UnifiedRubySDK
           SOURCES = new('sources')
           DATE_OF_BIRTH = new('date_of_birth')
           USER_ID = new('user_id')
+          USER_IDS = new('user_ids')
           WEB_URL = new('web_url')
           EXPERIENCES = new('experiences')
           EDUCATION = new('education')

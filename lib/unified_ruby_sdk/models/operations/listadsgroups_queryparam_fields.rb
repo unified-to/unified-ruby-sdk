@@ -22,6 +22,7 @@ module UnifiedRubySDK
           ORGANIZATION_ID = new('organization_id')
           INSERTIONORDER_ID = new('insertionorder_id')
           STATUS = new('status')
+          EFFECTIVE_STATUS = new('effective_status')
           TARGETING = new('targeting')
           BID_AMOUNT = new('bid_amount')
           BID_STRATEGY = new('bid_strategy')

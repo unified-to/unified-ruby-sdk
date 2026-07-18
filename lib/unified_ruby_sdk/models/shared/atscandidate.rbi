@@ -60,6 +60,8 @@ class UnifiedRubySDK::Models::Shared::AtsCandidate
   def updated_at=(str_); end
   def user_id(); end
   def user_id=(str_); end
+  def user_ids(); end
+  def user_ids=(str_); end
   def web_url(); end
   def web_url=(str_); end
 end

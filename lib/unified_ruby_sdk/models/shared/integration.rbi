@@ -46,6 +46,8 @@ class UnifiedRubySDK::Models::Shared::Integration
   def popularity=(str_); end
   def rate_limit_description(); end
   def rate_limit_description=(str_); end
+  def requires_cname(); end
+  def requires_cname=(str_); end
   def saml(); end
   def saml=(str_); end
   def sandbox(); end

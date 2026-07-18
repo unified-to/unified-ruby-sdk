@@ -20,6 +20,7 @@ module UnifiedRubySDK
           REPO_ID = new('repo_id')
           MESSAGE = new('message')
           BRANCH_ID = new('branch_id')
+          PULLREQUEST_IDS = new('pullrequest_ids')
           LINES_ADDED = new('lines_added')
           LINES_DELETED = new('lines_deleted')
           LINES_CHANGED = new('lines_changed')
