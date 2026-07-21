@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 3b22e3eb6058fda75068b7b68db79d73
+  docChecksum: 1c53d4c83d670f3e7401df3422270680
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.93
-  configChecksum: 1ca615429ed08c1f47b1af88f1947e77
+  releaseVersion: 0.67.94
+  configChecksum: 88d251eefbb2cab9009c8de0198f7e8b
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -269,6 +269,9 @@ generatedFiles:
   - docs/models/operations/createmartechmemberqueryparamfields.md
   - docs/models/operations/createmartechmemberrequest.md
   - docs/models/operations/createmartechmemberresponse.md
+  - docs/models/operations/createmessagingchannelqueryparamfields.md
+  - docs/models/operations/createmessagingchannelrequest.md
+  - docs/models/operations/createmessagingchannelresponse.md
   - docs/models/operations/createmessagingmessagequeryparamfields.md
   - docs/models/operations/createmessagingmessagerequest.md
   - docs/models/operations/createmessagingmessageresponse.md
@@ -1451,6 +1454,9 @@ generatedFiles:
   - docs/models/operations/patchmartechmemberqueryparamfields.md
   - docs/models/operations/patchmartechmemberrequest.md
   - docs/models/operations/patchmartechmemberresponse.md
+  - docs/models/operations/patchmessagingchannelqueryparamfields.md
+  - docs/models/operations/patchmessagingchannelrequest.md
+  - docs/models/operations/patchmessagingchannelresponse.md
   - docs/models/operations/patchmessagingeventqueryparamfields.md
   - docs/models/operations/patchmessagingeventrequest.md
   - docs/models/operations/patchmessagingeventresponse.md
@@ -1702,6 +1708,8 @@ generatedFiles:
   - docs/models/operations/removemartechlistresponse.md
   - docs/models/operations/removemartechmemberrequest.md
   - docs/models/operations/removemartechmemberresponse.md
+  - docs/models/operations/removemessagingchannelrequest.md
+  - docs/models/operations/removemessagingchannelresponse.md
   - docs/models/operations/removemessagingmessagerequest.md
   - docs/models/operations/removemessagingmessageresponse.md
   - docs/models/operations/removemetadatametadatarequest.md
@@ -2001,6 +2009,9 @@ generatedFiles:
   - docs/models/operations/updatemartechmemberqueryparamfields.md
   - docs/models/operations/updatemartechmemberrequest.md
   - docs/models/operations/updatemartechmemberresponse.md
+  - docs/models/operations/updatemessagingchannelqueryparamfields.md
+  - docs/models/operations/updatemessagingchannelrequest.md
+  - docs/models/operations/updatemessagingchannelresponse.md
   - docs/models/operations/updatemessagingeventqueryparamfields.md
   - docs/models/operations/updatemessagingeventrequest.md
   - docs/models/operations/updatemessagingeventresponse.md
@@ -3796,6 +3807,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createmartechmember_request.rbi
   - lib/unified_ruby_sdk/models/operations/createmartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/createmartechmember_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createmessagingchannel_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createmessagingchannel_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createmessagingchannel_request.rb
+  - lib/unified_ruby_sdk/models/operations/createmessagingchannel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createmessagingchannel_response.rb
+  - lib/unified_ruby_sdk/models/operations/createmessagingchannel_response.rbi
   - lib/unified_ruby_sdk/models/operations/createmessagingmessage_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createmessagingmessage_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createmessagingmessage_request.rb
@@ -6160,6 +6177,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchmartechmember_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchmartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/patchmartechmember_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchmessagingchannel_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchmessagingchannel_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchmessagingchannel_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchmessagingchannel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchmessagingchannel_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchmessagingchannel_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchmessagingevent_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchmessagingevent_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchmessagingevent_request.rb
@@ -6662,6 +6685,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removemartechmember_request.rbi
   - lib/unified_ruby_sdk/models/operations/removemartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/removemartechmember_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removemessagingchannel_request.rb
+  - lib/unified_ruby_sdk/models/operations/removemessagingchannel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removemessagingchannel_response.rb
+  - lib/unified_ruby_sdk/models/operations/removemessagingchannel_response.rbi
   - lib/unified_ruby_sdk/models/operations/removemessagingmessage_request.rb
   - lib/unified_ruby_sdk/models/operations/removemessagingmessage_request.rbi
   - lib/unified_ruby_sdk/models/operations/removemessagingmessage_response.rb
@@ -7260,6 +7287,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatemartechmember_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatemartechmember_response.rb
   - lib/unified_ruby_sdk/models/operations/updatemartechmember_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatemessagingchannel_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatemessagingchannel_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatemessagingchannel_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatemessagingchannel_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatemessagingchannel_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatemessagingchannel_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatemessagingevent_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatemessagingevent_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatemessagingevent_request.rb
@@ -22529,5 +22562,43 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  createMessagingChannel:
+    speakeasy-default-create-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchMessagingChannel:
+    speakeasy-default-patch-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeMessagingChannel:
+    speakeasy-default-remove-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateMessagingChannel:
+    speakeasy-default-update-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

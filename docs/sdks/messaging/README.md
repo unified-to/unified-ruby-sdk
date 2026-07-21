@@ -5,16 +5,64 @@
 
 ### Available Operations
 
+* [create_messaging_channel](#create_messaging_channel) - Create a channel
 * [create_messaging_message](#create_messaging_message) - Create a message
 * [get_messaging_channel](#get_messaging_channel) - Retrieve a channel
 * [get_messaging_message](#get_messaging_message) - Retrieve a message
 * [list_messaging_channels](#list_messaging_channels) - List all channels
 * [list_messaging_messages](#list_messaging_messages) - List all messages
+* [patch_messaging_channel](#patch_messaging_channel) - Update a channel
 * [patch_messaging_event](#patch_messaging_event) - Update an event
 * [patch_messaging_message](#patch_messaging_message) - Update a message
+* [remove_messaging_channel](#remove_messaging_channel) - Remove a channel
 * [remove_messaging_message](#remove_messaging_message) - Remove a message
+* [update_messaging_channel](#update_messaging_channel) - Update a channel
 * [update_messaging_event](#update_messaging_event) - Update an event
 * [update_messaging_message](#update_messaging_message) - Update a message
+
+## create_messaging_channel
+
+Create a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.messaging.create_messaging_channel(messaging_channel: Models::Shared::MessagingChannel.new(), connection_id: '<id>')
+
+unless res.messaging_channel.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `messaging_channel`                                                                                                                              | [Models::Shared::MessagingChannel](../../models/shared/messagingchannel.md)                                                                      | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateMessagingChannelQueryParamFields](../../models/operations/createmessagingchannelqueryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateMessagingChannelResponse)](../../models/operations/createmessagingchannelresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_messaging_message
 
@@ -238,6 +286,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_messaging_channel
+
+Update a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchMessagingChannelRequest.new(
+  messaging_channel: Models::Shared::MessagingChannel.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.messaging.patch_messaging_channel(request: req)
+
+unless res.messaging_channel.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::PatchMessagingChannelRequest](../../models/operations/patchmessagingchannelrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchMessagingChannelResponse)](../../models/operations/patchmessagingchannelresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_messaging_event
 
 Update an event
@@ -332,6 +427,48 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_messaging_channel
+
+Remove a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeMessagingChannel" method="delete" path="/messaging/{connection_id}/channel/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.messaging.remove_messaging_channel(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Channel    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveMessagingChannelResponse)](../../models/operations/removemessagingchannelresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_messaging_message
 
 Remove a message
@@ -367,6 +504,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveMessagingMessageResponse)](../../models/operations/removemessagingmessageresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_messaging_channel
+
+Update a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateMessagingChannelRequest.new(
+  messaging_channel: Models::Shared::MessagingChannel.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.messaging.update_messaging_channel(request: req)
+
+unless res.messaging_channel.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::UpdateMessagingChannelRequest](../../models/operations/updatemessagingchannelrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateMessagingChannelResponse)](../../models/operations/updatemessagingchannelresponse.md)**
 
 ### Errors
 
