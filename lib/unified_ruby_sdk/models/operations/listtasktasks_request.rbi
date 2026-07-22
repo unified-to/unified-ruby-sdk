@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Operations::ListTaskTasksRequest
   def connection_id(); end
   def connection_id=(str_); end
+  def assigned_user_id(); end
+  def assigned_user_id=(str_); end
   def end_lt(); end
   def end_lt=(str_); end
   def fields_(); end

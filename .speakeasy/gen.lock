@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 1c53d4c83d670f3e7401df3422270680
+  docChecksum: 335e17908653c0fa69c4c2a83a1a7885
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.94
-  configChecksum: 88d251eefbb2cab9009c8de0198f7e8b
+  releaseVersion: 0.67.95
+  configChecksum: c196a58bb116dfea587c0c788d8b5177
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2476,6 +2476,7 @@ generatedFiles:
   - docs/models/shared/listaccountid.md
   - docs/models/shared/listadid.md
   - docs/models/shared/listapplicationid.md
+  - docs/models/shared/listassigneduserid.md
   - docs/models/shared/listbenefitid.md
   - docs/models/shared/listbillid.md
   - docs/models/shared/listbranchid.md
@@ -3007,6 +3008,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookaccountid.md
   - docs/models/shared/virtualwebhookadid.md
   - docs/models/shared/virtualwebhookapplicationid.md
+  - docs/models/shared/virtualwebhookassigneduserid.md
   - docs/models/shared/virtualwebhookbenefitid.md
   - docs/models/shared/virtualwebhookbillid.md
   - docs/models/shared/virtualwebhookbranchid.md
@@ -8222,6 +8224,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_ad_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_application_id.rb
   - lib/unified_ruby_sdk/models/shared/list_application_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_assigned_user_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_assigned_user_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_benefit_id.rb
   - lib/unified_ruby_sdk/models/shared/list_benefit_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_bill_id.rb
@@ -9284,6 +9288,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_ad_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_application_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_application_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_assigned_user_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_assigned_user_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_benefit_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_benefit_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_bill_id.rb

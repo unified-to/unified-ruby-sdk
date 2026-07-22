@@ -23,6 +23,8 @@ module UnifiedRubySDK
           STATUS = new('status')
           NOTES = new('notes')
           DUE_AT = new('due_at')
+          START_AT = new('start_at')
+          END_AT = new('end_at')
           PRIORITY = new('priority')
           ASSIGNED_USER_IDS = new('assigned_user_ids')
           CREATOR_USER_ID = new('creator_user_id')
@@ -33,6 +35,7 @@ module UnifiedRubySDK
           ATTACHMENT_IDS = new('attachment_ids')
           METADATA = new('metadata')
           HAS_CHILDREN = new('has_children')
+          TYPE = new('type')
           RAW = new('raw')
         end
       end

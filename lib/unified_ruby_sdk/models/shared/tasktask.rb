@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
         field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
         field :follower_user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('follower_user_ids') } }
 
         field :group_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_ids') } }
@@ -48,22 +50,27 @@ module UnifiedRubySDK
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
         field :status, Crystalline::Nilable.new(Models::Shared::TaskTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::TaskTaskStatus, true) } }
 
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
+
+        field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(assigned_user_ids: T.nilable(T::Array[::String]), attachment_ids: T.nilable(T::Array[::String]), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), due_at: T.nilable(::DateTime), follower_user_ids: T.nilable(T::Array[::String]), group_ids: T.nilable(T::Array[::String]), has_children: T.nilable(T::Boolean), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), name: T.nilable(::String), notes: T.nilable(::String), parent_id: T.nilable(::String), priority: T.nilable(::String), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::TaskTaskStatus), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(assigned_user_ids: nil, attachment_ids: nil, completed_at: nil, created_at: nil, creator_user_id: nil, due_at: nil, follower_user_ids: nil, group_ids: nil, has_children: nil, id: nil, metadata: nil, name: nil, notes: nil, parent_id: nil, priority: nil, project_id: nil, raw: nil, status: nil, tags: nil, updated_at: nil, url: nil)
+        sig { params(assigned_user_ids: T.nilable(T::Array[::String]), attachment_ids: T.nilable(T::Array[::String]), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), due_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), follower_user_ids: T.nilable(T::Array[::String]), group_ids: T.nilable(T::Array[::String]), has_children: T.nilable(T::Boolean), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), name: T.nilable(::String), notes: T.nilable(::String), parent_id: T.nilable(::String), priority: T.nilable(::String), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::TaskTaskStatus), tags: T.nilable(T::Array[::String]), type: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(assigned_user_ids: nil, attachment_ids: nil, completed_at: nil, created_at: nil, creator_user_id: nil, due_at: nil, end_at: nil, follower_user_ids: nil, group_ids: nil, has_children: nil, id: nil, metadata: nil, name: nil, notes: nil, parent_id: nil, priority: nil, project_id: nil, raw: nil, start_at: nil, status: nil, tags: nil, type: nil, updated_at: nil, url: nil)
           @assigned_user_ids = assigned_user_ids
           @attachment_ids = attachment_ids
           @completed_at = completed_at
           @created_at = created_at
           @creator_user_id = creator_user_id
           @due_at = due_at
+          @end_at = end_at
           @follower_user_ids = follower_user_ids
           @group_ids = group_ids
           @has_children = has_children
@@ -75,8 +82,10 @@ module UnifiedRubySDK
           @priority = priority
           @project_id = project_id
           @raw = raw
+          @start_at = start_at
           @status = status
           @tags = tags
+          @type = type
           @updated_at = updated_at
           @url = url
         end
@@ -90,6 +99,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @creator_user_id == other.creator_user_id
           return false unless @due_at == other.due_at
+          return false unless @end_at == other.end_at
           return false unless @follower_user_ids == other.follower_user_ids
           return false unless @group_ids == other.group_ids
           return false unless @has_children == other.has_children
@@ -101,8 +111,10 @@ module UnifiedRubySDK
           return false unless @priority == other.priority
           return false unless @project_id == other.project_id
           return false unless @raw == other.raw
+          return false unless @start_at == other.start_at
           return false unless @status == other.status
           return false unless @tags == other.tags
+          return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           return false unless @url == other.url
           true

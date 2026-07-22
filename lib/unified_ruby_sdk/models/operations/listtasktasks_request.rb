@@ -15,6 +15,8 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # The assigned user/employee ID to filter by (reference to HrisEmployee)
+        field :assigned_user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'assigned_user_id', 'style': 'form', 'explode': true } }
         # The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :end_lt, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'end_lt', 'style': 'form', 'explode': true } }
         # Fields to return
@@ -44,9 +46,10 @@ module UnifiedRubySDK
         # The user/employee ID to filter by (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListTaskTasksQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), project_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), status: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(connection_id:, end_lt: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, project_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, status: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, assigned_user_id: T.nilable(::String), end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListTaskTasksQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), parent_id: T.nilable(::String), project_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), status: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(connection_id:, assigned_user_id: nil, end_lt: nil, fields_: nil, limit: nil, offset: nil, order: nil, parent_id: nil, project_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, status: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
+          @assigned_user_id = assigned_user_id
           @end_lt = end_lt
           @fields_ = fields_
           @limit = limit
@@ -67,6 +70,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
+          return false unless @assigned_user_id == other.assigned_user_id
           return false unless @end_lt == other.end_lt
           return false unless @fields_ == other.fields_
           return false unless @limit == other.limit

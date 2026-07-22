@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::TaskTask
   def creator_user_id=(str_); end
   def due_at(); end
   def due_at=(str_); end
+  def end_at(); end
+  def end_at=(str_); end
   def follower_user_ids(); end
   def follower_user_ids=(str_); end
   def group_ids(); end
@@ -42,10 +44,14 @@ class UnifiedRubySDK::Models::Shared::TaskTask
   def project_id=(str_); end
   def raw(); end
   def raw=(str_); end
+  def start_at(); end
+  def start_at=(str_); end
   def status(); end
   def status=(str_); end
   def tags(); end
   def tags=(str_); end
+  def type(); end
+  def type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def url(); end
