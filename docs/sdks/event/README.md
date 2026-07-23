@@ -7,21 +7,27 @@
 
 * [create_analytics_event](#create_analytics_event) - Create an event
 * [create_calendar_event](#create_calendar_event) - Create an event
+* [create_cdp_event](#create_cdp_event) - Create an event
 * [create_crm_event](#create_crm_event) - Create an event
 * [get_analytics_event](#get_analytics_event) - Retrieve an event
 * [get_calendar_event](#get_calendar_event) - Retrieve an event
+* [get_cdp_event](#get_cdp_event) - Retrieve an event
 * [get_clubs_event](#get_clubs_event) - Retrieve an event
 * [get_crm_event](#get_crm_event) - Retrieve an event
 * [list_analytics_events](#list_analytics_events) - List all events
 * [list_calendar_events](#list_calendar_events) - List all events
+* [list_cdp_events](#list_cdp_events) - List all events
 * [list_clubs_events](#list_clubs_events) - List all events
 * [list_crm_events](#list_crm_events) - List all events
 * [patch_calendar_event](#patch_calendar_event) - Update an event
+* [patch_cdp_event](#patch_cdp_event) - Update an event
 * [patch_crm_event](#patch_crm_event) - Update an event
 * [patch_messaging_event](#patch_messaging_event) - Update an event
 * [remove_calendar_event](#remove_calendar_event) - Remove an event
+* [remove_cdp_event](#remove_cdp_event) - Remove an event
 * [remove_crm_event](#remove_crm_event) - Remove an event
 * [update_calendar_event](#update_calendar_event) - Update an event
+* [update_cdp_event](#update_cdp_event) - Update an event
 * [update_crm_event](#update_crm_event) - Update an event
 * [update_messaging_event](#update_messaging_event) - Update an event
 
@@ -106,6 +112,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateCalendarEventResponse)](../../models/operations/createcalendareventresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_cdp_event
+
+Create an event
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createCdpEvent" method="post" path="/cdp/{connection_id}/event" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.event.create_cdp_event(cdp_event: Models::Shared::CdpEvent.new(), connection_id: '<id>')
+
+unless res.cdp_event.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `cdp_event`                                                                                                                                      | [Models::Shared::CdpEvent](../../models/shared/cdpevent.md)                                                                                      | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCdpEventQueryParamFields](../../models/operations/createcdpeventqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateCdpEventResponse)](../../models/operations/createcdpeventresponse.md)**
 
 ### Errors
 
@@ -238,6 +288,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetCalendarEventResponse)](../../models/operations/getcalendareventresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_cdp_event
+
+Retrieve an event
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getCdpEvent" method="get" path="/cdp/{connection_id}/event/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.event.get_cdp_event(connection_id: '<id>', id: '<id>')
+
+unless res.cdp_event.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Event                                                                                                                                  |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCdpEventQueryParamFields](../../models/operations/getcdpeventqueryparamfields.md)>                              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetCdpEventResponse)](../../models/operations/getcdpeventresponse.md)**
 
 ### Errors
 
@@ -423,6 +517,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_cdp_events
+
+List all events
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listCdpEvents" method="get" path="/cdp/{connection_id}/event" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListCdpEventsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.event.list_cdp_events(request: req)
+
+unless res.cdp_events.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [Models::Operations::ListCdpEventsRequest](../../models/operations/listcdpeventsrequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::ListCdpEventsResponse)](../../models/operations/listcdpeventsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_clubs_events
 
 List all events
@@ -553,6 +692,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::PatchCalendarEventResponse)](../../models/operations/patchcalendareventresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## patch_cdp_event
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchCdpEvent" method="patch" path="/cdp/{connection_id}/event/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchCdpEventRequest.new(
+  cdp_event: Models::Shared::CdpEvent.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.event.patch_cdp_event(request: req)
+
+unless res.cdp_event.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [Models::Operations::PatchCdpEventRequest](../../models/operations/patchcdpeventrequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchCdpEventResponse)](../../models/operations/patchcdpeventresponse.md)**
 
 ### Errors
 
@@ -696,6 +882,48 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_cdp_event
+
+Remove an event
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeCdpEvent" method="delete" path="/cdp/{connection_id}/event/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.event.remove_cdp_event(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Event      |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveCdpEventResponse)](../../models/operations/removecdpeventresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_crm_event
 
 Remove an event
@@ -778,6 +1006,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateCalendarEventResponse)](../../models/operations/updatecalendareventresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_cdp_event
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateCdpEvent" method="put" path="/cdp/{connection_id}/event/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateCdpEventRequest.new(
+  cdp_event: Models::Shared::CdpEvent.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.event.update_cdp_event(request: req)
+
+unless res.cdp_event.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::UpdateCdpEventRequest](../../models/operations/updatecdpeventrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateCdpEventResponse)](../../models/operations/updatecdpeventresponse.md)**
 
 ### Errors
 

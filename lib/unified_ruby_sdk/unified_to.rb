@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :vendorcredit, :ads, :ad, :campaign, :creative, :group, :insertionorder, :promoted, :target, :analytics, :event, :property, :session, :visitor, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :link, :recording, :webinar, :clubs, :location, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :review, :saleschannel, :crm, :deal, :lead, :picklist, :pipeline, :datastore, :database, :query, :record, :table, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :bankaccount, :benefit, :deduction, :device, :employee, :payslip, :taxonomy, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :template, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :secretsmanager, :verification, :request
+    attr_accessor :accounting, :account, :balancesheet, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :profitloss, :purchaseorder, :report, :salesorder, :taxrate, :transaction, :trialbalance, :vendorcredit, :ads, :ad, :campaign, :creative, :group, :insertionorder, :promoted, :target, :analytics, :event, :property, :session, :visitor, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :link, :recording, :webinar, :cdp, :activation, :destination, :profile, :segment, :source, :clubs, :location, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :review, :saleschannel, :crm, :deal, :lead, :picklist, :pipeline, :datastore, :database, :query, :record, :table, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :bankaccount, :benefit, :deduction, :device, :employee, :payslip, :taxonomy, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :template, :storage, :file, :task, :change, :project, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :issue, :webhook, :secretsmanager, :verification, :request
 
     sig do
       params(
@@ -128,6 +128,12 @@ module UnifiedRubySDK
       @link = Link.new(@sdk_configuration)
       @recording = Recording.new(@sdk_configuration)
       @webinar = Webinar.new(@sdk_configuration)
+      @cdp = Cdp.new(@sdk_configuration)
+      @activation = Activation.new(@sdk_configuration)
+      @destination = Destination.new(@sdk_configuration)
+      @profile = Profile.new(@sdk_configuration)
+      @segment = Segment.new(@sdk_configuration)
+      @source = Source.new(@sdk_configuration)
       @clubs = Clubs.new(@sdk_configuration)
       @location = Location.new(@sdk_configuration)
       @member = Member.new(@sdk_configuration)

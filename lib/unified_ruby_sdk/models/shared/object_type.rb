@@ -163,6 +163,12 @@ module UnifiedRubySDK
           DATASTORE_TABLE = new('datastore_table')
           DATASTORE_RECORD = new('datastore_record')
           DATASTORE_QUERY = new('datastore_query')
+          CDP_PROFILE = new('cdp_profile')
+          CDP_SEGMENT = new('cdp_segment')
+          CDP_EVENT = new('cdp_event')
+          CDP_SOURCE = new('cdp_source')
+          CDP_DESTINATION = new('cdp_destination')
+          CDP_ACTIVATION = new('cdp_activation')
         end
       end
     end

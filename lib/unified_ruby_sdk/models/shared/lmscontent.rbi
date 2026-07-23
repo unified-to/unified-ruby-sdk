@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::LmsContent
   def created_at=(str_); end
   def description(); end
   def description=(str_); end
+  def difficulty(); end
+  def difficulty=(str_); end
   def duration_minutes(); end
   def duration_minutes=(str_); end
   def external_reference(); end
@@ -38,6 +40,8 @@ class UnifiedRubySDK::Models::Shared::LmsContent
   def name=(str_); end
   def provider_name(); end
   def provider_name=(str_); end
+  def published_at(); end
+  def published_at=(str_); end
   def raw(); end
   def raw=(str_); end
   def short_description(); end
@@ -46,6 +50,10 @@ class UnifiedRubySDK::Models::Shared::LmsContent
   def skills=(str_); end
   def sort_order(); end
   def sort_order=(str_); end
+  def subjects(); end
+  def subjects=(str_); end
+  def tags(); end
+  def tags=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
 end

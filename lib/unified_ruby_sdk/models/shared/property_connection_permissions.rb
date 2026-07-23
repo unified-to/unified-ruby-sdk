@@ -289,6 +289,18 @@ module UnifiedRubySDK
           DATASTORE_RECORD_WRITE = new('datastore_record_write')
           DATASTORE_QUERY_READ = new('datastore_query_read')
           DATASTORE_QUERY_WRITE = new('datastore_query_write')
+          CDP_PROFILE_READ = new('cdp_profile_read')
+          CDP_PROFILE_WRITE = new('cdp_profile_write')
+          CDP_SEGMENT_READ = new('cdp_segment_read')
+          CDP_SEGMENT_WRITE = new('cdp_segment_write')
+          CDP_EVENT_READ = new('cdp_event_read')
+          CDP_EVENT_WRITE = new('cdp_event_write')
+          CDP_SOURCE_READ = new('cdp_source_read')
+          CDP_SOURCE_WRITE = new('cdp_source_write')
+          CDP_DESTINATION_READ = new('cdp_destination_read')
+          CDP_DESTINATION_WRITE = new('cdp_destination_write')
+          CDP_ACTIVATION_READ = new('cdp_activation_read')
+          CDP_ACTIVATION_WRITE = new('cdp_activation_write')
         end
       end
     end

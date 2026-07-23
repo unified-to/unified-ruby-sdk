@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
+        field :difficulty, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('difficulty') } }
+
         field :duration_minutes, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration_minutes') } }
 
         field :external_reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_reference') } }
@@ -44,6 +46,8 @@ module UnifiedRubySDK
 
         field :provider_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('provider_name') } }
 
+        field :published_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('published_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :short_description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('short_description') } }
@@ -51,16 +55,21 @@ module UnifiedRubySDK
         field :skills, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('skills') } }
 
         field :sort_order, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sort_order') } }
+        # Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)
+        field :subjects, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsSubject)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subjects') } }
+
+        field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(categories: T.nilable(T::Array[::String]), collection_ids: T.nilable(T::Array[::String]), course_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), duration_minutes: T.nilable(::Float), external_reference: T.nilable(::String), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), is_active: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), localizations: T.nilable(T::Array[Models::Shared::LmsContentLocalization]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), provider_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), short_description: T.nilable(::String), skills: T.nilable(T::Array[::String]), sort_order: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(categories: nil, collection_ids: nil, course_ids: nil, created_at: nil, description: nil, duration_minutes: nil, external_reference: nil, id: nil, instructor_ids: nil, is_active: nil, languages: nil, localizations: nil, media: nil, name: nil, provider_name: nil, raw: nil, short_description: nil, skills: nil, sort_order: nil, updated_at: nil)
+        sig { params(categories: T.nilable(T::Array[::String]), collection_ids: T.nilable(T::Array[::String]), course_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), difficulty: T.nilable(::String), duration_minutes: T.nilable(::Float), external_reference: T.nilable(::String), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), is_active: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), localizations: T.nilable(T::Array[Models::Shared::LmsContentLocalization]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), short_description: T.nilable(::String), skills: T.nilable(T::Array[::String]), sort_order: T.nilable(::Float), subjects: T.nilable(T::Array[Models::Shared::LmsSubject]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(categories: nil, collection_ids: nil, course_ids: nil, created_at: nil, description: nil, difficulty: nil, duration_minutes: nil, external_reference: nil, id: nil, instructor_ids: nil, is_active: nil, languages: nil, localizations: nil, media: nil, name: nil, provider_name: nil, published_at: nil, raw: nil, short_description: nil, skills: nil, sort_order: nil, subjects: nil, tags: nil, updated_at: nil)
           @categories = categories
           @collection_ids = collection_ids
           @course_ids = course_ids
           @created_at = created_at
           @description = description
+          @difficulty = difficulty
           @duration_minutes = duration_minutes
           @external_reference = external_reference
           @id = id
@@ -71,10 +80,13 @@ module UnifiedRubySDK
           @media = media
           @name = name
           @provider_name = provider_name
+          @published_at = published_at
           @raw = raw
           @short_description = short_description
           @skills = skills
           @sort_order = sort_order
+          @subjects = subjects
+          @tags = tags
           @updated_at = updated_at
         end
 
@@ -86,6 +98,7 @@ module UnifiedRubySDK
           return false unless @course_ids == other.course_ids
           return false unless @created_at == other.created_at
           return false unless @description == other.description
+          return false unless @difficulty == other.difficulty
           return false unless @duration_minutes == other.duration_minutes
           return false unless @external_reference == other.external_reference
           return false unless @id == other.id
@@ -96,10 +109,13 @@ module UnifiedRubySDK
           return false unless @media == other.media
           return false unless @name == other.name
           return false unless @provider_name == other.provider_name
+          return false unless @published_at == other.published_at
           return false unless @raw == other.raw
           return false unless @short_description == other.short_description
           return false unless @skills == other.skills
           return false unless @sort_order == other.sort_order
+          return false unless @subjects == other.subjects
+          return false unless @tags == other.tags
           return false unless @updated_at == other.updated_at
           true
         end

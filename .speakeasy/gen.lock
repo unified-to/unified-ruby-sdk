@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 335e17908653c0fa69c4c2a83a1a7885
+  docChecksum: df9d7e70f96a426fc6497f3a82fde17e
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.95
-  configChecksum: c196a58bb116dfea587c0c788d8b5177
+  releaseVersion: 0.67.96
+  configChecksum: cfee85eb1ef5b92692e8031a96d92bbf
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -134,6 +134,24 @@ generatedFiles:
   - docs/models/operations/createcalendarwebinarqueryparamfields.md
   - docs/models/operations/createcalendarwebinarrequest.md
   - docs/models/operations/createcalendarwebinarresponse.md
+  - docs/models/operations/createcdpactivationqueryparamfields.md
+  - docs/models/operations/createcdpactivationrequest.md
+  - docs/models/operations/createcdpactivationresponse.md
+  - docs/models/operations/createcdpdestinationqueryparamfields.md
+  - docs/models/operations/createcdpdestinationrequest.md
+  - docs/models/operations/createcdpdestinationresponse.md
+  - docs/models/operations/createcdpeventqueryparamfields.md
+  - docs/models/operations/createcdpeventrequest.md
+  - docs/models/operations/createcdpeventresponse.md
+  - docs/models/operations/createcdpprofilequeryparamfields.md
+  - docs/models/operations/createcdpprofilerequest.md
+  - docs/models/operations/createcdpprofileresponse.md
+  - docs/models/operations/createcdpsegmentqueryparamfields.md
+  - docs/models/operations/createcdpsegmentrequest.md
+  - docs/models/operations/createcdpsegmentresponse.md
+  - docs/models/operations/createcdpsourcequeryparamfields.md
+  - docs/models/operations/createcdpsourcerequest.md
+  - docs/models/operations/createcdpsourceresponse.md
   - docs/models/operations/createcommercecollectionqueryparamfields.md
   - docs/models/operations/createcommercecollectionrequest.md
   - docs/models/operations/createcommercecollectionresponse.md
@@ -503,6 +521,24 @@ generatedFiles:
   - docs/models/operations/getcalendarwebinarqueryparamfields.md
   - docs/models/operations/getcalendarwebinarrequest.md
   - docs/models/operations/getcalendarwebinarresponse.md
+  - docs/models/operations/getcdpactivationqueryparamfields.md
+  - docs/models/operations/getcdpactivationrequest.md
+  - docs/models/operations/getcdpactivationresponse.md
+  - docs/models/operations/getcdpdestinationqueryparamfields.md
+  - docs/models/operations/getcdpdestinationrequest.md
+  - docs/models/operations/getcdpdestinationresponse.md
+  - docs/models/operations/getcdpeventqueryparamfields.md
+  - docs/models/operations/getcdpeventrequest.md
+  - docs/models/operations/getcdpeventresponse.md
+  - docs/models/operations/getcdpprofilequeryparamfields.md
+  - docs/models/operations/getcdpprofilerequest.md
+  - docs/models/operations/getcdpprofileresponse.md
+  - docs/models/operations/getcdpsegmentqueryparamfields.md
+  - docs/models/operations/getcdpsegmentrequest.md
+  - docs/models/operations/getcdpsegmentresponse.md
+  - docs/models/operations/getcdpsourcequeryparamfields.md
+  - docs/models/operations/getcdpsourcerequest.md
+  - docs/models/operations/getcdpsourceresponse.md
   - docs/models/operations/getclubsactivityqueryparamfields.md
   - docs/models/operations/getclubsactivityrequest.md
   - docs/models/operations/getclubsactivityresponse.md
@@ -928,6 +964,24 @@ generatedFiles:
   - docs/models/operations/listcalendarwebinarsqueryparamfields.md
   - docs/models/operations/listcalendarwebinarsrequest.md
   - docs/models/operations/listcalendarwebinarsresponse.md
+  - docs/models/operations/listcdpactivationsqueryparamfields.md
+  - docs/models/operations/listcdpactivationsrequest.md
+  - docs/models/operations/listcdpactivationsresponse.md
+  - docs/models/operations/listcdpdestinationsqueryparamfields.md
+  - docs/models/operations/listcdpdestinationsrequest.md
+  - docs/models/operations/listcdpdestinationsresponse.md
+  - docs/models/operations/listcdpeventsqueryparamfields.md
+  - docs/models/operations/listcdpeventsrequest.md
+  - docs/models/operations/listcdpeventsresponse.md
+  - docs/models/operations/listcdpprofilesqueryparamfields.md
+  - docs/models/operations/listcdpprofilesrequest.md
+  - docs/models/operations/listcdpprofilesresponse.md
+  - docs/models/operations/listcdpsegmentsqueryparamfields.md
+  - docs/models/operations/listcdpsegmentsrequest.md
+  - docs/models/operations/listcdpsegmentsresponse.md
+  - docs/models/operations/listcdpsourcesqueryparamfields.md
+  - docs/models/operations/listcdpsourcesrequest.md
+  - docs/models/operations/listcdpsourcesresponse.md
   - docs/models/operations/listclubsactivitiesqueryparamfields.md
   - docs/models/operations/listclubsactivitiesrequest.md
   - docs/models/operations/listclubsactivitiesresponse.md
@@ -1328,6 +1382,24 @@ generatedFiles:
   - docs/models/operations/patchcalendarwebinarqueryparamfields.md
   - docs/models/operations/patchcalendarwebinarrequest.md
   - docs/models/operations/patchcalendarwebinarresponse.md
+  - docs/models/operations/patchcdpactivationqueryparamfields.md
+  - docs/models/operations/patchcdpactivationrequest.md
+  - docs/models/operations/patchcdpactivationresponse.md
+  - docs/models/operations/patchcdpdestinationqueryparamfields.md
+  - docs/models/operations/patchcdpdestinationrequest.md
+  - docs/models/operations/patchcdpdestinationresponse.md
+  - docs/models/operations/patchcdpeventqueryparamfields.md
+  - docs/models/operations/patchcdpeventrequest.md
+  - docs/models/operations/patchcdpeventresponse.md
+  - docs/models/operations/patchcdpprofilequeryparamfields.md
+  - docs/models/operations/patchcdpprofilerequest.md
+  - docs/models/operations/patchcdpprofileresponse.md
+  - docs/models/operations/patchcdpsegmentqueryparamfields.md
+  - docs/models/operations/patchcdpsegmentrequest.md
+  - docs/models/operations/patchcdpsegmentresponse.md
+  - docs/models/operations/patchcdpsourcequeryparamfields.md
+  - docs/models/operations/patchcdpsourcerequest.md
+  - docs/models/operations/patchcdpsourceresponse.md
   - docs/models/operations/patchcommercecollectionqueryparamfields.md
   - docs/models/operations/patchcommercecollectionrequest.md
   - docs/models/operations/patchcommercecollectionresponse.md
@@ -1624,6 +1696,18 @@ generatedFiles:
   - docs/models/operations/removecalendarlinkresponse.md
   - docs/models/operations/removecalendarwebinarrequest.md
   - docs/models/operations/removecalendarwebinarresponse.md
+  - docs/models/operations/removecdpactivationrequest.md
+  - docs/models/operations/removecdpactivationresponse.md
+  - docs/models/operations/removecdpdestinationrequest.md
+  - docs/models/operations/removecdpdestinationresponse.md
+  - docs/models/operations/removecdpeventrequest.md
+  - docs/models/operations/removecdpeventresponse.md
+  - docs/models/operations/removecdpprofilerequest.md
+  - docs/models/operations/removecdpprofileresponse.md
+  - docs/models/operations/removecdpsegmentrequest.md
+  - docs/models/operations/removecdpsegmentresponse.md
+  - docs/models/operations/removecdpsourcerequest.md
+  - docs/models/operations/removecdpsourceresponse.md
   - docs/models/operations/removecommercecollectionrequest.md
   - docs/models/operations/removecommercecollectionresponse.md
   - docs/models/operations/removecommerceinventoryrequest.md
@@ -1883,6 +1967,24 @@ generatedFiles:
   - docs/models/operations/updatecalendarwebinarqueryparamfields.md
   - docs/models/operations/updatecalendarwebinarrequest.md
   - docs/models/operations/updatecalendarwebinarresponse.md
+  - docs/models/operations/updatecdpactivationqueryparamfields.md
+  - docs/models/operations/updatecdpactivationrequest.md
+  - docs/models/operations/updatecdpactivationresponse.md
+  - docs/models/operations/updatecdpdestinationqueryparamfields.md
+  - docs/models/operations/updatecdpdestinationrequest.md
+  - docs/models/operations/updatecdpdestinationresponse.md
+  - docs/models/operations/updatecdpeventqueryparamfields.md
+  - docs/models/operations/updatecdpeventrequest.md
+  - docs/models/operations/updatecdpeventresponse.md
+  - docs/models/operations/updatecdpprofilequeryparamfields.md
+  - docs/models/operations/updatecdpprofilerequest.md
+  - docs/models/operations/updatecdpprofileresponse.md
+  - docs/models/operations/updatecdpsegmentqueryparamfields.md
+  - docs/models/operations/updatecdpsegmentrequest.md
+  - docs/models/operations/updatecdpsegmentresponse.md
+  - docs/models/operations/updatecdpsourcequeryparamfields.md
+  - docs/models/operations/updatecdpsourcerequest.md
+  - docs/models/operations/updatecdpsourceresponse.md
   - docs/models/operations/updatecommercecollectionqueryparamfields.md
   - docs/models/operations/updatecommercecollectionrequest.md
   - docs/models/operations/updatecommercecollectionresponse.md
@@ -2279,6 +2381,30 @@ generatedFiles:
   - docs/models/shared/calendarwebinarpaneliststatus.md
   - docs/models/shared/calendarwebinarregistrant.md
   - docs/models/shared/calendarwebinarstatus.md
+  - docs/models/shared/cdpactivation.md
+  - docs/models/shared/cdpactivationstatus.md
+  - docs/models/shared/cdpconsent.md
+  - docs/models/shared/cdpconsentstatus.md
+  - docs/models/shared/cdpdestination.md
+  - docs/models/shared/cdpevent.md
+  - docs/models/shared/cdpeventtype.md
+  - docs/models/shared/cdpidentifier.md
+  - docs/models/shared/cdpidentifiertype.md
+  - docs/models/shared/cdpmetadata.md
+  - docs/models/shared/cdpmetadata1.md
+  - docs/models/shared/cdpmetadata5.md
+  - docs/models/shared/cdpmetadataextradata.md
+  - docs/models/shared/cdpmetadataformat.md
+  - docs/models/shared/cdpmetadataschemas1.md
+  - docs/models/shared/cdpmetadataschemas5.md
+  - docs/models/shared/cdpmetadatavalue.md
+  - docs/models/shared/cdpprofile.md
+  - docs/models/shared/cdpprofilegender.md
+  - docs/models/shared/cdpprofilesegment.md
+  - docs/models/shared/cdpsegment.md
+  - docs/models/shared/cdpsegmenttype.md
+  - docs/models/shared/cdpsource.md
+  - docs/models/shared/cdpsourcedirection.md
   - docs/models/shared/citytarget.md
   - docs/models/shared/clubsactivity.md
   - docs/models/shared/clubsactivitytype.md
@@ -2319,6 +2445,7 @@ generatedFiles:
   - docs/models/shared/commercesaleschannel.md
   - docs/models/shared/commercetelephone.md
   - docs/models/shared/commercetelephonetype.md
+  - docs/models/shared/computemode.md
   - docs/models/shared/connection.md
   - docs/models/shared/contentstype.md
   - docs/models/shared/contenttype.md
@@ -2365,6 +2492,7 @@ generatedFiles:
   - docs/models/shared/dayofweek.md
   - docs/models/shared/dbtype.md
   - docs/models/shared/dimension.md
+  - docs/models/shared/direction.md
   - docs/models/shared/durationtype.md
   - docs/models/shared/dutiespaidby.md
   - docs/models/shared/effectivestatus.md
@@ -2531,6 +2659,7 @@ generatedFiles:
   - docs/models/shared/listpaymentid.md
   - docs/models/shared/listpayslipid.md
   - docs/models/shared/listpipelineid.md
+  - docs/models/shared/listprofileid.md
   - docs/models/shared/listprojectid.md
   - docs/models/shared/listpropertyid.md
   - docs/models/shared/listquery.md
@@ -2572,6 +2701,7 @@ generatedFiles:
   - docs/models/shared/lmsmedia.md
   - docs/models/shared/lmsmediatype.md
   - docs/models/shared/lmsstudent.md
+  - docs/models/shared/lmssubject.md
   - docs/models/shared/lmstelephone.md
   - docs/models/shared/lmstelephonetype.md
   - docs/models/shared/locationtype.md
@@ -2784,6 +2914,7 @@ generatedFiles:
   - docs/models/shared/propertycalendarrecordingtranscriptattendeestatus.md
   - docs/models/shared/propertycalendarwebinarorganizer.md
   - docs/models/shared/propertycalendarwebinarorganizerstatus.md
+  - docs/models/shared/propertycdpprofileaddress.md
   - docs/models/shared/propertyclubsgroupaddress.md
   - docs/models/shared/propertyclubslocationaddress.md
   - docs/models/shared/propertycommercelocationaddress.md
@@ -3049,6 +3180,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookparentid.md
   - docs/models/shared/virtualwebhookpaymentid.md
   - docs/models/shared/virtualwebhookpipelineid.md
+  - docs/models/shared/virtualwebhookprofileid.md
   - docs/models/shared/virtualwebhookprojectid.md
   - docs/models/shared/virtualwebhookpropertyid.md
   - docs/models/shared/virtualwebhookreference.md
@@ -3076,6 +3208,7 @@ generatedFiles:
   - docs/models/shared/youtubeandpartnerstype.md
   - docs/sdks/account/README.md
   - docs/sdks/accounting/README.md
+  - docs/sdks/activation/README.md
   - docs/sdks/activity/README.md
   - docs/sdks/ad/README.md
   - docs/sdks/ads/README.md
@@ -3100,6 +3233,7 @@ generatedFiles:
   - docs/sdks/carrier/README.md
   - docs/sdks/cashflow/README.md
   - docs/sdks/category/README.md
+  - docs/sdks/cdp/README.md
   - docs/sdks/change/README.md
   - docs/sdks/channel/README.md
   - docs/sdks/class/README.md
@@ -3121,6 +3255,7 @@ generatedFiles:
   - docs/sdks/datastore/README.md
   - docs/sdks/deal/README.md
   - docs/sdks/deduction/README.md
+  - docs/sdks/destination/README.md
   - docs/sdks/device/README.md
   - docs/sdks/document/README.md
   - docs/sdks/embedding/README.md
@@ -3172,6 +3307,7 @@ generatedFiles:
   - docs/sdks/person/README.md
   - docs/sdks/picklist/README.md
   - docs/sdks/pipeline/README.md
+  - docs/sdks/profile/README.md
   - docs/sdks/profitloss/README.md
   - docs/sdks/project/README.md
   - docs/sdks/promoted/README.md
@@ -3195,11 +3331,13 @@ generatedFiles:
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/secretsmanager/README.md
+  - docs/sdks/segment/README.md
   - docs/sdks/session/README.md
   - docs/sdks/shipment/README.md
   - docs/sdks/shipping/README.md
   - docs/sdks/signatory/README.md
   - docs/sdks/signing/README.md
+  - docs/sdks/source/README.md
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
   - docs/sdks/student/README.md
@@ -3236,6 +3374,7 @@ generatedFiles:
   - lib/unified_ruby_sdk.rb
   - lib/unified_ruby_sdk/account.rb
   - lib/unified_ruby_sdk/accounting.rb
+  - lib/unified_ruby_sdk/activation.rb
   - lib/unified_ruby_sdk/activity.rb
   - lib/unified_ruby_sdk/ad.rb
   - lib/unified_ruby_sdk/ads.rb
@@ -3260,6 +3399,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/carrier.rb
   - lib/unified_ruby_sdk/cashflow.rb
   - lib/unified_ruby_sdk/category.rb
+  - lib/unified_ruby_sdk/cdp.rb
   - lib/unified_ruby_sdk/change.rb
   - lib/unified_ruby_sdk/channel.rb
   - lib/unified_ruby_sdk/class_.rb
@@ -3281,6 +3421,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/datastore.rb
   - lib/unified_ruby_sdk/deal.rb
   - lib/unified_ruby_sdk/deduction.rb
+  - lib/unified_ruby_sdk/destination.rb
   - lib/unified_ruby_sdk/device.rb
   - lib/unified_ruby_sdk/document.rb
   - lib/unified_ruby_sdk/embedding.rb
@@ -3539,6 +3680,42 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createcalendarwebinar_request.rbi
   - lib/unified_ruby_sdk/models/operations/createcalendarwebinar_response.rb
   - lib/unified_ruby_sdk/models/operations/createcalendarwebinar_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpactivation_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpactivation_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpactivation_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpactivation_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpactivation_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpactivation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpdestination_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpdestination_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpdestination_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpdestination_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpdestination_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpdestination_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpevent_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpevent_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpevent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpevent_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpprofile_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpprofile_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpprofile_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpprofile_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpprofile_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpprofile_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpsegment_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpsegment_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpsegment_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpsegment_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpsegment_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpsegment_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpsource_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpsource_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpsource_request.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpsource_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createcdpsource_response.rb
+  - lib/unified_ruby_sdk/models/operations/createcdpsource_response.rbi
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createcommercecollection_request.rb
@@ -4277,6 +4454,42 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_request.rbi
   - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_response.rb
   - lib/unified_ruby_sdk/models/operations/getcalendarwebinar_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpactivation_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpactivation_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpactivation_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpactivation_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpactivation_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpactivation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpdestination_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpdestination_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpdestination_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpdestination_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpdestination_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpdestination_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpevent_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpevent_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpevent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpevent_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpprofile_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpprofile_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpprofile_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpprofile_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpprofile_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpprofile_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpsegment_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpsegment_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpsegment_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpsegment_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpsegment_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpsegment_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpsource_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpsource_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpsource_request.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpsource_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getcdpsource_response.rb
+  - lib/unified_ruby_sdk/models/operations/getcdpsource_response.rbi
   - lib/unified_ruby_sdk/models/operations/getclubsactivity_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getclubsactivity_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getclubsactivity_request.rb
@@ -5127,6 +5340,42 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_request.rbi
   - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_response.rb
   - lib/unified_ruby_sdk/models/operations/listcalendarwebinars_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpactivations_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpactivations_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpactivations_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpactivations_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpactivations_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpactivations_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpdestinations_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpdestinations_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpdestinations_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpdestinations_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpdestinations_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpdestinations_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpevents_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpevents_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpevents_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpevents_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpevents_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpevents_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpprofiles_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpprofiles_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpprofiles_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpprofiles_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpprofiles_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpprofiles_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpsegments_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpsegments_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpsegments_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpsegments_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpsegments_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpsegments_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpsources_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpsources_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpsources_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpsources_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcdpsources_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcdpsources_response.rbi
   - lib/unified_ruby_sdk/models/operations/listclubsactivities_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listclubsactivities_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listclubsactivities_request.rb
@@ -5927,6 +6176,42 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchcalendarwebinar_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchcalendarwebinar_response.rb
   - lib/unified_ruby_sdk/models/operations/patchcalendarwebinar_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpactivation_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpactivation_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpactivation_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpactivation_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpactivation_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpactivation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpdestination_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpdestination_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpdestination_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpdestination_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpdestination_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpdestination_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpevent_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpevent_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpevent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpevent_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpprofile_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpprofile_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpprofile_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpprofile_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpprofile_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpprofile_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpsegment_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpsegment_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpsegment_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpsegment_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpsegment_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpsegment_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpsource_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpsource_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpsource_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpsource_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchcdpsource_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchcdpsource_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchcommercecollection_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchcommercecollection_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchcommercecollection_request.rb
@@ -6519,6 +6804,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removecalendarwebinar_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecalendarwebinar_response.rb
   - lib/unified_ruby_sdk/models/operations/removecalendarwebinar_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpactivation_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpactivation_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpactivation_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpactivation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpdestination_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpdestination_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpdestination_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpdestination_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpevent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpevent_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpprofile_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpprofile_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpprofile_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpprofile_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpsegment_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpsegment_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpsegment_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpsegment_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpsource_request.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpsource_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removecdpsource_response.rb
+  - lib/unified_ruby_sdk/models/operations/removecdpsource_response.rbi
   - lib/unified_ruby_sdk/models/operations/removecommercecollection_request.rb
   - lib/unified_ruby_sdk/models/operations/removecommercecollection_request.rbi
   - lib/unified_ruby_sdk/models/operations/removecommercecollection_response.rb
@@ -7037,6 +7346,42 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatecalendarwebinar_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatecalendarwebinar_response.rb
   - lib/unified_ruby_sdk/models/operations/updatecalendarwebinar_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpactivation_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpactivation_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpactivation_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpactivation_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpactivation_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpactivation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpdestination_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpdestination_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpdestination_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpdestination_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpdestination_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpdestination_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpevent_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpevent_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpevent_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpevent_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpevent_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpevent_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpprofile_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpprofile_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpprofile_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpprofile_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpprofile_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpprofile_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpsegment_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpsegment_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpsegment_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpsegment_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpsegment_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpsegment_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpsource_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpsource_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpsource_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpsource_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatecdpsource_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatecdpsource_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatecommercecollection_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatecommercecollection_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatecommercecollection_request.rb
@@ -7830,6 +8175,54 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/calendarwebinarpanelist_status.rbi
   - lib/unified_ruby_sdk/models/shared/calendarwebinarregistrant.rb
   - lib/unified_ruby_sdk/models/shared/calendarwebinarregistrant.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpactivation.rb
+  - lib/unified_ruby_sdk/models/shared/cdpactivation.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpactivation_status.rb
+  - lib/unified_ruby_sdk/models/shared/cdpactivation_status.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpconsent.rb
+  - lib/unified_ruby_sdk/models/shared/cdpconsent.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpconsent_status.rb
+  - lib/unified_ruby_sdk/models/shared/cdpconsent_status.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpdestination.rb
+  - lib/unified_ruby_sdk/models/shared/cdpdestination.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpevent.rb
+  - lib/unified_ruby_sdk/models/shared/cdpevent.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpevent_type.rb
+  - lib/unified_ruby_sdk/models/shared/cdpevent_type.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpidentifier.rb
+  - lib/unified_ruby_sdk/models/shared/cdpidentifier.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpidentifier_type.rb
+  - lib/unified_ruby_sdk/models/shared/cdpidentifier_type.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata.rb
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_1.rb
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_1.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_5.rb
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_5.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_extra_data.rb
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_extra_data.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_format.rb
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_format.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_schemas_1.rb
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_schemas_1.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_schemas_5.rb
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_schemas_5.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_value.rb
+  - lib/unified_ruby_sdk/models/shared/cdpmetadata_value.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpprofile.rb
+  - lib/unified_ruby_sdk/models/shared/cdpprofile.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpprofile_gender.rb
+  - lib/unified_ruby_sdk/models/shared/cdpprofile_gender.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpprofilesegment.rb
+  - lib/unified_ruby_sdk/models/shared/cdpprofilesegment.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpsegment.rb
+  - lib/unified_ruby_sdk/models/shared/cdpsegment.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpsegment_type.rb
+  - lib/unified_ruby_sdk/models/shared/cdpsegment_type.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpsource.rb
+  - lib/unified_ruby_sdk/models/shared/cdpsource.rbi
+  - lib/unified_ruby_sdk/models/shared/cdpsource_direction.rb
+  - lib/unified_ruby_sdk/models/shared/cdpsource_direction.rbi
   - lib/unified_ruby_sdk/models/shared/citytarget.rb
   - lib/unified_ruby_sdk/models/shared/citytarget.rbi
   - lib/unified_ruby_sdk/models/shared/clubsactivity.rb
@@ -7910,6 +8303,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/commercetelephone.rbi
   - lib/unified_ruby_sdk/models/shared/commercetelephone_type.rb
   - lib/unified_ruby_sdk/models/shared/commercetelephone_type.rbi
+  - lib/unified_ruby_sdk/models/shared/compute_mode.rb
+  - lib/unified_ruby_sdk/models/shared/compute_mode.rbi
   - lib/unified_ruby_sdk/models/shared/connection.rb
   - lib/unified_ruby_sdk/models/shared/connection.rbi
   - lib/unified_ruby_sdk/models/shared/content_type.rb
@@ -8002,6 +8397,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/db_type.rbi
   - lib/unified_ruby_sdk/models/shared/dimension.rb
   - lib/unified_ruby_sdk/models/shared/dimension.rbi
+  - lib/unified_ruby_sdk/models/shared/direction.rb
+  - lib/unified_ruby_sdk/models/shared/direction.rbi
   - lib/unified_ruby_sdk/models/shared/duration_type.rb
   - lib/unified_ruby_sdk/models/shared/duration_type.rbi
   - lib/unified_ruby_sdk/models/shared/duties_paid_by.rb
@@ -8334,6 +8731,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_payslip_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_pipeline_id.rb
   - lib/unified_ruby_sdk/models/shared/list_pipeline_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_profile_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_profile_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_project_id.rb
   - lib/unified_ruby_sdk/models/shared/list_project_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_property_id.rb
@@ -8416,6 +8815,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/lmsmedia_type.rbi
   - lib/unified_ruby_sdk/models/shared/lmsstudent.rb
   - lib/unified_ruby_sdk/models/shared/lmsstudent.rbi
+  - lib/unified_ruby_sdk/models/shared/lmssubject.rb
+  - lib/unified_ruby_sdk/models/shared/lmssubject.rbi
   - lib/unified_ruby_sdk/models/shared/lmstelephone.rb
   - lib/unified_ruby_sdk/models/shared/lmstelephone.rbi
   - lib/unified_ruby_sdk/models/shared/lmstelephone_type.rb
@@ -8840,6 +9241,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_calendarwebinar_organizer.rbi
   - lib/unified_ruby_sdk/models/shared/property_calendarwebinar_organizer_status.rb
   - lib/unified_ruby_sdk/models/shared/property_calendarwebinar_organizer_status.rbi
+  - lib/unified_ruby_sdk/models/shared/property_cdpprofile_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_cdpprofile_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_clubsgroup_address.rb
   - lib/unified_ruby_sdk/models/shared/property_clubsgroup_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_clubslocation_address.rb
@@ -9370,6 +9773,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_payment_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_pipeline_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_pipeline_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_profile_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_profile_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_project_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_project_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_property_id.rb
@@ -9432,6 +9837,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/person.rb
   - lib/unified_ruby_sdk/picklist.rb
   - lib/unified_ruby_sdk/pipeline.rb
+  - lib/unified_ruby_sdk/profile.rb
   - lib/unified_ruby_sdk/profitloss.rb
   - lib/unified_ruby_sdk/project.rb
   - lib/unified_ruby_sdk/promoted.rb
@@ -9459,11 +9865,13 @@ generatedFiles:
   - lib/unified_ruby_sdk/sdkconfiguration.rb
   - lib/unified_ruby_sdk/sdkconfiguration.rbi
   - lib/unified_ruby_sdk/secretsmanager.rb
+  - lib/unified_ruby_sdk/segment.rb
   - lib/unified_ruby_sdk/session.rb
   - lib/unified_ruby_sdk/shipment.rb
   - lib/unified_ruby_sdk/shipping.rb
   - lib/unified_ruby_sdk/signatory.rb
   - lib/unified_ruby_sdk/signing.rb
+  - lib/unified_ruby_sdk/source.rb
   - lib/unified_ruby_sdk/space.rb
   - lib/unified_ruby_sdk/storage.rb
   - lib/unified_ruby_sdk/student.rb
@@ -22597,6 +23005,336 @@ examples:
           id: "<id>"
   updateMessagingChannel:
     speakeasy-default-update-messaging-channel:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCdpEvent:
+    speakeasy-default-create-cdp-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCdpEvent:
+    speakeasy-default-get-cdp-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCdpEvents:
+    speakeasy-default-list-cdp-events:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCdpEvent:
+    speakeasy-default-patch-cdp-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCdpEvent:
+    speakeasy-default-remove-cdp-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCdpEvent:
+    speakeasy-default-update-cdp-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCdpActivation:
+    speakeasy-default-create-cdp-activation:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCdpDestination:
+    speakeasy-default-create-cdp-destination:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCdpProfile:
+    speakeasy-default-create-cdp-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCdpSegment:
+    speakeasy-default-create-cdp-segment:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCdpSource:
+    speakeasy-default-create-cdp-source:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCdpActivation:
+    speakeasy-default-get-cdp-activation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getCdpDestination:
+    speakeasy-default-get-cdp-destination:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getCdpProfile:
+    speakeasy-default-get-cdp-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getCdpSegment:
+    speakeasy-default-get-cdp-segment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getCdpSource:
+    speakeasy-default-get-cdp-source:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCdpActivations:
+    speakeasy-default-list-cdp-activations:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listCdpDestinations:
+    speakeasy-default-list-cdp-destinations:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listCdpProfiles:
+    speakeasy-default-list-cdp-profiles:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listCdpSegments:
+    speakeasy-default-list-cdp-segments:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listCdpSources:
+    speakeasy-default-list-cdp-sources:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCdpActivation:
+    speakeasy-default-patch-cdp-activation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchCdpDestination:
+    speakeasy-default-patch-cdp-destination:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchCdpProfile:
+    speakeasy-default-patch-cdp-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchCdpSegment:
+    speakeasy-default-patch-cdp-segment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchCdpSource:
+    speakeasy-default-patch-cdp-source:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCdpActivation:
+    speakeasy-default-remove-cdp-activation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCdpDestination:
+    speakeasy-default-remove-cdp-destination:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCdpProfile:
+    speakeasy-default-remove-cdp-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCdpSegment:
+    speakeasy-default-remove-cdp-segment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeCdpSource:
+    speakeasy-default-remove-cdp-source:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCdpActivation:
+    speakeasy-default-update-cdp-activation:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateCdpDestination:
+    speakeasy-default-update-cdp-destination:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateCdpProfile:
+    speakeasy-default-update-cdp-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateCdpSegment:
+    speakeasy-default-update-cdp-segment:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateCdpSource:
+    speakeasy-default-update-cdp-source:
       parameters:
         path:
           connection_id: "<id>"

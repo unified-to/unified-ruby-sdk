@@ -44,6 +44,7 @@ module UnifiedRubySDK
           SIGNING = new('signing')
           CLUBS = new('clubs')
           DATASTORE = new('datastore')
+          CDP = new('cdp')
         end
       end
     end
