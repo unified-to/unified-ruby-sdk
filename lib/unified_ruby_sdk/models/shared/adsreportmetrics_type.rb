@@ -138,6 +138,8 @@ module UnifiedRubySDK
           TWENTY_EIGHT_D_VIEW = new('28D_VIEW')
           TWENTY_EIGHT_D_CLICK = new('28D_CLICK')
           THIRTY_D_CLICK = new('30D_CLICK')
+          VISITS = new('VISITS')
+          AUDIO_MUTES = new('AUDIO_MUTES')
         end
       end
     end
