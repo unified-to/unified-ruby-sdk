@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::TicketingTicket
+  def attachment_ids(); end
+  def attachment_ids=(str_); end
   def category_id(); end
   def category_id=(str_); end
   def closed_at(); end

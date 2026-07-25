@@ -32,6 +32,10 @@ module UnifiedRubySDK
           LINEITEMS = new('lineitems')
           ATTACHMENTS = new('attachments')
           ORGANIZATION_ID = new('organization_id')
+          USERS = new('users')
+          APPROVER_USERS = new('approver_users')
+          STATUS = new('status')
+          EXTERNAL_NUMBER = new('external_number')
           RAW = new('raw')
         end
       end

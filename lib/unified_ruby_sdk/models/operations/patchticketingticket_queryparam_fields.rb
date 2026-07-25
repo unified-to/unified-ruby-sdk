@@ -28,6 +28,7 @@ module UnifiedRubySDK
           TAGS = new('tags')
           USER_ID = new('user_id')
           URL = new('url')
+          ATTACHMENT_IDS = new('attachment_ids')
           DUE_AT = new('due_at')
           RAW = new('raw')
         end

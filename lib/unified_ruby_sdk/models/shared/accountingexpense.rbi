@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def approved_at=(str_); end
   def approver_user_id(); end
   def approver_user_id=(str_); end
+  def approver_users(); end
+  def approver_users=(str_); end
   def attachments(); end
   def attachments=(str_); end
   def contact_id(); end
@@ -22,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def created_at=(str_); end
   def currency(); end
   def currency=(str_); end
+  def external_number(); end
+  def external_number=(str_); end
   def id(); end
   def id=(str_); end
   def lineitems(); end
@@ -40,6 +44,8 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def reimbursed_amount=(str_); end
   def reimbursed_at(); end
   def reimbursed_at=(str_); end
+  def status(); end
+  def status=(str_); end
   def tax_amount(); end
   def tax_amount=(str_); end
   def total_amount(); end
@@ -48,4 +54,6 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def updated_at=(str_); end
   def user_id(); end
   def user_id=(str_); end
+  def users(); end
+  def users=(str_); end
 end

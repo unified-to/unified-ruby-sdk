@@ -19,6 +19,8 @@ module UnifiedRubySDK
         field :approved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :approver_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approver_user_id') } }
+        # expense approver(s); id is HR employee/user when resolved
+        field :approver_users, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approver_users') } }
 
         field :attachments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingAttachment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
 
@@ -27,6 +29,8 @@ module UnifiedRubySDK
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+
+        field :external_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_number') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -46,6 +50,8 @@ module UnifiedRubySDK
 
         field :reimbursed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reimbursed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :status, Crystalline::Nilable.new(Models::Shared::AccountingExpenseStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingExpenseStatus, true) } }
+
         field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
@@ -54,15 +60,19 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(account_id: T.nilable(::String), approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), name: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reimbursed_amount: T.nilable(::Float), reimbursed_at: T.nilable(::DateTime), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(account_id: nil, approved_at: nil, approver_user_id: nil, attachments: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, lineitems: nil, name: nil, organization_id: nil, payment_method: nil, posted_at: nil, raw: nil, reimbursed_amount: nil, reimbursed_at: nil, tax_amount: nil, total_amount: nil, updated_at: nil, user_id: nil)
+        field :users, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('users') } }
+
+        sig { params(account_id: T.nilable(::String), approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), approver_users: T.nilable(T::Array[Models::Shared::AccountingReference]), attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), external_number: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), name: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reimbursed_amount: T.nilable(::Float), reimbursed_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AccountingExpenseStatus), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), users: T.nilable(T::Array[Models::Shared::AccountingReference])).void }
+        def initialize(account_id: nil, approved_at: nil, approver_user_id: nil, approver_users: nil, attachments: nil, contact_id: nil, created_at: nil, currency: nil, external_number: nil, id: nil, lineitems: nil, name: nil, organization_id: nil, payment_method: nil, posted_at: nil, raw: nil, reimbursed_amount: nil, reimbursed_at: nil, status: nil, tax_amount: nil, total_amount: nil, updated_at: nil, user_id: nil, users: nil)
           @account_id = account_id
           @approved_at = approved_at
           @approver_user_id = approver_user_id
+          @approver_users = approver_users
           @attachments = attachments
           @contact_id = contact_id
           @created_at = created_at
           @currency = currency
+          @external_number = external_number
           @id = id
           @lineitems = lineitems
           @name = name
@@ -72,10 +82,12 @@ module UnifiedRubySDK
           @raw = raw
           @reimbursed_amount = reimbursed_amount
           @reimbursed_at = reimbursed_at
+          @status = status
           @tax_amount = tax_amount
           @total_amount = total_amount
           @updated_at = updated_at
           @user_id = user_id
+          @users = users
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -84,10 +96,12 @@ module UnifiedRubySDK
           return false unless @account_id == other.account_id
           return false unless @approved_at == other.approved_at
           return false unless @approver_user_id == other.approver_user_id
+          return false unless @approver_users == other.approver_users
           return false unless @attachments == other.attachments
           return false unless @contact_id == other.contact_id
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
+          return false unless @external_number == other.external_number
           return false unless @id == other.id
           return false unless @lineitems == other.lineitems
           return false unless @name == other.name
@@ -97,10 +111,12 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @reimbursed_amount == other.reimbursed_amount
           return false unless @reimbursed_at == other.reimbursed_at
+          return false unless @status == other.status
           return false unless @tax_amount == other.tax_amount
           return false unless @total_amount == other.total_amount
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
+          return false unless @users == other.users
           true
         end
       end

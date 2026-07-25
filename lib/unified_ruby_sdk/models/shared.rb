@@ -30,6 +30,7 @@ module UnifiedRubySDK
       autoload :AccountingEmail, 'unified_ruby_sdk/models/shared/accountingemail.rb'
       autoload :AccountingEmailType, 'unified_ruby_sdk/models/shared/accountingemail_type.rb'
       autoload :AccountingExpense, 'unified_ruby_sdk/models/shared/accountingexpense.rb'
+      autoload :AccountingExpenseStatus, 'unified_ruby_sdk/models/shared/accountingexpense_status.rb'
       autoload :AccountingFee, 'unified_ruby_sdk/models/shared/accountingfee.rb'
       autoload :AccountingFeeType, 'unified_ruby_sdk/models/shared/accountingfee_type.rb'
       autoload :AccountingInvoice, 'unified_ruby_sdk/models/shared/accountinginvoice.rb'

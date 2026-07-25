@@ -389,6 +389,7 @@ end
 
 * [get_unified_integration_auth](docs/sdks/auth/README.md#get_unified_integration_auth) - Authorize new connection
 * [get_unified_integration_login](docs/sdks/auth/README.md#get_unified_integration_login) - Sign in a user
+* [get_unified_integration_saml](docs/sdks/auth/README.md#get_unified_integration_saml) - Sign in a user via SAML
 
 ### [availability](docs/sdks/availability/README.md)
 
@@ -1333,6 +1334,7 @@ end
 ### [login](docs/sdks/login/README.md)
 
 * [get_unified_integration_login](docs/sdks/login/README.md#get_unified_integration_login) - Sign in a user
+* [get_unified_integration_saml](docs/sdks/login/README.md#get_unified_integration_saml) - Sign in a user via SAML
 
 ### [martech](docs/sdks/martech/README.md)
 

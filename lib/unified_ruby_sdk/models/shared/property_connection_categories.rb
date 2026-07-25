@@ -17,6 +17,7 @@ module UnifiedRubySDK
           HRIS = new('hris')
           ATS = new('ats')
           AUTH = new('auth')
+          SAML = new('saml')
           CRM = new('crm')
           ENRICH = new('enrich')
           MARTECH = new('martech')
