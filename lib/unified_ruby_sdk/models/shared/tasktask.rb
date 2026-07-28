@@ -46,6 +46,8 @@ module UnifiedRubySDK
 
         field :priority, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority') } }
 
+        field :progress, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('progress') } }
+
         field :project_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -54,7 +56,13 @@ module UnifiedRubySDK
 
         field :status, Crystalline::Nilable.new(Models::Shared::TaskTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::TaskTaskStatus, true) } }
 
+        field :story_points, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('story_points') } }
+
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
+
+        field :time_spent, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('time_spent') } }
+
+        field :time_spent_unit, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('time_spent_unit') } }
 
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
@@ -62,8 +70,8 @@ module UnifiedRubySDK
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(assigned_user_ids: T.nilable(T::Array[::String]), attachment_ids: T.nilable(T::Array[::String]), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), due_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), follower_user_ids: T.nilable(T::Array[::String]), group_ids: T.nilable(T::Array[::String]), has_children: T.nilable(T::Boolean), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), name: T.nilable(::String), notes: T.nilable(::String), parent_id: T.nilable(::String), priority: T.nilable(::String), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::TaskTaskStatus), tags: T.nilable(T::Array[::String]), type: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(assigned_user_ids: nil, attachment_ids: nil, completed_at: nil, created_at: nil, creator_user_id: nil, due_at: nil, end_at: nil, follower_user_ids: nil, group_ids: nil, has_children: nil, id: nil, metadata: nil, name: nil, notes: nil, parent_id: nil, priority: nil, project_id: nil, raw: nil, start_at: nil, status: nil, tags: nil, type: nil, updated_at: nil, url: nil)
+        sig { params(assigned_user_ids: T.nilable(T::Array[::String]), attachment_ids: T.nilable(T::Array[::String]), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_user_id: T.nilable(::String), due_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), follower_user_ids: T.nilable(T::Array[::String]), group_ids: T.nilable(T::Array[::String]), has_children: T.nilable(T::Boolean), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), name: T.nilable(::String), notes: T.nilable(::String), parent_id: T.nilable(::String), priority: T.nilable(::String), progress: T.nilable(::Float), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::TaskTaskStatus), story_points: T.nilable(::Float), tags: T.nilable(T::Array[::String]), time_spent: T.nilable(::Float), time_spent_unit: T.nilable(::String), type: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(assigned_user_ids: nil, attachment_ids: nil, completed_at: nil, created_at: nil, creator_user_id: nil, due_at: nil, end_at: nil, follower_user_ids: nil, group_ids: nil, has_children: nil, id: nil, metadata: nil, name: nil, notes: nil, parent_id: nil, priority: nil, progress: nil, project_id: nil, raw: nil, start_at: nil, status: nil, story_points: nil, tags: nil, time_spent: nil, time_spent_unit: nil, type: nil, updated_at: nil, url: nil)
           @assigned_user_ids = assigned_user_ids
           @attachment_ids = attachment_ids
           @completed_at = completed_at
@@ -80,11 +88,15 @@ module UnifiedRubySDK
           @notes = notes
           @parent_id = parent_id
           @priority = priority
+          @progress = progress
           @project_id = project_id
           @raw = raw
           @start_at = start_at
           @status = status
+          @story_points = story_points
           @tags = tags
+          @time_spent = time_spent
+          @time_spent_unit = time_spent_unit
           @type = type
           @updated_at = updated_at
           @url = url
@@ -109,11 +121,15 @@ module UnifiedRubySDK
           return false unless @notes == other.notes
           return false unless @parent_id == other.parent_id
           return false unless @priority == other.priority
+          return false unless @progress == other.progress
           return false unless @project_id == other.project_id
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
           return false unless @status == other.status
+          return false unless @story_points == other.story_points
           return false unless @tags == other.tags
+          return false unless @time_spent == other.time_spent
+          return false unless @time_spent_unit == other.time_spent_unit
           return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           return false unless @url == other.url

@@ -40,6 +40,8 @@ class UnifiedRubySDK::Models::Shared::TaskTask
   def parent_id=(str_); end
   def priority(); end
   def priority=(str_); end
+  def progress(); end
+  def progress=(str_); end
   def project_id(); end
   def project_id=(str_); end
   def raw(); end
@@ -48,8 +50,14 @@ class UnifiedRubySDK::Models::Shared::TaskTask
   def start_at=(str_); end
   def status(); end
   def status=(str_); end
+  def story_points(); end
+  def story_points=(str_); end
   def tags(); end
   def tags=(str_); end
+  def time_spent(); end
+  def time_spent=(str_); end
+  def time_spent_unit(); end
+  def time_spent_unit=(str_); end
   def type(); end
   def type=(str_); end
   def updated_at(); end

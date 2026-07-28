@@ -36,6 +36,10 @@ module UnifiedRubySDK
           METADATA = new('metadata')
           HAS_CHILDREN = new('has_children')
           TYPE = new('type')
+          TIME_SPENT = new('time_spent')
+          TIME_SPENT_UNIT = new('time_spent_unit')
+          PROGRESS = new('progress')
+          STORY_POINTS = new('story_points')
           RAW = new('raw')
         end
       end

@@ -28,4 +28,8 @@
 | `METADATA`          | metadata            |
 | `HAS_CHILDREN`      | has_children        |
 | `TYPE`              | type                |
+| `TIME_SPENT`        | time_spent          |
+| `TIME_SPENT_UNIT`   | time_spent_unit     |
+| `PROGRESS`          | progress            |
+| `STORY_POINTS`      | story_points        |
 | `RAW`               | raw                 |
