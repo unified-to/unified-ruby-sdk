@@ -12,7 +12,7 @@ require_relative 'utils/retries'
 
 module UnifiedRubySDK
   extend T::Sig
-  class Login
+  class Saml
     extend T::Sig
     
 
@@ -39,21 +39,21 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(request: Models::Operations::GetUnifiedIntegrationLoginRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationLoginResponse) }
-    def get_unified_integration_login(request:, timeout_ms: nil)
-      # get_unified_integration_login - Sign in a user
-      # Returns an authentication URL for the specified integration.  Once a successful OAuth2 code-flow authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+    sig { params(request: Models::Operations::GetUnifiedIntegrationSamlRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationSamlResponse) }
+    def get_unified_integration_saml(request:, timeout_ms: nil)
+      # get_unified_integration_saml - Sign in a user via SAML
+      # Returns a SAML authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
-        Models::Operations::GetUnifiedIntegrationLoginRequest,
+        Models::Operations::GetUnifiedIntegrationSamlRequest,
         base_url,
-        '/unified/integration/login/{workspace_id}/{integration_type}',
+        '/unified/integration/saml/{workspace_id}/{integration_type}',
         request
       )
       headers = {}
       headers = T.cast(headers, T::Hash[String, String])
-      query_params = Utils.get_query_params(Models::Operations::GetUnifiedIntegrationLoginRequest, request, nil)
+      query_params = Utils.get_query_params(Models::Operations::GetUnifiedIntegrationSamlRequest, request, nil)
       headers['Accept'] = 'text/plain'
       headers['user-agent'] = @sdk_configuration.user_agent
 
@@ -69,7 +69,7 @@ module UnifiedRubySDK
         config: @sdk_configuration,
         base_url: base_url,
         oauth2_scopes: [],
-        operation_id: 'getUnifiedIntegrationLogin',
+        operation_id: 'getUnifiedIntegrationSaml',
         security_source: @sdk_configuration.security_source
       )
 
@@ -128,7 +128,7 @@ module UnifiedRubySDK
           )
           obj = http_response.env.body
 
-          return Models::Operations::GetUnifiedIntegrationLoginResponse.new(
+          return Models::Operations::GetUnifiedIntegrationSamlResponse.new(
             status_code: http_response.status,
             content_type: content_type,
             raw_response: http_response,

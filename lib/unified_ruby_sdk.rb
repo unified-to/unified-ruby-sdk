@@ -158,6 +158,7 @@ module UnifiedRubySDK
   autoload :Integration, 'unified_ruby_sdk/integration'
   autoload :Auth, 'unified_ruby_sdk/auth'
   autoload :Login, 'unified_ruby_sdk/login'
+  autoload :Saml, 'unified_ruby_sdk/saml'
   autoload :Issue, 'unified_ruby_sdk/issue'
   autoload :Webhook, 'unified_ruby_sdk/webhook'
   autoload :Secretsmanager, 'unified_ruby_sdk/secretsmanager'

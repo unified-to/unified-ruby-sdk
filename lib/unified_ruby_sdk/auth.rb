@@ -151,7 +151,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::GetUnifiedIntegrationLoginRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUnifiedIntegrationLoginResponse) }
     def get_unified_integration_login(request:, timeout_ms: nil)
       # get_unified_integration_login - Sign in a user
-      # Returns an authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+      # Returns an authentication URL for the specified integration.  Once a successful OAuth2 code-flow authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

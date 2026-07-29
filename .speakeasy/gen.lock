@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 5b461abb1257ca6221e3f7381711a0fe
+  docChecksum: 80d7cdbe65fe311af91a91a99f56bf35
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.99
-  configChecksum: 37fc53ac744e37677ddf99035800efb5
+  releaseVersion: 0.67.100
+  configChecksum: a8c70b9432e930e76601f9829277b30e
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -3331,6 +3331,7 @@ generatedFiles:
   - docs/sdks/review/README.md
   - docs/sdks/saleschannel/README.md
   - docs/sdks/salesorder/README.md
+  - docs/sdks/saml/README.md
   - docs/sdks/scim/README.md
   - docs/sdks/scorecard/README.md
   - docs/sdks/secretsmanager/README.md
@@ -9867,6 +9868,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/review.rb
   - lib/unified_ruby_sdk/saleschannel.rb
   - lib/unified_ruby_sdk/salesorder.rb
+  - lib/unified_ruby_sdk/saml.rb
   - lib/unified_ruby_sdk/scim.rb
   - lib/unified_ruby_sdk/scorecard.rb
   - lib/unified_ruby_sdk/sdk_hooks/hooks.rb
