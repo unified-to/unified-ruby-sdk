@@ -20,6 +20,8 @@ module UnifiedRubySDK
           USER_ID = new('user_id')
           USER_NAME = new('user_name')
           TASK_ID = new('task_id')
+          PARENT_ID = new('parent_id')
+          HAS_CHILDREN = new('has_children')
           RAW = new('raw')
         end
       end

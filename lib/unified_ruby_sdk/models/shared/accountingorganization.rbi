@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::AccountingOrganization
   def fiscal_year_end_month=(str_); end
   def id(); end
   def id=(str_); end
+  def is_elimination(); end
+  def is_elimination=(str_); end
   def legal_name(); end
   def legal_name=(str_); end
   def name(); end
@@ -32,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::AccountingOrganization
   def tax_number=(str_); end
   def timezone(); end
   def timezone=(str_); end
+  def type(); end
+  def type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def website(); end

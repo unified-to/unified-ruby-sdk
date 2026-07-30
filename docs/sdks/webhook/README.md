@@ -34,7 +34,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.webhook.create_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
   event: Models::Shared::Event::CREATED,
-  object_type: Models::Shared::ObjectType::ATS_APPLICATIONSTATUS,
+  object_type: Models::Shared::WebhookObjectType::ATS_APPLICATIONSTATUS,
 ))
 
 unless res.webhook.nil?
@@ -164,7 +164,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.webhook.patch_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
   event: Models::Shared::Event::UPDATED,
-  object_type: Models::Shared::ObjectType::MARTECH_MEMBER,
+  object_type: Models::Shared::WebhookObjectType::MARTECH_MEMBER,
 ), id: '<id>')
 
 unless res.webhook.nil?
@@ -292,7 +292,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.webhook.update_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
   event: Models::Shared::Event::DELETED,
-  object_type: Models::Shared::ObjectType::GENAI_PROMPT,
+  object_type: Models::Shared::WebhookObjectType::GENAI_PROMPT,
 ), id: '<id>')
 
 unless res.webhook.nil?

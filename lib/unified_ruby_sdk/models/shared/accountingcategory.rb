@@ -14,6 +14,8 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
+        field :code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('code') } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
@@ -24,34 +26,44 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
+        field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
+
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :type, Crystalline::Nilable.new(Models::Shared::AccountingCategoryType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingCategoryType, true) } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, description: nil, id: nil, is_active: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil)
+        sig { params(code: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AccountingCategoryType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(code: nil, created_at: nil, description: nil, id: nil, is_active: nil, name: nil, organization_id: nil, parent_id: nil, raw: nil, type: nil, updated_at: nil)
+          @code = code
           @created_at = created_at
           @description = description
           @id = id
           @is_active = is_active
           @name = name
+          @organization_id = organization_id
           @parent_id = parent_id
           @raw = raw
+          @type = type
           @updated_at = updated_at
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @code == other.code
           return false unless @created_at == other.created_at
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_active == other.is_active
           return false unless @name == other.name
+          return false unless @organization_id == other.organization_id
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
+          return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           true
         end

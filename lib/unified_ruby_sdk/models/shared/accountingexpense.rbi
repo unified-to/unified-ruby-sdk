@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def approver_users=(str_); end
   def attachments(); end
   def attachments=(str_); end
+  def category_ids(); end
+  def category_ids=(str_); end
   def contact_id(); end
   def contact_id=(str_); end
   def created_at(); end

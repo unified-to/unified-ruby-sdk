@@ -41,6 +41,7 @@ module UnifiedRubySDK
           SEND = new('send')
           ORGANIZATION_ID = new('organization_id')
           APPLY_AMOUNT = new('apply_amount')
+          APPLICATIONS = new('applications')
           RAW = new('raw')
         end
       end

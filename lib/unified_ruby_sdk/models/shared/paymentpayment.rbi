@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::PaymentPayment
   def account_id(); end
   def account_id=(str_); end
+  def allocations(); end
+  def allocations=(str_); end
   def bill_id(); end
   def bill_id=(str_); end
   def contact_id(); end

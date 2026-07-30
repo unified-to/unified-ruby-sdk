@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Shared::AccountingSalesorder
   def account_id=(str_); end
   def billing_address(); end
   def billing_address=(str_); end
+  def category_ids(); end
+  def category_ids=(str_); end
   def contact_id(); end
   def contact_id=(str_); end
   def created_at(); end

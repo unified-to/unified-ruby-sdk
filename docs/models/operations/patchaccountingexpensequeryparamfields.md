@@ -28,4 +28,5 @@
 | `APPROVER_USERS`    | approver_users      |
 | `STATUS`            | status              |
 | `EXTERNAL_NUMBER`   | external_number     |
+| `CATEGORY_IDS`      | category_ids        |
 | `RAW`               | raw                 |

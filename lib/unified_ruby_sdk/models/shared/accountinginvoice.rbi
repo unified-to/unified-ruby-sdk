@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::AccountingInvoice
   def balance_amount=(str_); end
   def cancelled_at(); end
   def cancelled_at=(str_); end
+  def category_ids(); end
+  def category_ids=(str_); end
   def contact_id(); end
   def contact_id=(str_); end
   def created_at(); end
@@ -40,6 +42,10 @@ class UnifiedRubySDK::Models::Shared::AccountingInvoice
   def paid_at=(str_); end
   def payment_collection_method(); end
   def payment_collection_method=(str_); end
+  def payment_terms(); end
+  def payment_terms=(str_); end
+  def payments(); end
+  def payments=(str_); end
   def posted_at(); end
   def posted_at=(str_); end
   def raw(); end

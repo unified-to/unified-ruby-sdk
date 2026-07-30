@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::AccountingCreditmemo
+  def applications(); end
+  def applications=(str_); end
   def apply_amount(); end
   def apply_amount=(str_); end
   def attachments(); end

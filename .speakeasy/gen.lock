@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 80d7cdbe65fe311af91a91a99f56bf35
+  docChecksum: d7ef585232b169c854883e61b0e5e692
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.100
-  configChecksum: a8c70b9432e930e76601f9829277b30e
+  releaseVersion: 0.67.101
+  configChecksum: 64e714191cdcf3d63c1d4e939fd70408
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -72,6 +72,9 @@ generatedFiles:
   - docs/models/operations/createadsadqueryparamfields.md
   - docs/models/operations/createadsadrequest.md
   - docs/models/operations/createadsadresponse.md
+  - docs/models/operations/createadsassetqueryparamfields.md
+  - docs/models/operations/createadsassetrequest.md
+  - docs/models/operations/createadsassetresponse.md
   - docs/models/operations/createadscampaignqueryparamfields.md
   - docs/models/operations/createadscampaignrequest.md
   - docs/models/operations/createadscampaignresponse.md
@@ -447,6 +450,9 @@ generatedFiles:
   - docs/models/operations/getadsadqueryparamfields.md
   - docs/models/operations/getadsadrequest.md
   - docs/models/operations/getadsadresponse.md
+  - docs/models/operations/getadsassetqueryparamfields.md
+  - docs/models/operations/getadsassetrequest.md
+  - docs/models/operations/getadsassetresponse.md
   - docs/models/operations/getadscampaignqueryparamfields.md
   - docs/models/operations/getadscampaignrequest.md
   - docs/models/operations/getadscampaignresponse.md
@@ -880,6 +886,9 @@ generatedFiles:
   - docs/models/operations/listadsadsqueryparamfields.md
   - docs/models/operations/listadsadsrequest.md
   - docs/models/operations/listadsadsresponse.md
+  - docs/models/operations/listadsassetsqueryparamfields.md
+  - docs/models/operations/listadsassetsrequest.md
+  - docs/models/operations/listadsassetsresponse.md
   - docs/models/operations/listadscampaignsqueryparamfields.md
   - docs/models/operations/listadscampaignsrequest.md
   - docs/models/operations/listadscampaignsresponse.md
@@ -2224,9 +2233,12 @@ generatedFiles:
   - docs/models/shared/accountingcashflowitem.md
   - docs/models/shared/accountingcashflowsection.md
   - docs/models/shared/accountingcategory.md
+  - docs/models/shared/accountingcategorytype.md
   - docs/models/shared/accountingcontact.md
   - docs/models/shared/accountingcontactpaymentmethod.md
   - docs/models/shared/accountingcontactpaymentmethodtype.md
+  - docs/models/shared/accountingcontactpaymentterms.md
+  - docs/models/shared/accountingcreditapplication.md
   - docs/models/shared/accountingcreditmemo.md
   - docs/models/shared/accountingcreditmemopaymentcollectionmethod.md
   - docs/models/shared/accountingcreditmemostatus.md
@@ -2238,6 +2250,7 @@ generatedFiles:
   - docs/models/shared/accountingfeetype.md
   - docs/models/shared/accountinginvoice.md
   - docs/models/shared/accountinginvoicepaymentcollectionmethod.md
+  - docs/models/shared/accountinginvoicepaymentterms.md
   - docs/models/shared/accountinginvoicestatus.md
   - docs/models/shared/accountinginvoiceterm.md
   - docs/models/shared/accountinginvoicetype.md
@@ -2248,6 +2261,8 @@ generatedFiles:
   - docs/models/shared/accountingorderstatus.md
   - docs/models/shared/accountingordertype.md
   - docs/models/shared/accountingorganization.md
+  - docs/models/shared/accountingorganizationtype.md
+  - docs/models/shared/accountingpaymentreference.md
   - docs/models/shared/accountingprofitloss.md
   - docs/models/shared/accountingprofitlossaccount.md
   - docs/models/shared/accountingprofitlosscategory.md
@@ -2273,6 +2288,8 @@ generatedFiles:
   - docs/models/shared/accounttype.md
   - docs/models/shared/adsad.md
   - docs/models/shared/adsadstatus.md
+  - docs/models/shared/adsasset.md
+  - docs/models/shared/adsassettype.md
   - docs/models/shared/adscampaign.md
   - docs/models/shared/adscampaignstatus.md
   - docs/models/shared/adschedule.md
@@ -2302,6 +2319,7 @@ generatedFiles:
   - docs/models/shared/analyticsproperty.md
   - docs/models/shared/analyticsreport.md
   - docs/models/shared/analyticsreportmetrics.md
+  - docs/models/shared/analyticsreportmetricsdimension.md
   - docs/models/shared/analyticsreportmetricstype.md
   - docs/models/shared/analyticssession.md
   - docs/models/shared/analyticsvisitor.md
@@ -2764,6 +2782,8 @@ generatedFiles:
   - docs/models/shared/optimizationgoal.md
   - docs/models/shared/origin.md
   - docs/models/shared/partnership.md
+  - docs/models/shared/paymentallocation.md
+  - docs/models/shared/paymentallocationobjecttype.md
   - docs/models/shared/paymentcollectionmethod.md
   - docs/models/shared/paymentlineitem.md
   - docs/models/shared/paymentlink.md
@@ -2775,6 +2795,7 @@ generatedFiles:
   - docs/models/shared/paymentrefundstatus.md
   - docs/models/shared/paymentsubscription.md
   - docs/models/shared/paymentsubscriptionstatus.md
+  - docs/models/shared/paymentterms.md
   - docs/models/shared/paymenttype.md
   - docs/models/shared/performancegoaltype.md
   - docs/models/shared/period.md
@@ -2869,6 +2890,10 @@ generatedFiles:
   - docs/models/shared/propertyadsreportmetricscampaigntargetingoptimization.md
   - docs/models/shared/propertyadsreportmetricscampaigntargetingoptimizationmode.md
   - docs/models/shared/propertyadsreportmetricscampaigntargetingplacement.md
+  - docs/models/shared/propertyadsreportmetricscreative.md
+  - docs/models/shared/propertyadsreportmetricscreativecreativetype.md
+  - docs/models/shared/propertyadsreportmetricscreativehostingsource.md
+  - docs/models/shared/propertyadsreportmetricscreativestatus.md
   - docs/models/shared/propertyadsreportmetricsgroup.md
   - docs/models/shared/propertyadsreportmetricsgroupbidstrategy.md
   - docs/models/shared/propertyadsreportmetricsgroupbidstrategyperformancegoaltype.md
@@ -2903,6 +2928,21 @@ generatedFiles:
   - docs/models/shared/propertyadsreportmetricsgrouptargetingoptimizationmode.md
   - docs/models/shared/propertyadsreportmetricsgrouptargetingplacement.md
   - docs/models/shared/propertyadsreportmetricsgrouptype.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorder.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderbidstrategy.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderbidstrategyperformancegoaltype.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderbidstrategytype.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderbidstrategyyoutubeandpartnerstype.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderbudgetunit.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderfrequencycap.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderfrequencycaptimeunit.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderkpi.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderkpitype.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderpacing.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderpacingperiod.md
+  - docs/models/shared/propertyadsreportmetricsinsertionorderstatus.md
+  - docs/models/shared/propertyadsreportmetricskeyword.md
+  - docs/models/shared/propertyadsreportmetricsplacement.md
   - docs/models/shared/propertyanalyticseventmetadata.md
   - docs/models/shared/propertyanalyticsvisitormetadata.md
   - docs/models/shared/propertyatsactivityfrom.md
@@ -3205,6 +3245,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookusermentionedid.md
   - docs/models/shared/virtualwebhookvisitorid.md
   - docs/models/shared/webhook.md
+  - docs/models/shared/webhookobjecttype.md
   - docs/models/shared/webhooktype.md
   - docs/models/shared/weekstart.md
   - docs/models/shared/weightunit.md
@@ -3220,6 +3261,7 @@ generatedFiles:
   - docs/sdks/application/README.md
   - docs/sdks/applicationstatus/README.md
   - docs/sdks/assessment/README.md
+  - docs/sdks/asset/README.md
   - docs/sdks/ats/README.md
   - docs/sdks/auth/README.md
   - docs/sdks/availability/README.md
@@ -3387,6 +3429,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/application.rb
   - lib/unified_ruby_sdk/applicationstatus.rb
   - lib/unified_ruby_sdk/assessment.rb
+  - lib/unified_ruby_sdk/asset.rb
   - lib/unified_ruby_sdk/ats.rb
   - lib/unified_ruby_sdk/auth.rb
   - lib/unified_ruby_sdk/availability.rb
@@ -3560,6 +3603,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createadsad_request.rbi
   - lib/unified_ruby_sdk/models/operations/createadsad_response.rb
   - lib/unified_ruby_sdk/models/operations/createadsad_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createadsasset_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createadsasset_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createadsasset_request.rb
+  - lib/unified_ruby_sdk/models/operations/createadsasset_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createadsasset_response.rb
+  - lib/unified_ruby_sdk/models/operations/createadsasset_response.rbi
   - lib/unified_ruby_sdk/models/operations/createadscampaign_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createadscampaign_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createadscampaign_request.rb
@@ -4310,6 +4359,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getadsad_request.rbi
   - lib/unified_ruby_sdk/models/operations/getadsad_response.rb
   - lib/unified_ruby_sdk/models/operations/getadsad_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getadsasset_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getadsasset_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getadsasset_request.rb
+  - lib/unified_ruby_sdk/models/operations/getadsasset_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getadsasset_response.rb
+  - lib/unified_ruby_sdk/models/operations/getadsasset_response.rbi
   - lib/unified_ruby_sdk/models/operations/getadscampaign_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getadscampaign_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getadscampaign_request.rb
@@ -5176,6 +5231,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listadsads_request.rbi
   - lib/unified_ruby_sdk/models/operations/listadsads_response.rb
   - lib/unified_ruby_sdk/models/operations/listadsads_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listadsassets_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listadsassets_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listadsassets_request.rb
+  - lib/unified_ruby_sdk/models/operations/listadsassets_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listadsassets_response.rb
+  - lib/unified_ruby_sdk/models/operations/listadsassets_response.rbi
   - lib/unified_ruby_sdk/models/operations/listadscampaigns_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listadscampaigns_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listadscampaigns_request.rb
@@ -7867,12 +7928,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingcashflowsection.rbi
   - lib/unified_ruby_sdk/models/shared/accountingcategory.rb
   - lib/unified_ruby_sdk/models/shared/accountingcategory.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingcategory_type.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcategory_type.rbi
   - lib/unified_ruby_sdk/models/shared/accountingcontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontact.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingcontact_payment_terms.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcontact_payment_terms.rbi
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod.rbi
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingcontactpaymentmethod_type.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingcreditapplication.rb
+  - lib/unified_ruby_sdk/models/shared/accountingcreditapplication.rbi
   - lib/unified_ruby_sdk/models/shared/accountingcreditmemo.rb
   - lib/unified_ruby_sdk/models/shared/accountingcreditmemo.rbi
   - lib/unified_ruby_sdk/models/shared/accountingcreditmemo_payment_collection_method.rb
@@ -7895,6 +7962,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountinginvoice.rbi
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_payment_collection_method.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_payment_collection_method.rbi
+  - lib/unified_ruby_sdk/models/shared/accountinginvoice_payment_terms.rb
+  - lib/unified_ruby_sdk/models/shared/accountinginvoice_payment_terms.rbi
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_status.rb
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_status.rbi
   - lib/unified_ruby_sdk/models/shared/accountinginvoice_term.rb
@@ -7915,6 +7984,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingorder_type.rbi
   - lib/unified_ruby_sdk/models/shared/accountingorganization.rb
   - lib/unified_ruby_sdk/models/shared/accountingorganization.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingorganization_type.rb
+  - lib/unified_ruby_sdk/models/shared/accountingorganization_type.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingpaymentreference.rb
+  - lib/unified_ruby_sdk/models/shared/accountingpaymentreference.rbi
   - lib/unified_ruby_sdk/models/shared/accountingprofitloss.rb
   - lib/unified_ruby_sdk/models/shared/accountingprofitloss.rbi
   - lib/unified_ruby_sdk/models/shared/accountingprofitlossaccount.rb
@@ -7965,6 +8038,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/adsad.rbi
   - lib/unified_ruby_sdk/models/shared/adsad_status.rb
   - lib/unified_ruby_sdk/models/shared/adsad_status.rbi
+  - lib/unified_ruby_sdk/models/shared/adsasset.rb
+  - lib/unified_ruby_sdk/models/shared/adsasset.rbi
+  - lib/unified_ruby_sdk/models/shared/adsasset_type.rb
+  - lib/unified_ruby_sdk/models/shared/adsasset_type.rbi
   - lib/unified_ruby_sdk/models/shared/adscampaign.rb
   - lib/unified_ruby_sdk/models/shared/adscampaign.rbi
   - lib/unified_ruby_sdk/models/shared/adscampaign_status.rb
@@ -8021,6 +8098,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/analyticsreport.rbi
   - lib/unified_ruby_sdk/models/shared/analyticsreportmetrics.rb
   - lib/unified_ruby_sdk/models/shared/analyticsreportmetrics.rbi
+  - lib/unified_ruby_sdk/models/shared/analyticsreportmetrics_dimension.rb
+  - lib/unified_ruby_sdk/models/shared/analyticsreportmetrics_dimension.rbi
   - lib/unified_ruby_sdk/models/shared/analyticsreportmetrics_type.rb
   - lib/unified_ruby_sdk/models/shared/analyticsreportmetrics_type.rbi
   - lib/unified_ruby_sdk/models/shared/analyticssession.rb
@@ -8947,8 +9026,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/partnership.rbi
   - lib/unified_ruby_sdk/models/shared/payment_collection_method.rb
   - lib/unified_ruby_sdk/models/shared/payment_collection_method.rbi
+  - lib/unified_ruby_sdk/models/shared/payment_terms.rb
+  - lib/unified_ruby_sdk/models/shared/payment_terms.rbi
   - lib/unified_ruby_sdk/models/shared/payment_type.rb
   - lib/unified_ruby_sdk/models/shared/payment_type.rbi
+  - lib/unified_ruby_sdk/models/shared/paymentallocation.rb
+  - lib/unified_ruby_sdk/models/shared/paymentallocation.rbi
+  - lib/unified_ruby_sdk/models/shared/paymentallocation_object_type.rb
+  - lib/unified_ruby_sdk/models/shared/paymentallocation_object_type.rbi
   - lib/unified_ruby_sdk/models/shared/paymentlineitem.rb
   - lib/unified_ruby_sdk/models/shared/paymentlineitem.rbi
   - lib/unified_ruby_sdk/models/shared/paymentlink.rb
@@ -9155,6 +9240,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_optimization_mode.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_placement.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting_placement.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_creative.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_creative.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_creative_creative_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_creative_creative_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_creative_hosting_source.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_creative_hosting_source.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_creative_status.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_creative_status.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_bid_strategy.rb
@@ -9223,6 +9316,36 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_targeting_placement.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_type.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_bid_strategy.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_bid_strategy.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_bid_strategy_performance_goal_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_bid_strategy_performance_goal_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_bid_strategy_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_bid_strategy_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_bid_strategy_youtube_and_partners_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_bid_strategy_youtube_and_partners_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_budget_unit.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_budget_unit.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_frequency_cap.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_frequency_cap.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_frequency_cap_time_unit.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_frequency_cap_time_unit.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_kpi.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_kpi.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_kpi_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_kpi_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_pacing.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_pacing.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_pacing_period.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_pacing_period.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_status.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_insertionorder_status.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_keyword.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_keyword.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_placement.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_placement.rbi
   - lib/unified_ruby_sdk/models/shared/property_analyticsevent_metadata.rb
   - lib/unified_ruby_sdk/models/shared/property_analyticsevent_metadata.rbi
   - lib/unified_ruby_sdk/models/shared/property_analyticsvisitor_metadata.rb
@@ -9827,6 +9950,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_visitor_id.rbi
   - lib/unified_ruby_sdk/models/shared/webhook.rb
   - lib/unified_ruby_sdk/models/shared/webhook.rbi
+  - lib/unified_ruby_sdk/models/shared/webhook_object_type.rb
+  - lib/unified_ruby_sdk/models/shared/webhook_object_type.rbi
   - lib/unified_ruby_sdk/models/shared/webhook_type.rb
   - lib/unified_ruby_sdk/models/shared/webhook_type.rbi
   - lib/unified_ruby_sdk/models/shared/week_start.rb
@@ -23364,5 +23489,32 @@ examples:
       responses:
         "200":
           text/plain: "<value>"
+  createAdsAsset:
+    speakeasy-default-create-ads-asset:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAdsAsset:
+    speakeasy-default-get-ads-asset:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAdsAssets:
+    speakeasy-default-list-ads-assets:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}

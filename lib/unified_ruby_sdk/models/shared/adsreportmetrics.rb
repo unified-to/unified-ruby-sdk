@@ -18,17 +18,35 @@ module UnifiedRubySDK
 
         field :campaign, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCampaign), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign') } }
 
+        field :creative, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCreative), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creative') } }
+
+        field :dimension, Crystalline::Nilable.new(Models::Shared::Dimension), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension'), 'decoder': Utils.enum_from_string(Models::Shared::Dimension, true) } }
+
+        field :dimension_value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension_value') } }
+
         field :group, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroup), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group') } }
+
+        field :insertionorder, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsInsertionorder), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('insertionorder') } }
+
+        field :keyword, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsKeyword), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('keyword') } }
+
+        field :placement, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsPlacement), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('placement') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::AdsReportMetricsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AdsReportMetricsType, true) } }
 
         field :value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
-        sig { params(ad: T.nilable(Models::Shared::PropertyAdsReportMetricsAd), campaign: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaign), group: T.nilable(Models::Shared::PropertyAdsReportMetricsGroup), type: T.nilable(Models::Shared::AdsReportMetricsType), value: T.nilable(::Float)).void }
-        def initialize(ad: nil, campaign: nil, group: nil, type: nil, value: nil)
+        sig { params(ad: T.nilable(Models::Shared::PropertyAdsReportMetricsAd), campaign: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaign), creative: T.nilable(Models::Shared::PropertyAdsReportMetricsCreative), dimension: T.nilable(Models::Shared::Dimension), dimension_value: T.nilable(::String), group: T.nilable(Models::Shared::PropertyAdsReportMetricsGroup), insertionorder: T.nilable(Models::Shared::PropertyAdsReportMetricsInsertionorder), keyword: T.nilable(Models::Shared::PropertyAdsReportMetricsKeyword), placement: T.nilable(Models::Shared::PropertyAdsReportMetricsPlacement), type: T.nilable(Models::Shared::AdsReportMetricsType), value: T.nilable(::Float)).void }
+        def initialize(ad: nil, campaign: nil, creative: nil, dimension: nil, dimension_value: nil, group: nil, insertionorder: nil, keyword: nil, placement: nil, type: nil, value: nil)
           @ad = ad
           @campaign = campaign
+          @creative = creative
+          @dimension = dimension
+          @dimension_value = dimension_value
           @group = group
+          @insertionorder = insertionorder
+          @keyword = keyword
+          @placement = placement
           @type = type
           @value = value
         end
@@ -38,7 +56,13 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @ad == other.ad
           return false unless @campaign == other.campaign
+          return false unless @creative == other.creative
+          return false unless @dimension == other.dimension
+          return false unless @dimension_value == other.dimension_value
           return false unless @group == other.group
+          return false unless @insertionorder == other.insertionorder
+          return false unless @keyword == other.keyword
+          return false unless @placement == other.placement
           return false unless @type == other.type
           return false unless @value == other.value
           true

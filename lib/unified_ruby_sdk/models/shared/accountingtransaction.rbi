@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::AccountingTransaction
   def account_id(); end
   def account_id=(str_); end
+  def category_ids(); end
+  def category_ids=(str_); end
   def contacts(); end
   def contacts=(str_); end
   def created_at(); end

@@ -14,25 +14,9 @@ module UnifiedRubySDK
 
         enums do
           DATE = new('DATE')
-          HOUR = new('HOUR')
-          DAY_OF_WEEK = new('DAY_OF_WEEK')
-          WEEK = new('WEEK')
-          MONTH = new('MONTH')
-          YEAR = new('YEAR')
-          PAGE = new('PAGE')
-          PAGE_TITLE = new('PAGE_TITLE')
-          EVENT_NAME = new('EVENT_NAME')
-          SOURCE = new('SOURCE')
-          MEDIUM = new('MEDIUM')
-          CAMPAIGN = new('CAMPAIGN')
-          COUNTRY = new('COUNTRY')
-          CITY = new('CITY')
-          DEVICE_TYPE = new('DEVICE_TYPE')
-          BROWSER = new('BROWSER')
-          OS = new('OS')
-          USER_TYPE = new('USER_TYPE')
-          LANDING_PAGE = new('LANDING_PAGE')
-          VIDEO = new('VIDEO')
+          PLATFORM = new('PLATFORM')
+          PLATFORM_POSITION = new('PLATFORM_POSITION')
+          DEVICE = new('DEVICE')
         end
       end
     end

@@ -8,6 +8,10 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::AccountingJournal
+  def attachments(); end
+  def attachments=(str_); end
+  def category_ids(); end
+  def category_ids=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def currency(); end

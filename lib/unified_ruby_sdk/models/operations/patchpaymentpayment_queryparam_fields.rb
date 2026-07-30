@@ -28,6 +28,7 @@ module UnifiedRubySDK
           ACCOUNT_ID = new('account_id')
           REFERENCE = new('reference')
           ORGANIZATION_ID = new('organization_id')
+          ALLOCATIONS = new('allocations')
           RAW = new('raw')
         end
       end

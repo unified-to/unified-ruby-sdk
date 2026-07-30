@@ -39,8 +39,11 @@ module UnifiedRubySDK
           ATTACHMENTS = new('attachments')
           SEND = new('send')
           ORGANIZATION_ID = new('organization_id')
-          RAW = new('raw')
           TERM = new('term')
+          PAYMENT_TERMS = new('payment_terms')
+          PAYMENTS = new('payments')
+          CATEGORY_IDS = new('category_ids')
+          RAW = new('raw')
         end
       end
     end

@@ -243,6 +243,8 @@ module UnifiedRubySDK
           ADS_ORGANIZATION_WRITE = new('ads_organization_write')
           ADS_CREATIVE_READ = new('ads_creative_read')
           ADS_CREATIVE_WRITE = new('ads_creative_write')
+          ADS_ASSET_READ = new('ads_asset_read')
+          ADS_ASSET_WRITE = new('ads_asset_write')
           ADS_INSERTIONORDER_READ = new('ads_insertionorder_read')
           ADS_INSERTIONORDER_WRITE = new('ads_insertionorder_write')
           ADS_TARGET_READ = new('ads_target_read')

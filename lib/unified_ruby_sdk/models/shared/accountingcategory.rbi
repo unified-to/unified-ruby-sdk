@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::AccountingCategory
+  def code(); end
+  def code=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def description(); end
@@ -18,10 +20,14 @@ class UnifiedRubySDK::Models::Shared::AccountingCategory
   def is_active=(str_); end
   def name(); end
   def name=(str_); end
+  def organization_id(); end
+  def organization_id=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
   def raw(); end
   def raw=(str_); end
+  def type(); end
+  def type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
 end

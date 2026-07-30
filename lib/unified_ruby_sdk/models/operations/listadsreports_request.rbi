@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Operations::ListAdsReportsRequest
   def ad_id=(str_); end
   def campaign_id(); end
   def campaign_id=(str_); end
+  def dimension(); end
+  def dimension=(str_); end
   def end_lt(); end
   def end_lt=(str_); end
   def fields_(); end

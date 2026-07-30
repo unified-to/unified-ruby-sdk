@@ -28,6 +28,7 @@ module UnifiedRubySDK
   autoload :Vendorcredit, 'unified_ruby_sdk/vendorcredit'
   autoload :Ads, 'unified_ruby_sdk/ads'
   autoload :Ad, 'unified_ruby_sdk/ad'
+  autoload :Asset, 'unified_ruby_sdk/asset'
   autoload :Campaign, 'unified_ruby_sdk/campaign'
   autoload :Creative, 'unified_ruby_sdk/creative'
   autoload :Group, 'unified_ruby_sdk/group'

@@ -28,6 +28,7 @@ module UnifiedRubySDK
           SALES_CHANNEL = new('sales_channel')
           ORGANIZATION_ID = new('organization_id')
           FEES = new('fees')
+          CATEGORY_IDS = new('category_ids')
           RAW = new('raw')
         end
       end

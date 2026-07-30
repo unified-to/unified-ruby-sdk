@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :is_elimination, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_elimination') } }
+
         field :legal_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('legal_name') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
@@ -38,17 +40,20 @@ module UnifiedRubySDK
 
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
+        field :type, Crystalline::Nilable.new(Models::Shared::AccountingOrganizationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingOrganizationType, true) } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :website, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyAccountingOrganizationAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), fiscal_year_end_month: T.nilable(::Float), id: T.nilable(::String), legal_name: T.nilable(::String), name: T.nilable(::String), organization_code: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax_number: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), website: T.nilable(::String)).void }
-        def initialize(address: nil, created_at: nil, currency: nil, fiscal_year_end_month: nil, id: nil, legal_name: nil, name: nil, organization_code: nil, parent_id: nil, raw: nil, tax_number: nil, timezone: nil, updated_at: nil, website: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyAccountingOrganizationAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), fiscal_year_end_month: T.nilable(::Float), id: T.nilable(::String), is_elimination: T.nilable(T::Boolean), legal_name: T.nilable(::String), name: T.nilable(::String), organization_code: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax_number: T.nilable(::String), timezone: T.nilable(::String), type: T.nilable(Models::Shared::AccountingOrganizationType), updated_at: T.nilable(::DateTime), website: T.nilable(::String)).void }
+        def initialize(address: nil, created_at: nil, currency: nil, fiscal_year_end_month: nil, id: nil, is_elimination: nil, legal_name: nil, name: nil, organization_code: nil, parent_id: nil, raw: nil, tax_number: nil, timezone: nil, type: nil, updated_at: nil, website: nil)
           @address = address
           @created_at = created_at
           @currency = currency
           @fiscal_year_end_month = fiscal_year_end_month
           @id = id
+          @is_elimination = is_elimination
           @legal_name = legal_name
           @name = name
           @organization_code = organization_code
@@ -56,6 +61,7 @@ module UnifiedRubySDK
           @raw = raw
           @tax_number = tax_number
           @timezone = timezone
+          @type = type
           @updated_at = updated_at
           @website = website
         end
@@ -68,6 +74,7 @@ module UnifiedRubySDK
           return false unless @currency == other.currency
           return false unless @fiscal_year_end_month == other.fiscal_year_end_month
           return false unless @id == other.id
+          return false unless @is_elimination == other.is_elimination
           return false unless @legal_name == other.legal_name
           return false unless @name == other.name
           return false unless @organization_code == other.organization_code
@@ -75,6 +82,7 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @tax_number == other.tax_number
           return false unless @timezone == other.timezone
+          return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           return false unless @website == other.website
           true

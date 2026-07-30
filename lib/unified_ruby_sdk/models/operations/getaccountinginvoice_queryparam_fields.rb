@@ -34,6 +34,7 @@ module UnifiedRubySDK
           NOTES = new('notes')
           REFUND_REASON = new('refund_reason')
           TERM = new('term')
+          PAYMENT_TERMS = new('payment_terms')
           LINEITEMS = new('lineitems')
           STATUS = new('status')
           URL = new('url')
@@ -42,6 +43,8 @@ module UnifiedRubySDK
           ATTACHMENTS = new('attachments')
           SEND = new('send')
           ORGANIZATION_ID = new('organization_id')
+          PAYMENTS = new('payments')
+          CATEGORY_IDS = new('category_ids')
           RAW = new('raw')
         end
       end

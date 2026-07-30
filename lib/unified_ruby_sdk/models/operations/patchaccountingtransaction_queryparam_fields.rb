@@ -31,6 +31,7 @@ module UnifiedRubySDK
           CURRENCY = new('currency')
           CONTACTS = new('contacts')
           ORGANIZATION_ID = new('organization_id')
+          CATEGORY_IDS = new('category_ids')
           RAW = new('raw')
         end
       end

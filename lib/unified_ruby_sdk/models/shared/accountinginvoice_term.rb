@@ -20,7 +20,10 @@ module UnifiedRubySDK
           NET_20 = new('NET_20')
           NET_25 = new('NET_25')
           NET_30 = new('NET_30')
+          NET_45 = new('NET_45')
           NET_60 = new('NET_60')
+          NET_90 = new('NET_90')
+          OTHER = new('OTHER')
         end
       end
     end

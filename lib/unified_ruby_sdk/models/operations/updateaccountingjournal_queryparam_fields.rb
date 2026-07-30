@@ -25,6 +25,8 @@ module UnifiedRubySDK
           POSTED_AT = new('posted_at')
           SOURCE = new('source')
           ORGANIZATION_ID = new('organization_id')
+          CATEGORY_IDS = new('category_ids')
+          ATTACHMENTS = new('attachments')
           RAW = new('raw')
         end
       end

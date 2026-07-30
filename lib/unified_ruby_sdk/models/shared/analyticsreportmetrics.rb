@@ -14,7 +14,7 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
-        field :dimension, Crystalline::Nilable.new(Models::Shared::Dimension), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension'), 'decoder': Utils.enum_from_string(Models::Shared::Dimension, true) } }
+        field :dimension, Crystalline::Nilable.new(Models::Shared::AnalyticsReportMetricsDimension), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension'), 'decoder': Utils.enum_from_string(Models::Shared::AnalyticsReportMetricsDimension, true) } }
 
         field :dimension_value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension_value') } }
 
@@ -22,7 +22,7 @@ module UnifiedRubySDK
 
         field :value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
-        sig { params(dimension: T.nilable(Models::Shared::Dimension), dimension_value: T.nilable(::String), type: T.nilable(Models::Shared::AnalyticsReportMetricsType), value: T.nilable(::Float)).void }
+        sig { params(dimension: T.nilable(Models::Shared::AnalyticsReportMetricsDimension), dimension_value: T.nilable(::String), type: T.nilable(Models::Shared::AnalyticsReportMetricsType), value: T.nilable(::Float)).void }
         def initialize(dimension: nil, dimension_value: nil, type: nil, value: nil)
           @dimension = dimension
           @dimension_value = dimension_value

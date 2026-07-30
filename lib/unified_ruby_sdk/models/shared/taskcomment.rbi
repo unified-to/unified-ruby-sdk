@@ -10,8 +10,12 @@ end
 class UnifiedRubySDK::Models::Shared::TaskComment
   def created_at(); end
   def created_at=(str_); end
+  def has_children(); end
+  def has_children=(str_); end
   def id(); end
   def id=(str_); end
+  def parent_id(); end
+  def parent_id=(str_); end
   def raw(); end
   def raw=(str_); end
   def task_id(); end

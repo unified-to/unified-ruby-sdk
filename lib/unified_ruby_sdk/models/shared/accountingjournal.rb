@@ -14,6 +14,10 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
+        field :attachments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingAttachment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
+
+        field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -40,8 +44,10 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingJournalLineitem]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), source: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, currency: nil, description: nil, id: nil, lineitems: nil, organization_id: nil, posted_at: nil, raw: nil, reference: nil, source: nil, tax_amount: nil, taxrate_id: nil, updated_at: nil)
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), category_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingJournalLineitem]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), source: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(attachments: nil, category_ids: nil, created_at: nil, currency: nil, description: nil, id: nil, lineitems: nil, organization_id: nil, posted_at: nil, raw: nil, reference: nil, source: nil, tax_amount: nil, taxrate_id: nil, updated_at: nil)
+          @attachments = attachments
+          @category_ids = category_ids
           @created_at = created_at
           @currency = currency
           @description = description
@@ -60,6 +66,8 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @attachments == other.attachments
+          return false unless @category_ids == other.category_ids
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @description == other.description

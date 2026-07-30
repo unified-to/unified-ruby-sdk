@@ -18,6 +18,8 @@ module UnifiedRubySDK
 
         field :billing_address, Crystalline::Nilable.new(Models::Shared::PropertyAccountingPurchaseorderBillingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_address') } }
 
+        field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
+
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -42,10 +44,11 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), billing_address: T.nilable(Models::Shared::PropertyAccountingPurchaseorderBillingAddress), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingPurchaseorderShippingAddress), status: T.nilable(Models::Shared::AccountingPurchaseorderStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, billing_address: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, lineitems: nil, organization_id: nil, posted_at: nil, raw: nil, shipping_address: nil, status: nil, total_amount: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), billing_address: T.nilable(Models::Shared::PropertyAccountingPurchaseorderBillingAddress), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), shipping_address: T.nilable(Models::Shared::PropertyAccountingPurchaseorderShippingAddress), status: T.nilable(Models::Shared::AccountingPurchaseorderStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, billing_address: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, lineitems: nil, organization_id: nil, posted_at: nil, raw: nil, shipping_address: nil, status: nil, total_amount: nil, updated_at: nil)
           @account_id = account_id
           @billing_address = billing_address
+          @category_ids = category_ids
           @contact_id = contact_id
           @created_at = created_at
           @currency = currency
@@ -65,6 +68,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @account_id == other.account_id
           return false unless @billing_address == other.billing_address
+          return false unless @category_ids == other.category_ids
           return false unless @contact_id == other.contact_id
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency

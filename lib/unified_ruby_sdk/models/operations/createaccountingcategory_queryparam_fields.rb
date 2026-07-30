@@ -20,6 +20,9 @@ module UnifiedRubySDK
           DESCRIPTION = new('description')
           IS_ACTIVE = new('is_active')
           PARENT_ID = new('parent_id')
+          TYPE = new('type')
+          CODE = new('code')
+          ORGANIZATION_ID = new('organization_id')
           RAW = new('raw')
         end
       end

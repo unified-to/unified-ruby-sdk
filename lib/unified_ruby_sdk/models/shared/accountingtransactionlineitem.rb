@@ -16,6 +16,8 @@ module UnifiedRubySDK
 
         field :account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
 
+        field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
+
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
@@ -30,9 +32,10 @@ module UnifiedRubySDK
 
         field :unit_quantity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_quantity') } }
 
-        sig { params(account_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), object_type: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float)).void }
-        def initialize(account_id: nil, description: nil, id: nil, name: nil, object_type: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil)
+        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), description: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), object_type: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float)).void }
+        def initialize(account_id: nil, category_ids: nil, description: nil, id: nil, name: nil, object_type: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil)
           @account_id = account_id
+          @category_ids = category_ids
           @description = description
           @id = id
           @name = name
@@ -46,6 +49,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @account_id == other.account_id
+          return false unless @category_ids == other.category_ids
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @name == other.name

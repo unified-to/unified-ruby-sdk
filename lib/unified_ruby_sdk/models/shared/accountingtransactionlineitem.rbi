@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::AccountingTransactionLineItem
   def account_id(); end
   def account_id=(str_); end
+  def category_ids(); end
+  def category_ids=(str_); end
   def description(); end
   def description=(str_); end
   def id(); end

@@ -26,6 +26,8 @@ module UnifiedRubySDK
           PARENT_ID = new('parent_id')
           FISCAL_YEAR_END_MONTH = new('fiscal_year_end_month')
           ORGANIZATION_CODE = new('organization_code')
+          TYPE = new('type')
+          IS_ELIMINATION = new('is_elimination')
           RAW = new('raw')
         end
       end

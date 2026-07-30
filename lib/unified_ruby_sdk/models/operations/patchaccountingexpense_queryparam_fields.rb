@@ -36,6 +36,7 @@ module UnifiedRubySDK
           APPROVER_USERS = new('approver_users')
           STATUS = new('status')
           EXTERNAL_NUMBER = new('external_number')
+          CATEGORY_IDS = new('category_ids')
           RAW = new('raw')
         end
       end
