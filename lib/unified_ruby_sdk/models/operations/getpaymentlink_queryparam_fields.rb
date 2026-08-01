@@ -23,6 +23,7 @@ module UnifiedRubySDK
           PAYMENT_ID = new('payment_id')
           CONTACT_ID = new('contact_id')
           URL = new('url')
+          DESCRIPTION = new('description')
           IS_CHARGEABLE_NOW = new('is_chargeable_now')
           SUCCESS_URL = new('success_url')
           RAW = new('raw')

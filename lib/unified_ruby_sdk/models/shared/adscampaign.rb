@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
         field :budget_period, Crystalline::Nilable.new(Models::Shared::BudgetPeriod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_period'), 'decoder': Utils.enum_from_string(Models::Shared::BudgetPeriod, true) } }
 
+        field :budget_unit, Crystalline::Nilable.new(Models::Shared::BudgetUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_unit'), 'decoder': Utils.enum_from_string(Models::Shared::BudgetUnit, true) } }
+
         field :campaign_budget_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign_budget_identifier') } }
 
         field :category, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category') } }
@@ -58,11 +60,12 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(advertising_channel_type: T.nilable(Models::Shared::AdvertisingChannelType), budget_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::BudgetPeriod), campaign_budget_identifier: T.nilable(::String), category: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), effective_status: T.nilable(Models::Shared::EffectiveStatus), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsCampaignFrequencyCap), goal: T.nilable(Models::Shared::Goal), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), planned_spend_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AdsCampaignStatus), targeting: T.nilable(Models::Shared::PropertyAdsCampaignTargeting), total_spend_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(advertising_channel_type: nil, budget_amount: nil, budget_period: nil, campaign_budget_identifier: nil, category: nil, created_at: nil, currency: nil, effective_status: nil, end_at: nil, frequency_cap: nil, goal: nil, has_eu_political_ads: nil, id: nil, name: nil, organization_id: nil, planned_spend_amount: nil, raw: nil, start_at: nil, status: nil, targeting: nil, total_spend_amount: nil, updated_at: nil)
+        sig { params(advertising_channel_type: T.nilable(Models::Shared::AdvertisingChannelType), budget_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::BudgetPeriod), budget_unit: T.nilable(Models::Shared::BudgetUnit), campaign_budget_identifier: T.nilable(::String), category: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), effective_status: T.nilable(Models::Shared::EffectiveStatus), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsCampaignFrequencyCap), goal: T.nilable(Models::Shared::Goal), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), planned_spend_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AdsCampaignStatus), targeting: T.nilable(Models::Shared::PropertyAdsCampaignTargeting), total_spend_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(advertising_channel_type: nil, budget_amount: nil, budget_period: nil, budget_unit: nil, campaign_budget_identifier: nil, category: nil, created_at: nil, currency: nil, effective_status: nil, end_at: nil, frequency_cap: nil, goal: nil, has_eu_political_ads: nil, id: nil, name: nil, organization_id: nil, planned_spend_amount: nil, raw: nil, start_at: nil, status: nil, targeting: nil, total_spend_amount: nil, updated_at: nil)
           @advertising_channel_type = advertising_channel_type
           @budget_amount = budget_amount
           @budget_period = budget_period
+          @budget_unit = budget_unit
           @campaign_budget_identifier = campaign_budget_identifier
           @category = category
           @created_at = created_at
@@ -90,6 +93,7 @@ module UnifiedRubySDK
           return false unless @advertising_channel_type == other.advertising_channel_type
           return false unless @budget_amount == other.budget_amount
           return false unless @budget_period == other.budget_period
+          return false unless @budget_unit == other.budget_unit
           return false unless @campaign_budget_identifier == other.campaign_budget_identifier
           return false unless @category == other.category
           return false unless @created_at == other.created_at

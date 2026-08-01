@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :created_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
+        field :customer_note, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_note') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :importance, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('importance') } }
@@ -38,13 +40,14 @@ module UnifiedRubySDK
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(status: Models::Shared::IssueStatus, ticket_ref: ::String, title: ::String, workspace_id: ::String, created_at: T.nilable(::String), id: T.nilable(::String), importance: T.nilable(::Float), resolution_time: T.nilable(::Float), size: T.nilable(::Float), type: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), url: T.nilable(::String)).void }
-        def initialize(status:, ticket_ref:, title:, workspace_id:, created_at: nil, id: nil, importance: nil, resolution_time: nil, size: nil, type: nil, updated_at: nil, url: nil)
+        sig { params(status: Models::Shared::IssueStatus, ticket_ref: ::String, title: ::String, workspace_id: ::String, created_at: T.nilable(::String), customer_note: T.nilable(::String), id: T.nilable(::String), importance: T.nilable(::Float), resolution_time: T.nilable(::Float), size: T.nilable(::Float), type: T.nilable(T::Array[::String]), updated_at: T.nilable(::String), url: T.nilable(::String)).void }
+        def initialize(status:, ticket_ref:, title:, workspace_id:, created_at: nil, customer_note: nil, id: nil, importance: nil, resolution_time: nil, size: nil, type: nil, updated_at: nil, url: nil)
           @status = status
           @ticket_ref = ticket_ref
           @title = title
           @workspace_id = workspace_id
           @created_at = created_at
+          @customer_note = customer_note
           @id = id
           @importance = importance
           @resolution_time = resolution_time
@@ -62,6 +65,7 @@ module UnifiedRubySDK
           return false unless @title == other.title
           return false unless @workspace_id == other.workspace_id
           return false unless @created_at == other.created_at
+          return false unless @customer_note == other.customer_note
           return false unless @id == other.id
           return false unless @importance == other.importance
           return false unless @resolution_time == other.resolution_time

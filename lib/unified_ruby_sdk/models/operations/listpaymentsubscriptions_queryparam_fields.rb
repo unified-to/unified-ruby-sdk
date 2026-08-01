@@ -23,6 +23,7 @@ module UnifiedRubySDK
           CURRENT_PERIOD_START_AT = new('current_period_start_at')
           CANCELED_AT = new('canceled_at')
           CURRENCY = new('currency')
+          TOTAL_AMOUNT = new('total_amount')
           START_AT = new('start_at')
           END_AT = new('end_at')
           STATUS = new('status')

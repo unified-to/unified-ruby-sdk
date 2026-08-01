@@ -52,10 +52,12 @@ module UnifiedRubySDK
 
         field :status, Crystalline::Nilable.new(Models::Shared::PaymentSubscriptionStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentSubscriptionStatus, true) } }
 
+        field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(canceled_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), current_period_end_at: T.nilable(::DateTime), current_period_start_at: T.nilable(::DateTime), day_of_month: T.nilable(::Float), day_of_week: T.nilable(::Float), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), interval: T.nilable(::Float), interval_unit: T.nilable(Models::Shared::IntervalUnit), invoice_id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), month: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PaymentSubscriptionStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(canceled_at: nil, contact_id: nil, created_at: nil, currency: nil, current_period_end_at: nil, current_period_start_at: nil, day_of_month: nil, day_of_week: nil, description: nil, end_at: nil, id: nil, interval: nil, interval_unit: nil, invoice_id: nil, lineitems: nil, month: nil, raw: nil, start_at: nil, status: nil, updated_at: nil)
+        sig { params(canceled_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), current_period_end_at: T.nilable(::DateTime), current_period_start_at: T.nilable(::DateTime), day_of_month: T.nilable(::Float), day_of_week: T.nilable(::Float), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), interval: T.nilable(::Float), interval_unit: T.nilable(Models::Shared::IntervalUnit), invoice_id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), month: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PaymentSubscriptionStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(canceled_at: nil, contact_id: nil, created_at: nil, currency: nil, current_period_end_at: nil, current_period_start_at: nil, day_of_month: nil, day_of_week: nil, description: nil, end_at: nil, id: nil, interval: nil, interval_unit: nil, invoice_id: nil, lineitems: nil, month: nil, raw: nil, start_at: nil, status: nil, total_amount: nil, updated_at: nil)
           @canceled_at = canceled_at
           @contact_id = contact_id
           @created_at = created_at
@@ -75,6 +77,7 @@ module UnifiedRubySDK
           @raw = raw
           @start_at = start_at
           @status = status
+          @total_amount = total_amount
           @updated_at = updated_at
         end
 
@@ -100,6 +103,7 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
           return false unless @status == other.status
+          return false unless @total_amount == other.total_amount
           return false unless @updated_at == other.updated_at
           true
         end

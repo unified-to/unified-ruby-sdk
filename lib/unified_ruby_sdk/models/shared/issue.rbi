@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::Issue
   def workspace_id=(str_); end
   def created_at(); end
   def created_at=(str_); end
+  def customer_note(); end
+  def customer_note=(str_); end
   def id(); end
   def id=(str_); end
   def importance(); end

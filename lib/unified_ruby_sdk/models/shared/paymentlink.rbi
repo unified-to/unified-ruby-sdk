@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::PaymentLink
   def created_at=(str_); end
   def currency(); end
   def currency=(str_); end
+  def description(); end
+  def description=(str_); end
   def id(); end
   def id=(str_); end
   def is_active(); end

@@ -24,6 +24,7 @@ module UnifiedRubySDK
           END_AT = new('end_at')
           BUDGET_AMOUNT = new('budget_amount')
           BUDGET_PERIOD = new('budget_period')
+          BUDGET_UNIT = new('budget_unit')
           TOTAL_SPEND_AMOUNT = new('total_spend_amount')
           TARGETING = new('targeting')
           GOAL = new('goal')

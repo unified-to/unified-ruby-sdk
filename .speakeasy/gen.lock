@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: d7ef585232b169c854883e61b0e5e692
+  docChecksum: 2261a49528204f202086da5d7c5d3ba5
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.101
-  configChecksum: 64e714191cdcf3d63c1d4e939fd70408
+  releaseVersion: 0.67.102
+  configChecksum: a55395053a49dd13f57fd58f21c9c574
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2297,6 +2297,7 @@ generatedFiles:
   - docs/models/shared/adscreativestatus.md
   - docs/models/shared/adsgroup.md
   - docs/models/shared/adsgroupbudgetperiod.md
+  - docs/models/shared/adsgroupbudgetunit.md
   - docs/models/shared/adsgroupeffectivestatus.md
   - docs/models/shared/adsgroupstatus.md
   - docs/models/shared/adsgrouptype.md
@@ -2868,6 +2869,7 @@ generatedFiles:
   - docs/models/shared/propertyadsreportmetricscampaign.md
   - docs/models/shared/propertyadsreportmetricscampaignadvertisingchanneltype.md
   - docs/models/shared/propertyadsreportmetricscampaignbudgetperiod.md
+  - docs/models/shared/propertyadsreportmetricscampaignbudgetunit.md
   - docs/models/shared/propertyadsreportmetricscampaigneffectivestatus.md
   - docs/models/shared/propertyadsreportmetricscampaignfrequencycap.md
   - docs/models/shared/propertyadsreportmetricscampaignfrequencycaptimeunit.md
@@ -8056,6 +8058,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/adsgroup.rbi
   - lib/unified_ruby_sdk/models/shared/adsgroup_budget_period.rb
   - lib/unified_ruby_sdk/models/shared/adsgroup_budget_period.rbi
+  - lib/unified_ruby_sdk/models/shared/adsgroup_budget_unit.rb
+  - lib/unified_ruby_sdk/models/shared/adsgroup_budget_unit.rbi
   - lib/unified_ruby_sdk/models/shared/adsgroup_effective_status.rb
   - lib/unified_ruby_sdk/models/shared/adsgroup_effective_status.rbi
   - lib/unified_ruby_sdk/models/shared/adsgroup_status.rb
@@ -9196,6 +9200,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_advertising_channel_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_budget_period.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_budget_period.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_budget_unit.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_budget_unit.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_effective_status.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_effective_status.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_frequency_cap.rb

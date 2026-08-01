@@ -16,6 +16,7 @@
 | `END_AT`                     | end_at                       |
 | `BUDGET_AMOUNT`              | budget_amount                |
 | `BUDGET_PERIOD`              | budget_period                |
+| `BUDGET_UNIT`                | budget_unit                  |
 | `TOTAL_SPEND_AMOUNT`         | total_spend_amount           |
 | `TARGETING`                  | targeting                    |
 | `GOAL`                       | goal                         |

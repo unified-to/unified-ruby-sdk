@@ -46,6 +46,8 @@ class UnifiedRubySDK::Models::Shared::PaymentSubscription
   def start_at=(str_); end
   def status(); end
   def status=(str_); end
+  def total_amount(); end
+  def total_amount=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
 end

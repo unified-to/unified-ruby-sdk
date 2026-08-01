@@ -22,6 +22,8 @@ module UnifiedRubySDK
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
+        field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
@@ -40,12 +42,13 @@ module UnifiedRubySDK
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_chargeable_now: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), success_url: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(amount: nil, contact_id: nil, created_at: nil, currency: nil, id: nil, is_active: nil, is_chargeable_now: nil, lineitems: nil, payment_id: nil, raw: nil, success_url: nil, updated_at: nil, url: nil)
+        sig { params(amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_chargeable_now: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), success_url: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(amount: nil, contact_id: nil, created_at: nil, currency: nil, description: nil, id: nil, is_active: nil, is_chargeable_now: nil, lineitems: nil, payment_id: nil, raw: nil, success_url: nil, updated_at: nil, url: nil)
           @amount = amount
           @contact_id = contact_id
           @created_at = created_at
           @currency = currency
+          @description = description
           @id = id
           @is_active = is_active
           @is_chargeable_now = is_chargeable_now
@@ -64,6 +67,7 @@ module UnifiedRubySDK
           return false unless @contact_id == other.contact_id
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
+          return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_active == other.is_active
           return false unless @is_chargeable_now == other.is_chargeable_now

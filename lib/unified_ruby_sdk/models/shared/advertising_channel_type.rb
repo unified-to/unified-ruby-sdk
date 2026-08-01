@@ -26,6 +26,9 @@ module UnifiedRubySDK
           SEARCH = new('SEARCH')
           AUDIO = new('AUDIO')
           YOUTUBE = new('YOUTUBE')
+          NATIVE = new('NATIVE')
+          CTV = new('CTV')
+          DOOH = new('DOOH')
         end
       end
     end
