@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Operations::ListCommerceInventoriesRequest
   def connection_id=(str_); end
   def fields_(); end
   def fields_=(str_); end
+  def item_id(); end
+  def item_id=(str_); end
   def item_variant_id(); end
   def item_variant_id=(str_); end
   def limit(); end

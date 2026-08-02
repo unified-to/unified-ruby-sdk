@@ -17,6 +17,8 @@ module UnifiedRubySDK
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListCommerceInventoriesQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # The item ID to filter by (reference to CommerceItem)
+        field :item_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'item_id', 'style': 'form', 'explode': true } }
         # The item variant ID to filter by (reference to CommerceCommerceItemvariant)
         field :item_variant_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'item_variant_id', 'style': 'form', 'explode': true } }
 
@@ -36,10 +38,11 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::ListCommerceInventoriesQueryParamFields]), item_variant_id: T.nilable(::String), limit: T.nilable(::Float), location_id: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, fields_: nil, item_variant_id: nil, limit: nil, location_id: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::ListCommerceInventoriesQueryParamFields]), item_id: T.nilable(::String), item_variant_id: T.nilable(::String), limit: T.nilable(::Float), location_id: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, fields_: nil, item_id: nil, item_variant_id: nil, limit: nil, location_id: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
           @connection_id = connection_id
           @fields_ = fields_
+          @item_id = item_id
           @item_variant_id = item_variant_id
           @limit = limit
           @location_id = location_id
@@ -56,6 +59,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
           return false unless @fields_ == other.fields_
+          return false unless @item_id == other.item_id
           return false unless @item_variant_id == other.item_variant_id
           return false unless @limit == other.limit
           return false unless @location_id == other.location_id

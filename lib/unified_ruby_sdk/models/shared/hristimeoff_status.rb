@@ -16,6 +16,7 @@ module UnifiedRubySDK
           APPROVED = new('APPROVED')
           PENDING = new('PENDING')
           DENIED = new('DENIED')
+          CANCELLED = new('CANCELLED')
         end
       end
     end
