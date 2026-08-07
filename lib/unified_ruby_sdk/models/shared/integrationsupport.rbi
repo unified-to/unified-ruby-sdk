@@ -148,6 +148,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_root_id=(str_); end
   def list_saleschannel_id(); end
   def list_saleschannel_id=(str_); end
+  def list_segment_id(); end
+  def list_segment_id=(str_); end
   def list_session_id(); end
   def list_session_id=(str_); end
   def list_shipment_id(); end
@@ -224,6 +226,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_project_id=(str_); end
   def native_webhook_property_id(); end
   def native_webhook_property_id=(str_); end
+  def native_webhook_segment_id(); end
+  def native_webhook_segment_id=(str_); end
   def native_webhook_session_id(); end
   def native_webhook_session_id=(str_); end
   def native_webhook_shipment_id(); end
@@ -356,6 +360,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_repo_id=(str_); end
   def virtual_webhook_saleschannel_id(); end
   def virtual_webhook_saleschannel_id=(str_); end
+  def virtual_webhook_segment_id(); end
+  def virtual_webhook_segment_id=(str_); end
   def virtual_webhook_session_id(); end
   def virtual_webhook_session_id=(str_); end
   def virtual_webhook_shipment_id(); end
