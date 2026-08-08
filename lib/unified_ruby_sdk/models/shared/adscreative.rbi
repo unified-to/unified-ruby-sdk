@@ -38,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::AdsCreative
   def id=(str_); end
   def item_id(); end
   def item_id=(str_); end
+  def labels(); end
+  def labels=(str_); end
   def link_url(); end
   def link_url=(str_); end
   def name(); end
@@ -60,6 +62,8 @@ class UnifiedRubySDK::Models::Shared::AdsCreative
   def title=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
+  def url_tags(); end
+  def url_tags=(str_); end
   def vast_tag_url(); end
   def vast_tag_url=(str_); end
   def width(); end

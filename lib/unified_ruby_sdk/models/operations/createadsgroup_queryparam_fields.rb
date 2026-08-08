@@ -42,6 +42,8 @@ module UnifiedRubySDK
           BILLING_EVENT = new('billing_event')
           CURRENCY = new('currency')
           PROMOTED = new('promoted')
+          LANGUAGE_LOCALE = new('language_locale')
+          CREATIVE_SELECTION = new('creative_selection')
           RAW = new('raw')
         end
       end

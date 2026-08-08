@@ -35,6 +35,7 @@ module UnifiedRubySDK
           CURRENCY = new('currency')
           CATEGORY = new('category')
           HAS_EU_POLITICAL_ADS = new('has_eu_political_ads')
+          LABELS = new('labels')
           RAW = new('raw')
         end
       end

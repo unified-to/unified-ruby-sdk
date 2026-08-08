@@ -1,0 +1,12 @@
+# AccountingAgedPeriod
+
+
+## Fields
+
+| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `end_at`                                                                                | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html)                    | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `name`                                                                                  | *T.nilable(::String)*                                                                   | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `start_at`                                                                              | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html)                    | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `sub_items`                                                                             | T::Array<[Models::Shared::AccountingAgedRow](../../models/shared/accountingagedrow.md)> | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `total_amount`                                                                          | *T.nilable(::Float)*                                                                    | :heavy_minus_sign:                                                                      | N/A                                                                                     |

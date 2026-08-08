@@ -26,6 +26,7 @@ module UnifiedRubySDK
           SOURCE = new('source')
           ORGANIZATION_ID = new('organization_id')
           CATEGORY_IDS = new('category_ids')
+          PROJECT_ID = new('project_id')
           ATTACHMENTS = new('attachments')
           RAW = new('raw')
         end

@@ -32,6 +32,7 @@ module UnifiedRubySDK
           CONTACTS = new('contacts')
           ORGANIZATION_ID = new('organization_id')
           CATEGORY_IDS = new('category_ids')
+          PROJECT_ID = new('project_id')
           RAW = new('raw')
         end
       end

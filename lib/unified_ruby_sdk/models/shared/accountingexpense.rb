@@ -46,6 +46,8 @@ module UnifiedRubySDK
 
         field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :project_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_id') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :reimbursed_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reimbursed_amount') } }
@@ -64,8 +66,8 @@ module UnifiedRubySDK
 
         field :users, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('users') } }
 
-        sig { params(account_id: T.nilable(::String), approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), approver_users: T.nilable(T::Array[Models::Shared::AccountingReference]), attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), external_number: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), name: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reimbursed_amount: T.nilable(::Float), reimbursed_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AccountingExpenseStatus), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), users: T.nilable(T::Array[Models::Shared::AccountingReference])).void }
-        def initialize(account_id: nil, approved_at: nil, approver_user_id: nil, approver_users: nil, attachments: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, external_number: nil, id: nil, lineitems: nil, name: nil, organization_id: nil, payment_method: nil, posted_at: nil, raw: nil, reimbursed_amount: nil, reimbursed_at: nil, status: nil, tax_amount: nil, total_amount: nil, updated_at: nil, user_id: nil, users: nil)
+        sig { params(account_id: T.nilable(::String), approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), approver_users: T.nilable(T::Array[Models::Shared::AccountingReference]), attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), external_number: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), name: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), posted_at: T.nilable(::DateTime), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reimbursed_amount: T.nilable(::Float), reimbursed_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AccountingExpenseStatus), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), users: T.nilable(T::Array[Models::Shared::AccountingReference])).void }
+        def initialize(account_id: nil, approved_at: nil, approver_user_id: nil, approver_users: nil, attachments: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, external_number: nil, id: nil, lineitems: nil, name: nil, organization_id: nil, payment_method: nil, posted_at: nil, project_id: nil, raw: nil, reimbursed_amount: nil, reimbursed_at: nil, status: nil, tax_amount: nil, total_amount: nil, updated_at: nil, user_id: nil, users: nil)
           @account_id = account_id
           @approved_at = approved_at
           @approver_user_id = approver_user_id
@@ -82,6 +84,7 @@ module UnifiedRubySDK
           @organization_id = organization_id
           @payment_method = payment_method
           @posted_at = posted_at
+          @project_id = project_id
           @raw = raw
           @reimbursed_amount = reimbursed_amount
           @reimbursed_at = reimbursed_at
@@ -112,6 +115,7 @@ module UnifiedRubySDK
           return false unless @organization_id == other.organization_id
           return false unless @payment_method == other.payment_method
           return false unless @posted_at == other.posted_at
+          return false unless @project_id == other.project_id
           return false unless @raw == other.raw
           return false unless @reimbursed_amount == other.reimbursed_amount
           return false unless @reimbursed_at == other.reimbursed_at

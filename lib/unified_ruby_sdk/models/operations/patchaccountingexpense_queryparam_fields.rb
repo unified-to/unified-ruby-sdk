@@ -37,6 +37,7 @@ module UnifiedRubySDK
           STATUS = new('status')
           EXTERNAL_NUMBER = new('external_number')
           CATEGORY_IDS = new('category_ids')
+          PROJECT_ID = new('project_id')
           RAW = new('raw')
         end
       end

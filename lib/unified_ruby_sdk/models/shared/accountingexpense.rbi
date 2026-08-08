@@ -40,6 +40,8 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def payment_method=(str_); end
   def posted_at(); end
   def posted_at=(str_); end
+  def project_id(); end
+  def project_id=(str_); end
   def raw(); end
   def raw=(str_); end
   def reimbursed_amount(); end

@@ -14,11 +14,15 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
+        field :account_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_number') } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        # Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)
+        field :managers, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsManager)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('managers') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -26,18 +30,23 @@ module UnifiedRubySDK
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :status, Crystalline::Nilable.new(Models::Shared::AdsOrganizationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AdsOrganizationStatus, true) } }
+
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, currency: nil, id: nil, name: nil, parent_id: nil, raw: nil, timezone: nil, updated_at: nil)
+        sig { params(account_number: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), managers: T.nilable(T::Array[Models::Shared::AdsManager]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AdsOrganizationStatus), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_number: nil, created_at: nil, currency: nil, id: nil, managers: nil, name: nil, parent_id: nil, raw: nil, status: nil, timezone: nil, updated_at: nil)
+          @account_number = account_number
           @created_at = created_at
           @currency = currency
           @id = id
+          @managers = managers
           @name = name
           @parent_id = parent_id
           @raw = raw
+          @status = status
           @timezone = timezone
           @updated_at = updated_at
         end
@@ -45,12 +54,15 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @account_number == other.account_number
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @id == other.id
+          return false unless @managers == other.managers
           return false unless @name == other.name
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
+          return false unless @status == other.status
           return false unless @timezone == other.timezone
           return false unless @updated_at == other.updated_at
           true

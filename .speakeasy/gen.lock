@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 5def7c5e27b4f683945fa43fd9eb32fb
+  docChecksum: 87ccafd787d7294827ae4367912d6eb3
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.105
-  configChecksum: 49faa6f4b2a7e91a30047ef887bc7eac
+  releaseVersion: 0.67.106
+  configChecksum: 882f414bce8900b859f315a361d5d8f3
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -54,9 +54,15 @@ generatedFiles:
   - docs/models/operations/createaccountingorderqueryparamfields.md
   - docs/models/operations/createaccountingorderrequest.md
   - docs/models/operations/createaccountingorderresponse.md
+  - docs/models/operations/createaccountingprojectqueryparamfields.md
+  - docs/models/operations/createaccountingprojectrequest.md
+  - docs/models/operations/createaccountingprojectresponse.md
   - docs/models/operations/createaccountingpurchaseorderqueryparamfields.md
   - docs/models/operations/createaccountingpurchaseorderrequest.md
   - docs/models/operations/createaccountingpurchaseorderresponse.md
+  - docs/models/operations/createaccountingquotequeryparamfields.md
+  - docs/models/operations/createaccountingquoterequest.md
+  - docs/models/operations/createaccountingquoteresponse.md
   - docs/models/operations/createaccountingsalesorderqueryparamfields.md
   - docs/models/operations/createaccountingsalesorderrequest.md
   - docs/models/operations/createaccountingsalesorderresponse.md
@@ -390,6 +396,12 @@ generatedFiles:
   - docs/models/operations/fields_.md
   - docs/models/operations/getaccountingaccountrequest.md
   - docs/models/operations/getaccountingaccountresponse.md
+  - docs/models/operations/getaccountingagedpayablequeryparamfields.md
+  - docs/models/operations/getaccountingagedpayablerequest.md
+  - docs/models/operations/getaccountingagedpayableresponse.md
+  - docs/models/operations/getaccountingagedreceivablequeryparamfields.md
+  - docs/models/operations/getaccountingagedreceivablerequest.md
+  - docs/models/operations/getaccountingagedreceivableresponse.md
   - docs/models/operations/getaccountingbalancesheetqueryparamfields.md
   - docs/models/operations/getaccountingbalancesheetrequest.md
   - docs/models/operations/getaccountingbalancesheetresponse.md
@@ -426,9 +438,15 @@ generatedFiles:
   - docs/models/operations/getaccountingprofitlossqueryparamfields.md
   - docs/models/operations/getaccountingprofitlossrequest.md
   - docs/models/operations/getaccountingprofitlossresponse.md
+  - docs/models/operations/getaccountingprojectqueryparamfields.md
+  - docs/models/operations/getaccountingprojectrequest.md
+  - docs/models/operations/getaccountingprojectresponse.md
   - docs/models/operations/getaccountingpurchaseorderqueryparamfields.md
   - docs/models/operations/getaccountingpurchaseorderrequest.md
   - docs/models/operations/getaccountingpurchaseorderresponse.md
+  - docs/models/operations/getaccountingquotequeryparamfields.md
+  - docs/models/operations/getaccountingquoterequest.md
+  - docs/models/operations/getaccountingquoteresponse.md
   - docs/models/operations/getaccountingreportqueryparamfields.md
   - docs/models/operations/getaccountingreportrequest.md
   - docs/models/operations/getaccountingreportresponse.md
@@ -826,6 +844,12 @@ generatedFiles:
   - docs/models/operations/listaccountingaccountsqueryparamfields.md
   - docs/models/operations/listaccountingaccountsrequest.md
   - docs/models/operations/listaccountingaccountsresponse.md
+  - docs/models/operations/listaccountingagedpayablesqueryparamfields.md
+  - docs/models/operations/listaccountingagedpayablesrequest.md
+  - docs/models/operations/listaccountingagedpayablesresponse.md
+  - docs/models/operations/listaccountingagedreceivablesqueryparamfields.md
+  - docs/models/operations/listaccountingagedreceivablesrequest.md
+  - docs/models/operations/listaccountingagedreceivablesresponse.md
   - docs/models/operations/listaccountingbalancesheetsqueryparamfields.md
   - docs/models/operations/listaccountingbalancesheetsrequest.md
   - docs/models/operations/listaccountingbalancesheetsresponse.md
@@ -862,9 +886,15 @@ generatedFiles:
   - docs/models/operations/listaccountingprofitlossesqueryparamfields.md
   - docs/models/operations/listaccountingprofitlossesrequest.md
   - docs/models/operations/listaccountingprofitlossesresponse.md
+  - docs/models/operations/listaccountingprojectsqueryparamfields.md
+  - docs/models/operations/listaccountingprojectsrequest.md
+  - docs/models/operations/listaccountingprojectsresponse.md
   - docs/models/operations/listaccountingpurchaseordersqueryparamfields.md
   - docs/models/operations/listaccountingpurchaseordersrequest.md
   - docs/models/operations/listaccountingpurchaseordersresponse.md
+  - docs/models/operations/listaccountingquotesqueryparamfields.md
+  - docs/models/operations/listaccountingquotesrequest.md
+  - docs/models/operations/listaccountingquotesresponse.md
   - docs/models/operations/listaccountingreportsqueryparamfields.md
   - docs/models/operations/listaccountingreportsrequest.md
   - docs/models/operations/listaccountingreportsresponse.md
@@ -1313,9 +1343,15 @@ generatedFiles:
   - docs/models/operations/patchaccountingorderqueryparamfields.md
   - docs/models/operations/patchaccountingorderrequest.md
   - docs/models/operations/patchaccountingorderresponse.md
+  - docs/models/operations/patchaccountingprojectqueryparamfields.md
+  - docs/models/operations/patchaccountingprojectrequest.md
+  - docs/models/operations/patchaccountingprojectresponse.md
   - docs/models/operations/patchaccountingpurchaseorderqueryparamfields.md
   - docs/models/operations/patchaccountingpurchaseorderrequest.md
   - docs/models/operations/patchaccountingpurchaseorderresponse.md
+  - docs/models/operations/patchaccountingquotequeryparamfields.md
+  - docs/models/operations/patchaccountingquoterequest.md
+  - docs/models/operations/patchaccountingquoteresponse.md
   - docs/models/operations/patchaccountingsalesorderqueryparamfields.md
   - docs/models/operations/patchaccountingsalesorderrequest.md
   - docs/models/operations/patchaccountingsalesorderresponse.md
@@ -1655,8 +1691,12 @@ generatedFiles:
   - docs/models/operations/removeaccountingjournalresponse.md
   - docs/models/operations/removeaccountingorderrequest.md
   - docs/models/operations/removeaccountingorderresponse.md
+  - docs/models/operations/removeaccountingprojectrequest.md
+  - docs/models/operations/removeaccountingprojectresponse.md
   - docs/models/operations/removeaccountingpurchaseorderrequest.md
   - docs/models/operations/removeaccountingpurchaseorderresponse.md
+  - docs/models/operations/removeaccountingquoterequest.md
+  - docs/models/operations/removeaccountingquoteresponse.md
   - docs/models/operations/removeaccountingsalesorderrequest.md
   - docs/models/operations/removeaccountingsalesorderresponse.md
   - docs/models/operations/removeaccountingtaxraterequest.md
@@ -1898,9 +1938,15 @@ generatedFiles:
   - docs/models/operations/updateaccountingorderqueryparamfields.md
   - docs/models/operations/updateaccountingorderrequest.md
   - docs/models/operations/updateaccountingorderresponse.md
+  - docs/models/operations/updateaccountingprojectqueryparamfields.md
+  - docs/models/operations/updateaccountingprojectrequest.md
+  - docs/models/operations/updateaccountingprojectresponse.md
   - docs/models/operations/updateaccountingpurchaseorderqueryparamfields.md
   - docs/models/operations/updateaccountingpurchaseorderrequest.md
   - docs/models/operations/updateaccountingpurchaseorderresponse.md
+  - docs/models/operations/updateaccountingquotequeryparamfields.md
+  - docs/models/operations/updateaccountingquoterequest.md
+  - docs/models/operations/updateaccountingquoteresponse.md
   - docs/models/operations/updateaccountingsalesorderqueryparamfields.md
   - docs/models/operations/updateaccountingsalesorderrequest.md
   - docs/models/operations/updateaccountingsalesorderresponse.md
@@ -2223,6 +2269,10 @@ generatedFiles:
   - docs/models/shared/accountingaccount.md
   - docs/models/shared/accountingaccounttaxonomy.md
   - docs/models/shared/accountingaccounttaxonomytype.md
+  - docs/models/shared/accountingagedpayable.md
+  - docs/models/shared/accountingagedperiod.md
+  - docs/models/shared/accountingagedreceivable.md
+  - docs/models/shared/accountingagedrow.md
   - docs/models/shared/accountingassociatedcontact.md
   - docs/models/shared/accountingattachment.md
   - docs/models/shared/accountingbalancesheet.md
@@ -2268,8 +2318,13 @@ generatedFiles:
   - docs/models/shared/accountingprofitlosscategory.md
   - docs/models/shared/accountingprofitlosssection.md
   - docs/models/shared/accountingprofitlosssubcategory.md
+  - docs/models/shared/accountingproject.md
+  - docs/models/shared/accountingprojectstatus.md
   - docs/models/shared/accountingpurchaseorder.md
   - docs/models/shared/accountingpurchaseorderstatus.md
+  - docs/models/shared/accountingquote.md
+  - docs/models/shared/accountingquotepaymentterms.md
+  - docs/models/shared/accountingquotestatus.md
   - docs/models/shared/accountingreference.md
   - docs/models/shared/accountingreport.md
   - docs/models/shared/accountingreporttype.md
@@ -2306,7 +2361,9 @@ generatedFiles:
   - docs/models/shared/adsinsertionorderbudgetunit.md
   - docs/models/shared/adsinsertionorderstatus.md
   - docs/models/shared/adskeyword.md
+  - docs/models/shared/adsmanager.md
   - docs/models/shared/adsorganization.md
+  - docs/models/shared/adsorganizationstatus.md
   - docs/models/shared/adspromoted.md
   - docs/models/shared/adspromotedtype.md
   - docs/models/shared/adsreport.md
@@ -2381,6 +2438,7 @@ generatedFiles:
   - docs/models/shared/atstelephonetype.md
   - docs/models/shared/audiencecombination.md
   - docs/models/shared/billingevent.md
+  - docs/models/shared/billingtype.md
   - docs/models/shared/budgetallocationtype.md
   - docs/models/shared/budgetperiod.md
   - docs/models/shared/budgetunit.md
@@ -2473,6 +2531,7 @@ generatedFiles:
   - docs/models/shared/contenttype.md
   - docs/models/shared/coveragelevel.md
   - docs/models/shared/coveragetype.md
+  - docs/models/shared/creativeselection.md
   - docs/models/shared/creativetype.md
   - docs/models/shared/crmcompany.md
   - docs/models/shared/crmcontact.md
@@ -2769,7 +2828,6 @@ generatedFiles:
   - docs/models/shared/nativewebhookparentid.md
   - docs/models/shared/nativewebhookprojectid.md
   - docs/models/shared/nativewebhookpropertyid.md
-  - docs/models/shared/nativewebhooksegmentid.md
   - docs/models/shared/nativewebhooksessionid.md
   - docs/models/shared/nativewebhookshipmentid.md
   - docs/models/shared/nativewebhookstudentid.md
@@ -2805,6 +2863,8 @@ generatedFiles:
   - docs/models/shared/presencetype.md
   - docs/models/shared/priority.md
   - docs/models/shared/profilegender.md
+  - docs/models/shared/propertyaccountingagedrowcontact.md
+  - docs/models/shared/propertyaccountingagedrowtransaction.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/models/shared/propertyaccountingcontactshippingaddress.md
   - docs/models/shared/propertyaccountingorderbillingaddress.md
@@ -2907,6 +2967,7 @@ generatedFiles:
   - docs/models/shared/propertyadsreportmetricsgroupbudgetallocationtype.md
   - docs/models/shared/propertyadsreportmetricsgroupbudgetperiod.md
   - docs/models/shared/propertyadsreportmetricsgroupbudgetunit.md
+  - docs/models/shared/propertyadsreportmetricsgroupcreativeselection.md
   - docs/models/shared/propertyadsreportmetricsgroupeffectivestatus.md
   - docs/models/shared/propertyadsreportmetricsgroupfrequencycap.md
   - docs/models/shared/propertyadsreportmetricsgroupfrequencycaptimeunit.md
@@ -3147,6 +3208,7 @@ generatedFiles:
   - docs/models/shared/tax.md
   - docs/models/shared/taxespaidby.md
   - docs/models/shared/taxexemption.md
+  - docs/models/shared/taxmode.md
   - docs/models/shared/term.md
   - docs/models/shared/ticketingcategory.md
   - docs/models/shared/ticketingcustomer.md
@@ -3233,7 +3295,6 @@ generatedFiles:
   - docs/models/shared/virtualwebhookreference.md
   - docs/models/shared/virtualwebhookrepoid.md
   - docs/models/shared/virtualwebhooksaleschannelid.md
-  - docs/models/shared/virtualwebhooksegmentid.md
   - docs/models/shared/virtualwebhooksessionid.md
   - docs/models/shared/virtualwebhookshipmentid.md
   - docs/models/shared/virtualwebhookspaceid.md
@@ -3261,6 +3322,8 @@ generatedFiles:
   - docs/sdks/activity/README.md
   - docs/sdks/ad/README.md
   - docs/sdks/ads/README.md
+  - docs/sdks/agedpayable/README.md
+  - docs/sdks/agedreceivable/README.md
   - docs/sdks/analytics/README.md
   - docs/sdks/apicall/README.md
   - docs/sdks/application/README.md
@@ -3366,6 +3429,7 @@ generatedFiles:
   - docs/sdks/pullrequest/README.md
   - docs/sdks/purchaseorder/README.md
   - docs/sdks/query/README.md
+  - docs/sdks/quote/README.md
   - docs/sdks/rate/README.md
   - docs/sdks/record/README.md
   - docs/sdks/recording/README.md
@@ -3429,6 +3493,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/activity.rb
   - lib/unified_ruby_sdk/ad.rb
   - lib/unified_ruby_sdk/ads.rb
+  - lib/unified_ruby_sdk/agedpayable.rb
+  - lib/unified_ruby_sdk/agedreceivable.rb
   - lib/unified_ruby_sdk/analytics.rb
   - lib/unified_ruby_sdk/apicall.rb
   - lib/unified_ruby_sdk/application.rb
@@ -3572,12 +3638,24 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createaccountingorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingorder_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingproject_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingproject_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingproject_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingproject_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingproject_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingproject_response.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingpurchaseorder_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingpurchaseorder_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingpurchaseorder_request.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingpurchaseorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingpurchaseorder_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingpurchaseorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingquote_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingquote_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingquote_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingquote_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingquote_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingquote_response.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingsalesorder_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingsalesorder_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingsalesorder_request.rb
@@ -4244,6 +4322,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getaccountingaccount_request.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingaccount_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingaccount_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedpayable_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedpayable_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedpayable_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedpayable_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedpayable_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedpayable_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedreceivable_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedreceivable_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedreceivable_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedreceivable_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedreceivable_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingagedreceivable_response.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingbalancesheet_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingbalancesheet_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingbalancesheet_request.rb
@@ -4316,12 +4406,24 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getaccountingprofitloss_request.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingprofitloss_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingprofitloss_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingproject_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingproject_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingproject_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingproject_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingproject_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingproject_response.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingpurchaseorder_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingpurchaseorder_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingpurchaseorder_request.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingpurchaseorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingpurchaseorder_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingpurchaseorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingquote_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingquote_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingquote_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingquote_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingquote_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingquote_response.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingreport_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingreport_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingreport_request.rb
@@ -5116,6 +5218,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_request.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingaccounts_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedpayables_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedpayables_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedpayables_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedpayables_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedpayables_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedpayables_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedreceivables_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedreceivables_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedreceivables_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedreceivables_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedreceivables_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingagedreceivables_response.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingbalancesheets_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingbalancesheets_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingbalancesheets_request.rb
@@ -5188,12 +5302,24 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listaccountingprofitlosses_request.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingprofitlosses_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingprofitlosses_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingprojects_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingprojects_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingprojects_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingprojects_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingprojects_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingprojects_response.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingpurchaseorders_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingpurchaseorders_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingpurchaseorders_request.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingpurchaseorders_request.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingpurchaseorders_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingpurchaseorders_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingquotes_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingquotes_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingquotes_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingquotes_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingquotes_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingquotes_response.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingreports_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingreports_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingreports_request.rb
@@ -6090,12 +6216,24 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchaccountingorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingorder_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingproject_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingproject_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingproject_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingproject_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingproject_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingproject_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingpurchaseorder_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingpurchaseorder_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingpurchaseorder_request.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingpurchaseorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingpurchaseorder_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingpurchaseorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingquote_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingquote_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingquote_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingquote_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingquote_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingquote_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingsalesorder_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingsalesorder_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingsalesorder_request.rb
@@ -6774,10 +6912,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeaccountingorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingorder_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingproject_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingproject_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingproject_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingproject_response.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingpurchaseorder_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingpurchaseorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingpurchaseorder_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingpurchaseorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingquote_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingquote_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingquote_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingquote_response.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingsalesorder_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingsalesorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingsalesorder_response.rb
@@ -7260,12 +7406,24 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateaccountingorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingorder_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingproject_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingproject_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingproject_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingproject_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingproject_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingproject_response.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingpurchaseorder_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingpurchaseorder_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingpurchaseorder_request.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingpurchaseorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingpurchaseorder_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingpurchaseorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingquote_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingquote_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingquote_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingquote_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingquote_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingquote_response.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingsalesorder_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingsalesorder_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingsalesorder_request.rb
@@ -7913,6 +8071,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingaccounttaxonomy.rbi
   - lib/unified_ruby_sdk/models/shared/accountingaccounttaxonomy_type.rb
   - lib/unified_ruby_sdk/models/shared/accountingaccounttaxonomy_type.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingagedpayable.rb
+  - lib/unified_ruby_sdk/models/shared/accountingagedpayable.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingagedperiod.rb
+  - lib/unified_ruby_sdk/models/shared/accountingagedperiod.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingagedreceivable.rb
+  - lib/unified_ruby_sdk/models/shared/accountingagedreceivable.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingagedrow.rb
+  - lib/unified_ruby_sdk/models/shared/accountingagedrow.rbi
   - lib/unified_ruby_sdk/models/shared/accountingassociatedcontact.rb
   - lib/unified_ruby_sdk/models/shared/accountingassociatedcontact.rbi
   - lib/unified_ruby_sdk/models/shared/accountingattachment.rb
@@ -8003,10 +8169,20 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingprofitlosssection.rbi
   - lib/unified_ruby_sdk/models/shared/accountingprofitlosssubcategory.rb
   - lib/unified_ruby_sdk/models/shared/accountingprofitlosssubcategory.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingproject.rb
+  - lib/unified_ruby_sdk/models/shared/accountingproject.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingproject_status.rb
+  - lib/unified_ruby_sdk/models/shared/accountingproject_status.rbi
   - lib/unified_ruby_sdk/models/shared/accountingpurchaseorder.rb
   - lib/unified_ruby_sdk/models/shared/accountingpurchaseorder.rbi
   - lib/unified_ruby_sdk/models/shared/accountingpurchaseorder_status.rb
   - lib/unified_ruby_sdk/models/shared/accountingpurchaseorder_status.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingquote.rb
+  - lib/unified_ruby_sdk/models/shared/accountingquote.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingquote_payment_terms.rb
+  - lib/unified_ruby_sdk/models/shared/accountingquote_payment_terms.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingquote_status.rb
+  - lib/unified_ruby_sdk/models/shared/accountingquote_status.rbi
   - lib/unified_ruby_sdk/models/shared/accountingreference.rb
   - lib/unified_ruby_sdk/models/shared/accountingreference.rbi
   - lib/unified_ruby_sdk/models/shared/accountingreport.rb
@@ -8079,8 +8255,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/adsinsertionorderbudgetsegment.rbi
   - lib/unified_ruby_sdk/models/shared/adskeyword.rb
   - lib/unified_ruby_sdk/models/shared/adskeyword.rbi
+  - lib/unified_ruby_sdk/models/shared/adsmanager.rb
+  - lib/unified_ruby_sdk/models/shared/adsmanager.rbi
   - lib/unified_ruby_sdk/models/shared/adsorganization.rb
   - lib/unified_ruby_sdk/models/shared/adsorganization.rbi
+  - lib/unified_ruby_sdk/models/shared/adsorganization_status.rb
+  - lib/unified_ruby_sdk/models/shared/adsorganization_status.rbi
   - lib/unified_ruby_sdk/models/shared/adspromoted.rb
   - lib/unified_ruby_sdk/models/shared/adspromoted.rbi
   - lib/unified_ruby_sdk/models/shared/adspromoted_type.rb
@@ -8227,6 +8407,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/audiencecombination.rbi
   - lib/unified_ruby_sdk/models/shared/billing_event.rb
   - lib/unified_ruby_sdk/models/shared/billing_event.rbi
+  - lib/unified_ruby_sdk/models/shared/billing_type.rb
+  - lib/unified_ruby_sdk/models/shared/billing_type.rbi
   - lib/unified_ruby_sdk/models/shared/budget_allocation_type.rb
   - lib/unified_ruby_sdk/models/shared/budget_allocation_type.rbi
   - lib/unified_ruby_sdk/models/shared/budget_period.rb
@@ -8411,6 +8593,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/coverage_level.rbi
   - lib/unified_ruby_sdk/models/shared/coverage_type.rb
   - lib/unified_ruby_sdk/models/shared/coverage_type.rbi
+  - lib/unified_ruby_sdk/models/shared/creative_selection.rb
+  - lib/unified_ruby_sdk/models/shared/creative_selection.rbi
   - lib/unified_ruby_sdk/models/shared/creative_type.rb
   - lib/unified_ruby_sdk/models/shared/creative_type.rbi
   - lib/unified_ruby_sdk/models/shared/crmcompany.rb
@@ -9003,8 +9187,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/native_webhook_project_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_property_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_property_id.rbi
-  - lib/unified_ruby_sdk/models/shared/native_webhook_segment_id.rb
-  - lib/unified_ruby_sdk/models/shared/native_webhook_segment_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_session_id.rb
   - lib/unified_ruby_sdk/models/shared/native_webhook_session_id.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_shipment_id.rb
@@ -9075,6 +9257,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/priority.rbi
   - lib/unified_ruby_sdk/models/shared/profile_gender.rb
   - lib/unified_ruby_sdk/models/shared/profile_gender.rbi
+  - lib/unified_ruby_sdk/models/shared/property_accountingagedrow_contact.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingagedrow_contact.rbi
+  - lib/unified_ruby_sdk/models/shared/property_accountingagedrow_transaction.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingagedrow_transaction.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_shipping_address.rb
@@ -9279,6 +9465,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_budget_period.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_budget_unit.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_budget_unit.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_creative_selection.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_creative_selection.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_effective_status.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_effective_status.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_group_frequency_cap.rb
@@ -9757,6 +9945,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/tax.rbi
   - lib/unified_ruby_sdk/models/shared/tax_exemption.rb
   - lib/unified_ruby_sdk/models/shared/tax_exemption.rbi
+  - lib/unified_ruby_sdk/models/shared/tax_mode.rb
+  - lib/unified_ruby_sdk/models/shared/tax_mode.rbi
   - lib/unified_ruby_sdk/models/shared/taxes_paid_by.rb
   - lib/unified_ruby_sdk/models/shared/taxes_paid_by.rbi
   - lib/unified_ruby_sdk/models/shared/term.rb
@@ -9931,8 +10121,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_repo_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_saleschannel_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_saleschannel_id.rbi
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_segment_id.rb
-  - lib/unified_ruby_sdk/models/shared/virtual_webhook_segment_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_session_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_session_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_shipment_id.rb
@@ -9996,6 +10184,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/pullrequest.rb
   - lib/unified_ruby_sdk/purchaseorder.rb
   - lib/unified_ruby_sdk/query.rb
+  - lib/unified_ruby_sdk/quote.rb
   - lib/unified_ruby_sdk/rate.rb
   - lib/unified_ruby_sdk/record.rb
   - lib/unified_ruby_sdk/recording.rb
@@ -23531,5 +23720,149 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  createAccountingProject:
+    speakeasy-default-create-accounting-project:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingQuote:
+    speakeasy-default-create-accounting-quote:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingAgedpayable:
+    speakeasy-default-get-accounting-agedpayable:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingAgedreceivable:
+    speakeasy-default-get-accounting-agedreceivable:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingProject:
+    speakeasy-default-get-accounting-project:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingQuote:
+    speakeasy-default-get-accounting-quote:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingAgedpayables:
+    speakeasy-default-list-accounting-agedpayables:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingAgedreceivables:
+    speakeasy-default-list-accounting-agedreceivables:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingProjects:
+    speakeasy-default-list-accounting-projects:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingQuotes:
+    speakeasy-default-list-accounting-quotes:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingProject:
+    speakeasy-default-patch-accounting-project:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAccountingQuote:
+    speakeasy-default-patch-accounting-quote:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingProject:
+    speakeasy-default-remove-accounting-project:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAccountingQuote:
+    speakeasy-default-remove-accounting-quote:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingProject:
+    speakeasy-default-update-accounting-project:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAccountingQuote:
+    speakeasy-default-update-accounting-quote:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

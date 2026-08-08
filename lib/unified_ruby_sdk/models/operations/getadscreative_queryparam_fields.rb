@@ -28,6 +28,7 @@ module UnifiedRubySDK
           HEIGHT = new('height')
           ASSET_URLS = new('asset_urls')
           LINK_URL = new('link_url')
+          URL_TAGS = new('url_tags')
           BODY = new('body')
           TITLE = new('title')
           CTA = new('cta')
@@ -40,6 +41,7 @@ module UnifiedRubySDK
           PATH1 = new('path1')
           PATH2 = new('path2')
           DATA = new('data')
+          LABELS = new('labels')
           RAW = new('raw')
         end
       end

@@ -20,6 +20,9 @@ module UnifiedRubySDK
           CURRENCY = new('currency')
           TIMEZONE = new('timezone')
           PARENT_ID = new('parent_id')
+          STATUS = new('status')
+          ACCOUNT_NUMBER = new('account_number')
+          MANAGERS = new('managers')
           RAW = new('raw')
         end
       end

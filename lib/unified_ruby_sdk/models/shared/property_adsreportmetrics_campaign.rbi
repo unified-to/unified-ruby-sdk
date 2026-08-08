@@ -36,6 +36,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsCampaign
   def has_eu_political_ads=(str_); end
   def id(); end
   def id=(str_); end
+  def labels(); end
+  def labels=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end

@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::AdsGroup
   def created_at=(str_); end
   def creative_ids(); end
   def creative_ids=(str_); end
+  def creative_selection(); end
+  def creative_selection=(str_); end
   def currency(); end
   def currency=(str_); end
   def effective_status(); end
@@ -44,6 +46,8 @@ class UnifiedRubySDK::Models::Shared::AdsGroup
   def id=(str_); end
   def insertionorder_id(); end
   def insertionorder_id=(str_); end
+  def language_locale(); end
+  def language_locale=(str_); end
   def name(); end
   def name=(str_); end
   def optimization_goal(); end

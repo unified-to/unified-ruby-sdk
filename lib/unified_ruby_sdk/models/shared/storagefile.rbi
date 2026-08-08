@@ -34,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::StorageFile
   def references=(str_); end
   def size(); end
   def size=(str_); end
+  def tags(); end
+  def tags=(str_); end
   def type(); end
   def type=(str_); end
   def updated_at(); end

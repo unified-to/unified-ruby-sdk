@@ -40,6 +40,8 @@ module UnifiedRubySDK
 
         field :size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
 
+        field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
+
         field :type, Crystalline::Nilable.new(Models::Shared::StorageFileType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::StorageFileType, true) } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -50,8 +52,8 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(created_at: T.nilable(::DateTime), data: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), hash: T.nilable(::String), id: T.nilable(::String), mime_type: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), permissions: T.nilable(T::Array[Models::Shared::StoragePermission]), raw: T.nilable(T::Hash[Symbol, ::Object]), references: T.nilable(T::Array[Models::Shared::StorageReference]), size: T.nilable(::Float), type: T.nilable(Models::Shared::StorageFileType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), version: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(created_at: nil, data: nil, description: nil, download_url: nil, hash: nil, id: nil, mime_type: nil, name: nil, parent_id: nil, permissions: nil, raw: nil, references: nil, size: nil, type: nil, updated_at: nil, user_id: nil, version: nil, web_url: nil)
+        sig { params(created_at: T.nilable(::DateTime), data: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), hash: T.nilable(::String), id: T.nilable(::String), mime_type: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), permissions: T.nilable(T::Array[Models::Shared::StoragePermission]), raw: T.nilable(T::Hash[Symbol, ::Object]), references: T.nilable(T::Array[Models::Shared::StorageReference]), size: T.nilable(::Float), tags: T.nilable(T::Array[::String]), type: T.nilable(Models::Shared::StorageFileType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), version: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(created_at: nil, data: nil, description: nil, download_url: nil, hash: nil, id: nil, mime_type: nil, name: nil, parent_id: nil, permissions: nil, raw: nil, references: nil, size: nil, tags: nil, type: nil, updated_at: nil, user_id: nil, version: nil, web_url: nil)
           @created_at = created_at
           @data = data
           @description = description
@@ -65,6 +67,7 @@ module UnifiedRubySDK
           @raw = raw
           @references = references
           @size = size
+          @tags = tags
           @type = type
           @updated_at = updated_at
           @user_id = user_id
@@ -88,6 +91,7 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @references == other.references
           return false unless @size == other.size
+          return false unless @tags == other.tags
           return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id

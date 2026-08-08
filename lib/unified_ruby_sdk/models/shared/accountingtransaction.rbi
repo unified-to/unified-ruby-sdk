@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::AccountingTransaction
   def payment_method=(str_); end
   def payment_terms(); end
   def payment_terms=(str_); end
+  def project_id(); end
+  def project_id=(str_); end
   def raw(); end
   def raw=(str_); end
   def reference(); end
