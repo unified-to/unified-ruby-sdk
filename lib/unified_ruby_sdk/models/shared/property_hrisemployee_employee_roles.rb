@@ -18,6 +18,8 @@ module UnifiedRubySDK
           RECRUITER = new('RECRUITER')
           SALESREP = new('SALESREP')
           INTERVIEWER = new('INTERVIEWER')
+          USER = new('USER')
+          EMPLOYEE = new('EMPLOYEE')
         end
       end
     end

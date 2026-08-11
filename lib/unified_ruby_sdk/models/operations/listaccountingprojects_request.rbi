@@ -14,8 +14,6 @@ class UnifiedRubySDK::Models::Operations::ListAccountingProjectsRequest
   def contact_id=(str_); end
   def fields_(); end
   def fields_=(str_); end
-  def is_active(); end
-  def is_active=(str_); end
   def limit(); end
   def limit=(str_); end
   def offset(); end

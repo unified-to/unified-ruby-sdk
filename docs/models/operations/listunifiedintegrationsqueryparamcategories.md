@@ -38,3 +38,4 @@
 | `CLUBS`        | clubs          |
 | `DATASTORE`    | datastore      |
 | `CDP`          | cdp            |
+| `PERFORMANCE`  | performance    |

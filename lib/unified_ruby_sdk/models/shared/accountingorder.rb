@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # @deprecated; use AccountingSalesorder or AccountingPurchaseorder
       class AccountingOrder
         extend T::Sig
         include Crystalline::MetadataFields

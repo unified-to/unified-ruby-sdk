@@ -54,6 +54,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_course_id=(str_); end
   def list_customer_id(); end
   def list_customer_id=(str_); end
+  def list_cycle_id(); end
+  def list_cycle_id=(str_); end
   def list_database_id(); end
   def list_database_id=(str_); end
   def list_deal_id(); end
@@ -294,6 +296,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_course_id=(str_); end
   def virtual_webhook_customer_id(); end
   def virtual_webhook_customer_id=(str_); end
+  def virtual_webhook_cycle_id(); end
+  def virtual_webhook_cycle_id=(str_); end
   def virtual_webhook_database_id(); end
   def virtual_webhook_database_id=(str_); end
   def virtual_webhook_deal_id(); end

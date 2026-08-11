@@ -20,8 +20,6 @@ module UnifiedRubySDK
         # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListAccountingProjectsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
-        field :is_active, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'is_active', 'style': 'form', 'explode': true } }
-
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
@@ -42,12 +40,11 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, contact_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAccountingProjectsQueryParamFields]), is_active: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), org_id: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), status: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, contact_id: nil, fields_: nil, is_active: nil, limit: nil, offset: nil, order: nil, org_id: nil, parent_id: nil, query: nil, raw: nil, sort: nil, status: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, contact_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAccountingProjectsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), org_id: T.nilable(::String), parent_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), status: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, contact_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, org_id: nil, parent_id: nil, query: nil, raw: nil, sort: nil, status: nil, updated_gte: nil)
           @connection_id = connection_id
           @contact_id = contact_id
           @fields_ = fields_
-          @is_active = is_active
           @limit = limit
           @offset = offset
           @order = order
@@ -66,7 +63,6 @@ module UnifiedRubySDK
           return false unless @connection_id == other.connection_id
           return false unless @contact_id == other.contact_id
           return false unless @fields_ == other.fields_
-          return false unless @is_active == other.is_active
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order

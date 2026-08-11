@@ -46,6 +46,7 @@ module UnifiedRubySDK
           CLUBS = new('clubs')
           DATASTORE = new('datastore')
           CDP = new('cdp')
+          PERFORMANCE = new('performance')
         end
       end
     end

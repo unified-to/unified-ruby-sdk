@@ -174,6 +174,10 @@ module UnifiedRubySDK
           CDP_SOURCE = new('cdp_source')
           CDP_DESTINATION = new('cdp_destination')
           CDP_ACTIVATION = new('cdp_activation')
+          PERFORMANCE_CYCLE = new('performance_cycle')
+          PERFORMANCE_REVIEW = new('performance_review')
+          PERFORMANCE_GOAL = new('performance_goal')
+          PERFORMANCE_FEEDBACK = new('performance_feedback')
         end
       end
     end

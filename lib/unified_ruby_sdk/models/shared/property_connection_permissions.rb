@@ -310,6 +310,13 @@ module UnifiedRubySDK
           CDP_DESTINATION_WRITE = new('cdp_destination_write')
           CDP_ACTIVATION_READ = new('cdp_activation_read')
           CDP_ACTIVATION_WRITE = new('cdp_activation_write')
+          PERFORMANCE_CYCLE_READ = new('performance_cycle_read')
+          PERFORMANCE_REVIEW_READ = new('performance_review_read')
+          PERFORMANCE_REVIEW_WRITE = new('performance_review_write')
+          PERFORMANCE_GOAL_READ = new('performance_goal_read')
+          PERFORMANCE_GOAL_WRITE = new('performance_goal_write')
+          PERFORMANCE_FEEDBACK_READ = new('performance_feedback_read')
+          PERFORMANCE_FEEDBACK_WRITE = new('performance_feedback_write')
         end
       end
     end

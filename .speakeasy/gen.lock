@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 87ccafd787d7294827ae4367912d6eb3
+  docChecksum: f777b241309109355222be0cf2e25ccf
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.106
-  configChecksum: 882f414bce8900b859f315a361d5d8f3
+  releaseVersion: 0.67.107
+  configChecksum: 35e007e48b538cc78614584a53e37c87
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -318,6 +318,12 @@ generatedFiles:
   - docs/models/operations/createpaymentsubscriptionqueryparamfields.md
   - docs/models/operations/createpaymentsubscriptionrequest.md
   - docs/models/operations/createpaymentsubscriptionresponse.md
+  - docs/models/operations/createperformancefeedbackqueryparamfields.md
+  - docs/models/operations/createperformancefeedbackrequest.md
+  - docs/models/operations/createperformancefeedbackresponse.md
+  - docs/models/operations/createperformancegoalqueryparamfields.md
+  - docs/models/operations/createperformancegoalrequest.md
+  - docs/models/operations/createperformancegoalresponse.md
   - docs/models/operations/createrepobranchqueryparamfields.md
   - docs/models/operations/createrepobranchrequest.md
   - docs/models/operations/createrepobranchresponse.md
@@ -740,6 +746,18 @@ generatedFiles:
   - docs/models/operations/getpaymentsubscriptionqueryparamfields.md
   - docs/models/operations/getpaymentsubscriptionrequest.md
   - docs/models/operations/getpaymentsubscriptionresponse.md
+  - docs/models/operations/getperformancecyclequeryparamfields.md
+  - docs/models/operations/getperformancecyclerequest.md
+  - docs/models/operations/getperformancecycleresponse.md
+  - docs/models/operations/getperformancefeedbackqueryparamfields.md
+  - docs/models/operations/getperformancefeedbackrequest.md
+  - docs/models/operations/getperformancefeedbackresponse.md
+  - docs/models/operations/getperformancegoalqueryparamfields.md
+  - docs/models/operations/getperformancegoalrequest.md
+  - docs/models/operations/getperformancegoalresponse.md
+  - docs/models/operations/getperformancereviewqueryparamfields.md
+  - docs/models/operations/getperformancereviewrequest.md
+  - docs/models/operations/getperformancereviewresponse.md
   - docs/models/operations/getrepobranchqueryparamfields.md
   - docs/models/operations/getrepobranchrequest.md
   - docs/models/operations/getrepobranchresponse.md
@@ -1215,6 +1233,18 @@ generatedFiles:
   - docs/models/operations/listpaymentsubscriptionsqueryparamfields.md
   - docs/models/operations/listpaymentsubscriptionsrequest.md
   - docs/models/operations/listpaymentsubscriptionsresponse.md
+  - docs/models/operations/listperformancecyclesqueryparamfields.md
+  - docs/models/operations/listperformancecyclesrequest.md
+  - docs/models/operations/listperformancecyclesresponse.md
+  - docs/models/operations/listperformancefeedbacksqueryparamfields.md
+  - docs/models/operations/listperformancefeedbacksrequest.md
+  - docs/models/operations/listperformancefeedbacksresponse.md
+  - docs/models/operations/listperformancegoalsqueryparamfields.md
+  - docs/models/operations/listperformancegoalsrequest.md
+  - docs/models/operations/listperformancegoalsresponse.md
+  - docs/models/operations/listperformancereviewsqueryparamfields.md
+  - docs/models/operations/listperformancereviewsrequest.md
+  - docs/models/operations/listperformancereviewsresponse.md
   - docs/models/operations/listrepobranchesqueryparamfields.md
   - docs/models/operations/listrepobranchesrequest.md
   - docs/models/operations/listrepobranchesresponse.md
@@ -1598,6 +1628,9 @@ generatedFiles:
   - docs/models/operations/patchpaymentsubscriptionqueryparamfields.md
   - docs/models/operations/patchpaymentsubscriptionrequest.md
   - docs/models/operations/patchpaymentsubscriptionresponse.md
+  - docs/models/operations/patchperformancegoalqueryparamfields.md
+  - docs/models/operations/patchperformancegoalrequest.md
+  - docs/models/operations/patchperformancegoalresponse.md
   - docs/models/operations/patchrepobranchqueryparamfields.md
   - docs/models/operations/patchrepobranchrequest.md
   - docs/models/operations/patchrepobranchresponse.md
@@ -1857,6 +1890,8 @@ generatedFiles:
   - docs/models/operations/removepaymentpaymentresponse.md
   - docs/models/operations/removepaymentsubscriptionrequest.md
   - docs/models/operations/removepaymentsubscriptionresponse.md
+  - docs/models/operations/removeperformancegoalrequest.md
+  - docs/models/operations/removeperformancegoalresponse.md
   - docs/models/operations/removerepobranchrequest.md
   - docs/models/operations/removerepobranchresponse.md
   - docs/models/operations/removerepocommitrequest.md
@@ -2193,6 +2228,9 @@ generatedFiles:
   - docs/models/operations/updatepaymentsubscriptionqueryparamfields.md
   - docs/models/operations/updatepaymentsubscriptionrequest.md
   - docs/models/operations/updatepaymentsubscriptionresponse.md
+  - docs/models/operations/updateperformancegoalqueryparamfields.md
+  - docs/models/operations/updateperformancegoalrequest.md
+  - docs/models/operations/updateperformancegoalresponse.md
   - docs/models/operations/updaterepobranchqueryparamfields.md
   - docs/models/operations/updaterepobranchrequest.md
   - docs/models/operations/updaterepobranchresponse.md
@@ -2703,6 +2741,7 @@ generatedFiles:
   - docs/models/shared/listcontentid.md
   - docs/models/shared/listcourseid.md
   - docs/models/shared/listcustomerid.md
+  - docs/models/shared/listcycleid.md
   - docs/models/shared/listdatabaseid.md
   - docs/models/shared/listdealid.md
   - docs/models/shared/listdimension.md
@@ -2858,7 +2897,21 @@ generatedFiles:
   - docs/models/shared/paymentsubscriptionstatus.md
   - docs/models/shared/paymentterms.md
   - docs/models/shared/paymenttype.md
+  - docs/models/shared/performancecycle.md
+  - docs/models/shared/performancecyclestatus.md
+  - docs/models/shared/performancecycletype.md
+  - docs/models/shared/performancefeedback.md
+  - docs/models/shared/performancefeedbacktype.md
+  - docs/models/shared/performancegoal.md
+  - docs/models/shared/performancegoalmilestone.md
+  - docs/models/shared/performancegoalschemastype.md
+  - docs/models/shared/performancegoalstatus.md
   - docs/models/shared/performancegoaltype.md
+  - docs/models/shared/performancereview.md
+  - docs/models/shared/performancereviewquestion.md
+  - docs/models/shared/performancereviewquestiontype.md
+  - docs/models/shared/performancereviewstatus.md
+  - docs/models/shared/performancereviewtype.md
   - docs/models/shared/period.md
   - docs/models/shared/presencetype.md
   - docs/models/shared/priority.md
@@ -3263,6 +3316,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookcontactid.md
   - docs/models/shared/virtualwebhookcourseid.md
   - docs/models/shared/virtualwebhookcustomerid.md
+  - docs/models/shared/virtualwebhookcycleid.md
   - docs/models/shared/virtualwebhookdatabaseid.md
   - docs/models/shared/virtualwebhookdealid.md
   - docs/models/shared/virtualwebhookendlt.md
@@ -3364,6 +3418,7 @@ generatedFiles:
   - docs/sdks/creditmemo/README.md
   - docs/sdks/crm/README.md
   - docs/sdks/customer/README.md
+  - docs/sdks/cycle/README.md
   - docs/sdks/database/README.md
   - docs/sdks/datastore/README.md
   - docs/sdks/deal/README.md
@@ -3377,10 +3432,12 @@ generatedFiles:
   - docs/sdks/environment/README.md
   - docs/sdks/event/README.md
   - docs/sdks/expense/README.md
+  - docs/sdks/feedback/README.md
   - docs/sdks/file/README.md
   - docs/sdks/form/README.md
   - docs/sdks/forms/README.md
   - docs/sdks/genai/README.md
+  - docs/sdks/goal/README.md
   - docs/sdks/group/README.md
   - docs/sdks/hris/README.md
   - docs/sdks/insertionorder/README.md
@@ -3417,6 +3474,7 @@ generatedFiles:
   - docs/sdks/payment/README.md
   - docs/sdks/payout/README.md
   - docs/sdks/payslip/README.md
+  - docs/sdks/performance/README.md
   - docs/sdks/person/README.md
   - docs/sdks/picklist/README.md
   - docs/sdks/pipeline/README.md
@@ -3535,6 +3593,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/creditmemo.rb
   - lib/unified_ruby_sdk/crm.rb
   - lib/unified_ruby_sdk/customer.rb
+  - lib/unified_ruby_sdk/cycle.rb
   - lib/unified_ruby_sdk/database.rb
   - lib/unified_ruby_sdk/datastore.rb
   - lib/unified_ruby_sdk/deal.rb
@@ -3548,10 +3607,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/environment.rb
   - lib/unified_ruby_sdk/event.rb
   - lib/unified_ruby_sdk/expense.rb
+  - lib/unified_ruby_sdk/feedback.rb
   - lib/unified_ruby_sdk/file.rb
   - lib/unified_ruby_sdk/form.rb
   - lib/unified_ruby_sdk/forms.rb
   - lib/unified_ruby_sdk/genai.rb
+  - lib/unified_ruby_sdk/goal.rb
   - lib/unified_ruby_sdk/group.rb
   - lib/unified_ruby_sdk/hris.rb
   - lib/unified_ruby_sdk/insertionorder.rb
@@ -4166,6 +4227,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createpaymentsubscription_request.rbi
   - lib/unified_ruby_sdk/models/operations/createpaymentsubscription_response.rb
   - lib/unified_ruby_sdk/models/operations/createpaymentsubscription_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createperformancefeedback_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createperformancefeedback_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createperformancefeedback_request.rb
+  - lib/unified_ruby_sdk/models/operations/createperformancefeedback_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createperformancefeedback_response.rb
+  - lib/unified_ruby_sdk/models/operations/createperformancefeedback_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createperformancegoal_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createperformancegoal_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createperformancegoal_request.rb
+  - lib/unified_ruby_sdk/models/operations/createperformancegoal_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createperformancegoal_response.rb
+  - lib/unified_ruby_sdk/models/operations/createperformancegoal_response.rbi
   - lib/unified_ruby_sdk/models/operations/createrepobranch_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createrepobranch_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createrepobranch_request.rb
@@ -5010,6 +5083,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getpaymentsubscription_request.rbi
   - lib/unified_ruby_sdk/models/operations/getpaymentsubscription_response.rb
   - lib/unified_ruby_sdk/models/operations/getpaymentsubscription_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancecycle_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancecycle_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancecycle_request.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancecycle_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancecycle_response.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancecycle_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancefeedback_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancefeedback_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancefeedback_request.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancefeedback_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancefeedback_response.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancefeedback_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancegoal_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancegoal_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancegoal_request.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancegoal_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancegoal_response.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancegoal_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancereview_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancereview_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancereview_request.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancereview_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getperformancereview_response.rb
+  - lib/unified_ruby_sdk/models/operations/getperformancereview_response.rbi
   - lib/unified_ruby_sdk/models/operations/getrepobranch_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getrepobranch_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getrepobranch_request.rb
@@ -5960,6 +6057,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listpaymentsubscriptions_request.rbi
   - lib/unified_ruby_sdk/models/operations/listpaymentsubscriptions_response.rb
   - lib/unified_ruby_sdk/models/operations/listpaymentsubscriptions_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancecycles_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancecycles_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancecycles_request.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancecycles_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancecycles_response.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancecycles_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancefeedbacks_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancefeedbacks_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancefeedbacks_request.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancefeedbacks_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancefeedbacks_response.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancefeedbacks_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancegoals_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancegoals_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancegoals_request.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancegoals_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancegoals_response.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancegoals_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancereviews_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancereviews_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancereviews_request.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancereviews_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listperformancereviews_response.rb
+  - lib/unified_ruby_sdk/models/operations/listperformancereviews_response.rbi
   - lib/unified_ruby_sdk/models/operations/listrepobranches_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listrepobranches_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listrepobranches_request.rb
@@ -6726,6 +6847,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchpaymentsubscription_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchpaymentsubscription_response.rb
   - lib/unified_ruby_sdk/models/operations/patchpaymentsubscription_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchperformancegoal_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchperformancegoal_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchperformancegoal_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchperformancegoal_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchperformancegoal_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchperformancegoal_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchrepobranch_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchrepobranch_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchrepobranch_request.rb
@@ -7244,6 +7371,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removepaymentsubscription_request.rbi
   - lib/unified_ruby_sdk/models/operations/removepaymentsubscription_response.rb
   - lib/unified_ruby_sdk/models/operations/removepaymentsubscription_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeperformancegoal_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeperformancegoal_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeperformancegoal_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeperformancegoal_response.rbi
   - lib/unified_ruby_sdk/models/operations/removerepobranch_request.rb
   - lib/unified_ruby_sdk/models/operations/removerepobranch_request.rbi
   - lib/unified_ruby_sdk/models/operations/removerepobranch_response.rb
@@ -7916,6 +8047,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatepaymentsubscription_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatepaymentsubscription_response.rb
   - lib/unified_ruby_sdk/models/operations/updatepaymentsubscription_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateperformancegoal_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updateperformancegoal_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updateperformancegoal_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateperformancegoal_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateperformancegoal_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateperformancegoal_response.rbi
   - lib/unified_ruby_sdk/models/operations/updaterepobranch_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updaterepobranch_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updaterepobranch_request.rb
@@ -8937,6 +9074,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_course_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_customer_id.rb
   - lib/unified_ruby_sdk/models/shared/list_customer_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_cycle_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_cycle_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_database_id.rb
   - lib/unified_ruby_sdk/models/shared/list_database_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_deal_id.rb
@@ -9249,6 +9388,34 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/paymentsubscription_status.rbi
   - lib/unified_ruby_sdk/models/shared/performance_goal_type.rb
   - lib/unified_ruby_sdk/models/shared/performance_goal_type.rbi
+  - lib/unified_ruby_sdk/models/shared/performancecycle.rb
+  - lib/unified_ruby_sdk/models/shared/performancecycle.rbi
+  - lib/unified_ruby_sdk/models/shared/performancecycle_status.rb
+  - lib/unified_ruby_sdk/models/shared/performancecycle_status.rbi
+  - lib/unified_ruby_sdk/models/shared/performancecycle_type.rb
+  - lib/unified_ruby_sdk/models/shared/performancecycle_type.rbi
+  - lib/unified_ruby_sdk/models/shared/performancefeedback.rb
+  - lib/unified_ruby_sdk/models/shared/performancefeedback.rbi
+  - lib/unified_ruby_sdk/models/shared/performancefeedback_type.rb
+  - lib/unified_ruby_sdk/models/shared/performancefeedback_type.rbi
+  - lib/unified_ruby_sdk/models/shared/performancegoal.rb
+  - lib/unified_ruby_sdk/models/shared/performancegoal.rbi
+  - lib/unified_ruby_sdk/models/shared/performancegoal_schemas_type.rb
+  - lib/unified_ruby_sdk/models/shared/performancegoal_schemas_type.rbi
+  - lib/unified_ruby_sdk/models/shared/performancegoal_status.rb
+  - lib/unified_ruby_sdk/models/shared/performancegoal_status.rbi
+  - lib/unified_ruby_sdk/models/shared/performancegoalmilestone.rb
+  - lib/unified_ruby_sdk/models/shared/performancegoalmilestone.rbi
+  - lib/unified_ruby_sdk/models/shared/performancereview.rb
+  - lib/unified_ruby_sdk/models/shared/performancereview.rbi
+  - lib/unified_ruby_sdk/models/shared/performancereview_status.rb
+  - lib/unified_ruby_sdk/models/shared/performancereview_status.rbi
+  - lib/unified_ruby_sdk/models/shared/performancereview_type.rb
+  - lib/unified_ruby_sdk/models/shared/performancereview_type.rbi
+  - lib/unified_ruby_sdk/models/shared/performancereviewquestion.rb
+  - lib/unified_ruby_sdk/models/shared/performancereviewquestion.rbi
+  - lib/unified_ruby_sdk/models/shared/performancereviewquestion_type.rb
+  - lib/unified_ruby_sdk/models/shared/performancereviewquestion_type.rbi
   - lib/unified_ruby_sdk/models/shared/period.rb
   - lib/unified_ruby_sdk/models/shared/period.rbi
   - lib/unified_ruby_sdk/models/shared/presence_type.rb
@@ -10057,6 +10224,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_course_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_customer_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_customer_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_cycle_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_cycle_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_database_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_database_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_deal_id.rb
@@ -10172,6 +10341,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/payment.rb
   - lib/unified_ruby_sdk/payout.rb
   - lib/unified_ruby_sdk/payslip.rb
+  - lib/unified_ruby_sdk/performance.rb
   - lib/unified_ruby_sdk/person.rb
   - lib/unified_ruby_sdk/picklist.rb
   - lib/unified_ruby_sdk/pipeline.rb
@@ -23855,6 +24025,122 @@ examples:
           application/json: {}
   updateAccountingQuote:
     speakeasy-default-update-accounting-quote:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getPerformanceReview:
+    speakeasy-default-get-performance-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"user_id": "<id>"}
+  listPerformanceReviews:
+    speakeasy-default-list-performance-reviews:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"user_id": "<id>"}]
+  createPerformanceFeedback:
+    speakeasy-default-create-performance-feedback:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"user_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"user_id": "<id>"}
+  createPerformanceGoal:
+    speakeasy-default-create-performance-goal:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getPerformanceCycle:
+    speakeasy-default-get-performance-cycle:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getPerformanceFeedback:
+    speakeasy-default-get-performance-feedback:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"user_id": "<id>"}
+  getPerformanceGoal:
+    speakeasy-default-get-performance-goal:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listPerformanceCycles:
+    speakeasy-default-list-performance-cycles:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listPerformanceFeedbacks:
+    speakeasy-default-list-performance-feedbacks:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"user_id": "<id>"}]
+  listPerformanceGoals:
+    speakeasy-default-list-performance-goals:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchPerformanceGoal:
+    speakeasy-default-patch-performance-goal:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removePerformanceGoal:
+    speakeasy-default-remove-performance-goal:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updatePerformanceGoal:
+    speakeasy-default-update-performance-goal:
       parameters:
         path:
           connection_id: "<id>"

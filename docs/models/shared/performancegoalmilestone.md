@@ -1,0 +1,16 @@
+# PerformanceGoalMilestone
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `current_value`                                                      | *T.nilable(::Float)*                                                 | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `description`                                                        | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `due_at`                                                             | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `id`                                                                 | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `is_completed`                                                       | *T.nilable(T::Boolean)*                                              | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `name`                                                               | *::String*                                                           | :heavy_check_mark:                                                   | N/A                                                                  |
+| `target_value`                                                       | *T.nilable(::Float)*                                                 | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `unit`                                                               | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `weight`                                                             | *T.nilable(::Float)*                                                 | :heavy_minus_sign:                                                   | N/A                                                                  |

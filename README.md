@@ -868,6 +868,11 @@ end
 * [remove_ticketing_customer](docs/sdks/customer/README.md#remove_ticketing_customer) - Remove a customer
 * [update_ticketing_customer](docs/sdks/customer/README.md#update_ticketing_customer) - Update a customer
 
+### [cycle](docs/sdks/cycle/README.md)
+
+* [get_performance_cycle](docs/sdks/cycle/README.md#get_performance_cycle) - Retrieve a cycle
+* [list_performance_cycles](docs/sdks/cycle/README.md#list_performance_cycles) - List all cycles
+
 ### [database](docs/sdks/database/README.md)
 
 * [create_datastore_database](docs/sdks/database/README.md#create_datastore_database) - Create a database
@@ -1017,6 +1022,12 @@ end
 * [remove_accounting_expense](docs/sdks/expense/README.md#remove_accounting_expense) - Remove an expense
 * [update_accounting_expense](docs/sdks/expense/README.md#update_accounting_expense) - Update an expense
 
+### [feedback](docs/sdks/feedback/README.md)
+
+* [create_performance_feedback](docs/sdks/feedback/README.md#create_performance_feedback) - Create a feedback
+* [get_performance_feedback](docs/sdks/feedback/README.md#get_performance_feedback) - Retrieve a feedback
+* [list_performance_feedbacks](docs/sdks/feedback/README.md#list_performance_feedbacks) - List all feedbacks
+
 ### [file](docs/sdks/file/README.md)
 
 * [create_storage_file](docs/sdks/file/README.md#create_storage_file) - Create a file
@@ -1052,6 +1063,15 @@ end
 * [create_genai_prompt](docs/sdks/genai/README.md#create_genai_prompt) - Create a prompt
 * [get_genai_model](docs/sdks/genai/README.md#get_genai_model) - Retrieve a model
 * [list_genai_models](docs/sdks/genai/README.md#list_genai_models) - List all models
+
+### [goal](docs/sdks/goal/README.md)
+
+* [create_performance_goal](docs/sdks/goal/README.md#create_performance_goal) - Create a goal
+* [get_performance_goal](docs/sdks/goal/README.md#get_performance_goal) - Retrieve a goal
+* [list_performance_goals](docs/sdks/goal/README.md#list_performance_goals) - List all goals
+* [patch_performance_goal](docs/sdks/goal/README.md#patch_performance_goal) - Update a goal
+* [remove_performance_goal](docs/sdks/goal/README.md#remove_performance_goal) - Remove a goal
+* [update_performance_goal](docs/sdks/goal/README.md#update_performance_goal) - Update a goal
 
 ### [group](docs/sdks/group/README.md)
 
@@ -1546,6 +1566,22 @@ end
 * [get_hris_payslip](docs/sdks/payslip/README.md#get_hris_payslip) - Retrieve a payslip
 * [list_hris_payslips](docs/sdks/payslip/README.md#list_hris_payslips) - List all payslips
 
+### [performance](docs/sdks/performance/README.md)
+
+* [create_performance_feedback](docs/sdks/performance/README.md#create_performance_feedback) - Create a feedback
+* [create_performance_goal](docs/sdks/performance/README.md#create_performance_goal) - Create a goal
+* [get_performance_cycle](docs/sdks/performance/README.md#get_performance_cycle) - Retrieve a cycle
+* [get_performance_feedback](docs/sdks/performance/README.md#get_performance_feedback) - Retrieve a feedback
+* [get_performance_goal](docs/sdks/performance/README.md#get_performance_goal) - Retrieve a goal
+* [get_performance_review](docs/sdks/performance/README.md#get_performance_review) - Retrieve a review
+* [list_performance_cycles](docs/sdks/performance/README.md#list_performance_cycles) - List all cycles
+* [list_performance_feedbacks](docs/sdks/performance/README.md#list_performance_feedbacks) - List all feedbacks
+* [list_performance_goals](docs/sdks/performance/README.md#list_performance_goals) - List all goals
+* [list_performance_reviews](docs/sdks/performance/README.md#list_performance_reviews) - List all reviews
+* [patch_performance_goal](docs/sdks/performance/README.md#patch_performance_goal) - Update a goal
+* [remove_performance_goal](docs/sdks/performance/README.md#remove_performance_goal) - Remove a goal
+* [update_performance_goal](docs/sdks/performance/README.md#update_performance_goal) - Update a goal
+
 ### [person](docs/sdks/person/README.md)
 
 * [list_enrich_people](docs/sdks/person/README.md#list_enrich_people) - Retrieve enrichment information for a person
@@ -1742,7 +1778,9 @@ end
 
 * [create_commerce_review](docs/sdks/review/README.md#create_commerce_review) - Create a review
 * [get_commerce_review](docs/sdks/review/README.md#get_commerce_review) - Retrieve a review
+* [get_performance_review](docs/sdks/review/README.md#get_performance_review) - Retrieve a review
 * [list_commerce_reviews](docs/sdks/review/README.md#list_commerce_reviews) - List all reviews
+* [list_performance_reviews](docs/sdks/review/README.md#list_performance_reviews) - List all reviews
 * [patch_commerce_review](docs/sdks/review/README.md#patch_commerce_review) - Update a review
 * [remove_commerce_review](docs/sdks/review/README.md#remove_commerce_review) - Remove a review
 * [update_commerce_review](docs/sdks/review/README.md#update_commerce_review) - Update a review
