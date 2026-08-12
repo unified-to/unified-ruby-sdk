@@ -21,6 +21,7 @@ module UnifiedRubySDK
           RATE = new('rate')
           IS_ACTIVE = new('is_active')
           ORGANIZATION_ID = new('organization_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -52,6 +52,8 @@ class UnifiedRubySDK::Models::Shared::AccountingProject
   def location_id=(str_); end
   def manager_user_id(); end
   def manager_user_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def minutes_logged(); end
   def minutes_logged=(str_); end
   def minutes_to_be_invoiced(); end

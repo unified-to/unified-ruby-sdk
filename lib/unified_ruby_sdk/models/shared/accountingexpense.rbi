@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def id=(str_); end
   def lineitems(); end
   def lineitems=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end

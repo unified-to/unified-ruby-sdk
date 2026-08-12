@@ -146,6 +146,8 @@ module UnifiedRubySDK
           HRIS_TIMEOFF_WRITE = new('hris_timeoff_write')
           HRIS_TIMESHIFT_READ = new('hris_timeshift_read')
           HRIS_TIMESHIFT_WRITE = new('hris_timeshift_write')
+          HRIS_ATTENDANCE_READ = new('hris_attendance_read')
+          HRIS_ATTENDANCE_WRITE = new('hris_attendance_write')
           HRIS_COMPANY_READ = new('hris_company_read')
           HRIS_COMPANY_WRITE = new('hris_company_write')
           HRIS_LOCATION_READ = new('hris_location_read')

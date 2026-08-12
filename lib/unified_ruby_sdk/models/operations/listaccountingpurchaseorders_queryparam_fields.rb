@@ -27,6 +27,7 @@ module UnifiedRubySDK
           LINEITEMS = new('lineitems')
           ORGANIZATION_ID = new('organization_id')
           CATEGORY_IDS = new('category_ids')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

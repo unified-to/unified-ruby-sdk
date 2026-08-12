@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::AccountingInvoice
   def invoice_number=(str_); end
   def lineitems(); end
   def lineitems=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def notes(); end
   def notes=(str_); end
   def organization_id(); end

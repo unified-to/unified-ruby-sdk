@@ -20,6 +20,8 @@ module UnifiedRubySDK
           GIFT_WRAP = new('GIFT_WRAP')
           COD = new('COD')
           SURCHARGE = new('SURCHARGE')
+          TIP = new('TIP')
+          SERVICE_CHARGE = new('SERVICE_CHARGE')
           OTHER = new('OTHER')
         end
       end

@@ -34,4 +34,5 @@
 | `ORGANIZATION_ID`           | organization_id             |
 | `APPLY_AMOUNT`              | apply_amount                |
 | `APPLICATIONS`              | applications                |
+| `METADATA`                  | metadata                    |
 | `RAW`                       | raw                         |

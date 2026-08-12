@@ -20,51 +20,99 @@ module UnifiedRubySDK
 
         field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
 
+        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
+        field :device_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('device_id') } }
+
+        field :discount_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('discount_amount') } }
+
+        field :employee_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_user_id') } }
+
         field :fees, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingFee)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fees') } }
+
+        field :fulfillment_type, Crystalline::Nilable.new(Models::Shared::FulfillmentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fulfillment_type'), 'decoder': Utils.enum_from_string(Models::Shared::FulfillmentType, true) } }
+
+        field :guest_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('guest_count') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
+        field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
+        field :order_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('order_number') } }
+
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
+        # read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
+        field :payments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingPaymentReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payments') } }
 
         field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :refunded_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refunded_amount') } }
+
         field :sales_channel, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sales_channel') } }
+
+        field :service_charge_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('service_charge_amount') } }
 
         field :shipping_address, Crystalline::Nilable.new(Models::Shared::PropertyAccountingSalesorderShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::AccountingSalesorderStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingSalesorderStatus, true) } }
 
+        field :subscription_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subscription_id') } }
+
+        field :subtotal_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subtotal_amount') } }
+
+        field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
+
+        field :tip_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tip_amount') } }
+
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), billing_address: T.nilable(Models::Shared::PropertyAccountingSalesorderBillingAddress), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), fees: T.nilable(T::Array[Models::Shared::AccountingFee]), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), sales_channel: T.nilable(::String), shipping_address: T.nilable(Models::Shared::PropertyAccountingSalesorderShippingAddress), status: T.nilable(Models::Shared::AccountingSalesorderStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, billing_address: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, fees: nil, id: nil, lineitems: nil, organization_id: nil, posted_at: nil, raw: nil, sales_channel: nil, shipping_address: nil, status: nil, total_amount: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), billing_address: T.nilable(Models::Shared::PropertyAccountingSalesorderBillingAddress), category_ids: T.nilable(T::Array[::String]), closed_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), device_id: T.nilable(::String), discount_amount: T.nilable(::Float), employee_user_id: T.nilable(::String), fees: T.nilable(T::Array[Models::Shared::AccountingFee]), fulfillment_type: T.nilable(Models::Shared::FulfillmentType), guest_count: T.nilable(::Float), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), order_number: T.nilable(::String), organization_id: T.nilable(::String), payments: T.nilable(T::Array[Models::Shared::AccountingPaymentReference]), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), refunded_amount: T.nilable(::Float), sales_channel: T.nilable(::String), service_charge_amount: T.nilable(::Float), shipping_address: T.nilable(Models::Shared::PropertyAccountingSalesorderShippingAddress), status: T.nilable(Models::Shared::AccountingSalesorderStatus), subscription_id: T.nilable(::String), subtotal_amount: T.nilable(::Float), tax_amount: T.nilable(::Float), tip_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, billing_address: nil, category_ids: nil, closed_at: nil, contact_id: nil, created_at: nil, currency: nil, device_id: nil, discount_amount: nil, employee_user_id: nil, fees: nil, fulfillment_type: nil, guest_count: nil, id: nil, lineitems: nil, location_id: nil, metadata: nil, order_number: nil, organization_id: nil, payments: nil, posted_at: nil, raw: nil, refunded_amount: nil, sales_channel: nil, service_charge_amount: nil, shipping_address: nil, status: nil, subscription_id: nil, subtotal_amount: nil, tax_amount: nil, tip_amount: nil, total_amount: nil, updated_at: nil)
           @account_id = account_id
           @billing_address = billing_address
           @category_ids = category_ids
+          @closed_at = closed_at
           @contact_id = contact_id
           @created_at = created_at
           @currency = currency
+          @device_id = device_id
+          @discount_amount = discount_amount
+          @employee_user_id = employee_user_id
           @fees = fees
+          @fulfillment_type = fulfillment_type
+          @guest_count = guest_count
           @id = id
           @lineitems = lineitems
+          @location_id = location_id
+          @metadata = metadata
+          @order_number = order_number
           @organization_id = organization_id
+          @payments = payments
           @posted_at = posted_at
           @raw = raw
+          @refunded_amount = refunded_amount
           @sales_channel = sales_channel
+          @service_charge_amount = service_charge_amount
           @shipping_address = shipping_address
           @status = status
+          @subscription_id = subscription_id
+          @subtotal_amount = subtotal_amount
+          @tax_amount = tax_amount
+          @tip_amount = tip_amount
           @total_amount = total_amount
           @updated_at = updated_at
         end
@@ -75,18 +123,34 @@ module UnifiedRubySDK
           return false unless @account_id == other.account_id
           return false unless @billing_address == other.billing_address
           return false unless @category_ids == other.category_ids
+          return false unless @closed_at == other.closed_at
           return false unless @contact_id == other.contact_id
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
+          return false unless @device_id == other.device_id
+          return false unless @discount_amount == other.discount_amount
+          return false unless @employee_user_id == other.employee_user_id
           return false unless @fees == other.fees
+          return false unless @fulfillment_type == other.fulfillment_type
+          return false unless @guest_count == other.guest_count
           return false unless @id == other.id
           return false unless @lineitems == other.lineitems
+          return false unless @location_id == other.location_id
+          return false unless @metadata == other.metadata
+          return false unless @order_number == other.order_number
           return false unless @organization_id == other.organization_id
+          return false unless @payments == other.payments
           return false unless @posted_at == other.posted_at
           return false unless @raw == other.raw
+          return false unless @refunded_amount == other.refunded_amount
           return false unless @sales_channel == other.sales_channel
+          return false unless @service_charge_amount == other.service_charge_amount
           return false unless @shipping_address == other.shipping_address
           return false unless @status == other.status
+          return false unless @subscription_id == other.subscription_id
+          return false unless @subtotal_amount == other.subtotal_amount
+          return false unless @tax_amount == other.tax_amount
+          return false unless @tip_amount == other.tip_amount
           return false unless @total_amount == other.total_amount
           return false unless @updated_at == other.updated_at
           true

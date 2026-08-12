@@ -44,6 +44,7 @@ module UnifiedRubySDK
           PAYMENTS = new('payments')
           CATEGORY_IDS = new('category_ids')
           PROJECT_ID = new('project_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

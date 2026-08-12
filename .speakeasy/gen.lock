@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: f777b241309109355222be0cf2e25ccf
+  docChecksum: d36ed43c30a913e487dea4d78c125ad4
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.107
-  configChecksum: 35e007e48b538cc78614584a53e37c87
+  releaseVersion: 0.67.108
+  configChecksum: f1a185b3b09659437022b743a4aac7f2
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -224,6 +224,9 @@ generatedFiles:
   - docs/models/operations/creategenaipromptqueryparamfields.md
   - docs/models/operations/creategenaipromptrequest.md
   - docs/models/operations/creategenaipromptresponse.md
+  - docs/models/operations/createhrisattendancequeryparamfields.md
+  - docs/models/operations/createhrisattendancerequest.md
+  - docs/models/operations/createhrisattendanceresponse.md
   - docs/models/operations/createhrisbankaccountqueryparamfields.md
   - docs/models/operations/createhrisbankaccountrequest.md
   - docs/models/operations/createhrisbankaccountresponse.md
@@ -644,6 +647,9 @@ generatedFiles:
   - docs/models/operations/getgenaimodelqueryparamfields.md
   - docs/models/operations/getgenaimodelrequest.md
   - docs/models/operations/getgenaimodelresponse.md
+  - docs/models/operations/gethrisattendancequeryparamfields.md
+  - docs/models/operations/gethrisattendancerequest.md
+  - docs/models/operations/gethrisattendanceresponse.md
   - docs/models/operations/gethrisbankaccountqueryparamfields.md
   - docs/models/operations/gethrisbankaccountrequest.md
   - docs/models/operations/gethrisbankaccountresponse.md
@@ -1126,6 +1132,9 @@ generatedFiles:
   - docs/models/operations/listgenaimodelsqueryparamfields.md
   - docs/models/operations/listgenaimodelsrequest.md
   - docs/models/operations/listgenaimodelsresponse.md
+  - docs/models/operations/listhrisattendancesqueryparamfields.md
+  - docs/models/operations/listhrisattendancesrequest.md
+  - docs/models/operations/listhrisattendancesresponse.md
   - docs/models/operations/listhrisbankaccountsqueryparamfields.md
   - docs/models/operations/listhrisbankaccountsrequest.md
   - docs/models/operations/listhrisbankaccountsresponse.md
@@ -1531,6 +1540,9 @@ generatedFiles:
   - docs/models/operations/patchformsformqueryparamfields.md
   - docs/models/operations/patchformsformrequest.md
   - docs/models/operations/patchformsformresponse.md
+  - docs/models/operations/patchhrisattendancequeryparamfields.md
+  - docs/models/operations/patchhrisattendancerequest.md
+  - docs/models/operations/patchhrisattendanceresponse.md
   - docs/models/operations/patchhrisbankaccountqueryparamfields.md
   - docs/models/operations/patchhrisbankaccountrequest.md
   - docs/models/operations/patchhrisbankaccountresponse.md
@@ -1828,6 +1840,8 @@ generatedFiles:
   - docs/models/operations/removedatastoretableresponse.md
   - docs/models/operations/removeformsformrequest.md
   - docs/models/operations/removeformsformresponse.md
+  - docs/models/operations/removehrisattendancerequest.md
+  - docs/models/operations/removehrisattendanceresponse.md
   - docs/models/operations/removehrisbankaccountrequest.md
   - docs/models/operations/removehrisbankaccountresponse.md
   - docs/models/operations/removehrisbenefitrequest.md
@@ -2131,6 +2145,9 @@ generatedFiles:
   - docs/models/operations/updateformsformqueryparamfields.md
   - docs/models/operations/updateformsformrequest.md
   - docs/models/operations/updateformsformresponse.md
+  - docs/models/operations/updatehrisattendancequeryparamfields.md
+  - docs/models/operations/updatehrisattendancerequest.md
+  - docs/models/operations/updatehrisattendanceresponse.md
   - docs/models/operations/updatehrisbankaccountqueryparamfields.md
   - docs/models/operations/updatehrisbankaccountrequest.md
   - docs/models/operations/updatehrisbankaccountresponse.md
@@ -2345,6 +2362,9 @@ generatedFiles:
   - docs/models/shared/accountingjournal.md
   - docs/models/shared/accountingjournallineitem.md
   - docs/models/shared/accountinglineitem.md
+  - docs/models/shared/accountingmetadata.md
+  - docs/models/shared/accountingmetadata1.md
+  - docs/models/shared/accountingmetadata5.md
   - docs/models/shared/accountingorder.md
   - docs/models/shared/accountingorderstatus.md
   - docs/models/shared/accountingordertype.md
@@ -2465,6 +2485,11 @@ generatedFiles:
   - docs/models/shared/atsmetadata.md
   - docs/models/shared/atsmetadata1.md
   - docs/models/shared/atsmetadata5.md
+  - docs/models/shared/atsmetadataextradata.md
+  - docs/models/shared/atsmetadataformat.md
+  - docs/models/shared/atsmetadataschemas1.md
+  - docs/models/shared/atsmetadataschemas5.md
+  - docs/models/shared/atsmetadatavalue.md
   - docs/models/shared/atsoffer.md
   - docs/models/shared/atsofferstatus.md
   - docs/models/shared/atsreference.md
@@ -2640,6 +2665,7 @@ generatedFiles:
   - docs/models/shared/formssubmission.md
   - docs/models/shared/frequency.md
   - docs/models/shared/fromwebhook.md
+  - docs/models/shared/fulfillmenttype.md
   - docs/models/shared/genaicontent.md
   - docs/models/shared/genaiembedding.md
   - docs/models/shared/genaiembeddingcontent.md
@@ -2649,6 +2675,9 @@ generatedFiles:
   - docs/models/shared/goal.md
   - docs/models/shared/grouptype.md
   - docs/models/shared/hostingsource.md
+  - docs/models/shared/hrisattendance.md
+  - docs/models/shared/hrisattendancebreak.md
+  - docs/models/shared/hrisattendancestatus.md
   - docs/models/shared/hrisbankaccount.md
   - docs/models/shared/hrisbenefit.md
   - docs/models/shared/hrisbenefitfrequency.md
@@ -2888,6 +2917,7 @@ generatedFiles:
   - docs/models/shared/paymentlineitem.md
   - docs/models/shared/paymentlink.md
   - docs/models/shared/paymentpayment.md
+  - docs/models/shared/paymentpaymentstatus.md
   - docs/models/shared/paymentpaymenttype.md
   - docs/models/shared/paymentpayout.md
   - docs/models/shared/paymentpayoutstatus.md
@@ -3120,6 +3150,7 @@ generatedFiles:
   - docs/models/shared/propertydatastorequeryresponseaggregates.md
   - docs/models/shared/propertyenrichcompanyaddress.md
   - docs/models/shared/propertyenrichpersonaddress.md
+  - docs/models/shared/propertyhrisattendanceaddress.md
   - docs/models/shared/propertyhriscompanyaddress.md
   - docs/models/shared/propertyhrisemployeeaddress.md
   - docs/models/shared/propertyhrisemployeeemployeeroles.md
@@ -3262,6 +3293,7 @@ generatedFiles:
   - docs/models/shared/taxespaidby.md
   - docs/models/shared/taxexemption.md
   - docs/models/shared/taxmode.md
+  - docs/models/shared/tendertype.md
   - docs/models/shared/term.md
   - docs/models/shared/ticketingcategory.md
   - docs/models/shared/ticketingcustomer.md
@@ -3385,6 +3417,7 @@ generatedFiles:
   - docs/sdks/assessment/README.md
   - docs/sdks/asset/README.md
   - docs/sdks/ats/README.md
+  - docs/sdks/attendance/README.md
   - docs/sdks/auth/README.md
   - docs/sdks/availability/README.md
   - docs/sdks/balancesheet/README.md
@@ -3560,6 +3593,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/assessment.rb
   - lib/unified_ruby_sdk/asset.rb
   - lib/unified_ruby_sdk/ats.rb
+  - lib/unified_ruby_sdk/attendance.rb
   - lib/unified_ruby_sdk/auth.rb
   - lib/unified_ruby_sdk/availability.rb
   - lib/unified_ruby_sdk/balancesheet.rb
@@ -4039,6 +4073,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_request.rbi
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_response.rb
   - lib/unified_ruby_sdk/models/operations/creategenaiprompt_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisattendance_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisattendance_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisattendance_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisattendance_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createhrisattendance_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhrisattendance_response.rbi
   - lib/unified_ruby_sdk/models/operations/createhrisbankaccount_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createhrisbankaccount_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createhrisbankaccount_request.rb
@@ -4879,6 +4919,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_request.rbi
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_response.rb
   - lib/unified_ruby_sdk/models/operations/getgenaimodel_response.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisattendance_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisattendance_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisattendance_request.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisattendance_request.rbi
+  - lib/unified_ruby_sdk/models/operations/gethrisattendance_response.rb
+  - lib/unified_ruby_sdk/models/operations/gethrisattendance_response.rbi
   - lib/unified_ruby_sdk/models/operations/gethrisbankaccount_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/gethrisbankaccount_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/gethrisbankaccount_request.rb
@@ -5843,6 +5889,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_request.rbi
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_response.rb
   - lib/unified_ruby_sdk/models/operations/listgenaimodels_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisattendances_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisattendances_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisattendances_request.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisattendances_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listhrisattendances_response.rb
+  - lib/unified_ruby_sdk/models/operations/listhrisattendances_response.rbi
   - lib/unified_ruby_sdk/models/operations/listhrisbankaccounts_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listhrisbankaccounts_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listhrisbankaccounts_request.rb
@@ -6653,6 +6705,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchformsform_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchformsform_response.rb
   - lib/unified_ruby_sdk/models/operations/patchformsform_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisattendance_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisattendance_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisattendance_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisattendance_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchhrisattendance_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchhrisattendance_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrisbankaccount_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchhrisbankaccount_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchhrisbankaccount_request.rb
@@ -7247,6 +7305,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeformsform_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeformsform_response.rb
   - lib/unified_ruby_sdk/models/operations/removeformsform_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removehrisattendance_request.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisattendance_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removehrisattendance_response.rb
+  - lib/unified_ruby_sdk/models/operations/removehrisattendance_response.rbi
   - lib/unified_ruby_sdk/models/operations/removehrisbankaccount_request.rb
   - lib/unified_ruby_sdk/models/operations/removehrisbankaccount_request.rbi
   - lib/unified_ruby_sdk/models/operations/removehrisbankaccount_response.rb
@@ -7853,6 +7915,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateformsform_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateformsform_response.rb
   - lib/unified_ruby_sdk/models/operations/updateformsform_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisattendance_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisattendance_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisattendance_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisattendance_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatehrisattendance_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatehrisattendance_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrisbankaccount_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatehrisbankaccount_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatehrisbankaccount_request.rb
@@ -8284,6 +8352,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingjournallineitem.rbi
   - lib/unified_ruby_sdk/models/shared/accountinglineitem.rb
   - lib/unified_ruby_sdk/models/shared/accountinglineitem.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingmetadata.rb
+  - lib/unified_ruby_sdk/models/shared/accountingmetadata.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingmetadata_1.rb
+  - lib/unified_ruby_sdk/models/shared/accountingmetadata_1.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingmetadata_5.rb
+  - lib/unified_ruby_sdk/models/shared/accountingmetadata_5.rbi
   - lib/unified_ruby_sdk/models/shared/accountingorder.rb
   - lib/unified_ruby_sdk/models/shared/accountingorder.rbi
   - lib/unified_ruby_sdk/models/shared/accountingorder_status.rb
@@ -8522,6 +8596,16 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/atsmetadata_1.rbi
   - lib/unified_ruby_sdk/models/shared/atsmetadata_5.rb
   - lib/unified_ruby_sdk/models/shared/atsmetadata_5.rbi
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_extra_data.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_extra_data.rbi
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_format.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_format.rbi
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_1.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_1.rbi
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_5.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_schemas_5.rbi
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_value.rb
+  - lib/unified_ruby_sdk/models/shared/atsmetadata_value.rbi
   - lib/unified_ruby_sdk/models/shared/atsoffer.rb
   - lib/unified_ruby_sdk/models/shared/atsoffer.rbi
   - lib/unified_ruby_sdk/models/shared/atsoffer_status.rb
@@ -8872,6 +8956,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/frequency.rbi
   - lib/unified_ruby_sdk/models/shared/from_webhook.rb
   - lib/unified_ruby_sdk/models/shared/from_webhook.rbi
+  - lib/unified_ruby_sdk/models/shared/fulfillment_type.rb
+  - lib/unified_ruby_sdk/models/shared/fulfillment_type.rbi
   - lib/unified_ruby_sdk/models/shared/genaicontent.rb
   - lib/unified_ruby_sdk/models/shared/genaicontent.rbi
   - lib/unified_ruby_sdk/models/shared/genaiembedding.rb
@@ -8890,6 +8976,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/group_type.rbi
   - lib/unified_ruby_sdk/models/shared/hosting_source.rb
   - lib/unified_ruby_sdk/models/shared/hosting_source.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisattendance.rb
+  - lib/unified_ruby_sdk/models/shared/hrisattendance.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisattendance_status.rb
+  - lib/unified_ruby_sdk/models/shared/hrisattendance_status.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisattendancebreak.rb
+  - lib/unified_ruby_sdk/models/shared/hrisattendancebreak.rbi
   - lib/unified_ruby_sdk/models/shared/hrisbankaccount.rb
   - lib/unified_ruby_sdk/models/shared/hrisbankaccount.rbi
   - lib/unified_ruby_sdk/models/shared/hrisbenefit.rb
@@ -9372,6 +9464,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/paymentlink.rbi
   - lib/unified_ruby_sdk/models/shared/paymentpayment.rb
   - lib/unified_ruby_sdk/models/shared/paymentpayment.rbi
+  - lib/unified_ruby_sdk/models/shared/paymentpayment_status.rb
+  - lib/unified_ruby_sdk/models/shared/paymentpayment_status.rbi
   - lib/unified_ruby_sdk/models/shared/paymentpayment_type.rb
   - lib/unified_ruby_sdk/models/shared/paymentpayment_type.rbi
   - lib/unified_ruby_sdk/models/shared/paymentpayout.rb
@@ -9832,6 +9926,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_enrichcompany_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_enrichperson_address.rb
   - lib/unified_ruby_sdk/models/shared/property_enrichperson_address.rbi
+  - lib/unified_ruby_sdk/models/shared/property_hrisattendance_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_hrisattendance_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_hriscompany_address.rb
   - lib/unified_ruby_sdk/models/shared/property_hriscompany_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_hrisemployee_address.rb
@@ -10116,6 +10212,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/tax_mode.rbi
   - lib/unified_ruby_sdk/models/shared/taxes_paid_by.rb
   - lib/unified_ruby_sdk/models/shared/taxes_paid_by.rbi
+  - lib/unified_ruby_sdk/models/shared/tender_type.rb
+  - lib/unified_ruby_sdk/models/shared/tender_type.rbi
   - lib/unified_ruby_sdk/models/shared/term.rb
   - lib/unified_ruby_sdk/models/shared/term.rbi
   - lib/unified_ruby_sdk/models/shared/ticketingcategory.rb
@@ -24150,5 +24248,60 @@ examples:
       responses:
         "200":
           application/json: {}
+  createHrisAttendance:
+    speakeasy-default-create-hris-attendance:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"employee_user_id": "<id>", "end_at": "2026-07-01T14:10:09.942Z", "start_at": "2026-03-31T03:51:43.280Z"}
+      responses:
+        "200":
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-02-26T14:26:30.939Z", "start_at": "2024-05-07T11:59:04.560Z"}
+  getHrisAttendance:
+    speakeasy-default-get-hris-attendance:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-07-21T21:50:35.928Z", "start_at": "2025-06-20T02:50:25.238Z"}
+  listHrisAttendances:
+    speakeasy-default-list-hris-attendances:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"employee_user_id": "<id>", "end_at": "2026-04-08T08:38:41.327Z", "start_at": "2025-03-31T01:03:05.799Z"}]
+  patchHrisAttendance:
+    speakeasy-default-patch-hris-attendance:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"employee_user_id": "<id>", "end_at": "2024-09-28T22:23:28.906Z", "start_at": "2025-01-18T09:17:09.936Z"}
+      responses:
+        "200":
+          application/json: {"employee_user_id": "<id>", "end_at": "2024-05-07T22:29:38.093Z", "start_at": "2025-01-28T03:44:11.402Z"}
+  removeHrisAttendance:
+    speakeasy-default-remove-hris-attendance:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateHrisAttendance:
+    speakeasy-default-update-hris-attendance:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {"employee_user_id": "<id>", "end_at": "2024-07-06T19:51:15.352Z", "start_at": "2024-05-22T08:12:53.996Z"}
+      responses:
+        "200":
+          application/json: {"employee_user_id": "<id>", "end_at": "2025-02-07T06:39:13.305Z", "start_at": "2025-09-24T00:00:27.827Z"}
 examplesVersion: 1.0.2
 generatedTests: {}

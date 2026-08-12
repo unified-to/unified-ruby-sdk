@@ -42,6 +42,8 @@ module UnifiedRubySDK
 
         field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
@@ -74,8 +76,8 @@ module UnifiedRubySDK
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(applications: T.nilable(T::Array[Models::Shared::AccountingCreditApplication]), apply_amount: T.nilable(::Float), attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), balance_amount: T.nilable(::Float), cancelled_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), creditmemo_number: T.nilable(::String), currency: T.nilable(::String), discount_amount: T.nilable(::Float), due_at: T.nilable(::DateTime), id: T.nilable(::String), invoice_id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), notes: T.nilable(::String), organization_id: T.nilable(::String), paid_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_collection_method: T.nilable(Models::Shared::AccountingCreditmemoPaymentCollectionMethod), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), refund_amount: T.nilable(::Float), refund_reason: T.nilable(::String), refunded_at: T.nilable(::DateTime), send: T.nilable(T::Boolean), status: T.nilable(Models::Shared::AccountingCreditmemoStatus), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(applications: nil, apply_amount: nil, attachments: nil, balance_amount: nil, cancelled_at: nil, contact_id: nil, created_at: nil, creditmemo_number: nil, currency: nil, discount_amount: nil, due_at: nil, id: nil, invoice_id: nil, lineitems: nil, notes: nil, organization_id: nil, paid_amount: nil, paid_at: nil, payment_collection_method: nil, posted_at: nil, raw: nil, refund_amount: nil, refund_reason: nil, refunded_at: nil, send: nil, status: nil, tax_amount: nil, total_amount: nil, updated_at: nil, url: nil)
+        sig { params(applications: T.nilable(T::Array[Models::Shared::AccountingCreditApplication]), apply_amount: T.nilable(::Float), attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), balance_amount: T.nilable(::Float), cancelled_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), creditmemo_number: T.nilable(::String), currency: T.nilable(::String), discount_amount: T.nilable(::Float), due_at: T.nilable(::DateTime), id: T.nilable(::String), invoice_id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), notes: T.nilable(::String), organization_id: T.nilable(::String), paid_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_collection_method: T.nilable(Models::Shared::AccountingCreditmemoPaymentCollectionMethod), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), refund_amount: T.nilable(::Float), refund_reason: T.nilable(::String), refunded_at: T.nilable(::DateTime), send: T.nilable(T::Boolean), status: T.nilable(Models::Shared::AccountingCreditmemoStatus), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(applications: nil, apply_amount: nil, attachments: nil, balance_amount: nil, cancelled_at: nil, contact_id: nil, created_at: nil, creditmemo_number: nil, currency: nil, discount_amount: nil, due_at: nil, id: nil, invoice_id: nil, lineitems: nil, metadata: nil, notes: nil, organization_id: nil, paid_amount: nil, paid_at: nil, payment_collection_method: nil, posted_at: nil, raw: nil, refund_amount: nil, refund_reason: nil, refunded_at: nil, send: nil, status: nil, tax_amount: nil, total_amount: nil, updated_at: nil, url: nil)
           @applications = applications
           @apply_amount = apply_amount
           @attachments = attachments
@@ -90,6 +92,7 @@ module UnifiedRubySDK
           @id = id
           @invoice_id = invoice_id
           @lineitems = lineitems
+          @metadata = metadata
           @notes = notes
           @organization_id = organization_id
           @paid_amount = paid_amount
@@ -125,6 +128,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @invoice_id == other.invoice_id
           return false unless @lineitems == other.lineitems
+          return false unless @metadata == other.metadata
           return false unless @notes == other.notes
           return false unless @organization_id == other.organization_id
           return false unless @paid_amount == other.paid_amount

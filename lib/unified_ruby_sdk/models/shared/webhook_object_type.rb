@@ -79,6 +79,7 @@ module UnifiedRubySDK
           HRIS_LOCATION = new('hris_location')
           HRIS_DEVICE = new('hris_device')
           HRIS_TIMESHIFT = new('hris_timeshift')
+          HRIS_ATTENDANCE = new('hris_attendance')
           HRIS_DEDUCTION = new('hris_deduction')
           HRIS_BENEFIT = new('hris_benefit')
           HRIS_BANKACCOUNT = new('hris_bankaccount')

@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::AccountingCategory
   def id=(str_); end
   def is_active(); end
   def is_active=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end

@@ -58,6 +58,8 @@ module UnifiedRubySDK
 
         field :manager_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('manager_user_id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :minutes_logged, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('minutes_logged') } }
 
         field :minutes_to_be_invoiced, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('minutes_to_be_invoiced') } }
@@ -80,8 +82,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(actual_cost_amount: T.nilable(::Float), billing_type: T.nilable(Models::Shared::BillingType), category_ids: T.nilable(T::Array[::String]), code: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), credit_note_amount: T.nilable(::Float), currency: T.nilable(::String), deposit_amount: T.nilable(::Float), deposit_applied_amount: T.nilable(::Float), description: T.nilable(::String), due_at: T.nilable(::DateTime), ended_at: T.nilable(::DateTime), estimate_amount: T.nilable(::Float), estimated_cost_amount: T.nilable(::Float), expense_amount: T.nilable(::Float), id: T.nilable(::String), invoiced_amount: T.nilable(::Float), is_active: T.nilable(T::Boolean), is_billable: T.nilable(T::Boolean), location_id: T.nilable(::String), manager_user_id: T.nilable(::String), minutes_logged: T.nilable(::Float), minutes_to_be_invoiced: T.nilable(::Float), name: T.nilable(::String), organization_id: T.nilable(::String), parent_id: T.nilable(::String), percent_complete: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AccountingProjectStatus), to_be_invoiced_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(actual_cost_amount: nil, billing_type: nil, category_ids: nil, code: nil, contact_id: nil, created_at: nil, credit_note_amount: nil, currency: nil, deposit_amount: nil, deposit_applied_amount: nil, description: nil, due_at: nil, ended_at: nil, estimate_amount: nil, estimated_cost_amount: nil, expense_amount: nil, id: nil, invoiced_amount: nil, is_active: nil, is_billable: nil, location_id: nil, manager_user_id: nil, minutes_logged: nil, minutes_to_be_invoiced: nil, name: nil, organization_id: nil, parent_id: nil, percent_complete: nil, raw: nil, started_at: nil, status: nil, to_be_invoiced_amount: nil, updated_at: nil)
+        sig { params(actual_cost_amount: T.nilable(::Float), billing_type: T.nilable(Models::Shared::BillingType), category_ids: T.nilable(T::Array[::String]), code: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), credit_note_amount: T.nilable(::Float), currency: T.nilable(::String), deposit_amount: T.nilable(::Float), deposit_applied_amount: T.nilable(::Float), description: T.nilable(::String), due_at: T.nilable(::DateTime), ended_at: T.nilable(::DateTime), estimate_amount: T.nilable(::Float), estimated_cost_amount: T.nilable(::Float), expense_amount: T.nilable(::Float), id: T.nilable(::String), invoiced_amount: T.nilable(::Float), is_active: T.nilable(T::Boolean), is_billable: T.nilable(T::Boolean), location_id: T.nilable(::String), manager_user_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), minutes_logged: T.nilable(::Float), minutes_to_be_invoiced: T.nilable(::Float), name: T.nilable(::String), organization_id: T.nilable(::String), parent_id: T.nilable(::String), percent_complete: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AccountingProjectStatus), to_be_invoiced_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(actual_cost_amount: nil, billing_type: nil, category_ids: nil, code: nil, contact_id: nil, created_at: nil, credit_note_amount: nil, currency: nil, deposit_amount: nil, deposit_applied_amount: nil, description: nil, due_at: nil, ended_at: nil, estimate_amount: nil, estimated_cost_amount: nil, expense_amount: nil, id: nil, invoiced_amount: nil, is_active: nil, is_billable: nil, location_id: nil, manager_user_id: nil, metadata: nil, minutes_logged: nil, minutes_to_be_invoiced: nil, name: nil, organization_id: nil, parent_id: nil, percent_complete: nil, raw: nil, started_at: nil, status: nil, to_be_invoiced_amount: nil, updated_at: nil)
           @actual_cost_amount = actual_cost_amount
           @billing_type = billing_type
           @category_ids = category_ids
@@ -104,6 +106,7 @@ module UnifiedRubySDK
           @is_billable = is_billable
           @location_id = location_id
           @manager_user_id = manager_user_id
+          @metadata = metadata
           @minutes_logged = minutes_logged
           @minutes_to_be_invoiced = minutes_to_be_invoiced
           @name = name
@@ -142,6 +145,7 @@ module UnifiedRubySDK
           return false unless @is_billable == other.is_billable
           return false unless @location_id == other.location_id
           return false unless @manager_user_id == other.manager_user_id
+          return false unless @metadata == other.metadata
           return false unless @minutes_logged == other.minutes_logged
           return false unless @minutes_to_be_invoiced == other.minutes_to_be_invoiced
           return false unless @name == other.name

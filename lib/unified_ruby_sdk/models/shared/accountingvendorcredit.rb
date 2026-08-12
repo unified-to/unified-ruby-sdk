@@ -36,6 +36,8 @@ module UnifiedRubySDK
 
         field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
@@ -50,8 +52,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), applications: T.nilable(T::Array[Models::Shared::AccountingCreditApplication]), apply_amount: T.nilable(::Float), balance_amount: T.nilable(::Float), bill_id: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), due_at: T.nilable(::DateTime), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), notes: T.nilable(::String), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AccountingVendorcreditStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, applications: nil, apply_amount: nil, balance_amount: nil, bill_id: nil, contact_id: nil, created_at: nil, currency: nil, due_at: nil, id: nil, lineitems: nil, notes: nil, organization_id: nil, posted_at: nil, raw: nil, status: nil, total_amount: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), applications: T.nilable(T::Array[Models::Shared::AccountingCreditApplication]), apply_amount: T.nilable(::Float), balance_amount: T.nilable(::Float), bill_id: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), due_at: T.nilable(::DateTime), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), notes: T.nilable(::String), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AccountingVendorcreditStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, applications: nil, apply_amount: nil, balance_amount: nil, bill_id: nil, contact_id: nil, created_at: nil, currency: nil, due_at: nil, id: nil, lineitems: nil, metadata: nil, notes: nil, organization_id: nil, posted_at: nil, raw: nil, status: nil, total_amount: nil, updated_at: nil)
           @account_id = account_id
           @applications = applications
           @apply_amount = apply_amount
@@ -63,6 +65,7 @@ module UnifiedRubySDK
           @due_at = due_at
           @id = id
           @lineitems = lineitems
+          @metadata = metadata
           @notes = notes
           @organization_id = organization_id
           @posted_at = posted_at
@@ -86,6 +89,7 @@ module UnifiedRubySDK
           return false unless @due_at == other.due_at
           return false unless @id == other.id
           return false unless @lineitems == other.lineitems
+          return false unless @metadata == other.metadata
           return false unless @notes == other.notes
           return false unless @organization_id == other.organization_id
           return false unless @posted_at == other.posted_at

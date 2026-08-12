@@ -28,8 +28,17 @@ module UnifiedRubySDK
           ACCOUNT_ID = new('account_id')
           REFERENCE = new('reference')
           ORGANIZATION_ID = new('organization_id')
-          RAW = new('raw')
           ALLOCATIONS = new('allocations')
+          STATUS = new('status')
+          SALESORDER_ID = new('salesorder_id')
+          TENDER_TYPE = new('tender_type')
+          TIP_AMOUNT = new('tip_amount')
+          FEE_AMOUNT = new('fee_amount')
+          LOCATION_ID = new('location_id')
+          DEVICE_ID = new('device_id')
+          CARD_BRAND = new('card_brand')
+          CARD_LAST4 = new('card_last4')
+          RAW = new('raw')
         end
       end
     end

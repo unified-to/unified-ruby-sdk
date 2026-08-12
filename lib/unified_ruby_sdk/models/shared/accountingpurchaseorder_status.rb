@@ -22,6 +22,9 @@ module UnifiedRubySDK
           REFUNDED = new('REFUNDED')
           SUBMITTED = new('SUBMITTED')
           DELETED = new('DELETED')
+          OPEN = new('OPEN')
+          COMPLETED = new('COMPLETED')
+          CANCELED = new('CANCELED')
         end
       end
     end

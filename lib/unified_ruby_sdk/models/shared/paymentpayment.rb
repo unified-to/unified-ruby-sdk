@@ -20,15 +20,25 @@ module UnifiedRubySDK
 
         field :bill_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bill_id') } }
 
+        field :card_brand, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('card_brand') } }
+
+        field :card_last4, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('card_last4') } }
+
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
+        field :device_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('device_id') } }
+
+        field :fee_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fee_amount') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :invoice_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('invoice_id') } }
 
         field :link_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_id') } }
+
+        field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
 
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
@@ -40,6 +50,14 @@ module UnifiedRubySDK
 
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
+        field :salesorder_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('salesorder_id') } }
+
+        field :status, Crystalline::Nilable.new(Models::Shared::PaymentPaymentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentPaymentStatus, true) } }
+
+        field :tender_type, Crystalline::Nilable.new(Models::Shared::TenderType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tender_type'), 'decoder': Utils.enum_from_string(Models::Shared::TenderType, true) } }
+
+        field :tip_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tip_amount') } }
+
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::PaymentPaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentPaymentType, true) } }
@@ -48,21 +66,30 @@ module UnifiedRubySDK
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        sig { params(account_id: T.nilable(::String), allocations: T.nilable(T::Array[Models::Shared::PaymentAllocation]), bill_id: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), invoice_id: T.nilable(::String), link_id: T.nilable(::String), notes: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::PaymentPaymentType), updated_at: T.nilable(::DateTime), currency: T.nilable(::String)).void }
-        def initialize(account_id: nil, allocations: nil, bill_id: nil, contact_id: nil, created_at: nil, id: nil, invoice_id: nil, link_id: nil, notes: nil, organization_id: nil, payment_method: nil, raw: nil, reference: nil, total_amount: nil, type: nil, updated_at: nil, currency: 'USD')
+        sig { params(account_id: T.nilable(::String), allocations: T.nilable(T::Array[Models::Shared::PaymentAllocation]), bill_id: T.nilable(::String), card_brand: T.nilable(::String), card_last4: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), device_id: T.nilable(::String), fee_amount: T.nilable(::Float), id: T.nilable(::String), invoice_id: T.nilable(::String), link_id: T.nilable(::String), location_id: T.nilable(::String), notes: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), salesorder_id: T.nilable(::String), status: T.nilable(Models::Shared::PaymentPaymentStatus), tender_type: T.nilable(Models::Shared::TenderType), tip_amount: T.nilable(::Float), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::PaymentPaymentType), updated_at: T.nilable(::DateTime), currency: T.nilable(::String)).void }
+        def initialize(account_id: nil, allocations: nil, bill_id: nil, card_brand: nil, card_last4: nil, contact_id: nil, created_at: nil, device_id: nil, fee_amount: nil, id: nil, invoice_id: nil, link_id: nil, location_id: nil, notes: nil, organization_id: nil, payment_method: nil, raw: nil, reference: nil, salesorder_id: nil, status: nil, tender_type: nil, tip_amount: nil, total_amount: nil, type: nil, updated_at: nil, currency: 'USD')
           @account_id = account_id
           @allocations = allocations
           @bill_id = bill_id
+          @card_brand = card_brand
+          @card_last4 = card_last4
           @contact_id = contact_id
           @created_at = created_at
+          @device_id = device_id
+          @fee_amount = fee_amount
           @id = id
           @invoice_id = invoice_id
           @link_id = link_id
+          @location_id = location_id
           @notes = notes
           @organization_id = organization_id
           @payment_method = payment_method
           @raw = raw
           @reference = reference
+          @salesorder_id = salesorder_id
+          @status = status
+          @tender_type = tender_type
+          @tip_amount = tip_amount
           @total_amount = total_amount
           @type = type
           @updated_at = updated_at
@@ -75,16 +102,25 @@ module UnifiedRubySDK
           return false unless @account_id == other.account_id
           return false unless @allocations == other.allocations
           return false unless @bill_id == other.bill_id
+          return false unless @card_brand == other.card_brand
+          return false unless @card_last4 == other.card_last4
           return false unless @contact_id == other.contact_id
           return false unless @created_at == other.created_at
+          return false unless @device_id == other.device_id
+          return false unless @fee_amount == other.fee_amount
           return false unless @id == other.id
           return false unless @invoice_id == other.invoice_id
           return false unless @link_id == other.link_id
+          return false unless @location_id == other.location_id
           return false unless @notes == other.notes
           return false unless @organization_id == other.organization_id
           return false unless @payment_method == other.payment_method
           return false unless @raw == other.raw
           return false unless @reference == other.reference
+          return false unless @salesorder_id == other.salesorder_id
+          return false unless @status == other.status
+          return false unless @tender_type == other.tender_type
+          return false unless @tip_amount == other.tip_amount
           return false unless @total_amount == other.total_amount
           return false unless @type == other.type
           return false unless @updated_at == other.updated_at

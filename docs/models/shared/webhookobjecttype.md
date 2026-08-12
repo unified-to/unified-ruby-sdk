@@ -71,6 +71,7 @@
 | `HRIS_LOCATION`             | hris_location               |
 | `HRIS_DEVICE`               | hris_device                 |
 | `HRIS_TIMESHIFT`            | hris_timeshift              |
+| `HRIS_ATTENDANCE`           | hris_attendance             |
 | `HRIS_DEDUCTION`            | hris_deduction              |
 | `HRIS_BENEFIT`              | hris_benefit                |
 | `HRIS_BANKACCOUNT`          | hris_bankaccount            |

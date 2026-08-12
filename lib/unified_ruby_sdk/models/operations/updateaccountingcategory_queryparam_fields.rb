@@ -23,6 +23,7 @@ module UnifiedRubySDK
           TYPE = new('type')
           CODE = new('code')
           ORGANIZATION_ID = new('organization_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

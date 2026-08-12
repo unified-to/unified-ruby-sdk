@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::AccountingVendorcredit
   def id=(str_); end
   def lineitems(); end
   def lineitems=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def notes(); end
   def notes=(str_); end
   def organization_id(); end

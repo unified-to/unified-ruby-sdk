@@ -48,6 +48,8 @@ module UnifiedRubySDK
 
         field :memo, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('memo') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
 
         field :payment_terms, Crystalline::Nilable.new(Models::Shared::AccountingQuotePaymentTerms), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_terms'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingQuotePaymentTerms, true) } }
@@ -80,8 +82,8 @@ module UnifiedRubySDK
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(accepted_at: T.nilable(::DateTime), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::AccountingTransactionContact]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), currency_rate: T.nilable(::Float), customer_message: T.nilable(::String), declined_at: T.nilable(::DateTime), discount_amount: T.nilable(::Float), expires_at: T.nilable(::DateTime), group_id: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), issued_at: T.nilable(::DateTime), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), memo: T.nilable(::String), organization_id: T.nilable(::String), payment_terms: T.nilable(Models::Shared::AccountingQuotePaymentTerms), project_id: T.nilable(::String), quote_number: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), sent_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AccountingQuoteStatus), sub_total_amount: T.nilable(::Float), summary: T.nilable(::String), tax_amount: T.nilable(::Float), tax_mode: T.nilable(Models::Shared::TaxMode), title: T.nilable(::String), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(accepted_at: nil, category_ids: nil, contact_id: nil, contacts: nil, created_at: nil, currency: nil, currency_rate: nil, customer_message: nil, declined_at: nil, discount_amount: nil, expires_at: nil, group_id: nil, id: nil, invoice_id: nil, issued_at: nil, lineitems: nil, memo: nil, organization_id: nil, payment_terms: nil, project_id: nil, quote_number: nil, raw: nil, reference: nil, sent_at: nil, status: nil, sub_total_amount: nil, summary: nil, tax_amount: nil, tax_mode: nil, title: nil, total_amount: nil, updated_at: nil, url: nil)
+        sig { params(accepted_at: T.nilable(::DateTime), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::AccountingTransactionContact]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), currency_rate: T.nilable(::Float), customer_message: T.nilable(::String), declined_at: T.nilable(::DateTime), discount_amount: T.nilable(::Float), expires_at: T.nilable(::DateTime), group_id: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), issued_at: T.nilable(::DateTime), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), memo: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), organization_id: T.nilable(::String), payment_terms: T.nilable(Models::Shared::AccountingQuotePaymentTerms), project_id: T.nilable(::String), quote_number: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), sent_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AccountingQuoteStatus), sub_total_amount: T.nilable(::Float), summary: T.nilable(::String), tax_amount: T.nilable(::Float), tax_mode: T.nilable(Models::Shared::TaxMode), title: T.nilable(::String), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(accepted_at: nil, category_ids: nil, contact_id: nil, contacts: nil, created_at: nil, currency: nil, currency_rate: nil, customer_message: nil, declined_at: nil, discount_amount: nil, expires_at: nil, group_id: nil, id: nil, invoice_id: nil, issued_at: nil, lineitems: nil, memo: nil, metadata: nil, organization_id: nil, payment_terms: nil, project_id: nil, quote_number: nil, raw: nil, reference: nil, sent_at: nil, status: nil, sub_total_amount: nil, summary: nil, tax_amount: nil, tax_mode: nil, title: nil, total_amount: nil, updated_at: nil, url: nil)
           @accepted_at = accepted_at
           @category_ids = category_ids
           @contact_id = contact_id
@@ -99,6 +101,7 @@ module UnifiedRubySDK
           @issued_at = issued_at
           @lineitems = lineitems
           @memo = memo
+          @metadata = metadata
           @organization_id = organization_id
           @payment_terms = payment_terms
           @project_id = project_id
@@ -137,6 +140,7 @@ module UnifiedRubySDK
           return false unless @issued_at == other.issued_at
           return false unless @lineitems == other.lineitems
           return false unless @memo == other.memo
+          return false unless @metadata == other.metadata
           return false unless @organization_id == other.organization_id
           return false unless @payment_terms == other.payment_terms
           return false unless @project_id == other.project_id

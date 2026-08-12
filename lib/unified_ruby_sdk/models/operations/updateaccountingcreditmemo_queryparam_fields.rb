@@ -42,6 +42,7 @@ module UnifiedRubySDK
           ORGANIZATION_ID = new('organization_id')
           APPLY_AMOUNT = new('apply_amount')
           APPLICATIONS = new('applications')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

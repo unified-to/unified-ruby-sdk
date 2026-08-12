@@ -45,6 +45,7 @@ module UnifiedRubySDK
           CATEGORY_IDS = new('category_ids')
           URL = new('url')
           ORGANIZATION_ID = new('organization_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end
