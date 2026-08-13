@@ -30,7 +30,7 @@ module UnifiedRubySDK
         # @deprecated; use instructors
         field :instructor_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructor_ids') } }
 
-        field :instructors, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsInstructor)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructors') } }
+        field :instructors, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructors') } }
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
@@ -54,13 +54,13 @@ module UnifiedRubySDK
         # @deprecated; use students
         field :student_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('student_ids') } }
 
-        field :students, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsStudent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('students') } }
+        field :students, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('students') } }
 
         field :time_estimate_minutes, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('time_estimate_minutes') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(categories: T.nilable(T::Array[::String]), content_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), duration_minutes: T.nilable(::Float), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), instructors: T.nilable(T::Array[Models::Shared::LmsInstructor]), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), price_amount: T.nilable(::Float), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[::String]), student_ids: T.nilable(T::Array[::String]), students: T.nilable(T::Array[Models::Shared::LmsStudent]), time_estimate_minutes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(categories: T.nilable(T::Array[::String]), content_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), duration_minutes: T.nilable(::Float), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), price_amount: T.nilable(::Float), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[::String]), student_ids: T.nilable(T::Array[::String]), students: T.nilable(T::Array[Models::Shared::LmsReference]), time_estimate_minutes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(categories: nil, content_ids: nil, created_at: nil, currency: nil, description: nil, duration_minutes: nil, id: nil, instructor_ids: nil, instructors: nil, is_active: nil, is_private: nil, languages: nil, media: nil, name: nil, price_amount: nil, provider_name: nil, published_at: nil, raw: nil, skills: nil, student_ids: nil, students: nil, time_estimate_minutes: nil, updated_at: nil)
           @categories = categories
           @content_ids = content_ids

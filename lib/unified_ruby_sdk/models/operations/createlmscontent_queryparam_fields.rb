@@ -32,10 +32,11 @@ module UnifiedRubySDK
           SORT_ORDER = new('sort_order')
           PROVIDER_NAME = new('provider_name')
           SHORT_DESCRIPTION = new('short_description')
-          PUBLISHED_AT = new('published_at')
           LOCALIZATIONS = new('localizations')
           INSTRUCTOR_IDS = new('instructor_ids')
           COLLECTION_IDS = new('collection_ids')
+          INSTRUCTORS = new('instructors')
+          PUBLISHED_AT = new('published_at')
           RAW = new('raw')
         end
       end

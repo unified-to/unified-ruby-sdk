@@ -31,8 +31,10 @@ module UnifiedRubySDK
         field :external_reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_reference') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # @deprecated; use instructors
         field :instructor_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructor_ids') } }
+
+        field :instructors, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructors') } }
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
@@ -62,8 +64,8 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(categories: T.nilable(T::Array[::String]), collection_ids: T.nilable(T::Array[::String]), course_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), difficulty: T.nilable(::String), duration_minutes: T.nilable(::Float), external_reference: T.nilable(::String), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), is_active: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), localizations: T.nilable(T::Array[Models::Shared::LmsContentLocalization]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), short_description: T.nilable(::String), skills: T.nilable(T::Array[::String]), sort_order: T.nilable(::Float), subjects: T.nilable(T::Array[Models::Shared::LmsSubject]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(categories: nil, collection_ids: nil, course_ids: nil, created_at: nil, description: nil, difficulty: nil, duration_minutes: nil, external_reference: nil, id: nil, instructor_ids: nil, is_active: nil, languages: nil, localizations: nil, media: nil, name: nil, provider_name: nil, published_at: nil, raw: nil, short_description: nil, skills: nil, sort_order: nil, subjects: nil, tags: nil, updated_at: nil)
+        sig { params(categories: T.nilable(T::Array[::String]), collection_ids: T.nilable(T::Array[::String]), course_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), difficulty: T.nilable(::String), duration_minutes: T.nilable(::Float), external_reference: T.nilable(::String), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), is_active: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), localizations: T.nilable(T::Array[Models::Shared::LmsContentLocalization]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), short_description: T.nilable(::String), skills: T.nilable(T::Array[::String]), sort_order: T.nilable(::Float), subjects: T.nilable(T::Array[Models::Shared::LmsSubject]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(categories: nil, collection_ids: nil, course_ids: nil, created_at: nil, description: nil, difficulty: nil, duration_minutes: nil, external_reference: nil, id: nil, instructor_ids: nil, instructors: nil, is_active: nil, languages: nil, localizations: nil, media: nil, name: nil, provider_name: nil, published_at: nil, raw: nil, short_description: nil, skills: nil, sort_order: nil, subjects: nil, tags: nil, updated_at: nil)
           @categories = categories
           @collection_ids = collection_ids
           @course_ids = course_ids
@@ -74,6 +76,7 @@ module UnifiedRubySDK
           @external_reference = external_reference
           @id = id
           @instructor_ids = instructor_ids
+          @instructors = instructors
           @is_active = is_active
           @languages = languages
           @localizations = localizations
@@ -103,6 +106,7 @@ module UnifiedRubySDK
           return false unless @external_reference == other.external_reference
           return false unless @id == other.id
           return false unless @instructor_ids == other.instructor_ids
+          return false unless @instructors == other.instructors
           return false unless @is_active == other.is_active
           return false unless @languages == other.languages
           return false unless @localizations == other.localizations

@@ -23,6 +23,8 @@ module UnifiedRubySDK
           INSTRUCTOR_IDS = new('instructor_ids')
           STUDENT_IDS = new('student_ids')
           LANGUAGES = new('languages')
+          INSTRUCTORS = new('instructors')
+          STUDENTS = new('students')
           RAW = new('raw')
         end
       end

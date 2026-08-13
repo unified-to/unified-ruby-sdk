@@ -25,6 +25,6 @@
 | `SKILLS`                | skills                  |
 | `DURATION_MINUTES`      | duration_minutes        |
 | `PROVIDER_NAME`         | provider_name           |
-| `RAW`                   | raw                     |
 | `PUBLISHED_AT`          | published_at            |
 | `TIME_ESTIMATE_MINUTES` | time_estimate_minutes   |
+| `RAW`                   | raw                     |

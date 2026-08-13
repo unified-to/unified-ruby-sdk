@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::LmsClass
   def id=(str_); end
   def instructor_ids(); end
   def instructor_ids=(str_); end
+  def instructors(); end
+  def instructors=(str_); end
   def languages(); end
   def languages=(str_); end
   def media(); end
@@ -28,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::LmsClass
   def raw=(str_); end
   def student_ids(); end
   def student_ids=(str_); end
+  def students(); end
+  def students=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
 end

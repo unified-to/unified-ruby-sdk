@@ -404,6 +404,7 @@ module UnifiedRubySDK
       autoload :LmsInstructor, 'unified_ruby_sdk/models/shared/lmsinstructor.rb'
       autoload :LmsMedia, 'unified_ruby_sdk/models/shared/lmsmedia.rb'
       autoload :LmsMediaType, 'unified_ruby_sdk/models/shared/lmsmedia_type.rb'
+      autoload :LmsReference, 'unified_ruby_sdk/models/shared/lmsreference.rb'
       autoload :LmsStudent, 'unified_ruby_sdk/models/shared/lmsstudent.rb'
       autoload :LmsSubject, 'unified_ruby_sdk/models/shared/lmssubject.rb'
       autoload :LmsTelephone, 'unified_ruby_sdk/models/shared/lmstelephone.rb'

@@ -21,8 +21,10 @@ module UnifiedRubySDK
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # @deprecated; use instructors
         field :instructor_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructor_ids') } }
+
+        field :instructors, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructors') } }
 
         field :languages, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('languages') } }
 
@@ -31,23 +33,27 @@ module UnifiedRubySDK
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # @deprecated; use students
         field :student_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('student_ids') } }
+
+        field :students, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('students') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(course_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), student_ids: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(course_id: nil, created_at: nil, description: nil, id: nil, instructor_ids: nil, languages: nil, media: nil, name: nil, raw: nil, student_ids: nil, updated_at: nil)
+        sig { params(course_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), instructor_ids: T.nilable(T::Array[::String]), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), student_ids: T.nilable(T::Array[::String]), students: T.nilable(T::Array[Models::Shared::LmsReference]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(course_id: nil, created_at: nil, description: nil, id: nil, instructor_ids: nil, instructors: nil, languages: nil, media: nil, name: nil, raw: nil, student_ids: nil, students: nil, updated_at: nil)
           @course_id = course_id
           @created_at = created_at
           @description = description
           @id = id
           @instructor_ids = instructor_ids
+          @instructors = instructors
           @languages = languages
           @media = media
           @name = name
           @raw = raw
           @student_ids = student_ids
+          @students = students
           @updated_at = updated_at
         end
 
@@ -59,11 +65,13 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @instructor_ids == other.instructor_ids
+          return false unless @instructors == other.instructors
           return false unless @languages == other.languages
           return false unless @media == other.media
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @student_ids == other.student_ids
+          return false unless @students == other.students
           return false unless @updated_at == other.updated_at
           true
         end

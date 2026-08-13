@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::LmsContent
   def id=(str_); end
   def instructor_ids(); end
   def instructor_ids=(str_); end
+  def instructors(); end
+  def instructors=(str_); end
   def is_active(); end
   def is_active=(str_); end
   def languages(); end

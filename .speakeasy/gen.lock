@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: d36ed43c30a913e487dea4d78c125ad4
+  docChecksum: f9c6b1df5a3515296c00eef279133788
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.108
-  configChecksum: f1a185b3b09659437022b743a4aac7f2
+  releaseVersion: 0.67.109
+  configChecksum: 62b0bdea1918674682406134086f37bc
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2850,6 +2850,7 @@ generatedFiles:
   - docs/models/shared/lmsinstructor.md
   - docs/models/shared/lmsmedia.md
   - docs/models/shared/lmsmediatype.md
+  - docs/models/shared/lmsreference.md
   - docs/models/shared/lmsstudent.md
   - docs/models/shared/lmssubject.md
   - docs/models/shared/lmstelephone.md
@@ -9326,6 +9327,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/lmsmedia.rbi
   - lib/unified_ruby_sdk/models/shared/lmsmedia_type.rb
   - lib/unified_ruby_sdk/models/shared/lmsmedia_type.rbi
+  - lib/unified_ruby_sdk/models/shared/lmsreference.rb
+  - lib/unified_ruby_sdk/models/shared/lmsreference.rbi
   - lib/unified_ruby_sdk/models/shared/lmsstudent.rb
   - lib/unified_ruby_sdk/models/shared/lmsstudent.rbi
   - lib/unified_ruby_sdk/models/shared/lmssubject.rb
