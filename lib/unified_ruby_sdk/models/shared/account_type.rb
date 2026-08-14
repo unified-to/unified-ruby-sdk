@@ -15,6 +15,9 @@ module UnifiedRubySDK
         enums do
           CHECKING = new('CHECKING')
           SAVINGS = new('SAVINGS')
+          CREDIT_CARD = new('CREDIT_CARD')
+          LOAN = new('LOAN')
+          OTHER = new('OTHER')
         end
       end
     end

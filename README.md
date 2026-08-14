@@ -108,6 +108,8 @@ end
 ### [accounting](docs/sdks/accounting/README.md)
 
 * [create_accounting_account](docs/sdks/accounting/README.md#create_accounting_account) - Create an account
+* [create_accounting_bankfeedaccount](docs/sdks/accounting/README.md#create_accounting_bankfeedaccount) - Create a bankfeedaccount
+* [create_accounting_bankfeedtransaction](docs/sdks/accounting/README.md#create_accounting_bankfeedtransaction) - Create a bankfeedtransaction
 * [create_accounting_bill](docs/sdks/accounting/README.md#create_accounting_bill) - Create a bill
 * [create_accounting_category](docs/sdks/accounting/README.md#create_accounting_category) - Create a category
 * [create_accounting_contact](docs/sdks/accounting/README.md#create_accounting_contact) - Create a contact
@@ -127,6 +129,8 @@ end
 * [get_accounting_agedpayable](docs/sdks/accounting/README.md#get_accounting_agedpayable) - Retrieve an agedpayable
 * [get_accounting_agedreceivable](docs/sdks/accounting/README.md#get_accounting_agedreceivable) - Retrieve an agedreceivable
 * [get_accounting_balancesheet](docs/sdks/accounting/README.md#get_accounting_balancesheet) - Retrieve a balancesheet
+* [get_accounting_bankfeedaccount](docs/sdks/accounting/README.md#get_accounting_bankfeedaccount) - Retrieve a bankfeedaccount
+* [get_accounting_bankfeedtransaction](docs/sdks/accounting/README.md#get_accounting_bankfeedtransaction) - Retrieve a bankfeedtransaction
 * [get_accounting_bill](docs/sdks/accounting/README.md#get_accounting_bill) - Retrieve a bill
 * [get_accounting_cashflow](docs/sdks/accounting/README.md#get_accounting_cashflow) - Retrieve a cashflow
 * [get_accounting_category](docs/sdks/accounting/README.md#get_accounting_category) - Retrieve a category
@@ -151,6 +155,8 @@ end
 * [list_accounting_agedpayables](docs/sdks/accounting/README.md#list_accounting_agedpayables) - List all agedpayables
 * [list_accounting_agedreceivables](docs/sdks/accounting/README.md#list_accounting_agedreceivables) - List all agedreceivables
 * [list_accounting_balancesheets](docs/sdks/accounting/README.md#list_accounting_balancesheets) - List all balancesheets
+* [list_accounting_bankfeedaccounts](docs/sdks/accounting/README.md#list_accounting_bankfeedaccounts) - List all bankfeedaccounts
+* [list_accounting_bankfeedtransactions](docs/sdks/accounting/README.md#list_accounting_bankfeedtransactions) - List all bankfeedtransactions
 * [list_accounting_bills](docs/sdks/accounting/README.md#list_accounting_bills) - List all bills
 * [list_accounting_cashflows](docs/sdks/accounting/README.md#list_accounting_cashflows) - List all cashflows
 * [list_accounting_categories](docs/sdks/accounting/README.md#list_accounting_categories) - List all categories
@@ -172,6 +178,8 @@ end
 * [list_accounting_trialbalances](docs/sdks/accounting/README.md#list_accounting_trialbalances) - List all trialbalances
 * [list_accounting_vendorcredits](docs/sdks/accounting/README.md#list_accounting_vendorcredits) - List all vendorcredits
 * [patch_accounting_account](docs/sdks/accounting/README.md#patch_accounting_account) - Update an account
+* [patch_accounting_bankfeedaccount](docs/sdks/accounting/README.md#patch_accounting_bankfeedaccount) - Update a bankfeedaccount
+* [patch_accounting_bankfeedtransaction](docs/sdks/accounting/README.md#patch_accounting_bankfeedtransaction) - Update a bankfeedtransaction
 * [patch_accounting_bill](docs/sdks/accounting/README.md#patch_accounting_bill) - Update a bill
 * [patch_accounting_category](docs/sdks/accounting/README.md#patch_accounting_category) - Update a category
 * [patch_accounting_contact](docs/sdks/accounting/README.md#patch_accounting_contact) - Update a contact
@@ -188,6 +196,8 @@ end
 * [patch_accounting_transaction](docs/sdks/accounting/README.md#patch_accounting_transaction) - Update a transaction
 * [patch_accounting_vendorcredit](docs/sdks/accounting/README.md#patch_accounting_vendorcredit) - Update a vendorcredit
 * [remove_accounting_account](docs/sdks/accounting/README.md#remove_accounting_account) - Remove an account
+* [remove_accounting_bankfeedaccount](docs/sdks/accounting/README.md#remove_accounting_bankfeedaccount) - Remove a bankfeedaccount
+* [remove_accounting_bankfeedtransaction](docs/sdks/accounting/README.md#remove_accounting_bankfeedtransaction) - Remove a bankfeedtransaction
 * [remove_accounting_bill](docs/sdks/accounting/README.md#remove_accounting_bill) - Remove a bill
 * [remove_accounting_category](docs/sdks/accounting/README.md#remove_accounting_category) - Remove a category
 * [remove_accounting_contact](docs/sdks/accounting/README.md#remove_accounting_contact) - Remove a contact
@@ -204,6 +214,8 @@ end
 * [remove_accounting_transaction](docs/sdks/accounting/README.md#remove_accounting_transaction) - Remove a transaction
 * [remove_accounting_vendorcredit](docs/sdks/accounting/README.md#remove_accounting_vendorcredit) - Remove a vendorcredit
 * [update_accounting_account](docs/sdks/accounting/README.md#update_accounting_account) - Update an account
+* [update_accounting_bankfeedaccount](docs/sdks/accounting/README.md#update_accounting_bankfeedaccount) - Update a bankfeedaccount
+* [update_accounting_bankfeedtransaction](docs/sdks/accounting/README.md#update_accounting_bankfeedtransaction) - Update a bankfeedtransaction
 * [update_accounting_bill](docs/sdks/accounting/README.md#update_accounting_bill) - Update a bill
 * [update_accounting_category](docs/sdks/accounting/README.md#update_accounting_category) - Update a category
 * [update_accounting_contact](docs/sdks/accounting/README.md#update_accounting_contact) - Update a contact
@@ -452,6 +464,24 @@ end
 * [patch_hris_bankaccount](docs/sdks/bankaccount/README.md#patch_hris_bankaccount) - Update a bankaccount
 * [remove_hris_bankaccount](docs/sdks/bankaccount/README.md#remove_hris_bankaccount) - Remove a bankaccount
 * [update_hris_bankaccount](docs/sdks/bankaccount/README.md#update_hris_bankaccount) - Update a bankaccount
+
+### [bankfeedaccount](docs/sdks/bankfeedaccount/README.md)
+
+* [create_accounting_bankfeedaccount](docs/sdks/bankfeedaccount/README.md#create_accounting_bankfeedaccount) - Create a bankfeedaccount
+* [get_accounting_bankfeedaccount](docs/sdks/bankfeedaccount/README.md#get_accounting_bankfeedaccount) - Retrieve a bankfeedaccount
+* [list_accounting_bankfeedaccounts](docs/sdks/bankfeedaccount/README.md#list_accounting_bankfeedaccounts) - List all bankfeedaccounts
+* [patch_accounting_bankfeedaccount](docs/sdks/bankfeedaccount/README.md#patch_accounting_bankfeedaccount) - Update a bankfeedaccount
+* [remove_accounting_bankfeedaccount](docs/sdks/bankfeedaccount/README.md#remove_accounting_bankfeedaccount) - Remove a bankfeedaccount
+* [update_accounting_bankfeedaccount](docs/sdks/bankfeedaccount/README.md#update_accounting_bankfeedaccount) - Update a bankfeedaccount
+
+### [bankfeedtransaction](docs/sdks/bankfeedtransaction/README.md)
+
+* [create_accounting_bankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#create_accounting_bankfeedtransaction) - Create a bankfeedtransaction
+* [get_accounting_bankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#get_accounting_bankfeedtransaction) - Retrieve a bankfeedtransaction
+* [list_accounting_bankfeedtransactions](docs/sdks/bankfeedtransaction/README.md#list_accounting_bankfeedtransactions) - List all bankfeedtransactions
+* [patch_accounting_bankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#patch_accounting_bankfeedtransaction) - Update a bankfeedtransaction
+* [remove_accounting_bankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#remove_accounting_bankfeedtransaction) - Remove a bankfeedtransaction
+* [update_accounting_bankfeedtransaction](docs/sdks/bankfeedtransaction/README.md#update_accounting_bankfeedtransaction) - Update a bankfeedtransaction
 
 ### [benefit](docs/sdks/benefit/README.md)
 

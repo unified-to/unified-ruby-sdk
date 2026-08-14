@@ -18,7 +18,7 @@ module UnifiedRubySDK
 
         field :account_number_last4, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_number_last4') } }
 
-        field :account_type, Crystalline::Nilable.new(Models::Shared::AccountType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountType, true) } }
+        field :account_type, Crystalline::Nilable.new(Models::Shared::HrisBankaccountAccountType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisBankaccountAccountType, true) } }
 
         field :bank_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bank_name') } }
 
@@ -40,7 +40,7 @@ module UnifiedRubySDK
 
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(account_number: T.nilable(::String), account_number_last4: T.nilable(::String), account_type: T.nilable(Models::Shared::AccountType), bank_name: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_primary: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), routing_number: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(account_number: T.nilable(::String), account_number_last4: T.nilable(::String), account_type: T.nilable(Models::Shared::HrisBankaccountAccountType), bank_name: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_primary: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), routing_number: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
         def initialize(account_number: nil, account_number_last4: nil, account_type: nil, bank_name: nil, company_id: nil, created_at: nil, id: nil, is_primary: nil, name: nil, raw: nil, routing_number: nil, updated_at: nil, user_id: nil)
           @account_number = account_number
           @account_number_last4 = account_number_last4

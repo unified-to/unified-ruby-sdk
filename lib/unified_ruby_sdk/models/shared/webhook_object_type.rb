@@ -37,6 +37,8 @@ module UnifiedRubySDK
           ACCOUNTING_AGEDRECEIVABLE = new('accounting_agedreceivable')
           ACCOUNTING_AGEDPAYABLE = new('accounting_agedpayable')
           ACCOUNTING_PROJECT = new('accounting_project')
+          ACCOUNTING_BANKFEEDACCOUNT = new('accounting_bankfeedaccount')
+          ACCOUNTING_BANKFEEDTRANSACTION = new('accounting_bankfeedtransaction')
           PAYMENT_PAYMENT = new('payment_payment')
           PAYMENT_LINK = new('payment_link')
           PAYMENT_PAYOUT = new('payment_payout')

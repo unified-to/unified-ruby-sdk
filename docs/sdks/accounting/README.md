@@ -6,6 +6,8 @@
 ### Available Operations
 
 * [create_accounting_account](#create_accounting_account) - Create an account
+* [create_accounting_bankfeedaccount](#create_accounting_bankfeedaccount) - Create a bankfeedaccount
+* [create_accounting_bankfeedtransaction](#create_accounting_bankfeedtransaction) - Create a bankfeedtransaction
 * [create_accounting_bill](#create_accounting_bill) - Create a bill
 * [create_accounting_category](#create_accounting_category) - Create a category
 * [create_accounting_contact](#create_accounting_contact) - Create a contact
@@ -25,6 +27,8 @@
 * [get_accounting_agedpayable](#get_accounting_agedpayable) - Retrieve an agedpayable
 * [get_accounting_agedreceivable](#get_accounting_agedreceivable) - Retrieve an agedreceivable
 * [get_accounting_balancesheet](#get_accounting_balancesheet) - Retrieve a balancesheet
+* [get_accounting_bankfeedaccount](#get_accounting_bankfeedaccount) - Retrieve a bankfeedaccount
+* [get_accounting_bankfeedtransaction](#get_accounting_bankfeedtransaction) - Retrieve a bankfeedtransaction
 * [get_accounting_bill](#get_accounting_bill) - Retrieve a bill
 * [get_accounting_cashflow](#get_accounting_cashflow) - Retrieve a cashflow
 * [get_accounting_category](#get_accounting_category) - Retrieve a category
@@ -49,6 +53,8 @@
 * [list_accounting_agedpayables](#list_accounting_agedpayables) - List all agedpayables
 * [list_accounting_agedreceivables](#list_accounting_agedreceivables) - List all agedreceivables
 * [list_accounting_balancesheets](#list_accounting_balancesheets) - List all balancesheets
+* [list_accounting_bankfeedaccounts](#list_accounting_bankfeedaccounts) - List all bankfeedaccounts
+* [list_accounting_bankfeedtransactions](#list_accounting_bankfeedtransactions) - List all bankfeedtransactions
 * [list_accounting_bills](#list_accounting_bills) - List all bills
 * [list_accounting_cashflows](#list_accounting_cashflows) - List all cashflows
 * [list_accounting_categories](#list_accounting_categories) - List all categories
@@ -70,6 +76,8 @@
 * [list_accounting_trialbalances](#list_accounting_trialbalances) - List all trialbalances
 * [list_accounting_vendorcredits](#list_accounting_vendorcredits) - List all vendorcredits
 * [patch_accounting_account](#patch_accounting_account) - Update an account
+* [patch_accounting_bankfeedaccount](#patch_accounting_bankfeedaccount) - Update a bankfeedaccount
+* [patch_accounting_bankfeedtransaction](#patch_accounting_bankfeedtransaction) - Update a bankfeedtransaction
 * [patch_accounting_bill](#patch_accounting_bill) - Update a bill
 * [patch_accounting_category](#patch_accounting_category) - Update a category
 * [patch_accounting_contact](#patch_accounting_contact) - Update a contact
@@ -86,6 +94,8 @@
 * [patch_accounting_transaction](#patch_accounting_transaction) - Update a transaction
 * [patch_accounting_vendorcredit](#patch_accounting_vendorcredit) - Update a vendorcredit
 * [remove_accounting_account](#remove_accounting_account) - Remove an account
+* [remove_accounting_bankfeedaccount](#remove_accounting_bankfeedaccount) - Remove a bankfeedaccount
+* [remove_accounting_bankfeedtransaction](#remove_accounting_bankfeedtransaction) - Remove a bankfeedtransaction
 * [remove_accounting_bill](#remove_accounting_bill) - Remove a bill
 * [remove_accounting_category](#remove_accounting_category) - Remove a category
 * [remove_accounting_contact](#remove_accounting_contact) - Remove a contact
@@ -102,6 +112,8 @@
 * [remove_accounting_transaction](#remove_accounting_transaction) - Remove a transaction
 * [remove_accounting_vendorcredit](#remove_accounting_vendorcredit) - Remove a vendorcredit
 * [update_accounting_account](#update_accounting_account) - Update an account
+* [update_accounting_bankfeedaccount](#update_accounting_bankfeedaccount) - Update a bankfeedaccount
+* [update_accounting_bankfeedtransaction](#update_accounting_bankfeedtransaction) - Update a bankfeedtransaction
 * [update_accounting_bill](#update_accounting_bill) - Update a bill
 * [update_accounting_category](#update_accounting_category) - Update a category
 * [update_accounting_contact](#update_accounting_contact) - Update a contact
@@ -155,6 +167,94 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateAccountingAccountResponse)](../../models/operations/createaccountingaccountresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_accounting_bankfeedaccount
+
+Create a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.create_accounting_bankfeedaccount(accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(), connection_id: '<id>')
+
+unless res.accounting_bankfeedaccount.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                   | Type                                                                                                                                                        | Required                                                                                                                                                    | Description                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `accounting_bankfeedaccount`                                                                                                                                | [Models::Shared::AccountingBankfeedaccount](../../models/shared/accountingbankfeedaccount.md)                                                               | :heavy_check_mark:                                                                                                                                          | N/A                                                                                                                                                         |
+| `connection_id`                                                                                                                                             | *::String*                                                                                                                                                  | :heavy_check_mark:                                                                                                                                          | ID of the connection                                                                                                                                        |
+| `fields_`                                                                                                                                                   | T::Array<[Models::Operations::CreateAccountingBankfeedaccountQueryParamFields](../../models/operations/createaccountingbankfeedaccountqueryparamfields.md)> | :heavy_minus_sign:                                                                                                                                          | Fields to return                                                                                                                                            |
+| `raw`                                                                                                                                                       | *T.nilable(::String)*                                                                                                                                       | :heavy_minus_sign:                                                                                                                                          | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar            |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateAccountingBankfeedaccountResponse)](../../models/operations/createaccountingbankfeedaccountresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_accounting_bankfeedtransaction
+
+Create a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.create_accounting_bankfeedtransaction(accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(), connection_id: '<id>')
+
+unless res.accounting_bankfeedtransaction.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                           | Type                                                                                                                                                                | Required                                                                                                                                                            | Description                                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `accounting_bankfeedtransaction`                                                                                                                                    | [Models::Shared::AccountingBankfeedtransaction](../../models/shared/accountingbankfeedtransaction.md)                                                               | :heavy_check_mark:                                                                                                                                                  | N/A                                                                                                                                                                 |
+| `connection_id`                                                                                                                                                     | *::String*                                                                                                                                                          | :heavy_check_mark:                                                                                                                                                  | ID of the connection                                                                                                                                                |
+| `fields_`                                                                                                                                                           | T::Array<[Models::Operations::CreateAccountingBankfeedtransactionQueryParamFields](../../models/operations/createaccountingbankfeedtransactionqueryparamfields.md)> | :heavy_minus_sign:                                                                                                                                                  | Fields to return                                                                                                                                                    |
+| `raw`                                                                                                                                                               | *T.nilable(::String)*                                                                                                                                               | :heavy_minus_sign:                                                                                                                                                  | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar                    |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateAccountingBankfeedtransactionResponse)](../../models/operations/createaccountingbankfeedtransactionresponse.md)**
 
 ### Errors
 
@@ -991,6 +1091,94 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetAccountingBalancesheetResponse)](../../models/operations/getaccountingbalancesheetresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_accounting_bankfeedaccount
+
+Retrieve a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getAccountingBankfeedaccount" method="get" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.get_accounting_bankfeedaccount(connection_id: '<id>', id: '<id>')
+
+unless res.accounting_bankfeedaccount.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                             | Type                                                                                                                                                  | Required                                                                                                                                              | Description                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `connection_id`                                                                                                                                       | *::String*                                                                                                                                            | :heavy_check_mark:                                                                                                                                    | ID of the connection                                                                                                                                  |
+| `id`                                                                                                                                                  | *::String*                                                                                                                                            | :heavy_check_mark:                                                                                                                                    | ID of the Bankfeedaccount                                                                                                                             |
+| `fields_`                                                                                                                                             | T::Array<[Models::Operations::GetAccountingBankfeedaccountQueryParamFields](../../models/operations/getaccountingbankfeedaccountqueryparamfields.md)> | :heavy_minus_sign:                                                                                                                                    | Fields to return                                                                                                                                      |
+| `raw`                                                                                                                                                 | *T.nilable(::String)*                                                                                                                                 | :heavy_minus_sign:                                                                                                                                    | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar      |
+
+### Response
+
+**[T.nilable(Models::Operations::GetAccountingBankfeedaccountResponse)](../../models/operations/getaccountingbankfeedaccountresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_accounting_bankfeedtransaction
+
+Retrieve a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getAccountingBankfeedtransaction" method="get" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.get_accounting_bankfeedtransaction(connection_id: '<id>', id: '<id>')
+
+unless res.accounting_bankfeedtransaction.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                                     | Type                                                                                                                                                          | Required                                                                                                                                                      | Description                                                                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `connection_id`                                                                                                                                               | *::String*                                                                                                                                                    | :heavy_check_mark:                                                                                                                                            | ID of the connection                                                                                                                                          |
+| `id`                                                                                                                                                          | *::String*                                                                                                                                                    | :heavy_check_mark:                                                                                                                                            | ID of the Bankfeedtransaction                                                                                                                                 |
+| `fields_`                                                                                                                                                     | T::Array<[Models::Operations::GetAccountingBankfeedtransactionQueryParamFields](../../models/operations/getaccountingbankfeedtransactionqueryparamfields.md)> | :heavy_minus_sign:                                                                                                                                            | Fields to return                                                                                                                                              |
+| `raw`                                                                                                                                                         | *T.nilable(::String)*                                                                                                                                         | :heavy_minus_sign:                                                                                                                                            | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar              |
+
+### Response
+
+**[T.nilable(Models::Operations::GetAccountingBankfeedtransactionResponse)](../../models/operations/getaccountingbankfeedtransactionresponse.md)**
 
 ### Errors
 
@@ -2058,6 +2246,96 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_accounting_bankfeedaccounts
+
+List all bankfeedaccounts
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listAccountingBankfeedaccounts" method="get" path="/accounting/{connection_id}/bankfeedaccount" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListAccountingBankfeedaccountsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.accounting.list_accounting_bankfeedaccounts(request: req)
+
+unless res.accounting_bankfeedaccounts.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                     | [Models::Operations::ListAccountingBankfeedaccountsRequest](../../models/operations/listaccountingbankfeedaccountsrequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::ListAccountingBankfeedaccountsResponse)](../../models/operations/listaccountingbankfeedaccountsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_accounting_bankfeedtransactions
+
+List all bankfeedtransactions
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listAccountingBankfeedtransactions" method="get" path="/accounting/{connection_id}/bankfeedtransaction" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListAccountingBankfeedtransactionsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.accounting.list_accounting_bankfeedtransactions(request: req)
+
+unless res.accounting_bankfeedtransactions.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                             | [Models::Operations::ListAccountingBankfeedtransactionsRequest](../../models/operations/listaccountingbankfeedtransactionsrequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::ListAccountingBankfeedtransactionsResponse)](../../models/operations/listaccountingbankfeedtransactionsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_accounting_bills
 
 List all bills
@@ -3005,6 +3283,100 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_accounting_bankfeedaccount
+
+Update a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchAccountingBankfeedaccountRequest.new(
+  accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.accounting.patch_accounting_bankfeedaccount(request: req)
+
+unless res.accounting_bankfeedaccount.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                     | Type                                                                                                                          | Required                                                                                                                      | Description                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                     | [Models::Operations::PatchAccountingBankfeedaccountRequest](../../models/operations/patchaccountingbankfeedaccountrequest.md) | :heavy_check_mark:                                                                                                            | The request object to use for the request.                                                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchAccountingBankfeedaccountResponse)](../../models/operations/patchaccountingbankfeedaccountresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## patch_accounting_bankfeedtransaction
+
+Update a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
+  accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.accounting.patch_accounting_bankfeedtransaction(request: req)
+
+unless res.accounting_bankfeedtransaction.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                             | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                             | [Models::Operations::PatchAccountingBankfeedtransactionRequest](../../models/operations/patchaccountingbankfeedtransactionrequest.md) | :heavy_check_mark:                                                                                                                    | The request object to use for the request.                                                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchAccountingBankfeedtransactionResponse)](../../models/operations/patchaccountingbankfeedtransactionresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_accounting_bill
 
 Update a bill
@@ -3752,6 +4124,90 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_accounting_bankfeedaccount
+
+Remove a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeAccountingBankfeedaccount" method="delete" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.remove_accounting_bankfeedaccount(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                 | Type                      | Required                  | Description               |
+| ------------------------- | ------------------------- | ------------------------- | ------------------------- |
+| `connection_id`           | *::String*                | :heavy_check_mark:        | ID of the connection      |
+| `id`                      | *::String*                | :heavy_check_mark:        | ID of the Bankfeedaccount |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveAccountingBankfeedaccountResponse)](../../models/operations/removeaccountingbankfeedaccountresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_accounting_bankfeedtransaction
+
+Remove a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeAccountingBankfeedtransaction" method="delete" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.remove_accounting_bankfeedtransaction(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                     | Type                          | Required                      | Description                   |
+| ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
+| `connection_id`               | *::String*                    | :heavy_check_mark:            | ID of the connection          |
+| `id`                          | *::String*                    | :heavy_check_mark:            | ID of the Bankfeedtransaction |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveAccountingBankfeedtransactionResponse)](../../models/operations/removeaccountingbankfeedtransactionresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_accounting_bill
 
 Remove a bill
@@ -4422,6 +4878,100 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateAccountingAccountResponse)](../../models/operations/updateaccountingaccountresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_accounting_bankfeedaccount
+
+Update a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateAccountingBankfeedaccountRequest.new(
+  accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.accounting.update_accounting_bankfeedaccount(request: req)
+
+unless res.accounting_bankfeedaccount.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                       | Type                                                                                                                            | Required                                                                                                                        | Description                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                       | [Models::Operations::UpdateAccountingBankfeedaccountRequest](../../models/operations/updateaccountingbankfeedaccountrequest.md) | :heavy_check_mark:                                                                                                              | The request object to use for the request.                                                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateAccountingBankfeedaccountResponse)](../../models/operations/updateaccountingbankfeedaccountresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_accounting_bankfeedtransaction
+
+Update a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
+  accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.accounting.update_accounting_bankfeedtransaction(request: req)
+
+unless res.accounting_bankfeedtransaction.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                               | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                               | [Models::Operations::UpdateAccountingBankfeedtransactionRequest](../../models/operations/updateaccountingbankfeedtransactionrequest.md) | :heavy_check_mark:                                                                                                                      | The request object to use for the request.                                                                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateAccountingBankfeedtransactionResponse)](../../models/operations/updateaccountingbankfeedtransactionresponse.md)**
 
 ### Errors
 

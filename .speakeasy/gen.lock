@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: f9c6b1df5a3515296c00eef279133788
+  docChecksum: c2c443fb3eedde0720e069b060bd03ca
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.109
-  configChecksum: 62b0bdea1918674682406134086f37bc
+  releaseVersion: 0.67.110
+  configChecksum: 00ea3ba6f3bfc557bd7dbf5bfd29e9cf
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -30,6 +30,12 @@ generatedFiles:
   - docs/models/operations/categories.md
   - docs/models/operations/createaccountingaccountrequest.md
   - docs/models/operations/createaccountingaccountresponse.md
+  - docs/models/operations/createaccountingbankfeedaccountqueryparamfields.md
+  - docs/models/operations/createaccountingbankfeedaccountrequest.md
+  - docs/models/operations/createaccountingbankfeedaccountresponse.md
+  - docs/models/operations/createaccountingbankfeedtransactionqueryparamfields.md
+  - docs/models/operations/createaccountingbankfeedtransactionrequest.md
+  - docs/models/operations/createaccountingbankfeedtransactionresponse.md
   - docs/models/operations/createaccountingbillqueryparamfields.md
   - docs/models/operations/createaccountingbillrequest.md
   - docs/models/operations/createaccountingbillresponse.md
@@ -414,6 +420,12 @@ generatedFiles:
   - docs/models/operations/getaccountingbalancesheetqueryparamfields.md
   - docs/models/operations/getaccountingbalancesheetrequest.md
   - docs/models/operations/getaccountingbalancesheetresponse.md
+  - docs/models/operations/getaccountingbankfeedaccountqueryparamfields.md
+  - docs/models/operations/getaccountingbankfeedaccountrequest.md
+  - docs/models/operations/getaccountingbankfeedaccountresponse.md
+  - docs/models/operations/getaccountingbankfeedtransactionqueryparamfields.md
+  - docs/models/operations/getaccountingbankfeedtransactionrequest.md
+  - docs/models/operations/getaccountingbankfeedtransactionresponse.md
   - docs/models/operations/getaccountingbillqueryparamfields.md
   - docs/models/operations/getaccountingbillrequest.md
   - docs/models/operations/getaccountingbillresponse.md
@@ -877,6 +889,12 @@ generatedFiles:
   - docs/models/operations/listaccountingbalancesheetsqueryparamfields.md
   - docs/models/operations/listaccountingbalancesheetsrequest.md
   - docs/models/operations/listaccountingbalancesheetsresponse.md
+  - docs/models/operations/listaccountingbankfeedaccountsqueryparamfields.md
+  - docs/models/operations/listaccountingbankfeedaccountsrequest.md
+  - docs/models/operations/listaccountingbankfeedaccountsresponse.md
+  - docs/models/operations/listaccountingbankfeedtransactionsqueryparamfields.md
+  - docs/models/operations/listaccountingbankfeedtransactionsrequest.md
+  - docs/models/operations/listaccountingbankfeedtransactionsresponse.md
   - docs/models/operations/listaccountingbillsqueryparamfields.md
   - docs/models/operations/listaccountingbillsrequest.md
   - docs/models/operations/listaccountingbillsresponse.md
@@ -1358,6 +1376,12 @@ generatedFiles:
   - docs/models/operations/patchaccountingaccountqueryparamfields.md
   - docs/models/operations/patchaccountingaccountrequest.md
   - docs/models/operations/patchaccountingaccountresponse.md
+  - docs/models/operations/patchaccountingbankfeedaccountqueryparamfields.md
+  - docs/models/operations/patchaccountingbankfeedaccountrequest.md
+  - docs/models/operations/patchaccountingbankfeedaccountresponse.md
+  - docs/models/operations/patchaccountingbankfeedtransactionqueryparamfields.md
+  - docs/models/operations/patchaccountingbankfeedtransactionrequest.md
+  - docs/models/operations/patchaccountingbankfeedtransactionresponse.md
   - docs/models/operations/patchaccountingbillqueryparamfields.md
   - docs/models/operations/patchaccountingbillrequest.md
   - docs/models/operations/patchaccountingbillresponse.md
@@ -1720,6 +1744,10 @@ generatedFiles:
   - docs/models/operations/queryparamfields.md
   - docs/models/operations/removeaccountingaccountrequest.md
   - docs/models/operations/removeaccountingaccountresponse.md
+  - docs/models/operations/removeaccountingbankfeedaccountrequest.md
+  - docs/models/operations/removeaccountingbankfeedaccountresponse.md
+  - docs/models/operations/removeaccountingbankfeedtransactionrequest.md
+  - docs/models/operations/removeaccountingbankfeedtransactionresponse.md
   - docs/models/operations/removeaccountingbillrequest.md
   - docs/models/operations/removeaccountingbillresponse.md
   - docs/models/operations/removeaccountingcategoryrequest.md
@@ -1963,6 +1991,12 @@ generatedFiles:
   - docs/models/operations/updateaccountingaccountqueryparamfields.md
   - docs/models/operations/updateaccountingaccountrequest.md
   - docs/models/operations/updateaccountingaccountresponse.md
+  - docs/models/operations/updateaccountingbankfeedaccountqueryparamfields.md
+  - docs/models/operations/updateaccountingbankfeedaccountrequest.md
+  - docs/models/operations/updateaccountingbankfeedaccountresponse.md
+  - docs/models/operations/updateaccountingbankfeedtransactionqueryparamfields.md
+  - docs/models/operations/updateaccountingbankfeedtransactionrequest.md
+  - docs/models/operations/updateaccountingbankfeedtransactionresponse.md
   - docs/models/operations/updateaccountingbillqueryparamfields.md
   - docs/models/operations/updateaccountingbillrequest.md
   - docs/models/operations/updateaccountingbillresponse.md
@@ -2332,6 +2366,10 @@ generatedFiles:
   - docs/models/shared/accountingattachment.md
   - docs/models/shared/accountingbalancesheet.md
   - docs/models/shared/accountingbalancesheetitem.md
+  - docs/models/shared/accountingbankfeedaccount.md
+  - docs/models/shared/accountingbankfeedaccountstatus.md
+  - docs/models/shared/accountingbankfeedtransaction.md
+  - docs/models/shared/accountingbankfeedtransactiontype.md
   - docs/models/shared/accountingbill.md
   - docs/models/shared/accountingbillstatus.md
   - docs/models/shared/accountingcashflow.md
@@ -2679,6 +2717,7 @@ generatedFiles:
   - docs/models/shared/hrisattendancebreak.md
   - docs/models/shared/hrisattendancestatus.md
   - docs/models/shared/hrisbankaccount.md
+  - docs/models/shared/hrisbankaccountaccounttype.md
   - docs/models/shared/hrisbenefit.md
   - docs/models/shared/hrisbenefitfrequency.md
   - docs/models/shared/hrisbenefittype.md
@@ -2753,6 +2792,7 @@ generatedFiles:
   - docs/models/shared/listadid.md
   - docs/models/shared/listapplicationid.md
   - docs/models/shared/listassigneduserid.md
+  - docs/models/shared/listbankfeedaccountid.md
   - docs/models/shared/listbenefitid.md
   - docs/models/shared/listbillid.md
   - docs/models/shared/listbranchid.md
@@ -3335,6 +3375,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookadid.md
   - docs/models/shared/virtualwebhookapplicationid.md
   - docs/models/shared/virtualwebhookassigneduserid.md
+  - docs/models/shared/virtualwebhookbankfeedaccountid.md
   - docs/models/shared/virtualwebhookbenefitid.md
   - docs/models/shared/virtualwebhookbillid.md
   - docs/models/shared/virtualwebhookbranchid.md
@@ -3423,6 +3464,8 @@ generatedFiles:
   - docs/sdks/availability/README.md
   - docs/sdks/balancesheet/README.md
   - docs/sdks/bankaccount/README.md
+  - docs/sdks/bankfeedaccount/README.md
+  - docs/sdks/bankfeedtransaction/README.md
   - docs/sdks/benefit/README.md
   - docs/sdks/bill/README.md
   - docs/sdks/branch/README.md
@@ -3599,6 +3642,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/availability.rb
   - lib/unified_ruby_sdk/balancesheet.rb
   - lib/unified_ruby_sdk/bankaccount.rb
+  - lib/unified_ruby_sdk/bankfeedaccount.rb
+  - lib/unified_ruby_sdk/bankfeedtransaction.rb
   - lib/unified_ruby_sdk/benefit.rb
   - lib/unified_ruby_sdk/bill.rb
   - lib/unified_ruby_sdk/branch.rb
@@ -3686,6 +3731,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createaccountingaccount_request.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingaccount_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingaccount_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedaccount_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedaccount_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedaccount_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedaccount_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedtransaction_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedtransaction_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedtransaction_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingbankfeedtransaction_response.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingbill_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingbill_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingbill_request.rb
@@ -4454,6 +4511,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getaccountingbalancesheet_request.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingbalancesheet_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingbalancesheet_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedaccount_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedaccount_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedaccount_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedaccount_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedtransaction_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedtransaction_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedtransaction_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingbankfeedtransaction_response.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingbill_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingbill_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingbill_request.rb
@@ -5380,6 +5449,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listaccountingbalancesheets_request.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingbalancesheets_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingbalancesheets_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedaccounts_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedaccounts_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedaccounts_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedaccounts_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedaccounts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedaccounts_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedtransactions_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedtransactions_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedtransactions_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedtransactions_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedtransactions_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingbankfeedtransactions_response.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingbills_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingbills_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingbills_request.rb
@@ -6342,6 +6423,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingaccount_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedaccount_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedaccount_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedaccount_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedaccount_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedtransaction_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedtransaction_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedtransaction_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingbankfeedtransaction_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingbill_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingbill_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingbill_request.rb
@@ -7066,6 +7159,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingaccount_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingbankfeedaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingbankfeedaccount_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingbankfeedaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingbankfeedaccount_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingbankfeedtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingbankfeedtransaction_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingbankfeedtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingbankfeedtransaction_response.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingbill_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingbill_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingbill_response.rb
@@ -7552,6 +7653,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingaccount_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedaccount_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedaccount_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedaccount_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedaccount_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedaccount_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedaccount_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedtransaction_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedtransaction_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedtransaction_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedtransaction_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedtransaction_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingbankfeedtransaction_response.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingbill_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingbill_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingbill_request.rb
@@ -8293,6 +8406,14 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingbalancesheet.rbi
   - lib/unified_ruby_sdk/models/shared/accountingbalancesheetitem.rb
   - lib/unified_ruby_sdk/models/shared/accountingbalancesheetitem.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingbankfeedaccount.rb
+  - lib/unified_ruby_sdk/models/shared/accountingbankfeedaccount.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingbankfeedaccount_status.rb
+  - lib/unified_ruby_sdk/models/shared/accountingbankfeedaccount_status.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingbankfeedtransaction.rb
+  - lib/unified_ruby_sdk/models/shared/accountingbankfeedtransaction.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingbankfeedtransaction_type.rb
+  - lib/unified_ruby_sdk/models/shared/accountingbankfeedtransaction_type.rbi
   - lib/unified_ruby_sdk/models/shared/accountingbill.rb
   - lib/unified_ruby_sdk/models/shared/accountingbill.rbi
   - lib/unified_ruby_sdk/models/shared/accountingbill_status.rb
@@ -8985,6 +9106,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/hrisattendancebreak.rbi
   - lib/unified_ruby_sdk/models/shared/hrisbankaccount.rb
   - lib/unified_ruby_sdk/models/shared/hrisbankaccount.rbi
+  - lib/unified_ruby_sdk/models/shared/hrisbankaccount_account_type.rb
+  - lib/unified_ruby_sdk/models/shared/hrisbankaccount_account_type.rbi
   - lib/unified_ruby_sdk/models/shared/hrisbenefit.rb
   - lib/unified_ruby_sdk/models/shared/hrisbenefit.rbi
   - lib/unified_ruby_sdk/models/shared/hrisbenefit_frequency.rb
@@ -9133,6 +9256,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_application_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_assigned_user_id.rb
   - lib/unified_ruby_sdk/models/shared/list_assigned_user_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_bankfeedaccount_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_bankfeedaccount_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_benefit_id.rb
   - lib/unified_ruby_sdk/models/shared/list_benefit_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_bill_id.rb
@@ -10297,6 +10422,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_application_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_assigned_user_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_assigned_user_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_bankfeedaccount_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_bankfeedaccount_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_benefit_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_benefit_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_bill_id.rb
@@ -24306,5 +24433,115 @@ examples:
       responses:
         "200":
           application/json: {"employee_user_id": "<id>", "end_at": "2025-02-07T06:39:13.305Z", "start_at": "2025-09-24T00:00:27.827Z"}
+  createAccountingBankfeedaccount:
+    speakeasy-default-create-accounting-bankfeedaccount:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createAccountingBankfeedtransaction:
+    speakeasy-default-create-accounting-bankfeedtransaction:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingBankfeedaccount:
+    speakeasy-default-get-accounting-bankfeedaccount:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getAccountingBankfeedtransaction:
+    speakeasy-default-get-accounting-bankfeedtransaction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingBankfeedaccounts:
+    speakeasy-default-list-accounting-bankfeedaccounts:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listAccountingBankfeedtransactions:
+    speakeasy-default-list-accounting-bankfeedtransactions:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingBankfeedaccount:
+    speakeasy-default-patch-accounting-bankfeedaccount:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  patchAccountingBankfeedtransaction:
+    speakeasy-default-patch-accounting-bankfeedtransaction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingBankfeedaccount:
+    speakeasy-default-remove-accounting-bankfeedaccount:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  removeAccountingBankfeedtransaction:
+    speakeasy-default-remove-accounting-bankfeedtransaction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingBankfeedaccount:
+    speakeasy-default-update-accounting-bankfeedaccount:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateAccountingBankfeedtransaction:
+    speakeasy-default-update-accounting-bankfeedtransaction:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

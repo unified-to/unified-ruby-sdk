@@ -10,6 +10,8 @@ module UnifiedRubySDK
   autoload :Agedpayable, 'unified_ruby_sdk/agedpayable'
   autoload :Agedreceivable, 'unified_ruby_sdk/agedreceivable'
   autoload :Balancesheet, 'unified_ruby_sdk/balancesheet'
+  autoload :Bankfeedaccount, 'unified_ruby_sdk/bankfeedaccount'
+  autoload :Bankfeedtransaction, 'unified_ruby_sdk/bankfeedtransaction'
   autoload :Bill, 'unified_ruby_sdk/bill'
   autoload :Cashflow, 'unified_ruby_sdk/cashflow'
   autoload :Category, 'unified_ruby_sdk/category'
