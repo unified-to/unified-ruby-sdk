@@ -22,6 +22,7 @@ module UnifiedRubySDK
           PUBLISHER_HOSTED = new('PUBLISHER_HOSTED')
           ASSET_BASED = new('ASSET_BASED')
           IMAGE = new('IMAGE')
+          SHARE = new('SHARE')
           DOCUMENT = new('DOCUMENT')
         end
       end

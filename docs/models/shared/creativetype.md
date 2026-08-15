@@ -14,4 +14,5 @@
 | `PUBLISHER_HOSTED` | PUBLISHER_HOSTED   |
 | `ASSET_BASED`      | ASSET_BASED        |
 | `IMAGE`            | IMAGE              |
+| `SHARE`            | SHARE              |
 | `DOCUMENT`         | DOCUMENT           |
