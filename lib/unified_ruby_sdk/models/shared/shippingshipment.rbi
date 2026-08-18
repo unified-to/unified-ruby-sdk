@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::ShippingShipment
   def carrier_id(); end
   def carrier_id=(str_); end
+  def carrier_name(); end
+  def carrier_name=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def customs(); end
@@ -32,8 +34,12 @@ class UnifiedRubySDK::Models::Shared::ShippingShipment
   def is_signature_required=(str_); end
   def label_id(); end
   def label_id=(str_); end
+  def lineitems(); end
+  def lineitems=(str_); end
   def order_id(); end
   def order_id=(str_); end
+  def organization_id(); end
+  def organization_id=(str_); end
   def original_shipment_id(); end
   def original_shipment_id=(str_); end
   def packages(); end
@@ -74,6 +80,8 @@ class UnifiedRubySDK::Models::Shared::ShippingShipment
   def to_address=(str_); end
   def tracking_id(); end
   def tracking_id=(str_); end
+  def tracking_url(); end
+  def tracking_url=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def warehouse_location_id(); end

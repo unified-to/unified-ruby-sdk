@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: adb495d6e549f77377fe9efbe72717f5
+  docChecksum: 0c936c60770ab094bb7fea41b06b41b6
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.111
-  configChecksum: 142cec7dbf41004e0c7c206a46276e1a
+  releaseVersion: 0.67.112
+  configChecksum: 10df8563d735f02ce39c88be93aae6f1
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -3296,6 +3296,7 @@ generatedFiles:
   - docs/models/shared/shippingraterate.md
   - docs/models/shared/shippingratesurcharge.md
   - docs/models/shared/shippingshipment.md
+  - docs/models/shared/shippingshipmentlineitem.md
   - docs/models/shared/shippingshipmentstatus.md
   - docs/models/shared/shippingtracking.md
   - docs/models/shared/shippingtrackingevent.md
@@ -3353,6 +3354,14 @@ generatedFiles:
   - docs/models/shared/uccontact.md
   - docs/models/shared/ucemail.md
   - docs/models/shared/ucemailtype.md
+  - docs/models/shared/ucmetadata.md
+  - docs/models/shared/ucmetadata1.md
+  - docs/models/shared/ucmetadata5.md
+  - docs/models/shared/ucmetadataextradata.md
+  - docs/models/shared/ucmetadataformat.md
+  - docs/models/shared/ucmetadataschemas1.md
+  - docs/models/shared/ucmetadataschemas5.md
+  - docs/models/shared/ucmetadatavalue.md
   - docs/models/shared/ucrecording.md
   - docs/models/shared/ucrecordingmedia.md
   - docs/models/shared/ucrecordingtranscript.md
@@ -10266,6 +10275,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/shippingshipment.rbi
   - lib/unified_ruby_sdk/models/shared/shippingshipment_status.rb
   - lib/unified_ruby_sdk/models/shared/shippingshipment_status.rbi
+  - lib/unified_ruby_sdk/models/shared/shippingshipmentlineitem.rb
+  - lib/unified_ruby_sdk/models/shared/shippingshipmentlineitem.rbi
   - lib/unified_ruby_sdk/models/shared/shippingtracking.rb
   - lib/unified_ruby_sdk/models/shared/shippingtracking.rbi
   - lib/unified_ruby_sdk/models/shared/shippingtracking_status.rb
@@ -10378,6 +10389,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/ucemail.rbi
   - lib/unified_ruby_sdk/models/shared/ucemail_type.rb
   - lib/unified_ruby_sdk/models/shared/ucemail_type.rbi
+  - lib/unified_ruby_sdk/models/shared/ucmetadata.rb
+  - lib/unified_ruby_sdk/models/shared/ucmetadata.rbi
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_1.rb
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_1.rbi
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_5.rb
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_5.rbi
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_extra_data.rb
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_extra_data.rbi
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_format.rb
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_format.rbi
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_schemas_1.rb
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_schemas_1.rbi
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_schemas_5.rb
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_schemas_5.rbi
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_value.rb
+  - lib/unified_ruby_sdk/models/shared/ucmetadata_value.rbi
   - lib/unified_ruby_sdk/models/shared/ucrecording.rb
   - lib/unified_ruby_sdk/models/shared/ucrecording.rbi
   - lib/unified_ruby_sdk/models/shared/ucrecording_type.rb

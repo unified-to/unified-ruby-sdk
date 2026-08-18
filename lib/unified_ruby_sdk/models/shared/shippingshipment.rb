@@ -16,6 +16,8 @@ module UnifiedRubySDK
 
         field :carrier_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('carrier_id') } }
 
+        field :carrier_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('carrier_name') } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # Customs information
         field :customs, Crystalline::Nilable.new(Models::Shared::PropertyShippingShipmentCustoms), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customs') } }
@@ -37,8 +39,12 @@ module UnifiedRubySDK
         field :is_signature_required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_signature_required') } }
 
         field :label_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label_id') } }
+        # Item-level fulfillment lines (what shipped); used by commerce-platform fulfillments
+        field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ShippingShipmentLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
         field :order_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('order_id') } }
+
+        field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
 
         field :original_shipment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_shipment_id') } }
         # Array of packages in this shipment
@@ -80,15 +86,18 @@ module UnifiedRubySDK
 
         field :tracking_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tracking_id') } }
 
+        field :tracking_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tracking_url') } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :warehouse_location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('warehouse_location_id') } }
 
         field :warehouse_location_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('warehouse_location_name') } }
 
-        sig { params(carrier_id: T.nilable(::String), created_at: T.nilable(::DateTime), customs: T.nilable(Models::Shared::PropertyShippingShipmentCustoms), from_address: T.nilable(Models::Shared::PropertyShippingShipmentFromAddress), id: T.nilable(::String), insurance: T.nilable(Models::Shared::PropertyShippingShipmentInsurance), is_adult_signature_required: T.nilable(T::Boolean), is_international: T.nilable(T::Boolean), is_rate_guaranteed: T.nilable(T::Boolean), is_return: T.nilable(T::Boolean), is_signature_required: T.nilable(T::Boolean), label_id: T.nilable(::String), order_id: T.nilable(::String), original_shipment_id: T.nilable(::String), packages: T.nilable(T::Array[Models::Shared::ShippingPackage]), rate_amount: T.nilable(::Float), rate_currency: T.nilable(::String), rate_estimated_days: T.nilable(::Float), rate_estimated_delivery_at: T.nilable(::DateTime), rate_id: T.nilable(::String), rate_service_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference_number: T.nilable(::String), return_address: T.nilable(Models::Shared::PropertyShippingShipmentReturnAddress), return_authorization_number: T.nilable(::String), return_reason: T.nilable(::String), return_type: T.nilable(Models::Shared::ReturnType), service_code: T.nilable(::String), shipped_at: T.nilable(::DateTime), special_instructions: T.nilable(T::Array[::String]), status: T.nilable(Models::Shared::ShippingShipmentStatus), to_address: T.nilable(Models::Shared::PropertyShippingShipmentToAddress), tracking_id: T.nilable(::String), updated_at: T.nilable(::DateTime), warehouse_location_id: T.nilable(::String), warehouse_location_name: T.nilable(::String)).void }
-        def initialize(carrier_id: nil, created_at: nil, customs: nil, from_address: nil, id: nil, insurance: nil, is_adult_signature_required: nil, is_international: nil, is_rate_guaranteed: nil, is_return: nil, is_signature_required: nil, label_id: nil, order_id: nil, original_shipment_id: nil, packages: nil, rate_amount: nil, rate_currency: nil, rate_estimated_days: nil, rate_estimated_delivery_at: nil, rate_id: nil, rate_service_name: nil, raw: nil, reference_number: nil, return_address: nil, return_authorization_number: nil, return_reason: nil, return_type: nil, service_code: nil, shipped_at: nil, special_instructions: nil, status: nil, to_address: nil, tracking_id: nil, updated_at: nil, warehouse_location_id: nil, warehouse_location_name: nil)
+        sig { params(carrier_id: T.nilable(::String), carrier_name: T.nilable(::String), created_at: T.nilable(::DateTime), customs: T.nilable(Models::Shared::PropertyShippingShipmentCustoms), from_address: T.nilable(Models::Shared::PropertyShippingShipmentFromAddress), id: T.nilable(::String), insurance: T.nilable(Models::Shared::PropertyShippingShipmentInsurance), is_adult_signature_required: T.nilable(T::Boolean), is_international: T.nilable(T::Boolean), is_rate_guaranteed: T.nilable(T::Boolean), is_return: T.nilable(T::Boolean), is_signature_required: T.nilable(T::Boolean), label_id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::ShippingShipmentLineitem]), order_id: T.nilable(::String), organization_id: T.nilable(::String), original_shipment_id: T.nilable(::String), packages: T.nilable(T::Array[Models::Shared::ShippingPackage]), rate_amount: T.nilable(::Float), rate_currency: T.nilable(::String), rate_estimated_days: T.nilable(::Float), rate_estimated_delivery_at: T.nilable(::DateTime), rate_id: T.nilable(::String), rate_service_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference_number: T.nilable(::String), return_address: T.nilable(Models::Shared::PropertyShippingShipmentReturnAddress), return_authorization_number: T.nilable(::String), return_reason: T.nilable(::String), return_type: T.nilable(Models::Shared::ReturnType), service_code: T.nilable(::String), shipped_at: T.nilable(::DateTime), special_instructions: T.nilable(T::Array[::String]), status: T.nilable(Models::Shared::ShippingShipmentStatus), to_address: T.nilable(Models::Shared::PropertyShippingShipmentToAddress), tracking_id: T.nilable(::String), tracking_url: T.nilable(::String), updated_at: T.nilable(::DateTime), warehouse_location_id: T.nilable(::String), warehouse_location_name: T.nilable(::String)).void }
+        def initialize(carrier_id: nil, carrier_name: nil, created_at: nil, customs: nil, from_address: nil, id: nil, insurance: nil, is_adult_signature_required: nil, is_international: nil, is_rate_guaranteed: nil, is_return: nil, is_signature_required: nil, label_id: nil, lineitems: nil, order_id: nil, organization_id: nil, original_shipment_id: nil, packages: nil, rate_amount: nil, rate_currency: nil, rate_estimated_days: nil, rate_estimated_delivery_at: nil, rate_id: nil, rate_service_name: nil, raw: nil, reference_number: nil, return_address: nil, return_authorization_number: nil, return_reason: nil, return_type: nil, service_code: nil, shipped_at: nil, special_instructions: nil, status: nil, to_address: nil, tracking_id: nil, tracking_url: nil, updated_at: nil, warehouse_location_id: nil, warehouse_location_name: nil)
           @carrier_id = carrier_id
+          @carrier_name = carrier_name
           @created_at = created_at
           @customs = customs
           @from_address = from_address
@@ -100,7 +109,9 @@ module UnifiedRubySDK
           @is_return = is_return
           @is_signature_required = is_signature_required
           @label_id = label_id
+          @lineitems = lineitems
           @order_id = order_id
+          @organization_id = organization_id
           @original_shipment_id = original_shipment_id
           @packages = packages
           @rate_amount = rate_amount
@@ -121,6 +132,7 @@ module UnifiedRubySDK
           @status = status
           @to_address = to_address
           @tracking_id = tracking_id
+          @tracking_url = tracking_url
           @updated_at = updated_at
           @warehouse_location_id = warehouse_location_id
           @warehouse_location_name = warehouse_location_name
@@ -130,6 +142,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @carrier_id == other.carrier_id
+          return false unless @carrier_name == other.carrier_name
           return false unless @created_at == other.created_at
           return false unless @customs == other.customs
           return false unless @from_address == other.from_address
@@ -141,7 +154,9 @@ module UnifiedRubySDK
           return false unless @is_return == other.is_return
           return false unless @is_signature_required == other.is_signature_required
           return false unless @label_id == other.label_id
+          return false unless @lineitems == other.lineitems
           return false unless @order_id == other.order_id
+          return false unless @organization_id == other.organization_id
           return false unless @original_shipment_id == other.original_shipment_id
           return false unless @packages == other.packages
           return false unless @rate_amount == other.rate_amount
@@ -162,6 +177,7 @@ module UnifiedRubySDK
           return false unless @status == other.status
           return false unless @to_address == other.to_address
           return false unless @tracking_id == other.tracking_id
+          return false unless @tracking_url == other.tracking_url
           return false unless @updated_at == other.updated_at
           return false unless @warehouse_location_id == other.warehouse_location_id
           return false unless @warehouse_location_name == other.warehouse_location_name

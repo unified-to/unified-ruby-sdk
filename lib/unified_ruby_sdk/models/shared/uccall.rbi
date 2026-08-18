@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::UcCall
   def id=(str_); end
   def is_private(); end
   def is_private=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def start_at(); end

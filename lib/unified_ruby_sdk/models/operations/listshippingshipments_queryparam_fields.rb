@@ -17,6 +17,7 @@ module UnifiedRubySDK
           CREATED_AT = new('created_at')
           UPDATED_AT = new('updated_at')
           ORDER_ID = new('order_id')
+          ORGANIZATION_ID = new('organization_id')
           FROM_ADDRESS = new('from_address')
           TO_ADDRESS = new('to_address')
           PACKAGES = new('packages')
@@ -48,6 +49,9 @@ module UnifiedRubySDK
           ORIGINAL_SHIPMENT_ID = new('original_shipment_id')
           RETURN_REASON = new('return_reason')
           RETURN_TYPE = new('return_type')
+          CARRIER_NAME = new('carrier_name')
+          TRACKING_URL = new('tracking_url')
+          LINEITEMS = new('lineitems')
           RAW = new('raw')
         end
       end

@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Operations::ListShippingShipmentsRequest
   def order=(str_); end
   def order_id(); end
   def order_id=(str_); end
+  def org_id(); end
+  def org_id=(str_); end
   def query(); end
   def query=(str_); end
   def raw(); end

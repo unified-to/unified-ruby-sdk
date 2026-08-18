@@ -27,6 +27,8 @@ module UnifiedRubySDK
         field :order, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order', 'style': 'form', 'explode': true } }
         # The AccountingOrder ID to filter by
         field :order_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'order_id', 'style': 'form', 'explode': true } }
+        # The org ID to filter by
+        field :org_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'org_id', 'style': 'form', 'explode': true } }
         # Query string to search. eg. email address or name
         field :query, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
         # Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar
@@ -36,8 +38,8 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, carrier_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListShippingShipmentsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), order_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, carrier_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, order_id: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, carrier_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListShippingShipmentsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), order_id: T.nilable(::String), org_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, carrier_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, order_id: nil, org_id: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
           @connection_id = connection_id
           @carrier_id = carrier_id
           @fields_ = fields_
@@ -45,6 +47,7 @@ module UnifiedRubySDK
           @offset = offset
           @order = order
           @order_id = order_id
+          @org_id = org_id
           @query = query
           @raw = raw
           @sort = sort
@@ -61,6 +64,7 @@ module UnifiedRubySDK
           return false unless @offset == other.offset
           return false unless @order == other.order
           return false unless @order_id == other.order_id
+          return false unless @org_id == other.org_id
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @sort == other.sort

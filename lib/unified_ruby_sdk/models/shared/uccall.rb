@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
         field :is_private, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_private') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::UcMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -42,14 +44,15 @@ module UnifiedRubySDK
 
         field :user_phone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_phone') } }
 
-        sig { params(contact_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::UcContact]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_private: T.nilable(T::Boolean), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), telephone: T.nilable(Models::Shared::PropertyUcCallTelephone), type: T.nilable(Models::Shared::UcCallType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String), user_phone: T.nilable(::String)).void }
-        def initialize(contact_id: nil, contacts: nil, created_at: nil, end_at: nil, id: nil, is_private: nil, raw: nil, start_at: nil, telephone: nil, type: nil, updated_at: nil, user_id: nil, user_name: nil, user_phone: nil)
+        sig { params(contact_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::UcContact]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_private: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), telephone: T.nilable(Models::Shared::PropertyUcCallTelephone), type: T.nilable(Models::Shared::UcCallType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String), user_phone: T.nilable(::String)).void }
+        def initialize(contact_id: nil, contacts: nil, created_at: nil, end_at: nil, id: nil, is_private: nil, metadata: nil, raw: nil, start_at: nil, telephone: nil, type: nil, updated_at: nil, user_id: nil, user_name: nil, user_phone: nil)
           @contact_id = contact_id
           @contacts = contacts
           @created_at = created_at
           @end_at = end_at
           @id = id
           @is_private = is_private
+          @metadata = metadata
           @raw = raw
           @start_at = start_at
           @telephone = telephone
@@ -69,6 +72,7 @@ module UnifiedRubySDK
           return false unless @end_at == other.end_at
           return false unless @id == other.id
           return false unless @is_private == other.is_private
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
           return false unless @telephone == other.telephone
