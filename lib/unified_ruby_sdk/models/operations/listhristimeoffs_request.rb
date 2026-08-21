@@ -36,14 +36,16 @@ module UnifiedRubySDK
         # The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'start_gte', 'style': 'form', 'explode': true } }
 
+        field :status, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'status', 'style': 'form', 'explode': true } }
+
         field :type, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
         # The user/employee ID to filter by (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, company_id: T.nilable(::String), end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListHrisTimeoffsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(connection_id:, company_id: nil, end_lt: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, type: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, company_id: T.nilable(::String), end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListHrisTimeoffsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), status: T.nilable(::String), type: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(connection_id:, company_id: nil, end_lt: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, status: nil, type: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
           @company_id = company_id
           @end_lt = end_lt
@@ -55,6 +57,7 @@ module UnifiedRubySDK
           @raw = raw
           @sort = sort
           @start_gte = start_gte
+          @status = status
           @type = type
           @updated_gte = updated_gte
           @user_id = user_id
@@ -74,6 +77,7 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @sort == other.sort
           return false unless @start_gte == other.start_gte
+          return false unless @status == other.status
           return false unless @type == other.type
           return false unless @updated_gte == other.updated_gte
           return false unless @user_id == other.user_id

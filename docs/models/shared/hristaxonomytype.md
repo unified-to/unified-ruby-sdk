@@ -11,3 +11,4 @@
 | `ABILITY`       | ABILITY         |
 | `CERTIFICATION` | CERTIFICATION   |
 | `ROLE`          | ROLE            |
+| `HOLIDAY`       | HOLIDAY         |

@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Operations::ListHrisTimeoffsRequest
   def sort=(str_); end
   def start_gte(); end
   def start_gte=(str_); end
+  def status(); end
+  def status=(str_); end
   def type(); end
   def type=(str_); end
   def updated_gte(); end

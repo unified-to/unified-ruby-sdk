@@ -39,7 +39,7 @@ module UnifiedRubySDK
         field :references, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::StorageReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('references') } }
 
         field :size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
-
+        # labels
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::StorageFileType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::StorageFileType, true) } }

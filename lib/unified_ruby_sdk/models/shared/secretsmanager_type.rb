@@ -18,6 +18,12 @@ module UnifiedRubySDK
           GCP = new('gcp')
           HASHICORP = new('hashicorp')
           COMPOSIO = new('composio')
+          ONEPASSWORD = new('1password')
+          BITWARDEN = new('bitwarden')
+          DOPPLER = new('doppler')
+          AKEYLESS = new('akeyless')
+          PIPEDREAM = new('pipedream')
+          ALIBABACLOUD = new('alibabacloud')
         end
       end
     end

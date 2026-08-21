@@ -19,6 +19,7 @@ module UnifiedRubySDK
           ABILITY = new('ABILITY')
           CERTIFICATION = new('CERTIFICATION')
           ROLE = new('ROLE')
+          HOLIDAY = new('HOLIDAY')
         end
       end
     end
