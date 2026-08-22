@@ -1342,6 +1342,8 @@ module UnifiedRubySDK
       autoload :ListUnifiedIntegrationsResponse, 'unified_ruby_sdk/models/operations/listunifiedintegrations_response.rb'
       autoload :ListUnifiedIssuesRequest, 'unified_ruby_sdk/models/operations/listunifiedissues_request.rb'
       autoload :ListUnifiedIssuesResponse, 'unified_ruby_sdk/models/operations/listunifiedissues_response.rb'
+      autoload :ListUnifiedNotificationsRequest, 'unified_ruby_sdk/models/operations/listunifiednotifications_request.rb'
+      autoload :ListUnifiedNotificationsResponse, 'unified_ruby_sdk/models/operations/listunifiednotifications_response.rb'
       autoload :ListUnifiedWebhooksRequest, 'unified_ruby_sdk/models/operations/listunifiedwebhooks_request.rb'
       autoload :ListUnifiedWebhooksResponse, 'unified_ruby_sdk/models/operations/listunifiedwebhooks_response.rb'
       autoload :ListUnifiedWorkspaceSecretsmanagersRequest, 'unified_ruby_sdk/models/operations/listunifiedworkspacesecretsmanagers_request.rb'

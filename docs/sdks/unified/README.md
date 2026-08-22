@@ -21,6 +21,7 @@
 * [list_unified_integration_workspaces](#list_unified_integration_workspaces) - Returns all activated integrations in a workspace
 * [list_unified_integrations](#list_unified_integrations) - Returns all integrations
 * [list_unified_issues](#list_unified_issues) - List support issues
+* [list_unified_notifications](#list_unified_notifications) - List event notifications
 * [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
 * [list_unified_workspace_secretsmanagers](#list_unified_workspace_secretsmanagers) - List secrets managers
 * [patch_unified_connection](#patch_unified_connection) - Update connection
@@ -143,7 +144,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.unified.create_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
-  event: Models::Shared::Event::CREATED,
+  event: Models::Shared::WebhookEvent::CREATED,
   object_type: Models::Shared::WebhookObjectType::ATS_APPLICATIONSTATUS,
 ))
 
@@ -722,6 +723,49 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_unified_notifications
+
+List event notifications
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listUnifiedNotifications" method="get" path="/unified/notification" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListUnifiedNotificationsRequest.new()
+
+res = s.unified.list_unified_notifications(request: req)
+
+unless res.notifications.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::ListUnifiedNotificationsRequest](../../models/operations/listunifiednotificationsrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::ListUnifiedNotificationsResponse)](../../models/operations/listunifiednotificationsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_unified_webhooks
 
 Returns all registered webhooks
@@ -873,7 +917,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.unified.patch_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
-  event: Models::Shared::Event::UPDATED,
+  event: Models::Shared::WebhookEvent::UPDATED,
   object_type: Models::Shared::WebhookObjectType::MARTECH_MEMBER,
 ), id: '<id>')
 
@@ -1172,7 +1216,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.unified.update_unified_webhook(webhook: Models::Shared::Webhook.new(
   connection_id: '<id>',
-  event: Models::Shared::Event::DELETED,
+  event: Models::Shared::WebhookEvent::DELETED,
   object_type: Models::Shared::WebhookObjectType::GENAI_PROMPT,
 ), id: '<id>')
 

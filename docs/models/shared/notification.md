@@ -1,0 +1,23 @@
+# Notification
+
+A notification of an event that occurred in you account.
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `connection_id`                                                      | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `created_at`                                                         | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `description`                                                        | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `event`                                                              | [T.nilable(Models::Shared::Event)](../../models/shared/event.md)     | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `id`                                                                 | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `integration_name`                                                   | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `integration_type`                                                   | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `sent_at`                                                            | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `updated_at`                                                         | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `user_id`                                                            | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `user_name`                                                          | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `webhook_id`                                                         | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `workspace_id`                                                       | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `workspace_name`                                                     | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: ac3e4c504e331816bec27ab0719fcbcb
+  docChecksum: 623c5de1acc3efd5e2bcb209ebf54b0d
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.115
-  configChecksum: eeaa49d620061977bb706ffcd615d153
+  releaseVersion: 0.67.116
+  configChecksum: 890a9bc47147a0e647b4ecd7e2eb2a71
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1363,6 +1363,8 @@ generatedFiles:
   - docs/models/operations/listunifiedintegrationworkspacesresponse.md
   - docs/models/operations/listunifiedissuesrequest.md
   - docs/models/operations/listunifiedissuesresponse.md
+  - docs/models/operations/listunifiednotificationsrequest.md
+  - docs/models/operations/listunifiednotificationsresponse.md
   - docs/models/operations/listunifiedwebhooksrequest.md
   - docs/models/operations/listunifiedwebhooksresponse.md
   - docs/models/operations/listunifiedworkspacesecretsmanagersrequest.md
@@ -2946,6 +2948,7 @@ generatedFiles:
   - docs/models/shared/nativewebhooktype.md
   - docs/models/shared/nativewebhookvisitorid.md
   - docs/models/shared/nondeliveryoption.md
+  - docs/models/shared/notification.md
   - docs/models/shared/objecttype.md
   - docs/models/shared/one.md
   - docs/models/shared/operation.md
@@ -3448,6 +3451,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookusermentionedid.md
   - docs/models/shared/virtualwebhookvisitorid.md
   - docs/models/shared/webhook.md
+  - docs/models/shared/webhookevent.md
   - docs/models/shared/webhookobjecttype.md
   - docs/models/shared/webhooktype.md
   - docs/models/shared/weekstart.md
@@ -3552,6 +3556,7 @@ generatedFiles:
   - docs/sdks/metadata/README.md
   - docs/sdks/model/README.md
   - docs/sdks/note/README.md
+  - docs/sdks/notification/README.md
   - docs/sdks/order/README.md
   - docs/sdks/organization/README.md
   - docs/sdks/package/README.md
@@ -6406,6 +6411,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listunifiedissues_request.rbi
   - lib/unified_ruby_sdk/models/operations/listunifiedissues_response.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedissues_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listunifiednotifications_request.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiednotifications_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listunifiednotifications_response.rb
+  - lib/unified_ruby_sdk/models/operations/listunifiednotifications_response.rbi
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_request.rb
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_request.rbi
   - lib/unified_ruby_sdk/models/operations/listunifiedwebhooks_response.rb
@@ -9573,6 +9582,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/native_webhook_visitor_id.rbi
   - lib/unified_ruby_sdk/models/shared/non_delivery_option.rb
   - lib/unified_ruby_sdk/models/shared/non_delivery_option.rbi
+  - lib/unified_ruby_sdk/models/shared/notification.rb
+  - lib/unified_ruby_sdk/models/shared/notification.rbi
   - lib/unified_ruby_sdk/models/shared/object_type.rb
   - lib/unified_ruby_sdk/models/shared/object_type.rbi
   - lib/unified_ruby_sdk/models/shared/one.rb
@@ -10577,6 +10588,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_visitor_id.rbi
   - lib/unified_ruby_sdk/models/shared/webhook.rb
   - lib/unified_ruby_sdk/models/shared/webhook.rbi
+  - lib/unified_ruby_sdk/models/shared/webhook_event.rb
+  - lib/unified_ruby_sdk/models/shared/webhook_event.rbi
   - lib/unified_ruby_sdk/models/shared/webhook_object_type.rb
   - lib/unified_ruby_sdk/models/shared/webhook_object_type.rbi
   - lib/unified_ruby_sdk/models/shared/webhook_type.rb
@@ -10588,6 +10601,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/youtube_and_partners_type.rb
   - lib/unified_ruby_sdk/models/shared/youtube_and_partners_type.rbi
   - lib/unified_ruby_sdk/note.rb
+  - lib/unified_ruby_sdk/notification.rb
   - lib/unified_ruby_sdk/order.rb
   - lib/unified_ruby_sdk/organization.rb
   - lib/unified_ruby_sdk/package.rb
@@ -24570,5 +24584,10 @@ examples:
       responses:
         "200":
           application/json: {}
+  listUnifiedNotifications:
+    speakeasy-default-list-unified-notifications:
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}

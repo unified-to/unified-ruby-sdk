@@ -171,6 +171,7 @@ module UnifiedRubySDK
   autoload :Login, 'unified_ruby_sdk/login'
   autoload :Saml, 'unified_ruby_sdk/saml'
   autoload :Issue, 'unified_ruby_sdk/issue'
+  autoload :Notification, 'unified_ruby_sdk/notification'
   autoload :Webhook, 'unified_ruby_sdk/webhook'
   autoload :Secretsmanager, 'unified_ruby_sdk/secretsmanager'
   autoload :Verification, 'unified_ruby_sdk/verification'
