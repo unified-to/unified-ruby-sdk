@@ -41,6 +41,7 @@ module UnifiedRubySDK
           ORGANIZATION_ID = new('organization_id')
           TERM = new('term')
           PAYMENT_TERMS = new('payment_terms')
+          PAYMENTTERM_ID = new('paymentterm_id')
           PAYMENTS = new('payments')
           CATEGORY_IDS = new('category_ids')
           PROJECT_ID = new('project_id')

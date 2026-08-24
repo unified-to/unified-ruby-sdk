@@ -22,6 +22,7 @@ module UnifiedRubySDK
           ACCOUNTING_VENDORCREDIT = new('accounting_vendorcredit')
           ACCOUNTING_CREDITMEMO = new('accounting_creditmemo')
           ACCOUNTING_TAXRATE = new('accounting_taxrate')
+          ACCOUNTING_PAYMENTTERM = new('accounting_paymentterm')
           ACCOUNTING_ORGANIZATION = new('accounting_organization')
           ACCOUNTING_ORDER = new('accounting_order')
           ACCOUNTING_SALESORDER = new('accounting_salesorder')

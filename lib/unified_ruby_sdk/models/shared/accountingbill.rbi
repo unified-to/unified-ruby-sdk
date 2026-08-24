@@ -48,6 +48,8 @@ class UnifiedRubySDK::Models::Shared::AccountingBill
   def payment_terms=(str_); end
   def payments(); end
   def payments=(str_); end
+  def paymentterm_id(); end
+  def paymentterm_id=(str_); end
   def posted_at(); end
   def posted_at=(str_); end
   def project_id(); end

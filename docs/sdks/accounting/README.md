@@ -16,6 +16,7 @@
 * [create_accounting_invoice](#create_accounting_invoice) - Create an invoice
 * [create_accounting_journal](#create_accounting_journal) - Create a journal
 * [create_accounting_order](#create_accounting_order) - Create an order
+* [create_accounting_paymentterm](#create_accounting_paymentterm) - Create a paymentterm
 * [create_accounting_project](#create_accounting_project) - Create a project
 * [create_accounting_purchaseorder](#create_accounting_purchaseorder) - Create a purchaseorder
 * [create_accounting_quote](#create_accounting_quote) - Create a quote
@@ -39,6 +40,7 @@
 * [get_accounting_journal](#get_accounting_journal) - Retrieve a journal
 * [get_accounting_order](#get_accounting_order) - Retrieve an order
 * [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
+* [get_accounting_paymentterm](#get_accounting_paymentterm) - Retrieve a paymentterm
 * [get_accounting_profitloss](#get_accounting_profitloss) - Retrieve a profitloss
 * [get_accounting_project](#get_accounting_project) - Retrieve a project
 * [get_accounting_purchaseorder](#get_accounting_purchaseorder) - Retrieve a purchaseorder
@@ -65,6 +67,7 @@
 * [list_accounting_journals](#list_accounting_journals) - List all journals
 * [list_accounting_orders](#list_accounting_orders) - List all orders
 * [list_accounting_organizations](#list_accounting_organizations) - List all organizations
+* [list_accounting_paymentterms](#list_accounting_paymentterms) - List all paymentterms
 * [list_accounting_profitlosses](#list_accounting_profitlosses) - List all profitlosses
 * [list_accounting_projects](#list_accounting_projects) - List all projects
 * [list_accounting_purchaseorders](#list_accounting_purchaseorders) - List all purchaseorders
@@ -86,6 +89,7 @@
 * [patch_accounting_invoice](#patch_accounting_invoice) - Update an invoice
 * [patch_accounting_journal](#patch_accounting_journal) - Update a journal
 * [patch_accounting_order](#patch_accounting_order) - Update an order
+* [patch_accounting_paymentterm](#patch_accounting_paymentterm) - Update a paymentterm
 * [patch_accounting_project](#patch_accounting_project) - Update a project
 * [patch_accounting_purchaseorder](#patch_accounting_purchaseorder) - Update a purchaseorder
 * [patch_accounting_quote](#patch_accounting_quote) - Update a quote
@@ -104,6 +108,7 @@
 * [remove_accounting_invoice](#remove_accounting_invoice) - Remove an invoice
 * [remove_accounting_journal](#remove_accounting_journal) - Remove a journal
 * [remove_accounting_order](#remove_accounting_order) - Remove an order
+* [remove_accounting_paymentterm](#remove_accounting_paymentterm) - Remove a paymentterm
 * [remove_accounting_project](#remove_accounting_project) - Remove a project
 * [remove_accounting_purchaseorder](#remove_accounting_purchaseorder) - Remove a purchaseorder
 * [remove_accounting_quote](#remove_accounting_quote) - Remove a quote
@@ -122,6 +127,7 @@
 * [update_accounting_invoice](#update_accounting_invoice) - Update an invoice
 * [update_accounting_journal](#update_accounting_journal) - Update a journal
 * [update_accounting_order](#update_accounting_order) - Update an order
+* [update_accounting_paymentterm](#update_accounting_paymentterm) - Update a paymentterm
 * [update_accounting_project](#update_accounting_project) - Update a project
 * [update_accounting_purchaseorder](#update_accounting_purchaseorder) - Update a purchaseorder
 * [update_accounting_quote](#update_accounting_quote) - Update a quote
@@ -607,6 +613,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateAccountingOrderResponse)](../../models/operations/createaccountingorderresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_accounting_paymentterm
+
+Create a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.create_accounting_paymentterm(accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(), connection_id: '<id>')
+
+unless res.accounting_paymentterm.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                           | Type                                                                                                                                                | Required                                                                                                                                            | Description                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `accounting_paymentterm`                                                                                                                            | [Models::Shared::AccountingPaymentterm](../../models/shared/accountingpaymentterm.md)                                                               | :heavy_check_mark:                                                                                                                                  | N/A                                                                                                                                                 |
+| `connection_id`                                                                                                                                     | *::String*                                                                                                                                          | :heavy_check_mark:                                                                                                                                  | ID of the connection                                                                                                                                |
+| `fields_`                                                                                                                                           | T::Array<[Models::Operations::CreateAccountingPaymenttermQueryParamFields](../../models/operations/createaccountingpaymenttermqueryparamfields.md)> | :heavy_minus_sign:                                                                                                                                  | Fields to return                                                                                                                                    |
+| `raw`                                                                                                                                               | *T.nilable(::String)*                                                                                                                               | :heavy_minus_sign:                                                                                                                                  | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar    |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateAccountingPaymenttermResponse)](../../models/operations/createaccountingpaymenttermresponse.md)**
 
 ### Errors
 
@@ -1619,6 +1669,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetAccountingOrganizationResponse)](../../models/operations/getaccountingorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_accounting_paymentterm
+
+Retrieve a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getAccountingPaymentterm" method="get" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.get_accounting_paymentterm(connection_id: '<id>', id: '<id>')
+
+unless res.accounting_paymentterm.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Paymentterm                                                                                                                            |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAccountingPaymenttermQueryParamFields](../../models/operations/getaccountingpaymenttermqueryparamfields.md)>    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetAccountingPaymenttermResponse)](../../models/operations/getaccountingpaymenttermresponse.md)**
 
 ### Errors
 
@@ -2786,6 +2880,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_accounting_paymentterms
+
+List all paymentterms
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listAccountingPaymentterms" method="get" path="/accounting/{connection_id}/paymentterm" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListAccountingPaymenttermsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.accounting.list_accounting_paymentterms(request: req)
+
+unless res.accounting_paymentterms.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                             | [Models::Operations::ListAccountingPaymenttermsRequest](../../models/operations/listaccountingpaymenttermsrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::ListAccountingPaymenttermsResponse)](../../models/operations/listaccountingpaymenttermsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_accounting_profitlosses
 
 List all profitlosses
@@ -3753,6 +3892,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_accounting_paymentterm
+
+Update a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchAccountingPaymenttermRequest.new(
+  accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.accounting.patch_accounting_paymentterm(request: req)
+
+unless res.accounting_paymentterm.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                             | Type                                                                                                                  | Required                                                                                                              | Description                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                             | [Models::Operations::PatchAccountingPaymenttermRequest](../../models/operations/patchaccountingpaymenttermrequest.md) | :heavy_check_mark:                                                                                                    | The request object to use for the request.                                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchAccountingPaymenttermResponse)](../../models/operations/patchaccountingpaymenttermresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_accounting_project
 
 Update a project
@@ -4537,6 +4723,48 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveAccountingOrderResponse)](../../models/operations/removeaccountingorderresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_accounting_paymentterm
+
+Remove a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeAccountingPaymentterm" method="delete" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.accounting.remove_accounting_paymentterm(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter             | Type                  | Required              | Description           |
+| --------------------- | --------------------- | --------------------- | --------------------- |
+| `connection_id`       | *::String*            | :heavy_check_mark:    | ID of the connection  |
+| `id`                  | *::String*            | :heavy_check_mark:    | ID of the Paymentterm |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveAccountingPaymenttermResponse)](../../models/operations/removeaccountingpaymenttermresponse.md)**
 
 ### Errors
 
@@ -5348,6 +5576,53 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateAccountingOrderResponse)](../../models/operations/updateaccountingorderresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_accounting_paymentterm
+
+Update a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateAccountingPaymenttermRequest.new(
+  accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.accounting.update_accounting_paymentterm(request: req)
+
+unless res.accounting_paymentterm.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                               | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                               | [Models::Operations::UpdateAccountingPaymenttermRequest](../../models/operations/updateaccountingpaymenttermrequest.md) | :heavy_check_mark:                                                                                                      | The request object to use for the request.                                                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateAccountingPaymenttermResponse)](../../models/operations/updateaccountingpaymenttermresponse.md)**
 
 ### Errors
 

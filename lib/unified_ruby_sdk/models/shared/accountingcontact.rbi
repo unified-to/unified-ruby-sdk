@@ -40,6 +40,8 @@ class UnifiedRubySDK::Models::Shared::AccountingContact
   def payment_methods=(str_); end
   def payment_terms(); end
   def payment_terms=(str_); end
+  def paymentterm_id(); end
+  def paymentterm_id=(str_); end
   def portal_url(); end
   def portal_url=(str_); end
   def raw(); end

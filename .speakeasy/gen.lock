@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 623c5de1acc3efd5e2bcb209ebf54b0d
+  docChecksum: 5dbddde50faa6ee0fd800190b2c34aca
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.116
-  configChecksum: 890a9bc47147a0e647b4ecd7e2eb2a71
+  releaseVersion: 0.67.117
+  configChecksum: ce0917bb75f9c205b4964fe5fbc88b6b
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -60,6 +60,9 @@ generatedFiles:
   - docs/models/operations/createaccountingorderqueryparamfields.md
   - docs/models/operations/createaccountingorderrequest.md
   - docs/models/operations/createaccountingorderresponse.md
+  - docs/models/operations/createaccountingpaymenttermqueryparamfields.md
+  - docs/models/operations/createaccountingpaymenttermrequest.md
+  - docs/models/operations/createaccountingpaymenttermresponse.md
   - docs/models/operations/createaccountingprojectqueryparamfields.md
   - docs/models/operations/createaccountingprojectrequest.md
   - docs/models/operations/createaccountingprojectresponse.md
@@ -456,6 +459,9 @@ generatedFiles:
   - docs/models/operations/getaccountingorganizationqueryparamfields.md
   - docs/models/operations/getaccountingorganizationrequest.md
   - docs/models/operations/getaccountingorganizationresponse.md
+  - docs/models/operations/getaccountingpaymenttermqueryparamfields.md
+  - docs/models/operations/getaccountingpaymenttermrequest.md
+  - docs/models/operations/getaccountingpaymenttermresponse.md
   - docs/models/operations/getaccountingprofitlossqueryparamfields.md
   - docs/models/operations/getaccountingprofitlossrequest.md
   - docs/models/operations/getaccountingprofitlossresponse.md
@@ -925,6 +931,9 @@ generatedFiles:
   - docs/models/operations/listaccountingorganizationsqueryparamfields.md
   - docs/models/operations/listaccountingorganizationsrequest.md
   - docs/models/operations/listaccountingorganizationsresponse.md
+  - docs/models/operations/listaccountingpaymenttermsqueryparamfields.md
+  - docs/models/operations/listaccountingpaymenttermsrequest.md
+  - docs/models/operations/listaccountingpaymenttermsresponse.md
   - docs/models/operations/listaccountingprofitlossesqueryparamfields.md
   - docs/models/operations/listaccountingprofitlossesrequest.md
   - docs/models/operations/listaccountingprofitlossesresponse.md
@@ -1408,6 +1417,9 @@ generatedFiles:
   - docs/models/operations/patchaccountingorderqueryparamfields.md
   - docs/models/operations/patchaccountingorderrequest.md
   - docs/models/operations/patchaccountingorderresponse.md
+  - docs/models/operations/patchaccountingpaymenttermqueryparamfields.md
+  - docs/models/operations/patchaccountingpaymenttermrequest.md
+  - docs/models/operations/patchaccountingpaymenttermresponse.md
   - docs/models/operations/patchaccountingprojectqueryparamfields.md
   - docs/models/operations/patchaccountingprojectrequest.md
   - docs/models/operations/patchaccountingprojectresponse.md
@@ -1766,6 +1778,8 @@ generatedFiles:
   - docs/models/operations/removeaccountingjournalresponse.md
   - docs/models/operations/removeaccountingorderrequest.md
   - docs/models/operations/removeaccountingorderresponse.md
+  - docs/models/operations/removeaccountingpaymenttermrequest.md
+  - docs/models/operations/removeaccountingpaymenttermresponse.md
   - docs/models/operations/removeaccountingprojectrequest.md
   - docs/models/operations/removeaccountingprojectresponse.md
   - docs/models/operations/removeaccountingpurchaseorderrequest.md
@@ -2023,6 +2037,9 @@ generatedFiles:
   - docs/models/operations/updateaccountingorderqueryparamfields.md
   - docs/models/operations/updateaccountingorderrequest.md
   - docs/models/operations/updateaccountingorderresponse.md
+  - docs/models/operations/updateaccountingpaymenttermqueryparamfields.md
+  - docs/models/operations/updateaccountingpaymenttermrequest.md
+  - docs/models/operations/updateaccountingpaymenttermresponse.md
   - docs/models/operations/updateaccountingprojectqueryparamfields.md
   - docs/models/operations/updateaccountingprojectrequest.md
   - docs/models/operations/updateaccountingprojectresponse.md
@@ -2411,6 +2428,8 @@ generatedFiles:
   - docs/models/shared/accountingorganization.md
   - docs/models/shared/accountingorganizationtype.md
   - docs/models/shared/accountingpaymentreference.md
+  - docs/models/shared/accountingpaymentterm.md
+  - docs/models/shared/accountingpaymenttermtype.md
   - docs/models/shared/accountingprofitloss.md
   - docs/models/shared/accountingprofitlossaccount.md
   - docs/models/shared/accountingprofitlosscategory.md
@@ -2564,6 +2583,7 @@ generatedFiles:
   - docs/models/shared/calendarwebinarpaneliststatus.md
   - docs/models/shared/calendarwebinarregistrant.md
   - docs/models/shared/calendarwebinarstatus.md
+  - docs/models/shared/category.md
   - docs/models/shared/cdpactivation.md
   - docs/models/shared/cdpactivationstatus.md
   - docs/models/shared/cdpconsent.md
@@ -3563,6 +3583,7 @@ generatedFiles:
   - docs/sdks/page/README.md
   - docs/sdks/passthrough/README.md
   - docs/sdks/payment/README.md
+  - docs/sdks/paymentterm/README.md
   - docs/sdks/payout/README.md
   - docs/sdks/payslip/README.md
   - docs/sdks/performance/README.md
@@ -3805,6 +3826,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createaccountingorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingorder_response.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingpaymentterm_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingpaymentterm_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingpaymentterm_request.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingpaymentterm_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createaccountingpaymentterm_response.rb
+  - lib/unified_ruby_sdk/models/operations/createaccountingpaymentterm_response.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingproject_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createaccountingproject_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createaccountingproject_request.rb
@@ -4597,6 +4624,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getaccountingorganization_request.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingorganization_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingorganization_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingpaymentterm_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingpaymentterm_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingpaymentterm_request.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingpaymentterm_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getaccountingpaymentterm_response.rb
+  - lib/unified_ruby_sdk/models/operations/getaccountingpaymentterm_response.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingprofitloss_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingprofitloss_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingprofitloss_request.rb
@@ -5535,6 +5568,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listaccountingorganizations_request.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingorganizations_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingorganizations_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingpaymentterms_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingpaymentterms_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingpaymentterms_request.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingpaymentterms_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listaccountingpaymentterms_response.rb
+  - lib/unified_ruby_sdk/models/operations/listaccountingpaymentterms_response.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingprofitlosses_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingprofitlosses_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingprofitlosses_request.rb
@@ -6501,6 +6540,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchaccountingorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingorder_response.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingpaymentterm_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingpaymentterm_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingpaymentterm_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingpaymentterm_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchaccountingpaymentterm_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchaccountingpaymentterm_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingproject_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchaccountingproject_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchaccountingproject_request.rb
@@ -7217,6 +7262,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removeaccountingorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingorder_response.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingpaymentterm_request.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingpaymentterm_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removeaccountingpaymentterm_response.rb
+  - lib/unified_ruby_sdk/models/operations/removeaccountingpaymentterm_response.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingproject_request.rb
   - lib/unified_ruby_sdk/models/operations/removeaccountingproject_request.rbi
   - lib/unified_ruby_sdk/models/operations/removeaccountingproject_response.rb
@@ -7731,6 +7780,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updateaccountingorder_request.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingorder_response.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingorder_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingpaymentterm_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingpaymentterm_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingpaymentterm_request.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingpaymentterm_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updateaccountingpaymentterm_response.rb
+  - lib/unified_ruby_sdk/models/operations/updateaccountingpaymentterm_response.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingproject_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updateaccountingproject_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updateaccountingproject_request.rb
@@ -8510,6 +8565,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingorganization_type.rbi
   - lib/unified_ruby_sdk/models/shared/accountingpaymentreference.rb
   - lib/unified_ruby_sdk/models/shared/accountingpaymentreference.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingpaymentterm.rb
+  - lib/unified_ruby_sdk/models/shared/accountingpaymentterm.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingpaymentterm_type.rb
+  - lib/unified_ruby_sdk/models/shared/accountingpaymentterm_type.rbi
   - lib/unified_ruby_sdk/models/shared/accountingprofitloss.rb
   - lib/unified_ruby_sdk/models/shared/accountingprofitloss.rbi
   - lib/unified_ruby_sdk/models/shared/accountingprofitlossaccount.rb
@@ -8814,6 +8873,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/calendarwebinarpanelist_status.rbi
   - lib/unified_ruby_sdk/models/shared/calendarwebinarregistrant.rb
   - lib/unified_ruby_sdk/models/shared/calendarwebinarregistrant.rbi
+  - lib/unified_ruby_sdk/models/shared/category.rb
+  - lib/unified_ruby_sdk/models/shared/category.rbi
   - lib/unified_ruby_sdk/models/shared/cdpactivation.rb
   - lib/unified_ruby_sdk/models/shared/cdpactivation.rbi
   - lib/unified_ruby_sdk/models/shared/cdpactivation_status.rb
@@ -10608,6 +10669,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/page.rb
   - lib/unified_ruby_sdk/passthrough.rb
   - lib/unified_ruby_sdk/payment.rb
+  - lib/unified_ruby_sdk/paymentterm.rb
   - lib/unified_ruby_sdk/payout.rb
   - lib/unified_ruby_sdk/payslip.rb
   - lib/unified_ruby_sdk/performance.rb
@@ -24589,5 +24651,60 @@ examples:
       responses:
         "200":
           application/json: [{}]
+  createAccountingPaymentterm:
+    speakeasy-default-create-accounting-paymentterm:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getAccountingPaymentterm:
+    speakeasy-default-get-accounting-paymentterm:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listAccountingPaymentterms:
+    speakeasy-default-list-accounting-paymentterms:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchAccountingPaymentterm:
+    speakeasy-default-patch-accounting-paymentterm:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeAccountingPaymentterm:
+    speakeasy-default-remove-accounting-paymentterm:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateAccountingPaymentterm:
+    speakeasy-default-update-accounting-paymentterm:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}

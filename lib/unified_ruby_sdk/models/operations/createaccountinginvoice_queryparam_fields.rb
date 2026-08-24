@@ -35,6 +35,7 @@ module UnifiedRubySDK
           REFUND_REASON = new('refund_reason')
           TERM = new('term')
           PAYMENT_TERMS = new('payment_terms')
+          PAYMENTTERM_ID = new('paymentterm_id')
           LINEITEMS = new('lineitems')
           STATUS = new('status')
           URL = new('url')

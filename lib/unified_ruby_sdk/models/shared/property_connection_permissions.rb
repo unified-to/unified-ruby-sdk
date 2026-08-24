@@ -33,6 +33,8 @@ module UnifiedRubySDK
           ACCOUNTING_EXPENSE_WRITE = new('accounting_expense_write')
           ACCOUNTING_TAXRATE_READ = new('accounting_taxrate_read')
           ACCOUNTING_TAXRATE_WRITE = new('accounting_taxrate_write')
+          ACCOUNTING_PAYMENTTERM_READ = new('accounting_paymentterm_read')
+          ACCOUNTING_PAYMENTTERM_WRITE = new('accounting_paymentterm_write')
           ACCOUNTING_ORGANIZATION_READ = new('accounting_organization_read')
           ACCOUNTING_ORDER_READ = new('accounting_order_read')
           ACCOUNTING_ORDER_WRITE = new('accounting_order_write')

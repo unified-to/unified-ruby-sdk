@@ -36,6 +36,7 @@ module UnifiedRubySDK
           ASSOCIATED_CONTACTS = new('associated_contacts')
           ORGANIZATION_ID = new('organization_id')
           PAYMENT_TERMS = new('payment_terms')
+          PAYMENTTERM_ID = new('paymentterm_id')
           RAW = new('raw')
         end
       end

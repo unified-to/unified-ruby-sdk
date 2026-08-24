@@ -22,6 +22,7 @@ module UnifiedRubySDK
   autoload :Journal, 'unified_ruby_sdk/journal'
   autoload :Order, 'unified_ruby_sdk/order'
   autoload :Organization, 'unified_ruby_sdk/organization'
+  autoload :Paymentterm, 'unified_ruby_sdk/paymentterm'
   autoload :Profitloss, 'unified_ruby_sdk/profitloss'
   autoload :Project, 'unified_ruby_sdk/project'
   autoload :Purchaseorder, 'unified_ruby_sdk/purchaseorder'
