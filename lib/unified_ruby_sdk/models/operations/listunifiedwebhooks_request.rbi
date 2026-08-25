@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Operations::ListUnifiedWebhooksRequest
   def env=(str_); end
   def integration_type(); end
   def integration_type=(str_); end
+  def is_healthy(); end
+  def is_healthy=(str_); end
   def limit(); end
   def limit=(str_); end
   def object(); end

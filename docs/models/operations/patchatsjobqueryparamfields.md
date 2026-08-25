@@ -32,4 +32,5 @@
 | `SKILLS`                   | skills                     |
 | `METADATA`                 | metadata                   |
 | `USER_ID`                  | user_id                    |
+| `INDUSTRY`                 | industry                   |
 | `RAW`                      | raw                        |

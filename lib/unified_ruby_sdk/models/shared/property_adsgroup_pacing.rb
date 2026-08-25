@@ -18,11 +18,11 @@ module UnifiedRubySDK
 
         field :daily_max_impressions, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('daily_max_impressions') } }
 
-        field :period, Crystalline::Nilable.new(Models::Shared::Period), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('period'), 'decoder': Utils.enum_from_string(Models::Shared::Period, true) } }
+        field :period, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupPacingPeriod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('period'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsGroupPacingPeriod, true) } }
 
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
-        sig { params(daily_max_amount: T.nilable(::Float), daily_max_impressions: T.nilable(::Float), period: T.nilable(Models::Shared::Period), type: T.nilable(::String)).void }
+        sig { params(daily_max_amount: T.nilable(::Float), daily_max_impressions: T.nilable(::Float), period: T.nilable(Models::Shared::PropertyAdsGroupPacingPeriod), type: T.nilable(::String)).void }
         def initialize(daily_max_amount: nil, daily_max_impressions: nil, period: nil, type: nil)
           @daily_max_amount = daily_max_amount
           @daily_max_impressions = daily_max_impressions

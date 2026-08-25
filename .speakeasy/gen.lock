@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 5dbddde50faa6ee0fd800190b2c34aca
+  docChecksum: b24485f3e853704aed2b16d046ca7585
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.117
-  configChecksum: ce0917bb75f9c205b4964fe5fbc88b6b
+  releaseVersion: 0.67.118
+  configChecksum: f5718e46c0fbd9f6c5b76eef158a2172
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -370,6 +370,9 @@ generatedFiles:
   - docs/models/operations/createsigningsignatoryqueryparamfields.md
   - docs/models/operations/createsigningsignatoryrequest.md
   - docs/models/operations/createsigningsignatoryresponse.md
+  - docs/models/operations/createsocialpostqueryparamfields.md
+  - docs/models/operations/createsocialpostrequest.md
+  - docs/models/operations/createsocialpostresponse.md
   - docs/models/operations/createstoragefilequeryparamfields.md
   - docs/models/operations/createstoragefilerequest.md
   - docs/models/operations/createstoragefileresponse.md
@@ -822,6 +825,18 @@ generatedFiles:
   - docs/models/operations/getsigningtemplatequeryparamfields.md
   - docs/models/operations/getsigningtemplaterequest.md
   - docs/models/operations/getsigningtemplateresponse.md
+  - docs/models/operations/getsocialinsightqueryparamfields.md
+  - docs/models/operations/getsocialinsightrequest.md
+  - docs/models/operations/getsocialinsightresponse.md
+  - docs/models/operations/getsocialpostqueryparamfields.md
+  - docs/models/operations/getsocialpostrequest.md
+  - docs/models/operations/getsocialpostresponse.md
+  - docs/models/operations/getsocialprofilequeryparamfields.md
+  - docs/models/operations/getsocialprofilerequest.md
+  - docs/models/operations/getsocialprofileresponse.md
+  - docs/models/operations/getsocialreviewqueryparamfields.md
+  - docs/models/operations/getsocialreviewrequest.md
+  - docs/models/operations/getsocialreviewresponse.md
   - docs/models/operations/getstoragefilequeryparamfields.md
   - docs/models/operations/getstoragefilerequest.md
   - docs/models/operations/getstoragefileresponse.md
@@ -1321,6 +1336,18 @@ generatedFiles:
   - docs/models/operations/listsigningtemplatesqueryparamfields.md
   - docs/models/operations/listsigningtemplatesrequest.md
   - docs/models/operations/listsigningtemplatesresponse.md
+  - docs/models/operations/listsocialinsightsqueryparamfields.md
+  - docs/models/operations/listsocialinsightsrequest.md
+  - docs/models/operations/listsocialinsightsresponse.md
+  - docs/models/operations/listsocialpostsqueryparamfields.md
+  - docs/models/operations/listsocialpostsrequest.md
+  - docs/models/operations/listsocialpostsresponse.md
+  - docs/models/operations/listsocialprofilesqueryparamfields.md
+  - docs/models/operations/listsocialprofilesrequest.md
+  - docs/models/operations/listsocialprofilesresponse.md
+  - docs/models/operations/listsocialreviewsqueryparamfields.md
+  - docs/models/operations/listsocialreviewsrequest.md
+  - docs/models/operations/listsocialreviewsresponse.md
   - docs/models/operations/liststoragefilesqueryparamfields.md
   - docs/models/operations/liststoragefilesrequest.md
   - docs/models/operations/liststoragefilesresponse.md
@@ -1712,6 +1739,12 @@ generatedFiles:
   - docs/models/operations/patchsigningsignatoryqueryparamfields.md
   - docs/models/operations/patchsigningsignatoryrequest.md
   - docs/models/operations/patchsigningsignatoryresponse.md
+  - docs/models/operations/patchsocialpostqueryparamfields.md
+  - docs/models/operations/patchsocialpostrequest.md
+  - docs/models/operations/patchsocialpostresponse.md
+  - docs/models/operations/patchsocialreviewqueryparamfields.md
+  - docs/models/operations/patchsocialreviewrequest.md
+  - docs/models/operations/patchsocialreviewresponse.md
   - docs/models/operations/patchstoragefilequeryparamfields.md
   - docs/models/operations/patchstoragefilerequest.md
   - docs/models/operations/patchstoragefileresponse.md
@@ -1972,6 +2005,8 @@ generatedFiles:
   - docs/models/operations/removesigningdocumentresponse.md
   - docs/models/operations/removesigningsignatoryrequest.md
   - docs/models/operations/removesigningsignatoryresponse.md
+  - docs/models/operations/removesocialpostrequest.md
+  - docs/models/operations/removesocialpostresponse.md
   - docs/models/operations/removestoragefilerequest.md
   - docs/models/operations/removestoragefileresponse.md
   - docs/models/operations/removetaskcommentrequest.md
@@ -2332,6 +2367,12 @@ generatedFiles:
   - docs/models/operations/updatesigningsignatoryqueryparamfields.md
   - docs/models/operations/updatesigningsignatoryrequest.md
   - docs/models/operations/updatesigningsignatoryresponse.md
+  - docs/models/operations/updatesocialpostqueryparamfields.md
+  - docs/models/operations/updatesocialpostrequest.md
+  - docs/models/operations/updatesocialpostresponse.md
+  - docs/models/operations/updatesocialreviewqueryparamfields.md
+  - docs/models/operations/updatesocialreviewrequest.md
+  - docs/models/operations/updatesocialreviewresponse.md
   - docs/models/operations/updatestoragefilequeryparamfields.md
   - docs/models/operations/updatestoragefilerequest.md
   - docs/models/operations/updatestoragefileresponse.md
@@ -2870,6 +2911,7 @@ generatedFiles:
   - docs/models/shared/listpaymentid.md
   - docs/models/shared/listpayslipid.md
   - docs/models/shared/listpipelineid.md
+  - docs/models/shared/listpostid.md
   - docs/models/shared/listprofileid.md
   - docs/models/shared/listprojectid.md
   - docs/models/shared/listpropertyid.md
@@ -2942,6 +2984,7 @@ generatedFiles:
   - docs/models/shared/messagingreference.md
   - docs/models/shared/metadatametadata.md
   - docs/models/shared/metadatametadataformat.md
+  - docs/models/shared/metric.md
   - docs/models/shared/mode.md
   - docs/models/shared/nativewebhookcalendarid.md
   - docs/models/shared/nativewebhookcarrierid.md
@@ -3025,6 +3068,8 @@ generatedFiles:
   - docs/models/shared/propertyaccountingsalesorderbillingaddress.md
   - docs/models/shared/propertyaccountingsalesordershippingaddress.md
   - docs/models/shared/propertyadscampaignfrequencycap.md
+  - docs/models/shared/propertyadscampaignkpi.md
+  - docs/models/shared/propertyadscampaignkpitype.md
   - docs/models/shared/propertyadscampaigntargeting.md
   - docs/models/shared/propertyadscampaigntargetingaudience.md
   - docs/models/shared/propertyadscampaigntargetingbrandsafety.md
@@ -3045,6 +3090,7 @@ generatedFiles:
   - docs/models/shared/propertyadsgroupfrequencycap.md
   - docs/models/shared/propertyadsgroupfrequencycaptimeunit.md
   - docs/models/shared/propertyadsgrouppacing.md
+  - docs/models/shared/propertyadsgrouppacingperiod.md
   - docs/models/shared/propertyadsgrouptargeting.md
   - docs/models/shared/propertyadsgrouptargetingaudience.md
   - docs/models/shared/propertyadsgrouptargetingbrandsafety.md
@@ -3083,6 +3129,8 @@ generatedFiles:
   - docs/models/shared/propertyadsreportmetricscampaignfrequencycap.md
   - docs/models/shared/propertyadsreportmetricscampaignfrequencycaptimeunit.md
   - docs/models/shared/propertyadsreportmetricscampaigngoal.md
+  - docs/models/shared/propertyadsreportmetricscampaignkpi.md
+  - docs/models/shared/propertyadsreportmetricscampaignkpitype.md
   - docs/models/shared/propertyadsreportmetricscampaignstatus.md
   - docs/models/shared/propertyadsreportmetricscampaigntargeting.md
   - docs/models/shared/propertyadsreportmetricscampaigntargetingaudience.md
@@ -3260,6 +3308,12 @@ generatedFiles:
   - docs/models/shared/propertyshippingshipmentreturnaddress.md
   - docs/models/shared/propertyshippingshipmenttoaddress.md
   - docs/models/shared/propertyshippingtrackingeventlocationaddress.md
+  - docs/models/shared/propertysocialpostcalltoaction.md
+  - docs/models/shared/propertysocialpostcalltoactiontype.md
+  - docs/models/shared/propertysocialpostmetrics.md
+  - docs/models/shared/propertysocialprofileaddress.md
+  - docs/models/shared/propertysocialprofilemetrics.md
+  - docs/models/shared/propertysocialreviewreply.md
   - docs/models/shared/propertystoragepermissionroles.md
   - docs/models/shared/propertyuccalltelephone.md
   - docs/models/shared/propertyuccalltelephonetype.md
@@ -3332,6 +3386,14 @@ generatedFiles:
   - docs/models/shared/signingsignatorystatus.md
   - docs/models/shared/signingtemplate.md
   - docs/models/shared/sizeunit.md
+  - docs/models/shared/socialinsight.md
+  - docs/models/shared/socialmedia.md
+  - docs/models/shared/socialmediatype.md
+  - docs/models/shared/socialpost.md
+  - docs/models/shared/socialpoststatus.md
+  - docs/models/shared/socialposttype.md
+  - docs/models/shared/socialprofile.md
+  - docs/models/shared/socialreview.md
   - docs/models/shared/sortorder.md
   - docs/models/shared/sporttype.md
   - docs/models/shared/status.md
@@ -3449,6 +3511,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookparentid.md
   - docs/models/shared/virtualwebhookpaymentid.md
   - docs/models/shared/virtualwebhookpipelineid.md
+  - docs/models/shared/virtualwebhookpostid.md
   - docs/models/shared/virtualwebhookprofileid.md
   - docs/models/shared/virtualwebhookprojectid.md
   - docs/models/shared/virtualwebhookpropertyid.md
@@ -3551,6 +3614,7 @@ generatedFiles:
   - docs/sdks/group/README.md
   - docs/sdks/hris/README.md
   - docs/sdks/insertionorder/README.md
+  - docs/sdks/insight/README.md
   - docs/sdks/instructor/README.md
   - docs/sdks/integration/README.md
   - docs/sdks/interview/README.md
@@ -3590,6 +3654,7 @@ generatedFiles:
   - docs/sdks/person/README.md
   - docs/sdks/picklist/README.md
   - docs/sdks/pipeline/README.md
+  - docs/sdks/post/README.md
   - docs/sdks/profile/README.md
   - docs/sdks/profitloss/README.md
   - docs/sdks/project/README.md
@@ -3622,6 +3687,7 @@ generatedFiles:
   - docs/sdks/shipping/README.md
   - docs/sdks/signatory/README.md
   - docs/sdks/signing/README.md
+  - docs/sdks/social/README.md
   - docs/sdks/source/README.md
   - docs/sdks/space/README.md
   - docs/sdks/storage/README.md
@@ -3731,6 +3797,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/group.rb
   - lib/unified_ruby_sdk/hris.rb
   - lib/unified_ruby_sdk/insertionorder.rb
+  - lib/unified_ruby_sdk/insight.rb
   - lib/unified_ruby_sdk/instructor.rb
   - lib/unified_ruby_sdk/integration.rb
   - lib/unified_ruby_sdk/interview.rb
@@ -4446,6 +4513,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createsigningsignatory_request.rbi
   - lib/unified_ruby_sdk/models/operations/createsigningsignatory_response.rb
   - lib/unified_ruby_sdk/models/operations/createsigningsignatory_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createsocialpost_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createsocialpost_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createsocialpost_request.rb
+  - lib/unified_ruby_sdk/models/operations/createsocialpost_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createsocialpost_response.rb
+  - lib/unified_ruby_sdk/models/operations/createsocialpost_response.rbi
   - lib/unified_ruby_sdk/models/operations/createstoragefile_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createstoragefile_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createstoragefile_request.rb
@@ -5350,6 +5423,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getsigningtemplate_request.rbi
   - lib/unified_ruby_sdk/models/operations/getsigningtemplate_response.rb
   - lib/unified_ruby_sdk/models/operations/getsigningtemplate_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialinsight_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialinsight_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialinsight_request.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialinsight_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialinsight_response.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialinsight_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialpost_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialpost_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialpost_request.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialpost_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialpost_response.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialpost_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialprofile_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialprofile_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialprofile_request.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialprofile_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialprofile_response.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialprofile_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialreview_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialreview_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialreview_request.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialreview_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getsocialreview_response.rb
+  - lib/unified_ruby_sdk/models/operations/getsocialreview_response.rbi
   - lib/unified_ruby_sdk/models/operations/getstoragefile_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getstoragefile_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getstoragefile_request.rb
@@ -6348,6 +6445,30 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listsigningtemplates_request.rbi
   - lib/unified_ruby_sdk/models/operations/listsigningtemplates_response.rb
   - lib/unified_ruby_sdk/models/operations/listsigningtemplates_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialinsights_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialinsights_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialinsights_request.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialinsights_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialinsights_response.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialinsights_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialposts_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialposts_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialposts_request.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialposts_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialposts_response.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialposts_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialprofiles_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialprofiles_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialprofiles_request.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialprofiles_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialprofiles_response.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialprofiles_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialreviews_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialreviews_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialreviews_request.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialreviews_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listsocialreviews_response.rb
+  - lib/unified_ruby_sdk/models/operations/listsocialreviews_response.rbi
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/liststoragefiles_request.rb
@@ -7130,6 +7251,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/patchsigningsignatory_request.rbi
   - lib/unified_ruby_sdk/models/operations/patchsigningsignatory_response.rb
   - lib/unified_ruby_sdk/models/operations/patchsigningsignatory_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsocialpost_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchsocialpost_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsocialpost_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchsocialpost_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsocialpost_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchsocialpost_response.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsocialreview_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/patchsocialreview_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsocialreview_request.rb
+  - lib/unified_ruby_sdk/models/operations/patchsocialreview_request.rbi
+  - lib/unified_ruby_sdk/models/operations/patchsocialreview_response.rb
+  - lib/unified_ruby_sdk/models/operations/patchsocialreview_response.rbi
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/patchstoragefile_request.rb
@@ -7650,6 +7783,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/removesigningsignatory_request.rbi
   - lib/unified_ruby_sdk/models/operations/removesigningsignatory_response.rb
   - lib/unified_ruby_sdk/models/operations/removesigningsignatory_response.rbi
+  - lib/unified_ruby_sdk/models/operations/removesocialpost_request.rb
+  - lib/unified_ruby_sdk/models/operations/removesocialpost_request.rbi
+  - lib/unified_ruby_sdk/models/operations/removesocialpost_response.rb
+  - lib/unified_ruby_sdk/models/operations/removesocialpost_response.rbi
   - lib/unified_ruby_sdk/models/operations/removestoragefile_request.rb
   - lib/unified_ruby_sdk/models/operations/removestoragefile_request.rbi
   - lib/unified_ruby_sdk/models/operations/removestoragefile_response.rb
@@ -8370,6 +8507,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/updatesigningsignatory_request.rbi
   - lib/unified_ruby_sdk/models/operations/updatesigningsignatory_response.rb
   - lib/unified_ruby_sdk/models/operations/updatesigningsignatory_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesocialpost_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatesocialpost_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesocialpost_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatesocialpost_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesocialpost_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatesocialpost_response.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesocialreview_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/updatesocialreview_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesocialreview_request.rb
+  - lib/unified_ruby_sdk/models/operations/updatesocialreview_request.rbi
+  - lib/unified_ruby_sdk/models/operations/updatesocialreview_response.rb
+  - lib/unified_ruby_sdk/models/operations/updatesocialreview_response.rbi
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/updatestoragefile_request.rb
@@ -9447,6 +9596,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_payslip_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_pipeline_id.rb
   - lib/unified_ruby_sdk/models/shared/list_pipeline_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_post_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_post_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_profile_id.rb
   - lib/unified_ruby_sdk/models/shared/list_profile_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_project_id.rb
@@ -9591,6 +9742,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/metadatametadata.rbi
   - lib/unified_ruby_sdk/models/shared/metadatametadata_format.rb
   - lib/unified_ruby_sdk/models/shared/metadatametadata_format.rbi
+  - lib/unified_ruby_sdk/models/shared/metric.rb
+  - lib/unified_ruby_sdk/models/shared/metric.rbi
   - lib/unified_ruby_sdk/models/shared/mode.rb
   - lib/unified_ruby_sdk/models/shared/mode.rbi
   - lib/unified_ruby_sdk/models/shared/native_webhook_calendar_id.rb
@@ -9757,6 +9910,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_shipping_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_frequency_cap.rb
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_frequency_cap.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_kpi.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_kpi.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_kpi_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adscampaign_kpi_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting.rb
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting.rbi
   - lib/unified_ruby_sdk/models/shared/property_adscampaign_targeting_audience.rb
@@ -9797,6 +9954,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_frequency_cap_time_unit.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_pacing.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_pacing.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_pacing_period.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsgroup_pacing_period.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting.rb
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsgroup_targeting_audience.rb
@@ -9873,6 +10032,10 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_frequency_cap_time_unit.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_goal.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_goal.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_kpi.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_kpi.rbi
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_kpi_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_kpi_type.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_status.rb
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_status.rbi
   - lib/unified_ruby_sdk/models/shared/property_adsreportmetrics_campaign_targeting.rb
@@ -10227,6 +10390,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_shippingshipment_to_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_shippingtrackingevent_location_address.rb
   - lib/unified_ruby_sdk/models/shared/property_shippingtrackingevent_location_address.rbi
+  - lib/unified_ruby_sdk/models/shared/property_socialpost_call_to_action.rb
+  - lib/unified_ruby_sdk/models/shared/property_socialpost_call_to_action.rbi
+  - lib/unified_ruby_sdk/models/shared/property_socialpost_call_to_action_type.rb
+  - lib/unified_ruby_sdk/models/shared/property_socialpost_call_to_action_type.rbi
+  - lib/unified_ruby_sdk/models/shared/property_socialpost_metrics.rb
+  - lib/unified_ruby_sdk/models/shared/property_socialpost_metrics.rbi
+  - lib/unified_ruby_sdk/models/shared/property_socialprofile_address.rb
+  - lib/unified_ruby_sdk/models/shared/property_socialprofile_address.rbi
+  - lib/unified_ruby_sdk/models/shared/property_socialprofile_metrics.rb
+  - lib/unified_ruby_sdk/models/shared/property_socialprofile_metrics.rbi
+  - lib/unified_ruby_sdk/models/shared/property_socialreview_reply.rb
+  - lib/unified_ruby_sdk/models/shared/property_socialreview_reply.rbi
   - lib/unified_ruby_sdk/models/shared/property_storagepermission_roles.rb
   - lib/unified_ruby_sdk/models/shared/property_storagepermission_roles.rbi
   - lib/unified_ruby_sdk/models/shared/property_uccall_telephone.rb
@@ -10371,6 +10546,22 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/signingtemplate.rbi
   - lib/unified_ruby_sdk/models/shared/size_unit.rb
   - lib/unified_ruby_sdk/models/shared/size_unit.rbi
+  - lib/unified_ruby_sdk/models/shared/socialinsight.rb
+  - lib/unified_ruby_sdk/models/shared/socialinsight.rbi
+  - lib/unified_ruby_sdk/models/shared/socialmedia.rb
+  - lib/unified_ruby_sdk/models/shared/socialmedia.rbi
+  - lib/unified_ruby_sdk/models/shared/socialmedia_type.rb
+  - lib/unified_ruby_sdk/models/shared/socialmedia_type.rbi
+  - lib/unified_ruby_sdk/models/shared/socialpost.rb
+  - lib/unified_ruby_sdk/models/shared/socialpost.rbi
+  - lib/unified_ruby_sdk/models/shared/socialpost_status.rb
+  - lib/unified_ruby_sdk/models/shared/socialpost_status.rbi
+  - lib/unified_ruby_sdk/models/shared/socialpost_type.rb
+  - lib/unified_ruby_sdk/models/shared/socialpost_type.rbi
+  - lib/unified_ruby_sdk/models/shared/socialprofile.rb
+  - lib/unified_ruby_sdk/models/shared/socialprofile.rbi
+  - lib/unified_ruby_sdk/models/shared/socialreview.rb
+  - lib/unified_ruby_sdk/models/shared/socialreview.rbi
   - lib/unified_ruby_sdk/models/shared/sort_order.rb
   - lib/unified_ruby_sdk/models/shared/sort_order.rbi
   - lib/unified_ruby_sdk/models/shared/sport_type.rb
@@ -10605,6 +10796,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_payment_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_pipeline_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_pipeline_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_post_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_post_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_profile_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_profile_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_project_id.rb
@@ -10676,6 +10869,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/person.rb
   - lib/unified_ruby_sdk/picklist.rb
   - lib/unified_ruby_sdk/pipeline.rb
+  - lib/unified_ruby_sdk/post.rb
   - lib/unified_ruby_sdk/profile.rb
   - lib/unified_ruby_sdk/profitloss.rb
   - lib/unified_ruby_sdk/project.rb
@@ -10712,6 +10906,7 @@ generatedFiles:
   - lib/unified_ruby_sdk/shipping.rb
   - lib/unified_ruby_sdk/signatory.rb
   - lib/unified_ruby_sdk/signing.rb
+  - lib/unified_ruby_sdk/social.rb
   - lib/unified_ruby_sdk/source.rb
   - lib/unified_ruby_sdk/space.rb
   - lib/unified_ruby_sdk/storage.rb
@@ -24697,6 +24892,134 @@ examples:
           id: "<id>"
   updateAccountingPaymentterm:
     speakeasy-default-update-accounting-paymentterm:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getSocialProfile:
+    speakeasy-default-get-social-profile:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listSocialProfiles:
+    speakeasy-default-list-social-profiles:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  getSocialReview:
+    speakeasy-default-get-social-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listSocialReviews:
+    speakeasy-default-list-social-reviews:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchSocialReview:
+    speakeasy-default-patch-social-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  updateSocialReview:
+    speakeasy-default-update-social-review:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createSocialPost:
+    speakeasy-default-create-social-post:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getSocialInsight:
+    speakeasy-default-get-social-insight:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getSocialPost:
+    speakeasy-default-get-social-post:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listSocialInsights:
+    speakeasy-default-list-social-insights:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listSocialPosts:
+    speakeasy-default-list-social-posts:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchSocialPost:
+    speakeasy-default-patch-social-post:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeSocialPost:
+    speakeasy-default-remove-social-post:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateSocialPost:
+    speakeasy-default-update-social-post:
       parameters:
         path:
           connection_id: "<id>"

@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::AtsJob
   def hiring_managers=(str_); end
   def id(); end
   def id=(str_); end
+  def industry(); end
+  def industry=(str_); end
   def language_locale(); end
   def language_locale=(str_); end
   def metadata(); end

@@ -47,6 +47,7 @@ module UnifiedRubySDK
           DATASTORE = new('datastore')
           CDP = new('cdp')
           PERFORMANCE = new('performance')
+          SOCIAL = new('social')
         end
       end
     end

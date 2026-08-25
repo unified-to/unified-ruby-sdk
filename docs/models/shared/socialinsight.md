@@ -1,0 +1,16 @@
+# SocialInsight
+
+
+## Fields
+
+| Field                                                                | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `created_at`                                                         | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `date`                                                               | [Date](https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/Date.html) | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `id`                                                                 | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `metric`                                                             | [T.nilable(Models::Shared::Metric)](../../models/shared/metric.md)   | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `period`                                                             | [T.nilable(Models::Shared::Period)](../../models/shared/period.md)   | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `post_id`                                                            | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `profile_id`                                                         | *T.nilable(::String)*                                                | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `raw`                                                                | T::Hash[Symbol, *::Object*]                                          | :heavy_minus_sign:                                                   | N/A                                                                  |
+| `value`                                                              | *T.nilable(::Float)*                                                 | :heavy_minus_sign:                                                   | N/A                                                                  |

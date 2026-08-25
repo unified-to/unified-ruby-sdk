@@ -325,6 +325,14 @@ module UnifiedRubySDK
           PERFORMANCE_GOAL_WRITE = new('performance_goal_write')
           PERFORMANCE_FEEDBACK_READ = new('performance_feedback_read')
           PERFORMANCE_FEEDBACK_WRITE = new('performance_feedback_write')
+          SOCIAL_POST_READ = new('social_post_read')
+          SOCIAL_POST_WRITE = new('social_post_write')
+          SOCIAL_PROFILE_READ = new('social_profile_read')
+          SOCIAL_PROFILE_WRITE = new('social_profile_write')
+          SOCIAL_REVIEW_READ = new('social_review_read')
+          SOCIAL_REVIEW_WRITE = new('social_review_write')
+          SOCIAL_INSIGHT_READ = new('social_insight_read')
+          SOCIAL_INSIGHT_WRITE = new('social_insight_write')
         end
       end
     end

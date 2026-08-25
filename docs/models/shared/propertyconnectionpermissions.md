@@ -317,3 +317,11 @@
 | `PERFORMANCE_GOAL_WRITE`               | performance_goal_write                 |
 | `PERFORMANCE_FEEDBACK_READ`            | performance_feedback_read              |
 | `PERFORMANCE_FEEDBACK_WRITE`           | performance_feedback_write             |
+| `SOCIAL_POST_READ`                     | social_post_read                       |
+| `SOCIAL_POST_WRITE`                    | social_post_write                      |
+| `SOCIAL_PROFILE_READ`                  | social_profile_read                    |
+| `SOCIAL_PROFILE_WRITE`                 | social_profile_write                   |
+| `SOCIAL_REVIEW_READ`                   | social_review_read                     |
+| `SOCIAL_REVIEW_WRITE`                  | social_review_write                    |
+| `SOCIAL_INSIGHT_READ`                  | social_insight_read                    |
+| `SOCIAL_INSIGHT_WRITE`                 | social_insight_write                   |

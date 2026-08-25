@@ -21,6 +21,8 @@ module UnifiedRubySDK
         field :env, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
         # Filter the results to just this integration
         field :integration_type, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'integration_type', 'style': 'form', 'explode': true } }
+        # Filter by health. Omit to return all.
+        field :is_healthy, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'is_healthy', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
         # Filter the results for webhooks for only this object
@@ -34,12 +36,13 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: T.nilable(::String), created_lte: T.nilable(::String), env: T.nilable(::String), integration_type: T.nilable(::String), limit: T.nilable(::Float), object: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id: nil, created_lte: nil, env: nil, integration_type: nil, limit: nil, object: nil, offset: nil, order: nil, sort: nil, updated_gte: nil)
+        sig { params(connection_id: T.nilable(::String), created_lte: T.nilable(::String), env: T.nilable(::String), integration_type: T.nilable(::String), is_healthy: T.nilable(T::Boolean), limit: T.nilable(::Float), object: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id: nil, created_lte: nil, env: nil, integration_type: nil, is_healthy: nil, limit: nil, object: nil, offset: nil, order: nil, sort: nil, updated_gte: nil)
           @connection_id = connection_id
           @created_lte = created_lte
           @env = env
           @integration_type = integration_type
+          @is_healthy = is_healthy
           @limit = limit
           @object = object
           @offset = offset
@@ -55,6 +58,7 @@ module UnifiedRubySDK
           return false unless @created_lte == other.created_lte
           return false unless @env == other.env
           return false unless @integration_type == other.integration_type
+          return false unless @is_healthy == other.is_healthy
           return false unless @limit == other.limit
           return false unless @object == other.object
           return false unless @offset == other.offset

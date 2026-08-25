@@ -132,6 +132,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_payslip_id=(str_); end
   def list_pipeline_id(); end
   def list_pipeline_id=(str_); end
+  def list_post_id(); end
+  def list_post_id=(str_); end
   def list_profile_id(); end
   def list_profile_id=(str_); end
   def list_project_id(); end
@@ -354,6 +356,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_payment_id=(str_); end
   def virtual_webhook_pipeline_id(); end
   def virtual_webhook_pipeline_id=(str_); end
+  def virtual_webhook_post_id(); end
+  def virtual_webhook_post_id=(str_); end
   def virtual_webhook_profile_id(); end
   def virtual_webhook_profile_id=(str_); end
   def virtual_webhook_project_id(); end

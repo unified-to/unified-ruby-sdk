@@ -182,6 +182,10 @@ module UnifiedRubySDK
           PERFORMANCE_REVIEW = new('performance_review')
           PERFORMANCE_GOAL = new('performance_goal')
           PERFORMANCE_FEEDBACK = new('performance_feedback')
+          SOCIAL_POST = new('social_post')
+          SOCIAL_PROFILE = new('social_profile')
+          SOCIAL_REVIEW = new('social_review')
+          SOCIAL_INSIGHT = new('social_insight')
         end
       end
     end

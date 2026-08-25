@@ -13,9 +13,12 @@ module UnifiedRubySDK
 
 
         enums do
-          UNSPECIFIED = new('UNSPECIFIED')
-          DAILY = new('DAILY')
-          FLIGHT = new('FLIGHT')
+          DAY = new('DAY')
+          WEEK = new('WEEK')
+          MONTH = new('MONTH')
+          LIFETIME = new('LIFETIME')
+          TOTAL = new('TOTAL')
+          OTHER = new('OTHER')
         end
       end
     end

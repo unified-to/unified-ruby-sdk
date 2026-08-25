@@ -36,6 +36,7 @@ module UnifiedRubySDK
           CATEGORY = new('category')
           HAS_EU_POLITICAL_ADS = new('has_eu_political_ads')
           LABELS = new('labels')
+          KPI = new('kpi')
           RAW = new('raw')
         end
       end
