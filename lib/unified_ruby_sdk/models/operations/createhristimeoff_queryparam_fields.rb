@@ -26,6 +26,7 @@ module UnifiedRubySDK
           APPROVED_AT = new('approved_at')
           COMMENTS = new('comments')
           REASON = new('reason')
+          ORIGINAL_TYPE = new('original_type')
           TYPE = new('type')
           DURATION = new('duration')
           DURATION_TYPE = new('duration_type')

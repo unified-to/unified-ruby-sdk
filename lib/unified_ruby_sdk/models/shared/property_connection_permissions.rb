@@ -125,7 +125,7 @@ module UnifiedRubySDK
           CRM_LEAD_WRITE = new('crm_lead_write')
           CRM_PIPELINE_READ = new('crm_pipeline_read')
           CRM_PIPELINE_WRITE = new('crm_pipeline_write')
-          CRM_PICKLIST_READ = new('crm_picklist_read')
+          CRM_TAXONOMY_READ = new('crm_taxonomy_read')
           MARTECH_LIST_READ = new('martech_list_read')
           MARTECH_LIST_WRITE = new('martech_list_write')
           MARTECH_MEMBER_READ = new('martech_member_read')

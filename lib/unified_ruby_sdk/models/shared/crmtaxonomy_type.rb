@@ -6,18 +6,14 @@
 
 module UnifiedRubySDK
   module Models
-    module Operations
+    module Shared
     
 
-      class ListCrmPicklistsQueryParamFields < T::Enum
+      class CrmTaxonomyType < T::Enum
 
 
         enums do
-          ID = new('id')
-          NAME = new('name')
-          LABEL = new('label')
-          TYPE = new('type')
-          RAW = new('raw')
+          INDUSTRY = new('INDUSTRY')
         end
       end
     end

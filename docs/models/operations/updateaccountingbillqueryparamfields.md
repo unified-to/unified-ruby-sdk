@@ -23,6 +23,7 @@
 | `CONTACT_ID`                | contact_id                  |
 | `CURRENCY`                  | currency                    |
 | `NOTES`                     | notes                       |
+| `EXTENDED_NOTES`            | extended_notes              |
 | `REFUND_REASON`             | refund_reason               |
 | `LINEITEMS`                 | lineitems                   |
 | `STATUS`                    | status                      |

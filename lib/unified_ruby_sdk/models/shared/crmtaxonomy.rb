@@ -9,7 +9,7 @@ module UnifiedRubySDK
     module Shared
     
 
-      class CrmPicklist
+      class CrmTaxonomy
         extend T::Sig
         include Crystalline::MetadataFields
 
@@ -22,9 +22,9 @@ module UnifiedRubySDK
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::CrmPicklistType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CrmPicklistType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::CrmTaxonomyType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CrmTaxonomyType, true) } }
 
-        sig { params(id: ::String, label: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::CrmPicklistType)).void }
+        sig { params(id: ::String, label: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::CrmTaxonomyType)).void }
         def initialize(id:, label: nil, name: nil, raw: nil, type: nil)
           @id = id
           @label = label

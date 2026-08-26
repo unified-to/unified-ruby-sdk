@@ -9,7 +9,7 @@ module UnifiedRubySDK
     module Operations
     
 
-      class ListCrmPicklistsResponse
+      class ListCrmTaxonomiesResponse
         extend T::Sig
         include Crystalline::MetadataFields
 
@@ -20,14 +20,14 @@ module UnifiedRubySDK
         # Raw HTTP response; suitable for custom response parsing
         field :raw_response, ::Faraday::Response
         # Successful
-        field :crm_picklists, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CrmPicklist))
+        field :crm_taxonomies, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CrmTaxonomy))
 
-        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, crm_picklists: T.nilable(T::Array[Models::Shared::CrmPicklist])).void }
-        def initialize(content_type:, status_code:, raw_response:, crm_picklists: nil)
+        sig { params(content_type: ::String, status_code: ::Integer, raw_response: ::Faraday::Response, crm_taxonomies: T.nilable(T::Array[Models::Shared::CrmTaxonomy])).void }
+        def initialize(content_type:, status_code:, raw_response:, crm_taxonomies: nil)
           @content_type = content_type
           @status_code = status_code
           @raw_response = raw_response
-          @crm_picklists = crm_picklists
+          @crm_taxonomies = crm_taxonomies
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
@@ -36,7 +36,7 @@ module UnifiedRubySDK
           return false unless @content_type == other.content_type
           return false unless @status_code == other.status_code
           return false unless @raw_response == other.raw_response
-          return false unless @crm_picklists == other.crm_picklists
+          return false unless @crm_taxonomies == other.crm_taxonomies
           true
         end
       end

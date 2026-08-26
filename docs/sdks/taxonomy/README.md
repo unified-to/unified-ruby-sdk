@@ -6,6 +6,7 @@
 ### Available Operations
 
 * [get_hris_taxonomy](#get_hris_taxonomy) - Retrieve a taxonomy
+* [list_crm_taxonomies](#list_crm_taxonomies) - List all taxonomies
 * [list_hris_taxonomies](#list_hris_taxonomies) - List all taxonomies
 
 ## get_hris_taxonomy
@@ -45,6 +46,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHrisTaxonomyResponse)](../../models/operations/gethristaxonomyresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_crm_taxonomies
+
+List all taxonomies
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listCrmTaxonomies" method="get" path="/crm/{connection_id}/taxonomy" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListCrmTaxonomiesRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.taxonomy.list_crm_taxonomies(request: req)
+
+unless res.crm_taxonomies.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListCrmTaxonomiesRequest](../../models/operations/listcrmtaxonomiesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::ListCrmTaxonomiesResponse)](../../models/operations/listcrmtaxonomiesresponse.md)**
 
 ### Errors
 

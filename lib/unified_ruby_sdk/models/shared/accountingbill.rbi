@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::AccountingBill
   def discount_amount=(str_); end
   def due_at(); end
   def due_at=(str_); end
+  def extended_notes(); end
+  def extended_notes=(str_); end
   def id(); end
   def id=(str_); end
   def lineitems(); end

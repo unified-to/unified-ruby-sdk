@@ -2,12 +2,12 @@
 # frozen_string_literal: true
 
 
-class UnifiedRubySDK::Models::Shared::CrmPicklist
+class UnifiedRubySDK::Models::Shared::CrmTaxonomy
   extend ::Crystalline::MetadataFields::ClassMethods
 end
 
 
-class UnifiedRubySDK::Models::Shared::CrmPicklist
+class UnifiedRubySDK::Models::Shared::CrmTaxonomy
   def id(); end
   def id=(str_); end
   def label(); end

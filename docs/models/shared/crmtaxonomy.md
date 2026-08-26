@@ -1,4 +1,4 @@
-# CrmPicklist
+# CrmTaxonomy
 
 
 ## Fields
@@ -9,4 +9,4 @@
 | `label`                                                                              | *T.nilable(::String)*                                                                | :heavy_minus_sign:                                                                   | N/A                                                                                  |
 | `name`                                                                               | *T.nilable(::String)*                                                                | :heavy_minus_sign:                                                                   | N/A                                                                                  |
 | `raw`                                                                                | T::Hash[Symbol, *::Object*]                                                          | :heavy_minus_sign:                                                                   | N/A                                                                                  |
-| `type`                                                                               | [T.nilable(Models::Shared::CrmPicklistType)](../../models/shared/crmpicklisttype.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |
+| `type`                                                                               | [T.nilable(Models::Shared::CrmTaxonomyType)](../../models/shared/crmtaxonomytype.md) | :heavy_minus_sign:                                                                   | N/A                                                                                  |

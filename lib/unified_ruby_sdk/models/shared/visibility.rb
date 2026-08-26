@@ -9,11 +9,12 @@ module UnifiedRubySDK
     module Shared
     
 
-      class CrmPicklistType < T::Enum
+      class Visibility < T::Enum
 
 
         enums do
-          INDUSTRY = new('INDUSTRY')
+          PUBLIC = new('PUBLIC')
+          PRIVATE = new('PRIVATE')
         end
       end
     end

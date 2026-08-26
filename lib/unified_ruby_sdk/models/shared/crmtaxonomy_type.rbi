@@ -2,10 +2,10 @@
 # frozen_string_literal: true
 
 
-class UnifiedRubySDK::Models::Shared::CrmPicklistType
+class UnifiedRubySDK::Models::Shared::CrmTaxonomyType
   extend ::Crystalline::MetadataFields::ClassMethods
 end
 
 
-class UnifiedRubySDK::Models::Shared::CrmPicklistType
+class UnifiedRubySDK::Models::Shared::CrmTaxonomyType
 end

@@ -18,6 +18,7 @@
 | `APPROVED_AT`      | approved_at        |
 | `COMMENTS`         | comments           |
 | `REASON`           | reason             |
+| `ORIGINAL_TYPE`    | original_type      |
 | `TYPE`             | type               |
 | `DURATION`         | duration           |
 | `DURATION_TYPE`    | duration_type      |

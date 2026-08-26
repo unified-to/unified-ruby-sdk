@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: b24485f3e853704aed2b16d046ca7585
+  docChecksum: 717e539aa15792c3d978cbdc61f6bfd1
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.118
-  configChecksum: f5718e46c0fbd9f6c5b76eef158a2172
+  releaseVersion: 0.67.119
+  configChecksum: dc7ac23175cf854431542ece197c8a4d
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -1146,12 +1146,12 @@ generatedFiles:
   - docs/models/operations/listcrmleadsqueryparamfields.md
   - docs/models/operations/listcrmleadsrequest.md
   - docs/models/operations/listcrmleadsresponse.md
-  - docs/models/operations/listcrmpicklistsqueryparamfields.md
-  - docs/models/operations/listcrmpicklistsrequest.md
-  - docs/models/operations/listcrmpicklistsresponse.md
   - docs/models/operations/listcrmpipelinesqueryparamfields.md
   - docs/models/operations/listcrmpipelinesrequest.md
   - docs/models/operations/listcrmpipelinesresponse.md
+  - docs/models/operations/listcrmtaxonomiesqueryparamfields.md
+  - docs/models/operations/listcrmtaxonomiesrequest.md
+  - docs/models/operations/listcrmtaxonomiesresponse.md
   - docs/models/operations/listdatastoredatabasesqueryparamfields.md
   - docs/models/operations/listdatastoredatabasesrequest.md
   - docs/models/operations/listdatastoredatabasesresponse.md
@@ -2449,6 +2449,7 @@ generatedFiles:
   - docs/models/shared/accountingemailtype.md
   - docs/models/shared/accountingexpense.md
   - docs/models/shared/accountingexpensestatus.md
+  - docs/models/shared/accountingextendednote.md
   - docs/models/shared/accountingfee.md
   - docs/models/shared/accountingfeetype.md
   - docs/models/shared/accountinginvoice.md
@@ -2716,11 +2717,11 @@ generatedFiles:
   - docs/models/shared/crmmetadataschemas1.md
   - docs/models/shared/crmmetadataschemas5.md
   - docs/models/shared/crmmetadatavalue.md
-  - docs/models/shared/crmpicklist.md
-  - docs/models/shared/crmpicklisttype.md
   - docs/models/shared/crmpipeline.md
   - docs/models/shared/crmreference.md
   - docs/models/shared/crmstage.md
+  - docs/models/shared/crmtaxonomy.md
+  - docs/models/shared/crmtaxonomytype.md
   - docs/models/shared/crmtelephone.md
   - docs/models/shared/crmtelephonetype.md
   - docs/models/shared/datastoredatabase.md
@@ -3057,6 +3058,7 @@ generatedFiles:
   - docs/models/shared/propertyaccountingagedrowtransaction.md
   - docs/models/shared/propertyaccountingcontactbillingaddress.md
   - docs/models/shared/propertyaccountingcontactshippingaddress.md
+  - docs/models/shared/propertyaccountingextendednoteuser.md
   - docs/models/shared/propertyaccountingorderbillingaddress.md
   - docs/models/shared/propertyaccountingordershippingaddress.md
   - docs/models/shared/propertyaccountingorganizationaddress.md
@@ -3533,6 +3535,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookuserid.md
   - docs/models/shared/virtualwebhookusermentionedid.md
   - docs/models/shared/virtualwebhookvisitorid.md
+  - docs/models/shared/visibility.md
   - docs/models/shared/webhook.md
   - docs/models/shared/webhookevent.md
   - docs/models/shared/webhookobjecttype.md
@@ -3652,7 +3655,6 @@ generatedFiles:
   - docs/sdks/payslip/README.md
   - docs/sdks/performance/README.md
   - docs/sdks/person/README.md
-  - docs/sdks/picklist/README.md
   - docs/sdks/pipeline/README.md
   - docs/sdks/post/README.md
   - docs/sdks/profile/README.md
@@ -6065,18 +6067,18 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listcrmleads_request.rbi
   - lib/unified_ruby_sdk/models/operations/listcrmleads_response.rb
   - lib/unified_ruby_sdk/models/operations/listcrmleads_response.rbi
-  - lib/unified_ruby_sdk/models/operations/listcrmpicklists_queryparam_fields.rb
-  - lib/unified_ruby_sdk/models/operations/listcrmpicklists_queryparam_fields.rbi
-  - lib/unified_ruby_sdk/models/operations/listcrmpicklists_request.rb
-  - lib/unified_ruby_sdk/models/operations/listcrmpicklists_request.rbi
-  - lib/unified_ruby_sdk/models/operations/listcrmpicklists_response.rb
-  - lib/unified_ruby_sdk/models/operations/listcrmpicklists_response.rbi
   - lib/unified_ruby_sdk/models/operations/listcrmpipelines_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listcrmpipelines_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listcrmpipelines_request.rb
   - lib/unified_ruby_sdk/models/operations/listcrmpipelines_request.rbi
   - lib/unified_ruby_sdk/models/operations/listcrmpipelines_response.rb
   - lib/unified_ruby_sdk/models/operations/listcrmpipelines_response.rbi
+  - lib/unified_ruby_sdk/models/operations/listcrmtaxonomies_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmtaxonomies_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/listcrmtaxonomies_request.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmtaxonomies_request.rbi
+  - lib/unified_ruby_sdk/models/operations/listcrmtaxonomies_response.rb
+  - lib/unified_ruby_sdk/models/operations/listcrmtaxonomies_response.rbi
   - lib/unified_ruby_sdk/models/operations/listdatastoredatabases_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listdatastoredatabases_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listdatastoredatabases_request.rb
@@ -8674,6 +8676,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingexpense.rbi
   - lib/unified_ruby_sdk/models/shared/accountingexpense_status.rb
   - lib/unified_ruby_sdk/models/shared/accountingexpense_status.rbi
+  - lib/unified_ruby_sdk/models/shared/accountingextendednote.rb
+  - lib/unified_ruby_sdk/models/shared/accountingextendednote.rbi
   - lib/unified_ruby_sdk/models/shared/accountingfee.rb
   - lib/unified_ruby_sdk/models/shared/accountingfee.rbi
   - lib/unified_ruby_sdk/models/shared/accountingfee_type.rb
@@ -9206,16 +9210,16 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/crmmetadata_schemas_5.rbi
   - lib/unified_ruby_sdk/models/shared/crmmetadata_value.rb
   - lib/unified_ruby_sdk/models/shared/crmmetadata_value.rbi
-  - lib/unified_ruby_sdk/models/shared/crmpicklist.rb
-  - lib/unified_ruby_sdk/models/shared/crmpicklist.rbi
-  - lib/unified_ruby_sdk/models/shared/crmpicklist_type.rb
-  - lib/unified_ruby_sdk/models/shared/crmpicklist_type.rbi
   - lib/unified_ruby_sdk/models/shared/crmpipeline.rb
   - lib/unified_ruby_sdk/models/shared/crmpipeline.rbi
   - lib/unified_ruby_sdk/models/shared/crmreference.rb
   - lib/unified_ruby_sdk/models/shared/crmreference.rbi
   - lib/unified_ruby_sdk/models/shared/crmstage.rb
   - lib/unified_ruby_sdk/models/shared/crmstage.rbi
+  - lib/unified_ruby_sdk/models/shared/crmtaxonomy.rb
+  - lib/unified_ruby_sdk/models/shared/crmtaxonomy.rbi
+  - lib/unified_ruby_sdk/models/shared/crmtaxonomy_type.rb
+  - lib/unified_ruby_sdk/models/shared/crmtaxonomy_type.rbi
   - lib/unified_ruby_sdk/models/shared/crmtelephone.rb
   - lib/unified_ruby_sdk/models/shared/crmtelephone.rbi
   - lib/unified_ruby_sdk/models/shared/crmtelephone_type.rb
@@ -9888,6 +9892,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_billing_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_shipping_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingcontact_shipping_address.rbi
+  - lib/unified_ruby_sdk/models/shared/property_accountingextendednote_user.rb
+  - lib/unified_ruby_sdk/models/shared/property_accountingextendednote_user.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingorder_billing_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingorder_billing_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingorder_shipping_address.rb
@@ -10840,6 +10846,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_user_mentioned_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_visitor_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_visitor_id.rbi
+  - lib/unified_ruby_sdk/models/shared/visibility.rb
+  - lib/unified_ruby_sdk/models/shared/visibility.rbi
   - lib/unified_ruby_sdk/models/shared/webhook.rb
   - lib/unified_ruby_sdk/models/shared/webhook.rbi
   - lib/unified_ruby_sdk/models/shared/webhook_event.rb
@@ -10867,7 +10875,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/payslip.rb
   - lib/unified_ruby_sdk/performance.rb
   - lib/unified_ruby_sdk/person.rb
-  - lib/unified_ruby_sdk/picklist.rb
   - lib/unified_ruby_sdk/pipeline.rb
   - lib/unified_ruby_sdk/post.rb
   - lib/unified_ruby_sdk/profile.rb
@@ -25029,5 +25036,13 @@ examples:
       responses:
         "200":
           application/json: {}
+  listCrmTaxonomies:
+    speakeasy-default-list-crm-taxonomies:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{"id": "<id>"}]
 examplesVersion: 1.0.2
 generatedTests: {}

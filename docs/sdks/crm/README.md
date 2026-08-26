@@ -22,8 +22,8 @@
 * [list_crm_deals](#list_crm_deals) - List all deals
 * [list_crm_events](#list_crm_events) - List all events
 * [list_crm_leads](#list_crm_leads) - List all leads
-* [list_crm_picklists](#list_crm_picklists) - List all picklists
 * [list_crm_pipelines](#list_crm_pipelines) - List all pipelines
+* [list_crm_taxonomies](#list_crm_taxonomies) - List all taxonomies
 * [patch_crm_company](#patch_crm_company) - Update a company
 * [patch_crm_contact](#patch_crm_contact) - Update a contact
 * [patch_crm_deal](#patch_crm_deal) - Update a deal
@@ -796,51 +796,6 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_crm_picklists
-
-List all picklists
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="listCrmPicklists" method="get" path="/crm/{connection_id}/picklist" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmPicklistsRequest.new(
-  connection_id: '<id>',
-)
-
-res = s.crm.list_crm_picklists(request: req)
-
-unless res.crm_picklists.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `request`                                                                                         | [Models::Operations::ListCrmPicklistsRequest](../../models/operations/listcrmpicklistsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
-
-### Response
-
-**[T.nilable(Models::Operations::ListCrmPicklistsResponse)](../../models/operations/listcrmpicklistsresponse.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
 ## list_crm_pipelines
 
 List all pipelines
@@ -879,6 +834,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListCrmPipelinesResponse)](../../models/operations/listcrmpipelinesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_crm_taxonomies
+
+List all taxonomies
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listCrmTaxonomies" method="get" path="/crm/{connection_id}/taxonomy" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListCrmTaxonomiesRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.crm.list_crm_taxonomies(request: req)
+
+unless res.crm_taxonomies.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListCrmTaxonomiesRequest](../../models/operations/listcrmtaxonomiesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::ListCrmTaxonomiesResponse)](../../models/operations/listcrmtaxonomiesresponse.md)**
 
 ### Errors
 

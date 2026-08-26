@@ -2,12 +2,12 @@
 # frozen_string_literal: true
 
 
-class UnifiedRubySDK::Models::Operations::ListCrmPicklistsRequest
+class UnifiedRubySDK::Models::Operations::ListCrmTaxonomiesRequest
   extend ::Crystalline::MetadataFields::ClassMethods
 end
 
 
-class UnifiedRubySDK::Models::Operations::ListCrmPicklistsRequest
+class UnifiedRubySDK::Models::Operations::ListCrmTaxonomiesRequest
   def connection_id(); end
   def connection_id=(str_); end
   def fields_(); end

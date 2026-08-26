@@ -1,4 +1,4 @@
-# CrmPicklistType
+# CrmTaxonomyType
 
 
 ## Values

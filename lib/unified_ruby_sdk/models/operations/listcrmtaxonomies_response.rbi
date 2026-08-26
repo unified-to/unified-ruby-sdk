@@ -2,18 +2,18 @@
 # frozen_string_literal: true
 
 
-class UnifiedRubySDK::Models::Operations::ListCrmPicklistsResponse
+class UnifiedRubySDK::Models::Operations::ListCrmTaxonomiesResponse
   extend ::Crystalline::MetadataFields::ClassMethods
 end
 
 
-class UnifiedRubySDK::Models::Operations::ListCrmPicklistsResponse
+class UnifiedRubySDK::Models::Operations::ListCrmTaxonomiesResponse
   def content_type(); end
   def content_type=(str_); end
   def status_code(); end
   def status_code=(str_); end
   def raw_response(); end
   def raw_response=(str_); end
-  def crm_picklists(); end
-  def crm_picklists=(str_); end
+  def crm_taxonomies(); end
+  def crm_taxonomies=(str_); end
 end

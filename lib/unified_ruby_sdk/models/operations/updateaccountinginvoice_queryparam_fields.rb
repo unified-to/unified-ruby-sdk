@@ -32,6 +32,7 @@ module UnifiedRubySDK
           CONTACT_ID = new('contact_id')
           CURRENCY = new('currency')
           NOTES = new('notes')
+          EXTENDED_NOTES = new('extended_notes')
           REFUND_REASON = new('refund_reason')
           TERM = new('term')
           PAYMENT_TERMS = new('payment_terms')
