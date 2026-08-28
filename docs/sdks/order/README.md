@@ -6,7 +6,9 @@
 ### Available Operations
 
 * [create_accounting_order](#create_accounting_order) - Create an order
+* [create_assessment_order](#create_assessment_order) - Create an order
 * [get_accounting_order](#get_accounting_order) - Retrieve an order
+* [get_assessment_order](#get_assessment_order) - Retrieve an order
 * [list_accounting_orders](#list_accounting_orders) - List all orders
 * [patch_accounting_order](#patch_accounting_order) - Update an order
 * [patch_assessment_order](#patch_assessment_order) - Update an order
@@ -58,6 +60,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## create_assessment_order
+
+Create an order
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.order.create_assessment_order(assessment_order: Models::Shared::AssessmentOrder.new(
+  connection_id: '<id>',
+  workspace_id: '<id>',
+), connection_id: '<id>')
+
+unless res.assessment_order.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `assessment_order`                                                                                                                               | [Models::Shared::AssessmentOrder](../../models/shared/assessmentorder.md)                                                                        | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateAssessmentOrderQueryParamFields](../../models/operations/createassessmentorderqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateAssessmentOrderResponse)](../../models/operations/createassessmentorderresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_accounting_order
 
 Retrieve an order
@@ -95,6 +144,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetAccountingOrderResponse)](../../models/operations/getaccountingorderresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_assessment_order
+
+Retrieve an order
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getAssessmentOrder" method="get" path="/assessment/{connection_id}/order/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.order.get_assessment_order(connection_id: '<id>', id: '<id>')
+
+unless res.assessment_order.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Order                                                                                                                                  |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAssessmentOrderQueryParamFields](../../models/operations/getassessmentorderqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetAssessmentOrderResponse)](../../models/operations/getassessmentorderresponse.md)**
 
 ### Errors
 

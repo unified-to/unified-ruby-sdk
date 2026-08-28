@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 717e539aa15792c3d978cbdc61f6bfd1
+  docChecksum: 3ffdf53db69180f3a9706188fe5b0bca
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.119
-  configChecksum: dc7ac23175cf854431542ece197c8a4d
+  releaseVersion: 0.67.120
+  configChecksum: 54715e797a52eda4dc395557f151fde9
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -114,6 +114,9 @@ generatedFiles:
   - docs/models/operations/createanalyticsvisitorqueryparamfields.md
   - docs/models/operations/createanalyticsvisitorrequest.md
   - docs/models/operations/createanalyticsvisitorresponse.md
+  - docs/models/operations/createassessmentorderqueryparamfields.md
+  - docs/models/operations/createassessmentorderrequest.md
+  - docs/models/operations/createassessmentorderresponse.md
   - docs/models/operations/createassessmentpackagerequest.md
   - docs/models/operations/createassessmentpackageresponse.md
   - docs/models/operations/createatsactivityqueryparamfields.md
@@ -534,6 +537,9 @@ generatedFiles:
   - docs/models/operations/getanalyticsvisitorqueryparamfields.md
   - docs/models/operations/getanalyticsvisitorrequest.md
   - docs/models/operations/getanalyticsvisitorresponse.md
+  - docs/models/operations/getassessmentorderqueryparamfields.md
+  - docs/models/operations/getassessmentorderrequest.md
+  - docs/models/operations/getassessmentorderresponse.md
   - docs/models/operations/getassessmentpackagerequest.md
   - docs/models/operations/getassessmentpackageresponse.md
   - docs/models/operations/getatsactivityqueryparamfields.md
@@ -4003,6 +4009,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createanalyticsvisitor_request.rbi
   - lib/unified_ruby_sdk/models/operations/createanalyticsvisitor_response.rb
   - lib/unified_ruby_sdk/models/operations/createanalyticsvisitor_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createassessmentorder_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createassessmentorder_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createassessmentorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/createassessmentorder_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createassessmentorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/createassessmentorder_response.rbi
   - lib/unified_ruby_sdk/models/operations/createassessmentpackage_request.rb
   - lib/unified_ruby_sdk/models/operations/createassessmentpackage_request.rbi
   - lib/unified_ruby_sdk/models/operations/createassessmentpackage_response.rb
@@ -4843,6 +4855,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getanalyticsvisitor_request.rbi
   - lib/unified_ruby_sdk/models/operations/getanalyticsvisitor_response.rb
   - lib/unified_ruby_sdk/models/operations/getanalyticsvisitor_response.rbi
+  - lib/unified_ruby_sdk/models/operations/getassessmentorder_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/getassessmentorder_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/getassessmentorder_request.rb
+  - lib/unified_ruby_sdk/models/operations/getassessmentorder_request.rbi
+  - lib/unified_ruby_sdk/models/operations/getassessmentorder_response.rb
+  - lib/unified_ruby_sdk/models/operations/getassessmentorder_response.rbi
   - lib/unified_ruby_sdk/models/operations/getassessmentpackage_request.rb
   - lib/unified_ruby_sdk/models/operations/getassessmentpackage_request.rbi
   - lib/unified_ruby_sdk/models/operations/getassessmentpackage_response.rb
@@ -25044,5 +25062,24 @@ examples:
       responses:
         "200":
           application/json: [{"id": "<id>"}]
+  createAssessmentOrder:
+    speakeasy-default-create-assessment-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"connection_id": "<id>", "workspace_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"connection_id": "<id>", "workspace_id": "<id>"}
+  getAssessmentOrder:
+    speakeasy-default-get-assessment-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"connection_id": "<id>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
