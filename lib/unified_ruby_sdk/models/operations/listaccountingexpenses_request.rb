@@ -15,6 +15,8 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # The expense approver user/employee ID to filter by (reference to HrisEmployee)
+        field :approver_user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'approver_user_id', 'style': 'form', 'explode': true } }
         # The category ID to filter by (reference to AccountingCategory)
         field :category_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'category_id', 'style': 'form', 'explode': true } }
         # The contact ID to filter by (reference to AccountingContact)
@@ -48,9 +50,10 @@ module UnifiedRubySDK
         # The user/employee ID to filter by (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, category_id: T.nilable(::String), contact_id: T.nilable(::String), end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAccountingExpensesQueryParamFields]), group_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), org_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), status: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(connection_id:, category_id: nil, contact_id: nil, end_lt: nil, fields_: nil, group_id: nil, limit: nil, offset: nil, order: nil, org_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, status: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, approver_user_id: T.nilable(::String), category_id: T.nilable(::String), contact_id: T.nilable(::String), end_lt: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAccountingExpensesQueryParamFields]), group_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), org_id: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), status: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(connection_id:, approver_user_id: nil, category_id: nil, contact_id: nil, end_lt: nil, fields_: nil, group_id: nil, limit: nil, offset: nil, order: nil, org_id: nil, query: nil, raw: nil, sort: nil, start_gte: nil, status: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
+          @approver_user_id = approver_user_id
           @category_id = category_id
           @contact_id = contact_id
           @end_lt = end_lt
@@ -73,6 +76,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
+          return false unless @approver_user_id == other.approver_user_id
           return false unless @category_id == other.category_id
           return false unless @contact_id == other.contact_id
           return false unless @end_lt == other.end_lt

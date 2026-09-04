@@ -1155,6 +1155,7 @@ end
 * [create_hris_employee](docs/sdks/hris/README.md#create_hris_employee) - Create an employee
 * [create_hris_group](docs/sdks/hris/README.md#create_hris_group) - Create a group
 * [create_hris_location](docs/sdks/hris/README.md#create_hris_location) - Create a location
+* [create_hris_taxonomy](docs/sdks/hris/README.md#create_hris_taxonomy) - Create a taxonomy
 * [create_hris_timeoff](docs/sdks/hris/README.md#create_hris_timeoff) - Create a timeoff
 * [create_hris_timeshift](docs/sdks/hris/README.md#create_hris_timeshift) - Create a timeshift
 * [get_hris_attendance](docs/sdks/hris/README.md#get_hris_attendance) - Retrieve an attendance
@@ -2097,6 +2098,7 @@ end
 
 ### [taxonomy](docs/sdks/taxonomy/README.md)
 
+* [create_hris_taxonomy](docs/sdks/taxonomy/README.md#create_hris_taxonomy) - Create a taxonomy
 * [get_hris_taxonomy](docs/sdks/taxonomy/README.md#get_hris_taxonomy) - Retrieve a taxonomy
 * [list_crm_taxonomies](docs/sdks/taxonomy/README.md#list_crm_taxonomies) - List all taxonomies
 * [list_hris_taxonomies](docs/sdks/taxonomy/README.md#list_hris_taxonomies) - List all taxonomies

@@ -15,6 +15,7 @@
 * [create_hris_employee](#create_hris_employee) - Create an employee
 * [create_hris_group](#create_hris_group) - Create a group
 * [create_hris_location](#create_hris_location) - Create a location
+* [create_hris_taxonomy](#create_hris_taxonomy) - Create a taxonomy
 * [create_hris_timeoff](#create_hris_timeoff) - Create a timeoff
 * [create_hris_timeshift](#create_hris_timeshift) - Create a timeshift
 * [get_hris_attendance](#get_hris_attendance) - Retrieve an attendance
@@ -519,6 +520,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateHrisLocationResponse)](../../models/operations/createhrislocationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_hris_taxonomy
+
+Create a taxonomy
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.hris.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.new(), connection_id: '<id>')
+
+unless res.hris_taxonomy.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `hris_taxonomy`                                                                                                                                  | [Models::Shared::HrisTaxonomy](../../models/shared/hristaxonomy.md)                                                                              | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHrisTaxonomyQueryParamFields](../../models/operations/createhristaxonomyqueryparamfields.md)>                | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateHrisTaxonomyResponse)](../../models/operations/createhristaxonomyresponse.md)**
 
 ### Errors
 

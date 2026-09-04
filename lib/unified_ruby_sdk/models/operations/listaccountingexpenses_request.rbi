@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Operations::ListAccountingExpensesRequest
   def connection_id(); end
   def connection_id=(str_); end
+  def approver_user_id(); end
+  def approver_user_id=(str_); end
   def category_id(); end
   def category_id=(str_); end
   def contact_id(); end

@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_ad_id=(str_); end
   def list_application_id(); end
   def list_application_id=(str_); end
+  def list_approver_user_id(); end
+  def list_approver_user_id=(str_); end
   def list_assigned_user_id(); end
   def list_assigned_user_id=(str_); end
   def list_bankfeedaccount_id(); end
@@ -270,6 +272,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_ad_id=(str_); end
   def virtual_webhook_application_id(); end
   def virtual_webhook_application_id=(str_); end
+  def virtual_webhook_approver_user_id(); end
+  def virtual_webhook_approver_user_id=(str_); end
   def virtual_webhook_assigned_user_id(); end
   def virtual_webhook_assigned_user_id=(str_); end
   def virtual_webhook_bankfeedaccount_id(); end

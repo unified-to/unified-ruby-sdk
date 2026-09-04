@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 3ffdf53db69180f3a9706188fe5b0bca
+  docChecksum: 5cd3b024de4650685a1ee9ef777ba37a
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.120
-  configChecksum: 54715e797a52eda4dc395557f151fde9
+  releaseVersion: 0.67.121
+  configChecksum: 16ca4ebfd9d6ffef67e8ff60654e2262
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -266,6 +266,9 @@ generatedFiles:
   - docs/models/operations/createhrislocationqueryparamfields.md
   - docs/models/operations/createhrislocationrequest.md
   - docs/models/operations/createhrislocationresponse.md
+  - docs/models/operations/createhristaxonomyqueryparamfields.md
+  - docs/models/operations/createhristaxonomyrequest.md
+  - docs/models/operations/createhristaxonomyresponse.md
   - docs/models/operations/createhristimeoffqueryparamfields.md
   - docs/models/operations/createhristimeoffrequest.md
   - docs/models/operations/createhristimeoffresponse.md
@@ -2861,6 +2864,7 @@ generatedFiles:
   - docs/models/shared/listaccountid.md
   - docs/models/shared/listadid.md
   - docs/models/shared/listapplicationid.md
+  - docs/models/shared/listapproveruserid.md
   - docs/models/shared/listassigneduserid.md
   - docs/models/shared/listbankfeedaccountid.md
   - docs/models/shared/listbenefitid.md
@@ -3476,6 +3480,7 @@ generatedFiles:
   - docs/models/shared/virtualwebhookaccountid.md
   - docs/models/shared/virtualwebhookadid.md
   - docs/models/shared/virtualwebhookapplicationid.md
+  - docs/models/shared/virtualwebhookapproveruserid.md
   - docs/models/shared/virtualwebhookassigneduserid.md
   - docs/models/shared/virtualwebhookbankfeedaccountid.md
   - docs/models/shared/virtualwebhookbenefitid.md
@@ -4313,6 +4318,12 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/createhrislocation_request.rbi
   - lib/unified_ruby_sdk/models/operations/createhrislocation_response.rb
   - lib/unified_ruby_sdk/models/operations/createhrislocation_response.rbi
+  - lib/unified_ruby_sdk/models/operations/createhristaxonomy_queryparam_fields.rb
+  - lib/unified_ruby_sdk/models/operations/createhristaxonomy_queryparam_fields.rbi
+  - lib/unified_ruby_sdk/models/operations/createhristaxonomy_request.rb
+  - lib/unified_ruby_sdk/models/operations/createhristaxonomy_request.rbi
+  - lib/unified_ruby_sdk/models/operations/createhristaxonomy_response.rb
+  - lib/unified_ruby_sdk/models/operations/createhristaxonomy_response.rbi
   - lib/unified_ruby_sdk/models/operations/createhristimeoff_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/createhristimeoff_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/createhristimeoff_request.rb
@@ -9504,6 +9515,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/list_ad_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_application_id.rb
   - lib/unified_ruby_sdk/models/shared/list_application_id.rbi
+  - lib/unified_ruby_sdk/models/shared/list_approver_user_id.rb
+  - lib/unified_ruby_sdk/models/shared/list_approver_user_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_assigned_user_id.rb
   - lib/unified_ruby_sdk/models/shared/list_assigned_user_id.rbi
   - lib/unified_ruby_sdk/models/shared/list_bankfeedaccount_id.rb
@@ -10734,6 +10747,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_ad_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_application_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_application_id.rbi
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_approver_user_id.rb
+  - lib/unified_ruby_sdk/models/shared/virtual_webhook_approver_user_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_assigned_user_id.rb
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_assigned_user_id.rbi
   - lib/unified_ruby_sdk/models/shared/virtual_webhook_bankfeedaccount_id.rb
@@ -25081,5 +25096,15 @@ examples:
       responses:
         "200":
           application/json: {"connection_id": "<id>", "workspace_id": "<id>"}
+  createHrisTaxonomy:
+    speakeasy-default-create-hris-taxonomy:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
