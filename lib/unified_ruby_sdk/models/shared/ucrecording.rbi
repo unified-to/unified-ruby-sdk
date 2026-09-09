@@ -10,12 +10,6 @@ end
 class UnifiedRubySDK::Models::Shared::UcRecording
   def call_id(); end
   def call_id=(str_); end
-  def contact_id(); end
-  def contact_id=(str_); end
-  def contact_name(); end
-  def contact_name=(str_); end
-  def contact_phone(); end
-  def contact_phone=(str_); end
   def contacts(); end
   def contacts=(str_); end
   def created_at(); end

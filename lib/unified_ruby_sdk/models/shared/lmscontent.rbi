@@ -26,8 +26,6 @@ class UnifiedRubySDK::Models::Shared::LmsContent
   def external_reference=(str_); end
   def id(); end
   def id=(str_); end
-  def instructor_ids(); end
-  def instructor_ids=(str_); end
   def instructors(); end
   def instructors=(str_); end
   def is_active(); end

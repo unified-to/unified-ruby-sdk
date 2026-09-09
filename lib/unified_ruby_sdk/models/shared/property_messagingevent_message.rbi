@@ -14,10 +14,6 @@ class UnifiedRubySDK::Models::Shared::PropertyMessagingEventMessage
   def author_member=(str_); end
   def buttons(); end
   def buttons=(str_); end
-  def channel_id(); end
-  def channel_id=(str_); end
-  def channel_ids(); end
-  def channel_ids=(str_); end
   def channels(); end
   def channels=(str_); end
   def created_at(); end
@@ -50,8 +46,6 @@ class UnifiedRubySDK::Models::Shared::PropertyMessagingEventMessage
   def reactions=(str_); end
   def reference(); end
   def reference=(str_); end
-  def root_message_id(); end
-  def root_message_id=(str_); end
   def subject(); end
   def subject=(str_); end
   def updated_at(); end

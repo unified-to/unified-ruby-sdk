@@ -17,9 +17,7 @@
 | `CATEGORIES`            | categories              |
 | `CURRENCY`              | currency                |
 | `MEDIA`                 | media                   |
-| `INSTRUCTOR_IDS`        | instructor_ids          |
 | `INSTRUCTORS`           | instructors             |
-| `STUDENT_IDS`           | student_ids             |
 | `STUDENTS`              | students                |
 | `CONTENT_IDS`           | content_ids             |
 | `SKILLS`                | skills                  |

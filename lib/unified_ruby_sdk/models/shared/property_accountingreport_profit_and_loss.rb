@@ -15,8 +15,6 @@ module UnifiedRubySDK
 
 
         field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
-        # @deprecated – use cost_of_goods_sold_sections instead
-        field :cost_of_goods_sold, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingProfitlossCategory)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_of_goods_sold') } }
 
         field :cost_of_goods_sold_sections, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingProfitlossSection)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_of_goods_sold_sections') } }
 
@@ -27,18 +25,12 @@ module UnifiedRubySDK
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-        # @deprecated – use expenses_sections instead
-        field :expenses, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingProfitlossCategory)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expenses') } }
 
         field :expenses_sections, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingProfitlossSection)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expenses_sections') } }
 
         field :expenses_total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expenses_total_amount') } }
 
-        field :gross_profit_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gross_profit_amount') } }
-
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-        # @deprecated – use income_sections instead
-        field :income, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingProfitlossCategory)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('income') } }
 
         field :income_sections, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingProfitlossSection)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('income_sections') } }
 
@@ -48,34 +40,27 @@ module UnifiedRubySDK
 
         field :net_income_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_income_amount') } }
 
-        field :net_profit_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_profit_amount') } }
-
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(category_ids: T.nilable(T::Array[::String]), cost_of_goods_sold: T.nilable(T::Array[Models::Shared::AccountingProfitlossCategory]), cost_of_goods_sold_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), cost_of_goods_sold_total_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), expenses: T.nilable(T::Array[Models::Shared::AccountingProfitlossCategory]), expenses_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), expenses_total_amount: T.nilable(::Float), gross_profit_amount: T.nilable(::Float), id: T.nilable(::String), income: T.nilable(T::Array[Models::Shared::AccountingProfitlossCategory]), income_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), income_total_amount: T.nilable(::Float), name: T.nilable(::String), net_income_amount: T.nilable(::Float), net_profit_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
-        def initialize(category_ids: nil, cost_of_goods_sold: nil, cost_of_goods_sold_sections: nil, cost_of_goods_sold_total_amount: nil, created_at: nil, currency: nil, end_at: nil, expenses: nil, expenses_sections: nil, expenses_total_amount: nil, gross_profit_amount: nil, id: nil, income: nil, income_sections: nil, income_total_amount: nil, name: nil, net_income_amount: nil, net_profit_amount: nil, raw: nil, start_at: nil, updated_at: nil)
+        sig { params(category_ids: T.nilable(T::Array[::String]), cost_of_goods_sold_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), cost_of_goods_sold_total_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), expenses_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), expenses_total_amount: T.nilable(::Float), id: T.nilable(::String), income_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), income_total_amount: T.nilable(::Float), name: T.nilable(::String), net_income_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
+        def initialize(category_ids: nil, cost_of_goods_sold_sections: nil, cost_of_goods_sold_total_amount: nil, created_at: nil, currency: nil, end_at: nil, expenses_sections: nil, expenses_total_amount: nil, id: nil, income_sections: nil, income_total_amount: nil, name: nil, net_income_amount: nil, raw: nil, start_at: nil, updated_at: nil)
           @category_ids = category_ids
-          @cost_of_goods_sold = cost_of_goods_sold
           @cost_of_goods_sold_sections = cost_of_goods_sold_sections
           @cost_of_goods_sold_total_amount = cost_of_goods_sold_total_amount
           @created_at = created_at
           @currency = currency
           @end_at = end_at
-          @expenses = expenses
           @expenses_sections = expenses_sections
           @expenses_total_amount = expenses_total_amount
-          @gross_profit_amount = gross_profit_amount
           @id = id
-          @income = income
           @income_sections = income_sections
           @income_total_amount = income_total_amount
           @name = name
           @net_income_amount = net_income_amount
-          @net_profit_amount = net_profit_amount
           @raw = raw
           @start_at = start_at
           @updated_at = updated_at
@@ -85,23 +70,18 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @category_ids == other.category_ids
-          return false unless @cost_of_goods_sold == other.cost_of_goods_sold
           return false unless @cost_of_goods_sold_sections == other.cost_of_goods_sold_sections
           return false unless @cost_of_goods_sold_total_amount == other.cost_of_goods_sold_total_amount
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @end_at == other.end_at
-          return false unless @expenses == other.expenses
           return false unless @expenses_sections == other.expenses_sections
           return false unless @expenses_total_amount == other.expenses_total_amount
-          return false unless @gross_profit_amount == other.gross_profit_amount
           return false unless @id == other.id
-          return false unless @income == other.income
           return false unless @income_sections == other.income_sections
           return false unless @income_total_amount == other.income_total_amount
           return false unless @name == other.name
           return false unless @net_income_amount == other.net_income_amount
-          return false unless @net_profit_amount == other.net_profit_amount
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
           return false unless @updated_at == other.updated_at

@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::CrmDeal
   def created_at=(str_); end
   def currency(); end
   def currency=(str_); end
+  def description(); end
+  def description=(str_); end
   def id(); end
   def id=(str_); end
   def lost_reason(); end
@@ -30,10 +32,6 @@ class UnifiedRubySDK::Models::Shared::CrmDeal
   def metadata=(str_); end
   def name(); end
   def name=(str_); end
-  def pipeline(); end
-  def pipeline=(str_); end
-  def pipeline_id(); end
-  def pipeline_id=(str_); end
   def pipelines(); end
   def pipelines=(str_); end
   def probability(); end
@@ -42,10 +40,6 @@ class UnifiedRubySDK::Models::Shared::CrmDeal
   def raw=(str_); end
   def source(); end
   def source=(str_); end
-  def stage(); end
-  def stage=(str_); end
-  def stage_id(); end
-  def stage_id=(str_); end
   def stages(); end
   def stages=(str_); end
   def tags(); end

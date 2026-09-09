@@ -16,8 +16,6 @@ class UnifiedRubySDK::Models::Shared::LmsClass
   def description=(str_); end
   def id(); end
   def id=(str_); end
-  def instructor_ids(); end
-  def instructor_ids=(str_); end
   def instructors(); end
   def instructors=(str_); end
   def languages(); end
@@ -28,8 +26,6 @@ class UnifiedRubySDK::Models::Shared::LmsClass
   def name=(str_); end
   def raw(); end
   def raw=(str_); end
-  def student_ids(); end
-  def student_ids=(str_); end
   def students(); end
   def students=(str_); end
   def updated_at(); end

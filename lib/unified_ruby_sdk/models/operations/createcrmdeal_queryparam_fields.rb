@@ -21,10 +21,6 @@ module UnifiedRubySDK
           CURRENCY = new('currency')
           CLOSED_AT = new('closed_at')
           CLOSING_AT = new('closing_at')
-          STAGE = new('stage')
-          STAGE_ID = new('stage_id')
-          PIPELINE = new('pipeline')
-          PIPELINE_ID = new('pipeline_id')
           STAGES = new('stages')
           PIPELINES = new('pipelines')
           SOURCE = new('source')
@@ -36,6 +32,7 @@ module UnifiedRubySDK
           CONTACT_IDS = new('contact_ids')
           COMPANY_IDS = new('company_ids')
           METADATA = new('metadata')
+          DESCRIPTION = new('description')
           RAW = new('raw')
         end
       end

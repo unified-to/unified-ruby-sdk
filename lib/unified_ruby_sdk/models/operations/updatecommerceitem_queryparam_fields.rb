@@ -37,7 +37,6 @@ module UnifiedRubySDK
           VARIANTS = new('variants')
           TAGS = new('tags')
           MEDIA = new('media')
-          COLLECTION_IDS = new('collection_ids')
           ACCOUNT_ID = new('account_id')
           METADATA = new('metadata')
           COLLECTIONS = new('collections')

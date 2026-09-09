@@ -25,7 +25,6 @@
 | `PROVIDER_NAME`      | provider_name        |
 | `SHORT_DESCRIPTION`  | short_description    |
 | `LOCALIZATIONS`      | localizations        |
-| `INSTRUCTOR_IDS`     | instructor_ids       |
 | `COLLECTION_IDS`     | collection_ids       |
 | `INSTRUCTORS`        | instructors          |
 | `PUBLISHED_AT`       | published_at         |

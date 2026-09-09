@@ -18,8 +18,6 @@ class UnifiedRubySDK::Models::Shared::AccountingAccount
   def customer_defined_code=(str_); end
   def description(); end
   def description=(str_); end
-  def group(); end
-  def group=(str_); end
   def id(); end
   def id=(str_); end
   def is_payable(); end
@@ -32,14 +30,8 @@ class UnifiedRubySDK::Models::Shared::AccountingAccount
   def parent_id=(str_); end
   def raw(); end
   def raw=(str_); end
-  def section(); end
-  def section=(str_); end
   def status(); end
   def status=(str_); end
-  def subgroup(); end
-  def subgroup=(str_); end
-  def subsection(); end
-  def subsection=(str_); end
   def taxonomy(); end
   def taxonomy=(str_); end
   def type(); end

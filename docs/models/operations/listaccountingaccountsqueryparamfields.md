@@ -16,10 +16,6 @@
 | `CURRENCY`              | currency                |
 | `CUSTOMER_DEFINED_CODE` | customer_defined_code   |
 | `IS_PAYABLE`            | is_payable              |
-| `SECTION`               | section                 |
-| `SUBSECTION`            | subsection              |
-| `GROUP`                 | group                   |
-| `SUBGROUP`              | subgroup                |
 | `PARENT_ID`             | parent_id               |
 | `TAXONOMY`              | taxonomy                |
 | `ORGANIZATION_ID`       | organization_id         |

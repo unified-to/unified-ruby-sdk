@@ -20,8 +20,6 @@ module UnifiedRubySDK
           DESCRIPTION = new('description')
           MEDIA = new('media')
           COURSE_ID = new('course_id')
-          INSTRUCTOR_IDS = new('instructor_ids')
-          STUDENT_IDS = new('student_ids')
           LANGUAGES = new('languages')
           INSTRUCTORS = new('instructors')
           STUDENTS = new('students')

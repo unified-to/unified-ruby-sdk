@@ -33,7 +33,6 @@ module UnifiedRubySDK
           PROVIDER_NAME = new('provider_name')
           SHORT_DESCRIPTION = new('short_description')
           LOCALIZATIONS = new('localizations')
-          INSTRUCTOR_IDS = new('instructor_ids')
           COLLECTION_IDS = new('collection_ids')
           INSTRUCTORS = new('instructors')
           PUBLISHED_AT = new('published_at')

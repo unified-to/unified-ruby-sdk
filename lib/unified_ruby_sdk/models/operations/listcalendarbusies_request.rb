@@ -15,7 +15,7 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
-        # The calendar ID to filter by (reference to CalendarCalendar)
+        # The calendar ID to get availability for. Typically user's email or user ID. (reference to CalendarCalendar)
         field :calendar_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'calendar_id', 'style': 'form', 'explode': true } }
         # The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :end_lt, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'end_lt', 'style': 'form', 'explode': true } }

@@ -19,10 +19,6 @@ module UnifiedRubySDK
         field :author_member, Crystalline::Nilable.new(Models::Shared::PropertyMessagingMessageAuthorMember), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_member') } }
 
         field :buttons, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingButton)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('buttons') } }
-
-        field :channel_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channel_id') } }
-        # @deprecated; use channels instead
-        field :channel_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channel_ids') } }
         # Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted.
         field :channels, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channels') } }
 
@@ -56,21 +52,17 @@ module UnifiedRubySDK
 
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
-        field :root_message_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('root_message_id') } }
-
         field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingMessageAuthorMember), buttons: T.nilable(T::Array[Models::Shared::MessagingButton]), channel_id: T.nilable(::String), channel_ids: T.nilable(T::Array[::String]), channels: T.nilable(T::Array[Models::Shared::MessagingReference]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), is_unread: T.nilable(T::Boolean), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), message_markdown: T.nilable(::String), message_thread_identifier: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::MessagingReaction]), reference: T.nilable(::String), root_message_id: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-        def initialize(attachments: nil, author_member: nil, buttons: nil, channel_id: nil, channel_ids: nil, channels: nil, created_at: nil, destination_members: nil, has_children: nil, hidden_members: nil, id: nil, is_unread: nil, mentioned_members: nil, message: nil, message_html: nil, message_markdown: nil, message_thread_identifier: nil, parent_id: nil, raw: nil, reactions: nil, reference: nil, root_message_id: nil, subject: nil, updated_at: nil, web_url: nil)
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingMessageAuthorMember), buttons: T.nilable(T::Array[Models::Shared::MessagingButton]), channels: T.nilable(T::Array[Models::Shared::MessagingReference]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), is_unread: T.nilable(T::Boolean), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), message_markdown: T.nilable(::String), message_thread_identifier: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::MessagingReaction]), reference: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(attachments: nil, author_member: nil, buttons: nil, channels: nil, created_at: nil, destination_members: nil, has_children: nil, hidden_members: nil, id: nil, is_unread: nil, mentioned_members: nil, message: nil, message_html: nil, message_markdown: nil, message_thread_identifier: nil, parent_id: nil, raw: nil, reactions: nil, reference: nil, subject: nil, updated_at: nil, web_url: nil)
           @attachments = attachments
           @author_member = author_member
           @buttons = buttons
-          @channel_id = channel_id
-          @channel_ids = channel_ids
           @channels = channels
           @created_at = created_at
           @destination_members = destination_members
@@ -87,7 +79,6 @@ module UnifiedRubySDK
           @raw = raw
           @reactions = reactions
           @reference = reference
-          @root_message_id = root_message_id
           @subject = subject
           @updated_at = updated_at
           @web_url = web_url
@@ -99,8 +90,6 @@ module UnifiedRubySDK
           return false unless @attachments == other.attachments
           return false unless @author_member == other.author_member
           return false unless @buttons == other.buttons
-          return false unless @channel_id == other.channel_id
-          return false unless @channel_ids == other.channel_ids
           return false unless @channels == other.channels
           return false unless @created_at == other.created_at
           return false unless @destination_members == other.destination_members
@@ -117,7 +106,6 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @reactions == other.reactions
           return false unless @reference == other.reference
-          return false unless @root_message_id == other.root_message_id
           return false unless @subject == other.subject
           return false unless @updated_at == other.updated_at
           return false unless @web_url == other.web_url

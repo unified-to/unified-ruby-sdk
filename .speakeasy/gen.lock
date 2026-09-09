@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 5cd3b024de4650685a1ee9ef777ba37a
+  docChecksum: 0d6ce61374059ad32a939916e4bd0c06
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.121
-  configChecksum: 16ca4ebfd9d6ffef67e8ff60654e2262
+  releaseVersion: 0.67.122
+  configChecksum: a41e1d8b473e50ba589a717e50f24002
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -2483,9 +2483,7 @@ generatedFiles:
   - docs/models/shared/accountingpaymenttermtype.md
   - docs/models/shared/accountingprofitloss.md
   - docs/models/shared/accountingprofitlossaccount.md
-  - docs/models/shared/accountingprofitlosscategory.md
   - docs/models/shared/accountingprofitlosssection.md
-  - docs/models/shared/accountingprofitlosssubcategory.md
   - docs/models/shared/accountingproject.md
   - docs/models/shared/accountingprojectstatus.md
   - docs/models/shared/accountingpurchaseorder.md
@@ -8755,12 +8753,8 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingprofitloss.rbi
   - lib/unified_ruby_sdk/models/shared/accountingprofitlossaccount.rb
   - lib/unified_ruby_sdk/models/shared/accountingprofitlossaccount.rbi
-  - lib/unified_ruby_sdk/models/shared/accountingprofitlosscategory.rb
-  - lib/unified_ruby_sdk/models/shared/accountingprofitlosscategory.rbi
   - lib/unified_ruby_sdk/models/shared/accountingprofitlosssection.rb
   - lib/unified_ruby_sdk/models/shared/accountingprofitlosssection.rbi
-  - lib/unified_ruby_sdk/models/shared/accountingprofitlosssubcategory.rb
-  - lib/unified_ruby_sdk/models/shared/accountingprofitlosssubcategory.rbi
   - lib/unified_ruby_sdk/models/shared/accountingproject.rb
   - lib/unified_ruby_sdk/models/shared/accountingproject.rbi
   - lib/unified_ruby_sdk/models/shared/accountingproject_status.rb
