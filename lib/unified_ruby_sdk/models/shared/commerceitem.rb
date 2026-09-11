@@ -67,8 +67,6 @@ module UnifiedRubySDK
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-        # first variant is the default variant
-        field :variants, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemvariant)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('variants') } }
 
         field :vendor_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('vendor_name') } }
 
@@ -76,8 +74,8 @@ module UnifiedRubySDK
 
         field :weight_unit, Crystalline::Nilable.new(Models::Shared::WeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': Utils.enum_from_string(Models::Shared::WeightUnit, true) } }
 
-        sig { params(account_id: T.nilable(::String), collections: T.nilable(T::Array[Models::Shared::CommerceReference]), created_at: T.nilable(::DateTime), description: T.nilable(::String), duration: T.nilable(::Float), global_code: T.nilable(::String), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), location_id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), requires_shipping: T.nilable(T::Boolean), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), taxrate_id: T.nilable(::String), total_stock: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime), variants: T.nilable(T::Array[Models::Shared::CommerceItemvariant]), vendor_name: T.nilable(::String), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::WeightUnit)).void }
-        def initialize(account_id: nil, collections: nil, created_at: nil, description: nil, duration: nil, global_code: nil, id: nil, inventory_id: nil, is_active: nil, is_featured: nil, is_taxable: nil, is_visible: nil, location_id: nil, media: nil, metadata: nil, name: nil, prices: nil, public_description: nil, public_name: nil, raw: nil, requires_shipping: nil, slug: nil, tags: nil, taxrate_id: nil, total_stock: nil, type: nil, updated_at: nil, variants: nil, vendor_name: nil, weight: nil, weight_unit: nil)
+        sig { params(account_id: T.nilable(::String), collections: T.nilable(T::Array[Models::Shared::CommerceReference]), created_at: T.nilable(::DateTime), description: T.nilable(::String), duration: T.nilable(::Float), global_code: T.nilable(::String), id: T.nilable(::String), inventory_id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_taxable: T.nilable(T::Boolean), is_visible: T.nilable(T::Boolean), location_id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::CommerceItemPrice]), public_description: T.nilable(::String), public_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), requires_shipping: T.nilable(T::Boolean), slug: T.nilable(::String), tags: T.nilable(T::Array[::String]), taxrate_id: T.nilable(::String), total_stock: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime), vendor_name: T.nilable(::String), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::WeightUnit)).void }
+        def initialize(account_id: nil, collections: nil, created_at: nil, description: nil, duration: nil, global_code: nil, id: nil, inventory_id: nil, is_active: nil, is_featured: nil, is_taxable: nil, is_visible: nil, location_id: nil, media: nil, metadata: nil, name: nil, prices: nil, public_description: nil, public_name: nil, raw: nil, requires_shipping: nil, slug: nil, tags: nil, taxrate_id: nil, total_stock: nil, type: nil, updated_at: nil, vendor_name: nil, weight: nil, weight_unit: nil)
           @account_id = account_id
           @collections = collections
           @created_at = created_at
@@ -105,7 +103,6 @@ module UnifiedRubySDK
           @total_stock = total_stock
           @type = type
           @updated_at = updated_at
-          @variants = variants
           @vendor_name = vendor_name
           @weight = weight
           @weight_unit = weight_unit
@@ -141,7 +138,6 @@ module UnifiedRubySDK
           return false unless @total_stock == other.total_stock
           return false unless @type == other.type
           return false unless @updated_at == other.updated_at
-          return false unless @variants == other.variants
           return false unless @vendor_name == other.vendor_name
           return false unless @weight == other.weight
           return false unless @weight_unit == other.weight_unit

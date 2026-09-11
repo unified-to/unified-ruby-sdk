@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 73849861-e9ad-4f9c-b80b-7c628e3d8008
 management:
-  docChecksum: 0d6ce61374059ad32a939916e4bd0c06
+  docChecksum: 2603dd36aa034d8cef9a411c0f95cad1
   docVersion: "1.0"
   speakeasyVersion: 1.605.0
   generationVersion: 2.684.0
-  releaseVersion: 0.67.122
-  configChecksum: a41e1d8b473e50ba589a717e50f24002
+  releaseVersion: 0.67.123
+  configChecksum: e3c67508ab2cfe82e24f8acdea598620
   repoURL: https://github.com/unified-to/unified-ruby-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-ruby-sdk
@@ -483,9 +483,6 @@ generatedFiles:
   - docs/models/operations/getaccountingquotequeryparamfields.md
   - docs/models/operations/getaccountingquoterequest.md
   - docs/models/operations/getaccountingquoteresponse.md
-  - docs/models/operations/getaccountingreportqueryparamfields.md
-  - docs/models/operations/getaccountingreportrequest.md
-  - docs/models/operations/getaccountingreportresponse.md
   - docs/models/operations/getaccountingsalesorderqueryparamfields.md
   - docs/models/operations/getaccountingsalesorderrequest.md
   - docs/models/operations/getaccountingsalesorderresponse.md
@@ -970,9 +967,6 @@ generatedFiles:
   - docs/models/operations/listaccountingquotesqueryparamfields.md
   - docs/models/operations/listaccountingquotesrequest.md
   - docs/models/operations/listaccountingquotesresponse.md
-  - docs/models/operations/listaccountingreportsqueryparamfields.md
-  - docs/models/operations/listaccountingreportsrequest.md
-  - docs/models/operations/listaccountingreportsresponse.md
   - docs/models/operations/listaccountingsalesordersqueryparamfields.md
   - docs/models/operations/listaccountingsalesordersrequest.md
   - docs/models/operations/listaccountingsalesordersresponse.md
@@ -2492,8 +2486,6 @@ generatedFiles:
   - docs/models/shared/accountingquotepaymentterms.md
   - docs/models/shared/accountingquotestatus.md
   - docs/models/shared/accountingreference.md
-  - docs/models/shared/accountingreport.md
-  - docs/models/shared/accountingreporttype.md
   - docs/models/shared/accountingsalesorder.md
   - docs/models/shared/accountingsalesorderstatus.md
   - docs/models/shared/accountingtaxrate.md
@@ -3072,9 +3064,6 @@ generatedFiles:
   - docs/models/shared/propertyaccountingorganizationaddress.md
   - docs/models/shared/propertyaccountingpurchaseorderbillingaddress.md
   - docs/models/shared/propertyaccountingpurchaseordershippingaddress.md
-  - docs/models/shared/propertyaccountingreportbalancesheet.md
-  - docs/models/shared/propertyaccountingreportprofitandloss.md
-  - docs/models/shared/propertyaccountingreporttrialbalance.md
   - docs/models/shared/propertyaccountingsalesorderbillingaddress.md
   - docs/models/shared/propertyaccountingsalesordershippingaddress.md
   - docs/models/shared/propertyadscampaignfrequencycap.md
@@ -4750,12 +4739,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/getaccountingquote_request.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingquote_response.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingquote_response.rbi
-  - lib/unified_ruby_sdk/models/operations/getaccountingreport_queryparam_fields.rb
-  - lib/unified_ruby_sdk/models/operations/getaccountingreport_queryparam_fields.rbi
-  - lib/unified_ruby_sdk/models/operations/getaccountingreport_request.rb
-  - lib/unified_ruby_sdk/models/operations/getaccountingreport_request.rbi
-  - lib/unified_ruby_sdk/models/operations/getaccountingreport_response.rb
-  - lib/unified_ruby_sdk/models/operations/getaccountingreport_response.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingsalesorder_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/getaccountingsalesorder_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/getaccountingsalesorder_request.rb
@@ -5724,12 +5707,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/operations/listaccountingquotes_request.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingquotes_response.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingquotes_response.rbi
-  - lib/unified_ruby_sdk/models/operations/listaccountingreports_queryparam_fields.rb
-  - lib/unified_ruby_sdk/models/operations/listaccountingreports_queryparam_fields.rbi
-  - lib/unified_ruby_sdk/models/operations/listaccountingreports_request.rb
-  - lib/unified_ruby_sdk/models/operations/listaccountingreports_request.rbi
-  - lib/unified_ruby_sdk/models/operations/listaccountingreports_response.rb
-  - lib/unified_ruby_sdk/models/operations/listaccountingreports_response.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingsalesorders_queryparam_fields.rb
   - lib/unified_ruby_sdk/models/operations/listaccountingsalesorders_queryparam_fields.rbi
   - lib/unified_ruby_sdk/models/operations/listaccountingsalesorders_request.rb
@@ -8771,10 +8748,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/accountingquote_status.rbi
   - lib/unified_ruby_sdk/models/shared/accountingreference.rb
   - lib/unified_ruby_sdk/models/shared/accountingreference.rbi
-  - lib/unified_ruby_sdk/models/shared/accountingreport.rb
-  - lib/unified_ruby_sdk/models/shared/accountingreport.rbi
-  - lib/unified_ruby_sdk/models/shared/accountingreport_type.rb
-  - lib/unified_ruby_sdk/models/shared/accountingreport_type.rbi
   - lib/unified_ruby_sdk/models/shared/accountingsalesorder.rb
   - lib/unified_ruby_sdk/models/shared/accountingsalesorder.rbi
   - lib/unified_ruby_sdk/models/shared/accountingsalesorder_status.rb
@@ -9929,12 +9902,6 @@ generatedFiles:
   - lib/unified_ruby_sdk/models/shared/property_accountingpurchaseorder_billing_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingpurchaseorder_shipping_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingpurchaseorder_shipping_address.rbi
-  - lib/unified_ruby_sdk/models/shared/property_accountingreport_balance_sheet.rb
-  - lib/unified_ruby_sdk/models/shared/property_accountingreport_balance_sheet.rbi
-  - lib/unified_ruby_sdk/models/shared/property_accountingreport_profit_and_loss.rb
-  - lib/unified_ruby_sdk/models/shared/property_accountingreport_profit_and_loss.rbi
-  - lib/unified_ruby_sdk/models/shared/property_accountingreport_trial_balance.rb
-  - lib/unified_ruby_sdk/models/shared/property_accountingreport_trial_balance.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_billing_address.rb
   - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_billing_address.rbi
   - lib/unified_ruby_sdk/models/shared/property_accountingsalesorder_shipping_address.rb

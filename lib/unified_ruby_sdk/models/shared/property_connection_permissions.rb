@@ -42,8 +42,6 @@ module UnifiedRubySDK
           ACCOUNTING_PURCHASEORDER_WRITE = new('accounting_purchaseorder_write')
           ACCOUNTING_SALESORDER_READ = new('accounting_salesorder_read')
           ACCOUNTING_SALESORDER_WRITE = new('accounting_salesorder_write')
-          ACCOUNTING_REPORT_READ = new('accounting_report_read')
-          ACCOUNTING_REPORT_WRITE = new('accounting_report_write')
           ACCOUNTING_TRIALBALANCE_READ = new('accounting_trialbalance_read')
           ACCOUNTING_TRIALBALANCE_WRITE = new('accounting_trialbalance_write')
           ACCOUNTING_PROFITLOSS_READ = new('accounting_profitloss_read')

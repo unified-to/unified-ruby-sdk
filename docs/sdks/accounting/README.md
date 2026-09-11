@@ -45,7 +45,6 @@
 * [get_accounting_project](#get_accounting_project) - Retrieve a project
 * [get_accounting_purchaseorder](#get_accounting_purchaseorder) - Retrieve a purchaseorder
 * [get_accounting_quote](#get_accounting_quote) - Retrieve a quote
-* [get_accounting_report](#get_accounting_report) - Retrieve a report
 * [get_accounting_salesorder](#get_accounting_salesorder) - Retrieve a salesorder
 * [get_accounting_taxrate](#get_accounting_taxrate) - Retrieve a taxrate
 * [get_accounting_transaction](#get_accounting_transaction) - Retrieve a transaction
@@ -72,7 +71,6 @@
 * [list_accounting_projects](#list_accounting_projects) - List all projects
 * [list_accounting_purchaseorders](#list_accounting_purchaseorders) - List all purchaseorders
 * [list_accounting_quotes](#list_accounting_quotes) - List all quotes
-* [list_accounting_reports](#list_accounting_reports) - List all reports
 * [list_accounting_salesorders](#list_accounting_salesorders) - List all salesorders
 * [list_accounting_taxrates](#list_accounting_taxrates) - List all taxrates
 * [list_accounting_transactions](#list_accounting_transactions) - List all transactions
@@ -1896,50 +1894,6 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_accounting_report
-
-Retrieve a report
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="getAccountingReport" method="get" path="/accounting/{connection_id}/report/{id}" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.accounting.get_accounting_report(connection_id: '<id>', id: '<id>')
-
-unless res.accounting_report.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
-| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Report                                                                                                                                 |
-| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetAccountingReportQueryParamFields](../../models/operations/getaccountingreportqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
-| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
-
-### Response
-
-**[T.nilable(Models::Operations::GetAccountingReportResponse)](../../models/operations/getaccountingreportresponse.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
 ## get_accounting_salesorder
 
 Retrieve a salesorder
@@ -3098,51 +3052,6 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListAccountingQuotesResponse)](../../models/operations/listaccountingquotesresponse.md)**
-
-### Errors
-
-| Error Type       | Status Code      | Content Type     |
-| ---------------- | ---------------- | ---------------- |
-| Errors::APIError | 4XX, 5XX         | \*/\*            |
-
-## list_accounting_reports
-
-List all reports
-
-### Example Usage
-
-<!-- UsageSnippet language="ruby" operationID="listAccountingReports" method="get" path="/accounting/{connection_id}/report" -->
-```ruby
-require 'unified_ruby_sdk'
-
-Models = ::UnifiedRubySDK::Models
-s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingReportsRequest.new(
-  connection_id: '<id>',
-)
-
-res = s.accounting.list_accounting_reports(request: req)
-
-unless res.accounting_reports.nil?
-  # handle response
-end
-
-```
-
-### Parameters
-
-| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                   | [Models::Operations::ListAccountingReportsRequest](../../models/operations/listaccountingreportsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
-
-### Response
-
-**[T.nilable(Models::Operations::ListAccountingReportsResponse)](../../models/operations/listaccountingreportsresponse.md)**
 
 ### Errors
 

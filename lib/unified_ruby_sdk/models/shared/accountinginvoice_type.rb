@@ -13,7 +13,6 @@ module UnifiedRubySDK
 
 
         enums do
-          BILL = new('BILL')
           INVOICE = new('INVOICE')
           CREDITMEMO = new('CREDITMEMO')
         end

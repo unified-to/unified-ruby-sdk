@@ -34,7 +34,6 @@ module UnifiedRubySDK
           PRICES = new('prices')
           INVENTORY_ID = new('inventory_id')
           TOTAL_STOCK = new('total_stock')
-          VARIANTS = new('variants')
           TAGS = new('tags')
           MEDIA = new('media')
           ACCOUNT_ID = new('account_id')

@@ -27,7 +27,6 @@ module UnifiedRubySDK
           ACCOUNTING_ORDER = new('accounting_order')
           ACCOUNTING_SALESORDER = new('accounting_salesorder')
           ACCOUNTING_PURCHASEORDER = new('accounting_purchaseorder')
-          ACCOUNTING_REPORT = new('accounting_report')
           ACCOUNTING_BALANCESHEET = new('accounting_balancesheet')
           ACCOUNTING_PROFITLOSS = new('accounting_profitloss')
           ACCOUNTING_TRIALBALANCE = new('accounting_trialbalance')

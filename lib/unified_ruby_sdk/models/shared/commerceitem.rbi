@@ -62,8 +62,6 @@ class UnifiedRubySDK::Models::Shared::CommerceItem
   def type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
-  def variants(); end
-  def variants=(str_); end
   def vendor_name(); end
   def vendor_name=(str_); end
   def weight(); end
