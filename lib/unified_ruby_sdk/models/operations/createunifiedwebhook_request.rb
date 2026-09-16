@@ -15,7 +15,7 @@ module UnifiedRubySDK
 
         # A webhook is used to POST new/updated information to your server.
         field :webhook, Models::Shared::Webhook, { 'request': { 'media_type': 'application/json' } }
-        # When set, all of the existing data will sent back to your server.
+        # When true, send existing/historic data. When false, no historic data is sent.
         field :include_all, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'include_all', 'style': 'form', 'explode': true } }
 
         sig { params(webhook: Models::Shared::Webhook, include_all: T.nilable(T::Boolean)).void }
