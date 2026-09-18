@@ -29,7 +29,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingBill.new(), connection_id: '<id>')
+res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingBill.new(
+  attachments: [],
+  bill_number: 'vitae',
+  category_ids: [],
+  created_at: DateTime.iso8601('2019-08-08T23:03:14.104Z'),
+  currency: 'AUD',
+  discount_amount: 0.0,
+  due_at: DateTime.iso8601('2019-08-11T20:52:55.321Z'),
+  extended_notes: [],
+  id: 'cf3d7770-af77-4c67-9f72-8ce32c49c385',
+  lineitems: [],
+  metadata: [],
+  notes: 'Tutamen cilicium infit.',
+  payment_collection_method: Models::Shared::PaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+  payments: [],
+  posted_at: DateTime.iso8601('2024-04-04T07:21:13.467Z'),
+  send: true,
+  status: Models::Shared::AccountingBillStatus::DELETED,
+  tax_amount: 0.0,
+  term: Models::Shared::Term::NET_10,
+  total_amount: 0.0,
+  updated_at: DateTime.iso8601('2025-01-29T00:55:25.604Z'),
+  url: 'https://coarse-interviewer.biz/',
+), connection_id: '<id>')
 
 unless res.accounting_bill.nil?
   # handle response
@@ -163,7 +186,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingBillRequest.new(
-  accounting_bill: Models::Shared::AccountingBill.new(),
+  accounting_bill: Models::Shared::AccountingBill.new(
+    attachments: [],
+    bill_number: 'vitae',
+    category_ids: [],
+    created_at: DateTime.iso8601('2019-08-08T23:03:14.104Z'),
+    currency: 'AUD',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2019-08-11T20:52:55.321Z'),
+    extended_notes: [],
+    id: 'e92fecc6-3ce2-4247-9ad8-29596f03252f',
+    lineitems: [],
+    metadata: [],
+    notes: 'Tutamen cilicium infit.',
+    payment_collection_method: Models::Shared::PaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+    payments: [],
+    posted_at: DateTime.iso8601('2024-04-04T07:21:13.492Z'),
+    send: true,
+    status: Models::Shared::AccountingBillStatus::DELETED,
+    tax_amount: 0.0,
+    term: Models::Shared::Term::NET_10,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2025-01-29T00:55:25.634Z'),
+    url: 'https://coarse-interviewer.biz/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +298,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingBillRequest.new(
-  accounting_bill: Models::Shared::AccountingBill.new(),
+  accounting_bill: Models::Shared::AccountingBill.new(
+    attachments: [],
+    bill_number: 'vitae',
+    category_ids: [],
+    created_at: DateTime.iso8601('2019-08-08T23:03:14.104Z'),
+    currency: 'AUD',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2019-08-11T20:52:55.321Z'),
+    extended_notes: [],
+    id: 'e92fecc6-3ce2-4247-9ad8-29596f03252f',
+    lineitems: [],
+    metadata: [],
+    notes: 'Tutamen cilicium infit.',
+    payment_collection_method: Models::Shared::PaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+    payments: [],
+    posted_at: DateTime.iso8601('2024-04-04T07:21:13.492Z'),
+    send: true,
+    status: Models::Shared::AccountingBillStatus::DELETED,
+    tax_amount: 0.0,
+    term: Models::Shared::Term::NET_10,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2025-01-29T00:55:25.634Z'),
+    url: 'https://coarse-interviewer.biz/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

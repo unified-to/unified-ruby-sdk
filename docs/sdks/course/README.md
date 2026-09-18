@@ -29,7 +29,50 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(), connection_id: '<id>')
+res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
+  categories: [
+    'tergiversatio',
+    'tumultus',
+  ],
+  created_at: DateTime.iso8601('2022-10-06T09:58:53.559Z'),
+  currency: 'FJD',
+  description: 'Vinco alias aut capitulus.',
+  duration_minutes: 148.0,
+  id: '65b62991-1a03-4ba7-8efb-97b689c8a03f',
+  instructors: [],
+  is_active: true,
+  is_private: false,
+  languages: [
+    'desparatus',
+    'earum',
+    'deripio',
+  ],
+  media: [
+    Models::Shared::LmsMedia.new(
+      content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+      description: 'Adipiscor.',
+      languages: [
+        'ms',
+        'te',
+      ],
+      name: 'tandem',
+      thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
+      type: Models::Shared::LmsMediaType::OTHER,
+      url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+    ),
+  ],
+  name: 'comptus',
+  price_amount: 84.0,
+  provider_name: 'Homenick - Wunsch',
+  published_at: DateTime.iso8601('2023-12-30T03:35:03.902Z'),
+  skills: [
+    'adiuvo',
+    'tam',
+  ],
+  students: [],
+  time_estimate_minutes: 100.0,
+  updated_at: DateTime.iso8601('2023-02-06T22:30:32.213Z'),
+), connection_id: '<id>')
 
 unless res.lms_course.nil?
   # handle response
@@ -163,7 +206,50 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsCourseRequest.new(
-  lms_course: Models::Shared::LmsCourse.new(),
+  lms_course: Models::Shared::LmsCourse.new(
+    categories: [
+      'tergiversatio',
+      'tumultus',
+    ],
+    created_at: DateTime.iso8601('2022-10-06T09:58:53.559Z'),
+    currency: 'FJD',
+    description: 'Vinco alias aut capitulus.',
+    duration_minutes: 148.0,
+    id: '77a5449a-7770-4fd4-bb15-b62eb0663f70',
+    instructors: [],
+    is_active: true,
+    is_private: false,
+    languages: [
+      'desparatus',
+      'earum',
+      'deripio',
+    ],
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+        description: 'Adipiscor.',
+        languages: [
+          'ms',
+          'te',
+        ],
+        name: 'tandem',
+        thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
+        type: Models::Shared::LmsMediaType::OTHER,
+        url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+      ),
+    ],
+    name: 'comptus',
+    price_amount: 84.0,
+    provider_name: 'Homenick - Wunsch',
+    published_at: DateTime.iso8601('2023-12-30T03:35:03.902Z'),
+    skills: [
+      'adiuvo',
+      'tam',
+    ],
+    students: [],
+    time_estimate_minutes: 100.0,
+    updated_at: DateTime.iso8601('2023-02-06T22:30:32.215Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +338,50 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsCourseRequest.new(
-  lms_course: Models::Shared::LmsCourse.new(),
+  lms_course: Models::Shared::LmsCourse.new(
+    categories: [
+      'tergiversatio',
+      'tumultus',
+    ],
+    created_at: DateTime.iso8601('2022-10-06T09:58:53.559Z'),
+    currency: 'FJD',
+    description: 'Vinco alias aut capitulus.',
+    duration_minutes: 148.0,
+    id: '77a5449a-7770-4fd4-bb15-b62eb0663f70',
+    instructors: [],
+    is_active: true,
+    is_private: false,
+    languages: [
+      'desparatus',
+      'earum',
+      'deripio',
+    ],
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+        description: 'Adipiscor.',
+        languages: [
+          'ms',
+          'te',
+        ],
+        name: 'tandem',
+        thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
+        type: Models::Shared::LmsMediaType::OTHER,
+        url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+      ),
+    ],
+    name: 'comptus',
+    price_amount: 84.0,
+    provider_name: 'Homenick - Wunsch',
+    published_at: DateTime.iso8601('2023-12-30T03:35:03.902Z'),
+    skills: [
+      'adiuvo',
+      'tam',
+    ],
+    students: [],
+    time_estimate_minutes: 100.0,
+    updated_at: DateTime.iso8601('2023-02-06T22:30:32.215Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -29,7 +29,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.shipment.create_shipping_shipment(shipping_shipment: Models::Shared::ShippingShipment.new(), connection_id: '<id>')
+res = s.shipment.create_shipping_shipment(shipping_shipment: Models::Shared::ShippingShipment.new(
+  carrier_name: 'Bogisich, Franey and Koelpin',
+  created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
+  id: '1503017f-1733-49e7-84b2-9e43d4043a46',
+  rate_amount: 8.86_546_263_936_907,
+  rate_currency: 'USD',
+  rate_estimated_days: 8.0,
+  rate_service_name: 'Fisher - Kilback',
+  service_code: 'F7U',
+  shipped_at: DateTime.iso8601('2025-08-24T18:17:46.511Z'),
+  status: Models::Shared::ShippingShipmentStatus::PENDING,
+  tracking_url: 'https://shallow-secrecy.info/',
+  updated_at: DateTime.iso8601('2025-07-03T02:04:57.636Z'),
+), connection_id: '<id>')
 
 unless res.shipping_shipment.nil?
   # handle response
@@ -163,7 +176,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchShippingShipmentRequest.new(
-  shipping_shipment: Models::Shared::ShippingShipment.new(),
+  shipping_shipment: Models::Shared::ShippingShipment.new(
+    carrier_name: 'Bogisich, Franey and Koelpin',
+    created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
+    id: '3ba6f7f9-bc7e-4a98-8f5e-ae2b643db3fb',
+    rate_amount: 8.86_546_263_936_907,
+    rate_currency: 'USD',
+    rate_estimated_days: 8.0,
+    rate_service_name: 'Fisher - Kilback',
+    service_code: 'F7U',
+    shipped_at: DateTime.iso8601('2025-08-24T18:17:46.581Z'),
+    status: Models::Shared::ShippingShipmentStatus::PENDING,
+    tracking_url: 'https://shallow-secrecy.info/',
+    updated_at: DateTime.iso8601('2025-07-03T02:04:57.703Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +278,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateShippingShipmentRequest.new(
-  shipping_shipment: Models::Shared::ShippingShipment.new(),
+  shipping_shipment: Models::Shared::ShippingShipment.new(
+    carrier_name: 'Bogisich, Franey and Koelpin',
+    created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
+    id: '3ba6f7f9-bc7e-4a98-8f5e-ae2b643db3fb',
+    rate_amount: 8.86_546_263_936_907,
+    rate_currency: 'USD',
+    rate_estimated_days: 8.0,
+    rate_service_name: 'Fisher - Kilback',
+    service_code: 'F7U',
+    shipped_at: DateTime.iso8601('2025-08-24T18:17:46.581Z'),
+    status: Models::Shared::ShippingShipmentStatus::PENDING,
+    tracking_url: 'https://shallow-secrecy.info/',
+    updated_at: DateTime.iso8601('2025-07-03T02:04:57.703Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

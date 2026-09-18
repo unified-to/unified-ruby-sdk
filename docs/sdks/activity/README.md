@@ -37,7 +37,79 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(), connection_id: '<id>')
+res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
+  bcc: [
+    Models::Shared::AtsEmail.new(
+      email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+      name: 'Rochelle Franey-Bechtelar',
+      type: Models::Shared::AtsEmailType::HOME,
+    ),
+  ],
+  cc: [
+    Models::Shared::AtsEmail.new(
+      email: 'Sasha24@hotmail.com',
+      name: 'Dr. Elbert Kuvalis',
+      type: Models::Shared::AtsEmailType::HOME,
+    ),
+    Models::Shared::AtsEmail.new(
+      email: 'Rosetta_Donnelly@gmail.com',
+      name: 'Ramon Daniel',
+      type: Models::Shared::AtsEmailType::OTHER,
+    ),
+    Models::Shared::AtsEmail.new(
+      email: 'Kathryne_Jast@yahoo.com',
+      name: 'Christian Jacobson',
+      type: Models::Shared::AtsEmailType::OTHER,
+    ),
+    Models::Shared::AtsEmail.new(
+      email: 'Eldred95@yahoo.com',
+      name: 'Edna Bogan',
+      type: Models::Shared::AtsEmailType::OTHER,
+    ),
+  ],
+  created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
+  description: 'Amplus.',
+  from: Models::Shared::PropertyAtsActivityFrom.new(
+    email: 'Norwood.Wiza47@yahoo.com',
+    name: 'Toby Grant',
+    type: Models::Shared::PropertyAtsActivityFromType::OTHER,
+  ),
+  id: '993d7d4c-8e14-4eb9-bd3d-b4ed7f8df61d',
+  is_private: false,
+  metadata: [
+    Models::Shared::AtsMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::AtsMetadataFormat::TEXT,
+      id: '2396076e-eaf4-468a-9fba-2e3e0105e1d5',
+      namespace: 'activity',
+      slug: 'acer',
+      value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+    ),
+    Models::Shared::AtsMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::AtsMetadataFormat::TEXT,
+      id: '3d54d4e9-8984-4f01-84be-f62d2021b5bf',
+      namespace: 'activity',
+      slug: 'tremo',
+      value: 'Amita delectus dicta temptatio utroque ex.',
+    ),
+  ],
+  sub_type: 'TASK',
+  title: 'Senior Interactions Manager',
+  to: [
+    Models::Shared::AtsEmail.new(
+      email: 'Sister91@hotmail.com',
+      name: 'Eddie Nienow PhD',
+      type: Models::Shared::AtsEmailType::WORK,
+    ),
+  ],
+  type: Models::Shared::AtsActivityType::TASK,
+  updated_at: DateTime.iso8601('2026-03-06T13:30:58.946Z'),
+), connection_id: '<id>')
 
 unless res.ats_activity.nil?
   # handle response
@@ -81,7 +153,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.activity.create_lms_activity(lms_activity: Models::Shared::LmsActivity.new(), connection_id: '<id>')
+res = s.activity.create_lms_activity(lms_activity: Models::Shared::LmsActivity.new(
+  assigned_grade: 'summopere',
+  completed_at: DateTime.iso8601('2025-04-12T21:06:46.228Z'),
+  created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
+  duration_minutes: 55.0,
+  id: 'bf3c0450-601c-48a4-956f-a376f6c7cabc',
+  is_completed: true,
+  progress_percentage: 100.0,
+  started_at: DateTime.iso8601('2023-12-24T04:54:05.825Z'),
+  updated_at: DateTime.iso8601('2022-01-23T21:44:13.324Z'),
+), connection_id: '<id>')
 
 unless res.lms_activity.nil?
   # handle response
@@ -393,7 +475,79 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsActivityRequest.new(
-  ats_activity: Models::Shared::AtsActivity.new(),
+  ats_activity: Models::Shared::AtsActivity.new(
+    bcc: [
+      Models::Shared::AtsEmail.new(
+        email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+        name: 'Rochelle Franey-Bechtelar',
+        type: Models::Shared::AtsEmailType::HOME,
+      ),
+    ],
+    cc: [
+      Models::Shared::AtsEmail.new(
+        email: 'Sasha24@hotmail.com',
+        name: 'Dr. Elbert Kuvalis',
+        type: Models::Shared::AtsEmailType::HOME,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Rosetta_Donnelly@gmail.com',
+        name: 'Ramon Daniel',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Kathryne_Jast@yahoo.com',
+        name: 'Christian Jacobson',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Eldred95@yahoo.com',
+        name: 'Edna Bogan',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+    ],
+    created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
+    description: 'Amplus.',
+    from: Models::Shared::PropertyAtsActivityFrom.new(
+      email: 'Norwood.Wiza47@yahoo.com',
+      name: 'Toby Grant',
+      type: Models::Shared::PropertyAtsActivityFromType::OTHER,
+    ),
+    id: '2f3c1896-db19-4bd1-9539-a61b24090f4a',
+    is_private: false,
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: '960dcbc4-4334-4f59-a1c1-83c7cb3aa8fd',
+        namespace: 'activity',
+        slug: 'acer',
+        value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+      ),
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: 'aea063e4-918f-47d0-a92c-2f591c00a211',
+        namespace: 'activity',
+        slug: 'tremo',
+        value: 'Amita delectus dicta temptatio utroque ex.',
+      ),
+    ],
+    sub_type: 'TASK',
+    title: 'Senior Interactions Manager',
+    to: [
+      Models::Shared::AtsEmail.new(
+        email: 'Sister91@hotmail.com',
+        name: 'Eddie Nienow PhD',
+        type: Models::Shared::AtsEmailType::WORK,
+      ),
+    ],
+    type: Models::Shared::AtsActivityType::TASK,
+    updated_at: DateTime.iso8601('2026-03-06T13:30:58.965Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -440,7 +594,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsActivityRequest.new(
-  lms_activity: Models::Shared::LmsActivity.new(),
+  lms_activity: Models::Shared::LmsActivity.new(
+    assigned_grade: 'summopere',
+    completed_at: DateTime.iso8601('2025-04-12T21:06:46.233Z'),
+    created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
+    duration_minutes: 55.0,
+    id: '75d77351-7934-43b6-b258-f651820fd3d4',
+    is_completed: true,
+    progress_percentage: 100.0,
+    started_at: DateTime.iso8601('2023-12-24T04:54:05.825Z'),
+    updated_at: DateTime.iso8601('2022-01-23T21:44:13.326Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -571,7 +735,79 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsActivityRequest.new(
-  ats_activity: Models::Shared::AtsActivity.new(),
+  ats_activity: Models::Shared::AtsActivity.new(
+    bcc: [
+      Models::Shared::AtsEmail.new(
+        email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+        name: 'Rochelle Franey-Bechtelar',
+        type: Models::Shared::AtsEmailType::HOME,
+      ),
+    ],
+    cc: [
+      Models::Shared::AtsEmail.new(
+        email: 'Sasha24@hotmail.com',
+        name: 'Dr. Elbert Kuvalis',
+        type: Models::Shared::AtsEmailType::HOME,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Rosetta_Donnelly@gmail.com',
+        name: 'Ramon Daniel',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Kathryne_Jast@yahoo.com',
+        name: 'Christian Jacobson',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Eldred95@yahoo.com',
+        name: 'Edna Bogan',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+    ],
+    created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
+    description: 'Amplus.',
+    from: Models::Shared::PropertyAtsActivityFrom.new(
+      email: 'Norwood.Wiza47@yahoo.com',
+      name: 'Toby Grant',
+      type: Models::Shared::PropertyAtsActivityFromType::OTHER,
+    ),
+    id: '2f3c1896-db19-4bd1-9539-a61b24090f4a',
+    is_private: false,
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: '960dcbc4-4334-4f59-a1c1-83c7cb3aa8fd',
+        namespace: 'activity',
+        slug: 'acer',
+        value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+      ),
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: 'aea063e4-918f-47d0-a92c-2f591c00a211',
+        namespace: 'activity',
+        slug: 'tremo',
+        value: 'Amita delectus dicta temptatio utroque ex.',
+      ),
+    ],
+    sub_type: 'TASK',
+    title: 'Senior Interactions Manager',
+    to: [
+      Models::Shared::AtsEmail.new(
+        email: 'Sister91@hotmail.com',
+        name: 'Eddie Nienow PhD',
+        type: Models::Shared::AtsEmailType::WORK,
+      ),
+    ],
+    type: Models::Shared::AtsActivityType::TASK,
+    updated_at: DateTime.iso8601('2026-03-06T13:30:58.965Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -618,7 +854,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsActivityRequest.new(
-  lms_activity: Models::Shared::LmsActivity.new(),
+  lms_activity: Models::Shared::LmsActivity.new(
+    assigned_grade: 'summopere',
+    completed_at: DateTime.iso8601('2025-04-12T21:06:46.233Z'),
+    created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
+    duration_minutes: 55.0,
+    id: '75d77351-7934-43b6-b258-f651820fd3d4',
+    is_completed: true,
+    progress_percentage: 100.0,
+    started_at: DateTime.iso8601('2023-12-24T04:54:05.825Z'),
+    updated_at: DateTime.iso8601('2022-01-23T21:44:13.326Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

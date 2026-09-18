@@ -37,7 +37,61 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.location.create_commerce_location(commerce_location: Models::Shared::CommerceLocation.new(), connection_id: '<id>')
+res = s.location.create_commerce_location(commerce_location: Models::Shared::CommerceLocation.new(
+  address: Models::Shared::PropertyCommerceLocationAddress.new(
+    address1: '29896 The Limes',
+    city: 'New Kenny',
+    country_code: 'US',
+    postal_code: '14490-0609',
+    region: 'Virginia',
+    region_code: 'MS',
+  ),
+  categories: [],
+  created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
+  currency: 'XCD',
+  description: 'Adsidue audentia.',
+  id: '9caaac0b-d9ba-49cc-a459-153d3e34a530',
+  image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
+  is_active: false,
+  language_locale: 'vulgaris',
+  latitude: 0.0,
+  location_type: Models::Shared::LocationType::RESTAURANT,
+  longitude: 0.0,
+  media: [
+    Models::Shared::CommerceItemMedia.new(
+      alt: 'Addo.',
+      height: 283.0,
+      id: '14b89c28-1419-4a4f-89b2-284f6b1245cf',
+      metadata: [
+        Models::Shared::CommerceMetadata.new(
+          id: '123d7996-de44-4c26-8630-6a0870e5aa3c',
+          slug: 'abutor',
+          value: 'damno',
+        ),
+      ],
+      position: 40.0,
+      type: Models::Shared::CommerceItemMediaType::IMAGE,
+      url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+      width: 1.0,
+    ),
+  ],
+  name: 'Olson - Mraz',
+  price_level: '',
+  rating: 0.0,
+  review_count: 0.0,
+  telephones: [
+    Models::Shared::CommerceTelephone.new(
+      telephone: '(872) 522-3201',
+      type: Models::Shared::CommerceTelephoneType::OTHER,
+    ),
+    Models::Shared::CommerceTelephone.new(
+      telephone: '(236) 274-2445',
+      type: Models::Shared::CommerceTelephoneType::MOBILE,
+    ),
+  ],
+  updated_at: DateTime.iso8601('2024-04-09T09:34:39.566Z'),
+  web_url: 'https://chilly-edge.info',
+), connection_id: '<id>')
 
 unless res.commerce_location.nil?
   # handle response
@@ -81,7 +135,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocation.new(), connection_id: '<id>')
+res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocation.new(
+  address: Models::Shared::PropertyHrisLocationAddress.new(
+    address1: '2743 Connelly Summit',
+    address2: 'Apt. 350',
+    city: 'Titusville',
+    country_code: 'US',
+    postal_code: '16154-1095',
+    region: 'Oregon',
+    region_code: 'AL',
+  ),
+  created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
+  currency: 'MUR',
+  description: 'Acervus caries.',
+  external_identifier: '48190a0e-8459-412c-9cb4-0aa211d28948',
+  id: '0912ed39-fffb-4653-b9ce-9aec03d9f8d6',
+  is_active: true,
+  is_hq: false,
+  language_locale: 'fr',
+  name: 'adhuc',
+  telephones: [
+    Models::Shared::HrisTelephone.new(
+      telephone: '(710) 550-6997',
+      type: Models::Shared::HrisTelephoneType::FAX,
+    ),
+    Models::Shared::HrisTelephone.new(
+      telephone: '(208) 555-8542',
+      type: Models::Shared::HrisTelephoneType::HOME,
+    ),
+    Models::Shared::HrisTelephone.new(
+      telephone: '(712) 473-5482',
+      type: Models::Shared::HrisTelephoneType::FAX,
+    ),
+  ],
+  timezone: 'America/Guyana',
+  updated_at: DateTime.iso8601('2023-06-09T00:38:55.490Z'),
+), connection_id: '<id>')
 
 unless res.hris_location.nil?
   # handle response
@@ -393,7 +482,61 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCommerceLocationRequest.new(
-  commerce_location: Models::Shared::CommerceLocation.new(),
+  commerce_location: Models::Shared::CommerceLocation.new(
+    address: Models::Shared::PropertyCommerceLocationAddress.new(
+      address1: '29896 The Limes',
+      city: 'New Kenny',
+      country_code: 'US',
+      postal_code: '14490-0609',
+      region: 'Virginia',
+      region_code: 'MS',
+    ),
+    categories: [],
+    created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
+    currency: 'XCD',
+    description: 'Adsidue audentia.',
+    id: '0be6784f-dd40-4c40-b381-4b630735b618',
+    image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
+    is_active: false,
+    language_locale: 'vulgaris',
+    latitude: 0.0,
+    location_type: Models::Shared::LocationType::RESTAURANT,
+    longitude: 0.0,
+    media: [
+      Models::Shared::CommerceItemMedia.new(
+        alt: 'Addo.',
+        height: 283.0,
+        id: '07afdbe5-5afb-4f04-ae05-54900986b6b8',
+        metadata: [
+          Models::Shared::CommerceMetadata.new(
+            id: '0d94e69a-1b0d-43e9-b07b-ac5c42b4f6a8',
+            slug: 'abutor',
+            value: 'damno',
+          ),
+        ],
+        position: 40.0,
+        type: Models::Shared::CommerceItemMediaType::IMAGE,
+        url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+        width: 1.0,
+      ),
+    ],
+    name: 'Olson - Mraz',
+    price_level: '',
+    rating: 0.0,
+    review_count: 0.0,
+    telephones: [
+      Models::Shared::CommerceTelephone.new(
+        telephone: '(872) 522-3201',
+        type: Models::Shared::CommerceTelephoneType::OTHER,
+      ),
+      Models::Shared::CommerceTelephone.new(
+        telephone: '(236) 274-2445',
+        type: Models::Shared::CommerceTelephoneType::MOBILE,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2024-04-09T09:34:39.576Z'),
+    web_url: 'https://chilly-edge.info',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -440,7 +583,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisLocationRequest.new(
-  hris_location: Models::Shared::HrisLocation.new(),
+  hris_location: Models::Shared::HrisLocation.new(
+    address: Models::Shared::PropertyHrisLocationAddress.new(
+      address1: '2743 Connelly Summit',
+      address2: 'Apt. 350',
+      city: 'Titusville',
+      country_code: 'US',
+      postal_code: '16154-1095',
+      region: 'Oregon',
+      region_code: 'AL',
+    ),
+    created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
+    currency: 'MUR',
+    description: 'Acervus caries.',
+    external_identifier: '5283ff3d-65d3-471b-b91a-60c8740ba6c4',
+    id: '4e113e72-b722-4641-81b1-6be269320842',
+    is_active: true,
+    is_hq: false,
+    language_locale: 'fr',
+    name: 'adhuc',
+    telephones: [
+      Models::Shared::HrisTelephone.new(
+        telephone: '(710) 550-6997',
+        type: Models::Shared::HrisTelephoneType::FAX,
+      ),
+      Models::Shared::HrisTelephone.new(
+        telephone: '(208) 555-8542',
+        type: Models::Shared::HrisTelephoneType::HOME,
+      ),
+      Models::Shared::HrisTelephone.new(
+        telephone: '(712) 473-5482',
+        type: Models::Shared::HrisTelephoneType::FAX,
+      ),
+    ],
+    timezone: 'America/Guyana',
+    updated_at: DateTime.iso8601('2023-06-09T00:38:55.494Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -571,7 +749,61 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCommerceLocationRequest.new(
-  commerce_location: Models::Shared::CommerceLocation.new(),
+  commerce_location: Models::Shared::CommerceLocation.new(
+    address: Models::Shared::PropertyCommerceLocationAddress.new(
+      address1: '29896 The Limes',
+      city: 'New Kenny',
+      country_code: 'US',
+      postal_code: '14490-0609',
+      region: 'Virginia',
+      region_code: 'MS',
+    ),
+    categories: [],
+    created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
+    currency: 'XCD',
+    description: 'Adsidue audentia.',
+    id: '0be6784f-dd40-4c40-b381-4b630735b618',
+    image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
+    is_active: false,
+    language_locale: 'vulgaris',
+    latitude: 0.0,
+    location_type: Models::Shared::LocationType::RESTAURANT,
+    longitude: 0.0,
+    media: [
+      Models::Shared::CommerceItemMedia.new(
+        alt: 'Addo.',
+        height: 283.0,
+        id: '07afdbe5-5afb-4f04-ae05-54900986b6b8',
+        metadata: [
+          Models::Shared::CommerceMetadata.new(
+            id: '0d94e69a-1b0d-43e9-b07b-ac5c42b4f6a8',
+            slug: 'abutor',
+            value: 'damno',
+          ),
+        ],
+        position: 40.0,
+        type: Models::Shared::CommerceItemMediaType::IMAGE,
+        url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+        width: 1.0,
+      ),
+    ],
+    name: 'Olson - Mraz',
+    price_level: '',
+    rating: 0.0,
+    review_count: 0.0,
+    telephones: [
+      Models::Shared::CommerceTelephone.new(
+        telephone: '(872) 522-3201',
+        type: Models::Shared::CommerceTelephoneType::OTHER,
+      ),
+      Models::Shared::CommerceTelephone.new(
+        telephone: '(236) 274-2445',
+        type: Models::Shared::CommerceTelephoneType::MOBILE,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2024-04-09T09:34:39.576Z'),
+    web_url: 'https://chilly-edge.info',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -618,7 +850,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisLocationRequest.new(
-  hris_location: Models::Shared::HrisLocation.new(),
+  hris_location: Models::Shared::HrisLocation.new(
+    address: Models::Shared::PropertyHrisLocationAddress.new(
+      address1: '2743 Connelly Summit',
+      address2: 'Apt. 350',
+      city: 'Titusville',
+      country_code: 'US',
+      postal_code: '16154-1095',
+      region: 'Oregon',
+      region_code: 'AL',
+    ),
+    created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
+    currency: 'MUR',
+    description: 'Acervus caries.',
+    external_identifier: '5283ff3d-65d3-471b-b91a-60c8740ba6c4',
+    id: '4e113e72-b722-4641-81b1-6be269320842',
+    is_active: true,
+    is_hq: false,
+    language_locale: 'fr',
+    name: 'adhuc',
+    telephones: [
+      Models::Shared::HrisTelephone.new(
+        telephone: '(710) 550-6997',
+        type: Models::Shared::HrisTelephoneType::FAX,
+      ),
+      Models::Shared::HrisTelephone.new(
+        telephone: '(208) 555-8542',
+        type: Models::Shared::HrisTelephoneType::HOME,
+      ),
+      Models::Shared::HrisTelephone.new(
+        telephone: '(712) 473-5482',
+        type: Models::Shared::HrisTelephoneType::FAX,
+      ),
+    ],
+    timezone: 'America/Guyana',
+    updated_at: DateTime.iso8601('2023-06-09T00:38:55.494Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -29,7 +29,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(), connection_id: '<id>')
+res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
+  billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
+    address1: '37214 Tanya Walks',
+    city: 'South Annabelleton',
+    country_code: 'US',
+    postal_code: '30337',
+    region: 'Nevada',
+    region_code: 'MA',
+  ),
+  category_ids: [],
+  created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
+  currency: 'ZMW',
+  id: '37893c6d-beb3-4d9c-a822-47bbe9aac7c1',
+  lineitems: [],
+  metadata: [],
+  posted_at: DateTime.iso8601('2025-04-25T03:29:03.941Z'),
+  shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
+    address1: '649 Maggio Overpass',
+    city: 'Lake Jaylan',
+    country_code: 'US',
+    postal_code: '99211-6547',
+    region: 'North Carolina',
+    region_code: 'ID',
+  ),
+  status: Models::Shared::AccountingPurchaseorderStatus::PARTIALLY_REFUNDED,
+  total_amount: 0.0,
+  updated_at: DateTime.iso8601('2021-02-26T03:18:40.268Z'),
+), connection_id: '<id>')
 
 unless res.accounting_purchaseorder.nil?
   # handle response
@@ -163,7 +190,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
-  accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(),
+  accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
+    billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
+      address1: '37214 Tanya Walks',
+      city: 'South Annabelleton',
+      country_code: 'US',
+      postal_code: '30337',
+      region: 'Nevada',
+      region_code: 'MA',
+    ),
+    category_ids: [],
+    created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
+    currency: 'ZMW',
+    id: '8b21b723-4598-4da0-918a-5fc08bd5e59c',
+    lineitems: [],
+    metadata: [],
+    posted_at: DateTime.iso8601('2025-04-25T03:29:03.965Z'),
+    shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
+      address1: '649 Maggio Overpass',
+      city: 'Lake Jaylan',
+      country_code: 'US',
+      postal_code: '99211-6547',
+      region: 'North Carolina',
+      region_code: 'ID',
+    ),
+    status: Models::Shared::AccountingPurchaseorderStatus::PARTIALLY_REFUNDED,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2021-02-26T03:18:40.270Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +306,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
-  accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(),
+  accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
+    billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
+      address1: '37214 Tanya Walks',
+      city: 'South Annabelleton',
+      country_code: 'US',
+      postal_code: '30337',
+      region: 'Nevada',
+      region_code: 'MA',
+    ),
+    category_ids: [],
+    created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
+    currency: 'ZMW',
+    id: '8b21b723-4598-4da0-918a-5fc08bd5e59c',
+    lineitems: [],
+    metadata: [],
+    posted_at: DateTime.iso8601('2025-04-25T03:29:03.965Z'),
+    shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
+      address1: '649 Maggio Overpass',
+      city: 'Lake Jaylan',
+      country_code: 'US',
+      postal_code: '99211-6547',
+      region: 'North Carolina',
+      region_code: 'ID',
+    ),
+    status: Models::Shared::AccountingPurchaseorderStatus::PARTIALLY_REFUNDED,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2021-02-26T03:18:40.270Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -35,7 +35,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.category.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(), connection_id: '<id>')
+res = s.category.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(
+  created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
+  description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+  id: '088b0f9b-cff7-4500-ac8f-2f52543a9516',
+  is_active: false,
+  metadata: [],
+  name: 'Electronic Cotton Shoes',
+  updated_at: DateTime.iso8601('2025-08-20T06:33:25.029Z'),
+), connection_id: '<id>')
 
 unless res.accounting_category.nil?
   # handle response
@@ -79,7 +87,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.category.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(), connection_id: '<id>')
+res = s.category.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(
+  created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
+  description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
+  id: '1a314dbe-4fde-4d25-88f9-cfd54f54f6cf',
+  is_active: true,
+  name: 'amicitia',
+  updated_at: DateTime.iso8601('2025-12-15T15:08:13.938Z'),
+), connection_id: '<id>')
 
 unless res.ticketing_category.nil?
   # handle response
@@ -302,7 +317,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingCategoryRequest.new(
-  accounting_category: Models::Shared::AccountingCategory.new(),
+  accounting_category: Models::Shared::AccountingCategory.new(
+    created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
+    description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+    id: '1bbf1558-3110-4b21-902f-fa07892904c0',
+    is_active: false,
+    metadata: [],
+    name: 'Electronic Cotton Shoes',
+    updated_at: DateTime.iso8601('2025-08-20T06:33:25.039Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -349,7 +372,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTicketingCategoryRequest.new(
-  ticketing_category: Models::Shared::TicketingCategory.new(),
+  ticketing_category: Models::Shared::TicketingCategory.new(
+    created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
+    description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
+    id: 'e2adf03e-28c6-44ae-870e-de98f93f2e79',
+    is_active: true,
+    name: 'amicitia',
+    updated_at: DateTime.iso8601('2025-12-15T15:08:13.942Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -480,7 +510,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingCategoryRequest.new(
-  accounting_category: Models::Shared::AccountingCategory.new(),
+  accounting_category: Models::Shared::AccountingCategory.new(
+    created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
+    description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+    id: '1bbf1558-3110-4b21-902f-fa07892904c0',
+    is_active: false,
+    metadata: [],
+    name: 'Electronic Cotton Shoes',
+    updated_at: DateTime.iso8601('2025-08-20T06:33:25.039Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -527,7 +565,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTicketingCategoryRequest.new(
-  ticketing_category: Models::Shared::TicketingCategory.new(),
+  ticketing_category: Models::Shared::TicketingCategory.new(
+    created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
+    description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
+    id: 'e2adf03e-28c6-44ae-870e-de98f93f2e79',
+    is_active: true,
+    name: 'amicitia',
+    updated_at: DateTime.iso8601('2025-12-15T15:08:13.942Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -29,7 +29,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.deduction.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction.new(), connection_id: '<id>')
+res = s.deduction.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction.new(
+  amount: 139_655.0,
+  coverage_level: Models::Shared::HrisDeductionCoverageLevel::EMPLOYEE_ONLY,
+  created_at: DateTime.iso8601('2020-02-05T01:46:31.384Z'),
+  end_at: DateTime.iso8601('2026-05-22T22:49:15.318Z'),
+  frequency: Models::Shared::HrisDeductionFrequency::MONTH,
+  id: '341fcf8f-3d15-40e8-a000-830bbc2dbbfc',
+  is_active: false,
+  notes: 'Carmen desidero.',
+  start_at: DateTime.iso8601('2025-02-18T04:35:43.789Z'),
+  type: Models::Shared::HrisDeductionType::FIXED,
+  updated_at: DateTime.iso8601('2024-03-01T23:40:06.566Z'),
+), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
   # handle response
@@ -163,7 +175,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisDeductionRequest.new(
-  hris_deduction: Models::Shared::HrisDeduction.new(),
+  hris_deduction: Models::Shared::HrisDeduction.new(
+    amount: 139_655.0,
+    coverage_level: Models::Shared::HrisDeductionCoverageLevel::EMPLOYEE_ONLY,
+    created_at: DateTime.iso8601('2020-02-05T01:46:31.384Z'),
+    end_at: DateTime.iso8601('2026-05-22T22:49:15.325Z'),
+    frequency: Models::Shared::HrisDeductionFrequency::MONTH,
+    id: '0fb9036d-da6b-4413-8d98-19a60f26574e',
+    is_active: false,
+    notes: 'Carmen desidero.',
+    start_at: DateTime.iso8601('2025-02-18T04:35:43.795Z'),
+    type: Models::Shared::HrisDeductionType::FIXED,
+    updated_at: DateTime.iso8601('2024-03-01T23:40:06.570Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +276,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisDeductionRequest.new(
-  hris_deduction: Models::Shared::HrisDeduction.new(),
+  hris_deduction: Models::Shared::HrisDeduction.new(
+    amount: 139_655.0,
+    coverage_level: Models::Shared::HrisDeductionCoverageLevel::EMPLOYEE_ONLY,
+    created_at: DateTime.iso8601('2020-02-05T01:46:31.384Z'),
+    end_at: DateTime.iso8601('2026-05-22T22:49:15.325Z'),
+    frequency: Models::Shared::HrisDeductionFrequency::MONTH,
+    id: '0fb9036d-da6b-4413-8d98-19a60f26574e',
+    is_active: false,
+    notes: 'Carmen desidero.',
+    start_at: DateTime.iso8601('2025-02-18T04:35:43.795Z'),
+    type: Models::Shared::HrisDeductionType::FIXED,
+    updated_at: DateTime.iso8601('2024-03-01T23:40:06.570Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -30,7 +30,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.page.create_kms_page(kms_page: Models::Shared::KmsPage.new(
-  type: Models::Shared::KmsPageType::TEXT,
+  created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
+  download_url: 'https://agitated-validity.info',
+  has_children: true,
+  id: '4cd16e7c-443e-4057-ac6d-9696591ec923',
+  is_active: true,
+  metadata: [],
+  title: 'even minister extract',
+  type: Models::Shared::KmsPageType::HTML,
+  updated_at: DateTime.iso8601('2025-09-10T18:22:58.537Z'),
+  web_url: 'https://another-petticoat.info',
 ), connection_id: '<id>')
 
 unless res.kms_page.nil?
@@ -166,7 +175,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
-    type: Models::Shared::KmsPageType::OTHER,
+    created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
+    download_url: 'https://agitated-validity.info',
+    has_children: true,
+    id: '68de4673-06f8-45a1-9afb-531f05ff9bfd',
+    is_active: true,
+    metadata: [],
+    title: 'even minister extract',
+    type: Models::Shared::KmsPageType::HTML,
+    updated_at: DateTime.iso8601('2025-09-10T18:22:58.545Z'),
+    web_url: 'https://another-petticoat.info',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -257,7 +275,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
-    type: Models::Shared::KmsPageType::OTHER,
+    created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
+    download_url: 'https://agitated-validity.info',
+    has_children: true,
+    id: '68de4673-06f8-45a1-9afb-531f05ff9bfd',
+    is_active: true,
+    metadata: [],
+    title: 'even minister extract',
+    type: Models::Shared::KmsPageType::HTML,
+    updated_at: DateTime.iso8601('2025-09-10T18:22:58.545Z'),
+    web_url: 'https://another-petticoat.info',
   ),
   connection_id: '<id>',
   id: '<id>',

@@ -41,7 +41,74 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::AccountingContact.new(), connection_id: '<id>')
+res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::AccountingContact.new(
+  associated_contacts: [
+    Models::Shared::AccountingAssociatedContact.new(
+      id: 'd525ae4d-d9c6-4acc-81bd-027ef5e8a76e',
+      name: 'Delores Reynolds',
+    ),
+    Models::Shared::AccountingAssociatedContact.new(
+      id: '68dc5f0e-242a-4649-9046-8ce461d6b93d',
+      name: 'Delores Reynolds',
+    ),
+  ],
+  billing_address: Models::Shared::PropertyAccountingContactBillingAddress.new(
+    address1: '2633 Stoney Lane',
+    address2: 'Suite 176',
+    city: 'Ladariusboro',
+    country_code: 'US',
+    postal_code: '70131-2908',
+    region: 'Illinois',
+    region_code: 'NV',
+  ),
+  company_name: 'Marquardt Inc',
+  created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
+  currency: 'ISK',
+  emails: [
+    Models::Shared::AccountingEmail.new(
+      email: 'Delores.Reynolds10@hotmail.com',
+      type: Models::Shared::AccountingEmailType::HOME,
+    ),
+  ],
+  first_name: 'Delores',
+  id: '6d01203b-9e81-46fb-a101-7b29d374a4e4',
+  identification: 'amicitia',
+  is_active: true,
+  is_customer: true,
+  last_name: 'Reynolds',
+  name: 'Delores Reynolds',
+  payment_methods: [
+    Models::Shared::AccountingContactPaymentMethod.new(
+      default: true,
+      id: '3523e539-1561-452d-ae3c-0840b0464b33',
+      name: 'Visa 1234',
+      type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+    ),
+  ],
+  portal_url: 'https://scented-t-shirt.info/',
+  shipping_address: Models::Shared::PropertyAccountingContactShippingAddress.new(
+    address1: '786 Renner Stream',
+    address2: 'Apt. 555',
+    city: 'Roanoke',
+    country_code: 'US',
+    postal_code: '80686-7556',
+    region: 'Vermont',
+    region_code: 'NE',
+  ),
+  tax_exemption: Models::Shared::TaxExemption::RESALE,
+  tax_number: 'amplexus',
+  telephones: [
+    Models::Shared::AccountingTelephone.new(
+      telephone: '(427) 701-7160',
+      type: Models::Shared::AccountingTelephoneType::HOME,
+    ),
+    Models::Shared::AccountingTelephone.new(
+      telephone: '(540) 913-9171',
+      type: Models::Shared::AccountingTelephoneType::FAX,
+    ),
+  ],
+  updated_at: DateTime.iso8601('2023-12-04T22:26:30.009Z'),
+), connection_id: '<id>')
 
 unless res.accounting_contact.nil?
   # handle response
@@ -85,7 +152,71 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(), connection_id: '<id>')
+res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
+  address: Models::Shared::PropertyCrmContactAddress.new(
+    address1: '518 Brannon Burg',
+    city: 'East Helenebury',
+    country_code: 'US',
+    postal_code: '92622-2406',
+    region: 'Vermont',
+    region_code: 'AZ',
+  ),
+  company: 'Lowe - Jakubowski',
+  created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
+  department: 'systematic',
+  emails: [
+    Models::Shared::CrmEmail.new(
+      email: 'Mohammad.Bartell45@hotmail.com',
+      type: Models::Shared::CrmEmailType::HOME,
+    ),
+    Models::Shared::CrmEmail.new(
+      email: 'Mohammad.Bartell90@hotmail.com',
+      type: Models::Shared::CrmEmailType::HOME,
+    ),
+    Models::Shared::CrmEmail.new(
+      email: 'Mohammad_Bartell@hotmail.com',
+      type: Models::Shared::CrmEmailType::WORK,
+    ),
+  ],
+  first_name: 'Mohammad',
+  id: '044bd9d5-4207-49ab-a42d-86ff53cc84b8',
+  image_url: 'https://picsum.photos/seed/zmbPeg/2905/378',
+  last_name: 'Bartell',
+  link_urls: [
+    'https://limited-parade.info',
+    'https://faint-papa.com/',
+    'https://windy-accountability.name',
+  ],
+  metadata: [
+    Models::Shared::CrmMetadata.new(
+      extra_data: {
+        "display_name": 'Custom Property',
+      },
+      format: Models::Shared::CrmMetadataFormat::TEXT,
+      id: '4c434064-0547-4007-8384-afa37b266eb5',
+      namespace: 'custom',
+      slug: 'custom_property',
+      value: 'autem',
+    ),
+  ],
+  name: 'Mohammad Bartell',
+  telephones: [
+    Models::Shared::CrmTelephone.new(
+      telephone: '(975) 986-1658',
+      type: Models::Shared::CrmTelephoneType::WORK,
+    ),
+    Models::Shared::CrmTelephone.new(
+      telephone: '(489) 332-3509',
+      type: Models::Shared::CrmTelephoneType::HOME,
+    ),
+    Models::Shared::CrmTelephone.new(
+      telephone: '(205) 880-8886',
+      type: Models::Shared::CrmTelephoneType::HOME,
+    ),
+  ],
+  title: 'National Tactics Analyst',
+  updated_at: DateTime.iso8601('2021-02-23T09:13:04.804Z'),
+), connection_id: '<id>')
 
 unless res.crm_contact.nil?
   # handle response
@@ -129,7 +260,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(), connection_id: '<id>')
+res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
+  company: 'Tillman Group',
+  created_at: DateTime.iso8601('2019-10-28T11:06:56.460Z'),
+  emails: [
+    Models::Shared::UcEmail.new(
+      email: 'Luther_Rogahn32@yahoo.com',
+      type: Models::Shared::UcEmailType::WORK,
+    ),
+  ],
+  first_name: 'Luther',
+  id: '68649461-99c2-412e-ad3c-ecd09b6c2ffb',
+  last_name: 'Rogahn',
+  name: 'Luther Rogahn',
+  telephones: [
+    Models::Shared::UcTelephone.new(
+      telephone: '(809) 992-1681',
+      type: Models::Shared::UcTelephoneType::FAX,
+    ),
+    Models::Shared::UcTelephone.new(
+      telephone: '(868) 238-2746',
+      type: Models::Shared::UcTelephoneType::HOME,
+    ),
+    Models::Shared::UcTelephone.new(
+      telephone: '(219) 736-0357',
+      type: Models::Shared::UcTelephoneType::MOBILE,
+    ),
+  ],
+  title: 'Chief Optimization Executive',
+  updated_at: DateTime.iso8601('2023-11-18T22:28:26.560Z'),
+), connection_id: '<id>')
 
 unless res.uc_contact.nil?
   # handle response
@@ -441,7 +601,74 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingContactRequest.new(
-  accounting_contact: Models::Shared::AccountingContact.new(),
+  accounting_contact: Models::Shared::AccountingContact.new(
+    associated_contacts: [
+      Models::Shared::AccountingAssociatedContact.new(
+        id: '10071446-e0bf-48e8-adb6-834823d92db6',
+        name: 'Delores Reynolds',
+      ),
+      Models::Shared::AccountingAssociatedContact.new(
+        id: '86c61f21-ecff-4ce0-8818-50613f8505d5',
+        name: 'Delores Reynolds',
+      ),
+    ],
+    billing_address: Models::Shared::PropertyAccountingContactBillingAddress.new(
+      address1: '2633 Stoney Lane',
+      address2: 'Suite 176',
+      city: 'Ladariusboro',
+      country_code: 'US',
+      postal_code: '70131-2908',
+      region: 'Illinois',
+      region_code: 'NV',
+    ),
+    company_name: 'Marquardt Inc',
+    created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
+    currency: 'ISK',
+    emails: [
+      Models::Shared::AccountingEmail.new(
+        email: 'Delores.Reynolds10@hotmail.com',
+        type: Models::Shared::AccountingEmailType::HOME,
+      ),
+    ],
+    first_name: 'Delores',
+    id: 'b17e63cf-e91b-4b5c-80e4-f0f2dd2c9c16',
+    identification: 'amicitia',
+    is_active: true,
+    is_customer: true,
+    last_name: 'Reynolds',
+    name: 'Delores Reynolds',
+    payment_methods: [
+      Models::Shared::AccountingContactPaymentMethod.new(
+        default: true,
+        id: '68ae4f24-72de-4cb1-9812-2f5b56873368',
+        name: 'Visa 1234',
+        type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+      ),
+    ],
+    portal_url: 'https://scented-t-shirt.info/',
+    shipping_address: Models::Shared::PropertyAccountingContactShippingAddress.new(
+      address1: '786 Renner Stream',
+      address2: 'Apt. 555',
+      city: 'Roanoke',
+      country_code: 'US',
+      postal_code: '80686-7556',
+      region: 'Vermont',
+      region_code: 'NE',
+    ),
+    tax_exemption: Models::Shared::TaxExemption::RESALE,
+    tax_number: 'amplexus',
+    telephones: [
+      Models::Shared::AccountingTelephone.new(
+        telephone: '(427) 701-7160',
+        type: Models::Shared::AccountingTelephoneType::HOME,
+      ),
+      Models::Shared::AccountingTelephone.new(
+        telephone: '(540) 913-9171',
+        type: Models::Shared::AccountingTelephoneType::FAX,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2023-12-04T22:26:30.024Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -488,7 +715,71 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCrmContactRequest.new(
-  crm_contact: Models::Shared::CrmContact.new(),
+  crm_contact: Models::Shared::CrmContact.new(
+    address: Models::Shared::PropertyCrmContactAddress.new(
+      address1: '518 Brannon Burg',
+      city: 'East Helenebury',
+      country_code: 'US',
+      postal_code: '92622-2406',
+      region: 'Vermont',
+      region_code: 'AZ',
+    ),
+    company: 'Lowe - Jakubowski',
+    created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
+    department: 'systematic',
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad.Bartell45@hotmail.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad.Bartell90@hotmail.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad_Bartell@hotmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+    ],
+    first_name: 'Mohammad',
+    id: '91442d56-299e-4fbd-b06f-e26380d6656b',
+    image_url: 'https://picsum.photos/seed/zmbPeg/2905/378',
+    last_name: 'Bartell',
+    link_urls: [
+      'https://limited-parade.info',
+      'https://faint-papa.com/',
+      'https://windy-accountability.name',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '42b19565-d886-42ec-ad7b-5d560bbe7c3d',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'autem',
+      ),
+    ],
+    name: 'Mohammad Bartell',
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(975) 986-1658',
+        type: Models::Shared::CrmTelephoneType::WORK,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(489) 332-3509',
+        type: Models::Shared::CrmTelephoneType::HOME,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(205) 880-8886',
+        type: Models::Shared::CrmTelephoneType::HOME,
+      ),
+    ],
+    title: 'National Tactics Analyst',
+    updated_at: DateTime.iso8601('2021-02-23T09:13:04.805Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -535,7 +826,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchUcContactRequest.new(
-  uc_contact: Models::Shared::UcContact.new(),
+  uc_contact: Models::Shared::UcContact.new(
+    company: 'Tillman Group',
+    created_at: DateTime.iso8601('2019-10-28T11:06:56.460Z'),
+    emails: [
+      Models::Shared::UcEmail.new(
+        email: 'Luther_Rogahn32@yahoo.com',
+        type: Models::Shared::UcEmailType::WORK,
+      ),
+    ],
+    first_name: 'Luther',
+    id: '88fbbccc-9149-4030-b687-719937bb18a6',
+    last_name: 'Rogahn',
+    name: 'Luther Rogahn',
+    telephones: [
+      Models::Shared::UcTelephone.new(
+        telephone: '(809) 992-1681',
+        type: Models::Shared::UcTelephoneType::FAX,
+      ),
+      Models::Shared::UcTelephone.new(
+        telephone: '(868) 238-2746',
+        type: Models::Shared::UcTelephoneType::HOME,
+      ),
+      Models::Shared::UcTelephone.new(
+        telephone: '(219) 736-0357',
+        type: Models::Shared::UcTelephoneType::MOBILE,
+      ),
+    ],
+    title: 'Chief Optimization Executive',
+    updated_at: DateTime.iso8601('2023-11-18T22:28:26.565Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -708,7 +1028,74 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingContactRequest.new(
-  accounting_contact: Models::Shared::AccountingContact.new(),
+  accounting_contact: Models::Shared::AccountingContact.new(
+    associated_contacts: [
+      Models::Shared::AccountingAssociatedContact.new(
+        id: '10071446-e0bf-48e8-adb6-834823d92db6',
+        name: 'Delores Reynolds',
+      ),
+      Models::Shared::AccountingAssociatedContact.new(
+        id: '86c61f21-ecff-4ce0-8818-50613f8505d5',
+        name: 'Delores Reynolds',
+      ),
+    ],
+    billing_address: Models::Shared::PropertyAccountingContactBillingAddress.new(
+      address1: '2633 Stoney Lane',
+      address2: 'Suite 176',
+      city: 'Ladariusboro',
+      country_code: 'US',
+      postal_code: '70131-2908',
+      region: 'Illinois',
+      region_code: 'NV',
+    ),
+    company_name: 'Marquardt Inc',
+    created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
+    currency: 'ISK',
+    emails: [
+      Models::Shared::AccountingEmail.new(
+        email: 'Delores.Reynolds10@hotmail.com',
+        type: Models::Shared::AccountingEmailType::HOME,
+      ),
+    ],
+    first_name: 'Delores',
+    id: 'b17e63cf-e91b-4b5c-80e4-f0f2dd2c9c16',
+    identification: 'amicitia',
+    is_active: true,
+    is_customer: true,
+    last_name: 'Reynolds',
+    name: 'Delores Reynolds',
+    payment_methods: [
+      Models::Shared::AccountingContactPaymentMethod.new(
+        default: true,
+        id: '68ae4f24-72de-4cb1-9812-2f5b56873368',
+        name: 'Visa 1234',
+        type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+      ),
+    ],
+    portal_url: 'https://scented-t-shirt.info/',
+    shipping_address: Models::Shared::PropertyAccountingContactShippingAddress.new(
+      address1: '786 Renner Stream',
+      address2: 'Apt. 555',
+      city: 'Roanoke',
+      country_code: 'US',
+      postal_code: '80686-7556',
+      region: 'Vermont',
+      region_code: 'NE',
+    ),
+    tax_exemption: Models::Shared::TaxExemption::RESALE,
+    tax_number: 'amplexus',
+    telephones: [
+      Models::Shared::AccountingTelephone.new(
+        telephone: '(427) 701-7160',
+        type: Models::Shared::AccountingTelephoneType::HOME,
+      ),
+      Models::Shared::AccountingTelephone.new(
+        telephone: '(540) 913-9171',
+        type: Models::Shared::AccountingTelephoneType::FAX,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2023-12-04T22:26:30.024Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -755,7 +1142,71 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCrmContactRequest.new(
-  crm_contact: Models::Shared::CrmContact.new(),
+  crm_contact: Models::Shared::CrmContact.new(
+    address: Models::Shared::PropertyCrmContactAddress.new(
+      address1: '518 Brannon Burg',
+      city: 'East Helenebury',
+      country_code: 'US',
+      postal_code: '92622-2406',
+      region: 'Vermont',
+      region_code: 'AZ',
+    ),
+    company: 'Lowe - Jakubowski',
+    created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
+    department: 'systematic',
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad.Bartell45@hotmail.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad.Bartell90@hotmail.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad_Bartell@hotmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+    ],
+    first_name: 'Mohammad',
+    id: '91442d56-299e-4fbd-b06f-e26380d6656b',
+    image_url: 'https://picsum.photos/seed/zmbPeg/2905/378',
+    last_name: 'Bartell',
+    link_urls: [
+      'https://limited-parade.info',
+      'https://faint-papa.com/',
+      'https://windy-accountability.name',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '42b19565-d886-42ec-ad7b-5d560bbe7c3d',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'autem',
+      ),
+    ],
+    name: 'Mohammad Bartell',
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(975) 986-1658',
+        type: Models::Shared::CrmTelephoneType::WORK,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(489) 332-3509',
+        type: Models::Shared::CrmTelephoneType::HOME,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(205) 880-8886',
+        type: Models::Shared::CrmTelephoneType::HOME,
+      ),
+    ],
+    title: 'National Tactics Analyst',
+    updated_at: DateTime.iso8601('2021-02-23T09:13:04.805Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -802,7 +1253,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateUcContactRequest.new(
-  uc_contact: Models::Shared::UcContact.new(),
+  uc_contact: Models::Shared::UcContact.new(
+    company: 'Tillman Group',
+    created_at: DateTime.iso8601('2019-10-28T11:06:56.460Z'),
+    emails: [
+      Models::Shared::UcEmail.new(
+        email: 'Luther_Rogahn32@yahoo.com',
+        type: Models::Shared::UcEmailType::WORK,
+      ),
+    ],
+    first_name: 'Luther',
+    id: '88fbbccc-9149-4030-b687-719937bb18a6',
+    last_name: 'Rogahn',
+    name: 'Luther Rogahn',
+    telephones: [
+      Models::Shared::UcTelephone.new(
+        telephone: '(809) 992-1681',
+        type: Models::Shared::UcTelephoneType::FAX,
+      ),
+      Models::Shared::UcTelephone.new(
+        telephone: '(868) 238-2746',
+        type: Models::Shared::UcTelephoneType::HOME,
+      ),
+      Models::Shared::UcTelephone.new(
+        telephone: '(219) 736-0357',
+        type: Models::Shared::UcTelephoneType::MOBILE,
+      ),
+    ],
+    title: 'Chief Optimization Executive',
+    updated_at: DateTime.iso8601('2023-11-18T22:28:26.565Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

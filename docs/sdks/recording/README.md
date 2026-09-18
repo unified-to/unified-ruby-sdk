@@ -31,7 +31,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.recording.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(), connection_id: '<id>')
+res = s.recording.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(
+  contacts: [],
+  created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
+  end_at: DateTime.iso8601('2024-04-21T20:24:02.555Z'),
+  expires_at: DateTime.iso8601('2026-03-28T16:18:30.097Z'),
+  id: '3c73465c-c12b-412a-8f1d-25214db6320d',
+  media: [],
+  start_at: DateTime.iso8601('2023-04-22T20:24:56.568Z'),
+  type: Models::Shared::UcRecordingType::INBOUND,
+  updated_at: DateTime.iso8601('2025-02-24T08:22:00.968Z'),
+  user_name: 'Melyna Larson',
+  user_phone: '1-915-327-0429 x509',
+  web_url: 'https://spherical-comparison.org',
+), connection_id: '<id>')
 
 unless res.uc_recording.nil?
   # handle response
@@ -254,7 +267,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchUcRecordingRequest.new(
-  uc_recording: Models::Shared::UcRecording.new(),
+  uc_recording: Models::Shared::UcRecording.new(
+    contacts: [],
+    created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
+    end_at: DateTime.iso8601('2024-04-21T20:24:02.561Z'),
+    expires_at: DateTime.iso8601('2026-03-28T16:18:30.110Z'),
+    id: '3944c7e7-1e52-46ff-9ecb-5f6d1a444845',
+    media: [],
+    start_at: DateTime.iso8601('2023-04-22T20:24:56.570Z'),
+    type: Models::Shared::UcRecordingType::INBOUND,
+    updated_at: DateTime.iso8601('2025-02-24T08:22:00.977Z'),
+    user_name: 'Melyna Larson',
+    user_phone: '1-915-327-0429 x509',
+    web_url: 'https://spherical-comparison.org',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -343,7 +369,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateUcRecordingRequest.new(
-  uc_recording: Models::Shared::UcRecording.new(),
+  uc_recording: Models::Shared::UcRecording.new(
+    contacts: [],
+    created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
+    end_at: DateTime.iso8601('2024-04-21T20:24:02.561Z'),
+    expires_at: DateTime.iso8601('2026-03-28T16:18:30.110Z'),
+    id: '3944c7e7-1e52-46ff-9ecb-5f6d1a444845',
+    media: [],
+    start_at: DateTime.iso8601('2023-04-22T20:24:56.570Z'),
+    type: Models::Shared::UcRecordingType::INBOUND,
+    updated_at: DateTime.iso8601('2025-02-24T08:22:00.977Z'),
+    user_name: 'Melyna Larson',
+    user_phone: '1-915-327-0429 x509',
+    web_url: 'https://spherical-comparison.org',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

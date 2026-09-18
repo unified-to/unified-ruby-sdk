@@ -29,7 +29,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(), connection_id: '<id>')
+res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
+  applications: [],
+  attachments: [
+    Models::Shared::AccountingAttachment.new(
+      download_url: 'https://enlightened-chairperson.com/',
+      id: 'a9c6a2ee-5fda-4fc0-90cb-ed3f17aec4d7',
+      mime_type: 'complectus',
+      name: 'thesis',
+    ),
+  ],
+  created_at: DateTime.iso8601('2023-09-20T01:47:01.571Z'),
+  creditmemo_number: 'ulterius',
+  currency: 'MKD',
+  discount_amount: 0.0,
+  due_at: DateTime.iso8601('2023-10-18T04:35:00.543Z'),
+  id: '63197d4f-d1ef-4b85-8fd2-b9b95858e8c8',
+  lineitems: [],
+  metadata: [],
+  notes: 'Dedecor amo adfero torqueo quas.',
+  payment_collection_method: Models::Shared::AccountingCreditmemoPaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+  posted_at: DateTime.iso8601('2025-11-15T11:00:26.367Z'),
+  refund_amount: 0.0,
+  refund_reason: 'Virgo inflammatio quibusdam aestivus magnam.',
+  refunded_at: DateTime.iso8601('2023-10-23T00:35:36.814Z'),
+  send: false,
+  status: Models::Shared::AccountingCreditmemoStatus::PAID,
+  tax_amount: 0.0,
+  total_amount: 0.0,
+  updated_at: DateTime.iso8601('2024-11-15T13:31:19.220Z'),
+  url: 'https://lighthearted-bandwidth.net/',
+), connection_id: '<id>')
 
 unless res.accounting_creditmemo.nil?
   # handle response
@@ -163,7 +193,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingCreditmemoRequest.new(
-  accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(),
+  accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
+    applications: [],
+    attachments: [
+      Models::Shared::AccountingAttachment.new(
+        download_url: 'https://enlightened-chairperson.com/',
+        id: '856fb00a-08d3-4cd7-bacf-79dc293dbe79',
+        mime_type: 'complectus',
+        name: 'thesis',
+      ),
+    ],
+    created_at: DateTime.iso8601('2023-09-20T01:47:01.571Z'),
+    creditmemo_number: 'ulterius',
+    currency: 'MKD',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2023-10-18T04:35:00.543Z'),
+    id: '82ce8d96-c5de-4aa8-a536-1911f3cd29ea',
+    lineitems: [],
+    metadata: [],
+    notes: 'Dedecor amo adfero torqueo quas.',
+    payment_collection_method: Models::Shared::AccountingCreditmemoPaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+    posted_at: DateTime.iso8601('2025-11-15T11:00:26.395Z'),
+    refund_amount: 0.0,
+    refund_reason: 'Virgo inflammatio quibusdam aestivus magnam.',
+    refunded_at: DateTime.iso8601('2023-10-23T00:35:36.814Z'),
+    send: false,
+    status: Models::Shared::AccountingCreditmemoStatus::PAID,
+    tax_amount: 0.0,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2024-11-15T13:31:19.235Z'),
+    url: 'https://lighthearted-bandwidth.net/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +312,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
-  accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(),
+  accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
+    applications: [],
+    attachments: [
+      Models::Shared::AccountingAttachment.new(
+        download_url: 'https://enlightened-chairperson.com/',
+        id: '856fb00a-08d3-4cd7-bacf-79dc293dbe79',
+        mime_type: 'complectus',
+        name: 'thesis',
+      ),
+    ],
+    created_at: DateTime.iso8601('2023-09-20T01:47:01.571Z'),
+    creditmemo_number: 'ulterius',
+    currency: 'MKD',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2023-10-18T04:35:00.543Z'),
+    id: '82ce8d96-c5de-4aa8-a536-1911f3cd29ea',
+    lineitems: [],
+    metadata: [],
+    notes: 'Dedecor amo adfero torqueo quas.',
+    payment_collection_method: Models::Shared::AccountingCreditmemoPaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+    posted_at: DateTime.iso8601('2025-11-15T11:00:26.395Z'),
+    refund_amount: 0.0,
+    refund_reason: 'Virgo inflammatio quibusdam aestivus magnam.',
+    refunded_at: DateTime.iso8601('2023-10-23T00:35:36.814Z'),
+    send: false,
+    status: Models::Shared::AccountingCreditmemoStatus::PAID,
+    tax_amount: 0.0,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2024-11-15T13:31:19.235Z'),
+    url: 'https://lighthearted-bandwidth.net/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

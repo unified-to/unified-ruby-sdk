@@ -29,7 +29,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.saleschannel.create_commerce_saleschannel(commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(), connection_id: '<id>')
+res = s.saleschannel.create_commerce_saleschannel(commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(
+  collections: [],
+  created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
+  description: 'Utroque denuncio solutio.',
+  id: '1138f41c-c2e2-4ea5-8ea4-81fdb6756404',
+  is_active: false,
+  slug: 'amiculum-congregatio-suspendo',
+  updated_at: DateTime.iso8601('2025-01-06T17:41:56.768Z'),
+), connection_id: '<id>')
 
 unless res.commerce_saleschannel.nil?
   # handle response
@@ -163,7 +171,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCommerceSaleschannelRequest.new(
-  commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(),
+  commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(
+    collections: [],
+    created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
+    description: 'Utroque denuncio solutio.',
+    id: 'efad1a35-1fb8-4ec4-884b-ffd9f5846317',
+    is_active: false,
+    slug: 'amiculum-congregatio-suspendo',
+    updated_at: DateTime.iso8601('2025-01-06T17:41:56.774Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +268,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCommerceSaleschannelRequest.new(
-  commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(),
+  commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(
+    collections: [],
+    created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
+    description: 'Utroque denuncio solutio.',
+    id: 'efad1a35-1fb8-4ec4-884b-ffd9f5846317',
+    is_active: false,
+    slug: 'amiculum-congregatio-suspendo',
+    updated_at: DateTime.iso8601('2025-01-06T17:41:56.774Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

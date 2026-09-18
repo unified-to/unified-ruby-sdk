@@ -101,9 +101,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.hris.create_hris_attendance(hris_attendance: Models::Shared::HrisAttendance.new(
+  address: Models::Shared::PropertyHrisAttendanceAddress.new(
+    address1: '14108 Allie Flats',
+    city: 'Kearaborough',
+    country_code: 'US',
+    postal_code: '23844-2344',
+    region: 'Tennessee',
+    region_code: 'CA',
+  ),
+  approved_at: DateTime.iso8601('2021-08-13T10:36:02.365Z'),
+  breaks: [
+    Models::Shared::HrisAttendanceBreak.new(
+      duration_minutes: 12.0,
+      end_at: DateTime.iso8601('2023-10-22T16:21:14.897Z'),
+      id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
+      is_paid: true,
+      name: 'Lunch',
+      start_at: DateTime.iso8601('2023-10-15T20:47:35.030Z'),
+    ),
+  ],
+  created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
+  currency: 'UGX',
+  declared_tips_amount: 161.0,
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2026-07-01T14:10:09.942Z'),
-  start_at: DateTime.iso8601('2026-03-31T03:51:43.280Z'),
+  end_at: DateTime.iso8601('2024-04-06T03:54:31.376Z'),
+  hourly_rate: 53.0,
+  hours: 10.0,
+  id: 'c762e827-458c-47b2-ae4c-9ef09e1f14b4',
+  job_name: 'Global Creative Supervisor',
+  non_cash_tips_amount: 54.0,
+  start_at: DateTime.iso8601('2021-11-09T10:25:49.534Z'),
+  status: Models::Shared::HrisAttendanceStatus::CLOSED,
+  timezone: 'America/Atikokan',
+  updated_at: DateTime.iso8601('2022-01-17T01:24:46.590Z'),
 ), connection_id: '<id>')
 
 unless res.hris_attendance.nil?
@@ -148,7 +178,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBankaccount.new(), connection_id: '<id>')
+res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBankaccount.new(
+  account_number: '****3777',
+  account_number_last4: '3777',
+  account_type: Models::Shared::HrisBankaccountAccountType::CHECKING,
+  bank_name: 'Huel Group',
+  created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
+  id: '09e62b41-38ac-490e-af9a-1ccb3ad1a4b6',
+  is_primary: false,
+  name: 'Checking Account',
+  routing_number: '448650724',
+  updated_at: DateTime.iso8601('2025-06-04T11:28:24.714Z'),
+), connection_id: '<id>')
 
 unless res.hris_bankaccount.nil?
   # handle response
@@ -192,7 +233,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(), connection_id: '<id>')
+res = s.hris.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(
+  coverage_level: Models::Shared::CoverageLevel::EMPLOYEE_SPOUSE,
+  created_at: DateTime.iso8601('2020-06-11T01:24:05.654Z'),
+  currency: 'JOD',
+  description: 'Vomito voluptas dolor sed.',
+  employer_contribution_amount: 185_006.0,
+  employer_contribution_max_amount: 179_093.0,
+  employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
+  frequency: Models::Shared::HrisBenefitFrequency::HOUR,
+  id: '7bf54f76-6862-4755-9c41-3fffd202150c',
+  is_active: false,
+  name: 'Frozen Wooden Ball',
+  tax: Models::Shared::Tax::PRE_TAX,
+  type: Models::Shared::HrisBenefitType::GARNISHMENT,
+  updated_at: DateTime.iso8601('2023-03-06T10:59:14.083Z'),
+), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
   # handle response
@@ -236,7 +292,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_company(hris_company: Models::Shared::HrisCompany.new(), connection_id: '<id>')
+res = s.hris.create_hris_company(hris_company: Models::Shared::HrisCompany.new(
+  address: Models::Shared::PropertyHrisCompanyAddress.new(
+    address1: '2549 Church Walk',
+    city: 'Lake Nettiebury',
+    country_code: 'US',
+    postal_code: '32877-4898',
+    region: 'Idaho',
+    region_code: 'PA',
+  ),
+  created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
+  id: '7a72b0ec-5001-4744-bfcb-3aa7654f7509',
+  legal_name: 'Schultz LLC',
+  name: 'Gottlieb Group',
+  updated_at: DateTime.iso8601('2026-09-05T21:08:23.761Z'),
+), connection_id: '<id>')
 
 unless res.hris_company.nil?
   # handle response
@@ -280,7 +350,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction.new(), connection_id: '<id>')
+res = s.hris.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction.new(
+  amount: 139_655.0,
+  coverage_level: Models::Shared::HrisDeductionCoverageLevel::EMPLOYEE_ONLY,
+  created_at: DateTime.iso8601('2020-02-05T01:46:31.384Z'),
+  end_at: DateTime.iso8601('2026-05-22T22:49:15.318Z'),
+  frequency: Models::Shared::HrisDeductionFrequency::MONTH,
+  id: '341fcf8f-3d15-40e8-a000-830bbc2dbbfc',
+  is_active: false,
+  notes: 'Carmen desidero.',
+  start_at: DateTime.iso8601('2025-02-18T04:35:43.789Z'),
+  type: Models::Shared::HrisDeductionType::FIXED,
+  updated_at: DateTime.iso8601('2024-03-01T23:40:06.566Z'),
+), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
   # handle response
@@ -324,7 +406,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(), connection_id: '<id>')
+res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
+  admin_user_ids: [],
+  asset_tag: 'dpho9OuFNG',
+  created_at: DateTime.iso8601('2019-04-04T17:11:40.322Z'),
+  has_antivirus: false,
+  has_firewall: true,
+  has_hd_encrypted: true,
+  has_password_manager: true,
+  has_screenlock: true,
+  id: '63c3425f-9e1d-4843-b61c-577f2d3328b4',
+  is_missing: false,
+  manufacturer: 'Sanford - Hamill',
+  model: 'Refined',
+  name: 'cross_contamination_if.rar',
+  os: 'monitor',
+  os_version: '1.12.16',
+  updated_at: DateTime.iso8601('2023-05-21T00:54:39.864Z'),
+  version: '2.20.17',
+), connection_id: '<id>')
 
 unless res.hris_device.nil?
   # handle response
@@ -368,7 +468,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_document(hris_document: Models::Shared::HrisDocument.new(), connection_id: '<id>')
+res = s.hris.create_hris_document(hris_document: Models::Shared::HrisDocument.new(
+  created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
+  document_url: 'https://sore-decision.biz/',
+  filename: 'ridge_forager.xsl',
+  id: 'd1793ada-2825-4d40-b6b5-a13792d1db1e',
+  type: Models::Shared::HrisDocumentType::POLICY,
+  updated_at: DateTime.iso8601('2025-09-17T01:52:39.145Z'),
+), connection_id: '<id>')
 
 unless res.hris_document.nil?
   # handle response
@@ -412,7 +519,121 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.new(), connection_id: '<id>')
+res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.new(
+  address: Models::Shared::PropertyHrisEmployeeAddress.new(
+    address1: '52008 Lansdowne Road',
+    address2: 'Apt. 101',
+    city: 'Connellyberg',
+    country_code: 'US',
+    postal_code: '18978',
+    region: 'South Dakota',
+    region_code: 'NM',
+  ),
+  bio: 'sushi devotee, singer',
+  compensation: [
+    Models::Shared::HrisCompensation.new(
+      amount: 69_148.0,
+      currency: 'CRC',
+      frequency: Models::Shared::HrisCompensationFrequency::QUARTER,
+      notes: 'Tergeo laborum laboriosam tutis.',
+      type: Models::Shared::HrisCompensationType::EQUITY,
+    ),
+  ],
+  created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
+  currency: 'IDR',
+  date_of_birth: DateTime.iso8601('2001-04-22'),
+  emails: [
+    Models::Shared::HrisEmail.new(
+      email: 'Zetta_Prohaska67@hotmail.com',
+      type: Models::Shared::HrisEmailType::HOME,
+    ),
+  ],
+  employee_number: 'YuOt169CGu',
+  employment_status: Models::Shared::EmploymentStatus::ACTIVE,
+  employment_type: Models::Shared::HrisEmployeeEmploymentType::VOLUNTEER,
+  first_name: 'Zetta',
+  gender: Models::Shared::HrisEmployeeGender::INTERSEX,
+  has_mfa: true,
+  hired_at: DateTime.iso8601('2023-05-10T16:13:04.001Z'),
+  id: '88760f28-eae9-43c6-b599-2e579cfac04c',
+  image_url: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
+  language_locale: 'es',
+  last_name: 'Prohaska',
+  locations: [],
+  marital_status: Models::Shared::MaritalStatus::MARRIED,
+  metadata: [
+    Models::Shared::HrisMetadata.new(
+      extra_data: {
+        "display_name": 'Custom Property',
+      },
+      format: Models::Shared::HrisMetadataFormat::TEXT,
+      id: 'cca796a6-1580-4c10-8756-9b95541a72b5',
+      namespace: 'custom',
+      slug: 'custom_property',
+      value: 'tenetur',
+    ),
+  ],
+  name: 'Zetta Prohaska',
+  pronouns: 'she/her',
+  relationships: [
+    Models::Shared::HrisEmployeerelationship.new(
+      emails: [
+        Models::Shared::HrisEmail.new(
+          email: 'Deshaun.Sanford24@yahoo.com',
+        ),
+        Models::Shared::HrisEmail.new(
+          email: 'Rebeca.Dibbert11@hotmail.com',
+        ),
+        Models::Shared::HrisEmail.new(
+          email: 'Hester80@gmail.com',
+        ),
+      ],
+      name: 'Automotive',
+      type: Models::Shared::HrisEmployeerelationshipType::EMERGENCY,
+    ),
+    Models::Shared::HrisEmployeerelationship.new(
+      emails: [
+        Models::Shared::HrisEmail.new(
+          email: 'Benedict_Wisozk83@hotmail.com',
+        ),
+        Models::Shared::HrisEmail.new(
+          email: 'Princess_Rath43@gmail.com',
+        ),
+        Models::Shared::HrisEmail.new(
+          email: 'Elmira92@yahoo.com',
+        ),
+      ],
+      name: 'Music',
+      type: Models::Shared::HrisEmployeerelationshipType::FRIEND,
+    ),
+    Models::Shared::HrisEmployeerelationship.new(
+      emails: [
+        Models::Shared::HrisEmail.new(
+          email: 'Jane30@gmail.com',
+        ),
+      ],
+      name: 'Jewelry',
+      type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+    ),
+  ],
+  salutation: 'Miss',
+  ssn_sin: 'yMRtj0Q3xO',
+  storage_quota_allocated: 3_674_489.0,
+  storage_quota_available: 7_748_057.0,
+  storage_quota_used: 301_727.0,
+  telephones: [
+    Models::Shared::HrisTelephone.new(
+      telephone: '(409) 801-3705',
+      type: Models::Shared::HrisTelephoneType::FAX,
+    ),
+  ],
+  termination_reason: 'Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.',
+  timeoff_days_total: 12.0,
+  timeoff_days_used: 6.0,
+  timezone: 'Africa/Harare',
+  title: 'Investor Paradigm Liaison',
+  updated_at: DateTime.iso8601('2022-02-19T07:00:53.044Z'),
+), connection_id: '<id>')
 
 unless res.hris_employee.nil?
   # handle response
@@ -456,7 +677,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_group(hris_group: Models::Shared::HrisGroup.new(), connection_id: '<id>')
+res = s.hris.create_hris_group(hris_group: Models::Shared::HrisGroup.new(
+  created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
+  description: 'Absorbeo casso.',
+  id: '045c2bc7-ead6-478b-9f3f-3349fc5e1fa7',
+  is_active: false,
+  name: 'Games',
+  type: Models::Shared::HrisGroupType::BUSINESS_UNIT,
+  updated_at: DateTime.iso8601('2026-04-23T14:22:24.155Z'),
+), connection_id: '<id>')
 
 unless res.hris_group.nil?
   # handle response
@@ -500,7 +729,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.new(), connection_id: '<id>')
+res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.new(
+  address: Models::Shared::PropertyHrisLocationAddress.new(
+    address1: '2743 Connelly Summit',
+    address2: 'Apt. 350',
+    city: 'Titusville',
+    country_code: 'US',
+    postal_code: '16154-1095',
+    region: 'Oregon',
+    region_code: 'AL',
+  ),
+  created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
+  currency: 'MUR',
+  description: 'Acervus caries.',
+  external_identifier: '48190a0e-8459-412c-9cb4-0aa211d28948',
+  id: '0912ed39-fffb-4653-b9ce-9aec03d9f8d6',
+  is_active: true,
+  is_hq: false,
+  language_locale: 'fr',
+  name: 'adhuc',
+  telephones: [
+    Models::Shared::HrisTelephone.new(
+      telephone: '(710) 550-6997',
+      type: Models::Shared::HrisTelephoneType::FAX,
+    ),
+    Models::Shared::HrisTelephone.new(
+      telephone: '(208) 555-8542',
+      type: Models::Shared::HrisTelephoneType::HOME,
+    ),
+    Models::Shared::HrisTelephone.new(
+      telephone: '(712) 473-5482',
+      type: Models::Shared::HrisTelephoneType::FAX,
+    ),
+  ],
+  timezone: 'America/Guyana',
+  updated_at: DateTime.iso8601('2023-06-09T00:38:55.490Z'),
+), connection_id: '<id>')
 
 unless res.hris_location.nil?
   # handle response
@@ -544,7 +808,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.hris.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.new(), connection_id: '<id>')
+res = s.hris.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.new(
+  created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
+  description: 'Apto demonstro audacia adstringo cursim tristis solio careo.',
+  domain: 'Electronics',
+  id: 'ede085db-5709-4d53-a490-746f3de5be17',
+  is_active: false,
+  name: 'International Functionality Architect',
+  parent_id: '6524b2a7-6520-4e15-8c4e-1aa6793db837',
+  role_ids: [
+    '2b1ef757-eb4c-4207-8af1-929afe49cd65',
+  ],
+  subcategory: 'Bamboo',
+  type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
+  updated_at: DateTime.iso8601('2023-05-22T04:56:52.209Z'),
+  url: 'https://our-polarisation.name',
+), connection_id: '<id>')
 
 unless res.hris_taxonomy.nil?
   # handle response
@@ -589,6 +868,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.hris.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
+  approved_at: DateTime.iso8601('2022-02-20T21:02:26.002Z'),
+  comments: 'Blandior ventus curiositas amplitudo.',
+  created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
+  duration: 4.0,
+  duration_type: Models::Shared::DurationType::DAY,
+  end_at: DateTime.iso8601('2024-12-07T13:49:16.715Z'),
+  id: 'd9521fcf-9711-4f53-91e6-c529710324f2',
+  is_paid: true,
+  original_type: 'acerbitas ut',
+  reason: 'verto',
+  start_at: DateTime.iso8601('2023-08-23T06:55:46.297Z'),
+  status: Models::Shared::HrisTimeoffStatus::DENIED,
+  type: Models::Shared::HrisTimeoffType::IN_LIEU,
+  updated_at: DateTime.iso8601('2022-07-07T19:34:30.877Z'),
   user_id: '<id>',
 ), connection_id: '<id>')
 
@@ -635,7 +928,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.hris.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
+  approved_at: DateTime.iso8601('2023-06-05T14:30:14.534Z'),
+  compensation: [
+    Models::Shared::HrisCompensation.new(
+      amount: 76_761.0,
+      currency: 'JPY',
+      frequency: Models::Shared::HrisCompensationFrequency::HOUR,
+      notes: 'Annus adficio suasoria architecto aggero.',
+      type: Models::Shared::HrisCompensationType::OTHER,
+    ),
+  ],
+  created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
   employee_user_id: '<id>',
+  end_at: DateTime.iso8601('2026-08-25T08:25:39.098Z'),
+  hours: 8.0,
+  id: 'cc8b7736-3213-49e1-bddd-aad2b26fed16',
+  is_approved: true,
+  start_at: DateTime.iso8601('2023-06-24T19:28:03.634Z'),
+  updated_at: DateTime.iso8601('2021-06-22T20:52:32.069Z'),
 ), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -1928,9 +2238,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisAttendanceRequest.new(
   hris_attendance: Models::Shared::HrisAttendance.new(
+    address: Models::Shared::PropertyHrisAttendanceAddress.new(
+      address1: '14108 Allie Flats',
+      city: 'Kearaborough',
+      country_code: 'US',
+      postal_code: '23844-2344',
+      region: 'Tennessee',
+      region_code: 'CA',
+    ),
+    approved_at: DateTime.iso8601('2021-08-13T10:36:02.365Z'),
+    breaks: [
+      Models::Shared::HrisAttendanceBreak.new(
+        duration_minutes: 12.0,
+        end_at: DateTime.iso8601('2023-10-22T16:21:14.906Z'),
+        id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
+        is_paid: true,
+        name: 'Lunch',
+        start_at: DateTime.iso8601('2023-10-15T20:47:35.039Z'),
+      ),
+    ],
+    created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
+    currency: 'UGX',
+    declared_tips_amount: 161.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-09-28T22:23:28.906Z'),
-    start_at: DateTime.iso8601('2025-01-18T09:17:09.936Z'),
+    end_at: DateTime.iso8601('2024-04-06T03:54:31.387Z'),
+    hourly_rate: 53.0,
+    hours: 10.0,
+    id: '446589d6-e989-463d-8f9d-240cfda8db34',
+    job_name: 'Global Creative Supervisor',
+    non_cash_tips_amount: 54.0,
+    start_at: DateTime.iso8601('2021-11-09T10:25:49.535Z'),
+    status: Models::Shared::HrisAttendanceStatus::CLOSED,
+    timezone: 'America/Atikokan',
+    updated_at: DateTime.iso8601('2022-01-17T01:24:46.592Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1978,7 +2318,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisBankaccountRequest.new(
-  hris_bankaccount: Models::Shared::HrisBankaccount.new(),
+  hris_bankaccount: Models::Shared::HrisBankaccount.new(
+    account_number: '****3777',
+    account_number_last4: '3777',
+    account_type: Models::Shared::HrisBankaccountAccountType::CHECKING,
+    bank_name: 'Huel Group',
+    created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
+    id: '35fe7fc6-671a-4493-86ef-36db501190be',
+    is_primary: false,
+    name: 'Checking Account',
+    routing_number: '448650724',
+    updated_at: DateTime.iso8601('2025-06-04T11:28:24.719Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2025,7 +2376,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisBenefitRequest.new(
-  hris_benefit: Models::Shared::HrisBenefit.new(),
+  hris_benefit: Models::Shared::HrisBenefit.new(
+    coverage_level: Models::Shared::CoverageLevel::EMPLOYEE_SPOUSE,
+    created_at: DateTime.iso8601('2020-06-11T01:24:05.654Z'),
+    currency: 'JOD',
+    description: 'Vomito voluptas dolor sed.',
+    employer_contribution_amount: 185_006.0,
+    employer_contribution_max_amount: 179_093.0,
+    employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
+    frequency: Models::Shared::HrisBenefitFrequency::HOUR,
+    id: '53a00019-71c1-4738-aacf-6af75306611a',
+    is_active: false,
+    name: 'Frozen Wooden Ball',
+    tax: Models::Shared::Tax::PRE_TAX,
+    type: Models::Shared::HrisBenefitType::GARNISHMENT,
+    updated_at: DateTime.iso8601('2023-03-06T10:59:14.089Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2072,7 +2438,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisCompanyRequest.new(
-  hris_company: Models::Shared::HrisCompany.new(),
+  hris_company: Models::Shared::HrisCompany.new(
+    address: Models::Shared::PropertyHrisCompanyAddress.new(
+      address1: '2549 Church Walk',
+      city: 'Lake Nettiebury',
+      country_code: 'US',
+      postal_code: '32877-4898',
+      region: 'Idaho',
+      region_code: 'PA',
+    ),
+    created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
+    id: '7267454e-4b2a-4737-8f3a-4f662cfeb63f',
+    legal_name: 'Schultz LLC',
+    name: 'Gottlieb Group',
+    updated_at: DateTime.iso8601('2026-09-05T21:08:23.769Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2119,7 +2499,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisDeductionRequest.new(
-  hris_deduction: Models::Shared::HrisDeduction.new(),
+  hris_deduction: Models::Shared::HrisDeduction.new(
+    amount: 139_655.0,
+    coverage_level: Models::Shared::HrisDeductionCoverageLevel::EMPLOYEE_ONLY,
+    created_at: DateTime.iso8601('2020-02-05T01:46:31.384Z'),
+    end_at: DateTime.iso8601('2026-05-22T22:49:15.325Z'),
+    frequency: Models::Shared::HrisDeductionFrequency::MONTH,
+    id: '0fb9036d-da6b-4413-8d98-19a60f26574e',
+    is_active: false,
+    notes: 'Carmen desidero.',
+    start_at: DateTime.iso8601('2025-02-18T04:35:43.795Z'),
+    type: Models::Shared::HrisDeductionType::FIXED,
+    updated_at: DateTime.iso8601('2024-03-01T23:40:06.570Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2166,7 +2558,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisDeviceRequest.new(
-  hris_device: Models::Shared::HrisDevice.new(),
+  hris_device: Models::Shared::HrisDevice.new(
+    admin_user_ids: [],
+    asset_tag: 'dpho9OuFNG',
+    created_at: DateTime.iso8601('2019-04-04T17:11:40.322Z'),
+    has_antivirus: false,
+    has_firewall: true,
+    has_hd_encrypted: true,
+    has_password_manager: true,
+    has_screenlock: true,
+    id: '5e708c71-174e-43d9-ab85-c7afb48f5e4a',
+    is_missing: false,
+    manufacturer: 'Sanford - Hamill',
+    model: 'Refined',
+    name: 'cross_contamination_if.rar',
+    os: 'monitor',
+    os_version: '1.12.16',
+    updated_at: DateTime.iso8601('2023-05-21T00:54:39.868Z'),
+    version: '2.20.17',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2213,7 +2623,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisDocumentRequest.new(
-  hris_document: Models::Shared::HrisDocument.new(),
+  hris_document: Models::Shared::HrisDocument.new(
+    created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
+    document_url: 'https://sore-decision.biz/',
+    filename: 'ridge_forager.xsl',
+    id: '915638e1-b902-41f1-8561-c2ee07cbe0d7',
+    type: Models::Shared::HrisDocumentType::POLICY,
+    updated_at: DateTime.iso8601('2025-09-17T01:52:39.149Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2260,7 +2677,121 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisEmployeeRequest.new(
-  hris_employee: Models::Shared::HrisEmployee.new(),
+  hris_employee: Models::Shared::HrisEmployee.new(
+    address: Models::Shared::PropertyHrisEmployeeAddress.new(
+      address1: '52008 Lansdowne Road',
+      address2: 'Apt. 101',
+      city: 'Connellyberg',
+      country_code: 'US',
+      postal_code: '18978',
+      region: 'South Dakota',
+      region_code: 'NM',
+    ),
+    bio: 'sushi devotee, singer',
+    compensation: [
+      Models::Shared::HrisCompensation.new(
+        amount: 69_148.0,
+        currency: 'CRC',
+        frequency: Models::Shared::HrisCompensationFrequency::QUARTER,
+        notes: 'Tergeo laborum laboriosam tutis.',
+        type: Models::Shared::HrisCompensationType::EQUITY,
+      ),
+    ],
+    created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
+    currency: 'IDR',
+    date_of_birth: DateTime.iso8601('2001-04-22'),
+    emails: [
+      Models::Shared::HrisEmail.new(
+        email: 'Zetta_Prohaska67@hotmail.com',
+        type: Models::Shared::HrisEmailType::HOME,
+      ),
+    ],
+    employee_number: 'YuOt169CGu',
+    employment_status: Models::Shared::EmploymentStatus::ACTIVE,
+    employment_type: Models::Shared::HrisEmployeeEmploymentType::VOLUNTEER,
+    first_name: 'Zetta',
+    gender: Models::Shared::HrisEmployeeGender::INTERSEX,
+    has_mfa: true,
+    hired_at: DateTime.iso8601('2023-05-10T16:13:04.029Z'),
+    id: '368d632a-8d55-4663-b5ff-8ba311070b1f',
+    image_url: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
+    language_locale: 'es',
+    last_name: 'Prohaska',
+    locations: [],
+    marital_status: Models::Shared::MaritalStatus::MARRIED,
+    metadata: [
+      Models::Shared::HrisMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::HrisMetadataFormat::TEXT,
+        id: '844d64f5-05c8-4fa6-a753-54beeaae42c8',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'tenetur',
+      ),
+    ],
+    name: 'Zetta Prohaska',
+    pronouns: 'she/her',
+    relationships: [
+      Models::Shared::HrisEmployeerelationship.new(
+        emails: [
+          Models::Shared::HrisEmail.new(
+            email: 'Deshaun.Sanford24@yahoo.com',
+          ),
+          Models::Shared::HrisEmail.new(
+            email: 'Rebeca.Dibbert11@hotmail.com',
+          ),
+          Models::Shared::HrisEmail.new(
+            email: 'Hester80@gmail.com',
+          ),
+        ],
+        name: 'Automotive',
+        type: Models::Shared::HrisEmployeerelationshipType::EMERGENCY,
+      ),
+      Models::Shared::HrisEmployeerelationship.new(
+        emails: [
+          Models::Shared::HrisEmail.new(
+            email: 'Benedict_Wisozk83@hotmail.com',
+          ),
+          Models::Shared::HrisEmail.new(
+            email: 'Princess_Rath43@gmail.com',
+          ),
+          Models::Shared::HrisEmail.new(
+            email: 'Elmira92@yahoo.com',
+          ),
+        ],
+        name: 'Music',
+        type: Models::Shared::HrisEmployeerelationshipType::FRIEND,
+      ),
+      Models::Shared::HrisEmployeerelationship.new(
+        emails: [
+          Models::Shared::HrisEmail.new(
+            email: 'Jane30@gmail.com',
+          ),
+        ],
+        name: 'Jewelry',
+        type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+      ),
+    ],
+    salutation: 'Miss',
+    ssn_sin: 'yMRtj0Q3xO',
+    storage_quota_allocated: 3_674_489.0,
+    storage_quota_available: 7_748_057.0,
+    storage_quota_used: 301_727.0,
+    telephones: [
+      Models::Shared::HrisTelephone.new(
+        telephone: '(409) 801-3705',
+        type: Models::Shared::HrisTelephoneType::FAX,
+      ),
+    ],
+    termination_reason: 'Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.',
+    timeoff_days_total: 12.0,
+    timeoff_days_used: 6.0,
+    timezone: 'Africa/Harare',
+    title: 'Investor Paradigm Liaison',
+    updated_at: DateTime.iso8601('2022-02-19T07:00:53.063Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2307,7 +2838,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisGroupRequest.new(
-  hris_group: Models::Shared::HrisGroup.new(),
+  hris_group: Models::Shared::HrisGroup.new(
+    created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
+    description: 'Absorbeo casso.',
+    id: 'd0a99ab0-64a9-49c9-a7cc-094dc6a7244b',
+    is_active: false,
+    name: 'Games',
+    type: Models::Shared::HrisGroupType::BUSINESS_UNIT,
+    updated_at: DateTime.iso8601('2026-04-23T14:22:24.161Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2354,7 +2893,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisLocationRequest.new(
-  hris_location: Models::Shared::HrisLocation.new(),
+  hris_location: Models::Shared::HrisLocation.new(
+    address: Models::Shared::PropertyHrisLocationAddress.new(
+      address1: '2743 Connelly Summit',
+      address2: 'Apt. 350',
+      city: 'Titusville',
+      country_code: 'US',
+      postal_code: '16154-1095',
+      region: 'Oregon',
+      region_code: 'AL',
+    ),
+    created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
+    currency: 'MUR',
+    description: 'Acervus caries.',
+    external_identifier: '5283ff3d-65d3-471b-b91a-60c8740ba6c4',
+    id: '4e113e72-b722-4641-81b1-6be269320842',
+    is_active: true,
+    is_hq: false,
+    language_locale: 'fr',
+    name: 'adhuc',
+    telephones: [
+      Models::Shared::HrisTelephone.new(
+        telephone: '(710) 550-6997',
+        type: Models::Shared::HrisTelephoneType::FAX,
+      ),
+      Models::Shared::HrisTelephone.new(
+        telephone: '(208) 555-8542',
+        type: Models::Shared::HrisTelephoneType::HOME,
+      ),
+      Models::Shared::HrisTelephone.new(
+        telephone: '(712) 473-5482',
+        type: Models::Shared::HrisTelephoneType::FAX,
+      ),
+    ],
+    timezone: 'America/Guyana',
+    updated_at: DateTime.iso8601('2023-06-09T00:38:55.494Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2402,6 +2976,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
+    approved_at: DateTime.iso8601('2022-02-20T21:02:26.002Z'),
+    comments: 'Blandior ventus curiositas amplitudo.',
+    created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
+    duration: 4.0,
+    duration_type: Models::Shared::DurationType::DAY,
+    end_at: DateTime.iso8601('2024-12-07T13:49:16.721Z'),
+    id: 'ef2f9222-ff34-419c-a22b-bfa492e02d3c',
+    is_paid: true,
+    original_type: 'acerbitas ut',
+    reason: 'verto',
+    start_at: DateTime.iso8601('2023-08-23T06:55:46.301Z'),
+    status: Models::Shared::HrisTimeoffStatus::DENIED,
+    type: Models::Shared::HrisTimeoffType::IN_LIEU,
+    updated_at: DateTime.iso8601('2022-07-07T19:34:30.879Z'),
     user_id: '<id>',
   ),
   connection_id: '<id>',
@@ -2451,7 +3039,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
+    approved_at: DateTime.iso8601('2023-06-05T14:30:14.540Z'),
+    compensation: [
+      Models::Shared::HrisCompensation.new(
+        amount: 76_761.0,
+        currency: 'JPY',
+        frequency: Models::Shared::HrisCompensationFrequency::HOUR,
+        notes: 'Annus adficio suasoria architecto aggero.',
+        type: Models::Shared::HrisCompensationType::OTHER,
+      ),
+    ],
+    created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
+    end_at: DateTime.iso8601('2026-08-25T08:25:39.110Z'),
+    hours: 8.0,
+    id: '771ca1c4-06c5-40d8-bf75-4ffe636a625a',
+    is_approved: true,
+    start_at: DateTime.iso8601('2023-06-24T19:28:03.640Z'),
+    updated_at: DateTime.iso8601('2021-06-22T20:52:32.073Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3004,9 +3609,39 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisAttendanceRequest.new(
   hris_attendance: Models::Shared::HrisAttendance.new(
+    address: Models::Shared::PropertyHrisAttendanceAddress.new(
+      address1: '14108 Allie Flats',
+      city: 'Kearaborough',
+      country_code: 'US',
+      postal_code: '23844-2344',
+      region: 'Tennessee',
+      region_code: 'CA',
+    ),
+    approved_at: DateTime.iso8601('2021-08-13T10:36:02.365Z'),
+    breaks: [
+      Models::Shared::HrisAttendanceBreak.new(
+        duration_minutes: 12.0,
+        end_at: DateTime.iso8601('2023-10-22T16:21:14.906Z'),
+        id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
+        is_paid: true,
+        name: 'Lunch',
+        start_at: DateTime.iso8601('2023-10-15T20:47:35.039Z'),
+      ),
+    ],
+    created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
+    currency: 'UGX',
+    declared_tips_amount: 161.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-07-06T19:51:15.352Z'),
-    start_at: DateTime.iso8601('2024-05-22T08:12:53.996Z'),
+    end_at: DateTime.iso8601('2024-04-06T03:54:31.387Z'),
+    hourly_rate: 53.0,
+    hours: 10.0,
+    id: '446589d6-e989-463d-8f9d-240cfda8db34',
+    job_name: 'Global Creative Supervisor',
+    non_cash_tips_amount: 54.0,
+    start_at: DateTime.iso8601('2021-11-09T10:25:49.535Z'),
+    status: Models::Shared::HrisAttendanceStatus::CLOSED,
+    timezone: 'America/Atikokan',
+    updated_at: DateTime.iso8601('2022-01-17T01:24:46.592Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3054,7 +3689,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisBankaccountRequest.new(
-  hris_bankaccount: Models::Shared::HrisBankaccount.new(),
+  hris_bankaccount: Models::Shared::HrisBankaccount.new(
+    account_number: '****3777',
+    account_number_last4: '3777',
+    account_type: Models::Shared::HrisBankaccountAccountType::CHECKING,
+    bank_name: 'Huel Group',
+    created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
+    id: '35fe7fc6-671a-4493-86ef-36db501190be',
+    is_primary: false,
+    name: 'Checking Account',
+    routing_number: '448650724',
+    updated_at: DateTime.iso8601('2025-06-04T11:28:24.719Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3101,7 +3747,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisBenefitRequest.new(
-  hris_benefit: Models::Shared::HrisBenefit.new(),
+  hris_benefit: Models::Shared::HrisBenefit.new(
+    coverage_level: Models::Shared::CoverageLevel::EMPLOYEE_SPOUSE,
+    created_at: DateTime.iso8601('2020-06-11T01:24:05.654Z'),
+    currency: 'JOD',
+    description: 'Vomito voluptas dolor sed.',
+    employer_contribution_amount: 185_006.0,
+    employer_contribution_max_amount: 179_093.0,
+    employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
+    frequency: Models::Shared::HrisBenefitFrequency::HOUR,
+    id: '53a00019-71c1-4738-aacf-6af75306611a',
+    is_active: false,
+    name: 'Frozen Wooden Ball',
+    tax: Models::Shared::Tax::PRE_TAX,
+    type: Models::Shared::HrisBenefitType::GARNISHMENT,
+    updated_at: DateTime.iso8601('2023-03-06T10:59:14.089Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3148,7 +3809,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisCompanyRequest.new(
-  hris_company: Models::Shared::HrisCompany.new(),
+  hris_company: Models::Shared::HrisCompany.new(
+    address: Models::Shared::PropertyHrisCompanyAddress.new(
+      address1: '2549 Church Walk',
+      city: 'Lake Nettiebury',
+      country_code: 'US',
+      postal_code: '32877-4898',
+      region: 'Idaho',
+      region_code: 'PA',
+    ),
+    created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
+    id: '7267454e-4b2a-4737-8f3a-4f662cfeb63f',
+    legal_name: 'Schultz LLC',
+    name: 'Gottlieb Group',
+    updated_at: DateTime.iso8601('2026-09-05T21:08:23.769Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3195,7 +3870,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisDeductionRequest.new(
-  hris_deduction: Models::Shared::HrisDeduction.new(),
+  hris_deduction: Models::Shared::HrisDeduction.new(
+    amount: 139_655.0,
+    coverage_level: Models::Shared::HrisDeductionCoverageLevel::EMPLOYEE_ONLY,
+    created_at: DateTime.iso8601('2020-02-05T01:46:31.384Z'),
+    end_at: DateTime.iso8601('2026-05-22T22:49:15.325Z'),
+    frequency: Models::Shared::HrisDeductionFrequency::MONTH,
+    id: '0fb9036d-da6b-4413-8d98-19a60f26574e',
+    is_active: false,
+    notes: 'Carmen desidero.',
+    start_at: DateTime.iso8601('2025-02-18T04:35:43.795Z'),
+    type: Models::Shared::HrisDeductionType::FIXED,
+    updated_at: DateTime.iso8601('2024-03-01T23:40:06.570Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3242,7 +3929,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisDeviceRequest.new(
-  hris_device: Models::Shared::HrisDevice.new(),
+  hris_device: Models::Shared::HrisDevice.new(
+    admin_user_ids: [],
+    asset_tag: 'dpho9OuFNG',
+    created_at: DateTime.iso8601('2019-04-04T17:11:40.322Z'),
+    has_antivirus: false,
+    has_firewall: true,
+    has_hd_encrypted: true,
+    has_password_manager: true,
+    has_screenlock: true,
+    id: '5e708c71-174e-43d9-ab85-c7afb48f5e4a',
+    is_missing: false,
+    manufacturer: 'Sanford - Hamill',
+    model: 'Refined',
+    name: 'cross_contamination_if.rar',
+    os: 'monitor',
+    os_version: '1.12.16',
+    updated_at: DateTime.iso8601('2023-05-21T00:54:39.868Z'),
+    version: '2.20.17',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3289,7 +3994,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisDocumentRequest.new(
-  hris_document: Models::Shared::HrisDocument.new(),
+  hris_document: Models::Shared::HrisDocument.new(
+    created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
+    document_url: 'https://sore-decision.biz/',
+    filename: 'ridge_forager.xsl',
+    id: '915638e1-b902-41f1-8561-c2ee07cbe0d7',
+    type: Models::Shared::HrisDocumentType::POLICY,
+    updated_at: DateTime.iso8601('2025-09-17T01:52:39.149Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3336,7 +4048,121 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisEmployeeRequest.new(
-  hris_employee: Models::Shared::HrisEmployee.new(),
+  hris_employee: Models::Shared::HrisEmployee.new(
+    address: Models::Shared::PropertyHrisEmployeeAddress.new(
+      address1: '52008 Lansdowne Road',
+      address2: 'Apt. 101',
+      city: 'Connellyberg',
+      country_code: 'US',
+      postal_code: '18978',
+      region: 'South Dakota',
+      region_code: 'NM',
+    ),
+    bio: 'sushi devotee, singer',
+    compensation: [
+      Models::Shared::HrisCompensation.new(
+        amount: 69_148.0,
+        currency: 'CRC',
+        frequency: Models::Shared::HrisCompensationFrequency::QUARTER,
+        notes: 'Tergeo laborum laboriosam tutis.',
+        type: Models::Shared::HrisCompensationType::EQUITY,
+      ),
+    ],
+    created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
+    currency: 'IDR',
+    date_of_birth: DateTime.iso8601('2001-04-22'),
+    emails: [
+      Models::Shared::HrisEmail.new(
+        email: 'Zetta_Prohaska67@hotmail.com',
+        type: Models::Shared::HrisEmailType::HOME,
+      ),
+    ],
+    employee_number: 'YuOt169CGu',
+    employment_status: Models::Shared::EmploymentStatus::ACTIVE,
+    employment_type: Models::Shared::HrisEmployeeEmploymentType::VOLUNTEER,
+    first_name: 'Zetta',
+    gender: Models::Shared::HrisEmployeeGender::INTERSEX,
+    has_mfa: true,
+    hired_at: DateTime.iso8601('2023-05-10T16:13:04.029Z'),
+    id: '368d632a-8d55-4663-b5ff-8ba311070b1f',
+    image_url: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
+    language_locale: 'es',
+    last_name: 'Prohaska',
+    locations: [],
+    marital_status: Models::Shared::MaritalStatus::MARRIED,
+    metadata: [
+      Models::Shared::HrisMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::HrisMetadataFormat::TEXT,
+        id: '844d64f5-05c8-4fa6-a753-54beeaae42c8',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'tenetur',
+      ),
+    ],
+    name: 'Zetta Prohaska',
+    pronouns: 'she/her',
+    relationships: [
+      Models::Shared::HrisEmployeerelationship.new(
+        emails: [
+          Models::Shared::HrisEmail.new(
+            email: 'Deshaun.Sanford24@yahoo.com',
+          ),
+          Models::Shared::HrisEmail.new(
+            email: 'Rebeca.Dibbert11@hotmail.com',
+          ),
+          Models::Shared::HrisEmail.new(
+            email: 'Hester80@gmail.com',
+          ),
+        ],
+        name: 'Automotive',
+        type: Models::Shared::HrisEmployeerelationshipType::EMERGENCY,
+      ),
+      Models::Shared::HrisEmployeerelationship.new(
+        emails: [
+          Models::Shared::HrisEmail.new(
+            email: 'Benedict_Wisozk83@hotmail.com',
+          ),
+          Models::Shared::HrisEmail.new(
+            email: 'Princess_Rath43@gmail.com',
+          ),
+          Models::Shared::HrisEmail.new(
+            email: 'Elmira92@yahoo.com',
+          ),
+        ],
+        name: 'Music',
+        type: Models::Shared::HrisEmployeerelationshipType::FRIEND,
+      ),
+      Models::Shared::HrisEmployeerelationship.new(
+        emails: [
+          Models::Shared::HrisEmail.new(
+            email: 'Jane30@gmail.com',
+          ),
+        ],
+        name: 'Jewelry',
+        type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+      ),
+    ],
+    salutation: 'Miss',
+    ssn_sin: 'yMRtj0Q3xO',
+    storage_quota_allocated: 3_674_489.0,
+    storage_quota_available: 7_748_057.0,
+    storage_quota_used: 301_727.0,
+    telephones: [
+      Models::Shared::HrisTelephone.new(
+        telephone: '(409) 801-3705',
+        type: Models::Shared::HrisTelephoneType::FAX,
+      ),
+    ],
+    termination_reason: 'Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.',
+    timeoff_days_total: 12.0,
+    timeoff_days_used: 6.0,
+    timezone: 'Africa/Harare',
+    title: 'Investor Paradigm Liaison',
+    updated_at: DateTime.iso8601('2022-02-19T07:00:53.063Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3383,7 +4209,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisGroupRequest.new(
-  hris_group: Models::Shared::HrisGroup.new(),
+  hris_group: Models::Shared::HrisGroup.new(
+    created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
+    description: 'Absorbeo casso.',
+    id: 'd0a99ab0-64a9-49c9-a7cc-094dc6a7244b',
+    is_active: false,
+    name: 'Games',
+    type: Models::Shared::HrisGroupType::BUSINESS_UNIT,
+    updated_at: DateTime.iso8601('2026-04-23T14:22:24.161Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3430,7 +4264,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisLocationRequest.new(
-  hris_location: Models::Shared::HrisLocation.new(),
+  hris_location: Models::Shared::HrisLocation.new(
+    address: Models::Shared::PropertyHrisLocationAddress.new(
+      address1: '2743 Connelly Summit',
+      address2: 'Apt. 350',
+      city: 'Titusville',
+      country_code: 'US',
+      postal_code: '16154-1095',
+      region: 'Oregon',
+      region_code: 'AL',
+    ),
+    created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
+    currency: 'MUR',
+    description: 'Acervus caries.',
+    external_identifier: '5283ff3d-65d3-471b-b91a-60c8740ba6c4',
+    id: '4e113e72-b722-4641-81b1-6be269320842',
+    is_active: true,
+    is_hq: false,
+    language_locale: 'fr',
+    name: 'adhuc',
+    telephones: [
+      Models::Shared::HrisTelephone.new(
+        telephone: '(710) 550-6997',
+        type: Models::Shared::HrisTelephoneType::FAX,
+      ),
+      Models::Shared::HrisTelephone.new(
+        telephone: '(208) 555-8542',
+        type: Models::Shared::HrisTelephoneType::HOME,
+      ),
+      Models::Shared::HrisTelephone.new(
+        telephone: '(712) 473-5482',
+        type: Models::Shared::HrisTelephoneType::FAX,
+      ),
+    ],
+    timezone: 'America/Guyana',
+    updated_at: DateTime.iso8601('2023-06-09T00:38:55.494Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3478,6 +4347,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
+    approved_at: DateTime.iso8601('2022-02-20T21:02:26.002Z'),
+    comments: 'Blandior ventus curiositas amplitudo.',
+    created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
+    duration: 4.0,
+    duration_type: Models::Shared::DurationType::DAY,
+    end_at: DateTime.iso8601('2024-12-07T13:49:16.721Z'),
+    id: 'ef2f9222-ff34-419c-a22b-bfa492e02d3c',
+    is_paid: true,
+    original_type: 'acerbitas ut',
+    reason: 'verto',
+    start_at: DateTime.iso8601('2023-08-23T06:55:46.301Z'),
+    status: Models::Shared::HrisTimeoffStatus::DENIED,
+    type: Models::Shared::HrisTimeoffType::IN_LIEU,
+    updated_at: DateTime.iso8601('2022-07-07T19:34:30.879Z'),
     user_id: '<id>',
   ),
   connection_id: '<id>',
@@ -3527,7 +4410,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
+    approved_at: DateTime.iso8601('2023-06-05T14:30:14.540Z'),
+    compensation: [
+      Models::Shared::HrisCompensation.new(
+        amount: 76_761.0,
+        currency: 'JPY',
+        frequency: Models::Shared::HrisCompensationFrequency::HOUR,
+        notes: 'Annus adficio suasoria architecto aggero.',
+        type: Models::Shared::HrisCompensationType::OTHER,
+      ),
+    ],
+    created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
+    end_at: DateTime.iso8601('2026-08-25T08:25:39.110Z'),
+    hours: 8.0,
+    id: '771ca1c4-06c5-40d8-bf75-4ffe636a625a',
+    is_approved: true,
+    start_at: DateTime.iso8601('2023-06-24T19:28:03.640Z'),
+    updated_at: DateTime.iso8601('2021-06-22T20:52:32.073Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

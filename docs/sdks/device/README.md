@@ -29,7 +29,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(), connection_id: '<id>')
+res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
+  admin_user_ids: [],
+  asset_tag: 'dpho9OuFNG',
+  created_at: DateTime.iso8601('2019-04-04T17:11:40.322Z'),
+  has_antivirus: false,
+  has_firewall: true,
+  has_hd_encrypted: true,
+  has_password_manager: true,
+  has_screenlock: true,
+  id: '63c3425f-9e1d-4843-b61c-577f2d3328b4',
+  is_missing: false,
+  manufacturer: 'Sanford - Hamill',
+  model: 'Refined',
+  name: 'cross_contamination_if.rar',
+  os: 'monitor',
+  os_version: '1.12.16',
+  updated_at: DateTime.iso8601('2023-05-21T00:54:39.864Z'),
+  version: '2.20.17',
+), connection_id: '<id>')
 
 unless res.hris_device.nil?
   # handle response
@@ -163,7 +181,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisDeviceRequest.new(
-  hris_device: Models::Shared::HrisDevice.new(),
+  hris_device: Models::Shared::HrisDevice.new(
+    admin_user_ids: [],
+    asset_tag: 'dpho9OuFNG',
+    created_at: DateTime.iso8601('2019-04-04T17:11:40.322Z'),
+    has_antivirus: false,
+    has_firewall: true,
+    has_hd_encrypted: true,
+    has_password_manager: true,
+    has_screenlock: true,
+    id: '5e708c71-174e-43d9-ab85-c7afb48f5e4a',
+    is_missing: false,
+    manufacturer: 'Sanford - Hamill',
+    model: 'Refined',
+    name: 'cross_contamination_if.rar',
+    os: 'monitor',
+    os_version: '1.12.16',
+    updated_at: DateTime.iso8601('2023-05-21T00:54:39.868Z'),
+    version: '2.20.17',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +288,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisDeviceRequest.new(
-  hris_device: Models::Shared::HrisDevice.new(),
+  hris_device: Models::Shared::HrisDevice.new(
+    admin_user_ids: [],
+    asset_tag: 'dpho9OuFNG',
+    created_at: DateTime.iso8601('2019-04-04T17:11:40.322Z'),
+    has_antivirus: false,
+    has_firewall: true,
+    has_hd_encrypted: true,
+    has_password_manager: true,
+    has_screenlock: true,
+    id: '5e708c71-174e-43d9-ab85-c7afb48f5e4a',
+    is_missing: false,
+    manufacturer: 'Sanford - Hamill',
+    model: 'Refined',
+    name: 'cross_contamination_if.rar',
+    os: 'monitor',
+    os_version: '1.12.16',
+    updated_at: DateTime.iso8601('2023-05-21T00:54:39.868Z'),
+    version: '2.20.17',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -31,7 +31,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.member.create_martech_member(marketing_member: Models::Shared::MarketingMember.new(), connection_id: '<id>')
+res = s.member.create_martech_member(marketing_member: Models::Shared::MarketingMember.new(
+  company: 'Miller - Franecki',
+  created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
+  emails: [
+    Models::Shared::MarketingEmail.new(
+      email: 'Thalia.Abernathy61@gmail.com',
+      type: Models::Shared::MarketingEmailType::HOME,
+    ),
+    Models::Shared::MarketingEmail.new(
+      email: 'Maymie59@hotmail.com',
+      type: Models::Shared::MarketingEmailType::HOME,
+    ),
+    Models::Shared::MarketingEmail.new(
+      email: 'Coty27@hotmail.com',
+      type: Models::Shared::MarketingEmailType::WORK,
+    ),
+  ],
+  first_name: 'Jude',
+  id: '8fad607b-06a8-47de-9ead-622379e73069',
+  last_name: 'Leffler',
+  name: 'Jude Leffler',
+  status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
+  tags: [
+    'vinco',
+    'ceno',
+  ],
+  updated_at: DateTime.iso8601('2025-06-15T05:04:22.825Z'),
+), connection_id: '<id>')
 
 unless res.marketing_member.nil?
   # handle response
@@ -254,7 +281,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchMartechMemberRequest.new(
-  marketing_member: Models::Shared::MarketingMember.new(),
+  marketing_member: Models::Shared::MarketingMember.new(
+    company: 'Miller - Franecki',
+    created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
+    emails: [
+      Models::Shared::MarketingEmail.new(
+        email: 'Thalia.Abernathy61@gmail.com',
+        type: Models::Shared::MarketingEmailType::HOME,
+      ),
+      Models::Shared::MarketingEmail.new(
+        email: 'Maymie59@hotmail.com',
+        type: Models::Shared::MarketingEmailType::HOME,
+      ),
+      Models::Shared::MarketingEmail.new(
+        email: 'Coty27@hotmail.com',
+        type: Models::Shared::MarketingEmailType::WORK,
+      ),
+    ],
+    first_name: 'Jude',
+    id: '23819218-e541-48f2-b90a-259cc18ed48a',
+    last_name: 'Leffler',
+    name: 'Jude Leffler',
+    status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
+    tags: [
+      'vinco',
+      'ceno',
+    ],
+    updated_at: DateTime.iso8601('2025-06-15T05:04:22.830Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -343,7 +397,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateMartechMemberRequest.new(
-  marketing_member: Models::Shared::MarketingMember.new(),
+  marketing_member: Models::Shared::MarketingMember.new(
+    company: 'Miller - Franecki',
+    created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
+    emails: [
+      Models::Shared::MarketingEmail.new(
+        email: 'Thalia.Abernathy61@gmail.com',
+        type: Models::Shared::MarketingEmailType::HOME,
+      ),
+      Models::Shared::MarketingEmail.new(
+        email: 'Maymie59@hotmail.com',
+        type: Models::Shared::MarketingEmailType::HOME,
+      ),
+      Models::Shared::MarketingEmail.new(
+        email: 'Coty27@hotmail.com',
+        type: Models::Shared::MarketingEmailType::WORK,
+      ),
+    ],
+    first_name: 'Jude',
+    id: '23819218-e541-48f2-b90a-259cc18ed48a',
+    last_name: 'Leffler',
+    name: 'Jude Leffler',
+    status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
+    tags: [
+      'vinco',
+      'ceno',
+    ],
+    updated_at: DateTime.iso8601('2025-06-15T05:04:22.830Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -79,7 +79,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.project.create_task_project(task_project: Models::Shared::TaskProject.new(), connection_id: '<id>')
+res = s.project.create_task_project(task_project: Models::Shared::TaskProject.new(
+  created_at: DateTime.iso8601('2023-06-23T16:39:40.446Z'),
+  description: 'Valetudo aggredior accommodo curiositas vox.',
+  has_children: false,
+  has_tasks: false,
+  id: 'e1c80fa7-168b-4bc1-b2df-d0164bf2fb4b',
+  metadata: [
+    Models::Shared::TaskMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::TaskMetadataFormat::TEXT,
+      id: '3dc6355a-2866-4901-87d0-7f474da4ad42',
+      namespace: 'custom',
+      slug: 'decens',
+      value: 'uterque',
+    ),
+    Models::Shared::TaskMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::TaskMetadataFormat::TEXT,
+      id: '420361d1-7892-48a3-905a-0abfcdeb6d05',
+      namespace: 'custom',
+      slug: 'benevolentia',
+      value: 'pariatur',
+    ),
+  ],
+  name: 'Garden',
+  updated_at: DateTime.iso8601('2023-10-08T14:52:12.192Z'),
+), connection_id: '<id>')
 
 unless res.task_project.nil?
   # handle response
@@ -349,7 +379,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTaskProjectRequest.new(
-  task_project: Models::Shared::TaskProject.new(),
+  task_project: Models::Shared::TaskProject.new(
+    created_at: DateTime.iso8601('2023-06-23T16:39:40.446Z'),
+    description: 'Valetudo aggredior accommodo curiositas vox.',
+    has_children: false,
+    has_tasks: false,
+    id: '458b4d27-54de-4b3e-8ea3-84bb194dc75c',
+    metadata: [
+      Models::Shared::TaskMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::TaskMetadataFormat::TEXT,
+        id: '1ba460dd-a386-4256-8008-497620f59408',
+        namespace: 'custom',
+        slug: 'decens',
+        value: 'uterque',
+      ),
+      Models::Shared::TaskMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::TaskMetadataFormat::TEXT,
+        id: '51c81029-4462-42d8-aa4b-090678a5b1ed',
+        namespace: 'custom',
+        slug: 'benevolentia',
+        value: 'pariatur',
+      ),
+    ],
+    name: 'Garden',
+    updated_at: DateTime.iso8601('2023-10-08T14:52:12.193Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -527,7 +587,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTaskProjectRequest.new(
-  task_project: Models::Shared::TaskProject.new(),
+  task_project: Models::Shared::TaskProject.new(
+    created_at: DateTime.iso8601('2023-06-23T16:39:40.446Z'),
+    description: 'Valetudo aggredior accommodo curiositas vox.',
+    has_children: false,
+    has_tasks: false,
+    id: '458b4d27-54de-4b3e-8ea3-84bb194dc75c',
+    metadata: [
+      Models::Shared::TaskMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::TaskMetadataFormat::TEXT,
+        id: '1ba460dd-a386-4256-8008-497620f59408',
+        namespace: 'custom',
+        slug: 'decens',
+        value: 'uterque',
+      ),
+      Models::Shared::TaskMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::TaskMetadataFormat::TEXT,
+        id: '51c81029-4462-42d8-aa4b-090678a5b1ed',
+        namespace: 'custom',
+        slug: 'benevolentia',
+        value: 'pariatur',
+      ),
+    ],
+    name: 'Garden',
+    updated_at: DateTime.iso8601('2023-10-08T14:52:12.193Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

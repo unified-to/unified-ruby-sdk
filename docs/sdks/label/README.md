@@ -29,7 +29,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.label.create_shipping_label(shipping_label: Models::Shared::ShippingLabel.new(), connection_id: '<id>')
+res = s.label.create_shipping_label(shipping_label: Models::Shared::ShippingLabel.new(
+  created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
+  id: '2b8da297-53c2-419e-9ebb-2b9b329a41ac',
+  is_voided: false,
+  label_cost: 40.83_653_403_213_248,
+  label_cost_currency: 'USD',
+  label_format: Models::Shared::LabelFormat::PNG,
+  label_url: 'https://optimal-meadow.net',
+  service_code: 'GIz',
+  status: Models::Shared::ShippingLabelStatus::EXCEPTION,
+  tracking_number: 'zYv60FOIBUJ6',
+  updated_at: DateTime.iso8601('2024-04-16T18:19:23.293Z'),
+), connection_id: '<id>')
 
 unless res.shipping_label.nil?
   # handle response
@@ -163,7 +175,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchShippingLabelRequest.new(
-  shipping_label: Models::Shared::ShippingLabel.new(),
+  shipping_label: Models::Shared::ShippingLabel.new(
+    created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
+    id: '48633b7a-581c-4ecd-a6eb-cd73fb191205',
+    is_voided: false,
+    label_cost: 40.83_653_403_213_248,
+    label_cost_currency: 'USD',
+    label_format: Models::Shared::LabelFormat::PNG,
+    label_url: 'https://optimal-meadow.net',
+    service_code: 'GIz',
+    status: Models::Shared::ShippingLabelStatus::EXCEPTION,
+    tracking_number: 'zYv60FOIBUJ6',
+    updated_at: DateTime.iso8601('2024-04-16T18:19:23.296Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +276,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateShippingLabelRequest.new(
-  shipping_label: Models::Shared::ShippingLabel.new(),
+  shipping_label: Models::Shared::ShippingLabel.new(
+    created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
+    id: '48633b7a-581c-4ecd-a6eb-cd73fb191205',
+    is_voided: false,
+    label_cost: 40.83_653_403_213_248,
+    label_cost_currency: 'USD',
+    label_format: Models::Shared::LabelFormat::PNG,
+    label_url: 'https://optimal-meadow.net',
+    service_code: 'GIz',
+    status: Models::Shared::ShippingLabelStatus::EXCEPTION,
+    tracking_number: 'zYv60FOIBUJ6',
+    updated_at: DateTime.iso8601('2024-04-16T18:19:23.296Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -29,7 +29,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.bankfeedaccount.create_accounting_bankfeedaccount(accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(), connection_id: '<id>')
+res = s.bankfeedaccount.create_accounting_bankfeedaccount(accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
+  account_id: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+  account_number: '30369722',
+  account_number_last4: '9722',
+  account_type: Models::Shared::AccountType::LOAN,
+  balance: 90_358.0,
+  bank_name: 'Weissnat Inc',
+  created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+  currency: 'SSP',
+  feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+  id: '611e4c6d-d374-4fb6-9393-84e9435551db',
+  name: 'Corwin, Donnelly and Connelly Savings',
+  routing_number: '667753156',
+  status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
+  updated_at: DateTime.iso8601('2024-04-11T12:55:38.833Z'),
+), connection_id: '<id>')
 
 unless res.accounting_bankfeedaccount.nil?
   # handle response
@@ -163,7 +178,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingBankfeedaccountRequest.new(
-  accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(),
+  accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
+    account_id: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+    account_number: '30369722',
+    account_number_last4: '9722',
+    account_type: Models::Shared::AccountType::LOAN,
+    balance: 90_358.0,
+    bank_name: 'Weissnat Inc',
+    created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+    currency: 'SSP',
+    feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+    id: 'a3b852a0-d5bd-468e-9159-56e7754ac1f0',
+    name: 'Corwin, Donnelly and Connelly Savings',
+    routing_number: '667753156',
+    status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
+    updated_at: DateTime.iso8601('2024-04-11T12:55:38.836Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +282,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingBankfeedaccountRequest.new(
-  accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(),
+  accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
+    account_id: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+    account_number: '30369722',
+    account_number_last4: '9722',
+    account_type: Models::Shared::AccountType::LOAN,
+    balance: 90_358.0,
+    bank_name: 'Weissnat Inc',
+    created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+    currency: 'SSP',
+    feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+    id: 'a3b852a0-d5bd-468e-9159-56e7754ac1f0',
+    name: 'Corwin, Donnelly and Connelly Savings',
+    routing_number: '667753156',
+    status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
+    updated_at: DateTime.iso8601('2024-04-11T12:55:38.836Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

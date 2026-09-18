@@ -29,7 +29,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ad.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(), connection_id: '<id>')
+res = s.ad.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
+  ad_copy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+  ad_type: Models::Shared::AdType::SOCIAL,
+  advertiser_name: 'Robel, Nader and Rau',
+  created_at: DateTime.iso8601('2022-11-08T03:38:20.978Z'),
+  creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
+  description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
+  final_url: 'https://improbable-sanity.com',
+  id: '2872c23a-0cd8-4ba3-9947-487c2582c6a6',
+  name: 'Hermiston Group',
+  status: Models::Shared::AdsAdStatus::ARCHIVED,
+  updated_at: DateTime.iso8601('2024-06-05T02:36:59.066Z'),
+), connection_id: '<id>')
 
 unless res.ads_ad.nil?
   # handle response
@@ -163,7 +175,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAdsAdRequest.new(
-  ads_ad: Models::Shared::AdsAd.new(),
+  ads_ad: Models::Shared::AdsAd.new(
+    ad_copy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+    ad_type: Models::Shared::AdType::SOCIAL,
+    advertiser_name: 'Robel, Nader and Rau',
+    created_at: DateTime.iso8601('2022-11-08T03:38:20.978Z'),
+    creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
+    description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
+    final_url: 'https://improbable-sanity.com',
+    id: 'b8fa118b-20c8-4208-8f6a-74d6734fb9f7',
+    name: 'Hermiston Group',
+    status: Models::Shared::AdsAdStatus::ARCHIVED,
+    updated_at: DateTime.iso8601('2024-06-05T02:36:59.073Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +276,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAdsAdRequest.new(
-  ads_ad: Models::Shared::AdsAd.new(),
+  ads_ad: Models::Shared::AdsAd.new(
+    ad_copy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+    ad_type: Models::Shared::AdType::SOCIAL,
+    advertiser_name: 'Robel, Nader and Rau',
+    created_at: DateTime.iso8601('2022-11-08T03:38:20.978Z'),
+    creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
+    description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
+    final_url: 'https://improbable-sanity.com',
+    id: 'b8fa118b-20c8-4208-8f6a-74d6734fb9f7',
+    name: 'Hermiston Group',
+    status: Models::Shared::AdsAdStatus::ARCHIVED,
+    updated_at: DateTime.iso8601('2024-06-05T02:36:59.073Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -27,7 +27,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.taxonomy.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.new(), connection_id: '<id>')
+res = s.taxonomy.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.new(
+  created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
+  description: 'Apto demonstro audacia adstringo cursim tristis solio careo.',
+  domain: 'Electronics',
+  id: 'ede085db-5709-4d53-a490-746f3de5be17',
+  is_active: false,
+  name: 'International Functionality Architect',
+  parent_id: '6524b2a7-6520-4e15-8c4e-1aa6793db837',
+  role_ids: [
+    '2b1ef757-eb4c-4207-8af1-929afe49cd65',
+  ],
+  subcategory: 'Bamboo',
+  type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
+  updated_at: DateTime.iso8601('2023-05-22T04:56:52.209Z'),
+  url: 'https://our-polarisation.name',
+), connection_id: '<id>')
 
 unless res.hris_taxonomy.nil?
   # handle response

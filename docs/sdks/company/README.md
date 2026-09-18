@@ -42,7 +42,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.company.create_ats_company(ats_company: Models::Shared::AtsCompany.new(), connection_id: '<id>')
+res = s.company.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
+  created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
+  id: 'f4654bfd-c9b4-435c-b4c3-29fed835dd3d',
+  name: 'Gulgowski, Dibbert and Wilderman',
+  phone: '1-602-210-4548',
+  updated_at: DateTime.iso8601('2020-09-24T19:29:38.773Z'),
+  website_url: 'https://somber-substitution.com/',
+), connection_id: '<id>')
 
 unless res.ats_company.nil?
   # handle response
@@ -86,7 +93,83 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(), connection_id: '<id>')
+res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
+  address: Models::Shared::PropertyCrmCompanyAddress.new(
+    address1: '7261 Salisbury Road',
+    address2: 'Apt. 778',
+    city: 'Harrisburg',
+    country_code: 'US',
+    postal_code: '56293-3678',
+    region: 'Pennsylvania',
+    region_code: 'ID',
+  ),
+  created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
+  description: 'Balbus crapula spiculum.',
+  domains: [
+    'fussy-nerve.info',
+    'sturdy-lobster.org',
+    'greedy-offset.name',
+  ],
+  emails: [
+    Models::Shared::CrmEmail.new(
+      email: 'Sandrine_Jacobi@hotmail.com',
+      type: Models::Shared::CrmEmailType::WORK,
+    ),
+    Models::Shared::CrmEmail.new(
+      email: 'Sandrine_Jacobi@gmail.com',
+      type: Models::Shared::CrmEmailType::WORK,
+    ),
+    Models::Shared::CrmEmail.new(
+      email: 'Sandrine.Jacobi@yahoo.com',
+      type: Models::Shared::CrmEmailType::OTHER,
+    ),
+  ],
+  employees: 967.0,
+  id: '1e0095c8-303c-4e33-af03-5924093a4f9a',
+  industry: 'Infrastructure',
+  is_active: true,
+  link_urls: [
+    'https://blue-license.org',
+    'https://minor-formation.com',
+    'https://ecstatic-hammock.com',
+  ],
+  metadata: [
+    Models::Shared::CrmMetadata.new(
+      extra_data: {
+        "display_name": 'Custom Property',
+      },
+      format: Models::Shared::CrmMetadataFormat::TEXT,
+      id: '577ad0b2-eca6-4e6e-a005-0dc1ee885ca7',
+      namespace: 'custom',
+      slug: 'custom_property',
+      value: 'esse',
+    ),
+  ],
+  name: 'Goodwin and Sons',
+  tags: [
+    'quaerat',
+    'valeo',
+  ],
+  telephones: [
+    Models::Shared::CrmTelephone.new(
+      telephone: '(432) 849-2690',
+      type: Models::Shared::CrmTelephoneType::MOBILE,
+    ),
+    Models::Shared::CrmTelephone.new(
+      telephone: '(606) 871-2046',
+      type: Models::Shared::CrmTelephoneType::OTHER,
+    ),
+    Models::Shared::CrmTelephone.new(
+      telephone: '(842) 258-9395',
+      type: Models::Shared::CrmTelephoneType::MOBILE,
+    ),
+  ],
+  timezone: 'Europe/San_Marino',
+  updated_at: DateTime.iso8601('2025-02-06T12:31:07.287Z'),
+  websites: [
+    'https://wise-possession.org',
+  ],
+), connection_id: '<id>')
 
 unless res.crm_company.nil?
   # handle response
@@ -130,7 +213,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.company.create_hris_company(hris_company: Models::Shared::HrisCompany.new(), connection_id: '<id>')
+res = s.company.create_hris_company(hris_company: Models::Shared::HrisCompany.new(
+  address: Models::Shared::PropertyHrisCompanyAddress.new(
+    address1: '2549 Church Walk',
+    city: 'Lake Nettiebury',
+    country_code: 'US',
+    postal_code: '32877-4898',
+    region: 'Idaho',
+    region_code: 'PA',
+  ),
+  created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
+  id: '7a72b0ec-5001-4744-bfcb-3aa7654f7509',
+  legal_name: 'Schultz LLC',
+  name: 'Gottlieb Group',
+  updated_at: DateTime.iso8601('2026-09-05T21:08:23.761Z'),
+), connection_id: '<id>')
 
 unless res.hris_company.nil?
   # handle response
@@ -485,7 +582,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsCompanyRequest.new(
-  ats_company: Models::Shared::AtsCompany.new(),
+  ats_company: Models::Shared::AtsCompany.new(
+    created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
+    id: 'd2f6d36f-d09b-49ed-9fa5-cd949da19be5',
+    name: 'Gulgowski, Dibbert and Wilderman',
+    phone: '1-602-210-4548',
+    updated_at: DateTime.iso8601('2020-09-24T19:29:38.775Z'),
+    website_url: 'https://somber-substitution.com/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -532,7 +636,83 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCrmCompanyRequest.new(
-  crm_company: Models::Shared::CrmCompany.new(),
+  crm_company: Models::Shared::CrmCompany.new(
+    address: Models::Shared::PropertyCrmCompanyAddress.new(
+      address1: '7261 Salisbury Road',
+      address2: 'Apt. 778',
+      city: 'Harrisburg',
+      country_code: 'US',
+      postal_code: '56293-3678',
+      region: 'Pennsylvania',
+      region_code: 'ID',
+    ),
+    created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
+    description: 'Balbus crapula spiculum.',
+    domains: [
+      'fussy-nerve.info',
+      'sturdy-lobster.org',
+      'greedy-offset.name',
+    ],
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine_Jacobi@hotmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine_Jacobi@gmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine.Jacobi@yahoo.com',
+        type: Models::Shared::CrmEmailType::OTHER,
+      ),
+    ],
+    employees: 967.0,
+    id: 'c6a3d196-e987-493b-b018-b604516c8f09',
+    industry: 'Infrastructure',
+    is_active: true,
+    link_urls: [
+      'https://blue-license.org',
+      'https://minor-formation.com',
+      'https://ecstatic-hammock.com',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '3da39862-00b3-4763-8d44-9c5b7cee4fd6',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'esse',
+      ),
+    ],
+    name: 'Goodwin and Sons',
+    tags: [
+      'quaerat',
+      'valeo',
+    ],
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(432) 849-2690',
+        type: Models::Shared::CrmTelephoneType::MOBILE,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(606) 871-2046',
+        type: Models::Shared::CrmTelephoneType::OTHER,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(842) 258-9395',
+        type: Models::Shared::CrmTelephoneType::MOBILE,
+      ),
+    ],
+    timezone: 'Europe/San_Marino',
+    updated_at: DateTime.iso8601('2025-02-06T12:31:07.301Z'),
+    websites: [
+      'https://wise-possession.org',
+    ],
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -579,7 +759,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisCompanyRequest.new(
-  hris_company: Models::Shared::HrisCompany.new(),
+  hris_company: Models::Shared::HrisCompany.new(
+    address: Models::Shared::PropertyHrisCompanyAddress.new(
+      address1: '2549 Church Walk',
+      city: 'Lake Nettiebury',
+      country_code: 'US',
+      postal_code: '32877-4898',
+      region: 'Idaho',
+      region_code: 'PA',
+    ),
+    created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
+    id: '7267454e-4b2a-4737-8f3a-4f662cfeb63f',
+    legal_name: 'Schultz LLC',
+    name: 'Gottlieb Group',
+    updated_at: DateTime.iso8601('2026-09-05T21:08:23.769Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -752,7 +946,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsCompanyRequest.new(
-  ats_company: Models::Shared::AtsCompany.new(),
+  ats_company: Models::Shared::AtsCompany.new(
+    created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
+    id: 'd2f6d36f-d09b-49ed-9fa5-cd949da19be5',
+    name: 'Gulgowski, Dibbert and Wilderman',
+    phone: '1-602-210-4548',
+    updated_at: DateTime.iso8601('2020-09-24T19:29:38.775Z'),
+    website_url: 'https://somber-substitution.com/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -799,7 +1000,83 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCrmCompanyRequest.new(
-  crm_company: Models::Shared::CrmCompany.new(),
+  crm_company: Models::Shared::CrmCompany.new(
+    address: Models::Shared::PropertyCrmCompanyAddress.new(
+      address1: '7261 Salisbury Road',
+      address2: 'Apt. 778',
+      city: 'Harrisburg',
+      country_code: 'US',
+      postal_code: '56293-3678',
+      region: 'Pennsylvania',
+      region_code: 'ID',
+    ),
+    created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
+    description: 'Balbus crapula spiculum.',
+    domains: [
+      'fussy-nerve.info',
+      'sturdy-lobster.org',
+      'greedy-offset.name',
+    ],
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine_Jacobi@hotmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine_Jacobi@gmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine.Jacobi@yahoo.com',
+        type: Models::Shared::CrmEmailType::OTHER,
+      ),
+    ],
+    employees: 967.0,
+    id: 'c6a3d196-e987-493b-b018-b604516c8f09',
+    industry: 'Infrastructure',
+    is_active: true,
+    link_urls: [
+      'https://blue-license.org',
+      'https://minor-formation.com',
+      'https://ecstatic-hammock.com',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '3da39862-00b3-4763-8d44-9c5b7cee4fd6',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'esse',
+      ),
+    ],
+    name: 'Goodwin and Sons',
+    tags: [
+      'quaerat',
+      'valeo',
+    ],
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(432) 849-2690',
+        type: Models::Shared::CrmTelephoneType::MOBILE,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(606) 871-2046',
+        type: Models::Shared::CrmTelephoneType::OTHER,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(842) 258-9395',
+        type: Models::Shared::CrmTelephoneType::MOBILE,
+      ),
+    ],
+    timezone: 'Europe/San_Marino',
+    updated_at: DateTime.iso8601('2025-02-06T12:31:07.301Z'),
+    websites: [
+      'https://wise-possession.org',
+    ],
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -846,7 +1123,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisCompanyRequest.new(
-  hris_company: Models::Shared::HrisCompany.new(),
+  hris_company: Models::Shared::HrisCompany.new(
+    address: Models::Shared::PropertyHrisCompanyAddress.new(
+      address1: '2549 Church Walk',
+      city: 'Lake Nettiebury',
+      country_code: 'US',
+      postal_code: '32877-4898',
+      region: 'Idaho',
+      region_code: 'PA',
+    ),
+    created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
+    id: '7267454e-4b2a-4737-8f3a-4f662cfeb63f',
+    legal_name: 'Schultz LLC',
+    name: 'Gottlieb Group',
+    updated_at: DateTime.iso8601('2026-09-05T21:08:23.769Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

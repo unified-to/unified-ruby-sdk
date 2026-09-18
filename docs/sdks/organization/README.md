@@ -37,7 +37,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.organization.create_ads_organization(ads_organization: Models::Shared::AdsOrganization.new(), connection_id: '<id>')
+res = s.organization.create_ads_organization(ads_organization: Models::Shared::AdsOrganization.new(
+  account_number: 'LQUJx8zQBW',
+  created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
+  currency: 'USD',
+  id: '954024f0-be4e-42e9-ab99-babcdfd3f2ca',
+  managers: [
+    Models::Shared::AdsManager.new(
+      id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
+      name: 'Parker, Leannon and Gibson',
+    ),
+  ],
+  name: 'Ankunding Inc',
+  status: Models::Shared::AdsOrganizationStatus::PROCESSING,
+  timezone: 'Europe/Chisinau',
+  updated_at: DateTime.iso8601('2026-02-27T02:28:26.350Z'),
+), connection_id: '<id>')
 
 unless res.ads_organization.nil?
   # handle response
@@ -81,7 +96,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.organization.create_repo_organization(repo_organization: Models::Shared::RepoOrganization.new(), connection_id: '<id>')
+res = s.organization.create_repo_organization(repo_organization: Models::Shared::RepoOrganization.new(
+  avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+  created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
+  description: 'Trepide defendo supra testimonium ager.',
+  id: '663b7edf-8026-47ed-a9a2-35245ab612c1',
+  name: 'Denesik - Lemke',
+  updated_at: DateTime.iso8601('2023-08-12T23:33:59.915Z'),
+  web_url: 'https://turbulent-overheard.biz',
+), connection_id: '<id>')
 
 unless res.repo_organization.nil?
   # handle response
@@ -393,7 +416,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAdsOrganizationRequest.new(
-  ads_organization: Models::Shared::AdsOrganization.new(),
+  ads_organization: Models::Shared::AdsOrganization.new(
+    account_number: 'LQUJx8zQBW',
+    created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
+    currency: 'USD',
+    id: '0db49d1d-2e30-46e4-b602-b7a095facc07',
+    managers: [
+      Models::Shared::AdsManager.new(
+        id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
+        name: 'Parker, Leannon and Gibson',
+      ),
+    ],
+    name: 'Ankunding Inc',
+    status: Models::Shared::AdsOrganizationStatus::PROCESSING,
+    timezone: 'Europe/Chisinau',
+    updated_at: DateTime.iso8601('2026-02-27T02:28:26.361Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -440,7 +478,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchRepoOrganizationRequest.new(
-  repo_organization: Models::Shared::RepoOrganization.new(),
+  repo_organization: Models::Shared::RepoOrganization.new(
+    avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+    created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
+    description: 'Trepide defendo supra testimonium ager.',
+    id: '6950cc7d-4903-4e45-8056-ae03de805456',
+    name: 'Denesik - Lemke',
+    updated_at: DateTime.iso8601('2023-08-12T23:33:59.917Z'),
+    web_url: 'https://turbulent-overheard.biz',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -571,7 +617,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAdsOrganizationRequest.new(
-  ads_organization: Models::Shared::AdsOrganization.new(),
+  ads_organization: Models::Shared::AdsOrganization.new(
+    account_number: 'LQUJx8zQBW',
+    created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
+    currency: 'USD',
+    id: '0db49d1d-2e30-46e4-b602-b7a095facc07',
+    managers: [
+      Models::Shared::AdsManager.new(
+        id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
+        name: 'Parker, Leannon and Gibson',
+      ),
+    ],
+    name: 'Ankunding Inc',
+    status: Models::Shared::AdsOrganizationStatus::PROCESSING,
+    timezone: 'Europe/Chisinau',
+    updated_at: DateTime.iso8601('2026-02-27T02:28:26.361Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -618,7 +679,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateRepoOrganizationRequest.new(
-  repo_organization: Models::Shared::RepoOrganization.new(),
+  repo_organization: Models::Shared::RepoOrganization.new(
+    avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+    created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
+    description: 'Trepide defendo supra testimonium ager.',
+    id: '6950cc7d-4903-4e45-8056-ae03de805456',
+    name: 'Denesik - Lemke',
+    updated_at: DateTime.iso8601('2023-08-12T23:33:59.917Z'),
+    web_url: 'https://turbulent-overheard.biz',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

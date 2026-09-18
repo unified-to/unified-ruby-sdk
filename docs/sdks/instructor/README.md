@@ -29,7 +29,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.instructor.create_lms_instructor(lms_instructor: Models::Shared::LmsInstructor.new(), connection_id: '<id>')
+res = s.instructor.create_lms_instructor(lms_instructor: Models::Shared::LmsInstructor.new(
+  created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
+  emails: [
+    Models::Shared::LmsEmail.new(),
+    Models::Shared::LmsEmail.new(),
+  ],
+  first_name: 'Deangelo',
+  id: '8628b617-df56-40da-bc88-d001b8034098',
+  image_url: 'https://avatars.githubusercontent.com/u/20232618',
+  last_name: 'Ritchie',
+  name: 'Deangelo Ritchie',
+  telephones: [
+    Models::Shared::LmsTelephone.new(
+      telephone: '(352) 551-7989',
+      type: Models::Shared::LmsTelephoneType::HOME,
+    ),
+  ],
+  title: 'Product Solutions Engineer',
+  updated_at: DateTime.iso8601('2025-06-29T14:04:17.845Z'),
+), connection_id: '<id>')
 
 unless res.lms_instructor.nil?
   # handle response
@@ -163,7 +182,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsInstructorRequest.new(
-  lms_instructor: Models::Shared::LmsInstructor.new(),
+  lms_instructor: Models::Shared::LmsInstructor.new(
+    created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
+    emails: [
+      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new(),
+    ],
+    first_name: 'Deangelo',
+    id: 'a25b6394-8e8a-4791-9851-ccf53213de13',
+    image_url: 'https://avatars.githubusercontent.com/u/20232618',
+    last_name: 'Ritchie',
+    name: 'Deangelo Ritchie',
+    telephones: [
+      Models::Shared::LmsTelephone.new(
+        telephone: '(352) 551-7989',
+        type: Models::Shared::LmsTelephoneType::HOME,
+      ),
+    ],
+    title: 'Product Solutions Engineer',
+    updated_at: DateTime.iso8601('2025-06-29T14:04:17.854Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +290,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsInstructorRequest.new(
-  lms_instructor: Models::Shared::LmsInstructor.new(),
+  lms_instructor: Models::Shared::LmsInstructor.new(
+    created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
+    emails: [
+      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new(),
+    ],
+    first_name: 'Deangelo',
+    id: 'a25b6394-8e8a-4791-9851-ccf53213de13',
+    image_url: 'https://avatars.githubusercontent.com/u/20232618',
+    last_name: 'Ritchie',
+    name: 'Deangelo Ritchie',
+    telephones: [
+      Models::Shared::LmsTelephone.new(
+        telephone: '(352) 551-7989',
+        type: Models::Shared::LmsTelephoneType::HOME,
+      ),
+    ],
+    title: 'Product Solutions Engineer',
+    updated_at: DateTime.iso8601('2025-06-29T14:04:17.854Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

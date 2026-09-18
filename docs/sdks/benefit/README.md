@@ -29,7 +29,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.benefit.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(), connection_id: '<id>')
+res = s.benefit.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(
+  coverage_level: Models::Shared::CoverageLevel::EMPLOYEE_SPOUSE,
+  created_at: DateTime.iso8601('2020-06-11T01:24:05.654Z'),
+  currency: 'JOD',
+  description: 'Vomito voluptas dolor sed.',
+  employer_contribution_amount: 185_006.0,
+  employer_contribution_max_amount: 179_093.0,
+  employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
+  frequency: Models::Shared::HrisBenefitFrequency::HOUR,
+  id: '7bf54f76-6862-4755-9c41-3fffd202150c',
+  is_active: false,
+  name: 'Frozen Wooden Ball',
+  tax: Models::Shared::Tax::PRE_TAX,
+  type: Models::Shared::HrisBenefitType::GARNISHMENT,
+  updated_at: DateTime.iso8601('2023-03-06T10:59:14.083Z'),
+), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
   # handle response
@@ -163,7 +178,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisBenefitRequest.new(
-  hris_benefit: Models::Shared::HrisBenefit.new(),
+  hris_benefit: Models::Shared::HrisBenefit.new(
+    coverage_level: Models::Shared::CoverageLevel::EMPLOYEE_SPOUSE,
+    created_at: DateTime.iso8601('2020-06-11T01:24:05.654Z'),
+    currency: 'JOD',
+    description: 'Vomito voluptas dolor sed.',
+    employer_contribution_amount: 185_006.0,
+    employer_contribution_max_amount: 179_093.0,
+    employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
+    frequency: Models::Shared::HrisBenefitFrequency::HOUR,
+    id: '53a00019-71c1-4738-aacf-6af75306611a',
+    is_active: false,
+    name: 'Frozen Wooden Ball',
+    tax: Models::Shared::Tax::PRE_TAX,
+    type: Models::Shared::HrisBenefitType::GARNISHMENT,
+    updated_at: DateTime.iso8601('2023-03-06T10:59:14.089Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +282,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisBenefitRequest.new(
-  hris_benefit: Models::Shared::HrisBenefit.new(),
+  hris_benefit: Models::Shared::HrisBenefit.new(
+    coverage_level: Models::Shared::CoverageLevel::EMPLOYEE_SPOUSE,
+    created_at: DateTime.iso8601('2020-06-11T01:24:05.654Z'),
+    currency: 'JOD',
+    description: 'Vomito voluptas dolor sed.',
+    employer_contribution_amount: 185_006.0,
+    employer_contribution_max_amount: 179_093.0,
+    employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
+    frequency: Models::Shared::HrisBenefitFrequency::HOUR,
+    id: '53a00019-71c1-4738-aacf-6af75306611a',
+    is_active: false,
+    name: 'Frozen Wooden Ball',
+    tax: Models::Shared::Tax::PRE_TAX,
+    type: Models::Shared::HrisBenefitType::GARNISHMENT,
+    updated_at: DateTime.iso8601('2023-03-06T10:59:14.089Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

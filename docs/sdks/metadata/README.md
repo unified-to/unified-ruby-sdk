@@ -30,8 +30,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::MetadataMetadata.new(
-  name: '<value>',
-  object_type: '<value>',
+  created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
+  format: Models::Shared::MetadataMetadataFormat::PRICE,
+  id: '53ad9391-4586-4e00-8f29-aee90b5e125a',
+  is_required: false,
+  name: 'autem',
+  object_type: 'clubs_group',
+  objects: {
+
+  },
+  options: [],
+  original_format: 'advoco',
+  slug: 'arbustum',
+  updated_at: DateTime.iso8601('2025-02-26T07:58:11.488Z'),
 ), connection_id: '<id>')
 
 unless res.metadata_metadata.nil?
@@ -167,8 +178,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
-    name: '<value>',
-    object_type: '<value>',
+    created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
+    format: Models::Shared::MetadataMetadataFormat::PRICE,
+    id: 'd398b708-d3da-4d63-84fb-1ac376862216',
+    is_required: false,
+    name: 'autem',
+    object_type: 'clubs_group',
+    objects: {
+
+    },
+    options: [],
+    original_format: 'advoco',
+    slug: 'arbustum',
+    updated_at: DateTime.iso8601('2025-02-26T07:58:11.497Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -259,8 +281,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
-    name: '<value>',
-    object_type: '<value>',
+    created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
+    format: Models::Shared::MetadataMetadataFormat::PRICE,
+    id: 'd398b708-d3da-4d63-84fb-1ac376862216',
+    is_required: false,
+    name: 'autem',
+    object_type: 'clubs_group',
+    objects: {
+
+    },
+    options: [],
+    original_format: 'advoco',
+    slug: 'arbustum',
+    updated_at: DateTime.iso8601('2025-02-26T07:58:11.497Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

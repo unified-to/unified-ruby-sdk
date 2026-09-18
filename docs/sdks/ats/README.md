@@ -72,7 +72,79 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(), connection_id: '<id>')
+res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
+  bcc: [
+    Models::Shared::AtsEmail.new(
+      email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+      name: 'Rochelle Franey-Bechtelar',
+      type: Models::Shared::AtsEmailType::HOME,
+    ),
+  ],
+  cc: [
+    Models::Shared::AtsEmail.new(
+      email: 'Sasha24@hotmail.com',
+      name: 'Dr. Elbert Kuvalis',
+      type: Models::Shared::AtsEmailType::HOME,
+    ),
+    Models::Shared::AtsEmail.new(
+      email: 'Rosetta_Donnelly@gmail.com',
+      name: 'Ramon Daniel',
+      type: Models::Shared::AtsEmailType::OTHER,
+    ),
+    Models::Shared::AtsEmail.new(
+      email: 'Kathryne_Jast@yahoo.com',
+      name: 'Christian Jacobson',
+      type: Models::Shared::AtsEmailType::OTHER,
+    ),
+    Models::Shared::AtsEmail.new(
+      email: 'Eldred95@yahoo.com',
+      name: 'Edna Bogan',
+      type: Models::Shared::AtsEmailType::OTHER,
+    ),
+  ],
+  created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
+  description: 'Amplus.',
+  from: Models::Shared::PropertyAtsActivityFrom.new(
+    email: 'Norwood.Wiza47@yahoo.com',
+    name: 'Toby Grant',
+    type: Models::Shared::PropertyAtsActivityFromType::OTHER,
+  ),
+  id: '993d7d4c-8e14-4eb9-bd3d-b4ed7f8df61d',
+  is_private: false,
+  metadata: [
+    Models::Shared::AtsMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::AtsMetadataFormat::TEXT,
+      id: '2396076e-eaf4-468a-9fba-2e3e0105e1d5',
+      namespace: 'activity',
+      slug: 'acer',
+      value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+    ),
+    Models::Shared::AtsMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::AtsMetadataFormat::TEXT,
+      id: '3d54d4e9-8984-4f01-84be-f62d2021b5bf',
+      namespace: 'activity',
+      slug: 'tremo',
+      value: 'Amita delectus dicta temptatio utroque ex.',
+    ),
+  ],
+  sub_type: 'TASK',
+  title: 'Senior Interactions Manager',
+  to: [
+    Models::Shared::AtsEmail.new(
+      email: 'Sister91@hotmail.com',
+      name: 'Eddie Nienow PhD',
+      type: Models::Shared::AtsEmailType::WORK,
+    ),
+  ],
+  type: Models::Shared::AtsActivityType::TASK,
+  updated_at: DateTime.iso8601('2026-03-06T13:30:58.946Z'),
+), connection_id: '<id>')
 
 unless res.ats_activity.nil?
   # handle response
@@ -116,7 +188,33 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ats.create_ats_application(ats_application: Models::Shared::AtsApplication.new(), connection_id: '<id>')
+res = s.ats.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
+  answers: [],
+  applied_at: DateTime.iso8601('2025-09-08T08:45:58.175Z'),
+  created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
+  hired_at: DateTime.iso8601('2026-04-14T14:30:49.399Z'),
+  id: '3d467c88-78ed-4324-9573-7a42069f2113',
+  metadata: [
+    Models::Shared::AtsMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::AtsMetadataFormat::TEXT,
+      id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+      namespace: 'application',
+      slug: 'despecto',
+      value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+    ),
+  ],
+  offers: [],
+  original_status: 'vomica',
+  original_substatus: 'allatus',
+  rejected_at: DateTime.iso8601('2026-09-08T19:47:42.872Z'),
+  rejected_reason: 'Cometes amplitudo videlicet talio.',
+  source: 'credo',
+  status: Models::Shared::AtsApplicationStatus::REVIEWING,
+  updated_at: DateTime.iso8601('2026-09-15T11:06:13.612Z'),
+), connection_id: '<id>')
 
 unless res.ats_application.nil?
   # handle response
@@ -160,7 +258,92 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new(), connection_id: '<id>')
+res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new(
+  address: Models::Shared::PropertyAtsCandidateAddress.new(
+    address1: '802 Roberts Squares',
+    address2: 'Suite 550',
+    city: 'Lake Raeganside',
+    country_code: 'US',
+    postal_code: '44530-0054',
+    region: 'Tennessee',
+    region_code: 'NV',
+  ),
+  company_name: 'Ferry, Legros and Feest',
+  created_at: DateTime.iso8601('2023-10-16T05:42:56.049Z'),
+  education: [
+    Models::Shared::AtsCandidateEducation.new(
+      degree: 'mouser throughout',
+      end_at: DateTime.iso8601('1992-11-28T20:23:20.311Z'),
+      field_of_study: 'solutio',
+      institution: 'Heller - Lubowitz',
+      level: 'phd',
+      start_at: DateTime.iso8601('2001-03-26T08:12:11.510Z'),
+    ),
+  ],
+  emails: [
+    Models::Shared::AtsEmail.new(
+      email: 'Ardith.Beatty@hotmail.com',
+      name: 'Opal Lindgren',
+      type: Models::Shared::AtsEmailType::WORK,
+    ),
+    Models::Shared::AtsEmail.new(
+      email: 'Ardith_Beatty@gmail.com',
+      name: 'Kristi Nader',
+      type: Models::Shared::AtsEmailType::OTHER,
+    ),
+  ],
+  experiences: [
+    Models::Shared::AtsCandidateExperience.new(
+      company_name: 'Donnelly, Buckridge and Steuber',
+      end_at: DateTime.iso8601('1978-06-20T02:53:48.383Z'),
+      start_at: DateTime.iso8601('1980-02-06T17:16:53.798Z'),
+      title: 'Principal Brand Strategist',
+    ),
+  ],
+  first_name: 'Ardith',
+  id: 'ce33f6b2-2973-4759-82f9-9db325cbc090',
+  image_url: 'https://loremflickr.com/40/3693?lock=5634712403880328',
+  job_ids: [],
+  last_name: 'Beatty',
+  link_urls: [
+    'https://sizzling-legislature.com',
+    'https://soupy-interchange.net',
+    'https://troubled-substitution.info',
+  ],
+  metadata: [
+    Models::Shared::AtsMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::AtsMetadataFormat::TEXT,
+      id: 'b5eb2f0b-3a46-40e1-b507-6727b7110c14',
+      namespace: 'custom',
+      slug: 'custom_field',
+      value: 'cariosus',
+    ),
+  ],
+  name: 'Ardith Beatty',
+  origin: Models::Shared::Origin::SOURCED,
+  skills: [
+    'vita',
+    'cohors',
+  ],
+  sources: [
+    'tactus',
+  ],
+  tags: [
+    'aliquid',
+  ],
+  telephones: [
+    Models::Shared::AtsTelephone.new(
+      telephone: '(779) 296-5994',
+      type: Models::Shared::AtsTelephoneType::HOME,
+    ),
+  ],
+  title: 'Principal Implementation Analyst',
+  updated_at: DateTime.iso8601('2024-04-22T21:06:14.181Z'),
+  web_url: 'https://expert-lender.name/',
+), connection_id: '<id>')
 
 unless res.ats_candidate.nil?
   # handle response
@@ -204,7 +387,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ats.create_ats_company(ats_company: Models::Shared::AtsCompany.new(), connection_id: '<id>')
+res = s.ats.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
+  created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
+  id: 'f4654bfd-c9b4-435c-b4c3-29fed835dd3d',
+  name: 'Gulgowski, Dibbert and Wilderman',
+  phone: '1-602-210-4548',
+  updated_at: DateTime.iso8601('2020-09-24T19:29:38.773Z'),
+  website_url: 'https://somber-substitution.com/',
+), connection_id: '<id>')
 
 unless res.ats_company.nil?
   # handle response
@@ -248,7 +438,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ats.create_ats_document(ats_document: Models::Shared::AtsDocument.new(), connection_id: '<id>')
+res = s.ats.create_ats_document(ats_document: Models::Shared::AtsDocument.new(
+  created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
+  document_url: 'https://vengeful-lashes.biz',
+  filename: 'bah_white_frantically.bz',
+  id: '5babecc0-0d7c-49b4-8a03-5185e0da1ad5',
+  type: Models::Shared::AtsDocumentType::RESUME,
+  updated_at: DateTime.iso8601('2022-11-28T22:08:41.684Z'),
+), connection_id: '<id>')
 
 unless res.ats_document.nil?
   # handle response
@@ -292,7 +489,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ats.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(), connection_id: '<id>')
+res = s.ats.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(
+  created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
+  end_at: DateTime.iso8601('2025-09-23T08:15:22.627Z'),
+  external_event_xref: '390d0224-05fb-4956-9a15-4e63e6337824',
+  id: 'f8397709-c564-4864-8bc8-d0866cfa4946',
+  location: '26596 Halle Trafficway',
+  start_at: DateTime.iso8601('2025-05-19T06:23:36.545Z'),
+  status: Models::Shared::AtsInterviewStatus::SCHEDULED,
+  updated_at: DateTime.iso8601('2026-02-04T00:34:33.533Z'),
+), connection_id: '<id>')
 
 unless res.ats_interview.nil?
   # handle response
@@ -336,7 +542,134 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(), connection_id: '<id>')
+res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
+  addresses: [
+    Models::Shared::AtsAddress.new(
+      address1: '98097 Carlo Trail',
+      city: 'South Judd',
+      country_code: 'US',
+      postal_code: '89776-0669',
+      region: 'Mississippi',
+      region_code: 'FL',
+    ),
+  ],
+  compensation: [
+    Models::Shared::AtsCompensation.new(
+      currency: 'AUD',
+      frequency: Models::Shared::Frequency::DAY,
+      max: 174_303.0,
+      min: 174_042.0,
+      type: Models::Shared::AtsCompensationType::BONUS,
+    ),
+    Models::Shared::AtsCompensation.new(
+      currency: 'MZN',
+      frequency: Models::Shared::Frequency::MONTH,
+      max: 171_171.0,
+      min: 151_975.0,
+      type: Models::Shared::AtsCompensationType::SALARY,
+    ),
+  ],
+  created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
+  description: 'Global',
+  employment_type: Models::Shared::EmploymentType::FREELANCE,
+  hiring_managers: [
+    Models::Shared::AtsReference.new(
+      id: 'fd9852e3-9035-4f42-beb3-bbf4e4022122',
+      name: 'Eloise Mueller PhD',
+    ),
+  ],
+  id: '4fe97b43-03ba-46a3-834a-c4c7fff4430d',
+  industry: 'Gorgeous Plastic Computer',
+  language_locale: 'en',
+  metadata: [
+    Models::Shared::AtsMetadata.new(
+      extra_data: {
+        "display_name": 'Custom Property',
+      },
+      format: Models::Shared::AtsMetadataFormat::TEXT,
+      id: 'd6f2f1b7-9f4a-4349-a0ad-9eee2a92202b',
+      namespace: 'custom',
+      slug: 'custom_property',
+      value: 'acceptus',
+    ),
+  ],
+  minimum_degree: 'Bachelor',
+  minimum_experience_years: 3.0,
+  name: 'Forward Brand Producer',
+  number_of_openings: 1.0,
+  openings: [
+    Models::Shared::AtsJobOpening.new(
+      close_reason: 'Admoveo trado textilis.',
+      opened_at: DateTime.iso8601('2026-05-09T12:52:58.568Z'),
+      status: Models::Shared::AtsJobOpeningStatus::OPEN,
+    ),
+  ],
+  postings: [
+    Models::Shared::AtsJobPosting.new(
+      address: Models::Shared::PropertyAtsJobPostingAddress.new(
+        address1: '8460 Nils Trace',
+        city: 'West Mervinburgh',
+        country_code: 'US',
+        postal_code: '14162',
+        region: 'Maine',
+        region_code: 'MO',
+      ),
+      created_at: DateTime.iso8601('2026-07-02T04:11:03.269Z'),
+      description: 'Deduco cultellus alii terebro depono thesaurus.',
+      id: 'f6101769-deb3-4721-978c-d205638870ee',
+      is_active: false,
+      location: '6788 Oxford Road',
+      name: 'Forward Security Orchestrator',
+      posting_url: 'https://ajar-metabolite.net/',
+      updated_at: DateTime.iso8601('2026-07-27T18:31:14.296Z'),
+    ),
+  ],
+  public_job_urls: [
+    'https://trustworthy-elver.info',
+    'https://parched-dash.info',
+  ],
+  questions: [
+    Models::Shared::AtsJobQuestion.new(
+      description: 'Trepide provident taceo rem.',
+      id: '289f27c0-311c-41e5-ad9d-cbe2097332c2',
+      options: [
+        'censura',
+        'tum',
+      ],
+      prompt: 'Spectaculum mollitia arcus compello.',
+      question: 'Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.',
+      required: true,
+      type: Models::Shared::AtsJobQuestionType::TEXT,
+    ),
+    Models::Shared::AtsJobQuestion.new(
+      id: 'b3a0b53b-38f3-4e8d-84b9-f413a900d79b',
+      options: [
+        'odit',
+      ],
+      prompt: 'Similique absque temeritas celebrer enim.',
+      question: 'Vinitor sodalitas desino sollers viduo volo.',
+      required: false,
+      type: Models::Shared::AtsJobQuestionType::TEXT,
+    ),
+    Models::Shared::AtsJobQuestion.new(
+      description: 'Abstergo possimus quibusdam deinde amoveo.',
+      id: '568be61d-060e-4d8c-a8ab-8a17cb25edf3',
+      options: [
+        'vallum',
+      ],
+      prompt: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
+      question: 'Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.',
+      required: false,
+      type: Models::Shared::AtsJobQuestionType::TEXT,
+    ),
+  ],
+  skills: [
+    'amiculum',
+    'crux',
+  ],
+  status: Models::Shared::AtsJobStatus::ARCHIVED,
+  updated_at: DateTime.iso8601('2026-01-31T18:18:56.677Z'),
+), connection_id: '<id>')
 
 unless res.ats_job.nil?
   # handle response
@@ -380,7 +713,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ats.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(), connection_id: '<id>')
+res = s.ats.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
+  comment: 'Maiores enim.',
+  created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
+  id: '23c9219c-ba4a-4423-8855-640ee6af29a4',
+  questions: [
+    Models::Shared::AtsScorecardQuestion.new(
+      description: 'Sulum textor eveniet facere vita.',
+      text: 'Aliquam.',
+    ),
+    Models::Shared::AtsScorecardQuestion.new(
+      answer: 'Decretum.',
+      description: 'Conatus cicuta doloremque statua bonus.',
+      text: 'Pecto vulpes libero vomer comburo.',
+    ),
+  ],
+  recommendation: Models::Shared::Recommendation::STRONG_YES,
+  updated_at: DateTime.iso8601('2023-05-27T11:09:27.385Z'),
+), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
   # handle response
@@ -1182,7 +1532,79 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsActivityRequest.new(
-  ats_activity: Models::Shared::AtsActivity.new(),
+  ats_activity: Models::Shared::AtsActivity.new(
+    bcc: [
+      Models::Shared::AtsEmail.new(
+        email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+        name: 'Rochelle Franey-Bechtelar',
+        type: Models::Shared::AtsEmailType::HOME,
+      ),
+    ],
+    cc: [
+      Models::Shared::AtsEmail.new(
+        email: 'Sasha24@hotmail.com',
+        name: 'Dr. Elbert Kuvalis',
+        type: Models::Shared::AtsEmailType::HOME,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Rosetta_Donnelly@gmail.com',
+        name: 'Ramon Daniel',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Kathryne_Jast@yahoo.com',
+        name: 'Christian Jacobson',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Eldred95@yahoo.com',
+        name: 'Edna Bogan',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+    ],
+    created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
+    description: 'Amplus.',
+    from: Models::Shared::PropertyAtsActivityFrom.new(
+      email: 'Norwood.Wiza47@yahoo.com',
+      name: 'Toby Grant',
+      type: Models::Shared::PropertyAtsActivityFromType::OTHER,
+    ),
+    id: '2f3c1896-db19-4bd1-9539-a61b24090f4a',
+    is_private: false,
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: '960dcbc4-4334-4f59-a1c1-83c7cb3aa8fd',
+        namespace: 'activity',
+        slug: 'acer',
+        value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+      ),
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: 'aea063e4-918f-47d0-a92c-2f591c00a211',
+        namespace: 'activity',
+        slug: 'tremo',
+        value: 'Amita delectus dicta temptatio utroque ex.',
+      ),
+    ],
+    sub_type: 'TASK',
+    title: 'Senior Interactions Manager',
+    to: [
+      Models::Shared::AtsEmail.new(
+        email: 'Sister91@hotmail.com',
+        name: 'Eddie Nienow PhD',
+        type: Models::Shared::AtsEmailType::WORK,
+      ),
+    ],
+    type: Models::Shared::AtsActivityType::TASK,
+    updated_at: DateTime.iso8601('2026-03-06T13:30:58.965Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1229,7 +1651,33 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsApplicationRequest.new(
-  ats_application: Models::Shared::AtsApplication.new(),
+  ats_application: Models::Shared::AtsApplication.new(
+    answers: [],
+    applied_at: DateTime.iso8601('2025-09-08T08:45:58.189Z'),
+    created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
+    hired_at: DateTime.iso8601('2026-04-14T14:30:49.417Z'),
+    id: 'eb46d7bf-0943-4468-afea-c17576f07cc7',
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+        namespace: 'application',
+        slug: 'despecto',
+        value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+      ),
+    ],
+    offers: [],
+    original_status: 'vomica',
+    original_substatus: 'allatus',
+    rejected_at: DateTime.iso8601('2026-09-08T19:47:42.893Z'),
+    rejected_reason: 'Cometes amplitudo videlicet talio.',
+    source: 'credo',
+    status: Models::Shared::AtsApplicationStatus::REVIEWING,
+    updated_at: DateTime.iso8601('2026-09-15T11:06:13.633Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1276,7 +1724,92 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsCandidateRequest.new(
-  ats_candidate: Models::Shared::AtsCandidate.new(),
+  ats_candidate: Models::Shared::AtsCandidate.new(
+    address: Models::Shared::PropertyAtsCandidateAddress.new(
+      address1: '802 Roberts Squares',
+      address2: 'Suite 550',
+      city: 'Lake Raeganside',
+      country_code: 'US',
+      postal_code: '44530-0054',
+      region: 'Tennessee',
+      region_code: 'NV',
+    ),
+    company_name: 'Ferry, Legros and Feest',
+    created_at: DateTime.iso8601('2023-10-16T05:42:56.049Z'),
+    education: [
+      Models::Shared::AtsCandidateEducation.new(
+        degree: 'mouser throughout',
+        end_at: DateTime.iso8601('1992-11-28T20:23:20.311Z'),
+        field_of_study: 'solutio',
+        institution: 'Heller - Lubowitz',
+        level: 'phd',
+        start_at: DateTime.iso8601('2001-03-26T08:12:11.510Z'),
+      ),
+    ],
+    emails: [
+      Models::Shared::AtsEmail.new(
+        email: 'Ardith.Beatty@hotmail.com',
+        name: 'Opal Lindgren',
+        type: Models::Shared::AtsEmailType::WORK,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Ardith_Beatty@gmail.com',
+        name: 'Kristi Nader',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+    ],
+    experiences: [
+      Models::Shared::AtsCandidateExperience.new(
+        company_name: 'Donnelly, Buckridge and Steuber',
+        end_at: DateTime.iso8601('1978-06-20T02:53:48.383Z'),
+        start_at: DateTime.iso8601('1980-02-06T17:16:53.798Z'),
+        title: 'Principal Brand Strategist',
+      ),
+    ],
+    first_name: 'Ardith',
+    id: 'a66b0873-97b0-4009-a114-7c1f2311142e',
+    image_url: 'https://loremflickr.com/40/3693?lock=5634712403880328',
+    job_ids: [],
+    last_name: 'Beatty',
+    link_urls: [
+      'https://sizzling-legislature.com',
+      'https://soupy-interchange.net',
+      'https://troubled-substitution.info',
+    ],
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: '8bbe7927-5ce4-48a1-8122-6a89c008d8c0',
+        namespace: 'custom',
+        slug: 'custom_field',
+        value: 'cariosus',
+      ),
+    ],
+    name: 'Ardith Beatty',
+    origin: Models::Shared::Origin::SOURCED,
+    skills: [
+      'vita',
+      'cohors',
+    ],
+    sources: [
+      'tactus',
+    ],
+    tags: [
+      'aliquid',
+    ],
+    telephones: [
+      Models::Shared::AtsTelephone.new(
+        telephone: '(779) 296-5994',
+        type: Models::Shared::AtsTelephoneType::HOME,
+      ),
+    ],
+    title: 'Principal Implementation Analyst',
+    updated_at: DateTime.iso8601('2024-04-22T21:06:14.186Z'),
+    web_url: 'https://expert-lender.name/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1323,7 +1856,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsCompanyRequest.new(
-  ats_company: Models::Shared::AtsCompany.new(),
+  ats_company: Models::Shared::AtsCompany.new(
+    created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
+    id: 'd2f6d36f-d09b-49ed-9fa5-cd949da19be5',
+    name: 'Gulgowski, Dibbert and Wilderman',
+    phone: '1-602-210-4548',
+    updated_at: DateTime.iso8601('2020-09-24T19:29:38.775Z'),
+    website_url: 'https://somber-substitution.com/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1370,7 +1910,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsDocumentRequest.new(
-  ats_document: Models::Shared::AtsDocument.new(),
+  ats_document: Models::Shared::AtsDocument.new(
+    created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
+    document_url: 'https://vengeful-lashes.biz',
+    filename: 'bah_white_frantically.bz',
+    id: '81a7e903-9f28-4422-bf9d-142f31bde9dc',
+    type: Models::Shared::AtsDocumentType::RESUME,
+    updated_at: DateTime.iso8601('2022-11-28T22:08:41.686Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1417,7 +1964,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsInterviewRequest.new(
-  ats_interview: Models::Shared::AtsInterview.new(),
+  ats_interview: Models::Shared::AtsInterview.new(
+    created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
+    end_at: DateTime.iso8601('2025-09-23T08:15:22.633Z'),
+    external_event_xref: '8017d6fe-816e-4f7b-b701-7caca02ef9e6',
+    id: '21ba277c-ab25-4651-97f3-2d0d887baf49',
+    location: '26596 Halle Trafficway',
+    start_at: DateTime.iso8601('2025-05-19T06:23:36.550Z'),
+    status: Models::Shared::AtsInterviewStatus::SCHEDULED,
+    updated_at: DateTime.iso8601('2026-02-04T00:34:33.539Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1464,7 +2020,134 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsJobRequest.new(
-  ats_job: Models::Shared::AtsJob.new(),
+  ats_job: Models::Shared::AtsJob.new(
+    addresses: [
+      Models::Shared::AtsAddress.new(
+        address1: '98097 Carlo Trail',
+        city: 'South Judd',
+        country_code: 'US',
+        postal_code: '89776-0669',
+        region: 'Mississippi',
+        region_code: 'FL',
+      ),
+    ],
+    compensation: [
+      Models::Shared::AtsCompensation.new(
+        currency: 'AUD',
+        frequency: Models::Shared::Frequency::DAY,
+        max: 174_303.0,
+        min: 174_042.0,
+        type: Models::Shared::AtsCompensationType::BONUS,
+      ),
+      Models::Shared::AtsCompensation.new(
+        currency: 'MZN',
+        frequency: Models::Shared::Frequency::MONTH,
+        max: 171_171.0,
+        min: 151_975.0,
+        type: Models::Shared::AtsCompensationType::SALARY,
+      ),
+    ],
+    created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
+    description: 'Global',
+    employment_type: Models::Shared::EmploymentType::FREELANCE,
+    hiring_managers: [
+      Models::Shared::AtsReference.new(
+        id: 'fd9852e3-9035-4f42-beb3-bbf4e4022122',
+        name: 'Eloise Mueller PhD',
+      ),
+    ],
+    id: '832964f2-380d-43a0-adcd-1336ef6bb2ca',
+    industry: 'Gorgeous Plastic Computer',
+    language_locale: 'en',
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: '22a11272-a503-4d76-a280-27c47e315ec5',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'acceptus',
+      ),
+    ],
+    minimum_degree: 'Bachelor',
+    minimum_experience_years: 3.0,
+    name: 'Forward Brand Producer',
+    number_of_openings: 1.0,
+    openings: [
+      Models::Shared::AtsJobOpening.new(
+        close_reason: 'Admoveo trado textilis.',
+        opened_at: DateTime.iso8601('2026-05-09T12:52:58.604Z'),
+        status: Models::Shared::AtsJobOpeningStatus::OPEN,
+      ),
+    ],
+    postings: [
+      Models::Shared::AtsJobPosting.new(
+        address: Models::Shared::PropertyAtsJobPostingAddress.new(
+          address1: '8460 Nils Trace',
+          city: 'West Mervinburgh',
+          country_code: 'US',
+          postal_code: '14162',
+          region: 'Maine',
+          region_code: 'MO',
+        ),
+        created_at: DateTime.iso8601('2026-07-02T04:11:03.306Z'),
+        description: 'Deduco cultellus alii terebro depono thesaurus.',
+        id: 'f6101769-deb3-4721-978c-d205638870ee',
+        is_active: false,
+        location: '6788 Oxford Road',
+        name: 'Forward Security Orchestrator',
+        posting_url: 'https://ajar-metabolite.net/',
+        updated_at: DateTime.iso8601('2026-07-27T18:31:14.334Z'),
+      ),
+    ],
+    public_job_urls: [
+      'https://trustworthy-elver.info',
+      'https://parched-dash.info',
+    ],
+    questions: [
+      Models::Shared::AtsJobQuestion.new(
+        description: 'Trepide provident taceo rem.',
+        id: '289f27c0-311c-41e5-ad9d-cbe2097332c2',
+        options: [
+          'censura',
+          'tum',
+        ],
+        prompt: 'Spectaculum mollitia arcus compello.',
+        question: 'Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.',
+        required: true,
+        type: Models::Shared::AtsJobQuestionType::TEXT,
+      ),
+      Models::Shared::AtsJobQuestion.new(
+        id: 'b3a0b53b-38f3-4e8d-84b9-f413a900d79b',
+        options: [
+          'odit',
+        ],
+        prompt: 'Similique absque temeritas celebrer enim.',
+        question: 'Vinitor sodalitas desino sollers viduo volo.',
+        required: false,
+        type: Models::Shared::AtsJobQuestionType::TEXT,
+      ),
+      Models::Shared::AtsJobQuestion.new(
+        description: 'Abstergo possimus quibusdam deinde amoveo.',
+        id: '568be61d-060e-4d8c-a8ab-8a17cb25edf3',
+        options: [
+          'vallum',
+        ],
+        prompt: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
+        question: 'Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.',
+        required: false,
+        type: Models::Shared::AtsJobQuestionType::TEXT,
+      ),
+    ],
+    skills: [
+      'amiculum',
+      'crux',
+    ],
+    status: Models::Shared::AtsJobStatus::ARCHIVED,
+    updated_at: DateTime.iso8601('2026-01-31T18:18:56.709Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1511,7 +2194,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsScorecardRequest.new(
-  ats_scorecard: Models::Shared::AtsScorecard.new(),
+  ats_scorecard: Models::Shared::AtsScorecard.new(
+    comment: 'Maiores enim.',
+    created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
+    id: '0b5d608f-b399-4baa-bcc0-d82844c83305',
+    questions: [
+      Models::Shared::AtsScorecardQuestion.new(
+        description: 'Sulum textor eveniet facere vita.',
+        text: 'Aliquam.',
+      ),
+      Models::Shared::AtsScorecardQuestion.new(
+        answer: 'Decretum.',
+        description: 'Conatus cicuta doloremque statua bonus.',
+        text: 'Pecto vulpes libero vomer comburo.',
+      ),
+    ],
+    recommendation: Models::Shared::Recommendation::STRONG_YES,
+    updated_at: DateTime.iso8601('2023-05-27T11:09:27.388Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1894,7 +2594,79 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsActivityRequest.new(
-  ats_activity: Models::Shared::AtsActivity.new(),
+  ats_activity: Models::Shared::AtsActivity.new(
+    bcc: [
+      Models::Shared::AtsEmail.new(
+        email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+        name: 'Rochelle Franey-Bechtelar',
+        type: Models::Shared::AtsEmailType::HOME,
+      ),
+    ],
+    cc: [
+      Models::Shared::AtsEmail.new(
+        email: 'Sasha24@hotmail.com',
+        name: 'Dr. Elbert Kuvalis',
+        type: Models::Shared::AtsEmailType::HOME,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Rosetta_Donnelly@gmail.com',
+        name: 'Ramon Daniel',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Kathryne_Jast@yahoo.com',
+        name: 'Christian Jacobson',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Eldred95@yahoo.com',
+        name: 'Edna Bogan',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+    ],
+    created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
+    description: 'Amplus.',
+    from: Models::Shared::PropertyAtsActivityFrom.new(
+      email: 'Norwood.Wiza47@yahoo.com',
+      name: 'Toby Grant',
+      type: Models::Shared::PropertyAtsActivityFromType::OTHER,
+    ),
+    id: '2f3c1896-db19-4bd1-9539-a61b24090f4a',
+    is_private: false,
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: '960dcbc4-4334-4f59-a1c1-83c7cb3aa8fd',
+        namespace: 'activity',
+        slug: 'acer',
+        value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+      ),
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: 'aea063e4-918f-47d0-a92c-2f591c00a211',
+        namespace: 'activity',
+        slug: 'tremo',
+        value: 'Amita delectus dicta temptatio utroque ex.',
+      ),
+    ],
+    sub_type: 'TASK',
+    title: 'Senior Interactions Manager',
+    to: [
+      Models::Shared::AtsEmail.new(
+        email: 'Sister91@hotmail.com',
+        name: 'Eddie Nienow PhD',
+        type: Models::Shared::AtsEmailType::WORK,
+      ),
+    ],
+    type: Models::Shared::AtsActivityType::TASK,
+    updated_at: DateTime.iso8601('2026-03-06T13:30:58.965Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1941,7 +2713,33 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsApplicationRequest.new(
-  ats_application: Models::Shared::AtsApplication.new(),
+  ats_application: Models::Shared::AtsApplication.new(
+    answers: [],
+    applied_at: DateTime.iso8601('2025-09-08T08:45:58.189Z'),
+    created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
+    hired_at: DateTime.iso8601('2026-04-14T14:30:49.417Z'),
+    id: 'eb46d7bf-0943-4468-afea-c17576f07cc7',
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+        namespace: 'application',
+        slug: 'despecto',
+        value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+      ),
+    ],
+    offers: [],
+    original_status: 'vomica',
+    original_substatus: 'allatus',
+    rejected_at: DateTime.iso8601('2026-09-08T19:47:42.893Z'),
+    rejected_reason: 'Cometes amplitudo videlicet talio.',
+    source: 'credo',
+    status: Models::Shared::AtsApplicationStatus::REVIEWING,
+    updated_at: DateTime.iso8601('2026-09-15T11:06:13.633Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1988,7 +2786,92 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsCandidateRequest.new(
-  ats_candidate: Models::Shared::AtsCandidate.new(),
+  ats_candidate: Models::Shared::AtsCandidate.new(
+    address: Models::Shared::PropertyAtsCandidateAddress.new(
+      address1: '802 Roberts Squares',
+      address2: 'Suite 550',
+      city: 'Lake Raeganside',
+      country_code: 'US',
+      postal_code: '44530-0054',
+      region: 'Tennessee',
+      region_code: 'NV',
+    ),
+    company_name: 'Ferry, Legros and Feest',
+    created_at: DateTime.iso8601('2023-10-16T05:42:56.049Z'),
+    education: [
+      Models::Shared::AtsCandidateEducation.new(
+        degree: 'mouser throughout',
+        end_at: DateTime.iso8601('1992-11-28T20:23:20.311Z'),
+        field_of_study: 'solutio',
+        institution: 'Heller - Lubowitz',
+        level: 'phd',
+        start_at: DateTime.iso8601('2001-03-26T08:12:11.510Z'),
+      ),
+    ],
+    emails: [
+      Models::Shared::AtsEmail.new(
+        email: 'Ardith.Beatty@hotmail.com',
+        name: 'Opal Lindgren',
+        type: Models::Shared::AtsEmailType::WORK,
+      ),
+      Models::Shared::AtsEmail.new(
+        email: 'Ardith_Beatty@gmail.com',
+        name: 'Kristi Nader',
+        type: Models::Shared::AtsEmailType::OTHER,
+      ),
+    ],
+    experiences: [
+      Models::Shared::AtsCandidateExperience.new(
+        company_name: 'Donnelly, Buckridge and Steuber',
+        end_at: DateTime.iso8601('1978-06-20T02:53:48.383Z'),
+        start_at: DateTime.iso8601('1980-02-06T17:16:53.798Z'),
+        title: 'Principal Brand Strategist',
+      ),
+    ],
+    first_name: 'Ardith',
+    id: 'a66b0873-97b0-4009-a114-7c1f2311142e',
+    image_url: 'https://loremflickr.com/40/3693?lock=5634712403880328',
+    job_ids: [],
+    last_name: 'Beatty',
+    link_urls: [
+      'https://sizzling-legislature.com',
+      'https://soupy-interchange.net',
+      'https://troubled-substitution.info',
+    ],
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: '8bbe7927-5ce4-48a1-8122-6a89c008d8c0',
+        namespace: 'custom',
+        slug: 'custom_field',
+        value: 'cariosus',
+      ),
+    ],
+    name: 'Ardith Beatty',
+    origin: Models::Shared::Origin::SOURCED,
+    skills: [
+      'vita',
+      'cohors',
+    ],
+    sources: [
+      'tactus',
+    ],
+    tags: [
+      'aliquid',
+    ],
+    telephones: [
+      Models::Shared::AtsTelephone.new(
+        telephone: '(779) 296-5994',
+        type: Models::Shared::AtsTelephoneType::HOME,
+      ),
+    ],
+    title: 'Principal Implementation Analyst',
+    updated_at: DateTime.iso8601('2024-04-22T21:06:14.186Z'),
+    web_url: 'https://expert-lender.name/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2035,7 +2918,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsCompanyRequest.new(
-  ats_company: Models::Shared::AtsCompany.new(),
+  ats_company: Models::Shared::AtsCompany.new(
+    created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
+    id: 'd2f6d36f-d09b-49ed-9fa5-cd949da19be5',
+    name: 'Gulgowski, Dibbert and Wilderman',
+    phone: '1-602-210-4548',
+    updated_at: DateTime.iso8601('2020-09-24T19:29:38.775Z'),
+    website_url: 'https://somber-substitution.com/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2082,7 +2972,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsDocumentRequest.new(
-  ats_document: Models::Shared::AtsDocument.new(),
+  ats_document: Models::Shared::AtsDocument.new(
+    created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
+    document_url: 'https://vengeful-lashes.biz',
+    filename: 'bah_white_frantically.bz',
+    id: '81a7e903-9f28-4422-bf9d-142f31bde9dc',
+    type: Models::Shared::AtsDocumentType::RESUME,
+    updated_at: DateTime.iso8601('2022-11-28T22:08:41.686Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2129,7 +3026,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsInterviewRequest.new(
-  ats_interview: Models::Shared::AtsInterview.new(),
+  ats_interview: Models::Shared::AtsInterview.new(
+    created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
+    end_at: DateTime.iso8601('2025-09-23T08:15:22.633Z'),
+    external_event_xref: '8017d6fe-816e-4f7b-b701-7caca02ef9e6',
+    id: '21ba277c-ab25-4651-97f3-2d0d887baf49',
+    location: '26596 Halle Trafficway',
+    start_at: DateTime.iso8601('2025-05-19T06:23:36.550Z'),
+    status: Models::Shared::AtsInterviewStatus::SCHEDULED,
+    updated_at: DateTime.iso8601('2026-02-04T00:34:33.539Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2176,7 +3082,134 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsJobRequest.new(
-  ats_job: Models::Shared::AtsJob.new(),
+  ats_job: Models::Shared::AtsJob.new(
+    addresses: [
+      Models::Shared::AtsAddress.new(
+        address1: '98097 Carlo Trail',
+        city: 'South Judd',
+        country_code: 'US',
+        postal_code: '89776-0669',
+        region: 'Mississippi',
+        region_code: 'FL',
+      ),
+    ],
+    compensation: [
+      Models::Shared::AtsCompensation.new(
+        currency: 'AUD',
+        frequency: Models::Shared::Frequency::DAY,
+        max: 174_303.0,
+        min: 174_042.0,
+        type: Models::Shared::AtsCompensationType::BONUS,
+      ),
+      Models::Shared::AtsCompensation.new(
+        currency: 'MZN',
+        frequency: Models::Shared::Frequency::MONTH,
+        max: 171_171.0,
+        min: 151_975.0,
+        type: Models::Shared::AtsCompensationType::SALARY,
+      ),
+    ],
+    created_at: DateTime.iso8601('2023-06-16T12:51:44.518Z'),
+    description: 'Global',
+    employment_type: Models::Shared::EmploymentType::FREELANCE,
+    hiring_managers: [
+      Models::Shared::AtsReference.new(
+        id: 'fd9852e3-9035-4f42-beb3-bbf4e4022122',
+        name: 'Eloise Mueller PhD',
+      ),
+    ],
+    id: '832964f2-380d-43a0-adcd-1336ef6bb2ca',
+    industry: 'Gorgeous Plastic Computer',
+    language_locale: 'en',
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: '22a11272-a503-4d76-a280-27c47e315ec5',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'acceptus',
+      ),
+    ],
+    minimum_degree: 'Bachelor',
+    minimum_experience_years: 3.0,
+    name: 'Forward Brand Producer',
+    number_of_openings: 1.0,
+    openings: [
+      Models::Shared::AtsJobOpening.new(
+        close_reason: 'Admoveo trado textilis.',
+        opened_at: DateTime.iso8601('2026-05-09T12:52:58.604Z'),
+        status: Models::Shared::AtsJobOpeningStatus::OPEN,
+      ),
+    ],
+    postings: [
+      Models::Shared::AtsJobPosting.new(
+        address: Models::Shared::PropertyAtsJobPostingAddress.new(
+          address1: '8460 Nils Trace',
+          city: 'West Mervinburgh',
+          country_code: 'US',
+          postal_code: '14162',
+          region: 'Maine',
+          region_code: 'MO',
+        ),
+        created_at: DateTime.iso8601('2026-07-02T04:11:03.306Z'),
+        description: 'Deduco cultellus alii terebro depono thesaurus.',
+        id: 'f6101769-deb3-4721-978c-d205638870ee',
+        is_active: false,
+        location: '6788 Oxford Road',
+        name: 'Forward Security Orchestrator',
+        posting_url: 'https://ajar-metabolite.net/',
+        updated_at: DateTime.iso8601('2026-07-27T18:31:14.334Z'),
+      ),
+    ],
+    public_job_urls: [
+      'https://trustworthy-elver.info',
+      'https://parched-dash.info',
+    ],
+    questions: [
+      Models::Shared::AtsJobQuestion.new(
+        description: 'Trepide provident taceo rem.',
+        id: '289f27c0-311c-41e5-ad9d-cbe2097332c2',
+        options: [
+          'censura',
+          'tum',
+        ],
+        prompt: 'Spectaculum mollitia arcus compello.',
+        question: 'Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.',
+        required: true,
+        type: Models::Shared::AtsJobQuestionType::TEXT,
+      ),
+      Models::Shared::AtsJobQuestion.new(
+        id: 'b3a0b53b-38f3-4e8d-84b9-f413a900d79b',
+        options: [
+          'odit',
+        ],
+        prompt: 'Similique absque temeritas celebrer enim.',
+        question: 'Vinitor sodalitas desino sollers viduo volo.',
+        required: false,
+        type: Models::Shared::AtsJobQuestionType::TEXT,
+      ),
+      Models::Shared::AtsJobQuestion.new(
+        description: 'Abstergo possimus quibusdam deinde amoveo.',
+        id: '568be61d-060e-4d8c-a8ab-8a17cb25edf3',
+        options: [
+          'vallum',
+        ],
+        prompt: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
+        question: 'Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.',
+        required: false,
+        type: Models::Shared::AtsJobQuestionType::TEXT,
+      ),
+    ],
+    skills: [
+      'amiculum',
+      'crux',
+    ],
+    status: Models::Shared::AtsJobStatus::ARCHIVED,
+    updated_at: DateTime.iso8601('2026-01-31T18:18:56.709Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -2223,7 +3256,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsScorecardRequest.new(
-  ats_scorecard: Models::Shared::AtsScorecard.new(),
+  ats_scorecard: Models::Shared::AtsScorecard.new(
+    comment: 'Maiores enim.',
+    created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
+    id: '0b5d608f-b399-4baa-bcc0-d82844c83305',
+    questions: [
+      Models::Shared::AtsScorecardQuestion.new(
+        description: 'Sulum textor eveniet facere vita.',
+        text: 'Aliquam.',
+      ),
+      Models::Shared::AtsScorecardQuestion.new(
+        answer: 'Decretum.',
+        description: 'Conatus cicuta doloremque statua bonus.',
+        text: 'Pecto vulpes libero vomer comburo.',
+      ),
+    ],
+    recommendation: Models::Shared::Recommendation::STRONG_YES,
+    updated_at: DateTime.iso8601('2023-05-27T11:09:27.388Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

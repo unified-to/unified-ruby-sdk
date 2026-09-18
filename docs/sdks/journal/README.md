@@ -29,7 +29,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.journal.create_accounting_journal(accounting_journal: Models::Shared::AccountingJournal.new(), connection_id: '<id>')
+res = s.journal.create_accounting_journal(accounting_journal: Models::Shared::AccountingJournal.new(
+  attachments: [],
+  category_ids: [],
+  created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
+  currency: 'FKP',
+  description: 'Calco constans adipisci.',
+  id: 'cd6a5a11-41e2-4f81-b8e6-0798cb435201',
+  posted_at: DateTime.iso8601('2023-10-19T01:50:04.630Z'),
+  reference: 'ullam',
+  source: 'crustulum',
+  tax_amount: 78_672.0,
+  updated_at: DateTime.iso8601('2022-01-01T11:07:55.876Z'),
+), connection_id: '<id>')
 
 unless res.accounting_journal.nil?
   # handle response
@@ -163,7 +175,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingJournalRequest.new(
-  accounting_journal: Models::Shared::AccountingJournal.new(),
+  accounting_journal: Models::Shared::AccountingJournal.new(
+    attachments: [],
+    category_ids: [],
+    created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
+    currency: 'FKP',
+    description: 'Calco constans adipisci.',
+    id: 'd1210c72-7799-4a3f-851d-ea55c72c5f37',
+    posted_at: DateTime.iso8601('2023-10-19T01:50:04.646Z'),
+    reference: 'ullam',
+    source: 'crustulum',
+    tax_amount: 78_672.0,
+    updated_at: DateTime.iso8601('2022-01-01T11:07:55.884Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +276,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingJournalRequest.new(
-  accounting_journal: Models::Shared::AccountingJournal.new(),
+  accounting_journal: Models::Shared::AccountingJournal.new(
+    attachments: [],
+    category_ids: [],
+    created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
+    currency: 'FKP',
+    description: 'Calco constans adipisci.',
+    id: 'd1210c72-7799-4a3f-851d-ea55c72c5f37',
+    posted_at: DateTime.iso8601('2023-10-19T01:50:04.646Z'),
+    reference: 'ullam',
+    source: 'crustulum',
+    tax_amount: 78_672.0,
+    updated_at: DateTime.iso8601('2022-01-01T11:07:55.884Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

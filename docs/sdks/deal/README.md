@@ -29,7 +29,52 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(), connection_id: '<id>')
+res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
+  amount: 98_162.0,
+  closed_at: DateTime.iso8601('2024-03-03T13:46:07.013Z'),
+  closing_at: DateTime.iso8601('2025-08-09T21:44:29.595Z'),
+  created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
+  currency: 'IQD',
+  description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
+  id: '971abce9-768c-4862-821a-fd6a54ed79da',
+  metadata: [
+    Models::Shared::CrmMetadata.new(
+      extra_data: {
+        "display_name": 'Custom Property',
+      },
+      format: Models::Shared::CrmMetadataFormat::TEXT,
+      id: '3a5f8d7c-d860-4f4c-90fa-1c632e332df4',
+      namespace: 'custom',
+      slug: 'custom_property',
+      value: 'conatus',
+    ),
+  ],
+  name: 'Frozen Silk Chicken',
+  pipelines: [
+    Models::Shared::CrmReference.new(
+      id: '7f80b0d8-af8e-4eda-9b6e-6b1ab87fc0a0',
+      name: 'trans',
+    ),
+  ],
+  probability: 65.0,
+  source: 'cubo',
+  stages: [
+    Models::Shared::CrmReference.new(
+      id: '15fdf250-99d4-475a-99b3-7e82a8b1b11d',
+      name: 'tubineus',
+    ),
+    Models::Shared::CrmReference.new(
+      id: '6db47fc1-c86e-41b9-a466-911fd8faf366',
+      name: 'adfectus',
+    ),
+  ],
+  tags: [
+    'causa',
+    'suus',
+  ],
+  updated_at: DateTime.iso8601('2024-09-29T03:10:23.974Z'),
+  won_reason: 'Usque libero soleo.',
+), connection_id: '<id>')
 
 unless res.crm_deal.nil?
   # handle response
@@ -163,7 +208,52 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCrmDealRequest.new(
-  crm_deal: Models::Shared::CrmDeal.new(),
+  crm_deal: Models::Shared::CrmDeal.new(
+    amount: 98_162.0,
+    closed_at: DateTime.iso8601('2024-03-03T13:46:07.017Z'),
+    closing_at: DateTime.iso8601('2025-08-09T21:44:29.609Z'),
+    created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
+    currency: 'IQD',
+    description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
+    id: '82f07a5c-a4f5-4a50-bae3-887b060ed6f4',
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '29c57399-d6a5-40d8-8912-ce1714027425',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'conatus',
+      ),
+    ],
+    name: 'Frozen Silk Chicken',
+    pipelines: [
+      Models::Shared::CrmReference.new(
+        id: 'f035fcf2-e4f7-499f-b52c-f98892f40d17',
+        name: 'trans',
+      ),
+    ],
+    probability: 65.0,
+    source: 'cubo',
+    stages: [
+      Models::Shared::CrmReference.new(
+        id: '3b8e2f9d-235a-4731-a99b-deab0b35ed19',
+        name: 'tubineus',
+      ),
+      Models::Shared::CrmReference.new(
+        id: '04ae0756-6eb6-4d4f-a5c3-09b4e433dc8b',
+        name: 'adfectus',
+      ),
+    ],
+    tags: [
+      'causa',
+      'suus',
+    ],
+    updated_at: DateTime.iso8601('2024-09-29T03:10:23.982Z'),
+    won_reason: 'Usque libero soleo.',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +342,52 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCrmDealRequest.new(
-  crm_deal: Models::Shared::CrmDeal.new(),
+  crm_deal: Models::Shared::CrmDeal.new(
+    amount: 98_162.0,
+    closed_at: DateTime.iso8601('2024-03-03T13:46:07.017Z'),
+    closing_at: DateTime.iso8601('2025-08-09T21:44:29.609Z'),
+    created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
+    currency: 'IQD',
+    description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
+    id: '82f07a5c-a4f5-4a50-bae3-887b060ed6f4',
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '29c57399-d6a5-40d8-8912-ce1714027425',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'conatus',
+      ),
+    ],
+    name: 'Frozen Silk Chicken',
+    pipelines: [
+      Models::Shared::CrmReference.new(
+        id: 'f035fcf2-e4f7-499f-b52c-f98892f40d17',
+        name: 'trans',
+      ),
+    ],
+    probability: 65.0,
+    source: 'cubo',
+    stages: [
+      Models::Shared::CrmReference.new(
+        id: '3b8e2f9d-235a-4731-a99b-deab0b35ed19',
+        name: 'tubineus',
+      ),
+      Models::Shared::CrmReference.new(
+        id: '04ae0756-6eb6-4d4f-a5c3-09b4e433dc8b',
+        name: 'adfectus',
+      ),
+    ],
+    tags: [
+      'causa',
+      'suus',
+    ],
+    updated_at: DateTime.iso8601('2024-09-29T03:10:23.982Z'),
+    won_reason: 'Usque libero soleo.',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

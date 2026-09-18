@@ -42,7 +42,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.create_martech_campaign(marketing_campaign: Models::Shared::MarketingCampaign.new(), connection_id: '<id>')
+res = s.martech.create_martech_campaign(marketing_campaign: Models::Shared::MarketingCampaign.new(
+  created_at: DateTime.iso8601('2023-08-01T22:29:12.121Z'),
+  from_email: 'Nick.Beahan@hotmail.com',
+  from_name: 'Javier Rempel',
+  id: 'f55d8e92-4bfd-487f-8c76-04b61c5dd34e',
+  list_ids: [
+    'bde5cab9-cf2f-4ed5-adab-b33c88bac5af',
+  ],
+  name: 'Consequatur atqui sustineo.',
+  preview_text: 'Bellicus tener cinis causa cavus toties.',
+  reply_to_email: 'Antwan.Abshire@hotmail.com',
+  send_at: DateTime.iso8601('2023-03-28T12:33:25.052Z'),
+  status: Models::Shared::MarketingCampaignStatus::SENT,
+  subject_line: 'Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.',
+  type: 'plaintext',
+  updated_at: DateTime.iso8601('2023-12-17T22:11:31.702Z'),
+), connection_id: '<id>')
 
 unless res.marketing_campaign.nil?
   # handle response
@@ -86,7 +102,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.create_martech_list(marketing_list: Models::Shared::MarketingList.new(), connection_id: '<id>')
+res = s.martech.create_martech_list(marketing_list: Models::Shared::MarketingList.new(
+  address: Models::Shared::PropertyMarketingListAddress.new(
+    address1: '922 Elmore Manor',
+    address2: 'Suite 925',
+    city: 'Deerfield Beach',
+    country: 'Bahrain',
+    postal_code: '30765-6471',
+    region: 'FL',
+  ),
+  created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
+  description: 'Currus.',
+  id: 'bb442904-2817-43f0-9c39-171b763ceaba',
+  is_active: true,
+  language: 'it',
+  name: 'Annette Nolan',
+  sender_company: 'Hickle - Homenick',
+  sender_email: 'Matt_Steuber@hotmail.com',
+  sender_name: 'Salvatore Roob',
+  sender_phone: '896-328-1153 x4957',
+  subject: 'Tenetur thymum circumvenio triumphus celo.',
+  updated_at: DateTime.iso8601('2022-08-30T12:21:32.932Z'),
+), connection_id: '<id>')
 
 unless res.marketing_list.nil?
   # handle response
@@ -130,7 +167,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.martech.create_martech_member(marketing_member: Models::Shared::MarketingMember.new(), connection_id: '<id>')
+res = s.martech.create_martech_member(marketing_member: Models::Shared::MarketingMember.new(
+  company: 'Miller - Franecki',
+  created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
+  emails: [
+    Models::Shared::MarketingEmail.new(
+      email: 'Thalia.Abernathy61@gmail.com',
+      type: Models::Shared::MarketingEmailType::HOME,
+    ),
+    Models::Shared::MarketingEmail.new(
+      email: 'Maymie59@hotmail.com',
+      type: Models::Shared::MarketingEmailType::HOME,
+    ),
+    Models::Shared::MarketingEmail.new(
+      email: 'Coty27@hotmail.com',
+      type: Models::Shared::MarketingEmailType::WORK,
+    ),
+  ],
+  first_name: 'Jude',
+  id: '8fad607b-06a8-47de-9ead-622379e73069',
+  last_name: 'Leffler',
+  name: 'Jude Leffler',
+  status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
+  tags: [
+    'vinco',
+    'ceno',
+  ],
+  updated_at: DateTime.iso8601('2025-06-15T05:04:22.825Z'),
+), connection_id: '<id>')
 
 unless res.marketing_member.nil?
   # handle response
@@ -487,7 +551,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchMartechCampaignRequest.new(
-  marketing_campaign: Models::Shared::MarketingCampaign.new(),
+  marketing_campaign: Models::Shared::MarketingCampaign.new(
+    created_at: DateTime.iso8601('2023-08-01T22:29:12.121Z'),
+    from_email: 'Nick.Beahan@hotmail.com',
+    from_name: 'Javier Rempel',
+    id: '688597c4-916c-4da5-88d9-7ce364e7aac0',
+    list_ids: [
+      'bde5cab9-cf2f-4ed5-adab-b33c88bac5af',
+    ],
+    name: 'Consequatur atqui sustineo.',
+    preview_text: 'Bellicus tener cinis causa cavus toties.',
+    reply_to_email: 'Antwan.Abshire@hotmail.com',
+    send_at: DateTime.iso8601('2023-03-28T12:33:25.052Z'),
+    status: Models::Shared::MarketingCampaignStatus::SENT,
+    subject_line: 'Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.',
+    type: 'plaintext',
+    updated_at: DateTime.iso8601('2023-12-17T22:11:31.702Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -534,7 +614,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchMartechListRequest.new(
-  marketing_list: Models::Shared::MarketingList.new(),
+  marketing_list: Models::Shared::MarketingList.new(
+    address: Models::Shared::PropertyMarketingListAddress.new(
+      address1: '922 Elmore Manor',
+      address2: 'Suite 925',
+      city: 'Deerfield Beach',
+      country: 'Bahrain',
+      postal_code: '30765-6471',
+      region: 'FL',
+    ),
+    created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
+    description: 'Currus.',
+    id: 'd907dbd5-8f6e-444f-9b5e-5a7b02ad2b60',
+    is_active: true,
+    language: 'it',
+    name: 'Annette Nolan',
+    sender_company: 'Hickle - Homenick',
+    sender_email: 'Matt_Steuber@hotmail.com',
+    sender_name: 'Salvatore Roob',
+    sender_phone: '896-328-1153 x4957',
+    subject: 'Tenetur thymum circumvenio triumphus celo.',
+    updated_at: DateTime.iso8601('2022-08-30T12:21:32.937Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -581,7 +682,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchMartechMemberRequest.new(
-  marketing_member: Models::Shared::MarketingMember.new(),
+  marketing_member: Models::Shared::MarketingMember.new(
+    company: 'Miller - Franecki',
+    created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
+    emails: [
+      Models::Shared::MarketingEmail.new(
+        email: 'Thalia.Abernathy61@gmail.com',
+        type: Models::Shared::MarketingEmailType::HOME,
+      ),
+      Models::Shared::MarketingEmail.new(
+        email: 'Maymie59@hotmail.com',
+        type: Models::Shared::MarketingEmailType::HOME,
+      ),
+      Models::Shared::MarketingEmail.new(
+        email: 'Coty27@hotmail.com',
+        type: Models::Shared::MarketingEmailType::WORK,
+      ),
+    ],
+    first_name: 'Jude',
+    id: '23819218-e541-48f2-b90a-259cc18ed48a',
+    last_name: 'Leffler',
+    name: 'Jude Leffler',
+    status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
+    tags: [
+      'vinco',
+      'ceno',
+    ],
+    updated_at: DateTime.iso8601('2025-06-15T05:04:22.830Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -754,7 +882,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateMartechCampaignRequest.new(
-  marketing_campaign: Models::Shared::MarketingCampaign.new(),
+  marketing_campaign: Models::Shared::MarketingCampaign.new(
+    created_at: DateTime.iso8601('2023-08-01T22:29:12.121Z'),
+    from_email: 'Nick.Beahan@hotmail.com',
+    from_name: 'Javier Rempel',
+    id: '688597c4-916c-4da5-88d9-7ce364e7aac0',
+    list_ids: [
+      'bde5cab9-cf2f-4ed5-adab-b33c88bac5af',
+    ],
+    name: 'Consequatur atqui sustineo.',
+    preview_text: 'Bellicus tener cinis causa cavus toties.',
+    reply_to_email: 'Antwan.Abshire@hotmail.com',
+    send_at: DateTime.iso8601('2023-03-28T12:33:25.052Z'),
+    status: Models::Shared::MarketingCampaignStatus::SENT,
+    subject_line: 'Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.',
+    type: 'plaintext',
+    updated_at: DateTime.iso8601('2023-12-17T22:11:31.702Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -801,7 +945,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateMartechListRequest.new(
-  marketing_list: Models::Shared::MarketingList.new(),
+  marketing_list: Models::Shared::MarketingList.new(
+    address: Models::Shared::PropertyMarketingListAddress.new(
+      address1: '922 Elmore Manor',
+      address2: 'Suite 925',
+      city: 'Deerfield Beach',
+      country: 'Bahrain',
+      postal_code: '30765-6471',
+      region: 'FL',
+    ),
+    created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
+    description: 'Currus.',
+    id: 'd907dbd5-8f6e-444f-9b5e-5a7b02ad2b60',
+    is_active: true,
+    language: 'it',
+    name: 'Annette Nolan',
+    sender_company: 'Hickle - Homenick',
+    sender_email: 'Matt_Steuber@hotmail.com',
+    sender_name: 'Salvatore Roob',
+    sender_phone: '896-328-1153 x4957',
+    subject: 'Tenetur thymum circumvenio triumphus celo.',
+    updated_at: DateTime.iso8601('2022-08-30T12:21:32.937Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -848,7 +1013,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateMartechMemberRequest.new(
-  marketing_member: Models::Shared::MarketingMember.new(),
+  marketing_member: Models::Shared::MarketingMember.new(
+    company: 'Miller - Franecki',
+    created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
+    emails: [
+      Models::Shared::MarketingEmail.new(
+        email: 'Thalia.Abernathy61@gmail.com',
+        type: Models::Shared::MarketingEmailType::HOME,
+      ),
+      Models::Shared::MarketingEmail.new(
+        email: 'Maymie59@hotmail.com',
+        type: Models::Shared::MarketingEmailType::HOME,
+      ),
+      Models::Shared::MarketingEmail.new(
+        email: 'Coty27@hotmail.com',
+        type: Models::Shared::MarketingEmailType::WORK,
+      ),
+    ],
+    first_name: 'Jude',
+    id: '23819218-e541-48f2-b90a-259cc18ed48a',
+    last_name: 'Leffler',
+    name: 'Jude Leffler',
+    status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
+    tags: [
+      'vinco',
+      'ceno',
+    ],
+    updated_at: DateTime.iso8601('2025-06-15T05:04:22.830Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -29,7 +29,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.creative.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(), connection_id: '<id>')
+res = s.creative.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
+  created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
+  id: 'df77bb86-3327-4bb6-9905-4084ccd030e0',
+  labels: [
+    'coma',
+    'accedo',
+    'termes',
+  ],
+  name: 'Brekke, Bradtke and Robel',
+  status: Models::Shared::AdsCreativeStatus::PAUSED,
+  updated_at: DateTime.iso8601('2021-06-21T01:00:47.012Z'),
+), connection_id: '<id>')
 
 unless res.ads_creative.nil?
   # handle response
@@ -163,7 +174,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAdsCreativeRequest.new(
-  ads_creative: Models::Shared::AdsCreative.new(),
+  ads_creative: Models::Shared::AdsCreative.new(
+    created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
+    id: '7ad8c655-b945-4e86-a60b-81b992afba31',
+    labels: [
+      'coma',
+      'accedo',
+      'termes',
+    ],
+    name: 'Brekke, Bradtke and Robel',
+    status: Models::Shared::AdsCreativeStatus::PAUSED,
+    updated_at: DateTime.iso8601('2021-06-21T01:00:47.017Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +274,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAdsCreativeRequest.new(
-  ads_creative: Models::Shared::AdsCreative.new(),
+  ads_creative: Models::Shared::AdsCreative.new(
+    created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
+    id: '7ad8c655-b945-4e86-a60b-81b992afba31',
+    labels: [
+      'coma',
+      'accedo',
+      'termes',
+    ],
+    name: 'Brekke, Bradtke and Robel',
+    status: Models::Shared::AdsCreativeStatus::PAUSED,
+    updated_at: DateTime.iso8601('2021-06-21T01:00:47.017Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

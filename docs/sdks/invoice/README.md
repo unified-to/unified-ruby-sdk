@@ -29,7 +29,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::AccountingInvoice.new(), connection_id: '<id>')
+res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::AccountingInvoice.new(
+  attachments: [
+    Models::Shared::AccountingAttachment.new(
+      download_url: 'https://glossy-markup.net/',
+      id: 'e81ac815-5934-4501-9ec2-3eacdd95c5dc',
+      mime_type: 'benevolentia',
+      name: 'vespillo',
+    ),
+  ],
+  balance_amount: -1.0,
+  category_ids: [],
+  created_at: DateTime.iso8601('2022-11-07T14:17:29.587Z'),
+  currency: 'RWF',
+  discount_amount: 0.0,
+  due_at: DateTime.iso8601('2022-11-27T21:25:37.363Z'),
+  extended_notes: [],
+  id: 'b0692bc7-0871-4377-b2dc-725efc05f881',
+  invoice_number: 'vinco',
+  lineitems: [],
+  metadata: [],
+  notes: 'Auctus comburo clarus ubi.',
+  paid_amount: 0.0,
+  paid_at: DateTime.iso8601('2022-11-25T15:00:28.871Z'),
+  payment_collection_method: Models::Shared::AccountingInvoicePaymentCollectionMethod::SEND_INVOICE,
+  payments: [],
+  posted_at: DateTime.iso8601('2026-03-26T22:44:05.605Z'),
+  reference: 'adinventitias',
+  send: true,
+  status: Models::Shared::AccountingInvoiceStatus::DELETED,
+  tax_amount: 0.0,
+  term: Models::Shared::AccountingInvoiceTerm::NET_45,
+  total_amount: 0.0,
+  type: Models::Shared::AccountingInvoiceType::CREDITMEMO,
+  updated_at: DateTime.iso8601('2023-02-06T06:48:33.258Z'),
+  url: 'https://gifted-yarmulke.info/',
+), connection_id: '<id>')
 
 unless res.accounting_invoice.nil?
   # handle response
@@ -163,7 +198,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingInvoiceRequest.new(
-  accounting_invoice: Models::Shared::AccountingInvoice.new(),
+  accounting_invoice: Models::Shared::AccountingInvoice.new(
+    attachments: [
+      Models::Shared::AccountingAttachment.new(
+        download_url: 'https://glossy-markup.net/',
+        id: 'e219ef92-38f9-4aa3-81cd-61b8fb208c48',
+        mime_type: 'benevolentia',
+        name: 'vespillo',
+      ),
+    ],
+    balance_amount: -1.0,
+    category_ids: [],
+    created_at: DateTime.iso8601('2022-11-07T14:17:29.587Z'),
+    currency: 'RWF',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2022-11-27T21:25:37.363Z'),
+    extended_notes: [],
+    id: 'b6abe366-1d39-4b38-a0c3-8ca1b19c7d9f',
+    invoice_number: 'vinco',
+    lineitems: [],
+    metadata: [],
+    notes: 'Auctus comburo clarus ubi.',
+    paid_amount: 0.0,
+    paid_at: DateTime.iso8601('2022-11-25T15:00:28.871Z'),
+    payment_collection_method: Models::Shared::AccountingInvoicePaymentCollectionMethod::SEND_INVOICE,
+    payments: [],
+    posted_at: DateTime.iso8601('2026-03-26T22:44:05.641Z'),
+    reference: 'adinventitias',
+    send: true,
+    status: Models::Shared::AccountingInvoiceStatus::DELETED,
+    tax_amount: 0.0,
+    term: Models::Shared::AccountingInvoiceTerm::NET_45,
+    total_amount: 0.0,
+    type: Models::Shared::AccountingInvoiceType::CREDITMEMO,
+    updated_at: DateTime.iso8601('2023-02-06T06:48:33.261Z'),
+    url: 'https://gifted-yarmulke.info/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +322,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingInvoiceRequest.new(
-  accounting_invoice: Models::Shared::AccountingInvoice.new(),
+  accounting_invoice: Models::Shared::AccountingInvoice.new(
+    attachments: [
+      Models::Shared::AccountingAttachment.new(
+        download_url: 'https://glossy-markup.net/',
+        id: 'e219ef92-38f9-4aa3-81cd-61b8fb208c48',
+        mime_type: 'benevolentia',
+        name: 'vespillo',
+      ),
+    ],
+    balance_amount: -1.0,
+    category_ids: [],
+    created_at: DateTime.iso8601('2022-11-07T14:17:29.587Z'),
+    currency: 'RWF',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2022-11-27T21:25:37.363Z'),
+    extended_notes: [],
+    id: 'b6abe366-1d39-4b38-a0c3-8ca1b19c7d9f',
+    invoice_number: 'vinco',
+    lineitems: [],
+    metadata: [],
+    notes: 'Auctus comburo clarus ubi.',
+    paid_amount: 0.0,
+    paid_at: DateTime.iso8601('2022-11-25T15:00:28.871Z'),
+    payment_collection_method: Models::Shared::AccountingInvoicePaymentCollectionMethod::SEND_INVOICE,
+    payments: [],
+    posted_at: DateTime.iso8601('2026-03-26T22:44:05.641Z'),
+    reference: 'adinventitias',
+    send: true,
+    status: Models::Shared::AccountingInvoiceStatus::DELETED,
+    tax_amount: 0.0,
+    term: Models::Shared::AccountingInvoiceTerm::NET_45,
+    total_amount: 0.0,
+    type: Models::Shared::AccountingInvoiceType::CREDITMEMO,
+    updated_at: DateTime.iso8601('2023-02-06T06:48:33.261Z'),
+    url: 'https://gifted-yarmulke.info/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

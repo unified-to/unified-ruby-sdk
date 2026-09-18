@@ -29,7 +29,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.paymentterm.create_accounting_paymentterm(accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(), connection_id: '<id>')
+res = s.paymentterm.create_accounting_paymentterm(accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
+  category: Models::Shared::Category::STANDARD,
+  created_at: DateTime.iso8601('2021-08-22T22:42:42.265Z'),
+  day_of_month_due: 4.0,
+  description: 'Cogito pecco eos cultura.',
+  discount_day_of_month: 13.0,
+  discount_days: 4.0,
+  discount_percent: 5.0,
+  due_days: 57.0,
+  due_next_month_days: 9.0,
+  id: 'f1ebca14-510d-41f5-bca7-8d02ef127085',
+  is_active: false,
+  metadata: [],
+  name: 'Net 30',
+  type: Models::Shared::AccountingPaymenttermType::NET_15,
+  updated_at: DateTime.iso8601('2025-12-11T11:04:10.172Z'),
+), connection_id: '<id>')
 
 unless res.accounting_paymentterm.nil?
   # handle response
@@ -163,7 +179,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingPaymenttermRequest.new(
-  accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(),
+  accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
+    category: Models::Shared::Category::STANDARD,
+    created_at: DateTime.iso8601('2021-08-22T22:42:42.265Z'),
+    day_of_month_due: 4.0,
+    description: 'Cogito pecco eos cultura.',
+    discount_day_of_month: 13.0,
+    discount_days: 4.0,
+    discount_percent: 5.0,
+    due_days: 57.0,
+    due_next_month_days: 9.0,
+    id: '17d4a0af-2184-468b-bfc7-4fec7b6202fc',
+    is_active: false,
+    metadata: [],
+    name: 'Net 30',
+    type: Models::Shared::AccountingPaymenttermType::NET_15,
+    updated_at: DateTime.iso8601('2025-12-11T11:04:10.180Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +284,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingPaymenttermRequest.new(
-  accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(),
+  accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
+    category: Models::Shared::Category::STANDARD,
+    created_at: DateTime.iso8601('2021-08-22T22:42:42.265Z'),
+    day_of_month_due: 4.0,
+    description: 'Cogito pecco eos cultura.',
+    discount_day_of_month: 13.0,
+    discount_days: 4.0,
+    discount_percent: 5.0,
+    due_days: 57.0,
+    due_next_month_days: 9.0,
+    id: '17d4a0af-2184-468b-bfc7-4fec7b6202fc',
+    is_active: false,
+    metadata: [],
+    name: 'Net 30',
+    type: Models::Shared::AccountingPaymenttermType::NET_15,
+    updated_at: DateTime.iso8601('2025-12-11T11:04:10.180Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

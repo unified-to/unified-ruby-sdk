@@ -29,7 +29,62 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.lead.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(), connection_id: '<id>')
+res = s.lead.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
+  address: Models::Shared::PropertyCrmLeadAddress.new(
+    address1: '528 Forest Road',
+    address2: 'Apt. 643',
+    city: 'Palm Springs',
+    country_code: 'US',
+    postal_code: '55624-6499',
+    region: 'New Jersey',
+    region_code: 'LA',
+  ),
+  company_name: 'Tillman - Wiegand',
+  created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
+  emails: [
+    Models::Shared::CrmEmail.new(
+      email: 'Velda.Sporer16@yahoo.com',
+      type: Models::Shared::CrmEmailType::OTHER,
+    ),
+    Models::Shared::CrmEmail.new(
+      email: 'Velda.Sporer@yahoo.com',
+      type: Models::Shared::CrmEmailType::HOME,
+    ),
+  ],
+  first_name: 'Velda',
+  id: '13d6dc8b-5185-4405-8203-d4541c1154e2',
+  is_active: true,
+  last_name: 'Sporer',
+  link_urls: [
+    'https://classic-sightseeing.com/',
+  ],
+  metadata: [
+    Models::Shared::CrmMetadata.new(
+      extra_data: {
+        "display_name": 'Custom Property',
+      },
+      format: Models::Shared::CrmMetadataFormat::TEXT,
+      id: '688a84cf-fe8e-4523-8059-3605b77700c0',
+      namespace: 'custom',
+      slug: 'custom_property',
+      value: 'sublime',
+    ),
+  ],
+  name: 'Velda Sporer',
+  source: 'aetas',
+  status: 'vesco',
+  telephones: [
+    Models::Shared::CrmTelephone.new(
+      telephone: '(955) 643-9849',
+      type: Models::Shared::CrmTelephoneType::OTHER,
+    ),
+    Models::Shared::CrmTelephone.new(
+      telephone: '(621) 811-8800',
+      type: Models::Shared::CrmTelephoneType::WORK,
+    ),
+  ],
+  updated_at: DateTime.iso8601('2020-05-15T02:08:28.082Z'),
+), connection_id: '<id>')
 
 unless res.crm_lead.nil?
   # handle response
@@ -163,7 +218,62 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCrmLeadRequest.new(
-  crm_lead: Models::Shared::CrmLead.new(),
+  crm_lead: Models::Shared::CrmLead.new(
+    address: Models::Shared::PropertyCrmLeadAddress.new(
+      address1: '528 Forest Road',
+      address2: 'Apt. 643',
+      city: 'Palm Springs',
+      country_code: 'US',
+      postal_code: '55624-6499',
+      region: 'New Jersey',
+      region_code: 'LA',
+    ),
+    company_name: 'Tillman - Wiegand',
+    created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Velda.Sporer16@yahoo.com',
+        type: Models::Shared::CrmEmailType::OTHER,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Velda.Sporer@yahoo.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+    ],
+    first_name: 'Velda',
+    id: '7d3b7db3-5987-46a6-a7d4-feae9f200286',
+    is_active: true,
+    last_name: 'Sporer',
+    link_urls: [
+      'https://classic-sightseeing.com/',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '252518d8-6eb7-4131-b4c6-05c7db635dc3',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'sublime',
+      ),
+    ],
+    name: 'Velda Sporer',
+    source: 'aetas',
+    status: 'vesco',
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(955) 643-9849',
+        type: Models::Shared::CrmTelephoneType::OTHER,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(621) 811-8800',
+        type: Models::Shared::CrmTelephoneType::WORK,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2020-05-15T02:08:28.083Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +362,62 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCrmLeadRequest.new(
-  crm_lead: Models::Shared::CrmLead.new(),
+  crm_lead: Models::Shared::CrmLead.new(
+    address: Models::Shared::PropertyCrmLeadAddress.new(
+      address1: '528 Forest Road',
+      address2: 'Apt. 643',
+      city: 'Palm Springs',
+      country_code: 'US',
+      postal_code: '55624-6499',
+      region: 'New Jersey',
+      region_code: 'LA',
+    ),
+    company_name: 'Tillman - Wiegand',
+    created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Velda.Sporer16@yahoo.com',
+        type: Models::Shared::CrmEmailType::OTHER,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Velda.Sporer@yahoo.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+    ],
+    first_name: 'Velda',
+    id: '7d3b7db3-5987-46a6-a7d4-feae9f200286',
+    is_active: true,
+    last_name: 'Sporer',
+    link_urls: [
+      'https://classic-sightseeing.com/',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '252518d8-6eb7-4131-b4c6-05c7db635dc3',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'sublime',
+      ),
+    ],
+    name: 'Velda Sporer',
+    source: 'aetas',
+    status: 'vesco',
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(955) 643-9849',
+        type: Models::Shared::CrmTelephoneType::OTHER,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(621) 811-8800',
+        type: Models::Shared::CrmTelephoneType::WORK,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2020-05-15T02:08:28.083Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

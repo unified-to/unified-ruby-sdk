@@ -54,8 +54,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.repo.create_repo_branch(repo_branch: Models::Shared::RepoBranch.new(
-  name: '<value>',
+  created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
+  id: '195f90ad-7889-4e3d-8ed3-c3ab3130c92e',
+  name: 'voluptas',
   repo_id: '<id>',
+  updated_at: DateTime.iso8601('2020-01-03T14:14:44.140Z'),
 ), connection_id: '<id>')
 
 unless res.repo_branch.nil?
@@ -101,7 +104,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.repo.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
+  created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
+  id: 'dd97ee8e-a787-4f37-8d58-c32170afc440',
+  lines_added: 313.0,
+  lines_changed: 659.0,
+  lines_deleted: 482.0,
+  message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
   repo_id: '<id>',
+  updated_at: DateTime.iso8601('2023-05-16T02:57:49.297Z'),
 ), connection_id: '<id>')
 
 unless res.repo_commit.nil?
@@ -146,7 +156,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.repo.create_repo_organization(repo_organization: Models::Shared::RepoOrganization.new(), connection_id: '<id>')
+res = s.repo.create_repo_organization(repo_organization: Models::Shared::RepoOrganization.new(
+  avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+  created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
+  description: 'Trepide defendo supra testimonium ager.',
+  id: '663b7edf-8026-47ed-a9a2-35245ab612c1',
+  name: 'Denesik - Lemke',
+  updated_at: DateTime.iso8601('2023-08-12T23:33:59.915Z'),
+  web_url: 'https://turbulent-overheard.biz',
+), connection_id: '<id>')
 
 unless res.repo_organization.nil?
   # handle response
@@ -190,7 +208,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.repo.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(), connection_id: '<id>')
+res = s.repo.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(
+  closed_at: DateTime.iso8601('2025-04-11T21:26:53.955Z'),
+  created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
+  id: 'fa433f08-db56-4a30-a3c0-334b208106bd',
+  labels: [
+    'adhuc',
+    'quaerat',
+  ],
+  notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
+  source_branch_id: 'microchip-navigate',
+  status: Models::Shared::RepoPullrequestStatus::REJECTED,
+  target_branch_id: 'feed-reboot',
+  title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
+  updated_at: DateTime.iso8601('2024-12-30T23:41:13.375Z'),
+), connection_id: '<id>')
 
 unless res.repo_pullrequest.nil?
   # handle response
@@ -235,7 +267,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.repo.create_repo_repository(repo_repository: Models::Shared::RepoRepository.new(
-  name: '<value>',
+  created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
+  description: 'Tribuo torqueo aetas ustulo illum.',
+  id: 'e70224a7-b8e7-4f34-a2d5-b97d63861b07',
+  is_private: false,
+  name: 'suggero',
+  owner: 'Marcella Kuhic',
+  updated_at: DateTime.iso8601('2024-02-23T00:26:42.975Z'),
+  web_url: 'https://brown-phrase.info',
 ), connection_id: '<id>')
 
 unless res.repo_repository.nil?
@@ -727,8 +766,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
-    name: '<value>',
+    created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
+    id: 'a05efc21-ea2e-4395-b6c0-2af64ee42bec',
+    name: 'voluptas',
     repo_id: '<id>',
+    updated_at: DateTime.iso8601('2020-01-03T14:14:44.140Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -777,7 +819,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
+    created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
+    id: 'dacba916-3bbb-4fef-a587-ebd8127c1e2b',
+    lines_added: 313.0,
+    lines_changed: 659.0,
+    lines_deleted: 482.0,
+    message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
     repo_id: '<id>',
+    updated_at: DateTime.iso8601('2023-05-16T02:57:49.299Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -825,7 +874,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchRepoOrganizationRequest.new(
-  repo_organization: Models::Shared::RepoOrganization.new(),
+  repo_organization: Models::Shared::RepoOrganization.new(
+    avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+    created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
+    description: 'Trepide defendo supra testimonium ager.',
+    id: '6950cc7d-4903-4e45-8056-ae03de805456',
+    name: 'Denesik - Lemke',
+    updated_at: DateTime.iso8601('2023-08-12T23:33:59.917Z'),
+    web_url: 'https://turbulent-overheard.biz',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -872,7 +929,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchRepoPullrequestRequest.new(
-  repo_pullrequest: Models::Shared::RepoPullrequest.new(),
+  repo_pullrequest: Models::Shared::RepoPullrequest.new(
+    closed_at: DateTime.iso8601('2025-04-11T21:26:53.960Z'),
+    created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
+    id: 'db4a0a74-96d8-4158-8162-60ce529a6eca',
+    labels: [
+      'adhuc',
+      'quaerat',
+    ],
+    notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
+    source_branch_id: 'microchip-navigate',
+    status: Models::Shared::RepoPullrequestStatus::REJECTED,
+    target_branch_id: 'feed-reboot',
+    title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
+    updated_at: DateTime.iso8601('2024-12-30T23:41:13.379Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -920,7 +991,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
-    name: '<value>',
+    created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
+    description: 'Tribuo torqueo aetas ustulo illum.',
+    id: '7411471e-1c98-451a-9ece-c5d020994125',
+    is_private: false,
+    name: 'suggero',
+    owner: 'Marcella Kuhic',
+    updated_at: DateTime.iso8601('2024-02-23T00:26:42.977Z'),
+    web_url: 'https://brown-phrase.info',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1179,8 +1257,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
-    name: '<value>',
+    created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
+    id: 'a05efc21-ea2e-4395-b6c0-2af64ee42bec',
+    name: 'voluptas',
     repo_id: '<id>',
+    updated_at: DateTime.iso8601('2020-01-03T14:14:44.140Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1229,7 +1310,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
+    created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
+    id: 'dacba916-3bbb-4fef-a587-ebd8127c1e2b',
+    lines_added: 313.0,
+    lines_changed: 659.0,
+    lines_deleted: 482.0,
+    message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
     repo_id: '<id>',
+    updated_at: DateTime.iso8601('2023-05-16T02:57:49.299Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1277,7 +1365,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateRepoOrganizationRequest.new(
-  repo_organization: Models::Shared::RepoOrganization.new(),
+  repo_organization: Models::Shared::RepoOrganization.new(
+    avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+    created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
+    description: 'Trepide defendo supra testimonium ager.',
+    id: '6950cc7d-4903-4e45-8056-ae03de805456',
+    name: 'Denesik - Lemke',
+    updated_at: DateTime.iso8601('2023-08-12T23:33:59.917Z'),
+    web_url: 'https://turbulent-overheard.biz',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1324,7 +1420,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateRepoPullrequestRequest.new(
-  repo_pullrequest: Models::Shared::RepoPullrequest.new(),
+  repo_pullrequest: Models::Shared::RepoPullrequest.new(
+    closed_at: DateTime.iso8601('2025-04-11T21:26:53.960Z'),
+    created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
+    id: 'db4a0a74-96d8-4158-8162-60ce529a6eca',
+    labels: [
+      'adhuc',
+      'quaerat',
+    ],
+    notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
+    source_branch_id: 'microchip-navigate',
+    status: Models::Shared::RepoPullrequestStatus::REJECTED,
+    target_branch_id: 'feed-reboot',
+    title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
+    updated_at: DateTime.iso8601('2024-12-30T23:41:13.379Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1372,7 +1482,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
-    name: '<value>',
+    created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
+    description: 'Tribuo torqueo aetas ustulo illum.',
+    id: '7411471e-1c98-451a-9ece-c5d020994125',
+    is_private: false,
+    name: 'suggero',
+    owner: 'Marcella Kuhic',
+    updated_at: DateTime.iso8601('2024-02-23T00:26:42.977Z'),
+    web_url: 'https://brown-phrase.info',
   ),
   connection_id: '<id>',
   id: '<id>',

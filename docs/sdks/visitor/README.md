@@ -29,7 +29,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.visitor.create_analytics_visitor(analytics_visitor: Models::Shared::AnalyticsVisitor.new(), connection_id: '<id>')
+res = s.visitor.create_analytics_visitor(analytics_visitor: Models::Shared::AnalyticsVisitor.new(
+  created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+  email: 'Dallas_Mitchell@yahoo.com',
+  first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+  id: '3d243924-4936-4085-a79e-80afd88db46f',
+  last_seen_at: DateTime.iso8601('2021-12-04T18:08:29.898Z'),
+  metadata: {
+    "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+  },
+  name: 'Desiree O\'Hara',
+  total_events: 3639.0,
+  updated_at: DateTime.iso8601('2025-06-03T08:25:45.152Z'),
+), connection_id: '<id>')
 
 unless res.analytics_visitor.nil?
   # handle response
@@ -163,7 +175,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAnalyticsVisitorRequest.new(
-  analytics_visitor: Models::Shared::AnalyticsVisitor.new(),
+  analytics_visitor: Models::Shared::AnalyticsVisitor.new(
+    created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+    email: 'Dallas_Mitchell@yahoo.com',
+    first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+    id: 'be306e02-c550-4be8-aea8-b9dbcd53ec1c',
+    last_seen_at: DateTime.iso8601('2021-12-04T18:08:29.900Z'),
+    metadata: {
+      "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+    },
+    name: 'Desiree O\'Hara',
+    total_events: 3639.0,
+    updated_at: DateTime.iso8601('2025-06-03T08:25:45.158Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +276,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAnalyticsVisitorRequest.new(
-  analytics_visitor: Models::Shared::AnalyticsVisitor.new(),
+  analytics_visitor: Models::Shared::AnalyticsVisitor.new(
+    created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+    email: 'Dallas_Mitchell@yahoo.com',
+    first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+    id: 'be306e02-c550-4be8-aea8-b9dbcd53ec1c',
+    last_seen_at: DateTime.iso8601('2021-12-04T18:08:29.900Z'),
+    metadata: {
+      "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+    },
+    name: 'Desiree O\'Hara',
+    total_events: 3639.0,
+    updated_at: DateTime.iso8601('2025-06-03T08:25:45.158Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -29,7 +29,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.pipeline.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(), connection_id: '<id>')
+res = s.pipeline.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(
+  created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+  deal_probability: 99.0,
+  display_order: 8.0,
+  id: 'c2c01e88-79b5-464e-9b28-23b3e3522dbc',
+  is_active: true,
+  name: 'Small Steel Bacon',
+  stages: [
+    Models::Shared::CrmStage.new(
+      active: false,
+      created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+      deal_probability: 84.0,
+      display_order: 72.0,
+      id: '3d018fbd-9fb4-403d-bf4a-4bc3961fbcc6',
+      is_closed: true,
+      name: 'Veniam.',
+      updated_at: DateTime.iso8601('2025-09-16T09:57:01.692Z'),
+    ),
+  ],
+  updated_at: DateTime.iso8601('2025-10-07T15:01:45.555Z'),
+), connection_id: '<id>')
 
 unless res.crm_pipeline.nil?
   # handle response
@@ -163,7 +183,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCrmPipelineRequest.new(
-  crm_pipeline: Models::Shared::CrmPipeline.new(),
+  crm_pipeline: Models::Shared::CrmPipeline.new(
+    created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+    deal_probability: 99.0,
+    display_order: 8.0,
+    id: 'a2807263-c08e-4fa7-a5f5-d374f99f60f4',
+    is_active: true,
+    name: 'Small Steel Bacon',
+    stages: [
+      Models::Shared::CrmStage.new(
+        active: false,
+        created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+        deal_probability: 84.0,
+        display_order: 72.0,
+        id: 'c618bb9b-ac3b-4768-8d2c-02366a8825e9',
+        is_closed: true,
+        name: 'Veniam.',
+        updated_at: DateTime.iso8601('2025-09-16T09:57:01.697Z'),
+      ),
+    ],
+    updated_at: DateTime.iso8601('2025-10-07T15:01:45.561Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +292,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCrmPipelineRequest.new(
-  crm_pipeline: Models::Shared::CrmPipeline.new(),
+  crm_pipeline: Models::Shared::CrmPipeline.new(
+    created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+    deal_probability: 99.0,
+    display_order: 8.0,
+    id: 'a2807263-c08e-4fa7-a5f5-d374f99f60f4',
+    is_active: true,
+    name: 'Small Steel Bacon',
+    stages: [
+      Models::Shared::CrmStage.new(
+        active: false,
+        created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+        deal_probability: 84.0,
+        display_order: 72.0,
+        id: 'c618bb9b-ac3b-4768-8d2c-02366a8825e9',
+        is_closed: true,
+        name: 'Veniam.',
+        updated_at: DateTime.iso8601('2025-09-16T09:57:01.697Z'),
+      ),
+    ],
+    updated_at: DateTime.iso8601('2025-10-07T15:01:45.561Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -50,7 +50,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(
+  balance: 12_092.0,
+  created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
+  currency: 'BOB',
+  customer_defined_code: 'quo',
+  description: 'Spoliatio comedo vilitas harum cupiditate.',
+  id: '14522477-23c9-4425-a7a9-981198614b49',
+  is_payable: true,
+  name: 'Electronic Aluminum Tuna',
+  status: Models::Shared::Status::ARCHIVED,
+  taxonomy: [
+    Models::Shared::AccountingAccountTaxonomy.new(
+      original_type: 'vesper',
+      type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+      value: 'iste',
+    ),
+    Models::Shared::AccountingAccountTaxonomy.new(
+      original_type: 'adamo',
+      type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+      value: 'peccatus',
+    ),
+  ],
+  type: Models::Shared::Type::BANK,
+  updated_at: DateTime.iso8601('2023-01-03T03:10:58.260Z'),
+), connection_id: '<id>')
 
 unless res.accounting_account.nil?
   # handle response
@@ -81,7 +105,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(
+  balance: 12_092.0,
+  created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
+  currency: 'BOB',
+  customer_defined_code: 'quo',
+  description: 'Spoliatio comedo vilitas harum cupiditate.',
+  id: '14522477-23c9-4425-a7a9-981198614b49',
+  is_payable: true,
+  name: 'Electronic Aluminum Tuna',
+  status: Models::Shared::Status::ARCHIVED,
+  taxonomy: [
+    Models::Shared::AccountingAccountTaxonomy.new(
+      original_type: 'vesper',
+      type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+      value: 'iste',
+    ),
+    Models::Shared::AccountingAccountTaxonomy.new(
+      original_type: 'adamo',
+      type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+      value: 'peccatus',
+    ),
+  ],
+  type: Models::Shared::Type::BANK,
+  updated_at: DateTime.iso8601('2023-01-03T03:10:58.260Z'),
+), connection_id: '<id>')
 
 unless res.accounting_account.nil?
   # handle response
@@ -2336,7 +2384,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 begin
-    res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
+    res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(
+      balance: 12_092.0,
+      created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
+      currency: 'BOB',
+      customer_defined_code: 'quo',
+      description: 'Spoliatio comedo vilitas harum cupiditate.',
+      id: '14522477-23c9-4425-a7a9-981198614b49',
+      is_payable: true,
+      name: 'Electronic Aluminum Tuna',
+      status: Models::Shared::Status::ARCHIVED,
+      taxonomy: [
+        Models::Shared::AccountingAccountTaxonomy.new(
+          original_type: 'vesper',
+          type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+          value: 'iste',
+        ),
+        Models::Shared::AccountingAccountTaxonomy.new(
+          original_type: 'adamo',
+          type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+          value: 'peccatus',
+        ),
+      ],
+      type: Models::Shared::Type::BANK,
+      updated_at: DateTime.iso8601('2023-01-03T03:10:58.260Z'),
+    ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
       # handle response
@@ -2375,7 +2447,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(
+  balance: 12_092.0,
+  created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
+  currency: 'BOB',
+  customer_defined_code: 'quo',
+  description: 'Spoliatio comedo vilitas harum cupiditate.',
+  id: '14522477-23c9-4425-a7a9-981198614b49',
+  is_payable: true,
+  name: 'Electronic Aluminum Tuna',
+  status: Models::Shared::Status::ARCHIVED,
+  taxonomy: [
+    Models::Shared::AccountingAccountTaxonomy.new(
+      original_type: 'vesper',
+      type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+      value: 'iste',
+    ),
+    Models::Shared::AccountingAccountTaxonomy.new(
+      original_type: 'adamo',
+      type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+      value: 'peccatus',
+    ),
+  ],
+  type: Models::Shared::Type::BANK,
+  updated_at: DateTime.iso8601('2023-01-03T03:10:58.260Z'),
+), connection_id: '<id>')
 
 unless res.accounting_account.nil?
   # handle response
@@ -2397,7 +2493,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(
+  balance: 12_092.0,
+  created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
+  currency: 'BOB',
+  customer_defined_code: 'quo',
+  description: 'Spoliatio comedo vilitas harum cupiditate.',
+  id: '14522477-23c9-4425-a7a9-981198614b49',
+  is_payable: true,
+  name: 'Electronic Aluminum Tuna',
+  status: Models::Shared::Status::ARCHIVED,
+  taxonomy: [
+    Models::Shared::AccountingAccountTaxonomy.new(
+      original_type: 'vesper',
+      type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+      value: 'iste',
+    ),
+    Models::Shared::AccountingAccountTaxonomy.new(
+      original_type: 'adamo',
+      type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+      value: 'peccatus',
+    ),
+  ],
+  type: Models::Shared::Type::BANK,
+  updated_at: DateTime.iso8601('2023-01-03T03:10:58.260Z'),
+), connection_id: '<id>')
 
 unless res.accounting_account.nil?
   # handle response

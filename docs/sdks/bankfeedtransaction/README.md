@@ -29,7 +29,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.bankfeedtransaction.create_accounting_bankfeedtransaction(accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(), connection_id: '<id>')
+res = s.bankfeedtransaction.create_accounting_bankfeedtransaction(accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
+  account_id: 'b7dc4175-1368-4b89-a700-d621b6666648',
+  amount: 60_889.0,
+  bank_category: 'Games',
+  bankfeedaccount_id: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+  category_ids: [],
+  contact_id: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+  created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
+  currency: 'SRD',
+  description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+  id: '17e79edc-3ee2-4174-adf2-36ce57a3f333',
+  is_pending: true,
+  merchant_name: 'Reichert, Erdman and Tillman',
+  posted_at: DateTime.iso8601('2025-03-23T18:32:09.147Z'),
+  reference: '93642593',
+  transaction_at: DateTime.iso8601('2022-07-27T19:47:57.100Z'),
+  type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
+  updated_at: DateTime.iso8601('2022-05-23T20:47:13.142Z'),
+), connection_id: '<id>')
 
 unless res.accounting_bankfeedtransaction.nil?
   # handle response
@@ -163,7 +181,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
-  accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(),
+  accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
+    account_id: 'b7dc4175-1368-4b89-a700-d621b6666648',
+    amount: 60_889.0,
+    bank_category: 'Games',
+    bankfeedaccount_id: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+    category_ids: [],
+    contact_id: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+    created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
+    currency: 'SRD',
+    description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+    id: 'ded997cf-6026-470c-851e-c790164e6524',
+    is_pending: true,
+    merchant_name: 'Reichert, Erdman and Tillman',
+    posted_at: DateTime.iso8601('2025-03-23T18:32:09.153Z'),
+    reference: '93642593',
+    transaction_at: DateTime.iso8601('2022-07-27T19:47:57.100Z'),
+    type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
+    updated_at: DateTime.iso8601('2022-05-23T20:47:13.142Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +288,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
-  accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(),
+  accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
+    account_id: 'b7dc4175-1368-4b89-a700-d621b6666648',
+    amount: 60_889.0,
+    bank_category: 'Games',
+    bankfeedaccount_id: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+    category_ids: [],
+    contact_id: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+    created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
+    currency: 'SRD',
+    description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+    id: 'ded997cf-6026-470c-851e-c790164e6524',
+    is_pending: true,
+    merchant_name: 'Reichert, Erdman and Tillman',
+    posted_at: DateTime.iso8601('2025-03-23T18:32:09.153Z'),
+    reference: '93642593',
+    transaction_at: DateTime.iso8601('2022-07-27T19:47:57.100Z'),
+    type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
+    updated_at: DateTime.iso8601('2022-05-23T20:47:13.142Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

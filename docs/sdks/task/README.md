@@ -43,7 +43,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.task.create_task_comment(task_comment: Models::Shared::TaskComment.new(), connection_id: '<id>')
+res = s.task.create_task_comment(task_comment: Models::Shared::TaskComment.new(
+  created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
+  has_children: true,
+  id: '4f026d56-427a-4ac7-8f42-ed8ba395a639',
+  text: 'Colo ulciscor sublime tabernus.',
+  updated_at: DateTime.iso8601('2021-09-24T01:11:53.653Z'),
+  user_name: 'Santina Abbott',
+), connection_id: '<id>')
 
 unless res.task_comment.nil?
   # handle response
@@ -87,7 +94,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.task.create_task_project(task_project: Models::Shared::TaskProject.new(), connection_id: '<id>')
+res = s.task.create_task_project(task_project: Models::Shared::TaskProject.new(
+  created_at: DateTime.iso8601('2023-06-23T16:39:40.446Z'),
+  description: 'Valetudo aggredior accommodo curiositas vox.',
+  has_children: false,
+  has_tasks: false,
+  id: 'e1c80fa7-168b-4bc1-b2df-d0164bf2fb4b',
+  metadata: [
+    Models::Shared::TaskMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::TaskMetadataFormat::TEXT,
+      id: '3dc6355a-2866-4901-87d0-7f474da4ad42',
+      namespace: 'custom',
+      slug: 'decens',
+      value: 'uterque',
+    ),
+    Models::Shared::TaskMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::TaskMetadataFormat::TEXT,
+      id: '420361d1-7892-48a3-905a-0abfcdeb6d05',
+      namespace: 'custom',
+      slug: 'benevolentia',
+      value: 'pariatur',
+    ),
+  ],
+  name: 'Garden',
+  updated_at: DateTime.iso8601('2023-10-08T14:52:12.192Z'),
+), connection_id: '<id>')
 
 unless res.task_project.nil?
   # handle response
@@ -131,7 +168,32 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(), connection_id: '<id>')
+res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(
+  attachment_ids: [],
+  completed_at: DateTime.iso8601('2022-03-24T11:49:54.291Z'),
+  created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
+  due_at: DateTime.iso8601('2026-04-23T08:38:11.731Z'),
+  end_at: DateTime.iso8601('2022-10-13T17:20:32.655Z'),
+  has_children: true,
+  id: 'eaf524a7-9e19-4128-912e-09a41bac99b2',
+  metadata: [],
+  name: 'Direct Markets Architect',
+  notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
+  priority: 'LOW',
+  progress: 2.0,
+  start_at: DateTime.iso8601('2022-01-19T11:22:18.929Z'),
+  status: Models::Shared::TaskTaskStatus::IN_PROGRESS,
+  story_points: 0.0,
+  tags: [
+    'concido',
+    'rerum',
+  ],
+  time_spent: 957.0,
+  time_spent_unit: 'SECONDS',
+  type: 'tubineus',
+  updated_at: DateTime.iso8601('2019-07-13T10:48:57.228Z'),
+  url: 'https://dismal-silk.net/',
+), connection_id: '<id>')
 
 unless res.task_task.nil?
   # handle response
@@ -532,7 +594,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTaskCommentRequest.new(
-  task_comment: Models::Shared::TaskComment.new(),
+  task_comment: Models::Shared::TaskComment.new(
+    created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
+    has_children: true,
+    id: 'bd2b1556-d0ea-4943-bdfd-4cbec351e479',
+    text: 'Colo ulciscor sublime tabernus.',
+    updated_at: DateTime.iso8601('2021-09-24T01:11:53.655Z'),
+    user_name: 'Santina Abbott',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -579,7 +648,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTaskProjectRequest.new(
-  task_project: Models::Shared::TaskProject.new(),
+  task_project: Models::Shared::TaskProject.new(
+    created_at: DateTime.iso8601('2023-06-23T16:39:40.446Z'),
+    description: 'Valetudo aggredior accommodo curiositas vox.',
+    has_children: false,
+    has_tasks: false,
+    id: '458b4d27-54de-4b3e-8ea3-84bb194dc75c',
+    metadata: [
+      Models::Shared::TaskMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::TaskMetadataFormat::TEXT,
+        id: '1ba460dd-a386-4256-8008-497620f59408',
+        namespace: 'custom',
+        slug: 'decens',
+        value: 'uterque',
+      ),
+      Models::Shared::TaskMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::TaskMetadataFormat::TEXT,
+        id: '51c81029-4462-42d8-aa4b-090678a5b1ed',
+        namespace: 'custom',
+        slug: 'benevolentia',
+        value: 'pariatur',
+      ),
+    ],
+    name: 'Garden',
+    updated_at: DateTime.iso8601('2023-10-08T14:52:12.193Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -626,7 +725,32 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTaskTaskRequest.new(
-  task_task: Models::Shared::TaskTask.new(),
+  task_task: Models::Shared::TaskTask.new(
+    attachment_ids: [],
+    completed_at: DateTime.iso8601('2022-03-24T11:49:54.298Z'),
+    created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
+    due_at: DateTime.iso8601('2026-04-23T08:38:11.748Z'),
+    end_at: DateTime.iso8601('2022-10-13T17:20:32.664Z'),
+    has_children: true,
+    id: '5c799a1b-6d6e-47e0-9223-931dfca0827b',
+    metadata: [],
+    name: 'Direct Markets Architect',
+    notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
+    priority: 'LOW',
+    progress: 2.0,
+    start_at: DateTime.iso8601('2022-01-19T11:22:18.936Z'),
+    status: Models::Shared::TaskTaskStatus::IN_PROGRESS,
+    story_points: 0.0,
+    tags: [
+      'concido',
+      'rerum',
+    ],
+    time_spent: 957.0,
+    time_spent_unit: 'SECONDS',
+    type: 'tubineus',
+    updated_at: DateTime.iso8601('2019-07-13T10:48:57.229Z'),
+    url: 'https://dismal-silk.net/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -799,7 +923,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTaskCommentRequest.new(
-  task_comment: Models::Shared::TaskComment.new(),
+  task_comment: Models::Shared::TaskComment.new(
+    created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
+    has_children: true,
+    id: 'bd2b1556-d0ea-4943-bdfd-4cbec351e479',
+    text: 'Colo ulciscor sublime tabernus.',
+    updated_at: DateTime.iso8601('2021-09-24T01:11:53.655Z'),
+    user_name: 'Santina Abbott',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -846,7 +977,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTaskProjectRequest.new(
-  task_project: Models::Shared::TaskProject.new(),
+  task_project: Models::Shared::TaskProject.new(
+    created_at: DateTime.iso8601('2023-06-23T16:39:40.446Z'),
+    description: 'Valetudo aggredior accommodo curiositas vox.',
+    has_children: false,
+    has_tasks: false,
+    id: '458b4d27-54de-4b3e-8ea3-84bb194dc75c',
+    metadata: [
+      Models::Shared::TaskMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::TaskMetadataFormat::TEXT,
+        id: '1ba460dd-a386-4256-8008-497620f59408',
+        namespace: 'custom',
+        slug: 'decens',
+        value: 'uterque',
+      ),
+      Models::Shared::TaskMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::TaskMetadataFormat::TEXT,
+        id: '51c81029-4462-42d8-aa4b-090678a5b1ed',
+        namespace: 'custom',
+        slug: 'benevolentia',
+        value: 'pariatur',
+      ),
+    ],
+    name: 'Garden',
+    updated_at: DateTime.iso8601('2023-10-08T14:52:12.193Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -893,7 +1054,32 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTaskTaskRequest.new(
-  task_task: Models::Shared::TaskTask.new(),
+  task_task: Models::Shared::TaskTask.new(
+    attachment_ids: [],
+    completed_at: DateTime.iso8601('2022-03-24T11:49:54.298Z'),
+    created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
+    due_at: DateTime.iso8601('2026-04-23T08:38:11.748Z'),
+    end_at: DateTime.iso8601('2022-10-13T17:20:32.664Z'),
+    has_children: true,
+    id: '5c799a1b-6d6e-47e0-9223-931dfca0827b',
+    metadata: [],
+    name: 'Direct Markets Architect',
+    notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
+    priority: 'LOW',
+    progress: 2.0,
+    start_at: DateTime.iso8601('2022-01-19T11:22:18.936Z'),
+    status: Models::Shared::TaskTaskStatus::IN_PROGRESS,
+    story_points: 0.0,
+    tags: [
+      'concido',
+      'rerum',
+    ],
+    time_spent: 957.0,
+    time_spent_unit: 'SECONDS',
+    type: 'tubineus',
+    updated_at: DateTime.iso8601('2019-07-13T10:48:57.229Z'),
+    url: 'https://dismal-silk.net/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

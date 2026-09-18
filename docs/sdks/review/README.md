@@ -35,7 +35,78 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceReview.new(), connection_id: '<id>')
+res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceReview.new(
+  author_avatar_url: 'https://picsum.photos/seed/ix4Br3LA/2245/1245',
+  author_email: 'Cleve_Yundt@hotmail.com',
+  author_location: 'ipsum',
+  author_name: 'Marsha Krajcik',
+  comments: [],
+  content: 'Taedium thymum adipiscor amicitia cui.',
+  created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
+  helpful_votes: 26.0,
+  id: '162dde41-4827-441b-a090-185801f5640f',
+  is_featured: true,
+  is_public: true,
+  is_verified: false,
+  media: [
+    Models::Shared::CommerceItemMedia.new(
+      alt: 'Adulescens.',
+      height: 519.0,
+      id: '974c0c9c-09e9-4778-9fdf-98ea5c3a46f0',
+      metadata: [
+        Models::Shared::CommerceMetadata.new(
+          id: 'acd8ef6a-db90-4f0d-ad4d-3844f1624aa7',
+          slug: 'aggero',
+          value: 'tero',
+        ),
+      ],
+      position: 72.0,
+      type: Models::Shared::CommerceItemMediaType::VIDEO,
+      url: 'https://loremflickr.com/882/1004?lock=7448492654002422',
+      width: 75.0,
+    ),
+    Models::Shared::CommerceItemMedia.new(
+      alt: 'Pauci timidus sol comburo thema.',
+      height: 297.0,
+      id: '3c6e604b-3f45-44b6-876e-562033e2fbf9',
+      metadata: [
+        Models::Shared::CommerceMetadata.new(
+          id: '0ea7f2f1-420b-44af-bd88-3fc2649d4559',
+          slug: 'vito',
+          value: 'cuppedia',
+        ),
+      ],
+      position: 61.0,
+      type: Models::Shared::CommerceItemMediaType::IMAGE,
+      url: 'https://picsum.photos/seed/3QDZ8/1208/2171',
+      width: 96.0,
+    ),
+    Models::Shared::CommerceItemMedia.new(
+      alt: 'Cuppedia vestrum patruus.',
+      height: 6.0,
+      id: '474a0836-0eb3-4952-af1c-e21da23cc61a',
+      metadata: [
+        Models::Shared::CommerceMetadata.new(
+          id: '982a31e0-5ec8-477b-9e64-bdf48e4d5210',
+          slug: 'arbitro',
+          value: 'villa',
+        ),
+      ],
+      position: 60.0,
+      type: Models::Shared::CommerceItemMediaType::VIDEO,
+      url: 'https://picsum.photos/seed/ytybC/2616/710',
+      width: 74.0,
+    ),
+  ],
+  metadata: [],
+  rating: 3.0,
+  status: Models::Shared::CommerceReviewStatus::APPROVED,
+  title: 'Coepi adamo amicitia auxilium toties.',
+  unhelpful_votes: 49.0,
+  updated_at: DateTime.iso8601('2025-07-24T23:13:04.506Z'),
+  url: 'https://excitable-underneath.com',
+  verified_purchase: false,
+), connection_id: '<id>')
 
 unless res.commerce_review.nil?
   # handle response
@@ -347,7 +418,78 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCommerceReviewRequest.new(
-  commerce_review: Models::Shared::CommerceReview.new(),
+  commerce_review: Models::Shared::CommerceReview.new(
+    author_avatar_url: 'https://picsum.photos/seed/ix4Br3LA/2245/1245',
+    author_email: 'Cleve_Yundt@hotmail.com',
+    author_location: 'ipsum',
+    author_name: 'Marsha Krajcik',
+    comments: [],
+    content: 'Taedium thymum adipiscor amicitia cui.',
+    created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
+    helpful_votes: 26.0,
+    id: '06ed0eee-284a-419f-8334-2d3849676aa9',
+    is_featured: true,
+    is_public: true,
+    is_verified: false,
+    media: [
+      Models::Shared::CommerceItemMedia.new(
+        alt: 'Adulescens.',
+        height: 519.0,
+        id: '09bea147-f87c-49be-b6c8-d4e6dbc5a68e',
+        metadata: [
+          Models::Shared::CommerceMetadata.new(
+            id: 'dc1f22c7-21e2-4306-af48-bb67d9b96b5c',
+            slug: 'aggero',
+            value: 'tero',
+          ),
+        ],
+        position: 72.0,
+        type: Models::Shared::CommerceItemMediaType::VIDEO,
+        url: 'https://loremflickr.com/882/1004?lock=7448492654002422',
+        width: 75.0,
+      ),
+      Models::Shared::CommerceItemMedia.new(
+        alt: 'Pauci timidus sol comburo thema.',
+        height: 297.0,
+        id: '5b2b057d-713c-4920-8fb6-b9dca303e03a',
+        metadata: [
+          Models::Shared::CommerceMetadata.new(
+            id: '3b14f3c6-ad42-40a7-8904-27913b84aeed',
+            slug: 'vito',
+            value: 'cuppedia',
+          ),
+        ],
+        position: 61.0,
+        type: Models::Shared::CommerceItemMediaType::IMAGE,
+        url: 'https://picsum.photos/seed/3QDZ8/1208/2171',
+        width: 96.0,
+      ),
+      Models::Shared::CommerceItemMedia.new(
+        alt: 'Cuppedia vestrum patruus.',
+        height: 6.0,
+        id: '4349416e-61df-4414-9440-66b23d1fab8b',
+        metadata: [
+          Models::Shared::CommerceMetadata.new(
+            id: '8e1d8fc9-6d5c-42ee-a285-7d7a9f6988d5',
+            slug: 'arbitro',
+            value: 'villa',
+          ),
+        ],
+        position: 60.0,
+        type: Models::Shared::CommerceItemMediaType::VIDEO,
+        url: 'https://picsum.photos/seed/ytybC/2616/710',
+        width: 74.0,
+      ),
+    ],
+    metadata: [],
+    rating: 3.0,
+    status: Models::Shared::CommerceReviewStatus::APPROVED,
+    title: 'Coepi adamo amicitia auxilium toties.',
+    unhelpful_votes: 49.0,
+    updated_at: DateTime.iso8601('2025-07-24T23:13:04.540Z'),
+    url: 'https://excitable-underneath.com',
+    verified_purchase: false,
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -483,7 +625,78 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCommerceReviewRequest.new(
-  commerce_review: Models::Shared::CommerceReview.new(),
+  commerce_review: Models::Shared::CommerceReview.new(
+    author_avatar_url: 'https://picsum.photos/seed/ix4Br3LA/2245/1245',
+    author_email: 'Cleve_Yundt@hotmail.com',
+    author_location: 'ipsum',
+    author_name: 'Marsha Krajcik',
+    comments: [],
+    content: 'Taedium thymum adipiscor amicitia cui.',
+    created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
+    helpful_votes: 26.0,
+    id: '06ed0eee-284a-419f-8334-2d3849676aa9',
+    is_featured: true,
+    is_public: true,
+    is_verified: false,
+    media: [
+      Models::Shared::CommerceItemMedia.new(
+        alt: 'Adulescens.',
+        height: 519.0,
+        id: '09bea147-f87c-49be-b6c8-d4e6dbc5a68e',
+        metadata: [
+          Models::Shared::CommerceMetadata.new(
+            id: 'dc1f22c7-21e2-4306-af48-bb67d9b96b5c',
+            slug: 'aggero',
+            value: 'tero',
+          ),
+        ],
+        position: 72.0,
+        type: Models::Shared::CommerceItemMediaType::VIDEO,
+        url: 'https://loremflickr.com/882/1004?lock=7448492654002422',
+        width: 75.0,
+      ),
+      Models::Shared::CommerceItemMedia.new(
+        alt: 'Pauci timidus sol comburo thema.',
+        height: 297.0,
+        id: '5b2b057d-713c-4920-8fb6-b9dca303e03a',
+        metadata: [
+          Models::Shared::CommerceMetadata.new(
+            id: '3b14f3c6-ad42-40a7-8904-27913b84aeed',
+            slug: 'vito',
+            value: 'cuppedia',
+          ),
+        ],
+        position: 61.0,
+        type: Models::Shared::CommerceItemMediaType::IMAGE,
+        url: 'https://picsum.photos/seed/3QDZ8/1208/2171',
+        width: 96.0,
+      ),
+      Models::Shared::CommerceItemMedia.new(
+        alt: 'Cuppedia vestrum patruus.',
+        height: 6.0,
+        id: '4349416e-61df-4414-9440-66b23d1fab8b',
+        metadata: [
+          Models::Shared::CommerceMetadata.new(
+            id: '8e1d8fc9-6d5c-42ee-a285-7d7a9f6988d5',
+            slug: 'arbitro',
+            value: 'villa',
+          ),
+        ],
+        position: 60.0,
+        type: Models::Shared::CommerceItemMediaType::VIDEO,
+        url: 'https://picsum.photos/seed/ytybC/2616/710',
+        width: 74.0,
+      ),
+    ],
+    metadata: [],
+    rating: 3.0,
+    status: Models::Shared::CommerceReviewStatus::APPROVED,
+    title: 'Coepi adamo amicitia auxilium toties.',
+    unhelpful_votes: 49.0,
+    updated_at: DateTime.iso8601('2025-07-24T23:13:04.540Z'),
+    url: 'https://excitable-underneath.com',
+    verified_purchase: false,
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

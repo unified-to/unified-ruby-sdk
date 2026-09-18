@@ -29,7 +29,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.new(), connection_id: '<id>')
+res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.new(
+  address: Models::Shared::PropertyMarketingListAddress.new(
+    address1: '922 Elmore Manor',
+    address2: 'Suite 925',
+    city: 'Deerfield Beach',
+    country: 'Bahrain',
+    postal_code: '30765-6471',
+    region: 'FL',
+  ),
+  created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
+  description: 'Currus.',
+  id: 'bb442904-2817-43f0-9c39-171b763ceaba',
+  is_active: true,
+  language: 'it',
+  name: 'Annette Nolan',
+  sender_company: 'Hickle - Homenick',
+  sender_email: 'Matt_Steuber@hotmail.com',
+  sender_name: 'Salvatore Roob',
+  sender_phone: '896-328-1153 x4957',
+  subject: 'Tenetur thymum circumvenio triumphus celo.',
+  updated_at: DateTime.iso8601('2022-08-30T12:21:32.932Z'),
+), connection_id: '<id>')
 
 unless res.marketing_list.nil?
   # handle response
@@ -163,7 +184,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchMartechListRequest.new(
-  marketing_list: Models::Shared::MarketingList.new(),
+  marketing_list: Models::Shared::MarketingList.new(
+    address: Models::Shared::PropertyMarketingListAddress.new(
+      address1: '922 Elmore Manor',
+      address2: 'Suite 925',
+      city: 'Deerfield Beach',
+      country: 'Bahrain',
+      postal_code: '30765-6471',
+      region: 'FL',
+    ),
+    created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
+    description: 'Currus.',
+    id: 'd907dbd5-8f6e-444f-9b5e-5a7b02ad2b60',
+    is_active: true,
+    language: 'it',
+    name: 'Annette Nolan',
+    sender_company: 'Hickle - Homenick',
+    sender_email: 'Matt_Steuber@hotmail.com',
+    sender_name: 'Salvatore Roob',
+    sender_phone: '896-328-1153 x4957',
+    subject: 'Tenetur thymum circumvenio triumphus celo.',
+    updated_at: DateTime.iso8601('2022-08-30T12:21:32.937Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +294,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateMartechListRequest.new(
-  marketing_list: Models::Shared::MarketingList.new(),
+  marketing_list: Models::Shared::MarketingList.new(
+    address: Models::Shared::PropertyMarketingListAddress.new(
+      address1: '922 Elmore Manor',
+      address2: 'Suite 925',
+      city: 'Deerfield Beach',
+      country: 'Bahrain',
+      postal_code: '30765-6471',
+      region: 'FL',
+    ),
+    created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
+    description: 'Currus.',
+    id: 'd907dbd5-8f6e-444f-9b5e-5a7b02ad2b60',
+    is_active: true,
+    language: 'it',
+    name: 'Annette Nolan',
+    sender_company: 'Hickle - Homenick',
+    sender_email: 'Matt_Steuber@hotmail.com',
+    sender_name: 'Salvatore Roob',
+    sender_phone: '896-328-1153 x4957',
+    subject: 'Tenetur thymum circumvenio triumphus celo.',
+    updated_at: DateTime.iso8601('2022-08-30T12:21:32.937Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

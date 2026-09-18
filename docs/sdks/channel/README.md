@@ -29,7 +29,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.channel.create_messaging_channel(messaging_channel: Models::Shared::MessagingChannel.new(), connection_id: '<id>')
+res = s.channel.create_messaging_channel(messaging_channel: Models::Shared::MessagingChannel.new(
+  created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
+  description: 'Dolores tutis.',
+  has_subchannels: true,
+  id: '2f0b54d6-93a5-488b-8b57-756db1064aa1',
+  is_active: false,
+  is_private: true,
+  members: [],
+  name: 'tego',
+  updated_at: DateTime.iso8601('2026-04-23T02:20:49.365Z'),
+  web_url: 'https://svelte-rule.name/',
+), connection_id: '<id>')
 
 unless res.messaging_channel.nil?
   # handle response
@@ -163,7 +174,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchMessagingChannelRequest.new(
-  messaging_channel: Models::Shared::MessagingChannel.new(),
+  messaging_channel: Models::Shared::MessagingChannel.new(
+    created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
+    description: 'Dolores tutis.',
+    has_subchannels: true,
+    id: '433ebe1d-af81-4434-bc12-3ee8bbc22e5a',
+    is_active: false,
+    is_private: true,
+    members: [],
+    name: 'tego',
+    updated_at: DateTime.iso8601('2026-04-23T02:20:49.371Z'),
+    web_url: 'https://svelte-rule.name/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +274,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateMessagingChannelRequest.new(
-  messaging_channel: Models::Shared::MessagingChannel.new(),
+  messaging_channel: Models::Shared::MessagingChannel.new(
+    created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
+    description: 'Dolores tutis.',
+    has_subchannels: true,
+    id: '433ebe1d-af81-4434-bc12-3ee8bbc22e5a',
+    is_active: false,
+    is_private: true,
+    members: [],
+    name: 'tego',
+    updated_at: DateTime.iso8601('2026-04-23T02:20:49.371Z'),
+    web_url: 'https://svelte-rule.name/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

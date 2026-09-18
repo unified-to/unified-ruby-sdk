@@ -29,7 +29,33 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.application.create_ats_application(ats_application: Models::Shared::AtsApplication.new(), connection_id: '<id>')
+res = s.application.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
+  answers: [],
+  applied_at: DateTime.iso8601('2025-09-08T08:45:58.175Z'),
+  created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
+  hired_at: DateTime.iso8601('2026-04-14T14:30:49.399Z'),
+  id: '3d467c88-78ed-4324-9573-7a42069f2113',
+  metadata: [
+    Models::Shared::AtsMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::AtsMetadataFormat::TEXT,
+      id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+      namespace: 'application',
+      slug: 'despecto',
+      value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+    ),
+  ],
+  offers: [],
+  original_status: 'vomica',
+  original_substatus: 'allatus',
+  rejected_at: DateTime.iso8601('2026-09-08T19:47:42.872Z'),
+  rejected_reason: 'Cometes amplitudo videlicet talio.',
+  source: 'credo',
+  status: Models::Shared::AtsApplicationStatus::REVIEWING,
+  updated_at: DateTime.iso8601('2026-09-15T11:06:13.612Z'),
+), connection_id: '<id>')
 
 unless res.ats_application.nil?
   # handle response
@@ -163,7 +189,33 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsApplicationRequest.new(
-  ats_application: Models::Shared::AtsApplication.new(),
+  ats_application: Models::Shared::AtsApplication.new(
+    answers: [],
+    applied_at: DateTime.iso8601('2025-09-08T08:45:58.189Z'),
+    created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
+    hired_at: DateTime.iso8601('2026-04-14T14:30:49.417Z'),
+    id: 'eb46d7bf-0943-4468-afea-c17576f07cc7',
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+        namespace: 'application',
+        slug: 'despecto',
+        value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+      ),
+    ],
+    offers: [],
+    original_status: 'vomica',
+    original_substatus: 'allatus',
+    rejected_at: DateTime.iso8601('2026-09-08T19:47:42.893Z'),
+    rejected_reason: 'Cometes amplitudo videlicet talio.',
+    source: 'credo',
+    status: Models::Shared::AtsApplicationStatus::REVIEWING,
+    updated_at: DateTime.iso8601('2026-09-15T11:06:13.633Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +304,33 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsApplicationRequest.new(
-  ats_application: Models::Shared::AtsApplication.new(),
+  ats_application: Models::Shared::AtsApplication.new(
+    answers: [],
+    applied_at: DateTime.iso8601('2025-09-08T08:45:58.189Z'),
+    created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
+    hired_at: DateTime.iso8601('2026-04-14T14:30:49.417Z'),
+    id: 'eb46d7bf-0943-4468-afea-c17576f07cc7',
+    metadata: [
+      Models::Shared::AtsMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::AtsMetadataFormat::TEXT,
+        id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+        namespace: 'application',
+        slug: 'despecto',
+        value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+      ),
+    ],
+    offers: [],
+    original_status: 'vomica',
+    original_substatus: 'allatus',
+    rejected_at: DateTime.iso8601('2026-09-08T19:47:42.893Z'),
+    rejected_reason: 'Cometes amplitudo videlicet talio.',
+    source: 'credo',
+    status: Models::Shared::AtsApplicationStatus::REVIEWING,
+    updated_at: DateTime.iso8601('2026-09-15T11:06:13.633Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

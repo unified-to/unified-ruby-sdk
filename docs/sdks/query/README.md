@@ -24,7 +24,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.query.create_datastore_query(datastore_query: Models::Shared::DatastoreQuery.new(), connection_id: '<id>')
+res = s.query.create_datastore_query(datastore_query: Models::Shared::DatastoreQuery.new(
+  query: Models::Shared::PropertyDatastoreQueryQuery.new(
+    filter: Models::Shared::PropertyDatastoreQueryQueryFilter.new(
+      type: Models::Shared::PropertyDatastoreQueryQueryFilterType::OR,
+    ),
+    select: [
+      '*',
+    ],
+    sql: '',
+  ),
+), connection_id: '<id>')
 
 unless res.datastore_query.nil?
   # handle response

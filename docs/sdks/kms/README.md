@@ -41,7 +41,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.kms.create_kms_comment(kms_comment: Models::Shared::KmsComment.new(), connection_id: '<id>')
+res = s.kms.create_kms_comment(kms_comment: Models::Shared::KmsComment.new(
+  content: 'Decimus tolero viriliter usque.',
+  content_type: Models::Shared::ContentType::HTML,
+  created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
+  id: '034b4ae0-ad2d-4d6e-a72e-c552152b4344',
+  type: Models::Shared::KmsCommentType::PAGE,
+  updated_at: DateTime.iso8601('2023-11-16T08:14:19.101Z'),
+), connection_id: '<id>')
 
 unless res.kms_comment.nil?
   # handle response
@@ -86,7 +93,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.kms.create_kms_page(kms_page: Models::Shared::KmsPage.new(
-  type: Models::Shared::KmsPageType::TEXT,
+  created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
+  download_url: 'https://agitated-validity.info',
+  has_children: true,
+  id: '4cd16e7c-443e-4057-ac6d-9696591ec923',
+  is_active: true,
+  metadata: [],
+  title: 'even minister extract',
+  type: Models::Shared::KmsPageType::HTML,
+  updated_at: DateTime.iso8601('2025-09-10T18:22:58.537Z'),
+  web_url: 'https://another-petticoat.info',
 ), connection_id: '<id>')
 
 unless res.kms_page.nil?
@@ -131,7 +147,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.kms.create_kms_space(kms_space: Models::Shared::KmsSpace.new(), connection_id: '<id>')
+res = s.kms.create_kms_space(kms_space: Models::Shared::KmsSpace.new(
+  created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
+  description: 'Acer.',
+  id: '79516386-c074-488d-88d0-41302c9d98de',
+  is_active: false,
+  name: 'into nor afore',
+  updated_at: DateTime.iso8601('2025-12-03T15:49:18.632Z'),
+), connection_id: '<id>')
 
 unless res.kms_space.nil?
   # handle response
@@ -443,7 +466,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchKmsCommentRequest.new(
-  kms_comment: Models::Shared::KmsComment.new(),
+  kms_comment: Models::Shared::KmsComment.new(
+    content: 'Decimus tolero viriliter usque.',
+    content_type: Models::Shared::ContentType::HTML,
+    created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
+    id: '08ab714e-d537-4693-9de2-d3c4e8a2f4e7',
+    type: Models::Shared::KmsCommentType::PAGE,
+    updated_at: DateTime.iso8601('2023-11-16T08:14:19.104Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -491,7 +521,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
-    type: Models::Shared::KmsPageType::OTHER,
+    created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
+    download_url: 'https://agitated-validity.info',
+    has_children: true,
+    id: '68de4673-06f8-45a1-9afb-531f05ff9bfd',
+    is_active: true,
+    metadata: [],
+    title: 'even minister extract',
+    type: Models::Shared::KmsPageType::HTML,
+    updated_at: DateTime.iso8601('2025-09-10T18:22:58.545Z'),
+    web_url: 'https://another-petticoat.info',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -539,7 +578,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchKmsSpaceRequest.new(
-  kms_space: Models::Shared::KmsSpace.new(),
+  kms_space: Models::Shared::KmsSpace.new(
+    created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
+    description: 'Acer.',
+    id: '23accf41-cd43-4385-a429-b7d9b60c1e1d',
+    is_active: false,
+    name: 'into nor afore',
+    updated_at: DateTime.iso8601('2025-12-03T15:49:18.636Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -712,7 +758,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateKmsCommentRequest.new(
-  kms_comment: Models::Shared::KmsComment.new(),
+  kms_comment: Models::Shared::KmsComment.new(
+    content: 'Decimus tolero viriliter usque.',
+    content_type: Models::Shared::ContentType::HTML,
+    created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
+    id: '08ab714e-d537-4693-9de2-d3c4e8a2f4e7',
+    type: Models::Shared::KmsCommentType::PAGE,
+    updated_at: DateTime.iso8601('2023-11-16T08:14:19.104Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -760,7 +813,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateKmsPageRequest.new(
   kms_page: Models::Shared::KmsPage.new(
-    type: Models::Shared::KmsPageType::OTHER,
+    created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
+    download_url: 'https://agitated-validity.info',
+    has_children: true,
+    id: '68de4673-06f8-45a1-9afb-531f05ff9bfd',
+    is_active: true,
+    metadata: [],
+    title: 'even minister extract',
+    type: Models::Shared::KmsPageType::HTML,
+    updated_at: DateTime.iso8601('2025-09-10T18:22:58.545Z'),
+    web_url: 'https://another-petticoat.info',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -808,7 +870,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateKmsSpaceRequest.new(
-  kms_space: Models::Shared::KmsSpace.new(),
+  kms_space: Models::Shared::KmsSpace.new(
+    created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
+    description: 'Acer.',
+    id: '23accf41-cd43-4385-a429-b7d9b60c1e1d',
+    is_active: false,
+    name: 'into nor afore',
+    updated_at: DateTime.iso8601('2025-12-03T15:49:18.636Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

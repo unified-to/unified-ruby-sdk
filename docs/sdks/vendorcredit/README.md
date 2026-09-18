@@ -29,7 +29,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.vendorcredit.create_accounting_vendorcredit(accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(), connection_id: '<id>')
+res = s.vendorcredit.create_accounting_vendorcredit(accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(
+  applications: [],
+  apply_amount: 1.0,
+  balance_amount: 0.0,
+  created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
+  currency: 'KGS',
+  due_at: DateTime.iso8601('2023-05-06T20:38:46.775Z'),
+  id: '118481ff-0a88-4348-8ef5-40914cb68338',
+  lineitems: [],
+  metadata: [],
+  notes: 'Conatus cruciamentum decor avaritia tantum.',
+  posted_at: DateTime.iso8601('2023-09-28T16:43:14.946Z'),
+  status: Models::Shared::AccountingVendorcreditStatus::SUBMITTED,
+  total_amount: 0.0,
+  updated_at: DateTime.iso8601('2023-11-26T14:35:10.679Z'),
+), connection_id: '<id>')
 
 unless res.accounting_vendorcredit.nil?
   # handle response
@@ -163,7 +178,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingVendorcreditRequest.new(
-  accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(),
+  accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(
+    applications: [],
+    apply_amount: 1.0,
+    balance_amount: 0.0,
+    created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
+    currency: 'KGS',
+    due_at: DateTime.iso8601('2023-05-06T20:38:46.775Z'),
+    id: '059bf6b3-5dde-400b-a74d-6b0a1ea109b9',
+    lineitems: [],
+    metadata: [],
+    notes: 'Conatus cruciamentum decor avaritia tantum.',
+    posted_at: DateTime.iso8601('2023-09-28T16:43:14.949Z'),
+    status: Models::Shared::AccountingVendorcreditStatus::SUBMITTED,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2023-11-26T14:35:10.683Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +282,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingVendorcreditRequest.new(
-  accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(),
+  accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(
+    applications: [],
+    apply_amount: 1.0,
+    balance_amount: 0.0,
+    created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
+    currency: 'KGS',
+    due_at: DateTime.iso8601('2023-05-06T20:38:46.775Z'),
+    id: '059bf6b3-5dde-400b-a74d-6b0a1ea109b9',
+    lineitems: [],
+    metadata: [],
+    notes: 'Conatus cruciamentum decor avaritia tantum.',
+    posted_at: DateTime.iso8601('2023-09-28T16:43:14.949Z'),
+    status: Models::Shared::AccountingVendorcreditStatus::SUBMITTED,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2023-11-26T14:35:10.683Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

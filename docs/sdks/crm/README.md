@@ -60,7 +60,83 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(), connection_id: '<id>')
+res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
+  address: Models::Shared::PropertyCrmCompanyAddress.new(
+    address1: '7261 Salisbury Road',
+    address2: 'Apt. 778',
+    city: 'Harrisburg',
+    country_code: 'US',
+    postal_code: '56293-3678',
+    region: 'Pennsylvania',
+    region_code: 'ID',
+  ),
+  created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
+  description: 'Balbus crapula spiculum.',
+  domains: [
+    'fussy-nerve.info',
+    'sturdy-lobster.org',
+    'greedy-offset.name',
+  ],
+  emails: [
+    Models::Shared::CrmEmail.new(
+      email: 'Sandrine_Jacobi@hotmail.com',
+      type: Models::Shared::CrmEmailType::WORK,
+    ),
+    Models::Shared::CrmEmail.new(
+      email: 'Sandrine_Jacobi@gmail.com',
+      type: Models::Shared::CrmEmailType::WORK,
+    ),
+    Models::Shared::CrmEmail.new(
+      email: 'Sandrine.Jacobi@yahoo.com',
+      type: Models::Shared::CrmEmailType::OTHER,
+    ),
+  ],
+  employees: 967.0,
+  id: '1e0095c8-303c-4e33-af03-5924093a4f9a',
+  industry: 'Infrastructure',
+  is_active: true,
+  link_urls: [
+    'https://blue-license.org',
+    'https://minor-formation.com',
+    'https://ecstatic-hammock.com',
+  ],
+  metadata: [
+    Models::Shared::CrmMetadata.new(
+      extra_data: {
+        "display_name": 'Custom Property',
+      },
+      format: Models::Shared::CrmMetadataFormat::TEXT,
+      id: '577ad0b2-eca6-4e6e-a005-0dc1ee885ca7',
+      namespace: 'custom',
+      slug: 'custom_property',
+      value: 'esse',
+    ),
+  ],
+  name: 'Goodwin and Sons',
+  tags: [
+    'quaerat',
+    'valeo',
+  ],
+  telephones: [
+    Models::Shared::CrmTelephone.new(
+      telephone: '(432) 849-2690',
+      type: Models::Shared::CrmTelephoneType::MOBILE,
+    ),
+    Models::Shared::CrmTelephone.new(
+      telephone: '(606) 871-2046',
+      type: Models::Shared::CrmTelephoneType::OTHER,
+    ),
+    Models::Shared::CrmTelephone.new(
+      telephone: '(842) 258-9395',
+      type: Models::Shared::CrmTelephoneType::MOBILE,
+    ),
+  ],
+  timezone: 'Europe/San_Marino',
+  updated_at: DateTime.iso8601('2025-02-06T12:31:07.287Z'),
+  websites: [
+    'https://wise-possession.org',
+  ],
+), connection_id: '<id>')
 
 unless res.crm_company.nil?
   # handle response
@@ -104,7 +180,71 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(), connection_id: '<id>')
+res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
+  address: Models::Shared::PropertyCrmContactAddress.new(
+    address1: '518 Brannon Burg',
+    city: 'East Helenebury',
+    country_code: 'US',
+    postal_code: '92622-2406',
+    region: 'Vermont',
+    region_code: 'AZ',
+  ),
+  company: 'Lowe - Jakubowski',
+  created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
+  department: 'systematic',
+  emails: [
+    Models::Shared::CrmEmail.new(
+      email: 'Mohammad.Bartell45@hotmail.com',
+      type: Models::Shared::CrmEmailType::HOME,
+    ),
+    Models::Shared::CrmEmail.new(
+      email: 'Mohammad.Bartell90@hotmail.com',
+      type: Models::Shared::CrmEmailType::HOME,
+    ),
+    Models::Shared::CrmEmail.new(
+      email: 'Mohammad_Bartell@hotmail.com',
+      type: Models::Shared::CrmEmailType::WORK,
+    ),
+  ],
+  first_name: 'Mohammad',
+  id: '044bd9d5-4207-49ab-a42d-86ff53cc84b8',
+  image_url: 'https://picsum.photos/seed/zmbPeg/2905/378',
+  last_name: 'Bartell',
+  link_urls: [
+    'https://limited-parade.info',
+    'https://faint-papa.com/',
+    'https://windy-accountability.name',
+  ],
+  metadata: [
+    Models::Shared::CrmMetadata.new(
+      extra_data: {
+        "display_name": 'Custom Property',
+      },
+      format: Models::Shared::CrmMetadataFormat::TEXT,
+      id: '4c434064-0547-4007-8384-afa37b266eb5',
+      namespace: 'custom',
+      slug: 'custom_property',
+      value: 'autem',
+    ),
+  ],
+  name: 'Mohammad Bartell',
+  telephones: [
+    Models::Shared::CrmTelephone.new(
+      telephone: '(975) 986-1658',
+      type: Models::Shared::CrmTelephoneType::WORK,
+    ),
+    Models::Shared::CrmTelephone.new(
+      telephone: '(489) 332-3509',
+      type: Models::Shared::CrmTelephoneType::HOME,
+    ),
+    Models::Shared::CrmTelephone.new(
+      telephone: '(205) 880-8886',
+      type: Models::Shared::CrmTelephoneType::HOME,
+    ),
+  ],
+  title: 'National Tactics Analyst',
+  updated_at: DateTime.iso8601('2021-02-23T09:13:04.804Z'),
+), connection_id: '<id>')
 
 unless res.crm_contact.nil?
   # handle response
@@ -148,7 +288,52 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.crm.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(), connection_id: '<id>')
+res = s.crm.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
+  amount: 98_162.0,
+  closed_at: DateTime.iso8601('2024-03-03T13:46:07.013Z'),
+  closing_at: DateTime.iso8601('2025-08-09T21:44:29.595Z'),
+  created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
+  currency: 'IQD',
+  description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
+  id: '971abce9-768c-4862-821a-fd6a54ed79da',
+  metadata: [
+    Models::Shared::CrmMetadata.new(
+      extra_data: {
+        "display_name": 'Custom Property',
+      },
+      format: Models::Shared::CrmMetadataFormat::TEXT,
+      id: '3a5f8d7c-d860-4f4c-90fa-1c632e332df4',
+      namespace: 'custom',
+      slug: 'custom_property',
+      value: 'conatus',
+    ),
+  ],
+  name: 'Frozen Silk Chicken',
+  pipelines: [
+    Models::Shared::CrmReference.new(
+      id: '7f80b0d8-af8e-4eda-9b6e-6b1ab87fc0a0',
+      name: 'trans',
+    ),
+  ],
+  probability: 65.0,
+  source: 'cubo',
+  stages: [
+    Models::Shared::CrmReference.new(
+      id: '15fdf250-99d4-475a-99b3-7e82a8b1b11d',
+      name: 'tubineus',
+    ),
+    Models::Shared::CrmReference.new(
+      id: '6db47fc1-c86e-41b9-a466-911fd8faf366',
+      name: 'adfectus',
+    ),
+  ],
+  tags: [
+    'causa',
+    'suus',
+  ],
+  updated_at: DateTime.iso8601('2024-09-29T03:10:23.974Z'),
+  won_reason: 'Usque libero soleo.',
+), connection_id: '<id>')
 
 unless res.crm_deal.nil?
   # handle response
@@ -192,7 +377,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.crm.create_crm_event(crm_event: Models::Shared::CrmEvent.new(), connection_id: '<id>')
+res = s.crm.create_crm_event(crm_event: Models::Shared::CrmEvent.new(
+  call: Models::Shared::PropertyCrmEventCall.new(
+    description: 'Arbitro aptus.',
+    duration: 64.0,
+    start_at: DateTime.iso8601('2024-11-17T19:33:31.806Z'),
+  ),
+  created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
+  id: 'f688aa45-938a-4c44-8727-d2c8184ad18c',
+  type: Models::Shared::CrmEventType::CALL,
+  updated_at: DateTime.iso8601('2026-09-08T16:04:30.300Z'),
+), connection_id: '<id>')
 
 unless res.crm_event.nil?
   # handle response
@@ -236,7 +431,62 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(), connection_id: '<id>')
+res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
+  address: Models::Shared::PropertyCrmLeadAddress.new(
+    address1: '528 Forest Road',
+    address2: 'Apt. 643',
+    city: 'Palm Springs',
+    country_code: 'US',
+    postal_code: '55624-6499',
+    region: 'New Jersey',
+    region_code: 'LA',
+  ),
+  company_name: 'Tillman - Wiegand',
+  created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
+  emails: [
+    Models::Shared::CrmEmail.new(
+      email: 'Velda.Sporer16@yahoo.com',
+      type: Models::Shared::CrmEmailType::OTHER,
+    ),
+    Models::Shared::CrmEmail.new(
+      email: 'Velda.Sporer@yahoo.com',
+      type: Models::Shared::CrmEmailType::HOME,
+    ),
+  ],
+  first_name: 'Velda',
+  id: '13d6dc8b-5185-4405-8203-d4541c1154e2',
+  is_active: true,
+  last_name: 'Sporer',
+  link_urls: [
+    'https://classic-sightseeing.com/',
+  ],
+  metadata: [
+    Models::Shared::CrmMetadata.new(
+      extra_data: {
+        "display_name": 'Custom Property',
+      },
+      format: Models::Shared::CrmMetadataFormat::TEXT,
+      id: '688a84cf-fe8e-4523-8059-3605b77700c0',
+      namespace: 'custom',
+      slug: 'custom_property',
+      value: 'sublime',
+    ),
+  ],
+  name: 'Velda Sporer',
+  source: 'aetas',
+  status: 'vesco',
+  telephones: [
+    Models::Shared::CrmTelephone.new(
+      telephone: '(955) 643-9849',
+      type: Models::Shared::CrmTelephoneType::OTHER,
+    ),
+    Models::Shared::CrmTelephone.new(
+      telephone: '(621) 811-8800',
+      type: Models::Shared::CrmTelephoneType::WORK,
+    ),
+  ],
+  updated_at: DateTime.iso8601('2020-05-15T02:08:28.082Z'),
+), connection_id: '<id>')
 
 unless res.crm_lead.nil?
   # handle response
@@ -280,7 +530,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.crm.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(), connection_id: '<id>')
+res = s.crm.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(
+  created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+  deal_probability: 99.0,
+  display_order: 8.0,
+  id: 'c2c01e88-79b5-464e-9b28-23b3e3522dbc',
+  is_active: true,
+  name: 'Small Steel Bacon',
+  stages: [
+    Models::Shared::CrmStage.new(
+      active: false,
+      created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+      deal_probability: 84.0,
+      display_order: 72.0,
+      id: '3d018fbd-9fb4-403d-bf4a-4bc3961fbcc6',
+      is_closed: true,
+      name: 'Veniam.',
+      updated_at: DateTime.iso8601('2025-09-16T09:57:01.692Z'),
+    ),
+  ],
+  updated_at: DateTime.iso8601('2025-10-07T15:01:45.555Z'),
+), connection_id: '<id>')
 
 unless res.crm_pipeline.nil?
   # handle response
@@ -904,7 +1174,83 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCrmCompanyRequest.new(
-  crm_company: Models::Shared::CrmCompany.new(),
+  crm_company: Models::Shared::CrmCompany.new(
+    address: Models::Shared::PropertyCrmCompanyAddress.new(
+      address1: '7261 Salisbury Road',
+      address2: 'Apt. 778',
+      city: 'Harrisburg',
+      country_code: 'US',
+      postal_code: '56293-3678',
+      region: 'Pennsylvania',
+      region_code: 'ID',
+    ),
+    created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
+    description: 'Balbus crapula spiculum.',
+    domains: [
+      'fussy-nerve.info',
+      'sturdy-lobster.org',
+      'greedy-offset.name',
+    ],
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine_Jacobi@hotmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine_Jacobi@gmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine.Jacobi@yahoo.com',
+        type: Models::Shared::CrmEmailType::OTHER,
+      ),
+    ],
+    employees: 967.0,
+    id: 'c6a3d196-e987-493b-b018-b604516c8f09',
+    industry: 'Infrastructure',
+    is_active: true,
+    link_urls: [
+      'https://blue-license.org',
+      'https://minor-formation.com',
+      'https://ecstatic-hammock.com',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '3da39862-00b3-4763-8d44-9c5b7cee4fd6',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'esse',
+      ),
+    ],
+    name: 'Goodwin and Sons',
+    tags: [
+      'quaerat',
+      'valeo',
+    ],
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(432) 849-2690',
+        type: Models::Shared::CrmTelephoneType::MOBILE,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(606) 871-2046',
+        type: Models::Shared::CrmTelephoneType::OTHER,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(842) 258-9395',
+        type: Models::Shared::CrmTelephoneType::MOBILE,
+      ),
+    ],
+    timezone: 'Europe/San_Marino',
+    updated_at: DateTime.iso8601('2025-02-06T12:31:07.301Z'),
+    websites: [
+      'https://wise-possession.org',
+    ],
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -951,7 +1297,71 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCrmContactRequest.new(
-  crm_contact: Models::Shared::CrmContact.new(),
+  crm_contact: Models::Shared::CrmContact.new(
+    address: Models::Shared::PropertyCrmContactAddress.new(
+      address1: '518 Brannon Burg',
+      city: 'East Helenebury',
+      country_code: 'US',
+      postal_code: '92622-2406',
+      region: 'Vermont',
+      region_code: 'AZ',
+    ),
+    company: 'Lowe - Jakubowski',
+    created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
+    department: 'systematic',
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad.Bartell45@hotmail.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad.Bartell90@hotmail.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad_Bartell@hotmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+    ],
+    first_name: 'Mohammad',
+    id: '91442d56-299e-4fbd-b06f-e26380d6656b',
+    image_url: 'https://picsum.photos/seed/zmbPeg/2905/378',
+    last_name: 'Bartell',
+    link_urls: [
+      'https://limited-parade.info',
+      'https://faint-papa.com/',
+      'https://windy-accountability.name',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '42b19565-d886-42ec-ad7b-5d560bbe7c3d',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'autem',
+      ),
+    ],
+    name: 'Mohammad Bartell',
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(975) 986-1658',
+        type: Models::Shared::CrmTelephoneType::WORK,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(489) 332-3509',
+        type: Models::Shared::CrmTelephoneType::HOME,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(205) 880-8886',
+        type: Models::Shared::CrmTelephoneType::HOME,
+      ),
+    ],
+    title: 'National Tactics Analyst',
+    updated_at: DateTime.iso8601('2021-02-23T09:13:04.805Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -998,7 +1408,52 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCrmDealRequest.new(
-  crm_deal: Models::Shared::CrmDeal.new(),
+  crm_deal: Models::Shared::CrmDeal.new(
+    amount: 98_162.0,
+    closed_at: DateTime.iso8601('2024-03-03T13:46:07.017Z'),
+    closing_at: DateTime.iso8601('2025-08-09T21:44:29.609Z'),
+    created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
+    currency: 'IQD',
+    description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
+    id: '82f07a5c-a4f5-4a50-bae3-887b060ed6f4',
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '29c57399-d6a5-40d8-8912-ce1714027425',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'conatus',
+      ),
+    ],
+    name: 'Frozen Silk Chicken',
+    pipelines: [
+      Models::Shared::CrmReference.new(
+        id: 'f035fcf2-e4f7-499f-b52c-f98892f40d17',
+        name: 'trans',
+      ),
+    ],
+    probability: 65.0,
+    source: 'cubo',
+    stages: [
+      Models::Shared::CrmReference.new(
+        id: '3b8e2f9d-235a-4731-a99b-deab0b35ed19',
+        name: 'tubineus',
+      ),
+      Models::Shared::CrmReference.new(
+        id: '04ae0756-6eb6-4d4f-a5c3-09b4e433dc8b',
+        name: 'adfectus',
+      ),
+    ],
+    tags: [
+      'causa',
+      'suus',
+    ],
+    updated_at: DateTime.iso8601('2024-09-29T03:10:23.982Z'),
+    won_reason: 'Usque libero soleo.',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1045,7 +1500,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCrmEventRequest.new(
-  crm_event: Models::Shared::CrmEvent.new(),
+  crm_event: Models::Shared::CrmEvent.new(
+    call: Models::Shared::PropertyCrmEventCall.new(
+      description: 'Arbitro aptus.',
+      duration: 64.0,
+      start_at: DateTime.iso8601('2024-11-17T19:33:31.828Z'),
+    ),
+    created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
+    id: '47048461-7922-42b9-80fa-1b599c629858',
+    type: Models::Shared::CrmEventType::CALL,
+    updated_at: DateTime.iso8601('2026-09-08T16:04:30.331Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1092,7 +1557,62 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCrmLeadRequest.new(
-  crm_lead: Models::Shared::CrmLead.new(),
+  crm_lead: Models::Shared::CrmLead.new(
+    address: Models::Shared::PropertyCrmLeadAddress.new(
+      address1: '528 Forest Road',
+      address2: 'Apt. 643',
+      city: 'Palm Springs',
+      country_code: 'US',
+      postal_code: '55624-6499',
+      region: 'New Jersey',
+      region_code: 'LA',
+    ),
+    company_name: 'Tillman - Wiegand',
+    created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Velda.Sporer16@yahoo.com',
+        type: Models::Shared::CrmEmailType::OTHER,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Velda.Sporer@yahoo.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+    ],
+    first_name: 'Velda',
+    id: '7d3b7db3-5987-46a6-a7d4-feae9f200286',
+    is_active: true,
+    last_name: 'Sporer',
+    link_urls: [
+      'https://classic-sightseeing.com/',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '252518d8-6eb7-4131-b4c6-05c7db635dc3',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'sublime',
+      ),
+    ],
+    name: 'Velda Sporer',
+    source: 'aetas',
+    status: 'vesco',
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(955) 643-9849',
+        type: Models::Shared::CrmTelephoneType::OTHER,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(621) 811-8800',
+        type: Models::Shared::CrmTelephoneType::WORK,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2020-05-15T02:08:28.083Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1139,7 +1659,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCrmPipelineRequest.new(
-  crm_pipeline: Models::Shared::CrmPipeline.new(),
+  crm_pipeline: Models::Shared::CrmPipeline.new(
+    created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+    deal_probability: 99.0,
+    display_order: 8.0,
+    id: 'a2807263-c08e-4fa7-a5f5-d374f99f60f4',
+    is_active: true,
+    name: 'Small Steel Bacon',
+    stages: [
+      Models::Shared::CrmStage.new(
+        active: false,
+        created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+        deal_probability: 84.0,
+        display_order: 72.0,
+        id: 'c618bb9b-ac3b-4768-8d2c-02366a8825e9',
+        is_closed: true,
+        name: 'Veniam.',
+        updated_at: DateTime.iso8601('2025-09-16T09:57:01.697Z'),
+      ),
+    ],
+    updated_at: DateTime.iso8601('2025-10-07T15:01:45.561Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1438,7 +1978,83 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCrmCompanyRequest.new(
-  crm_company: Models::Shared::CrmCompany.new(),
+  crm_company: Models::Shared::CrmCompany.new(
+    address: Models::Shared::PropertyCrmCompanyAddress.new(
+      address1: '7261 Salisbury Road',
+      address2: 'Apt. 778',
+      city: 'Harrisburg',
+      country_code: 'US',
+      postal_code: '56293-3678',
+      region: 'Pennsylvania',
+      region_code: 'ID',
+    ),
+    created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
+    description: 'Balbus crapula spiculum.',
+    domains: [
+      'fussy-nerve.info',
+      'sturdy-lobster.org',
+      'greedy-offset.name',
+    ],
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine_Jacobi@hotmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine_Jacobi@gmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Sandrine.Jacobi@yahoo.com',
+        type: Models::Shared::CrmEmailType::OTHER,
+      ),
+    ],
+    employees: 967.0,
+    id: 'c6a3d196-e987-493b-b018-b604516c8f09',
+    industry: 'Infrastructure',
+    is_active: true,
+    link_urls: [
+      'https://blue-license.org',
+      'https://minor-formation.com',
+      'https://ecstatic-hammock.com',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '3da39862-00b3-4763-8d44-9c5b7cee4fd6',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'esse',
+      ),
+    ],
+    name: 'Goodwin and Sons',
+    tags: [
+      'quaerat',
+      'valeo',
+    ],
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(432) 849-2690',
+        type: Models::Shared::CrmTelephoneType::MOBILE,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(606) 871-2046',
+        type: Models::Shared::CrmTelephoneType::OTHER,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(842) 258-9395',
+        type: Models::Shared::CrmTelephoneType::MOBILE,
+      ),
+    ],
+    timezone: 'Europe/San_Marino',
+    updated_at: DateTime.iso8601('2025-02-06T12:31:07.301Z'),
+    websites: [
+      'https://wise-possession.org',
+    ],
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1485,7 +2101,71 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCrmContactRequest.new(
-  crm_contact: Models::Shared::CrmContact.new(),
+  crm_contact: Models::Shared::CrmContact.new(
+    address: Models::Shared::PropertyCrmContactAddress.new(
+      address1: '518 Brannon Burg',
+      city: 'East Helenebury',
+      country_code: 'US',
+      postal_code: '92622-2406',
+      region: 'Vermont',
+      region_code: 'AZ',
+    ),
+    company: 'Lowe - Jakubowski',
+    created_at: DateTime.iso8601('2021-01-02T00:41:38.885Z'),
+    department: 'systematic',
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad.Bartell45@hotmail.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad.Bartell90@hotmail.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Mohammad_Bartell@hotmail.com',
+        type: Models::Shared::CrmEmailType::WORK,
+      ),
+    ],
+    first_name: 'Mohammad',
+    id: '91442d56-299e-4fbd-b06f-e26380d6656b',
+    image_url: 'https://picsum.photos/seed/zmbPeg/2905/378',
+    last_name: 'Bartell',
+    link_urls: [
+      'https://limited-parade.info',
+      'https://faint-papa.com/',
+      'https://windy-accountability.name',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '42b19565-d886-42ec-ad7b-5d560bbe7c3d',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'autem',
+      ),
+    ],
+    name: 'Mohammad Bartell',
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(975) 986-1658',
+        type: Models::Shared::CrmTelephoneType::WORK,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(489) 332-3509',
+        type: Models::Shared::CrmTelephoneType::HOME,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(205) 880-8886',
+        type: Models::Shared::CrmTelephoneType::HOME,
+      ),
+    ],
+    title: 'National Tactics Analyst',
+    updated_at: DateTime.iso8601('2021-02-23T09:13:04.805Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1532,7 +2212,52 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCrmDealRequest.new(
-  crm_deal: Models::Shared::CrmDeal.new(),
+  crm_deal: Models::Shared::CrmDeal.new(
+    amount: 98_162.0,
+    closed_at: DateTime.iso8601('2024-03-03T13:46:07.017Z'),
+    closing_at: DateTime.iso8601('2025-08-09T21:44:29.609Z'),
+    created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
+    currency: 'IQD',
+    description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
+    id: '82f07a5c-a4f5-4a50-bae3-887b060ed6f4',
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '29c57399-d6a5-40d8-8912-ce1714027425',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'conatus',
+      ),
+    ],
+    name: 'Frozen Silk Chicken',
+    pipelines: [
+      Models::Shared::CrmReference.new(
+        id: 'f035fcf2-e4f7-499f-b52c-f98892f40d17',
+        name: 'trans',
+      ),
+    ],
+    probability: 65.0,
+    source: 'cubo',
+    stages: [
+      Models::Shared::CrmReference.new(
+        id: '3b8e2f9d-235a-4731-a99b-deab0b35ed19',
+        name: 'tubineus',
+      ),
+      Models::Shared::CrmReference.new(
+        id: '04ae0756-6eb6-4d4f-a5c3-09b4e433dc8b',
+        name: 'adfectus',
+      ),
+    ],
+    tags: [
+      'causa',
+      'suus',
+    ],
+    updated_at: DateTime.iso8601('2024-09-29T03:10:23.982Z'),
+    won_reason: 'Usque libero soleo.',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1579,7 +2304,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCrmEventRequest.new(
-  crm_event: Models::Shared::CrmEvent.new(),
+  crm_event: Models::Shared::CrmEvent.new(
+    call: Models::Shared::PropertyCrmEventCall.new(
+      description: 'Arbitro aptus.',
+      duration: 64.0,
+      start_at: DateTime.iso8601('2024-11-17T19:33:31.828Z'),
+    ),
+    created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
+    id: '47048461-7922-42b9-80fa-1b599c629858',
+    type: Models::Shared::CrmEventType::CALL,
+    updated_at: DateTime.iso8601('2026-09-08T16:04:30.331Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1626,7 +2361,62 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCrmLeadRequest.new(
-  crm_lead: Models::Shared::CrmLead.new(),
+  crm_lead: Models::Shared::CrmLead.new(
+    address: Models::Shared::PropertyCrmLeadAddress.new(
+      address1: '528 Forest Road',
+      address2: 'Apt. 643',
+      city: 'Palm Springs',
+      country_code: 'US',
+      postal_code: '55624-6499',
+      region: 'New Jersey',
+      region_code: 'LA',
+    ),
+    company_name: 'Tillman - Wiegand',
+    created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
+    emails: [
+      Models::Shared::CrmEmail.new(
+        email: 'Velda.Sporer16@yahoo.com',
+        type: Models::Shared::CrmEmailType::OTHER,
+      ),
+      Models::Shared::CrmEmail.new(
+        email: 'Velda.Sporer@yahoo.com',
+        type: Models::Shared::CrmEmailType::HOME,
+      ),
+    ],
+    first_name: 'Velda',
+    id: '7d3b7db3-5987-46a6-a7d4-feae9f200286',
+    is_active: true,
+    last_name: 'Sporer',
+    link_urls: [
+      'https://classic-sightseeing.com/',
+    ],
+    metadata: [
+      Models::Shared::CrmMetadata.new(
+        extra_data: {
+          "display_name": 'Custom Property',
+        },
+        format: Models::Shared::CrmMetadataFormat::TEXT,
+        id: '252518d8-6eb7-4131-b4c6-05c7db635dc3',
+        namespace: 'custom',
+        slug: 'custom_property',
+        value: 'sublime',
+      ),
+    ],
+    name: 'Velda Sporer',
+    source: 'aetas',
+    status: 'vesco',
+    telephones: [
+      Models::Shared::CrmTelephone.new(
+        telephone: '(955) 643-9849',
+        type: Models::Shared::CrmTelephoneType::OTHER,
+      ),
+      Models::Shared::CrmTelephone.new(
+        telephone: '(621) 811-8800',
+        type: Models::Shared::CrmTelephoneType::WORK,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2020-05-15T02:08:28.083Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1673,7 +2463,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCrmPipelineRequest.new(
-  crm_pipeline: Models::Shared::CrmPipeline.new(),
+  crm_pipeline: Models::Shared::CrmPipeline.new(
+    created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+    deal_probability: 99.0,
+    display_order: 8.0,
+    id: 'a2807263-c08e-4fa7-a5f5-d374f99f60f4',
+    is_active: true,
+    name: 'Small Steel Bacon',
+    stages: [
+      Models::Shared::CrmStage.new(
+        active: false,
+        created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
+        deal_probability: 84.0,
+        display_order: 72.0,
+        id: 'c618bb9b-ac3b-4768-8d2c-02366a8825e9',
+        is_closed: true,
+        name: 'Veniam.',
+        updated_at: DateTime.iso8601('2025-09-16T09:57:01.697Z'),
+      ),
+    ],
+    updated_at: DateTime.iso8601('2025-10-07T15:01:45.561Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

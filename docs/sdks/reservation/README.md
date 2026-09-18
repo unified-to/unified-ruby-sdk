@@ -29,7 +29,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.reservation.create_commerce_reservation(commerce_reservation: Models::Shared::CommerceReservation.new(), connection_id: '<id>')
+res = s.reservation.create_commerce_reservation(commerce_reservation: Models::Shared::CommerceReservation.new(
+  created_at: DateTime.iso8601('2021-12-14T19:50:31.151Z'),
+  end_at: DateTime.iso8601('2022-01-01T22:00:17.868Z'),
+  guest_email: 'Sunny.Strosin77@yahoo.com',
+  guest_name: 'Annette Franecki',
+  guest_phone: '(990) 317-6213',
+  id: '4a45b955-7123-4a67-a6c7-68eab893da7b',
+  item_name: 'Practical Ceramic Shoes',
+  notes: 'Adsum textilis ipsum despecto.',
+  size: 10.0,
+  staff_name: 'Vickie Fahey',
+  start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
+  status: Models::Shared::CommerceReservationStatus::PENDING,
+  updated_at: DateTime.iso8601('2022-12-27T17:10:59.311Z'),
+  url: 'https://cluttered-pine.info/',
+), connection_id: '<id>')
 
 unless res.commerce_reservation.nil?
   # handle response
@@ -163,7 +178,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCommerceReservationRequest.new(
-  commerce_reservation: Models::Shared::CommerceReservation.new(),
+  commerce_reservation: Models::Shared::CommerceReservation.new(
+    created_at: DateTime.iso8601('2021-12-14T19:50:31.151Z'),
+    end_at: DateTime.iso8601('2022-01-01T22:00:17.868Z'),
+    guest_email: 'Sunny.Strosin77@yahoo.com',
+    guest_name: 'Annette Franecki',
+    guest_phone: '(990) 317-6213',
+    id: 'f0206ae8-f1de-49d8-b45c-dd64c998d615',
+    item_name: 'Practical Ceramic Shoes',
+    notes: 'Adsum textilis ipsum despecto.',
+    size: 10.0,
+    staff_name: 'Vickie Fahey',
+    start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
+    status: Models::Shared::CommerceReservationStatus::PENDING,
+    updated_at: DateTime.iso8601('2022-12-27T17:10:59.313Z'),
+    url: 'https://cluttered-pine.info/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +282,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCommerceReservationRequest.new(
-  commerce_reservation: Models::Shared::CommerceReservation.new(),
+  commerce_reservation: Models::Shared::CommerceReservation.new(
+    created_at: DateTime.iso8601('2021-12-14T19:50:31.151Z'),
+    end_at: DateTime.iso8601('2022-01-01T22:00:17.868Z'),
+    guest_email: 'Sunny.Strosin77@yahoo.com',
+    guest_name: 'Annette Franecki',
+    guest_phone: '(990) 317-6213',
+    id: 'f0206ae8-f1de-49d8-b45c-dd64c998d615',
+    item_name: 'Practical Ceramic Shoes',
+    notes: 'Adsum textilis ipsum despecto.',
+    size: 10.0,
+    staff_name: 'Vickie Fahey',
+    start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
+    status: Models::Shared::CommerceReservationStatus::PENDING,
+    updated_at: DateTime.iso8601('2022-12-27T17:10:59.313Z'),
+    url: 'https://cluttered-pine.info/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -29,7 +29,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.inventory.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(), connection_id: '<id>')
+res = s.inventory.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(
+  available: 337.0,
+  updated_at: DateTime.iso8601('2025-10-24T19:33:58.174Z'),
+), connection_id: '<id>')
 
 unless res.commerce_inventory.nil?
   # handle response
@@ -163,7 +166,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchCommerceInventoryRequest.new(
-  commerce_inventory: Models::Shared::CommerceInventory.new(),
+  commerce_inventory: Models::Shared::CommerceInventory.new(
+    available: 337.0,
+    updated_at: DateTime.iso8601('2025-10-24T19:33:58.178Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +258,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateCommerceInventoryRequest.new(
-  commerce_inventory: Models::Shared::CommerceInventory.new(),
+  commerce_inventory: Models::Shared::CommerceInventory.new(
+    available: 337.0,
+    updated_at: DateTime.iso8601('2025-10-24T19:33:58.178Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

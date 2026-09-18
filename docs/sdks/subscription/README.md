@@ -29,7 +29,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.subscription.create_payment_subscription(payment_subscription: Models::Shared::PaymentSubscription.new(), connection_id: '<id>')
+res = s.subscription.create_payment_subscription(payment_subscription: Models::Shared::PaymentSubscription.new(
+  created_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
+  currency: 'WST',
+  current_period_end_at: DateTime.iso8601('2023-06-03T04:20:29.157Z'),
+  current_period_start_at: DateTime.iso8601('2023-05-21T03:55:58.846Z'),
+  day_of_month: 1.0,
+  description: 'Innovative Mouse featuring important technology and Bamboo construction',
+  end_at: DateTime.iso8601('2023-05-21T12:36:09.234Z'),
+  id: 'b4b1065f-cae9-4adf-a6d3-788815a91798',
+  interval: 1.0,
+  interval_unit: Models::Shared::IntervalUnit::MONTH,
+  lineitems: [],
+  start_at: DateTime.iso8601('2023-05-29T06:04:51.030Z'),
+  status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
+  total_amount: 75_616.0,
+  updated_at: DateTime.iso8601('2023-12-15T22:32:44.153Z'),
+), connection_id: '<id>')
 
 unless res.payment_subscription.nil?
   # handle response
@@ -163,7 +179,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchPaymentSubscriptionRequest.new(
-  payment_subscription: Models::Shared::PaymentSubscription.new(),
+  payment_subscription: Models::Shared::PaymentSubscription.new(
+    created_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
+    currency: 'WST',
+    current_period_end_at: DateTime.iso8601('2023-06-03T04:20:29.157Z'),
+    current_period_start_at: DateTime.iso8601('2023-05-21T03:55:58.846Z'),
+    day_of_month: 1.0,
+    description: 'Innovative Mouse featuring important technology and Bamboo construction',
+    end_at: DateTime.iso8601('2023-05-21T12:36:09.234Z'),
+    id: 'e0cecaf0-9a2c-4a5d-8d75-019d8be80964',
+    interval: 1.0,
+    interval_unit: Models::Shared::IntervalUnit::MONTH,
+    lineitems: [],
+    start_at: DateTime.iso8601('2023-05-29T06:04:51.030Z'),
+    status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
+    total_amount: 75_616.0,
+    updated_at: DateTime.iso8601('2023-12-15T22:32:44.157Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +284,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
-  payment_subscription: Models::Shared::PaymentSubscription.new(),
+  payment_subscription: Models::Shared::PaymentSubscription.new(
+    created_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
+    currency: 'WST',
+    current_period_end_at: DateTime.iso8601('2023-06-03T04:20:29.157Z'),
+    current_period_start_at: DateTime.iso8601('2023-05-21T03:55:58.846Z'),
+    day_of_month: 1.0,
+    description: 'Innovative Mouse featuring important technology and Bamboo construction',
+    end_at: DateTime.iso8601('2023-05-21T12:36:09.234Z'),
+    id: 'e0cecaf0-9a2c-4a5d-8d75-019d8be80964',
+    interval: 1.0,
+    interval_unit: Models::Shared::IntervalUnit::MONTH,
+    lineitems: [],
+    start_at: DateTime.iso8601('2023-05-29T06:04:51.030Z'),
+    status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
+    total_amount: 75_616.0,
+    updated_at: DateTime.iso8601('2023-12-15T22:32:44.157Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

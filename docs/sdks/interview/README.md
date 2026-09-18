@@ -29,7 +29,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.interview.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(), connection_id: '<id>')
+res = s.interview.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(
+  created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
+  end_at: DateTime.iso8601('2025-09-23T08:15:22.627Z'),
+  external_event_xref: '390d0224-05fb-4956-9a15-4e63e6337824',
+  id: 'f8397709-c564-4864-8bc8-d0866cfa4946',
+  location: '26596 Halle Trafficway',
+  start_at: DateTime.iso8601('2025-05-19T06:23:36.545Z'),
+  status: Models::Shared::AtsInterviewStatus::SCHEDULED,
+  updated_at: DateTime.iso8601('2026-02-04T00:34:33.533Z'),
+), connection_id: '<id>')
 
 unless res.ats_interview.nil?
   # handle response
@@ -163,7 +172,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsInterviewRequest.new(
-  ats_interview: Models::Shared::AtsInterview.new(),
+  ats_interview: Models::Shared::AtsInterview.new(
+    created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
+    end_at: DateTime.iso8601('2025-09-23T08:15:22.633Z'),
+    external_event_xref: '8017d6fe-816e-4f7b-b701-7caca02ef9e6',
+    id: '21ba277c-ab25-4651-97f3-2d0d887baf49',
+    location: '26596 Halle Trafficway',
+    start_at: DateTime.iso8601('2025-05-19T06:23:36.550Z'),
+    status: Models::Shared::AtsInterviewStatus::SCHEDULED,
+    updated_at: DateTime.iso8601('2026-02-04T00:34:33.539Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +270,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsInterviewRequest.new(
-  ats_interview: Models::Shared::AtsInterview.new(),
+  ats_interview: Models::Shared::AtsInterview.new(
+    created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
+    end_at: DateTime.iso8601('2025-09-23T08:15:22.633Z'),
+    external_event_xref: '8017d6fe-816e-4f7b-b701-7caca02ef9e6',
+    id: '21ba277c-ab25-4651-97f3-2d0d887baf49',
+    location: '26596 Halle Trafficway',
+    start_at: DateTime.iso8601('2025-05-19T06:23:36.550Z'),
+    status: Models::Shared::AtsInterviewStatus::SCHEDULED,
+    updated_at: DateTime.iso8601('2026-02-04T00:34:33.539Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

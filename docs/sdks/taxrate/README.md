@@ -29,7 +29,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.taxrate.create_accounting_taxrate(accounting_taxrate: Models::Shared::AccountingTaxrate.new(), connection_id: '<id>')
+res = s.taxrate.create_accounting_taxrate(accounting_taxrate: Models::Shared::AccountingTaxrate.new(
+  created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
+  description: 'Nemo atrox tricesimus creator aranea.',
+  id: '16248ada-de31-458f-9168-922536fc39ea',
+  is_active: false,
+  metadata: [],
+  name: 'cogo',
+  rate: 1.0,
+  updated_at: DateTime.iso8601('2025-11-04T07:50:52.883Z'),
+), connection_id: '<id>')
 
 unless res.accounting_taxrate.nil?
   # handle response
@@ -163,7 +172,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingTaxrateRequest.new(
-  accounting_taxrate: Models::Shared::AccountingTaxrate.new(),
+  accounting_taxrate: Models::Shared::AccountingTaxrate.new(
+    created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
+    description: 'Nemo atrox tricesimus creator aranea.',
+    id: '607c326b-3cd6-4366-908c-10dcf274278c',
+    is_active: false,
+    metadata: [],
+    name: 'cogo',
+    rate: 1.0,
+    updated_at: DateTime.iso8601('2025-11-04T07:50:52.889Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +270,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingTaxrateRequest.new(
-  accounting_taxrate: Models::Shared::AccountingTaxrate.new(),
+  accounting_taxrate: Models::Shared::AccountingTaxrate.new(
+    created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
+    description: 'Nemo atrox tricesimus creator aranea.',
+    id: '607c326b-3cd6-4366-908c-10dcf274278c',
+    is_active: false,
+    metadata: [],
+    name: 'cogo',
+    rate: 1.0,
+    updated_at: DateTime.iso8601('2025-11-04T07:50:52.889Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

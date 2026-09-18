@@ -29,7 +29,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.database.create_datastore_database(datastore_database: Models::Shared::DatastoreDatabase.new(), connection_id: '<id>')
+res = s.database.create_datastore_database(datastore_database: Models::Shared::DatastoreDatabase.new(
+  created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
+  description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
+  id: '99221c77-20f7-4746-8da1-3bc509c2055b',
+  is_active: true,
+  name: 'Rau - O\'Reilly',
+  password: 'iYLhYwOHm0NLDvI',
+  region: 'France',
+  updated_at: DateTime.iso8601('2023-06-12T03:08:59.875Z'),
+  web_url: 'https://optimal-signature.name',
+), connection_id: '<id>')
 
 unless res.datastore_database.nil?
   # handle response
@@ -163,7 +173,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchDatastoreDatabaseRequest.new(
-  datastore_database: Models::Shared::DatastoreDatabase.new(),
+  datastore_database: Models::Shared::DatastoreDatabase.new(
+    created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
+    description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
+    id: '95b58980-5d95-4640-9662-16bf49459520',
+    is_active: true,
+    name: 'Rau - O\'Reilly',
+    password: 'iYLhYwOHm0NLDvI',
+    region: 'France',
+    updated_at: DateTime.iso8601('2023-06-12T03:08:59.879Z'),
+    web_url: 'https://optimal-signature.name',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +272,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateDatastoreDatabaseRequest.new(
-  datastore_database: Models::Shared::DatastoreDatabase.new(),
+  datastore_database: Models::Shared::DatastoreDatabase.new(
+    created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
+    description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
+    id: '95b58980-5d95-4640-9662-16bf49459520',
+    is_active: true,
+    name: 'Rau - O\'Reilly',
+    password: 'iYLhYwOHm0NLDvI',
+    region: 'France',
+    updated_at: DateTime.iso8601('2023-06-12T03:08:59.879Z'),
+    web_url: 'https://optimal-signature.name',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

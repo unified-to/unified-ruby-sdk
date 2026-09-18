@@ -27,7 +27,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.genai.create_genai_embedding(genai_embedding: Models::Shared::GenaiEmbedding.new(), connection_id: '<id>')
+res = s.genai.create_genai_embedding(genai_embedding: Models::Shared::GenaiEmbedding.new(
+  content: [
+    Models::Shared::GenaiEmbeddingContent.new(
+      text: 'Utrimque temptatio pecco demulceo.',
+    ),
+  ],
+  dimension: 423.0,
+  embeddings: 'Est.',
+  enconding_format: Models::Shared::EncondingFormat::FLOAT,
+  id: '739d0d3c-8595-43bd-860d-f293570b2047',
+  max_tokens: 223.0,
+  tokens_used: 836.0,
+  type: 'classification',
+), connection_id: '<id>')
 
 unless res.genai_embedding.nil?
   # handle response
@@ -71,7 +84,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.genai.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(), connection_id: '<id>')
+res = s.genai.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(
+  max_tokens: 0.4_677_782_787_475_735,
+  mcp_authorization_token: 'f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4',
+  mcp_deferred_tools: [],
+  mcp_url: 'https://unsung-dusk.info/',
+  messages: [
+    Models::Shared::GenaiContent.new(
+      content: 'Aegre repudiandae verecundia facere statua.',
+      role: Models::Shared::Role::ASSISTANT,
+    ),
+    Models::Shared::GenaiContent.new(
+      content: 'Speciosus xiphias soleo trepide crinis.',
+      role: Models::Shared::Role::SYSTEM,
+    ),
+  ],
+  responses: [
+    'Balbus vobis circumvenio una.',
+  ],
+  temperature: 0.0,
+  tokens_used: 975.0,
+), connection_id: '<id>')
 
 unless res.genai_prompt.nil?
   # handle response

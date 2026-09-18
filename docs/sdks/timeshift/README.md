@@ -30,7 +30,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.timeshift.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
+  approved_at: DateTime.iso8601('2023-06-05T14:30:14.534Z'),
+  compensation: [
+    Models::Shared::HrisCompensation.new(
+      amount: 76_761.0,
+      currency: 'JPY',
+      frequency: Models::Shared::HrisCompensationFrequency::HOUR,
+      notes: 'Annus adficio suasoria architecto aggero.',
+      type: Models::Shared::HrisCompensationType::OTHER,
+    ),
+  ],
+  created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
   employee_user_id: '<id>',
+  end_at: DateTime.iso8601('2026-08-25T08:25:39.098Z'),
+  hours: 8.0,
+  id: 'cc8b7736-3213-49e1-bddd-aad2b26fed16',
+  is_approved: true,
+  start_at: DateTime.iso8601('2023-06-24T19:28:03.634Z'),
+  updated_at: DateTime.iso8601('2021-06-22T20:52:32.069Z'),
 ), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -166,7 +183,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
+    approved_at: DateTime.iso8601('2023-06-05T14:30:14.540Z'),
+    compensation: [
+      Models::Shared::HrisCompensation.new(
+        amount: 76_761.0,
+        currency: 'JPY',
+        frequency: Models::Shared::HrisCompensationFrequency::HOUR,
+        notes: 'Annus adficio suasoria architecto aggero.',
+        type: Models::Shared::HrisCompensationType::OTHER,
+      ),
+    ],
+    created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
+    end_at: DateTime.iso8601('2026-08-25T08:25:39.110Z'),
+    hours: 8.0,
+    id: '771ca1c4-06c5-40d8-bf75-4ffe636a625a',
+    is_approved: true,
+    start_at: DateTime.iso8601('2023-06-24T19:28:03.640Z'),
+    updated_at: DateTime.iso8601('2021-06-22T20:52:32.073Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -257,7 +291,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
+    approved_at: DateTime.iso8601('2023-06-05T14:30:14.540Z'),
+    compensation: [
+      Models::Shared::HrisCompensation.new(
+        amount: 76_761.0,
+        currency: 'JPY',
+        frequency: Models::Shared::HrisCompensationFrequency::HOUR,
+        notes: 'Annus adficio suasoria architecto aggero.',
+        type: Models::Shared::HrisCompensationType::OTHER,
+      ),
+    ],
+    created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
+    end_at: DateTime.iso8601('2026-08-25T08:25:39.110Z'),
+    hours: 8.0,
+    id: '771ca1c4-06c5-40d8-bf75-4ffe636a625a',
+    is_approved: true,
+    start_at: DateTime.iso8601('2023-06-24T19:28:03.640Z'),
+    updated_at: DateTime.iso8601('2021-06-22T20:52:32.073Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

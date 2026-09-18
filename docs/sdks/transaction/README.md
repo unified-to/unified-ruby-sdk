@@ -29,7 +29,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.transaction.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(), connection_id: '<id>')
+res = s.transaction.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(
+  created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
+  id: '1f0f8272-5741-4b34-8dfe-e81afb59d809',
+  lineitems: [
+    Models::Shared::AccountingTransactionLineItem.new(
+      category_ids: [],
+      description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+      id: '48067e11-a257-4de8-b4e0-197f19597ab7',
+      name: 'Salad',
+      object_type: 'delicate',
+      total_amount: 58_531.0,
+      unit_amount: 536.0,
+      unit_quantity: 91.0,
+    ),
+  ],
+  memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+  tax_amount: 0.0,
+  total_amount: 94_452.0,
+  updated_at: DateTime.iso8601('2021-09-10T02:35:42.829Z'),
+), connection_id: '<id>')
 
 unless res.accounting_transaction.nil?
   # handle response
@@ -163,7 +182,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingTransactionRequest.new(
-  accounting_transaction: Models::Shared::AccountingTransaction.new(),
+  accounting_transaction: Models::Shared::AccountingTransaction.new(
+    created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
+    id: '2d09e4a1-f081-4201-8bd0-5775a6b6dc7e',
+    lineitems: [
+      Models::Shared::AccountingTransactionLineItem.new(
+        category_ids: [],
+        description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+        id: '6074e102-382e-4790-8b94-5d2623efc532',
+        name: 'Salad',
+        object_type: 'delicate',
+        total_amount: 58_531.0,
+        unit_amount: 536.0,
+        unit_quantity: 91.0,
+      ),
+    ],
+    memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+    tax_amount: 0.0,
+    total_amount: 94_452.0,
+    updated_at: DateTime.iso8601('2021-09-10T02:35:42.833Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +290,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingTransactionRequest.new(
-  accounting_transaction: Models::Shared::AccountingTransaction.new(),
+  accounting_transaction: Models::Shared::AccountingTransaction.new(
+    created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
+    id: '2d09e4a1-f081-4201-8bd0-5775a6b6dc7e',
+    lineitems: [
+      Models::Shared::AccountingTransactionLineItem.new(
+        category_ids: [],
+        description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+        id: '6074e102-382e-4790-8b94-5d2623efc532',
+        name: 'Salad',
+        object_type: 'delicate',
+        total_amount: 58_531.0,
+        unit_amount: 536.0,
+        unit_quantity: 91.0,
+      ),
+    ],
+    memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+    tax_amount: 0.0,
+    total_amount: 94_452.0,
+    updated_at: DateTime.iso8601('2021-09-10T02:35:42.833Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

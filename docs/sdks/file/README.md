@@ -29,7 +29,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.file.create_storage_file(storage_file: Models::Shared::StorageFile.new(), connection_id: '<id>')
+res = s.file.create_storage_file(storage_file: Models::Shared::StorageFile.new(
+  created_at: DateTime.iso8601('2021-09-12T16:48:23.774Z'),
+  data: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+',
+  description: 'Crastinus cupiditate debilito cimentarius virgo.',
+  download_url: 'https://stingy-casement.name/',
+  hash: 'fe6a659e-75cd-4079-9b76-351f9af2205a',
+  id: 'd69a5ba4-9d6e-4d43-a579-0ec5050d2b6a',
+  mime_type: 'FOLDER',
+  name: 'softly.tiff',
+  references: [
+    Models::Shared::StorageReference.new(
+      id: 'ab705f3b-e368-4a94-8b22-d5f693c14a76',
+      name: 'tamisium viduo odio cauda',
+      type: 'accounting_bill',
+    ),
+    Models::Shared::StorageReference.new(
+      id: '9f0f694e-b6f4-4c12-b5f6-ab08d4e81140',
+      name: 'quia',
+      type: 'accounting_expense',
+    ),
+  ],
+  size: 10_276.0,
+  tags: [
+    'spoliatio',
+  ],
+  type: Models::Shared::StorageFileType::FILE,
+  updated_at: DateTime.iso8601('2023-01-27T11:57:07.170Z'),
+  version: '1',
+  web_url: 'https://sandy-distinction.info/',
+), connection_id: '<id>')
 
 unless res.storage_file.nil?
   # handle response
@@ -163,7 +192,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchStorageFileRequest.new(
-  storage_file: Models::Shared::StorageFile.new(),
+  storage_file: Models::Shared::StorageFile.new(
+    created_at: DateTime.iso8601('2021-09-12T16:48:23.774Z'),
+    data: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+',
+    description: 'Crastinus cupiditate debilito cimentarius virgo.',
+    download_url: 'https://stingy-casement.name/',
+    hash: 'fe6a659e-75cd-4079-9b76-351f9af2205a',
+    id: '045342fe-fb75-47ae-9b27-efdf664870fb',
+    mime_type: 'FOLDER',
+    name: 'softly.tiff',
+    references: [
+      Models::Shared::StorageReference.new(
+        id: 'ab705f3b-e368-4a94-8b22-d5f693c14a76',
+        name: 'tamisium viduo odio cauda',
+        type: 'accounting_bill',
+      ),
+      Models::Shared::StorageReference.new(
+        id: '9f0f694e-b6f4-4c12-b5f6-ab08d4e81140',
+        name: 'quia',
+        type: 'accounting_expense',
+      ),
+    ],
+    size: 10_276.0,
+    tags: [
+      'spoliatio',
+    ],
+    type: Models::Shared::StorageFileType::FILE,
+    updated_at: DateTime.iso8601('2023-01-27T11:57:07.173Z'),
+    version: '1',
+    web_url: 'https://sandy-distinction.info/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +310,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateStorageFileRequest.new(
-  storage_file: Models::Shared::StorageFile.new(),
+  storage_file: Models::Shared::StorageFile.new(
+    created_at: DateTime.iso8601('2021-09-12T16:48:23.774Z'),
+    data: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+',
+    description: 'Crastinus cupiditate debilito cimentarius virgo.',
+    download_url: 'https://stingy-casement.name/',
+    hash: 'fe6a659e-75cd-4079-9b76-351f9af2205a',
+    id: '045342fe-fb75-47ae-9b27-efdf664870fb',
+    mime_type: 'FOLDER',
+    name: 'softly.tiff',
+    references: [
+      Models::Shared::StorageReference.new(
+        id: 'ab705f3b-e368-4a94-8b22-d5f693c14a76',
+        name: 'tamisium viduo odio cauda',
+        type: 'accounting_bill',
+      ),
+      Models::Shared::StorageReference.new(
+        id: '9f0f694e-b6f4-4c12-b5f6-ab08d4e81140',
+        name: 'quia',
+        type: 'accounting_expense',
+      ),
+    ],
+    size: 10_276.0,
+    tags: [
+      'spoliatio',
+    ],
+    type: Models::Shared::StorageFileType::FILE,
+    updated_at: DateTime.iso8601('2023-01-27T11:57:07.173Z'),
+    version: '1',
+    web_url: 'https://sandy-distinction.info/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -29,7 +29,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.customer.create_ticketing_customer(ticketing_customer: Models::Shared::TicketingCustomer.new(), connection_id: '<id>')
+res = s.customer.create_ticketing_customer(ticketing_customer: Models::Shared::TicketingCustomer.new(
+  created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
+  emails: [
+    Models::Shared::TicketingEmail.new(
+      email: 'Christian_Windler@gmail.com',
+      type: Models::Shared::TicketingEmailType::HOME,
+    ),
+  ],
+  id: '5679b5ad-cbd1-49d3-aa76-be0765aac39f',
+  name: 'Christian Windler',
+  tags: [
+    'casso',
+    'peccatus',
+  ],
+  telephones: [
+    Models::Shared::TicketingTelephone.new(
+      telephone: '(532) 242-0482',
+      type: Models::Shared::TicketingTelephoneType::OTHER,
+    ),
+    Models::Shared::TicketingTelephone.new(
+      telephone: '(826) 283-7431',
+      type: Models::Shared::TicketingTelephoneType::MOBILE,
+    ),
+    Models::Shared::TicketingTelephone.new(
+      telephone: '(483) 314-6826',
+      type: Models::Shared::TicketingTelephoneType::MOBILE,
+    ),
+  ],
+  updated_at: DateTime.iso8601('2026-05-04T07:36:28.942Z'),
+), connection_id: '<id>')
 
 unless res.ticketing_customer.nil?
   # handle response
@@ -163,7 +192,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTicketingCustomerRequest.new(
-  ticketing_customer: Models::Shared::TicketingCustomer.new(),
+  ticketing_customer: Models::Shared::TicketingCustomer.new(
+    created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
+    emails: [
+      Models::Shared::TicketingEmail.new(
+        email: 'Christian_Windler@gmail.com',
+        type: Models::Shared::TicketingEmailType::HOME,
+      ),
+    ],
+    id: '2436512f-a3ac-4d4f-b26a-0698aa989293',
+    name: 'Christian Windler',
+    tags: [
+      'casso',
+      'peccatus',
+    ],
+    telephones: [
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(532) 242-0482',
+        type: Models::Shared::TicketingTelephoneType::OTHER,
+      ),
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(826) 283-7431',
+        type: Models::Shared::TicketingTelephoneType::MOBILE,
+      ),
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(483) 314-6826',
+        type: Models::Shared::TicketingTelephoneType::MOBILE,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2026-05-04T07:36:28.947Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +310,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTicketingCustomerRequest.new(
-  ticketing_customer: Models::Shared::TicketingCustomer.new(),
+  ticketing_customer: Models::Shared::TicketingCustomer.new(
+    created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
+    emails: [
+      Models::Shared::TicketingEmail.new(
+        email: 'Christian_Windler@gmail.com',
+        type: Models::Shared::TicketingEmailType::HOME,
+      ),
+    ],
+    id: '2436512f-a3ac-4d4f-b26a-0698aa989293',
+    name: 'Christian Windler',
+    tags: [
+      'casso',
+      'peccatus',
+    ],
+    telephones: [
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(532) 242-0482',
+        type: Models::Shared::TicketingTelephoneType::OTHER,
+      ),
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(826) 283-7431',
+        type: Models::Shared::TicketingTelephoneType::MOBILE,
+      ),
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(483) 314-6826',
+        type: Models::Shared::TicketingTelephoneType::MOBILE,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2026-05-04T07:36:28.947Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

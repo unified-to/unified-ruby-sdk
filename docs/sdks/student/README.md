@@ -29,7 +29,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(), connection_id: '<id>')
+res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
+  address: Models::Shared::PropertyLmsStudentAddress.new(
+    address1: '94082 Kassandra Camp',
+    address2: 'Apt. 461',
+    city: 'New Ibrahimmouth',
+    country_code: 'US',
+    postal_code: '52851',
+    region: 'Tennessee',
+    region_code: 'NV',
+  ),
+  created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
+  emails: [
+    Models::Shared::LmsEmail.new(),
+    Models::Shared::LmsEmail.new(),
+  ],
+  first_name: 'Marcella',
+  id: '3f9236a5-f318-42d3-a6d0-40616568294a',
+  image_url: 'https://avatars.githubusercontent.com/u/36301374',
+  last_name: 'Murazik',
+  name: 'Marcella Murazik',
+  telephones: [
+    Models::Shared::LmsTelephone.new(
+      telephone: '(482) 469-8067',
+      type: Models::Shared::LmsTelephoneType::FAX,
+    ),
+  ],
+  updated_at: DateTime.iso8601('2022-06-19T13:54:54.233Z'),
+), connection_id: '<id>')
 
 unless res.lms_student.nil?
   # handle response
@@ -163,7 +190,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsStudentRequest.new(
-  lms_student: Models::Shared::LmsStudent.new(),
+  lms_student: Models::Shared::LmsStudent.new(
+    address: Models::Shared::PropertyLmsStudentAddress.new(
+      address1: '94082 Kassandra Camp',
+      address2: 'Apt. 461',
+      city: 'New Ibrahimmouth',
+      country_code: 'US',
+      postal_code: '52851',
+      region: 'Tennessee',
+      region_code: 'NV',
+    ),
+    created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
+    emails: [
+      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new(),
+    ],
+    first_name: 'Marcella',
+    id: '19259c54-285a-42c7-8996-e0304b2e234e',
+    image_url: 'https://avatars.githubusercontent.com/u/36301374',
+    last_name: 'Murazik',
+    name: 'Marcella Murazik',
+    telephones: [
+      Models::Shared::LmsTelephone.new(
+        telephone: '(482) 469-8067',
+        type: Models::Shared::LmsTelephoneType::FAX,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2022-06-19T13:54:54.238Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +306,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsStudentRequest.new(
-  lms_student: Models::Shared::LmsStudent.new(),
+  lms_student: Models::Shared::LmsStudent.new(
+    address: Models::Shared::PropertyLmsStudentAddress.new(
+      address1: '94082 Kassandra Camp',
+      address2: 'Apt. 461',
+      city: 'New Ibrahimmouth',
+      country_code: 'US',
+      postal_code: '52851',
+      region: 'Tennessee',
+      region_code: 'NV',
+    ),
+    created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
+    emails: [
+      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new(),
+    ],
+    first_name: 'Marcella',
+    id: '19259c54-285a-42c7-8996-e0304b2e234e',
+    image_url: 'https://avatars.githubusercontent.com/u/36301374',
+    last_name: 'Murazik',
+    name: 'Marcella Murazik',
+    telephones: [
+      Models::Shared::LmsTelephone.new(
+        telephone: '(482) 469-8067',
+        type: Models::Shared::LmsTelephoneType::FAX,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2022-06-19T13:54:54.238Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

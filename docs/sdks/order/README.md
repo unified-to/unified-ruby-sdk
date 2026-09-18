@@ -33,7 +33,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.order.create_accounting_order(accounting_order: Models::Shared::AccountingOrder.new(), connection_id: '<id>')
+res = s.order.create_accounting_order(accounting_order: Models::Shared::AccountingOrder.new(
+  billing_address: Models::Shared::PropertyAccountingOrderBillingAddress.new(
+    address1: '802 Bechtelar Park',
+    address2: 'Apt. 436',
+    city: 'Daniellaville',
+    country_code: 'US',
+    postal_code: '36947',
+    region: 'Wisconsin',
+    region_code: 'NY',
+  ),
+  created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
+  currency: 'USD',
+  id: '2b6c7fae-af26-493e-be53-b5e704ab92e8',
+  lineitems: [],
+  metadata: [],
+  posted_at: DateTime.iso8601('2022-04-05T00:13:42.803Z'),
+  shipping_address: Models::Shared::PropertyAccountingOrderShippingAddress.new(
+    address1: '9745 Betty Shore',
+    city: 'South Alainaland',
+    country_code: 'US',
+    postal_code: '25274-7654',
+    region: 'New Hampshire',
+    region_code: 'LA',
+  ),
+  status: Models::Shared::AccountingOrderStatus::SUBMITTED,
+  total_amount: 0.0,
+  type: Models::Shared::AccountingOrderType::PURCHASE,
+  updated_at: DateTime.iso8601('2021-06-17T22:40:19.314Z'),
+), connection_id: '<id>')
 
 unless res.accounting_order.nil?
   # handle response
@@ -79,6 +107,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.order.create_assessment_order(assessment_order: Models::Shared::AssessmentOrder.new(
   connection_id: '<id>',
+  created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
+  id: '8729035a-8e4e-4daf-b669-416646ba155c',
+  parameters: [],
+  profile_addresses: [],
+  profile_date_of_birth: '1989-07-22T16:18:37.650Z',
+  profile_emails: [
+    'Cleta.Daugherty@gmail.com',
+  ],
+  profile_first_name: 'Amy',
+  profile_gender: Models::Shared::ProfileGender::NON_BINARY,
+  profile_last_name: 'Kris-Windler',
+  profile_name: 'Amy Kris-Windler',
+  profile_resume_url: 'https://enchanted-cycle.biz/',
+  profile_social_media_urls: [],
+  profile_telephones: [
+    '(828) 263-1594 x5248',
+  ],
+  reference: 'ab',
+  response_attributes: [],
+  response_details: [],
+  response_download_urls: [],
+  response_max_score: 82.0,
+  response_score: 92.0,
+  response_status: Models::Shared::ResponseStatus::FAILED,
+  response_url: 'https://irresponsible-trench.info/',
+  status: Models::Shared::AssessmentOrderStatus::REJECTED,
+  target_url: 'https://cautious-turret.info',
+  updated_at: DateTime.iso8601('2023-01-17T01:51:22.045Z'),
   workspace_id: '<id>',
 ), connection_id: '<id>')
 
@@ -258,7 +314,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingOrderRequest.new(
-  accounting_order: Models::Shared::AccountingOrder.new(),
+  accounting_order: Models::Shared::AccountingOrder.new(
+    billing_address: Models::Shared::PropertyAccountingOrderBillingAddress.new(
+      address1: '802 Bechtelar Park',
+      address2: 'Apt. 436',
+      city: 'Daniellaville',
+      country_code: 'US',
+      postal_code: '36947',
+      region: 'Wisconsin',
+      region_code: 'NY',
+    ),
+    created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
+    currency: 'USD',
+    id: 'c63b3439-37c7-40d8-90c0-2524d7e83e44',
+    lineitems: [],
+    metadata: [],
+    posted_at: DateTime.iso8601('2022-04-05T00:13:42.811Z'),
+    shipping_address: Models::Shared::PropertyAccountingOrderShippingAddress.new(
+      address1: '9745 Betty Shore',
+      city: 'South Alainaland',
+      country_code: 'US',
+      postal_code: '25274-7654',
+      region: 'New Hampshire',
+      region_code: 'LA',
+    ),
+    status: Models::Shared::AccountingOrderStatus::SUBMITTED,
+    total_amount: 0.0,
+    type: Models::Shared::AccountingOrderType::PURCHASE,
+    updated_at: DateTime.iso8601('2021-06-17T22:40:19.318Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -307,6 +391,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
+    created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
+    id: 'fd94d116-577c-4b39-850d-f9dc01076174',
+    parameters: [],
+    profile_addresses: [],
+    profile_date_of_birth: '1989-07-22T16:18:37.650Z',
+    profile_emails: [
+      'Cleta.Daugherty@gmail.com',
+    ],
+    profile_first_name: 'Amy',
+    profile_gender: Models::Shared::ProfileGender::NON_BINARY,
+    profile_last_name: 'Kris-Windler',
+    profile_name: 'Amy Kris-Windler',
+    profile_resume_url: 'https://enchanted-cycle.biz/',
+    profile_social_media_urls: [],
+    profile_telephones: [
+      '(828) 263-1594 x5248',
+    ],
+    reference: 'ab',
+    response_attributes: [],
+    response_details: [],
+    response_download_urls: [],
+    response_max_score: 82.0,
+    response_score: 92.0,
+    response_status: Models::Shared::ResponseStatus::FAILED,
+    response_url: 'https://irresponsible-trench.info/',
+    status: Models::Shared::AssessmentOrderStatus::REJECTED,
+    target_url: 'https://cautious-turret.info',
+    updated_at: DateTime.iso8601('2023-01-17T01:51:22.052Z'),
     workspace_id: '<id>',
   ),
   connection_id: '<id>',
@@ -397,7 +509,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingOrderRequest.new(
-  accounting_order: Models::Shared::AccountingOrder.new(),
+  accounting_order: Models::Shared::AccountingOrder.new(
+    billing_address: Models::Shared::PropertyAccountingOrderBillingAddress.new(
+      address1: '802 Bechtelar Park',
+      address2: 'Apt. 436',
+      city: 'Daniellaville',
+      country_code: 'US',
+      postal_code: '36947',
+      region: 'Wisconsin',
+      region_code: 'NY',
+    ),
+    created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
+    currency: 'USD',
+    id: 'c63b3439-37c7-40d8-90c0-2524d7e83e44',
+    lineitems: [],
+    metadata: [],
+    posted_at: DateTime.iso8601('2022-04-05T00:13:42.811Z'),
+    shipping_address: Models::Shared::PropertyAccountingOrderShippingAddress.new(
+      address1: '9745 Betty Shore',
+      city: 'South Alainaland',
+      country_code: 'US',
+      postal_code: '25274-7654',
+      region: 'New Hampshire',
+      region_code: 'LA',
+    ),
+    status: Models::Shared::AccountingOrderStatus::SUBMITTED,
+    total_amount: 0.0,
+    type: Models::Shared::AccountingOrderType::PURCHASE,
+    updated_at: DateTime.iso8601('2021-06-17T22:40:19.318Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -446,6 +586,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
+    created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
+    id: 'fd94d116-577c-4b39-850d-f9dc01076174',
+    parameters: [],
+    profile_addresses: [],
+    profile_date_of_birth: '1989-07-22T16:18:37.650Z',
+    profile_emails: [
+      'Cleta.Daugherty@gmail.com',
+    ],
+    profile_first_name: 'Amy',
+    profile_gender: Models::Shared::ProfileGender::NON_BINARY,
+    profile_last_name: 'Kris-Windler',
+    profile_name: 'Amy Kris-Windler',
+    profile_resume_url: 'https://enchanted-cycle.biz/',
+    profile_social_media_urls: [],
+    profile_telephones: [
+      '(828) 263-1594 x5248',
+    ],
+    reference: 'ab',
+    response_attributes: [],
+    response_details: [],
+    response_download_urls: [],
+    response_max_score: 82.0,
+    response_score: 92.0,
+    response_status: Models::Shared::ResponseStatus::FAILED,
+    response_url: 'https://irresponsible-trench.info/',
+    status: Models::Shared::AssessmentOrderStatus::REJECTED,
+    target_url: 'https://cautious-turret.info',
+    updated_at: DateTime.iso8601('2023-01-17T01:51:22.052Z'),
     workspace_id: '<id>',
   ),
   connection_id: '<id>',

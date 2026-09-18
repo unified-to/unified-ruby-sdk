@@ -30,9 +30,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.record.create_datastore_record(datastore_record: Models::Shared::DatastoreRecord.new(
+  created_at: DateTime.iso8601('2022-07-10T04:42:03.076Z'),
   fields_: {
 
   },
+  id: 'c26de1f0-1e37-4468-90c3-4d3442a6af2d',
+  row_number: 33.0,
+  updated_at: DateTime.iso8601('2025-02-12T16:22:06.906Z'),
 ), connection_id: '<id>')
 
 unless res.datastore_record.nil?
@@ -168,9 +172,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchDatastoreRecordRequest.new(
   datastore_record: Models::Shared::DatastoreRecord.new(
+    created_at: DateTime.iso8601('2022-07-10T04:42:03.076Z'),
     fields_: {
 
     },
+    id: '9f364386-0744-4f64-8f34-696abb389bbb',
+    row_number: 33.0,
+    updated_at: DateTime.iso8601('2025-02-12T16:22:06.912Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -261,9 +269,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateDatastoreRecordRequest.new(
   datastore_record: Models::Shared::DatastoreRecord.new(
+    created_at: DateTime.iso8601('2022-07-10T04:42:03.076Z'),
     fields_: {
 
     },
+    id: '9f364386-0744-4f64-8f34-696abb389bbb',
+    row_number: 33.0,
+    updated_at: DateTime.iso8601('2025-02-12T16:22:06.912Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

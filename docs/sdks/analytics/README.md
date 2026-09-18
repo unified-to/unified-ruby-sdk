@@ -41,7 +41,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.analytics.create_analytics_event(analytics_event: Models::Shared::AnalyticsEvent.new(), connection_id: '<id>')
+res = s.analytics.create_analytics_event(analytics_event: Models::Shared::AnalyticsEvent.new(
+  created_at: DateTime.iso8601('2023-06-21T03:13:22.954Z'),
+  event_type: Models::Shared::EventType::SCREEN_VIEW,
+  id: '190c36b5-8760-401d-ad94-207e17604289',
+  metadata: {
+    "key": Models::Shared::PropertyAnalyticsEventMetadata.new(),
+  },
+  name: 'Xk707ttsb51v',
+  updated_at: DateTime.iso8601('2023-09-22T02:14:13.861Z'),
+), connection_id: '<id>')
 
 unless res.analytics_event.nil?
   # handle response
@@ -85,7 +94,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.analytics.create_analytics_property(analytics_property: Models::Shared::AnalyticsProperty.new(), connection_id: '<id>')
+res = s.analytics.create_analytics_property(analytics_property: Models::Shared::AnalyticsProperty.new(
+  created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
+  currency: 'USD',
+  id: 'c7edcd79-5b7d-4948-95ad-bcb17088c516',
+  name: 'Daniel, Goldner and Dickinson',
+  timezone: 'UTC',
+  updated_at: DateTime.iso8601('2021-09-14T16:36:16.485Z'),
+), connection_id: '<id>')
 
 unless res.analytics_property.nil?
   # handle response
@@ -129,7 +145,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.analytics.create_analytics_visitor(analytics_visitor: Models::Shared::AnalyticsVisitor.new(), connection_id: '<id>')
+res = s.analytics.create_analytics_visitor(analytics_visitor: Models::Shared::AnalyticsVisitor.new(
+  created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+  email: 'Dallas_Mitchell@yahoo.com',
+  first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+  id: '3d243924-4936-4085-a79e-80afd88db46f',
+  last_seen_at: DateTime.iso8601('2021-12-04T18:08:29.898Z'),
+  metadata: {
+    "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+  },
+  name: 'Desiree O\'Hara',
+  total_events: 3639.0,
+  updated_at: DateTime.iso8601('2025-06-03T08:25:45.152Z'),
+), connection_id: '<id>')
 
 unless res.analytics_visitor.nil?
   # handle response
@@ -575,7 +603,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAnalyticsPropertyRequest.new(
-  analytics_property: Models::Shared::AnalyticsProperty.new(),
+  analytics_property: Models::Shared::AnalyticsProperty.new(
+    created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
+    currency: 'USD',
+    id: 'f3de8029-96c2-46fe-bd3a-25f64ccc0a25',
+    name: 'Daniel, Goldner and Dickinson',
+    timezone: 'UTC',
+    updated_at: DateTime.iso8601('2021-09-14T16:36:16.485Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -622,7 +657,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAnalyticsVisitorRequest.new(
-  analytics_visitor: Models::Shared::AnalyticsVisitor.new(),
+  analytics_visitor: Models::Shared::AnalyticsVisitor.new(
+    created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+    email: 'Dallas_Mitchell@yahoo.com',
+    first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+    id: 'be306e02-c550-4be8-aea8-b9dbcd53ec1c',
+    last_seen_at: DateTime.iso8601('2021-12-04T18:08:29.900Z'),
+    metadata: {
+      "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+    },
+    name: 'Desiree O\'Hara',
+    total_events: 3639.0,
+    updated_at: DateTime.iso8601('2025-06-03T08:25:45.158Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -753,7 +800,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAnalyticsPropertyRequest.new(
-  analytics_property: Models::Shared::AnalyticsProperty.new(),
+  analytics_property: Models::Shared::AnalyticsProperty.new(
+    created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
+    currency: 'USD',
+    id: 'f3de8029-96c2-46fe-bd3a-25f64ccc0a25',
+    name: 'Daniel, Goldner and Dickinson',
+    timezone: 'UTC',
+    updated_at: DateTime.iso8601('2021-09-14T16:36:16.485Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -800,7 +854,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAnalyticsVisitorRequest.new(
-  analytics_visitor: Models::Shared::AnalyticsVisitor.new(),
+  analytics_visitor: Models::Shared::AnalyticsVisitor.new(
+    created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+    email: 'Dallas_Mitchell@yahoo.com',
+    first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
+    id: 'be306e02-c550-4be8-aea8-b9dbcd53ec1c',
+    last_seen_at: DateTime.iso8601('2021-12-04T18:08:29.900Z'),
+    metadata: {
+      "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+    },
+    name: 'Desiree O\'Hara',
+    total_events: 3639.0,
+    updated_at: DateTime.iso8601('2025-06-03T08:25:45.158Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

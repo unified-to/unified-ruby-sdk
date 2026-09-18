@@ -29,7 +29,32 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(), connection_id: '<id>')
+res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
+  created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
+  description: 'Anser sperno decerno.',
+  id: 'c3c90717-93f8-4ab7-b95a-b98c71a4944d',
+  instructors: [],
+  languages: [
+    'in',
+  ],
+  media: [
+    Models::Shared::LmsMedia.new(
+      content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+      description: 'Esse confido.',
+      languages: [
+        'fa',
+        'da',
+      ],
+      name: 'illo',
+      thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+      type: Models::Shared::LmsMediaType::VIDEO,
+      url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+    ),
+  ],
+  name: 'virtus',
+  students: [],
+  updated_at: DateTime.iso8601('2025-07-07T21:34:01.563Z'),
+), connection_id: '<id>')
 
 unless res.lms_class.nil?
   # handle response
@@ -163,7 +188,32 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsClassRequest.new(
-  lms_class: Models::Shared::LmsClass.new(),
+  lms_class: Models::Shared::LmsClass.new(
+    created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
+    description: 'Anser sperno decerno.',
+    id: '2904921a-15f2-4099-8d09-c79721a959e6',
+    instructors: [],
+    languages: [
+      'in',
+    ],
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+        description: 'Esse confido.',
+        languages: [
+          'fa',
+          'da',
+        ],
+        name: 'illo',
+        thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+        type: Models::Shared::LmsMediaType::VIDEO,
+        url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+      ),
+    ],
+    name: 'virtus',
+    students: [],
+    updated_at: DateTime.iso8601('2025-07-07T21:34:01.574Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +302,32 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsClassRequest.new(
-  lms_class: Models::Shared::LmsClass.new(),
+  lms_class: Models::Shared::LmsClass.new(
+    created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
+    description: 'Anser sperno decerno.',
+    id: '2904921a-15f2-4099-8d09-c79721a959e6',
+    instructors: [],
+    languages: [
+      'in',
+    ],
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+        description: 'Esse confido.',
+        languages: [
+          'fa',
+          'da',
+        ],
+        name: 'illo',
+        thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+        type: Models::Shared::LmsMediaType::VIDEO,
+        url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+      ),
+    ],
+    name: 'virtus',
+    students: [],
+    updated_at: DateTime.iso8601('2025-07-07T21:34:01.574Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -30,6 +30,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.timeoff.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
+  approved_at: DateTime.iso8601('2022-02-20T21:02:26.002Z'),
+  comments: 'Blandior ventus curiositas amplitudo.',
+  created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
+  duration: 4.0,
+  duration_type: Models::Shared::DurationType::DAY,
+  end_at: DateTime.iso8601('2024-12-07T13:49:16.715Z'),
+  id: 'd9521fcf-9711-4f53-91e6-c529710324f2',
+  is_paid: true,
+  original_type: 'acerbitas ut',
+  reason: 'verto',
+  start_at: DateTime.iso8601('2023-08-23T06:55:46.297Z'),
+  status: Models::Shared::HrisTimeoffStatus::DENIED,
+  type: Models::Shared::HrisTimeoffType::IN_LIEU,
+  updated_at: DateTime.iso8601('2022-07-07T19:34:30.877Z'),
   user_id: '<id>',
 ), connection_id: '<id>')
 
@@ -166,6 +180,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
+    approved_at: DateTime.iso8601('2022-02-20T21:02:26.002Z'),
+    comments: 'Blandior ventus curiositas amplitudo.',
+    created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
+    duration: 4.0,
+    duration_type: Models::Shared::DurationType::DAY,
+    end_at: DateTime.iso8601('2024-12-07T13:49:16.721Z'),
+    id: 'ef2f9222-ff34-419c-a22b-bfa492e02d3c',
+    is_paid: true,
+    original_type: 'acerbitas ut',
+    reason: 'verto',
+    start_at: DateTime.iso8601('2023-08-23T06:55:46.301Z'),
+    status: Models::Shared::HrisTimeoffStatus::DENIED,
+    type: Models::Shared::HrisTimeoffType::IN_LIEU,
+    updated_at: DateTime.iso8601('2022-07-07T19:34:30.879Z'),
     user_id: '<id>',
   ),
   connection_id: '<id>',
@@ -257,6 +285,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
+    approved_at: DateTime.iso8601('2022-02-20T21:02:26.002Z'),
+    comments: 'Blandior ventus curiositas amplitudo.',
+    created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
+    duration: 4.0,
+    duration_type: Models::Shared::DurationType::DAY,
+    end_at: DateTime.iso8601('2024-12-07T13:49:16.721Z'),
+    id: 'ef2f9222-ff34-419c-a22b-bfa492e02d3c',
+    is_paid: true,
+    original_type: 'acerbitas ut',
+    reason: 'verto',
+    start_at: DateTime.iso8601('2023-08-23T06:55:46.301Z'),
+    status: Models::Shared::HrisTimeoffStatus::DENIED,
+    type: Models::Shared::HrisTimeoffType::IN_LIEU,
+    updated_at: DateTime.iso8601('2022-07-07T19:34:30.879Z'),
     user_id: '<id>',
   ),
   connection_id: '<id>',

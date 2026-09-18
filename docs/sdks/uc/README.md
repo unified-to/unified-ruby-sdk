@@ -43,7 +43,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.uc.create_uc_comment(uc_comment: Models::Shared::UcComment.new(), connection_id: '<id>')
+res = s.uc.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
+  content: 'Vociferor vitiosus.',
+  created_at: '2023-04-02T23:42:31.571Z',
+  id: '0b2e2c91-ff2d-436b-a7b1-89a12c926039',
+  updated_at: '2024-02-01T19:28:24.504Z',
+), connection_id: '<id>')
 
 unless res.uc_comment.nil?
   # handle response
@@ -87,7 +92,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(), connection_id: '<id>')
+res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
+  company: 'Tillman Group',
+  created_at: DateTime.iso8601('2019-10-28T11:06:56.460Z'),
+  emails: [
+    Models::Shared::UcEmail.new(
+      email: 'Luther_Rogahn32@yahoo.com',
+      type: Models::Shared::UcEmailType::WORK,
+    ),
+  ],
+  first_name: 'Luther',
+  id: '68649461-99c2-412e-ad3c-ecd09b6c2ffb',
+  last_name: 'Rogahn',
+  name: 'Luther Rogahn',
+  telephones: [
+    Models::Shared::UcTelephone.new(
+      telephone: '(809) 992-1681',
+      type: Models::Shared::UcTelephoneType::FAX,
+    ),
+    Models::Shared::UcTelephone.new(
+      telephone: '(868) 238-2746',
+      type: Models::Shared::UcTelephoneType::HOME,
+    ),
+    Models::Shared::UcTelephone.new(
+      telephone: '(219) 736-0357',
+      type: Models::Shared::UcTelephoneType::MOBILE,
+    ),
+  ],
+  title: 'Chief Optimization Executive',
+  updated_at: DateTime.iso8601('2023-11-18T22:28:26.560Z'),
+), connection_id: '<id>')
 
 unless res.uc_contact.nil?
   # handle response
@@ -131,7 +165,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.uc.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(), connection_id: '<id>')
+res = s.uc.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(
+  contacts: [],
+  created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
+  end_at: DateTime.iso8601('2024-04-21T20:24:02.555Z'),
+  expires_at: DateTime.iso8601('2026-03-28T16:18:30.097Z'),
+  id: '3c73465c-c12b-412a-8f1d-25214db6320d',
+  media: [],
+  start_at: DateTime.iso8601('2023-04-22T20:24:56.568Z'),
+  type: Models::Shared::UcRecordingType::INBOUND,
+  updated_at: DateTime.iso8601('2025-02-24T08:22:00.968Z'),
+  user_name: 'Melyna Larson',
+  user_phone: '1-915-327-0429 x509',
+  web_url: 'https://spherical-comparison.org',
+), connection_id: '<id>')
 
 unless res.uc_recording.nil?
   # handle response
@@ -532,7 +579,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchUcCommentRequest.new(
-  uc_comment: Models::Shared::UcComment.new(),
+  uc_comment: Models::Shared::UcComment.new(
+    content: 'Vociferor vitiosus.',
+    created_at: '2023-04-02T23:42:31.571Z',
+    id: 'ddeae7a9-9c65-44db-92f7-30f7b73389de',
+    updated_at: '2024-02-01T19:28:24.505Z',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -579,7 +631,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchUcContactRequest.new(
-  uc_contact: Models::Shared::UcContact.new(),
+  uc_contact: Models::Shared::UcContact.new(
+    company: 'Tillman Group',
+    created_at: DateTime.iso8601('2019-10-28T11:06:56.460Z'),
+    emails: [
+      Models::Shared::UcEmail.new(
+        email: 'Luther_Rogahn32@yahoo.com',
+        type: Models::Shared::UcEmailType::WORK,
+      ),
+    ],
+    first_name: 'Luther',
+    id: '88fbbccc-9149-4030-b687-719937bb18a6',
+    last_name: 'Rogahn',
+    name: 'Luther Rogahn',
+    telephones: [
+      Models::Shared::UcTelephone.new(
+        telephone: '(809) 992-1681',
+        type: Models::Shared::UcTelephoneType::FAX,
+      ),
+      Models::Shared::UcTelephone.new(
+        telephone: '(868) 238-2746',
+        type: Models::Shared::UcTelephoneType::HOME,
+      ),
+      Models::Shared::UcTelephone.new(
+        telephone: '(219) 736-0357',
+        type: Models::Shared::UcTelephoneType::MOBILE,
+      ),
+    ],
+    title: 'Chief Optimization Executive',
+    updated_at: DateTime.iso8601('2023-11-18T22:28:26.565Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -626,7 +707,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchUcRecordingRequest.new(
-  uc_recording: Models::Shared::UcRecording.new(),
+  uc_recording: Models::Shared::UcRecording.new(
+    contacts: [],
+    created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
+    end_at: DateTime.iso8601('2024-04-21T20:24:02.561Z'),
+    expires_at: DateTime.iso8601('2026-03-28T16:18:30.110Z'),
+    id: '3944c7e7-1e52-46ff-9ecb-5f6d1a444845',
+    media: [],
+    start_at: DateTime.iso8601('2023-04-22T20:24:56.570Z'),
+    type: Models::Shared::UcRecordingType::INBOUND,
+    updated_at: DateTime.iso8601('2025-02-24T08:22:00.977Z'),
+    user_name: 'Melyna Larson',
+    user_phone: '1-915-327-0429 x509',
+    web_url: 'https://spherical-comparison.org',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -799,7 +893,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateUcCommentRequest.new(
-  uc_comment: Models::Shared::UcComment.new(),
+  uc_comment: Models::Shared::UcComment.new(
+    content: 'Vociferor vitiosus.',
+    created_at: '2023-04-02T23:42:31.571Z',
+    id: 'ddeae7a9-9c65-44db-92f7-30f7b73389de',
+    updated_at: '2024-02-01T19:28:24.505Z',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -846,7 +945,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateUcContactRequest.new(
-  uc_contact: Models::Shared::UcContact.new(),
+  uc_contact: Models::Shared::UcContact.new(
+    company: 'Tillman Group',
+    created_at: DateTime.iso8601('2019-10-28T11:06:56.460Z'),
+    emails: [
+      Models::Shared::UcEmail.new(
+        email: 'Luther_Rogahn32@yahoo.com',
+        type: Models::Shared::UcEmailType::WORK,
+      ),
+    ],
+    first_name: 'Luther',
+    id: '88fbbccc-9149-4030-b687-719937bb18a6',
+    last_name: 'Rogahn',
+    name: 'Luther Rogahn',
+    telephones: [
+      Models::Shared::UcTelephone.new(
+        telephone: '(809) 992-1681',
+        type: Models::Shared::UcTelephoneType::FAX,
+      ),
+      Models::Shared::UcTelephone.new(
+        telephone: '(868) 238-2746',
+        type: Models::Shared::UcTelephoneType::HOME,
+      ),
+      Models::Shared::UcTelephone.new(
+        telephone: '(219) 736-0357',
+        type: Models::Shared::UcTelephoneType::MOBILE,
+      ),
+    ],
+    title: 'Chief Optimization Executive',
+    updated_at: DateTime.iso8601('2023-11-18T22:28:26.565Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -893,7 +1021,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateUcRecordingRequest.new(
-  uc_recording: Models::Shared::UcRecording.new(),
+  uc_recording: Models::Shared::UcRecording.new(
+    contacts: [],
+    created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
+    end_at: DateTime.iso8601('2024-04-21T20:24:02.561Z'),
+    expires_at: DateTime.iso8601('2026-03-28T16:18:30.110Z'),
+    id: '3944c7e7-1e52-46ff-9ecb-5f6d1a444845',
+    media: [],
+    start_at: DateTime.iso8601('2023-04-22T20:24:56.570Z'),
+    type: Models::Shared::UcRecordingType::INBOUND,
+    updated_at: DateTime.iso8601('2025-02-24T08:22:00.977Z'),
+    user_name: 'Melyna Larson',
+    user_phone: '1-915-327-0429 x509',
+    web_url: 'https://spherical-comparison.org',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

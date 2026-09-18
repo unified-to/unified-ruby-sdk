@@ -29,7 +29,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.bankaccount.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBankaccount.new(), connection_id: '<id>')
+res = s.bankaccount.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBankaccount.new(
+  account_number: '****3777',
+  account_number_last4: '3777',
+  account_type: Models::Shared::HrisBankaccountAccountType::CHECKING,
+  bank_name: 'Huel Group',
+  created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
+  id: '09e62b41-38ac-490e-af9a-1ccb3ad1a4b6',
+  is_primary: false,
+  name: 'Checking Account',
+  routing_number: '448650724',
+  updated_at: DateTime.iso8601('2025-06-04T11:28:24.714Z'),
+), connection_id: '<id>')
 
 unless res.hris_bankaccount.nil?
   # handle response
@@ -163,7 +174,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisBankaccountRequest.new(
-  hris_bankaccount: Models::Shared::HrisBankaccount.new(),
+  hris_bankaccount: Models::Shared::HrisBankaccount.new(
+    account_number: '****3777',
+    account_number_last4: '3777',
+    account_type: Models::Shared::HrisBankaccountAccountType::CHECKING,
+    bank_name: 'Huel Group',
+    created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
+    id: '35fe7fc6-671a-4493-86ef-36db501190be',
+    is_primary: false,
+    name: 'Checking Account',
+    routing_number: '448650724',
+    updated_at: DateTime.iso8601('2025-06-04T11:28:24.719Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +274,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisBankaccountRequest.new(
-  hris_bankaccount: Models::Shared::HrisBankaccount.new(),
+  hris_bankaccount: Models::Shared::HrisBankaccount.new(
+    account_number: '****3777',
+    account_number_last4: '3777',
+    account_type: Models::Shared::HrisBankaccountAccountType::CHECKING,
+    bank_name: 'Huel Group',
+    created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
+    id: '35fe7fc6-671a-4493-86ef-36db501190be',
+    is_primary: false,
+    name: 'Checking Account',
+    routing_number: '448650724',
+    updated_at: DateTime.iso8601('2025-06-04T11:28:24.719Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

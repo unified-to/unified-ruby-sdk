@@ -40,7 +40,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.shipping.create_shipping_label(shipping_label: Models::Shared::ShippingLabel.new(), connection_id: '<id>')
+res = s.shipping.create_shipping_label(shipping_label: Models::Shared::ShippingLabel.new(
+  created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
+  id: '2b8da297-53c2-419e-9ebb-2b9b329a41ac',
+  is_voided: false,
+  label_cost: 40.83_653_403_213_248,
+  label_cost_currency: 'USD',
+  label_format: Models::Shared::LabelFormat::PNG,
+  label_url: 'https://optimal-meadow.net',
+  service_code: 'GIz',
+  status: Models::Shared::ShippingLabelStatus::EXCEPTION,
+  tracking_number: 'zYv60FOIBUJ6',
+  updated_at: DateTime.iso8601('2024-04-16T18:19:23.293Z'),
+), connection_id: '<id>')
 
 unless res.shipping_label.nil?
   # handle response
@@ -84,7 +96,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.shipping.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.new(), connection_id: '<id>')
+res = s.shipping.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.new(
+  currency: 'USD',
+  id: '9883fb65-3504-4096-af84-b3dbcfe88152',
+  rates: [
+    Models::Shared::ShippingRateRate.new(
+      amount: 54.679_719_475_097_954,
+      base_amount: 76.45_537_888_631_225,
+      currency: 'USD',
+      delivery_days: 8.0,
+      description: 'Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.',
+      estimated_days: 10.0,
+      estimated_delivery_end_at: DateTime.iso8601('2024-01-31T23:10:31.780Z'),
+      is_guaranteed: true,
+      is_negotiated_rate: true,
+      tax_amount: 2.2_701_712_837_442_756,
+      title: 'Turcotte Inc',
+    ),
+  ],
+), connection_id: '<id>')
 
 unless res.shipping_rate.nil?
   # handle response
@@ -128,7 +158,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.shipping.create_shipping_shipment(shipping_shipment: Models::Shared::ShippingShipment.new(), connection_id: '<id>')
+res = s.shipping.create_shipping_shipment(shipping_shipment: Models::Shared::ShippingShipment.new(
+  carrier_name: 'Bogisich, Franey and Koelpin',
+  created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
+  id: '1503017f-1733-49e7-84b2-9e43d4043a46',
+  rate_amount: 8.86_546_263_936_907,
+  rate_currency: 'USD',
+  rate_estimated_days: 8.0,
+  rate_service_name: 'Fisher - Kilback',
+  service_code: 'F7U',
+  shipped_at: DateTime.iso8601('2025-08-24T18:17:46.511Z'),
+  status: Models::Shared::ShippingShipmentStatus::PENDING,
+  tracking_url: 'https://shallow-secrecy.info/',
+  updated_at: DateTime.iso8601('2025-07-03T02:04:57.636Z'),
+), connection_id: '<id>')
 
 unless res.shipping_shipment.nil?
   # handle response
@@ -529,7 +572,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchShippingLabelRequest.new(
-  shipping_label: Models::Shared::ShippingLabel.new(),
+  shipping_label: Models::Shared::ShippingLabel.new(
+    created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
+    id: '48633b7a-581c-4ecd-a6eb-cd73fb191205',
+    is_voided: false,
+    label_cost: 40.83_653_403_213_248,
+    label_cost_currency: 'USD',
+    label_format: Models::Shared::LabelFormat::PNG,
+    label_url: 'https://optimal-meadow.net',
+    service_code: 'GIz',
+    status: Models::Shared::ShippingLabelStatus::EXCEPTION,
+    tracking_number: 'zYv60FOIBUJ6',
+    updated_at: DateTime.iso8601('2024-04-16T18:19:23.296Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -576,7 +631,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchShippingShipmentRequest.new(
-  shipping_shipment: Models::Shared::ShippingShipment.new(),
+  shipping_shipment: Models::Shared::ShippingShipment.new(
+    carrier_name: 'Bogisich, Franey and Koelpin',
+    created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
+    id: '3ba6f7f9-bc7e-4a98-8f5e-ae2b643db3fb',
+    rate_amount: 8.86_546_263_936_907,
+    rate_currency: 'USD',
+    rate_estimated_days: 8.0,
+    rate_service_name: 'Fisher - Kilback',
+    service_code: 'F7U',
+    shipped_at: DateTime.iso8601('2025-08-24T18:17:46.581Z'),
+    status: Models::Shared::ShippingShipmentStatus::PENDING,
+    tracking_url: 'https://shallow-secrecy.info/',
+    updated_at: DateTime.iso8601('2025-07-03T02:04:57.703Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -707,7 +775,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateShippingLabelRequest.new(
-  shipping_label: Models::Shared::ShippingLabel.new(),
+  shipping_label: Models::Shared::ShippingLabel.new(
+    created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
+    id: '48633b7a-581c-4ecd-a6eb-cd73fb191205',
+    is_voided: false,
+    label_cost: 40.83_653_403_213_248,
+    label_cost_currency: 'USD',
+    label_format: Models::Shared::LabelFormat::PNG,
+    label_url: 'https://optimal-meadow.net',
+    service_code: 'GIz',
+    status: Models::Shared::ShippingLabelStatus::EXCEPTION,
+    tracking_number: 'zYv60FOIBUJ6',
+    updated_at: DateTime.iso8601('2024-04-16T18:19:23.296Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -754,7 +834,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateShippingShipmentRequest.new(
-  shipping_shipment: Models::Shared::ShippingShipment.new(),
+  shipping_shipment: Models::Shared::ShippingShipment.new(
+    carrier_name: 'Bogisich, Franey and Koelpin',
+    created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
+    id: '3ba6f7f9-bc7e-4a98-8f5e-ae2b643db3fb',
+    rate_amount: 8.86_546_263_936_907,
+    rate_currency: 'USD',
+    rate_estimated_days: 8.0,
+    rate_service_name: 'Fisher - Kilback',
+    service_code: 'F7U',
+    shipped_at: DateTime.iso8601('2025-08-24T18:17:46.581Z'),
+    status: Models::Shared::ShippingShipmentStatus::PENDING,
+    tracking_url: 'https://shallow-secrecy.info/',
+    updated_at: DateTime.iso8601('2025-07-03T02:04:57.703Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

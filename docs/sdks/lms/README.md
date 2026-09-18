@@ -65,7 +65,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.lms.create_lms_activity(lms_activity: Models::Shared::LmsActivity.new(), connection_id: '<id>')
+res = s.lms.create_lms_activity(lms_activity: Models::Shared::LmsActivity.new(
+  assigned_grade: 'summopere',
+  completed_at: DateTime.iso8601('2025-04-12T21:06:46.228Z'),
+  created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
+  duration_minutes: 55.0,
+  id: 'bf3c0450-601c-48a4-956f-a376f6c7cabc',
+  is_completed: true,
+  progress_percentage: 100.0,
+  started_at: DateTime.iso8601('2023-12-24T04:54:05.825Z'),
+  updated_at: DateTime.iso8601('2022-01-23T21:44:13.324Z'),
+), connection_id: '<id>')
 
 unless res.lms_activity.nil?
   # handle response
@@ -109,7 +119,32 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.lms.create_lms_class(lms_class: Models::Shared::LmsClass.new(), connection_id: '<id>')
+res = s.lms.create_lms_class(lms_class: Models::Shared::LmsClass.new(
+  created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
+  description: 'Anser sperno decerno.',
+  id: 'c3c90717-93f8-4ab7-b95a-b98c71a4944d',
+  instructors: [],
+  languages: [
+    'in',
+  ],
+  media: [
+    Models::Shared::LmsMedia.new(
+      content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+      description: 'Esse confido.',
+      languages: [
+        'fa',
+        'da',
+      ],
+      name: 'illo',
+      thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+      type: Models::Shared::LmsMediaType::VIDEO,
+      url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+    ),
+  ],
+  name: 'virtus',
+  students: [],
+  updated_at: DateTime.iso8601('2025-07-07T21:34:01.563Z'),
+), connection_id: '<id>')
 
 unless res.lms_class.nil?
   # handle response
@@ -153,7 +188,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.lms.create_lms_collection(lms_collection: Models::Shared::LmsCollection.new(), connection_id: '<id>')
+res = s.lms.create_lms_collection(lms_collection: Models::Shared::LmsCollection.new(
+  created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
+  description: 'Ab.',
+  id: '93115404-a881-4d28-909b-cf2a287f40d7',
+  is_active: true,
+  media: [
+    Models::Shared::LmsMedia.new(
+      content: 'Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.',
+      description: 'Aliquam tardus careo hic umbra.',
+      languages: [
+        'gl',
+      ],
+      name: 'thymum',
+      thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
+      type: Models::Shared::LmsMediaType::HEADSHOT,
+      url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+    ),
+  ],
+  name: 'ara',
+  updated_at: DateTime.iso8601('2026-06-28T07:57:59.042Z'),
+), connection_id: '<id>')
 
 unless res.lms_collection.nil?
   # handle response
@@ -197,7 +252,96 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(), connection_id: '<id>')
+res = s.lms.create_lms_content(lms_content: Models::Shared::LmsContent.new(
+  categories: [
+    'territo',
+  ],
+  created_at: DateTime.iso8601('2020-10-22T22:30:50.963Z'),
+  description: 'Usque laboriosam ventosus adflicto.',
+  difficulty: 'Beginner',
+  duration_minutes: 19.0,
+  external_reference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
+  id: '99c6e418-b48c-4ac4-8ea4-e6935480a6c3',
+  instructors: [
+    Models::Shared::LmsReference.new(
+      id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
+      name: 'Winston Ferry',
+    ),
+  ],
+  is_active: true,
+  languages: [
+    'despecto',
+    'suppellex',
+  ],
+  localizations: [
+    Models::Shared::LmsContentLocalization.new(
+      description: 'Numquam.',
+      language: 'es',
+      name: 'validus',
+    ),
+    Models::Shared::LmsContentLocalization.new(
+      description: 'Callide.',
+      language: 'fr',
+      name: 'crux',
+    ),
+  ],
+  media: [
+    Models::Shared::LmsMedia.new(
+      content: 'Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.',
+      description: 'Venia aeternus tandem spargo.',
+      languages: [
+        'zu',
+        'ba',
+      ],
+      name: 'subiungo',
+      thumbnail_url: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
+      type: Models::Shared::LmsMediaType::OTHER,
+      url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+    ),
+    Models::Shared::LmsMedia.new(
+      content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
+      description: 'Comedo valde caste combibo.',
+      languages: [
+        'it',
+        'hu',
+      ],
+      name: 'beneficium',
+      thumbnail_url: 'https://picsum.photos/seed/pNFr1/2597/885',
+      type: Models::Shared::LmsMediaType::WEB,
+      url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+    ),
+    Models::Shared::LmsMedia.new(
+      content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
+      description: 'Tunc barba decens.',
+      languages: [
+        'bn',
+        'yo',
+      ],
+      name: 'qui',
+      thumbnail_url: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
+      type: Models::Shared::LmsMediaType::IMAGE,
+      url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+    ),
+  ],
+  name: 'ut',
+  provider_name: 'Berge LLC',
+  published_at: DateTime.iso8601('2023-11-08T11:32:09.080Z'),
+  short_description: 'Commemoro.',
+  skills: [
+    'trucido',
+  ],
+  sort_order: 3.0,
+  subjects: [
+    Models::Shared::LmsSubject.new(
+      name: 'tibi',
+      rank: 1.0,
+    ),
+  ],
+  tags: [
+    'dens',
+  ],
+  updated_at: DateTime.iso8601('2022-09-23T11:12:34.561Z'),
+), connection_id: '<id>')
 
 unless res.lms_content.nil?
   # handle response
@@ -241,7 +385,50 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.lms.create_lms_course(lms_course: Models::Shared::LmsCourse.new(), connection_id: '<id>')
+res = s.lms.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
+  categories: [
+    'tergiversatio',
+    'tumultus',
+  ],
+  created_at: DateTime.iso8601('2022-10-06T09:58:53.559Z'),
+  currency: 'FJD',
+  description: 'Vinco alias aut capitulus.',
+  duration_minutes: 148.0,
+  id: '65b62991-1a03-4ba7-8efb-97b689c8a03f',
+  instructors: [],
+  is_active: true,
+  is_private: false,
+  languages: [
+    'desparatus',
+    'earum',
+    'deripio',
+  ],
+  media: [
+    Models::Shared::LmsMedia.new(
+      content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+      description: 'Adipiscor.',
+      languages: [
+        'ms',
+        'te',
+      ],
+      name: 'tandem',
+      thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
+      type: Models::Shared::LmsMediaType::OTHER,
+      url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+    ),
+  ],
+  name: 'comptus',
+  price_amount: 84.0,
+  provider_name: 'Homenick - Wunsch',
+  published_at: DateTime.iso8601('2023-12-30T03:35:03.902Z'),
+  skills: [
+    'adiuvo',
+    'tam',
+  ],
+  students: [],
+  time_estimate_minutes: 100.0,
+  updated_at: DateTime.iso8601('2023-02-06T22:30:32.213Z'),
+), connection_id: '<id>')
 
 unless res.lms_course.nil?
   # handle response
@@ -285,7 +472,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.lms.create_lms_instructor(lms_instructor: Models::Shared::LmsInstructor.new(), connection_id: '<id>')
+res = s.lms.create_lms_instructor(lms_instructor: Models::Shared::LmsInstructor.new(
+  created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
+  emails: [
+    Models::Shared::LmsEmail.new(),
+    Models::Shared::LmsEmail.new(),
+  ],
+  first_name: 'Deangelo',
+  id: '8628b617-df56-40da-bc88-d001b8034098',
+  image_url: 'https://avatars.githubusercontent.com/u/20232618',
+  last_name: 'Ritchie',
+  name: 'Deangelo Ritchie',
+  telephones: [
+    Models::Shared::LmsTelephone.new(
+      telephone: '(352) 551-7989',
+      type: Models::Shared::LmsTelephoneType::HOME,
+    ),
+  ],
+  title: 'Product Solutions Engineer',
+  updated_at: DateTime.iso8601('2025-06-29T14:04:17.845Z'),
+), connection_id: '<id>')
 
 unless res.lms_instructor.nil?
   # handle response
@@ -329,7 +535,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.lms.create_lms_student(lms_student: Models::Shared::LmsStudent.new(), connection_id: '<id>')
+res = s.lms.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
+  address: Models::Shared::PropertyLmsStudentAddress.new(
+    address1: '94082 Kassandra Camp',
+    address2: 'Apt. 461',
+    city: 'New Ibrahimmouth',
+    country_code: 'US',
+    postal_code: '52851',
+    region: 'Tennessee',
+    region_code: 'NV',
+  ),
+  created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
+  emails: [
+    Models::Shared::LmsEmail.new(),
+    Models::Shared::LmsEmail.new(),
+  ],
+  first_name: 'Marcella',
+  id: '3f9236a5-f318-42d3-a6d0-40616568294a',
+  image_url: 'https://avatars.githubusercontent.com/u/36301374',
+  last_name: 'Murazik',
+  name: 'Marcella Murazik',
+  telephones: [
+    Models::Shared::LmsTelephone.new(
+      telephone: '(482) 469-8067',
+      type: Models::Shared::LmsTelephoneType::FAX,
+    ),
+  ],
+  updated_at: DateTime.iso8601('2022-06-19T13:54:54.233Z'),
+), connection_id: '<id>')
 
 unless res.lms_student.nil?
   # handle response
@@ -997,7 +1230,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsActivityRequest.new(
-  lms_activity: Models::Shared::LmsActivity.new(),
+  lms_activity: Models::Shared::LmsActivity.new(
+    assigned_grade: 'summopere',
+    completed_at: DateTime.iso8601('2025-04-12T21:06:46.233Z'),
+    created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
+    duration_minutes: 55.0,
+    id: '75d77351-7934-43b6-b258-f651820fd3d4',
+    is_completed: true,
+    progress_percentage: 100.0,
+    started_at: DateTime.iso8601('2023-12-24T04:54:05.825Z'),
+    updated_at: DateTime.iso8601('2022-01-23T21:44:13.326Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1044,7 +1287,32 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsClassRequest.new(
-  lms_class: Models::Shared::LmsClass.new(),
+  lms_class: Models::Shared::LmsClass.new(
+    created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
+    description: 'Anser sperno decerno.',
+    id: '2904921a-15f2-4099-8d09-c79721a959e6',
+    instructors: [],
+    languages: [
+      'in',
+    ],
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+        description: 'Esse confido.',
+        languages: [
+          'fa',
+          'da',
+        ],
+        name: 'illo',
+        thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+        type: Models::Shared::LmsMediaType::VIDEO,
+        url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+      ),
+    ],
+    name: 'virtus',
+    students: [],
+    updated_at: DateTime.iso8601('2025-07-07T21:34:01.574Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1091,7 +1359,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsCollectionRequest.new(
-  lms_collection: Models::Shared::LmsCollection.new(),
+  lms_collection: Models::Shared::LmsCollection.new(
+    created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
+    description: 'Ab.',
+    id: '66b5e830-829d-48bd-96e9-b5a5d85cdc85',
+    is_active: true,
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.',
+        description: 'Aliquam tardus careo hic umbra.',
+        languages: [
+          'gl',
+        ],
+        name: 'thymum',
+        thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
+        type: Models::Shared::LmsMediaType::HEADSHOT,
+        url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+      ),
+    ],
+    name: 'ara',
+    updated_at: DateTime.iso8601('2026-06-28T07:57:59.056Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1138,7 +1426,96 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsContentRequest.new(
-  lms_content: Models::Shared::LmsContent.new(),
+  lms_content: Models::Shared::LmsContent.new(
+    categories: [
+      'territo',
+    ],
+    created_at: DateTime.iso8601('2020-10-22T22:30:50.963Z'),
+    description: 'Usque laboriosam ventosus adflicto.',
+    difficulty: 'Beginner',
+    duration_minutes: 19.0,
+    external_reference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
+    id: 'e5541a3f-34cb-41b3-bec7-97e33782a388',
+    instructors: [
+      Models::Shared::LmsReference.new(
+        id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
+        name: 'Winston Ferry',
+      ),
+    ],
+    is_active: true,
+    languages: [
+      'despecto',
+      'suppellex',
+    ],
+    localizations: [
+      Models::Shared::LmsContentLocalization.new(
+        description: 'Numquam.',
+        language: 'es',
+        name: 'validus',
+      ),
+      Models::Shared::LmsContentLocalization.new(
+        description: 'Callide.',
+        language: 'fr',
+        name: 'crux',
+      ),
+    ],
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.',
+        description: 'Venia aeternus tandem spargo.',
+        languages: [
+          'zu',
+          'ba',
+        ],
+        name: 'subiungo',
+        thumbnail_url: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
+        type: Models::Shared::LmsMediaType::OTHER,
+        url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+      ),
+      Models::Shared::LmsMedia.new(
+        content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
+        description: 'Comedo valde caste combibo.',
+        languages: [
+          'it',
+          'hu',
+        ],
+        name: 'beneficium',
+        thumbnail_url: 'https://picsum.photos/seed/pNFr1/2597/885',
+        type: Models::Shared::LmsMediaType::WEB,
+        url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+      ),
+      Models::Shared::LmsMedia.new(
+        content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
+        description: 'Tunc barba decens.',
+        languages: [
+          'bn',
+          'yo',
+        ],
+        name: 'qui',
+        thumbnail_url: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
+        type: Models::Shared::LmsMediaType::IMAGE,
+        url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+      ),
+    ],
+    name: 'ut',
+    provider_name: 'Berge LLC',
+    published_at: DateTime.iso8601('2023-11-08T11:32:09.080Z'),
+    short_description: 'Commemoro.',
+    skills: [
+      'trucido',
+    ],
+    sort_order: 3.0,
+    subjects: [
+      Models::Shared::LmsSubject.new(
+        name: 'tibi',
+        rank: 1.0,
+      ),
+    ],
+    tags: [
+      'dens',
+    ],
+    updated_at: DateTime.iso8601('2022-09-23T11:12:34.570Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1185,7 +1562,50 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsCourseRequest.new(
-  lms_course: Models::Shared::LmsCourse.new(),
+  lms_course: Models::Shared::LmsCourse.new(
+    categories: [
+      'tergiversatio',
+      'tumultus',
+    ],
+    created_at: DateTime.iso8601('2022-10-06T09:58:53.559Z'),
+    currency: 'FJD',
+    description: 'Vinco alias aut capitulus.',
+    duration_minutes: 148.0,
+    id: '77a5449a-7770-4fd4-bb15-b62eb0663f70',
+    instructors: [],
+    is_active: true,
+    is_private: false,
+    languages: [
+      'desparatus',
+      'earum',
+      'deripio',
+    ],
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+        description: 'Adipiscor.',
+        languages: [
+          'ms',
+          'te',
+        ],
+        name: 'tandem',
+        thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
+        type: Models::Shared::LmsMediaType::OTHER,
+        url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+      ),
+    ],
+    name: 'comptus',
+    price_amount: 84.0,
+    provider_name: 'Homenick - Wunsch',
+    published_at: DateTime.iso8601('2023-12-30T03:35:03.902Z'),
+    skills: [
+      'adiuvo',
+      'tam',
+    ],
+    students: [],
+    time_estimate_minutes: 100.0,
+    updated_at: DateTime.iso8601('2023-02-06T22:30:32.215Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1232,7 +1652,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsInstructorRequest.new(
-  lms_instructor: Models::Shared::LmsInstructor.new(),
+  lms_instructor: Models::Shared::LmsInstructor.new(
+    created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
+    emails: [
+      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new(),
+    ],
+    first_name: 'Deangelo',
+    id: 'a25b6394-8e8a-4791-9851-ccf53213de13',
+    image_url: 'https://avatars.githubusercontent.com/u/20232618',
+    last_name: 'Ritchie',
+    name: 'Deangelo Ritchie',
+    telephones: [
+      Models::Shared::LmsTelephone.new(
+        telephone: '(352) 551-7989',
+        type: Models::Shared::LmsTelephoneType::HOME,
+      ),
+    ],
+    title: 'Product Solutions Engineer',
+    updated_at: DateTime.iso8601('2025-06-29T14:04:17.854Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1279,7 +1718,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchLmsStudentRequest.new(
-  lms_student: Models::Shared::LmsStudent.new(),
+  lms_student: Models::Shared::LmsStudent.new(
+    address: Models::Shared::PropertyLmsStudentAddress.new(
+      address1: '94082 Kassandra Camp',
+      address2: 'Apt. 461',
+      city: 'New Ibrahimmouth',
+      country_code: 'US',
+      postal_code: '52851',
+      region: 'Tennessee',
+      region_code: 'NV',
+    ),
+    created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
+    emails: [
+      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new(),
+    ],
+    first_name: 'Marcella',
+    id: '19259c54-285a-42c7-8996-e0304b2e234e',
+    image_url: 'https://avatars.githubusercontent.com/u/36301374',
+    last_name: 'Murazik',
+    name: 'Marcella Murazik',
+    telephones: [
+      Models::Shared::LmsTelephone.new(
+        telephone: '(482) 469-8067',
+        type: Models::Shared::LmsTelephoneType::FAX,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2022-06-19T13:54:54.238Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1620,7 +2086,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsActivityRequest.new(
-  lms_activity: Models::Shared::LmsActivity.new(),
+  lms_activity: Models::Shared::LmsActivity.new(
+    assigned_grade: 'summopere',
+    completed_at: DateTime.iso8601('2025-04-12T21:06:46.233Z'),
+    created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
+    duration_minutes: 55.0,
+    id: '75d77351-7934-43b6-b258-f651820fd3d4',
+    is_completed: true,
+    progress_percentage: 100.0,
+    started_at: DateTime.iso8601('2023-12-24T04:54:05.825Z'),
+    updated_at: DateTime.iso8601('2022-01-23T21:44:13.326Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1667,7 +2143,32 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsClassRequest.new(
-  lms_class: Models::Shared::LmsClass.new(),
+  lms_class: Models::Shared::LmsClass.new(
+    created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
+    description: 'Anser sperno decerno.',
+    id: '2904921a-15f2-4099-8d09-c79721a959e6',
+    instructors: [],
+    languages: [
+      'in',
+    ],
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+        description: 'Esse confido.',
+        languages: [
+          'fa',
+          'da',
+        ],
+        name: 'illo',
+        thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+        type: Models::Shared::LmsMediaType::VIDEO,
+        url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+      ),
+    ],
+    name: 'virtus',
+    students: [],
+    updated_at: DateTime.iso8601('2025-07-07T21:34:01.574Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1714,7 +2215,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsCollectionRequest.new(
-  lms_collection: Models::Shared::LmsCollection.new(),
+  lms_collection: Models::Shared::LmsCollection.new(
+    created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
+    description: 'Ab.',
+    id: '66b5e830-829d-48bd-96e9-b5a5d85cdc85',
+    is_active: true,
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.',
+        description: 'Aliquam tardus careo hic umbra.',
+        languages: [
+          'gl',
+        ],
+        name: 'thymum',
+        thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
+        type: Models::Shared::LmsMediaType::HEADSHOT,
+        url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+      ),
+    ],
+    name: 'ara',
+    updated_at: DateTime.iso8601('2026-06-28T07:57:59.056Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1761,7 +2282,96 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsContentRequest.new(
-  lms_content: Models::Shared::LmsContent.new(),
+  lms_content: Models::Shared::LmsContent.new(
+    categories: [
+      'territo',
+    ],
+    created_at: DateTime.iso8601('2020-10-22T22:30:50.963Z'),
+    description: 'Usque laboriosam ventosus adflicto.',
+    difficulty: 'Beginner',
+    duration_minutes: 19.0,
+    external_reference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
+    id: 'e5541a3f-34cb-41b3-bec7-97e33782a388',
+    instructors: [
+      Models::Shared::LmsReference.new(
+        id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
+        name: 'Winston Ferry',
+      ),
+    ],
+    is_active: true,
+    languages: [
+      'despecto',
+      'suppellex',
+    ],
+    localizations: [
+      Models::Shared::LmsContentLocalization.new(
+        description: 'Numquam.',
+        language: 'es',
+        name: 'validus',
+      ),
+      Models::Shared::LmsContentLocalization.new(
+        description: 'Callide.',
+        language: 'fr',
+        name: 'crux',
+      ),
+    ],
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.',
+        description: 'Venia aeternus tandem spargo.',
+        languages: [
+          'zu',
+          'ba',
+        ],
+        name: 'subiungo',
+        thumbnail_url: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
+        type: Models::Shared::LmsMediaType::OTHER,
+        url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+      ),
+      Models::Shared::LmsMedia.new(
+        content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
+        description: 'Comedo valde caste combibo.',
+        languages: [
+          'it',
+          'hu',
+        ],
+        name: 'beneficium',
+        thumbnail_url: 'https://picsum.photos/seed/pNFr1/2597/885',
+        type: Models::Shared::LmsMediaType::WEB,
+        url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+      ),
+      Models::Shared::LmsMedia.new(
+        content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
+        description: 'Tunc barba decens.',
+        languages: [
+          'bn',
+          'yo',
+        ],
+        name: 'qui',
+        thumbnail_url: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
+        type: Models::Shared::LmsMediaType::IMAGE,
+        url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+      ),
+    ],
+    name: 'ut',
+    provider_name: 'Berge LLC',
+    published_at: DateTime.iso8601('2023-11-08T11:32:09.080Z'),
+    short_description: 'Commemoro.',
+    skills: [
+      'trucido',
+    ],
+    sort_order: 3.0,
+    subjects: [
+      Models::Shared::LmsSubject.new(
+        name: 'tibi',
+        rank: 1.0,
+      ),
+    ],
+    tags: [
+      'dens',
+    ],
+    updated_at: DateTime.iso8601('2022-09-23T11:12:34.570Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1808,7 +2418,50 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsCourseRequest.new(
-  lms_course: Models::Shared::LmsCourse.new(),
+  lms_course: Models::Shared::LmsCourse.new(
+    categories: [
+      'tergiversatio',
+      'tumultus',
+    ],
+    created_at: DateTime.iso8601('2022-10-06T09:58:53.559Z'),
+    currency: 'FJD',
+    description: 'Vinco alias aut capitulus.',
+    duration_minutes: 148.0,
+    id: '77a5449a-7770-4fd4-bb15-b62eb0663f70',
+    instructors: [],
+    is_active: true,
+    is_private: false,
+    languages: [
+      'desparatus',
+      'earum',
+      'deripio',
+    ],
+    media: [
+      Models::Shared::LmsMedia.new(
+        content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+        description: 'Adipiscor.',
+        languages: [
+          'ms',
+          'te',
+        ],
+        name: 'tandem',
+        thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
+        type: Models::Shared::LmsMediaType::OTHER,
+        url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+      ),
+    ],
+    name: 'comptus',
+    price_amount: 84.0,
+    provider_name: 'Homenick - Wunsch',
+    published_at: DateTime.iso8601('2023-12-30T03:35:03.902Z'),
+    skills: [
+      'adiuvo',
+      'tam',
+    ],
+    students: [],
+    time_estimate_minutes: 100.0,
+    updated_at: DateTime.iso8601('2023-02-06T22:30:32.215Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1855,7 +2508,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsInstructorRequest.new(
-  lms_instructor: Models::Shared::LmsInstructor.new(),
+  lms_instructor: Models::Shared::LmsInstructor.new(
+    created_at: DateTime.iso8601('2021-10-12T16:38:54.979Z'),
+    emails: [
+      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new(),
+    ],
+    first_name: 'Deangelo',
+    id: 'a25b6394-8e8a-4791-9851-ccf53213de13',
+    image_url: 'https://avatars.githubusercontent.com/u/20232618',
+    last_name: 'Ritchie',
+    name: 'Deangelo Ritchie',
+    telephones: [
+      Models::Shared::LmsTelephone.new(
+        telephone: '(352) 551-7989',
+        type: Models::Shared::LmsTelephoneType::HOME,
+      ),
+    ],
+    title: 'Product Solutions Engineer',
+    updated_at: DateTime.iso8601('2025-06-29T14:04:17.854Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1902,7 +2574,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateLmsStudentRequest.new(
-  lms_student: Models::Shared::LmsStudent.new(),
+  lms_student: Models::Shared::LmsStudent.new(
+    address: Models::Shared::PropertyLmsStudentAddress.new(
+      address1: '94082 Kassandra Camp',
+      address2: 'Apt. 461',
+      city: 'New Ibrahimmouth',
+      country_code: 'US',
+      postal_code: '52851',
+      region: 'Tennessee',
+      region_code: 'NV',
+    ),
+    created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
+    emails: [
+      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new(),
+    ],
+    first_name: 'Marcella',
+    id: '19259c54-285a-42c7-8996-e0304b2e234e',
+    image_url: 'https://avatars.githubusercontent.com/u/36301374',
+    last_name: 'Murazik',
+    name: 'Marcella Murazik',
+    telephones: [
+      Models::Shared::LmsTelephone.new(
+        telephone: '(482) 469-8067',
+        type: Models::Shared::LmsTelephoneType::FAX,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2022-06-19T13:54:54.238Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

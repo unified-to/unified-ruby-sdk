@@ -43,7 +43,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.group.create_ads_group(ads_group: Models::Shared::AdsGroup.new(), connection_id: '<id>')
+res = s.group.create_ads_group(ads_group: Models::Shared::AdsGroup.new(
+  bid_amount: 26.16_030_164_062_977,
+  budget_amount: 5_099.175_239_447_504,
+  budget_period: Models::Shared::AdsGroupBudgetPeriod::MONTHLY,
+  created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
+  currency: 'USD',
+  effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
+  end_at: DateTime.iso8601('2026-05-24T13:15:24.973Z'),
+  id: '7a1dd0fa-f562-417b-8e64-de340433f383',
+  language_locale: 'fr-FR',
+  name: 'Stark - Baumbach',
+  start_at: DateTime.iso8601('2025-12-10T21:07:40.588Z'),
+  status: Models::Shared::AdsGroupStatus::PROCESSING,
+  targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
+  updated_at: DateTime.iso8601('2022-01-02T16:44:41.438Z'),
+), connection_id: '<id>')
 
 unless res.ads_group.nil?
   # handle response
@@ -87,7 +102,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.group.create_hris_group(hris_group: Models::Shared::HrisGroup.new(), connection_id: '<id>')
+res = s.group.create_hris_group(hris_group: Models::Shared::HrisGroup.new(
+  created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
+  description: 'Absorbeo casso.',
+  id: '045c2bc7-ead6-478b-9f3f-3349fc5e1fa7',
+  is_active: false,
+  name: 'Games',
+  type: Models::Shared::HrisGroupType::BUSINESS_UNIT,
+  updated_at: DateTime.iso8601('2026-04-23T14:22:24.155Z'),
+), connection_id: '<id>')
 
 unless res.hris_group.nil?
   # handle response
@@ -530,7 +553,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAdsGroupRequest.new(
-  ads_group: Models::Shared::AdsGroup.new(),
+  ads_group: Models::Shared::AdsGroup.new(
+    bid_amount: 26.16_030_164_062_977,
+    budget_amount: 5_099.175_239_447_504,
+    budget_period: Models::Shared::AdsGroupBudgetPeriod::MONTHLY,
+    created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
+    currency: 'USD',
+    effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
+    end_at: DateTime.iso8601('2026-05-24T13:15:25.136Z'),
+    id: 'a0b7c5db-3caa-4a96-8652-58d8650a7304',
+    language_locale: 'fr-FR',
+    name: 'Stark - Baumbach',
+    start_at: DateTime.iso8601('2025-12-10T21:07:40.740Z'),
+    status: Models::Shared::AdsGroupStatus::PROCESSING,
+    targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
+    updated_at: DateTime.iso8601('2022-01-02T16:44:41.494Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -577,7 +615,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchHrisGroupRequest.new(
-  hris_group: Models::Shared::HrisGroup.new(),
+  hris_group: Models::Shared::HrisGroup.new(
+    created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
+    description: 'Absorbeo casso.',
+    id: 'd0a99ab0-64a9-49c9-a7cc-094dc6a7244b',
+    is_active: false,
+    name: 'Games',
+    type: Models::Shared::HrisGroupType::BUSINESS_UNIT,
+    updated_at: DateTime.iso8601('2026-04-23T14:22:24.161Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -795,7 +841,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAdsGroupRequest.new(
-  ads_group: Models::Shared::AdsGroup.new(),
+  ads_group: Models::Shared::AdsGroup.new(
+    bid_amount: 26.16_030_164_062_977,
+    budget_amount: 5_099.175_239_447_504,
+    budget_period: Models::Shared::AdsGroupBudgetPeriod::MONTHLY,
+    created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
+    currency: 'USD',
+    effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
+    end_at: DateTime.iso8601('2026-05-24T13:15:25.136Z'),
+    id: 'a0b7c5db-3caa-4a96-8652-58d8650a7304',
+    language_locale: 'fr-FR',
+    name: 'Stark - Baumbach',
+    start_at: DateTime.iso8601('2025-12-10T21:07:40.740Z'),
+    status: Models::Shared::AdsGroupStatus::PROCESSING,
+    targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
+    updated_at: DateTime.iso8601('2022-01-02T16:44:41.494Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -842,7 +903,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateHrisGroupRequest.new(
-  hris_group: Models::Shared::HrisGroup.new(),
+  hris_group: Models::Shared::HrisGroup.new(
+    created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
+    description: 'Absorbeo casso.',
+    id: 'd0a99ab0-64a9-49c9-a7cc-094dc6a7244b',
+    is_active: false,
+    name: 'Games',
+    type: Models::Shared::HrisGroupType::BUSINESS_UNIT,
+    updated_at: DateTime.iso8601('2026-04-23T14:22:24.161Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

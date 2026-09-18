@@ -29,7 +29,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(), connection_id: '<id>')
+res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
+  comment: 'Maiores enim.',
+  created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
+  id: '23c9219c-ba4a-4423-8855-640ee6af29a4',
+  questions: [
+    Models::Shared::AtsScorecardQuestion.new(
+      description: 'Sulum textor eveniet facere vita.',
+      text: 'Aliquam.',
+    ),
+    Models::Shared::AtsScorecardQuestion.new(
+      answer: 'Decretum.',
+      description: 'Conatus cicuta doloremque statua bonus.',
+      text: 'Pecto vulpes libero vomer comburo.',
+    ),
+  ],
+  recommendation: Models::Shared::Recommendation::STRONG_YES,
+  updated_at: DateTime.iso8601('2023-05-27T11:09:27.385Z'),
+), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
   # handle response
@@ -163,7 +180,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAtsScorecardRequest.new(
-  ats_scorecard: Models::Shared::AtsScorecard.new(),
+  ats_scorecard: Models::Shared::AtsScorecard.new(
+    comment: 'Maiores enim.',
+    created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
+    id: '0b5d608f-b399-4baa-bcc0-d82844c83305',
+    questions: [
+      Models::Shared::AtsScorecardQuestion.new(
+        description: 'Sulum textor eveniet facere vita.',
+        text: 'Aliquam.',
+      ),
+      Models::Shared::AtsScorecardQuestion.new(
+        answer: 'Decretum.',
+        description: 'Conatus cicuta doloremque statua bonus.',
+        text: 'Pecto vulpes libero vomer comburo.',
+      ),
+    ],
+    recommendation: Models::Shared::Recommendation::STRONG_YES,
+    updated_at: DateTime.iso8601('2023-05-27T11:09:27.388Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -252,7 +286,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAtsScorecardRequest.new(
-  ats_scorecard: Models::Shared::AtsScorecard.new(),
+  ats_scorecard: Models::Shared::AtsScorecard.new(
+    comment: 'Maiores enim.',
+    created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
+    id: '0b5d608f-b399-4baa-bcc0-d82844c83305',
+    questions: [
+      Models::Shared::AtsScorecardQuestion.new(
+        description: 'Sulum textor eveniet facere vita.',
+        text: 'Aliquam.',
+      ),
+      Models::Shared::AtsScorecardQuestion.new(
+        answer: 'Decretum.',
+        description: 'Conatus cicuta doloremque statua bonus.',
+        text: 'Pecto vulpes libero vomer comburo.',
+      ),
+    ],
+    recommendation: Models::Shared::Recommendation::STRONG_YES,
+    updated_at: DateTime.iso8601('2023-05-27T11:09:27.388Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

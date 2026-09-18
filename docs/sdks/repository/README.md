@@ -30,7 +30,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.repository.create_repo_repository(repo_repository: Models::Shared::RepoRepository.new(
-  name: '<value>',
+  created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
+  description: 'Tribuo torqueo aetas ustulo illum.',
+  id: 'e70224a7-b8e7-4f34-a2d5-b97d63861b07',
+  is_private: false,
+  name: 'suggero',
+  owner: 'Marcella Kuhic',
+  updated_at: DateTime.iso8601('2024-02-23T00:26:42.975Z'),
+  web_url: 'https://brown-phrase.info',
 ), connection_id: '<id>')
 
 unless res.repo_repository.nil?
@@ -166,7 +173,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
-    name: '<value>',
+    created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
+    description: 'Tribuo torqueo aetas ustulo illum.',
+    id: '7411471e-1c98-451a-9ece-c5d020994125',
+    is_private: false,
+    name: 'suggero',
+    owner: 'Marcella Kuhic',
+    updated_at: DateTime.iso8601('2024-02-23T00:26:42.977Z'),
+    web_url: 'https://brown-phrase.info',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -257,7 +271,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
-    name: '<value>',
+    created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
+    description: 'Tribuo torqueo aetas ustulo illum.',
+    id: '7411471e-1c98-451a-9ece-c5d020994125',
+    is_private: false,
+    name: 'suggero',
+    owner: 'Marcella Kuhic',
+    updated_at: DateTime.iso8601('2024-02-23T00:26:42.977Z'),
+    web_url: 'https://brown-phrase.info',
   ),
   connection_id: '<id>',
   id: '<id>',

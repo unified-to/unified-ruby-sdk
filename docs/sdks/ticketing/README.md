@@ -47,7 +47,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ticketing.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(), connection_id: '<id>')
+res = s.ticketing.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(
+  created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
+  description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
+  id: '1a314dbe-4fde-4d25-88f9-cfd54f54f6cf',
+  is_active: true,
+  name: 'amicitia',
+  updated_at: DateTime.iso8601('2025-12-15T15:08:13.938Z'),
+), connection_id: '<id>')
 
 unless res.ticketing_category.nil?
   # handle response
@@ -91,7 +98,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ticketing.create_ticketing_customer(ticketing_customer: Models::Shared::TicketingCustomer.new(), connection_id: '<id>')
+res = s.ticketing.create_ticketing_customer(ticketing_customer: Models::Shared::TicketingCustomer.new(
+  created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
+  emails: [
+    Models::Shared::TicketingEmail.new(
+      email: 'Christian_Windler@gmail.com',
+      type: Models::Shared::TicketingEmailType::HOME,
+    ),
+  ],
+  id: '5679b5ad-cbd1-49d3-aa76-be0765aac39f',
+  name: 'Christian Windler',
+  tags: [
+    'casso',
+    'peccatus',
+  ],
+  telephones: [
+    Models::Shared::TicketingTelephone.new(
+      telephone: '(532) 242-0482',
+      type: Models::Shared::TicketingTelephoneType::OTHER,
+    ),
+    Models::Shared::TicketingTelephone.new(
+      telephone: '(826) 283-7431',
+      type: Models::Shared::TicketingTelephoneType::MOBILE,
+    ),
+    Models::Shared::TicketingTelephone.new(
+      telephone: '(483) 314-6826',
+      type: Models::Shared::TicketingTelephoneType::MOBILE,
+    ),
+  ],
+  updated_at: DateTime.iso8601('2026-05-04T07:36:28.942Z'),
+), connection_id: '<id>')
 
 unless res.ticketing_customer.nil?
   # handle response
@@ -135,7 +171,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ticketing.create_ticketing_note(ticketing_note: Models::Shared::TicketingNote.new(), connection_id: '<id>')
+res = s.ticketing.create_ticketing_note(ticketing_note: Models::Shared::TicketingNote.new(
+  created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
+  description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
+  id: 'd7304380-ea8a-495e-bf16-e2a52ca4111d',
+  updated_at: DateTime.iso8601('2024-09-05T15:36:17.642Z'),
+), connection_id: '<id>')
 
 unless res.ticketing_note.nil?
   # handle response
@@ -179,7 +220,29 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.ticketing.create_ticketing_ticket(ticketing_ticket: Models::Shared::TicketingTicket.new(), connection_id: '<id>')
+res = s.ticketing.create_ticketing_ticket(ticketing_ticket: Models::Shared::TicketingTicket.new(
+  attachment_ids: [
+    '4de1d48f-6d67-4c55-887e-4214ac510edd',
+    '452879ac-9e59-4abb-a881-83f9a4ddda59',
+  ],
+  category_id: 'vilicus',
+  created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
+  description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
+  due_at: DateTime.iso8601('2025-07-20T03:54:57.765Z'),
+  id: 'e493516c-4307-4cd4-b9f1-6a718dab2757',
+  priority: 'LOW',
+  source: 'atavus',
+  source_ref: '7313e174-158a-4ae7-9ca5-77009d400edd',
+  status: Models::Shared::TicketingTicketStatus::ACTIVE,
+  subject: 'Thymbra ratione minus arbitro tricesimus cetera validus.',
+  tags: [
+    'tamen',
+    'vitae',
+    'torrens',
+  ],
+  updated_at: DateTime.iso8601('2023-05-28T07:24:22.561Z'),
+  url: 'https://yellowish-testimonial.biz',
+), connection_id: '<id>')
 
 unless res.ticketing_ticket.nil?
   # handle response
@@ -580,7 +643,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTicketingCategoryRequest.new(
-  ticketing_category: Models::Shared::TicketingCategory.new(),
+  ticketing_category: Models::Shared::TicketingCategory.new(
+    created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
+    description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
+    id: 'e2adf03e-28c6-44ae-870e-de98f93f2e79',
+    is_active: true,
+    name: 'amicitia',
+    updated_at: DateTime.iso8601('2025-12-15T15:08:13.942Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -627,7 +697,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTicketingCustomerRequest.new(
-  ticketing_customer: Models::Shared::TicketingCustomer.new(),
+  ticketing_customer: Models::Shared::TicketingCustomer.new(
+    created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
+    emails: [
+      Models::Shared::TicketingEmail.new(
+        email: 'Christian_Windler@gmail.com',
+        type: Models::Shared::TicketingEmailType::HOME,
+      ),
+    ],
+    id: '2436512f-a3ac-4d4f-b26a-0698aa989293',
+    name: 'Christian Windler',
+    tags: [
+      'casso',
+      'peccatus',
+    ],
+    telephones: [
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(532) 242-0482',
+        type: Models::Shared::TicketingTelephoneType::OTHER,
+      ),
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(826) 283-7431',
+        type: Models::Shared::TicketingTelephoneType::MOBILE,
+      ),
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(483) 314-6826',
+        type: Models::Shared::TicketingTelephoneType::MOBILE,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2026-05-04T07:36:28.947Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -674,7 +773,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTicketingNoteRequest.new(
-  ticketing_note: Models::Shared::TicketingNote.new(),
+  ticketing_note: Models::Shared::TicketingNote.new(
+    created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
+    description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
+    id: '336e6d20-6503-4fba-ac39-10c02b5009d9',
+    updated_at: DateTime.iso8601('2024-09-05T15:36:17.645Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -721,7 +825,29 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchTicketingTicketRequest.new(
-  ticketing_ticket: Models::Shared::TicketingTicket.new(),
+  ticketing_ticket: Models::Shared::TicketingTicket.new(
+    attachment_ids: [
+      'b98e4067-b984-48b5-987a-784b52785e20',
+      '8c18ce14-0091-47ed-a2a6-387b1764cfe7',
+    ],
+    category_id: 'vilicus',
+    created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
+    description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
+    due_at: DateTime.iso8601('2025-07-20T03:54:57.773Z'),
+    id: 'e029b6d8-58a7-42e7-8a06-478ac5f66882',
+    priority: 'LOW',
+    source: 'atavus',
+    source_ref: '2a3e4ec5-5a71-4c15-a0c7-6de32030e514',
+    status: Models::Shared::TicketingTicketStatus::ACTIVE,
+    subject: 'Thymbra ratione minus arbitro tricesimus cetera validus.',
+    tags: [
+      'tamen',
+      'vitae',
+      'torrens',
+    ],
+    updated_at: DateTime.iso8601('2023-05-28T07:24:22.564Z'),
+    url: 'https://yellowish-testimonial.biz',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -936,7 +1062,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTicketingCategoryRequest.new(
-  ticketing_category: Models::Shared::TicketingCategory.new(),
+  ticketing_category: Models::Shared::TicketingCategory.new(
+    created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
+    description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
+    id: 'e2adf03e-28c6-44ae-870e-de98f93f2e79',
+    is_active: true,
+    name: 'amicitia',
+    updated_at: DateTime.iso8601('2025-12-15T15:08:13.942Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -983,7 +1116,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTicketingCustomerRequest.new(
-  ticketing_customer: Models::Shared::TicketingCustomer.new(),
+  ticketing_customer: Models::Shared::TicketingCustomer.new(
+    created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
+    emails: [
+      Models::Shared::TicketingEmail.new(
+        email: 'Christian_Windler@gmail.com',
+        type: Models::Shared::TicketingEmailType::HOME,
+      ),
+    ],
+    id: '2436512f-a3ac-4d4f-b26a-0698aa989293',
+    name: 'Christian Windler',
+    tags: [
+      'casso',
+      'peccatus',
+    ],
+    telephones: [
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(532) 242-0482',
+        type: Models::Shared::TicketingTelephoneType::OTHER,
+      ),
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(826) 283-7431',
+        type: Models::Shared::TicketingTelephoneType::MOBILE,
+      ),
+      Models::Shared::TicketingTelephone.new(
+        telephone: '(483) 314-6826',
+        type: Models::Shared::TicketingTelephoneType::MOBILE,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2026-05-04T07:36:28.947Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1030,7 +1192,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTicketingNoteRequest.new(
-  ticketing_note: Models::Shared::TicketingNote.new(),
+  ticketing_note: Models::Shared::TicketingNote.new(
+    created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
+    description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
+    id: '336e6d20-6503-4fba-ac39-10c02b5009d9',
+    updated_at: DateTime.iso8601('2024-09-05T15:36:17.645Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -1077,7 +1244,29 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateTicketingTicketRequest.new(
-  ticketing_ticket: Models::Shared::TicketingTicket.new(),
+  ticketing_ticket: Models::Shared::TicketingTicket.new(
+    attachment_ids: [
+      'b98e4067-b984-48b5-987a-784b52785e20',
+      '8c18ce14-0091-47ed-a2a6-387b1764cfe7',
+    ],
+    category_id: 'vilicus',
+    created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
+    description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
+    due_at: DateTime.iso8601('2025-07-20T03:54:57.773Z'),
+    id: 'e029b6d8-58a7-42e7-8a06-478ac5f66882',
+    priority: 'LOW',
+    source: 'atavus',
+    source_ref: '2a3e4ec5-5a71-4c15-a0c7-6de32030e514',
+    status: Models::Shared::TicketingTicketStatus::ACTIVE,
+    subject: 'Thymbra ratione minus arbitro tricesimus cetera validus.',
+    tags: [
+      'tamen',
+      'vitae',
+      'torrens',
+    ],
+    updated_at: DateTime.iso8601('2023-05-28T07:24:22.564Z'),
+    url: 'https://yellowish-testimonial.biz',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

@@ -35,7 +35,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.campaign.create_ads_campaign(ads_campaign: Models::Shared::AdsCampaign.new(), connection_id: '<id>')
+res = s.campaign.create_ads_campaign(ads_campaign: Models::Shared::AdsCampaign.new(
+  budget_amount: 8_743.179_536_121_897,
+  budget_period: Models::Shared::BudgetPeriod::MONTHLY,
+  category: 'CREDIT',
+  created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
+  currency: 'USD',
+  effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
+  end_at: DateTime.iso8601('2025-05-09T08:16:21.877Z'),
+  id: 'df79d33b-427c-468d-b4c8-8374df7c8924',
+  labels: [
+    'comedo',
+  ],
+  name: 'Emard Inc',
+  start_at: DateTime.iso8601('2022-07-20T04:51:14.298Z'),
+  status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
+  targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
+  total_spend_amount: 2_349.8_642_875_347_286,
+  updated_at: DateTime.iso8601('2025-12-05T13:32:42.720Z'),
+), connection_id: '<id>')
 
 unless res.ads_campaign.nil?
   # handle response
@@ -79,7 +97,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.campaign.create_martech_campaign(marketing_campaign: Models::Shared::MarketingCampaign.new(), connection_id: '<id>')
+res = s.campaign.create_martech_campaign(marketing_campaign: Models::Shared::MarketingCampaign.new(
+  created_at: DateTime.iso8601('2023-08-01T22:29:12.121Z'),
+  from_email: 'Nick.Beahan@hotmail.com',
+  from_name: 'Javier Rempel',
+  id: 'f55d8e92-4bfd-487f-8c76-04b61c5dd34e',
+  list_ids: [
+    'bde5cab9-cf2f-4ed5-adab-b33c88bac5af',
+  ],
+  name: 'Consequatur atqui sustineo.',
+  preview_text: 'Bellicus tener cinis causa cavus toties.',
+  reply_to_email: 'Antwan.Abshire@hotmail.com',
+  send_at: DateTime.iso8601('2023-03-28T12:33:25.052Z'),
+  status: Models::Shared::MarketingCampaignStatus::SENT,
+  subject_line: 'Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.',
+  type: 'plaintext',
+  updated_at: DateTime.iso8601('2023-12-17T22:11:31.702Z'),
+), connection_id: '<id>')
 
 unless res.marketing_campaign.nil?
   # handle response
@@ -302,7 +336,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAdsCampaignRequest.new(
-  ads_campaign: Models::Shared::AdsCampaign.new(),
+  ads_campaign: Models::Shared::AdsCampaign.new(
+    budget_amount: 8_743.179_536_121_897,
+    budget_period: Models::Shared::BudgetPeriod::MONTHLY,
+    category: 'CREDIT',
+    created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
+    currency: 'USD',
+    effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
+    end_at: DateTime.iso8601('2025-05-09T08:16:21.964Z'),
+    id: '261bebf3-3835-469f-b46c-0c0527729793',
+    labels: [
+      'comedo',
+    ],
+    name: 'Emard Inc',
+    start_at: DateTime.iso8601('2022-07-20T04:51:14.303Z'),
+    status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
+    targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
+    total_spend_amount: 2_349.8_642_875_347_286,
+    updated_at: DateTime.iso8601('2025-12-05T13:32:42.824Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -349,7 +401,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchMartechCampaignRequest.new(
-  marketing_campaign: Models::Shared::MarketingCampaign.new(),
+  marketing_campaign: Models::Shared::MarketingCampaign.new(
+    created_at: DateTime.iso8601('2023-08-01T22:29:12.121Z'),
+    from_email: 'Nick.Beahan@hotmail.com',
+    from_name: 'Javier Rempel',
+    id: '688597c4-916c-4da5-88d9-7ce364e7aac0',
+    list_ids: [
+      'bde5cab9-cf2f-4ed5-adab-b33c88bac5af',
+    ],
+    name: 'Consequatur atqui sustineo.',
+    preview_text: 'Bellicus tener cinis causa cavus toties.',
+    reply_to_email: 'Antwan.Abshire@hotmail.com',
+    send_at: DateTime.iso8601('2023-03-28T12:33:25.052Z'),
+    status: Models::Shared::MarketingCampaignStatus::SENT,
+    subject_line: 'Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.',
+    type: 'plaintext',
+    updated_at: DateTime.iso8601('2023-12-17T22:11:31.702Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -480,7 +548,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAdsCampaignRequest.new(
-  ads_campaign: Models::Shared::AdsCampaign.new(),
+  ads_campaign: Models::Shared::AdsCampaign.new(
+    budget_amount: 8_743.179_536_121_897,
+    budget_period: Models::Shared::BudgetPeriod::MONTHLY,
+    category: 'CREDIT',
+    created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
+    currency: 'USD',
+    effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
+    end_at: DateTime.iso8601('2025-05-09T08:16:21.964Z'),
+    id: '261bebf3-3835-469f-b46c-0c0527729793',
+    labels: [
+      'comedo',
+    ],
+    name: 'Emard Inc',
+    start_at: DateTime.iso8601('2022-07-20T04:51:14.303Z'),
+    status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
+    targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
+    total_spend_amount: 2_349.8_642_875_347_286,
+    updated_at: DateTime.iso8601('2025-12-05T13:32:42.824Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -527,7 +613,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateMartechCampaignRequest.new(
-  marketing_campaign: Models::Shared::MarketingCampaign.new(),
+  marketing_campaign: Models::Shared::MarketingCampaign.new(
+    created_at: DateTime.iso8601('2023-08-01T22:29:12.121Z'),
+    from_email: 'Nick.Beahan@hotmail.com',
+    from_name: 'Javier Rempel',
+    id: '688597c4-916c-4da5-88d9-7ce364e7aac0',
+    list_ids: [
+      'bde5cab9-cf2f-4ed5-adab-b33c88bac5af',
+    ],
+    name: 'Consequatur atqui sustineo.',
+    preview_text: 'Bellicus tener cinis causa cavus toties.',
+    reply_to_email: 'Antwan.Abshire@hotmail.com',
+    send_at: DateTime.iso8601('2023-03-28T12:33:25.052Z'),
+    status: Models::Shared::MarketingCampaignStatus::SENT,
+    subject_line: 'Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.',
+    type: 'plaintext',
+    updated_at: DateTime.iso8601('2023-12-17T22:11:31.702Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

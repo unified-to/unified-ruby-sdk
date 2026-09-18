@@ -151,7 +151,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(
+  balance: 12_092.0,
+  created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
+  currency: 'BOB',
+  customer_defined_code: 'quo',
+  description: 'Spoliatio comedo vilitas harum cupiditate.',
+  id: '14522477-23c9-4425-a7a9-981198614b49',
+  is_payable: true,
+  name: 'Electronic Aluminum Tuna',
+  status: Models::Shared::Status::ARCHIVED,
+  taxonomy: [
+    Models::Shared::AccountingAccountTaxonomy.new(
+      original_type: 'vesper',
+      type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+      value: 'iste',
+    ),
+    Models::Shared::AccountingAccountTaxonomy.new(
+      original_type: 'adamo',
+      type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+      value: 'peccatus',
+    ),
+  ],
+  type: Models::Shared::Type::BANK,
+  updated_at: DateTime.iso8601('2023-01-03T03:10:58.260Z'),
+), connection_id: '<id>')
 
 unless res.accounting_account.nil?
   # handle response
@@ -195,7 +219,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_bankfeedaccount(accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_bankfeedaccount(accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
+  account_id: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+  account_number: '30369722',
+  account_number_last4: '9722',
+  account_type: Models::Shared::AccountType::LOAN,
+  balance: 90_358.0,
+  bank_name: 'Weissnat Inc',
+  created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+  currency: 'SSP',
+  feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+  id: '611e4c6d-d374-4fb6-9393-84e9435551db',
+  name: 'Corwin, Donnelly and Connelly Savings',
+  routing_number: '667753156',
+  status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
+  updated_at: DateTime.iso8601('2024-04-11T12:55:38.833Z'),
+), connection_id: '<id>')
 
 unless res.accounting_bankfeedaccount.nil?
   # handle response
@@ -239,7 +278,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_bankfeedtransaction(accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_bankfeedtransaction(accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
+  account_id: 'b7dc4175-1368-4b89-a700-d621b6666648',
+  amount: 60_889.0,
+  bank_category: 'Games',
+  bankfeedaccount_id: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+  category_ids: [],
+  contact_id: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+  created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
+  currency: 'SRD',
+  description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+  id: '17e79edc-3ee2-4174-adf2-36ce57a3f333',
+  is_pending: true,
+  merchant_name: 'Reichert, Erdman and Tillman',
+  posted_at: DateTime.iso8601('2025-03-23T18:32:09.147Z'),
+  reference: '93642593',
+  transaction_at: DateTime.iso8601('2022-07-27T19:47:57.100Z'),
+  type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
+  updated_at: DateTime.iso8601('2022-05-23T20:47:13.142Z'),
+), connection_id: '<id>')
 
 unless res.accounting_bankfeedtransaction.nil?
   # handle response
@@ -283,7 +340,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_bill(accounting_bill: Models::Shared::AccountingBill.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_bill(accounting_bill: Models::Shared::AccountingBill.new(
+  attachments: [],
+  bill_number: 'vitae',
+  category_ids: [],
+  created_at: DateTime.iso8601('2019-08-08T23:03:14.104Z'),
+  currency: 'AUD',
+  discount_amount: 0.0,
+  due_at: DateTime.iso8601('2019-08-11T20:52:55.321Z'),
+  extended_notes: [],
+  id: 'cf3d7770-af77-4c67-9f72-8ce32c49c385',
+  lineitems: [],
+  metadata: [],
+  notes: 'Tutamen cilicium infit.',
+  payment_collection_method: Models::Shared::PaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+  payments: [],
+  posted_at: DateTime.iso8601('2024-04-04T07:21:13.467Z'),
+  send: true,
+  status: Models::Shared::AccountingBillStatus::DELETED,
+  tax_amount: 0.0,
+  term: Models::Shared::Term::NET_10,
+  total_amount: 0.0,
+  updated_at: DateTime.iso8601('2025-01-29T00:55:25.604Z'),
+  url: 'https://coarse-interviewer.biz/',
+), connection_id: '<id>')
 
 unless res.accounting_bill.nil?
   # handle response
@@ -327,7 +407,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(
+  created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
+  description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+  id: '088b0f9b-cff7-4500-ac8f-2f52543a9516',
+  is_active: false,
+  metadata: [],
+  name: 'Electronic Cotton Shoes',
+  updated_at: DateTime.iso8601('2025-08-20T06:33:25.029Z'),
+), connection_id: '<id>')
 
 unless res.accounting_category.nil?
   # handle response
@@ -371,7 +459,74 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_contact(accounting_contact: Models::Shared::AccountingContact.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_contact(accounting_contact: Models::Shared::AccountingContact.new(
+  associated_contacts: [
+    Models::Shared::AccountingAssociatedContact.new(
+      id: 'd525ae4d-d9c6-4acc-81bd-027ef5e8a76e',
+      name: 'Delores Reynolds',
+    ),
+    Models::Shared::AccountingAssociatedContact.new(
+      id: '68dc5f0e-242a-4649-9046-8ce461d6b93d',
+      name: 'Delores Reynolds',
+    ),
+  ],
+  billing_address: Models::Shared::PropertyAccountingContactBillingAddress.new(
+    address1: '2633 Stoney Lane',
+    address2: 'Suite 176',
+    city: 'Ladariusboro',
+    country_code: 'US',
+    postal_code: '70131-2908',
+    region: 'Illinois',
+    region_code: 'NV',
+  ),
+  company_name: 'Marquardt Inc',
+  created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
+  currency: 'ISK',
+  emails: [
+    Models::Shared::AccountingEmail.new(
+      email: 'Delores.Reynolds10@hotmail.com',
+      type: Models::Shared::AccountingEmailType::HOME,
+    ),
+  ],
+  first_name: 'Delores',
+  id: '6d01203b-9e81-46fb-a101-7b29d374a4e4',
+  identification: 'amicitia',
+  is_active: true,
+  is_customer: true,
+  last_name: 'Reynolds',
+  name: 'Delores Reynolds',
+  payment_methods: [
+    Models::Shared::AccountingContactPaymentMethod.new(
+      default: true,
+      id: '3523e539-1561-452d-ae3c-0840b0464b33',
+      name: 'Visa 1234',
+      type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+    ),
+  ],
+  portal_url: 'https://scented-t-shirt.info/',
+  shipping_address: Models::Shared::PropertyAccountingContactShippingAddress.new(
+    address1: '786 Renner Stream',
+    address2: 'Apt. 555',
+    city: 'Roanoke',
+    country_code: 'US',
+    postal_code: '80686-7556',
+    region: 'Vermont',
+    region_code: 'NE',
+  ),
+  tax_exemption: Models::Shared::TaxExemption::RESALE,
+  tax_number: 'amplexus',
+  telephones: [
+    Models::Shared::AccountingTelephone.new(
+      telephone: '(427) 701-7160',
+      type: Models::Shared::AccountingTelephoneType::HOME,
+    ),
+    Models::Shared::AccountingTelephone.new(
+      telephone: '(540) 913-9171',
+      type: Models::Shared::AccountingTelephoneType::FAX,
+    ),
+  ],
+  updated_at: DateTime.iso8601('2023-12-04T22:26:30.009Z'),
+), connection_id: '<id>')
 
 unless res.accounting_contact.nil?
   # handle response
@@ -415,7 +570,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_creditmemo(accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_creditmemo(accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
+  applications: [],
+  attachments: [
+    Models::Shared::AccountingAttachment.new(
+      download_url: 'https://enlightened-chairperson.com/',
+      id: 'a9c6a2ee-5fda-4fc0-90cb-ed3f17aec4d7',
+      mime_type: 'complectus',
+      name: 'thesis',
+    ),
+  ],
+  created_at: DateTime.iso8601('2023-09-20T01:47:01.571Z'),
+  creditmemo_number: 'ulterius',
+  currency: 'MKD',
+  discount_amount: 0.0,
+  due_at: DateTime.iso8601('2023-10-18T04:35:00.543Z'),
+  id: '63197d4f-d1ef-4b85-8fd2-b9b95858e8c8',
+  lineitems: [],
+  metadata: [],
+  notes: 'Dedecor amo adfero torqueo quas.',
+  payment_collection_method: Models::Shared::AccountingCreditmemoPaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+  posted_at: DateTime.iso8601('2025-11-15T11:00:26.367Z'),
+  refund_amount: 0.0,
+  refund_reason: 'Virgo inflammatio quibusdam aestivus magnam.',
+  refunded_at: DateTime.iso8601('2023-10-23T00:35:36.814Z'),
+  send: false,
+  status: Models::Shared::AccountingCreditmemoStatus::PAID,
+  tax_amount: 0.0,
+  total_amount: 0.0,
+  updated_at: DateTime.iso8601('2024-11-15T13:31:19.220Z'),
+  url: 'https://lighthearted-bandwidth.net/',
+), connection_id: '<id>')
 
 unless res.accounting_creditmemo.nil?
   # handle response
@@ -459,7 +644,44 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared::AccountingExpense.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_expense(accounting_expense: Models::Shared::AccountingExpense.new(
+  approved_at: DateTime.iso8601('2026-05-09T18:20:18.227Z'),
+  attachments: [
+    Models::Shared::AccountingAttachment.new(
+      download_url: 'https://ripe-napkin.biz/',
+      id: 'c0585f15-d9b1-4ce4-bd67-52cab905a5ee',
+      mime_type: 'annus',
+      name: 'cohibeo',
+    ),
+  ],
+  category_ids: [],
+  created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
+  currency: 'SSP',
+  external_number: 'necessitatibus',
+  id: '9b1fbe52-ca5e-46f4-8553-190f6c28922b',
+  lineitems: [
+    Models::Shared::AccountingLineitem.new(
+      id: 'a8ffda93-7793-47a7-b9de-7d70e092ed0c',
+      item_description: 'Innovative Table featuring left technology and Rubber construction',
+      item_name: 'Luxurious Cotton Pizza',
+      item_sku: '978-0-8324-6620-5',
+      notes: 'Degusto conventus defendo valetudo.',
+      tax_amount: 2501.0,
+      total_amount: 168.0,
+      unit_amount: 3059.0,
+      unit_quantity: 1.0,
+    ),
+  ],
+  metadata: [],
+  name: 'Refined Steel Shoes',
+  payment_method: 'CASH',
+  posted_at: DateTime.iso8601('2021-06-04T05:03:25.138Z'),
+  reimbursed_amount: 1833.0,
+  status: Models::Shared::AccountingExpenseStatus::SUBMITTED,
+  tax_amount: 2602.0,
+  total_amount: 3580.0,
+  updated_at: DateTime.iso8601('2026-05-09T18:20:18.227Z'),
+), connection_id: '<id>')
 
 unless res.accounting_expense.nil?
   # handle response
@@ -503,7 +725,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_invoice(accounting_invoice: Models::Shared::AccountingInvoice.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_invoice(accounting_invoice: Models::Shared::AccountingInvoice.new(
+  attachments: [
+    Models::Shared::AccountingAttachment.new(
+      download_url: 'https://glossy-markup.net/',
+      id: 'e81ac815-5934-4501-9ec2-3eacdd95c5dc',
+      mime_type: 'benevolentia',
+      name: 'vespillo',
+    ),
+  ],
+  balance_amount: -1.0,
+  category_ids: [],
+  created_at: DateTime.iso8601('2022-11-07T14:17:29.587Z'),
+  currency: 'RWF',
+  discount_amount: 0.0,
+  due_at: DateTime.iso8601('2022-11-27T21:25:37.363Z'),
+  extended_notes: [],
+  id: 'b0692bc7-0871-4377-b2dc-725efc05f881',
+  invoice_number: 'vinco',
+  lineitems: [],
+  metadata: [],
+  notes: 'Auctus comburo clarus ubi.',
+  paid_amount: 0.0,
+  paid_at: DateTime.iso8601('2022-11-25T15:00:28.871Z'),
+  payment_collection_method: Models::Shared::AccountingInvoicePaymentCollectionMethod::SEND_INVOICE,
+  payments: [],
+  posted_at: DateTime.iso8601('2026-03-26T22:44:05.605Z'),
+  reference: 'adinventitias',
+  send: true,
+  status: Models::Shared::AccountingInvoiceStatus::DELETED,
+  tax_amount: 0.0,
+  term: Models::Shared::AccountingInvoiceTerm::NET_45,
+  total_amount: 0.0,
+  type: Models::Shared::AccountingInvoiceType::CREDITMEMO,
+  updated_at: DateTime.iso8601('2023-02-06T06:48:33.258Z'),
+  url: 'https://gifted-yarmulke.info/',
+), connection_id: '<id>')
 
 unless res.accounting_invoice.nil?
   # handle response
@@ -547,7 +804,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_journal(accounting_journal: Models::Shared::AccountingJournal.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_journal(accounting_journal: Models::Shared::AccountingJournal.new(
+  attachments: [],
+  category_ids: [],
+  created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
+  currency: 'FKP',
+  description: 'Calco constans adipisci.',
+  id: 'cd6a5a11-41e2-4f81-b8e6-0798cb435201',
+  posted_at: DateTime.iso8601('2023-10-19T01:50:04.630Z'),
+  reference: 'ullam',
+  source: 'crustulum',
+  tax_amount: 78_672.0,
+  updated_at: DateTime.iso8601('2022-01-01T11:07:55.876Z'),
+), connection_id: '<id>')
 
 unless res.accounting_journal.nil?
   # handle response
@@ -591,7 +860,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_order(accounting_order: Models::Shared::AccountingOrder.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_order(accounting_order: Models::Shared::AccountingOrder.new(
+  billing_address: Models::Shared::PropertyAccountingOrderBillingAddress.new(
+    address1: '802 Bechtelar Park',
+    address2: 'Apt. 436',
+    city: 'Daniellaville',
+    country_code: 'US',
+    postal_code: '36947',
+    region: 'Wisconsin',
+    region_code: 'NY',
+  ),
+  created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
+  currency: 'USD',
+  id: '2b6c7fae-af26-493e-be53-b5e704ab92e8',
+  lineitems: [],
+  metadata: [],
+  posted_at: DateTime.iso8601('2022-04-05T00:13:42.803Z'),
+  shipping_address: Models::Shared::PropertyAccountingOrderShippingAddress.new(
+    address1: '9745 Betty Shore',
+    city: 'South Alainaland',
+    country_code: 'US',
+    postal_code: '25274-7654',
+    region: 'New Hampshire',
+    region_code: 'LA',
+  ),
+  status: Models::Shared::AccountingOrderStatus::SUBMITTED,
+  total_amount: 0.0,
+  type: Models::Shared::AccountingOrderType::PURCHASE,
+  updated_at: DateTime.iso8601('2021-06-17T22:40:19.314Z'),
+), connection_id: '<id>')
 
 unless res.accounting_order.nil?
   # handle response
@@ -635,7 +932,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_paymentterm(accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_paymentterm(accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
+  category: Models::Shared::Category::STANDARD,
+  created_at: DateTime.iso8601('2021-08-22T22:42:42.265Z'),
+  day_of_month_due: 4.0,
+  description: 'Cogito pecco eos cultura.',
+  discount_day_of_month: 13.0,
+  discount_days: 4.0,
+  discount_percent: 5.0,
+  due_days: 57.0,
+  due_next_month_days: 9.0,
+  id: 'f1ebca14-510d-41f5-bca7-8d02ef127085',
+  is_active: false,
+  metadata: [],
+  name: 'Net 30',
+  type: Models::Shared::AccountingPaymenttermType::NET_15,
+  updated_at: DateTime.iso8601('2025-12-11T11:04:10.172Z'),
+), connection_id: '<id>')
 
 unless res.accounting_paymentterm.nil?
   # handle response
@@ -723,7 +1036,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_purchaseorder(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_purchaseorder(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
+  billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
+    address1: '37214 Tanya Walks',
+    city: 'South Annabelleton',
+    country_code: 'US',
+    postal_code: '30337',
+    region: 'Nevada',
+    region_code: 'MA',
+  ),
+  category_ids: [],
+  created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
+  currency: 'ZMW',
+  id: '37893c6d-beb3-4d9c-a822-47bbe9aac7c1',
+  lineitems: [],
+  metadata: [],
+  posted_at: DateTime.iso8601('2025-04-25T03:29:03.941Z'),
+  shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
+    address1: '649 Maggio Overpass',
+    city: 'Lake Jaylan',
+    country_code: 'US',
+    postal_code: '99211-6547',
+    region: 'North Carolina',
+    region_code: 'ID',
+  ),
+  status: Models::Shared::AccountingPurchaseorderStatus::PARTIALLY_REFUNDED,
+  total_amount: 0.0,
+  updated_at: DateTime.iso8601('2021-02-26T03:18:40.268Z'),
+), connection_id: '<id>')
 
 unless res.accounting_purchaseorder.nil?
   # handle response
@@ -811,7 +1151,56 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_salesorder(accounting_salesorder: Models::Shared::AccountingSalesorder.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_salesorder(accounting_salesorder: Models::Shared::AccountingSalesorder.new(
+  billing_address: Models::Shared::PropertyAccountingSalesorderBillingAddress.new(
+    address1: '26530 Stroman Rest',
+    address2: 'Suite 801',
+    city: 'Pocatello',
+    country_code: 'US',
+    postal_code: '05015-8546',
+    region: 'Louisiana',
+    region_code: 'MO',
+  ),
+  category_ids: [],
+  closed_at: DateTime.iso8601('2023-08-16T21:46:24.648Z'),
+  created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
+  currency: 'ANG',
+  discount_amount: 99.0,
+  employee_user_id: '4a6b8990-c85a-499f-82d0-5011c3c95a0b',
+  fees: [
+    Models::Shared::AccountingFee.new(
+      amount: 519.0,
+      currency: 'XCD',
+      type: Models::Shared::AccountingFeeType::PROMOTION,
+    ),
+  ],
+  fulfillment_type: Models::Shared::FulfillmentType::TAKEOUT,
+  guest_count: 8.0,
+  id: '69a1e52e-a91b-468a-af65-d8424cee038d',
+  lineitems: [],
+  metadata: [],
+  order_number: '988187',
+  payments: [],
+  posted_at: DateTime.iso8601('2026-01-11T02:08:18.379Z'),
+  refunded_amount: 0.0,
+  sales_channel: 'Harvey, Collier and Weimann',
+  service_charge_amount: 63.0,
+  shipping_address: Models::Shared::PropertyAccountingSalesorderShippingAddress.new(
+    address1: '9878 Bradley Mill',
+    address2: 'Apt. 215',
+    city: 'Port Matildestad',
+    country_code: 'US',
+    postal_code: '07989-2148',
+    region: 'Arkansas',
+    region_code: 'AK',
+  ),
+  status: Models::Shared::AccountingSalesorderStatus::REFUNDED,
+  subtotal_amount: 0.0,
+  tax_amount: 63.0,
+  tip_amount: 34.0,
+  total_amount: 0.0,
+  updated_at: DateTime.iso8601('2022-02-10T18:49:06.127Z'),
+), connection_id: '<id>')
 
 unless res.accounting_salesorder.nil?
   # handle response
@@ -855,7 +1244,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_taxrate(accounting_taxrate: Models::Shared::AccountingTaxrate.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_taxrate(accounting_taxrate: Models::Shared::AccountingTaxrate.new(
+  created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
+  description: 'Nemo atrox tricesimus creator aranea.',
+  id: '16248ada-de31-458f-9168-922536fc39ea',
+  is_active: false,
+  metadata: [],
+  name: 'cogo',
+  rate: 1.0,
+  updated_at: DateTime.iso8601('2025-11-04T07:50:52.883Z'),
+), connection_id: '<id>')
 
 unless res.accounting_taxrate.nil?
   # handle response
@@ -899,7 +1297,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(
+  created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
+  id: '1f0f8272-5741-4b34-8dfe-e81afb59d809',
+  lineitems: [
+    Models::Shared::AccountingTransactionLineItem.new(
+      category_ids: [],
+      description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+      id: '48067e11-a257-4de8-b4e0-197f19597ab7',
+      name: 'Salad',
+      object_type: 'delicate',
+      total_amount: 58_531.0,
+      unit_amount: 536.0,
+      unit_quantity: 91.0,
+    ),
+  ],
+  memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+  tax_amount: 0.0,
+  total_amount: 94_452.0,
+  updated_at: DateTime.iso8601('2021-09-10T02:35:42.829Z'),
+), connection_id: '<id>')
 
 unless res.accounting_transaction.nil?
   # handle response
@@ -943,7 +1360,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.accounting.create_accounting_vendorcredit(accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(), connection_id: '<id>')
+res = s.accounting.create_accounting_vendorcredit(accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(
+  applications: [],
+  apply_amount: 1.0,
+  balance_amount: 0.0,
+  created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
+  currency: 'KGS',
+  due_at: DateTime.iso8601('2023-05-06T20:38:46.775Z'),
+  id: '118481ff-0a88-4348-8ef5-40914cb68338',
+  lineitems: [],
+  metadata: [],
+  notes: 'Conatus cruciamentum decor avaritia tantum.',
+  posted_at: DateTime.iso8601('2023-09-28T16:43:14.946Z'),
+  status: Models::Shared::AccountingVendorcreditStatus::SUBMITTED,
+  total_amount: 0.0,
+  updated_at: DateTime.iso8601('2023-11-26T14:35:10.679Z'),
+), connection_id: '<id>')
 
 unless res.accounting_vendorcredit.nil?
   # handle response
@@ -3302,7 +3734,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingAccountRequest.new(
-  accounting_account: Models::Shared::AccountingAccount.new(),
+  accounting_account: Models::Shared::AccountingAccount.new(
+    balance: 12_092.0,
+    created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
+    currency: 'BOB',
+    customer_defined_code: 'quo',
+    description: 'Spoliatio comedo vilitas harum cupiditate.',
+    id: 'f0674a7d-2b9d-4915-9c0d-1868e2da5e79',
+    is_payable: true,
+    name: 'Electronic Aluminum Tuna',
+    status: Models::Shared::Status::ARCHIVED,
+    taxonomy: [
+      Models::Shared::AccountingAccountTaxonomy.new(
+        original_type: 'vesper',
+        type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+        value: 'iste',
+      ),
+      Models::Shared::AccountingAccountTaxonomy.new(
+        original_type: 'adamo',
+        type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+        value: 'peccatus',
+      ),
+    ],
+    type: Models::Shared::Type::BANK,
+    updated_at: DateTime.iso8601('2023-01-03T03:10:58.261Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3349,7 +3805,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingBankfeedaccountRequest.new(
-  accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(),
+  accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
+    account_id: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+    account_number: '30369722',
+    account_number_last4: '9722',
+    account_type: Models::Shared::AccountType::LOAN,
+    balance: 90_358.0,
+    bank_name: 'Weissnat Inc',
+    created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+    currency: 'SSP',
+    feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+    id: 'a3b852a0-d5bd-468e-9159-56e7754ac1f0',
+    name: 'Corwin, Donnelly and Connelly Savings',
+    routing_number: '667753156',
+    status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
+    updated_at: DateTime.iso8601('2024-04-11T12:55:38.836Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3396,7 +3867,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
-  accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(),
+  accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
+    account_id: 'b7dc4175-1368-4b89-a700-d621b6666648',
+    amount: 60_889.0,
+    bank_category: 'Games',
+    bankfeedaccount_id: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+    category_ids: [],
+    contact_id: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+    created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
+    currency: 'SRD',
+    description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+    id: 'ded997cf-6026-470c-851e-c790164e6524',
+    is_pending: true,
+    merchant_name: 'Reichert, Erdman and Tillman',
+    posted_at: DateTime.iso8601('2025-03-23T18:32:09.153Z'),
+    reference: '93642593',
+    transaction_at: DateTime.iso8601('2022-07-27T19:47:57.100Z'),
+    type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
+    updated_at: DateTime.iso8601('2022-05-23T20:47:13.142Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3443,7 +3932,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingBillRequest.new(
-  accounting_bill: Models::Shared::AccountingBill.new(),
+  accounting_bill: Models::Shared::AccountingBill.new(
+    attachments: [],
+    bill_number: 'vitae',
+    category_ids: [],
+    created_at: DateTime.iso8601('2019-08-08T23:03:14.104Z'),
+    currency: 'AUD',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2019-08-11T20:52:55.321Z'),
+    extended_notes: [],
+    id: 'e92fecc6-3ce2-4247-9ad8-29596f03252f',
+    lineitems: [],
+    metadata: [],
+    notes: 'Tutamen cilicium infit.',
+    payment_collection_method: Models::Shared::PaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+    payments: [],
+    posted_at: DateTime.iso8601('2024-04-04T07:21:13.492Z'),
+    send: true,
+    status: Models::Shared::AccountingBillStatus::DELETED,
+    tax_amount: 0.0,
+    term: Models::Shared::Term::NET_10,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2025-01-29T00:55:25.634Z'),
+    url: 'https://coarse-interviewer.biz/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3490,7 +4002,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingCategoryRequest.new(
-  accounting_category: Models::Shared::AccountingCategory.new(),
+  accounting_category: Models::Shared::AccountingCategory.new(
+    created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
+    description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+    id: '1bbf1558-3110-4b21-902f-fa07892904c0',
+    is_active: false,
+    metadata: [],
+    name: 'Electronic Cotton Shoes',
+    updated_at: DateTime.iso8601('2025-08-20T06:33:25.039Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3537,7 +4057,74 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingContactRequest.new(
-  accounting_contact: Models::Shared::AccountingContact.new(),
+  accounting_contact: Models::Shared::AccountingContact.new(
+    associated_contacts: [
+      Models::Shared::AccountingAssociatedContact.new(
+        id: '10071446-e0bf-48e8-adb6-834823d92db6',
+        name: 'Delores Reynolds',
+      ),
+      Models::Shared::AccountingAssociatedContact.new(
+        id: '86c61f21-ecff-4ce0-8818-50613f8505d5',
+        name: 'Delores Reynolds',
+      ),
+    ],
+    billing_address: Models::Shared::PropertyAccountingContactBillingAddress.new(
+      address1: '2633 Stoney Lane',
+      address2: 'Suite 176',
+      city: 'Ladariusboro',
+      country_code: 'US',
+      postal_code: '70131-2908',
+      region: 'Illinois',
+      region_code: 'NV',
+    ),
+    company_name: 'Marquardt Inc',
+    created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
+    currency: 'ISK',
+    emails: [
+      Models::Shared::AccountingEmail.new(
+        email: 'Delores.Reynolds10@hotmail.com',
+        type: Models::Shared::AccountingEmailType::HOME,
+      ),
+    ],
+    first_name: 'Delores',
+    id: 'b17e63cf-e91b-4b5c-80e4-f0f2dd2c9c16',
+    identification: 'amicitia',
+    is_active: true,
+    is_customer: true,
+    last_name: 'Reynolds',
+    name: 'Delores Reynolds',
+    payment_methods: [
+      Models::Shared::AccountingContactPaymentMethod.new(
+        default: true,
+        id: '68ae4f24-72de-4cb1-9812-2f5b56873368',
+        name: 'Visa 1234',
+        type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+      ),
+    ],
+    portal_url: 'https://scented-t-shirt.info/',
+    shipping_address: Models::Shared::PropertyAccountingContactShippingAddress.new(
+      address1: '786 Renner Stream',
+      address2: 'Apt. 555',
+      city: 'Roanoke',
+      country_code: 'US',
+      postal_code: '80686-7556',
+      region: 'Vermont',
+      region_code: 'NE',
+    ),
+    tax_exemption: Models::Shared::TaxExemption::RESALE,
+    tax_number: 'amplexus',
+    telephones: [
+      Models::Shared::AccountingTelephone.new(
+        telephone: '(427) 701-7160',
+        type: Models::Shared::AccountingTelephoneType::HOME,
+      ),
+      Models::Shared::AccountingTelephone.new(
+        telephone: '(540) 913-9171',
+        type: Models::Shared::AccountingTelephoneType::FAX,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2023-12-04T22:26:30.024Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3584,7 +4171,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingCreditmemoRequest.new(
-  accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(),
+  accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
+    applications: [],
+    attachments: [
+      Models::Shared::AccountingAttachment.new(
+        download_url: 'https://enlightened-chairperson.com/',
+        id: '856fb00a-08d3-4cd7-bacf-79dc293dbe79',
+        mime_type: 'complectus',
+        name: 'thesis',
+      ),
+    ],
+    created_at: DateTime.iso8601('2023-09-20T01:47:01.571Z'),
+    creditmemo_number: 'ulterius',
+    currency: 'MKD',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2023-10-18T04:35:00.543Z'),
+    id: '82ce8d96-c5de-4aa8-a536-1911f3cd29ea',
+    lineitems: [],
+    metadata: [],
+    notes: 'Dedecor amo adfero torqueo quas.',
+    payment_collection_method: Models::Shared::AccountingCreditmemoPaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+    posted_at: DateTime.iso8601('2025-11-15T11:00:26.395Z'),
+    refund_amount: 0.0,
+    refund_reason: 'Virgo inflammatio quibusdam aestivus magnam.',
+    refunded_at: DateTime.iso8601('2023-10-23T00:35:36.814Z'),
+    send: false,
+    status: Models::Shared::AccountingCreditmemoStatus::PAID,
+    tax_amount: 0.0,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2024-11-15T13:31:19.235Z'),
+    url: 'https://lighthearted-bandwidth.net/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3631,7 +4248,44 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingExpenseRequest.new(
-  accounting_expense: Models::Shared::AccountingExpense.new(),
+  accounting_expense: Models::Shared::AccountingExpense.new(
+    approved_at: DateTime.iso8601('2026-05-09T18:20:18.254Z'),
+    attachments: [
+      Models::Shared::AccountingAttachment.new(
+        download_url: 'https://ripe-napkin.biz/',
+        id: '1dabaac7-ed7e-45d2-b4b2-36c598f3cb3c',
+        mime_type: 'annus',
+        name: 'cohibeo',
+      ),
+    ],
+    category_ids: [],
+    created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
+    currency: 'SSP',
+    external_number: 'necessitatibus',
+    id: '99ea4d1b-6167-43b2-801a-a449e8326cb1',
+    lineitems: [
+      Models::Shared::AccountingLineitem.new(
+        id: '63345a96-fabf-4d9d-9096-5dc13951b455',
+        item_description: 'Innovative Table featuring left technology and Rubber construction',
+        item_name: 'Luxurious Cotton Pizza',
+        item_sku: '978-0-8324-6620-5',
+        notes: 'Degusto conventus defendo valetudo.',
+        tax_amount: 2501.0,
+        total_amount: 168.0,
+        unit_amount: 3059.0,
+        unit_quantity: 1.0,
+      ),
+    ],
+    metadata: [],
+    name: 'Refined Steel Shoes',
+    payment_method: 'CASH',
+    posted_at: DateTime.iso8601('2021-06-04T05:03:25.143Z'),
+    reimbursed_amount: 1833.0,
+    status: Models::Shared::AccountingExpenseStatus::SUBMITTED,
+    tax_amount: 2602.0,
+    total_amount: 3580.0,
+    updated_at: DateTime.iso8601('2026-05-09T18:20:18.254Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3678,7 +4332,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingInvoiceRequest.new(
-  accounting_invoice: Models::Shared::AccountingInvoice.new(),
+  accounting_invoice: Models::Shared::AccountingInvoice.new(
+    attachments: [
+      Models::Shared::AccountingAttachment.new(
+        download_url: 'https://glossy-markup.net/',
+        id: 'e219ef92-38f9-4aa3-81cd-61b8fb208c48',
+        mime_type: 'benevolentia',
+        name: 'vespillo',
+      ),
+    ],
+    balance_amount: -1.0,
+    category_ids: [],
+    created_at: DateTime.iso8601('2022-11-07T14:17:29.587Z'),
+    currency: 'RWF',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2022-11-27T21:25:37.363Z'),
+    extended_notes: [],
+    id: 'b6abe366-1d39-4b38-a0c3-8ca1b19c7d9f',
+    invoice_number: 'vinco',
+    lineitems: [],
+    metadata: [],
+    notes: 'Auctus comburo clarus ubi.',
+    paid_amount: 0.0,
+    paid_at: DateTime.iso8601('2022-11-25T15:00:28.871Z'),
+    payment_collection_method: Models::Shared::AccountingInvoicePaymentCollectionMethod::SEND_INVOICE,
+    payments: [],
+    posted_at: DateTime.iso8601('2026-03-26T22:44:05.641Z'),
+    reference: 'adinventitias',
+    send: true,
+    status: Models::Shared::AccountingInvoiceStatus::DELETED,
+    tax_amount: 0.0,
+    term: Models::Shared::AccountingInvoiceTerm::NET_45,
+    total_amount: 0.0,
+    type: Models::Shared::AccountingInvoiceType::CREDITMEMO,
+    updated_at: DateTime.iso8601('2023-02-06T06:48:33.261Z'),
+    url: 'https://gifted-yarmulke.info/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3725,7 +4414,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingJournalRequest.new(
-  accounting_journal: Models::Shared::AccountingJournal.new(),
+  accounting_journal: Models::Shared::AccountingJournal.new(
+    attachments: [],
+    category_ids: [],
+    created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
+    currency: 'FKP',
+    description: 'Calco constans adipisci.',
+    id: 'd1210c72-7799-4a3f-851d-ea55c72c5f37',
+    posted_at: DateTime.iso8601('2023-10-19T01:50:04.646Z'),
+    reference: 'ullam',
+    source: 'crustulum',
+    tax_amount: 78_672.0,
+    updated_at: DateTime.iso8601('2022-01-01T11:07:55.884Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3772,7 +4473,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingOrderRequest.new(
-  accounting_order: Models::Shared::AccountingOrder.new(),
+  accounting_order: Models::Shared::AccountingOrder.new(
+    billing_address: Models::Shared::PropertyAccountingOrderBillingAddress.new(
+      address1: '802 Bechtelar Park',
+      address2: 'Apt. 436',
+      city: 'Daniellaville',
+      country_code: 'US',
+      postal_code: '36947',
+      region: 'Wisconsin',
+      region_code: 'NY',
+    ),
+    created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
+    currency: 'USD',
+    id: 'c63b3439-37c7-40d8-90c0-2524d7e83e44',
+    lineitems: [],
+    metadata: [],
+    posted_at: DateTime.iso8601('2022-04-05T00:13:42.811Z'),
+    shipping_address: Models::Shared::PropertyAccountingOrderShippingAddress.new(
+      address1: '9745 Betty Shore',
+      city: 'South Alainaland',
+      country_code: 'US',
+      postal_code: '25274-7654',
+      region: 'New Hampshire',
+      region_code: 'LA',
+    ),
+    status: Models::Shared::AccountingOrderStatus::SUBMITTED,
+    total_amount: 0.0,
+    type: Models::Shared::AccountingOrderType::PURCHASE,
+    updated_at: DateTime.iso8601('2021-06-17T22:40:19.318Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3819,7 +4548,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingPaymenttermRequest.new(
-  accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(),
+  accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
+    category: Models::Shared::Category::STANDARD,
+    created_at: DateTime.iso8601('2021-08-22T22:42:42.265Z'),
+    day_of_month_due: 4.0,
+    description: 'Cogito pecco eos cultura.',
+    discount_day_of_month: 13.0,
+    discount_days: 4.0,
+    discount_percent: 5.0,
+    due_days: 57.0,
+    due_next_month_days: 9.0,
+    id: '17d4a0af-2184-468b-bfc7-4fec7b6202fc',
+    is_active: false,
+    metadata: [],
+    name: 'Net 30',
+    type: Models::Shared::AccountingPaymenttermType::NET_15,
+    updated_at: DateTime.iso8601('2025-12-11T11:04:10.180Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -3913,7 +4658,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
-  accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(),
+  accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
+    billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
+      address1: '37214 Tanya Walks',
+      city: 'South Annabelleton',
+      country_code: 'US',
+      postal_code: '30337',
+      region: 'Nevada',
+      region_code: 'MA',
+    ),
+    category_ids: [],
+    created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
+    currency: 'ZMW',
+    id: '8b21b723-4598-4da0-918a-5fc08bd5e59c',
+    lineitems: [],
+    metadata: [],
+    posted_at: DateTime.iso8601('2025-04-25T03:29:03.965Z'),
+    shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
+      address1: '649 Maggio Overpass',
+      city: 'Lake Jaylan',
+      country_code: 'US',
+      postal_code: '99211-6547',
+      region: 'North Carolina',
+      region_code: 'ID',
+    ),
+    status: Models::Shared::AccountingPurchaseorderStatus::PARTIALLY_REFUNDED,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2021-02-26T03:18:40.270Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -4007,7 +4779,56 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingSalesorderRequest.new(
-  accounting_salesorder: Models::Shared::AccountingSalesorder.new(),
+  accounting_salesorder: Models::Shared::AccountingSalesorder.new(
+    billing_address: Models::Shared::PropertyAccountingSalesorderBillingAddress.new(
+      address1: '26530 Stroman Rest',
+      address2: 'Suite 801',
+      city: 'Pocatello',
+      country_code: 'US',
+      postal_code: '05015-8546',
+      region: 'Louisiana',
+      region_code: 'MO',
+    ),
+    category_ids: [],
+    closed_at: DateTime.iso8601('2023-08-16T21:46:24.662Z'),
+    created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
+    currency: 'ANG',
+    discount_amount: 99.0,
+    employee_user_id: '4a6b8990-c85a-499f-82d0-5011c3c95a0b',
+    fees: [
+      Models::Shared::AccountingFee.new(
+        amount: 519.0,
+        currency: 'XCD',
+        type: Models::Shared::AccountingFeeType::PROMOTION,
+      ),
+    ],
+    fulfillment_type: Models::Shared::FulfillmentType::TAKEOUT,
+    guest_count: 8.0,
+    id: '7e1f569e-4e06-4346-9133-0bb4e4a4290d',
+    lineitems: [],
+    metadata: [],
+    order_number: '988187',
+    payments: [],
+    posted_at: DateTime.iso8601('2026-01-11T02:08:18.414Z'),
+    refunded_amount: 0.0,
+    sales_channel: 'Harvey, Collier and Weimann',
+    service_charge_amount: 63.0,
+    shipping_address: Models::Shared::PropertyAccountingSalesorderShippingAddress.new(
+      address1: '9878 Bradley Mill',
+      address2: 'Apt. 215',
+      city: 'Port Matildestad',
+      country_code: 'US',
+      postal_code: '07989-2148',
+      region: 'Arkansas',
+      region_code: 'AK',
+    ),
+    status: Models::Shared::AccountingSalesorderStatus::REFUNDED,
+    subtotal_amount: 0.0,
+    tax_amount: 63.0,
+    tip_amount: 34.0,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2022-02-10T18:49:06.128Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -4054,7 +4875,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingTaxrateRequest.new(
-  accounting_taxrate: Models::Shared::AccountingTaxrate.new(),
+  accounting_taxrate: Models::Shared::AccountingTaxrate.new(
+    created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
+    description: 'Nemo atrox tricesimus creator aranea.',
+    id: '607c326b-3cd6-4366-908c-10dcf274278c',
+    is_active: false,
+    metadata: [],
+    name: 'cogo',
+    rate: 1.0,
+    updated_at: DateTime.iso8601('2025-11-04T07:50:52.889Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -4101,7 +4931,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingTransactionRequest.new(
-  accounting_transaction: Models::Shared::AccountingTransaction.new(),
+  accounting_transaction: Models::Shared::AccountingTransaction.new(
+    created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
+    id: '2d09e4a1-f081-4201-8bd0-5775a6b6dc7e',
+    lineitems: [
+      Models::Shared::AccountingTransactionLineItem.new(
+        category_ids: [],
+        description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+        id: '6074e102-382e-4790-8b94-5d2623efc532',
+        name: 'Salad',
+        object_type: 'delicate',
+        total_amount: 58_531.0,
+        unit_amount: 536.0,
+        unit_quantity: 91.0,
+      ),
+    ],
+    memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+    tax_amount: 0.0,
+    total_amount: 94_452.0,
+    updated_at: DateTime.iso8601('2021-09-10T02:35:42.833Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -4148,7 +4997,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchAccountingVendorcreditRequest.new(
-  accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(),
+  accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(
+    applications: [],
+    apply_amount: 1.0,
+    balance_amount: 0.0,
+    created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
+    currency: 'KGS',
+    due_at: DateTime.iso8601('2023-05-06T20:38:46.775Z'),
+    id: '059bf6b3-5dde-400b-a74d-6b0a1ea109b9',
+    lineitems: [],
+    metadata: [],
+    notes: 'Conatus cruciamentum decor avaritia tantum.',
+    posted_at: DateTime.iso8601('2023-09-28T16:43:14.949Z'),
+    status: Models::Shared::AccountingVendorcreditStatus::SUBMITTED,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2023-11-26T14:35:10.683Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -4993,7 +5857,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingAccountRequest.new(
-  accounting_account: Models::Shared::AccountingAccount.new(),
+  accounting_account: Models::Shared::AccountingAccount.new(
+    balance: 12_092.0,
+    created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
+    currency: 'BOB',
+    customer_defined_code: 'quo',
+    description: 'Spoliatio comedo vilitas harum cupiditate.',
+    id: 'f0674a7d-2b9d-4915-9c0d-1868e2da5e79',
+    is_payable: true,
+    name: 'Electronic Aluminum Tuna',
+    status: Models::Shared::Status::ARCHIVED,
+    taxonomy: [
+      Models::Shared::AccountingAccountTaxonomy.new(
+        original_type: 'vesper',
+        type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+        value: 'iste',
+      ),
+      Models::Shared::AccountingAccountTaxonomy.new(
+        original_type: 'adamo',
+        type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
+        value: 'peccatus',
+      ),
+    ],
+    type: Models::Shared::Type::BANK,
+    updated_at: DateTime.iso8601('2023-01-03T03:10:58.261Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5040,7 +5928,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingBankfeedaccountRequest.new(
-  accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(),
+  accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
+    account_id: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+    account_number: '30369722',
+    account_number_last4: '9722',
+    account_type: Models::Shared::AccountType::LOAN,
+    balance: 90_358.0,
+    bank_name: 'Weissnat Inc',
+    created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+    currency: 'SSP',
+    feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
+    id: 'a3b852a0-d5bd-468e-9159-56e7754ac1f0',
+    name: 'Corwin, Donnelly and Connelly Savings',
+    routing_number: '667753156',
+    status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
+    updated_at: DateTime.iso8601('2024-04-11T12:55:38.836Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5087,7 +5990,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
-  accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(),
+  accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction.new(
+    account_id: 'b7dc4175-1368-4b89-a700-d621b6666648',
+    amount: 60_889.0,
+    bank_category: 'Games',
+    bankfeedaccount_id: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+    category_ids: [],
+    contact_id: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+    created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
+    currency: 'SRD',
+    description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+    id: 'ded997cf-6026-470c-851e-c790164e6524',
+    is_pending: true,
+    merchant_name: 'Reichert, Erdman and Tillman',
+    posted_at: DateTime.iso8601('2025-03-23T18:32:09.153Z'),
+    reference: '93642593',
+    transaction_at: DateTime.iso8601('2022-07-27T19:47:57.100Z'),
+    type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
+    updated_at: DateTime.iso8601('2022-05-23T20:47:13.142Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5134,7 +6055,30 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingBillRequest.new(
-  accounting_bill: Models::Shared::AccountingBill.new(),
+  accounting_bill: Models::Shared::AccountingBill.new(
+    attachments: [],
+    bill_number: 'vitae',
+    category_ids: [],
+    created_at: DateTime.iso8601('2019-08-08T23:03:14.104Z'),
+    currency: 'AUD',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2019-08-11T20:52:55.321Z'),
+    extended_notes: [],
+    id: 'e92fecc6-3ce2-4247-9ad8-29596f03252f',
+    lineitems: [],
+    metadata: [],
+    notes: 'Tutamen cilicium infit.',
+    payment_collection_method: Models::Shared::PaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+    payments: [],
+    posted_at: DateTime.iso8601('2024-04-04T07:21:13.492Z'),
+    send: true,
+    status: Models::Shared::AccountingBillStatus::DELETED,
+    tax_amount: 0.0,
+    term: Models::Shared::Term::NET_10,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2025-01-29T00:55:25.634Z'),
+    url: 'https://coarse-interviewer.biz/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5181,7 +6125,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingCategoryRequest.new(
-  accounting_category: Models::Shared::AccountingCategory.new(),
+  accounting_category: Models::Shared::AccountingCategory.new(
+    created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
+    description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+    id: '1bbf1558-3110-4b21-902f-fa07892904c0',
+    is_active: false,
+    metadata: [],
+    name: 'Electronic Cotton Shoes',
+    updated_at: DateTime.iso8601('2025-08-20T06:33:25.039Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5228,7 +6180,74 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingContactRequest.new(
-  accounting_contact: Models::Shared::AccountingContact.new(),
+  accounting_contact: Models::Shared::AccountingContact.new(
+    associated_contacts: [
+      Models::Shared::AccountingAssociatedContact.new(
+        id: '10071446-e0bf-48e8-adb6-834823d92db6',
+        name: 'Delores Reynolds',
+      ),
+      Models::Shared::AccountingAssociatedContact.new(
+        id: '86c61f21-ecff-4ce0-8818-50613f8505d5',
+        name: 'Delores Reynolds',
+      ),
+    ],
+    billing_address: Models::Shared::PropertyAccountingContactBillingAddress.new(
+      address1: '2633 Stoney Lane',
+      address2: 'Suite 176',
+      city: 'Ladariusboro',
+      country_code: 'US',
+      postal_code: '70131-2908',
+      region: 'Illinois',
+      region_code: 'NV',
+    ),
+    company_name: 'Marquardt Inc',
+    created_at: DateTime.iso8601('2021-08-15T14:56:50.258Z'),
+    currency: 'ISK',
+    emails: [
+      Models::Shared::AccountingEmail.new(
+        email: 'Delores.Reynolds10@hotmail.com',
+        type: Models::Shared::AccountingEmailType::HOME,
+      ),
+    ],
+    first_name: 'Delores',
+    id: 'b17e63cf-e91b-4b5c-80e4-f0f2dd2c9c16',
+    identification: 'amicitia',
+    is_active: true,
+    is_customer: true,
+    last_name: 'Reynolds',
+    name: 'Delores Reynolds',
+    payment_methods: [
+      Models::Shared::AccountingContactPaymentMethod.new(
+        default: true,
+        id: '68ae4f24-72de-4cb1-9812-2f5b56873368',
+        name: 'Visa 1234',
+        type: Models::Shared::AccountingContactPaymentMethodType::CARD,
+      ),
+    ],
+    portal_url: 'https://scented-t-shirt.info/',
+    shipping_address: Models::Shared::PropertyAccountingContactShippingAddress.new(
+      address1: '786 Renner Stream',
+      address2: 'Apt. 555',
+      city: 'Roanoke',
+      country_code: 'US',
+      postal_code: '80686-7556',
+      region: 'Vermont',
+      region_code: 'NE',
+    ),
+    tax_exemption: Models::Shared::TaxExemption::RESALE,
+    tax_number: 'amplexus',
+    telephones: [
+      Models::Shared::AccountingTelephone.new(
+        telephone: '(427) 701-7160',
+        type: Models::Shared::AccountingTelephoneType::HOME,
+      ),
+      Models::Shared::AccountingTelephone.new(
+        telephone: '(540) 913-9171',
+        type: Models::Shared::AccountingTelephoneType::FAX,
+      ),
+    ],
+    updated_at: DateTime.iso8601('2023-12-04T22:26:30.024Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5275,7 +6294,37 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
-  accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(),
+  accounting_creditmemo: Models::Shared::AccountingCreditmemo.new(
+    applications: [],
+    attachments: [
+      Models::Shared::AccountingAttachment.new(
+        download_url: 'https://enlightened-chairperson.com/',
+        id: '856fb00a-08d3-4cd7-bacf-79dc293dbe79',
+        mime_type: 'complectus',
+        name: 'thesis',
+      ),
+    ],
+    created_at: DateTime.iso8601('2023-09-20T01:47:01.571Z'),
+    creditmemo_number: 'ulterius',
+    currency: 'MKD',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2023-10-18T04:35:00.543Z'),
+    id: '82ce8d96-c5de-4aa8-a536-1911f3cd29ea',
+    lineitems: [],
+    metadata: [],
+    notes: 'Dedecor amo adfero torqueo quas.',
+    payment_collection_method: Models::Shared::AccountingCreditmemoPaymentCollectionMethod::CHARGE_AUTOMATICALLY,
+    posted_at: DateTime.iso8601('2025-11-15T11:00:26.395Z'),
+    refund_amount: 0.0,
+    refund_reason: 'Virgo inflammatio quibusdam aestivus magnam.',
+    refunded_at: DateTime.iso8601('2023-10-23T00:35:36.814Z'),
+    send: false,
+    status: Models::Shared::AccountingCreditmemoStatus::PAID,
+    tax_amount: 0.0,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2024-11-15T13:31:19.235Z'),
+    url: 'https://lighthearted-bandwidth.net/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5322,7 +6371,44 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingExpenseRequest.new(
-  accounting_expense: Models::Shared::AccountingExpense.new(),
+  accounting_expense: Models::Shared::AccountingExpense.new(
+    approved_at: DateTime.iso8601('2026-05-09T18:20:18.254Z'),
+    attachments: [
+      Models::Shared::AccountingAttachment.new(
+        download_url: 'https://ripe-napkin.biz/',
+        id: '1dabaac7-ed7e-45d2-b4b2-36c598f3cb3c',
+        mime_type: 'annus',
+        name: 'cohibeo',
+      ),
+    ],
+    category_ids: [],
+    created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
+    currency: 'SSP',
+    external_number: 'necessitatibus',
+    id: '99ea4d1b-6167-43b2-801a-a449e8326cb1',
+    lineitems: [
+      Models::Shared::AccountingLineitem.new(
+        id: '63345a96-fabf-4d9d-9096-5dc13951b455',
+        item_description: 'Innovative Table featuring left technology and Rubber construction',
+        item_name: 'Luxurious Cotton Pizza',
+        item_sku: '978-0-8324-6620-5',
+        notes: 'Degusto conventus defendo valetudo.',
+        tax_amount: 2501.0,
+        total_amount: 168.0,
+        unit_amount: 3059.0,
+        unit_quantity: 1.0,
+      ),
+    ],
+    metadata: [],
+    name: 'Refined Steel Shoes',
+    payment_method: 'CASH',
+    posted_at: DateTime.iso8601('2021-06-04T05:03:25.143Z'),
+    reimbursed_amount: 1833.0,
+    status: Models::Shared::AccountingExpenseStatus::SUBMITTED,
+    tax_amount: 2602.0,
+    total_amount: 3580.0,
+    updated_at: DateTime.iso8601('2026-05-09T18:20:18.254Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5369,7 +6455,42 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingInvoiceRequest.new(
-  accounting_invoice: Models::Shared::AccountingInvoice.new(),
+  accounting_invoice: Models::Shared::AccountingInvoice.new(
+    attachments: [
+      Models::Shared::AccountingAttachment.new(
+        download_url: 'https://glossy-markup.net/',
+        id: 'e219ef92-38f9-4aa3-81cd-61b8fb208c48',
+        mime_type: 'benevolentia',
+        name: 'vespillo',
+      ),
+    ],
+    balance_amount: -1.0,
+    category_ids: [],
+    created_at: DateTime.iso8601('2022-11-07T14:17:29.587Z'),
+    currency: 'RWF',
+    discount_amount: 0.0,
+    due_at: DateTime.iso8601('2022-11-27T21:25:37.363Z'),
+    extended_notes: [],
+    id: 'b6abe366-1d39-4b38-a0c3-8ca1b19c7d9f',
+    invoice_number: 'vinco',
+    lineitems: [],
+    metadata: [],
+    notes: 'Auctus comburo clarus ubi.',
+    paid_amount: 0.0,
+    paid_at: DateTime.iso8601('2022-11-25T15:00:28.871Z'),
+    payment_collection_method: Models::Shared::AccountingInvoicePaymentCollectionMethod::SEND_INVOICE,
+    payments: [],
+    posted_at: DateTime.iso8601('2026-03-26T22:44:05.641Z'),
+    reference: 'adinventitias',
+    send: true,
+    status: Models::Shared::AccountingInvoiceStatus::DELETED,
+    tax_amount: 0.0,
+    term: Models::Shared::AccountingInvoiceTerm::NET_45,
+    total_amount: 0.0,
+    type: Models::Shared::AccountingInvoiceType::CREDITMEMO,
+    updated_at: DateTime.iso8601('2023-02-06T06:48:33.261Z'),
+    url: 'https://gifted-yarmulke.info/',
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5416,7 +6537,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingJournalRequest.new(
-  accounting_journal: Models::Shared::AccountingJournal.new(),
+  accounting_journal: Models::Shared::AccountingJournal.new(
+    attachments: [],
+    category_ids: [],
+    created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
+    currency: 'FKP',
+    description: 'Calco constans adipisci.',
+    id: 'd1210c72-7799-4a3f-851d-ea55c72c5f37',
+    posted_at: DateTime.iso8601('2023-10-19T01:50:04.646Z'),
+    reference: 'ullam',
+    source: 'crustulum',
+    tax_amount: 78_672.0,
+    updated_at: DateTime.iso8601('2022-01-01T11:07:55.884Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5463,7 +6596,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingOrderRequest.new(
-  accounting_order: Models::Shared::AccountingOrder.new(),
+  accounting_order: Models::Shared::AccountingOrder.new(
+    billing_address: Models::Shared::PropertyAccountingOrderBillingAddress.new(
+      address1: '802 Bechtelar Park',
+      address2: 'Apt. 436',
+      city: 'Daniellaville',
+      country_code: 'US',
+      postal_code: '36947',
+      region: 'Wisconsin',
+      region_code: 'NY',
+    ),
+    created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
+    currency: 'USD',
+    id: 'c63b3439-37c7-40d8-90c0-2524d7e83e44',
+    lineitems: [],
+    metadata: [],
+    posted_at: DateTime.iso8601('2022-04-05T00:13:42.811Z'),
+    shipping_address: Models::Shared::PropertyAccountingOrderShippingAddress.new(
+      address1: '9745 Betty Shore',
+      city: 'South Alainaland',
+      country_code: 'US',
+      postal_code: '25274-7654',
+      region: 'New Hampshire',
+      region_code: 'LA',
+    ),
+    status: Models::Shared::AccountingOrderStatus::SUBMITTED,
+    total_amount: 0.0,
+    type: Models::Shared::AccountingOrderType::PURCHASE,
+    updated_at: DateTime.iso8601('2021-06-17T22:40:19.318Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5510,7 +6671,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingPaymenttermRequest.new(
-  accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(),
+  accounting_paymentterm: Models::Shared::AccountingPaymentterm.new(
+    category: Models::Shared::Category::STANDARD,
+    created_at: DateTime.iso8601('2021-08-22T22:42:42.265Z'),
+    day_of_month_due: 4.0,
+    description: 'Cogito pecco eos cultura.',
+    discount_day_of_month: 13.0,
+    discount_days: 4.0,
+    discount_percent: 5.0,
+    due_days: 57.0,
+    due_next_month_days: 9.0,
+    id: '17d4a0af-2184-468b-bfc7-4fec7b6202fc',
+    is_active: false,
+    metadata: [],
+    name: 'Net 30',
+    type: Models::Shared::AccountingPaymenttermType::NET_15,
+    updated_at: DateTime.iso8601('2025-12-11T11:04:10.180Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5604,7 +6781,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
-  accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(),
+  accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
+    billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
+      address1: '37214 Tanya Walks',
+      city: 'South Annabelleton',
+      country_code: 'US',
+      postal_code: '30337',
+      region: 'Nevada',
+      region_code: 'MA',
+    ),
+    category_ids: [],
+    created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
+    currency: 'ZMW',
+    id: '8b21b723-4598-4da0-918a-5fc08bd5e59c',
+    lineitems: [],
+    metadata: [],
+    posted_at: DateTime.iso8601('2025-04-25T03:29:03.965Z'),
+    shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
+      address1: '649 Maggio Overpass',
+      city: 'Lake Jaylan',
+      country_code: 'US',
+      postal_code: '99211-6547',
+      region: 'North Carolina',
+      region_code: 'ID',
+    ),
+    status: Models::Shared::AccountingPurchaseorderStatus::PARTIALLY_REFUNDED,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2021-02-26T03:18:40.270Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5698,7 +6902,56 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingSalesorderRequest.new(
-  accounting_salesorder: Models::Shared::AccountingSalesorder.new(),
+  accounting_salesorder: Models::Shared::AccountingSalesorder.new(
+    billing_address: Models::Shared::PropertyAccountingSalesorderBillingAddress.new(
+      address1: '26530 Stroman Rest',
+      address2: 'Suite 801',
+      city: 'Pocatello',
+      country_code: 'US',
+      postal_code: '05015-8546',
+      region: 'Louisiana',
+      region_code: 'MO',
+    ),
+    category_ids: [],
+    closed_at: DateTime.iso8601('2023-08-16T21:46:24.662Z'),
+    created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
+    currency: 'ANG',
+    discount_amount: 99.0,
+    employee_user_id: '4a6b8990-c85a-499f-82d0-5011c3c95a0b',
+    fees: [
+      Models::Shared::AccountingFee.new(
+        amount: 519.0,
+        currency: 'XCD',
+        type: Models::Shared::AccountingFeeType::PROMOTION,
+      ),
+    ],
+    fulfillment_type: Models::Shared::FulfillmentType::TAKEOUT,
+    guest_count: 8.0,
+    id: '7e1f569e-4e06-4346-9133-0bb4e4a4290d',
+    lineitems: [],
+    metadata: [],
+    order_number: '988187',
+    payments: [],
+    posted_at: DateTime.iso8601('2026-01-11T02:08:18.414Z'),
+    refunded_amount: 0.0,
+    sales_channel: 'Harvey, Collier and Weimann',
+    service_charge_amount: 63.0,
+    shipping_address: Models::Shared::PropertyAccountingSalesorderShippingAddress.new(
+      address1: '9878 Bradley Mill',
+      address2: 'Apt. 215',
+      city: 'Port Matildestad',
+      country_code: 'US',
+      postal_code: '07989-2148',
+      region: 'Arkansas',
+      region_code: 'AK',
+    ),
+    status: Models::Shared::AccountingSalesorderStatus::REFUNDED,
+    subtotal_amount: 0.0,
+    tax_amount: 63.0,
+    tip_amount: 34.0,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2022-02-10T18:49:06.128Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5745,7 +6998,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingTaxrateRequest.new(
-  accounting_taxrate: Models::Shared::AccountingTaxrate.new(),
+  accounting_taxrate: Models::Shared::AccountingTaxrate.new(
+    created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
+    description: 'Nemo atrox tricesimus creator aranea.',
+    id: '607c326b-3cd6-4366-908c-10dcf274278c',
+    is_active: false,
+    metadata: [],
+    name: 'cogo',
+    rate: 1.0,
+    updated_at: DateTime.iso8601('2025-11-04T07:50:52.889Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5792,7 +7054,26 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingTransactionRequest.new(
-  accounting_transaction: Models::Shared::AccountingTransaction.new(),
+  accounting_transaction: Models::Shared::AccountingTransaction.new(
+    created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
+    id: '2d09e4a1-f081-4201-8bd0-5775a6b6dc7e',
+    lineitems: [
+      Models::Shared::AccountingTransactionLineItem.new(
+        category_ids: [],
+        description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+        id: '6074e102-382e-4790-8b94-5d2623efc532',
+        name: 'Salad',
+        object_type: 'delicate',
+        total_amount: 58_531.0,
+        unit_amount: 536.0,
+        unit_quantity: 91.0,
+      ),
+    ],
+    memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+    tax_amount: 0.0,
+    total_amount: 94_452.0,
+    updated_at: DateTime.iso8601('2021-09-10T02:35:42.833Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -5839,7 +7120,22 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateAccountingVendorcreditRequest.new(
-  accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(),
+  accounting_vendorcredit: Models::Shared::AccountingVendorcredit.new(
+    applications: [],
+    apply_amount: 1.0,
+    balance_amount: 0.0,
+    created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
+    currency: 'KGS',
+    due_at: DateTime.iso8601('2023-05-06T20:38:46.775Z'),
+    id: '059bf6b3-5dde-400b-a74d-6b0a1ea109b9',
+    lineitems: [],
+    metadata: [],
+    notes: 'Conatus cruciamentum decor avaritia tantum.',
+    posted_at: DateTime.iso8601('2023-09-28T16:43:14.949Z'),
+    status: Models::Shared::AccountingVendorcreditStatus::SUBMITTED,
+    total_amount: 0.0,
+    updated_at: DateTime.iso8601('2023-11-26T14:35:10.683Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

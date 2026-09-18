@@ -31,7 +31,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.verification.create_verification_request(verification_request: Models::Shared::VerificationRequest.new(), connection_id: '<id>')
+res = s.verification.create_verification_request(verification_request: Models::Shared::VerificationRequest.new(
+  created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
+  id: 'a46b3bfa-1013-4a38-a395-053804aece77',
+  parameters: [],
+  profile_addresses: [],
+  profile_emails: [],
+  profile_telephones: [],
+  response_details: [],
+  response_download_urls: [],
+  response_source: 'Implemented regional protocol',
+  response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
+  updated_at: DateTime.iso8601('2023-12-26T03:33:18.550Z'),
+), connection_id: '<id>')
 
 unless res.verification_request.nil?
   # handle response
@@ -254,7 +266,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::PatchVerificationRequestRequest.new(
-  verification_request: Models::Shared::VerificationRequest.new(),
+  verification_request: Models::Shared::VerificationRequest.new(
+    created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
+    id: 'e90ae235-a54a-4ef5-b4cb-400dab43a687',
+    parameters: [],
+    profile_addresses: [],
+    profile_emails: [],
+    profile_telephones: [],
+    response_details: [],
+    response_download_urls: [],
+    response_source: 'Implemented regional protocol',
+    response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
+    updated_at: DateTime.iso8601('2023-12-26T03:33:18.550Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )
@@ -343,7 +367,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 req = Models::Operations::UpdateVerificationRequestRequest.new(
-  verification_request: Models::Shared::VerificationRequest.new(),
+  verification_request: Models::Shared::VerificationRequest.new(
+    created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
+    id: 'e90ae235-a54a-4ef5-b4cb-400dab43a687',
+    parameters: [],
+    profile_addresses: [],
+    profile_emails: [],
+    profile_telephones: [],
+    response_details: [],
+    response_download_urls: [],
+    response_source: 'Implemented regional protocol',
+    response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
+    updated_at: DateTime.iso8601('2023-12-26T03:33:18.550Z'),
+  ),
   connection_id: '<id>',
   id: '<id>',
 )

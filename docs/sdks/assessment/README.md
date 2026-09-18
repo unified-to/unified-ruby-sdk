@@ -35,6 +35,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.assessment.create_assessment_order(assessment_order: Models::Shared::AssessmentOrder.new(
   connection_id: '<id>',
+  created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
+  id: '8729035a-8e4e-4daf-b669-416646ba155c',
+  parameters: [],
+  profile_addresses: [],
+  profile_date_of_birth: '1989-07-22T16:18:37.650Z',
+  profile_emails: [
+    'Cleta.Daugherty@gmail.com',
+  ],
+  profile_first_name: 'Amy',
+  profile_gender: Models::Shared::ProfileGender::NON_BINARY,
+  profile_last_name: 'Kris-Windler',
+  profile_name: 'Amy Kris-Windler',
+  profile_resume_url: 'https://enchanted-cycle.biz/',
+  profile_social_media_urls: [],
+  profile_telephones: [
+    '(828) 263-1594 x5248',
+  ],
+  reference: 'ab',
+  response_attributes: [],
+  response_details: [],
+  response_download_urls: [],
+  response_max_score: 82.0,
+  response_score: 92.0,
+  response_status: Models::Shared::ResponseStatus::FAILED,
+  response_url: 'https://irresponsible-trench.info/',
+  status: Models::Shared::AssessmentOrderStatus::REJECTED,
+  target_url: 'https://cautious-turret.info',
+  updated_at: DateTime.iso8601('2023-01-17T01:51:22.045Z'),
   workspace_id: '<id>',
 ), connection_id: '<id>')
 
@@ -81,7 +109,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.assessment.create_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
-  type: Models::Shared::AssessmentPackageType::REFERENCE_CHECK,
+  aliases: [
+    'quia',
+  ],
+  created_at: DateTime.iso8601('2022-11-18T19:48:39.433Z'),
+  description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
+  has_redirect_url: true,
+  has_target_url: false,
+  id: '82bf3601-48bb-45c5-a3f9-057966529c2c',
+  info_url: 'https://ugly-instance.biz/',
+  integration_types: [
+    'viridis',
+  ],
+  max_score: 22.0,
+  name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
+  needs_ip_address: true,
+  parameters: [],
+  regions: [],
+  tags: [
+    'clamo',
+  ],
+  type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
+  updated_at: DateTime.iso8601('2023-09-18T05:28:24.265Z'),
 ), connection_id: '<id>')
 
 unless res.assessment_package.nil?
@@ -256,6 +305,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
+    created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
+    id: 'fd94d116-577c-4b39-850d-f9dc01076174',
+    parameters: [],
+    profile_addresses: [],
+    profile_date_of_birth: '1989-07-22T16:18:37.650Z',
+    profile_emails: [
+      'Cleta.Daugherty@gmail.com',
+    ],
+    profile_first_name: 'Amy',
+    profile_gender: Models::Shared::ProfileGender::NON_BINARY,
+    profile_last_name: 'Kris-Windler',
+    profile_name: 'Amy Kris-Windler',
+    profile_resume_url: 'https://enchanted-cycle.biz/',
+    profile_social_media_urls: [],
+    profile_telephones: [
+      '(828) 263-1594 x5248',
+    ],
+    reference: 'ab',
+    response_attributes: [],
+    response_details: [],
+    response_download_urls: [],
+    response_max_score: 82.0,
+    response_score: 92.0,
+    response_status: Models::Shared::ResponseStatus::FAILED,
+    response_url: 'https://irresponsible-trench.info/',
+    status: Models::Shared::AssessmentOrderStatus::REJECTED,
+    target_url: 'https://cautious-turret.info',
+    updated_at: DateTime.iso8601('2023-01-17T01:51:22.052Z'),
     workspace_id: '<id>',
   ),
   connection_id: '<id>',
@@ -304,7 +381,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.assessment.patch_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
-  type: Models::Shared::AssessmentPackageType::BACKGROUND_CHECK,
+  aliases: [
+    'quia',
+  ],
+  created_at: DateTime.iso8601('2022-11-18T19:48:39.433Z'),
+  description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
+  has_redirect_url: true,
+  has_target_url: false,
+  id: '3cbfc59a-0c84-489e-977b-c098e37b5475',
+  info_url: 'https://ugly-instance.biz/',
+  integration_types: [
+    'viridis',
+  ],
+  max_score: 22.0,
+  name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
+  needs_ip_address: true,
+  parameters: [],
+  regions: [],
+  tags: [
+    'clamo',
+  ],
+  type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
+  updated_at: DateTime.iso8601('2023-09-18T05:28:24.268Z'),
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?
@@ -393,6 +491,34 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
+    created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
+    id: 'fd94d116-577c-4b39-850d-f9dc01076174',
+    parameters: [],
+    profile_addresses: [],
+    profile_date_of_birth: '1989-07-22T16:18:37.650Z',
+    profile_emails: [
+      'Cleta.Daugherty@gmail.com',
+    ],
+    profile_first_name: 'Amy',
+    profile_gender: Models::Shared::ProfileGender::NON_BINARY,
+    profile_last_name: 'Kris-Windler',
+    profile_name: 'Amy Kris-Windler',
+    profile_resume_url: 'https://enchanted-cycle.biz/',
+    profile_social_media_urls: [],
+    profile_telephones: [
+      '(828) 263-1594 x5248',
+    ],
+    reference: 'ab',
+    response_attributes: [],
+    response_details: [],
+    response_download_urls: [],
+    response_max_score: 82.0,
+    response_score: 92.0,
+    response_status: Models::Shared::ResponseStatus::FAILED,
+    response_url: 'https://irresponsible-trench.info/',
+    status: Models::Shared::AssessmentOrderStatus::REJECTED,
+    target_url: 'https://cautious-turret.info',
+    updated_at: DateTime.iso8601('2023-01-17T01:51:22.052Z'),
     workspace_id: '<id>',
   ),
   connection_id: '<id>',
@@ -441,7 +567,28 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.assessment.update_assessment_package(assessment_package: Models::Shared::AssessmentPackage.new(
-  type: Models::Shared::AssessmentPackageType::OTHER,
+  aliases: [
+    'quia',
+  ],
+  created_at: DateTime.iso8601('2022-11-18T19:48:39.433Z'),
+  description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
+  has_redirect_url: true,
+  has_target_url: false,
+  id: '3cbfc59a-0c84-489e-977b-c098e37b5475',
+  info_url: 'https://ugly-instance.biz/',
+  integration_types: [
+    'viridis',
+  ],
+  max_score: 22.0,
+  name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
+  needs_ip_address: true,
+  parameters: [],
+  regions: [],
+  tags: [
+    'clamo',
+  ],
+  type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
+  updated_at: DateTime.iso8601('2023-09-18T05:28:24.268Z'),
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?

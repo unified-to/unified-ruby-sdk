@@ -24,7 +24,20 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
       ),
     )
 
-res = s.embedding.create_genai_embedding(genai_embedding: Models::Shared::GenaiEmbedding.new(), connection_id: '<id>')
+res = s.embedding.create_genai_embedding(genai_embedding: Models::Shared::GenaiEmbedding.new(
+  content: [
+    Models::Shared::GenaiEmbeddingContent.new(
+      text: 'Utrimque temptatio pecco demulceo.',
+    ),
+  ],
+  dimension: 423.0,
+  embeddings: 'Est.',
+  enconding_format: Models::Shared::EncondingFormat::FLOAT,
+  id: '739d0d3c-8595-43bd-860d-f293570b2047',
+  max_tokens: 223.0,
+  tokens_used: 836.0,
+  type: 'classification',
+), connection_id: '<id>')
 
 unless res.genai_embedding.nil?
   # handle response
