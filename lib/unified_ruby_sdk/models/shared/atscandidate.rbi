@@ -50,6 +50,8 @@ class UnifiedRubySDK::Models::Shared::AtsCandidate
   def skills=(str_); end
   def sources(); end
   def sources=(str_); end
+  def summary(); end
+  def summary=(str_); end
   def tags(); end
   def tags=(str_); end
   def telephones(); end

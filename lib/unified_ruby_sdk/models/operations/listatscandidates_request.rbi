@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Operations::ListAtsCandidatesRequest
   def company_id=(str_); end
   def fields_(); end
   def fields_=(str_); end
+  def job_id(); end
+  def job_id=(str_); end
   def limit(); end
   def limit=(str_); end
   def offset(); end

@@ -64,6 +64,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_database_id=(str_); end
   def list_deal_id(); end
   def list_deal_id=(str_); end
+  def list_destination_id(); end
+  def list_destination_id=(str_); end
   def list_dimension(); end
   def list_dimension=(str_); end
   def list_document_id(); end
@@ -248,6 +250,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_template_id=(str_); end
   def native_webhook_type(); end
   def native_webhook_type=(str_); end
+  def native_webhook_updated_gte(); end
+  def native_webhook_updated_gte=(str_); end
   def native_webhook_visitor_id(); end
   def native_webhook_visitor_id=(str_); end
   def outbound_fields(); end
@@ -312,6 +316,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_database_id=(str_); end
   def virtual_webhook_deal_id(); end
   def virtual_webhook_deal_id=(str_); end
+  def virtual_webhook_effective_status(); end
+  def virtual_webhook_effective_status=(str_); end
   def virtual_webhook_end_lt(); end
   def virtual_webhook_end_lt=(str_); end
   def virtual_webhook_event_id(); end

@@ -41,6 +41,7 @@ module UnifiedRubySDK
           METADATA = new('metadata')
           USER_ID = new('user_id')
           INDUSTRY = new('industry')
+          SUMMARY = new('summary')
           RAW = new('raw')
         end
       end

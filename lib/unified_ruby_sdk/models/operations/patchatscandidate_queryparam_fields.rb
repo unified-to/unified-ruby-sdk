@@ -40,6 +40,7 @@ module UnifiedRubySDK
           SKILLS = new('skills')
           JOB_IDS = new('job_ids')
           METADATA = new('metadata')
+          SUMMARY = new('summary')
           RAW = new('raw')
         end
       end

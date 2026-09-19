@@ -35,7 +35,7 @@ res = s.storage.create_storage_file(storage_file: Models::Shared::StorageFile.ne
   description: 'Crastinus cupiditate debilito cimentarius virgo.',
   download_url: 'https://stingy-casement.name/',
   hash: 'fe6a659e-75cd-4079-9b76-351f9af2205a',
-  id: 'd69a5ba4-9d6e-4d43-a579-0ec5050d2b6a',
+  id: '62e9f0a5-4099-4de0-82a1-9da4b6440119',
   mime_type: 'FOLDER',
   name: 'softly.tiff',
   references: [
@@ -55,7 +55,7 @@ res = s.storage.create_storage_file(storage_file: Models::Shared::StorageFile.ne
     'spoliatio',
   ],
   type: Models::Shared::StorageFileType::FILE,
-  updated_at: DateTime.iso8601('2023-01-27T11:57:07.170Z'),
+  updated_at: DateTime.iso8601('2023-01-27T18:45:49.584Z'),
   version: '1',
   web_url: 'https://sandy-distinction.info/',
 ), connection_id: '<id>')
@@ -198,7 +198,7 @@ req = Models::Operations::PatchStorageFileRequest.new(
     description: 'Crastinus cupiditate debilito cimentarius virgo.',
     download_url: 'https://stingy-casement.name/',
     hash: 'fe6a659e-75cd-4079-9b76-351f9af2205a',
-    id: '045342fe-fb75-47ae-9b27-efdf664870fb',
+    id: '79edbc39-8717-4887-95b8-3ce28de1ad03',
     mime_type: 'FOLDER',
     name: 'softly.tiff',
     references: [
@@ -218,7 +218,7 @@ req = Models::Operations::PatchStorageFileRequest.new(
       'spoliatio',
     ],
     type: Models::Shared::StorageFileType::FILE,
-    updated_at: DateTime.iso8601('2023-01-27T11:57:07.173Z'),
+    updated_at: DateTime.iso8601('2023-01-27T18:45:49.587Z'),
     version: '1',
     web_url: 'https://sandy-distinction.info/',
   ),
@@ -316,7 +316,7 @@ req = Models::Operations::UpdateStorageFileRequest.new(
     description: 'Crastinus cupiditate debilito cimentarius virgo.',
     download_url: 'https://stingy-casement.name/',
     hash: 'fe6a659e-75cd-4079-9b76-351f9af2205a',
-    id: '045342fe-fb75-47ae-9b27-efdf664870fb',
+    id: '79edbc39-8717-4887-95b8-3ce28de1ad03',
     mime_type: 'FOLDER',
     name: 'softly.tiff',
     references: [
@@ -336,7 +336,7 @@ req = Models::Operations::UpdateStorageFileRequest.new(
       'spoliatio',
     ],
     type: Models::Shared::StorageFileType::FILE,
-    updated_at: DateTime.iso8601('2023-01-27T11:57:07.173Z'),
+    updated_at: DateTime.iso8601('2023-01-27T18:45:49.587Z'),
     version: '1',
     web_url: 'https://sandy-distinction.info/',
   ),

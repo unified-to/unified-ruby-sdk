@@ -41,7 +41,7 @@ res = s.organization.create_ads_organization(ads_organization: Models::Shared::A
   account_number: 'LQUJx8zQBW',
   created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
   currency: 'USD',
-  id: '954024f0-be4e-42e9-ab99-babcdfd3f2ca',
+  id: '18882c56-c1f5-426c-ae97-103e068bd8b3',
   managers: [
     Models::Shared::AdsManager.new(
       id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -51,7 +51,7 @@ res = s.organization.create_ads_organization(ads_organization: Models::Shared::A
   name: 'Ankunding Inc',
   status: Models::Shared::AdsOrganizationStatus::PROCESSING,
   timezone: 'Europe/Chisinau',
-  updated_at: DateTime.iso8601('2026-02-27T02:28:26.350Z'),
+  updated_at: DateTime.iso8601('2026-02-28T01:05:19.323Z'),
 ), connection_id: '<id>')
 
 unless res.ads_organization.nil?
@@ -100,9 +100,9 @@ res = s.organization.create_repo_organization(repo_organization: Models::Shared:
   avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
   created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
   description: 'Trepide defendo supra testimonium ager.',
-  id: '663b7edf-8026-47ed-a9a2-35245ab612c1',
+  id: 'ef42b40b-e008-470b-b345-9190966fff75',
   name: 'Denesik - Lemke',
-  updated_at: DateTime.iso8601('2023-08-12T23:33:59.915Z'),
+  updated_at: DateTime.iso8601('2023-08-13T06:04:51.055Z'),
   web_url: 'https://turbulent-overheard.biz',
 ), connection_id: '<id>')
 
@@ -420,7 +420,7 @@ req = Models::Operations::PatchAdsOrganizationRequest.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '0db49d1d-2e30-46e4-b602-b7a095facc07',
+    id: 'f7dfc8ea-504a-4551-8318-5b6de3e6cacb',
     managers: [
       Models::Shared::AdsManager.new(
         id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -430,7 +430,7 @@ req = Models::Operations::PatchAdsOrganizationRequest.new(
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-02-27T02:28:26.361Z'),
+    updated_at: DateTime.iso8601('2026-02-28T01:05:19.333Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -482,9 +482,9 @@ req = Models::Operations::PatchRepoOrganizationRequest.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: '6950cc7d-4903-4e45-8056-ae03de805456',
+    id: '1cd65209-45da-48b6-a3f5-319fda12f872',
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-12T23:33:59.917Z'),
+    updated_at: DateTime.iso8601('2023-08-13T06:04:51.057Z'),
     web_url: 'https://turbulent-overheard.biz',
   ),
   connection_id: '<id>',
@@ -621,7 +621,7 @@ req = Models::Operations::UpdateAdsOrganizationRequest.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '0db49d1d-2e30-46e4-b602-b7a095facc07',
+    id: 'f7dfc8ea-504a-4551-8318-5b6de3e6cacb',
     managers: [
       Models::Shared::AdsManager.new(
         id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -631,7 +631,7 @@ req = Models::Operations::UpdateAdsOrganizationRequest.new(
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-02-27T02:28:26.361Z'),
+    updated_at: DateTime.iso8601('2026-02-28T01:05:19.333Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -683,9 +683,9 @@ req = Models::Operations::UpdateRepoOrganizationRequest.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: '6950cc7d-4903-4e45-8056-ae03de805456',
+    id: '1cd65209-45da-48b6-a3f5-319fda12f872',
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-12T23:33:59.917Z'),
+    updated_at: DateTime.iso8601('2023-08-13T06:04:51.057Z'),
     web_url: 'https://turbulent-overheard.biz',
   ),
   connection_id: '<id>',

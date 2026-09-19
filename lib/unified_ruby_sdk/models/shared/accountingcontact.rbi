@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::AccountingContact
   def associated_contacts(); end
   def associated_contacts=(str_); end
+  def balance_amount(); end
+  def balance_amount=(str_); end
   def billing_address(); end
   def billing_address=(str_); end
   def company_name(); end
@@ -34,6 +36,8 @@ class UnifiedRubySDK::Models::Shared::AccountingContact
   def last_name=(str_); end
   def name(); end
   def name=(str_); end
+  def notes(); end
+  def notes=(str_); end
   def organization_id(); end
   def organization_id=(str_); end
   def payment_methods(); end
@@ -56,6 +60,8 @@ class UnifiedRubySDK::Models::Shared::AccountingContact
   def telephones=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
+  def website(); end
+  def website=(str_); end
   def currency(); end
   def currency=(str_); end
 end

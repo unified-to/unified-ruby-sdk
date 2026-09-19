@@ -30,6 +30,7 @@ module UnifiedRubySDK
           USER_ID = new('user_id')
           METADATA = new('metadata')
           ORIGINAL_SUBSTATUS = new('original_substatus')
+          SUMMARY = new('summary')
           RAW = new('raw')
         end
       end

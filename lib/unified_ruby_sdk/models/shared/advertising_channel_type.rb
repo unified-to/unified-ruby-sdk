@@ -29,6 +29,7 @@ module UnifiedRubySDK
           NATIVE = new('NATIVE')
           CTV = new('CTV')
           DOOH = new('DOOH')
+          PERFORMANCE_MAX = new('PERFORMANCE_MAX')
         end
       end
     end
