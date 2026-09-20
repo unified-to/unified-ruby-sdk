@@ -31,17 +31,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.ticket.create_ticketing_ticket(ticketing_ticket: Models::Shared::TicketingTicket.new(
   attachment_ids: [
-    '50529b00-9e89-41df-80f4-04c851a7fb31',
-    '6a97ec98-af4e-430a-a0b8-123838830e03',
+    '3469d79d-01df-4e5c-9c7c-c26423764577',
+    '907e62e1-7781-4429-b22e-b01de278bd27',
   ],
   category_id: 'vilicus',
   created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
   description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
-  due_at: DateTime.iso8601('2025-07-20T23:14:47.529Z'),
-  id: '2e24949e-0e7a-468d-911c-2fafc5ac7779',
+  due_at: DateTime.iso8601('2025-07-21T17:02:47.773Z'),
+  id: '0e3e9fc5-737a-487d-b43f-7d533cd5cdc4',
   priority: 'LOW',
   source: 'atavus',
-  source_ref: 'b2fe6a65-901c-4e47-9cf4-e594acb4aeae',
+  source_ref: '90ea2838-61bc-42f4-aaa5-9037506a50e1',
   status: Models::Shared::TicketingTicketStatus::ACTIVE,
   subject: 'Thymbra ratione minus arbitro tricesimus cetera validus.',
   tags: [
@@ -49,7 +49,7 @@ res = s.ticket.create_ticketing_ticket(ticketing_ticket: Models::Shared::Ticketi
     'vitae',
     'torrens',
   ],
-  updated_at: DateTime.iso8601('2023-05-28T16:32:08.345Z'),
+  updated_at: DateTime.iso8601('2023-05-29T00:56:32.099Z'),
   url: 'https://yellowish-testimonial.biz',
 ), connection_id: '<id>')
 
@@ -187,17 +187,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchTicketingTicketRequest.new(
   ticketing_ticket: Models::Shared::TicketingTicket.new(
     attachment_ids: [
-      '3f42cdc9-77db-4a42-8c62-b3c371cc9a90',
-      '06ac8421-ef2d-4919-adfb-8122a7f99a8d',
+      '3f0d99b0-c1cc-45d8-9bf2-fa2440517120',
+      '58df0216-681c-4d24-87ac-22fe2e4e6417',
     ],
     category_id: 'vilicus',
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
-    due_at: DateTime.iso8601('2025-07-20T23:14:47.535Z'),
-    id: 'e13d53ca-528c-4cbe-acbc-d0b01f5d3b10',
+    due_at: DateTime.iso8601('2025-07-21T17:02:47.782Z'),
+    id: '31ebc641-3b21-4e16-972d-d67fef0fe24a',
     priority: 'LOW',
     source: 'atavus',
-    source_ref: '4ea8ebb5-b85c-4f26-9e57-d504ad16a37f',
+    source_ref: '582c27dd-3052-4495-be3a-3dcb4db5796e',
     status: Models::Shared::TicketingTicketStatus::ACTIVE,
     subject: 'Thymbra ratione minus arbitro tricesimus cetera validus.',
     tags: [
@@ -205,7 +205,7 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
       'vitae',
       'torrens',
     ],
-    updated_at: DateTime.iso8601('2023-05-28T16:32:08.348Z'),
+    updated_at: DateTime.iso8601('2023-05-29T00:56:32.103Z'),
     url: 'https://yellowish-testimonial.biz',
   ),
   connection_id: '<id>',
@@ -298,17 +298,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateTicketingTicketRequest.new(
   ticketing_ticket: Models::Shared::TicketingTicket.new(
     attachment_ids: [
-      '3f42cdc9-77db-4a42-8c62-b3c371cc9a90',
-      '06ac8421-ef2d-4919-adfb-8122a7f99a8d',
+      '3f0d99b0-c1cc-45d8-9bf2-fa2440517120',
+      '58df0216-681c-4d24-87ac-22fe2e4e6417',
     ],
     category_id: 'vilicus',
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
-    due_at: DateTime.iso8601('2025-07-20T23:14:47.535Z'),
-    id: 'e13d53ca-528c-4cbe-acbc-d0b01f5d3b10',
+    due_at: DateTime.iso8601('2025-07-21T17:02:47.782Z'),
+    id: '31ebc641-3b21-4e16-972d-d67fef0fe24a',
     priority: 'LOW',
     source: 'atavus',
-    source_ref: '4ea8ebb5-b85c-4f26-9e57-d504ad16a37f',
+    source_ref: '582c27dd-3052-4495-be3a-3dcb4db5796e',
     status: Models::Shared::TicketingTicketStatus::ACTIVE,
     subject: 'Thymbra ratione minus arbitro tricesimus cetera validus.',
     tags: [
@@ -316,7 +316,7 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
       'vitae',
       'torrens',
     ],
-    updated_at: DateTime.iso8601('2023-05-28T16:32:08.348Z'),
+    updated_at: DateTime.iso8601('2023-05-29T00:56:32.103Z'),
     url: 'https://yellowish-testimonial.biz',
   ),
   connection_id: '<id>',

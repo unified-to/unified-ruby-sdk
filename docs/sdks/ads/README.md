@@ -75,10 +75,10 @@ res = s.ads.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
   creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
   description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
   final_url: 'https://improbable-sanity.com',
-  id: '9f5a9491-d7a2-43b9-a6f9-1b463d5ab888',
+  id: '37053b73-6d2b-4437-820d-ea9592399ade',
   name: 'Hermiston Group',
   status: Models::Shared::AdsAdStatus::ARCHIVED,
-  updated_at: DateTime.iso8601('2024-06-05T12:45:16.085Z'),
+  updated_at: DateTime.iso8601('2024-06-05T22:05:23.917Z'),
 ), connection_id: '<id>')
 
 unless res.ads_ad.nil?
@@ -126,11 +126,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ads.create_ads_asset(ads_asset: Models::Shared::AdsAsset.new(
   created_at: DateTime.iso8601('2020-03-27T20:14:38.603Z'),
   height: 400.0,
-  id: 'fa6ea86a-553b-41d5-a665-f0cd647dd372',
+  id: 'cfd64e43-1341-4fb0-9638-93775b4b47d7',
   mime_type: 'IMAGE_PNG',
   name: 'Lockman - DuBuque',
   type: Models::Shared::AdsAssetType::IMAGE,
-  updated_at: DateTime.iso8601('2022-03-15T11:56:31.340Z'),
+  updated_at: DateTime.iso8601('2022-03-15T18:53:05.567Z'),
   url: 'https://informal-perfection.com/',
   width: 600.0,
 ), connection_id: '<id>')
@@ -184,17 +184,17 @@ res = s.ads.create_ads_campaign(ads_campaign: Models::Shared::AdsCampaign.new(
   created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
   currency: 'USD',
   effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-  end_at: DateTime.iso8601('2025-05-10T01:19:15.620Z'),
-  id: 'a433e385-898b-4b69-a1a7-03e2e2a5c9a5',
+  end_at: DateTime.iso8601('2025-05-10T17:01:10.791Z'),
+  id: 'b1b4c3e4-c0c5-47e9-bdb2-65bef9009dcb',
   labels: [
     'comedo',
   ],
   name: 'Emard Inc',
-  start_at: DateTime.iso8601('2022-07-20T05:47:41.991Z'),
+  start_at: DateTime.iso8601('2022-07-20T06:39:41.501Z'),
   status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
   targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
   total_spend_amount: 2_349.8_642_875_347_286,
-  updated_at: DateTime.iso8601('2025-12-06T09:53:58.919Z'),
+  updated_at: DateTime.iso8601('2025-12-07T04:38:34.303Z'),
 ), connection_id: '<id>')
 
 unless res.ads_campaign.nil?
@@ -241,7 +241,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.ads.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-  id: '8875633d-644c-47a8-9c6a-87ac3af30282',
+  id: '486d04ad-a73e-46ae-8267-dbfb3d322611',
   labels: [
     'coma',
     'accedo',
@@ -249,7 +249,7 @@ res = s.ads.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   ],
   name: 'Brekke, Bradtke and Robel',
   status: Models::Shared::AdsCreativeStatus::PAUSED,
-  updated_at: DateTime.iso8601('2021-06-21T06:04:28.106Z'),
+  updated_at: DateTime.iso8601('2021-06-21T10:44:06.761Z'),
 ), connection_id: '<id>')
 
 unless res.ads_creative.nil?
@@ -301,14 +301,14 @@ res = s.ads.create_ads_group(ads_group: Models::Shared::AdsGroup.new(
   created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
   currency: 'USD',
   effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-  end_at: DateTime.iso8601('2026-05-25T12:59:33.356Z'),
-  id: '36b7bd30-2259-40f7-93d8-6f95e3659e6c',
+  end_at: DateTime.iso8601('2026-05-26T10:50:57.393Z'),
+  id: 'a8470d23-bde4-42b9-a08a-e2f4c752a8b0',
   language_locale: 'fr-FR',
   name: 'Stark - Baumbach',
-  start_at: DateTime.iso8601('2025-12-11T19:16:28.610Z'),
+  start_at: DateTime.iso8601('2025-12-12T15:40:05.126Z'),
   status: Models::Shared::AdsGroupStatus::PROCESSING,
   targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-  updated_at: DateTime.iso8601('2022-01-03T01:00:50.011Z'),
+  updated_at: DateTime.iso8601('2022-01-03T08:37:42.016Z'),
 ), connection_id: '<id>')
 
 unless res.ads_group.nil?
@@ -355,10 +355,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.ads.create_ads_insertionorder(ads_insertionorder: Models::Shared::AdsInsertionorder.new(
   created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-  id: '52fbe318-1e95-4d56-a52e-14024c511300',
+  id: '48632bb8-8805-433f-88e3-6904504117b6',
   name: 'Kunde, Smith and Reinger',
   status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-  updated_at: DateTime.iso8601('2021-04-28T12:45:01.534Z'),
+  updated_at: DateTime.iso8601('2021-04-28T12:57:37.791Z'),
 ), connection_id: '<id>')
 
 unless res.ads_insertionorder.nil?
@@ -407,7 +407,7 @@ res = s.ads.create_ads_organization(ads_organization: Models::Shared::AdsOrganiz
   account_number: 'LQUJx8zQBW',
   created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
   currency: 'USD',
-  id: '18882c56-c1f5-426c-ae97-103e068bd8b3',
+  id: '1a65b1ae-7e27-4674-a504-8466fd2da6db',
   managers: [
     Models::Shared::AdsManager.new(
       id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -417,7 +417,7 @@ res = s.ads.create_ads_organization(ads_organization: Models::Shared::AdsOrganiz
   name: 'Ankunding Inc',
   status: Models::Shared::AdsOrganizationStatus::PROCESSING,
   timezone: 'Europe/Chisinau',
-  updated_at: DateTime.iso8601('2026-02-28T01:05:19.323Z'),
+  updated_at: DateTime.iso8601('2026-02-28T21:54:47.333Z'),
 ), connection_id: '<id>')
 
 unless res.ads_organization.nil?
@@ -1317,10 +1317,10 @@ req = Models::Operations::PatchAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: '2d856da5-8470-4689-8fea-95df80a033d3',
+    id: '3614ff1d-a8b2-4ebd-94b7-81c446ad759e',
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-05T12:45:16.093Z'),
+    updated_at: DateTime.iso8601('2024-06-05T22:05:23.929Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1375,17 +1375,17 @@ req = Models::Operations::PatchAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-05-10T01:19:15.711Z'),
-    id: 'db8787c1-8ba6-4383-80eb-66ea5cbf2568',
+    end_at: DateTime.iso8601('2025-05-10T17:01:10.904Z'),
+    id: '67e98d0f-b6d4-4951-b1ea-28ed039fdc1e',
     labels: [
       'comedo',
     ],
     name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-20T05:47:41.996Z'),
+    start_at: DateTime.iso8601('2022-07-20T06:39:41.508Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
     total_spend_amount: 2_349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2025-12-06T09:53:59.028Z'),
+    updated_at: DateTime.iso8601('2025-12-07T04:38:34.437Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1435,7 +1435,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '4c3f61d0-5a33-4632-a246-7b4096d686d1',
+    id: '12cf2970-525e-45cc-ae17-4939348f7c0c',
     labels: [
       'coma',
       'accedo',
@@ -1443,7 +1443,7 @@ req = Models::Operations::PatchAdsCreativeRequest.new(
     ],
     name: 'Brekke, Bradtke and Robel',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-06-21T06:04:28.109Z'),
+    updated_at: DateTime.iso8601('2021-06-21T10:44:06.767Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1498,14 +1498,14 @@ req = Models::Operations::PatchAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-05-25T12:59:33.493Z'),
-    id: '6d8cf9ec-3f1c-4222-bba4-bd915bb91f0a',
+    end_at: DateTime.iso8601('2026-05-26T10:50:57.548Z'),
+    id: '1140364c-1ab5-40e7-ae03-fe207bb1cb7c',
     language_locale: 'fr-FR',
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2025-12-11T19:16:28.737Z'),
+    start_at: DateTime.iso8601('2025-12-12T15:40:05.270Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-    updated_at: DateTime.iso8601('2022-01-03T01:00:50.059Z'),
+    updated_at: DateTime.iso8601('2022-01-03T08:37:42.070Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1555,10 +1555,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: '7a282907-956e-4e19-9b8d-32ea624e0bc2',
+    id: '01882435-4379-443d-9df5-6241ceb40c86',
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-28T12:45:01.534Z'),
+    updated_at: DateTime.iso8601('2021-04-28T12:57:37.791Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1610,7 +1610,7 @@ req = Models::Operations::PatchAdsOrganizationRequest.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: 'f7dfc8ea-504a-4551-8318-5b6de3e6cacb',
+    id: '8672a91d-dadd-4018-920d-c12b36e7ef8f',
     managers: [
       Models::Shared::AdsManager.new(
         id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -1620,7 +1620,7 @@ req = Models::Operations::PatchAdsOrganizationRequest.new(
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-02-28T01:05:19.333Z'),
+    updated_at: DateTime.iso8601('2026-02-28T21:54:47.341Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1928,10 +1928,10 @@ req = Models::Operations::UpdateAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: '2d856da5-8470-4689-8fea-95df80a033d3',
+    id: '3614ff1d-a8b2-4ebd-94b7-81c446ad759e',
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-05T12:45:16.093Z'),
+    updated_at: DateTime.iso8601('2024-06-05T22:05:23.929Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1986,17 +1986,17 @@ req = Models::Operations::UpdateAdsCampaignRequest.new(
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-05-10T01:19:15.711Z'),
-    id: 'db8787c1-8ba6-4383-80eb-66ea5cbf2568',
+    end_at: DateTime.iso8601('2025-05-10T17:01:10.904Z'),
+    id: '67e98d0f-b6d4-4951-b1ea-28ed039fdc1e',
     labels: [
       'comedo',
     ],
     name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-20T05:47:41.996Z'),
+    start_at: DateTime.iso8601('2022-07-20T06:39:41.508Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
     targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
     total_spend_amount: 2_349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2025-12-06T09:53:59.028Z'),
+    updated_at: DateTime.iso8601('2025-12-07T04:38:34.437Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2046,7 +2046,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '4c3f61d0-5a33-4632-a246-7b4096d686d1',
+    id: '12cf2970-525e-45cc-ae17-4939348f7c0c',
     labels: [
       'coma',
       'accedo',
@@ -2054,7 +2054,7 @@ req = Models::Operations::UpdateAdsCreativeRequest.new(
     ],
     name: 'Brekke, Bradtke and Robel',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-06-21T06:04:28.109Z'),
+    updated_at: DateTime.iso8601('2021-06-21T10:44:06.767Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2109,14 +2109,14 @@ req = Models::Operations::UpdateAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-05-25T12:59:33.493Z'),
-    id: '6d8cf9ec-3f1c-4222-bba4-bd915bb91f0a',
+    end_at: DateTime.iso8601('2026-05-26T10:50:57.548Z'),
+    id: '1140364c-1ab5-40e7-ae03-fe207bb1cb7c',
     language_locale: 'fr-FR',
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2025-12-11T19:16:28.737Z'),
+    start_at: DateTime.iso8601('2025-12-12T15:40:05.270Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-    updated_at: DateTime.iso8601('2022-01-03T01:00:50.059Z'),
+    updated_at: DateTime.iso8601('2022-01-03T08:37:42.070Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2166,10 +2166,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: '7a282907-956e-4e19-9b8d-32ea624e0bc2',
+    id: '01882435-4379-443d-9df5-6241ceb40c86',
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-28T12:45:01.534Z'),
+    updated_at: DateTime.iso8601('2021-04-28T12:57:37.791Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2221,7 +2221,7 @@ req = Models::Operations::UpdateAdsOrganizationRequest.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: 'f7dfc8ea-504a-4551-8318-5b6de3e6cacb',
+    id: '8672a91d-dadd-4018-920d-c12b36e7ef8f',
     managers: [
       Models::Shared::AdsManager.new(
         id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -2231,7 +2231,7 @@ req = Models::Operations::UpdateAdsOrganizationRequest.new(
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-02-28T01:05:19.333Z'),
+    updated_at: DateTime.iso8601('2026-02-28T21:54:47.341Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

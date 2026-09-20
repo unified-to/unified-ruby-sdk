@@ -35,7 +35,7 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
   description: 'Vulnero ustulo abeo.',
   duration: 87.0,
   global_code: 'calamitas',
-  id: 'a30cb475-a338-40bd-8684-52c60d5def37',
+  id: '2dc556b3-cb20-426b-a77b-19f3a9499932',
   is_active: false,
   is_featured: true,
   is_taxable: true,
@@ -44,10 +44,10 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
     Models::Shared::CommerceItemMedia.new(
       alt: 'Caterva eveniet acies candidus.',
       height: 663.0,
-      id: '74910279-2a3d-46f3-a797-32d87638b091',
+      id: 'e8d93ee5-e6df-466b-b0f0-d889f8b5ac67',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '51c1b601-09ca-4543-a370-dd7ccbd14d19',
+          id: '3b03e2ef-f4d2-42ae-9f9d-311dd75aa773',
           slug: 'doloremque',
           value: 'allatus',
         ),
@@ -60,10 +60,10 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
     Models::Shared::CommerceItemMedia.new(
       alt: 'Comedo.',
       height: 189.0,
-      id: '812029ee-535f-41e4-9e83-5b2340f49b07',
+      id: 'ea943912-39d5-4343-910a-d03a67748ff3',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'e3f9811d-f56a-4235-b203-24beeb67cf2f',
+          id: 'aa222c73-6dda-4cc6-bb8f-181604d28096',
           slug: 'bis',
           value: 'somniculosus',
         ),
@@ -80,7 +80,7 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '9a484925-7579-481f-81cc-104d19a33e7b',
+      id: '2437a0f2-7d92-4536-b345-53cd32fb3cda',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'terebro',
@@ -104,7 +104,7 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
   ],
   total_stock: 579.0,
   type: 'beatae',
-  updated_at: DateTime.iso8601('2022-04-07T04:10:44.395Z'),
+  updated_at: DateTime.iso8601('2022-04-07T13:00:19.801Z'),
   vendor_name: 'Mayer - Flatley',
   weight: 22.0,
   weight_unit: Models::Shared::WeightUnit::KG,
@@ -248,7 +248,7 @@ req = Models::Operations::PatchCommerceItemRequest.new(
     description: 'Vulnero ustulo abeo.',
     duration: 87.0,
     global_code: 'calamitas',
-    id: 'f2ea4aa9-bad5-4dc1-a238-047d2b10c029',
+    id: 'b7caa9e0-fb78-4b0f-bbfc-143f490f3a4d',
     is_active: false,
     is_featured: true,
     is_taxable: true,
@@ -257,10 +257,10 @@ req = Models::Operations::PatchCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Caterva eveniet acies candidus.',
         height: 663.0,
-        id: '31a94d94-5fa5-403f-97f5-b3d06fb6fbb2',
+        id: '0b2b07ee-0c40-49b2-92fe-72619bc0f8cb',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '2494983b-813d-49d1-80b0-b1b5cd4979b2',
+            id: '613c7638-b713-4b55-9f4e-ec025eda32e6',
             slug: 'doloremque',
             value: 'allatus',
           ),
@@ -273,10 +273,10 @@ req = Models::Operations::PatchCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 189.0,
-        id: '994da1a2-125e-4aeb-b5e3-bdad596eb8b6',
+        id: '50eed9d2-583a-4f43-b06b-b4ee935c630b',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'c4899daa-d40c-4e18-acfe-a5d112b0e9b0',
+            id: '2ab66b04-898a-445e-b800-8af0348f6923',
             slug: 'bis',
             value: 'somniculosus',
           ),
@@ -293,7 +293,7 @@ req = Models::Operations::PatchCommerceItemRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '87aba78b-9a94-416c-9cab-3afe1349ee4e',
+        id: 'd53d1603-6619-4a30-a239-c91342735cbd',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'terebro',
@@ -317,7 +317,7 @@ req = Models::Operations::PatchCommerceItemRequest.new(
     ],
     total_stock: 579.0,
     type: 'beatae',
-    updated_at: DateTime.iso8601('2022-04-07T04:10:44.406Z'),
+    updated_at: DateTime.iso8601('2022-04-07T13:00:19.812Z'),
     vendor_name: 'Mayer - Flatley',
     weight: 22.0,
     weight_unit: Models::Shared::WeightUnit::KG,
@@ -416,7 +416,7 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
     description: 'Vulnero ustulo abeo.',
     duration: 87.0,
     global_code: 'calamitas',
-    id: 'f2ea4aa9-bad5-4dc1-a238-047d2b10c029',
+    id: 'b7caa9e0-fb78-4b0f-bbfc-143f490f3a4d',
     is_active: false,
     is_featured: true,
     is_taxable: true,
@@ -425,10 +425,10 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Caterva eveniet acies candidus.',
         height: 663.0,
-        id: '31a94d94-5fa5-403f-97f5-b3d06fb6fbb2',
+        id: '0b2b07ee-0c40-49b2-92fe-72619bc0f8cb',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '2494983b-813d-49d1-80b0-b1b5cd4979b2',
+            id: '613c7638-b713-4b55-9f4e-ec025eda32e6',
             slug: 'doloremque',
             value: 'allatus',
           ),
@@ -441,10 +441,10 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 189.0,
-        id: '994da1a2-125e-4aeb-b5e3-bdad596eb8b6',
+        id: '50eed9d2-583a-4f43-b06b-b4ee935c630b',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'c4899daa-d40c-4e18-acfe-a5d112b0e9b0',
+            id: '2ab66b04-898a-445e-b800-8af0348f6923',
             slug: 'bis',
             value: 'somniculosus',
           ),
@@ -461,7 +461,7 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '87aba78b-9a94-416c-9cab-3afe1349ee4e',
+        id: 'd53d1603-6619-4a30-a239-c91342735cbd',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'terebro',
@@ -485,7 +485,7 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
     ],
     total_stock: 579.0,
     type: 'beatae',
-    updated_at: DateTime.iso8601('2022-04-07T04:10:44.406Z'),
+    updated_at: DateTime.iso8601('2022-04-07T13:00:19.812Z'),
     vendor_name: 'Mayer - Flatley',
     weight: 22.0,
     weight_unit: Models::Shared::WeightUnit::KG,

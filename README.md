@@ -56,7 +56,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'BOB',
   customer_defined_code: 'quo',
   description: 'Spoliatio comedo vilitas harum cupiditate.',
-  id: '17197349-fb2b-49f6-9196-53d6fe02ce9d',
+  id: 'ca584c14-4e2c-4bf5-86b5-bad69a58a9ea',
   is_payable: true,
   name: 'Electronic Aluminum Tuna',
   status: Models::Shared::Status::ARCHIVED,
@@ -73,7 +73,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::BANK,
-  updated_at: DateTime.iso8601('2023-01-03T06:08:54.340Z'),
+  updated_at: DateTime.iso8601('2023-01-03T08:52:45.183Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -111,7 +111,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'BOB',
   customer_defined_code: 'quo',
   description: 'Spoliatio comedo vilitas harum cupiditate.',
-  id: '17197349-fb2b-49f6-9196-53d6fe02ce9d',
+  id: 'ca584c14-4e2c-4bf5-86b5-bad69a58a9ea',
   is_payable: true,
   name: 'Electronic Aluminum Tuna',
   status: Models::Shared::Status::ARCHIVED,
@@ -128,7 +128,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::BANK,
-  updated_at: DateTime.iso8601('2023-01-03T06:08:54.340Z'),
+  updated_at: DateTime.iso8601('2023-01-03T08:52:45.183Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -2390,7 +2390,7 @@ begin
       currency: 'BOB',
       customer_defined_code: 'quo',
       description: 'Spoliatio comedo vilitas harum cupiditate.',
-      id: '17197349-fb2b-49f6-9196-53d6fe02ce9d',
+      id: 'ca584c14-4e2c-4bf5-86b5-bad69a58a9ea',
       is_payable: true,
       name: 'Electronic Aluminum Tuna',
       status: Models::Shared::Status::ARCHIVED,
@@ -2407,7 +2407,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::BANK,
-      updated_at: DateTime.iso8601('2023-01-03T06:08:54.340Z'),
+      updated_at: DateTime.iso8601('2023-01-03T08:52:45.183Z'),
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -2453,7 +2453,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'BOB',
   customer_defined_code: 'quo',
   description: 'Spoliatio comedo vilitas harum cupiditate.',
-  id: '17197349-fb2b-49f6-9196-53d6fe02ce9d',
+  id: 'ca584c14-4e2c-4bf5-86b5-bad69a58a9ea',
   is_payable: true,
   name: 'Electronic Aluminum Tuna',
   status: Models::Shared::Status::ARCHIVED,
@@ -2470,7 +2470,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::BANK,
-  updated_at: DateTime.iso8601('2023-01-03T06:08:54.340Z'),
+  updated_at: DateTime.iso8601('2023-01-03T08:52:45.183Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -2499,7 +2499,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'BOB',
   customer_defined_code: 'quo',
   description: 'Spoliatio comedo vilitas harum cupiditate.',
-  id: '17197349-fb2b-49f6-9196-53d6fe02ce9d',
+  id: 'ca584c14-4e2c-4bf5-86b5-bad69a58a9ea',
   is_payable: true,
   name: 'Electronic Aluminum Tuna',
   status: Models::Shared::Status::ARCHIVED,
@@ -2516,7 +2516,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::BANK,
-  updated_at: DateTime.iso8601('2023-01-03T06:08:54.340Z'),
+  updated_at: DateTime.iso8601('2023-01-03T08:52:45.183Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

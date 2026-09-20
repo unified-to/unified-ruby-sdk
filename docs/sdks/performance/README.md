@@ -38,7 +38,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.performance.create_performance_feedback(performance_feedback: Models::Shared::PerformanceFeedback.new(
   created_at: DateTime.iso8601('2023-04-11T16:21:53.862Z'),
-  id: 'aef4be3f-6844-4f6b-95aa-fd3bbe918ab6',
+  id: 'eaec50d3-41f0-4a4b-9c8b-c280ed47c518',
   is_visible: true,
   message: 'Tabernus corpus voluptate aestus.',
   tags: [
@@ -46,7 +46,7 @@ res = s.performance.create_performance_feedback(performance_feedback: Models::Sh
     'hexagon',
   ],
   type: Models::Shared::PerformanceFeedbackType::PRAISE,
-  updated_at: DateTime.iso8601('2025-08-13T08:30:19.164Z'),
+  updated_at: DateTime.iso8601('2025-08-14T00:04:41.128Z'),
   user_id: '<id>',
 ), connection_id: '<id>')
 
@@ -95,12 +95,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.performance.create_performance_goal(performance_goal: Models::Shared::PerformanceGoal.new(
   created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
   description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-  due_at: DateTime.iso8601('2026-06-28T20:56:08.908Z'),
-  id: '0157968a-5882-4231-ba87-095a70db7c64',
+  due_at: DateTime.iso8601('2026-06-29T19:03:28.111Z'),
+  id: '9b2901c3-ceda-47a0-9f45-43264de79254',
   milestones: [
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 10.0,
-      due_at: DateTime.iso8601('2026-05-04T16:57:02.837Z'),
+      due_at: DateTime.iso8601('2026-05-05T14:33:22.022Z'),
       id: 'ec90d3e3-23bd-4d9f-a5d7-e388979f90d9',
       is_completed: true,
       name: 'Front-line asynchronous hub',
@@ -110,7 +110,7 @@ res = s.performance.create_performance_goal(performance_goal: Models::Shared::Pe
     ),
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 0.0,
-      due_at: DateTime.iso8601('2026-07-08T10:46:34.504Z'),
+      due_at: DateTime.iso8601('2026-07-09T08:59:16.601Z'),
       id: '09e04b09-7197-4fc4-9c32-077230408c26',
       is_completed: true,
       name: 'Organized encompassing archive',
@@ -120,7 +120,7 @@ res = s.performance.create_performance_goal(performance_goal: Models::Shared::Pe
     Models::Shared::PerformanceGoalMilestone.new(
       current_value: 31.0,
       description: 'Nobis tremo debitis.',
-      due_at: DateTime.iso8601('2026-09-08T14:06:11.511Z'),
+      due_at: DateTime.iso8601('2026-09-09T12:53:48.720Z'),
       id: 'bbe63683-c1d0-4932-89ac-ef81e73ae6f1',
       is_completed: true,
       name: 'Devolved directional middleware',
@@ -130,10 +130,10 @@ res = s.performance.create_performance_goal(performance_goal: Models::Shared::Pe
   ],
   name: 'Proactive national protocol',
   progress: 3.0,
-  start_at: DateTime.iso8601('2025-06-27T06:47:59.776Z'),
+  start_at: DateTime.iso8601('2025-06-28T01:29:18.800Z'),
   status: Models::Shared::PerformanceGoalStatus::CLOSED,
   type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-  updated_at: DateTime.iso8601('2022-08-31T10:41:06.725Z'),
+  updated_at: DateTime.iso8601('2022-08-31T19:43:09.266Z'),
   weight: 5.0,
 ), connection_id: '<id>')
 
@@ -539,12 +539,12 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
   performance_goal: Models::Shared::PerformanceGoal.new(
     created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
     description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-    due_at: DateTime.iso8601('2026-06-28T20:56:08.921Z'),
-    id: '39415313-f83a-4986-8cf6-a2b0acc6830e',
+    due_at: DateTime.iso8601('2026-06-29T19:03:28.130Z'),
+    id: 'f62c84ef-c23b-44cc-98a1-3a111e715348',
     milestones: [
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 10.0,
-        due_at: DateTime.iso8601('2026-05-04T16:57:02.850Z'),
+        due_at: DateTime.iso8601('2026-05-05T14:33:22.040Z'),
         id: 'ec90d3e3-23bd-4d9f-a5d7-e388979f90d9',
         is_completed: true,
         name: 'Front-line asynchronous hub',
@@ -554,7 +554,7 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
       ),
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 0.0,
-        due_at: DateTime.iso8601('2026-07-08T10:46:34.518Z'),
+        due_at: DateTime.iso8601('2026-07-09T08:59:16.621Z'),
         id: '09e04b09-7197-4fc4-9c32-077230408c26',
         is_completed: true,
         name: 'Organized encompassing archive',
@@ -564,7 +564,7 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 31.0,
         description: 'Nobis tremo debitis.',
-        due_at: DateTime.iso8601('2026-09-08T14:06:11.525Z'),
+        due_at: DateTime.iso8601('2026-09-09T12:53:48.739Z'),
         id: 'bbe63683-c1d0-4932-89ac-ef81e73ae6f1',
         is_completed: true,
         name: 'Devolved directional middleware',
@@ -574,10 +574,10 @@ req = Models::Operations::PatchPerformanceGoalRequest.new(
     ],
     name: 'Proactive national protocol',
     progress: 3.0,
-    start_at: DateTime.iso8601('2025-06-27T06:47:59.788Z'),
+    start_at: DateTime.iso8601('2025-06-28T01:29:18.816Z'),
     status: Models::Shared::PerformanceGoalStatus::CLOSED,
     type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-    updated_at: DateTime.iso8601('2022-08-31T10:41:06.730Z'),
+    updated_at: DateTime.iso8601('2022-08-31T19:43:09.274Z'),
     weight: 5.0,
   ),
   connection_id: '<id>',
@@ -671,12 +671,12 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
   performance_goal: Models::Shared::PerformanceGoal.new(
     created_at: DateTime.iso8601('2020-01-09T20:43:07.380Z'),
     description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-    due_at: DateTime.iso8601('2026-06-28T20:56:08.921Z'),
-    id: '39415313-f83a-4986-8cf6-a2b0acc6830e',
+    due_at: DateTime.iso8601('2026-06-29T19:03:28.130Z'),
+    id: 'f62c84ef-c23b-44cc-98a1-3a111e715348',
     milestones: [
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 10.0,
-        due_at: DateTime.iso8601('2026-05-04T16:57:02.850Z'),
+        due_at: DateTime.iso8601('2026-05-05T14:33:22.040Z'),
         id: 'ec90d3e3-23bd-4d9f-a5d7-e388979f90d9',
         is_completed: true,
         name: 'Front-line asynchronous hub',
@@ -686,7 +686,7 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
       ),
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 0.0,
-        due_at: DateTime.iso8601('2026-07-08T10:46:34.518Z'),
+        due_at: DateTime.iso8601('2026-07-09T08:59:16.621Z'),
         id: '09e04b09-7197-4fc4-9c32-077230408c26',
         is_completed: true,
         name: 'Organized encompassing archive',
@@ -696,7 +696,7 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
       Models::Shared::PerformanceGoalMilestone.new(
         current_value: 31.0,
         description: 'Nobis tremo debitis.',
-        due_at: DateTime.iso8601('2026-09-08T14:06:11.525Z'),
+        due_at: DateTime.iso8601('2026-09-09T12:53:48.739Z'),
         id: 'bbe63683-c1d0-4932-89ac-ef81e73ae6f1',
         is_completed: true,
         name: 'Devolved directional middleware',
@@ -706,10 +706,10 @@ req = Models::Operations::UpdatePerformanceGoalRequest.new(
     ],
     name: 'Proactive national protocol',
     progress: 3.0,
-    start_at: DateTime.iso8601('2025-06-27T06:47:59.788Z'),
+    start_at: DateTime.iso8601('2025-06-28T01:29:18.816Z'),
     status: Models::Shared::PerformanceGoalStatus::CLOSED,
     type: Models::Shared::PerformanceGoalSchemasType::COMPANY,
-    updated_at: DateTime.iso8601('2022-08-31T10:41:06.730Z'),
+    updated_at: DateTime.iso8601('2022-08-31T19:43:09.274Z'),
     weight: 5.0,
   ),
   connection_id: '<id>',
