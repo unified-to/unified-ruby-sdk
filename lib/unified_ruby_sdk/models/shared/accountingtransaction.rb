@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
         field :customer_message, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_message') } }
 
+        field :exchange_rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('exchange_rate') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingTransactionLineItem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
@@ -46,24 +48,29 @@ module UnifiedRubySDK
 
         field :split_account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('split_account_id') } }
 
+        field :status, Crystalline::Nilable.new(Models::Shared::AccountingTransactionStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingTransactionStatus, true) } }
+
         field :sub_total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_total_amount') } }
 
         field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
+        field :transaction_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transaction_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contacts: T.nilable(T::Array[Models::Shared::AccountingTransactionContact]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_message: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingTransactionLineItem]), memo: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), payment_terms: T.nilable(::String), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), split_account_id: T.nilable(::String), sub_total_amount: T.nilable(::Float), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, category_ids: nil, contacts: nil, created_at: nil, currency: nil, customer_message: nil, id: nil, lineitems: nil, memo: nil, organization_id: nil, payment_method: nil, payment_terms: nil, project_id: nil, raw: nil, reference: nil, split_account_id: nil, sub_total_amount: nil, tax_amount: nil, total_amount: nil, type: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contacts: T.nilable(T::Array[Models::Shared::AccountingTransactionContact]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_message: T.nilable(::String), exchange_rate: T.nilable(::Float), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingTransactionLineItem]), memo: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), payment_terms: T.nilable(::String), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), split_account_id: T.nilable(::String), status: T.nilable(Models::Shared::AccountingTransactionStatus), sub_total_amount: T.nilable(::Float), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), transaction_at: T.nilable(::DateTime), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, category_ids: nil, contacts: nil, created_at: nil, currency: nil, customer_message: nil, exchange_rate: nil, id: nil, lineitems: nil, memo: nil, organization_id: nil, payment_method: nil, payment_terms: nil, project_id: nil, raw: nil, reference: nil, split_account_id: nil, status: nil, sub_total_amount: nil, tax_amount: nil, total_amount: nil, transaction_at: nil, type: nil, updated_at: nil)
           @account_id = account_id
           @category_ids = category_ids
           @contacts = contacts
           @created_at = created_at
           @currency = currency
           @customer_message = customer_message
+          @exchange_rate = exchange_rate
           @id = id
           @lineitems = lineitems
           @memo = memo
@@ -74,9 +81,11 @@ module UnifiedRubySDK
           @raw = raw
           @reference = reference
           @split_account_id = split_account_id
+          @status = status
           @sub_total_amount = sub_total_amount
           @tax_amount = tax_amount
           @total_amount = total_amount
+          @transaction_at = transaction_at
           @type = type
           @updated_at = updated_at
         end
@@ -90,6 +99,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @customer_message == other.customer_message
+          return false unless @exchange_rate == other.exchange_rate
           return false unless @id == other.id
           return false unless @lineitems == other.lineitems
           return false unless @memo == other.memo
@@ -100,9 +110,11 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @reference == other.reference
           return false unless @split_account_id == other.split_account_id
+          return false unless @status == other.status
           return false unless @sub_total_amount == other.sub_total_amount
           return false unless @tax_amount == other.tax_amount
           return false unless @total_amount == other.total_amount
+          return false unless @transaction_at == other.transaction_at
           return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           true

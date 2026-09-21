@@ -5,13 +5,16 @@
 
 ### Available Operations
 
+* [create_genai_task](#create_genai_task) - Create a task
 * [create_task_comment](#create_task_comment) - Create a comment
 * [create_task_project](#create_task_project) - Create a project
 * [create_task_task](#create_task_task) - Create a task
+* [get_genai_task](#get_genai_task) - Retrieve a task
 * [get_task_change](#get_task_change) - Retrieve a change
 * [get_task_comment](#get_task_comment) - Retrieve a comment
 * [get_task_project](#get_task_project) - Retrieve a project
 * [get_task_task](#get_task_task) - Retrieve a task
+* [list_genai_tasks](#list_genai_tasks) - List all tasks
 * [list_task_changes](#list_task_changes) - List all changes
 * [list_task_comments](#list_task_comments) - List all comments
 * [list_task_projects](#list_task_projects) - List all projects
@@ -19,12 +22,82 @@
 * [patch_task_comment](#patch_task_comment) - Update a comment
 * [patch_task_project](#patch_task_project) - Update a project
 * [patch_task_task](#patch_task_task) - Update a task
+* [remove_genai_task](#remove_genai_task) - Remove a task
 * [remove_task_comment](#remove_task_comment) - Remove a comment
 * [remove_task_project](#remove_task_project) - Remove a project
 * [remove_task_task](#remove_task_task) - Remove a task
 * [update_task_comment](#update_task_comment) - Update a comment
 * [update_task_project](#update_task_project) - Update a project
 * [update_task_task](#update_task_task) - Update a task
+
+## create_genai_task
+
+Create a task
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createGenaiTask" method="post" path="/genai/{connection_id}/task" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.task.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
+  completed_at: DateTime.iso8601('2025-09-06T13:57:38.078Z'),
+  created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
+  files_changed: 19.0,
+  id: '968cf408-0894-4133-a538-3598570fa578',
+  instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
+  lines_added: 244.0,
+  lines_deleted: 118.0,
+  messages: [
+    Models::Shared::GenaiContent.new(
+      content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
+      role: Models::Shared::Role::ASSISTANT,
+    ),
+  ],
+  name: 'connect multi-byte port',
+  pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
+  repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
+  source_branch_identifier: 'main',
+  started_at: DateTime.iso8601('2024-05-03T13:35:15.218Z'),
+  status: Models::Shared::GenaiTaskStatus::BLOCKED,
+  summary: 'Cur aeternus cogito vesper.',
+  target_branch_identifier: 'agent/joshingly-ignorance',
+  tokens_used: 2165.0,
+  updated_at: DateTime.iso8601('2023-02-14T14:26:48.799Z'),
+  web_url: 'https://inexperienced-adrenalin.biz/',
+), connection_id: '<id>')
+
+unless res.genai_task.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `genai_task`                                                                                                                                     | [Models::Shared::GenaiTask](../../models/shared/genaitask.md)                                                                                    | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateGenaiTaskQueryParamFields](../../models/operations/creategenaitaskqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateGenaiTaskResponse)](../../models/operations/creategenaitaskresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_task_comment
 
@@ -46,9 +119,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.task.create_task_comment(task_comment: Models::Shared::TaskComment.new(
   created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
   has_children: true,
-  id: 'e4a71514-88b1-47a7-b63e-aa8f58a29ab9',
+  id: 'd92b2d9e-8c09-4571-a417-fe7110f8b0bb',
   text: 'Colo ulciscor sublime tabernus.',
-  updated_at: DateTime.iso8601('2021-09-24T14:37:43.092Z'),
+  updated_at: DateTime.iso8601('2021-09-24T21:41:00.583Z'),
   user_name: 'Santina Abbott',
 ), connection_id: '<id>')
 
@@ -99,14 +172,14 @@ res = s.task.create_task_project(task_project: Models::Shared::TaskProject.new(
   description: 'Valetudo aggredior accommodo curiositas vox.',
   has_children: false,
   has_tasks: false,
-  id: 'f4a52049-ac72-4d83-a076-1521abe15f6f',
+  id: 'cc0e16de-8188-4d43-868f-cf9e3787c27c',
   metadata: [
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: '740b3aa1-b09f-455c-b2ca-b26e6d343e67',
+      id: 'e83b4005-eac1-4dfa-ae95-4013f93c4c7d',
       namespace: 'custom',
       slug: 'decens',
       value: 'uterque',
@@ -116,14 +189,14 @@ res = s.task.create_task_project(task_project: Models::Shared::TaskProject.new(
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: 'c60d01fd-23a1-4ba9-8f33-1e129dce1180',
+      id: '9d196c7e-2d47-4411-8942-a6472f44cb31',
       namespace: 'custom',
       slug: 'benevolentia',
       value: 'pariatur',
     ),
   ],
   name: 'Garden',
-  updated_at: DateTime.iso8601('2023-10-08T19:11:18.829Z'),
+  updated_at: DateTime.iso8601('2023-10-08T21:27:25.328Z'),
 ), connection_id: '<id>')
 
 unless res.task_project.nil?
@@ -170,18 +243,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(
   attachment_ids: [],
-  completed_at: DateTime.iso8601('2022-03-25T07:30:20.403Z'),
+  completed_at: DateTime.iso8601('2022-03-25T17:50:24.679Z'),
   created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-  due_at: DateTime.iso8601('2026-04-25T05:51:26.354Z'),
-  end_at: DateTime.iso8601('2022-10-14T16:29:55.584Z'),
+  due_at: DateTime.iso8601('2026-04-26T05:36:40.806Z'),
+  end_at: DateTime.iso8601('2022-10-15T04:39:45.330Z'),
   has_children: true,
-  id: 'a137c11c-a2eb-4377-a4f5-5c3f7b3f8b8f',
+  id: 'f0703b97-9544-4c08-a485-22fe3b0af672',
   metadata: [],
   name: 'Direct Markets Architect',
   notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
   priority: 'LOW',
   progress: 2.0,
-  start_at: DateTime.iso8601('2022-01-20T05:56:55.830Z'),
+  start_at: DateTime.iso8601('2022-01-20T15:42:25.624Z'),
   status: Models::Shared::TaskTaskStatus::IN_PROGRESS,
   story_points: 0.0,
   tags: [
@@ -191,7 +264,7 @@ res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(
   time_spent: 957.0,
   time_spent_unit: 'SECONDS',
   type: 'tubineus',
-  updated_at: DateTime.iso8601('2019-07-13T13:36:38.105Z'),
+  updated_at: DateTime.iso8601('2019-07-13T15:04:42.986Z'),
   url: 'https://dismal-silk.net/',
 ), connection_id: '<id>')
 
@@ -213,6 +286,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateTaskTaskResponse)](../../models/operations/createtasktaskresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_genai_task
+
+Retrieve a task
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getGenaiTask" method="get" path="/genai/{connection_id}/task/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.task.get_genai_task(connection_id: '<id>', id: '<id>')
+
+unless res.genai_task.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Task                                                                                                                                   |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetGenaiTaskQueryParamFields](../../models/operations/getgenaitaskqueryparamfields.md)>                            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetGenaiTaskResponse)](../../models/operations/getgenaitaskresponse.md)**
 
 ### Errors
 
@@ -389,6 +506,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetTaskTaskResponse)](../../models/operations/gettasktaskresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_genai_tasks
+
+List all tasks
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listGenaiTasks" method="get" path="/genai/{connection_id}/task" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListGenaiTasksRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.task.list_genai_tasks(request: req)
+
+unless res.genai_tasks.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::ListGenaiTasksRequest](../../models/operations/listgenaitasksrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::ListGenaiTasksResponse)](../../models/operations/listgenaitasksresponse.md)**
 
 ### Errors
 
@@ -597,9 +759,9 @@ req = Models::Operations::PatchTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: 'd3f6a7c4-b3d9-41f2-9799-d60631cdd219',
+    id: '73440994-5b81-4ab7-9441-ec40694d6397',
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-09-24T14:37:43.095Z'),
+    updated_at: DateTime.iso8601('2021-09-24T21:41:00.585Z'),
     user_name: 'Santina Abbott',
   ),
   connection_id: '<id>',
@@ -653,14 +815,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: '9542cee6-4a7c-41de-b1af-459c56c6249b',
+    id: 'fd489a85-c972-40fd-aaf9-2d7c6c737ed1',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '1ef88907-73c2-47e9-9355-675761ce2cf0',
+        id: '0539bb0b-5263-44ef-8147-ac6393fdd8b6',
         namespace: 'custom',
         slug: 'decens',
         value: 'uterque',
@@ -670,14 +832,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'd5c9442a-7c46-42ee-8b0f-037463ec2890',
+        id: '2a317897-0d1f-46b6-831a-e55155eb784d',
         namespace: 'custom',
         slug: 'benevolentia',
         value: 'pariatur',
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-08T19:11:18.830Z'),
+    updated_at: DateTime.iso8601('2023-10-08T21:27:25.329Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -727,18 +889,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchTaskTaskRequest.new(
   task_task: Models::Shared::TaskTask.new(
     attachment_ids: [],
-    completed_at: DateTime.iso8601('2022-03-25T07:30:20.415Z'),
+    completed_at: DateTime.iso8601('2022-03-25T17:50:24.689Z'),
     created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-    due_at: DateTime.iso8601('2026-04-25T05:51:26.382Z'),
-    end_at: DateTime.iso8601('2022-10-14T16:29:55.598Z'),
+    due_at: DateTime.iso8601('2026-04-26T05:36:40.830Z'),
+    end_at: DateTime.iso8601('2022-10-15T04:39:45.342Z'),
     has_children: true,
-    id: '5d651a51-5038-48f0-9b86-1b96f41a2b03',
+    id: '907fd4b6-91ec-4eec-8491-5f9677a3e58f',
     metadata: [],
     name: 'Direct Markets Architect',
     notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
     priority: 'LOW',
     progress: 2.0,
-    start_at: DateTime.iso8601('2022-01-20T05:56:55.842Z'),
+    start_at: DateTime.iso8601('2022-01-20T15:42:25.634Z'),
     status: Models::Shared::TaskTaskStatus::IN_PROGRESS,
     story_points: 0.0,
     tags: [
@@ -748,7 +910,7 @@ req = Models::Operations::PatchTaskTaskRequest.new(
     time_spent: 957.0,
     time_spent_unit: 'SECONDS',
     type: 'tubineus',
-    updated_at: DateTime.iso8601('2019-07-13T13:36:38.106Z'),
+    updated_at: DateTime.iso8601('2019-07-13T15:04:42.988Z'),
     url: 'https://dismal-silk.net/',
   ),
   connection_id: '<id>',
@@ -772,6 +934,48 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::PatchTaskTaskResponse)](../../models/operations/patchtasktaskresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_genai_task
+
+Remove a task
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeGenaiTask" method="delete" path="/genai/{connection_id}/task/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.task.remove_genai_task(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Task       |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveGenaiTaskResponse)](../../models/operations/removegenaitaskresponse.md)**
 
 ### Errors
 
@@ -926,9 +1130,9 @@ req = Models::Operations::UpdateTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: 'd3f6a7c4-b3d9-41f2-9799-d60631cdd219',
+    id: '73440994-5b81-4ab7-9441-ec40694d6397',
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-09-24T14:37:43.095Z'),
+    updated_at: DateTime.iso8601('2021-09-24T21:41:00.585Z'),
     user_name: 'Santina Abbott',
   ),
   connection_id: '<id>',
@@ -982,14 +1186,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: '9542cee6-4a7c-41de-b1af-459c56c6249b',
+    id: 'fd489a85-c972-40fd-aaf9-2d7c6c737ed1',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '1ef88907-73c2-47e9-9355-675761ce2cf0',
+        id: '0539bb0b-5263-44ef-8147-ac6393fdd8b6',
         namespace: 'custom',
         slug: 'decens',
         value: 'uterque',
@@ -999,14 +1203,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'd5c9442a-7c46-42ee-8b0f-037463ec2890',
+        id: '2a317897-0d1f-46b6-831a-e55155eb784d',
         namespace: 'custom',
         slug: 'benevolentia',
         value: 'pariatur',
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-08T19:11:18.830Z'),
+    updated_at: DateTime.iso8601('2023-10-08T21:27:25.329Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1056,18 +1260,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateTaskTaskRequest.new(
   task_task: Models::Shared::TaskTask.new(
     attachment_ids: [],
-    completed_at: DateTime.iso8601('2022-03-25T07:30:20.415Z'),
+    completed_at: DateTime.iso8601('2022-03-25T17:50:24.689Z'),
     created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-    due_at: DateTime.iso8601('2026-04-25T05:51:26.382Z'),
-    end_at: DateTime.iso8601('2022-10-14T16:29:55.598Z'),
+    due_at: DateTime.iso8601('2026-04-26T05:36:40.830Z'),
+    end_at: DateTime.iso8601('2022-10-15T04:39:45.342Z'),
     has_children: true,
-    id: '5d651a51-5038-48f0-9b86-1b96f41a2b03',
+    id: '907fd4b6-91ec-4eec-8491-5f9677a3e58f',
     metadata: [],
     name: 'Direct Markets Architect',
     notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
     priority: 'LOW',
     progress: 2.0,
-    start_at: DateTime.iso8601('2022-01-20T05:56:55.842Z'),
+    start_at: DateTime.iso8601('2022-01-20T15:42:25.634Z'),
     status: Models::Shared::TaskTaskStatus::IN_PROGRESS,
     story_points: 0.0,
     tags: [
@@ -1077,7 +1281,7 @@ req = Models::Operations::UpdateTaskTaskRequest.new(
     time_spent: 957.0,
     time_spent_unit: 'SECONDS',
     type: 'tubineus',
-    updated_at: DateTime.iso8601('2019-07-13T13:36:38.106Z'),
+    updated_at: DateTime.iso8601('2019-07-13T15:04:42.988Z'),
     url: 'https://dismal-silk.net/',
   ),
   connection_id: '<id>',

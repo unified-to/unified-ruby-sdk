@@ -28,6 +28,7 @@ module UnifiedRubySDK
           ORGANIZATION_CODE = new('organization_code')
           TYPE = new('type')
           IS_ELIMINATION = new('is_elimination')
+          BOOKS_CLOSE_AT = new('books_close_at')
           RAW = new('raw')
         end
       end

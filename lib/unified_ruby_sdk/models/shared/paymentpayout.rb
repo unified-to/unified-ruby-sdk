@@ -14,11 +14,21 @@ module UnifiedRubySDK
         include Crystalline::MetadataFields
 
 
+        field :account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
+
+        field :arrival_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('arrival_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
         field :created_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
+        field :fee_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fee_amount') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        # The transactions included in this payout
+        field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PaymentPayoutLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
+
+        field :net_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_amount') } }
 
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
@@ -30,11 +40,16 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
-        sig { params(created_at: T.nilable(::String), currency: T.nilable(::String), id: T.nilable(::String), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::PaymentPayoutStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::String)).void }
-        def initialize(created_at: nil, currency: nil, id: nil, notes: nil, raw: nil, status: nil, total_amount: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), arrival_at: T.nilable(::DateTime), created_at: T.nilable(::String), currency: T.nilable(::String), fee_amount: T.nilable(::Float), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::PaymentPayoutLineitem]), net_amount: T.nilable(::Float), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::PaymentPayoutStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::String)).void }
+        def initialize(account_id: nil, arrival_at: nil, created_at: nil, currency: nil, fee_amount: nil, id: nil, lineitems: nil, net_amount: nil, notes: nil, raw: nil, status: nil, total_amount: nil, updated_at: nil)
+          @account_id = account_id
+          @arrival_at = arrival_at
           @created_at = created_at
           @currency = currency
+          @fee_amount = fee_amount
           @id = id
+          @lineitems = lineitems
+          @net_amount = net_amount
           @notes = notes
           @raw = raw
           @status = status
@@ -45,9 +60,14 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @account_id == other.account_id
+          return false unless @arrival_at == other.arrival_at
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
+          return false unless @fee_amount == other.fee_amount
           return false unless @id == other.id
+          return false unless @lineitems == other.lineitems
+          return false unless @net_amount == other.net_amount
           return false unless @notes == other.notes
           return false unless @raw == other.raw
           return false unless @status == other.status

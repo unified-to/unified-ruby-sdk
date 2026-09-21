@@ -24,9 +24,13 @@ module UnifiedRubySDK
 
         field :discount_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('discount_amount') } }
 
+        field :exchange_rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('exchange_rate') } }
+
         field :fees, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingFee)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fees') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :is_billable, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_billable') } }
 
         field :item_description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_description') } }
 
@@ -41,6 +45,8 @@ module UnifiedRubySDK
         field :locations, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locations') } }
 
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
+
+        field :project_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_id') } }
 
         field :refund_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refund_amount') } }
 
@@ -58,15 +64,17 @@ module UnifiedRubySDK
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), discount_amount: T.nilable(::Float), fees: T.nilable(T::Array[Models::Shared::AccountingFee]), id: T.nilable(::String), item_description: T.nilable(::String), item_id: T.nilable(::String), item_name: T.nilable(::String), item_sku: T.nilable(::String), item_variants: T.nilable(T::Array[Models::Shared::AccountingReference]), locations: T.nilable(T::Array[Models::Shared::AccountingReference]), notes: T.nilable(::String), refund_amount: T.nilable(::Float), refunded_at: T.nilable(::DateTime), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, category_ids: nil, contact_id: nil, created_at: nil, discount_amount: nil, fees: nil, id: nil, item_description: nil, item_id: nil, item_name: nil, item_sku: nil, item_variants: nil, locations: nil, notes: nil, refund_amount: nil, refunded_at: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), discount_amount: T.nilable(::Float), exchange_rate: T.nilable(::Float), fees: T.nilable(T::Array[Models::Shared::AccountingFee]), id: T.nilable(::String), is_billable: T.nilable(T::Boolean), item_description: T.nilable(::String), item_id: T.nilable(::String), item_name: T.nilable(::String), item_sku: T.nilable(::String), item_variants: T.nilable(T::Array[Models::Shared::AccountingReference]), locations: T.nilable(T::Array[Models::Shared::AccountingReference]), notes: T.nilable(::String), project_id: T.nilable(::String), refund_amount: T.nilable(::Float), refunded_at: T.nilable(::DateTime), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, category_ids: nil, contact_id: nil, created_at: nil, discount_amount: nil, exchange_rate: nil, fees: nil, id: nil, is_billable: nil, item_description: nil, item_id: nil, item_name: nil, item_sku: nil, item_variants: nil, locations: nil, notes: nil, project_id: nil, refund_amount: nil, refunded_at: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil, updated_at: nil)
           @account_id = account_id
           @category_ids = category_ids
           @contact_id = contact_id
           @created_at = created_at
           @discount_amount = discount_amount
+          @exchange_rate = exchange_rate
           @fees = fees
           @id = id
+          @is_billable = is_billable
           @item_description = item_description
           @item_id = item_id
           @item_name = item_name
@@ -74,6 +82,7 @@ module UnifiedRubySDK
           @item_variants = item_variants
           @locations = locations
           @notes = notes
+          @project_id = project_id
           @refund_amount = refund_amount
           @refunded_at = refunded_at
           @tax_amount = tax_amount
@@ -92,8 +101,10 @@ module UnifiedRubySDK
           return false unless @contact_id == other.contact_id
           return false unless @created_at == other.created_at
           return false unless @discount_amount == other.discount_amount
+          return false unless @exchange_rate == other.exchange_rate
           return false unless @fees == other.fees
           return false unless @id == other.id
+          return false unless @is_billable == other.is_billable
           return false unless @item_description == other.item_description
           return false unless @item_id == other.item_id
           return false unless @item_name == other.item_name
@@ -101,6 +112,7 @@ module UnifiedRubySDK
           return false unless @item_variants == other.item_variants
           return false unless @locations == other.locations
           return false unless @notes == other.notes
+          return false unless @project_id == other.project_id
           return false unless @refund_amount == other.refund_amount
           return false unless @refunded_at == other.refunded_at
           return false unless @tax_amount == other.tax_amount

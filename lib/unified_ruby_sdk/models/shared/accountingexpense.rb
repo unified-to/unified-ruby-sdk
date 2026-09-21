@@ -32,6 +32,8 @@ module UnifiedRubySDK
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
+        field :exchange_rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('exchange_rate') } }
+
         field :external_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_number') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
@@ -60,6 +62,8 @@ module UnifiedRubySDK
 
         field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
+        field :taxrate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('taxrate_id') } }
+
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -68,8 +72,8 @@ module UnifiedRubySDK
 
         field :users, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('users') } }
 
-        sig { params(account_id: T.nilable(::String), approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), approver_users: T.nilable(T::Array[Models::Shared::AccountingReference]), attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), external_number: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), posted_at: T.nilable(::DateTime), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reimbursed_amount: T.nilable(::Float), reimbursed_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AccountingExpenseStatus), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), users: T.nilable(T::Array[Models::Shared::AccountingReference])).void }
-        def initialize(account_id: nil, approved_at: nil, approver_user_id: nil, approver_users: nil, attachments: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, external_number: nil, id: nil, lineitems: nil, metadata: nil, name: nil, organization_id: nil, payment_method: nil, posted_at: nil, project_id: nil, raw: nil, reimbursed_amount: nil, reimbursed_at: nil, status: nil, tax_amount: nil, total_amount: nil, updated_at: nil, user_id: nil, users: nil)
+        sig { params(account_id: T.nilable(::String), approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), approver_users: T.nilable(T::Array[Models::Shared::AccountingReference]), attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), exchange_rate: T.nilable(::Float), external_number: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), posted_at: T.nilable(::DateTime), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reimbursed_amount: T.nilable(::Float), reimbursed_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AccountingExpenseStatus), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), users: T.nilable(T::Array[Models::Shared::AccountingReference])).void }
+        def initialize(account_id: nil, approved_at: nil, approver_user_id: nil, approver_users: nil, attachments: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, exchange_rate: nil, external_number: nil, id: nil, lineitems: nil, metadata: nil, name: nil, organization_id: nil, payment_method: nil, posted_at: nil, project_id: nil, raw: nil, reimbursed_amount: nil, reimbursed_at: nil, status: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil, updated_at: nil, user_id: nil, users: nil)
           @account_id = account_id
           @approved_at = approved_at
           @approver_user_id = approver_user_id
@@ -79,6 +83,7 @@ module UnifiedRubySDK
           @contact_id = contact_id
           @created_at = created_at
           @currency = currency
+          @exchange_rate = exchange_rate
           @external_number = external_number
           @id = id
           @lineitems = lineitems
@@ -93,6 +98,7 @@ module UnifiedRubySDK
           @reimbursed_at = reimbursed_at
           @status = status
           @tax_amount = tax_amount
+          @taxrate_id = taxrate_id
           @total_amount = total_amount
           @updated_at = updated_at
           @user_id = user_id
@@ -111,6 +117,7 @@ module UnifiedRubySDK
           return false unless @contact_id == other.contact_id
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
+          return false unless @exchange_rate == other.exchange_rate
           return false unless @external_number == other.external_number
           return false unless @id == other.id
           return false unless @lineitems == other.lineitems
@@ -125,6 +132,7 @@ module UnifiedRubySDK
           return false unless @reimbursed_at == other.reimbursed_at
           return false unless @status == other.status
           return false unless @tax_amount == other.tax_amount
+          return false unless @taxrate_id == other.taxrate_id
           return false unless @total_amount == other.total_amount
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id

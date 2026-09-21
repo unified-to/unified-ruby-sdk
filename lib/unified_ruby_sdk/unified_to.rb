@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :agedpayable, :agedreceivable, :balancesheet, :bankfeedaccount, :bankfeedtransaction, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :paymentterm, :profitloss, :project, :purchaseorder, :quote, :salesorder, :taxrate, :transaction, :trialbalance, :vendorcredit, :ads, :ad, :asset, :campaign, :creative, :group, :insertionorder, :promoted, :report, :target, :analytics, :event, :property, :session, :visitor, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :link, :recording, :webinar, :cdp, :activation, :destination, :profile, :segment, :source, :clubs, :location, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :taxonomy, :datastore, :database, :query, :record, :table, :enrich, :person, :forms, :form, :submission, :genai, :embedding, :model, :prompt, :hris, :attendance, :bankaccount, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :performance, :cycle, :feedback, :goal, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :template, :social, :insight, :post, :storage, :file, :task, :change, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :saml, :issue, :notification, :webhook, :secretsmanager, :verification, :request
+    attr_accessor :accounting, :account, :agedpayable, :agedreceivable, :balancesheet, :bankfeedaccount, :bankfeedtransaction, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :invoice, :journal, :order, :organization, :paymentterm, :profitloss, :project, :purchaseorder, :quote, :salesorder, :taxrate, :transaction, :trialbalance, :vendorcredit, :ads, :ad, :asset, :campaign, :creative, :group, :insertionorder, :promoted, :report, :target, :analytics, :event, :property, :session, :visitor, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :link, :recording, :webinar, :cdp, :activation, :destination, :profile, :segment, :source, :clubs, :location, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :taxonomy, :datastore, :database, :query, :record, :table, :enrich, :person, :forms, :form, :submission, :genai, :agent, :embedding, :model, :prompt, :task, :hris, :attendance, :bankaccount, :benefit, :deduction, :device, :employee, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :performance, :cycle, :feedback, :goal, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :template, :social, :insight, :post, :storage, :file, :change, :ticketing, :customer, :note, :ticket, :uc, :call, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :saml, :issue, :notification, :webhook, :secretsmanager, :verification, :request
 
     sig do
       params(
@@ -170,9 +170,11 @@ module UnifiedRubySDK
       @form = Form.new(@sdk_configuration)
       @submission = Submission.new(@sdk_configuration)
       @genai = Genai.new(@sdk_configuration)
+      @agent = Agent.new(@sdk_configuration)
       @embedding = Embedding.new(@sdk_configuration)
       @model = Model.new(@sdk_configuration)
       @prompt = Prompt.new(@sdk_configuration)
+      @task = Task.new(@sdk_configuration)
       @hris = Hris.new(@sdk_configuration)
       @attendance = Attendance.new(@sdk_configuration)
       @bankaccount = Bankaccount.new(@sdk_configuration)
@@ -229,7 +231,6 @@ module UnifiedRubySDK
       @post = Post.new(@sdk_configuration)
       @storage = Storage.new(@sdk_configuration)
       @file = File.new(@sdk_configuration)
-      @task = Task.new(@sdk_configuration)
       @change = Change.new(@sdk_configuration)
       @ticketing = Ticketing.new(@sdk_configuration)
       @customer = Customer.new(@sdk_configuration)

@@ -32,7 +32,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
   comment: 'Maiores enim.',
   created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-  id: 'f5ba4f70-6ed7-4a72-9041-f919f2124edd',
+  id: 'e2f4a5a4-e9bc-4405-9cfd-bd6b3f9cbd6c',
   questions: [
     Models::Shared::AtsScorecardQuestion.new(
       description: 'Sulum textor eveniet facere vita.',
@@ -45,7 +45,7 @@ res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScoreca
     ),
   ],
   recommendation: Models::Shared::Recommendation::STRONG_YES,
-  updated_at: DateTime.iso8601('2023-05-28T00:19:46.828Z'),
+  updated_at: DateTime.iso8601('2023-05-28T07:14:55.859Z'),
 ), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -183,7 +183,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: '41b491a0-1743-48ec-b490-83e5fd169363',
+    id: 'a14934d1-1651-4216-999d-179416ae4bd7',
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
         description: 'Sulum textor eveniet facere vita.',
@@ -196,7 +196,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-05-28T00:19:46.832Z'),
+    updated_at: DateTime.iso8601('2023-05-28T07:14:55.862Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -289,7 +289,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: '41b491a0-1743-48ec-b490-83e5fd169363',
+    id: 'a14934d1-1651-4216-999d-179416ae4bd7',
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
         description: 'Sulum textor eveniet facere vita.',
@@ -302,7 +302,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-05-28T00:19:46.832Z'),
+    updated_at: DateTime.iso8601('2023-05-28T07:14:55.862Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

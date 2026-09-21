@@ -18,12 +18,16 @@ class UnifiedRubySDK::Models::Shared::PaymentPayment
   def card_brand=(str_); end
   def card_last4(); end
   def card_last4=(str_); end
+  def category_ids(); end
+  def category_ids=(str_); end
   def contact_id(); end
   def contact_id=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def device_id(); end
   def device_id=(str_); end
+  def exchange_rate(); end
+  def exchange_rate=(str_); end
   def fee_amount(); end
   def fee_amount=(str_); end
   def id(); end
@@ -34,10 +38,14 @@ class UnifiedRubySDK::Models::Shared::PaymentPayment
   def link_id=(str_); end
   def location_id(); end
   def location_id=(str_); end
+  def net_amount(); end
+  def net_amount=(str_); end
   def notes(); end
   def notes=(str_); end
   def organization_id(); end
   def organization_id=(str_); end
+  def paid_at(); end
+  def paid_at=(str_); end
   def payment_method(); end
   def payment_method=(str_); end
   def raw(); end

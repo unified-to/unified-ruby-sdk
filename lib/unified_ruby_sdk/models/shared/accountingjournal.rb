@@ -24,7 +24,11 @@ module UnifiedRubySDK
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
+        field :exchange_rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('exchange_rate') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :is_inclusive_of_tax, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_inclusive_of_tax') } }
         # new field name
         field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingJournalLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
@@ -40,20 +44,26 @@ module UnifiedRubySDK
 
         field :source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
 
+        field :status, Crystalline::Nilable.new(Models::Shared::AccountingJournalStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingJournalStatus, true) } }
+
         field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
         field :taxrate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('taxrate_id') } }
 
+        field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), category_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingJournalLineitem]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), source: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(attachments: nil, category_ids: nil, created_at: nil, currency: nil, description: nil, id: nil, lineitems: nil, organization_id: nil, posted_at: nil, project_id: nil, raw: nil, reference: nil, source: nil, tax_amount: nil, taxrate_id: nil, updated_at: nil)
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), category_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), exchange_rate: T.nilable(::Float), id: T.nilable(::String), is_inclusive_of_tax: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::AccountingJournalLineitem]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), source: T.nilable(::String), status: T.nilable(Models::Shared::AccountingJournalStatus), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(attachments: nil, category_ids: nil, created_at: nil, currency: nil, description: nil, exchange_rate: nil, id: nil, is_inclusive_of_tax: nil, lineitems: nil, organization_id: nil, posted_at: nil, project_id: nil, raw: nil, reference: nil, source: nil, status: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil, updated_at: nil)
           @attachments = attachments
           @category_ids = category_ids
           @created_at = created_at
           @currency = currency
           @description = description
+          @exchange_rate = exchange_rate
           @id = id
+          @is_inclusive_of_tax = is_inclusive_of_tax
           @lineitems = lineitems
           @organization_id = organization_id
           @posted_at = posted_at
@@ -61,8 +71,10 @@ module UnifiedRubySDK
           @raw = raw
           @reference = reference
           @source = source
+          @status = status
           @tax_amount = tax_amount
           @taxrate_id = taxrate_id
+          @total_amount = total_amount
           @updated_at = updated_at
         end
 
@@ -74,7 +86,9 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @description == other.description
+          return false unless @exchange_rate == other.exchange_rate
           return false unless @id == other.id
+          return false unless @is_inclusive_of_tax == other.is_inclusive_of_tax
           return false unless @lineitems == other.lineitems
           return false unless @organization_id == other.organization_id
           return false unless @posted_at == other.posted_at
@@ -82,8 +96,10 @@ module UnifiedRubySDK
           return false unless @raw == other.raw
           return false unless @reference == other.reference
           return false unless @source == other.source
+          return false unless @status == other.status
           return false unless @tax_amount == other.tax_amount
           return false unless @taxrate_id == other.taxrate_id
+          return false unless @total_amount == other.total_amount
           return false unless @updated_at == other.updated_at
           true
         end

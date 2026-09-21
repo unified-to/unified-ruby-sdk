@@ -38,6 +38,10 @@ module UnifiedRubySDK
           DEVICE_ID = new('device_id')
           CARD_BRAND = new('card_brand')
           CARD_LAST4 = new('card_last4')
+          PAID_AT = new('paid_at')
+          EXCHANGE_RATE = new('exchange_rate')
+          CATEGORY_IDS = new('category_ids')
+          NET_AMOUNT = new('net_amount')
           RAW = new('raw')
         end
       end

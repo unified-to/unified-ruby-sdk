@@ -23,12 +23,16 @@ module UnifiedRubySDK
         field :card_brand, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('card_brand') } }
 
         field :card_last4, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('card_last4') } }
+        # dimension refs -> AccountingCategory
+        field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
 
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :device_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('device_id') } }
+
+        field :exchange_rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('exchange_rate') } }
 
         field :fee_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fee_amount') } }
 
@@ -40,9 +44,13 @@ module UnifiedRubySDK
 
         field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
 
+        field :net_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_amount') } }
+
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
+
+        field :paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :payment_method, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_method') } }
 
@@ -66,23 +74,27 @@ module UnifiedRubySDK
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        sig { params(account_id: T.nilable(::String), allocations: T.nilable(T::Array[Models::Shared::PaymentAllocation]), bill_id: T.nilable(::String), card_brand: T.nilable(::String), card_last4: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), device_id: T.nilable(::String), fee_amount: T.nilable(::Float), id: T.nilable(::String), invoice_id: T.nilable(::String), link_id: T.nilable(::String), location_id: T.nilable(::String), notes: T.nilable(::String), organization_id: T.nilable(::String), payment_method: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), salesorder_id: T.nilable(::String), status: T.nilable(Models::Shared::PaymentPaymentStatus), tender_type: T.nilable(Models::Shared::TenderType), tip_amount: T.nilable(::Float), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::PaymentPaymentType), updated_at: T.nilable(::DateTime), currency: T.nilable(::String)).void }
-        def initialize(account_id: nil, allocations: nil, bill_id: nil, card_brand: nil, card_last4: nil, contact_id: nil, created_at: nil, device_id: nil, fee_amount: nil, id: nil, invoice_id: nil, link_id: nil, location_id: nil, notes: nil, organization_id: nil, payment_method: nil, raw: nil, reference: nil, salesorder_id: nil, status: nil, tender_type: nil, tip_amount: nil, total_amount: nil, type: nil, updated_at: nil, currency: 'USD')
+        sig { params(account_id: T.nilable(::String), allocations: T.nilable(T::Array[Models::Shared::PaymentAllocation]), bill_id: T.nilable(::String), card_brand: T.nilable(::String), card_last4: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), device_id: T.nilable(::String), exchange_rate: T.nilable(::Float), fee_amount: T.nilable(::Float), id: T.nilable(::String), invoice_id: T.nilable(::String), link_id: T.nilable(::String), location_id: T.nilable(::String), net_amount: T.nilable(::Float), notes: T.nilable(::String), organization_id: T.nilable(::String), paid_at: T.nilable(::DateTime), payment_method: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), salesorder_id: T.nilable(::String), status: T.nilable(Models::Shared::PaymentPaymentStatus), tender_type: T.nilable(Models::Shared::TenderType), tip_amount: T.nilable(::Float), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::PaymentPaymentType), updated_at: T.nilable(::DateTime), currency: T.nilable(::String)).void }
+        def initialize(account_id: nil, allocations: nil, bill_id: nil, card_brand: nil, card_last4: nil, category_ids: nil, contact_id: nil, created_at: nil, device_id: nil, exchange_rate: nil, fee_amount: nil, id: nil, invoice_id: nil, link_id: nil, location_id: nil, net_amount: nil, notes: nil, organization_id: nil, paid_at: nil, payment_method: nil, raw: nil, reference: nil, salesorder_id: nil, status: nil, tender_type: nil, tip_amount: nil, total_amount: nil, type: nil, updated_at: nil, currency: 'USD')
           @account_id = account_id
           @allocations = allocations
           @bill_id = bill_id
           @card_brand = card_brand
           @card_last4 = card_last4
+          @category_ids = category_ids
           @contact_id = contact_id
           @created_at = created_at
           @device_id = device_id
+          @exchange_rate = exchange_rate
           @fee_amount = fee_amount
           @id = id
           @invoice_id = invoice_id
           @link_id = link_id
           @location_id = location_id
+          @net_amount = net_amount
           @notes = notes
           @organization_id = organization_id
+          @paid_at = paid_at
           @payment_method = payment_method
           @raw = raw
           @reference = reference
@@ -104,16 +116,20 @@ module UnifiedRubySDK
           return false unless @bill_id == other.bill_id
           return false unless @card_brand == other.card_brand
           return false unless @card_last4 == other.card_last4
+          return false unless @category_ids == other.category_ids
           return false unless @contact_id == other.contact_id
           return false unless @created_at == other.created_at
           return false unless @device_id == other.device_id
+          return false unless @exchange_rate == other.exchange_rate
           return false unless @fee_amount == other.fee_amount
           return false unless @id == other.id
           return false unless @invoice_id == other.invoice_id
           return false unless @link_id == other.link_id
           return false unless @location_id == other.location_id
+          return false unless @net_amount == other.net_amount
           return false unless @notes == other.notes
           return false unless @organization_id == other.organization_id
+          return false unless @paid_at == other.paid_at
           return false unless @payment_method == other.payment_method
           return false unless @raw == other.raw
           return false unless @reference == other.reference

@@ -16,6 +16,8 @@ module UnifiedRubySDK
 
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyAccountingOrganizationAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
 
+        field :books_close_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('books_close_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -46,9 +48,10 @@ module UnifiedRubySDK
 
         field :website, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyAccountingOrganizationAddress), created_at: T.nilable(::DateTime), currency: T.nilable(::String), fiscal_year_end_month: T.nilable(::Float), id: T.nilable(::String), is_elimination: T.nilable(T::Boolean), legal_name: T.nilable(::String), name: T.nilable(::String), organization_code: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax_number: T.nilable(::String), timezone: T.nilable(::String), type: T.nilable(Models::Shared::AccountingOrganizationType), updated_at: T.nilable(::DateTime), website: T.nilable(::String)).void }
-        def initialize(address: nil, created_at: nil, currency: nil, fiscal_year_end_month: nil, id: nil, is_elimination: nil, legal_name: nil, name: nil, organization_code: nil, parent_id: nil, raw: nil, tax_number: nil, timezone: nil, type: nil, updated_at: nil, website: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyAccountingOrganizationAddress), books_close_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), currency: T.nilable(::String), fiscal_year_end_month: T.nilable(::Float), id: T.nilable(::String), is_elimination: T.nilable(T::Boolean), legal_name: T.nilable(::String), name: T.nilable(::String), organization_code: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax_number: T.nilable(::String), timezone: T.nilable(::String), type: T.nilable(Models::Shared::AccountingOrganizationType), updated_at: T.nilable(::DateTime), website: T.nilable(::String)).void }
+        def initialize(address: nil, books_close_at: nil, created_at: nil, currency: nil, fiscal_year_end_month: nil, id: nil, is_elimination: nil, legal_name: nil, name: nil, organization_code: nil, parent_id: nil, raw: nil, tax_number: nil, timezone: nil, type: nil, updated_at: nil, website: nil)
           @address = address
+          @books_close_at = books_close_at
           @created_at = created_at
           @currency = currency
           @fiscal_year_end_month = fiscal_year_end_month
@@ -70,6 +73,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @address == other.address
+          return false unless @books_close_at == other.books_close_at
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @fiscal_year_end_month == other.fiscal_year_end_month

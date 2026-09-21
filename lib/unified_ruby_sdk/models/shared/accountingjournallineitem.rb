@@ -40,10 +40,12 @@ module UnifiedRubySDK
 
         field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
+        field :taxrate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('taxrate_id') } }
+
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
-        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), credit_amount: T.nilable(::Float), debit_amount: T.nilable(::Float), description: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), organization_id: T.nilable(::String), payment_id: T.nilable(::String), project_id: T.nilable(::String), tax_amount: T.nilable(::Float), total_amount: T.nilable(::Float)).void }
-        def initialize(account_id: nil, category_ids: nil, contact_id: nil, credit_amount: nil, debit_amount: nil, description: nil, group_id: nil, id: nil, invoice_id: nil, organization_id: nil, payment_id: nil, project_id: nil, tax_amount: nil, total_amount: nil)
+        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), credit_amount: T.nilable(::Float), debit_amount: T.nilable(::Float), description: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), organization_id: T.nilable(::String), payment_id: T.nilable(::String), project_id: T.nilable(::String), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float)).void }
+        def initialize(account_id: nil, category_ids: nil, contact_id: nil, credit_amount: nil, debit_amount: nil, description: nil, group_id: nil, id: nil, invoice_id: nil, organization_id: nil, payment_id: nil, project_id: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil)
           @account_id = account_id
           @category_ids = category_ids
           @contact_id = contact_id
@@ -57,6 +59,7 @@ module UnifiedRubySDK
           @payment_id = payment_id
           @project_id = project_id
           @tax_amount = tax_amount
+          @taxrate_id = taxrate_id
           @total_amount = total_amount
         end
 
@@ -76,6 +79,7 @@ module UnifiedRubySDK
           return false unless @payment_id == other.payment_id
           return false unless @project_id == other.project_id
           return false unless @tax_amount == other.tax_amount
+          return false unless @taxrate_id == other.taxrate_id
           return false unless @total_amount == other.total_amount
           true
         end

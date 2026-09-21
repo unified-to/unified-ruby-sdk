@@ -22,6 +22,9 @@ module UnifiedRubySDK
           NOTES = new('notes')
           STATUS = new('status')
           REFERENCE = new('reference')
+          REFUNDED_AT = new('refunded_at')
+          REASON = new('reason')
+          TENDER_TYPE = new('tender_type')
           RAW = new('raw')
         end
       end

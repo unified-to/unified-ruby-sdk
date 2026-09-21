@@ -31,13 +31,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.commit.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
   created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-  id: '7cd90039-a423-4450-b597-6a597a0cbaed',
+  id: '53470487-d7ba-4010-a8c4-88f1f377afb0',
   lines_added: 313.0,
   lines_changed: 659.0,
   lines_deleted: 482.0,
   message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2023-05-17T00:53:59.141Z'),
+  updated_at: DateTime.iso8601('2023-05-17T12:25:21.183Z'),
 ), connection_id: '<id>')
 
 unless res.repo_commit.nil?
@@ -174,13 +174,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: '5b1ce3e6-b49f-4b15-93d8-75624ad44a32',
+    id: '48bfa5a1-e918-4856-b823-b16d1dfa5227',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-05-17T00:53:59.147Z'),
+    updated_at: DateTime.iso8601('2023-05-17T12:25:21.189Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -272,13 +272,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: '5b1ce3e6-b49f-4b15-93d8-75624ad44a32',
+    id: '48bfa5a1-e918-4856-b823-b16d1dfa5227',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-05-17T00:53:59.147Z'),
+    updated_at: DateTime.iso8601('2023-05-17T12:25:21.189Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

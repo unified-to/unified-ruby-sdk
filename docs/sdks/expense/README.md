@@ -30,11 +30,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::AccountingExpense.new(
-  approved_at: DateTime.iso8601('2026-05-11T15:21:08.506Z'),
+  approved_at: DateTime.iso8601('2026-05-12T14:59:51.847Z'),
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://ripe-napkin.biz/',
-      id: 'f4ea86c2-7fc6-455d-b6d1-e01fd1f0b146',
+      id: '2b12c7c0-070e-46a8-a60a-f6b9ac0974d1',
       mime_type: 'annus',
       name: 'cohibeo',
     ),
@@ -43,10 +43,10 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
   currency: 'SSP',
   external_number: 'necessitatibus',
-  id: '85b9d72b-bd9b-4b73-87a0-d78971f7f736',
+  id: '48eda7e6-33a6-4cc4-983e-d235e6b1e640',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: 'c9a93d1c-722f-4380-a04a-59a33669da16',
+      id: '0f3ecfc8-0d5c-4da9-962b-a1ab4a21ec65',
       item_description: 'Innovative Table featuring left technology and Rubber construction',
       item_name: 'Luxurious Cotton Pizza',
       item_sku: '978-0-8324-6620-5',
@@ -60,12 +60,12 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   metadata: [],
   name: 'Refined Steel Shoes',
   payment_method: 'CASH',
-  posted_at: DateTime.iso8601('2021-06-04T12:31:25.115Z'),
+  posted_at: DateTime.iso8601('2021-06-04T16:26:44.890Z'),
   reimbursed_amount: 1833.0,
   status: Models::Shared::AccountingExpenseStatus::SUBMITTED,
   tax_amount: 2602.0,
   total_amount: 3580.0,
-  updated_at: DateTime.iso8601('2026-05-11T15:21:08.506Z'),
+  updated_at: DateTime.iso8601('2026-05-12T14:59:51.847Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_expense.nil?
@@ -201,11 +201,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchAccountingExpenseRequest.new(
   accounting_expense: Models::Shared::AccountingExpense.new(
-    approved_at: DateTime.iso8601('2026-05-11T15:21:08.545Z'),
+    approved_at: DateTime.iso8601('2026-05-12T14:59:51.879Z'),
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://ripe-napkin.biz/',
-        id: 'a3c4a325-fc80-4ae1-a213-afdb165e2217',
+        id: '5418c1de-6c66-4111-b8f6-97e2beb48015',
         mime_type: 'annus',
         name: 'cohibeo',
       ),
@@ -214,10 +214,10 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'SSP',
     external_number: 'necessitatibus',
-    id: '0de8d7e0-cc95-42e1-963b-332e43ef2c61',
+    id: '852b20a2-b542-43e7-87de-8de713f7ed30',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'c15ccf0e-7201-43fa-a34f-2f1cd10486b9',
+        id: '4f3f2270-fb10-4aed-86d4-8312f2819c24',
         item_description: 'Innovative Table featuring left technology and Rubber construction',
         item_name: 'Luxurious Cotton Pizza',
         item_sku: '978-0-8324-6620-5',
@@ -231,12 +231,12 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     metadata: [],
     name: 'Refined Steel Shoes',
     payment_method: 'CASH',
-    posted_at: DateTime.iso8601('2021-06-04T12:31:25.122Z'),
+    posted_at: DateTime.iso8601('2021-06-04T16:26:44.896Z'),
     reimbursed_amount: 1833.0,
     status: Models::Shared::AccountingExpenseStatus::SUBMITTED,
     tax_amount: 2602.0,
     total_amount: 3580.0,
-    updated_at: DateTime.iso8601('2026-05-11T15:21:08.545Z'),
+    updated_at: DateTime.iso8601('2026-05-12T14:59:51.879Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -327,11 +327,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateAccountingExpenseRequest.new(
   accounting_expense: Models::Shared::AccountingExpense.new(
-    approved_at: DateTime.iso8601('2026-05-11T15:21:08.545Z'),
+    approved_at: DateTime.iso8601('2026-05-12T14:59:51.879Z'),
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://ripe-napkin.biz/',
-        id: 'a3c4a325-fc80-4ae1-a213-afdb165e2217',
+        id: '5418c1de-6c66-4111-b8f6-97e2beb48015',
         mime_type: 'annus',
         name: 'cohibeo',
       ),
@@ -340,10 +340,10 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'SSP',
     external_number: 'necessitatibus',
-    id: '0de8d7e0-cc95-42e1-963b-332e43ef2c61',
+    id: '852b20a2-b542-43e7-87de-8de713f7ed30',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: 'c15ccf0e-7201-43fa-a34f-2f1cd10486b9',
+        id: '4f3f2270-fb10-4aed-86d4-8312f2819c24',
         item_description: 'Innovative Table featuring left technology and Rubber construction',
         item_name: 'Luxurious Cotton Pizza',
         item_sku: '978-0-8324-6620-5',
@@ -357,12 +357,12 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     metadata: [],
     name: 'Refined Steel Shoes',
     payment_method: 'CASH',
-    posted_at: DateTime.iso8601('2021-06-04T12:31:25.122Z'),
+    posted_at: DateTime.iso8601('2021-06-04T16:26:44.896Z'),
     reimbursed_amount: 1833.0,
     status: Models::Shared::AccountingExpenseStatus::SUBMITTED,
     tax_amount: 2602.0,
     total_amount: 3580.0,
-    updated_at: DateTime.iso8601('2026-05-11T15:21:08.545Z'),
+    updated_at: DateTime.iso8601('2026-05-12T14:59:51.879Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

@@ -34,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::AccountingJournalLineitem
   def project_id=(str_); end
   def tax_amount(); end
   def tax_amount=(str_); end
+  def taxrate_id(); end
+  def taxrate_id=(str_); end
   def total_amount(); end
   def total_amount=(str_); end
 end

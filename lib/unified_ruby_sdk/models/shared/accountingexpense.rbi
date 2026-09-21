@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def created_at=(str_); end
   def currency(); end
   def currency=(str_); end
+  def exchange_rate(); end
+  def exchange_rate=(str_); end
   def external_number(); end
   def external_number=(str_); end
   def id(); end
@@ -54,6 +56,8 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def status=(str_); end
   def tax_amount(); end
   def tax_amount=(str_); end
+  def taxrate_id(); end
+  def taxrate_id=(str_); end
   def total_amount(); end
   def total_amount=(str_); end
   def updated_at(); end

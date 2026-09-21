@@ -30,14 +30,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.taxrate.create_accounting_taxrate(accounting_taxrate: Models::Shared::AccountingTaxrate.new(
+  components: [
+    Models::Shared::AccountingTaxrateComponent.new(
+      is_compound: false,
+      name: 'cogo',
+      rate: 53.0,
+    ),
+  ],
+  country: 'BY',
   created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
-  description: 'Nemo atrox tricesimus creator aranea.',
-  id: '24e9429d-e92f-44a5-853b-57855b305532',
+  description: 'Atrox tricesimus creator.',
+  effective_rate: 53.0,
+  id: 'f60cdbf8-fb40-4fa3-80f7-548de98ad657',
   is_active: false,
+  is_compound: true,
   metadata: [],
-  name: 'cogo',
-  rate: 1.0,
-  updated_at: DateTime.iso8601('2025-11-06T01:24:12.559Z'),
+  name: 'villa',
+  rate: 53.0,
+  region: 'TX',
+  total_rate: 53.0,
+  type: Models::Shared::AccountingTaxrateType::OTHER,
+  updated_at: DateTime.iso8601('2022-04-13T10:10:02.142Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_taxrate.nil?
@@ -173,14 +186,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchAccountingTaxrateRequest.new(
   accounting_taxrate: Models::Shared::AccountingTaxrate.new(
+    components: [
+      Models::Shared::AccountingTaxrateComponent.new(
+        is_compound: false,
+        name: 'cogo',
+        rate: 53.0,
+      ),
+    ],
+    country: 'BY',
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
-    description: 'Nemo atrox tricesimus creator aranea.',
-    id: '9ef4e6ea-760f-4303-aa85-4a283560db82',
+    description: 'Atrox tricesimus creator.',
+    effective_rate: 53.0,
+    id: '6157a522-08d3-45f7-9287-187fd17fc766',
     is_active: false,
+    is_compound: true,
     metadata: [],
-    name: 'cogo',
-    rate: 1.0,
-    updated_at: DateTime.iso8601('2025-11-06T01:24:12.567Z'),
+    name: 'villa',
+    rate: 53.0,
+    region: 'TX',
+    total_rate: 53.0,
+    type: Models::Shared::AccountingTaxrateType::OTHER,
+    updated_at: DateTime.iso8601('2022-04-13T10:10:02.150Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -271,14 +297,27 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateAccountingTaxrateRequest.new(
   accounting_taxrate: Models::Shared::AccountingTaxrate.new(
+    components: [
+      Models::Shared::AccountingTaxrateComponent.new(
+        is_compound: false,
+        name: 'cogo',
+        rate: 53.0,
+      ),
+    ],
+    country: 'BY',
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
-    description: 'Nemo atrox tricesimus creator aranea.',
-    id: '9ef4e6ea-760f-4303-aa85-4a283560db82',
+    description: 'Atrox tricesimus creator.',
+    effective_rate: 53.0,
+    id: '6157a522-08d3-45f7-9287-187fd17fc766',
     is_active: false,
+    is_compound: true,
     metadata: [],
-    name: 'cogo',
-    rate: 1.0,
-    updated_at: DateTime.iso8601('2025-11-06T01:24:12.567Z'),
+    name: 'villa',
+    rate: 53.0,
+    region: 'TX',
+    total_rate: 53.0,
+    type: Models::Shared::AccountingTaxrateType::OTHER,
+    updated_at: DateTime.iso8601('2022-04-13T10:10:02.150Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

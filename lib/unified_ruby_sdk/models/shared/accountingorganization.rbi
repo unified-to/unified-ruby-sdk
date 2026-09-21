@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::AccountingOrganization
   def address(); end
   def address=(str_); end
+  def books_close_at(); end
+  def books_close_at=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def currency(); end

@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::AccountingTransaction
   def currency=(str_); end
   def customer_message(); end
   def customer_message=(str_); end
+  def exchange_rate(); end
+  def exchange_rate=(str_); end
   def id(); end
   def id=(str_); end
   def lineitems(); end
@@ -40,12 +42,16 @@ class UnifiedRubySDK::Models::Shared::AccountingTransaction
   def reference=(str_); end
   def split_account_id(); end
   def split_account_id=(str_); end
+  def status(); end
+  def status=(str_); end
   def sub_total_amount(); end
   def sub_total_amount=(str_); end
   def tax_amount(); end
   def tax_amount=(str_); end
   def total_amount(); end
   def total_amount=(str_); end
+  def transaction_at(); end
+  def transaction_at=(str_); end
   def type(); end
   def type=(str_); end
   def updated_at(); end

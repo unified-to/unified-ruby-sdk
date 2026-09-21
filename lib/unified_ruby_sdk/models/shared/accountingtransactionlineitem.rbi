@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::AccountingTransactionLineItem
   def name=(str_); end
   def object_type(); end
   def object_type=(str_); end
+  def taxrate_id(); end
+  def taxrate_id=(str_); end
   def total_amount(); end
   def total_amount=(str_); end
   def unit_amount(); end

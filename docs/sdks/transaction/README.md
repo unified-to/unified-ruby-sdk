@@ -31,12 +31,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.transaction.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(
   created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  id: 'be1a01ce-57bc-454c-9db7-649cbf9e35f6',
+  exchange_rate: 0.5_674,
+  id: '87e1785a-99e0-4104-9ca4-f517ff6e6f4f',
   lineitems: [
     Models::Shared::AccountingTransactionLineItem.new(
       category_ids: [],
       description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-      id: '222d9e63-6799-4547-b4fb-b98a12efe84b',
+      id: '78395113-acef-4251-9287-02bf9466a9dd',
       name: 'Salad',
       object_type: 'delicate',
       total_amount: 58_531.0,
@@ -45,9 +46,11 @@ res = s.transaction.create_accounting_transaction(accounting_transaction: Models
     ),
   ],
   memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+  status: Models::Shared::AccountingTransactionStatus::VOID,
   tax_amount: 0.0,
   total_amount: 94_452.0,
-  updated_at: DateTime.iso8601('2021-09-10T15:59:53.872Z'),
+  transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
+  updated_at: DateTime.iso8601('2021-09-10T23:02:19.723Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_transaction.nil?
@@ -184,12 +187,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '955e0f2f-3c32-4ab9-b579-c60c171bd5a7',
+    exchange_rate: 0.5_674,
+    id: '149fa846-c137-4a76-850e-1e5bd335bf10',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-        id: '0694b18a-8cb3-42fd-84a4-f2a75398bdac',
+        id: '66a182d7-5406-4d9d-837d-4d25c59428ad',
         name: 'Salad',
         object_type: 'delicate',
         total_amount: 58_531.0,
@@ -198,9 +202,11 @@ req = Models::Operations::PatchAccountingTransactionRequest.new(
       ),
     ],
     memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+    status: Models::Shared::AccountingTransactionStatus::VOID,
     tax_amount: 0.0,
     total_amount: 94_452.0,
-    updated_at: DateTime.iso8601('2021-09-10T15:59:53.878Z'),
+    transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
+    updated_at: DateTime.iso8601('2021-09-10T23:02:19.731Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -292,12 +298,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '955e0f2f-3c32-4ab9-b579-c60c171bd5a7',
+    exchange_rate: 0.5_674,
+    id: '149fa846-c137-4a76-850e-1e5bd335bf10',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-        id: '0694b18a-8cb3-42fd-84a4-f2a75398bdac',
+        id: '66a182d7-5406-4d9d-837d-4d25c59428ad',
         name: 'Salad',
         object_type: 'delicate',
         total_amount: 58_531.0,
@@ -306,9 +313,11 @@ req = Models::Operations::UpdateAccountingTransactionRequest.new(
       ),
     ],
     memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+    status: Models::Shared::AccountingTransactionStatus::VOID,
     tax_amount: 0.0,
     total_amount: 94_452.0,
-    updated_at: DateTime.iso8601('2021-09-10T15:59:53.878Z'),
+    transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
+    updated_at: DateTime.iso8601('2021-09-10T23:02:19.731Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

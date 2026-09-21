@@ -32,11 +32,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.signatory.create_signing_signatory(signing_signatory: Models::Shared::SigningSignatory.new(
   created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
   email: 'Hardy.Wehner@gmail.com',
-  id: '841584c8-4171-4bd4-974c-dc46027bb465',
+  id: '14744bf0-9914-4ff1-8cb9-f54737f20d72',
   order: 5.0,
   role: Models::Shared::SigningSignatoryRole::SIGNER,
   status: Models::Shared::SigningSignatoryStatus::SIGNED,
-  updated_at: DateTime.iso8601('2026-08-12T17:37:25.756Z'),
+  updated_at: DateTime.iso8601('2026-08-13T18:06:48.643Z'),
 ), connection_id: '<id>')
 
 unless res.signing_signatory.nil?
@@ -174,11 +174,11 @@ req = Models::Operations::PatchSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
     email: 'Hardy.Wehner@gmail.com',
-    id: '60db361b-69b8-4c3f-8120-58eb011cb4b7',
+    id: 'c90461b3-febf-4d10-a3f0-7a45f65ddc4a',
     order: 5.0,
     role: Models::Shared::SigningSignatoryRole::SIGNER,
     status: Models::Shared::SigningSignatoryStatus::SIGNED,
-    updated_at: DateTime.iso8601('2026-08-12T17:37:25.766Z'),
+    updated_at: DateTime.iso8601('2026-08-13T18:06:48.654Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -271,11 +271,11 @@ req = Models::Operations::UpdateSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
     email: 'Hardy.Wehner@gmail.com',
-    id: '60db361b-69b8-4c3f-8120-58eb011cb4b7',
+    id: 'c90461b3-febf-4d10-a3f0-7a45f65ddc4a',
     order: 5.0,
     role: Models::Shared::SigningSignatoryRole::SIGNER,
     status: Models::Shared::SigningSignatoryStatus::SIGNED,
-    updated_at: DateTime.iso8601('2026-08-12T17:37:25.766Z'),
+    updated_at: DateTime.iso8601('2026-08-13T18:06:48.654Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

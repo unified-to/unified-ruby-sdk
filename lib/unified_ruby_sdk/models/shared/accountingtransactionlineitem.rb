@@ -26,20 +26,23 @@ module UnifiedRubySDK
 
         field :object_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type') } }
 
+        field :taxrate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('taxrate_id') } }
+
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
         field :unit_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_amount') } }
 
         field :unit_quantity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_quantity') } }
 
-        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), description: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), object_type: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float)).void }
-        def initialize(account_id: nil, category_ids: nil, description: nil, id: nil, name: nil, object_type: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil)
+        sig { params(account_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), description: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), object_type: T.nilable(::String), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), unit_amount: T.nilable(::Float), unit_quantity: T.nilable(::Float)).void }
+        def initialize(account_id: nil, category_ids: nil, description: nil, id: nil, name: nil, object_type: nil, taxrate_id: nil, total_amount: nil, unit_amount: nil, unit_quantity: nil)
           @account_id = account_id
           @category_ids = category_ids
           @description = description
           @id = id
           @name = name
           @object_type = object_type
+          @taxrate_id = taxrate_id
           @total_amount = total_amount
           @unit_amount = unit_amount
           @unit_quantity = unit_quantity
@@ -54,6 +57,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @name == other.name
           return false unless @object_type == other.object_type
+          return false unless @taxrate_id == other.taxrate_id
           return false unless @total_amount == other.total_amount
           return false unless @unit_amount == other.unit_amount
           return false unless @unit_quantity == other.unit_quantity

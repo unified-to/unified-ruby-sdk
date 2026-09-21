@@ -18,10 +18,14 @@ class UnifiedRubySDK::Models::Shared::AccountingLineitem
   def created_at=(str_); end
   def discount_amount(); end
   def discount_amount=(str_); end
+  def exchange_rate(); end
+  def exchange_rate=(str_); end
   def fees(); end
   def fees=(str_); end
   def id(); end
   def id=(str_); end
+  def is_billable(); end
+  def is_billable=(str_); end
   def item_description(); end
   def item_description=(str_); end
   def item_id(); end
@@ -36,6 +40,8 @@ class UnifiedRubySDK::Models::Shared::AccountingLineitem
   def locations=(str_); end
   def notes(); end
   def notes=(str_); end
+  def project_id(); end
+  def project_id=(str_); end
   def refund_amount(); end
   def refund_amount=(str_); end
   def refunded_at(); end

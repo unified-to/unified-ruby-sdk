@@ -22,6 +22,13 @@ module UnifiedRubySDK
           IS_ACTIVE = new('is_active')
           ORGANIZATION_ID = new('organization_id')
           METADATA = new('metadata')
+          EFFECTIVE_RATE = new('effective_rate')
+          TOTAL_RATE = new('total_rate')
+          COMPONENTS = new('components')
+          TYPE = new('type')
+          IS_COMPOUND = new('is_compound')
+          COUNTRY = new('country')
+          REGION = new('region')
           RAW = new('raw')
         end
       end

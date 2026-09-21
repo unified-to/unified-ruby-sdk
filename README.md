@@ -56,7 +56,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'BOB',
   customer_defined_code: 'quo',
   description: 'Spoliatio comedo vilitas harum cupiditate.',
-  id: 'ca584c14-4e2c-4bf5-86b5-bad69a58a9ea',
+  id: 'ba60921a-31d4-49c5-b2fe-50a08d9b2eec',
   is_payable: true,
   name: 'Electronic Aluminum Tuna',
   status: Models::Shared::Status::ARCHIVED,
@@ -73,7 +73,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::BANK,
-  updated_at: DateTime.iso8601('2023-01-03T08:52:45.183Z'),
+  updated_at: DateTime.iso8601('2023-01-03T11:52:17.293Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -111,7 +111,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'BOB',
   customer_defined_code: 'quo',
   description: 'Spoliatio comedo vilitas harum cupiditate.',
-  id: 'ca584c14-4e2c-4bf5-86b5-bad69a58a9ea',
+  id: 'ba60921a-31d4-49c5-b2fe-50a08d9b2eec',
   is_payable: true,
   name: 'Electronic Aluminum Tuna',
   status: Models::Shared::Status::ARCHIVED,
@@ -128,7 +128,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::BANK,
-  updated_at: DateTime.iso8601('2023-01-03T08:52:45.183Z'),
+  updated_at: DateTime.iso8601('2023-01-03T11:52:17.293Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -375,6 +375,15 @@ end
 
 * [get_accounting_agedreceivable](docs/sdks/agedreceivable/README.md#get_accounting_agedreceivable) - Retrieve an agedreceivable
 * [list_accounting_agedreceivables](docs/sdks/agedreceivable/README.md#list_accounting_agedreceivables) - List all agedreceivables
+
+### [agent](docs/sdks/agent/README.md)
+
+* [create_genai_agent](docs/sdks/agent/README.md#create_genai_agent) - Create an agent
+* [get_genai_agent](docs/sdks/agent/README.md#get_genai_agent) - Retrieve an agent
+* [list_genai_agents](docs/sdks/agent/README.md#list_genai_agents) - List all agents
+* [patch_genai_agent](docs/sdks/agent/README.md#patch_genai_agent) - Update an agent
+* [remove_genai_agent](docs/sdks/agent/README.md#remove_genai_agent) - Remove an agent
+* [update_genai_agent](docs/sdks/agent/README.md#update_genai_agent) - Update an agent
 
 ### [analytics](docs/sdks/analytics/README.md)
 
@@ -1152,10 +1161,26 @@ end
 
 ### [genai](docs/sdks/genai/README.md)
 
+* [create_genai_agent](docs/sdks/genai/README.md#create_genai_agent) - Create an agent
 * [create_genai_embedding](docs/sdks/genai/README.md#create_genai_embedding) - Create an embedding
+* [create_genai_organization](docs/sdks/genai/README.md#create_genai_organization) - Create an organization
 * [create_genai_prompt](docs/sdks/genai/README.md#create_genai_prompt) - Create a prompt
+* [create_genai_task](docs/sdks/genai/README.md#create_genai_task) - Create a task
+* [get_genai_agent](docs/sdks/genai/README.md#get_genai_agent) - Retrieve an agent
 * [get_genai_model](docs/sdks/genai/README.md#get_genai_model) - Retrieve a model
+* [get_genai_organization](docs/sdks/genai/README.md#get_genai_organization) - Retrieve an organization
+* [get_genai_task](docs/sdks/genai/README.md#get_genai_task) - Retrieve a task
+* [list_genai_agents](docs/sdks/genai/README.md#list_genai_agents) - List all agents
 * [list_genai_models](docs/sdks/genai/README.md#list_genai_models) - List all models
+* [list_genai_organizations](docs/sdks/genai/README.md#list_genai_organizations) - List all organizations
+* [list_genai_tasks](docs/sdks/genai/README.md#list_genai_tasks) - List all tasks
+* [patch_genai_agent](docs/sdks/genai/README.md#patch_genai_agent) - Update an agent
+* [patch_genai_organization](docs/sdks/genai/README.md#patch_genai_organization) - Update an organization
+* [remove_genai_agent](docs/sdks/genai/README.md#remove_genai_agent) - Remove an agent
+* [remove_genai_organization](docs/sdks/genai/README.md#remove_genai_organization) - Remove an organization
+* [remove_genai_task](docs/sdks/genai/README.md#remove_genai_task) - Remove a task
+* [update_genai_agent](docs/sdks/genai/README.md#update_genai_agent) - Update an agent
+* [update_genai_organization](docs/sdks/genai/README.md#update_genai_organization) - Update an organization
 
 ### [goal](docs/sdks/goal/README.md)
 
@@ -1597,18 +1622,24 @@ end
 ### [organization](docs/sdks/organization/README.md)
 
 * [create_ads_organization](docs/sdks/organization/README.md#create_ads_organization) - Create an organization
+* [create_genai_organization](docs/sdks/organization/README.md#create_genai_organization) - Create an organization
 * [create_repo_organization](docs/sdks/organization/README.md#create_repo_organization) - Create an organization
 * [get_accounting_organization](docs/sdks/organization/README.md#get_accounting_organization) - Retrieve an organization
 * [get_ads_organization](docs/sdks/organization/README.md#get_ads_organization) - Retrieve an organization
+* [get_genai_organization](docs/sdks/organization/README.md#get_genai_organization) - Retrieve an organization
 * [get_repo_organization](docs/sdks/organization/README.md#get_repo_organization) - Retrieve an organization
 * [list_accounting_organizations](docs/sdks/organization/README.md#list_accounting_organizations) - List all organizations
 * [list_ads_organizations](docs/sdks/organization/README.md#list_ads_organizations) - List all organizations
+* [list_genai_organizations](docs/sdks/organization/README.md#list_genai_organizations) - List all organizations
 * [list_repo_organizations](docs/sdks/organization/README.md#list_repo_organizations) - List all organizations
 * [patch_ads_organization](docs/sdks/organization/README.md#patch_ads_organization) - Update an organization
+* [patch_genai_organization](docs/sdks/organization/README.md#patch_genai_organization) - Update an organization
 * [patch_repo_organization](docs/sdks/organization/README.md#patch_repo_organization) - Update an organization
 * [remove_ads_organization](docs/sdks/organization/README.md#remove_ads_organization) - Remove an organization
+* [remove_genai_organization](docs/sdks/organization/README.md#remove_genai_organization) - Remove an organization
 * [remove_repo_organization](docs/sdks/organization/README.md#remove_repo_organization) - Remove an organization
 * [update_ads_organization](docs/sdks/organization/README.md#update_ads_organization) - Update an organization
+* [update_genai_organization](docs/sdks/organization/README.md#update_genai_organization) - Update an organization
 * [update_repo_organization](docs/sdks/organization/README.md#update_repo_organization) - Update an organization
 
 ### [package](docs/sdks/package/README.md)
@@ -2119,13 +2150,16 @@ end
 
 ### [task](docs/sdks/task/README.md)
 
+* [create_genai_task](docs/sdks/task/README.md#create_genai_task) - Create a task
 * [create_task_comment](docs/sdks/task/README.md#create_task_comment) - Create a comment
 * [create_task_project](docs/sdks/task/README.md#create_task_project) - Create a project
 * [create_task_task](docs/sdks/task/README.md#create_task_task) - Create a task
+* [get_genai_task](docs/sdks/task/README.md#get_genai_task) - Retrieve a task
 * [get_task_change](docs/sdks/task/README.md#get_task_change) - Retrieve a change
 * [get_task_comment](docs/sdks/task/README.md#get_task_comment) - Retrieve a comment
 * [get_task_project](docs/sdks/task/README.md#get_task_project) - Retrieve a project
 * [get_task_task](docs/sdks/task/README.md#get_task_task) - Retrieve a task
+* [list_genai_tasks](docs/sdks/task/README.md#list_genai_tasks) - List all tasks
 * [list_task_changes](docs/sdks/task/README.md#list_task_changes) - List all changes
 * [list_task_comments](docs/sdks/task/README.md#list_task_comments) - List all comments
 * [list_task_projects](docs/sdks/task/README.md#list_task_projects) - List all projects
@@ -2133,6 +2167,7 @@ end
 * [patch_task_comment](docs/sdks/task/README.md#patch_task_comment) - Update a comment
 * [patch_task_project](docs/sdks/task/README.md#patch_task_project) - Update a project
 * [patch_task_task](docs/sdks/task/README.md#patch_task_task) - Update a task
+* [remove_genai_task](docs/sdks/task/README.md#remove_genai_task) - Remove a task
 * [remove_task_comment](docs/sdks/task/README.md#remove_task_comment) - Remove a comment
 * [remove_task_project](docs/sdks/task/README.md#remove_task_project) - Remove a project
 * [remove_task_task](docs/sdks/task/README.md#remove_task_task) - Remove a task
@@ -2390,7 +2425,7 @@ begin
       currency: 'BOB',
       customer_defined_code: 'quo',
       description: 'Spoliatio comedo vilitas harum cupiditate.',
-      id: 'ca584c14-4e2c-4bf5-86b5-bad69a58a9ea',
+      id: 'ba60921a-31d4-49c5-b2fe-50a08d9b2eec',
       is_payable: true,
       name: 'Electronic Aluminum Tuna',
       status: Models::Shared::Status::ARCHIVED,
@@ -2407,7 +2442,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::BANK,
-      updated_at: DateTime.iso8601('2023-01-03T08:52:45.183Z'),
+      updated_at: DateTime.iso8601('2023-01-03T11:52:17.293Z'),
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -2453,7 +2488,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'BOB',
   customer_defined_code: 'quo',
   description: 'Spoliatio comedo vilitas harum cupiditate.',
-  id: 'ca584c14-4e2c-4bf5-86b5-bad69a58a9ea',
+  id: 'ba60921a-31d4-49c5-b2fe-50a08d9b2eec',
   is_payable: true,
   name: 'Electronic Aluminum Tuna',
   status: Models::Shared::Status::ARCHIVED,
@@ -2470,7 +2505,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::BANK,
-  updated_at: DateTime.iso8601('2023-01-03T08:52:45.183Z'),
+  updated_at: DateTime.iso8601('2023-01-03T11:52:17.293Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -2499,7 +2534,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'BOB',
   customer_defined_code: 'quo',
   description: 'Spoliatio comedo vilitas harum cupiditate.',
-  id: 'ca584c14-4e2c-4bf5-86b5-bad69a58a9ea',
+  id: 'ba60921a-31d4-49c5-b2fe-50a08d9b2eec',
   is_payable: true,
   name: 'Electronic Aluminum Tuna',
   status: Models::Shared::Status::ARCHIVED,
@@ -2516,7 +2551,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::BANK,
-  updated_at: DateTime.iso8601('2023-01-03T08:52:45.183Z'),
+  updated_at: DateTime.iso8601('2023-01-03T11:52:17.293Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

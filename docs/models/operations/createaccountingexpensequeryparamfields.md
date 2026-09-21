@@ -31,4 +31,6 @@
 | `CATEGORY_IDS`      | category_ids        |
 | `PROJECT_ID`        | project_id          |
 | `METADATA`          | metadata            |
+| `TAXRATE_ID`        | taxrate_id          |
+| `EXCHANGE_RATE`     | exchange_rate       |
 | `RAW`               | raw                 |

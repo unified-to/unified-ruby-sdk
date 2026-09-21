@@ -20,6 +20,11 @@ module UnifiedRubySDK
           CURRENCY = new('currency')
           NOTES = new('notes')
           STATUS = new('status')
+          ARRIVAL_AT = new('arrival_at')
+          FEE_AMOUNT = new('fee_amount')
+          NET_AMOUNT = new('net_amount')
+          ACCOUNT_ID = new('account_id')
+          LINEITEMS = new('lineitems')
           RAW = new('raw')
         end
       end

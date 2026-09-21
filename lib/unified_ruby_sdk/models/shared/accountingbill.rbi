@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::AccountingBill
   def discount_amount=(str_); end
   def due_at(); end
   def due_at=(str_); end
+  def exchange_rate(); end
+  def exchange_rate=(str_); end
   def extended_notes(); end
   def extended_notes=(str_); end
   def id(); end
@@ -56,6 +58,8 @@ class UnifiedRubySDK::Models::Shared::AccountingBill
   def posted_at=(str_); end
   def project_id(); end
   def project_id=(str_); end
+  def purchaseorder_ids(); end
+  def purchaseorder_ids=(str_); end
   def raw(); end
   def raw=(str_); end
   def refund_amount(); end
@@ -68,6 +72,8 @@ class UnifiedRubySDK::Models::Shared::AccountingBill
   def send=(str_); end
   def status(); end
   def status=(str_); end
+  def sub_total_amount(); end
+  def sub_total_amount=(str_); end
   def tax_amount(); end
   def tax_amount=(str_); end
   def term(); end

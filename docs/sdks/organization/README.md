@@ -6,18 +6,24 @@
 ### Available Operations
 
 * [create_ads_organization](#create_ads_organization) - Create an organization
+* [create_genai_organization](#create_genai_organization) - Create an organization
 * [create_repo_organization](#create_repo_organization) - Create an organization
 * [get_accounting_organization](#get_accounting_organization) - Retrieve an organization
 * [get_ads_organization](#get_ads_organization) - Retrieve an organization
+* [get_genai_organization](#get_genai_organization) - Retrieve an organization
 * [get_repo_organization](#get_repo_organization) - Retrieve an organization
 * [list_accounting_organizations](#list_accounting_organizations) - List all organizations
 * [list_ads_organizations](#list_ads_organizations) - List all organizations
+* [list_genai_organizations](#list_genai_organizations) - List all organizations
 * [list_repo_organizations](#list_repo_organizations) - List all organizations
 * [patch_ads_organization](#patch_ads_organization) - Update an organization
+* [patch_genai_organization](#patch_genai_organization) - Update an organization
 * [patch_repo_organization](#patch_repo_organization) - Update an organization
 * [remove_ads_organization](#remove_ads_organization) - Remove an organization
+* [remove_genai_organization](#remove_genai_organization) - Remove an organization
 * [remove_repo_organization](#remove_repo_organization) - Remove an organization
 * [update_ads_organization](#update_ads_organization) - Update an organization
+* [update_genai_organization](#update_genai_organization) - Update an organization
 * [update_repo_organization](#update_repo_organization) - Update an organization
 
 ## create_ads_organization
@@ -41,7 +47,7 @@ res = s.organization.create_ads_organization(ads_organization: Models::Shared::A
   account_number: 'LQUJx8zQBW',
   created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
   currency: 'USD',
-  id: '1a65b1ae-7e27-4674-a504-8466fd2da6db',
+  id: 'e3012e78-dbb9-43c3-b089-c52634a97002',
   managers: [
     Models::Shared::AdsManager.new(
       id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -51,7 +57,7 @@ res = s.organization.create_ads_organization(ads_organization: Models::Shared::A
   name: 'Ankunding Inc',
   status: Models::Shared::AdsOrganizationStatus::PROCESSING,
   timezone: 'Europe/Chisinau',
-  updated_at: DateTime.iso8601('2026-02-28T21:54:47.333Z'),
+  updated_at: DateTime.iso8601('2026-03-01T20:43:52.695Z'),
 ), connection_id: '<id>')
 
 unless res.ads_organization.nil?
@@ -72,6 +78,57 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateAdsOrganizationResponse)](../../models/operations/createadsorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_genai_organization
+
+Create an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createGenaiOrganization" method="post" path="/genai/{connection_id}/organization" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.organization.create_genai_organization(genai_organization: Models::Shared::GenaiOrganization.new(
+  created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
+  description: 'Voluptates abeo subseco.',
+  id: '9942ae74-f1b5-48d6-a941-810141e8c41f',
+  is_active: false,
+  name: 'officially about',
+  updated_at: DateTime.iso8601('2023-01-15T04:21:51.211Z'),
+), connection_id: '<id>')
+
+unless res.genai_organization.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `genai_organization`                                                                                                                             | [Models::Shared::GenaiOrganization](../../models/shared/genaiorganization.md)                                                                    | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateGenaiOrganizationQueryParamFields](../../models/operations/creategenaiorganizationqueryparamfields.md)>      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateGenaiOrganizationResponse)](../../models/operations/creategenaiorganizationresponse.md)**
 
 ### Errors
 
@@ -100,9 +157,9 @@ res = s.organization.create_repo_organization(repo_organization: Models::Shared:
   avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
   created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
   description: 'Trepide defendo supra testimonium ager.',
-  id: '8677d586-3b0a-4fc0-86ae-a1fba892b7e2',
+  id: 'c5328bd2-b906-4f4d-ab67-1d60be96411c',
   name: 'Denesik - Lemke',
-  updated_at: DateTime.iso8601('2023-08-13T12:04:45.798Z'),
+  updated_at: DateTime.iso8601('2023-08-13T18:39:07.932Z'),
   web_url: 'https://turbulent-overheard.biz',
 ), connection_id: '<id>')
 
@@ -212,6 +269,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetAdsOrganizationResponse)](../../models/operations/getadsorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_genai_organization
+
+Retrieve an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getGenaiOrganization" method="get" path="/genai/{connection_id}/organization/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.organization.get_genai_organization(connection_id: '<id>', id: '<id>')
+
+unless res.genai_organization.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Organization                                                                                                                           |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetGenaiOrganizationQueryParamFields](../../models/operations/getgenaiorganizationqueryparamfields.md)>            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetGenaiOrganizationResponse)](../../models/operations/getgenaiorganizationresponse.md)**
 
 ### Errors
 
@@ -353,6 +454,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_genai_organizations
+
+List all organizations
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listGenaiOrganizations" method="get" path="/genai/{connection_id}/organization" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListGenaiOrganizationsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.organization.list_genai_organizations(request: req)
+
+unless res.genai_organizations.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::ListGenaiOrganizationsRequest](../../models/operations/listgenaiorganizationsrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::ListGenaiOrganizationsResponse)](../../models/operations/listgenaiorganizationsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_repo_organizations
 
 List all organizations
@@ -420,7 +566,7 @@ req = Models::Operations::PatchAdsOrganizationRequest.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '8672a91d-dadd-4018-920d-c12b36e7ef8f',
+    id: '342b0c9f-6f03-4da3-8936-b68c6b4ad0c0',
     managers: [
       Models::Shared::AdsManager.new(
         id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -430,7 +576,7 @@ req = Models::Operations::PatchAdsOrganizationRequest.new(
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-02-28T21:54:47.341Z'),
+    updated_at: DateTime.iso8601('2026-03-01T20:43:52.701Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -460,6 +606,60 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_genai_organization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchGenaiOrganization" method="patch" path="/genai/{connection_id}/organization/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchGenaiOrganizationRequest.new(
+  genai_organization: Models::Shared::GenaiOrganization.new(
+    created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
+    description: 'Voluptates abeo subseco.',
+    id: 'b1da2f82-66e6-44ab-8556-dccd964b2224',
+    is_active: false,
+    name: 'officially about',
+    updated_at: DateTime.iso8601('2023-01-15T04:21:51.214Z'),
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.organization.patch_genai_organization(request: req)
+
+unless res.genai_organization.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                     | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                     | [Models::Operations::PatchGenaiOrganizationRequest](../../models/operations/patchgenaiorganizationrequest.md) | :heavy_check_mark:                                                                                            | The request object to use for the request.                                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchGenaiOrganizationResponse)](../../models/operations/patchgenaiorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_repo_organization
 
 Update an organization
@@ -482,9 +682,9 @@ req = Models::Operations::PatchRepoOrganizationRequest.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: 'ad2ee52c-7288-4b39-986f-d07b32acb0a9',
+    id: 'e4a2893c-7445-459a-ae15-677ebc3066bd',
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-13T12:04:45.800Z'),
+    updated_at: DateTime.iso8601('2023-08-13T18:39:07.934Z'),
     web_url: 'https://turbulent-overheard.biz',
   ),
   connection_id: '<id>',
@@ -557,6 +757,48 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_genai_organization
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeGenaiOrganization" method="delete" path="/genai/{connection_id}/organization/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.organization.remove_genai_organization(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter              | Type                   | Required               | Description            |
+| ---------------------- | ---------------------- | ---------------------- | ---------------------- |
+| `connection_id`        | *::String*             | :heavy_check_mark:     | ID of the connection   |
+| `id`                   | *::String*             | :heavy_check_mark:     | ID of the Organization |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveGenaiOrganizationResponse)](../../models/operations/removegenaiorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_repo_organization
 
 Remove an organization
@@ -621,7 +863,7 @@ req = Models::Operations::UpdateAdsOrganizationRequest.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '8672a91d-dadd-4018-920d-c12b36e7ef8f',
+    id: '342b0c9f-6f03-4da3-8936-b68c6b4ad0c0',
     managers: [
       Models::Shared::AdsManager.new(
         id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -631,7 +873,7 @@ req = Models::Operations::UpdateAdsOrganizationRequest.new(
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-02-28T21:54:47.341Z'),
+    updated_at: DateTime.iso8601('2026-03-01T20:43:52.701Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -661,6 +903,60 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## update_genai_organization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateGenaiOrganization" method="put" path="/genai/{connection_id}/organization/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateGenaiOrganizationRequest.new(
+  genai_organization: Models::Shared::GenaiOrganization.new(
+    created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
+    description: 'Voluptates abeo subseco.',
+    id: 'b1da2f82-66e6-44ab-8556-dccd964b2224',
+    is_active: false,
+    name: 'officially about',
+    updated_at: DateTime.iso8601('2023-01-15T04:21:51.214Z'),
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.organization.update_genai_organization(request: req)
+
+unless res.genai_organization.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::UpdateGenaiOrganizationRequest](../../models/operations/updategenaiorganizationrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateGenaiOrganizationResponse)](../../models/operations/updategenaiorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## update_repo_organization
 
 Update an organization
@@ -683,9 +979,9 @@ req = Models::Operations::UpdateRepoOrganizationRequest.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: 'ad2ee52c-7288-4b39-986f-d07b32acb0a9',
+    id: 'e4a2893c-7445-459a-ae15-677ebc3066bd',
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-13T12:04:45.800Z'),
+    updated_at: DateTime.iso8601('2023-08-13T18:39:07.934Z'),
     web_url: 'https://turbulent-overheard.biz',
   ),
   connection_id: '<id>',

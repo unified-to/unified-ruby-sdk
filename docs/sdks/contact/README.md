@@ -44,11 +44,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::AccountingContact.new(
   associated_contacts: [
     Models::Shared::AccountingAssociatedContact.new(
-      id: 'f9794159-7343-4d73-87f8-7ac3663a0b73',
+      id: 'aed4a25a-a941-4154-854f-32113e8dd6ca',
       name: 'Delores Reynolds',
     ),
     Models::Shared::AccountingAssociatedContact.new(
-      id: '27a72b4c-7d10-4f80-a7ea-c49b1ea2a4e5',
+      id: '5a725f40-c54e-4aa5-a55d-353408faa333',
       name: 'Delores Reynolds',
     ),
   ],
@@ -71,7 +71,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
     ),
   ],
   first_name: 'Delores',
-  id: 'f2994005-5f70-40ba-b869-06f03736272b',
+  id: 'c6a1cc7a-b779-4420-a19a-0d6b905137af',
   identification: 'amicitia',
   is_active: true,
   is_customer: true,
@@ -81,7 +81,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
   payment_methods: [
     Models::Shared::AccountingContactPaymentMethod.new(
       default: true,
-      id: '56f9571d-dc50-4434-8975-13a3075fdf2b',
+      id: '00dadef0-7876-4af4-be59-5aa5a33c1ee3',
       name: 'Visa 1234',
       type: Models::Shared::AccountingContactPaymentMethodType::CARD,
     ),
@@ -108,7 +108,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
       type: Models::Shared::AccountingTelephoneType::FAX,
     ),
   ],
-  updated_at: DateTime.iso8601('2023-12-05T20:02:50.664Z'),
+  updated_at: DateTime.iso8601('2023-12-06T07:23:48.157Z'),
   website: 'https://noxious-advertisement.org',
 ), connection_id: '<id>')
 
@@ -181,7 +181,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   first_name: 'Mohammad',
-  id: '4e380d8a-f386-42e5-a068-635a59a77be1',
+  id: 'b55b499a-6e6c-4781-88b5-c4f74733ac20',
   image_url: 'https://picsum.photos/seed/zmbPeg/2905/378',
   last_name: 'Bartell',
   link_urls: [
@@ -195,7 +195,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '264c5dd7-59b9-4e24-b64c-bfcb6c7a04e3',
+      id: 'eaefef1f-44cc-4e97-a6cd-bf001d40b644',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'autem',
@@ -217,7 +217,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   title: 'National Tactics Analyst',
-  updated_at: DateTime.iso8601('2021-02-23T10:25:01.378Z'),
+  updated_at: DateTime.iso8601('2021-02-23T11:02:48.853Z'),
 ), connection_id: '<id>')
 
 unless res.crm_contact.nil?
@@ -272,7 +272,7 @@ res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   first_name: 'Luther',
-  id: 'a6b42d1b-cbb7-4483-a454-24ff0fefd709',
+  id: 'b6f1a80e-606a-4fd0-b071-56e392552c22',
   last_name: 'Rogahn',
   name: 'Luther Rogahn',
   telephones: [
@@ -290,7 +290,7 @@ res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   title: 'Chief Optimization Executive',
-  updated_at: DateTime.iso8601('2023-11-20T02:36:12.447Z'),
+  updated_at: DateTime.iso8601('2023-11-20T17:22:46.770Z'),
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -606,11 +606,11 @@ req = Models::Operations::PatchAccountingContactRequest.new(
   accounting_contact: Models::Shared::AccountingContact.new(
     associated_contacts: [
       Models::Shared::AccountingAssociatedContact.new(
-        id: '2b60456e-af7b-4c10-b279-8910dd04b1a5',
+        id: '32bde497-bc3f-4491-ba2c-fb650eccb8d1',
         name: 'Delores Reynolds',
       ),
       Models::Shared::AccountingAssociatedContact.new(
-        id: '234b1ef4-6fc4-4b2b-95df-73304828e20a',
+        id: '2a3996a2-f5d4-46b3-bf49-8127eab40cc2',
         name: 'Delores Reynolds',
       ),
     ],
@@ -633,7 +633,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
       ),
     ],
     first_name: 'Delores',
-    id: '0714c73d-b947-465b-a8f4-507b98032a3c',
+    id: 'eb2d42b7-7120-4cde-9354-5e8775fd6701',
     identification: 'amicitia',
     is_active: true,
     is_customer: true,
@@ -643,7 +643,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: '0edd06c2-b952-45ae-92fb-d3a99a8a015f',
+        id: '60ce8459-b72d-4dc8-a716-ba5c44475ca2',
         name: 'Visa 1234',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD,
       ),
@@ -670,7 +670,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
         type: Models::Shared::AccountingTelephoneType::FAX,
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-05T20:02:50.687Z'),
+    updated_at: DateTime.iso8601('2023-12-06T07:23:48.180Z'),
     website: 'https://noxious-advertisement.org',
   ),
   connection_id: '<id>',
@@ -746,7 +746,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     first_name: 'Mohammad',
-    id: 'db51fa4a-434e-4984-a162-58947adafefb',
+    id: 'f3de8ccf-d21c-4b0c-ad59-265b6103644a',
     image_url: 'https://picsum.photos/seed/zmbPeg/2905/378',
     last_name: 'Bartell',
     link_urls: [
@@ -760,7 +760,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8b1f080e-d99d-4231-a9f5-72226b45739d',
+        id: '2020b0dc-6195-4cf7-841e-18acc42a2106',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'autem',
@@ -782,7 +782,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-23T10:25:01.379Z'),
+    updated_at: DateTime.iso8601('2021-02-23T11:02:48.854Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -840,7 +840,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: 'ffa33251-17e2-4894-a4ed-cc99b6fe8fa1',
+    id: 'b02e5795-1218-412d-93ee-a303bcae9d79',
     last_name: 'Rogahn',
     name: 'Luther Rogahn',
     telephones: [
@@ -858,7 +858,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-11-20T02:36:12.455Z'),
+    updated_at: DateTime.iso8601('2023-11-20T17:22:46.775Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1035,11 +1035,11 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
   accounting_contact: Models::Shared::AccountingContact.new(
     associated_contacts: [
       Models::Shared::AccountingAssociatedContact.new(
-        id: '2b60456e-af7b-4c10-b279-8910dd04b1a5',
+        id: '32bde497-bc3f-4491-ba2c-fb650eccb8d1',
         name: 'Delores Reynolds',
       ),
       Models::Shared::AccountingAssociatedContact.new(
-        id: '234b1ef4-6fc4-4b2b-95df-73304828e20a',
+        id: '2a3996a2-f5d4-46b3-bf49-8127eab40cc2',
         name: 'Delores Reynolds',
       ),
     ],
@@ -1062,7 +1062,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
       ),
     ],
     first_name: 'Delores',
-    id: '0714c73d-b947-465b-a8f4-507b98032a3c',
+    id: 'eb2d42b7-7120-4cde-9354-5e8775fd6701',
     identification: 'amicitia',
     is_active: true,
     is_customer: true,
@@ -1072,7 +1072,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: '0edd06c2-b952-45ae-92fb-d3a99a8a015f',
+        id: '60ce8459-b72d-4dc8-a716-ba5c44475ca2',
         name: 'Visa 1234',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD,
       ),
@@ -1099,7 +1099,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
         type: Models::Shared::AccountingTelephoneType::FAX,
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-05T20:02:50.687Z'),
+    updated_at: DateTime.iso8601('2023-12-06T07:23:48.180Z'),
     website: 'https://noxious-advertisement.org',
   ),
   connection_id: '<id>',
@@ -1175,7 +1175,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     first_name: 'Mohammad',
-    id: 'db51fa4a-434e-4984-a162-58947adafefb',
+    id: 'f3de8ccf-d21c-4b0c-ad59-265b6103644a',
     image_url: 'https://picsum.photos/seed/zmbPeg/2905/378',
     last_name: 'Bartell',
     link_urls: [
@@ -1189,7 +1189,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8b1f080e-d99d-4231-a9f5-72226b45739d',
+        id: '2020b0dc-6195-4cf7-841e-18acc42a2106',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'autem',
@@ -1211,7 +1211,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-23T10:25:01.379Z'),
+    updated_at: DateTime.iso8601('2021-02-23T11:02:48.854Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1269,7 +1269,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: 'ffa33251-17e2-4894-a4ed-cc99b6fe8fa1',
+    id: 'b02e5795-1218-412d-93ee-a303bcae9d79',
     last_name: 'Rogahn',
     name: 'Luther Rogahn',
     telephones: [
@@ -1287,7 +1287,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-11-20T02:36:12.455Z'),
+    updated_at: DateTime.iso8601('2023-11-20T17:22:46.775Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

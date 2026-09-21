@@ -28,6 +28,10 @@ module UnifiedRubySDK
           CATEGORY_IDS = new('category_ids')
           PROJECT_ID = new('project_id')
           ATTACHMENTS = new('attachments')
+          TOTAL_AMOUNT = new('total_amount')
+          EXCHANGE_RATE = new('exchange_rate')
+          STATUS = new('status')
+          IS_INCLUSIVE_OF_TAX = new('is_inclusive_of_tax')
           RAW = new('raw')
         end
       end

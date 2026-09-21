@@ -18,8 +18,12 @@ class UnifiedRubySDK::Models::Shared::AccountingJournal
   def currency=(str_); end
   def description(); end
   def description=(str_); end
+  def exchange_rate(); end
+  def exchange_rate=(str_); end
   def id(); end
   def id=(str_); end
+  def is_inclusive_of_tax(); end
+  def is_inclusive_of_tax=(str_); end
   def lineitems(); end
   def lineitems=(str_); end
   def organization_id(); end
@@ -34,10 +38,14 @@ class UnifiedRubySDK::Models::Shared::AccountingJournal
   def reference=(str_); end
   def source(); end
   def source=(str_); end
+  def status(); end
+  def status=(str_); end
   def tax_amount(); end
   def tax_amount=(str_); end
   def taxrate_id(); end
   def taxrate_id=(str_); end
+  def total_amount(); end
+  def total_amount=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
 end

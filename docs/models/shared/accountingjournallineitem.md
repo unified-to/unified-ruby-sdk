@@ -18,4 +18,5 @@
 | `payment_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
 | `project_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
 | `tax_amount`          | *T.nilable(::Float)*  | :heavy_minus_sign:    | N/A                   |
+| `taxrate_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
 | `total_amount`        | *T.nilable(::Float)*  | :heavy_minus_sign:    | N/A                   |

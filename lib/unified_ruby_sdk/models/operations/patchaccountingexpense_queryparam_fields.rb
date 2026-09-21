@@ -39,6 +39,8 @@ module UnifiedRubySDK
           CATEGORY_IDS = new('category_ids')
           PROJECT_ID = new('project_id')
           METADATA = new('metadata')
+          TAXRATE_ID = new('taxrate_id')
+          EXCHANGE_RATE = new('exchange_rate')
           RAW = new('raw')
         end
       end

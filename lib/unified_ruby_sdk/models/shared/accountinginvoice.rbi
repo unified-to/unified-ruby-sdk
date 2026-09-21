@@ -26,12 +26,16 @@ class UnifiedRubySDK::Models::Shared::AccountingInvoice
   def discount_amount=(str_); end
   def due_at(); end
   def due_at=(str_); end
+  def exchange_rate(); end
+  def exchange_rate=(str_); end
   def extended_notes(); end
   def extended_notes=(str_); end
   def id(); end
   def id=(str_); end
   def invoice_number(); end
   def invoice_number=(str_); end
+  def is_inclusive_of_tax(); end
+  def is_inclusive_of_tax=(str_); end
   def lineitems(); end
   def lineitems=(str_); end
   def metadata(); end
@@ -66,10 +70,14 @@ class UnifiedRubySDK::Models::Shared::AccountingInvoice
   def refund_reason=(str_); end
   def refunded_at(); end
   def refunded_at=(str_); end
+  def salesorder_ids(); end
+  def salesorder_ids=(str_); end
   def send(); end
   def send=(str_); end
   def status(); end
   def status=(str_); end
+  def sub_total_amount(); end
+  def sub_total_amount=(str_); end
   def tax_amount(); end
   def tax_amount=(str_); end
   def term(); end

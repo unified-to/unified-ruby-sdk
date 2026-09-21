@@ -20,10 +20,16 @@ class UnifiedRubySDK::Models::Shared::PaymentRefund
   def payment_id=(str_); end
   def raw(); end
   def raw=(str_); end
+  def reason(); end
+  def reason=(str_); end
   def reference(); end
   def reference=(str_); end
+  def refunded_at(); end
+  def refunded_at=(str_); end
   def status(); end
   def status=(str_); end
+  def tender_type(); end
+  def tender_type=(str_); end
   def total_amount(); end
   def total_amount=(str_); end
   def updated_at(); end

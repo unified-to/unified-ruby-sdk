@@ -33,6 +33,9 @@ module UnifiedRubySDK
           ORGANIZATION_ID = new('organization_id')
           CATEGORY_IDS = new('category_ids')
           PROJECT_ID = new('project_id')
+          TRANSACTION_AT = new('transaction_at')
+          EXCHANGE_RATE = new('exchange_rate')
+          STATUS = new('status')
           RAW = new('raw')
         end
       end

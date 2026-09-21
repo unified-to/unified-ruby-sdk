@@ -44,10 +44,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.company.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
   created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-  id: '7f8c5864-af8d-4358-be97-8d71632e3495',
+  id: '8622302e-b838-4e0e-bd70-d376bfaaf6c9',
   name: 'Gulgowski, Dibbert and Wilderman',
   phone: '1-602-210-4548',
-  updated_at: DateTime.iso8601('2020-09-25T04:41:59.278Z'),
+  updated_at: DateTime.iso8601('2020-09-25T09:32:07.701Z'),
   website_url: 'https://somber-substitution.com/',
 ), connection_id: '<id>')
 
@@ -125,7 +125,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   employees: 967.0,
-  id: '7cd8f93a-c2fc-4c91-8561-8026241f4380',
+  id: '0567cfb8-6154-4978-93a3-743b1c88e669',
   industry: 'Infrastructure',
   is_active: true,
   link_urls: [
@@ -139,7 +139,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '9e5404fb-2ab3-4bf4-ada4-36fd53578f8e',
+      id: '6f98be97-88f2-4f7a-9315-a237e1600d65',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'esse',
@@ -165,7 +165,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   timezone: 'Europe/San_Marino',
-  updated_at: DateTime.iso8601('2025-02-08T00:09:29.459Z'),
+  updated_at: DateTime.iso8601('2025-02-08T18:52:45.950Z'),
   websites: [
     'https://wise-possession.org',
   ],
@@ -223,10 +223,10 @@ res = s.company.create_hris_company(hris_company: Models::Shared::HrisCompany.ne
     region_code: 'PA',
   ),
   created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-  id: '22593234-c77c-4a29-8e96-ea9e4661150d',
+  id: 'a11f97c3-0d79-4eae-aaf7-d7987e9817aa',
   legal_name: 'Schultz LLC',
   name: 'Gottlieb Group',
-  updated_at: DateTime.iso8601('2026-09-07T20:35:45.211Z'),
+  updated_at: DateTime.iso8601('2026-09-08T21:31:26.668Z'),
 ), connection_id: '<id>')
 
 unless res.hris_company.nil?
@@ -584,10 +584,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: '29703e08-648d-4971-a658-f98ab68bb073',
+    id: '1c041a6c-7b33-400e-b667-3f1b9a1dd42b',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-602-210-4548',
-    updated_at: DateTime.iso8601('2020-09-25T04:41:59.283Z'),
+    updated_at: DateTime.iso8601('2020-09-25T09:32:07.704Z'),
     website_url: 'https://somber-substitution.com/',
   ),
   connection_id: '<id>',
@@ -668,7 +668,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     employees: 967.0,
-    id: '74785c2a-bd8b-4d11-9c91-f72686965140',
+    id: '78c9de98-3738-4fda-8dc5-f353c2ae9d13',
     industry: 'Infrastructure',
     is_active: true,
     link_urls: [
@@ -682,7 +682,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '63aac25f-6022-4c5e-9f55-ab362620b6e6',
+        id: '024cb77c-3ee1-4c81-91c9-80f9a64e7559',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'esse',
@@ -708,7 +708,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Europe/San_Marino',
-    updated_at: DateTime.iso8601('2025-02-08T00:09:29.484Z'),
+    updated_at: DateTime.iso8601('2025-02-08T18:52:45.974Z'),
     websites: [
       'https://wise-possession.org',
     ],
@@ -769,10 +769,10 @@ req = Models::Operations::PatchHrisCompanyRequest.new(
       region_code: 'PA',
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: 'da44fd5c-497c-4c36-9716-4b2537739537',
+    id: '50bdb37f-e21e-4d15-b7dd-677113a9b1d3',
     legal_name: 'Schultz LLC',
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-09-07T20:35:45.220Z'),
+    updated_at: DateTime.iso8601('2026-09-08T21:31:26.681Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -948,10 +948,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: '29703e08-648d-4971-a658-f98ab68bb073',
+    id: '1c041a6c-7b33-400e-b667-3f1b9a1dd42b',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-602-210-4548',
-    updated_at: DateTime.iso8601('2020-09-25T04:41:59.283Z'),
+    updated_at: DateTime.iso8601('2020-09-25T09:32:07.704Z'),
     website_url: 'https://somber-substitution.com/',
   ),
   connection_id: '<id>',
@@ -1032,7 +1032,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     employees: 967.0,
-    id: '74785c2a-bd8b-4d11-9c91-f72686965140',
+    id: '78c9de98-3738-4fda-8dc5-f353c2ae9d13',
     industry: 'Infrastructure',
     is_active: true,
     link_urls: [
@@ -1046,7 +1046,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '63aac25f-6022-4c5e-9f55-ab362620b6e6',
+        id: '024cb77c-3ee1-4c81-91c9-80f9a64e7559',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'esse',
@@ -1072,7 +1072,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Europe/San_Marino',
-    updated_at: DateTime.iso8601('2025-02-08T00:09:29.484Z'),
+    updated_at: DateTime.iso8601('2025-02-08T18:52:45.974Z'),
     websites: [
       'https://wise-possession.org',
     ],
@@ -1133,10 +1133,10 @@ req = Models::Operations::UpdateHrisCompanyRequest.new(
       region_code: 'PA',
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: 'da44fd5c-497c-4c36-9716-4b2537739537',
+    id: '50bdb37f-e21e-4d15-b7dd-677113a9b1d3',
     legal_name: 'Schultz LLC',
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-09-07T20:35:45.220Z'),
+    updated_at: DateTime.iso8601('2026-09-08T21:31:26.681Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

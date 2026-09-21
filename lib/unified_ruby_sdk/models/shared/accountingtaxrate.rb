@@ -13,14 +13,22 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+        # Component parts of a compound or multi-component tax
+        field :components, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingTaxrateComponent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('components') } }
+
+        field :country, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
 
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
+        field :effective_rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('effective_rate') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+
+        field :is_compound, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_compound') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
@@ -32,34 +40,54 @@ module UnifiedRubySDK
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
+        field :region, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
+
+        field :total_rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_rate') } }
+
+        field :type, Crystalline::Nilable.new(Models::Shared::AccountingTaxrateType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingTaxrateType, true) } }
+
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), rate: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, description: nil, id: nil, is_active: nil, metadata: nil, name: nil, organization_id: nil, rate: nil, raw: nil, updated_at: nil)
+        sig { params(components: T.nilable(T::Array[Models::Shared::AccountingTaxrateComponent]), country: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), effective_rate: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_compound: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), rate: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), region: T.nilable(::String), total_rate: T.nilable(::Float), type: T.nilable(Models::Shared::AccountingTaxrateType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(components: nil, country: nil, created_at: nil, description: nil, effective_rate: nil, id: nil, is_active: nil, is_compound: nil, metadata: nil, name: nil, organization_id: nil, rate: nil, raw: nil, region: nil, total_rate: nil, type: nil, updated_at: nil)
+          @components = components
+          @country = country
           @created_at = created_at
           @description = description
+          @effective_rate = effective_rate
           @id = id
           @is_active = is_active
+          @is_compound = is_compound
           @metadata = metadata
           @name = name
           @organization_id = organization_id
           @rate = rate
           @raw = raw
+          @region = region
+          @total_rate = total_rate
+          @type = type
           @updated_at = updated_at
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @components == other.components
+          return false unless @country == other.country
           return false unless @created_at == other.created_at
           return false unless @description == other.description
+          return false unless @effective_rate == other.effective_rate
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @is_compound == other.is_compound
           return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
           return false unless @rate == other.rate
           return false unless @raw == other.raw
+          return false unless @region == other.region
+          return false unless @total_rate == other.total_rate
+          return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           true
         end
