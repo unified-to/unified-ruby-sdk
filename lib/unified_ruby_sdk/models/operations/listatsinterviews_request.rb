@@ -17,8 +17,12 @@ module UnifiedRubySDK
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
         # The application ID to filter by
         field :application_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'application_id', 'style': 'form', 'explode': true } }
+        # The candidate ID to filter by
+        field :candidate_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'candidate_id', 'style': 'form', 'explode': true } }
         # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListAtsInterviewsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # The job ID to filter by
+        field :job_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'job_id', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
@@ -34,11 +38,13 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, application_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAtsInterviewsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, application_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, application_id: T.nilable(::String), candidate_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListAtsInterviewsQueryParamFields]), job_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, application_id: nil, candidate_id: nil, fields_: nil, job_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil)
           @connection_id = connection_id
           @application_id = application_id
+          @candidate_id = candidate_id
           @fields_ = fields_
+          @job_id = job_id
           @limit = limit
           @offset = offset
           @order = order
@@ -53,7 +59,9 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
           return false unless @application_id == other.application_id
+          return false unless @candidate_id == other.candidate_id
           return false unless @fields_ == other.fields_
+          return false unless @job_id == other.job_id
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order

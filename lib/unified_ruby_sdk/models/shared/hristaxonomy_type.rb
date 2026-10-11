@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # HrisTaxonomyType - the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation
       class HrisTaxonomyType < T::Enum
 
 

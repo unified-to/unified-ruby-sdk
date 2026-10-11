@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ShippingPackageSizeUnit - Unit for dimensions (cm, inch)
       class ShippingPackageSizeUnit < T::Enum
 
 

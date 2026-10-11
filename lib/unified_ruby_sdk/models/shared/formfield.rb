@@ -19,7 +19,7 @@ module UnifiedRubySDK
         field :type, Models::Shared::FormFieldType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::FormFieldType, false) } }
         # For select/radio/checkbox fields
         field :choices, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('choices') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :default_value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('default_value') } }
@@ -43,7 +43,7 @@ module UnifiedRubySDK
         field :order, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('order') } }
 
         field :pattern, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pattern') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(name: ::String, type: Models::Shared::FormFieldType, choices: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), default_value: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_required: T.nilable(T::Boolean), max: T.nilable(::Float), max_length: T.nilable(::Float), min: T.nilable(::Float), min_length: T.nilable(::Float), order: T.nilable(::Float), pattern: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }

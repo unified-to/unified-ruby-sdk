@@ -1,5 +1,7 @@
 # AccountingCategoryType
 
+The kind of dimension
+
 
 ## Values
 

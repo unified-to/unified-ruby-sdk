@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PropertyHrisPayslipDeductionCoverageLevel - Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
       class PropertyHrisPayslipDeductionCoverageLevel < T::Enum
 
 

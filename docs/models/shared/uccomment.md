@@ -3,12 +3,12 @@
 
 ## Fields
 
-| Field                       | Type                        | Required                    | Description                 |
-| --------------------------- | --------------------------- | --------------------------- | --------------------------- |
-| `call_id`                   | *T.nilable(::String)*       | :heavy_minus_sign:          | N/A                         |
-| `content`                   | *T.nilable(::String)*       | :heavy_minus_sign:          | N/A                         |
-| `created_at`                | *T.nilable(::String)*       | :heavy_minus_sign:          | N/A                         |
-| `id`                        | *T.nilable(::String)*       | :heavy_minus_sign:          | N/A                         |
-| `raw`                       | T::Hash[Symbol, *::Object*] | :heavy_minus_sign:          | N/A                         |
-| `updated_at`                | *T.nilable(::String)*       | :heavy_minus_sign:          | N/A                         |
-| `user_id`                   | *T.nilable(::String)*       | :heavy_minus_sign:          | N/A                         |
+| Field                                                 | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `call_id`                                             | *T.nilable(::String)*                                 | :heavy_minus_sign:                                    | N/A                                                   |
+| `content`                                             | *T.nilable(::String)*                                 | :heavy_minus_sign:                                    | N/A                                                   |
+| `created_at`                                          | *T.nilable(::String)*                                 | :heavy_minus_sign:                                    | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)              |
+| `id`                                                  | *T.nilable(::String)*                                 | :heavy_minus_sign:                                    | N/A                                                   |
+| `raw`                                                 | T::Hash[Symbol, *::Object*]                           | :heavy_minus_sign:                                    | N/A                                                   |
+| `updated_at`                                          | *T.nilable(::String)*                                 | :heavy_minus_sign:                                    | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)              |
+| `user_id`                                             | *T.nilable(::String)*                                 | :heavy_minus_sign:                                    | reference to HrisEmployee (reference to HrisEmployee) |

@@ -1,5 +1,7 @@
 # AccountingBankfeedtransactionType
 
+direction: DEBIT, CREDIT
+
 
 ## Values
 

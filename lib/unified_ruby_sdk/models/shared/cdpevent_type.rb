@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # CdpEventType - The unified structural category of the event
       class CdpEventType < T::Enum
 
 

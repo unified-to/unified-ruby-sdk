@@ -20,6 +20,8 @@ module UnifiedRubySDK
           HOUR = new('HOUR')
           MONTH = new('MONTH')
           WEEK = new('WEEK')
+          BIWEEKLY = new('BIWEEKLY')
+          SEMIMONTHLY = new('SEMIMONTHLY')
         end
       end
     end

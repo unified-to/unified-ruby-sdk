@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # CdpConsentStatus - The consent status for this purpose
       class CdpConsentStatus < T::Enum
 
 

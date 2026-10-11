@@ -15,7 +15,7 @@ module UnifiedRubySDK
 
 
         field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id'), required: true } }
-
+        # Promoted entity types for ads_promoted list endpoint
         field :type, Models::Shared::AdsPromotedType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AdsPromotedType, false) } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }

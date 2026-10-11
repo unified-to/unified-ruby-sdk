@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # CdpIdentifierType - The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
       class CdpIdentifierType < T::Enum
 
 

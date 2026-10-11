@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # WebhookObjectType - The object to return (eg. CRM "contact")
       class WebhookObjectType < T::Enum
 
 
@@ -26,12 +26,15 @@ module UnifiedRubySDK
           ACCOUNTING_ORGANIZATION = new('accounting_organization')
           ACCOUNTING_ORDER = new('accounting_order')
           ACCOUNTING_SALESORDER = new('accounting_salesorder')
+          ACCOUNTING_SALESRECEIPT = new('accounting_salesreceipt')
           ACCOUNTING_PURCHASEORDER = new('accounting_purchaseorder')
           ACCOUNTING_BALANCESHEET = new('accounting_balancesheet')
           ACCOUNTING_PROFITLOSS = new('accounting_profitloss')
           ACCOUNTING_TRIALBALANCE = new('accounting_trialbalance')
           ACCOUNTING_CATEGORY = new('accounting_category')
           ACCOUNTING_EXPENSE = new('accounting_expense')
+          ACCOUNTING_EXPENSEREPORT = new('accounting_expensereport')
+          ACCOUNTING_PURCHASERECEIPT = new('accounting_purchasereceipt')
           ACCOUNTING_CASHFLOW = new('accounting_cashflow')
           ACCOUNTING_QUOTE = new('accounting_quote')
           ACCOUNTING_AGEDRECEIVABLE = new('accounting_agedreceivable')
@@ -87,6 +90,10 @@ module UnifiedRubySDK
           HRIS_BANKACCOUNT = new('hris_bankaccount')
           HRIS_DOCUMENT = new('hris_document')
           HRIS_TAXONOMY = new('hris_taxonomy')
+          HRIS_JOB = new('hris_job')
+          HRIS_PAYROLL = new('hris_payroll')
+          HRIS_PAYCODE = new('hris_paycode')
+          HRIS_EARNING = new('hris_earning')
           MARTECH_LIST = new('martech_list')
           MARTECH_MEMBER = new('martech_member')
           MARTECH_CAMPAIGN = new('martech_campaign')
@@ -100,6 +107,8 @@ module UnifiedRubySDK
           UC_CALL = new('uc_call')
           UC_COMMENT = new('uc_comment')
           UC_RECORDING = new('uc_recording')
+          UC_SCORECARD = new('uc_scorecard')
+          UC_SCORECARDTEMPLATE = new('uc_scorecardtemplate')
           ENRICH_PERSON = new('enrich_person')
           ENRICH_COMPANY = new('enrich_company')
           STORAGE_FILE = new('storage_file')
@@ -109,6 +118,7 @@ module UnifiedRubySDK
           GENAI_TASK = new('genai_task')
           GENAI_AGENT = new('genai_agent')
           GENAI_ORGANIZATION = new('genai_organization')
+          GENAI_SKILL = new('genai_skill')
           MESSAGING_MESSAGE = new('messaging_message')
           MESSAGING_CHANNEL = new('messaging_channel')
           MESSAGING_EVENT = new('messaging_event')

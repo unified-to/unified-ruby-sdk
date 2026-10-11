@@ -19,7 +19,7 @@ module UnifiedRubySDK
         field :field_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('field_name') } }
         # references StorageFile ID
         field :file_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('file_ids') } }
-
+        # Can be string, number, boolean, array, etc.
         field :value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
         sig { params(field_id: ::String, field_name: T.nilable(::String), file_ids: T.nilable(T::Array[::String]), value: T.nilable(::String)).void }

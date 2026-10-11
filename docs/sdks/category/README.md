@@ -38,11 +38,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.category.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(
   created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
   description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
-  id: '88148b1e-dc10-46c0-9597-b3cdf31f314d',
+  id: '2dfe35ff-f710-4187-961b-1e8ceb4536a4',
   is_active: false,
   metadata: [],
   name: 'Electronic Cotton Shoes',
-  updated_at: DateTime.iso8601('2025-08-22T07:37:19.698Z'),
+  updated_at: DateTime.iso8601('2025-09-04T18:35:02.003Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_category.nil?
@@ -90,10 +90,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.category.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(
   created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
   description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-  id: '593cc150-ad6e-43cc-9cfd-dd992d77f12a',
+  id: '6cd8191d-704e-43a4-9bab-48df542c1faf',
   is_active: true,
   name: 'amicitia',
-  updated_at: DateTime.iso8601('2025-12-18T07:59:56.418Z'),
+  updated_at: DateTime.iso8601('2026-01-05T02:56:22.518Z'),
 ), connection_id: '<id>')
 
 unless res.ticketing_category.nil?
@@ -320,11 +320,11 @@ req = Models::Operations::PatchAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
-    id: '879a3600-e0d0-422d-8b03-6483b173c016',
+    id: '2ae5d710-e676-4d0f-96b3-acab3b2d98cb',
     is_active: false,
     metadata: [],
     name: 'Electronic Cotton Shoes',
-    updated_at: DateTime.iso8601('2025-08-22T07:37:19.705Z'),
+    updated_at: DateTime.iso8601('2025-09-04T18:35:02.010Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -375,10 +375,10 @@ req = Models::Operations::PatchTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: '357c1928-d52c-4680-b02e-d446abe84175',
+    id: 'e03884aa-f28f-4791-bd8c-9be4eea93e54',
     is_active: true,
     name: 'amicitia',
-    updated_at: DateTime.iso8601('2025-12-18T07:59:56.422Z'),
+    updated_at: DateTime.iso8601('2026-01-05T02:56:22.524Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -513,11 +513,11 @@ req = Models::Operations::UpdateAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
-    id: '879a3600-e0d0-422d-8b03-6483b173c016',
+    id: '2ae5d710-e676-4d0f-96b3-acab3b2d98cb',
     is_active: false,
     metadata: [],
     name: 'Electronic Cotton Shoes',
-    updated_at: DateTime.iso8601('2025-08-22T07:37:19.705Z'),
+    updated_at: DateTime.iso8601('2025-09-04T18:35:02.010Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -568,10 +568,10 @@ req = Models::Operations::UpdateTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: '357c1928-d52c-4680-b02e-d446abe84175',
+    id: 'e03884aa-f28f-4791-bd8c-9be4eea93e54',
     is_active: true,
     name: 'amicitia',
-    updated_at: DateTime.iso8601('2025-12-18T07:59:56.422Z'),
+    updated_at: DateTime.iso8601('2026-01-05T02:56:22.524Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

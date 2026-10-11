@@ -1,5 +1,7 @@
 # SocialMediaType
 
+Type of media
+
 
 ## Values
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # SocialPostStatus - Publication status of the post
       class SocialPostStatus < T::Enum
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # SigningSignatoryRole - Role of the signatory
       class SigningSignatoryRole < T::Enum
 
 

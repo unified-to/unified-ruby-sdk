@@ -12,3 +12,4 @@
 | `BUSINESS_UNIT`  | BUSINESS_UNIT    |
 | `BRANCH`         | BRANCH           |
 | `SUB_DEPARTMENT` | SUB_DEPARTMENT   |
+| `PAY_GROUP`      | PAY_GROUP        |

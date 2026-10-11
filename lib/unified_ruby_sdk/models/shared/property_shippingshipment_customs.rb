@@ -13,13 +13,13 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Customs declared value
         field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
 
         field :contents_type, Crystalline::Nilable.new(Models::Shared::ContentsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contents_type'), 'decoder': Utils.enum_from_string(Models::Shared::ContentsType, true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # Explanation of contents
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :duties_paid_by, Crystalline::Nilable.new(Models::Shared::DutiesPaidBy), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duties_paid_by'), 'decoder': Utils.enum_from_string(Models::Shared::DutiesPaidBy, true) } }
@@ -27,15 +27,15 @@ module UnifiedRubySDK
         field :items, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ShippingCustomsItem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('items') } }
 
         field :non_delivery_option, Crystalline::Nilable.new(Models::Shared::NonDeliveryOption), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('non_delivery_option'), 'decoder': Utils.enum_from_string(Models::Shared::NonDeliveryOption, true) } }
-
+        # Importer EORI number
         field :recipient_eori, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recipient_eori') } }
-
+        # Importer tax ID
         field :recipient_tax_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recipient_tax_number') } }
         # Any restrictions
         field :restrictions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('restrictions') } }
-
+        # Exporter EORI number
         field :shipper_eori, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipper_eori') } }
-
+        # Exporter tax ID
         field :shipper_tax_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipper_tax_number') } }
 
         field :taxes_paid_by, Crystalline::Nilable.new(Models::Shared::TaxesPaidBy), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('taxes_paid_by'), 'decoder': Utils.enum_from_string(Models::Shared::TaxesPaidBy, true) } }

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountType - CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
       class AccountType < T::Enum
 
 

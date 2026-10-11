@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AnalyticsReportMetricsDimension - new vs returning
       class AnalyticsReportMetricsDimension < T::Enum
 
 

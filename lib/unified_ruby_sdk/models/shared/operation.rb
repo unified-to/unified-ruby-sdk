@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Operation - ONLY USED ON UPDATES
       class Operation < T::Enum
 
 

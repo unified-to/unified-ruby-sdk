@@ -13,7 +13,7 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # unified field in ITaskTask
         field :field, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('field'), required: true } }
 
         field :from, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from') } }

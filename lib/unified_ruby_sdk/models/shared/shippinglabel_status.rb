@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ShippingLabelStatus - Status of the label
       class ShippingLabelStatus < T::Enum
 
 

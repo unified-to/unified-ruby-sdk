@@ -65,7 +65,7 @@ module UnifiedRubySDK
         field :urn_ietf_params_scim_schemas_extension_peakon_2_0_user, Crystalline::Nilable.new(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('urn:ietf:params:scim:schemas:extension:peakon:2.0:User') } }
 
         field :user_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('userName') } }
-
+        # 'Employee','Super Admin', 'General Admin', 'Account Manager', 'User Manager', 'Workflow Manager', 'Experience Manager', 'Author','Reporter','Contractor,'Intern','Temp','External','Unknown']
         field :user_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('userType') } }
 
         field :x509_certificates, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimRole)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('x509Certificates') } }

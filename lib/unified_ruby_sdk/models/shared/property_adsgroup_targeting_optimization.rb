@@ -17,7 +17,7 @@ module UnifiedRubySDK
         field :advantage_audience, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('advantage_audience') } }
 
         field :advantage_placements, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('advantage_placements') } }
-
+        # Google: bid_only falsetrue
         field :mode, Crystalline::Nilable.new(Models::Shared::PropertyAdsGroupTargetingOptimizationMode), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mode'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsGroupTargetingOptimizationMode, true) } }
 
         field :targeting_optimization_expansion_all, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('targeting_optimization_expansion_all') } }

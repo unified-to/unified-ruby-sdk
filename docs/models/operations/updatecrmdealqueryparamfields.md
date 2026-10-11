@@ -23,6 +23,6 @@
 | `USER_ID`     | user_id       |
 | `CONTACT_IDS` | contact_ids   |
 | `COMPANY_IDS` | company_ids   |
-| `METADATA`    | metadata      |
 | `DESCRIPTION` | description   |
+| `METADATA`    | metadata      |
 | `RAW`         | raw           |

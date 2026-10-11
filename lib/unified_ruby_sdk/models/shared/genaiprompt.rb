@@ -13,37 +13,46 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # One answer per question, matched by id.
+        field :answers, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiAnswer)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers') } }
+        # a float between 0-1
         field :max_tokens, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_tokens') } }
-
+        # OAuth Bearer token for MCP servers that require authentication.
         field :mcp_authorization_token, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mcp_authorization_token') } }
 
         field :mcp_deferred_tools, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mcp_deferred_tools') } }
-
+        # Supply a remote MCP URL to send to the LLM API for it to call its tools.  Note: Some LLM APIs do not yet support remote MCP URLs. 
         field :mcp_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mcp_url') } }
 
         field :messages, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiContent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('messages') } }
 
         field :model_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('model_id') } }
+        # Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
+        field :questions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiQuestion)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :responses, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('responses') } }
-
+        # ids of the genai_skill objects (Agent Skills) to make available to the LLM while it answers.
+        field :skill_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('skill_ids') } }
+        # 0-1
         field :temperature, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('temperature') } }
 
         field :tokens_used, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
 
-        sig { params(max_tokens: T.nilable(::Float), mcp_authorization_token: T.nilable(::String), mcp_deferred_tools: T.nilable(T::Array[::String]), mcp_url: T.nilable(::String), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), responses: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
-        def initialize(max_tokens: nil, mcp_authorization_token: nil, mcp_deferred_tools: nil, mcp_url: nil, messages: nil, model_id: nil, raw: nil, responses: nil, temperature: nil, tokens_used: nil)
+        sig { params(answers: T.nilable(T::Array[Models::Shared::GenaiAnswer]), max_tokens: T.nilable(::Float), mcp_authorization_token: T.nilable(::String), mcp_deferred_tools: T.nilable(T::Array[::String]), mcp_url: T.nilable(::String), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), questions: T.nilable(T::Array[Models::Shared::GenaiQuestion]), raw: T.nilable(T::Hash[Symbol, ::Object]), responses: T.nilable(T::Array[::String]), skill_ids: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
+        def initialize(answers: nil, max_tokens: nil, mcp_authorization_token: nil, mcp_deferred_tools: nil, mcp_url: nil, messages: nil, model_id: nil, questions: nil, raw: nil, responses: nil, skill_ids: nil, temperature: nil, tokens_used: nil)
+          @answers = answers
           @max_tokens = max_tokens
           @mcp_authorization_token = mcp_authorization_token
           @mcp_deferred_tools = mcp_deferred_tools
           @mcp_url = mcp_url
           @messages = messages
           @model_id = model_id
+          @questions = questions
           @raw = raw
           @responses = responses
+          @skill_ids = skill_ids
           @temperature = temperature
           @tokens_used = tokens_used
         end
@@ -51,14 +60,17 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @answers == other.answers
           return false unless @max_tokens == other.max_tokens
           return false unless @mcp_authorization_token == other.mcp_authorization_token
           return false unless @mcp_deferred_tools == other.mcp_deferred_tools
           return false unless @mcp_url == other.mcp_url
           return false unless @messages == other.messages
           return false unless @model_id == other.model_id
+          return false unless @questions == other.questions
           return false unless @raw == other.raw
           return false unless @responses == other.responses
+          return false unless @skill_ids == other.skill_ids
           return false unless @temperature == other.temperature
           return false unless @tokens_used == other.tokens_used
           true

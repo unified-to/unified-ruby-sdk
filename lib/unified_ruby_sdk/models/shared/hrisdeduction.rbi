@@ -18,16 +18,26 @@ class UnifiedRubySDK::Models::Shared::HrisDeduction
   def coverage_level=(str_); end
   def created_at(); end
   def created_at=(str_); end
+  def employer_amount(); end
+  def employer_amount=(str_); end
+  def employer_type(); end
+  def employer_type=(str_); end
   def end_at(); end
   def end_at=(str_); end
   def frequency(); end
   def frequency=(str_); end
+  def garnishment_type(); end
+  def garnishment_type=(str_); end
   def id(); end
   def id=(str_); end
   def is_active(); end
   def is_active=(str_); end
+  def max_amount(); end
+  def max_amount=(str_); end
   def notes(); end
   def notes=(str_); end
+  def paycode_id(); end
+  def paycode_id=(str_); end
   def raw(); end
   def raw=(str_); end
   def start_at(); end

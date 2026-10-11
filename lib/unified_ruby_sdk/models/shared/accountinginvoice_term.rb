@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountingInvoiceTerm - @deprecated use payment_terms instead
       class AccountingInvoiceTerm < T::Enum
 
 

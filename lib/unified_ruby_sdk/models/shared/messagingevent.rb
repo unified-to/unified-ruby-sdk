@@ -17,9 +17,9 @@ module UnifiedRubySDK
         field :button, Crystalline::Nilable.new(Models::Shared::PropertyMessagingEventButton), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('button') } }
 
         field :channel, Crystalline::Nilable.new(Models::Shared::PropertyMessagingEventChannel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channel') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # not used
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :is_replacing_original, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_replacing_original') } }

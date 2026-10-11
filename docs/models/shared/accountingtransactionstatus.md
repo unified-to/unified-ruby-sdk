@@ -1,5 +1,7 @@
 # AccountingTransactionStatus
 
+Posting state of the transaction
+
 
 ## Values
 

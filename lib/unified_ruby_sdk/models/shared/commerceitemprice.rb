@@ -15,7 +15,7 @@ module UnifiedRubySDK
 
 
         field :price, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price'), required: true } }
-
+        # The original price of the item before an adjustment or a sale.
         field :compare_at_price, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compare_at_price') } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }

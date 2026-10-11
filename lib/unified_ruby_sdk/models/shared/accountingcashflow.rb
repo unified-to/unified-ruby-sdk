@@ -13,19 +13,19 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Cash at beginning of period
         field :cash_beginning_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cash_beginning_amount') } }
-
+        # Cash at end of period
         field :cash_ending_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cash_ending_amount') } }
 
         field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
-
+        # (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # ISO 4217, e.g. "USD"
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :financing_sections, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingCashflowSection)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('financing_sections') } }
@@ -33,17 +33,17 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :investing_sections, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingCashflowSection)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('investing_sections') } }
-
+        # e.g. "Cash Flow Statement Q1 2020"
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # Usually ending - beginning
         field :net_change_in_cash_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_change_in_cash_amount') } }
 
         field :operating_sections, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingCashflowSection)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('operating_sections') } }
-
+        # Original data from the integration
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(cash_beginning_amount: T.nilable(::Float), cash_ending_amount: T.nilable(::Float), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), financing_sections: T.nilable(T::Array[Models::Shared::AccountingCashflowSection]), id: T.nilable(::String), investing_sections: T.nilable(T::Array[Models::Shared::AccountingCashflowSection]), name: T.nilable(::String), net_change_in_cash_amount: T.nilable(::Float), operating_sections: T.nilable(T::Array[Models::Shared::AccountingCashflowSection]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }

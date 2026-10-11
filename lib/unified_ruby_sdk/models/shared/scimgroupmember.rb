@@ -13,15 +13,15 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # ID of user
         field :value, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value'), required: true } }
-
+        # url to user
         field :dollar_ref, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('$ref') } }
-
+        # user name
         field :display, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('display') } }
-
+        # ONLY USED ON UPDATES
         field :operation, Crystalline::Nilable.new(Models::Shared::Operation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('operation'), 'decoder': Utils.enum_from_string(Models::Shared::Operation, true) } }
-
+        # NOT STANDARD
         field :type, Crystalline::Nilable.new(Models::Shared::ScimGroupMemberType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimGroupMemberType, true) } }
 
         sig { params(value: ::String, dollar_ref: T.nilable(::String), display: T.nilable(::String), operation: T.nilable(Models::Shared::Operation), type: T.nilable(Models::Shared::ScimGroupMemberType)).void }

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PaymentRefundTenderType - Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
       class PaymentRefundTenderType < T::Enum
 
 

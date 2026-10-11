@@ -39,7 +39,7 @@ module UnifiedRubySDK
         field :expires_in, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_in') } }
 
         field :expiry_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expiry_date'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # the private KEY X.509 certificate in Base64 ASCII format
         field :key, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('key') } }
 
         field :meta, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meta') } }
@@ -47,7 +47,7 @@ module UnifiedRubySDK
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # When integration.auth_type = "other", this field contains the authentication credentials in the same order as token_names
         field :other_auth_info, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('other_auth_info') } }
-
+        # the PEM X.509 certificate in Base64 ASCII format
         field :pem, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pem') } }
 
         field :refresh_token, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refresh_token') } }
@@ -63,7 +63,7 @@ module UnifiedRubySDK
         field :token, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token') } }
 
         field :token_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_url') } }
-
+        # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         sig { params(access_token: T.nilable(::String), api_url: T.nilable(::String), app_id: T.nilable(::String), audience: T.nilable(::String), authorize_url: T.nilable(::String), client_id: T.nilable(::String), client_secret: T.nilable(::String), consumer_key: T.nilable(::String), consumer_secret: T.nilable(::String), dev_api_key: T.nilable(::String), emails: T.nilable(T::Array[::String]), expires_in: T.nilable(::Float), expiry_date: T.nilable(::DateTime), key: T.nilable(::String), meta: T.nilable(T::Hash[Symbol, ::Object]), name: T.nilable(::String), other_auth_info: T.nilable(T::Array[::String]), pem: T.nilable(::String), refresh_token: T.nilable(::String), refresh_token_expires_date: T.nilable(::DateTime), refresh_token_expires_in: T.nilable(::Float), refresh_url: T.nilable(::String), state: T.nilable(::String), token: T.nilable(::String), token_url: T.nilable(::String), user_id: T.nilable(::String)).void }

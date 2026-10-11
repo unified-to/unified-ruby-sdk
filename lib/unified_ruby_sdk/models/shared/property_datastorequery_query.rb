@@ -31,7 +31,7 @@ module UnifiedRubySDK
         field :sort_fields, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sort_fields') } }
 
         field :sort_order, Crystalline::Nilable.new(Models::Shared::SortOrder), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sort_order'), 'decoder': Utils.enum_from_string(Models::Shared::SortOrder, true) } }
-
+        # Raw SQL – when set, executed directly (table_id optional)
         field :sql, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sql') } }
 
         sig { params(aggregate: T.nilable(Models::Shared::PropertyDatastoreQueryQueryAggregate), expand: T.nilable(T::Hash[Symbol, Models::Shared::DatastoreQueryExpand]), filter: T.nilable(Models::Shared::PropertyDatastoreQueryQueryFilter), is_count_only: T.nilable(T::Boolean), limit: T.nilable(::Float), offset: T.nilable(::Float), select: T.nilable(T::Array[::String]), sort_fields: T.nilable(T::Array[::String]), sort_order: T.nilable(Models::Shared::SortOrder), sql: T.nilable(::String)).void }

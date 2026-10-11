@@ -13,9 +13,9 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # points to ATS Candidate
         field :candidate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
@@ -25,13 +25,13 @@ module UnifiedRubySDK
         field :parameters, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::VerificationParameterInput)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parameters') } }
 
         field :profile_addresses, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::VerificationAddress)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_addresses') } }
-
+        # YYYY-MM-DD
         field :profile_date_of_birth, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_date_of_birth') } }
 
         field :profile_emails, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_emails') } }
 
         field :profile_gender, Crystalline::Nilable.new(Models::Shared::VerificationRequestProfileGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_gender'), 'decoder': Utils.enum_from_string(Models::Shared::VerificationRequestProfileGender, true) } }
-
+        # XXX.XXX.XXX.XXX
         field :profile_ip_address, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_ip_address') } }
 
         field :profile_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_name') } }
@@ -41,27 +41,27 @@ module UnifiedRubySDK
         field :profile_telephones, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_telephones') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :response_completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_completed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :response_details, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::VerificationResponseDetail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_details') } }
         # report download
         field :response_download_urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_download_urls') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :response_expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # datetime that identify was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :response_issued_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_issued_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Most modern IDV providers (like Onfido, Veriff, Jumio, ID.me). Background Check Providers, such as Checkr, GoodHire, Sterling, and HireRight. Credit bureaus and services often require direct user consent and information. This allows them to properly handle disclosures required by regulations like FCRA. Employment and Education Verification need users to confirm previous employers and schools.
         field :response_redirect_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_redirect_url') } }
-
+        # Identity verification services provide confidence scores (e.g., 0-100), Credit checks return specific numeric scores (e.g., FICO score 300-850), Fraud prevention tools use risk scores (e.g., 1-999)
         field :response_score, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_score') } }
 
         field :response_source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_source') } }
-
+        # Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO
         field :response_status, Crystalline::Nilable.new(Models::Shared::VerificationRequestResponseStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_status'), 'decoder': Utils.enum_from_string(Models::Shared::VerificationRequestResponseStatus, true) } }
 
         field :target_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('target_url') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), package_id: T.nilable(::String), parameters: T.nilable(T::Array[Models::Shared::VerificationParameterInput]), profile_addresses: T.nilable(T::Array[Models::Shared::VerificationAddress]), profile_date_of_birth: T.nilable(::String), profile_emails: T.nilable(T::Array[::String]), profile_gender: T.nilable(Models::Shared::VerificationRequestProfileGender), profile_ip_address: T.nilable(::String), profile_name: T.nilable(::String), profile_national_identifier: T.nilable(::String), profile_telephones: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), response_completed_at: T.nilable(::DateTime), response_details: T.nilable(T::Array[Models::Shared::VerificationResponseDetail]), response_download_urls: T.nilable(T::Array[::String]), response_expires_at: T.nilable(::DateTime), response_issued_at: T.nilable(::DateTime), response_redirect_url: T.nilable(::String), response_score: T.nilable(::Float), response_source: T.nilable(::String), response_status: T.nilable(Models::Shared::VerificationRequestResponseStatus), target_url: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }

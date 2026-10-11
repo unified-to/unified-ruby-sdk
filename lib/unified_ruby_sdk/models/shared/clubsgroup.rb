@@ -17,45 +17,45 @@ module UnifiedRubySDK
         field :activity_types, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('activity_types') } }
         # The group's address
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyClubsGroupAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
-
+        # URL to the group's cover photo
         field :cover_image_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cover_image_url') } }
-
+        # The date that this group was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The group's description
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # The number of athletes the group follows
         field :following_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('following_count') } }
-
+        # The group type
         field :group_type, Crystalline::Nilable.new(Models::Shared::GroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_type'), 'decoder': Utils.enum_from_string(Models::Shared::GroupType, true) } }
-
+        # Unique identifier for this group
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # Whether the authenticated user is an admin of the group
         field :is_admin, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_admin') } }
-
+        # Whether the group is featured
         field :is_featured, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_featured') } }
-
+        # Whether the authenticated user is the owner of the group
         field :is_owner, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_owner') } }
-
+        # Whether the group is private
         field :is_private, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_private') } }
-
+        # Whether the group is verified
         field :is_verified, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
-
+        # The number of members in the group
         field :member_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('member_count') } }
-
+        # The authenticated user's membership status
         field :membership_status, Crystalline::Nilable.new(Models::Shared::MembershipStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('membership_status'), 'decoder': Utils.enum_from_string(Models::Shared::MembershipStatus, true) } }
-
+        # The group's name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # The number of posts in the group
         field :post_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('post_count') } }
-
+        # URL to the group's profile picture
         field :profile_image_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_image_url') } }
-
+        # The raw data returned by the integration for this group
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # The primary sport of the group
         field :sport_type, Crystalline::Nilable.new(Models::Shared::SportType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sport_type'), 'decoder': Utils.enum_from_string(Models::Shared::SportType, true) } }
-
+        # The last date that this group was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The group's vanity URL
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
         sig { params(activity_types: T.nilable(T::Array[::String]), address: T.nilable(Models::Shared::PropertyClubsGroupAddress), cover_image_url: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), following_count: T.nilable(::Float), group_type: T.nilable(Models::Shared::GroupType), id: T.nilable(::String), is_admin: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_owner: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), member_count: T.nilable(::Float), membership_status: T.nilable(Models::Shared::MembershipStatus), name: T.nilable(::String), post_count: T.nilable(::Float), profile_image_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sport_type: T.nilable(Models::Shared::SportType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }

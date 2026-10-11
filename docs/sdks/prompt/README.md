@@ -25,6 +25,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.prompt.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(
+  answers: [
+    Models::Shared::GenaiAnswer.new(
+      confidence: 0.5_384_309_098_590_165,
+      id: 'TeZpueFB',
+      probabilities: [
+        Models::Shared::GenaiAnswerProbability.new(
+          option: 'veniam',
+          probability: 0.05_683_182_482_607_663,
+        ),
+        Models::Shared::GenaiAnswerProbability.new(
+          option: 'comes',
+          probability: 0.1_404_057_613_108_307,
+        ),
+      ],
+      score: 0.05_974_147_981_032_729,
+      type: Models::Shared::GenaiAnswerType::CHOICE,
+      value: 'summisse',
+    ),
+  ],
   max_tokens: 0.4_677_782_787_475_735,
   mcp_authorization_token: 'f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4',
   mcp_deferred_tools: [],
@@ -32,11 +51,45 @@ res = s.prompt.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new
   messages: [
     Models::Shared::GenaiContent.new(
       content: 'Aegre repudiandae verecundia facere statua.',
+      images: [],
       role: Models::Shared::Role::ASSISTANT,
     ),
     Models::Shared::GenaiContent.new(
       content: 'Speciosus xiphias soleo trepide crinis.',
+      images: [],
       role: Models::Shared::Role::SYSTEM,
+    ),
+  ],
+  questions: [
+    Models::Shared::GenaiQuestion.new(
+      id: 'KtvbYiEq',
+      instructions: 'Admiratio cura contabesco subvenio venustas architecto vacuus summopere.',
+      options: [
+        'vulnero',
+        'quasi',
+        'tolero',
+      ],
+      type: Models::Shared::GenaiQuestionType::BOOLEAN,
+    ),
+    Models::Shared::GenaiQuestion.new(
+      id: 'oV6IURtv',
+      instructions: 'Celer deleniti ventus ipsam tendo odit.',
+      options: [
+        'nulla',
+        'aspicio',
+        'tero',
+      ],
+      type: Models::Shared::GenaiQuestionType::CHOICE,
+    ),
+    Models::Shared::GenaiQuestion.new(
+      id: '60dBZk2K',
+      instructions: 'Decretum vesica amet repudiandae.',
+      options: [
+        'ducimus',
+        'civis',
+        'alter',
+      ],
+      type: Models::Shared::GenaiQuestionType::BOOLEAN,
     ),
   ],
   responses: [

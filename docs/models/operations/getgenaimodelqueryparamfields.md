@@ -11,4 +11,6 @@
 | `MAX_TOKENS`      | max_tokens        |
 | `WEB_URL`         | web_url           |
 | `HAS_TEMPERATURE` | has_temperature   |
+| `HAS_QUESTIONS`   | has_questions     |
+| `HAS_VISION`      | has_vision        |
 | `RAW`             | raw               |

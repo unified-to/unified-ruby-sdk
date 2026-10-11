@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # CreativeSelection - Creative rotation strategy (LinkedIn creativeSelection)
       class CreativeSelection < T::Enum
 
 

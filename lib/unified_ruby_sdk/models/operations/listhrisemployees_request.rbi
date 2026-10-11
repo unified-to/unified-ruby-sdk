@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Operations::ListHrisEmployeesRequest
   def fields_=(str_); end
   def group_id(); end
   def group_id=(str_); end
+  def job_id(); end
+  def job_id=(str_); end
   def limit(); end
   def limit=(str_); end
   def location_id(); end

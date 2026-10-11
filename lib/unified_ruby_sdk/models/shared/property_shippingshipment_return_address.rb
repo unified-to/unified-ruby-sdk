@@ -19,21 +19,21 @@ module UnifiedRubySDK
         field :address2, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address2') } }
 
         field :city, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('city') } }
-
+        # Company name (for commercial addresses)
         field :company_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
 
         field :country, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
-
+        # ISO 2-digit country code
         field :country_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country_code') } }
-
+        # Special delivery notes
         field :delivery_instructions, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('delivery_instructions') } }
-
+        # Email address (for delivery notifications)
         field :email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
-
+        # Alias for address_type === 'RESIDENTIAL'
         field :is_residential, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_residential') } }
-
+        # Whether address has been validated
         field :is_validated, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_validated') } }
-
+        # Recipientsender name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :postal_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postal_code') } }
@@ -41,7 +41,7 @@ module UnifiedRubySDK
         field :region, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
 
         field :region_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region_code') } }
-
+        # Phone number (required by FedEx, UPS, DHL)
         field :telephone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone') } }
 
         sig { params(address1: T.nilable(::String), address2: T.nilable(::String), city: T.nilable(::String), company_name: T.nilable(::String), country: T.nilable(::String), country_code: T.nilable(::String), delivery_instructions: T.nilable(::String), email: T.nilable(::String), is_residential: T.nilable(T::Boolean), is_validated: T.nilable(T::Boolean), name: T.nilable(::String), postal_code: T.nilable(::String), region: T.nilable(::String), region_code: T.nilable(::String), telephone: T.nilable(::String)).void }

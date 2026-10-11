@@ -21,7 +21,7 @@ module UnifiedRubySDK
         field :budget_unit, Crystalline::Nilable.new(Models::Shared::AdsInsertionorderBudgetUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_unit'), 'decoder': Utils.enum_from_string(Models::Shared::AdsInsertionorderBudgetUnit, true) } }
 
         field :campaign_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign_id') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :frequency_cap, Crystalline::Nilable.new(Models::Shared::PropertyAdsInsertionorderFrequencyCap), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency_cap') } }
@@ -37,11 +37,11 @@ module UnifiedRubySDK
         field :pacing, Crystalline::Nilable.new(Models::Shared::PropertyAdsInsertionorderPacing), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pacing') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # client's reference ID for the insertion order
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::AdsInsertionorderStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AdsInsertionorderStatus, true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(bid_strategy: T.nilable(Models::Shared::PropertyAdsInsertionorderBidStrategy), budget_segments: T.nilable(T::Array[Models::Shared::AdsInsertionorderBudgetSegment]), budget_unit: T.nilable(Models::Shared::AdsInsertionorderBudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsInsertionorderFrequencyCap), id: T.nilable(::String), kpi: T.nilable(Models::Shared::PropertyAdsInsertionorderKpi), name: T.nilable(::String), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsInsertionorderPacing), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), status: T.nilable(Models::Shared::AdsInsertionorderStatus), updated_at: T.nilable(::DateTime)).void }

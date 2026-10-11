@@ -21,7 +21,7 @@ module UnifiedRubySDK
         field :country, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
 
         field :country_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country_code') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -43,15 +43,15 @@ module UnifiedRubySDK
         field :page_title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('page_title') } }
 
         field :page_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('page_url') } }
-
+        # points to AnalyticsProperty
         field :property_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('property_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :region, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
-
+        # points to AnalyticsSession
         field :session_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('session_id') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :utm_campaign, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('utm_campaign') } }
@@ -65,7 +65,7 @@ module UnifiedRubySDK
         field :utm_term, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('utm_term') } }
 
         field :value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
-
+        # points to AnalyticsVisitor
         field :visitor_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('visitor_id') } }
 
         sig { params(browser: T.nilable(::String), city: T.nilable(::String), country: T.nilable(::String), country_code: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), device: T.nilable(::String), event_type: T.nilable(Models::Shared::EventType), id: T.nilable(::String), metadata: T.nilable(T::Hash[Symbol, Models::Shared::PropertyAnalyticsEventMetadata]), name: T.nilable(::String), os: T.nilable(::String), page_referrer: T.nilable(::String), page_title: T.nilable(::String), page_url: T.nilable(::String), property_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), region: T.nilable(::String), session_id: T.nilable(::String), updated_at: T.nilable(::DateTime), utm_campaign: T.nilable(::String), utm_content: T.nilable(::String), utm_medium: T.nilable(::String), utm_source: T.nilable(::String), utm_term: T.nilable(::String), value: T.nilable(::Float), visitor_id: T.nilable(::String)).void }

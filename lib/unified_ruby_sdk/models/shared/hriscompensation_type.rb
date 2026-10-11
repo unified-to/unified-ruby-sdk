@@ -18,6 +18,8 @@ module UnifiedRubySDK
           STOCK_OPTIONS = new('STOCK_OPTIONS')
           EQUITY = new('EQUITY')
           OTHER = new('OTHER')
+          HOURLY = new('HOURLY')
+          COMMISSION = new('COMMISSION')
         end
       end
     end

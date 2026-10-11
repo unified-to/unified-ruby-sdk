@@ -16,20 +16,34 @@ class UnifiedRubySDK::Models::Shared::HrisBankaccount
   def account_type=(str_); end
   def bank_name(); end
   def bank_name=(str_); end
+  def bic(); end
+  def bic=(str_); end
   def company_id(); end
   def company_id=(str_); end
+  def country_code(); end
+  def country_code=(str_); end
   def created_at(); end
   def created_at=(str_); end
+  def currency(); end
+  def currency=(str_); end
+  def iban(); end
+  def iban=(str_); end
   def id(); end
   def id=(str_); end
   def is_primary(); end
   def is_primary=(str_); end
   def name(); end
   def name=(str_); end
+  def priority(); end
+  def priority=(str_); end
   def raw(); end
   def raw=(str_); end
   def routing_number(); end
   def routing_number=(str_); end
+  def split_amount(); end
+  def split_amount=(str_); end
+  def split_type(); end
+  def split_type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def user_id(); end

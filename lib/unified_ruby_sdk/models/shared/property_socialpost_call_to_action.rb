@@ -13,9 +13,9 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The call-to-action button type
         field :type, Crystalline::Nilable.new(Models::Shared::PropertySocialPostCallToActionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertySocialPostCallToActionType, true) } }
-
+        # The URL the call-to-action points to
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
         sig { params(type: T.nilable(Models::Shared::PropertySocialPostCallToActionType), url: T.nilable(::String)).void }

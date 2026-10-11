@@ -13,27 +13,27 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The date that this member was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The member's first name
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
-
+        # The group this member belongs to (reference to HrisGroup)
         field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
-
+        # Unique identifier for this member (not provided by Strava)
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # Whether the member is an admin of the group
         field :is_admin, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_admin') } }
-
+        # Whether the member is the owner of the group
         field :is_owner, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_owner') } }
-
+        # The member's last name (a single initial for Strava)
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
-
+        # The member's membership status
         field :membership_status, Crystalline::Nilable.new(Models::Shared::ClubsMemberMembershipStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('membership_status'), 'decoder': Utils.enum_from_string(Models::Shared::ClubsMemberMembershipStatus, true) } }
-
+        # The full name of the member (first name + last initial for Strava)
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # The raw data returned by the integration for this member
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # The last date that this member was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(created_at: T.nilable(::DateTime), first_name: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), is_admin: T.nilable(T::Boolean), is_owner: T.nilable(T::Boolean), last_name: T.nilable(::String), membership_status: T.nilable(Models::Shared::ClubsMemberMembershipStatus), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }

@@ -21,20 +21,44 @@ module UnifiedRubySDK
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        # latest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :max_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        # maximum answer length (TEXT)
+        field :max_length, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_length') } }
+        # maximum answer value (NUMBER)
+        field :max_value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_value') } }
+        # earliest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :min_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        # minimum answer length (TEXT)
+        field :min_length, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min_length') } }
+        # minimum answer value (NUMBER)
+        field :min_value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min_value') } }
 
         field :options, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
+        # only ask this question when the parent question's answer is one of these
+        field :parent_answer_values, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_answer_values') } }
+        # id of the question in this job's questions list that this question depends on
+        field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
         field :prompt, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('prompt') } }
 
         field :required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
 
-        sig { params(question: ::String, type: Models::Shared::AtsJobQuestionType, description: T.nilable(::String), id: T.nilable(::String), options: T.nilable(T::Array[::String]), prompt: T.nilable(::String), required: T.nilable(T::Boolean)).void }
-        def initialize(question:, type:, description: nil, id: nil, options: nil, prompt: nil, required: nil)
+        sig { params(question: ::String, type: Models::Shared::AtsJobQuestionType, description: T.nilable(::String), id: T.nilable(::String), max_at: T.nilable(::DateTime), max_length: T.nilable(::Float), max_value: T.nilable(::Float), min_at: T.nilable(::DateTime), min_length: T.nilable(::Float), min_value: T.nilable(::Float), options: T.nilable(T::Array[::String]), parent_answer_values: T.nilable(T::Array[::String]), parent_id: T.nilable(::String), prompt: T.nilable(::String), required: T.nilable(T::Boolean)).void }
+        def initialize(question:, type:, description: nil, id: nil, max_at: nil, max_length: nil, max_value: nil, min_at: nil, min_length: nil, min_value: nil, options: nil, parent_answer_values: nil, parent_id: nil, prompt: nil, required: nil)
           @question = question
           @type = type
           @description = description
           @id = id
+          @max_at = max_at
+          @max_length = max_length
+          @max_value = max_value
+          @min_at = min_at
+          @min_length = min_length
+          @min_value = min_value
           @options = options
+          @parent_answer_values = parent_answer_values
+          @parent_id = parent_id
           @prompt = prompt
           @required = required
         end
@@ -46,7 +70,15 @@ module UnifiedRubySDK
           return false unless @type == other.type
           return false unless @description == other.description
           return false unless @id == other.id
+          return false unless @max_at == other.max_at
+          return false unless @max_length == other.max_length
+          return false unless @max_value == other.max_value
+          return false unless @min_at == other.min_at
+          return false unless @min_length == other.min_length
+          return false unless @min_value == other.min_value
           return false unless @options == other.options
+          return false unless @parent_answer_values == other.parent_answer_values
+          return false unless @parent_id == other.parent_id
           return false unless @prompt == other.prompt
           return false unless @required == other.required
           true

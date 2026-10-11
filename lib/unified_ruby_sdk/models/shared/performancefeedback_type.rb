@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PerformanceFeedbackType - praise/recognition, constructive feedback, or a response to a feedback request
       class PerformanceFeedbackType < T::Enum
 
 

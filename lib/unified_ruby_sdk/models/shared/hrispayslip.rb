@@ -13,55 +13,85 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
         field :deduction, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeduction), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deduction') } }
+        # total employee deductions (pre and post-tax)
+        field :deduction_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deduction_amount') } }
 
         field :details, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisPayslipDetail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('details') } }
-
+        # total taxes withheld from the employee
+        field :employee_tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_tax_amount') } }
+        # total employer benefit contributions
+        field :employer_contribution_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employer_contribution_amount') } }
+        # total employer-paid taxes
+        field :employer_tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employer_tax_amount') } }
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :gross_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gross_amount') } }
+        # year-to-date gross pay as of this payslip
+        field :gross_ytd_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gross_ytd_amount') } }
+        # the pay group (hris_group of type PAY_GROUP) (reference to HrisGroup)
+        field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
+        # total hours paid on this payslip
+        field :hours, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hours') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :net_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_amount') } }
-
+        # year-to-date net pay as of this payslip
+        field :net_ytd_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_ytd_amount') } }
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :payment_reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_reference') } }
 
         field :payment_type, Crystalline::Nilable.new(Models::Shared::PaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentType, true) } }
+        # the hris_payroll (pay run) this payslip belongs to
+        field :payroll_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payroll_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisPayslipType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisPayslipType, true) } }
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # the employee (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction: T.nilable(Models::Shared::PropertyHrisPayslipDeduction), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), id: T.nilable(::String), net_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_reference: T.nilable(::String), payment_type: T.nilable(Models::Shared::PaymentType), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(company_id: nil, created_at: nil, currency: nil, deduction: nil, details: nil, end_at: nil, gross_amount: nil, id: nil, net_amount: nil, paid_at: nil, payment_reference: nil, payment_type: nil, raw: nil, start_at: nil, updated_at: nil, user_id: nil)
+        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction: T.nilable(Models::Shared::PropertyHrisPayslipDeduction), deduction_amount: T.nilable(::Float), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), employee_tax_amount: T.nilable(::Float), employer_contribution_amount: T.nilable(::Float), employer_tax_amount: T.nilable(::Float), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), gross_ytd_amount: T.nilable(::Float), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), net_amount: T.nilable(::Float), net_ytd_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_reference: T.nilable(::String), payment_type: T.nilable(Models::Shared::PaymentType), payroll_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisPayslipType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(company_id: nil, created_at: nil, currency: nil, deduction: nil, deduction_amount: nil, details: nil, employee_tax_amount: nil, employer_contribution_amount: nil, employer_tax_amount: nil, end_at: nil, gross_amount: nil, gross_ytd_amount: nil, group_id: nil, hours: nil, id: nil, net_amount: nil, net_ytd_amount: nil, paid_at: nil, payment_reference: nil, payment_type: nil, payroll_id: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
           @company_id = company_id
           @created_at = created_at
           @currency = currency
           @deduction = deduction
+          @deduction_amount = deduction_amount
           @details = details
+          @employee_tax_amount = employee_tax_amount
+          @employer_contribution_amount = employer_contribution_amount
+          @employer_tax_amount = employer_tax_amount
           @end_at = end_at
           @gross_amount = gross_amount
+          @gross_ytd_amount = gross_ytd_amount
+          @group_id = group_id
+          @hours = hours
           @id = id
           @net_amount = net_amount
+          @net_ytd_amount = net_ytd_amount
           @paid_at = paid_at
           @payment_reference = payment_reference
           @payment_type = payment_type
+          @payroll_id = payroll_id
           @raw = raw
           @start_at = start_at
+          @type = type
           @updated_at = updated_at
           @user_id = user_id
         end
@@ -73,16 +103,26 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @deduction == other.deduction
+          return false unless @deduction_amount == other.deduction_amount
           return false unless @details == other.details
+          return false unless @employee_tax_amount == other.employee_tax_amount
+          return false unless @employer_contribution_amount == other.employer_contribution_amount
+          return false unless @employer_tax_amount == other.employer_tax_amount
           return false unless @end_at == other.end_at
           return false unless @gross_amount == other.gross_amount
+          return false unless @gross_ytd_amount == other.gross_ytd_amount
+          return false unless @group_id == other.group_id
+          return false unless @hours == other.hours
           return false unless @id == other.id
           return false unless @net_amount == other.net_amount
+          return false unless @net_ytd_amount == other.net_ytd_amount
           return false unless @paid_at == other.paid_at
           return false unless @payment_reference == other.payment_reference
           return false unless @payment_type == other.payment_type
+          return false unless @payroll_id == other.payroll_id
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
+          return false unless @type == other.type
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
           true

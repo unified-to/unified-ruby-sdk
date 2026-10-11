@@ -13,49 +13,64 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # percentage or absolute amount (employee's portion)
         field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
 
         field :benefit_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('benefit_id') } }
-
+        # (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
-
+        # Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
         field :coverage_level, Crystalline::Nilable.new(Models::Shared::HrisDeductionCoverageLevel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('coverage_level'), 'decoder': Utils.enum_from_string(Models::Shared::HrisDeductionCoverageLevel, true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        # percentage or absolute amount (employer's portion/match)
+        field :employer_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employer_amount') } }
 
+        field :employer_type, Crystalline::Nilable.new(Models::Shared::EmployerType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employer_type'), 'decoder': Utils.enum_from_string(Models::Shared::EmployerType, true) } }
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
         field :frequency, Crystalline::Nilable.new(Models::Shared::HrisDeductionFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::HrisDeductionFrequency, true) } }
+        # set when this deduction is a court-ordered garnishment
+        field :garnishment_type, Crystalline::Nilable.new(Models::Shared::GarnishmentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('garnishment_type'), 'decoder': Utils.enum_from_string(Models::Shared::GarnishmentType, true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+        # annual maximum employee amount (always money)
+        field :max_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_amount') } }
 
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
+        # the hris_paycode (deduction code) this deduction uses
+        field :paycode_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paycode_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::HrisDeductionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisDeductionType, true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # employee ID (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(amount: T.nilable(::Float), benefit_id: T.nilable(::String), company_id: T.nilable(::String), coverage_level: T.nilable(Models::Shared::HrisDeductionCoverageLevel), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::HrisDeductionFrequency), id: T.nilable(::String), is_active: T.nilable(T::Boolean), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisDeductionType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(amount: nil, benefit_id: nil, company_id: nil, coverage_level: nil, created_at: nil, end_at: nil, frequency: nil, id: nil, is_active: nil, notes: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
+        sig { params(amount: T.nilable(::Float), benefit_id: T.nilable(::String), company_id: T.nilable(::String), coverage_level: T.nilable(Models::Shared::HrisDeductionCoverageLevel), created_at: T.nilable(::DateTime), employer_amount: T.nilable(::Float), employer_type: T.nilable(Models::Shared::EmployerType), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::HrisDeductionFrequency), garnishment_type: T.nilable(Models::Shared::GarnishmentType), id: T.nilable(::String), is_active: T.nilable(T::Boolean), max_amount: T.nilable(::Float), notes: T.nilable(::String), paycode_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisDeductionType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(amount: nil, benefit_id: nil, company_id: nil, coverage_level: nil, created_at: nil, employer_amount: nil, employer_type: nil, end_at: nil, frequency: nil, garnishment_type: nil, id: nil, is_active: nil, max_amount: nil, notes: nil, paycode_id: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
           @amount = amount
           @benefit_id = benefit_id
           @company_id = company_id
           @coverage_level = coverage_level
           @created_at = created_at
+          @employer_amount = employer_amount
+          @employer_type = employer_type
           @end_at = end_at
           @frequency = frequency
+          @garnishment_type = garnishment_type
           @id = id
           @is_active = is_active
+          @max_amount = max_amount
           @notes = notes
+          @paycode_id = paycode_id
           @raw = raw
           @start_at = start_at
           @type = type
@@ -71,11 +86,16 @@ module UnifiedRubySDK
           return false unless @company_id == other.company_id
           return false unless @coverage_level == other.coverage_level
           return false unless @created_at == other.created_at
+          return false unless @employer_amount == other.employer_amount
+          return false unless @employer_type == other.employer_type
           return false unless @end_at == other.end_at
           return false unless @frequency == other.frequency
+          return false unless @garnishment_type == other.garnishment_type
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @max_amount == other.max_amount
           return false unless @notes == other.notes
+          return false unless @paycode_id == other.paycode_id
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
           return false unless @type == other.type

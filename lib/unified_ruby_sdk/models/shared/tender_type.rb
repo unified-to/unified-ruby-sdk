@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # TenderType - normalized tender category; the provider's original label stays in payment_method
       class TenderType < T::Enum
 
 

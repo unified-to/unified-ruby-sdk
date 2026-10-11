@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountingFeeType - Unified fee category
       class AccountingFeeType < T::Enum
 
 

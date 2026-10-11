@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # CdpSegmentType - The type of entity the segment targets (USERS, ACCOUNTS, LINKED)
       class CdpSegmentType < T::Enum
 
 

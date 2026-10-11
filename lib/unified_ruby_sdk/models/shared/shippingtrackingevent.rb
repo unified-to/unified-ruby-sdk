@@ -13,25 +13,25 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Carrier's status code at this event
         field :carrier_status_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('carrier_status_code') } }
-
+        # The date that this tracking event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Description of the tracking event
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # Carrier-specific event code
         field :event_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event_code') } }
 
         field :location_address, Crystalline::Nilable.new(Models::Shared::PropertyShippingTrackingEventLocationAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_address') } }
-
+        # Location ID; points to CommerceLocation (reference to ShippingLocation)
         field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
-
+        # Location name
         field :location_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_name') } }
-
+        # Additional notes
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
-
+        # Who signed for delivery
         field :signed_by, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('signed_by') } }
-
+        # Status at the time of this event
         field :status, Crystalline::Nilable.new(Models::Shared::ShippingTrackingEventStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::ShippingTrackingEventStatus, true) } }
 
         sig { params(carrier_status_code: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), event_code: T.nilable(::String), location_address: T.nilable(Models::Shared::PropertyShippingTrackingEventLocationAddress), location_id: T.nilable(::String), location_name: T.nilable(::String), notes: T.nilable(::String), signed_by: T.nilable(::String), status: T.nilable(Models::Shared::ShippingTrackingEventStatus)).void }

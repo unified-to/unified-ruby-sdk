@@ -15,9 +15,9 @@ module UnifiedRubySDK
 
 
         field :cost_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_amount') } }
-
+        # ISO 4217 format
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # Processing time in milliseconds
         field :processing_time, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('processing_time') } }
         # Countryregion codes where this package is available ({country}-{state} or {country})
         field :regions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('regions') } }

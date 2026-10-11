@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PaymentPayoutLineitemObjectType - What this payout line settles
       class PaymentPayoutLineitemObjectType < T::Enum
 
 

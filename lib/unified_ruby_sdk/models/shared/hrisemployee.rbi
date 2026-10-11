@@ -34,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def employment_type=(str_); end
   def first_name(); end
   def first_name=(str_); end
+  def flsa_status(); end
+  def flsa_status=(str_); end
   def gender(); end
   def gender=(str_); end
   def groups(); end
@@ -46,6 +48,8 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def id=(str_); end
   def image_url(); end
   def image_url=(str_); end
+  def job_id(); end
+  def job_id=(str_); end
   def language_locale(); end
   def language_locale=(str_); end
   def last_name(); end
@@ -60,6 +64,8 @@ class UnifiedRubySDK::Models::Shared::HrisEmployee
   def metadata=(str_); end
   def name(); end
   def name=(str_); end
+  def pay_frequency(); end
+  def pay_frequency=(str_); end
   def pronouns(); end
   def pronouns=(str_); end
   def raw(); end

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # EnrichPersonGender - The gender of the person
       class EnrichPersonGender < T::Enum
 
 

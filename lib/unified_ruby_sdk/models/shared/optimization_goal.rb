@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # OptimizationGoal - Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
       class OptimizationGoal < T::Enum
 
 

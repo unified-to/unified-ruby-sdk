@@ -1,5 +1,7 @@
 # GroupType
 
+The group type
+
 
 ## Values
 

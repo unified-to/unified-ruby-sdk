@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Period - The aggregation period of the value
       class Period < T::Enum
 
 

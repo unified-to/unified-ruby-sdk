@@ -15,11 +15,11 @@ module UnifiedRubySDK
 
 
         field :amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount'), required: true } }
-
+        # Unified fee category
         field :type, Models::Shared::AccountingFeeType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AccountingFeeType, false) } }
-
+        # ISO 4217 currency code, e.g. USD
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # The provider's original fee label, e.g. "VAT" or a shipping carrier name
         field :original_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_type') } }
 
         sig { params(amount: ::Float, type: Models::Shared::AccountingFeeType, currency: T.nilable(::String), original_type: T.nilable(::String)).void }

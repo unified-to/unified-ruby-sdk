@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ApiCallType - The type of API Call being logged
       class ApiCallType < T::Enum
 
 

@@ -23,7 +23,7 @@ module UnifiedRubySDK
         field :required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('required') } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::CalendarAttendeeStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarAttendeeStatus, true) } }
-
+        # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         sig { params(email: T.nilable(::String), is_cohost: T.nilable(T::Boolean), name: T.nilable(::String), required: T.nilable(T::Boolean), status: T.nilable(Models::Shared::CalendarAttendeeStatus), user_id: T.nilable(::String)).void }

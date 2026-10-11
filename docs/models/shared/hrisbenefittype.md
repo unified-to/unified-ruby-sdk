@@ -21,3 +21,7 @@
 | `LOAN_REPAYMENT`            | LOAN_REPAYMENT              |
 | `CHARITABLE_CONTRIBUTION`   | CHARITABLE_CONTRIBUTION     |
 | `OTHER`                     | OTHER                       |
+| `RETIREMENT_ROTH`           | RETIREMENT_ROTH             |
+| `COMMUTER`                  | COMMUTER                    |
+| `DEPENDENT_CARE`            | DEPENDENT_CARE              |
+| `PENSION`                   | PENSION                     |

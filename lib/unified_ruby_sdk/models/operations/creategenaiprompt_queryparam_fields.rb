@@ -22,6 +22,9 @@ module UnifiedRubySDK
           MCP_URL = new('mcp_url')
           MCP_DEFERRED_TOOLS = new('mcp_deferred_tools')
           MCP_AUTHORIZATION_TOKEN = new('mcp_authorization_token')
+          QUESTIONS = new('questions')
+          ANSWERS = new('answers')
+          SKILL_IDS = new('skill_ids')
           RAW = new('raw')
         end
       end

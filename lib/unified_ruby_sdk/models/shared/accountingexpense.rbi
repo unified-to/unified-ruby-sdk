@@ -60,6 +60,8 @@ class UnifiedRubySDK::Models::Shared::AccountingExpense
   def taxrate_id=(str_); end
   def total_amount(); end
   def total_amount=(str_); end
+  def type(); end
+  def type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def user_id(); end

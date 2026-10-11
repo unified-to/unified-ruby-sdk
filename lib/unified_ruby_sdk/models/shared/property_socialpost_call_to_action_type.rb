@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PropertySocialPostCallToActionType - The call-to-action button type
       class PropertySocialPostCallToActionType < T::Enum
 
 

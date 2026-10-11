@@ -17,13 +17,13 @@ module UnifiedRubySDK
         field :attachments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarAttachment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
 
         field :attendees, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarAttendee)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attendees') } }
-
+        # (reference to CalendarCalendar)
         field :calendar_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('calendar_id') } }
 
         field :conference, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarConference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('conference') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :end_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at') } }
 
         field :has_conference, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_conference') } }
@@ -45,11 +45,11 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :recurrence, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarEventRecurrence)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recurrence') } }
-
+        # (reference to CalendarEvent)
         field :recurring_event_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recurring_event_id') } }
 
         field :send_notifications, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('send_notifications') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at') } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::CalendarEventStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarEventStatus, true) } }
@@ -57,7 +57,7 @@ module UnifiedRubySDK
         field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
 
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }

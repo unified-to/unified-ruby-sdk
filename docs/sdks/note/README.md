@@ -32,8 +32,8 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.note.create_ticketing_note(ticketing_note: Models::Shared::TicketingNote.new(
   created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
   description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-  id: '0e92d770-f83a-4574-b23e-9d32b18f5607',
-  updated_at: DateTime.iso8601('2024-09-07T19:44:57.659Z'),
+  id: 'd02ecf82-9b5a-4135-9783-131f0f339f56',
+  updated_at: DateTime.iso8601('2024-09-22T02:58:49.313Z'),
 ), connection_id: '<id>')
 
 unless res.ticketing_note.nil?
@@ -171,8 +171,8 @@ req = Models::Operations::PatchTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
     description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-    id: 'b8a209e8-dd1b-4b3e-8657-17503285f173',
-    updated_at: DateTime.iso8601('2024-09-07T19:44:57.662Z'),
+    id: '9f652cb7-8c00-4ee9-b847-574ab60cf622',
+    updated_at: DateTime.iso8601('2024-09-22T02:58:49.319Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -265,8 +265,8 @@ req = Models::Operations::UpdateTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
     description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-    id: 'b8a209e8-dd1b-4b3e-8657-17503285f173',
-    updated_at: DateTime.iso8601('2024-09-07T19:44:57.662Z'),
+    id: '9f652cb7-8c00-4ee9-b847-574ab60cf622',
+    updated_at: DateTime.iso8601('2024-09-22T02:58:49.319Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

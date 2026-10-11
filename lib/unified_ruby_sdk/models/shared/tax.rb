@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Tax - Tax describes the tax treatment of the benefit
       class Tax < T::Enum
 
 

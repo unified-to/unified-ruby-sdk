@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountingTaxrateType - Whether the rate applies to sales, purchases, or both
       class AccountingTaxrateType < T::Enum
 
 

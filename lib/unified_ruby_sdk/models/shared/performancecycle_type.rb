@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PerformanceCycleType - whether this is a review cycle or a goal cycle/timeframe
       class PerformanceCycleType < T::Enum
 
 

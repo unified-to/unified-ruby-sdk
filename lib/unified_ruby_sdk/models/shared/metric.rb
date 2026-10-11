@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Metric - The metric being reported
       class Metric < T::Enum
 
 

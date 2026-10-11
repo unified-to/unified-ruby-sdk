@@ -25,6 +25,13 @@ module UnifiedRubySDK
           ACCOUNT_NUMBER_LAST4 = new('account_number_last4')
           NAME = new('name')
           IS_PRIMARY = new('is_primary')
+          IBAN = new('iban')
+          BIC = new('bic')
+          COUNTRY_CODE = new('country_code')
+          CURRENCY = new('currency')
+          SPLIT_TYPE = new('split_type')
+          SPLIT_AMOUNT = new('split_amount')
+          PRIORITY = new('priority')
           RAW = new('raw')
         end
       end

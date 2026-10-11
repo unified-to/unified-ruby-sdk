@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::AccountingPurchaseorder
   def account_id(); end
   def account_id=(str_); end
+  def attachments(); end
+  def attachments=(str_); end
   def billing_address(); end
   def billing_address=(str_); end
   def category_ids(); end

@@ -15,57 +15,57 @@ module UnifiedRubySDK
 
         # The address of the company
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyEnrichCompanyAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
-
+        # The Alexa rank of the company
         field :alexa_rank, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('alexa_rank') } }
-
+        # The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The Crunchbase URL of the company
         field :crunchbase_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('crunchbase_url') } }
-
+        # The description of the company
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # The webmail domain of the company
         field :domain, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('domain') } }
-
+        # The number of employees at the company
         field :employees, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employees') } }
-
+        # The public exchange of the company (eg. NASDAQ)
         field :exchange, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('exchange') } }
-
+        # The Facebook URL of the company
         field :facebook_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('facebook_url') } }
-
+        # Unique identifier for this company object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # The industry of the company
         field :industry, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('industry') } }
-
+        # The Crunchbase URL of the company
         field :instagram_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instagram_url') } }
-
+        # The LinkedIn URL of the company
         field :linkedin_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('linkedin_url') } }
-
+        # The URL of the logo of the company
         field :logo_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('logo_url') } }
-
+        # The NAICS code of the company
         field :naics_code, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('naics_code') } }
-
+        # The name of the company
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # The raw data returned by the integration for this company
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # The approximate revenue of the company
         field :revenue, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('revenue') } }
-
+        # The SIC code of the company
         field :sic_code, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sic_code') } }
-
+        # The stock ticker of the company (eg. AMZN)
         field :stock, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('stock') } }
         # An array of telephones for this company
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::EnrichTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
-
+        # The twitter handle of the company
         field :twitter_handle, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('twitter_handle') } }
-
+        # The twitter URL of the company
         field :twitter_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('twitter_url') } }
-
+        # The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The year that the company was founded
         field :year_founded, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('year_founded') } }
-
+        # The Yelp URL of the company
         field :yelp_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('yelp_url') } }
-
+        # The Youtube URL of the company
         field :youtube_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('youtube_url') } }
 
         sig { params(address: T.nilable(Models::Shared::PropertyEnrichCompanyAddress), alexa_rank: T.nilable(::Float), created_at: T.nilable(::DateTime), crunchbase_url: T.nilable(::String), description: T.nilable(::String), domain: T.nilable(::String), employees: T.nilable(::String), exchange: T.nilable(::String), facebook_url: T.nilable(::String), id: T.nilable(::String), industry: T.nilable(::String), instagram_url: T.nilable(::String), linkedin_url: T.nilable(::String), logo_url: T.nilable(::String), naics_code: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), revenue: T.nilable(::String), sic_code: T.nilable(::Float), stock: T.nilable(::String), telephones: T.nilable(T::Array[Models::Shared::EnrichTelephone]), twitter_handle: T.nilable(::String), twitter_url: T.nilable(::String), updated_at: T.nilable(::DateTime), year_founded: T.nilable(::Float), yelp_url: T.nilable(::String), youtube_url: T.nilable(::String)).void }

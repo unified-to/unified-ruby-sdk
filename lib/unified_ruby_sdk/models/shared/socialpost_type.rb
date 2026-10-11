@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # SocialPostType - The kind of post
       class SocialPostType < T::Enum
 
 

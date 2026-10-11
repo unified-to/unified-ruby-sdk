@@ -19,11 +19,11 @@ module UnifiedRubySDK
         field :collection_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('collection_ids') } }
 
         field :course_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('course_ids') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # Difficulty or level of the content (e.g. Beginner, Intermediate, Advanced)
         field :difficulty, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('difficulty') } }
 
         field :duration_minutes, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration_minutes') } }
@@ -45,7 +45,7 @@ module UnifiedRubySDK
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :provider_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('provider_name') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :published_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('published_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -59,7 +59,7 @@ module UnifiedRubySDK
         field :subjects, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsSubject)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subjects') } }
 
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(categories: T.nilable(T::Array[::String]), collection_ids: T.nilable(T::Array[::String]), course_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), difficulty: T.nilable(::String), duration_minutes: T.nilable(::Float), external_reference: T.nilable(::String), id: T.nilable(::String), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), is_active: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), localizations: T.nilable(T::Array[Models::Shared::LmsContentLocalization]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), short_description: T.nilable(::String), skills: T.nilable(T::Array[::String]), sort_order: T.nilable(::Float), subjects: T.nilable(T::Array[Models::Shared::LmsSubject]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }

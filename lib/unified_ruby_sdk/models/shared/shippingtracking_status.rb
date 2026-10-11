@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ShippingTrackingStatus - Current status of the shipment
       class ShippingTrackingStatus < T::Enum
 
 

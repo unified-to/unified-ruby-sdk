@@ -28,6 +28,7 @@ module UnifiedRubySDK
           TYPE = new('type')
           METADATA = new('metadata')
           RAW = new('raw')
+          CONVERSATION_IDENTIFIER = new('conversation_identifier')
         end
       end
     end

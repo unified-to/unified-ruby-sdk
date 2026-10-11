@@ -10,3 +10,5 @@
 | `STOCK_OPTIONS` | STOCK_OPTIONS   |
 | `EQUITY`        | EQUITY          |
 | `OTHER`         | OTHER           |
+| `HOURLY`        | HOURLY          |
+| `COMMISSION`    | COMMISSION      |

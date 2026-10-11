@@ -17,7 +17,7 @@ module UnifiedRubySDK
         field :answers, Crystalline::Array.new(Models::Shared::FormAnswer), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers'), required: true } }
 
         field :form_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('form_id'), required: true } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
@@ -27,7 +27,7 @@ module UnifiedRubySDK
         field :respondent_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('respondent_email') } }
 
         field :respondent_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('respondent_name') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(answers: T::Array[Models::Shared::FormAnswer], form_id: ::String, created_at: T.nilable(::DateTime), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), respondent_email: T.nilable(::String), respondent_name: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }

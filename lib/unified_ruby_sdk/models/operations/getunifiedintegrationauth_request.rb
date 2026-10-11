@@ -17,6 +17,8 @@ module UnifiedRubySDK
         field :integration_type, ::String, { 'path_param': { 'field_name': 'integration_type', 'style': 'simple', 'explode': false } }
         # The ID of the workspace
         field :workspace_id, ::String, { 'path_param': { 'field_name': 'workspace_id', 'style': 'simple', 'explode': false } }
+        # Existing connection ID to re-authorize in place instead of creating a duplicate. Requires reauth_token.
+        field :connection_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'connection_id', 'style': 'form', 'explode': true } }
 
         field :env, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
         # Your user identifier to associate with the new Integration
@@ -25,6 +27,8 @@ module UnifiedRubySDK
         field :failure_redirect, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'failure_redirect', 'style': 'form', 'explode': true } }
         # Language: en, fr, es, it, pt, zh, hi
         field :lang, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'lang', 'style': 'form', 'explode': true } }
+        # Single-use token from "Create a re-authorization token for a connection" (POST /unified/connection/{id}/reauth); required with connection_id.
+        field :reauth_token, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'reauth_token', 'style': 'form', 'explode': true } }
 
         field :redirect, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'redirect', 'style': 'form', 'explode': true } }
         # Optional region index (into the integration api.urls array) selected by the end-user. Set automatically by the auth widget when the workspace integration has prompt_region=true.
@@ -38,14 +42,16 @@ module UnifiedRubySDK
         # The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
         field :success_redirect, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'success_redirect', 'style': 'form', 'explode': true } }
 
-        sig { params(integration_type: ::String, workspace_id: ::String, env: T.nilable(::String), external_xref: T.nilable(::String), failure_redirect: T.nilable(::String), lang: T.nilable(::String), redirect: T.nilable(T::Boolean), region: T.nilable(::String), scopes: T.nilable(T::Array[::String]), state: T.nilable(::String), subdomain: T.nilable(::String), success_redirect: T.nilable(::String)).void }
-        def initialize(integration_type:, workspace_id:, env: nil, external_xref: nil, failure_redirect: nil, lang: nil, redirect: nil, region: nil, scopes: nil, state: nil, subdomain: nil, success_redirect: nil)
+        sig { params(integration_type: ::String, workspace_id: ::String, connection_id: T.nilable(::String), env: T.nilable(::String), external_xref: T.nilable(::String), failure_redirect: T.nilable(::String), lang: T.nilable(::String), reauth_token: T.nilable(::String), redirect: T.nilable(T::Boolean), region: T.nilable(::String), scopes: T.nilable(T::Array[::String]), state: T.nilable(::String), subdomain: T.nilable(::String), success_redirect: T.nilable(::String)).void }
+        def initialize(integration_type:, workspace_id:, connection_id: nil, env: nil, external_xref: nil, failure_redirect: nil, lang: nil, reauth_token: nil, redirect: nil, region: nil, scopes: nil, state: nil, subdomain: nil, success_redirect: nil)
           @integration_type = integration_type
           @workspace_id = workspace_id
+          @connection_id = connection_id
           @env = env
           @external_xref = external_xref
           @failure_redirect = failure_redirect
           @lang = lang
+          @reauth_token = reauth_token
           @redirect = redirect
           @region = region
           @scopes = scopes
@@ -59,10 +65,12 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @integration_type == other.integration_type
           return false unless @workspace_id == other.workspace_id
+          return false unless @connection_id == other.connection_id
           return false unless @env == other.env
           return false unless @external_xref == other.external_xref
           return false unless @failure_redirect == other.failure_redirect
           return false unless @lang == other.lang
+          return false unless @reauth_token == other.reauth_token
           return false unless @redirect == other.redirect
           return false unless @region == other.region
           return false unless @scopes == other.scopes

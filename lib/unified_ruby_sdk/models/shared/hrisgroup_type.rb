@@ -20,6 +20,7 @@ module UnifiedRubySDK
           BUSINESS_UNIT = new('BUSINESS_UNIT')
           BRANCH = new('BRANCH')
           SUB_DEPARTMENT = new('SUB_DEPARTMENT')
+          PAY_GROUP = new('PAY_GROUP')
         end
       end
     end

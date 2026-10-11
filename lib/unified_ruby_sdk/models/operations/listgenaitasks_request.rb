@@ -15,6 +15,8 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # The agent ID to filter by
+        field :agent_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'agent_id', 'style': 'form', 'explode': true } }
         # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListGenaiTasksQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
@@ -34,9 +36,10 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::ListGenaiTasksQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), status: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, status: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, agent_id: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListGenaiTasksQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), status: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, agent_id: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, status: nil, updated_gte: nil)
           @connection_id = connection_id
+          @agent_id = agent_id
           @fields_ = fields_
           @limit = limit
           @offset = offset
@@ -52,6 +55,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
+          return false unless @agent_id == other.agent_id
           return false unless @fields_ == other.fields_
           return false unless @limit == other.limit
           return false unless @offset == other.offset

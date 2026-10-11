@@ -30,6 +30,7 @@ module UnifiedRubySDK
           TELEPHONES = new('telephones')
           SOURCE = new('source')
           STATUS = new('status')
+          TITLE = new('title')
           LINK_URLS = new('link_urls')
           METADATA = new('metadata')
           RAW = new('raw')

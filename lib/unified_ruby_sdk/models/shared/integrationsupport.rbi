@@ -8,6 +8,8 @@ end
 
 
 class UnifiedRubySDK::Models::Shared::IntegrationSupport
+  def raw_objects(); end
+  def raw_objects=(str_); end
   def from_webhook(); end
   def from_webhook=(str_); end
   def inbound_fields(); end
@@ -16,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_account_id=(str_); end
   def list_ad_id(); end
   def list_ad_id=(str_); end
+  def list_agent_id(); end
+  def list_agent_id=(str_); end
   def list_application_id(); end
   def list_application_id=(str_); end
   def list_approver_user_id(); end
@@ -72,6 +76,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_document_id=(str_); end
   def list_effective_status(); end
   def list_effective_status=(str_); end
+  def list_email(); end
+  def list_email=(str_); end
   def list_end_lt(); end
   def list_end_lt=(str_); end
   def list_event_id(); end
@@ -256,8 +262,6 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def native_webhook_visitor_id=(str_); end
   def outbound_fields(); end
   def outbound_fields=(str_); end
-  def raw_objects(); end
-  def raw_objects=(str_); end
   def search_domain(); end
   def search_domain=(str_); end
   def search_email(); end

@@ -13,7 +13,7 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
@@ -21,23 +21,23 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
-
+        # (reference to PaymentPayment)
         field :payment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # Why the refund was issued
         field :reason, Crystalline::Nilable.new(Models::Shared::Reason), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reason'), 'decoder': Utils.enum_from_string(Models::Shared::Reason, true) } }
 
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
-
+        # Date and time the refund occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :refunded_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refunded_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::PaymentRefundStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentRefundStatus, true) } }
-
+        # Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
         field :tender_type, Crystalline::Nilable.new(Models::Shared::PaymentRefundTenderType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tender_type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentRefundTenderType, true) } }
 
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), notes: T.nilable(::String), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(Models::Shared::Reason), reference: T.nilable(::String), refunded_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PaymentRefundStatus), tender_type: T.nilable(Models::Shared::PaymentRefundTenderType), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }

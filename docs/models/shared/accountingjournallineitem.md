@@ -3,20 +3,20 @@
 
 ## Fields
 
-| Field                 | Type                  | Required              | Description           |
-| --------------------- | --------------------- | --------------------- | --------------------- |
-| `account_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `category_ids`        | T::Array<*::String*>  | :heavy_minus_sign:    | N/A                   |
-| `contact_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `credit_amount`       | *T.nilable(::Float)*  | :heavy_minus_sign:    | N/A                   |
-| `debit_amount`        | *T.nilable(::Float)*  | :heavy_minus_sign:    | N/A                   |
-| `description`         | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `group_id`            | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `id`                  | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `invoice_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `organization_id`     | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `payment_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `project_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `tax_amount`          | *T.nilable(::Float)*  | :heavy_minus_sign:    | N/A                   |
-| `taxrate_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `total_amount`        | *T.nilable(::Float)*  | :heavy_minus_sign:    | N/A                   |
+| Field                                                          | Type                                                           | Required                                                       | Description                                                    |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| `account_id`                                                   | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | (reference to AccountingAccount)                               |
+| `category_ids`                                                 | T::Array<*::String*>                                           | :heavy_minus_sign:                                             | N/A                                                            |
+| `contact_id`                                                   | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | (reference to AccountingContact)                               |
+| `credit_amount`                                                | *T.nilable(::Float)*                                           | :heavy_minus_sign:                                             | N/A                                                            |
+| `debit_amount`                                                 | *T.nilable(::Float)*                                           | :heavy_minus_sign:                                             | will replace total_amount (absolute value)                     |
+| `description`                                                  | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | N/A                                                            |
+| `group_id`                                                     | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | points to a HRIS Group (reference to HrisGroup)                |
+| `id`                                                           | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | N/A                                                            |
+| `invoice_id`                                                   | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | (reference to AccountingInvoice)                               |
+| `organization_id`                                              | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | points to a AccountingOrganization                             |
+| `payment_id`                                                   | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | link to PaymentPayment (reference to PaymentPayment)           |
+| `project_id`                                                   | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | (reference to TaskProject)                                     |
+| `tax_amount`                                                   | *T.nilable(::Float)*                                           | :heavy_minus_sign:                                             | N/A                                                            |
+| `taxrate_id`                                                   | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | ref -> AccountingTaxrate applied to the line                   |
+| `total_amount`                                                 | *T.nilable(::Float)*                                           | :heavy_minus_sign:                                             | will be a positive value for a debit and negative for a credit |

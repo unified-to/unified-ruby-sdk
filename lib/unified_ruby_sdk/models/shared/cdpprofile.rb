@@ -15,43 +15,43 @@ module UnifiedRubySDK
 
         # The address of the profile
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyCdpProfileAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
-
+        # The birth date of the profile
         field :birthdate, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('birthdate') } }
-
+        # The company/organization name of the profile
         field :company, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company') } }
         # The consent/privacy preferences of the profile
         field :consent, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CdpConsent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('consent') } }
-
+        # The date that this profile object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The primary email address of the profile
         field :email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
-
+        # The first name of the profile
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
-
+        # The gender of the profile
         field :gender, Crystalline::Nilable.new(Models::Shared::CdpProfileGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Models::Shared::CdpProfileGender, true) } }
-
+        # Unique identifier for this profile object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # The typed identifiers stitched to this profile
         field :identifiers, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CdpIdentifier)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('identifiers') } }
-
+        # Whether the profile is anonymous (no known identity)
         field :is_anonymous, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_anonymous') } }
-
+        # The last name of the profile
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
         # The traits/attributes of the profile
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CdpMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # The full name of the profile
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # The raw data returned by the integration for this profile
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The segments/audiences this profile currently belongs to
         field :segments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CdpProfileSegment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('segments') } }
-
+        # The cdp_source this profile originated from; points to CdpSource
         field :source_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source_id') } }
-
+        # The primary telephone number of the profile
         field :telephone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone') } }
-
+        # The job title of the profile
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
-
+        # The last date that this profile object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(address: T.nilable(Models::Shared::PropertyCdpProfileAddress), birthdate: T.nilable(::String), company: T.nilable(::String), consent: T.nilable(T::Array[Models::Shared::CdpConsent]), created_at: T.nilable(::DateTime), email: T.nilable(::String), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::CdpProfileGender), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::CdpIdentifier]), is_anonymous: T.nilable(T::Boolean), last_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CdpMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), segments: T.nilable(T::Array[Models::Shared::CdpProfileSegment]), source_id: T.nilable(::String), telephone: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }

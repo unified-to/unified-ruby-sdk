@@ -19,7 +19,7 @@ module UnifiedRubySDK
         field :body, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('body') } }
 
         field :campaign_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign_id') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :creative_type, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCreativeCreativeType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creative_type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsCreativeCreativeType, true) } }
@@ -33,7 +33,7 @@ module UnifiedRubySDK
         field :external_creative_reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_creative_reference') } }
 
         field :external_placement_reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('external_placement_reference') } }
-
+        # (reference to AdsGroup)
         field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
 
         field :height, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('height') } }
@@ -41,19 +41,19 @@ module UnifiedRubySDK
         field :hosting_source, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCreativeHostingSource), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hosting_source'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsCreativeHostingSource, true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # references Commerce Item ID (reference to CommerceItem)
         field :item_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_id') } }
 
         field :labels, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('labels') } }
-
+        # Destination URL for creatives with links
         field :link_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_url') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
-
+        # Display URL path 1 (Microsoft RSA Path1)
         field :path1, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path1') } }
-
+        # Display URL path 2 (Microsoft RSA Path2)
         field :path2, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('path2') } }
 
         field :promoted, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsPromoted)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('promoted') } }
@@ -65,9 +65,9 @@ module UnifiedRubySDK
         field :third_party_tag, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('third_party_tag') } }
 
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Appended URL tracking params (e.g. utm_source=..&utm_medium=..); Meta url_tags, Google tracking template
         field :url_tags, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url_tags') } }
 
         field :vast_tag_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('vast_tag_url') } }

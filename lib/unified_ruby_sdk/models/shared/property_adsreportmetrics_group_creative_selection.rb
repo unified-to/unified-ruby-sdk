@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PropertyAdsReportMetricsGroupCreativeSelection - Creative rotation strategy (LinkedIn creativeSelection)
       class PropertyAdsReportMetricsGroupCreativeSelection < T::Enum
 
 

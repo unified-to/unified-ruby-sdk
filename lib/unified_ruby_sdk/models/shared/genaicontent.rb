@@ -15,12 +15,15 @@ module UnifiedRubySDK
 
 
         field :content, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content'), required: true } }
+        # Images for the model to evaluate with this message, as base64 data URLs (data:image/png;base64,...). Only for models with has_vision.
+        field :images, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('images') } }
 
         field :role, Crystalline::Nilable.new(Models::Shared::Role), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('role'), 'decoder': Utils.enum_from_string(Models::Shared::Role, true) } }
 
-        sig { params(content: ::String, role: T.nilable(Models::Shared::Role)).void }
-        def initialize(content:, role: nil)
+        sig { params(content: ::String, images: T.nilable(T::Array[::String]), role: T.nilable(Models::Shared::Role)).void }
+        def initialize(content:, images: nil, role: nil)
           @content = content
+          @images = images
           @role = role
         end
 
@@ -28,6 +31,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @content == other.content
+          return false unless @images == other.images
           return false unless @role == other.role
           true
         end

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ClubsEventStatus - The event status
       class ClubsEventStatus < T::Enum
 
 

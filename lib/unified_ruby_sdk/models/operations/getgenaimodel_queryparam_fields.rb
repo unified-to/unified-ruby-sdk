@@ -19,6 +19,8 @@ module UnifiedRubySDK
           MAX_TOKENS = new('max_tokens')
           WEB_URL = new('web_url')
           HAS_TEMPERATURE = new('has_temperature')
+          HAS_QUESTIONS = new('has_questions')
+          HAS_VISION = new('has_vision')
           RAW = new('raw')
         end
       end

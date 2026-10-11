@@ -1,5 +1,7 @@
 # SigningSignatoryStatus
 
+Current status of this signatory
+
 
 ## Values
 

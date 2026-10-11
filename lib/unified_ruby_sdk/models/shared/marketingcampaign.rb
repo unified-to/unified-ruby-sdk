@@ -13,33 +13,33 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # When the campaign was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Sender email address
         field :from_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from_email') } }
-
+        # Sender name
         field :from_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from_name') } }
-
+        # Unique identifier for the campaign
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Associated listaudience IDs
         field :list_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_ids') } }
-
+        # Campaign nametitle
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # Email preview text
         field :preview_text, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('preview_text') } }
-
+        # Raw data from integration
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # Reply-to email address
         field :reply_to_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reply_to_email') } }
-
+        # Scheduled send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :send_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('send_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Campaign status
         field :status, Crystalline::Nilable.new(Models::Shared::MarketingCampaignStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::MarketingCampaignStatus, true) } }
-
+        # Email subject line
         field :subject_line, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject_line') } }
-
+        # Campaign type (e.g., regular, automation, ab_test)
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
-
+        # When the campaign was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(created_at: T.nilable(::DateTime), from_email: T.nilable(::String), from_name: T.nilable(::String), id: T.nilable(::String), list_ids: T.nilable(T::Array[::String]), name: T.nilable(::String), preview_text: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reply_to_email: T.nilable(::String), send_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::MarketingCampaignStatus), subject_line: T.nilable(::String), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }

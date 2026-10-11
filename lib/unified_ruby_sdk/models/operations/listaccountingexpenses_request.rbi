@@ -40,6 +40,8 @@ class UnifiedRubySDK::Models::Operations::ListAccountingExpensesRequest
   def start_gte=(str_); end
   def status(); end
   def status=(str_); end
+  def type(); end
+  def type=(str_); end
   def updated_gte(); end
   def updated_gte=(str_); end
   def user_id(); end

@@ -13,11 +13,11 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Number of followers
         field :follower_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('follower_count') } }
-
+        # Number of accounts this profile follows
         field :following_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('following_count') } }
-
+        # Total number of posts published by this profile
         field :post_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('post_count') } }
 
         sig { params(follower_count: T.nilable(::Float), following_count: T.nilable(::Float), post_count: T.nilable(::Float)).void }

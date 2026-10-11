@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # CrmEventType - The type of event
       class CrmEventType < T::Enum
 
 

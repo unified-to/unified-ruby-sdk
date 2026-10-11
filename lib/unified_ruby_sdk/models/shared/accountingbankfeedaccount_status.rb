@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountingBankfeedaccountStatus - feed state: ACTIVE, INACTIVE
       class AccountingBankfeedaccountStatus < T::Enum
 
 

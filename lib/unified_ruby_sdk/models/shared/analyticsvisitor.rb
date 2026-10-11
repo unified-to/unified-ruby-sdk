@@ -21,11 +21,11 @@ module UnifiedRubySDK
         field :country, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
 
         field :country_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country_code') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :first_seen_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_seen_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :gender, Crystalline::Nilable.new(Models::Shared::Gender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Models::Shared::Gender, true) } }
@@ -33,13 +33,13 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :last_seen_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_seen_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, Models::Shared::PropertyAnalyticsVisitorMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # points to AnalyticsProperty
         field :property_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('property_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -51,7 +51,7 @@ module UnifiedRubySDK
         field :total_page_views, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_page_views') } }
 
         field :total_sessions, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_sessions') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(age: T.nilable(::Float), city: T.nilable(::String), country: T.nilable(::String), country_code: T.nilable(::String), created_at: T.nilable(::DateTime), email: T.nilable(::String), first_seen_at: T.nilable(::DateTime), gender: T.nilable(Models::Shared::Gender), id: T.nilable(::String), language: T.nilable(::String), last_seen_at: T.nilable(::DateTime), metadata: T.nilable(T::Hash[Symbol, Models::Shared::PropertyAnalyticsVisitorMetadata]), name: T.nilable(::String), property_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), total_events: T.nilable(::Float), total_page_views: T.nilable(::Float), total_sessions: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }

@@ -40,7 +40,7 @@ res = s.taxonomy.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonom
   ],
   subcategory: 'Bamboo',
   type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-  updated_at: DateTime.iso8601('2023-05-22T20:37:18.964Z'),
+  updated_at: DateTime.iso8601('2023-05-27T03:47:37.296Z'),
   url: 'https://our-polarisation.name',
 ), connection_id: '<id>')
 

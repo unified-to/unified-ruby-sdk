@@ -1,5 +1,7 @@
 # CdpEventType
 
+The unified structural category of the event
+
 
 ## Values
 

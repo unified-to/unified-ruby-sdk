@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # CdpActivationStatus - The current status of the activation
       class CdpActivationStatus < T::Enum
 
 

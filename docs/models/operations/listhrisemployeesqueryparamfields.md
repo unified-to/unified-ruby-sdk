@@ -13,6 +13,7 @@
 | `LAST_NAME`               | last_name                 |
 | `EMAILS`                  | emails                    |
 | `TITLE`                   | title                     |
+| `JOB_ID`                  | job_id                    |
 | `MANAGER_ID`              | manager_id                |
 | `EMPLOYMENT_STATUS`       | employment_status         |
 | `GENDER`                  | gender                    |
@@ -46,4 +47,6 @@
 | `HAS_MFA`                 | has_mfa                   |
 | `TIMEOFF_DAYS_TOTAL`      | timeoff_days_total        |
 | `TIMEOFF_DAYS_USED`       | timeoff_days_used         |
+| `FLSA_STATUS`             | flsa_status               |
+| `PAY_FREQUENCY`           | pay_frequency             |
 | `RAW`                     | raw                       |

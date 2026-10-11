@@ -13,41 +13,41 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # the HR Employee being reviewed (reference to HrisEmployee)
         field :user_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id'), required: true } }
-
+        # the overall/summary comment of this review
         field :comment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comment') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # pointer to the Performance Cycle object
         field :cycle_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cycle_id') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # whether the reviewee acknowledged this review
         field :is_acknowledged, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_acknowledged') } }
 
         field :questions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PerformanceReviewQuestion)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }
-
+        # the overall rating/score of this review
         field :rating, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating') } }
-
+        # label of the rating on the provider's scale (e.g. "Exceeds expectations")
         field :rating_description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating_description') } }
-
+        # the maximum possible rating/score on the provider's scale
         field :rating_maximum, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating_maximum') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # the HR Employee that wrote this review (reference to HrisEmployee)
         field :reviewer_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reviewer_user_id') } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::PerformanceReviewStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PerformanceReviewStatus, true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :submitted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('submitted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # id of the review template/form this review is based on
         field :template_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('template_identifier') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::PerformanceReviewType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PerformanceReviewType, true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(user_id: ::String, comment: T.nilable(::String), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), cycle_id: T.nilable(::String), id: T.nilable(::String), is_acknowledged: T.nilable(T::Boolean), questions: T.nilable(T::Array[Models::Shared::PerformanceReviewQuestion]), rating: T.nilable(::Float), rating_description: T.nilable(::String), rating_maximum: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), reviewer_user_id: T.nilable(::String), status: T.nilable(Models::Shared::PerformanceReviewStatus), submitted_at: T.nilable(::DateTime), template_identifier: T.nilable(::String), type: T.nilable(Models::Shared::PerformanceReviewType), updated_at: T.nilable(::DateTime)).void }

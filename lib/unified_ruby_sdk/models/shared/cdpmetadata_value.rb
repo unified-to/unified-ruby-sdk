@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # The attribute/trait value
       class CdpMetadataValue
         extend T::Sig
         include Crystalline::MetadataFields

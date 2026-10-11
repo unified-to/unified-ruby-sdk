@@ -13,15 +13,15 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The event task's descriptionnote
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The event task's nametitle/subject
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :priority, Crystalline::Nilable.new(Models::Shared::Priority), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority'), 'decoder': Utils.enum_from_string(Models::Shared::Priority, true) } }
-
+        # The event task's status
         field :status, Crystalline::Nilable.new(Models::Shared::PropertyCrmEventTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyCrmEventTaskStatus, true) } }
 
         sig { params(description: T.nilable(::String), due_at: T.nilable(::DateTime), name: T.nilable(::String), priority: T.nilable(Models::Shared::Priority), status: T.nilable(Models::Shared::PropertyCrmEventTaskStatus)).void }

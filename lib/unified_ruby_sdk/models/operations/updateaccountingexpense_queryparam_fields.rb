@@ -41,6 +41,7 @@ module UnifiedRubySDK
           METADATA = new('metadata')
           TAXRATE_ID = new('taxrate_id')
           EXCHANGE_RATE = new('exchange_rate')
+          TYPE = new('type')
           RAW = new('raw')
         end
       end

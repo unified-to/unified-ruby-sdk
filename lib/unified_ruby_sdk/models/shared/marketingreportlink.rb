@@ -13,17 +13,17 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Percentage of total clicks
         field :click_percentage, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('click_percentage') } }
-
+        # Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :last_click_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_click_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Total clicks on this link
         field :total_clicks, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_clicks') } }
-
+        # Percentage of unique clicks
         field :unique_click_percentage, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unique_click_percentage') } }
-
+        # Unique clicks on this link
         field :unique_clicks, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unique_clicks') } }
-
+        # The URL
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
         sig { params(click_percentage: T.nilable(::Float), last_click_at: T.nilable(::DateTime), total_clicks: T.nilable(::Float), unique_click_percentage: T.nilable(::Float), unique_clicks: T.nilable(::Float), url: T.nilable(::String)).void }

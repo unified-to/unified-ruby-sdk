@@ -15,44 +15,65 @@ module UnifiedRubySDK
 
 
         field :account_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_number') } }
-
+        # when full number not returned
         field :account_number_last4, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_number_last4') } }
 
         field :account_type, Crystalline::Nilable.new(Models::Shared::HrisBankaccountAccountType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisBankaccountAccountType, true) } }
 
         field :bank_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bank_name') } }
-
+        # BIC / SWIFT code
+        field :bic, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bic') } }
+        # (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
-
+        # ISO 2-digit country code of the bank account
+        field :country_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country_code') } }
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+        # International Bank Account Number (non-US accounts)
+        field :iban, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('iban') } }
+
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # primary for direct deposit
         field :is_primary, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_primary') } }
-
+        # account nickname (e.g. "BoA Checking")
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        # order in which split accounts are funded (1 = first)
+        field :priority, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # 9-digit US routing number
         field :routing_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('routing_number') } }
-
+        # percentage (when split_type is PERCENTAGE) or money (when FIXED)
+        field :split_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('split_amount') } }
+        # how net pay is split into this account when an employee has several accounts
+        field :split_type, Crystalline::Nilable.new(Models::Shared::SplitType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('split_type'), 'decoder': Utils.enum_from_string(Models::Shared::SplitType, true) } }
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # employee ID (required for listcreate) (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(account_number: T.nilable(::String), account_number_last4: T.nilable(::String), account_type: T.nilable(Models::Shared::HrisBankaccountAccountType), bank_name: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_primary: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), routing_number: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(account_number: nil, account_number_last4: nil, account_type: nil, bank_name: nil, company_id: nil, created_at: nil, id: nil, is_primary: nil, name: nil, raw: nil, routing_number: nil, updated_at: nil, user_id: nil)
+        sig { params(account_number: T.nilable(::String), account_number_last4: T.nilable(::String), account_type: T.nilable(Models::Shared::HrisBankaccountAccountType), bank_name: T.nilable(::String), bic: T.nilable(::String), company_id: T.nilable(::String), country_code: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), iban: T.nilable(::String), id: T.nilable(::String), is_primary: T.nilable(T::Boolean), name: T.nilable(::String), priority: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), routing_number: T.nilable(::String), split_amount: T.nilable(::Float), split_type: T.nilable(Models::Shared::SplitType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(account_number: nil, account_number_last4: nil, account_type: nil, bank_name: nil, bic: nil, company_id: nil, country_code: nil, created_at: nil, currency: nil, iban: nil, id: nil, is_primary: nil, name: nil, priority: nil, raw: nil, routing_number: nil, split_amount: nil, split_type: nil, updated_at: nil, user_id: nil)
           @account_number = account_number
           @account_number_last4 = account_number_last4
           @account_type = account_type
           @bank_name = bank_name
+          @bic = bic
           @company_id = company_id
+          @country_code = country_code
           @created_at = created_at
+          @currency = currency
+          @iban = iban
           @id = id
           @is_primary = is_primary
           @name = name
+          @priority = priority
           @raw = raw
           @routing_number = routing_number
+          @split_amount = split_amount
+          @split_type = split_type
           @updated_at = updated_at
           @user_id = user_id
         end
@@ -64,13 +85,20 @@ module UnifiedRubySDK
           return false unless @account_number_last4 == other.account_number_last4
           return false unless @account_type == other.account_type
           return false unless @bank_name == other.bank_name
+          return false unless @bic == other.bic
           return false unless @company_id == other.company_id
+          return false unless @country_code == other.country_code
           return false unless @created_at == other.created_at
+          return false unless @currency == other.currency
+          return false unless @iban == other.iban
           return false unless @id == other.id
           return false unless @is_primary == other.is_primary
           return false unless @name == other.name
+          return false unless @priority == other.priority
           return false unless @raw == other.raw
           return false unless @routing_number == other.routing_number
+          return false unless @split_amount == other.split_amount
+          return false unless @split_type == other.split_type
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id
           true

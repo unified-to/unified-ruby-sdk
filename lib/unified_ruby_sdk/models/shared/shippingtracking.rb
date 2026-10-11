@@ -13,33 +13,33 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Actual delivery timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :actual_delivery_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('actual_delivery_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Reference to the carrier
         field :carrier_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('carrier_id') } }
-
+        # Carrier's status code
         field :carrier_status_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('carrier_status_code') } }
-
+        # Carrier's status description
         field :carrier_status_description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('carrier_status_description') } }
-
+        # The date that this tracking object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Estimated delivery date
         field :estimated_delivery, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('estimated_delivery'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # Array of tracking events
         field :events, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ShippingTrackingEvent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('events') } }
-
+        # Unique identifier for this tracking object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # The raw data returned by the integration for this tracking
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # Reference to the shipment
         field :shipment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipment_id') } }
-
+        # Current status of the shipment
         field :status, Crystalline::Nilable.new(Models::Shared::ShippingTrackingStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::ShippingTrackingStatus, true) } }
-
+        # Human-readable status
         field :status_description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status_description') } }
-
+        # Tracking number for the shipment
         field :tracking_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tracking_number') } }
-
+        # The last date that this tracking object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(actual_delivery_at: T.nilable(::DateTime), carrier_id: T.nilable(::String), carrier_status_code: T.nilable(::String), carrier_status_description: T.nilable(::String), created_at: T.nilable(::DateTime), estimated_delivery: T.nilable(::DateTime), events: T.nilable(T::Array[Models::Shared::ShippingTrackingEvent]), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), shipment_id: T.nilable(::String), status: T.nilable(Models::Shared::ShippingTrackingStatus), status_description: T.nilable(::String), tracking_number: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }

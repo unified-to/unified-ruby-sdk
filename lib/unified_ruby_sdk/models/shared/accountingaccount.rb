@@ -13,35 +13,35 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Balance of the account.
         field :balance, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance') } }
-
+        # Date and time when the Account was created, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Account’s currency, in ISO 4217 format (e.g. U.S. dollars is USD)
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # Identifier for tracking and categorizing accounts for reporting or analysis purposes that is defined by the end-customer
         field :customer_defined_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('customer_defined_code') } }
-
+        # Account description
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # Identifier used by the SaaS application to uniquely identify the Account
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # True if the account is an “accounts payable” account
         field :is_payable, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_payable') } }
-
+        # Account name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
-
+        # The parent account ID for this account
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
-
+        # The original data from the integration's API
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # Account status, such as ACTIVE or ARCHIVED
         field :status, Crystalline::Nilable.new(Models::Shared::Status), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::Status, true) } }
 
         field :taxonomy, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingAccountTaxonomy)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('taxonomy') } }
-
+        # Account type, such as BANK. EQUITY, ASSET, ...
         field :type, Crystalline::Nilable.new(Models::Shared::Type), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::Type, true) } }
-
+        # Date and time when the Account was last updated, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(balance: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_defined_code: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_payable: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::Status), taxonomy: T.nilable(T::Array[Models::Shared::AccountingAccountTaxonomy]), type: T.nilable(Models::Shared::Type), updated_at: T.nilable(::DateTime)).void }

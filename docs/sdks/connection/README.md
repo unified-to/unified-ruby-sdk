@@ -6,6 +6,7 @@
 ### Available Operations
 
 * [create_unified_connection](#create_unified_connection) - Create connection
+* [create_unified_connection_reauth](#create_unified_connection_reauth) - Create a re-authorization token for a connection
 * [get_unified_connection](#get_unified_connection) - Retrieve connection
 * [list_unified_connections](#list_unified_connections) - List all connections
 * [patch_unified_connection](#patch_unified_connection) - Update connection
@@ -14,7 +15,7 @@
 
 ## create_unified_connection
 
-Used only to import existing customer credentials; use "Authorize new connection" instead
+Used only to import existing customer credentials. To connect a new account, use the "Authorize or re-authorize a connection" auth URL instead. To change credentials on an existing connection, use "Update connection".
 
 ### Example Usage
 
@@ -52,6 +53,47 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateUnifiedConnectionResponse)](../../models/operations/createunifiedconnectionresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_unified_connection_reauth
+
+Returns a short-lived, single-use token that lets your end-user re-authorize this existing connection in place via the "Authorize or re-authorize a connection" URL with connection_id and reauth_token.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createUnifiedConnectionReauth" method="post" path="/unified/connection/{id}/reauth" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.connection.create_unified_connection_reauth(id: '<id>')
+
+unless res.connection_reauth.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Connection |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateUnifiedConnectionReauthResponse)](../../models/operations/createunifiedconnectionreauthresponse.md)**
 
 ### Errors
 

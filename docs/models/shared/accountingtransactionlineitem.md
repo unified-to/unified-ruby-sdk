@@ -3,15 +3,15 @@
 
 ## Fields
 
-| Field                 | Type                  | Required              | Description           |
-| --------------------- | --------------------- | --------------------- | --------------------- |
-| `account_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `category_ids`        | T::Array<*::String*>  | :heavy_minus_sign:    | N/A                   |
-| `description`         | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `id`                  | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `name`                | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `object_type`         | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `taxrate_id`          | *T.nilable(::String)* | :heavy_minus_sign:    | N/A                   |
-| `total_amount`        | *T.nilable(::Float)*  | :heavy_minus_sign:    | N/A                   |
-| `unit_amount`         | *T.nilable(::Float)*  | :heavy_minus_sign:    | N/A                   |
-| `unit_quantity`       | *T.nilable(::Float)*  | :heavy_minus_sign:    | N/A                   |
+| Field                                                          | Type                                                           | Required                                                       | Description                                                    |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| `account_id`                                                   | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | (reference to AccountingAccount)                               |
+| `category_ids`                                                 | T::Array<*::String*>                                           | :heavy_minus_sign:                                             | N/A                                                            |
+| `description`                                                  | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | N/A                                                            |
+| `id`                                                           | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | N/A                                                            |
+| `name`                                                         | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | N/A                                                            |
+| `object_type`                                                  | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | N/A                                                            |
+| `taxrate_id`                                                   | *T.nilable(::String)*                                          | :heavy_minus_sign:                                             | ref -> AccountingTaxrate applied to the line                   |
+| `total_amount`                                                 | *T.nilable(::Float)*                                           | :heavy_minus_sign:                                             | will be a positive value for a debit and negative for a credit |
+| `unit_amount`                                                  | *T.nilable(::Float)*                                           | :heavy_minus_sign:                                             | N/A                                                            |
+| `unit_quantity`                                                | *T.nilable(::Float)*                                           | :heavy_minus_sign:                                             | N/A                                                            |

@@ -13,27 +13,27 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The date that this event object was ingested (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Unique identifier for this event object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # The identifiers that link this event to a profile
         field :identifiers, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CdpIdentifier)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('identifiers') } }
         # The event payload/properties
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CdpMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # The specific event name (eg. "Product Purchased")
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # When the event actually happened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :occurred_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('occurred_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The profile this event is associated with; points to CdpProfile
         field :profile_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_id') } }
-
+        # The raw data returned by the integration for this event
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # The source that produced this event
         field :source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
-
+        # The cdp_source this event originated from; points to CdpSource
         field :source_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source_id') } }
-
+        # The unified structural category of the event
         field :type, Crystalline::Nilable.new(Models::Shared::CdpEventType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CdpEventType, true) } }
 
         sig { params(created_at: T.nilable(::DateTime), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::CdpIdentifier]), metadata: T.nilable(T::Array[Models::Shared::CdpMetadata]), name: T.nilable(::String), occurred_at: T.nilable(::DateTime), profile_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), source_id: T.nilable(::String), type: T.nilable(Models::Shared::CdpEventType)).void }

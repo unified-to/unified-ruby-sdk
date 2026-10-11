@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ClubsEventType - The event type
       class ClubsEventType < T::Enum
 
 

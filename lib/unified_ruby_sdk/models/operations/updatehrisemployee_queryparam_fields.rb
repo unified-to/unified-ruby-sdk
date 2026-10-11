@@ -21,6 +21,7 @@ module UnifiedRubySDK
           LAST_NAME = new('last_name')
           EMAILS = new('emails')
           TITLE = new('title')
+          JOB_ID = new('job_id')
           MANAGER_ID = new('manager_id')
           EMPLOYMENT_STATUS = new('employment_status')
           GENDER = new('gender')
@@ -54,6 +55,8 @@ module UnifiedRubySDK
           HAS_MFA = new('has_mfa')
           TIMEOFF_DAYS_TOTAL = new('timeoff_days_total')
           TIMEOFF_DAYS_USED = new('timeoff_days_used')
+          FLSA_STATUS = new('flsa_status')
+          PAY_FREQUENCY = new('pay_frequency')
           RAW = new('raw')
         end
       end

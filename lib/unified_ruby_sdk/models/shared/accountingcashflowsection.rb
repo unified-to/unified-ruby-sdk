@@ -15,9 +15,9 @@ module UnifiedRubySDK
 
 
         field :items, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingCashflowItem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('items') } }
-
+        # e.g. "Operating Activities"
         field :section_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('section_name') } }
-
+        # Net cash providedused by this section
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
         sig { params(items: T.nilable(T::Array[Models::Shared::AccountingCashflowItem]), section_name: T.nilable(::String), total_amount: T.nilable(::Float)).void }

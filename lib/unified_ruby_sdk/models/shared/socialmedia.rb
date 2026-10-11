@@ -13,19 +13,19 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # URL of the media asset
         field :url, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url'), required: true } }
-
+        # Accessibility caption / alt text
         field :alt, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('alt') } }
-
+        # Media height in pixels
         field :height, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('height') } }
-
+        # Provider media id, when the media is individually addressable
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # Ordering of the media within the post; 1 is the first
         field :position, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('position') } }
-
+        # Type of media
         field :type, Crystalline::Nilable.new(Models::Shared::SocialMediaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::SocialMediaType, true) } }
-
+        # Media width in pixels
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
         sig { params(url: ::String, alt: T.nilable(::String), height: T.nilable(::Float), id: T.nilable(::String), position: T.nilable(::Float), type: T.nilable(Models::Shared::SocialMediaType), width: T.nilable(::Float)).void }

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountingCategoryType - The kind of dimension
       class AccountingCategoryType < T::Enum
 
 

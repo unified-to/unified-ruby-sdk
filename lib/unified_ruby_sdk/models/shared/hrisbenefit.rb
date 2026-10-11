@@ -13,37 +13,37 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
 
         field :coverage_level, Crystalline::Nilable.new(Models::Shared::CoverageLevel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('coverage_level'), 'decoder': Utils.enum_from_string(Models::Shared::CoverageLevel, true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # e.g. "Company 401(k) retirement plan"
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # percentage or money
         field :employer_contribution_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employer_contribution_amount') } }
-
+        # always money
         field :employer_contribution_max_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employer_contribution_max_amount') } }
 
         field :employer_contribution_type, Crystalline::Nilable.new(Models::Shared::EmployerContributionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employer_contribution_type'), 'decoder': Utils.enum_from_string(Models::Shared::EmployerContributionType, true) } }
-
+        # Frequency that costs accrue for this benefit. For insurance/benefits, usually "MONTHLY". For compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc).
         field :frequency, Crystalline::Nilable.new(Models::Shared::HrisBenefitFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::HrisBenefitFrequency, true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
-
+        # e.g. "401(k) Plan"
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # Tax describes the tax treatment of the benefit
         field :tax, Crystalline::Nilable.new(Models::Shared::Tax), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax'), 'decoder': Utils.enum_from_string(Models::Shared::Tax, true) } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::HrisBenefitType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisBenefitType, true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(company_id: T.nilable(::String), coverage_level: T.nilable(Models::Shared::CoverageLevel), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), employer_contribution_amount: T.nilable(::Float), employer_contribution_max_amount: T.nilable(::Float), employer_contribution_type: T.nilable(Models::Shared::EmployerContributionType), frequency: T.nilable(Models::Shared::HrisBenefitFrequency), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax: T.nilable(Models::Shared::Tax), type: T.nilable(Models::Shared::HrisBenefitType), updated_at: T.nilable(::DateTime)).void }

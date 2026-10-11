@@ -16,26 +16,46 @@ class UnifiedRubySDK::Models::Shared::HrisPayslip
   def currency=(str_); end
   def deduction(); end
   def deduction=(str_); end
+  def deduction_amount(); end
+  def deduction_amount=(str_); end
   def details(); end
   def details=(str_); end
+  def employee_tax_amount(); end
+  def employee_tax_amount=(str_); end
+  def employer_contribution_amount(); end
+  def employer_contribution_amount=(str_); end
+  def employer_tax_amount(); end
+  def employer_tax_amount=(str_); end
   def end_at(); end
   def end_at=(str_); end
   def gross_amount(); end
   def gross_amount=(str_); end
+  def gross_ytd_amount(); end
+  def gross_ytd_amount=(str_); end
+  def group_id(); end
+  def group_id=(str_); end
+  def hours(); end
+  def hours=(str_); end
   def id(); end
   def id=(str_); end
   def net_amount(); end
   def net_amount=(str_); end
+  def net_ytd_amount(); end
+  def net_ytd_amount=(str_); end
   def paid_at(); end
   def paid_at=(str_); end
   def payment_reference(); end
   def payment_reference=(str_); end
   def payment_type(); end
   def payment_type=(str_); end
+  def payroll_id(); end
+  def payroll_id=(str_); end
   def raw(); end
   def raw=(str_); end
   def start_at(); end
   def start_at=(str_); end
+  def type(); end
+  def type=(str_); end
   def updated_at(); end
   def updated_at=(str_); end
   def user_id(); end

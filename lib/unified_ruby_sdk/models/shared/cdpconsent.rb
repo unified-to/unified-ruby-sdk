@@ -13,11 +13,11 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The consent purpose or objective (eg. marketing, analytics)
         field :purpose, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('purpose') } }
-
+        # The consent status for this purpose
         field :status, Crystalline::Nilable.new(Models::Shared::CdpConsentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CdpConsentStatus, true) } }
-
+        # When the consent status was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(purpose: T.nilable(::String), status: T.nilable(Models::Shared::CdpConsentStatus), updated_at: T.nilable(::DateTime)).void }

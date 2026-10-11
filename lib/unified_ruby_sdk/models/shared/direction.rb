@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Direction - DESTINATION, or BIDIRECTIONAL for import+export connectors
       class Direction < T::Enum
 
 

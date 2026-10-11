@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountingQuotePaymentTerms - unified payment terms enum, as on accounting_invoice / accounting_bill
       class AccountingQuotePaymentTerms < T::Enum
 
 

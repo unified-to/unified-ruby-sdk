@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Operations::GetUnifiedIntegrationAuthRequest
   def integration_type=(str_); end
   def workspace_id(); end
   def workspace_id=(str_); end
+  def connection_id(); end
+  def connection_id=(str_); end
   def env(); end
   def env=(str_); end
   def external_xref(); end
@@ -20,6 +22,8 @@ class UnifiedRubySDK::Models::Operations::GetUnifiedIntegrationAuthRequest
   def failure_redirect=(str_); end
   def lang(); end
   def lang=(str_); end
+  def reauth_token(); end
+  def reauth_token=(str_); end
   def redirect(); end
   def redirect=(str_); end
   def region(); end

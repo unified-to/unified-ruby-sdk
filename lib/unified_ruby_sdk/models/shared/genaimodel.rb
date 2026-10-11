@@ -15,11 +15,15 @@ module UnifiedRubySDK
 
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # Whether the model is a decision model (such as TypeSafe Jev or Cloudflare Clef) that answers the typed questions of a prompt with answers instead of generating text responses.
+        field :has_questions, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_questions') } }
+        # Controls randomness of responses. A lower temperature leads to more predictable outputs while a higher temperature results in more varies and sometimes more creative outputs. 0-1
         field :has_temperature, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_temperature') } }
+        # Whether the model accepts images as input (see the images on each prompt message).
+        field :has_vision, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_vision') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # The maximum number of tokens that the model can process in a single response. This limits ensures computational efficiency and resource management.
         field :max_tokens, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_tokens') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
@@ -28,10 +32,12 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(description: T.nilable(::String), has_temperature: T.nilable(T::Boolean), id: T.nilable(::String), max_tokens: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), web_url: T.nilable(::String)).void }
-        def initialize(description: nil, has_temperature: nil, id: nil, max_tokens: nil, name: nil, raw: nil, web_url: nil)
+        sig { params(description: T.nilable(::String), has_questions: T.nilable(T::Boolean), has_temperature: T.nilable(T::Boolean), has_vision: T.nilable(T::Boolean), id: T.nilable(::String), max_tokens: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), web_url: T.nilable(::String)).void }
+        def initialize(description: nil, has_questions: nil, has_temperature: nil, has_vision: nil, id: nil, max_tokens: nil, name: nil, raw: nil, web_url: nil)
           @description = description
+          @has_questions = has_questions
           @has_temperature = has_temperature
+          @has_vision = has_vision
           @id = id
           @max_tokens = max_tokens
           @name = name
@@ -43,7 +49,9 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @description == other.description
+          return false unless @has_questions == other.has_questions
           return false unless @has_temperature == other.has_temperature
+          return false unless @has_vision == other.has_vision
           return false unless @id == other.id
           return false unless @max_tokens == other.max_tokens
           return false unless @name == other.name

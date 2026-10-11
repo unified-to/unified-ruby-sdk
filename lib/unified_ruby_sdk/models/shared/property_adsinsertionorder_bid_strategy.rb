@@ -27,7 +27,7 @@ module UnifiedRubySDK
         field :performance_goal_type, Crystalline::Nilable.new(Models::Shared::PropertyAdsInsertionorderBidStrategyPerformanceGoalType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('performance_goal_type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsInsertionorderBidStrategyPerformanceGoalType, true) } }
 
         field :raise_bid_for_deals, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raise_bid_for_deals') } }
-
+        # Target ROAS e.g. 2.5 = 250% (Google)
         field :target_roas, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('target_roas') } }
 
         field :youtube_and_partners_type, Crystalline::Nilable.new(Models::Shared::PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('youtube_and_partners_type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsInsertionorderBidStrategyYoutubeAndPartnersType, true) } }

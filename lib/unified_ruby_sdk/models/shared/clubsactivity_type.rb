@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ClubsActivityType - The activity type
       class ClubsActivityType < T::Enum
 
 

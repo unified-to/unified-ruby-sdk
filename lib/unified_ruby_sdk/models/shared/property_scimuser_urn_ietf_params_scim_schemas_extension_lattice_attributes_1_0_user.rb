@@ -13,17 +13,17 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # 'M3',
         field :job_level, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Job Level') } }
-
+        # 'People Manager',
         field :people_manager_reviews, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('People Manager (Reviews)') } }
-
+        # 'Ontario',
         field :remote_work_location, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Remote Work - Location') } }
-
+        # '130000',
         field :salary_information, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Salary Information') } }
 
         field :sub_departments, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Sub Departments') } }
-
+        # "1987-10-06",
         field :birth_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('birthDate'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :ethnicity, Crystalline::Nilable.new(Models::Shared::Ethnicity), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ethnicity'), 'decoder': Utils.enum_from_string(Models::Shared::Ethnicity, true) } }
@@ -31,7 +31,7 @@ module UnifiedRubySDK
         field :gender, Crystalline::Nilable.new(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender, true) } }
 
         field :sexual_orientation, Crystalline::Nilable.new(Models::Shared::SexualOrientation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sexualOrientation'), 'decoder': Utils.enum_from_string(Models::Shared::SexualOrientation, true) } }
-
+        # "2022-03-08",
         field :start_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('startDate'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(job_level: T.nilable(::String), people_manager_reviews: T.nilable(::String), remote_work_location: T.nilable(::String), salary_information: T.nilable(::String), sub_departments: T.nilable(::String), birth_date: T.nilable(::DateTime), ethnicity: T.nilable(Models::Shared::Ethnicity), gender: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender), sexual_orientation: T.nilable(Models::Shared::SexualOrientation), start_date: T.nilable(::DateTime)).void }

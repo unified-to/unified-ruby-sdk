@@ -1,5 +1,7 @@
 # AccountingFeeType
 
+Unified fee category
+
 
 ## Values
 

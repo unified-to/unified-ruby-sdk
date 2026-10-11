@@ -13,21 +13,21 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Coverage amount (may differ from insured_value)
         field :coverage_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('coverage_amount') } }
 
         field :coverage_type, Crystalline::Nilable.new(Models::Shared::CoverageType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('coverage_type'), 'decoder': Utils.enum_from_string(Models::Shared::CoverageType, true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # Cost of insurance
         field :insurance_cost, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('insurance_cost') } }
 
         field :insurance_cost_currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('insurance_cost_currency') } }
-
+        # Insurance provider name
         field :insurance_provider, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('insurance_provider') } }
-
+        # Provider code
         field :insurance_provider_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('insurance_provider_code') } }
-
+        # Insured value
         field :insured_value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('insured_value') } }
 
         sig { params(coverage_amount: T.nilable(::Float), coverage_type: T.nilable(Models::Shared::CoverageType), currency: T.nilable(::String), insurance_cost: T.nilable(::Float), insurance_cost_currency: T.nilable(::String), insurance_provider: T.nilable(::String), insurance_provider_code: T.nilable(::String), insured_value: T.nilable(::Float)).void }

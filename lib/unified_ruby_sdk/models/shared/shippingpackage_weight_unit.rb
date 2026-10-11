@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ShippingPackageWeightUnit - Unit for weight (g, kg, oz, lb)
       class ShippingPackageWeightUnit < T::Enum
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PaymentAllocationObjectType - The type of object this payment was applied to
       class PaymentAllocationObjectType < T::Enum
 
 

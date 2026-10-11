@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Category - STANDARD (days-based) or DATE_DRIVEN (month-based)
       class Category < T::Enum
 
 

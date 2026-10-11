@@ -13,29 +13,29 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The date that this activation object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The cdp_destination the data is sent to; points to CdpDestination
         field :destination_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('destination_id') } }
-
+        # Unique identifier for this activation object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # Whether the activation is active/enabled
         field :is_enabled, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_enabled') } }
-
+        # When the activation last ran (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :last_run_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_run_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The name of the activation/sync job
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # The raw data returned by the integration for this activation
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # The activation schedule or mode (eg. cron, interval, realtime, batch)
         field :schedule, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('schedule') } }
-
+        # The cdp_segment being activated; points to CdpSegment
         field :segment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('segment_id') } }
-
+        # The cdp_source the data originates from; points to CdpSource
         field :source_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source_id') } }
-
+        # The current status of the activation
         field :status, Crystalline::Nilable.new(Models::Shared::CdpActivationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CdpActivationStatus, true) } }
-
+        # The last date that this activation object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(created_at: T.nilable(::DateTime), destination_id: T.nilable(::String), id: T.nilable(::String), is_enabled: T.nilable(T::Boolean), last_run_at: T.nilable(::DateTime), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), schedule: T.nilable(::String), segment_id: T.nilable(::String), source_id: T.nilable(::String), status: T.nilable(Models::Shared::CdpActivationStatus), updated_at: T.nilable(::DateTime)).void }

@@ -13,17 +13,17 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Number of bookmarks/saves
         field :bookmark_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bookmark_count') } }
-
+        # Number of comments/replies
         field :comment_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comment_count') } }
-
+        # Number of likes/reactions
         field :like_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('like_count') } }
-
+        # Number of quotes
         field :quote_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('quote_count') } }
-
+        # Number of shares/reposts
         field :share_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('share_count') } }
-
+        # Number of views/impressions
         field :view_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('view_count') } }
 
         sig { params(bookmark_count: T.nilable(::Float), comment_count: T.nilable(::Float), like_count: T.nilable(::Float), quote_count: T.nilable(::Float), share_count: T.nilable(::Float), view_count: T.nilable(::Float)).void }

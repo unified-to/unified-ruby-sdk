@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Status - Account status, such as ACTIVE or ARCHIVED
       class Status < T::Enum
 
 

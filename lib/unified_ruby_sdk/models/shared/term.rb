@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Term - @deprecated use payment_terms instead
       class Term < T::Enum
 
 

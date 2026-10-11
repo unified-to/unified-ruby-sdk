@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # SocialMediaType - Type of media
       class SocialMediaType < T::Enum
 
 

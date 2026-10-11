@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # HrisDeductionCoverageLevel - Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
       class HrisDeductionCoverageLevel < T::Enum
 
 

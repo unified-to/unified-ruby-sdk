@@ -23,7 +23,7 @@ module UnifiedRubySDK
         field :is_required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_required') } }
         # options for MULTIPLE_CHOICE and MULTIPLE_SELECT
         field :options, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
-
+        # question to ask the human
         field :public_question, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_question') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::VerificationParameterType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::VerificationParameterType, true) } }

@@ -13,15 +13,15 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The URI of the SCIM resource representing the User's manager.  RECOMMENDED.
         field :dollar_ref, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('$ref') } }
-
+        # The displayName of the user's manager.  This attribute is OPTIONAL, and mutability is "readOnly".
         field :display_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('displayName') } }
-
+        # alias for value?
         field :manager_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('managerId') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::ScimManagerType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimManagerType, true) } }
-
+        # The "id" of the SCIM resource representing the user's manager.  RECOMMENDED.
         field :value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
         sig { params(dollar_ref: T.nilable(::String), display_name: T.nilable(::String), manager_id: T.nilable(::String), type: T.nilable(Models::Shared::ScimManagerType), value: T.nilable(::String)).void }

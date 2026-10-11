@@ -13,7 +13,7 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-        # A webhook is used to POST new/updated information to your server.
+        # A webhook is used to POST new, updated, or deleted records to your server.
         field :webhook, Models::Shared::Webhook, { 'request': { 'media_type': 'application/json' } }
         # When true, send existing/historic data. When false, no historic data is sent.
         field :include_all, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'include_all', 'style': 'form', 'explode': true } }

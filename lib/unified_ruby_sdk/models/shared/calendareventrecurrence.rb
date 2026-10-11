@@ -13,9 +13,9 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # how many occurrences, defaults to undefined (no limit)
         field :count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('count') } }
-
+        # until date, defaults to undefined (no end date) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # dates to exclude from the recurrence, defaults to undefined (no exclusions)
         field :excluded_dates, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('excluded_dates') } }
@@ -23,7 +23,7 @@ module UnifiedRubySDK
         field :frequency, Crystalline::Nilable.new(Models::Shared::CalendarEventRecurrenceFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarEventRecurrenceFrequency, true) } }
         # dates to include in the recurrence, defaults to undefined (no inclusions)
         field :included_dates, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('included_dates') } }
-
+        # how many "units" between occurrences, defaults to 1
         field :interval, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interval') } }
         # days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
         field :on_days, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyCalendarEventRecurrenceOnDays)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_days') } }
@@ -35,9 +35,9 @@ module UnifiedRubySDK
         field :on_weeks, Crystalline::Nilable.new(Crystalline::Array.new(::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_weeks') } }
         # days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
         field :on_year_days, Crystalline::Nilable.new(Crystalline::Array.new(::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_year_days') } }
-
+        # timezone, defaults to undefined (no timezone)
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
-
+        # week start day, defaults to undefined (no week start day)
         field :week_start, Crystalline::Nilable.new(Models::Shared::WeekStart), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('week_start'), 'decoder': Utils.enum_from_string(Models::Shared::WeekStart, true) } }
 
         sig { params(count: T.nilable(::Float), end_at: T.nilable(::DateTime), excluded_dates: T.nilable(T::Array[::String]), frequency: T.nilable(Models::Shared::CalendarEventRecurrenceFrequency), included_dates: T.nilable(T::Array[::String]), interval: T.nilable(::Float), on_days: T.nilable(T::Array[Models::Shared::PropertyCalendarEventRecurrenceOnDays]), on_month_days: T.nilable(T::Array[::Float]), on_months: T.nilable(T::Array[::Float]), on_weeks: T.nilable(T::Array[::Float]), on_year_days: T.nilable(T::Array[::Float]), timezone: T.nilable(::String), week_start: T.nilable(Models::Shared::WeekStart)).void }

@@ -21,13 +21,13 @@ module UnifiedRubySDK
         field :city, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('city') } }
 
         field :country, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
-
+        # Country code in ISO 3166 A-2 format
         field :country_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country_code') } }
 
         field :postal_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postal_code') } }
-
+        # Regional area (e.g., state in the U.S., province in Canada)
         field :region, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
-
+        # Short form for regional area (e.g., two-letter stateprovince abbreviation)
         field :region_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region_code') } }
 
         sig { params(address1: T.nilable(::String), address2: T.nilable(::String), city: T.nilable(::String), country: T.nilable(::String), country_code: T.nilable(::String), postal_code: T.nilable(::String), region: T.nilable(::String), region_code: T.nilable(::String)).void }

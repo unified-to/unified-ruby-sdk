@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AdsPromotedType - Promoted entity types for ads_promoted list endpoint
       class AdsPromotedType < T::Enum
 
 

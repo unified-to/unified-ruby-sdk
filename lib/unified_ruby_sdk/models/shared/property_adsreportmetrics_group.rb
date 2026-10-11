@@ -17,7 +17,7 @@ module UnifiedRubySDK
         field :bid_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bid_amount') } }
         # YOUTUBE_AND_PARTNERS
         field :bid_strategy, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupBidStrategy), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bid_strategy') } }
-
+        # Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)
         field :billing_event, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupBillingEvent), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_event'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupBillingEvent, true) } }
 
         field :budget_allocation_type, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupBudgetAllocationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_allocation_type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupBudgetAllocationType, true) } }
@@ -31,17 +31,17 @@ module UnifiedRubySDK
         field :budget_unit, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupBudgetUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_unit'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupBudgetUnit, true) } }
 
         field :campaign_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign_id') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :creative_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creative_ids') } }
-
+        # Creative rotation strategy (LinkedIn creativeSelection)
         field :creative_selection, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupCreativeSelection), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creative_selection'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupCreativeSelection, true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
         field :effective_status, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupEffectiveStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('effective_status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupEffectiveStatus, true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :frequency_cap, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupFrequencyCap), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency_cap') } }
@@ -51,11 +51,11 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :insertionorder_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('insertionorder_id') } }
-
+        # Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale
         field :language_locale, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
         field :optimization_goal, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupOptimizationGoal), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('optimization_goal'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupOptimizationGoal, true) } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
@@ -67,7 +67,7 @@ module UnifiedRubySDK
         field :promoted, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsPromoted)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('promoted') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupStatus, true) } }
@@ -75,7 +75,7 @@ module UnifiedRubySDK
         field :targeting, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupTargeting), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('targeting') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsGroupType, true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(bid_amount: T.nilable(::Float), bid_strategy: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBidStrategy), billing_event: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBillingEvent), budget_allocation_type: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetAllocationType), budget_amount: T.nilable(::Float), budget_max_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetPeriod), budget_unit: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupBudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_ids: T.nilable(T::Array[::String]), creative_selection: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupCreativeSelection), currency: T.nilable(::String), effective_status: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupEffectiveStatus), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupFrequencyCap), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), insertionorder_id: T.nilable(::String), language_locale: T.nilable(::String), name: T.nilable(::String), optimization_goal: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupOptimizationGoal), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupPacing), parent_id: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupStatus), targeting: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupTargeting), type: T.nilable(Models::Shared::PropertyAdsReportMetricsGroupType), updated_at: T.nilable(::DateTime)).void }

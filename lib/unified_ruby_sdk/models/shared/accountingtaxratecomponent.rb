@@ -13,11 +13,11 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # True when this component is charged on top of the other components
         field :is_compound, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_compound') } }
-
+        # Name of the tax component, e.g. GST or PST
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # Rate of this component, in %
         field :rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate') } }
 
         sig { params(is_compound: T.nilable(T::Boolean), name: T.nilable(::String), rate: T.nilable(::Float)).void }

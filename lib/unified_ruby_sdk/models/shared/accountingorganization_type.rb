@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountingOrganizationType - Entity type within a consolidation hierarchy
       class AccountingOrganizationType < T::Enum
 
 

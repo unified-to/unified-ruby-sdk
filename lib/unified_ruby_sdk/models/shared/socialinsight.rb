@@ -13,23 +13,23 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # When the insight was recorded (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The day/timestamp of the data point
         field :date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('date'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Unique identifier for the insight data point
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # The metric being reported
         field :metric, Crystalline::Nilable.new(Models::Shared::Metric), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metric'), 'decoder': Utils.enum_from_string(Models::Shared::Metric, true) } }
-
+        # The aggregation period of the value
         field :period, Crystalline::Nilable.new(Models::Shared::Period), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('period'), 'decoder': Utils.enum_from_string(Models::Shared::Period, true) } }
-
+        # Optional: the post these stats belong to
         field :post_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('post_id') } }
-
+        # The social profile these stats belong to
         field :profile_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_id') } }
-
+        # Raw data from integration
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # The metric value
         field :value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
         sig { params(created_at: T.nilable(::DateTime), date: T.nilable(::DateTime), id: T.nilable(::String), metric: T.nilable(Models::Shared::Metric), period: T.nilable(Models::Shared::Period), post_id: T.nilable(::String), profile_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), value: T.nilable(::Float)).void }

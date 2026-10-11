@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AnalyticsReportMetricsType - Traffic metrics
       class AnalyticsReportMetricsType < T::Enum
 
 

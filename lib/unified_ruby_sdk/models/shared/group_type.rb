@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # GroupType - The group type
       class GroupType < T::Enum
 
 

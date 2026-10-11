@@ -17,15 +17,15 @@ module UnifiedRubySDK
         field :label, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label'), required: true } }
 
         field :type, Models::Shared::AssessmentAttributeType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AssessmentAttributeType, false) } }
-
+        # For SUB_RESULT type
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
         field :score_max, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('score_max') } }
 
         field :score_value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('score_value') } }
-
+        # For SUB_RESULT type
         field :status, Crystalline::Nilable.new(Models::Shared::AssessmentAttributeStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AssessmentAttributeStatus, true) } }
-
+        # For TEXT and NUMBER types
         field :value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
         sig { params(label: ::String, type: Models::Shared::AssessmentAttributeType, reference: T.nilable(::String), score_max: T.nilable(::Float), score_value: T.nilable(::Float), status: T.nilable(Models::Shared::AssessmentAttributeStatus), value: T.nilable(::String)).void }

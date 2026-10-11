@@ -13,13 +13,13 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Reference to the carrier
         field :carrier_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('carrier_id') } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # Origin address
         field :from_address, Crystalline::Nilable.new(Models::Shared::PropertyShippingRateFromAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('from_address') } }
-
+        # Unique identifier for this rate object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Multiple packages (alternative to package)
         field :packages, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ShippingPackage)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('packages') } }
@@ -27,9 +27,9 @@ module UnifiedRubySDK
         field :rates, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ShippingRateRate)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rates') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # Latest date to ship (from order) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :ship_by_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ship_by_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Reference to the shipping object (if rate is for existing shipment)
         field :shipment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipment_id') } }
         # Destination address
         field :to_address, Crystalline::Nilable.new(Models::Shared::PropertyShippingRateToAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to_address') } }

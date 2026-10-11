@@ -16,35 +16,71 @@ module UnifiedRubySDK
 
         field :amount, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount'), required: true } }
 
+        field :benefit_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('benefit_id') } }
+
         field :company_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_amount') } }
+
+        field :deduction_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deduction_id') } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :employee_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_amount') } }
 
+        field :hours, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hours') } }
+        # true when this line is paid by the employer (employer tax or contribution)
+        field :is_employer, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_employer') } }
+
+        field :is_pre_tax, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_pre_tax') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
+        # integration pay-code label before normalization
+        field :original_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_type') } }
+        # the hris_paycode for this line
+        field :paycode_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paycode_id') } }
+        # pay rate for hourly/unit-based lines
+        field :rate_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_amount') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::HrisPayslipDetailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisPayslipDetailType, true) } }
+        # year-to-date amount for this line
+        field :ytd_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ytd_amount') } }
 
-        sig { params(amount: ::Float, company_amount: T.nilable(::Float), description: T.nilable(::String), employee_amount: T.nilable(::Float), name: T.nilable(::String), type: T.nilable(Models::Shared::HrisPayslipDetailType)).void }
-        def initialize(amount:, company_amount: nil, description: nil, employee_amount: nil, name: nil, type: nil)
+        sig { params(amount: ::Float, benefit_id: T.nilable(::String), company_amount: T.nilable(::Float), deduction_id: T.nilable(::String), description: T.nilable(::String), employee_amount: T.nilable(::Float), hours: T.nilable(::Float), is_employer: T.nilable(T::Boolean), is_pre_tax: T.nilable(T::Boolean), name: T.nilable(::String), original_type: T.nilable(::String), paycode_id: T.nilable(::String), rate_amount: T.nilable(::Float), type: T.nilable(Models::Shared::HrisPayslipDetailType), ytd_amount: T.nilable(::Float)).void }
+        def initialize(amount:, benefit_id: nil, company_amount: nil, deduction_id: nil, description: nil, employee_amount: nil, hours: nil, is_employer: nil, is_pre_tax: nil, name: nil, original_type: nil, paycode_id: nil, rate_amount: nil, type: nil, ytd_amount: nil)
           @amount = amount
+          @benefit_id = benefit_id
           @company_amount = company_amount
+          @deduction_id = deduction_id
           @description = description
           @employee_amount = employee_amount
+          @hours = hours
+          @is_employer = is_employer
+          @is_pre_tax = is_pre_tax
           @name = name
+          @original_type = original_type
+          @paycode_id = paycode_id
+          @rate_amount = rate_amount
           @type = type
+          @ytd_amount = ytd_amount
         end
 
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @amount == other.amount
+          return false unless @benefit_id == other.benefit_id
           return false unless @company_amount == other.company_amount
+          return false unless @deduction_id == other.deduction_id
           return false unless @description == other.description
           return false unless @employee_amount == other.employee_amount
+          return false unless @hours == other.hours
+          return false unless @is_employer == other.is_employer
+          return false unless @is_pre_tax == other.is_pre_tax
           return false unless @name == other.name
+          return false unless @original_type == other.original_type
+          return false unless @paycode_id == other.paycode_id
+          return false unless @rate_amount == other.rate_amount
           return false unless @type == other.type
+          return false unless @ytd_amount == other.ytd_amount
           true
         end
       end

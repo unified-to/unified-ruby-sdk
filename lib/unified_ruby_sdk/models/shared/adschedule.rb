@@ -15,15 +15,15 @@ module UnifiedRubySDK
 
 
         field :day_of_week, Models::Shared::DayOfWeek, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('day_of_week'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::DayOfWeek, false) } }
-
+        # 0-24 (24 = end of day)
         field :end_hour, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_hour'), required: true } }
-
+        # 0-23
         field :start_hour, ::Float, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_hour'), required: true } }
-
+        # 0.1-10.0
         field :bid_modifier, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bid_modifier') } }
-
+        # 0, 15, 30, 45
         field :end_minute, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_minute') } }
-
+        # 0, 15, 30, 45
         field :start_minute, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_minute') } }
 
         sig { params(day_of_week: Models::Shared::DayOfWeek, end_hour: ::Float, start_hour: ::Float, bid_modifier: T.nilable(::Float), end_minute: T.nilable(::Float), start_minute: T.nilable(::Float)).void }

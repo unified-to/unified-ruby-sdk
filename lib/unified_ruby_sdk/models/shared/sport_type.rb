@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # SportType - The primary sport of the group
       class SportType < T::Enum
 
 

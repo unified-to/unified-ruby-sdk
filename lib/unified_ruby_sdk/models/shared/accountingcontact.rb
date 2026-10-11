@@ -15,13 +15,13 @@ module UnifiedRubySDK
 
 
         field :associated_contacts, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingAssociatedContact)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('associated_contacts') } }
-
+        # Outstanding AR/AP balance for this contact
         field :balance_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance_amount') } }
 
         field :billing_address, Crystalline::Nilable.new(Models::Shared::PropertyAccountingContactBillingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_address') } }
 
         field :company_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
@@ -29,7 +29,7 @@ module UnifiedRubySDK
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # contact account numbers such as registration, A membership or identification reference to help to identify and search customers
         field :identification, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('identification') } }
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
@@ -51,7 +51,7 @@ module UnifiedRubySDK
         field :payment_terms, Crystalline::Nilable.new(Models::Shared::AccountingContactPaymentTerms), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_terms'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingContactPaymentTerms, true) } }
 
         field :paymentterm_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paymentterm_id') } }
-
+        # URL for the contact’s portal
         field :portal_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('portal_url') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -59,11 +59,11 @@ module UnifiedRubySDK
         field :shipping_address, Crystalline::Nilable.new(Models::Shared::PropertyAccountingContactShippingAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipping_address') } }
 
         field :tax_exemption, Crystalline::Nilable.new(Models::Shared::TaxExemption), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_exemption'), 'decoder': Utils.enum_from_string(Models::Shared::TaxExemption, true) } }
-
+        # The ID/number of the customer's tax number.  This is also known as the ABN (Australia), GST Number (New Zealand), VAT Number (UK) or Tax ID Number (US and global).
         field :tax_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_number') } }
 
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :website, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website') } }

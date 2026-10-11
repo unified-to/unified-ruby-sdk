@@ -13,31 +13,31 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # How the segment membership is computed (REALTIME or BATCH)
         field :compute_mode, Crystalline::Nilable.new(Models::Shared::ComputeMode), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compute_mode'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeMode, true) } }
-
+        # The date that this segment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The membership rule/query that defines the segment
         field :definition, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('definition') } }
-
+        # The description of the segment/audience
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # Unique identifier for this segment object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # Whether the segment is active/enabled
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
-
+        # The name of the segment/audience
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # The raw data returned by the integration for this segment
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # The number of profiles currently in the segment
         field :size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
-
+        # The data-plane handle/key used to identify segment membership in profiles and destinations
         field :slug, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
-
+        # The cdp_source this segment originated from; points to CdpSource
         field :source_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source_id') } }
-
+        # The type of entity the segment targets (USERS, ACCOUNTS, LINKED)
         field :type, Crystalline::Nilable.new(Models::Shared::CdpSegmentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CdpSegmentType, true) } }
-
+        # The last date that this segment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(compute_mode: T.nilable(Models::Shared::ComputeMode), created_at: T.nilable(::DateTime), definition: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), slug: T.nilable(::String), source_id: T.nilable(::String), type: T.nilable(Models::Shared::CdpSegmentType), updated_at: T.nilable(::DateTime)).void }

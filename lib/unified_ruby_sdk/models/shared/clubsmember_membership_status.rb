@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ClubsMemberMembershipStatus - The member's membership status
       class ClubsMemberMembershipStatus < T::Enum
 
 

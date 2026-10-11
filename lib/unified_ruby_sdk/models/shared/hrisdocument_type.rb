@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # HrisDocumentType - unified, normalized document type (OTHER when unmappable)
       class HrisDocumentType < T::Enum
 
 

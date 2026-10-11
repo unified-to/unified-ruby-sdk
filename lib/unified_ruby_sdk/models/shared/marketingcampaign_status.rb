@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # MarketingCampaignStatus - Campaign status
       class MarketingCampaignStatus < T::Enum
 
 

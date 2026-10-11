@@ -12,10 +12,14 @@
 * [get_uc_comment](#get_uc_comment) - Retrieve a comment
 * [get_uc_contact](#get_uc_contact) - Retrieve a contact
 * [get_uc_recording](#get_uc_recording) - Retrieve a recording
+* [get_uc_scorecard](#get_uc_scorecard) - Retrieve a scorecard
+* [get_uc_scorecardtemplate](#get_uc_scorecardtemplate) - Retrieve a scorecardtemplate
 * [list_uc_calls](#list_uc_calls) - List all calls
 * [list_uc_comments](#list_uc_comments) - List all comments
 * [list_uc_contacts](#list_uc_contacts) - List all contacts
 * [list_uc_recordings](#list_uc_recordings) - List all recordings
+* [list_uc_scorecards](#list_uc_scorecards) - List all scorecards
+* [list_uc_scorecardtemplates](#list_uc_scorecardtemplates) - List all scorecardtemplates
 * [patch_uc_comment](#patch_uc_comment) - Update a comment
 * [patch_uc_contact](#patch_uc_contact) - Update a contact
 * [patch_uc_recording](#patch_uc_recording) - Update a recording
@@ -46,8 +50,8 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.uc.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
   content: 'Vociferor vitiosus.',
   created_at: '2023-04-02T23:42:31.571Z',
-  id: '323a249e-0cee-438f-80c8-aa82141e88d3',
-  updated_at: '2024-02-02T13:02:16.012Z',
+  id: 'b55bcbeb-d0d3-4f88-bf42-c9984245742e',
+  updated_at: '2024-02-07T08:39:05.491Z',
 ), connection_id: '<id>')
 
 unless res.uc_comment.nil?
@@ -102,7 +106,7 @@ res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   first_name: 'Luther',
-  id: 'b6f1a80e-606a-4fd0-b071-56e392552c22',
+  id: '71892722-5d88-40d7-bf99-7d405cd261d5',
   last_name: 'Rogahn',
   name: 'Luther Rogahn',
   telephones: [
@@ -120,7 +124,7 @@ res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   title: 'Chief Optimization Executive',
-  updated_at: DateTime.iso8601('2023-11-20T17:22:46.770Z'),
+  updated_at: DateTime.iso8601('2023-12-02T11:47:51.993Z'),
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -167,34 +171,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.uc.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(
   contacts: [],
+  conversation_identifier: 'e92e4042-a800-41d5-9411-07742151d49f',
   created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-  end_at: DateTime.iso8601('2024-04-23T01:24:44.941Z'),
-  expires_at: DateTime.iso8601('2026-03-31T08:30:10.212Z'),
-  id: '16959603-31ff-4806-b696-fd3434fc2fa3',
+  end_at: DateTime.iso8601('2024-05-01T00:22:37.256Z'),
+  expires_at: DateTime.iso8601('2026-04-17T23:03:03.151Z'),
+  id: 'e92e4042-a800-41d5-9411-07742151d49f',
   media: [
     Models::Shared::UcRecordingMedia.new(
-      end_at: DateTime.iso8601('2024-03-21T13:03:13.755Z'),
+      end_at: DateTime.iso8601('2024-03-29T01:22:20.176Z'),
       language: 'en',
       recording_download_url: 'https://parched-wasabi.com/',
-      start_at: DateTime.iso8601('2026-04-18T15:34:49.770Z'),
+      start_at: DateTime.iso8601('2026-05-06T12:07:07.207Z'),
       transcript_download_url: 'https://colossal-cuckoo.name',
       transcripts: [
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2026-01-30T07:48:51.811Z'),
-          start_at: DateTime.iso8601('2024-05-20T17:57:09.629Z'),
+          end_at: DateTime.iso8601('2026-02-16T02:42:27.963Z'),
+          start_at: DateTime.iso8601('2024-05-29T01:58:59.623Z'),
           text: 'Turpis maiores ducimus tero speculum.',
         ),
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2024-09-27T09:24:07.211Z'),
-          start_at: DateTime.iso8601('2026-07-05T11:55:01.125Z'),
+          end_at: DateTime.iso8601('2024-10-07T11:52:50.369Z'),
+          start_at: DateTime.iso8601('2026-07-24T09:56:38.505Z'),
           text: 'Magnam consuasor uxor tergiversatio subseco.',
         ),
       ],
     ),
   ],
-  start_at: DateTime.iso8601('2023-04-23T07:14:01.559Z'),
+  start_at: DateTime.iso8601('2023-04-26T06:26:29.625Z'),
   type: Models::Shared::UcRecordingType::OUTBOUND,
-  updated_at: DateTime.iso8601('2025-02-26T04:45:21.953Z'),
+  updated_at: DateTime.iso8601('2025-03-10T08:56:21.806Z'),
   user_name: 'Melyna Larson',
   user_phone: '1-915-327-0429 x509',
   web_url: 'https://spherical-comparison.org',
@@ -401,6 +406,94 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_uc_scorecard
+
+Retrieve a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getUcScorecard" method="get" path="/uc/{connection_id}/scorecard/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.uc.get_uc_scorecard(connection_id: '<id>', id: '<id>')
+
+unless res.uc_scorecard.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Scorecard                                                                                                                              |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetUcScorecardQueryParamFields](../../models/operations/getucscorecardqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetUcScorecardResponse)](../../models/operations/getucscorecardresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_uc_scorecardtemplate
+
+Retrieve a scorecardtemplate
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getUcScorecardtemplate" method="get" path="/uc/{connection_id}/scorecardtemplate/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.uc.get_uc_scorecardtemplate(connection_id: '<id>', id: '<id>')
+
+unless res.uc_scorecardtemplate.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Scorecardtemplate                                                                                                                      |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetUcScorecardtemplateQueryParamFields](../../models/operations/getucscorecardtemplatequeryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetUcScorecardtemplateResponse)](../../models/operations/getucscorecardtemplateresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_uc_calls
 
 List all calls
@@ -581,6 +674,96 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_uc_scorecards
+
+List all scorecards
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listUcScorecards" method="get" path="/uc/{connection_id}/scorecard" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListUcScorecardsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.uc.list_uc_scorecards(request: req)
+
+unless res.uc_scorecards.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListUcScorecardsRequest](../../models/operations/listucscorecardsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::ListUcScorecardsResponse)](../../models/operations/listucscorecardsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_uc_scorecardtemplates
+
+List all scorecardtemplates
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listUcScorecardtemplates" method="get" path="/uc/{connection_id}/scorecardtemplate" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListUcScorecardtemplatesRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.uc.list_uc_scorecardtemplates(request: req)
+
+unless res.uc_scorecardtemplates.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::ListUcScorecardtemplatesRequest](../../models/operations/listucscorecardtemplatesrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::ListUcScorecardtemplatesResponse)](../../models/operations/listucscorecardtemplatesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_uc_comment
 
 Update a comment
@@ -602,8 +785,8 @@ req = Models::Operations::PatchUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: '45a743bf-a173-442a-a853-3c6d0c1433a2',
-    updated_at: '2024-02-02T13:02:16.014Z',
+    id: '263c6302-731a-4748-9738-16c1097238e1',
+    updated_at: '2024-02-07T08:39:05.493Z',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -661,7 +844,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: 'b02e5795-1218-412d-93ee-a303bcae9d79',
+    id: '5c181c14-a751-42f2-89eb-22b7f876a2a5',
     last_name: 'Rogahn',
     name: 'Luther Rogahn',
     telephones: [
@@ -679,7 +862,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-11-20T17:22:46.775Z'),
+    updated_at: DateTime.iso8601('2023-12-02T11:47:52.001Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -729,34 +912,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
+    conversation_identifier: '7e7003c4-a24f-41d1-acca-86a24b27fc9d',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-04-23T01:24:44.948Z'),
-    expires_at: DateTime.iso8601('2026-03-31T08:30:10.228Z'),
-    id: '446c53c1-07a1-4da2-a56d-a6b2d6bc43ed',
+    end_at: DateTime.iso8601('2024-05-01T00:22:37.266Z'),
+    expires_at: DateTime.iso8601('2026-04-17T23:03:03.175Z'),
+    id: '7e7003c4-a24f-41d1-acca-86a24b27fc9d',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-03-21T13:03:13.761Z'),
+        end_at: DateTime.iso8601('2024-03-29T01:22:20.186Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-04-18T15:34:49.786Z'),
+        start_at: DateTime.iso8601('2026-05-06T12:07:07.232Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-01-30T07:48:51.827Z'),
-            start_at: DateTime.iso8601('2024-05-20T17:57:09.636Z'),
+            end_at: DateTime.iso8601('2026-02-16T02:42:27.986Z'),
+            start_at: DateTime.iso8601('2024-05-29T01:58:59.635Z'),
             text: 'Turpis maiores ducimus tero speculum.',
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-09-27T09:24:07.220Z'),
-            start_at: DateTime.iso8601('2026-07-05T11:55:01.142Z'),
+            end_at: DateTime.iso8601('2024-10-07T11:52:50.383Z'),
+            start_at: DateTime.iso8601('2026-07-24T09:56:38.529Z'),
             text: 'Magnam consuasor uxor tergiversatio subseco.',
           ),
         ],
       ),
     ],
-    start_at: DateTime.iso8601('2023-04-23T07:14:01.562Z'),
+    start_at: DateTime.iso8601('2023-04-26T06:26:29.629Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-02-26T04:45:21.963Z'),
+    updated_at: DateTime.iso8601('2025-03-10T08:56:21.823Z'),
     user_name: 'Melyna Larson',
     user_phone: '1-915-327-0429 x509',
     web_url: 'https://spherical-comparison.org',
@@ -936,8 +1120,8 @@ req = Models::Operations::UpdateUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: '45a743bf-a173-442a-a853-3c6d0c1433a2',
-    updated_at: '2024-02-02T13:02:16.014Z',
+    id: '263c6302-731a-4748-9738-16c1097238e1',
+    updated_at: '2024-02-07T08:39:05.493Z',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -995,7 +1179,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: 'b02e5795-1218-412d-93ee-a303bcae9d79',
+    id: '5c181c14-a751-42f2-89eb-22b7f876a2a5',
     last_name: 'Rogahn',
     name: 'Luther Rogahn',
     telephones: [
@@ -1013,7 +1197,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-11-20T17:22:46.775Z'),
+    updated_at: DateTime.iso8601('2023-12-02T11:47:52.001Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1063,34 +1247,35 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
+    conversation_identifier: '7e7003c4-a24f-41d1-acca-86a24b27fc9d',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-04-23T01:24:44.948Z'),
-    expires_at: DateTime.iso8601('2026-03-31T08:30:10.228Z'),
-    id: '446c53c1-07a1-4da2-a56d-a6b2d6bc43ed',
+    end_at: DateTime.iso8601('2024-05-01T00:22:37.266Z'),
+    expires_at: DateTime.iso8601('2026-04-17T23:03:03.175Z'),
+    id: '7e7003c4-a24f-41d1-acca-86a24b27fc9d',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-03-21T13:03:13.761Z'),
+        end_at: DateTime.iso8601('2024-03-29T01:22:20.186Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-04-18T15:34:49.786Z'),
+        start_at: DateTime.iso8601('2026-05-06T12:07:07.232Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-01-30T07:48:51.827Z'),
-            start_at: DateTime.iso8601('2024-05-20T17:57:09.636Z'),
+            end_at: DateTime.iso8601('2026-02-16T02:42:27.986Z'),
+            start_at: DateTime.iso8601('2024-05-29T01:58:59.635Z'),
             text: 'Turpis maiores ducimus tero speculum.',
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-09-27T09:24:07.220Z'),
-            start_at: DateTime.iso8601('2026-07-05T11:55:01.142Z'),
+            end_at: DateTime.iso8601('2024-10-07T11:52:50.383Z'),
+            start_at: DateTime.iso8601('2026-07-24T09:56:38.529Z'),
             text: 'Magnam consuasor uxor tergiversatio subseco.',
           ),
         ],
       ),
     ],
-    start_at: DateTime.iso8601('2023-04-23T07:14:01.562Z'),
+    start_at: DateTime.iso8601('2023-04-26T06:26:29.629Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-02-26T04:45:21.963Z'),
+    updated_at: DateTime.iso8601('2025-03-10T08:56:21.823Z'),
     user_name: 'Melyna Larson',
     user_phone: '1-915-327-0429 x509',
     web_url: 'https://spherical-comparison.org',

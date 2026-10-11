@@ -13,33 +13,33 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The date that this label object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Unique identifier for this label object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # Whether label has been voided
         field :is_voided, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_voided') } }
-
+        # Cost to purchase label
         field :label_cost, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label_cost') } }
 
         field :label_cost_currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label_cost_currency') } }
-
+        # Format of the label (PDF, PNG, ZPL, EPL2)
         field :label_format, Crystalline::Nilable.new(Models::Shared::LabelFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label_format'), 'decoder': Utils.enum_from_string(Models::Shared::LabelFormat, true) } }
-
+        # URL to download the label
         field :label_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label_url') } }
-
+        # Rate used for this label; points to ShippingRate
         field :rate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_id') } }
-
+        # The raw data returned by the integration for this label
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # Service code used
         field :service_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('service_code') } }
-
+        # Reference to the shipment
         field :shipment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipment_id') } }
-
+        # Status of the label
         field :status, Crystalline::Nilable.new(Models::Shared::ShippingLabelStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::ShippingLabelStatus, true) } }
-
+        # Tracking number for the shipment
         field :tracking_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tracking_number') } }
-
+        # The last date that this label object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(created_at: T.nilable(::DateTime), id: T.nilable(::String), is_voided: T.nilable(T::Boolean), label_cost: T.nilable(::Float), label_cost_currency: T.nilable(::String), label_format: T.nilable(Models::Shared::LabelFormat), label_url: T.nilable(::String), rate_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), service_code: T.nilable(::String), shipment_id: T.nilable(::String), status: T.nilable(Models::Shared::ShippingLabelStatus), tracking_number: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }

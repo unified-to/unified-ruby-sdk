@@ -13,27 +13,27 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # ISO 4217 currency code
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # Description of the package contents
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # Height of the package
         field :height, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('height') } }
-
+        # Insured value for this package
         field :insured_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('insured_amount') } }
-
+        # Length of the package
         field :length, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('length') } }
-
+        # Unit for dimensions (cm, inch)
         field :size_unit, Crystalline::Nilable.new(Models::Shared::ShippingPackageSizeUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size_unit'), 'decoder': Utils.enum_from_string(Models::Shared::ShippingPackageSizeUnit, true) } }
-
+        # Package-level tracking (for multi-package shipments)
         field :tracking_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tracking_number') } }
-
+        # Declared value of the package
         field :value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
-
+        # Weight of the package
         field :weight, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight') } }
-
+        # Unit for weight (g, kg, oz, lb)
         field :weight_unit, Crystalline::Nilable.new(Models::Shared::ShippingPackageWeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': Utils.enum_from_string(Models::Shared::ShippingPackageWeightUnit, true) } }
-
+        # Width of the package
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
         sig { params(currency: T.nilable(::String), description: T.nilable(::String), height: T.nilable(::Float), insured_amount: T.nilable(::Float), length: T.nilable(::Float), size_unit: T.nilable(Models::Shared::ShippingPackageSizeUnit), tracking_number: T.nilable(::String), value: T.nilable(::Float), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::ShippingPackageWeightUnit), width: T.nilable(::Float)).void }

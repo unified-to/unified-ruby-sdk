@@ -28,6 +28,16 @@ module UnifiedRubySDK
           NET_AMOUNT = new('net_amount')
           DETAILS = new('details')
           DEDUCTION = new('deduction')
+          PAYROLL_ID = new('payroll_id')
+          GROUP_ID = new('group_id')
+          TYPE = new('type')
+          HOURS = new('hours')
+          EMPLOYEE_TAX_AMOUNT = new('employee_tax_amount')
+          EMPLOYER_TAX_AMOUNT = new('employer_tax_amount')
+          DEDUCTION_AMOUNT = new('deduction_amount')
+          EMPLOYER_CONTRIBUTION_AMOUNT = new('employer_contribution_amount')
+          GROSS_YTD_AMOUNT = new('gross_ytd_amount')
+          NET_YTD_AMOUNT = new('net_ytd_amount')
           RAW = new('raw')
         end
       end

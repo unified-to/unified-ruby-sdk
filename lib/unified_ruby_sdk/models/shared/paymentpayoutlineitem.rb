@@ -13,17 +13,17 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Gross amount of this line
         field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
-
+        # ISO 4217 currency code of the line amount
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # Processor fee attributed to this line
         field :fee_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fee_amount') } }
-
+        # amount minus fee_amount
         field :net_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_amount') } }
-
+        # id of the settled object -- a PaymentPayment or PaymentRefund for PAYMENT / REFUND lines
         field :object_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_id') } }
-
+        # What this payout line settles
         field :object_type, Crystalline::Nilable.new(Models::Shared::PaymentPayoutLineitemObjectType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentPayoutLineitemObjectType, true) } }
 
         sig { params(amount: T.nilable(::Float), currency: T.nilable(::String), fee_amount: T.nilable(::Float), net_amount: T.nilable(::Float), object_id: T.nilable(::String), object_type: T.nilable(Models::Shared::PaymentPayoutLineitemObjectType)).void }

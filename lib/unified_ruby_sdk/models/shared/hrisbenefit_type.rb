@@ -29,6 +29,10 @@ module UnifiedRubySDK
           LOAN_REPAYMENT = new('LOAN_REPAYMENT')
           CHARITABLE_CONTRIBUTION = new('CHARITABLE_CONTRIBUTION')
           OTHER = new('OTHER')
+          RETIREMENT_ROTH = new('RETIREMENT_ROTH')
+          COMMUTER = new('COMMUTER')
+          DEPENDENT_CARE = new('DEPENDENT_CARE')
+          PENSION = new('PENSION')
         end
       end
     end

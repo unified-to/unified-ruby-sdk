@@ -19,9 +19,9 @@ module UnifiedRubySDK
         field :author_member, Crystalline::Nilable.new(Models::Shared::PropertyMessagingMessageAuthorMember), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_member') } }
 
         field :buttons, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingButton)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('buttons') } }
-        # Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted.
+        # Represents all channels to which the message is sent. Identifies the channels where the message is posted.  To send to the "Draft" channel/folder, use a channel ID "DRAFT".
         field :channels, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channels') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # for email systems, this field represents the To value
         field :destination_members, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingMember)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('destination_members') } }
@@ -41,19 +41,19 @@ module UnifiedRubySDK
         field :message_html, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_html') } }
 
         field :message_markdown, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_markdown') } }
-
+        # the opaque identifier for the first message in a thread  
         field :message_thread_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_thread_identifier') } }
-
+        # Represents the ID of the immediate predecessor message in the thread. Identifies a specific message to which the current message directly replies.
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :reactions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingReaction)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reactions') } }
-
+        # eg. RFC822 MessageID
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
         field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }

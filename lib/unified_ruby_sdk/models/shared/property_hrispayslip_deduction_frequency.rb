@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PropertyHrisPayslipDeductionFrequency - Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
       class PropertyHrisPayslipDeductionFrequency < T::Enum
 
 
@@ -20,6 +20,8 @@ module UnifiedRubySDK
           HOUR = new('HOUR')
           MONTH = new('MONTH')
           WEEK = new('WEEK')
+          BIWEEKLY = new('BIWEEKLY')
+          SEMIMONTHLY = new('SEMIMONTHLY')
         end
       end
     end

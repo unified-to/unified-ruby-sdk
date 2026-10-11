@@ -10,8 +10,12 @@ end
 class UnifiedRubySDK::Models::Shared::GenaiModel
   def description(); end
   def description=(str_); end
+  def has_questions(); end
+  def has_questions=(str_); end
   def has_temperature(); end
   def has_temperature=(str_); end
+  def has_vision(); end
+  def has_vision=(str_); end
   def id(); end
   def id=(str_); end
   def max_tokens(); end

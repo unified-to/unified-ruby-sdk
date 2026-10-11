@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountingBankfeedtransactionType - direction: DEBIT, CREDIT
       class AccountingBankfeedtransactionType < T::Enum
 
 

@@ -1,5 +1,7 @@
 # ShippingLabelStatus
 
+Status of the label
+
 
 ## Values
 

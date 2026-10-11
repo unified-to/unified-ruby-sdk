@@ -15,7 +15,7 @@ module UnifiedRubySDK
 
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # Depth of this subject in the provider's topic hierarchy (0 = top level)
         field :rank, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rank') } }
 
         sig { params(name: T.nilable(::String), rank: T.nilable(::Float)).void }

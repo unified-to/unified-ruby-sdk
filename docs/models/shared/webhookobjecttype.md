@@ -1,5 +1,7 @@
 # WebhookObjectType
 
+The object to return (eg. CRM "contact")
+
 
 ## Values
 
@@ -18,12 +20,15 @@
 | `ACCOUNTING_ORGANIZATION`        | accounting_organization          |
 | `ACCOUNTING_ORDER`               | accounting_order                 |
 | `ACCOUNTING_SALESORDER`          | accounting_salesorder            |
+| `ACCOUNTING_SALESRECEIPT`        | accounting_salesreceipt          |
 | `ACCOUNTING_PURCHASEORDER`       | accounting_purchaseorder         |
 | `ACCOUNTING_BALANCESHEET`        | accounting_balancesheet          |
 | `ACCOUNTING_PROFITLOSS`          | accounting_profitloss            |
 | `ACCOUNTING_TRIALBALANCE`        | accounting_trialbalance          |
 | `ACCOUNTING_CATEGORY`            | accounting_category              |
 | `ACCOUNTING_EXPENSE`             | accounting_expense               |
+| `ACCOUNTING_EXPENSEREPORT`       | accounting_expensereport         |
+| `ACCOUNTING_PURCHASERECEIPT`     | accounting_purchasereceipt       |
 | `ACCOUNTING_CASHFLOW`            | accounting_cashflow              |
 | `ACCOUNTING_QUOTE`               | accounting_quote                 |
 | `ACCOUNTING_AGEDRECEIVABLE`      | accounting_agedreceivable        |
@@ -79,6 +84,10 @@
 | `HRIS_BANKACCOUNT`               | hris_bankaccount                 |
 | `HRIS_DOCUMENT`                  | hris_document                    |
 | `HRIS_TAXONOMY`                  | hris_taxonomy                    |
+| `HRIS_JOB`                       | hris_job                         |
+| `HRIS_PAYROLL`                   | hris_payroll                     |
+| `HRIS_PAYCODE`                   | hris_paycode                     |
+| `HRIS_EARNING`                   | hris_earning                     |
 | `MARTECH_LIST`                   | martech_list                     |
 | `MARTECH_MEMBER`                 | martech_member                   |
 | `MARTECH_CAMPAIGN`               | martech_campaign                 |
@@ -92,6 +101,8 @@
 | `UC_CALL`                        | uc_call                          |
 | `UC_COMMENT`                     | uc_comment                       |
 | `UC_RECORDING`                   | uc_recording                     |
+| `UC_SCORECARD`                   | uc_scorecard                     |
+| `UC_SCORECARDTEMPLATE`           | uc_scorecardtemplate             |
 | `ENRICH_PERSON`                  | enrich_person                    |
 | `ENRICH_COMPANY`                 | enrich_company                   |
 | `STORAGE_FILE`                   | storage_file                     |
@@ -101,6 +112,7 @@
 | `GENAI_TASK`                     | genai_task                       |
 | `GENAI_AGENT`                    | genai_agent                      |
 | `GENAI_ORGANIZATION`             | genai_organization               |
+| `GENAI_SKILL`                    | genai_skill                      |
 | `MESSAGING_MESSAGE`              | messaging_message                |
 | `MESSAGING_CHANNEL`              | messaging_channel                |
 | `MESSAGING_EVENT`                | messaging_event                  |

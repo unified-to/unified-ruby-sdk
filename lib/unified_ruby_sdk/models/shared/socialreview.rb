@@ -13,31 +13,31 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Profile image URL of the reviewer
         field :author_avatar_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_avatar_url') } }
-
+        # Free-text location of the reviewer
         field :author_location, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_location') } }
-
+        # Display name of the reviewer
         field :author_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('author_name') } }
-
+        # The review text
         field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
-
+        # When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Unique identifier for the review
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # The social profile (page/handle/listing) being reviewed
         field :profile_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_id') } }
-
+        # Star rating, typically 1-5
         field :rating, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating') } }
-
+        # Raw data from integration
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The business's reply to the review
         field :reply, Crystalline::Nilable.new(Models::Shared::PropertySocialReviewReply), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reply') } }
-
+        # Optional review title/headline
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
-
+        # When the review was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Public permalink to the review
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
         sig { params(author_avatar_url: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), profile_id: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), reply: T.nilable(Models::Shared::PropertySocialReviewReply), title: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }

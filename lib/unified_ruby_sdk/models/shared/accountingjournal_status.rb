@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountingJournalStatus - Posting state of the journal entry
       class AccountingJournalStatus < T::Enum
 
 

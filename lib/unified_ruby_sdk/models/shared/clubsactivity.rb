@@ -13,91 +13,91 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The number of achievements gained during this activity
         field :achievement_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('achievement_count') } }
-
+        # The number of athletes that took part in this activity
         field :athlete_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('athlete_count') } }
-
+        # The id of the athlete who performed the activity (DetailedActivity only)
         field :athlete_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('athlete_id') } }
-
+        # The full name of the athlete
         field :athlete_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('athlete_name') } }
-
+        # The activity's average cadence
         field :average_cadence, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('average_cadence') } }
-
+        # The activity's average heart rate, in beats per minute
         field :average_heartrate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('average_heartrate') } }
-
+        # The activity's average speed, in meters per second
         field :average_speed, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('average_speed') } }
-
+        # The activity's average power output, in watts
         field :average_watts, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('average_watts') } }
-
+        # The number of kilocalories consumed during this activity
         field :calories, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('calories') } }
-
+        # The number of comments for this activity
         field :comment_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comment_count') } }
-
+        # The date that this activity was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The description of the activity (DetailedActivity only)
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # The activity's distance, in meters
         field :distance, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('distance') } }
-
+        # The activity's elapsed time, in seconds
         field :elapsed_time, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('elapsed_time') } }
-
+        # The activity's highest elevation, in meters (DetailedActivity only)
         field :elevation_high, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('elevation_high') } }
-
+        # The activity's lowest elevation, in meters (DetailedActivity only)
         field :elevation_low, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('elevation_low') } }
-
+        # The group this activity was listed under (reference to HrisGroup)
         field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
-
+        # Whether the activity has heart rate data
         field :has_heartrate, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_heartrate') } }
-
+        # Unique identifier for this activity (not provided by ClubActivity)
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # Whether this activity is a commute
         field :is_commute, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_commute') } }
-
+        # Whether this activity was created manually
         field :is_manual, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_manual') } }
-
+        # Whether this activity is private
         field :is_private, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_private') } }
-
+        # Whether this activity was recorded on a training machine
         field :is_trainer, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_trainer') } }
-
+        # The total work done, in kilojoules
         field :kilojoules, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('kilojoules') } }
-
+        # The number of kudos given for this activity
         field :kudos_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('kudos_count') } }
-
+        # The detailed polyline of the activity's map
         field :map_polyline, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('map_polyline') } }
-
+        # The summary polyline of the activity's map
         field :map_summary_polyline, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('map_summary_polyline') } }
-
+        # The activity's max heart rate, in beats per minute
         field :max_heartrate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_heartrate') } }
-
+        # The activity's max speed, in meters per second
         field :max_speed, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_speed') } }
-
+        # The activity's max power output, in watts
         field :max_watts, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_watts') } }
-
+        # The activity's moving time, in seconds
         field :moving_time, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('moving_time') } }
-
+        # The name of the activity
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # The number of Instagram photos for this activity
         field :photo_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('photo_count') } }
-
+        # The number of personal records set during this activity
         field :pr_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pr_count') } }
-
+        # The raw data returned by the integration for this activity
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # When the activity started (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The activity's relative effort score
         field :suffer_score, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('suffer_score') } }
-
+        # The timezone of the activity
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
-
+        # The activity's total elevation gain, in meters
         field :total_elevation_gain, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_elevation_gain') } }
-
+        # The activity type
         field :type, Crystalline::Nilable.new(Models::Shared::ClubsActivityType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ClubsActivityType, true) } }
-
+        # The last date that this activity was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The activity's weighted average power output, in watts
         field :weighted_average_watts, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weighted_average_watts') } }
-
+        # The activity's workout type
         field :workout_type, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workout_type') } }
 
         sig { params(achievement_count: T.nilable(::Float), athlete_count: T.nilable(::Float), athlete_id: T.nilable(::String), athlete_name: T.nilable(::String), average_cadence: T.nilable(::Float), average_heartrate: T.nilable(::Float), average_speed: T.nilable(::Float), average_watts: T.nilable(::Float), calories: T.nilable(::Float), comment_count: T.nilable(::Float), created_at: T.nilable(::DateTime), description: T.nilable(::String), distance: T.nilable(::Float), elapsed_time: T.nilable(::Float), elevation_high: T.nilable(::Float), elevation_low: T.nilable(::Float), group_id: T.nilable(::String), has_heartrate: T.nilable(T::Boolean), id: T.nilable(::String), is_commute: T.nilable(T::Boolean), is_manual: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), is_trainer: T.nilable(T::Boolean), kilojoules: T.nilable(::Float), kudos_count: T.nilable(::Float), map_polyline: T.nilable(::String), map_summary_polyline: T.nilable(::String), max_heartrate: T.nilable(::Float), max_speed: T.nilable(::Float), max_watts: T.nilable(::Float), moving_time: T.nilable(::Float), name: T.nilable(::String), photo_count: T.nilable(::Float), pr_count: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), suffer_score: T.nilable(::Float), timezone: T.nilable(::String), total_elevation_gain: T.nilable(::Float), type: T.nilable(Models::Shared::ClubsActivityType), updated_at: T.nilable(::DateTime), weighted_average_watts: T.nilable(::Float), workout_type: T.nilable(::Float)).void }

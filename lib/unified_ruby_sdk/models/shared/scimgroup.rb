@@ -13,13 +13,13 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The group's display name
         field :display_name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('displayName'), required: true } }
-
+        # A groups id in an external system
         field :external_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('externalId') } }
-
+        # Organization [NOT STANDARD]
         field :group_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groupType') } }
-
+        # The group's unique id
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # An array of members
         field :members, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimGroupMember)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('members') } }

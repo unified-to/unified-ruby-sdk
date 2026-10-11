@@ -13,37 +13,37 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # ref -> AccountingAccount: the target GL account the feed posts into (reference to AccountingAccount)
         field :account_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_id') } }
-
+        # full account number where available
         field :account_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_number') } }
-
+        # last-4 when the full number isn't returned
         field :account_number_last4, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_number_last4') } }
-
+        # CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
         field :account_type, Crystalline::Nilable.new(Models::Shared::AccountType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('account_type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountType, true) } }
-
+        # current balance of the source account
         field :balance, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('balance') } }
-
+        # bank / institution name
         field :bank_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bank_name') } }
-
+        # creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # ISO 4217 currency of the account
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # date the feed begins delivering transactions (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :feed_start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('feed_start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # account nickname / source name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # ref -> accounting Organization this record belongs to
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
-
+        # The original data from the integration's API
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # bank routing number
         field :routing_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('routing_number') } }
-
+        # feed state: ACTIVE, INACTIVE
         field :status, Crystalline::Nilable.new(Models::Shared::AccountingBankfeedaccountStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingBankfeedaccountStatus, true) } }
-
+        # last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(account_id: T.nilable(::String), account_number: T.nilable(::String), account_number_last4: T.nilable(::String), account_type: T.nilable(Models::Shared::AccountType), balance: T.nilable(::Float), bank_name: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), feed_start_at: T.nilable(::DateTime), id: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), routing_number: T.nilable(::String), status: T.nilable(Models::Shared::AccountingBankfeedaccountStatus), updated_at: T.nilable(::DateTime)).void }

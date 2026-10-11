@@ -13,29 +13,29 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The date that this signatory was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Reason for declining (if status is DECLINED)
         field :decline_reason, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('decline_reason') } }
-
+        # Parent signing document; points to SigningDocument
         field :document_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('document_id') } }
-
+        # Email address of the signatory
         field :email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
-
+        # Unique identifier for this signatory
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # Full name of the signatory
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # Signing order (1, 2, 3...)
         field :order, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('order') } }
-
+        # The raw data returned by the integration
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # Role of the signatory
         field :role, Crystalline::Nilable.new(Models::Shared::SigningSignatoryRole), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('role'), 'decoder': Utils.enum_from_string(Models::Shared::SigningSignatoryRole, true) } }
-
+        # When this signatory signed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :signed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('signed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Current status of this signatory
         field :status, Crystalline::Nilable.new(Models::Shared::SigningSignatoryStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::SigningSignatoryStatus, true) } }
-
+        # The last date that this signatory was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(created_at: T.nilable(::DateTime), decline_reason: T.nilable(::String), document_id: T.nilable(::String), email: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), order: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), role: T.nilable(Models::Shared::SigningSignatoryRole), signed_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::SigningSignatoryStatus), updated_at: T.nilable(::DateTime)).void }

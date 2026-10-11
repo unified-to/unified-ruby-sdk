@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::GenaiContent
   def content(); end
   def content=(str_); end
+  def images(); end
+  def images=(str_); end
   def role(); end
   def role=(str_); end
 end

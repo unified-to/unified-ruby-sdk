@@ -28,6 +28,7 @@ module UnifiedRubySDK
           ORGANIZATION_ID = new('organization_id')
           CATEGORY_IDS = new('category_ids')
           METADATA = new('metadata')
+          ATTACHMENTS = new('attachments')
           RAW = new('raw')
         end
       end

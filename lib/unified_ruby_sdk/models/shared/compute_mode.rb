@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ComputeMode - How the segment membership is computed (REALTIME or BATCH)
       class ComputeMode < T::Enum
 
 

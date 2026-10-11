@@ -17,7 +17,7 @@ module UnifiedRubySDK
         field :field, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('field'), required: true } }
 
         field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
-
+        # target Database Table ID
         field :table_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('table_id'), required: true } }
 
         field :type, Models::Shared::DatastoreRelationshipType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::DatastoreRelationshipType, false) } }

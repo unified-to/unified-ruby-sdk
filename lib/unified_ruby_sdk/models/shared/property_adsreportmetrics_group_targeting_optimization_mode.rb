@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PropertyAdsReportMetricsGroupTargetingOptimizationMode - Google: bid_only falsetrue
       class PropertyAdsReportMetricsGroupTargetingOptimizationMode < T::Enum
 
 

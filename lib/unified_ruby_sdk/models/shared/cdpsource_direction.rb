@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # CdpSourceDirection - SOURCE, or BIDIRECTIONAL for import+export connectors
       class CdpSourceDirection < T::Enum
 
 

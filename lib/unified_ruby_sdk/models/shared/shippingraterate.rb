@@ -17,41 +17,41 @@ module UnifiedRubySDK
         field :title, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title'), required: true } }
 
         field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
-
+        # Base shipping rate
         field :base_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('base_amount') } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # Delivery days (integer)
         field :delivery_days, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('delivery_days') } }
-
+        # Delivery duration terms (e.g., "3-5 business days")
         field :delivery_terms, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('delivery_terms') } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # Applied discount
         field :discount_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('discount_amount') } }
-
+        # Estimated delivery time in days
         field :estimated_days, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('estimated_days') } }
-
+        # Specific delivery date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :estimated_delivery_end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('estimated_delivery_end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Time window (e.g., "10:00 AM - 2:00 PM") (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :estimated_delivery_start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('estimated_delivery_start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Whether rate is currently available
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
-
+        # Whether delivery is guaranteed
         field :is_guaranteed, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_guaranteed') } }
-
+        # Whether this is a negotiated rate
         field :is_negotiated_rate, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_negotiated_rate') } }
-
+        # Whether shipment is trackable
         field :is_trackable, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_trackable') } }
-
+        # Package type (e.g., "package", "envelope", "flat")
         field :package_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('package_type') } }
-
+        # Source of rate (e.g., "carrier", "negotiated", "account")
         field :rate_source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_source') } }
         # Additional charges
         field :surcharges, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ShippingRateSurcharge)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('surcharges') } }
 
         field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
-
+        # Transit time in hours
         field :transit_hours, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('transit_hours') } }
 
         sig { params(title: ::String, amount: T.nilable(::Float), base_amount: T.nilable(::Float), currency: T.nilable(::String), delivery_days: T.nilable(::Float), delivery_terms: T.nilable(::String), description: T.nilable(::String), discount_amount: T.nilable(::Float), estimated_days: T.nilable(::Float), estimated_delivery_end_at: T.nilable(::DateTime), estimated_delivery_start_at: T.nilable(::DateTime), is_active: T.nilable(T::Boolean), is_guaranteed: T.nilable(T::Boolean), is_negotiated_rate: T.nilable(T::Boolean), is_trackable: T.nilable(T::Boolean), package_type: T.nilable(::String), rate_source: T.nilable(::String), surcharges: T.nilable(T::Array[Models::Shared::ShippingRateSurcharge]), tax_amount: T.nilable(::Float), transit_hours: T.nilable(::Float)).void }

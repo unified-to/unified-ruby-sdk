@@ -1,5 +1,7 @@
 # Period
 
+The aggregation period of the value
+
 
 ## Values
 

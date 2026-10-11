@@ -47,7 +47,7 @@ end
 
 | Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `webhook`                                                                     | [Models::Shared::Webhook](../../models/shared/webhook.md)                     | :heavy_check_mark:                                                            | A webhook is used to POST new/updated information to your server.             |
+| `webhook`                                                                     | [Models::Shared::Webhook](../../models/shared/webhook.md)                     | :heavy_check_mark:                                                            | A webhook is used to POST new, updated, or deleted records to your server.    |
 | `include_all`                                                                 | *T.nilable(T::Boolean)*                                                       | :heavy_minus_sign:                                                            | When true, send existing/historic data. When false, no historic data is sent. |
 
 ### Response
@@ -175,10 +175,10 @@ end
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `webhook`                                                         | [Models::Shared::Webhook](../../models/shared/webhook.md)         | :heavy_check_mark:                                                | A webhook is used to POST new/updated information to your server. |
-| `id`                                                              | *::String*                                                        | :heavy_check_mark:                                                | ID of the Webhook                                                 |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `webhook`                                                                  | [Models::Shared::Webhook](../../models/shared/webhook.md)                  | :heavy_check_mark:                                                         | A webhook is used to POST new, updated, or deleted records to your server. |
+| `id`                                                                       | *::String*                                                                 | :heavy_check_mark:                                                         | ID of the Webhook                                                          |
 
 ### Response
 
@@ -303,10 +303,10 @@ end
 
 ### Parameters
 
-| Parameter                                                         | Type                                                              | Required                                                          | Description                                                       |
-| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `webhook`                                                         | [Models::Shared::Webhook](../../models/shared/webhook.md)         | :heavy_check_mark:                                                | A webhook is used to POST new/updated information to your server. |
-| `id`                                                              | *::String*                                                        | :heavy_check_mark:                                                | ID of the Webhook                                                 |
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `webhook`                                                                  | [Models::Shared::Webhook](../../models/shared/webhook.md)                  | :heavy_check_mark:                                                         | A webhook is used to POST new, updated, or deleted records to your server. |
+| `id`                                                                       | *::String*                                                                 | :heavy_check_mark:                                                         | ID of the Webhook                                                          |
 
 ### Response
 

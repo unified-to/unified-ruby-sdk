@@ -42,11 +42,11 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   bio: 'sushi devotee, singer',
   compensation: [
     Models::Shared::HrisCompensation.new(
-      amount: 69_148.0,
+      amount: 60_136.0,
       currency: 'CRC',
       frequency: Models::Shared::HrisCompensationFrequency::QUARTER,
       notes: 'Tergeo laborum laboriosam tutis.',
-      type: Models::Shared::HrisCompensationType::EQUITY,
+      type: Models::Shared::HrisCompensationType::STOCK_OPTIONS,
     ),
   ],
   created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
@@ -62,10 +62,11 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   employment_status: Models::Shared::EmploymentStatus::ACTIVE,
   employment_type: Models::Shared::HrisEmployeeEmploymentType::VOLUNTEER,
   first_name: 'Zetta',
+  flsa_status: Models::Shared::FlsaStatus::SALARIED_NONEXEMPT,
   gender: Models::Shared::HrisEmployeeGender::INTERSEX,
-  has_mfa: true,
-  hired_at: DateTime.iso8601('2023-05-12T06:08:21.583Z'),
-  id: '484040b5-6330-41f5-9b49-4d3045c77f39',
+  has_mfa: false,
+  hired_at: DateTime.iso8601('2023-05-22T15:45:02.980Z'),
+  id: '3c57c9db-2490-435f-890b-c3b4065605fd',
   image_url: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
   language_locale: 'es',
   last_name: 'Prohaska',
@@ -77,13 +78,14 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
         "display_name": 'Custom Property',
       },
       format: Models::Shared::HrisMetadataFormat::TEXT,
-      id: 'f3fc17c5-b836-407b-a353-5d1f99341389',
+      id: 'a18f53be-9e33-4567-8afb-ffd8e3af4904',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'tenetur',
+      value: 'appono',
     ),
   ],
   name: 'Zetta Prohaska',
+  pay_frequency: Models::Shared::PayFrequency::BIWEEKLY,
   pronouns: 'she/her',
   relationships: [
     Models::Shared::HrisEmployeerelationship.new(
@@ -99,38 +101,35 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
         ),
       ],
       name: 'Automotive',
-      type: Models::Shared::HrisEmployeerelationshipType::EMERGENCY,
+      type: Models::Shared::HrisEmployeerelationshipType::FRIEND,
     ),
     Models::Shared::HrisEmployeerelationship.new(
       emails: [
         Models::Shared::HrisEmail.new(
           email: 'Benedict_Wisozk83@hotmail.com',
         ),
-        Models::Shared::HrisEmail.new(
-          email: 'Princess_Rath43@gmail.com',
-        ),
-        Models::Shared::HrisEmail.new(
-          email: 'Elmira92@yahoo.com',
-        ),
       ],
       name: 'Music',
-      type: Models::Shared::HrisEmployeerelationshipType::FRIEND,
+      type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
     ),
     Models::Shared::HrisEmployeerelationship.new(
       emails: [
         Models::Shared::HrisEmail.new(
-          email: 'Jane30@gmail.com',
+          email: 'Margot11@yahoo.com',
+        ),
+        Models::Shared::HrisEmail.new(
+          email: 'Jaden_Miller@gmail.com',
         ),
       ],
-      name: 'Jewelry',
-      type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+      name: 'Electronics',
+      type: Models::Shared::HrisEmployeerelationshipType::OTHER,
     ),
   ],
   salutation: 'Miss',
   ssn_sin: 'yMRtj0Q3xO',
-  storage_quota_allocated: 3_674_489.0,
-  storage_quota_available: 7_748_057.0,
-  storage_quota_used: 301_727.0,
+  storage_quota_allocated: 7_748_057.0,
+  storage_quota_available: 1_590_710.0,
+  storage_quota_used: 730_343.0,
   telephones: [
     Models::Shared::HrisTelephone.new(
       telephone: '(409) 801-3705',
@@ -142,7 +141,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   timeoff_days_used: 6.0,
   timezone: 'Africa/Harare',
   title: 'Investor Paradigm Liaison',
-  updated_at: DateTime.iso8601('2022-02-20T08:15:24.501Z'),
+  updated_at: DateTime.iso8601('2022-02-27T06:24:28.834Z'),
 ), connection_id: '<id>')
 
 unless res.hris_employee.nil?
@@ -290,11 +289,11 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     bio: 'sushi devotee, singer',
     compensation: [
       Models::Shared::HrisCompensation.new(
-        amount: 69_148.0,
+        amount: 60_136.0,
         currency: 'CRC',
         frequency: Models::Shared::HrisCompensationFrequency::QUARTER,
         notes: 'Tergeo laborum laboriosam tutis.',
-        type: Models::Shared::HrisCompensationType::EQUITY,
+        type: Models::Shared::HrisCompensationType::STOCK_OPTIONS,
       ),
     ],
     created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
@@ -310,10 +309,11 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     employment_status: Models::Shared::EmploymentStatus::ACTIVE,
     employment_type: Models::Shared::HrisEmployeeEmploymentType::VOLUNTEER,
     first_name: 'Zetta',
+    flsa_status: Models::Shared::FlsaStatus::SALARIED_NONEXEMPT,
     gender: Models::Shared::HrisEmployeeGender::INTERSEX,
-    has_mfa: true,
-    hired_at: DateTime.iso8601('2023-05-12T06:08:21.617Z'),
-    id: '9b80cc3c-35a4-4eb2-b269-399711785e39',
+    has_mfa: false,
+    hired_at: DateTime.iso8601('2023-05-22T15:45:03.018Z'),
+    id: '81c8b367-c709-49bf-83aa-4fe7d6faf9cc',
     image_url: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
     language_locale: 'es',
     last_name: 'Prohaska',
@@ -325,13 +325,14 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: 'cd351d1b-4490-4933-92ab-fea7c8e86868',
+        id: '24010608-6f76-45ac-925c-ab53fb3c734c',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'tenetur',
+        value: 'appono',
       ),
     ],
     name: 'Zetta Prohaska',
+    pay_frequency: Models::Shared::PayFrequency::BIWEEKLY,
     pronouns: 'she/her',
     relationships: [
       Models::Shared::HrisEmployeerelationship.new(
@@ -347,38 +348,35 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
           ),
         ],
         name: 'Automotive',
-        type: Models::Shared::HrisEmployeerelationshipType::EMERGENCY,
+        type: Models::Shared::HrisEmployeerelationshipType::FRIEND,
       ),
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
             email: 'Benedict_Wisozk83@hotmail.com',
           ),
-          Models::Shared::HrisEmail.new(
-            email: 'Princess_Rath43@gmail.com',
-          ),
-          Models::Shared::HrisEmail.new(
-            email: 'Elmira92@yahoo.com',
-          ),
         ],
         name: 'Music',
-        type: Models::Shared::HrisEmployeerelationshipType::FRIEND,
+        type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
       ),
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'Jane30@gmail.com',
+            email: 'Margot11@yahoo.com',
+          ),
+          Models::Shared::HrisEmail.new(
+            email: 'Jaden_Miller@gmail.com',
           ),
         ],
-        name: 'Jewelry',
-        type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+        name: 'Electronics',
+        type: Models::Shared::HrisEmployeerelationshipType::OTHER,
       ),
     ],
     salutation: 'Miss',
     ssn_sin: 'yMRtj0Q3xO',
-    storage_quota_allocated: 3_674_489.0,
-    storage_quota_available: 7_748_057.0,
-    storage_quota_used: 301_727.0,
+    storage_quota_allocated: 7_748_057.0,
+    storage_quota_available: 1_590_710.0,
+    storage_quota_used: 730_343.0,
     telephones: [
       Models::Shared::HrisTelephone.new(
         telephone: '(409) 801-3705',
@@ -390,7 +388,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     timeoff_days_used: 6.0,
     timezone: 'Africa/Harare',
     title: 'Investor Paradigm Liaison',
-    updated_at: DateTime.iso8601('2022-02-20T08:15:24.523Z'),
+    updated_at: DateTime.iso8601('2022-02-27T06:24:28.860Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -493,11 +491,11 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     bio: 'sushi devotee, singer',
     compensation: [
       Models::Shared::HrisCompensation.new(
-        amount: 69_148.0,
+        amount: 60_136.0,
         currency: 'CRC',
         frequency: Models::Shared::HrisCompensationFrequency::QUARTER,
         notes: 'Tergeo laborum laboriosam tutis.',
-        type: Models::Shared::HrisCompensationType::EQUITY,
+        type: Models::Shared::HrisCompensationType::STOCK_OPTIONS,
       ),
     ],
     created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
@@ -513,10 +511,11 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     employment_status: Models::Shared::EmploymentStatus::ACTIVE,
     employment_type: Models::Shared::HrisEmployeeEmploymentType::VOLUNTEER,
     first_name: 'Zetta',
+    flsa_status: Models::Shared::FlsaStatus::SALARIED_NONEXEMPT,
     gender: Models::Shared::HrisEmployeeGender::INTERSEX,
-    has_mfa: true,
-    hired_at: DateTime.iso8601('2023-05-12T06:08:21.617Z'),
-    id: '9b80cc3c-35a4-4eb2-b269-399711785e39',
+    has_mfa: false,
+    hired_at: DateTime.iso8601('2023-05-22T15:45:03.018Z'),
+    id: '81c8b367-c709-49bf-83aa-4fe7d6faf9cc',
     image_url: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
     language_locale: 'es',
     last_name: 'Prohaska',
@@ -528,13 +527,14 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: 'cd351d1b-4490-4933-92ab-fea7c8e86868',
+        id: '24010608-6f76-45ac-925c-ab53fb3c734c',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'tenetur',
+        value: 'appono',
       ),
     ],
     name: 'Zetta Prohaska',
+    pay_frequency: Models::Shared::PayFrequency::BIWEEKLY,
     pronouns: 'she/her',
     relationships: [
       Models::Shared::HrisEmployeerelationship.new(
@@ -550,38 +550,35 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
           ),
         ],
         name: 'Automotive',
-        type: Models::Shared::HrisEmployeerelationshipType::EMERGENCY,
+        type: Models::Shared::HrisEmployeerelationshipType::FRIEND,
       ),
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
             email: 'Benedict_Wisozk83@hotmail.com',
           ),
-          Models::Shared::HrisEmail.new(
-            email: 'Princess_Rath43@gmail.com',
-          ),
-          Models::Shared::HrisEmail.new(
-            email: 'Elmira92@yahoo.com',
-          ),
         ],
         name: 'Music',
-        type: Models::Shared::HrisEmployeerelationshipType::FRIEND,
+        type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
       ),
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'Jane30@gmail.com',
+            email: 'Margot11@yahoo.com',
+          ),
+          Models::Shared::HrisEmail.new(
+            email: 'Jaden_Miller@gmail.com',
           ),
         ],
-        name: 'Jewelry',
-        type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+        name: 'Electronics',
+        type: Models::Shared::HrisEmployeerelationshipType::OTHER,
       ),
     ],
     salutation: 'Miss',
     ssn_sin: 'yMRtj0Q3xO',
-    storage_quota_allocated: 3_674_489.0,
-    storage_quota_available: 7_748_057.0,
-    storage_quota_used: 301_727.0,
+    storage_quota_allocated: 7_748_057.0,
+    storage_quota_available: 1_590_710.0,
+    storage_quota_used: 730_343.0,
     telephones: [
       Models::Shared::HrisTelephone.new(
         telephone: '(409) 801-3705',
@@ -593,7 +590,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     timeoff_days_used: 6.0,
     timezone: 'Africa/Harare',
     title: 'Investor Paradigm Liaison',
-    updated_at: DateTime.iso8601('2022-02-20T08:15:24.523Z'),
+    updated_at: DateTime.iso8601('2022-02-27T06:24:28.860Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

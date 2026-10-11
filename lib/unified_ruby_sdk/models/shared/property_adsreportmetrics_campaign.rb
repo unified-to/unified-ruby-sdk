@@ -21,17 +21,17 @@ module UnifiedRubySDK
         field :budget_period, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCampaignBudgetPeriod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_period'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsCampaignBudgetPeriod, true) } }
 
         field :budget_unit, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCampaignBudgetUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_unit'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsCampaignBudgetUnit, true) } }
-
+        # Resource name for existing/shared budget (Google)
         field :campaign_budget_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign_budget_identifier') } }
-
+        # Housing, employment, credit, NONE (Meta)
         field :category, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status
         field :effective_status, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCampaignEffectiveStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('effective_status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsCampaignEffectiveStatus, true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :frequency_cap, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCampaignFrequencyCap), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency_cap') } }
@@ -53,7 +53,7 @@ module UnifiedRubySDK
         field :planned_spend_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('planned_spend_amount') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCampaignStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsCampaignStatus, true) } }
@@ -61,7 +61,7 @@ module UnifiedRubySDK
         field :targeting, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCampaignTargeting), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('targeting') } }
 
         field :total_spend_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_spend_amount') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(advertising_channel_type: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignAdvertisingChannelType), budget_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignBudgetPeriod), budget_unit: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignBudgetUnit), campaign_budget_identifier: T.nilable(::String), category: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), effective_status: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignEffectiveStatus), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignFrequencyCap), goal: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignGoal), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), kpi: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignKpi), labels: T.nilable(T::Array[::String]), name: T.nilable(::String), organization_id: T.nilable(::String), planned_spend_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignStatus), targeting: T.nilable(Models::Shared::PropertyAdsReportMetricsCampaignTargeting), total_spend_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }

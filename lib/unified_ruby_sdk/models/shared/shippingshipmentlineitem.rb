@@ -13,19 +13,19 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Unique identifier for this fulfillment line
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # Reference to the CommerceItem being fulfilled (reference to CommerceItem)
         field :item_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_id') } }
-
+        # Item name (for display)
         field :item_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_name') } }
-
+        # Reference to the CommerceItemvariant being fulfilled (reference to CommerceCommerceItemvariant)
         field :item_variant_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('item_variant_id') } }
-
+        # The order line being fulfilled
         field :order_lineitem_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('order_lineitem_id') } }
-
+        # Units fulfilled on this line
         field :quantity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('quantity') } }
-
+        # Item SKU
         field :sku, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sku') } }
 
         sig { params(id: T.nilable(::String), item_id: T.nilable(::String), item_name: T.nilable(::String), item_variant_id: T.nilable(::String), order_lineitem_id: T.nilable(::String), quantity: T.nilable(::Float), sku: T.nilable(::String)).void }

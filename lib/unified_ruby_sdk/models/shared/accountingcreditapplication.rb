@@ -13,13 +13,13 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The amount of credit applied to this object
         field :amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('amount') } }
-
+        # Date and time when the credit was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :applied_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('applied_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The id of the object this credit was applied to
         field :object_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_id') } }
-
+        # The type of object this credit was applied to
         field :object_type, Crystalline::Nilable.new(Models::Shared::ObjectType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), 'decoder': Utils.enum_from_string(Models::Shared::ObjectType, true) } }
 
         sig { params(amount: T.nilable(::Float), applied_at: T.nilable(::DateTime), object_id: T.nilable(::String), object_type: T.nilable(Models::Shared::ObjectType)).void }

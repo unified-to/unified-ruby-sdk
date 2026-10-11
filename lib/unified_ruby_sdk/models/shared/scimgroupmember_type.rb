@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ScimGroupMemberType - NOT STANDARD
       class ScimGroupMemberType < T::Enum
 
 

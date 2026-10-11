@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # CdpMetadataFormat - The data type of the attribute value
       class CdpMetadataFormat < T::Enum
 
 

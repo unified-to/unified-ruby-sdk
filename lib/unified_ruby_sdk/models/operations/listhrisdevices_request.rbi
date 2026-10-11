@@ -10,8 +10,12 @@ end
 class UnifiedRubySDK::Models::Operations::ListHrisDevicesRequest
   def connection_id(); end
   def connection_id=(str_); end
+  def email(); end
+  def email=(str_); end
   def fields_(); end
   def fields_=(str_); end
+  def group_id(); end
+  def group_id=(str_); end
   def limit(); end
   def limit=(str_); end
   def offset(); end

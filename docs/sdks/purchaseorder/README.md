@@ -30,6 +30,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
+  attachments: [],
   billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
     address1: '37214 Tanya Walks',
     city: 'South Annabelleton',
@@ -41,10 +42,10 @@ res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: 
   category_ids: [],
   created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
   currency: 'ZMW',
-  id: 'f7dde434-bbb1-4325-ae3c-a9403bede977',
+  id: '5df0165d-2362-45a3-a731-a5c2c266b425',
   lineitems: [],
   metadata: [],
-  posted_at: DateTime.iso8601('2025-04-27T10:38:53.396Z'),
+  posted_at: DateTime.iso8601('2025-05-12T13:45:08.967Z'),
   shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
     address1: '649 Maggio Overpass',
     city: 'Lake Jaylan',
@@ -55,7 +56,7 @@ res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: 
   ),
   status: Models::Shared::AccountingPurchaseorderStatus::PARTIALLY_REFUNDED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2021-02-26T05:56:03.104Z'),
+  updated_at: DateTime.iso8601('2021-02-26T23:11:58.689Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_purchaseorder.nil?
@@ -191,6 +192,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
   accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
+    attachments: [],
     billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
       address1: '37214 Tanya Walks',
       city: 'South Annabelleton',
@@ -202,10 +204,10 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'ZMW',
-    id: 'd118cce2-44a0-4328-bf59-7259e05d3180',
+    id: '0ef164ae-3d7d-43eb-b5a6-fba3cbcbd136',
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2025-04-27T10:38:53.438Z'),
+    posted_at: DateTime.iso8601('2025-05-12T13:45:08.992Z'),
     shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
       address1: '649 Maggio Overpass',
       city: 'Lake Jaylan',
@@ -216,7 +218,7 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::PARTIALLY_REFUNDED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-02-26T05:56:03.106Z'),
+    updated_at: DateTime.iso8601('2021-02-26T23:11:58.691Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -307,6 +309,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
   accounting_purchaseorder: Models::Shared::AccountingPurchaseorder.new(
+    attachments: [],
     billing_address: Models::Shared::PropertyAccountingPurchaseorderBillingAddress.new(
       address1: '37214 Tanya Walks',
       city: 'South Annabelleton',
@@ -318,10 +321,10 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'ZMW',
-    id: 'd118cce2-44a0-4328-bf59-7259e05d3180',
+    id: '0ef164ae-3d7d-43eb-b5a6-fba3cbcbd136',
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2025-04-27T10:38:53.438Z'),
+    posted_at: DateTime.iso8601('2025-05-12T13:45:08.992Z'),
     shipping_address: Models::Shared::PropertyAccountingPurchaseorderShippingAddress.new(
       address1: '649 Maggio Overpass',
       city: 'Lake Jaylan',
@@ -332,7 +335,7 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::PARTIALLY_REFUNDED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-02-26T05:56:03.106Z'),
+    updated_at: DateTime.iso8601('2021-02-26T23:11:58.691Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

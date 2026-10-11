@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ReturnType - Type of return
       class ReturnType < T::Enum
 
 

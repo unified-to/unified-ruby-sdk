@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Type - Account type, such as BANK. EQUITY, ASSET, ...
       class Type < T::Enum
 
 

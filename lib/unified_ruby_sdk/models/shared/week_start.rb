@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # WeekStart - week start day, defaults to undefined (no week start day)
       class WeekStart < T::Enum
 
 

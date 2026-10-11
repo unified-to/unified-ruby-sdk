@@ -30,24 +30,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.timeshift.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
-  approved_at: DateTime.iso8601('2023-06-07T06:09:27.537Z'),
+  approved_at: DateTime.iso8601('2023-06-18T03:10:12.113Z'),
   compensation: [
     Models::Shared::HrisCompensation.new(
       amount: 76_761.0,
       currency: 'JPY',
-      frequency: Models::Shared::HrisCompensationFrequency::HOUR,
+      frequency: Models::Shared::HrisCompensationFrequency::WEEK,
       notes: 'Annus adficio suasoria architecto aggero.',
-      type: Models::Shared::HrisCompensationType::OTHER,
+      type: Models::Shared::HrisCompensationType::COMMISSION,
     ),
   ],
   created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2026-08-28T08:36:26.125Z'),
+  end_at: DateTime.iso8601('2026-09-17T03:42:59.907Z'),
   hours: 8.0,
-  id: '66e56b79-777c-4816-93c2-56aab6d4a323',
+  id: 'dfcf1802-ce5f-4727-89b0-f6b60d8029a2',
   is_approved: true,
-  start_at: DateTime.iso8601('2023-06-26T11:39:07.841Z'),
-  updated_at: DateTime.iso8601('2021-06-23T16:49:43.315Z'),
+  start_at: DateTime.iso8601('2023-07-07T12:09:32.558Z'),
+  updated_at: DateTime.iso8601('2021-06-29T04:09:58.867Z'),
 ), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -183,24 +183,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2023-06-07T06:09:27.547Z'),
+    approved_at: DateTime.iso8601('2023-06-18T03:10:12.122Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
         currency: 'JPY',
-        frequency: Models::Shared::HrisCompensationFrequency::HOUR,
+        frequency: Models::Shared::HrisCompensationFrequency::WEEK,
         notes: 'Annus adficio suasoria architecto aggero.',
-        type: Models::Shared::HrisCompensationType::OTHER,
+        type: Models::Shared::HrisCompensationType::COMMISSION,
       ),
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-08-28T08:36:26.141Z'),
+    end_at: DateTime.iso8601('2026-09-17T03:42:59.924Z'),
     hours: 8.0,
-    id: 'f4e9abcd-0967-4162-a883-8936d4157af5',
+    id: '66a39c02-f126-4c60-921c-1874dc4ce92d',
     is_approved: true,
-    start_at: DateTime.iso8601('2023-06-26T11:39:07.851Z'),
-    updated_at: DateTime.iso8601('2021-06-23T16:49:43.319Z'),
+    start_at: DateTime.iso8601('2023-07-07T12:09:32.567Z'),
+    updated_at: DateTime.iso8601('2021-06-29T04:09:58.872Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -291,24 +291,24 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2023-06-07T06:09:27.547Z'),
+    approved_at: DateTime.iso8601('2023-06-18T03:10:12.122Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
         currency: 'JPY',
-        frequency: Models::Shared::HrisCompensationFrequency::HOUR,
+        frequency: Models::Shared::HrisCompensationFrequency::WEEK,
         notes: 'Annus adficio suasoria architecto aggero.',
-        type: Models::Shared::HrisCompensationType::OTHER,
+        type: Models::Shared::HrisCompensationType::COMMISSION,
       ),
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-08-28T08:36:26.141Z'),
+    end_at: DateTime.iso8601('2026-09-17T03:42:59.924Z'),
     hours: 8.0,
-    id: 'f4e9abcd-0967-4162-a883-8936d4157af5',
+    id: '66a39c02-f126-4c60-921c-1874dc4ce92d',
     is_approved: true,
-    start_at: DateTime.iso8601('2023-06-26T11:39:07.851Z'),
-    updated_at: DateTime.iso8601('2021-06-23T16:49:43.319Z'),
+    start_at: DateTime.iso8601('2023-07-07T12:09:32.567Z'),
+    updated_at: DateTime.iso8601('2021-06-29T04:09:58.872Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

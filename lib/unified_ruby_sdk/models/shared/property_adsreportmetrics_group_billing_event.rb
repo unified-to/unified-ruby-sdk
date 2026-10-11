@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PropertyAdsReportMetricsGroupBillingEvent - Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)
       class PropertyAdsReportMetricsGroupBillingEvent < T::Enum
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountingTransactionStatus - Posting state of the transaction
       class AccountingTransactionStatus < T::Enum
 
 

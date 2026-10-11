@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # PropertyCrmEventTaskStatus - The event task's status
       class PropertyCrmEventTaskStatus < T::Enum
 
 

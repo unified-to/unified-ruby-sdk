@@ -19,7 +19,7 @@ module UnifiedRubySDK
         field :candidate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
 
         field :comment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comment') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
@@ -35,7 +35,7 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :recommendation, Crystalline::Nilable.new(Models::Shared::Recommendation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recommendation'), 'decoder': Utils.enum_from_string(Models::Shared::Recommendation, true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(application_id: T.nilable(::String), candidate_id: T.nilable(::String), comment: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), interview_id: T.nilable(::String), interviewer_id: T.nilable(::String), job_id: T.nilable(::String), questions: T.nilable(T::Array[Models::Shared::AtsScorecardQuestion]), raw: T.nilable(T::Hash[Symbol, ::Object]), recommendation: T.nilable(Models::Shared::Recommendation), updated_at: T.nilable(::DateTime)).void }

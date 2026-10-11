@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # LabelFormat - Format of the label (PDF, PNG, ZPL, EPL2)
       class LabelFormat < T::Enum
 
 

@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Shared::UcRecording
   def call_id=(str_); end
   def contacts(); end
   def contacts=(str_); end
+  def conversation_identifier(); end
+  def conversation_identifier=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def end_at(); end

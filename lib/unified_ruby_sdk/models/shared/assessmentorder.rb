@@ -13,31 +13,31 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Connection ID that this order belongs to
         field :connection_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('connection_id'), required: true } }
-
+        # Workspace ID that this order belongs to (reference to KmsSpace)
         field :workspace_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('workspace_id'), required: true } }
-
+        # ATS application ID
         field :application_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('application_id') } }
-
+        # ATS candidate ID
         field :candidate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
-
+        # ATS company ID (reference to AtsCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # ATS employee ID
         field :employee_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_id') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # ATS job ID
         field :job_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_id') } }
-
+        # Assessment package ID
         field :package_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('package_id') } }
         # Filled-in answers to the package's parameter questions
         field :parameters, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AssessmentParameterInput)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parameters') } }
 
         field :profile_addresses, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AssessmentAddress)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_addresses') } }
-
+        # YYYY-MM-DD
         field :profile_date_of_birth, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_date_of_birth') } }
 
         field :profile_emails, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_emails') } }
@@ -45,7 +45,7 @@ module UnifiedRubySDK
         field :profile_first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_first_name') } }
 
         field :profile_gender, Crystalline::Nilable.new(Models::Shared::ProfileGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_gender'), 'decoder': Utils.enum_from_string(Models::Shared::ProfileGender, true) } }
-
+        # XXX.XXX.XXX.XXX
         field :profile_ip_address, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_ip_address') } }
 
         field :profile_last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_last_name') } }
@@ -61,39 +61,39 @@ module UnifiedRubySDK
         field :profile_telephones, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_telephones') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # ATS-specific reference ID
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
         # Additional result attributes
         field :response_attributes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AssessmentAttribute)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_attributes') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :response_completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_completed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :response_details, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AssessmentResponseDetail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_details') } }
         # Report download URLs
         field :response_download_urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_download_urls') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :response_expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Datetime that assessment was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :response_issued_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_issued_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Maximum possible score
         field :response_max_score, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_max_score') } }
-
+        # URL to redirect the user to complete assessment
         field :response_redirect_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_redirect_url') } }
-
+        # Assessment score (e.g., 0-100)
         field :response_score, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_score') } }
 
         field :response_source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_source') } }
 
         field :response_status, Crystalline::Nilable.new(Models::Shared::ResponseStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_status'), 'decoder': Utils.enum_from_string(Models::Shared::ResponseStatus, true) } }
-
+        # URL to view detailed results
         field :response_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_url') } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::AssessmentOrderStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AssessmentOrderStatus, true) } }
-
+        # URL to redirect user to after assessment
         field :target_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('target_url') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Webhook ID that this order belongs to
         field :webhook_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webhook_id') } }
 
         sig { params(connection_id: ::String, workspace_id: ::String, application_id: T.nilable(::String), candidate_id: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), employee_id: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), package_id: T.nilable(::String), parameters: T.nilable(T::Array[Models::Shared::AssessmentParameterInput]), profile_addresses: T.nilable(T::Array[Models::Shared::AssessmentAddress]), profile_date_of_birth: T.nilable(::String), profile_emails: T.nilable(T::Array[::String]), profile_first_name: T.nilable(::String), profile_gender: T.nilable(Models::Shared::ProfileGender), profile_ip_address: T.nilable(::String), profile_last_name: T.nilable(::String), profile_name: T.nilable(::String), profile_national_identifier: T.nilable(::String), profile_resume_url: T.nilable(::String), profile_social_media_urls: T.nilable(T::Array[::String]), profile_telephones: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), response_attributes: T.nilable(T::Array[Models::Shared::AssessmentAttribute]), response_completed_at: T.nilable(::DateTime), response_details: T.nilable(T::Array[Models::Shared::AssessmentResponseDetail]), response_download_urls: T.nilable(T::Array[::String]), response_expires_at: T.nilable(::DateTime), response_issued_at: T.nilable(::DateTime), response_max_score: T.nilable(::Float), response_redirect_url: T.nilable(::String), response_score: T.nilable(::Float), response_source: T.nilable(::String), response_status: T.nilable(Models::Shared::ResponseStatus), response_url: T.nilable(::String), status: T.nilable(Models::Shared::AssessmentOrderStatus), target_url: T.nilable(::String), updated_at: T.nilable(::DateTime), webhook_id: T.nilable(::String)).void }

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # HrisBenefitFrequency - Frequency that costs accrue for this benefit. For insurance/benefits, usually "MONTHLY". For compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc).
       class HrisBenefitFrequency < T::Enum
 
 
@@ -20,6 +20,8 @@ module UnifiedRubySDK
           HOUR = new('HOUR')
           MONTH = new('MONTH')
           WEEK = new('WEEK')
+          BIWEEKLY = new('BIWEEKLY')
+          SEMIMONTHLY = new('SEMIMONTHLY')
         end
       end
     end

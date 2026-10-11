@@ -15,31 +15,31 @@ module UnifiedRubySDK
 
 
         field :additional_managers, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ScimManager)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('additionalManagers') } }
-
+        # 1985-07-20
         field :birthday, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('birthday'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Identifies the name of a cost center.
         field :cost_center, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('costCenter') } }
-
+        # User currency
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # Identifies the name of a department.
         field :department, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('department') } }
-
+        # Identifies the name of a division.
         field :division, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('division') } }
 
         field :employee_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employeeNumber') } }
-
+        # 2022-02-25
         field :end_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('endDate'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :gender, Crystalline::Nilable.new(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender, true) } }
 
         field :level, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('level') } }
-
+        # Berlin
         field :location, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
         # "id" attribute of another User.
         field :manager, Crystalline::Nilable.new(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('manager') } }
-
+        # Identifies the name of an organization.
         field :organization, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization') } }
-
+        # 2011-03-25
         field :start_date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('startDate'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(additional_managers: T.nilable(T::Array[Models::Shared::ScimManager]), birthday: T.nilable(::DateTime), cost_center: T.nilable(::String), currency: T.nilable(::String), department: T.nilable(::String), division: T.nilable(::String), employee_number: T.nilable(::String), end_date: T.nilable(::DateTime), gender: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserGender), level: T.nilable(::String), location: T.nilable(::String), manager: T.nilable(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager), organization: T.nilable(::String), start_date: T.nilable(::DateTime)).void }

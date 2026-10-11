@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Mode - Google: bid_only falsetrue
       class Mode < T::Enum
 
 

@@ -27,6 +27,11 @@ module UnifiedRubySDK
           END_AT = new('end_at')
           IS_ACTIVE = new('is_active')
           NOTES = new('notes')
+          EMPLOYER_AMOUNT = new('employer_amount')
+          EMPLOYER_TYPE = new('employer_type')
+          MAX_AMOUNT = new('max_amount')
+          PAYCODE_ID = new('paycode_id')
+          GARNISHMENT_TYPE = new('garnishment_type')
           RAW = new('raw')
         end
       end

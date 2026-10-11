@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AssessmentAttributeStatus - For SUB_RESULT type
       class AssessmentAttributeStatus < T::Enum
 
 

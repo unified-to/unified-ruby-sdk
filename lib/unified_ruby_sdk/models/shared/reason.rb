@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Reason - Why the refund was issued
       class Reason < T::Enum
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # SigningSignatoryStatus - Current status of this signatory
       class SigningSignatoryStatus < T::Enum
 
 

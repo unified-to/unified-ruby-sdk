@@ -13,15 +13,15 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # (reference to CalendarCalendar)
         field :calendar_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('calendar_id') } }
 
         field :capacity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('capacity') } }
 
         field :conference, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarConference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('conference') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :has_polls, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('has_polls') } }
@@ -69,7 +69,7 @@ module UnifiedRubySDK
         field :require_last_name, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('require_last_name') } }
 
         field :require_phone, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('require_phone') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::CalendarWebinarStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarWebinarStatus, true) } }
@@ -77,9 +77,9 @@ module UnifiedRubySDK
         field :subject, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subject') } }
 
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
-
+        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # information
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
         sig { params(calendar_id: T.nilable(::String), capacity: T.nilable(::Float), conference: T.nilable(T::Array[Models::Shared::CalendarConference]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), has_polls: T.nilable(T::Boolean), has_qa: T.nilable(T::Boolean), has_recording: T.nilable(T::Boolean), id: T.nilable(::String), is_auto_approve: T.nilable(T::Boolean), is_enabled: T.nilable(T::Boolean), is_webcast: T.nilable(T::Boolean), join_url: T.nilable(::String), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarWebinarOrganizer), panelist_password: T.nilable(::String), panelists: T.nilable(T::Array[Models::Shared::CalendarWebinarPanelist]), raw: T.nilable(T::Hash[Symbol, ::Object]), recurrence: T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), registrant_password: T.nilable(::String), registrants: T.nilable(T::Array[Models::Shared::CalendarWebinarRegistrant]), require_address: T.nilable(T::Boolean), require_company: T.nilable(T::Boolean), require_email: T.nilable(T::Boolean), require_first_name: T.nilable(T::Boolean), require_job_title: T.nilable(T::Boolean), require_last_name: T.nilable(T::Boolean), require_phone: T.nilable(T::Boolean), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::CalendarWebinarStatus), subject: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }

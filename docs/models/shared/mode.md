@@ -1,5 +1,7 @@
 # Mode
 
+Google: bid_only falsetrue
+
 
 ## Values
 

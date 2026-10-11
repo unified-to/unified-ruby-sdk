@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AccountingInvoiceType - BILL removed (use AccountingBill); remaining values: INVOICE, CREDITMEMO
       class AccountingInvoiceType < T::Enum
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # CdpProfileGender - The gender of the profile
       class CdpProfileGender < T::Enum
 
 

@@ -15,9 +15,9 @@ module UnifiedRubySDK
 
 
         field :content, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiEmbeddingContent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
-
+        # 256, 512, 1024, and 1536
         field :dimension, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension') } }
-
+        # JSON string based off of the format
         field :embeddings, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('embeddings') } }
 
         field :enconding_format, Crystalline::Nilable.new(Models::Shared::EncondingFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('enconding_format'), 'decoder': Utils.enum_from_string(Models::Shared::EncondingFormat, true) } }
@@ -31,7 +31,7 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :tokens_used, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
-
+        # 'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';
         field :type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type') } }
 
         sig { params(content: T.nilable(T::Array[Models::Shared::GenaiEmbeddingContent]), dimension: T.nilable(::Float), embeddings: T.nilable(::String), enconding_format: T.nilable(Models::Shared::EncondingFormat), id: T.nilable(::String), max_tokens: T.nilable(::Float), model_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tokens_used: T.nilable(::Float), type: T.nilable(::String)).void }

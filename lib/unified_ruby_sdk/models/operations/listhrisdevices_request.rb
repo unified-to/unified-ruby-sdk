@@ -15,8 +15,12 @@ module UnifiedRubySDK
 
         # ID of the connection
         field :connection_id, ::String, { 'path_param': { 'field_name': 'connection_id', 'style': 'simple', 'explode': false } }
+        # The email address to filter by
+        field :email, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'email', 'style': 'form', 'explode': true } }
         # Fields to return
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListHrisDevicesQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
+        # The group ID to filter by (reference to HrisGroup)
+        field :group_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'group_id', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
 
@@ -34,10 +38,12 @@ module UnifiedRubySDK
         # The user/employee ID to filter by (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'user_id', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::ListHrisDevicesQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(connection_id:, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil, user_id: nil)
+        sig { params(connection_id: ::String, email: T.nilable(::String), fields_: T.nilable(T::Array[Models::Operations::ListHrisDevicesQueryParamFields]), group_id: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), updated_gte: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(connection_id:, email: nil, fields_: nil, group_id: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, updated_gte: nil, user_id: nil)
           @connection_id = connection_id
+          @email = email
           @fields_ = fields_
+          @group_id = group_id
           @limit = limit
           @offset = offset
           @order = order
@@ -52,7 +58,9 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @connection_id == other.connection_id
+          return false unless @email == other.email
           return false unless @fields_ == other.fields_
+          return false unless @group_id == other.group_id
           return false unless @limit == other.limit
           return false unless @offset == other.offset
           return false unless @order == other.order

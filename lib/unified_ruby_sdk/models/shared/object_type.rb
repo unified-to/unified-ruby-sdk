@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # ObjectType - The type of object this credit was applied to
       class ObjectType < T::Enum
 
 

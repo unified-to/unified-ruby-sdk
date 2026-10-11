@@ -13,18 +13,23 @@
 * [get_genai_agent](#get_genai_agent) - Retrieve an agent
 * [get_genai_model](#get_genai_model) - Retrieve a model
 * [get_genai_organization](#get_genai_organization) - Retrieve an organization
+* [get_genai_skill](#get_genai_skill) - Retrieve a skill
 * [get_genai_task](#get_genai_task) - Retrieve a task
 * [list_genai_agents](#list_genai_agents) - List all agents
 * [list_genai_models](#list_genai_models) - List all models
 * [list_genai_organizations](#list_genai_organizations) - List all organizations
+* [list_genai_skills](#list_genai_skills) - List all skills
 * [list_genai_tasks](#list_genai_tasks) - List all tasks
 * [patch_genai_agent](#patch_genai_agent) - Update an agent
 * [patch_genai_organization](#patch_genai_organization) - Update an organization
+* [patch_genai_task](#patch_genai_task) - Update a task
 * [remove_genai_agent](#remove_genai_agent) - Remove an agent
 * [remove_genai_organization](#remove_genai_organization) - Remove an organization
+* [remove_genai_skill](#remove_genai_skill) - Remove a skill
 * [remove_genai_task](#remove_genai_task) - Remove a task
 * [update_genai_agent](#update_genai_agent) - Update an agent
 * [update_genai_organization](#update_genai_organization) - Update an organization
+* [update_genai_task](#update_genai_task) - Update a task
 
 ## create_genai_agent
 
@@ -46,11 +51,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.genai.create_genai_agent(genai_agent: Models::Shared::GenaiAgent.new(
   created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
   description: 'Assentator tero sequi.',
-  id: 'eecd9967-8ffb-4fc8-9387-fe795c805bd3',
+  id: '08bfc443-c346-47a1-8912-e15df508d4aa',
   instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
   is_active: false,
   name: 'daughter with',
-  updated_at: DateTime.iso8601('2025-09-20T16:27:57.260Z'),
+  updated_at: DateTime.iso8601('2025-10-07T04:35:20.472Z'),
 ), connection_id: '<id>')
 
 unless res.genai_agent.nil?
@@ -104,7 +109,7 @@ res = s.genai.create_genai_embedding(genai_embedding: Models::Shared::GenaiEmbed
   dimension: 423.0,
   embeddings: 'Est.',
   enconding_format: Models::Shared::EncondingFormat::FLOAT,
-  id: 'cca4d4fc-2849-4a2f-a78c-7c28952c326c',
+  id: 'e2c08e06-56c1-48bf-af2b-b24b11985b27',
   max_tokens: 223.0,
   tokens_used: 836.0,
   type: 'classification',
@@ -155,10 +160,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.genai.create_genai_organization(genai_organization: Models::Shared::GenaiOrganization.new(
   created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
   description: 'Voluptates abeo subseco.',
-  id: '9942ae74-f1b5-48d6-a941-810141e8c41f',
+  id: 'e3f4425c-aaf8-41db-832a-aa3bf1eba493',
   is_active: false,
   name: 'officially about',
-  updated_at: DateTime.iso8601('2023-01-15T04:21:51.211Z'),
+  updated_at: DateTime.iso8601('2023-01-22T16:30:20.583Z'),
 ), connection_id: '<id>')
 
 unless res.genai_organization.nil?
@@ -204,6 +209,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.genai.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(
+  answers: [
+    Models::Shared::GenaiAnswer.new(
+      confidence: 0.5_384_309_098_590_165,
+      id: 'TeZpueFB',
+      probabilities: [
+        Models::Shared::GenaiAnswerProbability.new(
+          option: 'veniam',
+          probability: 0.05_683_182_482_607_663,
+        ),
+        Models::Shared::GenaiAnswerProbability.new(
+          option: 'comes',
+          probability: 0.1_404_057_613_108_307,
+        ),
+      ],
+      score: 0.05_974_147_981_032_729,
+      type: Models::Shared::GenaiAnswerType::CHOICE,
+      value: 'summisse',
+    ),
+  ],
   max_tokens: 0.4_677_782_787_475_735,
   mcp_authorization_token: 'f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4',
   mcp_deferred_tools: [],
@@ -211,11 +235,45 @@ res = s.genai.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(
   messages: [
     Models::Shared::GenaiContent.new(
       content: 'Aegre repudiandae verecundia facere statua.',
+      images: [],
       role: Models::Shared::Role::ASSISTANT,
     ),
     Models::Shared::GenaiContent.new(
       content: 'Speciosus xiphias soleo trepide crinis.',
+      images: [],
       role: Models::Shared::Role::SYSTEM,
+    ),
+  ],
+  questions: [
+    Models::Shared::GenaiQuestion.new(
+      id: 'KtvbYiEq',
+      instructions: 'Admiratio cura contabesco subvenio venustas architecto vacuus summopere.',
+      options: [
+        'vulnero',
+        'quasi',
+        'tolero',
+      ],
+      type: Models::Shared::GenaiQuestionType::BOOLEAN,
+    ),
+    Models::Shared::GenaiQuestion.new(
+      id: 'oV6IURtv',
+      instructions: 'Celer deleniti ventus ipsam tendo odit.',
+      options: [
+        'nulla',
+        'aspicio',
+        'tero',
+      ],
+      type: Models::Shared::GenaiQuestionType::CHOICE,
+    ),
+    Models::Shared::GenaiQuestion.new(
+      id: '60dBZk2K',
+      instructions: 'Decretum vesica amet repudiandae.',
+      options: [
+        'ducimus',
+        'civis',
+        'alter',
+      ],
+      type: Models::Shared::GenaiQuestionType::BOOLEAN,
     ),
   ],
   responses: [
@@ -268,16 +326,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.genai.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
-  completed_at: DateTime.iso8601('2025-09-06T13:57:38.078Z'),
+  completed_at: DateTime.iso8601('2025-09-23T01:00:16.745Z'),
   created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
   files_changed: 19.0,
-  id: '968cf408-0894-4133-a538-3598570fa578',
+  id: '29e10421-e909-4556-95f3-15cbb6f8aadd',
   instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
   lines_added: 244.0,
   lines_deleted: 118.0,
   messages: [
     Models::Shared::GenaiContent.new(
       content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
+      images: [],
       role: Models::Shared::Role::ASSISTANT,
     ),
   ],
@@ -285,12 +344,12 @@ res = s.genai.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
   pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
   repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
   source_branch_identifier: 'main',
-  started_at: DateTime.iso8601('2024-05-03T13:35:15.218Z'),
+  started_at: DateTime.iso8601('2024-05-15T11:27:28.422Z'),
   status: Models::Shared::GenaiTaskStatus::BLOCKED,
   summary: 'Cur aeternus cogito vesper.',
   target_branch_identifier: 'agent/joshingly-ignorance',
   tokens_used: 2165.0,
-  updated_at: DateTime.iso8601('2023-02-14T14:26:48.799Z'),
+  updated_at: DateTime.iso8601('2023-02-22T09:36:18.031Z'),
   web_url: 'https://inexperienced-adrenalin.biz/',
 ), connection_id: '<id>')
 
@@ -444,6 +503,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetGenaiOrganizationResponse)](../../models/operations/getgenaiorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_genai_skill
+
+Retrieve a skill
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getGenaiSkill" method="get" path="/genai/{connection_id}/skill/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.genai.get_genai_skill(connection_id: '<id>', id: '<id>')
+
+unless res.genai_skill.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Skill                                                                                                                                  |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetGenaiSkillQueryParamFields](../../models/operations/getgenaiskillqueryparamfields.md)>                          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetGenaiSkillResponse)](../../models/operations/getgenaiskillresponse.md)**
 
 ### Errors
 
@@ -630,6 +733,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_genai_skills
+
+List all skills
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listGenaiSkills" method="get" path="/genai/{connection_id}/skill" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListGenaiSkillsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.genai.list_genai_skills(request: req)
+
+unless res.genai_skills.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::ListGenaiSkillsRequest](../../models/operations/listgenaiskillsrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::ListGenaiSkillsResponse)](../../models/operations/listgenaiskillsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_genai_tasks
 
 List all tasks
@@ -696,11 +844,11 @@ req = Models::Operations::PatchGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: 'e9c89654-7de4-4cb3-9713-6a5249260a61',
+    id: '425ae9f5-6097-4f84-915f-0fca94c2bd50',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-09-20T16:27:57.270Z'),
+    updated_at: DateTime.iso8601('2025-10-07T04:35:20.482Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -751,10 +899,10 @@ req = Models::Operations::PatchGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: 'b1da2f82-66e6-44ab-8556-dccd964b2224',
+    id: 'ee8ee20d-4053-4fc4-88ef-3e62ddf8e96a',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-01-15T04:21:51.214Z'),
+    updated_at: DateTime.iso8601('2023-01-22T16:30:20.585Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -777,6 +925,79 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::PatchGenaiOrganizationResponse)](../../models/operations/patchgenaiorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## patch_genai_task
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchGenaiTask" method="patch" path="/genai/{connection_id}/task/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchGenaiTaskRequest.new(
+  genai_task: Models::Shared::GenaiTask.new(
+    completed_at: DateTime.iso8601('2025-09-23T01:00:16.763Z'),
+    created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
+    files_changed: 19.0,
+    id: '90014b59-c502-4956-b3c4-7c91f99182b8',
+    instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
+    lines_added: 244.0,
+    lines_deleted: 118.0,
+    messages: [
+      Models::Shared::GenaiContent.new(
+        content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
+        images: [],
+        role: Models::Shared::Role::ASSISTANT,
+      ),
+    ],
+    name: 'connect multi-byte port',
+    pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
+    repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
+    source_branch_identifier: 'main',
+    started_at: DateTime.iso8601('2024-05-15T11:27:28.435Z'),
+    status: Models::Shared::GenaiTaskStatus::BLOCKED,
+    summary: 'Cur aeternus cogito vesper.',
+    target_branch_identifier: 'agent/joshingly-ignorance',
+    tokens_used: 2165.0,
+    updated_at: DateTime.iso8601('2023-02-22T09:36:18.040Z'),
+    web_url: 'https://inexperienced-adrenalin.biz/',
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.genai.patch_genai_task(request: req)
+
+unless res.genai_task.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [Models::Operations::PatchGenaiTaskRequest](../../models/operations/patchgenaitaskrequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchGenaiTaskResponse)](../../models/operations/patchgenaitaskresponse.md)**
 
 ### Errors
 
@@ -868,6 +1089,48 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_genai_skill
+
+Remove a skill
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeGenaiSkill" method="delete" path="/genai/{connection_id}/skill/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.genai.remove_genai_skill(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Skill      |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveGenaiSkillResponse)](../../models/operations/removegenaiskillresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_genai_task
 
 Remove a task
@@ -931,11 +1194,11 @@ req = Models::Operations::UpdateGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: 'e9c89654-7de4-4cb3-9713-6a5249260a61',
+    id: '425ae9f5-6097-4f84-915f-0fca94c2bd50',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-09-20T16:27:57.270Z'),
+    updated_at: DateTime.iso8601('2025-10-07T04:35:20.482Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -986,10 +1249,10 @@ req = Models::Operations::UpdateGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: 'b1da2f82-66e6-44ab-8556-dccd964b2224',
+    id: 'ee8ee20d-4053-4fc4-88ef-3e62ddf8e96a',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-01-15T04:21:51.214Z'),
+    updated_at: DateTime.iso8601('2023-01-22T16:30:20.585Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1012,6 +1275,79 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateGenaiOrganizationResponse)](../../models/operations/updategenaiorganizationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_genai_task
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateGenaiTask" method="put" path="/genai/{connection_id}/task/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateGenaiTaskRequest.new(
+  genai_task: Models::Shared::GenaiTask.new(
+    completed_at: DateTime.iso8601('2025-09-23T01:00:16.763Z'),
+    created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
+    files_changed: 19.0,
+    id: '90014b59-c502-4956-b3c4-7c91f99182b8',
+    instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
+    lines_added: 244.0,
+    lines_deleted: 118.0,
+    messages: [
+      Models::Shared::GenaiContent.new(
+        content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
+        images: [],
+        role: Models::Shared::Role::ASSISTANT,
+      ),
+    ],
+    name: 'connect multi-byte port',
+    pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
+    repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
+    source_branch_identifier: 'main',
+    started_at: DateTime.iso8601('2024-05-15T11:27:28.435Z'),
+    status: Models::Shared::GenaiTaskStatus::BLOCKED,
+    summary: 'Cur aeternus cogito vesper.',
+    target_branch_identifier: 'agent/joshingly-ignorance',
+    tokens_used: 2165.0,
+    updated_at: DateTime.iso8601('2023-02-22T09:36:18.040Z'),
+    web_url: 'https://inexperienced-adrenalin.biz/',
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.genai.update_genai_task(request: req)
+
+unless res.genai_task.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [Models::Operations::UpdateGenaiTaskRequest](../../models/operations/updategenaitaskrequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateGenaiTaskResponse)](../../models/operations/updategenaitaskresponse.md)**
 
 ### Errors
 
