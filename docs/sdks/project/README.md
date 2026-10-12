@@ -84,14 +84,14 @@ res = s.project.create_task_project(task_project: Models::Shared::TaskProject.ne
   description: 'Valetudo aggredior accommodo curiositas vox.',
   has_children: false,
   has_tasks: false,
-  id: 'd5c0ef94-a1b0-4a8c-a4c9-d8a70f692263',
+  id: 'ffd408c6-9b5a-4530-aab0-31d3762b20d6',
   metadata: [
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: 'f691b070-82a0-4959-ad65-8c92a54e8e4f',
+      id: '2e630dc8-318c-400f-b0ed-eb190efe123a',
       namespace: 'custom',
       slug: 'decens',
       value: 'uterque',
@@ -101,14 +101,14 @@ res = s.project.create_task_project(task_project: Models::Shared::TaskProject.ne
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: '20516573-393f-4f42-bb48-e515524e25cc',
+      id: '95767a4e-b80a-417f-bc51-cbf7b14bfe14',
       namespace: 'custom',
       slug: 'benevolentia',
       value: 'pariatur',
     ),
   ],
   name: 'Garden',
-  updated_at: DateTime.iso8601('2023-10-10T16:48:52.107Z'),
+  updated_at: DateTime.iso8601('2023-10-10T18:43:27.641Z'),
 ), connection_id: '<id>')
 
 unless res.task_project.nil?
@@ -384,14 +384,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: '694a3d15-b260-40ed-aaeb-ae1408c288c7',
+    id: '6b43199d-8b61-47b7-b455-bc0ffbbd4ea7',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '4777e1fc-238e-438e-9aae-b289edea5a89',
+        id: 'c7f6460f-d4b1-414b-9051-7d80a673fae4',
         namespace: 'custom',
         slug: 'decens',
         value: 'uterque',
@@ -401,14 +401,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '8ebedd03-9d83-4a4d-ae84-2c88820ee464',
+        id: 'b1419f74-2b89-4771-9ecb-dfa72a05866e',
         namespace: 'custom',
         slug: 'benevolentia',
         value: 'pariatur',
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-10T16:48:52.109Z'),
+    updated_at: DateTime.iso8601('2023-10-10T18:43:27.642Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -592,14 +592,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: '694a3d15-b260-40ed-aaeb-ae1408c288c7',
+    id: '6b43199d-8b61-47b7-b455-bc0ffbbd4ea7',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '4777e1fc-238e-438e-9aae-b289edea5a89',
+        id: 'c7f6460f-d4b1-414b-9051-7d80a673fae4',
         namespace: 'custom',
         slug: 'decens',
         value: 'uterque',
@@ -609,14 +609,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '8ebedd03-9d83-4a4d-ae84-2c88820ee464',
+        id: 'b1419f74-2b89-4771-9ecb-dfa72a05866e',
         namespace: 'custom',
         slug: 'benevolentia',
         value: 'pariatur',
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-10T16:48:52.109Z'),
+    updated_at: DateTime.iso8601('2023-10-10T18:43:27.642Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

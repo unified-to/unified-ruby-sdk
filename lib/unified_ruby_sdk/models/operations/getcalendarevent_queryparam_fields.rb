@@ -36,6 +36,7 @@ module UnifiedRubySDK
           CONFERENCE = new('conference')
           ATTACHMENTS = new('attachments')
           SEND_NOTIFICATIONS = new('send_notifications')
+          MATTER_ID = new('matter_id')
           RAW = new('raw')
         end
       end

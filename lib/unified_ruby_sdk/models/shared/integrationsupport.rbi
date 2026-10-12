@@ -92,6 +92,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_goal=(str_); end
   def list_group_id(); end
   def list_group_id=(str_); end
+  def list_instance_id(); end
+  def list_instance_id=(str_); end
   def list_instructor_id(); end
   def list_instructor_id=(str_); end
   def list_interview_id(); end
@@ -118,6 +120,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_list_id=(str_); end
   def list_location_id(); end
   def list_location_id=(str_); end
+  def list_matter_id(); end
+  def list_matter_id=(str_); end
   def list_medium(); end
   def list_medium=(str_); end
   def list_member_id(); end
@@ -136,6 +140,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_page_id=(str_); end
   def list_parent_id(); end
   def list_parent_id=(str_); end
+  def list_patient_id(); end
+  def list_patient_id=(str_); end
   def list_payment_id(); end
   def list_payment_id=(str_); end
   def list_payslip_id(); end
@@ -144,6 +150,10 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_pipeline_id=(str_); end
   def list_post_id(); end
   def list_post_id=(str_); end
+  def list_practicearea_id(); end
+  def list_practicearea_id=(str_); end
+  def list_practitioner_id(); end
+  def list_practitioner_id=(str_); end
   def list_profile_id(); end
   def list_profile_id=(str_); end
   def list_project_id(); end
@@ -156,6 +166,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_raw_fields=(str_); end
   def list_reference(); end
   def list_reference=(str_); end
+  def list_region_id(); end
+  def list_region_id=(str_); end
   def list_repo_id(); end
   def list_repo_id=(str_); end
   def list_role_id(); end
@@ -166,6 +178,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_saleschannel_id=(str_); end
   def list_segment_id(); end
   def list_segment_id=(str_); end
+  def list_service_id(); end
+  def list_service_id=(str_); end
   def list_session_id(); end
   def list_session_id=(str_); end
   def list_shipment_id(); end
@@ -356,6 +370,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_list_id=(str_); end
   def virtual_webhook_location_id(); end
   def virtual_webhook_location_id=(str_); end
+  def virtual_webhook_matter_id(); end
+  def virtual_webhook_matter_id=(str_); end
   def virtual_webhook_member_id(); end
   def virtual_webhook_member_id=(str_); end
   def virtual_webhook_order_id(); end
@@ -366,12 +382,18 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_page_id=(str_); end
   def virtual_webhook_parent_id(); end
   def virtual_webhook_parent_id=(str_); end
+  def virtual_webhook_patient_id(); end
+  def virtual_webhook_patient_id=(str_); end
   def virtual_webhook_payment_id(); end
   def virtual_webhook_payment_id=(str_); end
   def virtual_webhook_pipeline_id(); end
   def virtual_webhook_pipeline_id=(str_); end
   def virtual_webhook_post_id(); end
   def virtual_webhook_post_id=(str_); end
+  def virtual_webhook_practicearea_id(); end
+  def virtual_webhook_practicearea_id=(str_); end
+  def virtual_webhook_practitioner_id(); end
+  def virtual_webhook_practitioner_id=(str_); end
   def virtual_webhook_profile_id(); end
   def virtual_webhook_profile_id=(str_); end
   def virtual_webhook_project_id(); end

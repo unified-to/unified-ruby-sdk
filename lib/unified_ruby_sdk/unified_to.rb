@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :agedpayable, :agedreceivable, :balancesheet, :bankfeedaccount, :bankfeedtransaction, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :expensereport, :invoice, :journal, :order, :organization, :paymentterm, :profitloss, :project, :purchaseorder, :purchasereceipt, :quote, :salesorder, :salesreceipt, :taxrate, :transaction, :trialbalance, :vendorcredit, :ads, :ad, :asset, :campaign, :creative, :group, :insertionorder, :promoted, :report, :target, :analytics, :event, :property, :session, :visitor, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :link, :recording, :webinar, :cdp, :activation, :destination, :profile, :segment, :source, :clubs, :location, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :review, :saleschannel, :crm, :deal, :lead, :pipeline, :taxonomy, :datastore, :database, :query, :record, :table, :enrich, :person, :forms, :form, :submission, :genai, :agent, :embedding, :model, :prompt, :skill, :task, :hris, :attendance, :bankaccount, :benefit, :deduction, :device, :earning, :employee, :paycode, :payroll, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :performance, :cycle, :feedback, :goal, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :template, :social, :insight, :post, :storage, :file, :change, :ticketing, :customer, :note, :ticket, :uc, :call, :scorecardtemplate, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :saml, :issue, :notification, :secretsmanager, :webhook, :verification, :request
+    attr_accessor :accounting, :account, :agedpayable, :agedreceivable, :balancesheet, :bankfeedaccount, :bankfeedtransaction, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :expensereport, :invoice, :journal, :order, :organization, :paymentterm, :profitloss, :project, :purchaseorder, :purchasereceipt, :quote, :salesorder, :salesreceipt, :taxrate, :transaction, :trialbalance, :vendorcredit, :ads, :ad, :asset, :campaign, :creative, :group, :insertionorder, :promoted, :report, :target, :analytics, :event, :property, :session, :visitor, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :link, :recording, :webinar, :cdp, :activation, :destination, :profile, :segment, :source, :clubs, :location, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :review, :saleschannel, :compute, :deployment, :domain, :envvar, :gputype, :instance, :key, :region, :service, :snapshot, :template, :usage, :volume, :crm, :deal, :lead, :pipeline, :taxonomy, :datastore, :database, :query, :record, :table, :enrich, :person, :forms, :form, :submission, :genai, :agent, :embedding, :model, :prompt, :skill, :task, :healthcare, :allergy, :appointment, :condition, :encounter, :immunization, :medication, :observation, :patient, :practitioner, :slot, :hris, :attendance, :bankaccount, :benefit, :deduction, :device, :earning, :employee, :paycode, :payroll, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :legal, :matter, :practicearea, :timeentry, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :performance, :cycle, :feedback, :goal, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :social, :insight, :post, :storage, :file, :change, :ticketing, :customer, :note, :ticket, :uc, :call, :scorecardtemplate, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :saml, :issue, :notification, :secretsmanager, :webhook, :verification, :request
 
     sig do
       params(
@@ -157,6 +157,19 @@ module UnifiedRubySDK
       @reservation = Reservation.new(@sdk_configuration)
       @review = Review.new(@sdk_configuration)
       @saleschannel = Saleschannel.new(@sdk_configuration)
+      @compute = Compute.new(@sdk_configuration)
+      @deployment = Deployment.new(@sdk_configuration)
+      @domain = Domain.new(@sdk_configuration)
+      @envvar = Envvar.new(@sdk_configuration)
+      @gputype = Gputype.new(@sdk_configuration)
+      @instance = Instance.new(@sdk_configuration)
+      @key = Key.new(@sdk_configuration)
+      @region = Region.new(@sdk_configuration)
+      @service = Service.new(@sdk_configuration)
+      @snapshot = Snapshot.new(@sdk_configuration)
+      @template = Template.new(@sdk_configuration)
+      @usage = Usage.new(@sdk_configuration)
+      @volume = Volume.new(@sdk_configuration)
       @crm = Crm.new(@sdk_configuration)
       @deal = Deal.new(@sdk_configuration)
       @lead = Lead.new(@sdk_configuration)
@@ -179,6 +192,17 @@ module UnifiedRubySDK
       @prompt = Prompt.new(@sdk_configuration)
       @skill = Skill.new(@sdk_configuration)
       @task = Task.new(@sdk_configuration)
+      @healthcare = Healthcare.new(@sdk_configuration)
+      @allergy = Allergy.new(@sdk_configuration)
+      @appointment = Appointment.new(@sdk_configuration)
+      @condition = Condition.new(@sdk_configuration)
+      @encounter = Encounter.new(@sdk_configuration)
+      @immunization = Immunization.new(@sdk_configuration)
+      @medication = Medication.new(@sdk_configuration)
+      @observation = Observation.new(@sdk_configuration)
+      @patient = Patient.new(@sdk_configuration)
+      @practitioner = Practitioner.new(@sdk_configuration)
+      @slot = Slot.new(@sdk_configuration)
       @hris = Hris.new(@sdk_configuration)
       @attendance = Attendance.new(@sdk_configuration)
       @bankaccount = Bankaccount.new(@sdk_configuration)
@@ -196,6 +220,10 @@ module UnifiedRubySDK
       @comment = Comment.new(@sdk_configuration)
       @page = Page.new(@sdk_configuration)
       @space = Space.new(@sdk_configuration)
+      @legal = Legal.new(@sdk_configuration)
+      @matter = Matter.new(@sdk_configuration)
+      @practicearea = Practicearea.new(@sdk_configuration)
+      @timeentry = Timeentry.new(@sdk_configuration)
       @lms = Lms.new(@sdk_configuration)
       @class_ = Class.new(@sdk_configuration)
       @content = Content.new(@sdk_configuration)
@@ -232,7 +260,6 @@ module UnifiedRubySDK
       @tracking = Tracking.new(@sdk_configuration)
       @signing = Signing.new(@sdk_configuration)
       @signatory = Signatory.new(@sdk_configuration)
-      @template = Template.new(@sdk_configuration)
       @social = Social.new(@sdk_configuration)
       @insight = Insight.new(@sdk_configuration)
       @post = Post.new(@sdk_configuration)

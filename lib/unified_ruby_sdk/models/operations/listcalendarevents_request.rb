@@ -25,6 +25,8 @@ module UnifiedRubySDK
         field :fields_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Operations::ListCalendarEventsQueryParamFields)), { 'query_param': { 'field_name': 'fields', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        # The matter ID to filter by
+        field :matter_id, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'matter_id', 'style': 'form', 'explode': true } }
 
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
@@ -40,14 +42,15 @@ module UnifiedRubySDK
         # Return only results whose updated date is equal or greater to this value (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, calendar_id: T.nilable(::String), end_lt: T.nilable(::String), expand: T.nilable(T::Boolean), fields_: T.nilable(T::Array[Models::Operations::ListCalendarEventsQueryParamFields]), limit: T.nilable(::Float), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(connection_id:, calendar_id: nil, end_lt: nil, expand: nil, fields_: nil, limit: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
+        sig { params(connection_id: ::String, calendar_id: T.nilable(::String), end_lt: T.nilable(::String), expand: T.nilable(T::Boolean), fields_: T.nilable(T::Array[Models::Operations::ListCalendarEventsQueryParamFields]), limit: T.nilable(::Float), matter_id: T.nilable(::String), offset: T.nilable(::Float), order: T.nilable(::String), query: T.nilable(::String), raw: T.nilable(::String), sort: T.nilable(::String), start_gte: T.nilable(::String), updated_gte: T.nilable(::String)).void }
+        def initialize(connection_id:, calendar_id: nil, end_lt: nil, expand: nil, fields_: nil, limit: nil, matter_id: nil, offset: nil, order: nil, query: nil, raw: nil, sort: nil, start_gte: nil, updated_gte: nil)
           @connection_id = connection_id
           @calendar_id = calendar_id
           @end_lt = end_lt
           @expand = expand
           @fields_ = fields_
           @limit = limit
+          @matter_id = matter_id
           @offset = offset
           @order = order
           @query = query
@@ -66,6 +69,7 @@ module UnifiedRubySDK
           return false unless @expand == other.expand
           return false unless @fields_ == other.fields_
           return false unless @limit == other.limit
+          return false unless @matter_id == other.matter_id
           return false unless @offset == other.offset
           return false unless @order == other.order
           return false unless @query == other.query

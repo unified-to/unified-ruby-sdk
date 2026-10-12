@@ -9,9 +9,11 @@
 * [create_hris_location](#create_hris_location) - Create a location
 * [get_clubs_location](#get_clubs_location) - Retrieve a location
 * [get_commerce_location](#get_commerce_location) - Retrieve a location
+* [get_healthcare_location](#get_healthcare_location) - Retrieve a location
 * [get_hris_location](#get_hris_location) - Retrieve a location
 * [list_clubs_locations](#list_clubs_locations) - List all locations
 * [list_commerce_locations](#list_commerce_locations) - List all locations
+* [list_healthcare_locations](#list_healthcare_locations) - List all locations
 * [list_hris_locations](#list_hris_locations) - List all locations
 * [patch_commerce_location](#patch_commerce_location) - Update a location
 * [patch_hris_location](#patch_hris_location) - Update a location
@@ -50,7 +52,7 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
   created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
   currency: 'XCD',
   description: 'Adsidue audentia.',
-  id: '3d7eb4c9-224d-4192-909a-ffee9511a2d6',
+  id: '7ac92ab4-ae41-4514-96d1-478c8c218613',
   image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
   is_active: false,
   language_locale: 'vulgaris',
@@ -61,10 +63,10 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
     Models::Shared::CommerceItemMedia.new(
       alt: 'Addo.',
       height: 283.0,
-      id: '81a94236-8cdf-4d10-b3f3-892e5a415dd9',
+      id: 'eb8db84d-c9b5-4ebd-ac27-a79341a5b150',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '369a99a4-0314-496e-b8fb-b6dd2cc284e0',
+          id: '08495af3-76ce-408d-858d-95e28e72981e',
           slug: 'abutor',
           value: 'damno',
         ),
@@ -89,7 +91,7 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
       type: Models::Shared::CommerceTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2024-04-17T07:27:52.972Z'),
+  updated_at: DateTime.iso8601('2024-04-17T14:43:33.537Z'),
   web_url: 'https://chilly-edge.info',
 ), connection_id: '<id>')
 
@@ -148,8 +150,8 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
   created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
   currency: 'MUR',
   description: 'Acervus caries.',
-  external_identifier: 'a95fb085-1de2-4952-a92c-4b2d394ad136',
-  id: '71d77c71-c403-4af9-b84d-9873ee590086',
+  external_identifier: '54889f3b-64bd-4c03-87a4-3046c3f40499',
+  id: 'd23bc217-59a3-4e73-a3a3-155cbeeb1978',
   is_active: true,
   is_hq: false,
   language_locale: 'fr',
@@ -169,7 +171,7 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
     ),
   ],
   timezone: 'America/Guyana',
-  updated_at: DateTime.iso8601('2023-06-17T10:41:43.024Z'),
+  updated_at: DateTime.iso8601('2023-06-17T18:25:17.217Z'),
 ), connection_id: '<id>')
 
 unless res.hris_location.nil?
@@ -278,6 +280,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetCommerceLocationResponse)](../../models/operations/getcommercelocationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_healthcare_location
+
+Retrieve a location
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHealthcareLocation" method="get" path="/healthcare/{connection_id}/location/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.location.get_healthcare_location(connection_id: '<id>', id: '<id>')
+
+unless res.healthcare_location.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Location                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHealthcareLocationQueryParamFields](../../models/operations/gethealthcarelocationqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHealthcareLocationResponse)](../../models/operations/gethealthcarelocationresponse.md)**
 
 ### Errors
 
@@ -419,6 +465,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_healthcare_locations
+
+List all locations
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHealthcareLocations" method="get" path="/healthcare/{connection_id}/location" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHealthcareLocationsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.location.list_healthcare_locations(request: req)
+
+unless res.healthcare_locations.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::ListHealthcareLocationsRequest](../../models/operations/listhealthcarelocationsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHealthcareLocationsResponse)](../../models/operations/listhealthcarelocationsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_hris_locations
 
 List all locations
@@ -495,7 +586,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: '807edb13-f876-457a-98dd-258282cc6997',
+    id: '602a4d92-5d65-4016-978b-8b03bed67fd9',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -506,10 +597,10 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '4c1f73b2-fee9-4130-a73e-8e0f227a6cf0',
+        id: '05e11113-6be6-45df-8796-c425ccecdcfc',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '0a9a7714-e2ce-49e5-9936-149141d0e05f',
+            id: '5c08a4a3-7827-44f7-b4a6-7d08143fe585',
             slug: 'abutor',
             value: 'damno',
           ),
@@ -534,7 +625,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-17T07:27:52.982Z'),
+    updated_at: DateTime.iso8601('2024-04-17T14:43:33.549Z'),
     web_url: 'https://chilly-edge.info',
   ),
   connection_id: '<id>',
@@ -596,8 +687,8 @@ req = Models::Operations::PatchHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MUR',
     description: 'Acervus caries.',
-    external_identifier: '019aebc6-abcb-41bd-842e-f9315e842363',
-    id: 'bf9eb454-3fd7-45f7-8a51-2b1635dfe888',
+    external_identifier: '0e9dcba4-0ad5-4c38-8a0a-74cdda1b2bbc',
+    id: 'd71ba7b1-de46-43ab-a5c9-6f86497eaac1',
     is_active: true,
     is_hq: false,
     language_locale: 'fr',
@@ -617,7 +708,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
       ),
     ],
     timezone: 'America/Guyana',
-    updated_at: DateTime.iso8601('2023-06-17T10:41:43.030Z'),
+    updated_at: DateTime.iso8601('2023-06-17T18:25:17.222Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -762,7 +853,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: '807edb13-f876-457a-98dd-258282cc6997',
+    id: '602a4d92-5d65-4016-978b-8b03bed67fd9',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -773,10 +864,10 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '4c1f73b2-fee9-4130-a73e-8e0f227a6cf0',
+        id: '05e11113-6be6-45df-8796-c425ccecdcfc',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '0a9a7714-e2ce-49e5-9936-149141d0e05f',
+            id: '5c08a4a3-7827-44f7-b4a6-7d08143fe585',
             slug: 'abutor',
             value: 'damno',
           ),
@@ -801,7 +892,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-17T07:27:52.982Z'),
+    updated_at: DateTime.iso8601('2024-04-17T14:43:33.549Z'),
     web_url: 'https://chilly-edge.info',
   ),
   connection_id: '<id>',
@@ -863,8 +954,8 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MUR',
     description: 'Acervus caries.',
-    external_identifier: '019aebc6-abcb-41bd-842e-f9315e842363',
-    id: 'bf9eb454-3fd7-45f7-8a51-2b1635dfe888',
+    external_identifier: '0e9dcba4-0ad5-4c38-8a0a-74cdda1b2bbc',
+    id: 'd71ba7b1-de46-43ab-a5c9-6f86497eaac1',
     is_active: true,
     is_hq: false,
     language_locale: 'fr',
@@ -884,7 +975,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
       ),
     ],
     timezone: 'America/Guyana',
-    updated_at: DateTime.iso8601('2023-06-17T10:41:43.030Z'),
+    updated_at: DateTime.iso8601('2023-06-17T18:25:17.222Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

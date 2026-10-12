@@ -1,0 +1,10 @@
+# HealthcareIdentifier
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `system`                                                                                               | *T.nilable(::String)*                                                                                  | :heavy_minus_sign:                                                                                     | The namespace/system URI that issued the identifier                                                    |
+| `type`                                                                                                 | [T.nilable(Models::Shared::HealthcareIdentifierType)](../../models/shared/healthcareidentifiertype.md) | :heavy_minus_sign:                                                                                     | The kind of identifier                                                                                 |
+| `value`                                                                                                | *::String*                                                                                             | :heavy_check_mark:                                                                                     | The identifier value                                                                                   |

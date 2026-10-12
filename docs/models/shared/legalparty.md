@@ -1,0 +1,11 @@
+# LegalParty
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `company_id`                                                                       | *T.nilable(::String)*                                                              | :heavy_minus_sign:                                                                 | pointer to a CRM Company                                                           |
+| `contact_id`                                                                       | *T.nilable(::String)*                                                              | :heavy_minus_sign:                                                                 | pointer to a CRM Contact                                                           |
+| `description`                                                                      | *T.nilable(::String)*                                                              | :heavy_minus_sign:                                                                 | the vendor's free-text relationship description                                    |
+| `role`                                                                             | [T.nilable(Models::Shared::LegalPartyRole)](../../models/shared/legalpartyrole.md) | :heavy_minus_sign:                                                                 | N/A                                                                                |

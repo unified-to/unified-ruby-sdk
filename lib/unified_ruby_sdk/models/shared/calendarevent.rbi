@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::CalendarEvent
   def is_private=(str_); end
   def location(); end
   def location=(str_); end
+  def matter_id(); end
+  def matter_id=(str_); end
   def notes(); end
   def notes=(str_); end
   def organizer(); end

@@ -48,6 +48,9 @@ module UnifiedRubySDK
           CDP = new('cdp')
           PERFORMANCE = new('performance')
           SOCIAL = new('social')
+          LEGAL = new('legal')
+          COMPUTE = new('compute')
+          HEALTHCARE = new('healthcare')
         end
       end
     end
