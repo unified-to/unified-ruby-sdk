@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # LegalMetadataFormat - the data type of the value
       class LegalMetadataFormat < T::Enum
 
 

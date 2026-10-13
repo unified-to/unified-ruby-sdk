@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # The custom field value
       class HealthcareMetadataValue
         extend T::Sig
         include Crystalline::MetadataFields

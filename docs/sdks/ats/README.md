@@ -110,7 +110,7 @@ res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
     name: 'Toby Grant',
     type: Models::Shared::PropertyAtsActivityFromType::OTHER,
   ),
-  id: 'fa714938-0adf-4127-ad14-b72c66607aa5',
+  id: '2752caf8-edb3-4cf7-b534-26e5df63b7ee',
   is_private: false,
   metadata: [
     Models::Shared::AtsMetadata.new(
@@ -118,7 +118,7 @@ res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '05e29c47-e3e7-42c5-ab4b-6c87d018cc90',
+      id: 'f9ce5aa1-e361-44f6-924e-9997fcfca8fb',
       namespace: 'activity',
       slug: 'acer',
       value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
@@ -128,7 +128,7 @@ res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '53cc6481-95c8-44c1-8483-cf54bd2efa00',
+      id: '1d73e533-7e32-4568-afb5-65fd52060b13',
       namespace: 'activity',
       slug: 'tremo',
       value: 'Amita delectus dicta temptatio utroque ex.',
@@ -144,7 +144,7 @@ res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
     ),
   ],
   type: Models::Shared::AtsActivityType::TASK,
-  updated_at: DateTime.iso8601('2026-03-27T08:19:12.714Z'),
+  updated_at: DateTime.iso8601('2026-03-28T08:21:10.265Z'),
 ), connection_id: '<id>')
 
 unless res.ats_activity.nil?
@@ -191,10 +191,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.ats.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
   answers: [],
-  applied_at: DateTime.iso8601('2025-09-23T20:45:42.303Z'),
+  applied_at: DateTime.iso8601('2025-09-24T14:41:04.870Z'),
   created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-  hired_at: DateTime.iso8601('2026-05-04T23:49:02.172Z'),
-  id: '5325cb93-df77-4344-8105-a5dba4ca6a88',
+  hired_at: DateTime.iso8601('2026-05-05T23:23:31.783Z'),
+  id: '9fba3f56-0705-4b8f-b8b3-54379e311339',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
@@ -210,12 +210,12 @@ res = s.ats.create_ats_application(ats_application: Models::Shared::AtsApplicati
   offers: [],
   original_status: 'vomica',
   original_substatus: 'allatus',
-  rejected_at: DateTime.iso8601('2026-10-02T12:13:56.755Z'),
+  rejected_at: DateTime.iso8601('2026-10-03T15:37:12.082Z'),
   rejected_reason: 'Cometes amplitudo videlicet talio.',
   source: 'credo',
   status: Models::Shared::AtsApplicationStatus::REVIEWING,
   summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-  updated_at: DateTime.iso8601('2026-10-09T07:06:32.209Z'),
+  updated_at: DateTime.iso8601('2026-10-10T10:40:06.401Z'),
 ), connection_id: '<id>')
 
 unless res.ats_application.nil?
@@ -303,7 +303,7 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
     ),
   ],
   first_name: 'Ardith',
-  id: 'e80da6a9-4980-495d-a220-7045e9b0385e',
+  id: '748f1092-41d3-4af8-990b-533195b58b9d',
   image_url: 'https://loremflickr.com/40/3693?lock=5634712403880328',
   job_ids: [],
   last_name: 'Beatty',
@@ -318,7 +318,7 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'c537c8c9-f994-4a86-a91b-fbef38d3d305',
+      id: '4ad9f6fc-b5a8-4637-a5be-f00c5c571a1d',
       namespace: 'custom',
       slug: 'custom_field',
       value: 'cariosus',
@@ -344,7 +344,7 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
     ),
   ],
   title: 'Principal Implementation Analyst',
-  updated_at: DateTime.iso8601('2024-04-27T02:56:16.296Z'),
+  updated_at: DateTime.iso8601('2024-04-27T07:50:39.391Z'),
   web_url: 'https://expert-lender.name/',
 ), connection_id: '<id>')
 
@@ -392,10 +392,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.ats.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
   created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-  id: '9868f156-530f-4428-bb6e-3076b8862e73',
+  id: 'e0b90748-705f-4530-83f5-bb4da2ce2fc5',
   name: 'Gulgowski, Dibbert and Wilderman',
   phone: '1-602-210-4548',
-  updated_at: DateTime.iso8601('2020-09-29T10:01:52.911Z'),
+  updated_at: DateTime.iso8601('2020-09-29T15:21:25.578Z'),
   website_url: 'https://somber-substitution.com/',
 ), connection_id: '<id>')
 
@@ -445,9 +445,9 @@ res = s.ats.create_ats_document(ats_document: Models::Shared::AtsDocument.new(
   created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
   document_url: 'https://vengeful-lashes.biz',
   filename: 'bah_white_frantically.bz',
-  id: 'f1bfa234-03c4-4a17-9f3f-4898720d210a',
+  id: '62003c4e-b4e0-40bc-9b55-894a5392deba',
   type: Models::Shared::AtsDocumentType::RESUME,
-  updated_at: DateTime.iso8601('2022-12-04T22:04:49.487Z'),
+  updated_at: DateTime.iso8601('2022-12-05T05:00:55.076Z'),
 ), connection_id: '<id>')
 
 unless res.ats_document.nil?
@@ -494,13 +494,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.ats.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(
   created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
-  end_at: DateTime.iso8601('2025-10-12T08:06:40.725Z'),
-  external_event_xref: '8128034e-2f48-43e9-94c1-95390be6e282',
-  id: '8386dee2-c31f-41b1-8f68-1df4756eb8a8',
+  end_at: DateTime.iso8601('2025-10-13T06:04:28.710Z'),
+  external_event_xref: 'dab92194-e494-494e-a5c9-3f393aeace48',
+  id: '716ed808-fded-44b8-b383-8fcbd2c77d36',
   location: '26596 Halle Trafficway',
-  start_at: DateTime.iso8601('2025-06-05T12:43:42.891Z'),
+  start_at: DateTime.iso8601('2025-06-06T08:41:29.250Z'),
   status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-  updated_at: DateTime.iso8601('2026-02-24T20:06:29.249Z'),
+  updated_at: DateTime.iso8601('2026-02-25T20:10:33.023Z'),
 ), connection_id: '<id>')
 
 unless res.ats_interview.nil?
@@ -581,7 +581,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       name: 'Troy Greenholt',
     ),
   ],
-  id: 'ef217360-2bad-4fe0-a2a4-b1ac1d22706b',
+  id: 'b541a5a1-6601-4e48-9c3f-27af62b158ed',
   industry: 'Modern Granite Gloves',
   language_locale: 'en',
   metadata: [
@@ -590,7 +590,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         "display_name": 'Custom Property',
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'b9ac7703-628a-416d-bbe8-aac9323993bd',
+      id: '870da7e4-da77-4e41-af5c-45e95446e721',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'vomica',
@@ -603,7 +603,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   openings: [
     Models::Shared::AtsJobOpening.new(
       close_reason: 'Admoveo trado textilis.',
-      opened_at: DateTime.iso8601('2026-05-30T18:52:49.883Z'),
+      opened_at: DateTime.iso8601('2026-05-31T19:27:08.933Z'),
       status: Models::Shared::AtsJobOpeningStatus::OPEN,
     ),
   ],
@@ -617,14 +617,14 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         region: 'Vermont',
         region_code: 'MO',
       ),
-      created_at: DateTime.iso8601('2026-07-24T12:02:13.984Z'),
+      created_at: DateTime.iso8601('2026-07-25T13:51:17.649Z'),
       description: 'Provident turbo cunabula spoliatio agnitio.',
       id: '372178cd-2056-4388-870e-e7c199761c7c',
       is_active: false,
       location: '2925 Connie Green',
       name: 'Lead Intranet Developer',
       posting_url: 'https://smart-summer.name/',
-      updated_at: DateTime.iso8601('2026-08-19T14:42:45.119Z'),
+      updated_at: DateTime.iso8601('2026-08-20T17:07:28.968Z'),
     ),
   ],
   public_job_urls: [
@@ -678,7 +678,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   ],
   status: Models::Shared::AtsJobStatus::ARCHIVED,
   summary: 'Iste sto communis.',
-  updated_at: DateTime.iso8601('2026-02-20T01:10:57.486Z'),
+  updated_at: DateTime.iso8601('2026-02-20T23:29:01.719Z'),
 ), connection_id: '<id>')
 
 unless res.ats_job.nil?
@@ -726,7 +726,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ats.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
   comment: 'Maiores enim.',
   created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-  id: '497f109c-e2a6-48ef-ab01-2b35e952c507',
+  id: '0964a467-de14-405f-a7de-29721f65a5ea',
   questions: [
     Models::Shared::AtsScorecardQuestion.new(
       description: 'Sulum textor eveniet facere vita.',
@@ -739,7 +739,7 @@ res = s.ats.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new
     ),
   ],
   recommendation: Models::Shared::Recommendation::STRONG_YES,
-  updated_at: DateTime.iso8601('2023-06-03T01:19:15.687Z'),
+  updated_at: DateTime.iso8601('2023-06-03T08:56:29.103Z'),
 ), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -1623,7 +1623,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
       name: 'Toby Grant',
       type: Models::Shared::PropertyAtsActivityFromType::OTHER,
     ),
-    id: 'abdfb606-349c-4843-9d68-54fc1d9c0a14',
+    id: '1df00d62-ae72-4005-a538-b79af0054fe3',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -1631,7 +1631,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'c3c4ad76-b134-4377-aeba-2885ea05deb3',
+        id: '139facb9-aff7-4be6-9913-c682ce64bbe0',
         namespace: 'activity',
         slug: 'acer',
         value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
@@ -1641,7 +1641,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '68d86feb-2357-4124-9dd1-0d6465f8bd98',
+        id: 'e4898ca2-9cd1-4fdc-a9cf-338bc39095ce',
         namespace: 'activity',
         slug: 'tremo',
         value: 'Amita delectus dicta temptatio utroque ex.',
@@ -1657,7 +1657,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
       ),
     ],
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-03-27T08:19:12.740Z'),
+    updated_at: DateTime.iso8601('2026-03-28T08:21:10.283Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1707,10 +1707,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-09-23T20:45:42.318Z'),
+    applied_at: DateTime.iso8601('2025-09-24T14:41:04.883Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-04T23:49:02.192Z'),
-    id: '3d485de1-9ff8-4865-bb20-7bbe2423e40d',
+    hired_at: DateTime.iso8601('2026-05-05T23:23:31.800Z'),
+    id: 'c70ec983-bd76-4837-ab1d-52d7008903be',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
@@ -1726,12 +1726,12 @@ req = Models::Operations::PatchAtsApplicationRequest.new(
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-02T12:13:56.777Z'),
+    rejected_at: DateTime.iso8601('2026-10-03T15:37:12.101Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-    updated_at: DateTime.iso8601('2026-10-09T07:06:32.232Z'),
+    updated_at: DateTime.iso8601('2026-10-10T10:40:06.420Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1822,7 +1822,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
       ),
     ],
     first_name: 'Ardith',
-    id: 'be8285a0-9517-42f6-b46f-d3e801caba79',
+    id: '6090eb46-5930-414f-99ad-c56db8dc8c68',
     image_url: 'https://loremflickr.com/40/3693?lock=5634712403880328',
     job_ids: [],
     last_name: 'Beatty',
@@ -1837,7 +1837,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '2b37da89-8061-4566-8643-abc843d78dd8',
+        id: 'f478dbec-0bad-423a-8834-235a7c1905de',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'cariosus',
@@ -1863,7 +1863,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
       ),
     ],
     title: 'Principal Implementation Analyst',
-    updated_at: DateTime.iso8601('2024-04-27T02:56:16.303Z'),
+    updated_at: DateTime.iso8601('2024-04-27T07:50:39.396Z'),
     web_url: 'https://expert-lender.name/',
   ),
   connection_id: '<id>',
@@ -1914,10 +1914,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: 'b8304991-4436-483a-8561-34ac4b9394cf',
+    id: '550e2248-9b3e-4b91-a971-6a690eada29a',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-602-210-4548',
-    updated_at: DateTime.iso8601('2020-09-29T10:01:52.913Z'),
+    updated_at: DateTime.iso8601('2020-09-29T15:21:25.580Z'),
     website_url: 'https://somber-substitution.com/',
   ),
   connection_id: '<id>',
@@ -1970,9 +1970,9 @@ req = Models::Operations::PatchAtsDocumentRequest.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'bah_white_frantically.bz',
-    id: 'a112a607-caa9-4059-8b11-2bb0e8f77b75',
+    id: '0ca1468a-2a80-4d97-8de9-b1d1dd4e9fc7',
     type: Models::Shared::AtsDocumentType::RESUME,
-    updated_at: DateTime.iso8601('2022-12-04T22:04:49.489Z'),
+    updated_at: DateTime.iso8601('2022-12-05T05:00:55.078Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2022,13 +2022,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
-    end_at: DateTime.iso8601('2025-10-12T08:06:40.733Z'),
-    external_event_xref: 'fb6d0205-1487-4731-bb46-7d4650aaeb67',
-    id: 'b1fcbd36-50c4-49e8-82b8-788361d40572',
+    end_at: DateTime.iso8601('2025-10-13T06:04:28.716Z'),
+    external_event_xref: '71009098-2cd3-4e59-822a-3a44413292b1',
+    id: 'b1a937f6-bf22-4334-90b4-34f3c07a6bc0',
     location: '26596 Halle Trafficway',
-    start_at: DateTime.iso8601('2025-06-05T12:43:42.899Z'),
+    start_at: DateTime.iso8601('2025-06-06T08:41:29.256Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2026-02-24T20:06:29.258Z'),
+    updated_at: DateTime.iso8601('2026-02-25T20:10:33.030Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2112,7 +2112,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
         name: 'Troy Greenholt',
       ),
     ],
-    id: '689867c8-1501-44e3-8884-a8a2a40fe31d',
+    id: 'ef8e14d1-9697-4dd2-91ec-b693aed426b5',
     industry: 'Modern Granite Gloves',
     language_locale: 'en',
     metadata: [
@@ -2121,7 +2121,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'f4217c6f-5479-4303-a6d8-8c7eb11e260a',
+        id: '7119e7f7-4144-4a29-95a0-c21976484f5f',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'vomica',
@@ -2134,7 +2134,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-05-30T18:52:49.940Z'),
+        opened_at: DateTime.iso8601('2026-05-31T19:27:08.966Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN,
       ),
     ],
@@ -2148,14 +2148,14 @@ req = Models::Operations::PatchAtsJobRequest.new(
           region: 'Vermont',
           region_code: 'MO',
         ),
-        created_at: DateTime.iso8601('2026-07-24T12:02:14.044Z'),
+        created_at: DateTime.iso8601('2026-07-25T13:51:17.684Z'),
         description: 'Provident turbo cunabula spoliatio agnitio.',
         id: '372178cd-2056-4388-870e-e7c199761c7c',
         is_active: false,
         location: '2925 Connie Green',
         name: 'Lead Intranet Developer',
         posting_url: 'https://smart-summer.name/',
-        updated_at: DateTime.iso8601('2026-08-19T14:42:45.180Z'),
+        updated_at: DateTime.iso8601('2026-08-20T17:07:29.004Z'),
       ),
     ],
     public_job_urls: [
@@ -2209,7 +2209,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Iste sto communis.',
-    updated_at: DateTime.iso8601('2026-02-20T01:10:57.537Z'),
+    updated_at: DateTime.iso8601('2026-02-20T23:29:01.749Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2260,7 +2260,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: '3ce84d87-0984-4eed-9589-5bf91af0797f',
+    id: '3efe585b-b1a1-4842-ae94-5b4a90d3807f',
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
         description: 'Sulum textor eveniet facere vita.',
@@ -2273,7 +2273,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-03T01:19:15.690Z'),
+    updated_at: DateTime.iso8601('2023-06-03T08:56:29.105Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2694,7 +2694,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
       name: 'Toby Grant',
       type: Models::Shared::PropertyAtsActivityFromType::OTHER,
     ),
-    id: 'abdfb606-349c-4843-9d68-54fc1d9c0a14',
+    id: '1df00d62-ae72-4005-a538-b79af0054fe3',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -2702,7 +2702,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'c3c4ad76-b134-4377-aeba-2885ea05deb3',
+        id: '139facb9-aff7-4be6-9913-c682ce64bbe0',
         namespace: 'activity',
         slug: 'acer',
         value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
@@ -2712,7 +2712,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '68d86feb-2357-4124-9dd1-0d6465f8bd98',
+        id: 'e4898ca2-9cd1-4fdc-a9cf-338bc39095ce',
         namespace: 'activity',
         slug: 'tremo',
         value: 'Amita delectus dicta temptatio utroque ex.',
@@ -2728,7 +2728,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
       ),
     ],
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-03-27T08:19:12.740Z'),
+    updated_at: DateTime.iso8601('2026-03-28T08:21:10.283Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2778,10 +2778,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-09-23T20:45:42.318Z'),
+    applied_at: DateTime.iso8601('2025-09-24T14:41:04.883Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-04T23:49:02.192Z'),
-    id: '3d485de1-9ff8-4865-bb20-7bbe2423e40d',
+    hired_at: DateTime.iso8601('2026-05-05T23:23:31.800Z'),
+    id: 'c70ec983-bd76-4837-ab1d-52d7008903be',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
@@ -2797,12 +2797,12 @@ req = Models::Operations::UpdateAtsApplicationRequest.new(
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-02T12:13:56.777Z'),
+    rejected_at: DateTime.iso8601('2026-10-03T15:37:12.101Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-    updated_at: DateTime.iso8601('2026-10-09T07:06:32.232Z'),
+    updated_at: DateTime.iso8601('2026-10-10T10:40:06.420Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2893,7 +2893,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
       ),
     ],
     first_name: 'Ardith',
-    id: 'be8285a0-9517-42f6-b46f-d3e801caba79',
+    id: '6090eb46-5930-414f-99ad-c56db8dc8c68',
     image_url: 'https://loremflickr.com/40/3693?lock=5634712403880328',
     job_ids: [],
     last_name: 'Beatty',
@@ -2908,7 +2908,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '2b37da89-8061-4566-8643-abc843d78dd8',
+        id: 'f478dbec-0bad-423a-8834-235a7c1905de',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'cariosus',
@@ -2934,7 +2934,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
       ),
     ],
     title: 'Principal Implementation Analyst',
-    updated_at: DateTime.iso8601('2024-04-27T02:56:16.303Z'),
+    updated_at: DateTime.iso8601('2024-04-27T07:50:39.396Z'),
     web_url: 'https://expert-lender.name/',
   ),
   connection_id: '<id>',
@@ -2985,10 +2985,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: 'b8304991-4436-483a-8561-34ac4b9394cf',
+    id: '550e2248-9b3e-4b91-a971-6a690eada29a',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-602-210-4548',
-    updated_at: DateTime.iso8601('2020-09-29T10:01:52.913Z'),
+    updated_at: DateTime.iso8601('2020-09-29T15:21:25.580Z'),
     website_url: 'https://somber-substitution.com/',
   ),
   connection_id: '<id>',
@@ -3041,9 +3041,9 @@ req = Models::Operations::UpdateAtsDocumentRequest.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'bah_white_frantically.bz',
-    id: 'a112a607-caa9-4059-8b11-2bb0e8f77b75',
+    id: '0ca1468a-2a80-4d97-8de9-b1d1dd4e9fc7',
     type: Models::Shared::AtsDocumentType::RESUME,
-    updated_at: DateTime.iso8601('2022-12-04T22:04:49.489Z'),
+    updated_at: DateTime.iso8601('2022-12-05T05:00:55.078Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3093,13 +3093,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
-    end_at: DateTime.iso8601('2025-10-12T08:06:40.733Z'),
-    external_event_xref: 'fb6d0205-1487-4731-bb46-7d4650aaeb67',
-    id: 'b1fcbd36-50c4-49e8-82b8-788361d40572',
+    end_at: DateTime.iso8601('2025-10-13T06:04:28.716Z'),
+    external_event_xref: '71009098-2cd3-4e59-822a-3a44413292b1',
+    id: 'b1a937f6-bf22-4334-90b4-34f3c07a6bc0',
     location: '26596 Halle Trafficway',
-    start_at: DateTime.iso8601('2025-06-05T12:43:42.899Z'),
+    start_at: DateTime.iso8601('2025-06-06T08:41:29.256Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2026-02-24T20:06:29.258Z'),
+    updated_at: DateTime.iso8601('2026-02-25T20:10:33.030Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3183,7 +3183,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         name: 'Troy Greenholt',
       ),
     ],
-    id: '689867c8-1501-44e3-8884-a8a2a40fe31d',
+    id: 'ef8e14d1-9697-4dd2-91ec-b693aed426b5',
     industry: 'Modern Granite Gloves',
     language_locale: 'en',
     metadata: [
@@ -3192,7 +3192,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'f4217c6f-5479-4303-a6d8-8c7eb11e260a',
+        id: '7119e7f7-4144-4a29-95a0-c21976484f5f',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'vomica',
@@ -3205,7 +3205,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-05-30T18:52:49.940Z'),
+        opened_at: DateTime.iso8601('2026-05-31T19:27:08.966Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN,
       ),
     ],
@@ -3219,14 +3219,14 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           region: 'Vermont',
           region_code: 'MO',
         ),
-        created_at: DateTime.iso8601('2026-07-24T12:02:14.044Z'),
+        created_at: DateTime.iso8601('2026-07-25T13:51:17.684Z'),
         description: 'Provident turbo cunabula spoliatio agnitio.',
         id: '372178cd-2056-4388-870e-e7c199761c7c',
         is_active: false,
         location: '2925 Connie Green',
         name: 'Lead Intranet Developer',
         posting_url: 'https://smart-summer.name/',
-        updated_at: DateTime.iso8601('2026-08-19T14:42:45.180Z'),
+        updated_at: DateTime.iso8601('2026-08-20T17:07:29.004Z'),
       ),
     ],
     public_job_urls: [
@@ -3280,7 +3280,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Iste sto communis.',
-    updated_at: DateTime.iso8601('2026-02-20T01:10:57.537Z'),
+    updated_at: DateTime.iso8601('2026-02-20T23:29:01.749Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3331,7 +3331,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: '3ce84d87-0984-4eed-9589-5bf91af0797f',
+    id: '3efe585b-b1a1-4842-ae94-5b4a90d3807f',
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
         description: 'Sulum textor eveniet facere vita.',
@@ -3344,7 +3344,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-03T01:19:15.690Z'),
+    updated_at: DateTime.iso8601('2023-06-03T08:56:29.105Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

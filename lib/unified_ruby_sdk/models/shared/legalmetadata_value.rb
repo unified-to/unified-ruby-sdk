@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # the custom field value
       class LegalMetadataValue
         extend T::Sig
         include Crystalline::MetadataFields

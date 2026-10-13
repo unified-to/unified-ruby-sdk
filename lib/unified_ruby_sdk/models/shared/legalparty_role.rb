@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # LegalPartyRole - the party role on the matter
       class LegalPartyRole < T::Enum
 
 

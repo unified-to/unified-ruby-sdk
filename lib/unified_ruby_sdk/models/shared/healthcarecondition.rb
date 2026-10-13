@@ -21,7 +21,7 @@ module UnifiedRubySDK
         field :encounter_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('encounter_id') } }
         # Unique identifier for the condition
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # Custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Human-readable name of the condition
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }

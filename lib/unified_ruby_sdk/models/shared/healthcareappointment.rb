@@ -25,7 +25,7 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Where the appointment takes place
         field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
-
+        # Custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Free-text notes or comments
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }

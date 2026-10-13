@@ -27,7 +27,7 @@ module UnifiedRubySDK
         field :interpretation, Crystalline::Nilable.new(Models::Shared::Interpretation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interpretation'), 'decoder': Utils.enum_from_string(Models::Shared::Interpretation, true) } }
         # When the result was released (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :issued_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('issued_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Human-readable name of what was observed
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }

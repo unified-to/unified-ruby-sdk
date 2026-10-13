@@ -13,23 +13,23 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # the practice area code
         field :code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('code') } }
-        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        # when the practice area was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # unique identifier for the practice area
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # whether the practice area is active
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
         # custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LegalMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # the practice area name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # raw data from the integration
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # the normalized practice area type
         field :type, Crystalline::Nilable.new(Models::Shared::LegalPracticeareaType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::LegalPracticeareaType, true) } }
-        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        # when the practice area was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(code: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::LegalMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::LegalPracticeareaType), updated_at: T.nilable(::DateTime)).void }

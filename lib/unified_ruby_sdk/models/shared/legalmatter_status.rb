@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # LegalMatterStatus - the matter status
       class LegalMatterStatus < T::Enum
 
 

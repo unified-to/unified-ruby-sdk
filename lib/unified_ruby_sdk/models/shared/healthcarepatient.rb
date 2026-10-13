@@ -39,7 +39,7 @@ module UnifiedRubySDK
         field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
         # Family name of the patient
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
-
+        # Custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Full name of the patient
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }

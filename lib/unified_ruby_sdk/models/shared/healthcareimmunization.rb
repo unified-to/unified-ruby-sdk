@@ -29,7 +29,7 @@ module UnifiedRubySDK
         field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
         # Vaccine lot number
         field :lot_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lot_number') } }
-
+        # Custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Human-readable name of the vaccine
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }

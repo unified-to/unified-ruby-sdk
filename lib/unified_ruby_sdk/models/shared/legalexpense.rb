@@ -15,23 +15,23 @@ module UnifiedRubySDK
 
         # the vendor's expense category name
         field :category, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category') } }
-        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        # when the expense was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # ISO 4217 currency code
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
-
+        # free-text description of the expense
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # UTBMS/LEDES expense code
         field :expense_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expense_code') } }
-
+        # unique identifier for the expense
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # date the expense was incurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :incurred_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('incurred_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # pointer to the Accounting Invoice this expense was billed on (reference to AccountingInvoice)
         field :invoice_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('invoice_id') } }
-
+        # whether the expense is billable
         field :is_billable, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_billable') } }
-
+        # whether the expense has been billed
         field :is_billed, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_billed') } }
         # pointer to the Legal Matter this expense is recorded against
         field :matter_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('matter_id') } }
@@ -39,15 +39,15 @@ module UnifiedRubySDK
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LegalMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # unit price
         field :price_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_amount') } }
-
+        # number of units
         field :quantity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('quantity') } }
-
+        # raw data from the integration
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # total amount of the expense
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
-
+        # hard cost, soft cost or other
         field :type, Crystalline::Nilable.new(Models::Shared::LegalExpenseType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::LegalExpenseType, true) } }
-        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        # when the expense was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # HR Employee who incurred or recorded the expense (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }

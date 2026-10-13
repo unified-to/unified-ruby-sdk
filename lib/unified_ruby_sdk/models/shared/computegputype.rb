@@ -19,7 +19,7 @@ module UnifiedRubySDK
         field :availability, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ComputeAvailability)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('availability') } }
         # vCPUs included in one unit of this type
         field :cpu_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cpu_count') } }
-        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        # When the GPU type was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # Local disk in MiB
         field :disk_mb, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('disk_mb') } }
@@ -43,7 +43,7 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The vendor's own SKU or type name
         field :sku, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sku') } }
-        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        # When the GPU type was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         sig { params(architecture: T.nilable(Models::Shared::Architecture), availability: T.nilable(T::Array[Models::Shared::ComputeAvailability]), cpu_count: T.nilable(::Float), created_at: T.nilable(::DateTime), disk_mb: T.nilable(::Float), gpu_count: T.nilable(::Float), gpu_manufacturer: T.nilable(Models::Shared::GpuManufacturer), gpu_memory_mb: T.nilable(::Float), gpu_model: T.nilable(Models::Shared::GpuModel), id: T.nilable(::String), memory_mb: T.nilable(::Float), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::ComputePrice]), raw: T.nilable(T::Hash[Symbol, ::Object]), sku: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }

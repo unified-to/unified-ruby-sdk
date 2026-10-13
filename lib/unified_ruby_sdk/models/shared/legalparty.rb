@@ -19,7 +19,7 @@ module UnifiedRubySDK
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
         # the vendor's free-text relationship description
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
-
+        # the party role on the matter
         field :role, Crystalline::Nilable.new(Models::Shared::LegalPartyRole), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('role'), 'decoder': Utils.enum_from_string(Models::Shared::LegalPartyRole, true) } }
 
         sig { params(company_id: T.nilable(::String), contact_id: T.nilable(::String), description: T.nilable(::String), role: T.nilable(Models::Shared::LegalPartyRole)).void }

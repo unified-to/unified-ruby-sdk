@@ -15,7 +15,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'BOB',
   customer_defined_code: 'quo',
   description: 'Spoliatio comedo vilitas harum cupiditate.',
-  id: 'b096adb6-85c6-43bd-8b65-9908676ad8f8',
+  id: 'ab122fc2-9591-4d94-9d7c-39207333fc92',
   is_payable: true,
   name: 'Electronic Aluminum Tuna',
   status: Models::Shared::Status::ARCHIVED,
@@ -32,7 +32,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::BANK,
-  updated_at: DateTime.iso8601('2023-01-05T23:34:54.694Z'),
+  updated_at: DateTime.iso8601('2023-01-06T02:52:38.445Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

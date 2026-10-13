@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # HealthcareTelephoneType - The kind of telephone number (work, home, mobile, fax or other)
       class HealthcareTelephoneType < T::Enum
 
 

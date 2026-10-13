@@ -13,9 +13,9 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The email address
         field :email, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email'), required: true } }
-
+        # The kind of email address (work, home or other)
         field :type, Crystalline::Nilable.new(Models::Shared::HealthcareEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareEmailType, true) } }
 
         sig { params(email: ::String, type: T.nilable(Models::Shared::HealthcareEmailType)).void }

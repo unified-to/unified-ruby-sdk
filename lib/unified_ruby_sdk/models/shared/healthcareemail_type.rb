@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # HealthcareEmailType - The kind of email address (work, home or other)
       class HealthcareEmailType < T::Enum
 
 

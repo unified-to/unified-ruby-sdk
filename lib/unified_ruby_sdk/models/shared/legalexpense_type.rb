@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # LegalExpenseType - hard cost, soft cost or other
       class LegalExpenseType < T::Enum
 
 

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # Additional data about the value
       class ComputeMetadataExtraData
         extend T::Sig
         include Crystalline::MetadataFields

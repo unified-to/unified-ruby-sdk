@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # LegalPracticeareaType - the normalized practice area type
       class LegalPracticeareaType < T::Enum
 
 

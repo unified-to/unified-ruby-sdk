@@ -13,17 +13,17 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # First line of the street address
         field :address1, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address1') } }
-
+        # Second line of the street address
         field :address2, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address2') } }
-
+        # City or locality
         field :city, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('city') } }
-
+        # Country
         field :country, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
-
+        # Postal or ZIP code
         field :postal_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postal_code') } }
-
+        # Regional area (e.g., state in the U.S., province in Canada)
         field :region, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
 
         sig { params(address1: T.nilable(::String), address2: T.nilable(::String), city: T.nilable(::String), country: T.nilable(::String), postal_code: T.nilable(::String), region: T.nilable(::String)).void }

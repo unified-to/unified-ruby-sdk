@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # HealthcareMetadataFormat - The data type of the value
       class HealthcareMetadataFormat < T::Enum
 
 
