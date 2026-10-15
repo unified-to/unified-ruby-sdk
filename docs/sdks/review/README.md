@@ -44,7 +44,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   content: 'Taedium thymum adipiscor amicitia cui.',
   created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
   helpful_votes: 26.0,
-  id: 'bf0f7f8d-f2fd-47bb-8996-1a7577fb6fa0',
+  id: 'f797aba5-0339-44bc-bdf1-493e2adbebc3',
   is_featured: true,
   is_public: true,
   is_verified: false,
@@ -52,10 +52,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Adulescens.',
       height: 519.0,
-      id: 'b1c261ef-d6ec-451a-a3eb-d6f5553d27ca',
+      id: '3bc91b1a-f4d6-46de-84df-5940e2c2ba97',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '1a0c78e8-cade-4270-a331-27cf98f8e542',
+          id: '374ec05f-b297-423b-b66c-626cc36ccdd4',
           slug: 'aggero',
           value: 'tero',
         ),
@@ -68,10 +68,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Pauci timidus sol comburo thema.',
       height: 297.0,
-      id: '38b54e9b-a0cd-499c-b2c7-81f32343ad0b',
+      id: '6b78f952-26a6-4cd0-867f-508501cc0eee',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '7a6b0b47-0d03-45a3-b607-534c64a6808f',
+          id: '60a52816-2476-4502-8c47-f82d77843a2f',
           slug: 'vito',
           value: 'cuppedia',
         ),
@@ -84,10 +84,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Cuppedia vestrum patruus.',
       height: 6.0,
-      id: '7ceb4123-c217-43d0-a7fa-a9ee383c365d',
+      id: '460d0525-4ddc-4484-bd28-b348643f4769',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'd9feab65-1d3b-43e0-bb84-2be9a7285fd0',
+          id: '785d25c1-9616-4ccf-95e1-43a8b1227fec',
           slug: 'arbitro',
           value: 'villa',
         ),
@@ -103,7 +103,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   status: Models::Shared::CommerceReviewStatus::APPROVED,
   title: 'Coepi adamo amicitia auxilium toties.',
   unhelpful_votes: 49.0,
-  updated_at: DateTime.iso8601('2025-08-14T18:03:26.113Z'),
+  updated_at: DateTime.iso8601('2025-08-16T06:00:43.798Z'),
   url: 'https://excitable-underneath.com',
   verified_purchase: false,
 ), connection_id: '<id>')
@@ -427,7 +427,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 26.0,
-    id: '1f3defe2-eca1-43b7-b359-05fcc890ab02',
+    id: 'c72625ee-a9c8-4c76-92f4-c5356d2d5495',
     is_featured: true,
     is_public: true,
     is_verified: false,
@@ -435,10 +435,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adulescens.',
         height: 519.0,
-        id: '650a54d7-b43e-466b-934f-6cc1a830ef49',
+        id: 'f52231ab-36e2-495d-a27b-933c2ba34df2',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '816939e6-6480-4eb5-acfa-8bc21f576d77',
+            id: '738862aa-d51c-4bae-97f7-6fd75386602c',
             slug: 'aggero',
             value: 'tero',
           ),
@@ -451,10 +451,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Pauci timidus sol comburo thema.',
         height: 297.0,
-        id: '652fbbbc-970d-47c5-ad0f-b16be11babd1',
+        id: 'd6f66a5c-0dff-4e3e-a19c-da0a82f48688',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '8269a39a-a927-4467-8023-b1287ae70df3',
+            id: '147b70c7-0fbe-4f32-9694-3a313ee18390',
             slug: 'vito',
             value: 'cuppedia',
           ),
@@ -467,10 +467,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Cuppedia vestrum patruus.',
         height: 6.0,
-        id: '16205081-03b6-427a-9842-04d3999304c3',
+        id: '3f71a1f2-c404-4198-88a8-5bb9801678bd',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '99e3db98-4adf-49ef-b7d1-e51ef6f75d77',
+            id: 'df97ac05-845e-4c2a-a54e-d2389189d0f6',
             slug: 'arbitro',
             value: 'villa',
           ),
@@ -486,7 +486,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 49.0,
-    updated_at: DateTime.iso8601('2025-08-14T18:03:26.137Z'),
+    updated_at: DateTime.iso8601('2025-08-16T06:00:43.838Z'),
     url: 'https://excitable-underneath.com',
     verified_purchase: false,
   ),
@@ -634,7 +634,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 26.0,
-    id: '1f3defe2-eca1-43b7-b359-05fcc890ab02',
+    id: 'c72625ee-a9c8-4c76-92f4-c5356d2d5495',
     is_featured: true,
     is_public: true,
     is_verified: false,
@@ -642,10 +642,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adulescens.',
         height: 519.0,
-        id: '650a54d7-b43e-466b-934f-6cc1a830ef49',
+        id: 'f52231ab-36e2-495d-a27b-933c2ba34df2',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '816939e6-6480-4eb5-acfa-8bc21f576d77',
+            id: '738862aa-d51c-4bae-97f7-6fd75386602c',
             slug: 'aggero',
             value: 'tero',
           ),
@@ -658,10 +658,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Pauci timidus sol comburo thema.',
         height: 297.0,
-        id: '652fbbbc-970d-47c5-ad0f-b16be11babd1',
+        id: 'd6f66a5c-0dff-4e3e-a19c-da0a82f48688',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '8269a39a-a927-4467-8023-b1287ae70df3',
+            id: '147b70c7-0fbe-4f32-9694-3a313ee18390',
             slug: 'vito',
             value: 'cuppedia',
           ),
@@ -674,10 +674,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Cuppedia vestrum patruus.',
         height: 6.0,
-        id: '16205081-03b6-427a-9842-04d3999304c3',
+        id: '3f71a1f2-c404-4198-88a8-5bb9801678bd',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '99e3db98-4adf-49ef-b7d1-e51ef6f75d77',
+            id: 'df97ac05-845e-4c2a-a54e-d2389189d0f6',
             slug: 'arbitro',
             value: 'villa',
           ),
@@ -693,7 +693,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 49.0,
-    updated_at: DateTime.iso8601('2025-08-14T18:03:26.137Z'),
+    updated_at: DateTime.iso8601('2025-08-16T06:00:43.838Z'),
     url: 'https://excitable-underneath.com',
     verified_purchase: false,
   ),

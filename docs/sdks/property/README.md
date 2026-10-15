@@ -32,10 +32,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.property.create_analytics_property(analytics_property: Models::Shared::AnalyticsProperty.new(
   created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
   currency: 'USD',
-  id: 'f84ea8c7-1523-4fb8-823e-354731bfb814',
+  id: 'de9c162c-00f6-4fdf-9984-d25637f5753a',
   name: 'Daniel, Goldner and Dickinson',
   timezone: 'UTC',
-  updated_at: DateTime.iso8601('2021-09-14T19:30:47.921Z'),
+  updated_at: DateTime.iso8601('2021-09-14T19:43:22.674Z'),
 ), connection_id: '<id>')
 
 unless res.analytics_property.nil?
@@ -173,10 +173,10 @@ req = Models::Operations::PatchAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: '68b04ee9-541a-4b00-ac30-329f0c288ef8',
+    id: '6cb55c65-e865-41fb-ade0-9f2ab5716a80',
     name: 'Daniel, Goldner and Dickinson',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T19:30:47.921Z'),
+    updated_at: DateTime.iso8601('2021-09-14T19:43:22.674Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -269,10 +269,10 @@ req = Models::Operations::UpdateAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: '68b04ee9-541a-4b00-ac30-329f0c288ef8',
+    id: '6cb55c65-e865-41fb-ade0-9f2ab5716a80',
     name: 'Daniel, Goldner and Dickinson',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T19:30:47.921Z'),
+    updated_at: DateTime.iso8601('2021-09-14T19:43:22.674Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

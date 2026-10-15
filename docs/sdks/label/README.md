@@ -31,7 +31,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.label.create_shipping_label(shipping_label: Models::Shared::ShippingLabel.new(
   created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-  id: 'a74e28c6-ec7d-459f-bedf-6402f2fc1974',
+  id: '051ddb93-9c4f-486c-a9b6-d2774f959fa2',
   is_voided: false,
   label_cost: 40.83_653_403_213_248,
   label_cost_currency: 'USD',
@@ -40,7 +40,7 @@ res = s.label.create_shipping_label(shipping_label: Models::Shared::ShippingLabe
   service_code: 'GIz',
   status: Models::Shared::ShippingLabelStatus::EXCEPTION,
   tracking_number: 'zYv60FOIBUJ6',
-  updated_at: DateTime.iso8601('2024-04-25T23:32:25.576Z'),
+  updated_at: DateTime.iso8601('2024-04-26T15:29:06.731Z'),
 ), connection_id: '<id>')
 
 unless res.shipping_label.nil?
@@ -177,7 +177,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: 'aac40fc0-bc7b-4f2a-8642-b9885d9755c4',
+    id: 'd2f5942d-ef6e-4fa6-a8de-9a4af34e6e78',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
@@ -186,7 +186,7 @@ req = Models::Operations::PatchShippingLabelRequest.new(
     service_code: 'GIz',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'zYv60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-04-25T23:32:25.579Z'),
+    updated_at: DateTime.iso8601('2024-04-26T15:29:06.735Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -278,7 +278,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: 'aac40fc0-bc7b-4f2a-8642-b9885d9755c4',
+    id: 'd2f5942d-ef6e-4fa6-a8de-9a4af34e6e78',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
@@ -287,7 +287,7 @@ req = Models::Operations::UpdateShippingLabelRequest.new(
     service_code: 'GIz',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'zYv60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-04-25T23:32:25.579Z'),
+    updated_at: DateTime.iso8601('2024-04-26T15:29:06.735Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

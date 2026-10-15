@@ -30,9 +30,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(
-  closed_at: DateTime.iso8601('2025-04-26T19:53:01.986Z'),
+  closed_at: DateTime.iso8601('2025-04-27T21:43:08.293Z'),
   created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-  id: 'e987d7c6-83d2-4161-a142-d96a9d978be5',
+  id: 'f6264d79-0816-4693-804f-99c0620febcf',
   labels: [
     'adhuc',
     'quaerat',
@@ -42,7 +42,7 @@ res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::Re
   status: Models::Shared::RepoPullrequestStatus::REJECTED,
   target_branch_id: 'feed-reboot',
   title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
-  updated_at: DateTime.iso8601('2025-01-12T22:57:36.524Z'),
+  updated_at: DateTime.iso8601('2025-01-13T21:23:45.186Z'),
 ), connection_id: '<id>')
 
 unless res.repo_pullrequest.nil?
@@ -178,9 +178,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-04-26T19:53:01.990Z'),
+    closed_at: DateTime.iso8601('2025-04-27T21:43:08.298Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '518b99b0-3657-426a-9e89-e787b6333256',
+    id: '02957a49-99cb-4b59-b781-09db080d97f7',
     labels: [
       'adhuc',
       'quaerat',
@@ -190,7 +190,7 @@ req = Models::Operations::PatchRepoPullrequestRequest.new(
     status: Models::Shared::RepoPullrequestStatus::REJECTED,
     target_branch_id: 'feed-reboot',
     title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
-    updated_at: DateTime.iso8601('2025-01-12T22:57:36.528Z'),
+    updated_at: DateTime.iso8601('2025-01-13T21:23:45.191Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -281,9 +281,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-04-26T19:53:01.990Z'),
+    closed_at: DateTime.iso8601('2025-04-27T21:43:08.298Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '518b99b0-3657-426a-9e89-e787b6333256',
+    id: '02957a49-99cb-4b59-b781-09db080d97f7',
     labels: [
       'adhuc',
       'quaerat',
@@ -293,7 +293,7 @@ req = Models::Operations::UpdateRepoPullrequestRequest.new(
     status: Models::Shared::RepoPullrequestStatus::REJECTED,
     target_branch_id: 'feed-reboot',
     title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
-    updated_at: DateTime.iso8601('2025-01-12T22:57:36.528Z'),
+    updated_at: DateTime.iso8601('2025-01-13T21:23:45.191Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

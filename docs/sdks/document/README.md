@@ -45,9 +45,9 @@ res = s.document.create_ats_document(ats_document: Models::Shared::AtsDocument.n
   created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
   document_url: 'https://vengeful-lashes.biz',
   filename: 'bah_white_frantically.bz',
-  id: '62003c4e-b4e0-40bc-9b55-894a5392deba',
+  id: 'e059eaec-51fe-4df8-9c94-819d6c63f37c',
   type: Models::Shared::AtsDocumentType::RESUME,
-  updated_at: DateTime.iso8601('2022-12-05T05:00:55.076Z'),
+  updated_at: DateTime.iso8601('2022-12-05T15:53:22.206Z'),
 ), connection_id: '<id>')
 
 unless res.ats_document.nil?
@@ -96,9 +96,9 @@ res = s.document.create_hris_document(hris_document: Models::Shared::HrisDocumen
   created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
   document_url: 'https://sore-decision.biz/',
   filename: 'ridge_forager.xsl',
-  id: '2ab21d8f-7403-4032-b6c9-853da227f612',
+  id: '11954447-e216-4438-ab1b-83d921c45f67',
   type: Models::Shared::HrisDocumentType::POLICY,
-  updated_at: DateTime.iso8601('2025-10-05T16:09:47.419Z'),
+  updated_at: DateTime.iso8601('2025-10-07T00:19:47.881Z'),
 ), connection_id: '<id>')
 
 unless res.hris_document.nil?
@@ -145,11 +145,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.document.create_signing_document(signing_document: Models::Shared::SigningDocument.new(
   created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
-  expires_at: DateTime.iso8601('2027-01-10T11:12:26.599Z'),
-  id: '847d9de5-76e3-47ca-9715-b332bd401528',
+  expires_at: DateTime.iso8601('2027-01-12T06:31:28.930Z'),
+  id: '373761cd-42ff-4ccc-a5ba-8a778437976a',
   name: 'nam audax absens',
   status: Models::Shared::SigningDocumentStatus::VOIDED,
-  updated_at: DateTime.iso8601('2025-08-27T14:51:47.606Z'),
+  updated_at: DateTime.iso8601('2025-08-29T01:13:25.073Z'),
 ), connection_id: '<id>')
 
 unless res.signing_document.nil?
@@ -466,9 +466,9 @@ req = Models::Operations::PatchAtsDocumentRequest.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'bah_white_frantically.bz',
-    id: '0ca1468a-2a80-4d97-8de9-b1d1dd4e9fc7',
+    id: '7ab3f089-44bf-472c-b506-8b4a15214947',
     type: Models::Shared::AtsDocumentType::RESUME,
-    updated_at: DateTime.iso8601('2022-12-05T05:00:55.078Z'),
+    updated_at: DateTime.iso8601('2022-12-05T15:53:22.208Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -520,9 +520,9 @@ req = Models::Operations::PatchHrisDocumentRequest.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: '854cf1ce-97d2-4f16-a36b-b6395c839ff5',
+    id: 'fc497af4-1e89-4d8d-81e5-b55e22029089',
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-05T16:09:47.423Z'),
+    updated_at: DateTime.iso8601('2025-10-07T00:19:47.892Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -572,11 +572,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchSigningDocumentRequest.new(
   signing_document: Models::Shared::SigningDocument.new(
     created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
-    expires_at: DateTime.iso8601('2027-01-10T11:12:26.605Z'),
-    id: '8ca48ee3-d663-43de-957d-50c4bc52d6ad',
+    expires_at: DateTime.iso8601('2027-01-12T06:31:28.941Z'),
+    id: '6675f835-7269-4880-b6e2-797f286d904e',
     name: 'nam audax absens',
     status: Models::Shared::SigningDocumentStatus::VOIDED,
-    updated_at: DateTime.iso8601('2025-08-27T14:51:47.611Z'),
+    updated_at: DateTime.iso8601('2025-08-29T01:13:25.082Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -754,9 +754,9 @@ req = Models::Operations::UpdateAtsDocumentRequest.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'bah_white_frantically.bz',
-    id: '0ca1468a-2a80-4d97-8de9-b1d1dd4e9fc7',
+    id: '7ab3f089-44bf-472c-b506-8b4a15214947',
     type: Models::Shared::AtsDocumentType::RESUME,
-    updated_at: DateTime.iso8601('2022-12-05T05:00:55.078Z'),
+    updated_at: DateTime.iso8601('2022-12-05T15:53:22.208Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -808,9 +808,9 @@ req = Models::Operations::UpdateHrisDocumentRequest.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: '854cf1ce-97d2-4f16-a36b-b6395c839ff5',
+    id: 'fc497af4-1e89-4d8d-81e5-b55e22029089',
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-05T16:09:47.423Z'),
+    updated_at: DateTime.iso8601('2025-10-07T00:19:47.892Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -860,11 +860,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateSigningDocumentRequest.new(
   signing_document: Models::Shared::SigningDocument.new(
     created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
-    expires_at: DateTime.iso8601('2027-01-10T11:12:26.605Z'),
-    id: '8ca48ee3-d663-43de-957d-50c4bc52d6ad',
+    expires_at: DateTime.iso8601('2027-01-12T06:31:28.941Z'),
+    id: '6675f835-7269-4880-b6e2-797f286d904e',
     name: 'nam audax absens',
     status: Models::Shared::SigningDocumentStatus::VOIDED,
-    updated_at: DateTime.iso8601('2025-08-27T14:51:47.611Z'),
+    updated_at: DateTime.iso8601('2025-08-29T01:13:25.082Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
