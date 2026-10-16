@@ -31,13 +31,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.interview.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(
   created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
-  end_at: DateTime.iso8601('2025-10-14T16:30:50.737Z'),
-  external_event_xref: 'dd0f79de-205d-4d94-887d-c5753e0c66f1',
-  id: 'd3abe05d-ffaa-41cb-a956-8ac108fe2270',
+  end_at: DateTime.iso8601('2025-10-15T12:09:56.376Z'),
+  external_event_xref: '7e58a7e2-8977-4bdd-9883-41b05807670f',
+  id: '3b6c0045-1ffc-4c1f-bc18-83486ddc6304',
   location: '26596 Halle Trafficway',
-  start_at: DateTime.iso8601('2025-06-07T15:59:38.816Z'),
+  start_at: DateTime.iso8601('2025-06-08T09:51:20.841Z'),
   status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-  updated_at: DateTime.iso8601('2026-02-27T09:54:54.216Z'),
+  updated_at: DateTime.iso8601('2026-02-28T07:26:58.250Z'),
 ), connection_id: '<id>')
 
 unless res.ats_interview.nil?
@@ -174,13 +174,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
-    end_at: DateTime.iso8601('2025-10-14T16:30:50.746Z'),
-    external_event_xref: 'b825362d-47b5-434f-9473-2f05ee989207',
-    id: '61a4b43a-e685-4285-a684-53f2521ff29a',
+    end_at: DateTime.iso8601('2025-10-15T12:09:56.383Z'),
+    external_event_xref: 'd0b0d7be-a8ff-46f6-bde5-055251b61075',
+    id: 'cc75a2d4-ac6a-48c7-9884-e48c9eaeb127',
     location: '26596 Halle Trafficway',
-    start_at: DateTime.iso8601('2025-06-07T15:59:38.825Z'),
+    start_at: DateTime.iso8601('2025-06-08T09:51:20.847Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2026-02-27T09:54:54.226Z'),
+    updated_at: DateTime.iso8601('2026-02-28T07:26:58.258Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -272,13 +272,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
-    end_at: DateTime.iso8601('2025-10-14T16:30:50.746Z'),
-    external_event_xref: 'b825362d-47b5-434f-9473-2f05ee989207',
-    id: '61a4b43a-e685-4285-a684-53f2521ff29a',
+    end_at: DateTime.iso8601('2025-10-15T12:09:56.383Z'),
+    external_event_xref: 'd0b0d7be-a8ff-46f6-bde5-055251b61075',
+    id: 'cc75a2d4-ac6a-48c7-9884-e48c9eaeb127',
     location: '26596 Halle Trafficway',
-    start_at: DateTime.iso8601('2025-06-07T15:59:38.825Z'),
+    start_at: DateTime.iso8601('2025-06-08T09:51:20.847Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2026-02-27T09:54:54.226Z'),
+    updated_at: DateTime.iso8601('2026-02-28T07:26:58.258Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

@@ -39,7 +39,7 @@ res = s.package.create_assessment_package(assessment_package: Models::Shared::As
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '0458dd4f-6cf0-4519-af4c-420c1236e451',
+  id: 'cb94b0ea-31ba-48d8-98fd-559c5205077d',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -53,7 +53,7 @@ res = s.package.create_assessment_package(assessment_package: Models::Shared::As
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-24T01:11:16.571Z'),
+  updated_at: DateTime.iso8601('2023-09-24T06:32:51.920Z'),
 ), connection_id: '<id>')
 
 unless res.assessment_package.nil?
@@ -278,7 +278,7 @@ res = s.package.patch_assessment_package(assessment_package: Models::Shared::Ass
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '79858f38-9948-44e0-a4df-2e0cad97e1a3',
+  id: 'ed1e3b46-abd3-4bb3-bebd-9a05f649014a',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -292,7 +292,7 @@ res = s.package.patch_assessment_package(assessment_package: Models::Shared::Ass
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-24T01:11:16.575Z'),
+  updated_at: DateTime.iso8601('2023-09-24T06:32:51.923Z'),
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?
@@ -386,7 +386,7 @@ res = s.package.update_assessment_package(assessment_package: Models::Shared::As
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '79858f38-9948-44e0-a4df-2e0cad97e1a3',
+  id: 'ed1e3b46-abd3-4bb3-bebd-9a05f649014a',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -400,7 +400,7 @@ res = s.package.update_assessment_package(assessment_package: Models::Shared::As
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-24T01:11:16.575Z'),
+  updated_at: DateTime.iso8601('2023-09-24T06:32:51.923Z'),
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?

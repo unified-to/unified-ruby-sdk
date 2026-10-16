@@ -31,10 +31,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.insertionorder.create_ads_insertionorder(ads_insertionorder: Models::Shared::AdsInsertionorder.new(
   created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-  id: 'bf8f7811-8c3a-4e44-9040-74145a4793cc',
+  id: 'c6aa4e47-449b-4db2-94fd-41c6952f1daf',
   name: 'Kunde, Smith and Reinger',
   status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-  updated_at: DateTime.iso8601('2021-04-28T18:26:06.029Z'),
+  updated_at: DateTime.iso8601('2021-04-28T18:39:42.601Z'),
 ), connection_id: '<id>')
 
 unless res.ads_insertionorder.nil?
@@ -171,10 +171,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: '7e21c30a-ff13-4575-9582-26dcd955325b',
+    id: 'fe225f97-4315-4b72-9686-8abcd3001823',
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-28T18:26:06.029Z'),
+    updated_at: DateTime.iso8601('2021-04-28T18:39:42.601Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -266,10 +266,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: '7e21c30a-ff13-4575-9582-26dcd955325b',
+    id: 'fe225f97-4315-4b72-9686-8abcd3001823',
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-28T18:26:06.029Z'),
+    updated_at: DateTime.iso8601('2021-04-28T18:39:42.601Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

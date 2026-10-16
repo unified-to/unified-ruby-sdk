@@ -34,10 +34,10 @@ res = s.envvar.create_compute_envvar(compute_envvar: Models::Shared::ComputeEnvv
   environments: [
     Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
   ],
-  id: '976c6309-9ed8-4bd2-8c85-913172f9b0aa',
+  id: 'ef928af0-f4e3-40ce-9d44-cb3d5da9e577',
   is_secret: true,
   name: 'AEGER_SUBSTANTIA',
-  updated_at: DateTime.iso8601('2025-06-28T23:37:01.001Z'),
+  updated_at: DateTime.iso8601('2025-06-29T18:08:07.462Z'),
 ), connection_id: '<id>')
 
 unless res.compute_envvar.nil?
@@ -177,10 +177,10 @@ req = Models::Operations::PatchComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: 'fc36e77c-b964-42f5-b6f7-277a689c205e',
+    id: '663732ab-4be6-483c-bb94-d428a59164c9',
     is_secret: true,
     name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-06-28T23:37:01.004Z'),
+    updated_at: DateTime.iso8601('2025-06-29T18:08:07.467Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -275,10 +275,10 @@ req = Models::Operations::UpdateComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: 'fc36e77c-b964-42f5-b6f7-277a689c205e',
+    id: '663732ab-4be6-483c-bb94-d428a59164c9',
     is_secret: true,
     name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-06-28T23:37:01.004Z'),
+    updated_at: DateTime.iso8601('2025-06-29T18:08:07.467Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

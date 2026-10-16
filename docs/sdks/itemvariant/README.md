@@ -34,7 +34,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
   created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
   description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
   height: 52.0,
-  id: '10c36db7-82a2-4b63-bdbe-2f77210145b8',
+  id: 'b6677832-1d2f-4c91-aa96-925a8a833237',
   is_active: false,
   is_featured: false,
   is_visible: false,
@@ -43,10 +43,10 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
     Models::Shared::CommerceItemMedia.new(
       alt: 'Calcar delibero cursim summisse.',
       height: 394.0,
-      id: 'f1011b50-2364-4104-a438-b09042ec5d33',
+      id: 'e579cede-0ddb-4ce9-a662-36a26b895e91',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'edbefeb4-a281-4ac3-9941-dc5048b1dc01',
+          id: '20d0cf12-c2e0-4d0b-8246-c86da8c94cc5',
           slug: 'illo',
           value: 'quia',
         ),
@@ -59,10 +59,10 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
     Models::Shared::CommerceItemMedia.new(
       alt: 'Civitas acies substantia tergo.',
       height: 351.0,
-      id: '79f66c5d-079e-40cd-81ac-3e857a0f3ef0',
+      id: 'fd859428-4920-48a5-b4af-b3ba69706e89',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '90c1a9f0-c358-4f36-b806-cd25150a43ab',
+          id: '220af5e6-b800-4b64-b420-15a130e578bd',
           slug: 'libero',
           value: 'capitulus',
         ),
@@ -79,7 +79,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '23ecaf6e-4af7-40a3-afcb-170ca49718fa',
+      id: 'f423ed3e-4ed9-4b4d-833c-af5f98bde9dd',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'nihil',
@@ -88,7 +88,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
   name: 'Keyboard',
   options: [
     Models::Shared::CommerceItemOption.new(
-      id: '78107540-739f-49dd-82e8-eae196027257',
+      id: '8a144dc9-5a46-4a80-8f35-6e4868484c4b',
       name: 'Steel',
       position: 97.0,
       values: [
@@ -124,7 +124,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
     'custodia',
   ],
   total_stock: 929.0,
-  updated_at: DateTime.iso8601('2025-06-12T15:37:54.795Z'),
+  updated_at: DateTime.iso8601('2025-06-13T09:21:09.942Z'),
   weight: 61.0,
   weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
   width: 26.0,
@@ -267,7 +267,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
     height: 52.0,
-    id: '349173b7-a380-4abe-a4fc-61f7c41cc1ea',
+    id: 'f0413343-b845-47ba-9e36-253c6e526a00',
     is_active: false,
     is_featured: false,
     is_visible: false,
@@ -276,10 +276,10 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Calcar delibero cursim summisse.',
         height: 394.0,
-        id: 'dfd0630f-005d-43c8-a58b-d774a1a42a14',
+        id: '168e6eab-bf05-46bc-a87a-d62331d5e6b4',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '4e269ede-ba27-4289-a4d8-7a2ea1ccacfa',
+            id: '6b6edc2a-c331-481b-881d-bd822b5fc2e8',
             slug: 'illo',
             value: 'quia',
           ),
@@ -292,10 +292,10 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Civitas acies substantia tergo.',
         height: 351.0,
-        id: '31131153-ad3d-4022-b229-dea9fa6bcb1e',
+        id: '6530cef2-60e2-4a2a-9f83-2dd2d894972b',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '80f954b7-7ba0-4ed1-9a2f-fa8663ec21e2',
+            id: 'd7fa76ca-9a49-4276-b778-69c2fe559687',
             slug: 'libero',
             value: 'capitulus',
           ),
@@ -312,7 +312,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '4afac168-45da-4a72-a1a9-d5c7070a2a2a',
+        id: 'bbbba81a-42f6-4172-808b-677605840f52',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'nihil',
@@ -321,7 +321,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     name: 'Keyboard',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '720155c3-ef28-43c9-a033-5db440b32f96',
+        id: 'a6d7a08c-0665-420c-a2e8-f07790a3247c',
         name: 'Steel',
         position: 97.0,
         values: [
@@ -357,7 +357,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       'custodia',
     ],
     total_stock: 929.0,
-    updated_at: DateTime.iso8601('2025-06-12T15:37:54.826Z'),
+    updated_at: DateTime.iso8601('2025-06-13T09:21:09.961Z'),
     weight: 61.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 26.0,
@@ -455,7 +455,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
     height: 52.0,
-    id: '349173b7-a380-4abe-a4fc-61f7c41cc1ea',
+    id: 'f0413343-b845-47ba-9e36-253c6e526a00',
     is_active: false,
     is_featured: false,
     is_visible: false,
@@ -464,10 +464,10 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Calcar delibero cursim summisse.',
         height: 394.0,
-        id: 'dfd0630f-005d-43c8-a58b-d774a1a42a14',
+        id: '168e6eab-bf05-46bc-a87a-d62331d5e6b4',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '4e269ede-ba27-4289-a4d8-7a2ea1ccacfa',
+            id: '6b6edc2a-c331-481b-881d-bd822b5fc2e8',
             slug: 'illo',
             value: 'quia',
           ),
@@ -480,10 +480,10 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Civitas acies substantia tergo.',
         height: 351.0,
-        id: '31131153-ad3d-4022-b229-dea9fa6bcb1e',
+        id: '6530cef2-60e2-4a2a-9f83-2dd2d894972b',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '80f954b7-7ba0-4ed1-9a2f-fa8663ec21e2',
+            id: 'd7fa76ca-9a49-4276-b778-69c2fe559687',
             slug: 'libero',
             value: 'capitulus',
           ),
@@ -500,7 +500,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '4afac168-45da-4a72-a1a9-d5c7070a2a2a',
+        id: 'bbbba81a-42f6-4172-808b-677605840f52',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'nihil',
@@ -509,7 +509,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     name: 'Keyboard',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '720155c3-ef28-43c9-a033-5db440b32f96',
+        id: 'a6d7a08c-0665-420c-a2e8-f07790a3247c',
         name: 'Steel',
         position: 97.0,
         values: [
@@ -545,7 +545,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       'custodia',
     ],
     total_stock: 929.0,
-    updated_at: DateTime.iso8601('2025-06-12T15:37:54.826Z'),
+    updated_at: DateTime.iso8601('2025-06-13T09:21:09.961Z'),
     weight: 61.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 26.0,
