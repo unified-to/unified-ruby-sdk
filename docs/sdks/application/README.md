@@ -31,10 +31,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.application.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
   answers: [],
-  applied_at: DateTime.iso8601('2025-09-26T10:49:30.301Z'),
+  applied_at: DateTime.iso8601('2025-09-27T04:26:12.005Z'),
   created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-  hired_at: DateTime.iso8601('2026-05-08T09:27:07.678Z'),
-  id: '0cb1b516-b260-4d2a-b303-3e95654071cf',
+  hired_at: DateTime.iso8601('2026-05-09T08:37:02.964Z'),
+  id: '8d955ca3-6e7c-400d-93ad-479beb67a0cf',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
@@ -50,12 +50,12 @@ res = s.application.create_ats_application(ats_application: Models::Shared::AtsA
   offers: [],
   original_status: 'vomica',
   original_substatus: 'allatus',
-  rejected_at: DateTime.iso8601('2026-10-06T11:04:11.510Z'),
+  rejected_at: DateTime.iso8601('2026-10-07T13:58:54.073Z'),
   rejected_reason: 'Cometes amplitudo videlicet talio.',
   source: 'credo',
   status: Models::Shared::AtsApplicationStatus::REVIEWING,
   summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-  updated_at: DateTime.iso8601('2026-10-13T06:32:29.962Z'),
+  updated_at: DateTime.iso8601('2026-10-14T09:37:20.640Z'),
 ), connection_id: '<id>')
 
 unless res.ats_application.nil?
@@ -192,10 +192,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-09-26T10:49:30.323Z'),
+    applied_at: DateTime.iso8601('2025-09-27T04:26:12.018Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-08T09:27:07.707Z'),
-    id: 'ab5afb57-b0f2-4508-81ec-2c1b90f584b2',
+    hired_at: DateTime.iso8601('2026-05-09T08:37:02.981Z'),
+    id: '45f9655b-b434-4c97-98d1-d546579d535e',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
@@ -211,12 +211,12 @@ req = Models::Operations::PatchAtsApplicationRequest.new(
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-06T11:04:11.544Z'),
+    rejected_at: DateTime.iso8601('2026-10-07T13:58:54.092Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-    updated_at: DateTime.iso8601('2026-10-13T06:32:29.996Z'),
+    updated_at: DateTime.iso8601('2026-10-14T09:37:20.659Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -308,10 +308,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-09-26T10:49:30.323Z'),
+    applied_at: DateTime.iso8601('2025-09-27T04:26:12.018Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-08T09:27:07.707Z'),
-    id: 'ab5afb57-b0f2-4508-81ec-2c1b90f584b2',
+    hired_at: DateTime.iso8601('2026-05-09T08:37:02.981Z'),
+    id: '45f9655b-b434-4c97-98d1-d546579d535e',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
@@ -327,12 +327,12 @@ req = Models::Operations::UpdateAtsApplicationRequest.new(
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-06T11:04:11.544Z'),
+    rejected_at: DateTime.iso8601('2026-10-07T13:58:54.092Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-    updated_at: DateTime.iso8601('2026-10-13T06:32:29.996Z'),
+    updated_at: DateTime.iso8601('2026-10-14T09:37:20.659Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

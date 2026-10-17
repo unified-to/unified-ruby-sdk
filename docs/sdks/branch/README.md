@@ -31,10 +31,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.branch.create_repo_branch(repo_branch: Models::Shared::RepoBranch.new(
   created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-  id: 'ae354e59-242b-48b1-a859-3fd9d6fecd11',
+  id: '44d77db3-24ce-4ff8-8724-c670aa5edfad',
   name: 'voluptas',
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2020-01-06T18:05:32.574Z'),
+  updated_at: DateTime.iso8601('2020-01-06T21:10:11.171Z'),
 ), connection_id: '<id>')
 
 unless res.repo_branch.nil?
@@ -171,10 +171,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
     created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-    id: '6f4f96fd-ed50-45cb-b534-11b8f18e1ff7',
+    id: '262acf03-98e4-4dd1-930c-e5db7f18b4b6',
     name: 'voluptas',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2020-01-06T18:05:32.574Z'),
+    updated_at: DateTime.iso8601('2020-01-06T21:10:11.171Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -266,10 +266,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
     created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-    id: '6f4f96fd-ed50-45cb-b534-11b8f18e1ff7',
+    id: '262acf03-98e4-4dd1-930c-e5db7f18b4b6',
     name: 'voluptas',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2020-01-06T18:05:32.574Z'),
+    updated_at: DateTime.iso8601('2020-01-06T21:10:11.171Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

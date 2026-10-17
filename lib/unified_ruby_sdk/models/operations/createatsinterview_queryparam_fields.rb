@@ -24,6 +24,7 @@ module UnifiedRubySDK
           START_AT = new('start_at')
           END_AT = new('end_at')
           LOCATION = new('location')
+          MEETING_URL = new('meeting_url')
           EXTERNAL_EVENT_XREF = new('external_event_xref')
           RAW = new('raw')
         end

@@ -26,7 +26,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.rate.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.new(
   currency: 'USD',
-  id: '20960bbf-ce68-40d2-8f94-96676d49fb5a',
+  id: '123b2f3c-58bb-446d-9c4a-902c08e8693d',
   rates: [
     Models::Shared::ShippingRateRate.new(
       amount: 54.679_719_475_097_954,
@@ -35,7 +35,7 @@ res = s.rate.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.ne
       delivery_days: 8.0,
       description: 'Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.',
       estimated_days: 10.0,
-      estimated_delivery_end_at: DateTime.iso8601('2024-02-14T07:20:00.529Z'),
+      estimated_delivery_end_at: DateTime.iso8601('2024-02-14T20:19:24.503Z'),
       is_guaranteed: true,
       is_negotiated_rate: true,
       tax_amount: 2.2_701_712_837_442_756,

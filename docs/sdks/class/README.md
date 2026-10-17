@@ -32,7 +32,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
   description: 'Anser sperno decerno.',
-  id: 'e96aba3b-2483-4608-af45-91e5781c9199',
+  id: '6590c622-fe79-4e34-b50e-32488da23674',
   instructors: [],
   languages: [
     'in',
@@ -53,7 +53,7 @@ res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   ],
   name: 'virtus',
   students: [],
-  updated_at: DateTime.iso8601('2025-07-30T16:48:50.250Z'),
+  updated_at: DateTime.iso8601('2025-07-31T15:01:04.127Z'),
 ), connection_id: '<id>')
 
 unless res.lms_class.nil?
@@ -191,7 +191,7 @@ req = Models::Operations::PatchLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: 'f68a5f9c-fa73-4fd6-90df-f66a5a9d6991',
+    id: '04920888-d5b7-4593-b1ae-442be256be42',
     instructors: [],
     languages: [
       'in',
@@ -212,7 +212,7 @@ req = Models::Operations::PatchLmsClassRequest.new(
     ],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-07-30T16:48:50.259Z'),
+    updated_at: DateTime.iso8601('2025-07-31T15:01:04.135Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -305,7 +305,7 @@ req = Models::Operations::UpdateLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: 'f68a5f9c-fa73-4fd6-90df-f66a5a9d6991',
+    id: '04920888-d5b7-4593-b1ae-442be256be42',
     instructors: [],
     languages: [
       'in',
@@ -326,7 +326,7 @@ req = Models::Operations::UpdateLmsClassRequest.new(
     ],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-07-30T16:48:50.259Z'),
+    updated_at: DateTime.iso8601('2025-07-31T15:01:04.135Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

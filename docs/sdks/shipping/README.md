@@ -42,7 +42,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.shipping.create_shipping_label(shipping_label: Models::Shared::ShippingLabel.new(
   created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-  id: '227fd03c-f48b-45f8-99cf-9552dfd019f9',
+  id: 'a3f0ba10-86e6-4a1c-9508-7379d6069eea',
   is_voided: false,
   label_cost: 40.83_653_403_213_248,
   label_cost_currency: 'USD',
@@ -51,7 +51,7 @@ res = s.shipping.create_shipping_label(shipping_label: Models::Shared::ShippingL
   service_code: 'GIz',
   status: Models::Shared::ShippingLabelStatus::EXCEPTION,
   tracking_number: 'zYv60FOIBUJ6',
-  updated_at: DateTime.iso8601('2024-04-27T00:34:59.848Z'),
+  updated_at: DateTime.iso8601('2024-04-27T10:34:29.924Z'),
 ), connection_id: '<id>')
 
 unless res.shipping_label.nil?
@@ -98,7 +98,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.shipping.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.new(
   currency: 'USD',
-  id: '20960bbf-ce68-40d2-8f94-96676d49fb5a',
+  id: '123b2f3c-58bb-446d-9c4a-902c08e8693d',
   rates: [
     Models::Shared::ShippingRateRate.new(
       amount: 54.679_719_475_097_954,
@@ -107,7 +107,7 @@ res = s.shipping.create_shipping_rate(shipping_rate: Models::Shared::ShippingRat
       delivery_days: 8.0,
       description: 'Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.',
       estimated_days: 10.0,
-      estimated_delivery_end_at: DateTime.iso8601('2024-02-14T07:20:00.529Z'),
+      estimated_delivery_end_at: DateTime.iso8601('2024-02-14T20:19:24.503Z'),
       is_guaranteed: true,
       is_negotiated_rate: true,
       tax_amount: 2.2_701_712_837_442_756,
@@ -161,16 +161,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.shipping.create_shipping_shipment(shipping_shipment: Models::Shared::ShippingShipment.new(
   carrier_name: 'Bogisich, Franey and Koelpin',
   created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-  id: 'ac583184-b9f4-420d-9229-27b389dec979',
+  id: 'e6a9f02c-09e4-4797-a88b-c323e42c4478',
   rate_amount: 8.86_546_263_936_907,
   rate_currency: 'USD',
   rate_estimated_days: 8.0,
   rate_service_name: 'Fisher - Kilback',
   service_code: 'F7U',
-  shipped_at: DateTime.iso8601('2025-09-14T05:47:39.352Z'),
+  shipped_at: DateTime.iso8601('2025-09-15T01:44:10.216Z'),
   status: Models::Shared::ShippingShipmentStatus::PENDING,
   tracking_url: 'https://shallow-secrecy.info/',
-  updated_at: DateTime.iso8601('2025-07-22T13:33:20.844Z'),
+  updated_at: DateTime.iso8601('2025-07-23T08:31:22.502Z'),
 ), connection_id: '<id>')
 
 unless res.shipping_shipment.nil?
@@ -574,7 +574,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: '6917a2ff-1966-4354-b27d-d952bd1502f8',
+    id: 'dab0f346-8794-4523-b847-7bf47aa9601e',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
@@ -583,7 +583,7 @@ req = Models::Operations::PatchShippingLabelRequest.new(
     service_code: 'GIz',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'zYv60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-04-27T00:34:59.855Z'),
+    updated_at: DateTime.iso8601('2024-04-27T10:34:29.927Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -634,16 +634,16 @@ req = Models::Operations::PatchShippingShipmentRequest.new(
   shipping_shipment: Models::Shared::ShippingShipment.new(
     carrier_name: 'Bogisich, Franey and Koelpin',
     created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-    id: '9f9321be-3e4c-47b9-8e4e-b07f7595859a',
+    id: 'c2e1c4a7-168a-4c55-8dcb-75811f5416f7',
     rate_amount: 8.86_546_263_936_907,
     rate_currency: 'USD',
     rate_estimated_days: 8.0,
     rate_service_name: 'Fisher - Kilback',
     service_code: 'F7U',
-    shipped_at: DateTime.iso8601('2025-09-14T05:47:39.415Z'),
+    shipped_at: DateTime.iso8601('2025-09-15T01:44:10.258Z'),
     status: Models::Shared::ShippingShipmentStatus::PENDING,
     tracking_url: 'https://shallow-secrecy.info/',
-    updated_at: DateTime.iso8601('2025-07-22T13:33:20.905Z'),
+    updated_at: DateTime.iso8601('2025-07-23T08:31:22.541Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -777,7 +777,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: '6917a2ff-1966-4354-b27d-d952bd1502f8',
+    id: 'dab0f346-8794-4523-b847-7bf47aa9601e',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
@@ -786,7 +786,7 @@ req = Models::Operations::UpdateShippingLabelRequest.new(
     service_code: 'GIz',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'zYv60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-04-27T00:34:59.855Z'),
+    updated_at: DateTime.iso8601('2024-04-27T10:34:29.927Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -837,16 +837,16 @@ req = Models::Operations::UpdateShippingShipmentRequest.new(
   shipping_shipment: Models::Shared::ShippingShipment.new(
     carrier_name: 'Bogisich, Franey and Koelpin',
     created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-    id: '9f9321be-3e4c-47b9-8e4e-b07f7595859a',
+    id: 'c2e1c4a7-168a-4c55-8dcb-75811f5416f7',
     rate_amount: 8.86_546_263_936_907,
     rate_currency: 'USD',
     rate_estimated_days: 8.0,
     rate_service_name: 'Fisher - Kilback',
     service_code: 'F7U',
-    shipped_at: DateTime.iso8601('2025-09-14T05:47:39.415Z'),
+    shipped_at: DateTime.iso8601('2025-09-15T01:44:10.258Z'),
     status: Models::Shared::ShippingShipmentStatus::PENDING,
     tracking_url: 'https://shallow-secrecy.info/',
-    updated_at: DateTime.iso8601('2025-07-22T13:33:20.905Z'),
+    updated_at: DateTime.iso8601('2025-07-23T08:31:22.541Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
