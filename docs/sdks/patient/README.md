@@ -37,7 +37,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
     postal_code: '31579',
     region: 'Minnesota',
   ),
-  birthdate: '2025-02-08',
+  birthdate: '2025-02-09',
   created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
   emails: [
     Models::Shared::HealthcareEmail.new(
@@ -47,7 +47,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '603c2e56-e71e-4ec1-8e03-e818ca115bd1',
+  id: 'eca3858f-c799-4f09-9a26-8cd996b91528',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -67,7 +67,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
       type: Models::Shared::HealthcareTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-19T02:13:15.683Z'),
+  updated_at: DateTime.iso8601('2026-06-19T23:26:26.323Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -211,7 +211,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
       postal_code: '31579',
       region: 'Minnesota',
     ),
-    birthdate: '2025-02-08',
+    birthdate: '2025-02-09',
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
@@ -221,7 +221,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '43029d3b-4c3a-47bb-9cf6-38b6d0756fd8',
+    id: 'ff03defe-888a-412b-a562-feac195a7a8b',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -241,7 +241,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-19T02:13:15.700Z'),
+    updated_at: DateTime.iso8601('2026-06-19T23:26:26.344Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -298,7 +298,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
       postal_code: '31579',
       region: 'Minnesota',
     ),
-    birthdate: '2025-02-08',
+    birthdate: '2025-02-09',
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
@@ -308,7 +308,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '43029d3b-4c3a-47bb-9cf6-38b6d0756fd8',
+    id: 'ff03defe-888a-412b-a562-feac195a7a8b',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -328,7 +328,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-19T02:13:15.700Z'),
+    updated_at: DateTime.iso8601('2026-06-19T23:26:26.344Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

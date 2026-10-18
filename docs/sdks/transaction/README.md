@@ -32,12 +32,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.transaction.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(
   created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
   exchange_rate: 0.5_674,
-  id: 'c7ffcaad-cd77-4a83-9ac5-87c8d42cf631',
+  id: 'd42ee16f-9e24-4515-9565-e1553bfb888e',
   lineitems: [
     Models::Shared::AccountingTransactionLineItem.new(
       category_ids: [],
       description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-      id: 'fed1b468-39bd-4799-acaf-764a8a279795',
+      id: '41494917-dba3-4479-b4f0-f55013f49ef2',
       name: 'Salad',
       object_type: 'delicate',
       total_amount: 58_531.0,
@@ -50,7 +50,7 @@ res = s.transaction.create_accounting_transaction(accounting_transaction: Models
   tax_amount: 0.0,
   total_amount: 94_452.0,
   transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  updated_at: DateTime.iso8601('2021-09-18T06:00:07.541Z'),
+  updated_at: DateTime.iso8601('2021-09-18T12:20:46.967Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_transaction.nil?
@@ -188,12 +188,12 @@ req = Models::Operations::PatchAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
     exchange_rate: 0.5_674,
-    id: 'b6f170d9-8a89-4db0-a86f-9203a8c0a414',
+    id: '028b5d78-7ee7-400d-9086-4f787f9cd7ce',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-        id: 'a09a87e8-4864-4c30-8dd6-dc84e0f07562',
+        id: '1fe2ea64-340b-4529-8977-61a276c18ada',
         name: 'Salad',
         object_type: 'delicate',
         total_amount: 58_531.0,
@@ -206,7 +206,7 @@ req = Models::Operations::PatchAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 94_452.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2021-09-18T06:00:07.544Z'),
+    updated_at: DateTime.iso8601('2021-09-18T12:20:46.973Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -299,12 +299,12 @@ req = Models::Operations::UpdateAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
     exchange_rate: 0.5_674,
-    id: 'b6f170d9-8a89-4db0-a86f-9203a8c0a414',
+    id: '028b5d78-7ee7-400d-9086-4f787f9cd7ce',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-        id: 'a09a87e8-4864-4c30-8dd6-dc84e0f07562',
+        id: '1fe2ea64-340b-4529-8977-61a276c18ada',
         name: 'Salad',
         object_type: 'delicate',
         total_amount: 58_531.0,
@@ -317,7 +317,7 @@ req = Models::Operations::UpdateAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 94_452.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2021-09-18T06:00:07.544Z'),
+    updated_at: DateTime.iso8601('2021-09-18T12:20:46.973Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

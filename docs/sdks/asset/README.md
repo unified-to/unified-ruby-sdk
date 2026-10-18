@@ -29,11 +29,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.asset.create_ads_asset(ads_asset: Models::Shared::AdsAsset.new(
   created_at: DateTime.iso8601('2020-03-27T20:14:38.603Z'),
   height: 400.0,
-  id: '4a6a0f65-bdbe-4f9d-96fb-744699f9d311',
+  id: '95fd438e-7421-45dd-b085-2fb6ed350a75',
   mime_type: 'IMAGE_PNG',
   name: 'Lockman - DuBuque',
   type: Models::Shared::AdsAssetType::IMAGE,
-  updated_at: DateTime.iso8601('2022-03-23T23:32:47.322Z'),
+  updated_at: DateTime.iso8601('2022-03-24T06:24:06.495Z'),
   url: 'https://informal-perfection.com/',
   width: 600.0,
 ), connection_id: '<id>')

@@ -33,7 +33,7 @@ res = s.appointment.create_healthcare_appointment(healthcare_appointment: Models
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'clarus aptus cetera',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: '767df113-a2f3-43b0-b3dd-9e8e1d891a68',
+  id: '80af28db-0447-46e2-b142-5768bf892921',
   metadata: [],
   practitioner_ids: [],
   reasons: [
@@ -53,7 +53,7 @@ res = s.appointment.create_healthcare_appointment(healthcare_appointment: Models
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2025-11-16T11:42:52.011Z'),
+  updated_at: DateTime.iso8601('2025-11-17T04:25:54.948Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -192,7 +192,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'f8ade8a0-2dc4-4e9a-9a1a-ea1c5c156afe',
+    id: 'd528882e-e169-4021-afe0-7e7885bf9c8e',
     metadata: [],
     practitioner_ids: [],
     reasons: [
@@ -212,7 +212,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-16T11:42:52.022Z'),
+    updated_at: DateTime.iso8601('2025-11-17T04:25:54.964Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -306,7 +306,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'f8ade8a0-2dc4-4e9a-9a1a-ea1c5c156afe',
+    id: 'd528882e-e169-4021-afe0-7e7885bf9c8e',
     metadata: [],
     practitioner_ids: [],
     reasons: [
@@ -326,7 +326,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-16T11:42:52.022Z'),
+    updated_at: DateTime.iso8601('2025-11-17T04:25:54.964Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
