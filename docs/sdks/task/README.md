@@ -50,10 +50,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.task.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
-  completed_at: DateTime.iso8601('2025-09-28T18:13:25.819Z'),
+  completed_at: DateTime.iso8601('2025-09-29T12:21:39.355Z'),
   created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
   files_changed: 19.0,
-  id: '6cfc8806-591b-4516-b2bb-ab3031f1bb96',
+  id: '05248374-bcbd-4d58-bec8-3dc34f488568',
   instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
   lines_added: 244.0,
   lines_deleted: 118.0,
@@ -68,12 +68,12 @@ res = s.task.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
   pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
   repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
   source_branch_identifier: 'main',
-  started_at: DateTime.iso8601('2024-05-19T14:45:19.477Z'),
+  started_at: DateTime.iso8601('2024-05-20T03:52:48.597Z'),
   status: Models::Shared::GenaiTaskStatus::BLOCKED,
   summary: 'Cur aeternus cogito vesper.',
   target_branch_identifier: 'agent/joshingly-ignorance',
   tokens_used: 2165.0,
-  updated_at: DateTime.iso8601('2023-02-25T02:36:52.845Z'),
+  updated_at: DateTime.iso8601('2023-02-25T11:12:26.648Z'),
   web_url: 'https://inexperienced-adrenalin.biz/',
 ), connection_id: '<id>')
 
@@ -122,9 +122,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.task.create_task_comment(task_comment: Models::Shared::TaskComment.new(
   created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
   has_children: true,
-  id: 'e0d2059c-4c4a-4762-87da-facb371ef32b',
+  id: '6b441a29-00aa-4225-a76a-ac6b62ab454b',
   text: 'Colo ulciscor sublime tabernus.',
-  updated_at: DateTime.iso8601('2021-10-02T11:21:37.062Z'),
+  updated_at: DateTime.iso8601('2021-10-02T17:33:03.634Z'),
   user_name: 'Santina Abbott',
 ), connection_id: '<id>')
 
@@ -175,14 +175,14 @@ res = s.task.create_task_project(task_project: Models::Shared::TaskProject.new(
   description: 'Valetudo aggredior accommodo curiositas vox.',
   has_children: false,
   has_tasks: false,
-  id: '23bc9d53-b7ff-49be-a7c9-9019e16b0a6b',
+  id: '78e14d5a-7f6e-4f28-9075-215c0159700f',
   metadata: [
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: 'd24d729d-9859-4d4b-8cc9-6b17effe8be9',
+      id: 'ba3602cb-aaa9-4333-8ddc-77b876cbd4ad',
       namespace: 'custom',
       slug: 'decens',
       value: 'uterque',
@@ -192,14 +192,14 @@ res = s.task.create_task_project(task_project: Models::Shared::TaskProject.new(
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: '652f65e9-0f1b-4b0e-9c6e-75e320e85e16',
+      id: '7f69a956-d3d9-4138-a18c-ded64891c704',
       namespace: 'custom',
       slug: 'benevolentia',
       value: 'pariatur',
     ),
   ],
   name: 'Garden',
-  updated_at: DateTime.iso8601('2023-10-11T07:52:29.096Z'),
+  updated_at: DateTime.iso8601('2023-10-11T09:51:55.287Z'),
 ), connection_id: '<id>')
 
 unless res.task_project.nil?
@@ -246,18 +246,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(
   attachment_ids: [],
-  completed_at: DateTime.iso8601('2022-04-05T19:58:29.536Z'),
+  completed_at: DateTime.iso8601('2022-04-06T05:02:36.687Z'),
   created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-  due_at: DateTime.iso8601('2026-05-21T17:19:29.741Z'),
-  end_at: DateTime.iso8601('2022-10-28T05:54:19.256Z'),
+  due_at: DateTime.iso8601('2026-05-22T14:10:09.587Z'),
+  end_at: DateTime.iso8601('2022-10-28T16:34:45.226Z'),
   has_children: true,
-  id: '9e769cc4-6993-42cb-9592-30716a04b51d',
+  id: '324f41e4-8eeb-4917-b857-81f404eeb371',
   metadata: [],
   name: 'Direct Markets Architect',
   notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
   priority: 'LOW',
   progress: 2.0,
-  start_at: DateTime.iso8601('2022-01-31T03:00:08.397Z'),
+  start_at: DateTime.iso8601('2022-01-31T11:33:55.167Z'),
   status: Models::Shared::TaskTaskStatus::IN_PROGRESS,
   story_points: 0.0,
   tags: [
@@ -267,7 +267,7 @@ res = s.task.create_task_task(task_task: Models::Shared::TaskTask.new(
   time_spent: 957.0,
   time_spent_unit: 'SECONDS',
   type: 'tubineus',
-  updated_at: DateTime.iso8601('2019-07-15T04:52:59.308Z'),
+  updated_at: DateTime.iso8601('2019-07-15T06:10:16.848Z'),
   url: 'https://dismal-silk.net/',
 ), connection_id: '<id>')
 
@@ -760,10 +760,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-09-28T18:13:25.838Z'),
+    completed_at: DateTime.iso8601('2025-09-29T12:21:39.376Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '10ea6c85-f39a-4ed9-b239-54c3f46503b5',
+    id: '275e48d6-ca86-4c3f-a494-fd4a4eba0e92',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -778,12 +778,12 @@ req = Models::Operations::PatchGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-05-19T14:45:19.490Z'),
+    started_at: DateTime.iso8601('2024-05-20T03:52:48.612Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-02-25T02:36:52.854Z'),
+    updated_at: DateTime.iso8601('2023-02-25T11:12:26.658Z'),
     web_url: 'https://inexperienced-adrenalin.biz/',
   ),
   connection_id: '<id>',
@@ -835,9 +835,9 @@ req = Models::Operations::PatchTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: 'e9c38407-0f21-483c-ab57-9bd623074008',
+    id: '19e8ee1b-161b-43a8-b2e1-ddb21bb50763',
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-10-02T11:21:37.064Z'),
+    updated_at: DateTime.iso8601('2021-10-02T17:33:03.636Z'),
     user_name: 'Santina Abbott',
   ),
   connection_id: '<id>',
@@ -891,14 +891,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: 'ece461a4-3691-4a5b-8e07-161fc2869dc5',
+    id: '9957a8b2-1262-41df-a4ec-91b9779bfc6c',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'e210de9e-1ad0-4b41-b132-641831a8d3e3',
+        id: '7101b309-ccae-4d05-a7d6-18f57c1148c2',
         namespace: 'custom',
         slug: 'decens',
         value: 'uterque',
@@ -908,14 +908,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '7d25887e-4abf-4f60-a00a-10e7d6dc1590',
+        id: '99b249a4-ac45-4ef2-9a3f-0e2fde63a49b',
         namespace: 'custom',
         slug: 'benevolentia',
         value: 'pariatur',
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-11T07:52:29.098Z'),
+    updated_at: DateTime.iso8601('2023-10-11T09:51:55.288Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -965,18 +965,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchTaskTaskRequest.new(
   task_task: Models::Shared::TaskTask.new(
     attachment_ids: [],
-    completed_at: DateTime.iso8601('2022-04-05T19:58:29.546Z'),
+    completed_at: DateTime.iso8601('2022-04-06T05:02:36.696Z'),
     created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-    due_at: DateTime.iso8601('2026-05-21T17:19:29.763Z'),
-    end_at: DateTime.iso8601('2022-10-28T05:54:19.267Z'),
+    due_at: DateTime.iso8601('2026-05-22T14:10:09.608Z'),
+    end_at: DateTime.iso8601('2022-10-28T16:34:45.236Z'),
     has_children: true,
-    id: '984bfbe9-d033-4672-87a5-bb452460ccde',
+    id: '6c37b17a-588a-4ec8-99f9-9b1f71541e8b',
     metadata: [],
     name: 'Direct Markets Architect',
     notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
     priority: 'LOW',
     progress: 2.0,
-    start_at: DateTime.iso8601('2022-01-31T03:00:08.406Z'),
+    start_at: DateTime.iso8601('2022-01-31T11:33:55.175Z'),
     status: Models::Shared::TaskTaskStatus::IN_PROGRESS,
     story_points: 0.0,
     tags: [
@@ -986,7 +986,7 @@ req = Models::Operations::PatchTaskTaskRequest.new(
     time_spent: 957.0,
     time_spent_unit: 'SECONDS',
     type: 'tubineus',
-    updated_at: DateTime.iso8601('2019-07-15T04:52:59.309Z'),
+    updated_at: DateTime.iso8601('2019-07-15T06:10:16.849Z'),
     url: 'https://dismal-silk.net/',
   ),
   connection_id: '<id>',
@@ -1204,10 +1204,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-09-28T18:13:25.838Z'),
+    completed_at: DateTime.iso8601('2025-09-29T12:21:39.376Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '10ea6c85-f39a-4ed9-b239-54c3f46503b5',
+    id: '275e48d6-ca86-4c3f-a494-fd4a4eba0e92',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1222,12 +1222,12 @@ req = Models::Operations::UpdateGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-05-19T14:45:19.490Z'),
+    started_at: DateTime.iso8601('2024-05-20T03:52:48.612Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-02-25T02:36:52.854Z'),
+    updated_at: DateTime.iso8601('2023-02-25T11:12:26.658Z'),
     web_url: 'https://inexperienced-adrenalin.biz/',
   ),
   connection_id: '<id>',
@@ -1279,9 +1279,9 @@ req = Models::Operations::UpdateTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: 'e9c38407-0f21-483c-ab57-9bd623074008',
+    id: '19e8ee1b-161b-43a8-b2e1-ddb21bb50763',
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-10-02T11:21:37.064Z'),
+    updated_at: DateTime.iso8601('2021-10-02T17:33:03.636Z'),
     user_name: 'Santina Abbott',
   ),
   connection_id: '<id>',
@@ -1335,14 +1335,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: 'ece461a4-3691-4a5b-8e07-161fc2869dc5',
+    id: '9957a8b2-1262-41df-a4ec-91b9779bfc6c',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'e210de9e-1ad0-4b41-b132-641831a8d3e3',
+        id: '7101b309-ccae-4d05-a7d6-18f57c1148c2',
         namespace: 'custom',
         slug: 'decens',
         value: 'uterque',
@@ -1352,14 +1352,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '7d25887e-4abf-4f60-a00a-10e7d6dc1590',
+        id: '99b249a4-ac45-4ef2-9a3f-0e2fde63a49b',
         namespace: 'custom',
         slug: 'benevolentia',
         value: 'pariatur',
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-11T07:52:29.098Z'),
+    updated_at: DateTime.iso8601('2023-10-11T09:51:55.288Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1409,18 +1409,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateTaskTaskRequest.new(
   task_task: Models::Shared::TaskTask.new(
     attachment_ids: [],
-    completed_at: DateTime.iso8601('2022-04-05T19:58:29.546Z'),
+    completed_at: DateTime.iso8601('2022-04-06T05:02:36.696Z'),
     created_at: DateTime.iso8601('2019-01-31T08:34:55.626Z'),
-    due_at: DateTime.iso8601('2026-05-21T17:19:29.763Z'),
-    end_at: DateTime.iso8601('2022-10-28T05:54:19.267Z'),
+    due_at: DateTime.iso8601('2026-05-22T14:10:09.608Z'),
+    end_at: DateTime.iso8601('2022-10-28T16:34:45.236Z'),
     has_children: true,
-    id: '984bfbe9-d033-4672-87a5-bb452460ccde',
+    id: '6c37b17a-588a-4ec8-99f9-9b1f71541e8b',
     metadata: [],
     name: 'Direct Markets Architect',
     notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
     priority: 'LOW',
     progress: 2.0,
-    start_at: DateTime.iso8601('2022-01-31T03:00:08.406Z'),
+    start_at: DateTime.iso8601('2022-01-31T11:33:55.175Z'),
     status: Models::Shared::TaskTaskStatus::IN_PROGRESS,
     story_points: 0.0,
     tags: [
@@ -1430,7 +1430,7 @@ req = Models::Operations::UpdateTaskTaskRequest.new(
     time_spent: 957.0,
     time_spent_unit: 'SECONDS',
     type: 'tubineus',
-    updated_at: DateTime.iso8601('2019-07-15T04:52:59.309Z'),
+    updated_at: DateTime.iso8601('2019-07-15T06:10:16.849Z'),
     url: 'https://dismal-silk.net/',
   ),
   connection_id: '<id>',

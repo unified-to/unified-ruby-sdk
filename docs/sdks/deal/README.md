@@ -31,19 +31,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   amount: 98_162.0,
-  closed_at: DateTime.iso8601('2024-03-09T18:53:25.631Z'),
-  closing_at: DateTime.iso8601('2025-08-29T12:34:39.752Z'),
+  closed_at: DateTime.iso8601('2024-03-09T23:27:25.005Z'),
+  closing_at: DateTime.iso8601('2025-08-30T02:59:45.307Z'),
   created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
   currency: 'IQD',
   description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
-  id: 'aa95bafb-d207-4e33-9a57-ec15e964f39c',
+  id: 'e29acd65-714a-400f-9cbe-389972589d74',
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '02d268d4-b535-45b3-8e61-53d1ee6b46fa',
+      id: '05d739bd-f5de-4881-9d54-e7dcfd39324c',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'conatus',
@@ -52,7 +52,7 @@ res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   name: 'Frozen Silk Chicken',
   pipelines: [
     Models::Shared::CrmReference.new(
-      id: 'af5d98e5-2523-476d-b15f-8289cea0caba',
+      id: '8f11c546-00f7-4d98-ae39-bb422ca8afa2',
       name: 'trans',
     ),
   ],
@@ -60,11 +60,11 @@ res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   source: 'cubo',
   stages: [
     Models::Shared::CrmReference.new(
-      id: 'ac80d9a0-d774-4ec3-948a-7b37fa056574',
+      id: '0b1ae1d4-a4d7-4e14-a493-c0b9b7fcb224',
       name: 'tubineus',
     ),
     Models::Shared::CrmReference.new(
-      id: 'e26bbeb6-ad9e-4321-831e-8a7cc43e281e',
+      id: 'b70b3259-bc43-4135-a067-c4b8e60a9797',
       name: 'adfectus',
     ),
   ],
@@ -72,7 +72,7 @@ res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
     'causa',
     'suus',
   ],
-  updated_at: DateTime.iso8601('2024-10-10T16:52:26.088Z'),
+  updated_at: DateTime.iso8601('2024-10-11T01:22:40.142Z'),
   won_reason: 'Usque libero soleo.',
 ), connection_id: '<id>')
 
@@ -210,19 +210,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-09T18:53:25.634Z'),
-    closing_at: DateTime.iso8601('2025-08-29T12:34:39.763Z'),
+    closed_at: DateTime.iso8601('2024-03-09T23:27:25.008Z'),
+    closing_at: DateTime.iso8601('2025-08-30T02:59:45.317Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'IQD',
     description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
-    id: '1081b832-ba28-4007-b398-20b237ceb6c2',
+    id: '58f12bab-1d4b-48d4-8cf9-9beb58f718a9',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'b33e82e8-3a34-4554-9ad9-0cd39c039032',
+        id: 'f09628f6-612a-40fe-9d88-066c2a2c014e',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'conatus',
@@ -231,7 +231,7 @@ req = Models::Operations::PatchCrmDealRequest.new(
     name: 'Frozen Silk Chicken',
     pipelines: [
       Models::Shared::CrmReference.new(
-        id: '8552803a-a795-4523-af93-d88be97d5bc4',
+        id: '83988f5c-38da-4136-886e-3b28ea6c6275',
         name: 'trans',
       ),
     ],
@@ -239,11 +239,11 @@ req = Models::Operations::PatchCrmDealRequest.new(
     source: 'cubo',
     stages: [
       Models::Shared::CrmReference.new(
-        id: '3da6dba3-5510-44aa-ab46-f95cc69bcf8b',
+        id: '8cd983d9-b24c-405c-b76e-81dfc3336588',
         name: 'tubineus',
       ),
       Models::Shared::CrmReference.new(
-        id: '41e5f005-b9b8-4ad2-86af-2cefcc22a27f',
+        id: '18f3c85a-9491-4f3e-9da0-4f2b5c937e20',
         name: 'adfectus',
       ),
     ],
@@ -251,7 +251,7 @@ req = Models::Operations::PatchCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-10T16:52:26.095Z'),
+    updated_at: DateTime.iso8601('2024-10-11T01:22:40.147Z'),
     won_reason: 'Usque libero soleo.',
   ),
   connection_id: '<id>',
@@ -344,19 +344,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-09T18:53:25.634Z'),
-    closing_at: DateTime.iso8601('2025-08-29T12:34:39.763Z'),
+    closed_at: DateTime.iso8601('2024-03-09T23:27:25.008Z'),
+    closing_at: DateTime.iso8601('2025-08-30T02:59:45.317Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'IQD',
     description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
-    id: '1081b832-ba28-4007-b398-20b237ceb6c2',
+    id: '58f12bab-1d4b-48d4-8cf9-9beb58f718a9',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'b33e82e8-3a34-4554-9ad9-0cd39c039032',
+        id: 'f09628f6-612a-40fe-9d88-066c2a2c014e',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'conatus',
@@ -365,7 +365,7 @@ req = Models::Operations::UpdateCrmDealRequest.new(
     name: 'Frozen Silk Chicken',
     pipelines: [
       Models::Shared::CrmReference.new(
-        id: '8552803a-a795-4523-af93-d88be97d5bc4',
+        id: '83988f5c-38da-4136-886e-3b28ea6c6275',
         name: 'trans',
       ),
     ],
@@ -373,11 +373,11 @@ req = Models::Operations::UpdateCrmDealRequest.new(
     source: 'cubo',
     stages: [
       Models::Shared::CrmReference.new(
-        id: '3da6dba3-5510-44aa-ab46-f95cc69bcf8b',
+        id: '8cd983d9-b24c-405c-b76e-81dfc3336588',
         name: 'tubineus',
       ),
       Models::Shared::CrmReference.new(
-        id: '41e5f005-b9b8-4ad2-86af-2cefcc22a27f',
+        id: '18f3c85a-9491-4f3e-9da0-4f2b5c937e20',
         name: 'adfectus',
       ),
     ],
@@ -385,7 +385,7 @@ req = Models::Operations::UpdateCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-10T16:52:26.095Z'),
+    updated_at: DateTime.iso8601('2024-10-11T01:22:40.147Z'),
     won_reason: 'Usque libero soleo.',
   ),
   connection_id: '<id>',

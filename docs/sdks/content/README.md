@@ -38,7 +38,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   difficulty: 'Beginner',
   duration_minutes: 19.0,
   external_reference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-  id: '09b681a8-f6de-413e-94c4-06e8b7ad3362',
+  id: '7140a732-8b44-4a34-9dee-62274e8bb470',
   instructors: [
     Models::Shared::LmsReference.new(
       id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
@@ -117,7 +117,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   tags: [
     'dens',
   ],
-  updated_at: DateTime.iso8601('2022-10-03T04:44:47.453Z'),
+  updated_at: DateTime.iso8601('2022-10-03T11:53:52.798Z'),
 ), connection_id: '<id>')
 
 unless res.lms_content.nil?
@@ -261,7 +261,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     difficulty: 'Beginner',
     duration_minutes: 19.0,
     external_reference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-    id: 'e8a0035d-b1a5-454e-aa49-99691f4f473e',
+    id: 'f24ad348-41a4-4cb5-a1d4-3b56a0ff93a4',
     instructors: [
       Models::Shared::LmsReference.new(
         id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
@@ -340,7 +340,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-03T04:44:47.459Z'),
+    updated_at: DateTime.iso8601('2022-10-03T11:53:52.804Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -439,7 +439,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     difficulty: 'Beginner',
     duration_minutes: 19.0,
     external_reference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-    id: 'e8a0035d-b1a5-454e-aa49-99691f4f473e',
+    id: 'f24ad348-41a4-4cb5-a1d4-3b56a0ff93a4',
     instructors: [
       Models::Shared::LmsReference.new(
         id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
@@ -518,7 +518,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-03T04:44:47.459Z'),
+    updated_at: DateTime.iso8601('2022-10-03T11:53:52.804Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

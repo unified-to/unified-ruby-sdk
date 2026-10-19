@@ -31,14 +31,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.interview.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(
   created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
-  end_at: DateTime.iso8601('2025-10-17T03:43:03.304Z'),
-  external_event_xref: 'd820b33f-1135-4ec7-945b-b01af7ab4701',
-  id: '9071e239-41bc-4d9a-9623-9340c2fcc950',
+  end_at: DateTime.iso8601('2025-10-17T21:13:01.859Z'),
+  external_event_xref: 'b0450c2b-c353-4853-9574-0ccc45c07511',
+  id: '4910c145-ae37-46bc-ad7e-4add478774f1',
   location: '26596 Halle Trafficway',
   meeting_url: 'https://immaculate-foodstuffs.biz',
-  start_at: DateTime.iso8601('2025-06-09T21:48:18.963Z'),
+  start_at: DateTime.iso8601('2025-06-10T13:42:39.519Z'),
   status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-  updated_at: DateTime.iso8601('2026-03-02T02:47:27.784Z'),
+  updated_at: DateTime.iso8601('2026-03-02T21:58:02.458Z'),
 ), connection_id: '<id>')
 
 unless res.ats_interview.nil?
@@ -175,14 +175,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
-    end_at: DateTime.iso8601('2025-10-17T03:43:03.314Z'),
-    external_event_xref: '63e73170-0f86-4fd7-a8f9-32a37a9febbc',
-    id: 'db7f6a46-adbc-4c99-b18f-24a097d0d30b',
+    end_at: DateTime.iso8601('2025-10-17T21:13:01.867Z'),
+    external_event_xref: '63ce1798-5a98-43a9-9c64-d405680649c5',
+    id: '68fb39bb-2623-4b40-abfb-bcd10fa97b4a',
     location: '26596 Halle Trafficway',
     meeting_url: 'https://immaculate-foodstuffs.biz',
-    start_at: DateTime.iso8601('2025-06-09T21:48:18.972Z'),
+    start_at: DateTime.iso8601('2025-06-10T13:42:39.526Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2026-03-02T02:47:27.795Z'),
+    updated_at: DateTime.iso8601('2026-03-02T21:58:02.467Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -274,14 +274,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
-    end_at: DateTime.iso8601('2025-10-17T03:43:03.314Z'),
-    external_event_xref: '63e73170-0f86-4fd7-a8f9-32a37a9febbc',
-    id: 'db7f6a46-adbc-4c99-b18f-24a097d0d30b',
+    end_at: DateTime.iso8601('2025-10-17T21:13:01.867Z'),
+    external_event_xref: '63ce1798-5a98-43a9-9c64-d405680649c5',
+    id: '68fb39bb-2623-4b40-abfb-bcd10fa97b4a',
     location: '26596 Halle Trafficway',
     meeting_url: 'https://immaculate-foodstuffs.biz',
-    start_at: DateTime.iso8601('2025-06-09T21:48:18.972Z'),
+    start_at: DateTime.iso8601('2025-06-10T13:42:39.526Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2026-03-02T02:47:27.795Z'),
+    updated_at: DateTime.iso8601('2026-03-02T21:58:02.467Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

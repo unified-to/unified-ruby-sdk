@@ -30,16 +30,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.expensereport.create_accounting_expensereport(accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-  approved_at: DateTime.iso8601('2025-04-11T16:44:56.293Z'),
+  approved_at: DateTime.iso8601('2025-04-12T09:31:48.733Z'),
   attachments: [],
   category_ids: [],
   created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
   currency: 'BMD',
   external_number: 'asporto',
-  id: 'ae1904a2-92f8-4834-9051-59ab133d384e',
+  id: '8d5bed23-08d6-4d17-a18f-6046595bd806',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: 'efc6ec6f-8e0a-4420-beda-a7907478fd9a',
+      id: '32aa64b7-afea-4e91-9f76-f6d8b01bb81f',
       item_description: 'The Synchronised motivating software Car offers reliable performance and webbed design',
       item_name: 'Intelligent Gold Cheese',
       item_sku: '978-0-6550-0228-4',
@@ -50,7 +50,7 @@ res = s.expensereport.create_accounting_expensereport(accounting_expensereport: 
       unit_quantity: 1.0,
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'c7e7d06d-7dd6-4b70-a056-54c4680f1c55',
+      id: '27de9590-5635-467f-bd68-26f224bb657b',
       item_description: 'Ergonomic Bike made with Marble for all-day coordinated support',
       item_name: 'Practical Steel Pizza',
       item_sku: '978-1-4129-9332-6',
@@ -63,12 +63,12 @@ res = s.expensereport.create_accounting_expensereport(accounting_expensereport: 
   ],
   metadata: [],
   name: 'Rustic Aluminum Car',
-  posted_at: DateTime.iso8601('2022-11-01T21:58:27.543Z'),
+  posted_at: DateTime.iso8601('2022-11-02T06:20:29.638Z'),
   reimbursed_amount: 6696.0,
   status: Models::Shared::AccountingExpensereportStatus::PAID,
   tax_amount: 983.0,
   total_amount: 13_931.0,
-  updated_at: DateTime.iso8601('2025-04-11T16:44:56.293Z'),
+  updated_at: DateTime.iso8601('2025-04-12T09:31:48.733Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_expensereport.nil?
@@ -204,16 +204,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchAccountingExpensereportRequest.new(
   accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-    approved_at: DateTime.iso8601('2025-04-11T16:44:56.325Z'),
+    approved_at: DateTime.iso8601('2025-04-12T09:31:48.772Z'),
     attachments: [],
     category_ids: [],
     created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     currency: 'BMD',
     external_number: 'asporto',
-    id: '21f3cee5-1306-4bf1-a21b-140092ebf0b2',
+    id: 'c031fe83-6b37-42b1-a498-9b135c4bdacf',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '9e2b60ae-a5db-4140-b315-414fa7e71b2c',
+        id: 'd8e0030c-57db-41eb-a053-693bc14a40d2',
         item_description: 'The Synchronised motivating software Car offers reliable performance and webbed design',
         item_name: 'Intelligent Gold Cheese',
         item_sku: '978-0-6550-0228-4',
@@ -224,7 +224,7 @@ req = Models::Operations::PatchAccountingExpensereportRequest.new(
         unit_quantity: 1.0,
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'b53a2b67-0ed4-4b59-abb7-2639d84ebf5f',
+        id: '4e8ce484-6d22-42cd-adbb-b5fe9ae17e2a',
         item_description: 'Ergonomic Bike made with Marble for all-day coordinated support',
         item_name: 'Practical Steel Pizza',
         item_sku: '978-1-4129-9332-6',
@@ -237,12 +237,12 @@ req = Models::Operations::PatchAccountingExpensereportRequest.new(
     ],
     metadata: [],
     name: 'Rustic Aluminum Car',
-    posted_at: DateTime.iso8601('2022-11-01T21:58:27.559Z'),
+    posted_at: DateTime.iso8601('2022-11-02T06:20:29.657Z'),
     reimbursed_amount: 6696.0,
     status: Models::Shared::AccountingExpensereportStatus::PAID,
     tax_amount: 983.0,
     total_amount: 13_931.0,
-    updated_at: DateTime.iso8601('2025-04-11T16:44:56.325Z'),
+    updated_at: DateTime.iso8601('2025-04-12T09:31:48.772Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -333,16 +333,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateAccountingExpensereportRequest.new(
   accounting_expensereport: Models::Shared::AccountingExpensereport.new(
-    approved_at: DateTime.iso8601('2025-04-11T16:44:56.325Z'),
+    approved_at: DateTime.iso8601('2025-04-12T09:31:48.772Z'),
     attachments: [],
     category_ids: [],
     created_at: DateTime.iso8601('2020-05-29T02:04:59.078Z'),
     currency: 'BMD',
     external_number: 'asporto',
-    id: '21f3cee5-1306-4bf1-a21b-140092ebf0b2',
+    id: 'c031fe83-6b37-42b1-a498-9b135c4bdacf',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '9e2b60ae-a5db-4140-b315-414fa7e71b2c',
+        id: 'd8e0030c-57db-41eb-a053-693bc14a40d2',
         item_description: 'The Synchronised motivating software Car offers reliable performance and webbed design',
         item_name: 'Intelligent Gold Cheese',
         item_sku: '978-0-6550-0228-4',
@@ -353,7 +353,7 @@ req = Models::Operations::UpdateAccountingExpensereportRequest.new(
         unit_quantity: 1.0,
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'b53a2b67-0ed4-4b59-abb7-2639d84ebf5f',
+        id: '4e8ce484-6d22-42cd-adbb-b5fe9ae17e2a',
         item_description: 'Ergonomic Bike made with Marble for all-day coordinated support',
         item_name: 'Practical Steel Pizza',
         item_sku: '978-1-4129-9332-6',
@@ -366,12 +366,12 @@ req = Models::Operations::UpdateAccountingExpensereportRequest.new(
     ],
     metadata: [],
     name: 'Rustic Aluminum Car',
-    posted_at: DateTime.iso8601('2022-11-01T21:58:27.559Z'),
+    posted_at: DateTime.iso8601('2022-11-02T06:20:29.657Z'),
     reimbursed_amount: 6696.0,
     status: Models::Shared::AccountingExpensereportStatus::PAID,
     tax_amount: 983.0,
     total_amount: 13_931.0,
-    updated_at: DateTime.iso8601('2025-04-11T16:44:56.325Z'),
+    updated_at: DateTime.iso8601('2025-04-12T09:31:48.772Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

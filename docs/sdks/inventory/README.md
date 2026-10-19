@@ -31,7 +31,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.inventory.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(
   available: 337.0,
-  updated_at: DateTime.iso8601('2025-11-17T22:42:12.091Z'),
+  updated_at: DateTime.iso8601('2025-11-18T16:26:16.847Z'),
 ), connection_id: '<id>')
 
 unless res.commerce_inventory.nil?
@@ -168,7 +168,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    updated_at: DateTime.iso8601('2025-11-17T22:42:12.096Z'),
+    updated_at: DateTime.iso8601('2025-11-18T16:26:16.853Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -260,7 +260,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    updated_at: DateTime.iso8601('2025-11-17T22:42:12.096Z'),
+    updated_at: DateTime.iso8601('2025-11-18T16:26:16.853Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

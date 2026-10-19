@@ -57,7 +57,7 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'clarus aptus cetera',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: '80af28db-0447-46e2-b142-5768bf892921',
+  id: '9e0d2d75-0d97-42f0-9926-2ddc64f88160',
   metadata: [],
   practitioner_ids: [],
   reasons: [
@@ -77,7 +77,7 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2025-11-17T04:25:54.948Z'),
+  updated_at: DateTime.iso8601('2025-11-17T20:42:40.303Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -155,15 +155,15 @@ res = s.healthcare.create_healthcare_observation(healthcare_observation: Models:
     ),
   ],
   created_at: DateTime.iso8601('2022-12-06T21:34:04.293Z'),
-  id: '9a713953-1a54-490d-a70f-bff11be36538',
+  id: 'b407870a-4dc4-40e8-81d8-fe360299cbc7',
   interpretation: Models::Shared::Interpretation::CRITICAL_HIGH,
-  issued_at: DateTime.iso8601('2025-05-09T12:30:05.716Z'),
+  issued_at: DateTime.iso8601('2025-05-10T02:18:02.330Z'),
   metadata: [],
   name: 'Blood pressure panel',
-  observed_at: DateTime.iso8601('2025-01-18T11:47:13.788Z'),
+  observed_at: DateTime.iso8601('2025-01-18T23:51:15.443Z'),
   status: Models::Shared::HealthcareObservationStatus::CORRECTED,
   type: Models::Shared::HealthcareObservationType::VITAL_SIGNS,
-  updated_at: DateTime.iso8601('2026-03-21T15:59:06.549Z'),
+  updated_at: DateTime.iso8601('2026-03-22T10:42:56.526Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -227,7 +227,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: 'eca3858f-c799-4f09-9a26-8cd996b91528',
+  id: '2cb89a12-a7c7-4231-b43c-7d981b8252ea',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -247,7 +247,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
       type: Models::Shared::HealthcareTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-19T23:26:26.323Z'),
+  updated_at: DateTime.iso8601('2026-06-20T20:06:14.543Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -1276,7 +1276,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'd528882e-e169-4021-afe0-7e7885bf9c8e',
+    id: '31db7aaf-da65-45a6-8577-1291d7b7f54e',
     metadata: [],
     practitioner_ids: [],
     reasons: [
@@ -1296,7 +1296,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-17T04:25:54.964Z'),
+    updated_at: DateTime.iso8601('2025-11-17T20:42:40.318Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1363,7 +1363,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'ff03defe-888a-412b-a562-feac195a7a8b',
+    id: 'a87750c8-e94c-4723-89e1-8c3ae64c5810',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -1383,7 +1383,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-19T23:26:26.344Z'),
+    updated_at: DateTime.iso8601('2026-06-20T20:06:14.571Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1477,7 +1477,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'd528882e-e169-4021-afe0-7e7885bf9c8e',
+    id: '31db7aaf-da65-45a6-8577-1291d7b7f54e',
     metadata: [],
     practitioner_ids: [],
     reasons: [
@@ -1497,7 +1497,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-17T04:25:54.964Z'),
+    updated_at: DateTime.iso8601('2025-11-17T20:42:40.318Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1564,7 +1564,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'ff03defe-888a-412b-a562-feac195a7a8b',
+    id: 'a87750c8-e94c-4723-89e1-8c3ae64c5810',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -1584,7 +1584,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-19T23:26:26.344Z'),
+    updated_at: DateTime.iso8601('2026-06-20T20:06:14.571Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
