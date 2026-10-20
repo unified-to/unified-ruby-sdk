@@ -26,6 +26,7 @@ module UnifiedRubySDK
           LOCATION = new('location')
           MEETING_URL = new('meeting_url')
           EXTERNAL_EVENT_XREF = new('external_event_xref')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

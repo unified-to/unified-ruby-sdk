@@ -27,6 +27,8 @@ module UnifiedRubySDK
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
         field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MarketingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The list's name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration for this list
@@ -48,8 +50,8 @@ module UnifiedRubySDK
         # The user who created this list (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyMarketingListAddress), created_at: T.nilable(::DateTime), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_active: T.nilable(T::Boolean), language: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sender_company: T.nilable(::String), sender_email: T.nilable(::String), sender_name: T.nilable(::String), sender_phone: T.nilable(::String), start_at: T.nilable(::DateTime), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(address: nil, created_at: nil, description: nil, end_at: nil, id: nil, is_active: nil, language: nil, name: nil, raw: nil, sender_company: nil, sender_email: nil, sender_name: nil, sender_phone: nil, start_at: nil, subject: nil, updated_at: nil, user_id: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyMarketingListAddress), created_at: T.nilable(::DateTime), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_active: T.nilable(T::Boolean), language: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::MarketingMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sender_company: T.nilable(::String), sender_email: T.nilable(::String), sender_name: T.nilable(::String), sender_phone: T.nilable(::String), start_at: T.nilable(::DateTime), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(address: nil, created_at: nil, description: nil, end_at: nil, id: nil, is_active: nil, language: nil, metadata: nil, name: nil, raw: nil, sender_company: nil, sender_email: nil, sender_name: nil, sender_phone: nil, start_at: nil, subject: nil, updated_at: nil, user_id: nil)
           @address = address
           @created_at = created_at
           @description = description
@@ -57,6 +59,7 @@ module UnifiedRubySDK
           @id = id
           @is_active = is_active
           @language = language
+          @metadata = metadata
           @name = name
           @raw = raw
           @sender_company = sender_company
@@ -79,6 +82,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_active == other.is_active
           return false unless @language == other.language
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @sender_company == other.sender_company

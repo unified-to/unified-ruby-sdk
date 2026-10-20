@@ -20,4 +20,5 @@
 | `IS_ACTIVE`           | is_active             |
 | `IS_HQ`               | is_hq                 |
 | `COMPANY_ID`          | company_id            |
+| `METADATA`            | metadata              |
 | `RAW`                 | raw                   |

@@ -30,6 +30,7 @@ module UnifiedRubySDK
           CONTACT_IDS = new('contact_ids')
           LEAD_IDS = new('lead_ids')
           USER_ID = new('user_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

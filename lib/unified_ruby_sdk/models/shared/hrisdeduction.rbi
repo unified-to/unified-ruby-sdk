@@ -34,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::HrisDeduction
   def is_active=(str_); end
   def max_amount(); end
   def max_amount=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def notes(); end
   def notes=(str_); end
   def paycode_id(); end

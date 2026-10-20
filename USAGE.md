@@ -12,27 +12,23 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.accounting.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(
   balance: 12_092.0,
   created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
-  currency: 'BOB',
-  customer_defined_code: 'quo',
-  description: 'Spoliatio comedo vilitas harum cupiditate.',
-  id: 'fe2a1956-ca4f-4f5e-b368-e1a29c17915d',
-  is_payable: true,
-  name: 'Electronic Aluminum Tuna',
+  currency: 'CAD',
+  customer_defined_code: '6170',
+  description: 'Voluptatibus valde spoliatio.',
+  id: 'b53f61d7-38ae-45b7-8f61-d3c00d7bc340',
+  is_payable: false,
+  metadata: [],
+  name: 'Auto Loan Account',
   status: Models::Shared::Status::ARCHIVED,
   taxonomy: [
     Models::Shared::AccountingAccountTaxonomy.new(
-      original_type: 'vesper',
+      original_type: 'vilitas',
       type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-      value: 'iste',
-    ),
-    Models::Shared::AccountingAccountTaxonomy.new(
-      original_type: 'adamo',
-      type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-      value: 'peccatus',
+      value: 'comedo',
     ),
   ],
-  type: Models::Shared::Type::BANK,
-  updated_at: DateTime.iso8601('2023-01-06T19:33:13.679Z'),
+  type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
+  updated_at: DateTime.iso8601('2023-08-06T15:46:01.977Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

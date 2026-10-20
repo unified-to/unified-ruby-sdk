@@ -24,6 +24,7 @@ module UnifiedRubySDK
           RECOMMENDATION = new('recommendation')
           COMMENT = new('comment')
           QUESTIONS = new('questions')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

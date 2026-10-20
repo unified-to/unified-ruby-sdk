@@ -34,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::CalendarEvent
   def location=(str_); end
   def matter_id(); end
   def matter_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def notes(); end
   def notes=(str_); end
   def organizer(); end

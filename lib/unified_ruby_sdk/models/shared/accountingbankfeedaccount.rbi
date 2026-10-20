@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::AccountingBankfeedaccount
   def feed_start_at=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end

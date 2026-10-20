@@ -21,6 +21,7 @@ module UnifiedRubySDK
           DEAL_PROBABILITY = new('deal_probability')
           DISPLAY_ORDER = new('display_order')
           STAGES = new('stages')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

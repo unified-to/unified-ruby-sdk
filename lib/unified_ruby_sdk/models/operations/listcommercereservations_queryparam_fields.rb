@@ -30,6 +30,7 @@ module UnifiedRubySDK
           CREATED_AT = new('created_at')
           UPDATED_AT = new('updated_at')
           URL = new('url')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -34,6 +34,7 @@ module UnifiedRubySDK
           PROFILE_IMAGE_URL = new('profile_image_url')
           COVER_IMAGE_URL = new('cover_image_url')
           ACTIVITY_TYPES = new('activity_types')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -37,14 +37,8 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   description: 'Usque laboriosam ventosus adflicto.',
   difficulty: 'Beginner',
   duration_minutes: 19.0,
-  external_reference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-  id: '7140a732-8b44-4a34-9dee-62274e8bb470',
-  instructors: [
-    Models::Shared::LmsReference.new(
-      id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
-      name: 'Winston Ferry',
-    ),
-  ],
+  id: '267b35e6-fd25-43ca-ad1f-90f8f6790835',
+  instructors: [],
   is_active: true,
   languages: [
     'despecto',
@@ -52,14 +46,14 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   ],
   localizations: [
     Models::Shared::LmsContentLocalization.new(
-      description: 'Numquam.',
+      description: 'Acervus.',
       language: 'es',
-      name: 'validus',
+      name: 'talis',
     ),
     Models::Shared::LmsContentLocalization.new(
-      description: 'Callide.',
-      language: 'fr',
-      name: 'crux',
+      description: 'Ratione.',
+      language: 'es',
+      name: 'sint',
     ),
   ],
   media: [
@@ -100,10 +94,11 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
       url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
     ),
   ],
+  metadata: [],
   name: 'ut',
-  provider_name: 'Berge LLC',
-  published_at: DateTime.iso8601('2023-11-08T11:32:09.080Z'),
-  short_description: 'Commemoro.',
+  provider_name: 'Bins LLC',
+  published_at: DateTime.iso8601('2022-09-02T23:04:43.015Z'),
+  short_description: 'Caritas.',
   skills: [
     'trucido',
   ],
@@ -117,7 +112,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   tags: [
     'dens',
   ],
-  updated_at: DateTime.iso8601('2022-10-03T11:53:52.798Z'),
+  updated_at: DateTime.iso8601('2022-10-03T21:01:18.729Z'),
 ), connection_id: '<id>')
 
 unless res.lms_content.nil?
@@ -260,14 +255,8 @@ req = Models::Operations::PatchLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    external_reference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-    id: 'f24ad348-41a4-4cb5-a1d4-3b56a0ff93a4',
-    instructors: [
-      Models::Shared::LmsReference.new(
-        id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
-        name: 'Winston Ferry',
-      ),
-    ],
+    id: '79b3af00-ee33-4bdb-bf07-125012707426',
+    instructors: [],
     is_active: true,
     languages: [
       'despecto',
@@ -275,14 +264,14 @@ req = Models::Operations::PatchLmsContentRequest.new(
     ],
     localizations: [
       Models::Shared::LmsContentLocalization.new(
-        description: 'Numquam.',
+        description: 'Acervus.',
         language: 'es',
-        name: 'validus',
+        name: 'talis',
       ),
       Models::Shared::LmsContentLocalization.new(
-        description: 'Callide.',
-        language: 'fr',
-        name: 'crux',
+        description: 'Ratione.',
+        language: 'es',
+        name: 'sint',
       ),
     ],
     media: [
@@ -323,10 +312,11 @@ req = Models::Operations::PatchLmsContentRequest.new(
         url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
       ),
     ],
+    metadata: [],
     name: 'ut',
-    provider_name: 'Berge LLC',
-    published_at: DateTime.iso8601('2023-11-08T11:32:09.080Z'),
-    short_description: 'Commemoro.',
+    provider_name: 'Bins LLC',
+    published_at: DateTime.iso8601('2022-09-02T23:04:43.027Z'),
+    short_description: 'Caritas.',
     skills: [
       'trucido',
     ],
@@ -340,7 +330,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-03T11:53:52.804Z'),
+    updated_at: DateTime.iso8601('2022-10-03T21:01:18.742Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -438,14 +428,8 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    external_reference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-    id: 'f24ad348-41a4-4cb5-a1d4-3b56a0ff93a4',
-    instructors: [
-      Models::Shared::LmsReference.new(
-        id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
-        name: 'Winston Ferry',
-      ),
-    ],
+    id: '79b3af00-ee33-4bdb-bf07-125012707426',
+    instructors: [],
     is_active: true,
     languages: [
       'despecto',
@@ -453,14 +437,14 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     ],
     localizations: [
       Models::Shared::LmsContentLocalization.new(
-        description: 'Numquam.',
+        description: 'Acervus.',
         language: 'es',
-        name: 'validus',
+        name: 'talis',
       ),
       Models::Shared::LmsContentLocalization.new(
-        description: 'Callide.',
-        language: 'fr',
-        name: 'crux',
+        description: 'Ratione.',
+        language: 'es',
+        name: 'sint',
       ),
     ],
     media: [
@@ -501,10 +485,11 @@ req = Models::Operations::UpdateLmsContentRequest.new(
         url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
       ),
     ],
+    metadata: [],
     name: 'ut',
-    provider_name: 'Berge LLC',
-    published_at: DateTime.iso8601('2023-11-08T11:32:09.080Z'),
-    short_description: 'Commemoro.',
+    provider_name: 'Bins LLC',
+    published_at: DateTime.iso8601('2022-09-02T23:04:43.027Z'),
+    short_description: 'Caritas.',
     skills: [
       'trucido',
     ],
@@ -518,7 +503,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-03T11:53:52.804Z'),
+    updated_at: DateTime.iso8601('2022-10-03T21:01:18.742Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

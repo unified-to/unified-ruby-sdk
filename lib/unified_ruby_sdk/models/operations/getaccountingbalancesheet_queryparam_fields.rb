@@ -24,6 +24,7 @@ module UnifiedRubySDK
           ASSETS = new('assets')
           LIABILITIES = new('liabilities')
           EQUITY = new('equity')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

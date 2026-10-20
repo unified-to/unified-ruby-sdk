@@ -31,6 +31,7 @@ module UnifiedRubySDK
           MAX_SCORE = new('max_score')
           INFO_URL = new('info_url')
           VALID_REGIONS = new('valid_regions')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

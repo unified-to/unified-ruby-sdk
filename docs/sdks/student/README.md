@@ -31,31 +31,38 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
   address: Models::Shared::PropertyLmsStudentAddress.new(
-    address1: '94082 Kassandra Camp',
-    address2: 'Apt. 461',
-    city: 'New Ibrahimmouth',
+    address1: '15033 Corwin Circles',
+    city: 'New Craigside',
     country_code: 'US',
-    postal_code: '52851',
-    region: 'Tennessee',
-    region_code: 'NV',
+    postal_code: '73966',
+    region: 'New Jersey',
+    region_code: 'TX',
   ),
   created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
   emails: [
     Models::Shared::LmsEmail.new(),
-    Models::Shared::LmsEmail.new(),
   ],
   first_name: 'Marcella',
-  id: 'c924f90e-78d5-4abd-a4c0-7e9aadd82906',
-  image_url: 'https://avatars.githubusercontent.com/u/36301374',
+  id: '1e64a5f2-909f-4a15-b816-1650cefa876c',
+  image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
   last_name: 'Murazik',
+  metadata: [],
   name: 'Marcella Murazik',
   telephones: [
     Models::Shared::LmsTelephone.new(
-      telephone: '(482) 469-8067',
+      telephone: '(899) 827-6400',
+      type: Models::Shared::LmsTelephoneType::WORK,
+    ),
+    Models::Shared::LmsTelephone.new(
+      telephone: '(487) 213-8236',
+      type: Models::Shared::LmsTelephoneType::FAX,
+    ),
+    Models::Shared::LmsTelephone.new(
+      telephone: '(980) 775-2940',
       type: Models::Shared::LmsTelephoneType::FAX,
     ),
   ],
-  updated_at: DateTime.iso8601('2022-06-30T05:42:56.093Z'),
+  updated_at: DateTime.iso8601('2022-06-30T15:24:44.314Z'),
 ), connection_id: '<id>')
 
 unless res.lms_student.nil?
@@ -192,31 +199,38 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchLmsStudentRequest.new(
   lms_student: Models::Shared::LmsStudent.new(
     address: Models::Shared::PropertyLmsStudentAddress.new(
-      address1: '94082 Kassandra Camp',
-      address2: 'Apt. 461',
-      city: 'New Ibrahimmouth',
+      address1: '15033 Corwin Circles',
+      city: 'New Craigside',
       country_code: 'US',
-      postal_code: '52851',
-      region: 'Tennessee',
-      region_code: 'NV',
+      postal_code: '73966',
+      region: 'New Jersey',
+      region_code: 'TX',
     ),
     created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
     emails: [
       Models::Shared::LmsEmail.new(),
-      Models::Shared::LmsEmail.new(),
     ],
     first_name: 'Marcella',
-    id: '2eacce99-db4c-4a7b-a71b-a642d6643a6b',
-    image_url: 'https://avatars.githubusercontent.com/u/36301374',
+    id: '3a0cab34-97b2-4a97-83e9-310502633e02',
+    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
+    metadata: [],
     name: 'Marcella Murazik',
     telephones: [
       Models::Shared::LmsTelephone.new(
-        telephone: '(482) 469-8067',
+        telephone: '(899) 827-6400',
+        type: Models::Shared::LmsTelephoneType::WORK,
+      ),
+      Models::Shared::LmsTelephone.new(
+        telephone: '(487) 213-8236',
+        type: Models::Shared::LmsTelephoneType::FAX,
+      ),
+      Models::Shared::LmsTelephone.new(
+        telephone: '(980) 775-2940',
         type: Models::Shared::LmsTelephoneType::FAX,
       ),
     ],
-    updated_at: DateTime.iso8601('2022-06-30T05:42:56.098Z'),
+    updated_at: DateTime.iso8601('2022-06-30T15:24:44.321Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -308,31 +322,38 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateLmsStudentRequest.new(
   lms_student: Models::Shared::LmsStudent.new(
     address: Models::Shared::PropertyLmsStudentAddress.new(
-      address1: '94082 Kassandra Camp',
-      address2: 'Apt. 461',
-      city: 'New Ibrahimmouth',
+      address1: '15033 Corwin Circles',
+      city: 'New Craigside',
       country_code: 'US',
-      postal_code: '52851',
-      region: 'Tennessee',
-      region_code: 'NV',
+      postal_code: '73966',
+      region: 'New Jersey',
+      region_code: 'TX',
     ),
     created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
     emails: [
       Models::Shared::LmsEmail.new(),
-      Models::Shared::LmsEmail.new(),
     ],
     first_name: 'Marcella',
-    id: '2eacce99-db4c-4a7b-a71b-a642d6643a6b',
-    image_url: 'https://avatars.githubusercontent.com/u/36301374',
+    id: '3a0cab34-97b2-4a97-83e9-310502633e02',
+    image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
+    metadata: [],
     name: 'Marcella Murazik',
     telephones: [
       Models::Shared::LmsTelephone.new(
-        telephone: '(482) 469-8067',
+        telephone: '(899) 827-6400',
+        type: Models::Shared::LmsTelephoneType::WORK,
+      ),
+      Models::Shared::LmsTelephone.new(
+        telephone: '(487) 213-8236',
+        type: Models::Shared::LmsTelephoneType::FAX,
+      ),
+      Models::Shared::LmsTelephone.new(
+        telephone: '(980) 775-2940',
         type: Models::Shared::LmsTelephoneType::FAX,
       ),
     ],
-    updated_at: DateTime.iso8601('2022-06-30T05:42:56.098Z'),
+    updated_at: DateTime.iso8601('2022-06-30T15:24:44.321Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

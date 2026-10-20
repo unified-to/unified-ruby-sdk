@@ -42,6 +42,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsCreative
   def labels=(str_); end
   def link_url(); end
   def link_url=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end

@@ -20,6 +20,7 @@ module UnifiedRubySDK
           EMAILS = new('emails')
           TELEPHONES = new('telephones')
           TAGS = new('tags')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

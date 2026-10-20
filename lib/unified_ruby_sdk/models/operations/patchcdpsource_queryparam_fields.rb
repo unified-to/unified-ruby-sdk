@@ -21,6 +21,7 @@ module UnifiedRubySDK
           TYPE = new('type')
           DIRECTION = new('direction')
           IS_ENABLED = new('is_enabled')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

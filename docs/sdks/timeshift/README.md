@@ -30,24 +30,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.timeshift.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
-  approved_at: DateTime.iso8601('2023-06-22T09:48:59.268Z'),
+  approved_at: DateTime.iso8601('2022-07-17T16:09:12.830Z'),
   compensation: [
     Models::Shared::HrisCompensation.new(
       amount: 76_761.0,
-      currency: 'JPY',
-      frequency: Models::Shared::HrisCompensationFrequency::WEEK,
-      notes: 'Annus adficio suasoria architecto aggero.',
+      currency: 'GBP',
+      frequency: Models::Shared::HrisCompensationFrequency::SEMIMONTHLY,
+      notes: 'Vehemens annus adficio.',
       type: Models::Shared::HrisCompensationType::COMMISSION,
     ),
   ],
   created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2026-09-24T22:33:33.969Z'),
-  hours: 8.0,
-  id: '9ec06366-683a-459f-a8db-046c3fe975c4',
-  is_approved: true,
-  start_at: DateTime.iso8601('2023-07-11T20:10:47.012Z'),
-  updated_at: DateTime.iso8601('2021-07-01T07:48:59.584Z'),
+  end_at: DateTime.iso8601('2026-09-26T02:23:17.939Z'),
+  hours: 6.0,
+  id: '703d276a-8857-4464-9def-2c69dacba2b6',
+  is_approved: false,
+  metadata: [],
+  start_at: DateTime.iso8601('2023-07-12T11:40:22.269Z'),
+  updated_at: DateTime.iso8601('2021-07-01T15:30:34.106Z'),
 ), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -183,24 +184,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2023-06-22T09:48:59.277Z'),
+    approved_at: DateTime.iso8601('2022-07-17T16:09:12.838Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
-        currency: 'JPY',
-        frequency: Models::Shared::HrisCompensationFrequency::WEEK,
-        notes: 'Annus adficio suasoria architecto aggero.',
+        currency: 'GBP',
+        frequency: Models::Shared::HrisCompensationFrequency::SEMIMONTHLY,
+        notes: 'Vehemens annus adficio.',
         type: Models::Shared::HrisCompensationType::COMMISSION,
       ),
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-09-24T22:33:33.985Z'),
-    hours: 8.0,
-    id: 'aea0f2e0-1950-4a4c-bdca-21639d1960e5',
-    is_approved: true,
-    start_at: DateTime.iso8601('2023-07-11T20:10:47.021Z'),
-    updated_at: DateTime.iso8601('2021-07-01T07:48:59.588Z'),
+    end_at: DateTime.iso8601('2026-09-26T02:23:17.960Z'),
+    hours: 6.0,
+    id: 'fe9652cf-b8ba-4ef8-8920-b0075f3ca010',
+    is_approved: false,
+    metadata: [],
+    start_at: DateTime.iso8601('2023-07-12T11:40:22.280Z'),
+    updated_at: DateTime.iso8601('2021-07-01T15:30:34.112Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -291,24 +293,25 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2023-06-22T09:48:59.277Z'),
+    approved_at: DateTime.iso8601('2022-07-17T16:09:12.838Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
-        currency: 'JPY',
-        frequency: Models::Shared::HrisCompensationFrequency::WEEK,
-        notes: 'Annus adficio suasoria architecto aggero.',
+        currency: 'GBP',
+        frequency: Models::Shared::HrisCompensationFrequency::SEMIMONTHLY,
+        notes: 'Vehemens annus adficio.',
         type: Models::Shared::HrisCompensationType::COMMISSION,
       ),
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-09-24T22:33:33.985Z'),
-    hours: 8.0,
-    id: 'aea0f2e0-1950-4a4c-bdca-21639d1960e5',
-    is_approved: true,
-    start_at: DateTime.iso8601('2023-07-11T20:10:47.021Z'),
-    updated_at: DateTime.iso8601('2021-07-01T07:48:59.588Z'),
+    end_at: DateTime.iso8601('2026-09-26T02:23:17.960Z'),
+    hours: 6.0,
+    id: 'fe9652cf-b8ba-4ef8-8920-b0075f3ca010',
+    is_approved: false,
+    metadata: [],
+    start_at: DateTime.iso8601('2023-07-12T11:40:22.280Z'),
+    updated_at: DateTime.iso8601('2021-07-01T15:30:34.112Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

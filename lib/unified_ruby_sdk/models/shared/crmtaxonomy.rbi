@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Shared::CrmTaxonomy
   def id=(str_); end
   def label(); end
   def label=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

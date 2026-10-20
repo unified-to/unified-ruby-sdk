@@ -22,6 +22,7 @@ module UnifiedRubySDK
           CARRIER_ID = new('carrier_id')
           ID = new('id')
           RATES = new('rates')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

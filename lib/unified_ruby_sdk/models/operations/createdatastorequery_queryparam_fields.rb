@@ -17,6 +17,7 @@ module UnifiedRubySDK
           DATABASE_ID = new('database_id')
           QUERY = new('query')
           RESPONSE = new('response')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

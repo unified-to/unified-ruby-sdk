@@ -30,6 +30,8 @@ module UnifiedRubySDK
 
         field :kpi, Crystalline::Nilable.new(Models::Shared::PropertyAdsInsertionorderKpi), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('kpi') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
@@ -44,8 +46,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(bid_strategy: T.nilable(Models::Shared::PropertyAdsInsertionorderBidStrategy), budget_segments: T.nilable(T::Array[Models::Shared::AdsInsertionorderBudgetSegment]), budget_unit: T.nilable(Models::Shared::AdsInsertionorderBudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsInsertionorderFrequencyCap), id: T.nilable(::String), kpi: T.nilable(Models::Shared::PropertyAdsInsertionorderKpi), name: T.nilable(::String), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsInsertionorderPacing), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), status: T.nilable(Models::Shared::AdsInsertionorderStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(bid_strategy: nil, budget_segments: nil, budget_unit: nil, campaign_id: nil, created_at: nil, frequency_cap: nil, id: nil, kpi: nil, name: nil, organization_id: nil, pacing: nil, raw: nil, reference: nil, status: nil, updated_at: nil)
+        sig { params(bid_strategy: T.nilable(Models::Shared::PropertyAdsInsertionorderBidStrategy), budget_segments: T.nilable(T::Array[Models::Shared::AdsInsertionorderBudgetSegment]), budget_unit: T.nilable(Models::Shared::AdsInsertionorderBudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsInsertionorderFrequencyCap), id: T.nilable(::String), kpi: T.nilable(Models::Shared::PropertyAdsInsertionorderKpi), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsInsertionorderPacing), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), status: T.nilable(Models::Shared::AdsInsertionorderStatus), updated_at: T.nilable(::DateTime)).void }
+        def initialize(bid_strategy: nil, budget_segments: nil, budget_unit: nil, campaign_id: nil, created_at: nil, frequency_cap: nil, id: nil, kpi: nil, metadata: nil, name: nil, organization_id: nil, pacing: nil, raw: nil, reference: nil, status: nil, updated_at: nil)
           @bid_strategy = bid_strategy
           @budget_segments = budget_segments
           @budget_unit = budget_unit
@@ -54,6 +56,7 @@ module UnifiedRubySDK
           @frequency_cap = frequency_cap
           @id = id
           @kpi = kpi
+          @metadata = metadata
           @name = name
           @organization_id = organization_id
           @pacing = pacing
@@ -74,6 +77,7 @@ module UnifiedRubySDK
           return false unless @frequency_cap == other.frequency_cap
           return false unless @id == other.id
           return false unless @kpi == other.kpi
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
           return false unless @pacing == other.pacing

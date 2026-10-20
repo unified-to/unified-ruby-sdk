@@ -26,6 +26,7 @@ module UnifiedRubySDK
           DOWNLOAD_URL = new('download_url')
           CREATOR_ID = new('creator_id')
           RAW = new('raw')
+          METADATA = new('metadata')
         end
       end
     end

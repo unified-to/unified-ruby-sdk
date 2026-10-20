@@ -28,6 +28,7 @@ module UnifiedRubySDK
           BALANCE = new('balance')
           FEED_START_AT = new('feed_start_at')
           STATUS = new('status')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::AccountingOrganization
   def is_elimination=(str_); end
   def legal_name(); end
   def legal_name=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def organization_code(); end

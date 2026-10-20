@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::ComputeEnvvar
   def id=(str_); end
   def is_secret(); end
   def is_secret=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

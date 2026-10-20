@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::CommerceAvailability
   def item_id=(str_); end
   def location_id(); end
   def location_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def size(); end

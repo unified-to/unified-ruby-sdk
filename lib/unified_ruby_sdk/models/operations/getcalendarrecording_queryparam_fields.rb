@@ -22,6 +22,7 @@ module UnifiedRubySDK
           EVENT_ID = new('event_id')
           WEB_URL = new('web_url')
           MEDIA = new('media')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

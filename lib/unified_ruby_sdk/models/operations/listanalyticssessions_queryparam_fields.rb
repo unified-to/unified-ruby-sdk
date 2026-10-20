@@ -35,6 +35,7 @@ module UnifiedRubySDK
           CITY = new('city')
           IS_BOUNCE = new('is_bounce')
           IS_CONVERSION = new('is_conversion')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

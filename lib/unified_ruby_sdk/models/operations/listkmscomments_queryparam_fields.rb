@@ -22,6 +22,7 @@ module UnifiedRubySDK
           USER_ID = new('user_id')
           PAGE_ID = new('page_id')
           PARENT_ID = new('parent_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

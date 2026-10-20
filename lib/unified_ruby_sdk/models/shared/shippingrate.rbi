@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::ShippingRate
   def from_address=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def packages(); end
   def packages=(str_); end
   def rates(); end

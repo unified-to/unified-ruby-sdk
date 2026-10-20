@@ -28,20 +28,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.taxonomy.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.new(
-  created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
-  description: 'Apto demonstro audacia adstringo cursim tristis solio careo.',
-  domain: 'Electronics',
-  id: 'ede085db-5709-4d53-a490-746f3de5be17',
-  is_active: false,
-  name: 'International Functionality Architect',
-  parent_id: '6524b2a7-6520-4e15-8c4e-1aa6793db837',
-  role_ids: [
-    '2b1ef757-eb4c-4207-8af1-929afe49cd65',
+  alternative_names: [
+    'Facilitator',
+    'National',
   ],
-  subcategory: 'Bamboo',
+  created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
+  description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
+  domain: 'Health',
+  id: '0c9d4620-91ef-490f-8979-9ac2502a675c',
+  is_active: false,
+  metadata: [],
+  name: 'International Functionality Architect',
+  subcategory: 'Marble',
   type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-  updated_at: DateTime.iso8601('2023-05-28T20:22:02.282Z'),
-  url: 'https://our-polarisation.name',
+  updated_at: DateTime.iso8601('2023-05-29T02:24:37.617Z'),
+  url: 'https://fixed-membership.biz/',
 ), connection_id: '<id>')
 
 unless res.hris_taxonomy.nil?

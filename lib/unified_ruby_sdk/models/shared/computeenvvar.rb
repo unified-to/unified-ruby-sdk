@@ -21,6 +21,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Whether the vendor stores the value as a secret
         field :is_secret, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_secret') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ComputeMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Variable name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Raw data from integration
@@ -32,12 +34,13 @@ module UnifiedRubySDK
         # Variable value (write-only; never returned)
         field :value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
-        sig { params(created_at: T.nilable(::DateTime), environments: T.nilable(T::Array[Models::Shared::PropertyComputeEnvvarEnvironments]), id: T.nilable(::String), is_secret: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), service_id: T.nilable(::String), updated_at: T.nilable(::DateTime), value: T.nilable(::String)).void }
-        def initialize(created_at: nil, environments: nil, id: nil, is_secret: nil, name: nil, raw: nil, service_id: nil, updated_at: nil, value: nil)
+        sig { params(created_at: T.nilable(::DateTime), environments: T.nilable(T::Array[Models::Shared::PropertyComputeEnvvarEnvironments]), id: T.nilable(::String), is_secret: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), service_id: T.nilable(::String), updated_at: T.nilable(::DateTime), value: T.nilable(::String)).void }
+        def initialize(created_at: nil, environments: nil, id: nil, is_secret: nil, metadata: nil, name: nil, raw: nil, service_id: nil, updated_at: nil, value: nil)
           @created_at = created_at
           @environments = environments
           @id = id
           @is_secret = is_secret
+          @metadata = metadata
           @name = name
           @raw = raw
           @service_id = service_id
@@ -52,6 +55,7 @@ module UnifiedRubySDK
           return false unless @environments == other.environments
           return false unless @id == other.id
           return false unless @is_secret == other.is_secret
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @service_id == other.service_id

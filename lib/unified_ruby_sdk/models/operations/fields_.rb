@@ -27,6 +27,7 @@ module UnifiedRubySDK
           PARENT_ID = new('parent_id')
           TAXONOMY = new('taxonomy')
           ORGANIZATION_ID = new('organization_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

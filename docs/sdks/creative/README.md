@@ -31,15 +31,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.creative.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-  id: '962bd60b-01f2-4fb5-bc0d-cc8ab30ba325',
+  id: 'cd471b4a-1dcc-4a5b-a328-f4119e9b1ad1',
   labels: [
     'coma',
     'accedo',
     'termes',
   ],
+  metadata: [],
   name: 'Brekke, Bradtke and Robel',
   status: Models::Shared::AdsCreativeStatus::PAUSED,
-  updated_at: DateTime.iso8601('2021-06-27T07:50:15.977Z'),
+  updated_at: DateTime.iso8601('2021-06-27T13:33:18.443Z'),
 ), connection_id: '<id>')
 
 unless res.ads_creative.nil?
@@ -176,15 +177,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '282c70a8-7c5e-49cc-b783-c7853b9b7169',
+    id: '7c46ef3e-c6d8-4e5c-ac1b-34404bc86d56',
     labels: [
       'coma',
       'accedo',
       'termes',
     ],
+    metadata: [],
     name: 'Brekke, Bradtke and Robel',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-06-27T07:50:15.983Z'),
+    updated_at: DateTime.iso8601('2021-06-27T13:33:18.451Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -276,15 +278,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '282c70a8-7c5e-49cc-b783-c7853b9b7169',
+    id: '7c46ef3e-c6d8-4e5c-ac1b-34404bc86d56',
     labels: [
       'coma',
       'accedo',
       'termes',
     ],
+    metadata: [],
     name: 'Brekke, Bradtke and Robel',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-06-27T07:50:15.983Z'),
+    updated_at: DateTime.iso8601('2021-06-27T13:33:18.451Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

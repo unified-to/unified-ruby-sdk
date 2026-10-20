@@ -42,6 +42,7 @@ module UnifiedRubySDK
           PATH2 = new('path2')
           DATA = new('data')
           LABELS = new('labels')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

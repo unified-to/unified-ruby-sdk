@@ -48,6 +48,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsGroup
   def insertionorder_id=(str_); end
   def language_locale(); end
   def language_locale=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def optimization_goal(); end

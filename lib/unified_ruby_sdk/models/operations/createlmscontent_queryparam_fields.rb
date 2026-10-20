@@ -36,6 +36,7 @@ module UnifiedRubySDK
           COLLECTION_IDS = new('collection_ids')
           INSTRUCTORS = new('instructors')
           PUBLISHED_AT = new('published_at')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TaskMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -34,11 +36,12 @@ module UnifiedRubySDK
 
         field :user_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_name') } }
 
-        sig { params(created_at: T.nilable(::DateTime), has_children: T.nilable(T::Boolean), id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), task_id: T.nilable(::String), text: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String)).void }
-        def initialize(created_at: nil, has_children: nil, id: nil, parent_id: nil, raw: nil, task_id: nil, text: nil, updated_at: nil, user_id: nil, user_name: nil)
+        sig { params(created_at: T.nilable(::DateTime), has_children: T.nilable(T::Boolean), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TaskMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), task_id: T.nilable(::String), text: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String)).void }
+        def initialize(created_at: nil, has_children: nil, id: nil, metadata: nil, parent_id: nil, raw: nil, task_id: nil, text: nil, updated_at: nil, user_id: nil, user_name: nil)
           @created_at = created_at
           @has_children = has_children
           @id = id
+          @metadata = metadata
           @parent_id = parent_id
           @raw = raw
           @task_id = task_id
@@ -54,6 +57,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @has_children == other.has_children
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
           return false unless @task_id == other.task_id

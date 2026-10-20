@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::AccountingAccount
   def id=(str_); end
   def is_payable(); end
   def is_payable=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end

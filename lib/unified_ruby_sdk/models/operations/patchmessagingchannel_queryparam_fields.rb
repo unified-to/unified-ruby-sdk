@@ -24,6 +24,7 @@ module UnifiedRubySDK
           IS_ACTIVE = new('is_active')
           IS_PRIVATE = new('is_private')
           WEB_URL = new('web_url')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

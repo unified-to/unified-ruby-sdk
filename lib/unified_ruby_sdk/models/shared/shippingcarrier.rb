@@ -23,6 +23,8 @@ module UnifiedRubySDK
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
         # Carrier logo URL
         field :logo_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('logo_url') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ShippingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The name of the carrier
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration for this carrier
@@ -32,13 +34,14 @@ module UnifiedRubySDK
         # Carrier website
         field :website_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website_url') } }
 
-        sig { params(code: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_active: T.nilable(T::Boolean), logo_url: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), website_url: T.nilable(::String)).void }
-        def initialize(code: nil, created_at: nil, id: nil, is_active: nil, logo_url: nil, name: nil, raw: nil, updated_at: nil, website_url: nil)
+        sig { params(code: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_active: T.nilable(T::Boolean), logo_url: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ShippingMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), website_url: T.nilable(::String)).void }
+        def initialize(code: nil, created_at: nil, id: nil, is_active: nil, logo_url: nil, metadata: nil, name: nil, raw: nil, updated_at: nil, website_url: nil)
           @code = code
           @created_at = created_at
           @id = id
           @is_active = is_active
           @logo_url = logo_url
+          @metadata = metadata
           @name = name
           @raw = raw
           @updated_at = updated_at
@@ -53,6 +56,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_active == other.is_active
           return false unless @logo_url == other.logo_url
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at

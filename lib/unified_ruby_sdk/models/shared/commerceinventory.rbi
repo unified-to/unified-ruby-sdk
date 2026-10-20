@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::CommerceInventory
   def item_variant_id=(str_); end
   def location_id(); end
   def location_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def updated_at(); end

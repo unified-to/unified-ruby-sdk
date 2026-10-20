@@ -37,6 +37,8 @@ module UnifiedRubySDK
         field :is_pending, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_pending') } }
         # counterparty as reported by the bank
         field :merchant_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('merchant_name') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # ref -> accounting Organization this record belongs to
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
         # when it posted / cleared (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -52,8 +54,8 @@ module UnifiedRubySDK
         # last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), bank_category: T.nilable(::String), bankfeedaccount_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_pending: T.nilable(T::Boolean), merchant_name: T.nilable(::String), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), transaction_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::AccountingBankfeedtransactionType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, amount: nil, bank_category: nil, bankfeedaccount_id: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, description: nil, id: nil, is_pending: nil, merchant_name: nil, organization_id: nil, posted_at: nil, raw: nil, reference: nil, transaction_at: nil, type: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), amount: T.nilable(::Float), bank_category: T.nilable(::String), bankfeedaccount_id: T.nilable(::String), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_pending: T.nilable(T::Boolean), merchant_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), transaction_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::AccountingBankfeedtransactionType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, amount: nil, bank_category: nil, bankfeedaccount_id: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, description: nil, id: nil, is_pending: nil, merchant_name: nil, metadata: nil, organization_id: nil, posted_at: nil, raw: nil, reference: nil, transaction_at: nil, type: nil, updated_at: nil)
           @account_id = account_id
           @amount = amount
           @bank_category = bank_category
@@ -66,6 +68,7 @@ module UnifiedRubySDK
           @id = id
           @is_pending = is_pending
           @merchant_name = merchant_name
+          @metadata = metadata
           @organization_id = organization_id
           @posted_at = posted_at
           @raw = raw
@@ -90,6 +93,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_pending == other.is_pending
           return false unless @merchant_name == other.merchant_name
+          return false unless @metadata == other.metadata
           return false unless @organization_id == other.organization_id
           return false unless @posted_at == other.posted_at
           return false unless @raw == other.raw

@@ -31,6 +31,7 @@ module UnifiedRubySDK
           WEB_URL = new('web_url')
           REFERENCES = new('references')
           TAGS = new('tags')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

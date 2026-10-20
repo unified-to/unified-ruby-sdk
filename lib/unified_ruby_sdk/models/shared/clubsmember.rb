@@ -29,6 +29,8 @@ module UnifiedRubySDK
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
         # The member's membership status
         field :membership_status, Crystalline::Nilable.new(Models::Shared::ClubsMemberMembershipStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('membership_status'), 'decoder': Utils.enum_from_string(Models::Shared::ClubsMemberMembershipStatus, true) } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ClubsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The full name of the member (first name + last initial for Strava)
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration for this member
@@ -36,8 +38,8 @@ module UnifiedRubySDK
         # The last date that this member was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), first_name: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), is_admin: T.nilable(T::Boolean), is_owner: T.nilable(T::Boolean), last_name: T.nilable(::String), membership_status: T.nilable(Models::Shared::ClubsMemberMembershipStatus), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, first_name: nil, group_id: nil, id: nil, is_admin: nil, is_owner: nil, last_name: nil, membership_status: nil, name: nil, raw: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), first_name: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), is_admin: T.nilable(T::Boolean), is_owner: T.nilable(T::Boolean), last_name: T.nilable(::String), membership_status: T.nilable(Models::Shared::ClubsMemberMembershipStatus), metadata: T.nilable(T::Array[Models::Shared::ClubsMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, first_name: nil, group_id: nil, id: nil, is_admin: nil, is_owner: nil, last_name: nil, membership_status: nil, metadata: nil, name: nil, raw: nil, updated_at: nil)
           @created_at = created_at
           @first_name = first_name
           @group_id = group_id
@@ -46,6 +48,7 @@ module UnifiedRubySDK
           @is_owner = is_owner
           @last_name = last_name
           @membership_status = membership_status
+          @metadata = metadata
           @name = name
           @raw = raw
           @updated_at = updated_at
@@ -62,6 +65,7 @@ module UnifiedRubySDK
           return false unless @is_owner == other.is_owner
           return false unless @last_name == other.last_name
           return false unless @membership_status == other.membership_status
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at

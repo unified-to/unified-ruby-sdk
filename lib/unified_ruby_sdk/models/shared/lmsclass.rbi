@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::LmsClass
   def languages=(str_); end
   def media(); end
   def media=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

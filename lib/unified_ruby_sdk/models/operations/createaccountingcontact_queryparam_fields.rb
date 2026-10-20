@@ -40,6 +40,7 @@ module UnifiedRubySDK
           BALANCE_AMOUNT = new('balance_amount')
           WEBSITE = new('website')
           NOTES = new('notes')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

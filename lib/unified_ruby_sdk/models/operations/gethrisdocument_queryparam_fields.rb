@@ -22,6 +22,7 @@ module UnifiedRubySDK
           TYPE = new('type')
           USER_ID = new('user_id')
           COMPANY_ID = new('company_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

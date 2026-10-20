@@ -27,6 +27,7 @@ module UnifiedRubySDK
           APPROVED_AT = new('approved_at')
           HOURS = new('hours')
           IS_APPROVED = new('is_approved')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

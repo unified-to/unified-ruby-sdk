@@ -25,6 +25,8 @@ module UnifiedRubySDK
         field :latitude, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('latitude') } }
         # The longitude
         field :longitude, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('longitude') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ClubsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The location name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration for this location
@@ -36,14 +38,15 @@ module UnifiedRubySDK
         # A URL for the location
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyClubsLocationAddress), created_at: T.nilable(::DateTime), group_id: T.nilable(::String), id: T.nilable(::String), latitude: T.nilable(::Float), longitude: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephone: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(address: nil, created_at: nil, group_id: nil, id: nil, latitude: nil, longitude: nil, name: nil, raw: nil, telephone: nil, updated_at: nil, url: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyClubsLocationAddress), created_at: T.nilable(::DateTime), group_id: T.nilable(::String), id: T.nilable(::String), latitude: T.nilable(::Float), longitude: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ClubsMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephone: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(address: nil, created_at: nil, group_id: nil, id: nil, latitude: nil, longitude: nil, metadata: nil, name: nil, raw: nil, telephone: nil, updated_at: nil, url: nil)
           @address = address
           @created_at = created_at
           @group_id = group_id
           @id = id
           @latitude = latitude
           @longitude = longitude
+          @metadata = metadata
           @name = name
           @raw = raw
           @telephone = telephone
@@ -60,6 +63,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @latitude == other.latitude
           return false unless @longitude == other.longitude
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @telephone == other.telephone

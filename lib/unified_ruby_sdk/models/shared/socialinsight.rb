@@ -19,6 +19,8 @@ module UnifiedRubySDK
         field :date, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('date'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the insight data point
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::SocialMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The metric being reported
         field :metric, Crystalline::Nilable.new(Models::Shared::Metric), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metric'), 'decoder': Utils.enum_from_string(Models::Shared::Metric, true) } }
         # The aggregation period of the value
@@ -32,11 +34,12 @@ module UnifiedRubySDK
         # The metric value
         field :value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
-        sig { params(created_at: T.nilable(::DateTime), date: T.nilable(::DateTime), id: T.nilable(::String), metric: T.nilable(Models::Shared::Metric), period: T.nilable(Models::Shared::Period), post_id: T.nilable(::String), profile_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), value: T.nilable(::Float)).void }
-        def initialize(created_at: nil, date: nil, id: nil, metric: nil, period: nil, post_id: nil, profile_id: nil, raw: nil, value: nil)
+        sig { params(created_at: T.nilable(::DateTime), date: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::SocialMetadata]), metric: T.nilable(Models::Shared::Metric), period: T.nilable(Models::Shared::Period), post_id: T.nilable(::String), profile_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), value: T.nilable(::Float)).void }
+        def initialize(created_at: nil, date: nil, id: nil, metadata: nil, metric: nil, period: nil, post_id: nil, profile_id: nil, raw: nil, value: nil)
           @created_at = created_at
           @date = date
           @id = id
+          @metadata = metadata
           @metric = metric
           @period = period
           @post_id = post_id
@@ -51,6 +54,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @date == other.date
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @metric == other.metric
           return false unless @period == other.period
           return false unless @post_id == other.post_id

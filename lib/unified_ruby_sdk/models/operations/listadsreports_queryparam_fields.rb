@@ -21,6 +21,7 @@ module UnifiedRubySDK
           START_AT = new('start_at')
           END_AT = new('end_at')
           ORGANIZATION_ID = new('organization_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

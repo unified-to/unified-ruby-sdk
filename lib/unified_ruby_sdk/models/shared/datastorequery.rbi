@@ -10,6 +10,8 @@ end
 class UnifiedRubySDK::Models::Shared::DatastoreQuery
   def database_id(); end
   def database_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def query(); end
   def query=(str_); end
   def raw(); end

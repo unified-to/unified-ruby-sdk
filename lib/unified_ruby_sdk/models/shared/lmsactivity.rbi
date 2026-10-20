@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::LmsActivity
   def id=(str_); end
   def is_completed(); end
   def is_completed=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def progress_percentage(); end
   def progress_percentage=(str_); end
   def raw(); end

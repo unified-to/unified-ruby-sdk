@@ -119,6 +119,7 @@ module UnifiedRubySDK
           GENAI_AGENT = new('genai_agent')
           GENAI_ORGANIZATION = new('genai_organization')
           GENAI_SKILL = new('genai_skill')
+          GENAI_MEMORY = new('genai_memory')
           MESSAGING_MESSAGE = new('messaging_message')
           MESSAGING_CHANNEL = new('messaging_channel')
           MESSAGING_EVENT = new('messaging_event')

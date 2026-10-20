@@ -30,6 +30,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
         # the hris_paycode (earning code) this earning is paid under
         field :paycode_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paycode_id') } }
@@ -50,8 +52,8 @@ module UnifiedRubySDK
         # employee ID (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(amount: T.nilable(::Float), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::HrisEarningFrequency), hours: T.nilable(::Float), id: T.nilable(::String), notes: T.nilable(::String), paycode_id: T.nilable(::String), payroll_id: T.nilable(::String), payslip_id: T.nilable(::String), rate_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HrisEarningStatus), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(amount: nil, company_id: nil, created_at: nil, currency: nil, end_at: nil, frequency: nil, hours: nil, id: nil, notes: nil, paycode_id: nil, payroll_id: nil, payslip_id: nil, rate_amount: nil, raw: nil, start_at: nil, status: nil, updated_at: nil, user_id: nil)
+        sig { params(amount: T.nilable(::Float), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::HrisEarningFrequency), hours: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), notes: T.nilable(::String), paycode_id: T.nilable(::String), payroll_id: T.nilable(::String), payslip_id: T.nilable(::String), rate_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HrisEarningStatus), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(amount: nil, company_id: nil, created_at: nil, currency: nil, end_at: nil, frequency: nil, hours: nil, id: nil, metadata: nil, notes: nil, paycode_id: nil, payroll_id: nil, payslip_id: nil, rate_amount: nil, raw: nil, start_at: nil, status: nil, updated_at: nil, user_id: nil)
           @amount = amount
           @company_id = company_id
           @created_at = created_at
@@ -60,6 +62,7 @@ module UnifiedRubySDK
           @frequency = frequency
           @hours = hours
           @id = id
+          @metadata = metadata
           @notes = notes
           @paycode_id = paycode_id
           @payroll_id = payroll_id
@@ -83,6 +86,7 @@ module UnifiedRubySDK
           return false unless @frequency == other.frequency
           return false unless @hours == other.hours
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @notes == other.notes
           return false unless @paycode_id == other.paycode_id
           return false unless @payroll_id == other.payroll_id

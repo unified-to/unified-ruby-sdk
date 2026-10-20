@@ -16,4 +16,5 @@
 | `IS_ACTIVE`       | is_active         |
 | `IS_PRIVATE`      | is_private        |
 | `WEB_URL`         | web_url           |
+| `METADATA`        | metadata          |
 | `RAW`             | raw               |

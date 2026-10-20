@@ -24,6 +24,8 @@ module UnifiedRubySDK
         # Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)
         field :managers, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsManager)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('managers') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
@@ -36,13 +38,14 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_number: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), managers: T.nilable(T::Array[Models::Shared::AdsManager]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AdsOrganizationStatus), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_number: nil, created_at: nil, currency: nil, id: nil, managers: nil, name: nil, parent_id: nil, raw: nil, status: nil, timezone: nil, updated_at: nil)
+        sig { params(account_number: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), managers: T.nilable(T::Array[Models::Shared::AdsManager]), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AdsOrganizationStatus), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_number: nil, created_at: nil, currency: nil, id: nil, managers: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, status: nil, timezone: nil, updated_at: nil)
           @account_number = account_number
           @created_at = created_at
           @currency = currency
           @id = id
           @managers = managers
+          @metadata = metadata
           @name = name
           @parent_id = parent_id
           @raw = raw
@@ -59,6 +62,7 @@ module UnifiedRubySDK
           return false unless @currency == other.currency
           return false unless @id == other.id
           return false unless @managers == other.managers
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw

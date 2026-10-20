@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::LmsStudent
   def image_url=(str_); end
   def last_name(); end
   def last_name=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

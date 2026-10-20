@@ -34,6 +34,7 @@ module UnifiedRubySDK
           HAS_CHILDREN = new('has_children')
           IS_UNREAD = new('is_unread')
           BUTTONS = new('buttons')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

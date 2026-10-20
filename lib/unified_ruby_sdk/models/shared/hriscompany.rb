@@ -22,18 +22,21 @@ module UnifiedRubySDK
 
         field :legal_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('legal_name') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyHrisCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), legal_name: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(address: nil, created_at: nil, id: nil, legal_name: nil, name: nil, raw: nil, updated_at: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyHrisCompanyAddress), created_at: T.nilable(::DateTime), id: T.nilable(::String), legal_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(address: nil, created_at: nil, id: nil, legal_name: nil, metadata: nil, name: nil, raw: nil, updated_at: nil)
           @address = address
           @created_at = created_at
           @id = id
           @legal_name = legal_name
+          @metadata = metadata
           @name = name
           @raw = raw
           @updated_at = updated_at
@@ -46,6 +49,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @id == other.id
           return false unless @legal_name == other.legal_name
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at

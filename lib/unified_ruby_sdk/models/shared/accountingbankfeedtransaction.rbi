@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::AccountingBankfeedtransaction
   def is_pending=(str_); end
   def merchant_name(); end
   def merchant_name=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def organization_id(); end
   def organization_id=(str_); end
   def posted_at(); end

@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::HrisEarning
   def hours=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def notes(); end
   def notes=(str_); end
   def paycode_id(); end

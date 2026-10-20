@@ -33,6 +33,8 @@ module UnifiedRubySDK
         field :feed_start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('feed_start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # account nickname / source name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # ref -> accounting Organization this record belongs to
@@ -46,8 +48,8 @@ module UnifiedRubySDK
         # last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), account_number: T.nilable(::String), account_number_last4: T.nilable(::String), account_type: T.nilable(Models::Shared::AccountType), balance: T.nilable(::Float), bank_name: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), feed_start_at: T.nilable(::DateTime), id: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), routing_number: T.nilable(::String), status: T.nilable(Models::Shared::AccountingBankfeedaccountStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, account_number: nil, account_number_last4: nil, account_type: nil, balance: nil, bank_name: nil, created_at: nil, currency: nil, feed_start_at: nil, id: nil, name: nil, organization_id: nil, raw: nil, routing_number: nil, status: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), account_number: T.nilable(::String), account_number_last4: T.nilable(::String), account_type: T.nilable(Models::Shared::AccountType), balance: T.nilable(::Float), bank_name: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), feed_start_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), routing_number: T.nilable(::String), status: T.nilable(Models::Shared::AccountingBankfeedaccountStatus), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, account_number: nil, account_number_last4: nil, account_type: nil, balance: nil, bank_name: nil, created_at: nil, currency: nil, feed_start_at: nil, id: nil, metadata: nil, name: nil, organization_id: nil, raw: nil, routing_number: nil, status: nil, updated_at: nil)
           @account_id = account_id
           @account_number = account_number
           @account_number_last4 = account_number_last4
@@ -58,6 +60,7 @@ module UnifiedRubySDK
           @currency = currency
           @feed_start_at = feed_start_at
           @id = id
+          @metadata = metadata
           @name = name
           @organization_id = organization_id
           @raw = raw
@@ -79,6 +82,7 @@ module UnifiedRubySDK
           return false unless @currency == other.currency
           return false unless @feed_start_at == other.feed_start_at
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
           return false unless @raw == other.raw

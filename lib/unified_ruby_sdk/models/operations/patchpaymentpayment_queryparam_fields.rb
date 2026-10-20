@@ -42,6 +42,7 @@ module UnifiedRubySDK
           EXCHANGE_RATE = new('exchange_rate')
           CATEGORY_IDS = new('category_ids')
           NET_AMOUNT = new('net_amount')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

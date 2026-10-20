@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::HrisLocation
   def is_hq=(str_); end
   def language_locale(); end
   def language_locale=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def parent_id(); end

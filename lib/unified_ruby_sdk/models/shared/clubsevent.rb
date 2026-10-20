@@ -39,6 +39,8 @@ module UnifiedRubySDK
         field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
         # The name of the location for this event
         field :location_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_name') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ClubsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The event name (or a "Home vs Away" matchup label)
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The id of the opposing team (single-opponent providers)
@@ -64,8 +66,8 @@ module UnifiedRubySDK
         # A URL to the event
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(away_score: T.nilable(::Float), away_team_name: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), duration_minutes: T.nilable(::Float), end_at: T.nilable(::DateTime), group_id: T.nilable(::String), home_score: T.nilable(::Float), home_team_name: T.nilable(::String), id: T.nilable(::String), is_home: T.nilable(T::Boolean), location_id: T.nilable(::String), location_name: T.nilable(::String), name: T.nilable(::String), opponent_id: T.nilable(::String), opponent_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), score_against: T.nilable(::Float), score_for: T.nilable(::Float), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::ClubsEventStatus), timezone: T.nilable(::String), type: T.nilable(Models::Shared::ClubsEventType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(away_score: nil, away_team_name: nil, created_at: nil, description: nil, duration_minutes: nil, end_at: nil, group_id: nil, home_score: nil, home_team_name: nil, id: nil, is_home: nil, location_id: nil, location_name: nil, name: nil, opponent_id: nil, opponent_name: nil, raw: nil, score_against: nil, score_for: nil, start_at: nil, status: nil, timezone: nil, type: nil, updated_at: nil, url: nil)
+        sig { params(away_score: T.nilable(::Float), away_team_name: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), duration_minutes: T.nilable(::Float), end_at: T.nilable(::DateTime), group_id: T.nilable(::String), home_score: T.nilable(::Float), home_team_name: T.nilable(::String), id: T.nilable(::String), is_home: T.nilable(T::Boolean), location_id: T.nilable(::String), location_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ClubsMetadata]), name: T.nilable(::String), opponent_id: T.nilable(::String), opponent_name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), score_against: T.nilable(::Float), score_for: T.nilable(::Float), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::ClubsEventStatus), timezone: T.nilable(::String), type: T.nilable(Models::Shared::ClubsEventType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(away_score: nil, away_team_name: nil, created_at: nil, description: nil, duration_minutes: nil, end_at: nil, group_id: nil, home_score: nil, home_team_name: nil, id: nil, is_home: nil, location_id: nil, location_name: nil, metadata: nil, name: nil, opponent_id: nil, opponent_name: nil, raw: nil, score_against: nil, score_for: nil, start_at: nil, status: nil, timezone: nil, type: nil, updated_at: nil, url: nil)
           @away_score = away_score
           @away_team_name = away_team_name
           @created_at = created_at
@@ -79,6 +81,7 @@ module UnifiedRubySDK
           @is_home = is_home
           @location_id = location_id
           @location_name = location_name
+          @metadata = metadata
           @name = name
           @opponent_id = opponent_id
           @opponent_name = opponent_name
@@ -109,6 +112,7 @@ module UnifiedRubySDK
           return false unless @is_home == other.is_home
           return false unless @location_id == other.location_id
           return false unless @location_name == other.location_name
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @opponent_id == other.opponent_id
           return false unless @opponent_name == other.opponent_name

@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::AccountingJournal
   def is_inclusive_of_tax=(str_); end
   def lineitems(); end
   def lineitems=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def organization_id(); end
   def organization_id=(str_); end
   def posted_at(); end

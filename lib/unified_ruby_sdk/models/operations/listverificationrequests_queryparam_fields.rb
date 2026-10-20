@@ -37,6 +37,7 @@ module UnifiedRubySDK
           RESPONSE_DOWNLOAD_URLS = new('response_download_urls')
           RESPONSE_DETAILS = new('response_details')
           RESPONSE_SOURCE = new('response_source')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

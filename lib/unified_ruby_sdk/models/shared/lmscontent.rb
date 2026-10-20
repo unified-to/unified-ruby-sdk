@@ -42,6 +42,8 @@ module UnifiedRubySDK
 
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :provider_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('provider_name') } }
@@ -62,8 +64,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(categories: T.nilable(T::Array[::String]), collection_ids: T.nilable(T::Array[::String]), course_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), difficulty: T.nilable(::String), duration_minutes: T.nilable(::Float), external_reference: T.nilable(::String), id: T.nilable(::String), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), is_active: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), localizations: T.nilable(T::Array[Models::Shared::LmsContentLocalization]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), short_description: T.nilable(::String), skills: T.nilable(T::Array[::String]), sort_order: T.nilable(::Float), subjects: T.nilable(T::Array[Models::Shared::LmsSubject]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(categories: nil, collection_ids: nil, course_ids: nil, created_at: nil, description: nil, difficulty: nil, duration_minutes: nil, external_reference: nil, id: nil, instructors: nil, is_active: nil, languages: nil, localizations: nil, media: nil, name: nil, provider_name: nil, published_at: nil, raw: nil, short_description: nil, skills: nil, sort_order: nil, subjects: nil, tags: nil, updated_at: nil)
+        sig { params(categories: T.nilable(T::Array[::String]), collection_ids: T.nilable(T::Array[::String]), course_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), description: T.nilable(::String), difficulty: T.nilable(::String), duration_minutes: T.nilable(::Float), external_reference: T.nilable(::String), id: T.nilable(::String), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), is_active: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), localizations: T.nilable(T::Array[Models::Shared::LmsContentLocalization]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), metadata: T.nilable(T::Array[Models::Shared::LmsMetadata]), name: T.nilable(::String), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), short_description: T.nilable(::String), skills: T.nilable(T::Array[::String]), sort_order: T.nilable(::Float), subjects: T.nilable(T::Array[Models::Shared::LmsSubject]), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(categories: nil, collection_ids: nil, course_ids: nil, created_at: nil, description: nil, difficulty: nil, duration_minutes: nil, external_reference: nil, id: nil, instructors: nil, is_active: nil, languages: nil, localizations: nil, media: nil, metadata: nil, name: nil, provider_name: nil, published_at: nil, raw: nil, short_description: nil, skills: nil, sort_order: nil, subjects: nil, tags: nil, updated_at: nil)
           @categories = categories
           @collection_ids = collection_ids
           @course_ids = course_ids
@@ -78,6 +80,7 @@ module UnifiedRubySDK
           @languages = languages
           @localizations = localizations
           @media = media
+          @metadata = metadata
           @name = name
           @provider_name = provider_name
           @published_at = published_at
@@ -107,6 +110,7 @@ module UnifiedRubySDK
           return false unless @languages == other.languages
           return false unless @localizations == other.localizations
           return false unless @media == other.media
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @provider_name == other.provider_name
           return false unless @published_at == other.published_at

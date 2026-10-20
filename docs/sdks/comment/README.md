@@ -45,9 +45,10 @@ res = s.comment.create_kms_comment(kms_comment: Models::Shared::KmsComment.new(
   content: 'Decimus tolero viriliter usque.',
   content_type: Models::Shared::ContentType::HTML,
   created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-  id: '99c34671-b1d5-411f-9081-07064b7f1f19',
+  id: 'b39cda01-54ee-4311-8e67-da349850c5e5',
+  metadata: [],
   type: Models::Shared::KmsCommentType::PAGE,
-  updated_at: DateTime.iso8601('2023-11-25T15:19:49.981Z'),
+  updated_at: DateTime.iso8601('2023-11-25T23:47:14.416Z'),
 ), connection_id: '<id>')
 
 unless res.kms_comment.nil?
@@ -95,10 +96,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.comment.create_task_comment(task_comment: Models::Shared::TaskComment.new(
   created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
   has_children: true,
-  id: '6b441a29-00aa-4225-a76a-ac6b62ab454b',
+  id: 'f83893c0-fa0a-4ee4-89bf-5a27fc26c5f1',
+  metadata: [],
   text: 'Colo ulciscor sublime tabernus.',
-  updated_at: DateTime.iso8601('2021-10-02T17:33:03.634Z'),
-  user_name: 'Santina Abbott',
+  updated_at: DateTime.iso8601('2021-10-03T01:26:56.682Z'),
 ), connection_id: '<id>')
 
 unless res.task_comment.nil?
@@ -146,8 +147,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.comment.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
   content: 'Vociferor vitiosus.',
   created_at: '2023-04-02T23:42:31.571Z',
-  id: '629f8213-1135-4ac6-9f8f-de669d0502af',
-  updated_at: '2024-02-09T06:07:05.184Z',
+  id: 'abddba1b-9599-449d-8bca-33512e600b95',
+  metadata: [],
+  updated_at: '2024-02-09T12:53:23.995Z',
 ), connection_id: '<id>')
 
 unless res.uc_comment.nil?
@@ -464,9 +466,10 @@ req = Models::Operations::PatchKmsCommentRequest.new(
     content: 'Decimus tolero viriliter usque.',
     content_type: Models::Shared::ContentType::HTML,
     created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-    id: '30b8477c-a04e-4b63-a95d-a8688e6c26e1',
+    id: 'a3a99d16-f4cd-4d83-8fc2-3fc512411226',
+    metadata: [],
     type: Models::Shared::KmsCommentType::PAGE,
-    updated_at: DateTime.iso8601('2023-11-25T15:19:49.983Z'),
+    updated_at: DateTime.iso8601('2023-11-25T23:47:14.422Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -517,10 +520,10 @@ req = Models::Operations::PatchTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: '19e8ee1b-161b-43a8-b2e1-ddb21bb50763',
+    id: 'aa170a7a-d40a-40c5-a0cd-0ced6be1e525',
+    metadata: [],
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-10-02T17:33:03.636Z'),
-    user_name: 'Santina Abbott',
+    updated_at: DateTime.iso8601('2021-10-03T01:26:56.685Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -571,8 +574,9 @@ req = Models::Operations::PatchUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: '0698f156-0ff7-44ec-8688-29334dd607cf',
-    updated_at: '2024-02-09T06:07:05.185Z',
+    id: '496ae26d-0f6c-495b-8fb2-a4ff7b73846d',
+    metadata: [],
+    updated_at: '2024-02-09T12:53:23.998Z',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -750,9 +754,10 @@ req = Models::Operations::UpdateKmsCommentRequest.new(
     content: 'Decimus tolero viriliter usque.',
     content_type: Models::Shared::ContentType::HTML,
     created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-    id: '30b8477c-a04e-4b63-a95d-a8688e6c26e1',
+    id: 'a3a99d16-f4cd-4d83-8fc2-3fc512411226',
+    metadata: [],
     type: Models::Shared::KmsCommentType::PAGE,
-    updated_at: DateTime.iso8601('2023-11-25T15:19:49.983Z'),
+    updated_at: DateTime.iso8601('2023-11-25T23:47:14.422Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -803,10 +808,10 @@ req = Models::Operations::UpdateTaskCommentRequest.new(
   task_comment: Models::Shared::TaskComment.new(
     created_at: DateTime.iso8601('2019-10-12T20:33:37.879Z'),
     has_children: true,
-    id: '19e8ee1b-161b-43a8-b2e1-ddb21bb50763',
+    id: 'aa170a7a-d40a-40c5-a0cd-0ced6be1e525',
+    metadata: [],
     text: 'Colo ulciscor sublime tabernus.',
-    updated_at: DateTime.iso8601('2021-10-02T17:33:03.636Z'),
-    user_name: 'Santina Abbott',
+    updated_at: DateTime.iso8601('2021-10-03T01:26:56.685Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -857,8 +862,9 @@ req = Models::Operations::UpdateUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: '0698f156-0ff7-44ec-8688-29334dd607cf',
-    updated_at: '2024-02-09T06:07:05.185Z',
+    id: '496ae26d-0f6c-495b-8fb2-a4ff7b73846d',
+    metadata: [],
+    updated_at: '2024-02-09T12:53:23.998Z',
   ),
   connection_id: '<id>',
   id: '<id>',

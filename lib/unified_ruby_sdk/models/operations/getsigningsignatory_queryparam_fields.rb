@@ -25,6 +25,7 @@ module UnifiedRubySDK
           SIGNED_AT = new('signed_at')
           DECLINE_REASON = new('decline_reason')
           RAW = new('raw')
+          METADATA = new('metadata')
         end
       end
     end

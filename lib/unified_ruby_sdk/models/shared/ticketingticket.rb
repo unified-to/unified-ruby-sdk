@@ -30,6 +30,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TicketingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :priority, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('priority') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -50,8 +52,8 @@ module UnifiedRubySDK
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(attachment_ids: T.nilable(T::Array[::String]), category_id: T.nilable(::String), closed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), due_at: T.nilable(::DateTime), id: T.nilable(::String), priority: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), source_ref: T.nilable(::String), status: T.nilable(Models::Shared::TicketingTicketStatus), subject: T.nilable(::String), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(attachment_ids: nil, category_id: nil, closed_at: nil, created_at: nil, customer_id: nil, description: nil, due_at: nil, id: nil, priority: nil, raw: nil, source: nil, source_ref: nil, status: nil, subject: nil, tags: nil, updated_at: nil, url: nil, user_id: nil)
+        sig { params(attachment_ids: T.nilable(T::Array[::String]), category_id: T.nilable(::String), closed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), due_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TicketingMetadata]), priority: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), source: T.nilable(::String), source_ref: T.nilable(::String), status: T.nilable(Models::Shared::TicketingTicketStatus), subject: T.nilable(::String), tags: T.nilable(T::Array[::String]), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(attachment_ids: nil, category_id: nil, closed_at: nil, created_at: nil, customer_id: nil, description: nil, due_at: nil, id: nil, metadata: nil, priority: nil, raw: nil, source: nil, source_ref: nil, status: nil, subject: nil, tags: nil, updated_at: nil, url: nil, user_id: nil)
           @attachment_ids = attachment_ids
           @category_id = category_id
           @closed_at = closed_at
@@ -60,6 +62,7 @@ module UnifiedRubySDK
           @description = description
           @due_at = due_at
           @id = id
+          @metadata = metadata
           @priority = priority
           @raw = raw
           @source = source
@@ -83,6 +86,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @due_at == other.due_at
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @priority == other.priority
           return false unless @raw == other.raw
           return false unless @source == other.source

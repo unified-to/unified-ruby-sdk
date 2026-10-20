@@ -54,6 +54,8 @@ module UnifiedRubySDK
         # Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale
         field :language_locale, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
         field :optimization_goal, Crystalline::Nilable.new(Models::Shared::OptimizationGoal), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('optimization_goal'), 'decoder': Utils.enum_from_string(Models::Shared::OptimizationGoal, true) } }
@@ -78,8 +80,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(bid_amount: T.nilable(::Float), bid_strategy: T.nilable(Models::Shared::PropertyAdsGroupBidStrategy), billing_event: T.nilable(Models::Shared::BillingEvent), budget_allocation_type: T.nilable(Models::Shared::BudgetAllocationType), budget_amount: T.nilable(::Float), budget_max_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::AdsGroupBudgetPeriod), budget_unit: T.nilable(Models::Shared::AdsGroupBudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_ids: T.nilable(T::Array[::String]), creative_selection: T.nilable(Models::Shared::CreativeSelection), currency: T.nilable(::String), effective_status: T.nilable(Models::Shared::AdsGroupEffectiveStatus), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsGroupFrequencyCap), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), insertionorder_id: T.nilable(::String), language_locale: T.nilable(::String), name: T.nilable(::String), optimization_goal: T.nilable(Models::Shared::OptimizationGoal), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsGroupPacing), parent_id: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AdsGroupStatus), targeting: T.nilable(Models::Shared::PropertyAdsGroupTargeting), type: T.nilable(Models::Shared::AdsGroupType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(bid_amount: nil, bid_strategy: nil, billing_event: nil, budget_allocation_type: nil, budget_amount: nil, budget_max_amount: nil, budget_period: nil, budget_unit: nil, campaign_id: nil, created_at: nil, creative_ids: nil, creative_selection: nil, currency: nil, effective_status: nil, end_at: nil, frequency_cap: nil, has_eu_political_ads: nil, id: nil, insertionorder_id: nil, language_locale: nil, name: nil, optimization_goal: nil, organization_id: nil, pacing: nil, parent_id: nil, promoted: nil, raw: nil, start_at: nil, status: nil, targeting: nil, type: nil, updated_at: nil)
+        sig { params(bid_amount: T.nilable(::Float), bid_strategy: T.nilable(Models::Shared::PropertyAdsGroupBidStrategy), billing_event: T.nilable(Models::Shared::BillingEvent), budget_allocation_type: T.nilable(Models::Shared::BudgetAllocationType), budget_amount: T.nilable(::Float), budget_max_amount: T.nilable(::Float), budget_period: T.nilable(Models::Shared::AdsGroupBudgetPeriod), budget_unit: T.nilable(Models::Shared::AdsGroupBudgetUnit), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_ids: T.nilable(T::Array[::String]), creative_selection: T.nilable(Models::Shared::CreativeSelection), currency: T.nilable(::String), effective_status: T.nilable(Models::Shared::AdsGroupEffectiveStatus), end_at: T.nilable(::DateTime), frequency_cap: T.nilable(Models::Shared::PropertyAdsGroupFrequencyCap), has_eu_political_ads: T.nilable(T::Boolean), id: T.nilable(::String), insertionorder_id: T.nilable(::String), language_locale: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), optimization_goal: T.nilable(Models::Shared::OptimizationGoal), organization_id: T.nilable(::String), pacing: T.nilable(Models::Shared::PropertyAdsGroupPacing), parent_id: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AdsGroupStatus), targeting: T.nilable(Models::Shared::PropertyAdsGroupTargeting), type: T.nilable(Models::Shared::AdsGroupType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(bid_amount: nil, bid_strategy: nil, billing_event: nil, budget_allocation_type: nil, budget_amount: nil, budget_max_amount: nil, budget_period: nil, budget_unit: nil, campaign_id: nil, created_at: nil, creative_ids: nil, creative_selection: nil, currency: nil, effective_status: nil, end_at: nil, frequency_cap: nil, has_eu_political_ads: nil, id: nil, insertionorder_id: nil, language_locale: nil, metadata: nil, name: nil, optimization_goal: nil, organization_id: nil, pacing: nil, parent_id: nil, promoted: nil, raw: nil, start_at: nil, status: nil, targeting: nil, type: nil, updated_at: nil)
           @bid_amount = bid_amount
           @bid_strategy = bid_strategy
           @billing_event = billing_event
@@ -100,6 +102,7 @@ module UnifiedRubySDK
           @id = id
           @insertionorder_id = insertionorder_id
           @language_locale = language_locale
+          @metadata = metadata
           @name = name
           @optimization_goal = optimization_goal
           @organization_id = organization_id
@@ -137,6 +140,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @insertionorder_id == other.insertionorder_id
           return false unless @language_locale == other.language_locale
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @optimization_goal == other.optimization_goal
           return false unless @organization_id == other.organization_id

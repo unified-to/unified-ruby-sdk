@@ -18,6 +18,7 @@ module UnifiedRubySDK
           STATUS = new('status')
           ORIGINAL_STATUS = new('original_status')
           DESCRIPTION = new('description')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

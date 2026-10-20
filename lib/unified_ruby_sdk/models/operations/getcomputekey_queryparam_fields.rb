@@ -26,6 +26,7 @@ module UnifiedRubySDK
           SECRET = new('secret')
           INSTANCE_ID = new('instance_id')
           EXPIRES_AT = new('expires_at')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

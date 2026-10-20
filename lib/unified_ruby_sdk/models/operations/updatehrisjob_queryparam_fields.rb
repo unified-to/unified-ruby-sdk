@@ -27,6 +27,7 @@ module UnifiedRubySDK
           PARENT_ID = new('parent_id')
           USERS = new('users')
           COMPENSATION = new('compensation')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

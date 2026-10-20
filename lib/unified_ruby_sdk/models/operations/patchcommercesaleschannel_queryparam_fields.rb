@@ -20,6 +20,7 @@ module UnifiedRubySDK
           DESCRIPTION = new('description')
           IS_ACTIVE = new('is_active')
           COLLECTIONS = new('collections')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

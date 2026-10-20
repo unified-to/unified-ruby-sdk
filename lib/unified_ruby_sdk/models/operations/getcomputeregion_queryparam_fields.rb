@@ -20,6 +20,7 @@ module UnifiedRubySDK
           LOCATION = new('location')
           COUNTRY = new('country')
           GPU_MODELS = new('gpu_models')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

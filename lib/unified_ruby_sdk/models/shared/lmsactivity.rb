@@ -30,6 +30,8 @@ module UnifiedRubySDK
 
         field :is_completed, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_completed') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :progress_percentage, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('progress_percentage') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -40,8 +42,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(assigned_grade: T.nilable(::String), completed_at: T.nilable(::DateTime), content_id: T.nilable(::String), course_id: T.nilable(::String), created_at: T.nilable(::DateTime), duration_minutes: T.nilable(::Float), id: T.nilable(::String), is_completed: T.nilable(T::Boolean), progress_percentage: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), started_at: T.nilable(::DateTime), student_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(assigned_grade: nil, completed_at: nil, content_id: nil, course_id: nil, created_at: nil, duration_minutes: nil, id: nil, is_completed: nil, progress_percentage: nil, raw: nil, started_at: nil, student_id: nil, updated_at: nil)
+        sig { params(assigned_grade: T.nilable(::String), completed_at: T.nilable(::DateTime), content_id: T.nilable(::String), course_id: T.nilable(::String), created_at: T.nilable(::DateTime), duration_minutes: T.nilable(::Float), id: T.nilable(::String), is_completed: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::LmsMetadata]), progress_percentage: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), started_at: T.nilable(::DateTime), student_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(assigned_grade: nil, completed_at: nil, content_id: nil, course_id: nil, created_at: nil, duration_minutes: nil, id: nil, is_completed: nil, metadata: nil, progress_percentage: nil, raw: nil, started_at: nil, student_id: nil, updated_at: nil)
           @assigned_grade = assigned_grade
           @completed_at = completed_at
           @content_id = content_id
@@ -50,6 +52,7 @@ module UnifiedRubySDK
           @duration_minutes = duration_minutes
           @id = id
           @is_completed = is_completed
+          @metadata = metadata
           @progress_percentage = progress_percentage
           @raw = raw
           @started_at = started_at
@@ -68,6 +71,7 @@ module UnifiedRubySDK
           return false unless @duration_minutes == other.duration_minutes
           return false unless @id == other.id
           return false unless @is_completed == other.is_completed
+          return false unless @metadata == other.metadata
           return false unless @progress_percentage == other.progress_percentage
           return false unless @raw == other.raw
           return false unless @started_at == other.started_at

@@ -22,16 +22,19 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::RepoMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(name: ::String, repo_id: ::String, created_at: T.nilable(::DateTime), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(name:, repo_id:, created_at: nil, id: nil, raw: nil, updated_at: nil)
+        sig { params(name: ::String, repo_id: ::String, created_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::RepoMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(name:, repo_id:, created_at: nil, id: nil, metadata: nil, raw: nil, updated_at: nil)
           @name = name
           @repo_id = repo_id
           @created_at = created_at
           @id = id
+          @metadata = metadata
           @raw = raw
           @updated_at = updated_at
         end
@@ -43,6 +46,7 @@ module UnifiedRubySDK
           return false unless @repo_id == other.repo_id
           return false unless @created_at == other.created_at
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at
           true

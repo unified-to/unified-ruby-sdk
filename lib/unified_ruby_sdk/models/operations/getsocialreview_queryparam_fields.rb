@@ -25,6 +25,7 @@ module UnifiedRubySDK
           AUTHOR_LOCATION = new('author_location')
           REPLY = new('reply')
           URL = new('url')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

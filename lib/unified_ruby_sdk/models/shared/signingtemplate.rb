@@ -23,6 +23,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Whether the template is active/available
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::SigningMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Template name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration
@@ -30,13 +32,14 @@ module UnifiedRubySDK
         # The last date that this template was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), creator_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, creator_id: nil, description: nil, id: nil, is_active: nil, name: nil, raw: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), creator_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::SigningMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, creator_id: nil, description: nil, id: nil, is_active: nil, metadata: nil, name: nil, raw: nil, updated_at: nil)
           @created_at = created_at
           @creator_id = creator_id
           @description = description
           @id = id
           @is_active = is_active
+          @metadata = metadata
           @name = name
           @raw = raw
           @updated_at = updated_at
@@ -50,6 +53,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at

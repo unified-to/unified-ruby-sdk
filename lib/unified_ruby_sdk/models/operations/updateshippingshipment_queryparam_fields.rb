@@ -52,6 +52,7 @@ module UnifiedRubySDK
           CARRIER_NAME = new('carrier_name')
           TRACKING_URL = new('tracking_url')
           LINEITEMS = new('lineitems')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

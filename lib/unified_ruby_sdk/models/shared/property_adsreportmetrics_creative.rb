@@ -48,6 +48,8 @@ module UnifiedRubySDK
         # Destination URL for creatives with links
         field :link_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_url') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
@@ -74,8 +76,8 @@ module UnifiedRubySDK
 
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
-        sig { params(asset_urls: T.nilable(T::Array[::String]), body: T.nilable(::String), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_type: T.nilable(Models::Shared::PropertyAdsReportMetricsCreativeCreativeType), cta: T.nilable(::String), data: T.nilable(::String), external_ad_reference: T.nilable(::String), external_creative_reference: T.nilable(::String), external_placement_reference: T.nilable(::String), group_id: T.nilable(::String), height: T.nilable(::Float), hosting_source: T.nilable(Models::Shared::PropertyAdsReportMetricsCreativeHostingSource), id: T.nilable(::String), item_id: T.nilable(::String), labels: T.nilable(T::Array[::String]), link_url: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), path1: T.nilable(::String), path2: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::PropertyAdsReportMetricsCreativeStatus), third_party_tag: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime), url_tags: T.nilable(::String), vast_tag_url: T.nilable(::String), width: T.nilable(::Float)).void }
-        def initialize(asset_urls: nil, body: nil, campaign_id: nil, created_at: nil, creative_type: nil, cta: nil, data: nil, external_ad_reference: nil, external_creative_reference: nil, external_placement_reference: nil, group_id: nil, height: nil, hosting_source: nil, id: nil, item_id: nil, labels: nil, link_url: nil, name: nil, organization_id: nil, path1: nil, path2: nil, promoted: nil, raw: nil, status: nil, third_party_tag: nil, title: nil, updated_at: nil, url_tags: nil, vast_tag_url: nil, width: nil)
+        sig { params(asset_urls: T.nilable(T::Array[::String]), body: T.nilable(::String), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_type: T.nilable(Models::Shared::PropertyAdsReportMetricsCreativeCreativeType), cta: T.nilable(::String), data: T.nilable(::String), external_ad_reference: T.nilable(::String), external_creative_reference: T.nilable(::String), external_placement_reference: T.nilable(::String), group_id: T.nilable(::String), height: T.nilable(::Float), hosting_source: T.nilable(Models::Shared::PropertyAdsReportMetricsCreativeHostingSource), id: T.nilable(::String), item_id: T.nilable(::String), labels: T.nilable(T::Array[::String]), link_url: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), path1: T.nilable(::String), path2: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::PropertyAdsReportMetricsCreativeStatus), third_party_tag: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime), url_tags: T.nilable(::String), vast_tag_url: T.nilable(::String), width: T.nilable(::Float)).void }
+        def initialize(asset_urls: nil, body: nil, campaign_id: nil, created_at: nil, creative_type: nil, cta: nil, data: nil, external_ad_reference: nil, external_creative_reference: nil, external_placement_reference: nil, group_id: nil, height: nil, hosting_source: nil, id: nil, item_id: nil, labels: nil, link_url: nil, metadata: nil, name: nil, organization_id: nil, path1: nil, path2: nil, promoted: nil, raw: nil, status: nil, third_party_tag: nil, title: nil, updated_at: nil, url_tags: nil, vast_tag_url: nil, width: nil)
           @asset_urls = asset_urls
           @body = body
           @campaign_id = campaign_id
@@ -93,6 +95,7 @@ module UnifiedRubySDK
           @item_id = item_id
           @labels = labels
           @link_url = link_url
+          @metadata = metadata
           @name = name
           @organization_id = organization_id
           @path1 = path1
@@ -128,6 +131,7 @@ module UnifiedRubySDK
           return false unless @item_id == other.item_id
           return false unless @labels == other.labels
           return false unless @link_url == other.link_url
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
           return false unless @path1 == other.path1

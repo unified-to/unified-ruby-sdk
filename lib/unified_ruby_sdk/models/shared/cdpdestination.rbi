@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::CdpDestination
   def id=(str_); end
   def is_enabled(); end
   def is_enabled=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

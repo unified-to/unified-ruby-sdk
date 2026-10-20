@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::AdsInsertionorder
   def id=(str_); end
   def kpi(); end
   def kpi=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end

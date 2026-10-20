@@ -35,6 +35,7 @@ module UnifiedRubySDK
           PATH2 = new('path2')
           PROMOTED = new('promoted')
           LOGO_CREATIVE_ID = new('logo_creative_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

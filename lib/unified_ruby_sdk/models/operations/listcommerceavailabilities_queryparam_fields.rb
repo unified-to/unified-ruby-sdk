@@ -19,6 +19,7 @@ module UnifiedRubySDK
           SIZE = new('size')
           ITEM_ID = new('item_id')
           STAFF_USER_ID = new('staff_user_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

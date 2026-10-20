@@ -38,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::PropertyMessagingEventMessage
   def message_markdown=(str_); end
   def message_thread_identifier(); end
   def message_thread_identifier=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
   def raw(); end

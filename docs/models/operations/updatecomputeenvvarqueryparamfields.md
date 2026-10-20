@@ -13,4 +13,5 @@
 | `VALUE`        | value          |
 | `ENVIRONMENTS` | environments   |
 | `IS_SECRET`    | is_secret      |
+| `METADATA`     | metadata       |
 | `RAW`          | raw            |

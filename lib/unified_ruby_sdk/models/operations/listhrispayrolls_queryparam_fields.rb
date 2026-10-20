@@ -34,6 +34,7 @@ module UnifiedRubySDK
           TOTAL_COST_AMOUNT = new('total_cost_amount')
           USER_IDS = new('user_ids')
           PAYSLIP_IDS = new('payslip_ids')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

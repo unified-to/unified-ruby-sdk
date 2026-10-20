@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
@@ -32,13 +34,14 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, description: nil, id: nil, is_active: nil, media: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), media: T.nilable(T::Array[Models::Shared::LmsMedia]), metadata: T.nilable(T::Array[Models::Shared::LmsMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, description: nil, id: nil, is_active: nil, media: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil)
           @created_at = created_at
           @description = description
           @id = id
           @is_active = is_active
           @media = media
+          @metadata = metadata
           @name = name
           @parent_id = parent_id
           @raw = raw
@@ -53,6 +56,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_active == other.is_active
           return false unless @media == other.media
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw

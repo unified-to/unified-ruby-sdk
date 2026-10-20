@@ -23,6 +23,7 @@ module UnifiedRubySDK
           TOTAL_DEBIT_AMOUNT = new('total_debit_amount')
           TOTAL_CREDIT_AMOUNT = new('total_credit_amount')
           SUB_ITEMS = new('sub_items')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

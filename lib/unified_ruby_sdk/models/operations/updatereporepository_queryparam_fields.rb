@@ -22,6 +22,7 @@ module UnifiedRubySDK
           IS_PRIVATE = new('is_private')
           WEB_URL = new('web_url')
           ORG_ID = new('org_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -23,6 +23,7 @@ module UnifiedRubySDK
           COMPANY = new('company')
           EMAILS = new('emails')
           TELEPHONES = new('telephones')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

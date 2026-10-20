@@ -20,6 +20,7 @@ module UnifiedRubySDK
           RESPONDENT_EMAIL = new('respondent_email')
           RESPONDENT_NAME = new('respondent_name')
           ANSWERS = new('answers')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -30,6 +30,8 @@ module UnifiedRubySDK
 
         field :legal_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('legal_name') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Identifier for tracking and categorizing organizations for reporting or analysis purposes that is defined by the end-customer
         field :organization_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_code') } }
@@ -48,8 +50,8 @@ module UnifiedRubySDK
 
         field :website, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyAccountingOrganizationAddress), books_close_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), currency: T.nilable(::String), fiscal_year_end_month: T.nilable(::Float), id: T.nilable(::String), is_elimination: T.nilable(T::Boolean), legal_name: T.nilable(::String), name: T.nilable(::String), organization_code: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax_number: T.nilable(::String), timezone: T.nilable(::String), type: T.nilable(Models::Shared::AccountingOrganizationType), updated_at: T.nilable(::DateTime), website: T.nilable(::String)).void }
-        def initialize(address: nil, books_close_at: nil, created_at: nil, currency: nil, fiscal_year_end_month: nil, id: nil, is_elimination: nil, legal_name: nil, name: nil, organization_code: nil, parent_id: nil, raw: nil, tax_number: nil, timezone: nil, type: nil, updated_at: nil, website: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyAccountingOrganizationAddress), books_close_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), currency: T.nilable(::String), fiscal_year_end_month: T.nilable(::Float), id: T.nilable(::String), is_elimination: T.nilable(T::Boolean), legal_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), organization_code: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax_number: T.nilable(::String), timezone: T.nilable(::String), type: T.nilable(Models::Shared::AccountingOrganizationType), updated_at: T.nilable(::DateTime), website: T.nilable(::String)).void }
+        def initialize(address: nil, books_close_at: nil, created_at: nil, currency: nil, fiscal_year_end_month: nil, id: nil, is_elimination: nil, legal_name: nil, metadata: nil, name: nil, organization_code: nil, parent_id: nil, raw: nil, tax_number: nil, timezone: nil, type: nil, updated_at: nil, website: nil)
           @address = address
           @books_close_at = books_close_at
           @created_at = created_at
@@ -58,6 +60,7 @@ module UnifiedRubySDK
           @id = id
           @is_elimination = is_elimination
           @legal_name = legal_name
+          @metadata = metadata
           @name = name
           @organization_code = organization_code
           @parent_id = parent_id
@@ -80,6 +83,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_elimination == other.is_elimination
           return false unless @legal_name == other.legal_name
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @organization_code == other.organization_code
           return false unless @parent_id == other.parent_id

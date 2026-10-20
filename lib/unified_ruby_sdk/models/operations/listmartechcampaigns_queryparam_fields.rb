@@ -26,6 +26,7 @@ module UnifiedRubySDK
           FROM_EMAIL = new('from_email')
           REPLY_TO_EMAIL = new('reply_to_email')
           SEND_AT = new('send_at')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

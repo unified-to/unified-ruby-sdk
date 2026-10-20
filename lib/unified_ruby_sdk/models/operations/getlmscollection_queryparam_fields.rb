@@ -21,6 +21,7 @@ module UnifiedRubySDK
           MEDIA = new('media')
           IS_ACTIVE = new('is_active')
           PARENT_ID = new('parent_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

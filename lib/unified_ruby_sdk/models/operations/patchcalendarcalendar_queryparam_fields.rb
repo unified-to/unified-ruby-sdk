@@ -20,6 +20,7 @@ module UnifiedRubySDK
           DESCRIPTION = new('description')
           TIMEZONE = new('timezone')
           IS_PRIMARY = new('is_primary')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

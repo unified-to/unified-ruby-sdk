@@ -23,6 +23,7 @@ module UnifiedRubySDK
           LONGITUDE = new('longitude')
           TELEPHONE = new('telephone')
           URL = new('url')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

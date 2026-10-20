@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AnalyticsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :metrics, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AnalyticsReportMetrics)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metrics') } }
         # points to AnalyticsProperty
         field :property_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('property_id') } }
@@ -30,11 +32,12 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), metrics: T.nilable(T::Array[Models::Shared::AnalyticsReportMetrics]), property_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, end_at: nil, id: nil, metrics: nil, property_id: nil, raw: nil, start_at: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AnalyticsMetadata]), metrics: T.nilable(T::Array[Models::Shared::AnalyticsReportMetrics]), property_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, end_at: nil, id: nil, metadata: nil, metrics: nil, property_id: nil, raw: nil, start_at: nil, updated_at: nil)
           @created_at = created_at
           @end_at = end_at
           @id = id
+          @metadata = metadata
           @metrics = metrics
           @property_id = property_id
           @raw = raw
@@ -48,6 +51,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @end_at == other.end_at
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @metrics == other.metrics
           return false unless @property_id == other.property_id
           return false unless @raw == other.raw

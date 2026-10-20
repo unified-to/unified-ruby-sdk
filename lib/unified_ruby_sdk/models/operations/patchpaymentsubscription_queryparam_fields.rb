@@ -33,6 +33,7 @@ module UnifiedRubySDK
           DAY_OF_WEEK = new('day_of_week')
           INTERVAL = new('interval')
           LINEITEMS = new('lineitems')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

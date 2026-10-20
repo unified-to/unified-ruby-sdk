@@ -19,6 +19,7 @@ module UnifiedRubySDK
           TASK_ID = new('task_id')
           USER_ID = new('user_id')
           ITEMS = new('items')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

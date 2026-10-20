@@ -23,6 +23,7 @@ module UnifiedRubySDK
           TITLE = new('title')
           TELEPHONES = new('telephones')
           IMAGE_URL = new('image_url')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

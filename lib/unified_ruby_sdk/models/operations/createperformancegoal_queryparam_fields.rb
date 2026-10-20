@@ -30,6 +30,7 @@ module UnifiedRubySDK
           DUE_AT = new('due_at')
           COMPLETED_AT = new('completed_at')
           MILESTONES = new('milestones')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

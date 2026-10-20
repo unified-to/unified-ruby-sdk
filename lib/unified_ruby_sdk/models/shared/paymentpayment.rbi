@@ -38,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::PaymentPayment
   def link_id=(str_); end
   def location_id(); end
   def location_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def net_amount(); end
   def net_amount=(str_); end
   def notes(); end

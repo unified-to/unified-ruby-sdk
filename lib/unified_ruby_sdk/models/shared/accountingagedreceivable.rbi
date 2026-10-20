@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::AccountingAgedreceivable
   def end_at=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def organization_id(); end
   def organization_id=(str_); end
   def periods(); end

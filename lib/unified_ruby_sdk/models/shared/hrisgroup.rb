@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
         field :manager_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('manager_ids') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :next_paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('next_paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -42,14 +44,15 @@ module UnifiedRubySDK
 
         field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[::String]), name: T.nilable(::String), next_paid_at: T.nilable(::DateTime), parent_id: T.nilable(::String), pay_frequency: T.nilable(Models::Shared::HrisGroupPayFrequency), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::HrisGroupType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-        def initialize(company_id: nil, created_at: nil, description: nil, id: nil, is_active: nil, manager_ids: nil, name: nil, next_paid_at: nil, parent_id: nil, pay_frequency: nil, raw: nil, type: nil, updated_at: nil, user_ids: nil)
+        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), manager_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), next_paid_at: T.nilable(::DateTime), parent_id: T.nilable(::String), pay_frequency: T.nilable(Models::Shared::HrisGroupPayFrequency), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::HrisGroupType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        def initialize(company_id: nil, created_at: nil, description: nil, id: nil, is_active: nil, manager_ids: nil, metadata: nil, name: nil, next_paid_at: nil, parent_id: nil, pay_frequency: nil, raw: nil, type: nil, updated_at: nil, user_ids: nil)
           @company_id = company_id
           @created_at = created_at
           @description = description
           @id = id
           @is_active = is_active
           @manager_ids = manager_ids
+          @metadata = metadata
           @name = name
           @next_paid_at = next_paid_at
           @parent_id = parent_id
@@ -69,6 +72,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_active == other.is_active
           return false unless @manager_ids == other.manager_ids
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @next_paid_at == other.next_paid_at
           return false unless @parent_id == other.parent_id

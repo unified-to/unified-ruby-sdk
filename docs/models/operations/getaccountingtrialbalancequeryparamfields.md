@@ -15,4 +15,5 @@
 | `TOTAL_DEBIT_AMOUNT`  | total_debit_amount    |
 | `TOTAL_CREDIT_AMOUNT` | total_credit_amount   |
 | `SUB_ITEMS`           | sub_items             |
+| `METADATA`            | metadata              |
 | `RAW`                 | raw                   |

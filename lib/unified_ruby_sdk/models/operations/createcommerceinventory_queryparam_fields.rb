@@ -20,6 +20,7 @@ module UnifiedRubySDK
           ITEM_OPTION_ID = new('item_option_id')
           LOCATION_ID = new('location_id')
           AVAILABLE = new('available')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

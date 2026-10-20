@@ -22,6 +22,7 @@ module UnifiedRubySDK
           MESSAGE = new('message')
           TAGS = new('tags')
           IS_VISIBLE = new('is_visible')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

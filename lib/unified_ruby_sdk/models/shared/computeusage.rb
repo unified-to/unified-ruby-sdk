@@ -27,6 +27,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # The instance the usage belongs to, when per-instance
         field :instance_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instance_id') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ComputeMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Amount consumed, in unit
         field :quantity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('quantity') } }
         # Raw data from integration
@@ -38,8 +40,8 @@ module UnifiedRubySDK
         # When the usage record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(category: T.nilable(Models::Shared::ComputeUsageCategory), cost_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), instance_id: T.nilable(::String), quantity: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), unit: T.nilable(Models::Shared::Unit), updated_at: T.nilable(::DateTime)).void }
-        def initialize(category: nil, cost_amount: nil, created_at: nil, currency: nil, end_at: nil, id: nil, instance_id: nil, quantity: nil, raw: nil, start_at: nil, unit: nil, updated_at: nil)
+        sig { params(category: T.nilable(Models::Shared::ComputeUsageCategory), cost_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), instance_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), quantity: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), unit: T.nilable(Models::Shared::Unit), updated_at: T.nilable(::DateTime)).void }
+        def initialize(category: nil, cost_amount: nil, created_at: nil, currency: nil, end_at: nil, id: nil, instance_id: nil, metadata: nil, quantity: nil, raw: nil, start_at: nil, unit: nil, updated_at: nil)
           @category = category
           @cost_amount = cost_amount
           @created_at = created_at
@@ -47,6 +49,7 @@ module UnifiedRubySDK
           @end_at = end_at
           @id = id
           @instance_id = instance_id
+          @metadata = metadata
           @quantity = quantity
           @raw = raw
           @start_at = start_at
@@ -64,6 +67,7 @@ module UnifiedRubySDK
           return false unless @end_at == other.end_at
           return false unless @id == other.id
           return false unless @instance_id == other.instance_id
+          return false unless @metadata == other.metadata
           return false unless @quantity == other.quantity
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at

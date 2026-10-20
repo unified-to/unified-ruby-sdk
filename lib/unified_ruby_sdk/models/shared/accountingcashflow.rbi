@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::AccountingCashflow
   def id=(str_); end
   def investing_sections(); end
   def investing_sections=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def net_change_in_cash_amount(); end

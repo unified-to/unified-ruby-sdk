@@ -34,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::ClubsEvent
   def location_id=(str_); end
   def location_name(); end
   def location_name=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def opponent_id(); end

@@ -22,6 +22,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TicketingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :ticket_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ticket_id') } }
@@ -30,12 +32,13 @@ module UnifiedRubySDK
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), ticket_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(created_at: nil, customer_id: nil, description: nil, id: nil, raw: nil, ticket_id: nil, updated_at: nil, user_id: nil)
+        sig { params(created_at: T.nilable(::DateTime), customer_id: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::TicketingMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), ticket_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(created_at: nil, customer_id: nil, description: nil, id: nil, metadata: nil, raw: nil, ticket_id: nil, updated_at: nil, user_id: nil)
           @created_at = created_at
           @customer_id = customer_id
           @description = description
           @id = id
+          @metadata = metadata
           @raw = raw
           @ticket_id = ticket_id
           @updated_at = updated_at
@@ -49,6 +52,7 @@ module UnifiedRubySDK
           return false unless @customer_id == other.customer_id
           return false unless @description == other.description
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @ticket_id == other.ticket_id
           return false unless @updated_at == other.updated_at

@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::SocialReview
   def created_at=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def profile_id(); end
   def profile_id=(str_); end
   def rating(); end

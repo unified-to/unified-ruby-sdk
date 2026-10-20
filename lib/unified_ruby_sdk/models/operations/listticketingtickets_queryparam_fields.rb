@@ -30,6 +30,7 @@ module UnifiedRubySDK
           URL = new('url')
           ATTACHMENT_IDS = new('attachment_ids')
           DUE_AT = new('due_at')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

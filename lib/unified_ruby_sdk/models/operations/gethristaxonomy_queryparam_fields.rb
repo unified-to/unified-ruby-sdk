@@ -27,6 +27,7 @@ module UnifiedRubySDK
           URL = new('url')
           ROLE_IDS = new('role_ids')
           IS_ACTIVE = new('is_active')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::ShippingTracking
   def events=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def shipment_id(); end

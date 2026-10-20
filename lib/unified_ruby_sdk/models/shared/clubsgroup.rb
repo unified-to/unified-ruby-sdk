@@ -43,6 +43,8 @@ module UnifiedRubySDK
         field :member_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('member_count') } }
         # The authenticated user's membership status
         field :membership_status, Crystalline::Nilable.new(Models::Shared::MembershipStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('membership_status'), 'decoder': Utils.enum_from_string(Models::Shared::MembershipStatus, true) } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ClubsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The group's name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The number of posts in the group
@@ -58,8 +60,8 @@ module UnifiedRubySDK
         # The group's vanity URL
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(activity_types: T.nilable(T::Array[::String]), address: T.nilable(Models::Shared::PropertyClubsGroupAddress), cover_image_url: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), following_count: T.nilable(::Float), group_type: T.nilable(Models::Shared::GroupType), id: T.nilable(::String), is_admin: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_owner: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), member_count: T.nilable(::Float), membership_status: T.nilable(Models::Shared::MembershipStatus), name: T.nilable(::String), post_count: T.nilable(::Float), profile_image_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sport_type: T.nilable(Models::Shared::SportType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(activity_types: nil, address: nil, cover_image_url: nil, created_at: nil, description: nil, following_count: nil, group_type: nil, id: nil, is_admin: nil, is_featured: nil, is_owner: nil, is_private: nil, is_verified: nil, member_count: nil, membership_status: nil, name: nil, post_count: nil, profile_image_url: nil, raw: nil, sport_type: nil, updated_at: nil, url: nil)
+        sig { params(activity_types: T.nilable(T::Array[::String]), address: T.nilable(Models::Shared::PropertyClubsGroupAddress), cover_image_url: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), following_count: T.nilable(::Float), group_type: T.nilable(Models::Shared::GroupType), id: T.nilable(::String), is_admin: T.nilable(T::Boolean), is_featured: T.nilable(T::Boolean), is_owner: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), member_count: T.nilable(::Float), membership_status: T.nilable(Models::Shared::MembershipStatus), metadata: T.nilable(T::Array[Models::Shared::ClubsMetadata]), name: T.nilable(::String), post_count: T.nilable(::Float), profile_image_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sport_type: T.nilable(Models::Shared::SportType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(activity_types: nil, address: nil, cover_image_url: nil, created_at: nil, description: nil, following_count: nil, group_type: nil, id: nil, is_admin: nil, is_featured: nil, is_owner: nil, is_private: nil, is_verified: nil, member_count: nil, membership_status: nil, metadata: nil, name: nil, post_count: nil, profile_image_url: nil, raw: nil, sport_type: nil, updated_at: nil, url: nil)
           @activity_types = activity_types
           @address = address
           @cover_image_url = cover_image_url
@@ -75,6 +77,7 @@ module UnifiedRubySDK
           @is_verified = is_verified
           @member_count = member_count
           @membership_status = membership_status
+          @metadata = metadata
           @name = name
           @post_count = post_count
           @profile_image_url = profile_image_url
@@ -102,6 +105,7 @@ module UnifiedRubySDK
           return false unless @is_verified == other.is_verified
           return false unless @member_count == other.member_count
           return false unless @membership_status == other.membership_status
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @post_count == other.post_count
           return false unless @profile_image_url == other.profile_image_url

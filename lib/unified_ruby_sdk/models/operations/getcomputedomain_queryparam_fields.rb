@@ -21,6 +21,7 @@ module UnifiedRubySDK
           STATUS = new('status')
           IS_PRIMARY = new('is_primary')
           REDIRECT_URL = new('redirect_url')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

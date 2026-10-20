@@ -32,7 +32,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
   description: 'Anser sperno decerno.',
-  id: '0aa9ad53-9d98-4634-904a-b074d342e6a9',
+  id: 'e3e3fb5e-ea4a-43bf-8d84-cc922fd1628e',
   instructors: [],
   languages: [
     'in',
@@ -51,9 +51,10 @@ res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
       url: 'https://loremflickr.com/487/921?lock=5127962071241632',
     ),
   ],
+  metadata: [],
   name: 'virtus',
   students: [],
-  updated_at: DateTime.iso8601('2025-08-02T03:30:38.563Z'),
+  updated_at: DateTime.iso8601('2025-08-03T02:28:49.606Z'),
 ), connection_id: '<id>')
 
 unless res.lms_class.nil?
@@ -191,7 +192,7 @@ req = Models::Operations::PatchLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: 'b139278a-ea3a-45c7-808d-9302c03a2f1a',
+    id: '2c0dae7b-6fd6-4336-8bcb-0c6119045288',
     instructors: [],
     languages: [
       'in',
@@ -210,9 +211,10 @@ req = Models::Operations::PatchLmsClassRequest.new(
         url: 'https://loremflickr.com/487/921?lock=5127962071241632',
       ),
     ],
+    metadata: [],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-02T03:30:38.577Z'),
+    updated_at: DateTime.iso8601('2025-08-03T02:28:49.623Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -305,7 +307,7 @@ req = Models::Operations::UpdateLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: 'b139278a-ea3a-45c7-808d-9302c03a2f1a',
+    id: '2c0dae7b-6fd6-4336-8bcb-0c6119045288',
     instructors: [],
     languages: [
       'in',
@@ -324,9 +326,10 @@ req = Models::Operations::UpdateLmsClassRequest.new(
         url: 'https://loremflickr.com/487/921?lock=5127962071241632',
       ),
     ],
+    metadata: [],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-02T03:30:38.577Z'),
+    updated_at: DateTime.iso8601('2025-08-03T02:28:49.623Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

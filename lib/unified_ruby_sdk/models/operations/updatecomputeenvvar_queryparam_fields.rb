@@ -21,6 +21,7 @@ module UnifiedRubySDK
           VALUE = new('value')
           ENVIRONMENTS = new('environments')
           IS_SECRET = new('is_secret')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

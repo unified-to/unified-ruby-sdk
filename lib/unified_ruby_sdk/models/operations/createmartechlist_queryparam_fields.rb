@@ -29,6 +29,7 @@ module UnifiedRubySDK
           LANGUAGE = new('language')
           SENDER_COMPANY = new('sender_company')
           SENDER_PHONE = new('sender_phone')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

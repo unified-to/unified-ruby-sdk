@@ -22,6 +22,8 @@ module UnifiedRubySDK
 
         field :industry, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('industry') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AnalyticsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # points to AnalyticsProperty
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
@@ -32,12 +34,13 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), industry: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, currency: nil, id: nil, industry: nil, name: nil, parent_id: nil, raw: nil, timezone: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), industry: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AnalyticsMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, currency: nil, id: nil, industry: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, timezone: nil, updated_at: nil)
           @created_at = created_at
           @currency = currency
           @id = id
           @industry = industry
+          @metadata = metadata
           @name = name
           @parent_id = parent_id
           @raw = raw
@@ -52,6 +55,7 @@ module UnifiedRubySDK
           return false unless @currency == other.currency
           return false unless @id == other.id
           return false unless @industry == other.industry
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw

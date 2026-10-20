@@ -24,6 +24,7 @@ module UnifiedRubySDK
           TOTAL_AMOUNT = new('total_amount')
           PERIODS = new('periods')
           ORGANIZATION_ID = new('organization_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

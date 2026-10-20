@@ -30,44 +30,43 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::HealthcarePatient.new(
   address: Models::Shared::PropertyHealthcarePatientAddress.new(
-    address1: '3645 Zoila Isle',
-    address2: 'Suite 613',
-    city: 'Jacintostead',
+    address1: '162 Kirlin Mall',
+    city: 'Dickinsonborough',
     country: 'US',
-    postal_code: '31579',
-    region: 'Minnesota',
+    postal_code: '54031',
+    region: 'Nebraska',
   ),
-  birthdate: '2025-02-09',
+  birthdate: '2025-02-11',
   created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
   emails: [
     Models::Shared::HealthcareEmail.new(
-      email: 'alejandrin.parker@yahoo.com',
+      email: 'alejandrin.parker@icloud.com',
       type: Models::Shared::HealthcareEmailType::HOME,
     ),
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '2cb89a12-a7c7-4231-b43c-7d981b8252ea',
+  id: 'd60c5cea-4cfb-42db-8978-c547c4e06522',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
-      value: '92636004',
+      value: '57992636',
     ),
   ],
   is_active: true,
   is_deceased: false,
-  language: 'en',
+  language: 'zh',
   last_name: 'Parker',
   metadata: [],
   name: 'Alejandrin Parker',
   practitioner_ids: [],
   telephones: [
     Models::Shared::HealthcareTelephone.new(
-      telephone: '659.223.0829 x590',
+      telephone: '1-219-555-9023 x08295',
       type: Models::Shared::HealthcareTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-20T20:06:14.543Z'),
+  updated_at: DateTime.iso8601('2026-06-21T22:27:59.451Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -204,44 +203,43 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchHealthcarePatientRequest.new(
   healthcare_patient: Models::Shared::HealthcarePatient.new(
     address: Models::Shared::PropertyHealthcarePatientAddress.new(
-      address1: '3645 Zoila Isle',
-      address2: 'Suite 613',
-      city: 'Jacintostead',
+      address1: '162 Kirlin Mall',
+      city: 'Dickinsonborough',
       country: 'US',
-      postal_code: '31579',
-      region: 'Minnesota',
+      postal_code: '54031',
+      region: 'Nebraska',
     ),
-    birthdate: '2025-02-09',
+    birthdate: '2025-02-11',
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
-        email: 'alejandrin.parker@yahoo.com',
+        email: 'alejandrin.parker@icloud.com',
         type: Models::Shared::HealthcareEmailType::HOME,
       ),
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'a87750c8-e94c-4723-89e1-8c3ae64c5810',
+    id: 'b843ec9b-a881-46e1-939d-5777b12a1858',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
-        value: '92636004',
+        value: '57992636',
       ),
     ],
     is_active: true,
     is_deceased: false,
-    language: 'en',
+    language: 'zh',
     last_name: 'Parker',
     metadata: [],
     name: 'Alejandrin Parker',
     practitioner_ids: [],
     telephones: [
       Models::Shared::HealthcareTelephone.new(
-        telephone: '659.223.0829 x590',
+        telephone: '1-219-555-9023 x08295',
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-20T20:06:14.571Z'),
+    updated_at: DateTime.iso8601('2026-06-21T22:27:59.496Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -291,44 +289,43 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateHealthcarePatientRequest.new(
   healthcare_patient: Models::Shared::HealthcarePatient.new(
     address: Models::Shared::PropertyHealthcarePatientAddress.new(
-      address1: '3645 Zoila Isle',
-      address2: 'Suite 613',
-      city: 'Jacintostead',
+      address1: '162 Kirlin Mall',
+      city: 'Dickinsonborough',
       country: 'US',
-      postal_code: '31579',
-      region: 'Minnesota',
+      postal_code: '54031',
+      region: 'Nebraska',
     ),
-    birthdate: '2025-02-09',
+    birthdate: '2025-02-11',
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
-        email: 'alejandrin.parker@yahoo.com',
+        email: 'alejandrin.parker@icloud.com',
         type: Models::Shared::HealthcareEmailType::HOME,
       ),
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'a87750c8-e94c-4723-89e1-8c3ae64c5810',
+    id: 'b843ec9b-a881-46e1-939d-5777b12a1858',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
-        value: '92636004',
+        value: '57992636',
       ),
     ],
     is_active: true,
     is_deceased: false,
-    language: 'en',
+    language: 'zh',
     last_name: 'Parker',
     metadata: [],
     name: 'Alejandrin Parker',
     practitioner_ids: [],
     telephones: [
       Models::Shared::HealthcareTelephone.new(
-        telephone: '659.223.0829 x590',
+        telephone: '1-219-555-9023 x08295',
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-20T20:06:14.571Z'),
+    updated_at: DateTime.iso8601('2026-06-21T22:27:59.496Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

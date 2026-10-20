@@ -206,6 +206,8 @@ module UnifiedRubySDK
           GENAI_ORGANIZATION_WRITE = new('genai_organization_write')
           GENAI_SKILL_READ = new('genai_skill_read')
           GENAI_SKILL_WRITE = new('genai_skill_write')
+          GENAI_MEMORY_READ = new('genai_memory_read')
+          GENAI_MEMORY_WRITE = new('genai_memory_write')
           MESSAGING_MESSAGE_READ = new('messaging_message_read')
           MESSAGING_MESSAGE_WRITE = new('messaging_message_write')
           MESSAGING_CHANNEL_READ = new('messaging_channel_read')

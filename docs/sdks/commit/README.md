@@ -31,13 +31,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.commit.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
   created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-  id: 'c4e7fd69-60f4-4cb6-90c9-05ace36d775e',
+  id: 'acf3230e-a576-4bd0-9994-7edf796cb480',
   lines_added: 313.0,
   lines_changed: 659.0,
   lines_deleted: 482.0,
-  message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
+  message: 'quantify bluetooth bandwidth',
+  metadata: [],
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2023-05-30T07:16:08.723Z'),
+  updated_at: DateTime.iso8601('2023-05-30T20:10:09.092Z'),
 ), connection_id: '<id>')
 
 unless res.repo_commit.nil?
@@ -174,13 +175,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: 'c93e99bb-9f65-43f2-8b0d-956e0ae8ce7e',
+    id: 'e8ceebd7-0b7e-459e-b33e-51276d006d0e',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
-    message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
+    message: 'quantify bluetooth bandwidth',
+    metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-05-30T07:16:08.731Z'),
+    updated_at: DateTime.iso8601('2023-05-30T20:10:09.102Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -272,13 +274,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: 'c93e99bb-9f65-43f2-8b0d-956e0ae8ce7e',
+    id: 'e8ceebd7-0b7e-459e-b33e-51276d006d0e',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
-    message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
+    message: 'quantify bluetooth bandwidth',
+    metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-05-30T07:16:08.731Z'),
+    updated_at: DateTime.iso8601('2023-05-30T20:10:09.102Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

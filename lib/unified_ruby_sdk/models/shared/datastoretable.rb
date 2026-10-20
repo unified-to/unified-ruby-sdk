@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DatastoreMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
@@ -36,13 +38,14 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(created_at: T.nilable(::DateTime), database_id: T.nilable(::String), description: T.nilable(::String), fields_: T.nilable(T::Array[Models::Shared::DatastoreField]), id: T.nilable(::String), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), relationships: T.nilable(T::Array[Models::Shared::DatastoreRelationship]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-        def initialize(created_at: nil, database_id: nil, description: nil, fields_: nil, id: nil, name: nil, parent_id: nil, raw: nil, relationships: nil, updated_at: nil, web_url: nil)
+        sig { params(created_at: T.nilable(::DateTime), database_id: T.nilable(::String), description: T.nilable(::String), fields_: T.nilable(T::Array[Models::Shared::DatastoreField]), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::DatastoreMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), relationships: T.nilable(T::Array[Models::Shared::DatastoreRelationship]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(created_at: nil, database_id: nil, description: nil, fields_: nil, id: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, relationships: nil, updated_at: nil, web_url: nil)
           @created_at = created_at
           @database_id = database_id
           @description = description
           @fields_ = fields_
           @id = id
+          @metadata = metadata
           @name = name
           @parent_id = parent_id
           @raw = raw
@@ -59,6 +62,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @fields_ == other.fields_
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw

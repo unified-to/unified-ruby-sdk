@@ -21,6 +21,7 @@ module UnifiedRubySDK
           PERIOD = new('period')
           METRIC = new('metric')
           VALUE = new('value')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

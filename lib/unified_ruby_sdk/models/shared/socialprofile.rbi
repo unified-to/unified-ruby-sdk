@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::SocialProfile
   def is_verified=(str_); end
   def location(); end
   def location=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def metrics(); end
   def metrics=(str_); end
   def name(); end

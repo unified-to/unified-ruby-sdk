@@ -33,6 +33,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :investing_sections, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingCashflowSection)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('investing_sections') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # e.g. "Cash Flow Statement Q1 2020"
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Usually ending - beginning
@@ -46,8 +48,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(cash_beginning_amount: T.nilable(::Float), cash_ending_amount: T.nilable(::Float), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), financing_sections: T.nilable(T::Array[Models::Shared::AccountingCashflowSection]), id: T.nilable(::String), investing_sections: T.nilable(T::Array[Models::Shared::AccountingCashflowSection]), name: T.nilable(::String), net_change_in_cash_amount: T.nilable(::Float), operating_sections: T.nilable(T::Array[Models::Shared::AccountingCashflowSection]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
-        def initialize(cash_beginning_amount: nil, cash_ending_amount: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, end_at: nil, financing_sections: nil, id: nil, investing_sections: nil, name: nil, net_change_in_cash_amount: nil, operating_sections: nil, raw: nil, start_at: nil, updated_at: nil)
+        sig { params(cash_beginning_amount: T.nilable(::Float), cash_ending_amount: T.nilable(::Float), category_ids: T.nilable(T::Array[::String]), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), financing_sections: T.nilable(T::Array[Models::Shared::AccountingCashflowSection]), id: T.nilable(::String), investing_sections: T.nilable(T::Array[Models::Shared::AccountingCashflowSection]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), net_change_in_cash_amount: T.nilable(::Float), operating_sections: T.nilable(T::Array[Models::Shared::AccountingCashflowSection]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
+        def initialize(cash_beginning_amount: nil, cash_ending_amount: nil, category_ids: nil, contact_id: nil, created_at: nil, currency: nil, end_at: nil, financing_sections: nil, id: nil, investing_sections: nil, metadata: nil, name: nil, net_change_in_cash_amount: nil, operating_sections: nil, raw: nil, start_at: nil, updated_at: nil)
           @cash_beginning_amount = cash_beginning_amount
           @cash_ending_amount = cash_ending_amount
           @category_ids = category_ids
@@ -58,6 +60,7 @@ module UnifiedRubySDK
           @financing_sections = financing_sections
           @id = id
           @investing_sections = investing_sections
+          @metadata = metadata
           @name = name
           @net_change_in_cash_amount = net_change_in_cash_amount
           @operating_sections = operating_sections
@@ -79,6 +82,7 @@ module UnifiedRubySDK
           return false unless @financing_sections == other.financing_sections
           return false unless @id == other.id
           return false unless @investing_sections == other.investing_sections
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @net_change_in_cash_amount == other.net_change_in_cash_amount
           return false unless @operating_sections == other.operating_sections

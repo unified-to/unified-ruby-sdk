@@ -27,6 +27,7 @@ module UnifiedRubySDK
           HAS_SHUFFLE_QUESTIONS = new('has_shuffle_questions')
           CONFIRMATION_MESSAGE = new('confirmation_message')
           CONFIRMATION_REDIRECT_URL = new('confirmation_redirect_url')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

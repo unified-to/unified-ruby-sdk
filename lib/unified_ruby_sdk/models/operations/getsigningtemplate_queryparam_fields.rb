@@ -21,6 +21,7 @@ module UnifiedRubySDK
           IS_ACTIVE = new('is_active')
           CREATOR_ID = new('creator_id')
           RAW = new('raw')
+          METADATA = new('metadata')
         end
       end
     end

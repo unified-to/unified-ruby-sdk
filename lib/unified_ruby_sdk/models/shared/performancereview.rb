@@ -28,6 +28,8 @@ module UnifiedRubySDK
         # whether the reviewee acknowledged this review
         field :is_acknowledged, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_acknowledged') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PerformanceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :questions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PerformanceReviewQuestion)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }
         # the overall rating/score of this review
         field :rating, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating') } }
@@ -50,8 +52,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(user_id: ::String, comment: T.nilable(::String), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), cycle_id: T.nilable(::String), id: T.nilable(::String), is_acknowledged: T.nilable(T::Boolean), questions: T.nilable(T::Array[Models::Shared::PerformanceReviewQuestion]), rating: T.nilable(::Float), rating_description: T.nilable(::String), rating_maximum: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), reviewer_user_id: T.nilable(::String), status: T.nilable(Models::Shared::PerformanceReviewStatus), submitted_at: T.nilable(::DateTime), template_identifier: T.nilable(::String), type: T.nilable(Models::Shared::PerformanceReviewType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(user_id:, comment: nil, completed_at: nil, created_at: nil, cycle_id: nil, id: nil, is_acknowledged: nil, questions: nil, rating: nil, rating_description: nil, rating_maximum: nil, raw: nil, reviewer_user_id: nil, status: nil, submitted_at: nil, template_identifier: nil, type: nil, updated_at: nil)
+        sig { params(user_id: ::String, comment: T.nilable(::String), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), cycle_id: T.nilable(::String), id: T.nilable(::String), is_acknowledged: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::PerformanceMetadata]), questions: T.nilable(T::Array[Models::Shared::PerformanceReviewQuestion]), rating: T.nilable(::Float), rating_description: T.nilable(::String), rating_maximum: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), reviewer_user_id: T.nilable(::String), status: T.nilable(Models::Shared::PerformanceReviewStatus), submitted_at: T.nilable(::DateTime), template_identifier: T.nilable(::String), type: T.nilable(Models::Shared::PerformanceReviewType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(user_id:, comment: nil, completed_at: nil, created_at: nil, cycle_id: nil, id: nil, is_acknowledged: nil, metadata: nil, questions: nil, rating: nil, rating_description: nil, rating_maximum: nil, raw: nil, reviewer_user_id: nil, status: nil, submitted_at: nil, template_identifier: nil, type: nil, updated_at: nil)
           @user_id = user_id
           @comment = comment
           @completed_at = completed_at
@@ -59,6 +61,7 @@ module UnifiedRubySDK
           @cycle_id = cycle_id
           @id = id
           @is_acknowledged = is_acknowledged
+          @metadata = metadata
           @questions = questions
           @rating = rating
           @rating_description = rating_description
@@ -82,6 +85,7 @@ module UnifiedRubySDK
           return false unless @cycle_id == other.cycle_id
           return false unless @id == other.id
           return false unless @is_acknowledged == other.is_acknowledged
+          return false unless @metadata == other.metadata
           return false unless @questions == other.questions
           return false unless @rating == other.rating
           return false unless @rating_description == other.rating_description

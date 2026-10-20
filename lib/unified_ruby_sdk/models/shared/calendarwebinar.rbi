@@ -34,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::CalendarWebinar
   def is_webcast=(str_); end
   def join_url(); end
   def join_url=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def notes(); end
   def notes=(str_); end
   def organizer(); end

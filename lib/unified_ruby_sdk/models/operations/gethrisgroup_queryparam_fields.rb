@@ -26,6 +26,7 @@ module UnifiedRubySDK
           COMPANY_ID = new('company_id')
           PAY_FREQUENCY = new('pay_frequency')
           NEXT_PAID_AT = new('next_paid_at')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

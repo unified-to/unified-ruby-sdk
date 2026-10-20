@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :price_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_amount') } }
@@ -36,14 +38,15 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
-        sig { params(url: ::String, created_at: T.nilable(::String), description: T.nilable(::String), duration: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), price_amount: T.nilable(::Float), price_currency: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String)).void }
-        def initialize(url:, created_at: nil, description: nil, duration: nil, id: nil, is_active: nil, name: nil, price_amount: nil, price_currency: nil, raw: nil, updated_at: nil)
+        sig { params(url: ::String, created_at: T.nilable(::String), description: T.nilable(::String), duration: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::CalendarMetadata]), name: T.nilable(::String), price_amount: T.nilable(::Float), price_currency: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String)).void }
+        def initialize(url:, created_at: nil, description: nil, duration: nil, id: nil, is_active: nil, metadata: nil, name: nil, price_amount: nil, price_currency: nil, raw: nil, updated_at: nil)
           @url = url
           @created_at = created_at
           @description = description
           @duration = duration
           @id = id
           @is_active = is_active
+          @metadata = metadata
           @name = name
           @price_amount = price_amount
           @price_currency = price_currency
@@ -60,6 +63,7 @@ module UnifiedRubySDK
           return false unless @duration == other.duration
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @price_amount == other.price_amount
           return false unless @price_currency == other.price_currency

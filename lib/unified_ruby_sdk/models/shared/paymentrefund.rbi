@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::PaymentRefund
   def currency=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def notes(); end
   def notes=(str_); end
   def payment_id(); end

@@ -21,6 +21,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Whether the destination is active/enabled
         field :is_enabled, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_enabled') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CdpMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The name of the outbound activation destination
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration for this destination
@@ -32,12 +34,13 @@ module UnifiedRubySDK
         # The last date that this destination object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), direction: T.nilable(Models::Shared::Direction), id: T.nilable(::String), is_enabled: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, direction: nil, id: nil, is_enabled: nil, name: nil, raw: nil, slug: nil, type: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), direction: T.nilable(Models::Shared::Direction), id: T.nilable(::String), is_enabled: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::CdpMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, direction: nil, id: nil, is_enabled: nil, metadata: nil, name: nil, raw: nil, slug: nil, type: nil, updated_at: nil)
           @created_at = created_at
           @direction = direction
           @id = id
           @is_enabled = is_enabled
+          @metadata = metadata
           @name = name
           @raw = raw
           @slug = slug
@@ -52,6 +55,7 @@ module UnifiedRubySDK
           return false unless @direction == other.direction
           return false unless @id == other.id
           return false unless @is_enabled == other.is_enabled
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @slug == other.slug

@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::AtsDocument
   def id=(str_); end
   def job_id(); end
   def job_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def type(); end

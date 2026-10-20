@@ -37,12 +37,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.category.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(
   created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
-  description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
-  id: 'dd7d7b48-8989-46fe-9102-c48437557ac1',
+  description: 'Textus ab thymum labore basium.',
+  id: '4d040afd-aae9-43cc-83de-7e0e1daa59c4',
   is_active: false,
   metadata: [],
-  name: 'Electronic Cotton Shoes',
-  updated_at: DateTime.iso8601('2025-09-10T01:35:34.112Z'),
+  name: 'Beauty',
+  updated_at: DateTime.iso8601('2025-09-10T20:30:35.430Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_category.nil?
@@ -90,10 +90,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.category.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(
   created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
   description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-  id: 'e11d1716-12be-488d-970e-e7b8ca32021f',
+  id: 'ab65c131-0e50-4cea-bec4-ca8000b8ab0a',
   is_active: true,
+  metadata: [],
   name: 'amicitia',
-  updated_at: DateTime.iso8601('2026-01-12T02:50:21.943Z'),
+  updated_at: DateTime.iso8601('2026-01-13T03:50:48.455Z'),
 ), connection_id: '<id>')
 
 unless res.ticketing_category.nil?
@@ -319,12 +320,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
-    description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
-    id: 'a6ad7df7-e370-4e3f-adb2-c9673d3c5c64',
+    description: 'Textus ab thymum labore basium.',
+    id: 'ef66efb2-5981-4414-beee-531df11cc5c0',
     is_active: false,
     metadata: [],
-    name: 'Electronic Cotton Shoes',
-    updated_at: DateTime.iso8601('2025-09-10T01:35:34.127Z'),
+    name: 'Beauty',
+    updated_at: DateTime.iso8601('2025-09-10T20:30:35.449Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -375,10 +376,11 @@ req = Models::Operations::PatchTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: 'f1500c79-7bfb-4d72-9839-47b09bc70d22',
+    id: 'b76d15a6-9f48-4654-97a4-61db7a1f2e34',
     is_active: true,
+    metadata: [],
     name: 'amicitia',
-    updated_at: DateTime.iso8601('2026-01-12T02:50:21.948Z'),
+    updated_at: DateTime.iso8601('2026-01-13T03:50:48.467Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -512,12 +514,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
-    description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
-    id: 'a6ad7df7-e370-4e3f-adb2-c9673d3c5c64',
+    description: 'Textus ab thymum labore basium.',
+    id: 'ef66efb2-5981-4414-beee-531df11cc5c0',
     is_active: false,
     metadata: [],
-    name: 'Electronic Cotton Shoes',
-    updated_at: DateTime.iso8601('2025-09-10T01:35:34.127Z'),
+    name: 'Beauty',
+    updated_at: DateTime.iso8601('2025-09-10T20:30:35.449Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -568,10 +570,11 @@ req = Models::Operations::UpdateTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: 'f1500c79-7bfb-4d72-9839-47b09bc70d22',
+    id: 'b76d15a6-9f48-4654-97a4-61db7a1f2e34',
     is_active: true,
+    metadata: [],
     name: 'amicitia',
-    updated_at: DateTime.iso8601('2026-01-12T02:50:21.948Z'),
+    updated_at: DateTime.iso8601('2026-01-13T03:50:48.467Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

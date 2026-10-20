@@ -53,6 +53,7 @@ module UnifiedRubySDK
           RESPONSE_DETAILS = new('response_details')
           RESPONSE_SOURCE = new('response_source')
           RESPONSE_ATTRIBUTES = new('response_attributes')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

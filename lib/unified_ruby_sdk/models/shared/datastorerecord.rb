@@ -22,6 +22,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DatastoreMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :row_number, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('row_number') } }
@@ -30,12 +32,13 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(fields_: T::Hash[Symbol, Models::Shared::DatastoreFieldValue], created_at: T.nilable(::DateTime), database_id: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), row_number: T.nilable(::Float), table_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(fields_:, created_at: nil, database_id: nil, id: nil, raw: nil, row_number: nil, table_id: nil, updated_at: nil)
+        sig { params(fields_: T::Hash[Symbol, Models::Shared::DatastoreFieldValue], created_at: T.nilable(::DateTime), database_id: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::DatastoreMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), row_number: T.nilable(::Float), table_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(fields_:, created_at: nil, database_id: nil, id: nil, metadata: nil, raw: nil, row_number: nil, table_id: nil, updated_at: nil)
           @fields_ = fields_
           @created_at = created_at
           @database_id = database_id
           @id = id
+          @metadata = metadata
           @raw = raw
           @row_number = row_number
           @table_id = table_id
@@ -49,6 +52,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @database_id == other.database_id
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @row_number == other.row_number
           return false unless @table_id == other.table_id

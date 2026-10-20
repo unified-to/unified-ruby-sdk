@@ -36,28 +36,21 @@ res = s.member.create_martech_member(marketing_member: Models::Shared::Marketing
   created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
   emails: [
     Models::Shared::MarketingEmail.new(
-      email: 'Thalia.Abernathy61@gmail.com',
+      email: 'jude.leffler@hotmail.com',
       type: Models::Shared::MarketingEmailType::HOME,
-    ),
-    Models::Shared::MarketingEmail.new(
-      email: 'Maymie59@hotmail.com',
-      type: Models::Shared::MarketingEmailType::HOME,
-    ),
-    Models::Shared::MarketingEmail.new(
-      email: 'Coty27@hotmail.com',
-      type: Models::Shared::MarketingEmailType::WORK,
     ),
   ],
   first_name: 'Jude',
-  id: 'a4dfb061-9e6b-4b97-a7d8-040073b31c9e',
+  id: 'c7fd8ac7-696c-4727-9259-33dabece1a92',
   last_name: 'Leffler',
+  metadata: [],
   name: 'Jude Leffler',
   status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
   tags: [
-    'vinco',
-    'ceno',
+    'adnuo',
+    'verumtamen',
   ],
-  updated_at: DateTime.iso8601('2025-07-07T07:07:57.927Z'),
+  updated_at: DateTime.iso8601('2025-07-08T03:13:32.707Z'),
 ), connection_id: '<id>')
 
 unless res.marketing_member.nil?
@@ -286,28 +279,21 @@ req = Models::Operations::PatchMartechMemberRequest.new(
     created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
     emails: [
       Models::Shared::MarketingEmail.new(
-        email: 'Thalia.Abernathy61@gmail.com',
+        email: 'jude.leffler@hotmail.com',
         type: Models::Shared::MarketingEmailType::HOME,
-      ),
-      Models::Shared::MarketingEmail.new(
-        email: 'Maymie59@hotmail.com',
-        type: Models::Shared::MarketingEmailType::HOME,
-      ),
-      Models::Shared::MarketingEmail.new(
-        email: 'Coty27@hotmail.com',
-        type: Models::Shared::MarketingEmailType::WORK,
       ),
     ],
     first_name: 'Jude',
-    id: '3b9eeecb-1d6c-4148-8ec4-8f25f110f2d7',
+    id: 'ed268560-655d-43c2-ae44-64e5e41e3784',
     last_name: 'Leffler',
+    metadata: [],
     name: 'Jude Leffler',
     status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
     tags: [
-      'vinco',
-      'ceno',
+      'adnuo',
+      'verumtamen',
     ],
-    updated_at: DateTime.iso8601('2025-07-07T07:07:57.932Z'),
+    updated_at: DateTime.iso8601('2025-07-08T03:13:32.717Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -402,28 +388,21 @@ req = Models::Operations::UpdateMartechMemberRequest.new(
     created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
     emails: [
       Models::Shared::MarketingEmail.new(
-        email: 'Thalia.Abernathy61@gmail.com',
+        email: 'jude.leffler@hotmail.com',
         type: Models::Shared::MarketingEmailType::HOME,
-      ),
-      Models::Shared::MarketingEmail.new(
-        email: 'Maymie59@hotmail.com',
-        type: Models::Shared::MarketingEmailType::HOME,
-      ),
-      Models::Shared::MarketingEmail.new(
-        email: 'Coty27@hotmail.com',
-        type: Models::Shared::MarketingEmailType::WORK,
       ),
     ],
     first_name: 'Jude',
-    id: '3b9eeecb-1d6c-4148-8ec4-8f25f110f2d7',
+    id: 'ed268560-655d-43c2-ae44-64e5e41e3784',
     last_name: 'Leffler',
+    metadata: [],
     name: 'Jude Leffler',
     status: Models::Shared::MarketingMemberStatus::UNSUBSCRIBED,
     tags: [
-      'vinco',
-      'ceno',
+      'adnuo',
+      'verumtamen',
     ],
-    updated_at: DateTime.iso8601('2025-07-07T07:07:57.932Z'),
+    updated_at: DateTime.iso8601('2025-07-08T03:13:32.717Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

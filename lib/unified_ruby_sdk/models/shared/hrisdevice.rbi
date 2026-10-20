@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::HrisDevice
   def location_id=(str_); end
   def manufacturer(); end
   def manufacturer=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def model(); end
   def model=(str_); end
   def name(); end

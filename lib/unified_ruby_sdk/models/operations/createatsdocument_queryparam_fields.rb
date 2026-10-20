@@ -24,6 +24,7 @@ module UnifiedRubySDK
           APPLICATION_ID = new('application_id')
           JOB_ID = new('job_id')
           USER_ID = new('user_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

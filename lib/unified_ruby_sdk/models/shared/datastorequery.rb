@@ -16,6 +16,8 @@ module UnifiedRubySDK
 
         field :database_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('database_id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DatastoreMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :query, Crystalline::Nilable.new(Models::Shared::PropertyDatastoreQueryQuery), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('query') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -24,9 +26,10 @@ module UnifiedRubySDK
 
         field :table_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('table_id') } }
 
-        sig { params(database_id: T.nilable(::String), query: T.nilable(Models::Shared::PropertyDatastoreQueryQuery), raw: T.nilable(T::Hash[Symbol, ::Object]), response: T.nilable(Models::Shared::PropertyDatastoreQueryResponse), table_id: T.nilable(::String)).void }
-        def initialize(database_id: nil, query: nil, raw: nil, response: nil, table_id: nil)
+        sig { params(database_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::DatastoreMetadata]), query: T.nilable(Models::Shared::PropertyDatastoreQueryQuery), raw: T.nilable(T::Hash[Symbol, ::Object]), response: T.nilable(Models::Shared::PropertyDatastoreQueryResponse), table_id: T.nilable(::String)).void }
+        def initialize(database_id: nil, metadata: nil, query: nil, raw: nil, response: nil, table_id: nil)
           @database_id = database_id
+          @metadata = metadata
           @query = query
           @raw = raw
           @response = response
@@ -37,6 +40,7 @@ module UnifiedRubySDK
         def ==(other)
           return false unless other.is_a? self.class
           return false unless @database_id == other.database_id
+          return false unless @metadata == other.metadata
           return false unless @query == other.query
           return false unless @raw == other.raw
           return false unless @response == other.response

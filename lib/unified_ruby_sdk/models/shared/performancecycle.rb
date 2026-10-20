@@ -24,6 +24,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PerformanceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -36,13 +38,14 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), due_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PerformanceCycleStatus), type: T.nilable(Models::Shared::PerformanceCycleType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, description: nil, due_at: nil, end_at: nil, id: nil, name: nil, raw: nil, start_at: nil, status: nil, type: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), due_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PerformanceMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PerformanceCycleStatus), type: T.nilable(Models::Shared::PerformanceCycleType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, description: nil, due_at: nil, end_at: nil, id: nil, metadata: nil, name: nil, raw: nil, start_at: nil, status: nil, type: nil, updated_at: nil)
           @created_at = created_at
           @description = description
           @due_at = due_at
           @end_at = end_at
           @id = id
+          @metadata = metadata
           @name = name
           @raw = raw
           @start_at = start_at
@@ -59,6 +62,7 @@ module UnifiedRubySDK
           return false unless @due_at == other.due_at
           return false unless @end_at == other.end_at
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at

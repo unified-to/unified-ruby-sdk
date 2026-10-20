@@ -68,6 +68,8 @@ class UnifiedRubySDK::Models::Shared::ClubsActivity
   def max_speed=(str_); end
   def max_watts(); end
   def max_watts=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def moving_time(); end
   def moving_time=(str_); end
   def name(); end

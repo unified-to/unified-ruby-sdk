@@ -27,6 +27,8 @@ module UnifiedRubySDK
         field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PerformanceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # milestones or key results for this goal
         field :milestones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PerformanceGoalMilestone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('milestones') } }
 
@@ -50,8 +52,8 @@ module UnifiedRubySDK
         # the weight of this goal when the provider weighs goals in reviews
         field :weight, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight') } }
 
-        sig { params(company_id: T.nilable(::String), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), cycle_id: T.nilable(::String), description: T.nilable(::String), due_at: T.nilable(::DateTime), id: T.nilable(::String), milestones: T.nilable(T::Array[Models::Shared::PerformanceGoalMilestone]), name: T.nilable(::String), parent_id: T.nilable(::String), progress: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PerformanceGoalStatus), type: T.nilable(Models::Shared::PerformanceGoalSchemasType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String]), weight: T.nilable(::Float)).void }
-        def initialize(company_id: nil, completed_at: nil, created_at: nil, cycle_id: nil, description: nil, due_at: nil, id: nil, milestones: nil, name: nil, parent_id: nil, progress: nil, raw: nil, start_at: nil, status: nil, type: nil, updated_at: nil, user_ids: nil, weight: nil)
+        sig { params(company_id: T.nilable(::String), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), cycle_id: T.nilable(::String), description: T.nilable(::String), due_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PerformanceMetadata]), milestones: T.nilable(T::Array[Models::Shared::PerformanceGoalMilestone]), name: T.nilable(::String), parent_id: T.nilable(::String), progress: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PerformanceGoalStatus), type: T.nilable(Models::Shared::PerformanceGoalSchemasType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String]), weight: T.nilable(::Float)).void }
+        def initialize(company_id: nil, completed_at: nil, created_at: nil, cycle_id: nil, description: nil, due_at: nil, id: nil, metadata: nil, milestones: nil, name: nil, parent_id: nil, progress: nil, raw: nil, start_at: nil, status: nil, type: nil, updated_at: nil, user_ids: nil, weight: nil)
           @company_id = company_id
           @completed_at = completed_at
           @created_at = created_at
@@ -59,6 +61,7 @@ module UnifiedRubySDK
           @description = description
           @due_at = due_at
           @id = id
+          @metadata = metadata
           @milestones = milestones
           @name = name
           @parent_id = parent_id
@@ -82,6 +85,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @due_at == other.due_at
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @milestones == other.milestones
           return false unless @name == other.name
           return false unless @parent_id == other.parent_id

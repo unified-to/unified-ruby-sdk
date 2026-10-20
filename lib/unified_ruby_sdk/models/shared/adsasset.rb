@@ -24,6 +24,8 @@ module UnifiedRubySDK
         # provider asset resource name/id (e.g. Google Ads customers/{cid}/assets/{id}, TikTok image/video id, DV360 mediaId)
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :mime_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mime_type') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
@@ -40,13 +42,14 @@ module UnifiedRubySDK
 
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
-        sig { params(content: T.nilable(::String), created_at: T.nilable(::DateTime), file_size: T.nilable(::Float), height: T.nilable(::Float), id: T.nilable(::String), mime_type: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AdsAssetType), updated_at: T.nilable(::DateTime), url: T.nilable(::String), width: T.nilable(::Float)).void }
-        def initialize(content: nil, created_at: nil, file_size: nil, height: nil, id: nil, mime_type: nil, name: nil, organization_id: nil, raw: nil, type: nil, updated_at: nil, url: nil, width: nil)
+        sig { params(content: T.nilable(::String), created_at: T.nilable(::DateTime), file_size: T.nilable(::Float), height: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), mime_type: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AdsAssetType), updated_at: T.nilable(::DateTime), url: T.nilable(::String), width: T.nilable(::Float)).void }
+        def initialize(content: nil, created_at: nil, file_size: nil, height: nil, id: nil, metadata: nil, mime_type: nil, name: nil, organization_id: nil, raw: nil, type: nil, updated_at: nil, url: nil, width: nil)
           @content = content
           @created_at = created_at
           @file_size = file_size
           @height = height
           @id = id
+          @metadata = metadata
           @mime_type = mime_type
           @name = name
           @organization_id = organization_id
@@ -65,6 +68,7 @@ module UnifiedRubySDK
           return false unless @file_size == other.file_size
           return false unless @height == other.height
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @mime_type == other.mime_type
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id

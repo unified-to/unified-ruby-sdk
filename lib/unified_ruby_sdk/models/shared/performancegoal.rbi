@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::PerformanceGoal
   def due_at=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def milestones(); end
   def milestones=(str_); end
   def name(); end

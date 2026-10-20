@@ -20,6 +20,7 @@ module UnifiedRubySDK
           START_AT = new('start_at')
           END_AT = new('end_at')
           METRICS = new('metrics')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

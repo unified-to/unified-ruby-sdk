@@ -24,6 +24,7 @@ module UnifiedRubySDK
           LINES_ADDED = new('lines_added')
           LINES_DELETED = new('lines_deleted')
           LINES_CHANGED = new('lines_changed')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

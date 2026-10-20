@@ -116,6 +116,7 @@ module UnifiedRubySDK
   autoload :Genai, 'unified_ruby_sdk/genai'
   autoload :Agent, 'unified_ruby_sdk/agent'
   autoload :Embedding, 'unified_ruby_sdk/embedding'
+  autoload :Memory, 'unified_ruby_sdk/memory'
   autoload :Model, 'unified_ruby_sdk/model'
   autoload :Prompt, 'unified_ruby_sdk/prompt'
   autoload :Skill, 'unified_ruby_sdk/skill'

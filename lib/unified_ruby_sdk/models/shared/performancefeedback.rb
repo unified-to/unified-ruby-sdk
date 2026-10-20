@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
         field :message, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PerformanceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # badges or company values attached to this feedback
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
@@ -34,14 +36,15 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(user_id: ::String, author_user_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_visible: T.nilable(T::Boolean), message: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), type: T.nilable(Models::Shared::PerformanceFeedbackType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(user_id:, author_user_id: nil, created_at: nil, id: nil, is_visible: nil, message: nil, raw: nil, tags: nil, type: nil, updated_at: nil)
+        sig { params(user_id: ::String, author_user_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_visible: T.nilable(T::Boolean), message: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PerformanceMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), tags: T.nilable(T::Array[::String]), type: T.nilable(Models::Shared::PerformanceFeedbackType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(user_id:, author_user_id: nil, created_at: nil, id: nil, is_visible: nil, message: nil, metadata: nil, raw: nil, tags: nil, type: nil, updated_at: nil)
           @user_id = user_id
           @author_user_id = author_user_id
           @created_at = created_at
           @id = id
           @is_visible = is_visible
           @message = message
+          @metadata = metadata
           @raw = raw
           @tags = tags
           @type = type
@@ -57,6 +60,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_visible == other.is_visible
           return false unless @message == other.message
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @tags == other.tags
           return false unless @type == other.type

@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::TaskChange
   def id=(str_); end
   def items(); end
   def items=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def task_id(); end

@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::PerformanceFeedback
   def is_visible=(str_); end
   def message(); end
   def message=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def tags(); end

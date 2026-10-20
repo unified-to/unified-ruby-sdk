@@ -22,6 +22,8 @@ module UnifiedRubySDK
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::KmsPageMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
@@ -34,12 +36,13 @@ module UnifiedRubySDK
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), parent_id: T.nilable(::String), parent_page_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(created_at: nil, description: nil, id: nil, is_active: nil, name: nil, parent_id: nil, parent_page_id: nil, raw: nil, updated_at: nil, user_id: nil)
+        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::KmsPageMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), parent_page_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(created_at: nil, description: nil, id: nil, is_active: nil, metadata: nil, name: nil, parent_id: nil, parent_page_id: nil, raw: nil, updated_at: nil, user_id: nil)
           @created_at = created_at
           @description = description
           @id = id
           @is_active = is_active
+          @metadata = metadata
           @name = name
           @parent_id = parent_id
           @parent_page_id = parent_page_id
@@ -55,6 +58,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @parent_id == other.parent_id
           return false unless @parent_page_id == other.parent_page_id

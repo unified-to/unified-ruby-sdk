@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::AdsOrganization
   def id=(str_); end
   def managers(); end
   def managers=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def parent_id(); end

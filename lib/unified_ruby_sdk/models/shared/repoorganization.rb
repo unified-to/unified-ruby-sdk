@@ -22,6 +22,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::RepoMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -32,12 +34,13 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(avatar_url: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String]), web_url: T.nilable(::String)).void }
-        def initialize(avatar_url: nil, created_at: nil, description: nil, id: nil, name: nil, raw: nil, updated_at: nil, user_ids: nil, web_url: nil)
+        sig { params(avatar_url: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::RepoMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String]), web_url: T.nilable(::String)).void }
+        def initialize(avatar_url: nil, created_at: nil, description: nil, id: nil, metadata: nil, name: nil, raw: nil, updated_at: nil, user_ids: nil, web_url: nil)
           @avatar_url = avatar_url
           @created_at = created_at
           @description = description
           @id = id
+          @metadata = metadata
           @name = name
           @raw = raw
           @updated_at = updated_at
@@ -52,6 +55,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @description == other.description
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at

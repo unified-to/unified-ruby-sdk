@@ -37,6 +37,7 @@ module UnifiedRubySDK
           SCORE_AGAINST = new('score_against')
           IS_HOME = new('is_home')
           URL = new('url')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -23,6 +23,7 @@ module UnifiedRubySDK
           IS_ACTIVE = new('is_active')
           PRICE_AMOUNT = new('price_amount')
           PRICE_CURRENCY = new('price_currency')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

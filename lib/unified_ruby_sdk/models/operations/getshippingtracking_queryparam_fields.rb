@@ -26,6 +26,7 @@ module UnifiedRubySDK
           CARRIER_ID = new('carrier_id')
           CARRIER_STATUS_CODE = new('carrier_status_code')
           CARRIER_STATUS_DESCRIPTION = new('carrier_status_description')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

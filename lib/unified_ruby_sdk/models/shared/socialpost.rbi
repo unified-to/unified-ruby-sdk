@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::SocialPost
   def language=(str_); end
   def media(); end
   def media=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def metrics(); end
   def metrics=(str_); end
   def parent_post_id(); end

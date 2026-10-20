@@ -34,7 +34,8 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
   comment: 'Maiores enim.',
   created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-  id: '67f18e2d-94f9-4a08-a58f-fc35a970bc3f',
+  id: '0c9417df-47f7-48b3-b705-a3b7e001f36f',
+  metadata: [],
   questions: [
     Models::Shared::AtsScorecardQuestion.new(
       description: 'Sulum textor eveniet facere vita.',
@@ -47,7 +48,7 @@ res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScoreca
     ),
   ],
   recommendation: Models::Shared::Recommendation::STRONG_YES,
-  updated_at: DateTime.iso8601('2023-06-04T23:30:12.327Z'),
+  updated_at: DateTime.iso8601('2023-06-05T07:14:58.499Z'),
 ), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -274,7 +275,8 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: '97aae32e-e6d1-400b-a5d4-76887a846359',
+    id: '7d78e730-f79a-4cdd-8e28-b84977951ecb',
+    metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
         description: 'Sulum textor eveniet facere vita.',
@@ -287,7 +289,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-04T23:30:12.330Z'),
+    updated_at: DateTime.iso8601('2023-06-05T07:14:58.504Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -380,7 +382,8 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: '97aae32e-e6d1-400b-a5d4-76887a846359',
+    id: '7d78e730-f79a-4cdd-8e28-b84977951ecb',
+    metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
         description: 'Sulum textor eveniet facere vita.',
@@ -393,7 +396,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-04T23:30:12.330Z'),
+    updated_at: DateTime.iso8601('2023-06-05T07:14:58.504Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

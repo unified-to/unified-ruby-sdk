@@ -28,6 +28,7 @@ module UnifiedRubySDK
           IS_ACTIVE = new('is_active')
           IS_HQ = new('is_hq')
           COMPANY_ID = new('company_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

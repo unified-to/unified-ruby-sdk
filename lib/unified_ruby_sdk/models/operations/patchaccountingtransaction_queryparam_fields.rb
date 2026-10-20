@@ -36,6 +36,7 @@ module UnifiedRubySDK
           TRANSACTION_AT = new('transaction_at')
           EXCHANGE_RATE = new('exchange_rate')
           STATUS = new('status')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

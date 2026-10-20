@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::CalendarCalendar
   def id=(str_); end
   def is_primary(); end
   def is_primary=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

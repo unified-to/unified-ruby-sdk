@@ -28,15 +28,16 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.feedback.create_performance_feedback(performance_feedback: Models::Shared::PerformanceFeedback.new(
   created_at: DateTime.iso8601('2023-04-11T16:21:53.862Z'),
-  id: '05f95454-7f1e-49ca-8222-7349295201f2',
+  id: 'b07a0617-c39e-4c1c-b421-27c8b6384b78',
   is_visible: true,
   message: 'Tabernus corpus voluptate aestus.',
+  metadata: [],
   tags: [
     'well-to-do',
     'hexagon',
   ],
   type: Models::Shared::PerformanceFeedbackType::PRAISE,
-  updated_at: DateTime.iso8601('2025-09-02T15:32:10.223Z'),
+  updated_at: DateTime.iso8601('2025-09-03T10:38:21.753Z'),
   user_id: '<id>',
 ), connection_id: '<id>')
 

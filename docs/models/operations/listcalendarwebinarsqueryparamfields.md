@@ -38,4 +38,5 @@
 | `HAS_QA`              | has_qa                |
 | `HAS_POLLS`           | has_polls             |
 | `HAS_RECORDING`       | has_recording         |
+| `METADATA`            | metadata              |
 | `RAW`                 | raw                   |

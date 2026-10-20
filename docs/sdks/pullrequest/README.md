@@ -30,19 +30,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(
-  closed_at: DateTime.iso8601('2025-04-30T07:15:28.279Z'),
+  closed_at: DateTime.iso8601('2025-05-01T00:00:20.590Z'),
   created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-  id: '8a416a7f-0d60-4661-9000-a954553f161b',
+  id: '96d067ab-572b-41eb-9990-115b7c2d8770',
   labels: [
-    'adhuc',
-    'quaerat',
+    'creptio',
+    'tutamen',
   ],
-  notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
-  source_branch_id: 'microchip-navigate',
-  status: Models::Shared::RepoPullrequestStatus::REJECTED,
-  target_branch_id: 'feed-reboot',
-  title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
-  updated_at: DateTime.iso8601('2025-01-15T23:21:49.974Z'),
+  metadata: [],
+  notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
+  status: Models::Shared::RepoPullrequestStatus::APPROVED,
+  title: 'reboot mobile application',
+  updated_at: DateTime.iso8601('2026-01-16T12:40:08.462Z'),
 ), connection_id: '<id>')
 
 unless res.repo_pullrequest.nil?
@@ -178,19 +177,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-04-30T07:15:28.286Z'),
+    closed_at: DateTime.iso8601('2025-05-01T00:00:20.597Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '23c11a02-9a3e-4d67-8ed6-f2d92d1b730f',
+    id: '4392bc65-a3d1-40e3-8c2e-d8c1b3867c90',
     labels: [
-      'adhuc',
-      'quaerat',
+      'creptio',
+      'tutamen',
     ],
-    notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
-    source_branch_id: 'microchip-navigate',
-    status: Models::Shared::RepoPullrequestStatus::REJECTED,
-    target_branch_id: 'feed-reboot',
-    title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
-    updated_at: DateTime.iso8601('2025-01-15T23:21:49.979Z'),
+    metadata: [],
+    notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
+    status: Models::Shared::RepoPullrequestStatus::APPROVED,
+    title: 'reboot mobile application',
+    updated_at: DateTime.iso8601('2026-01-16T12:40:08.471Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -281,19 +279,18 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-04-30T07:15:28.286Z'),
+    closed_at: DateTime.iso8601('2025-05-01T00:00:20.597Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '23c11a02-9a3e-4d67-8ed6-f2d92d1b730f',
+    id: '4392bc65-a3d1-40e3-8c2e-d8c1b3867c90',
     labels: [
-      'adhuc',
-      'quaerat',
+      'creptio',
+      'tutamen',
     ],
-    notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
-    source_branch_id: 'microchip-navigate',
-    status: Models::Shared::RepoPullrequestStatus::REJECTED,
-    target_branch_id: 'feed-reboot',
-    title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
-    updated_at: DateTime.iso8601('2025-01-15T23:21:49.979Z'),
+    metadata: [],
+    notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
+    status: Models::Shared::RepoPullrequestStatus::APPROVED,
+    title: 'reboot mobile application',
+    updated_at: DateTime.iso8601('2026-01-16T12:40:08.471Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

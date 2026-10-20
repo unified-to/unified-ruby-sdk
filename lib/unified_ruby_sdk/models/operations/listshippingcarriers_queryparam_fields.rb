@@ -21,6 +21,7 @@ module UnifiedRubySDK
           IS_ACTIVE = new('is_active')
           LOGO_URL = new('logo_url')
           WEBSITE_URL = new('website_url')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

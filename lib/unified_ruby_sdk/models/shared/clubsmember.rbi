@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::ClubsMember
   def last_name=(str_); end
   def membership_status(); end
   def membership_status=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

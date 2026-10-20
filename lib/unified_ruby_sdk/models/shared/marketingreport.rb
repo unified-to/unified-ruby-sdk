@@ -47,6 +47,8 @@ module UnifiedRubySDK
         field :links, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MarketingReportLink)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('links') } }
         # Associated list ID
         field :list_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_id') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MarketingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Open rate (decimal)
         field :open_rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('open_rate') } }
         # Total opens
@@ -70,8 +72,8 @@ module UnifiedRubySDK
         # Number of unsubscribes
         field :unsubscribed, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unsubscribed') } }
 
-        sig { params(abuse_reports: T.nilable(::Float), campaign_id: T.nilable(::String), click_rate: T.nilable(::Float), clicks_total: T.nilable(::Float), emails_sent: T.nilable(::Float), end_at: T.nilable(::DateTime), forwards_count: T.nilable(::Float), forwards_opens: T.nilable(::Float), hard_bounces: T.nilable(::Float), human_open_rate: T.nilable(::Float), human_opens_total: T.nilable(::Float), human_unique_opens: T.nilable(::Float), id: T.nilable(::String), last_click_at: T.nilable(::DateTime), last_open_at: T.nilable(::DateTime), links: T.nilable(T::Array[Models::Shared::MarketingReportLink]), list_id: T.nilable(::String), open_rate: T.nilable(::Float), opens_total: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), sent_at: T.nilable(::DateTime), soft_bounces: T.nilable(::Float), start_at: T.nilable(::DateTime), syntax_errors: T.nilable(::Float), unique_clicks: T.nilable(::Float), unique_opens: T.nilable(::Float), unique_subscriber_clicks: T.nilable(::Float), unsubscribed: T.nilable(::Float)).void }
-        def initialize(abuse_reports: nil, campaign_id: nil, click_rate: nil, clicks_total: nil, emails_sent: nil, end_at: nil, forwards_count: nil, forwards_opens: nil, hard_bounces: nil, human_open_rate: nil, human_opens_total: nil, human_unique_opens: nil, id: nil, last_click_at: nil, last_open_at: nil, links: nil, list_id: nil, open_rate: nil, opens_total: nil, raw: nil, sent_at: nil, soft_bounces: nil, start_at: nil, syntax_errors: nil, unique_clicks: nil, unique_opens: nil, unique_subscriber_clicks: nil, unsubscribed: nil)
+        sig { params(abuse_reports: T.nilable(::Float), campaign_id: T.nilable(::String), click_rate: T.nilable(::Float), clicks_total: T.nilable(::Float), emails_sent: T.nilable(::Float), end_at: T.nilable(::DateTime), forwards_count: T.nilable(::Float), forwards_opens: T.nilable(::Float), hard_bounces: T.nilable(::Float), human_open_rate: T.nilable(::Float), human_opens_total: T.nilable(::Float), human_unique_opens: T.nilable(::Float), id: T.nilable(::String), last_click_at: T.nilable(::DateTime), last_open_at: T.nilable(::DateTime), links: T.nilable(T::Array[Models::Shared::MarketingReportLink]), list_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::MarketingMetadata]), open_rate: T.nilable(::Float), opens_total: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), sent_at: T.nilable(::DateTime), soft_bounces: T.nilable(::Float), start_at: T.nilable(::DateTime), syntax_errors: T.nilable(::Float), unique_clicks: T.nilable(::Float), unique_opens: T.nilable(::Float), unique_subscriber_clicks: T.nilable(::Float), unsubscribed: T.nilable(::Float)).void }
+        def initialize(abuse_reports: nil, campaign_id: nil, click_rate: nil, clicks_total: nil, emails_sent: nil, end_at: nil, forwards_count: nil, forwards_opens: nil, hard_bounces: nil, human_open_rate: nil, human_opens_total: nil, human_unique_opens: nil, id: nil, last_click_at: nil, last_open_at: nil, links: nil, list_id: nil, metadata: nil, open_rate: nil, opens_total: nil, raw: nil, sent_at: nil, soft_bounces: nil, start_at: nil, syntax_errors: nil, unique_clicks: nil, unique_opens: nil, unique_subscriber_clicks: nil, unsubscribed: nil)
           @abuse_reports = abuse_reports
           @campaign_id = campaign_id
           @click_rate = click_rate
@@ -89,6 +91,7 @@ module UnifiedRubySDK
           @last_open_at = last_open_at
           @links = links
           @list_id = list_id
+          @metadata = metadata
           @open_rate = open_rate
           @opens_total = opens_total
           @raw = raw
@@ -122,6 +125,7 @@ module UnifiedRubySDK
           return false unless @last_open_at == other.last_open_at
           return false unless @links == other.links
           return false unless @list_id == other.list_id
+          return false unless @metadata == other.metadata
           return false unless @open_rate == other.open_rate
           return false unless @opens_total == other.opens_total
           return false unless @raw == other.raw

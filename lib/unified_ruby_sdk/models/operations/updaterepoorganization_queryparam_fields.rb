@@ -21,6 +21,7 @@ module UnifiedRubySDK
           AVATAR_URL = new('avatar_url')
           WEB_URL = new('web_url')
           USER_IDS = new('user_ids')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

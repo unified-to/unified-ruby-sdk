@@ -23,6 +23,7 @@ module UnifiedRubySDK
           STATUS = new('status')
           ACCOUNT_NUMBER = new('account_number')
           MANAGERS = new('managers')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

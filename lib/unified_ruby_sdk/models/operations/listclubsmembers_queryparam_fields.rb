@@ -23,6 +23,7 @@ module UnifiedRubySDK
           IS_ADMIN = new('is_admin')
           IS_OWNER = new('is_owner')
           MEMBERSHIP_STATUS = new('membership_status')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

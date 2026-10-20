@@ -26,6 +26,7 @@ module UnifiedRubySDK
           LABEL_COST_CURRENCY = new('label_cost_currency')
           RATE_ID = new('rate_id')
           SERVICE_CODE = new('service_code')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

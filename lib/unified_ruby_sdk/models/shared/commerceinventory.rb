@@ -26,18 +26,21 @@ module UnifiedRubySDK
         # (reference to CommerceLocation)
         field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(available: T.nilable(::Float), id: T.nilable(::String), item_id: T.nilable(::String), item_option_id: T.nilable(::String), item_variant_id: T.nilable(::String), location_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(available: nil, id: nil, item_id: nil, item_option_id: nil, item_variant_id: nil, location_id: nil, raw: nil, updated_at: nil)
+        sig { params(available: T.nilable(::Float), id: T.nilable(::String), item_id: T.nilable(::String), item_option_id: T.nilable(::String), item_variant_id: T.nilable(::String), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(available: nil, id: nil, item_id: nil, item_option_id: nil, item_variant_id: nil, location_id: nil, metadata: nil, raw: nil, updated_at: nil)
           @available = available
           @id = id
           @item_id = item_id
           @item_option_id = item_option_id
           @item_variant_id = item_variant_id
           @location_id = location_id
+          @metadata = metadata
           @raw = raw
           @updated_at = updated_at
         end
@@ -51,6 +54,7 @@ module UnifiedRubySDK
           return false unless @item_option_id == other.item_option_id
           return false unless @item_variant_id == other.item_variant_id
           return false unless @location_id == other.location_id
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at
           true

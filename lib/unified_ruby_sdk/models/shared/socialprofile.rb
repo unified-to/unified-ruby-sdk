@@ -31,6 +31,8 @@ module UnifiedRubySDK
         field :is_verified, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
         # Free-text location/locale string
         field :location, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::SocialMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Audience metrics for the profile
         field :metrics, Crystalline::Nilable.new(Models::Shared::PropertySocialProfileMetrics), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metrics') } }
         # Display name of the profile
@@ -50,8 +52,8 @@ module UnifiedRubySDK
         # External website linked from the profile
         field :website_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website_url') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertySocialProfileAddress), avatar_url: T.nilable(::String), category: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_private: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), location: T.nilable(::String), metrics: T.nilable(Models::Shared::PropertySocialProfileMetrics), name: T.nilable(::String), parent_id: T.nilable(::String), phone: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), url: T.nilable(::String), username: T.nilable(::String), website_url: T.nilable(::String)).void }
-        def initialize(address: nil, avatar_url: nil, category: nil, created_at: nil, description: nil, id: nil, is_private: nil, is_verified: nil, location: nil, metrics: nil, name: nil, parent_id: nil, phone: nil, raw: nil, updated_at: nil, url: nil, username: nil, website_url: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertySocialProfileAddress), avatar_url: T.nilable(::String), category: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_private: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), location: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::SocialMetadata]), metrics: T.nilable(Models::Shared::PropertySocialProfileMetrics), name: T.nilable(::String), parent_id: T.nilable(::String), phone: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), url: T.nilable(::String), username: T.nilable(::String), website_url: T.nilable(::String)).void }
+        def initialize(address: nil, avatar_url: nil, category: nil, created_at: nil, description: nil, id: nil, is_private: nil, is_verified: nil, location: nil, metadata: nil, metrics: nil, name: nil, parent_id: nil, phone: nil, raw: nil, updated_at: nil, url: nil, username: nil, website_url: nil)
           @address = address
           @avatar_url = avatar_url
           @category = category
@@ -61,6 +63,7 @@ module UnifiedRubySDK
           @is_private = is_private
           @is_verified = is_verified
           @location = location
+          @metadata = metadata
           @metrics = metrics
           @name = name
           @parent_id = parent_id
@@ -84,6 +87,7 @@ module UnifiedRubySDK
           return false unless @is_private == other.is_private
           return false unless @is_verified == other.is_verified
           return false unless @location == other.location
+          return false unless @metadata == other.metadata
           return false unless @metrics == other.metrics
           return false unless @name == other.name
           return false unless @parent_id == other.parent_id

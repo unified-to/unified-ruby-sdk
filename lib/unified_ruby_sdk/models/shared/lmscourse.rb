@@ -38,6 +38,8 @@ module UnifiedRubySDK
 
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # How much the course costs
         field :price_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_amount') } }
@@ -56,8 +58,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(categories: T.nilable(T::Array[::String]), content_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), duration_minutes: T.nilable(::Float), id: T.nilable(::String), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), price_amount: T.nilable(::Float), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[::String]), students: T.nilable(T::Array[Models::Shared::LmsReference]), time_estimate_minutes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(categories: nil, content_ids: nil, created_at: nil, currency: nil, description: nil, duration_minutes: nil, id: nil, instructors: nil, is_active: nil, is_private: nil, languages: nil, media: nil, name: nil, price_amount: nil, provider_name: nil, published_at: nil, raw: nil, skills: nil, students: nil, time_estimate_minutes: nil, updated_at: nil)
+        sig { params(categories: T.nilable(T::Array[::String]), content_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), duration_minutes: T.nilable(::Float), id: T.nilable(::String), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), metadata: T.nilable(T::Array[Models::Shared::LmsMetadata]), name: T.nilable(::String), price_amount: T.nilable(::Float), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[::String]), students: T.nilable(T::Array[Models::Shared::LmsReference]), time_estimate_minutes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(categories: nil, content_ids: nil, created_at: nil, currency: nil, description: nil, duration_minutes: nil, id: nil, instructors: nil, is_active: nil, is_private: nil, languages: nil, media: nil, metadata: nil, name: nil, price_amount: nil, provider_name: nil, published_at: nil, raw: nil, skills: nil, students: nil, time_estimate_minutes: nil, updated_at: nil)
           @categories = categories
           @content_ids = content_ids
           @created_at = created_at
@@ -70,6 +72,7 @@ module UnifiedRubySDK
           @is_private = is_private
           @languages = languages
           @media = media
+          @metadata = metadata
           @name = name
           @price_amount = price_amount
           @provider_name = provider_name
@@ -96,6 +99,7 @@ module UnifiedRubySDK
           return false unless @is_private == other.is_private
           return false unless @languages == other.languages
           return false unless @media == other.media
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @price_amount == other.price_amount
           return false unless @provider_name == other.provider_name

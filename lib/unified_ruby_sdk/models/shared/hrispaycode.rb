@@ -32,6 +32,8 @@ module UnifiedRubySDK
 
         field :is_pre_tax, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_pre_tax') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -40,8 +42,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(code: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), detail_type: T.nilable(Models::Shared::DetailType), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_employer: T.nilable(T::Boolean), is_pre_tax: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::HrisPaycodeType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(code: nil, company_id: nil, created_at: nil, description: nil, detail_type: nil, id: nil, is_active: nil, is_employer: nil, is_pre_tax: nil, name: nil, raw: nil, type: nil, updated_at: nil)
+        sig { params(code: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), detail_type: T.nilable(Models::Shared::DetailType), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_employer: T.nilable(T::Boolean), is_pre_tax: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::HrisPaycodeType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(code: nil, company_id: nil, created_at: nil, description: nil, detail_type: nil, id: nil, is_active: nil, is_employer: nil, is_pre_tax: nil, metadata: nil, name: nil, raw: nil, type: nil, updated_at: nil)
           @code = code
           @company_id = company_id
           @created_at = created_at
@@ -51,6 +53,7 @@ module UnifiedRubySDK
           @is_active = is_active
           @is_employer = is_employer
           @is_pre_tax = is_pre_tax
+          @metadata = metadata
           @name = name
           @raw = raw
           @type = type
@@ -69,6 +72,7 @@ module UnifiedRubySDK
           return false unless @is_active == other.is_active
           return false unless @is_employer == other.is_employer
           return false unless @is_pre_tax == other.is_pre_tax
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @type == other.type

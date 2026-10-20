@@ -38,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::AnalyticsSession
   def landing_page=(str_); end
   def medium(); end
   def medium=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def os(); end
   def os=(str_); end
   def page_views(); end

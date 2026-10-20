@@ -36,6 +36,8 @@ class UnifiedRubySDK::Models::Shared::LmsContent
   def localizations=(str_); end
   def media(); end
   def media=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def provider_name(); end

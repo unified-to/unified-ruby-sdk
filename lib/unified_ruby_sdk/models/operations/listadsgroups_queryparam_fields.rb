@@ -44,6 +44,7 @@ module UnifiedRubySDK
           PROMOTED = new('promoted')
           LANGUAGE_LOCALE = new('language_locale')
           CREATIVE_SELECTION = new('creative_selection')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

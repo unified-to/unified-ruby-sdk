@@ -23,6 +23,7 @@ module UnifiedRubySDK
           RELATIONSHIPS = new('relationships')
           WEB_URL = new('web_url')
           PARENT_ID = new('parent_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

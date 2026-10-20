@@ -24,6 +24,7 @@ module UnifiedRubySDK
           LIST_IDS = new('list_ids')
           TAGS = new('tags')
           STATUS = new('status')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

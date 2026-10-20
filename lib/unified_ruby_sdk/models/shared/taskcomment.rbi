@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::TaskComment
   def has_children=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def parent_id(); end
   def parent_id=(str_); end
   def raw(); end

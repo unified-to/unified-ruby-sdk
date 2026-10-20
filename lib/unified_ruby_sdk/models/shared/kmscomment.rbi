@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::KmsComment
   def created_at=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def page_id(); end
   def page_id=(str_); end
   def parent_id(); end

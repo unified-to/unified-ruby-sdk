@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::ShippingLabel
   def label_format=(str_); end
   def label_url(); end
   def label_url=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def rate_id(); end
   def rate_id=(str_); end
   def raw(); end

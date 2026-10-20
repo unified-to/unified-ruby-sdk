@@ -28,6 +28,7 @@ module UnifiedRubySDK
           ARCHITECTURE = new('architecture')
           PRICES = new('prices')
           AVAILABILITY = new('availability')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

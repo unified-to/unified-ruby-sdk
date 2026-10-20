@@ -35,6 +35,7 @@ module UnifiedRubySDK
           HOURLY_RATE = new('hourly_rate')
           APPROVER_USER_ID = new('approver_user_id')
           APPROVED_AT = new('approved_at')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

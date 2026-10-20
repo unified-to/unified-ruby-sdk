@@ -15,4 +15,5 @@
 | `IS_ADMIN`          | is_admin            |
 | `IS_OWNER`          | is_owner            |
 | `MEMBERSHIP_STATUS` | membership_status   |
+| `METADATA`          | metadata            |
 | `RAW`               | raw                 |

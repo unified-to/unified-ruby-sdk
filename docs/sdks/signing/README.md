@@ -39,11 +39,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.signing.create_signing_document(signing_document: Models::Shared::SigningDocument.new(
   created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
-  expires_at: DateTime.iso8601('2027-01-16T06:59:57.511Z'),
-  id: '2dac77aa-842b-4e2c-9665-bba366bb77f0',
-  name: 'nam audax absens',
-  status: Models::Shared::SigningDocumentStatus::VOIDED,
-  updated_at: DateTime.iso8601('2025-09-01T05:44:59.172Z'),
+  description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
+  expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
+  id: 'eb317e52-612b-49fe-b747-1ff4ecd402b7',
+  metadata: [],
+  name: 'Denesik Group NDA',
+  sent_at: DateTime.iso8601('2022-06-29T07:10:17.369Z'),
+  status: Models::Shared::SigningDocumentStatus::DRAFT,
+  updated_at: DateTime.iso8601('2025-09-02T04:01:27.314Z'),
 ), connection_id: '<id>')
 
 unless res.signing_document.nil?
@@ -90,12 +93,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.signing.create_signing_signatory(signing_signatory: Models::Shared::SigningSignatory.new(
   created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
-  email: 'Hardy.Wehner@gmail.com',
-  id: '73dac70e-d4e3-4922-bbc3-b2ce77777ea4',
-  order: 5.0,
+  email: 'anais.lakin@icloud.com',
+  id: 'e324f048-a37d-42c7-8be2-a1c3bbfd4ba2',
+  metadata: [],
+  name: 'Anais Lakin',
   role: Models::Shared::SigningSignatoryRole::SIGNER,
-  status: Models::Shared::SigningSignatoryStatus::SIGNED,
-  updated_at: DateTime.iso8601('2026-09-09T22:15:45.928Z'),
+  status: Models::Shared::SigningSignatoryStatus::ERROR,
+  updated_at: DateTime.iso8601('2024-05-17T09:12:23.035Z'),
 ), connection_id: '<id>')
 
 unless res.signing_signatory.nil?
@@ -410,11 +414,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchSigningDocumentRequest.new(
   signing_document: Models::Shared::SigningDocument.new(
     created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
-    expires_at: DateTime.iso8601('2027-01-16T06:59:57.518Z'),
-    id: 'ec1e5ef0-bc54-4809-939c-693de5cb3c28',
-    name: 'nam audax absens',
-    status: Models::Shared::SigningDocumentStatus::VOIDED,
-    updated_at: DateTime.iso8601('2025-09-01T05:44:59.178Z'),
+    description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
+    expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
+    id: 'a8a13862-9eaa-43f6-9d5a-752aea175f67',
+    metadata: [],
+    name: 'Denesik Group NDA',
+    sent_at: DateTime.iso8601('2022-06-29T07:10:17.372Z'),
+    status: Models::Shared::SigningDocumentStatus::DRAFT,
+    updated_at: DateTime.iso8601('2025-09-02T04:01:27.324Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -464,12 +471,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
-    email: 'Hardy.Wehner@gmail.com',
-    id: '3b135465-5f41-4974-b26b-69d284272ecf',
-    order: 5.0,
+    email: 'anais.lakin@icloud.com',
+    id: '47df2914-9e1c-42d1-9898-da65ceed36e8',
+    metadata: [],
+    name: 'Anais Lakin',
     role: Models::Shared::SigningSignatoryRole::SIGNER,
-    status: Models::Shared::SigningSignatoryStatus::SIGNED,
-    updated_at: DateTime.iso8601('2026-09-09T22:15:45.936Z'),
+    status: Models::Shared::SigningSignatoryStatus::ERROR,
+    updated_at: DateTime.iso8601('2024-05-17T09:12:23.041Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -603,11 +611,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateSigningDocumentRequest.new(
   signing_document: Models::Shared::SigningDocument.new(
     created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
-    expires_at: DateTime.iso8601('2027-01-16T06:59:57.518Z'),
-    id: 'ec1e5ef0-bc54-4809-939c-693de5cb3c28',
-    name: 'nam audax absens',
-    status: Models::Shared::SigningDocumentStatus::VOIDED,
-    updated_at: DateTime.iso8601('2025-09-01T05:44:59.178Z'),
+    description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
+    expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
+    id: 'a8a13862-9eaa-43f6-9d5a-752aea175f67',
+    metadata: [],
+    name: 'Denesik Group NDA',
+    sent_at: DateTime.iso8601('2022-06-29T07:10:17.372Z'),
+    status: Models::Shared::SigningDocumentStatus::DRAFT,
+    updated_at: DateTime.iso8601('2025-09-02T04:01:27.324Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -657,12 +668,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
-    email: 'Hardy.Wehner@gmail.com',
-    id: '3b135465-5f41-4974-b26b-69d284272ecf',
-    order: 5.0,
+    email: 'anais.lakin@icloud.com',
+    id: '47df2914-9e1c-42d1-9898-da65ceed36e8',
+    metadata: [],
+    name: 'Anais Lakin',
     role: Models::Shared::SigningSignatoryRole::SIGNER,
-    status: Models::Shared::SigningSignatoryStatus::SIGNED,
-    updated_at: DateTime.iso8601('2026-09-09T22:15:45.936Z'),
+    status: Models::Shared::SigningSignatoryStatus::ERROR,
+    updated_at: DateTime.iso8601('2024-05-17T09:12:23.041Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

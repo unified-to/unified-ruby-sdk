@@ -18,6 +18,7 @@ module UnifiedRubySDK
           END_AT = new('end_at')
           TIMEZONE = new('timezone')
           DESCRIPTION = new('description')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -25,6 +25,7 @@ module UnifiedRubySDK
           WIDTH = new('width')
           HEIGHT = new('height')
           FILE_SIZE = new('file_size')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -20,6 +20,7 @@ module UnifiedRubySDK
           DESCRIPTION = new('description')
           TICKET_ID = new('ticket_id')
           USER_ID = new('user_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

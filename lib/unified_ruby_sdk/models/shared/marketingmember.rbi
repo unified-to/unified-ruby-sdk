@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::MarketingMember
   def last_name=(str_); end
   def list_ids(); end
   def list_ids=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

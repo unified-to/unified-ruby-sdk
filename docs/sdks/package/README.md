@@ -39,12 +39,13 @@ res = s.package.create_assessment_package(assessment_package: Models::Shared::As
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '94e1ff1d-68d5-45d0-baf4-c6756f090312',
+  id: '7f2a13be-6391-43b2-95f4-14d4855ccc1a',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
   ],
   max_score: 22.0,
+  metadata: [],
   name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
   needs_ip_address: true,
   parameters: [],
@@ -53,7 +54,7 @@ res = s.package.create_assessment_package(assessment_package: Models::Shared::As
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-24T22:06:29.338Z'),
+  updated_at: DateTime.iso8601('2023-09-25T04:11:50.375Z'),
 ), connection_id: '<id>')
 
 unless res.assessment_package.nil?
@@ -278,12 +279,13 @@ res = s.package.patch_assessment_package(assessment_package: Models::Shared::Ass
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: 'eccd513a-d929-4e04-8495-cdc0ee496c87',
+  id: '353187b6-3acf-41dc-826d-ea9a649d9830',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
   ],
   max_score: 22.0,
+  metadata: [],
   name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
   needs_ip_address: true,
   parameters: [],
@@ -292,7 +294,7 @@ res = s.package.patch_assessment_package(assessment_package: Models::Shared::Ass
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-24T22:06:29.341Z'),
+  updated_at: DateTime.iso8601('2023-09-25T04:11:50.381Z'),
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?
@@ -386,12 +388,13 @@ res = s.package.update_assessment_package(assessment_package: Models::Shared::As
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: 'eccd513a-d929-4e04-8495-cdc0ee496c87',
+  id: '353187b6-3acf-41dc-826d-ea9a649d9830',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
   ],
   max_score: 22.0,
+  metadata: [],
   name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
   needs_ip_address: true,
   parameters: [],
@@ -400,7 +403,7 @@ res = s.package.update_assessment_package(assessment_package: Models::Shared::As
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-24T22:06:29.341Z'),
+  updated_at: DateTime.iso8601('2023-09-25T04:11:50.381Z'),
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?

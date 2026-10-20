@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::RepoPullrequest
   def id=(str_); end
   def labels(); end
   def labels=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def notes(); end
   def notes=(str_); end
   def raw(); end

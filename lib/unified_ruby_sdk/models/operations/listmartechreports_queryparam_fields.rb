@@ -40,6 +40,7 @@ module UnifiedRubySDK
           HUMAN_OPENS_TOTAL = new('human_opens_total')
           HUMAN_UNIQUE_OPENS = new('human_unique_opens')
           HUMAN_OPEN_RATE = new('human_open_rate')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

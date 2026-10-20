@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::ComputeKey
   def id=(str_); end
   def instance_id(); end
   def instance_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def private_key(); end

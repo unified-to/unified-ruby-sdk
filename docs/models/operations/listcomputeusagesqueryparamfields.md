@@ -16,4 +16,5 @@
 | `UNIT`        | unit          |
 | `COST_AMOUNT` | cost_amount   |
 | `CURRENCY`    | currency      |
+| `METADATA`    | metadata      |
 | `RAW`         | raw           |

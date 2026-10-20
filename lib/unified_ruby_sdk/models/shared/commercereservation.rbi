@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::CommerceReservation
   def item_name=(str_); end
   def location_id(); end
   def location_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def notes(); end
   def notes=(str_); end
   def raw(); end

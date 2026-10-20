@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::AccountingTransaction
   def lineitems=(str_); end
   def memo(); end
   def memo=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def organization_id(); end
   def organization_id=(str_); end
   def payment_method(); end

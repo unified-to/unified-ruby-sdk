@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::RepoBranch
   def created_at=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def updated_at(); end

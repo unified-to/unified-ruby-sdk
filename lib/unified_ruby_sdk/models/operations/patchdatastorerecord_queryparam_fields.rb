@@ -20,6 +20,7 @@ module UnifiedRubySDK
           TABLE_ID = new('table_id')
           FIELDS = new('fields')
           ROW_NUMBER = new('row_number')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

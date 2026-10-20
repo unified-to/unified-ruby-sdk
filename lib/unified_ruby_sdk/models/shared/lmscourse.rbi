@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::LmsCourse
   def languages=(str_); end
   def media(); end
   def media=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def price_amount(); end

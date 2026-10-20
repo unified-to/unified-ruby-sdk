@@ -35,6 +35,8 @@ module UnifiedRubySDK
         field :marketing_email, Crystalline::Nilable.new(Models::Shared::PropertyCrmEventMarketingEmail), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('marketing_email') } }
         # The meeting object, when type = meeting
         field :meeting, Crystalline::Nilable.new(Models::Shared::PropertyCrmEventMeeting), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meeting') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CrmMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The note object, when type = note
         field :note, Crystalline::Nilable.new(Models::Shared::PropertyCrmEventNote), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('note') } }
 
@@ -50,8 +52,8 @@ module UnifiedRubySDK
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(call: T.nilable(Models::Shared::PropertyCrmEventCall), company_ids: T.nilable(T::Array[::String]), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), email: T.nilable(Models::Shared::PropertyCrmEventEmail), form: T.nilable(Models::Shared::PropertyCrmEventForm), id: T.nilable(::String), lead_ids: T.nilable(T::Array[::String]), marketing_email: T.nilable(Models::Shared::PropertyCrmEventMarketingEmail), meeting: T.nilable(Models::Shared::PropertyCrmEventMeeting), note: T.nilable(Models::Shared::PropertyCrmEventNote), page_view: T.nilable(Models::Shared::PropertyCrmEventPageView), raw: T.nilable(T::Hash[Symbol, ::Object]), task: T.nilable(Models::Shared::PropertyCrmEventTask), type: T.nilable(Models::Shared::CrmEventType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(call: nil, company_ids: nil, contact_ids: nil, created_at: nil, deal_ids: nil, email: nil, form: nil, id: nil, lead_ids: nil, marketing_email: nil, meeting: nil, note: nil, page_view: nil, raw: nil, task: nil, type: nil, updated_at: nil, user_id: nil)
+        sig { params(call: T.nilable(Models::Shared::PropertyCrmEventCall), company_ids: T.nilable(T::Array[::String]), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), email: T.nilable(Models::Shared::PropertyCrmEventEmail), form: T.nilable(Models::Shared::PropertyCrmEventForm), id: T.nilable(::String), lead_ids: T.nilable(T::Array[::String]), marketing_email: T.nilable(Models::Shared::PropertyCrmEventMarketingEmail), meeting: T.nilable(Models::Shared::PropertyCrmEventMeeting), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), note: T.nilable(Models::Shared::PropertyCrmEventNote), page_view: T.nilable(Models::Shared::PropertyCrmEventPageView), raw: T.nilable(T::Hash[Symbol, ::Object]), task: T.nilable(Models::Shared::PropertyCrmEventTask), type: T.nilable(Models::Shared::CrmEventType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(call: nil, company_ids: nil, contact_ids: nil, created_at: nil, deal_ids: nil, email: nil, form: nil, id: nil, lead_ids: nil, marketing_email: nil, meeting: nil, metadata: nil, note: nil, page_view: nil, raw: nil, task: nil, type: nil, updated_at: nil, user_id: nil)
           @call = call
           @company_ids = company_ids
           @contact_ids = contact_ids
@@ -63,6 +65,7 @@ module UnifiedRubySDK
           @lead_ids = lead_ids
           @marketing_email = marketing_email
           @meeting = meeting
+          @metadata = metadata
           @note = note
           @page_view = page_view
           @raw = raw
@@ -86,6 +89,7 @@ module UnifiedRubySDK
           return false unless @lead_ids == other.lead_ids
           return false unless @marketing_email == other.marketing_email
           return false unless @meeting == other.meeting
+          return false unless @metadata == other.metadata
           return false unless @note == other.note
           return false unless @page_view == other.page_view
           return false unless @raw == other.raw

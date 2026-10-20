@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::HrisTimeshift
   def is_approved=(str_); end
   def location_id(); end
   def location_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def start_at(); end

@@ -40,6 +40,8 @@ module UnifiedRubySDK
         # annual maximum employee amount (always money)
         field :max_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_amount') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
         # the hris_paycode (deduction code) this deduction uses
         field :paycode_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paycode_id') } }
@@ -54,8 +56,8 @@ module UnifiedRubySDK
         # employee ID (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(amount: T.nilable(::Float), benefit_id: T.nilable(::String), company_id: T.nilable(::String), coverage_level: T.nilable(Models::Shared::PropertyHrisPayslipDeductionCoverageLevel), created_at: T.nilable(::DateTime), employer_amount: T.nilable(::Float), employer_type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionEmployerType), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::PropertyHrisPayslipDeductionFrequency), garnishment_type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionGarnishmentType), id: T.nilable(::String), is_active: T.nilable(T::Boolean), max_amount: T.nilable(::Float), notes: T.nilable(::String), paycode_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(amount: nil, benefit_id: nil, company_id: nil, coverage_level: nil, created_at: nil, employer_amount: nil, employer_type: nil, end_at: nil, frequency: nil, garnishment_type: nil, id: nil, is_active: nil, max_amount: nil, notes: nil, paycode_id: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
+        sig { params(amount: T.nilable(::Float), benefit_id: T.nilable(::String), company_id: T.nilable(::String), coverage_level: T.nilable(Models::Shared::PropertyHrisPayslipDeductionCoverageLevel), created_at: T.nilable(::DateTime), employer_amount: T.nilable(::Float), employer_type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionEmployerType), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::PropertyHrisPayslipDeductionFrequency), garnishment_type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionGarnishmentType), id: T.nilable(::String), is_active: T.nilable(T::Boolean), max_amount: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), notes: T.nilable(::String), paycode_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(amount: nil, benefit_id: nil, company_id: nil, coverage_level: nil, created_at: nil, employer_amount: nil, employer_type: nil, end_at: nil, frequency: nil, garnishment_type: nil, id: nil, is_active: nil, max_amount: nil, metadata: nil, notes: nil, paycode_id: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
           @amount = amount
           @benefit_id = benefit_id
           @company_id = company_id
@@ -69,6 +71,7 @@ module UnifiedRubySDK
           @id = id
           @is_active = is_active
           @max_amount = max_amount
+          @metadata = metadata
           @notes = notes
           @paycode_id = paycode_id
           @raw = raw
@@ -94,6 +97,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_active == other.is_active
           return false unless @max_amount == other.max_amount
+          return false unless @metadata == other.metadata
           return false unless @notes == other.notes
           return false unless @paycode_id == other.paycode_id
           return false unless @raw == other.raw

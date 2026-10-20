@@ -22,18 +22,21 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::UcMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
         # reference to HrisEmployee (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(call_id: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::String), id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String), user_id: T.nilable(::String)).void }
-        def initialize(call_id: nil, content: nil, created_at: nil, id: nil, raw: nil, updated_at: nil, user_id: nil)
+        sig { params(call_id: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String), user_id: T.nilable(::String)).void }
+        def initialize(call_id: nil, content: nil, created_at: nil, id: nil, metadata: nil, raw: nil, updated_at: nil, user_id: nil)
           @call_id = call_id
           @content = content
           @created_at = created_at
           @id = id
+          @metadata = metadata
           @raw = raw
           @updated_at = updated_at
           @user_id = user_id
@@ -46,6 +49,7 @@ module UnifiedRubySDK
           return false unless @content == other.content
           return false unless @created_at == other.created_at
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at
           return false unless @user_id == other.user_id

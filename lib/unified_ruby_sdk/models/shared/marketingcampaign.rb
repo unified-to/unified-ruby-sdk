@@ -23,6 +23,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Associated listaudience IDs
         field :list_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('list_ids') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MarketingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Campaign nametitle
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Email preview text
@@ -42,13 +44,14 @@ module UnifiedRubySDK
         # When the campaign was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), from_email: T.nilable(::String), from_name: T.nilable(::String), id: T.nilable(::String), list_ids: T.nilable(T::Array[::String]), name: T.nilable(::String), preview_text: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reply_to_email: T.nilable(::String), send_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::MarketingCampaignStatus), subject_line: T.nilable(::String), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, from_email: nil, from_name: nil, id: nil, list_ids: nil, name: nil, preview_text: nil, raw: nil, reply_to_email: nil, send_at: nil, status: nil, subject_line: nil, type: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), from_email: T.nilable(::String), from_name: T.nilable(::String), id: T.nilable(::String), list_ids: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::MarketingMetadata]), name: T.nilable(::String), preview_text: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reply_to_email: T.nilable(::String), send_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::MarketingCampaignStatus), subject_line: T.nilable(::String), type: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, from_email: nil, from_name: nil, id: nil, list_ids: nil, metadata: nil, name: nil, preview_text: nil, raw: nil, reply_to_email: nil, send_at: nil, status: nil, subject_line: nil, type: nil, updated_at: nil)
           @created_at = created_at
           @from_email = from_email
           @from_name = from_name
           @id = id
           @list_ids = list_ids
+          @metadata = metadata
           @name = name
           @preview_text = preview_text
           @raw = raw
@@ -68,6 +71,7 @@ module UnifiedRubySDK
           return false unless @from_name == other.from_name
           return false unless @id == other.id
           return false unless @list_ids == other.list_ids
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @preview_text == other.preview_text
           return false unless @raw == other.raw

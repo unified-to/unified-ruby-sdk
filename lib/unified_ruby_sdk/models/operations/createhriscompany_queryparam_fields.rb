@@ -19,6 +19,7 @@ module UnifiedRubySDK
           NAME = new('name')
           LEGAL_NAME = new('legal_name')
           ADDRESS = new('address')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

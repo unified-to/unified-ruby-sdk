@@ -40,6 +40,8 @@ module UnifiedRubySDK
 
         field :join_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('join_url') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
         field :organizer, Crystalline::Nilable.new(Models::Shared::PropertyCalendarWebinarOrganizer), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organizer') } }
@@ -82,8 +84,8 @@ module UnifiedRubySDK
         # information
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(calendar_id: T.nilable(::String), capacity: T.nilable(::Float), conference: T.nilable(T::Array[Models::Shared::CalendarConference]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), has_polls: T.nilable(T::Boolean), has_qa: T.nilable(T::Boolean), has_recording: T.nilable(T::Boolean), id: T.nilable(::String), is_auto_approve: T.nilable(T::Boolean), is_enabled: T.nilable(T::Boolean), is_webcast: T.nilable(T::Boolean), join_url: T.nilable(::String), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarWebinarOrganizer), panelist_password: T.nilable(::String), panelists: T.nilable(T::Array[Models::Shared::CalendarWebinarPanelist]), raw: T.nilable(T::Hash[Symbol, ::Object]), recurrence: T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), registrant_password: T.nilable(::String), registrants: T.nilable(T::Array[Models::Shared::CalendarWebinarRegistrant]), require_address: T.nilable(T::Boolean), require_company: T.nilable(T::Boolean), require_email: T.nilable(T::Boolean), require_first_name: T.nilable(T::Boolean), require_job_title: T.nilable(T::Boolean), require_last_name: T.nilable(T::Boolean), require_phone: T.nilable(T::Boolean), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::CalendarWebinarStatus), subject: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-        def initialize(calendar_id: nil, capacity: nil, conference: nil, created_at: nil, end_at: nil, has_polls: nil, has_qa: nil, has_recording: nil, id: nil, is_auto_approve: nil, is_enabled: nil, is_webcast: nil, join_url: nil, notes: nil, organizer: nil, panelist_password: nil, panelists: nil, raw: nil, recurrence: nil, registrant_password: nil, registrants: nil, require_address: nil, require_company: nil, require_email: nil, require_first_name: nil, require_job_title: nil, require_last_name: nil, require_phone: nil, start_at: nil, status: nil, subject: nil, timezone: nil, updated_at: nil, web_url: nil)
+        sig { params(calendar_id: T.nilable(::String), capacity: T.nilable(::Float), conference: T.nilable(T::Array[Models::Shared::CalendarConference]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), has_polls: T.nilable(T::Boolean), has_qa: T.nilable(T::Boolean), has_recording: T.nilable(T::Boolean), id: T.nilable(::String), is_auto_approve: T.nilable(T::Boolean), is_enabled: T.nilable(T::Boolean), is_webcast: T.nilable(T::Boolean), join_url: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CalendarMetadata]), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarWebinarOrganizer), panelist_password: T.nilable(::String), panelists: T.nilable(T::Array[Models::Shared::CalendarWebinarPanelist]), raw: T.nilable(T::Hash[Symbol, ::Object]), recurrence: T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), registrant_password: T.nilable(::String), registrants: T.nilable(T::Array[Models::Shared::CalendarWebinarRegistrant]), require_address: T.nilable(T::Boolean), require_company: T.nilable(T::Boolean), require_email: T.nilable(T::Boolean), require_first_name: T.nilable(T::Boolean), require_job_title: T.nilable(T::Boolean), require_last_name: T.nilable(T::Boolean), require_phone: T.nilable(T::Boolean), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::CalendarWebinarStatus), subject: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(calendar_id: nil, capacity: nil, conference: nil, created_at: nil, end_at: nil, has_polls: nil, has_qa: nil, has_recording: nil, id: nil, is_auto_approve: nil, is_enabled: nil, is_webcast: nil, join_url: nil, metadata: nil, notes: nil, organizer: nil, panelist_password: nil, panelists: nil, raw: nil, recurrence: nil, registrant_password: nil, registrants: nil, require_address: nil, require_company: nil, require_email: nil, require_first_name: nil, require_job_title: nil, require_last_name: nil, require_phone: nil, start_at: nil, status: nil, subject: nil, timezone: nil, updated_at: nil, web_url: nil)
           @calendar_id = calendar_id
           @capacity = capacity
           @conference = conference
@@ -97,6 +99,7 @@ module UnifiedRubySDK
           @is_enabled = is_enabled
           @is_webcast = is_webcast
           @join_url = join_url
+          @metadata = metadata
           @notes = notes
           @organizer = organizer
           @panelist_password = panelist_password
@@ -136,6 +139,7 @@ module UnifiedRubySDK
           return false unless @is_enabled == other.is_enabled
           return false unless @is_webcast == other.is_webcast
           return false unless @join_url == other.join_url
+          return false unless @metadata == other.metadata
           return false unless @notes == other.notes
           return false unless @organizer == other.organizer
           return false unless @panelist_password == other.panelist_password

@@ -38,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::AdsAd
   def id=(str_); end
   def logo_creative_id(); end
   def logo_creative_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end

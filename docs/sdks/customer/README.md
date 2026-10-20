@@ -33,31 +33,32 @@ res = s.customer.create_ticketing_customer(ticketing_customer: Models::Shared::T
   created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
   emails: [
     Models::Shared::TicketingEmail.new(
-      email: 'Christian_Windler@gmail.com',
+      email: 'christian.windler@gmail.com',
       type: Models::Shared::TicketingEmailType::HOME,
     ),
   ],
-  id: 'ed330ecd-ad23-42d3-86fc-5837fee992b8',
+  id: '92f31399-3e64-4418-a4cd-17deab80d436',
+  metadata: [],
   name: 'Christian Windler',
   tags: [
-    'casso',
-    'peccatus',
+    'quidem',
+    'una',
   ],
   telephones: [
     Models::Shared::TicketingTelephone.new(
-      telephone: '(532) 242-0482',
+      telephone: '(299) 843-2042',
       type: Models::Shared::TicketingTelephoneType::OTHER,
     ),
     Models::Shared::TicketingTelephone.new(
-      telephone: '(826) 283-7431',
+      telephone: '(248) 482-6083',
       type: Models::Shared::TicketingTelephoneType::MOBILE,
     ),
     Models::Shared::TicketingTelephone.new(
-      telephone: '(483) 314-6826',
+      telephone: '(743) 328-3214',
       type: Models::Shared::TicketingTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-02T02:04:39.243Z'),
+  updated_at: DateTime.iso8601('2026-06-03T04:15:04.412Z'),
 ), connection_id: '<id>')
 
 unless res.ticketing_customer.nil?
@@ -196,31 +197,32 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
     created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
     emails: [
       Models::Shared::TicketingEmail.new(
-        email: 'Christian_Windler@gmail.com',
+        email: 'christian.windler@gmail.com',
         type: Models::Shared::TicketingEmailType::HOME,
       ),
     ],
-    id: '44a919b7-5449-4a44-8992-16e8370786c3',
+    id: '703b71c0-194b-4672-bb7d-c2b12c0844bd',
+    metadata: [],
     name: 'Christian Windler',
     tags: [
-      'casso',
-      'peccatus',
+      'quidem',
+      'una',
     ],
     telephones: [
       Models::Shared::TicketingTelephone.new(
-        telephone: '(532) 242-0482',
+        telephone: '(299) 843-2042',
         type: Models::Shared::TicketingTelephoneType::OTHER,
       ),
       Models::Shared::TicketingTelephone.new(
-        telephone: '(826) 283-7431',
+        telephone: '(248) 482-6083',
         type: Models::Shared::TicketingTelephoneType::MOBILE,
       ),
       Models::Shared::TicketingTelephone.new(
-        telephone: '(483) 314-6826',
+        telephone: '(743) 328-3214',
         type: Models::Shared::TicketingTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-02T02:04:39.249Z'),
+    updated_at: DateTime.iso8601('2026-06-03T04:15:04.428Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -314,31 +316,32 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
     created_at: DateTime.iso8601('2021-03-15T12:33:14.875Z'),
     emails: [
       Models::Shared::TicketingEmail.new(
-        email: 'Christian_Windler@gmail.com',
+        email: 'christian.windler@gmail.com',
         type: Models::Shared::TicketingEmailType::HOME,
       ),
     ],
-    id: '44a919b7-5449-4a44-8992-16e8370786c3',
+    id: '703b71c0-194b-4672-bb7d-c2b12c0844bd',
+    metadata: [],
     name: 'Christian Windler',
     tags: [
-      'casso',
-      'peccatus',
+      'quidem',
+      'una',
     ],
     telephones: [
       Models::Shared::TicketingTelephone.new(
-        telephone: '(532) 242-0482',
+        telephone: '(299) 843-2042',
         type: Models::Shared::TicketingTelephoneType::OTHER,
       ),
       Models::Shared::TicketingTelephone.new(
-        telephone: '(826) 283-7431',
+        telephone: '(248) 482-6083',
         type: Models::Shared::TicketingTelephoneType::MOBILE,
       ),
       Models::Shared::TicketingTelephone.new(
-        telephone: '(483) 314-6826',
+        telephone: '(743) 328-3214',
         type: Models::Shared::TicketingTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-02T02:04:39.249Z'),
+    updated_at: DateTime.iso8601('2026-06-03T04:15:04.428Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

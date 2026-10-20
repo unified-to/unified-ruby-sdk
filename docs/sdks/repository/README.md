@@ -31,13 +31,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.repository.create_repo_repository(repo_repository: Models::Shared::RepoRepository.new(
   created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
-  description: 'Tribuo torqueo aetas ustulo illum.',
-  id: '744e0e5f-069d-40a7-88a9-e31485fefc4d',
+  description: 'Sed somnus crastinus armarium.',
+  id: 'fb1aa40b-5620-4aca-834e-8a9de7835276',
   is_private: false,
-  name: 'suggero',
-  owner: 'Marcella Kuhic',
-  updated_at: DateTime.iso8601('2024-02-29T15:05:18.346Z'),
-  web_url: 'https://brown-phrase.info',
+  metadata: [],
+  name: 'bah-bogus',
+  updated_at: DateTime.iso8601('2024-02-29T21:06:07.856Z'),
+  web_url: 'https://neat-birdbath.org',
 ), connection_id: '<id>')
 
 unless res.repo_repository.nil?
@@ -174,13 +174,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
-    description: 'Tribuo torqueo aetas ustulo illum.',
-    id: '171c1ba5-84a3-46be-b31c-1b7377e19fad',
+    description: 'Sed somnus crastinus armarium.',
+    id: '909c2e4b-80d1-46b6-8a22-1b72c9254900',
     is_private: false,
-    name: 'suggero',
-    owner: 'Marcella Kuhic',
-    updated_at: DateTime.iso8601('2024-02-29T15:05:18.349Z'),
-    web_url: 'https://brown-phrase.info',
+    metadata: [],
+    name: 'bah-bogus',
+    updated_at: DateTime.iso8601('2024-02-29T21:06:07.859Z'),
+    web_url: 'https://neat-birdbath.org',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -272,13 +272,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
-    description: 'Tribuo torqueo aetas ustulo illum.',
-    id: '171c1ba5-84a3-46be-b31c-1b7377e19fad',
+    description: 'Sed somnus crastinus armarium.',
+    id: '909c2e4b-80d1-46b6-8a22-1b72c9254900',
     is_private: false,
-    name: 'suggero',
-    owner: 'Marcella Kuhic',
-    updated_at: DateTime.iso8601('2024-02-29T15:05:18.349Z'),
-    web_url: 'https://brown-phrase.info',
+    metadata: [],
+    name: 'bah-bogus',
+    updated_at: DateTime.iso8601('2024-02-29T21:06:07.859Z'),
+    web_url: 'https://neat-birdbath.org',
   ),
   connection_id: '<id>',
   id: '<id>',

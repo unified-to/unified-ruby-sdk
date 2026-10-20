@@ -25,6 +25,7 @@ module UnifiedRubySDK
           SIZE = new('size')
           IS_ACTIVE = new('is_active')
           SOURCE_ID = new('source_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

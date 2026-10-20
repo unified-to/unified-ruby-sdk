@@ -22,6 +22,7 @@ module UnifiedRubySDK
           IS_ACTIVE = new('is_active')
           PASSWORD = new('password')
           REGION = new('region')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

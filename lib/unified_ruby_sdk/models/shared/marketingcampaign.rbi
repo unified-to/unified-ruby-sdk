@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::MarketingCampaign
   def id=(str_); end
   def list_ids(); end
   def list_ids=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def preview_text(); end

@@ -42,6 +42,8 @@ class UnifiedRubySDK::Models::Shared::MarketingReport
   def links=(str_); end
   def list_id(); end
   def list_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def open_rate(); end
   def open_rate=(str_); end
   def opens_total(); end

@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::PaymentLink
   def is_chargeable_now=(str_); end
   def lineitems(); end
   def lineitems=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def payment_id(); end
   def payment_id=(str_); end
   def raw(); end

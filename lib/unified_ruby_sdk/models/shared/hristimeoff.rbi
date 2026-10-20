@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::HrisTimeoff
   def id=(str_); end
   def is_paid(); end
   def is_paid=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def original_type(); end
   def original_type=(str_); end
   def raw(); end

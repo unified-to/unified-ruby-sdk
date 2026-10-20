@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::UcRecording
   def id=(str_); end
   def media(); end
   def media=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def raw(); end
   def raw=(str_); end
   def start_at(); end

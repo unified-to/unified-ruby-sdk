@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::ClubsLocation
   def latitude=(str_); end
   def longitude(); end
   def longitude=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

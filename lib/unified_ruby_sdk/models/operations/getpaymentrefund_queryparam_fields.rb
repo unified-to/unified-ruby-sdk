@@ -25,6 +25,7 @@ module UnifiedRubySDK
           REFUNDED_AT = new('refunded_at')
           REASON = new('reason')
           TENDER_TYPE = new('tender_type')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

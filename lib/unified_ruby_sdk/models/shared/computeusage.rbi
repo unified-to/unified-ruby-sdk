@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::ComputeUsage
   def id=(str_); end
   def instance_id(); end
   def instance_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def quantity(); end
   def quantity=(str_); end
   def raw(); end

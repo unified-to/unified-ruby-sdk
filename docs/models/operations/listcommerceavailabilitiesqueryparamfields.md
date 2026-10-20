@@ -11,4 +11,5 @@
 | `SIZE`          | size            |
 | `ITEM_ID`       | item_id         |
 | `STAFF_USER_ID` | staff_user_id   |
+| `METADATA`      | metadata        |
 | `RAW`           | raw             |

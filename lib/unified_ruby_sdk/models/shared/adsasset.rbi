@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::AdsAsset
   def height=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def mime_type(); end
   def mime_type=(str_); end
   def name(); end

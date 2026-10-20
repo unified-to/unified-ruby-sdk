@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::UcContact
   def id=(str_); end
   def last_name(); end
   def last_name=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

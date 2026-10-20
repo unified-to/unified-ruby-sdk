@@ -37,6 +37,7 @@ module UnifiedRubySDK
           HAS_EU_POLITICAL_ADS = new('has_eu_political_ads')
           LABELS = new('labels')
           KPI = new('kpi')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

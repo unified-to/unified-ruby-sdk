@@ -22,6 +22,8 @@ module UnifiedRubySDK
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DatastoreMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :password, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('password') } }
@@ -34,12 +36,13 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), password: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), region: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-        def initialize(created_at: nil, description: nil, id: nil, is_active: nil, name: nil, password: nil, raw: nil, region: nil, updated_at: nil, web_url: nil)
+        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::DatastoreMetadata]), name: T.nilable(::String), password: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), region: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(created_at: nil, description: nil, id: nil, is_active: nil, metadata: nil, name: nil, password: nil, raw: nil, region: nil, updated_at: nil, web_url: nil)
           @created_at = created_at
           @description = description
           @id = id
           @is_active = is_active
+          @metadata = metadata
           @name = name
           @password = password
           @raw = raw
@@ -55,6 +58,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @password == other.password
           return false unless @raw == other.raw

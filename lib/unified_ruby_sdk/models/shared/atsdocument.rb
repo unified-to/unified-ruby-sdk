@@ -30,6 +30,8 @@ module UnifiedRubySDK
 
         field :job_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::AtsDocumentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsDocumentType, true) } }
@@ -38,8 +40,8 @@ module UnifiedRubySDK
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(application_id: T.nilable(::String), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), document_data: T.nilable(::String), document_url: T.nilable(::String), filename: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AtsDocumentType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(application_id: nil, candidate_id: nil, created_at: nil, document_data: nil, document_url: nil, filename: nil, id: nil, job_id: nil, raw: nil, type: nil, updated_at: nil, user_id: nil)
+        sig { params(application_id: T.nilable(::String), candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), document_data: T.nilable(::String), document_url: T.nilable(::String), filename: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AtsDocumentType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(application_id: nil, candidate_id: nil, created_at: nil, document_data: nil, document_url: nil, filename: nil, id: nil, job_id: nil, metadata: nil, raw: nil, type: nil, updated_at: nil, user_id: nil)
           @application_id = application_id
           @candidate_id = candidate_id
           @created_at = created_at
@@ -48,6 +50,7 @@ module UnifiedRubySDK
           @filename = filename
           @id = id
           @job_id = job_id
+          @metadata = metadata
           @raw = raw
           @type = type
           @updated_at = updated_at
@@ -65,6 +68,7 @@ module UnifiedRubySDK
           return false unless @filename == other.filename
           return false unless @id == other.id
           return false unless @job_id == other.job_id
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @type == other.type
           return false unless @updated_at == other.updated_at

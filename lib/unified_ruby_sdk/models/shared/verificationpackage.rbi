@@ -34,6 +34,8 @@ class UnifiedRubySDK::Models::Shared::VerificationPackage
   def info_url=(str_); end
   def max_score(); end
   def max_score=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def needs_ip_address(); end
   def needs_ip_address=(str_); end
   def parameters(); end

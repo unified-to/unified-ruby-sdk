@@ -28,6 +28,8 @@ class UnifiedRubySDK::Models::Shared::HrisJob
   def is_active=(str_); end
   def locations(); end
   def locations=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def parent_id(); end

@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::AccountingBalancesheet
   def id=(str_); end
   def liabilities(); end
   def liabilities=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def net_assets_amount(); end

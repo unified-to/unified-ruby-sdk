@@ -44,6 +44,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :net_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_amount') } }
         # year-to-date net pay as of this payslip
         field :net_ytd_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_ytd_amount') } }
@@ -66,8 +68,8 @@ module UnifiedRubySDK
         # the employee (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction: T.nilable(Models::Shared::PropertyHrisPayslipDeduction), deduction_amount: T.nilable(::Float), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), employee_tax_amount: T.nilable(::Float), employer_contribution_amount: T.nilable(::Float), employer_tax_amount: T.nilable(::Float), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), gross_ytd_amount: T.nilable(::Float), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), net_amount: T.nilable(::Float), net_ytd_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_reference: T.nilable(::String), payment_type: T.nilable(Models::Shared::PaymentType), payroll_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisPayslipType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(company_id: nil, created_at: nil, currency: nil, deduction: nil, deduction_amount: nil, details: nil, employee_tax_amount: nil, employer_contribution_amount: nil, employer_tax_amount: nil, end_at: nil, gross_amount: nil, gross_ytd_amount: nil, group_id: nil, hours: nil, id: nil, net_amount: nil, net_ytd_amount: nil, paid_at: nil, payment_reference: nil, payment_type: nil, payroll_id: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
+        sig { params(company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction: T.nilable(Models::Shared::PropertyHrisPayslipDeduction), deduction_amount: T.nilable(::Float), details: T.nilable(T::Array[Models::Shared::HrisPayslipDetail]), employee_tax_amount: T.nilable(::Float), employer_contribution_amount: T.nilable(::Float), employer_tax_amount: T.nilable(::Float), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), gross_ytd_amount: T.nilable(::Float), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), net_amount: T.nilable(::Float), net_ytd_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payment_reference: T.nilable(::String), payment_type: T.nilable(Models::Shared::PaymentType), payroll_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::HrisPayslipType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(company_id: nil, created_at: nil, currency: nil, deduction: nil, deduction_amount: nil, details: nil, employee_tax_amount: nil, employer_contribution_amount: nil, employer_tax_amount: nil, end_at: nil, gross_amount: nil, gross_ytd_amount: nil, group_id: nil, hours: nil, id: nil, metadata: nil, net_amount: nil, net_ytd_amount: nil, paid_at: nil, payment_reference: nil, payment_type: nil, payroll_id: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
           @company_id = company_id
           @created_at = created_at
           @currency = currency
@@ -83,6 +85,7 @@ module UnifiedRubySDK
           @group_id = group_id
           @hours = hours
           @id = id
+          @metadata = metadata
           @net_amount = net_amount
           @net_ytd_amount = net_ytd_amount
           @paid_at = paid_at
@@ -114,6 +117,7 @@ module UnifiedRubySDK
           return false unless @group_id == other.group_id
           return false unless @hours == other.hours
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @net_amount == other.net_amount
           return false unless @net_ytd_amount == other.net_ytd_amount
           return false unless @paid_at == other.paid_at

@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::HrisPaycode
   def is_employer=(str_); end
   def is_pre_tax(); end
   def is_pre_tax=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

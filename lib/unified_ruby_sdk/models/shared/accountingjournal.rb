@@ -32,6 +32,8 @@ module UnifiedRubySDK
         # new field name
         field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingJournalLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :posted_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('posted_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -54,8 +56,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), category_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), exchange_rate: T.nilable(::Float), id: T.nilable(::String), is_inclusive_of_tax: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::AccountingJournalLineitem]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), source: T.nilable(::String), status: T.nilable(Models::Shared::AccountingJournalStatus), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(attachments: nil, category_ids: nil, created_at: nil, currency: nil, description: nil, exchange_rate: nil, id: nil, is_inclusive_of_tax: nil, lineitems: nil, organization_id: nil, posted_at: nil, project_id: nil, raw: nil, reference: nil, source: nil, status: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil, updated_at: nil)
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::AccountingAttachment]), category_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), exchange_rate: T.nilable(::Float), id: T.nilable(::String), is_inclusive_of_tax: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::AccountingJournalLineitem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), organization_id: T.nilable(::String), posted_at: T.nilable(::DateTime), project_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference: T.nilable(::String), source: T.nilable(::String), status: T.nilable(Models::Shared::AccountingJournalStatus), tax_amount: T.nilable(::Float), taxrate_id: T.nilable(::String), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(attachments: nil, category_ids: nil, created_at: nil, currency: nil, description: nil, exchange_rate: nil, id: nil, is_inclusive_of_tax: nil, lineitems: nil, metadata: nil, organization_id: nil, posted_at: nil, project_id: nil, raw: nil, reference: nil, source: nil, status: nil, tax_amount: nil, taxrate_id: nil, total_amount: nil, updated_at: nil)
           @attachments = attachments
           @category_ids = category_ids
           @created_at = created_at
@@ -65,6 +67,7 @@ module UnifiedRubySDK
           @id = id
           @is_inclusive_of_tax = is_inclusive_of_tax
           @lineitems = lineitems
+          @metadata = metadata
           @organization_id = organization_id
           @posted_at = posted_at
           @project_id = project_id
@@ -90,6 +93,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_inclusive_of_tax == other.is_inclusive_of_tax
           return false unless @lineitems == other.lineitems
+          return false unless @metadata == other.metadata
           return false unless @organization_id == other.organization_id
           return false unless @posted_at == other.posted_at
           return false unless @project_id == other.project_id

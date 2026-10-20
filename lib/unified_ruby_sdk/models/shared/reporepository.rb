@@ -23,6 +23,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :is_private, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_private') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::RepoMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # (reference to RepoOrganization)
         field :org_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('org_id') } }
 
@@ -34,13 +36,14 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_private: T.nilable(T::Boolean), org_id: T.nilable(::String), owner: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-        def initialize(name:, created_at: nil, description: nil, id: nil, is_private: nil, org_id: nil, owner: nil, raw: nil, updated_at: nil, web_url: nil)
+        sig { params(name: ::String, created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_private: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::RepoMetadata]), org_id: T.nilable(::String), owner: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(name:, created_at: nil, description: nil, id: nil, is_private: nil, metadata: nil, org_id: nil, owner: nil, raw: nil, updated_at: nil, web_url: nil)
           @name = name
           @created_at = created_at
           @description = description
           @id = id
           @is_private = is_private
+          @metadata = metadata
           @org_id = org_id
           @owner = owner
           @raw = raw
@@ -56,6 +59,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_private == other.is_private
+          return false unless @metadata == other.metadata
           return false unless @org_id == other.org_id
           return false unless @owner == other.owner
           return false unless @raw == other.raw

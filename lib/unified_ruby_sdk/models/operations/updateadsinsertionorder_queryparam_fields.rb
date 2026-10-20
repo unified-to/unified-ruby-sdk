@@ -27,6 +27,7 @@ module UnifiedRubySDK
           BUDGET_SEGMENTS = new('budget_segments')
           BID_STRATEGY = new('bid_strategy')
           REFERENCE = new('reference')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

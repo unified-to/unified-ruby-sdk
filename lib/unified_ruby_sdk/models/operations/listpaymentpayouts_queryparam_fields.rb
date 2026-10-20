@@ -25,6 +25,7 @@ module UnifiedRubySDK
           NET_AMOUNT = new('net_amount')
           ACCOUNT_ID = new('account_id')
           LINEITEMS = new('lineitems')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

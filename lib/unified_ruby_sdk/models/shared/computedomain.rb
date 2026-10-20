@@ -19,6 +19,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Whether this is the service's primary domain
         field :is_primary, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_primary') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ComputeMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The hostname (eg. app.example.com)
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Raw data from integration
@@ -32,11 +34,12 @@ module UnifiedRubySDK
         # When the domain was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), id: T.nilable(::String), is_primary: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), redirect_url: T.nilable(::String), service_id: T.nilable(::String), status: T.nilable(Models::Shared::ComputeDomainStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, id: nil, is_primary: nil, name: nil, raw: nil, redirect_url: nil, service_id: nil, status: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), id: T.nilable(::String), is_primary: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), redirect_url: T.nilable(::String), service_id: T.nilable(::String), status: T.nilable(Models::Shared::ComputeDomainStatus), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, id: nil, is_primary: nil, metadata: nil, name: nil, raw: nil, redirect_url: nil, service_id: nil, status: nil, updated_at: nil)
           @created_at = created_at
           @id = id
           @is_primary = is_primary
+          @metadata = metadata
           @name = name
           @raw = raw
           @redirect_url = redirect_url
@@ -51,6 +54,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @id == other.id
           return false unless @is_primary == other.is_primary
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @redirect_url == other.redirect_url

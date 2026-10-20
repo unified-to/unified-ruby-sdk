@@ -28,6 +28,7 @@ module UnifiedRubySDK
           OPERATING_SECTIONS = new('operating_sections')
           INVESTING_SECTIONS = new('investing_sections')
           FINANCING_SECTIONS = new('financing_sections')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

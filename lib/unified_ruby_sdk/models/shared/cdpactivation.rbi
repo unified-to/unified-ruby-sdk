@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::CdpActivation
   def is_enabled=(str_); end
   def last_run_at(); end
   def last_run_at=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

@@ -31,31 +31,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.application.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
   answers: [],
-  applied_at: DateTime.iso8601('2025-09-28T09:22:52.903Z'),
+  applied_at: DateTime.iso8601('2025-09-29T03:36:00.324Z'),
   created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-  hired_at: DateTime.iso8601('2026-05-10T22:41:23.376Z'),
-  id: '0e3d5719-fd91-4a1b-bf9b-1d82fc3d2f31',
+  hired_at: DateTime.iso8601('2026-05-11T22:39:13.640Z'),
+  id: '889ecbff-f682-4701-a672-c644f9d2ff06',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+      id: 'd9066202-ad4f-4d0e-ace8-d6d85dc037ab',
       namespace: 'application',
-      slug: 'despecto',
-      value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+      slug: 'stella',
+      value: 'Caput.',
     ),
   ],
   offers: [],
   original_status: 'vomica',
   original_substatus: 'allatus',
-  rejected_at: DateTime.iso8601('2026-10-09T10:12:40.867Z'),
+  rejected_at: DateTime.iso8601('2026-10-10T14:03:03.371Z'),
   rejected_reason: 'Cometes amplitudo videlicet talio.',
   source: 'credo',
   status: Models::Shared::AtsApplicationStatus::REVIEWING,
-  summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-  updated_at: DateTime.iso8601('2026-10-16T06:07:46.871Z'),
+  summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
+  updated_at: DateTime.iso8601('2026-10-17T10:08:38.454Z'),
 ), connection_id: '<id>')
 
 unless res.ats_application.nil?
@@ -192,31 +192,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-09-28T09:22:52.917Z'),
+    applied_at: DateTime.iso8601('2025-09-29T03:36:00.349Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-10T22:41:23.394Z'),
-    id: '54049215-ed41-4707-9d03-7cb50fe7662b',
+    hired_at: DateTime.iso8601('2026-05-11T22:39:13.673Z'),
+    id: '65fb33f2-061f-4d29-b50c-7c47b53fbcfd',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+        id: '2ca3f81a-c864-47b9-b217-e53747bdb5ad',
         namespace: 'application',
-        slug: 'despecto',
-        value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+        slug: 'stella',
+        value: 'Caput.',
       ),
     ],
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-09T10:12:40.889Z'),
+    rejected_at: DateTime.iso8601('2026-10-10T14:03:03.409Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
-    summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-    updated_at: DateTime.iso8601('2026-10-16T06:07:46.893Z'),
+    summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
+    updated_at: DateTime.iso8601('2026-10-17T10:08:38.492Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -308,31 +308,31 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-09-28T09:22:52.917Z'),
+    applied_at: DateTime.iso8601('2025-09-29T03:36:00.349Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-10T22:41:23.394Z'),
-    id: '54049215-ed41-4707-9d03-7cb50fe7662b',
+    hired_at: DateTime.iso8601('2026-05-11T22:39:13.673Z'),
+    id: '65fb33f2-061f-4d29-b50c-7c47b53fbcfd',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+        id: '2ca3f81a-c864-47b9-b217-e53747bdb5ad',
         namespace: 'application',
-        slug: 'despecto',
-        value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+        slug: 'stella',
+        value: 'Caput.',
       ),
     ],
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-09T10:12:40.889Z'),
+    rejected_at: DateTime.iso8601('2026-10-10T14:03:03.409Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
-    summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-    updated_at: DateTime.iso8601('2026-10-16T06:07:46.893Z'),
+    summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
+    updated_at: DateTime.iso8601('2026-10-17T10:08:38.492Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

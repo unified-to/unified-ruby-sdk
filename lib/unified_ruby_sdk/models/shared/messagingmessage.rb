@@ -43,6 +43,8 @@ module UnifiedRubySDK
         field :message_markdown, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_markdown') } }
         # the opaque identifier for the first message in a thread  
         field :message_thread_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_thread_identifier') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Represents the ID of the immediate predecessor message in the thread. Identifies a specific message to which the current message directly replies.
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
@@ -58,8 +60,8 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingMessageAuthorMember), buttons: T.nilable(T::Array[Models::Shared::MessagingButton]), channels: T.nilable(T::Array[Models::Shared::MessagingReference]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), is_unread: T.nilable(T::Boolean), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), message_markdown: T.nilable(::String), message_thread_identifier: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::MessagingReaction]), reference: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-        def initialize(attachments: nil, author_member: nil, buttons: nil, channels: nil, created_at: nil, destination_members: nil, has_children: nil, hidden_members: nil, id: nil, is_unread: nil, mentioned_members: nil, message: nil, message_html: nil, message_markdown: nil, message_thread_identifier: nil, parent_id: nil, raw: nil, reactions: nil, reference: nil, subject: nil, updated_at: nil, web_url: nil)
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::MessagingAttachment]), author_member: T.nilable(Models::Shared::PropertyMessagingMessageAuthorMember), buttons: T.nilable(T::Array[Models::Shared::MessagingButton]), channels: T.nilable(T::Array[Models::Shared::MessagingReference]), created_at: T.nilable(::DateTime), destination_members: T.nilable(T::Array[Models::Shared::MessagingMember]), has_children: T.nilable(T::Boolean), hidden_members: T.nilable(T::Array[Models::Shared::MessagingMember]), id: T.nilable(::String), is_unread: T.nilable(T::Boolean), mentioned_members: T.nilable(T::Array[Models::Shared::MessagingMember]), message: T.nilable(::String), message_html: T.nilable(::String), message_markdown: T.nilable(::String), message_thread_identifier: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::MessagingMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reactions: T.nilable(T::Array[Models::Shared::MessagingReaction]), reference: T.nilable(::String), subject: T.nilable(::String), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(attachments: nil, author_member: nil, buttons: nil, channels: nil, created_at: nil, destination_members: nil, has_children: nil, hidden_members: nil, id: nil, is_unread: nil, mentioned_members: nil, message: nil, message_html: nil, message_markdown: nil, message_thread_identifier: nil, metadata: nil, parent_id: nil, raw: nil, reactions: nil, reference: nil, subject: nil, updated_at: nil, web_url: nil)
           @attachments = attachments
           @author_member = author_member
           @buttons = buttons
@@ -75,6 +77,7 @@ module UnifiedRubySDK
           @message_html = message_html
           @message_markdown = message_markdown
           @message_thread_identifier = message_thread_identifier
+          @metadata = metadata
           @parent_id = parent_id
           @raw = raw
           @reactions = reactions
@@ -102,6 +105,7 @@ module UnifiedRubySDK
           return false unless @message_html == other.message_html
           return false unless @message_markdown == other.message_markdown
           return false unless @message_thread_identifier == other.message_thread_identifier
+          return false unless @metadata == other.metadata
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
           return false unless @reactions == other.reactions

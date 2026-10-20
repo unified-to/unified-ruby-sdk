@@ -31,12 +31,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.signatory.create_signing_signatory(signing_signatory: Models::Shared::SigningSignatory.new(
   created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
-  email: 'Hardy.Wehner@gmail.com',
-  id: '73dac70e-d4e3-4922-bbc3-b2ce77777ea4',
-  order: 5.0,
+  email: 'anais.lakin@icloud.com',
+  id: 'e324f048-a37d-42c7-8be2-a1c3bbfd4ba2',
+  metadata: [],
+  name: 'Anais Lakin',
   role: Models::Shared::SigningSignatoryRole::SIGNER,
-  status: Models::Shared::SigningSignatoryStatus::SIGNED,
-  updated_at: DateTime.iso8601('2026-09-09T22:15:45.928Z'),
+  status: Models::Shared::SigningSignatoryStatus::ERROR,
+  updated_at: DateTime.iso8601('2024-05-17T09:12:23.035Z'),
 ), connection_id: '<id>')
 
 unless res.signing_signatory.nil?
@@ -173,12 +174,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
-    email: 'Hardy.Wehner@gmail.com',
-    id: '3b135465-5f41-4974-b26b-69d284272ecf',
-    order: 5.0,
+    email: 'anais.lakin@icloud.com',
+    id: '47df2914-9e1c-42d1-9898-da65ceed36e8',
+    metadata: [],
+    name: 'Anais Lakin',
     role: Models::Shared::SigningSignatoryRole::SIGNER,
-    status: Models::Shared::SigningSignatoryStatus::SIGNED,
-    updated_at: DateTime.iso8601('2026-09-09T22:15:45.936Z'),
+    status: Models::Shared::SigningSignatoryStatus::ERROR,
+    updated_at: DateTime.iso8601('2024-05-17T09:12:23.041Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -270,12 +272,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
-    email: 'Hardy.Wehner@gmail.com',
-    id: '3b135465-5f41-4974-b26b-69d284272ecf',
-    order: 5.0,
+    email: 'anais.lakin@icloud.com',
+    id: '47df2914-9e1c-42d1-9898-da65ceed36e8',
+    metadata: [],
+    name: 'Anais Lakin',
     role: Models::Shared::SigningSignatoryRole::SIGNER,
-    status: Models::Shared::SigningSignatoryStatus::SIGNED,
-    updated_at: DateTime.iso8601('2026-09-09T22:15:45.936Z'),
+    status: Models::Shared::SigningSignatoryStatus::ERROR,
+    updated_at: DateTime.iso8601('2024-05-17T09:12:23.041Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

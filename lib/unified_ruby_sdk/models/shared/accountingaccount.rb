@@ -27,6 +27,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # True if the account is an “accounts payable” account
         field :is_payable, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_payable') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Account name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -44,8 +46,8 @@ module UnifiedRubySDK
         # Date and time when the Account was last updated, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(balance: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_defined_code: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_payable: T.nilable(T::Boolean), name: T.nilable(::String), organization_id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::Status), taxonomy: T.nilable(T::Array[Models::Shared::AccountingAccountTaxonomy]), type: T.nilable(Models::Shared::Type), updated_at: T.nilable(::DateTime)).void }
-        def initialize(balance: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, id: nil, is_payable: nil, name: nil, organization_id: nil, parent_id: nil, raw: nil, status: nil, taxonomy: nil, type: nil, updated_at: nil)
+        sig { params(balance: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), customer_defined_code: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_payable: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::Status), taxonomy: T.nilable(T::Array[Models::Shared::AccountingAccountTaxonomy]), type: T.nilable(Models::Shared::Type), updated_at: T.nilable(::DateTime)).void }
+        def initialize(balance: nil, created_at: nil, currency: nil, customer_defined_code: nil, description: nil, id: nil, is_payable: nil, metadata: nil, name: nil, organization_id: nil, parent_id: nil, raw: nil, status: nil, taxonomy: nil, type: nil, updated_at: nil)
           @balance = balance
           @created_at = created_at
           @currency = currency
@@ -53,6 +55,7 @@ module UnifiedRubySDK
           @description = description
           @id = id
           @is_payable = is_payable
+          @metadata = metadata
           @name = name
           @organization_id = organization_id
           @parent_id = parent_id
@@ -73,6 +76,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_payable == other.is_payable
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @organization_id == other.organization_id
           return false unless @parent_id == other.parent_id

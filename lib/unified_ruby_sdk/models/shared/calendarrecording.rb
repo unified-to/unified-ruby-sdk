@@ -26,6 +26,8 @@ module UnifiedRubySDK
 
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarRecordingMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -34,14 +36,15 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), event_id: T.nilable(::String), expires_at: T.nilable(::DateTime), id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CalendarRecordingMedia]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
-        def initialize(created_at: nil, end_at: nil, event_id: nil, expires_at: nil, id: nil, media: nil, raw: nil, start_at: nil, updated_at: nil, web_url: nil)
+        sig { params(created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), event_id: T.nilable(::String), expires_at: T.nilable(::DateTime), id: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::CalendarRecordingMedia]), metadata: T.nilable(T::Array[Models::Shared::CalendarMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        def initialize(created_at: nil, end_at: nil, event_id: nil, expires_at: nil, id: nil, media: nil, metadata: nil, raw: nil, start_at: nil, updated_at: nil, web_url: nil)
           @created_at = created_at
           @end_at = end_at
           @event_id = event_id
           @expires_at = expires_at
           @id = id
           @media = media
+          @metadata = metadata
           @raw = raw
           @start_at = start_at
           @updated_at = updated_at
@@ -57,6 +60,7 @@ module UnifiedRubySDK
           return false unless @expires_at == other.expires_at
           return false unless @id == other.id
           return false unless @media == other.media
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
           return false unless @updated_at == other.updated_at

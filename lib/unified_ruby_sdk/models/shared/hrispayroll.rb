@@ -38,6 +38,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :net_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_amount') } }
         # pay/check date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -58,8 +60,8 @@ module UnifiedRubySDK
         # employees paid in this payroll
         field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-        sig { params(approved_at: T.nilable(::DateTime), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction_amount: T.nilable(::Float), employee_tax_amount: T.nilable(::Float), employer_contribution_amount: T.nilable(::Float), employer_tax_amount: T.nilable(::Float), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), group_id: T.nilable(::String), id: T.nilable(::String), net_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payslip_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HrisPayrollStatus), total_cost_amount: T.nilable(::Float), type: T.nilable(Models::Shared::HrisPayrollType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
-        def initialize(approved_at: nil, company_id: nil, created_at: nil, currency: nil, deduction_amount: nil, employee_tax_amount: nil, employer_contribution_amount: nil, employer_tax_amount: nil, end_at: nil, gross_amount: nil, group_id: nil, id: nil, net_amount: nil, paid_at: nil, payslip_ids: nil, raw: nil, start_at: nil, status: nil, total_cost_amount: nil, type: nil, updated_at: nil, user_ids: nil)
+        sig { params(approved_at: T.nilable(::DateTime), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deduction_amount: T.nilable(::Float), employee_tax_amount: T.nilable(::Float), employer_contribution_amount: T.nilable(::Float), employer_tax_amount: T.nilable(::Float), end_at: T.nilable(::DateTime), gross_amount: T.nilable(::Float), group_id: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), net_amount: T.nilable(::Float), paid_at: T.nilable(::DateTime), payslip_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HrisPayrollStatus), total_cost_amount: T.nilable(::Float), type: T.nilable(Models::Shared::HrisPayrollType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        def initialize(approved_at: nil, company_id: nil, created_at: nil, currency: nil, deduction_amount: nil, employee_tax_amount: nil, employer_contribution_amount: nil, employer_tax_amount: nil, end_at: nil, gross_amount: nil, group_id: nil, id: nil, metadata: nil, net_amount: nil, paid_at: nil, payslip_ids: nil, raw: nil, start_at: nil, status: nil, total_cost_amount: nil, type: nil, updated_at: nil, user_ids: nil)
           @approved_at = approved_at
           @company_id = company_id
           @created_at = created_at
@@ -72,6 +74,7 @@ module UnifiedRubySDK
           @gross_amount = gross_amount
           @group_id = group_id
           @id = id
+          @metadata = metadata
           @net_amount = net_amount
           @paid_at = paid_at
           @payslip_ids = payslip_ids
@@ -99,6 +102,7 @@ module UnifiedRubySDK
           return false unless @gross_amount == other.gross_amount
           return false unless @group_id == other.group_id
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @net_amount == other.net_amount
           return false unless @paid_at == other.paid_at
           return false unless @payslip_ids == other.payslip_ids

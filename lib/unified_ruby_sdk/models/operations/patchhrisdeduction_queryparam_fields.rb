@@ -32,6 +32,7 @@ module UnifiedRubySDK
           MAX_AMOUNT = new('max_amount')
           PAYCODE_ID = new('paycode_id')
           GARNISHMENT_TYPE = new('garnishment_type')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

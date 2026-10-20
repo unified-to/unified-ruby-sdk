@@ -32,6 +32,8 @@ class UnifiedRubySDK::Models::Shared::HrisPayroll
   def group_id=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def net_amount(); end
   def net_amount=(str_); end
   def paid_at(); end

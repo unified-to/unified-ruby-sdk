@@ -32,6 +32,7 @@ module UnifiedRubySDK
           SPLIT_TYPE = new('split_type')
           SPLIT_AMOUNT = new('split_amount')
           PRIORITY = new('priority')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

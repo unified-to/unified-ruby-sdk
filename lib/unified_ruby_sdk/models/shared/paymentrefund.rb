@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PaymentMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
         # (reference to PaymentPayment)
         field :payment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id') } }
@@ -40,11 +42,12 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), notes: T.nilable(::String), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(Models::Shared::Reason), reference: T.nilable(::String), refunded_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PaymentRefundStatus), tender_type: T.nilable(Models::Shared::PaymentRefundTenderType), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, currency: nil, id: nil, notes: nil, payment_id: nil, raw: nil, reason: nil, reference: nil, refunded_at: nil, status: nil, tender_type: nil, total_amount: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), currency: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PaymentMetadata]), notes: T.nilable(::String), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(Models::Shared::Reason), reference: T.nilable(::String), refunded_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PaymentRefundStatus), tender_type: T.nilable(Models::Shared::PaymentRefundTenderType), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, currency: nil, id: nil, metadata: nil, notes: nil, payment_id: nil, raw: nil, reason: nil, reference: nil, refunded_at: nil, status: nil, tender_type: nil, total_amount: nil, updated_at: nil)
           @created_at = created_at
           @currency = currency
           @id = id
+          @metadata = metadata
           @notes = notes
           @payment_id = payment_id
           @raw = raw
@@ -63,6 +66,7 @@ module UnifiedRubySDK
           return false unless @created_at == other.created_at
           return false unless @currency == other.currency
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @notes == other.notes
           return false unless @payment_id == other.payment_id
           return false unless @raw == other.raw

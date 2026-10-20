@@ -40,6 +40,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsCampaign
   def kpi=(str_); end
   def labels(); end
   def labels=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def organization_id(); end

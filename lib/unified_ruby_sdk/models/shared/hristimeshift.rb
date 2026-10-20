@@ -38,14 +38,16 @@ module UnifiedRubySDK
         # (reference to HrisLocation)
         field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(employee_user_id: ::String, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), is_approved: T.nilable(T::Boolean), location_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
-        def initialize(employee_user_id:, approved_at: nil, approver_user_id: nil, company_id: nil, compensation: nil, created_at: nil, end_at: nil, group_id: nil, hours: nil, id: nil, is_approved: nil, location_id: nil, raw: nil, start_at: nil, updated_at: nil)
+        sig { params(employee_user_id: ::String, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), group_id: T.nilable(::String), hours: T.nilable(::Float), id: T.nilable(::String), is_approved: T.nilable(T::Boolean), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
+        def initialize(employee_user_id:, approved_at: nil, approver_user_id: nil, company_id: nil, compensation: nil, created_at: nil, end_at: nil, group_id: nil, hours: nil, id: nil, is_approved: nil, location_id: nil, metadata: nil, raw: nil, start_at: nil, updated_at: nil)
           @employee_user_id = employee_user_id
           @approved_at = approved_at
           @approver_user_id = approver_user_id
@@ -58,6 +60,7 @@ module UnifiedRubySDK
           @id = id
           @is_approved = is_approved
           @location_id = location_id
+          @metadata = metadata
           @raw = raw
           @start_at = start_at
           @updated_at = updated_at
@@ -78,6 +81,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_approved == other.is_approved
           return false unless @location_id == other.location_id
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
           return false unless @updated_at == other.updated_at

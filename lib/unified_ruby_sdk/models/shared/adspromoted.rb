@@ -18,14 +18,17 @@ module UnifiedRubySDK
         # Promoted entity types for ads_promoted list endpoint
         field :type, Models::Shared::AdsPromotedType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AdsPromotedType, false) } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        sig { params(id: ::String, type: Models::Shared::AdsPromotedType, name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object])).void }
-        def initialize(id:, type:, name: nil, raw: nil)
+        sig { params(id: ::String, type: Models::Shared::AdsPromotedType, metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object])).void }
+        def initialize(id:, type:, metadata: nil, name: nil, raw: nil)
           @id = id
           @type = type
+          @metadata = metadata
           @name = name
           @raw = raw
         end
@@ -35,6 +38,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @id == other.id
           return false unless @type == other.type
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           true

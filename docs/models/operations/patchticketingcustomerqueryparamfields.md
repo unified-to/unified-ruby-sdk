@@ -12,4 +12,5 @@
 | `EMAILS`     | emails       |
 | `TELEPHONES` | telephones   |
 | `TAGS`       | tags         |
+| `METADATA`   | metadata     |
 | `RAW`        | raw          |

@@ -50,8 +50,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.uc.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
   content: 'Vociferor vitiosus.',
   created_at: '2023-04-02T23:42:31.571Z',
-  id: '629f8213-1135-4ac6-9f8f-de669d0502af',
-  updated_at: '2024-02-09T06:07:05.184Z',
+  id: 'abddba1b-9599-449d-8bca-33512e600b95',
+  metadata: [],
+  updated_at: '2024-02-09T12:53:23.995Z',
 ), connection_id: '<id>')
 
 unless res.uc_comment.nil?
@@ -106,8 +107,9 @@ res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   first_name: 'Luther',
-  id: '2ead9661-dbfe-4834-952f-cdb00f219dea',
+  id: '8a0c40e6-c2f8-421b-b516-c0ca92205a11',
   last_name: 'Rogahn',
+  metadata: [],
   name: 'Luther Rogahn',
   telephones: [
     Models::Shared::UcTelephone.new(
@@ -124,7 +126,7 @@ res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   title: 'Chief Optimization Executive',
-  updated_at: DateTime.iso8601('2023-12-07T02:51:44.306Z'),
+  updated_at: DateTime.iso8601('2023-12-07T19:24:16.199Z'),
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -171,36 +173,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.uc.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(
   contacts: [],
-  conversation_identifier: 'f8c14834-f89c-43e3-9095-76864bca0de2',
+  conversation_identifier: '705a7da9-1a1f-4c6a-9e2e-29c9dccc1782',
   created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-  end_at: DateTime.iso8601('2024-05-04T03:28:34.516Z'),
-  expires_at: DateTime.iso8601('2026-04-24T21:13:23.820Z'),
-  id: 'f8c14834-f89c-43e3-9095-76864bca0de2',
+  end_at: DateTime.iso8601('2024-05-04T14:39:42.123Z'),
+  expires_at: DateTime.iso8601('2026-04-25T21:58:24.127Z'),
+  id: '705a7da9-1a1f-4c6a-9e2e-29c9dccc1782',
   media: [
     Models::Shared::UcRecordingMedia.new(
-      end_at: DateTime.iso8601('2024-04-01T00:17:05.290Z'),
+      end_at: DateTime.iso8601('2024-04-01T10:50:48.018Z'),
       language: 'en',
       recording_download_url: 'https://parched-wasabi.com/',
-      start_at: DateTime.iso8601('2026-05-13T12:38:48.391Z'),
+      start_at: DateTime.iso8601('2026-05-14T13:44:51.806Z'),
       transcript_download_url: 'https://colossal-cuckoo.name',
       transcripts: [
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2026-02-22T17:09:02.624Z'),
-          start_at: DateTime.iso8601('2024-06-01T08:38:52.069Z'),
+          end_at: DateTime.iso8601('2026-02-23T16:44:58.464Z'),
+          start_at: DateTime.iso8601('2024-06-01T20:21:51.376Z'),
           text: 'Turpis maiores ducimus tero speculum.',
         ),
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2024-10-11T11:14:18.540Z'),
-          start_at: DateTime.iso8601('2026-07-31T20:29:45.456Z'),
+          end_at: DateTime.iso8601('2024-10-12T01:26:28.639Z'),
+          start_at: DateTime.iso8601('2026-08-01T23:05:23.564Z'),
           text: 'Magnam consuasor uxor tergiversatio subseco.',
         ),
       ],
     ),
   ],
-  start_at: DateTime.iso8601('2023-04-27T10:26:41.773Z'),
+  metadata: [],
+  start_at: DateTime.iso8601('2023-04-27T14:36:56.957Z'),
   type: Models::Shared::UcRecordingType::OUTBOUND,
-  updated_at: DateTime.iso8601('2025-03-15T03:50:39.117Z'),
-  user_name: 'Melyna Larson',
+  updated_at: DateTime.iso8601('2025-03-15T20:57:30.150Z'),
   user_phone: '1-915-327-0429 x509',
   web_url: 'https://spherical-comparison.org',
 ), connection_id: '<id>')
@@ -785,8 +787,9 @@ req = Models::Operations::PatchUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: '0698f156-0ff7-44ec-8688-29334dd607cf',
-    updated_at: '2024-02-09T06:07:05.185Z',
+    id: '496ae26d-0f6c-495b-8fb2-a4ff7b73846d',
+    metadata: [],
+    updated_at: '2024-02-09T12:53:23.998Z',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -844,8 +847,9 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: 'fcb7dc6e-81ad-45eb-ab90-6529e20be9f1',
+    id: '5dc3188a-e9d1-4774-b4e4-14c9f93ce605',
     last_name: 'Rogahn',
+    metadata: [],
     name: 'Luther Rogahn',
     telephones: [
       Models::Shared::UcTelephone.new(
@@ -862,7 +866,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-07T02:51:44.313Z'),
+    updated_at: DateTime.iso8601('2023-12-07T19:24:16.207Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -912,36 +916,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: 'de8881ef-d977-4c86-a8aa-9a420973d059',
+    conversation_identifier: 'db2375af-112c-49b4-9b87-fa70eeb5992a',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-04T03:28:34.525Z'),
-    expires_at: DateTime.iso8601('2026-04-24T21:13:23.841Z'),
-    id: 'de8881ef-d977-4c86-a8aa-9a420973d059',
+    end_at: DateTime.iso8601('2024-05-04T14:39:42.134Z'),
+    expires_at: DateTime.iso8601('2026-04-25T21:58:24.152Z'),
+    id: 'db2375af-112c-49b4-9b87-fa70eeb5992a',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-01T00:17:05.298Z'),
+        end_at: DateTime.iso8601('2024-04-01T10:50:48.029Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-05-13T12:38:48.412Z'),
+        start_at: DateTime.iso8601('2026-05-14T13:44:51.830Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-02-22T17:09:02.643Z'),
-            start_at: DateTime.iso8601('2024-06-01T08:38:52.078Z'),
+            end_at: DateTime.iso8601('2026-02-23T16:44:58.487Z'),
+            start_at: DateTime.iso8601('2024-06-01T20:21:51.388Z'),
             text: 'Turpis maiores ducimus tero speculum.',
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-11T11:14:18.552Z'),
-            start_at: DateTime.iso8601('2026-07-31T20:29:45.477Z'),
+            end_at: DateTime.iso8601('2024-10-12T01:26:28.652Z'),
+            start_at: DateTime.iso8601('2026-08-01T23:05:23.590Z'),
             text: 'Magnam consuasor uxor tergiversatio subseco.',
           ),
         ],
       ),
     ],
-    start_at: DateTime.iso8601('2023-04-27T10:26:41.777Z'),
+    metadata: [],
+    start_at: DateTime.iso8601('2023-04-27T14:36:56.961Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-15T03:50:39.131Z'),
-    user_name: 'Melyna Larson',
+    updated_at: DateTime.iso8601('2025-03-15T20:57:30.166Z'),
     user_phone: '1-915-327-0429 x509',
     web_url: 'https://spherical-comparison.org',
   ),
@@ -1120,8 +1124,9 @@ req = Models::Operations::UpdateUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: '0698f156-0ff7-44ec-8688-29334dd607cf',
-    updated_at: '2024-02-09T06:07:05.185Z',
+    id: '496ae26d-0f6c-495b-8fb2-a4ff7b73846d',
+    metadata: [],
+    updated_at: '2024-02-09T12:53:23.998Z',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1179,8 +1184,9 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: 'fcb7dc6e-81ad-45eb-ab90-6529e20be9f1',
+    id: '5dc3188a-e9d1-4774-b4e4-14c9f93ce605',
     last_name: 'Rogahn',
+    metadata: [],
     name: 'Luther Rogahn',
     telephones: [
       Models::Shared::UcTelephone.new(
@@ -1197,7 +1203,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-07T02:51:44.313Z'),
+    updated_at: DateTime.iso8601('2023-12-07T19:24:16.207Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1247,36 +1253,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: 'de8881ef-d977-4c86-a8aa-9a420973d059',
+    conversation_identifier: 'db2375af-112c-49b4-9b87-fa70eeb5992a',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-04T03:28:34.525Z'),
-    expires_at: DateTime.iso8601('2026-04-24T21:13:23.841Z'),
-    id: 'de8881ef-d977-4c86-a8aa-9a420973d059',
+    end_at: DateTime.iso8601('2024-05-04T14:39:42.134Z'),
+    expires_at: DateTime.iso8601('2026-04-25T21:58:24.152Z'),
+    id: 'db2375af-112c-49b4-9b87-fa70eeb5992a',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-01T00:17:05.298Z'),
+        end_at: DateTime.iso8601('2024-04-01T10:50:48.029Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-05-13T12:38:48.412Z'),
+        start_at: DateTime.iso8601('2026-05-14T13:44:51.830Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-02-22T17:09:02.643Z'),
-            start_at: DateTime.iso8601('2024-06-01T08:38:52.078Z'),
+            end_at: DateTime.iso8601('2026-02-23T16:44:58.487Z'),
+            start_at: DateTime.iso8601('2024-06-01T20:21:51.388Z'),
             text: 'Turpis maiores ducimus tero speculum.',
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-11T11:14:18.552Z'),
-            start_at: DateTime.iso8601('2026-07-31T20:29:45.477Z'),
+            end_at: DateTime.iso8601('2024-10-12T01:26:28.652Z'),
+            start_at: DateTime.iso8601('2026-08-01T23:05:23.590Z'),
             text: 'Magnam consuasor uxor tergiversatio subseco.',
           ),
         ],
       ),
     ],
-    start_at: DateTime.iso8601('2023-04-27T10:26:41.777Z'),
+    metadata: [],
+    start_at: DateTime.iso8601('2023-04-27T14:36:56.961Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-15T03:50:39.131Z'),
-    user_name: 'Melyna Larson',
+    updated_at: DateTime.iso8601('2025-03-15T20:57:30.166Z'),
     user_phone: '1-915-327-0429 x509',
     web_url: 'https://spherical-comparison.org',
   ),

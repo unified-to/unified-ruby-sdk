@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::CrmEvent
   def marketing_email=(str_); end
   def meeting(); end
   def meeting=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def note(); end
   def note=(str_); end
   def page_view(); end

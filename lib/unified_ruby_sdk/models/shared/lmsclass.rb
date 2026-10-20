@@ -28,6 +28,8 @@ module UnifiedRubySDK
 
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::LmsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -36,8 +38,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(course_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), students: T.nilable(T::Array[Models::Shared::LmsReference]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(course_id: nil, created_at: nil, description: nil, id: nil, instructors: nil, languages: nil, media: nil, name: nil, raw: nil, students: nil, updated_at: nil)
+        sig { params(course_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), metadata: T.nilable(T::Array[Models::Shared::LmsMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), students: T.nilable(T::Array[Models::Shared::LmsReference]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(course_id: nil, created_at: nil, description: nil, id: nil, instructors: nil, languages: nil, media: nil, metadata: nil, name: nil, raw: nil, students: nil, updated_at: nil)
           @course_id = course_id
           @created_at = created_at
           @description = description
@@ -45,6 +47,7 @@ module UnifiedRubySDK
           @instructors = instructors
           @languages = languages
           @media = media
+          @metadata = metadata
           @name = name
           @raw = raw
           @students = students
@@ -61,6 +64,7 @@ module UnifiedRubySDK
           return false unless @instructors == other.instructors
           return false unless @languages == other.languages
           return false unless @media == other.media
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @students == other.students

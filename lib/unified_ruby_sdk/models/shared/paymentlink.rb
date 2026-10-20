@@ -31,6 +31,8 @@ module UnifiedRubySDK
         field :is_chargeable_now, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_chargeable_now') } }
 
         field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PaymentLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PaymentMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # (reference to PaymentPayment)
         field :payment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payment_id') } }
 
@@ -42,8 +44,8 @@ module UnifiedRubySDK
         # the payment link
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_chargeable_now: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), success_url: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(amount: nil, contact_id: nil, created_at: nil, currency: nil, description: nil, id: nil, is_active: nil, is_chargeable_now: nil, lineitems: nil, payment_id: nil, raw: nil, success_url: nil, updated_at: nil, url: nil)
+        sig { params(amount: T.nilable(::Float), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_chargeable_now: T.nilable(T::Boolean), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), metadata: T.nilable(T::Array[Models::Shared::PaymentMetadata]), payment_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), success_url: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(amount: nil, contact_id: nil, created_at: nil, currency: nil, description: nil, id: nil, is_active: nil, is_chargeable_now: nil, lineitems: nil, metadata: nil, payment_id: nil, raw: nil, success_url: nil, updated_at: nil, url: nil)
           @amount = amount
           @contact_id = contact_id
           @created_at = created_at
@@ -53,6 +55,7 @@ module UnifiedRubySDK
           @is_active = is_active
           @is_chargeable_now = is_chargeable_now
           @lineitems = lineitems
+          @metadata = metadata
           @payment_id = payment_id
           @raw = raw
           @success_url = success_url
@@ -72,6 +75,7 @@ module UnifiedRubySDK
           return false unless @is_active == other.is_active
           return false unless @is_chargeable_now == other.is_chargeable_now
           return false unless @lineitems == other.lineitems
+          return false unless @metadata == other.metadata
           return false unless @payment_id == other.payment_id
           return false unless @raw == other.raw
           return false unless @success_url == other.success_url

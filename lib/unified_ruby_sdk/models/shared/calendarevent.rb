@@ -40,6 +40,8 @@ module UnifiedRubySDK
         # pointer to Legal Matter
         field :matter_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('matter_id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
         field :organizer, Crystalline::Nilable.new(Models::Shared::PropertyCalendarEventOrganizer), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organizer') } }
@@ -64,8 +66,8 @@ module UnifiedRubySDK
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(attachments: T.nilable(T::Array[Models::Shared::CalendarAttachment]), attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), calendar_id: T.nilable(::String), conference: T.nilable(T::Array[Models::Shared::CalendarConference]), created_at: T.nilable(::String), end_at: T.nilable(::String), has_conference: T.nilable(T::Boolean), id: T.nilable(::String), is_all_day: T.nilable(T::Boolean), is_free: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), location: T.nilable(::String), matter_id: T.nilable(::String), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarEventOrganizer), raw: T.nilable(T::Hash[Symbol, ::Object]), recurrence: T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), recurring_event_id: T.nilable(::String), send_notifications: T.nilable(T::Boolean), start_at: T.nilable(::String), status: T.nilable(Models::Shared::CalendarEventStatus), subject: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
-        def initialize(attachments: nil, attendees: nil, calendar_id: nil, conference: nil, created_at: nil, end_at: nil, has_conference: nil, id: nil, is_all_day: nil, is_free: nil, is_private: nil, location: nil, matter_id: nil, notes: nil, organizer: nil, raw: nil, recurrence: nil, recurring_event_id: nil, send_notifications: nil, start_at: nil, status: nil, subject: nil, timezone: nil, updated_at: nil, web_url: nil)
+        sig { params(attachments: T.nilable(T::Array[Models::Shared::CalendarAttachment]), attendees: T.nilable(T::Array[Models::Shared::CalendarAttendee]), calendar_id: T.nilable(::String), conference: T.nilable(T::Array[Models::Shared::CalendarConference]), created_at: T.nilable(::String), end_at: T.nilable(::String), has_conference: T.nilable(T::Boolean), id: T.nilable(::String), is_all_day: T.nilable(T::Boolean), is_free: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), location: T.nilable(::String), matter_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CalendarMetadata]), notes: T.nilable(::String), organizer: T.nilable(Models::Shared::PropertyCalendarEventOrganizer), raw: T.nilable(T::Hash[Symbol, ::Object]), recurrence: T.nilable(T::Array[Models::Shared::CalendarEventRecurrence]), recurring_event_id: T.nilable(::String), send_notifications: T.nilable(T::Boolean), start_at: T.nilable(::String), status: T.nilable(Models::Shared::CalendarEventStatus), subject: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::String), web_url: T.nilable(::String)).void }
+        def initialize(attachments: nil, attendees: nil, calendar_id: nil, conference: nil, created_at: nil, end_at: nil, has_conference: nil, id: nil, is_all_day: nil, is_free: nil, is_private: nil, location: nil, matter_id: nil, metadata: nil, notes: nil, organizer: nil, raw: nil, recurrence: nil, recurring_event_id: nil, send_notifications: nil, start_at: nil, status: nil, subject: nil, timezone: nil, updated_at: nil, web_url: nil)
           @attachments = attachments
           @attendees = attendees
           @calendar_id = calendar_id
@@ -79,6 +81,7 @@ module UnifiedRubySDK
           @is_private = is_private
           @location = location
           @matter_id = matter_id
+          @metadata = metadata
           @notes = notes
           @organizer = organizer
           @raw = raw
@@ -109,6 +112,7 @@ module UnifiedRubySDK
           return false unless @is_private == other.is_private
           return false unless @location == other.location
           return false unless @matter_id == other.matter_id
+          return false unless @metadata == other.metadata
           return false unless @notes == other.notes
           return false unless @organizer == other.organizer
           return false unless @raw == other.raw

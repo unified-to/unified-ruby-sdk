@@ -24,6 +24,8 @@ class UnifiedRubySDK::Models::Shared::TicketingTicket
   def due_at=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def priority(); end
   def priority=(str_); end
   def raw(); end

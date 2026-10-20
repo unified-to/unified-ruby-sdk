@@ -26,20 +26,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.rate.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.new(
   currency: 'USD',
-  id: 'c180cb4f-015f-46fe-ba9f-ed942135800f',
+  id: '30c49a7b-e4cc-40ab-8044-d1ebd825c147',
+  metadata: [],
   rates: [
     Models::Shared::ShippingRateRate.new(
-      amount: 54.679_719_475_097_954,
-      base_amount: 76.45_537_888_631_225,
+      amount: 44.72,
+      base_amount: 46.01,
       currency: 'USD',
-      delivery_days: 8.0,
-      description: 'Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.',
-      estimated_days: 10.0,
-      estimated_delivery_end_at: DateTime.iso8601('2024-02-15T17:40:23.176Z'),
-      is_guaranteed: true,
+      delivery_days: 2.0,
+      description: 'Veniam denego vulgo bos turpis pax.',
+      discount_amount: 4.6,
+      estimated_days: 2.0,
+      estimated_delivery_end_at: DateTime.iso8601('2021-09-03T01:03:36.021Z'),
       is_negotiated_rate: true,
-      tax_amount: 2.2_701_712_837_442_756,
-      title: 'Turcotte Inc',
+      tax_amount: 3.31,
+      title: 'Express',
     ),
   ],
 ), connection_id: '<id>')

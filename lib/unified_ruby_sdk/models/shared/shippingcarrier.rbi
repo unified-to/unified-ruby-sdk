@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::ShippingCarrier
   def is_active=(str_); end
   def logo_url(); end
   def logo_url=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

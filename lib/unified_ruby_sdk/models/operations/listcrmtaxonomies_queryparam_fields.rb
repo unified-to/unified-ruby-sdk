@@ -17,6 +17,7 @@ module UnifiedRubySDK
           NAME = new('name')
           LABEL = new('label')
           TYPE = new('type')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

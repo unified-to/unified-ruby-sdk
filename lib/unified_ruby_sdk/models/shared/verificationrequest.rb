@@ -20,6 +20,8 @@ module UnifiedRubySDK
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::VerificationMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :package_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('package_id') } }
 
         field :parameters, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::VerificationParameterInput)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parameters') } }
@@ -64,11 +66,12 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), package_id: T.nilable(::String), parameters: T.nilable(T::Array[Models::Shared::VerificationParameterInput]), profile_addresses: T.nilable(T::Array[Models::Shared::VerificationAddress]), profile_date_of_birth: T.nilable(::String), profile_emails: T.nilable(T::Array[::String]), profile_gender: T.nilable(Models::Shared::VerificationRequestProfileGender), profile_ip_address: T.nilable(::String), profile_name: T.nilable(::String), profile_national_identifier: T.nilable(::String), profile_telephones: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), response_completed_at: T.nilable(::DateTime), response_details: T.nilable(T::Array[Models::Shared::VerificationResponseDetail]), response_download_urls: T.nilable(T::Array[::String]), response_expires_at: T.nilable(::DateTime), response_issued_at: T.nilable(::DateTime), response_redirect_url: T.nilable(::String), response_score: T.nilable(::Float), response_source: T.nilable(::String), response_status: T.nilable(Models::Shared::VerificationRequestResponseStatus), target_url: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(candidate_id: nil, created_at: nil, id: nil, package_id: nil, parameters: nil, profile_addresses: nil, profile_date_of_birth: nil, profile_emails: nil, profile_gender: nil, profile_ip_address: nil, profile_name: nil, profile_national_identifier: nil, profile_telephones: nil, raw: nil, response_completed_at: nil, response_details: nil, response_download_urls: nil, response_expires_at: nil, response_issued_at: nil, response_redirect_url: nil, response_score: nil, response_source: nil, response_status: nil, target_url: nil, updated_at: nil)
+        sig { params(candidate_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::VerificationMetadata]), package_id: T.nilable(::String), parameters: T.nilable(T::Array[Models::Shared::VerificationParameterInput]), profile_addresses: T.nilable(T::Array[Models::Shared::VerificationAddress]), profile_date_of_birth: T.nilable(::String), profile_emails: T.nilable(T::Array[::String]), profile_gender: T.nilable(Models::Shared::VerificationRequestProfileGender), profile_ip_address: T.nilable(::String), profile_name: T.nilable(::String), profile_national_identifier: T.nilable(::String), profile_telephones: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), response_completed_at: T.nilable(::DateTime), response_details: T.nilable(T::Array[Models::Shared::VerificationResponseDetail]), response_download_urls: T.nilable(T::Array[::String]), response_expires_at: T.nilable(::DateTime), response_issued_at: T.nilable(::DateTime), response_redirect_url: T.nilable(::String), response_score: T.nilable(::Float), response_source: T.nilable(::String), response_status: T.nilable(Models::Shared::VerificationRequestResponseStatus), target_url: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(candidate_id: nil, created_at: nil, id: nil, metadata: nil, package_id: nil, parameters: nil, profile_addresses: nil, profile_date_of_birth: nil, profile_emails: nil, profile_gender: nil, profile_ip_address: nil, profile_name: nil, profile_national_identifier: nil, profile_telephones: nil, raw: nil, response_completed_at: nil, response_details: nil, response_download_urls: nil, response_expires_at: nil, response_issued_at: nil, response_redirect_url: nil, response_score: nil, response_source: nil, response_status: nil, target_url: nil, updated_at: nil)
           @candidate_id = candidate_id
           @created_at = created_at
           @id = id
+          @metadata = metadata
           @package_id = package_id
           @parameters = parameters
           @profile_addresses = profile_addresses
@@ -99,6 +102,7 @@ module UnifiedRubySDK
           return false unless @candidate_id == other.candidate_id
           return false unless @created_at == other.created_at
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @package_id == other.package_id
           return false unless @parameters == other.parameters
           return false unless @profile_addresses == other.profile_addresses

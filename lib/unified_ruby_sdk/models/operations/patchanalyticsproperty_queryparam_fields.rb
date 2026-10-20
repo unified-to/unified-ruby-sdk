@@ -21,6 +21,7 @@ module UnifiedRubySDK
           CURRENCY = new('currency')
           INDUSTRY = new('industry')
           PARENT_ID = new('parent_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

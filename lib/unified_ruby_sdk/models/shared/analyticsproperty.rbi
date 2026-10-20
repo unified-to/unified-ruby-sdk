@@ -16,6 +16,8 @@ class UnifiedRubySDK::Models::Shared::AnalyticsProperty
   def id=(str_); end
   def industry(); end
   def industry=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def parent_id(); end

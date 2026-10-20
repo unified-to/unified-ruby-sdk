@@ -55,6 +55,7 @@ module UnifiedRubySDK
           WORKOUT_TYPE = new('workout_type')
           SUFFER_SCORE = new('suffer_score')
           PR_COUNT = new('pr_count')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

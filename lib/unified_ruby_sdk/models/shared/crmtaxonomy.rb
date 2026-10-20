@@ -18,16 +18,19 @@ module UnifiedRubySDK
 
         field :label, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CrmMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::CrmTaxonomyType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CrmTaxonomyType, true) } }
 
-        sig { params(id: ::String, label: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::CrmTaxonomyType)).void }
-        def initialize(id:, label: nil, name: nil, raw: nil, type: nil)
+        sig { params(id: ::String, label: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::CrmTaxonomyType)).void }
+        def initialize(id:, label: nil, metadata: nil, name: nil, raw: nil, type: nil)
           @id = id
           @label = label
+          @metadata = metadata
           @name = name
           @raw = raw
           @type = type
@@ -38,6 +41,7 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @id == other.id
           return false unless @label == other.label
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @type == other.type

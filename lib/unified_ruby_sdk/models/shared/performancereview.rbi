@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::PerformanceReview
   def id=(str_); end
   def is_acknowledged(); end
   def is_acknowledged=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def questions(); end
   def questions=(str_); end
   def rating(); end

@@ -17,4 +17,5 @@
 | `NET_AMOUNT`   | net_amount     |
 | `ACCOUNT_ID`   | account_id     |
 | `LINEITEMS`    | lineitems      |
+| `METADATA`     | metadata       |
 | `RAW`          | raw            |

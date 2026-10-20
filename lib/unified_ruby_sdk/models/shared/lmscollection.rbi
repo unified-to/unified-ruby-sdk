@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::LmsCollection
   def is_active=(str_); end
   def media(); end
   def media=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def parent_id(); end

@@ -32,6 +32,8 @@ module UnifiedRubySDK
         # (reference to CommerceLocation)
         field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
@@ -50,8 +52,8 @@ module UnifiedRubySDK
 
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), guest_email: T.nilable(::String), guest_name: T.nilable(::String), guest_phone: T.nilable(::String), id: T.nilable(::String), item_id: T.nilable(::String), item_name: T.nilable(::String), location_id: T.nilable(::String), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), staff_name: T.nilable(::String), staff_user_id: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::CommerceReservationStatus), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(created_at: nil, end_at: nil, guest_email: nil, guest_name: nil, guest_phone: nil, id: nil, item_id: nil, item_name: nil, location_id: nil, notes: nil, raw: nil, size: nil, staff_name: nil, staff_user_id: nil, start_at: nil, status: nil, updated_at: nil, url: nil)
+        sig { params(created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), guest_email: T.nilable(::String), guest_name: T.nilable(::String), guest_phone: T.nilable(::String), id: T.nilable(::String), item_id: T.nilable(::String), item_name: T.nilable(::String), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), staff_name: T.nilable(::String), staff_user_id: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::CommerceReservationStatus), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(created_at: nil, end_at: nil, guest_email: nil, guest_name: nil, guest_phone: nil, id: nil, item_id: nil, item_name: nil, location_id: nil, metadata: nil, notes: nil, raw: nil, size: nil, staff_name: nil, staff_user_id: nil, start_at: nil, status: nil, updated_at: nil, url: nil)
           @created_at = created_at
           @end_at = end_at
           @guest_email = guest_email
@@ -61,6 +63,7 @@ module UnifiedRubySDK
           @item_id = item_id
           @item_name = item_name
           @location_id = location_id
+          @metadata = metadata
           @notes = notes
           @raw = raw
           @size = size
@@ -84,6 +87,7 @@ module UnifiedRubySDK
           return false unless @item_id == other.item_id
           return false unless @item_name == other.item_name
           return false unless @location_id == other.location_id
+          return false unless @metadata == other.metadata
           return false unless @notes == other.notes
           return false unless @raw == other.raw
           return false unless @size == other.size

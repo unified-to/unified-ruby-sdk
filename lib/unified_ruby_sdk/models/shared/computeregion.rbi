@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::ComputeRegion
   def id=(str_); end
   def location(); end
   def location=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

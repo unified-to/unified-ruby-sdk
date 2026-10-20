@@ -37,6 +37,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # primary for direct deposit
         field :is_primary, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_primary') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # account nickname (e.g. "BoA Checking")
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # order in which split accounts are funded (1 = first)
@@ -54,8 +56,8 @@ module UnifiedRubySDK
         # employee ID (required for listcreate) (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(account_number: T.nilable(::String), account_number_last4: T.nilable(::String), account_type: T.nilable(Models::Shared::HrisBankaccountAccountType), bank_name: T.nilable(::String), bic: T.nilable(::String), company_id: T.nilable(::String), country_code: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), iban: T.nilable(::String), id: T.nilable(::String), is_primary: T.nilable(T::Boolean), name: T.nilable(::String), priority: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), routing_number: T.nilable(::String), split_amount: T.nilable(::Float), split_type: T.nilable(Models::Shared::SplitType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
-        def initialize(account_number: nil, account_number_last4: nil, account_type: nil, bank_name: nil, bic: nil, company_id: nil, country_code: nil, created_at: nil, currency: nil, iban: nil, id: nil, is_primary: nil, name: nil, priority: nil, raw: nil, routing_number: nil, split_amount: nil, split_type: nil, updated_at: nil, user_id: nil)
+        sig { params(account_number: T.nilable(::String), account_number_last4: T.nilable(::String), account_type: T.nilable(Models::Shared::HrisBankaccountAccountType), bank_name: T.nilable(::String), bic: T.nilable(::String), company_id: T.nilable(::String), country_code: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), iban: T.nilable(::String), id: T.nilable(::String), is_primary: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), priority: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), routing_number: T.nilable(::String), split_amount: T.nilable(::Float), split_type: T.nilable(Models::Shared::SplitType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        def initialize(account_number: nil, account_number_last4: nil, account_type: nil, bank_name: nil, bic: nil, company_id: nil, country_code: nil, created_at: nil, currency: nil, iban: nil, id: nil, is_primary: nil, metadata: nil, name: nil, priority: nil, raw: nil, routing_number: nil, split_amount: nil, split_type: nil, updated_at: nil, user_id: nil)
           @account_number = account_number
           @account_number_last4 = account_number_last4
           @account_type = account_type
@@ -68,6 +70,7 @@ module UnifiedRubySDK
           @iban = iban
           @id = id
           @is_primary = is_primary
+          @metadata = metadata
           @name = name
           @priority = priority
           @raw = raw
@@ -93,6 +96,7 @@ module UnifiedRubySDK
           return false unless @iban == other.iban
           return false unless @id == other.id
           return false unless @is_primary == other.is_primary
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @priority == other.priority
           return false unless @raw == other.raw

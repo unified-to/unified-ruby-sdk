@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::AccountingProfitloss
   def income_sections=(str_); end
   def income_total_amount(); end
   def income_total_amount=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def net_income_amount(); end

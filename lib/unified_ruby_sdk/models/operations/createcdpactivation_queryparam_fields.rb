@@ -24,6 +24,7 @@ module UnifiedRubySDK
           STATUS = new('status')
           LAST_RUN_AT = new('last_run_at')
           IS_ENABLED = new('is_enabled')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

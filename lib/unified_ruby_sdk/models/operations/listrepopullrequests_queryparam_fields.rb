@@ -26,6 +26,7 @@ module UnifiedRubySDK
           LABELS = new('labels')
           CLOSED_AT = new('closed_at')
           COMMIT_IDS = new('commit_ids')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

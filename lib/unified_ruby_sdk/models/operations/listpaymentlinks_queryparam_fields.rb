@@ -26,6 +26,7 @@ module UnifiedRubySDK
           DESCRIPTION = new('description')
           IS_CHARGEABLE_NOW = new('is_chargeable_now')
           SUCCESS_URL = new('success_url')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

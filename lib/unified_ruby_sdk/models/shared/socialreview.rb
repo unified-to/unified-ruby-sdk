@@ -25,6 +25,8 @@ module UnifiedRubySDK
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the review
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::SocialMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The social profile (page/handle/listing) being reviewed
         field :profile_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_id') } }
         # Star rating, typically 1-5
@@ -40,14 +42,15 @@ module UnifiedRubySDK
         # Public permalink to the review
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(author_avatar_url: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), profile_id: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), reply: T.nilable(Models::Shared::PropertySocialReviewReply), title: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(author_avatar_url: nil, author_location: nil, author_name: nil, content: nil, created_at: nil, id: nil, profile_id: nil, rating: nil, raw: nil, reply: nil, title: nil, updated_at: nil, url: nil)
+        sig { params(author_avatar_url: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::SocialMetadata]), profile_id: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), reply: T.nilable(Models::Shared::PropertySocialReviewReply), title: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(author_avatar_url: nil, author_location: nil, author_name: nil, content: nil, created_at: nil, id: nil, metadata: nil, profile_id: nil, rating: nil, raw: nil, reply: nil, title: nil, updated_at: nil, url: nil)
           @author_avatar_url = author_avatar_url
           @author_location = author_location
           @author_name = author_name
           @content = content
           @created_at = created_at
           @id = id
+          @metadata = metadata
           @profile_id = profile_id
           @rating = rating
           @raw = raw
@@ -66,6 +69,7 @@ module UnifiedRubySDK
           return false unless @content == other.content
           return false unless @created_at == other.created_at
           return false unless @id == other.id
+          return false unless @metadata == other.metadata
           return false unless @profile_id == other.profile_id
           return false unless @rating == other.rating
           return false unless @raw == other.raw

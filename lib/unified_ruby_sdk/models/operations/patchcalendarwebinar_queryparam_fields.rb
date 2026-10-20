@@ -46,6 +46,7 @@ module UnifiedRubySDK
           HAS_QA = new('has_qa')
           HAS_POLLS = new('has_polls')
           HAS_RECORDING = new('has_recording')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

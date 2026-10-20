@@ -30,6 +30,7 @@ module UnifiedRubySDK
           IS_VERIFIED = new('is_verified')
           IS_PRIVATE = new('is_private')
           METRICS = new('metrics')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

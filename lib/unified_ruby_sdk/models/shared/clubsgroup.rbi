@@ -38,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::ClubsGroup
   def member_count=(str_); end
   def membership_status(); end
   def membership_status=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def post_count(); end

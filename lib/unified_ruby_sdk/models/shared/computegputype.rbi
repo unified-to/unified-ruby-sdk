@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::ComputeGputype
   def id=(str_); end
   def memory_mb(); end
   def memory_mb=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def prices(); end

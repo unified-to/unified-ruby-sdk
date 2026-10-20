@@ -33,6 +33,7 @@ module UnifiedRubySDK
           IMAGE_URL = new('image_url')
           WEB_URL = new('web_url')
           MEDIA = new('media')
+          METADATA = new('metadata')
           RAW = new('raw')
           CATEGORIES = new('categories')
         end

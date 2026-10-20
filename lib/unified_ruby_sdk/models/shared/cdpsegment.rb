@@ -25,6 +25,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Whether the segment is active/enabled
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CdpMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The name of the segment/audience
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration for this segment
@@ -40,14 +42,15 @@ module UnifiedRubySDK
         # The last date that this segment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(compute_mode: T.nilable(Models::Shared::ComputeMode), created_at: T.nilable(::DateTime), definition: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), slug: T.nilable(::String), source_id: T.nilable(::String), type: T.nilable(Models::Shared::CdpSegmentType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(compute_mode: nil, created_at: nil, definition: nil, description: nil, id: nil, is_active: nil, name: nil, raw: nil, size: nil, slug: nil, source_id: nil, type: nil, updated_at: nil)
+        sig { params(compute_mode: T.nilable(Models::Shared::ComputeMode), created_at: T.nilable(::DateTime), definition: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::CdpMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), slug: T.nilable(::String), source_id: T.nilable(::String), type: T.nilable(Models::Shared::CdpSegmentType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(compute_mode: nil, created_at: nil, definition: nil, description: nil, id: nil, is_active: nil, metadata: nil, name: nil, raw: nil, size: nil, slug: nil, source_id: nil, type: nil, updated_at: nil)
           @compute_mode = compute_mode
           @created_at = created_at
           @definition = definition
           @description = description
           @id = id
           @is_active = is_active
+          @metadata = metadata
           @name = name
           @raw = raw
           @size = size
@@ -66,6 +69,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @size == other.size

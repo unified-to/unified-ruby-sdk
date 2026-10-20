@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::MessagingChannel
   def is_private=(str_); end
   def members(); end
   def members=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def parent_id(); end

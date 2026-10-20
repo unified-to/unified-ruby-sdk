@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::SocialInsight
   def date=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def metric(); end
   def metric=(str_); end
   def period(); end

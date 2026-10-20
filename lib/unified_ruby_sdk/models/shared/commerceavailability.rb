@@ -20,6 +20,8 @@ module UnifiedRubySDK
         # (reference to CommerceLocation)
         field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
@@ -28,11 +30,12 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(end_at: T.nilable(::DateTime), item_id: T.nilable(::String), location_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), staff_user_id: T.nilable(::String), start_at: T.nilable(::DateTime)).void }
-        def initialize(end_at: nil, item_id: nil, location_id: nil, raw: nil, size: nil, staff_user_id: nil, start_at: nil)
+        sig { params(end_at: T.nilable(::DateTime), item_id: T.nilable(::String), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), size: T.nilable(::Float), staff_user_id: T.nilable(::String), start_at: T.nilable(::DateTime)).void }
+        def initialize(end_at: nil, item_id: nil, location_id: nil, metadata: nil, raw: nil, size: nil, staff_user_id: nil, start_at: nil)
           @end_at = end_at
           @item_id = item_id
           @location_id = location_id
+          @metadata = metadata
           @raw = raw
           @size = size
           @staff_user_id = staff_user_id
@@ -45,6 +48,7 @@ module UnifiedRubySDK
           return false unless @end_at == other.end_at
           return false unless @item_id == other.item_id
           return false unless @location_id == other.location_id
+          return false unless @metadata == other.metadata
           return false unless @raw == other.raw
           return false unless @size == other.size
           return false unless @staff_user_id == other.staff_user_id

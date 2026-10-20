@@ -35,6 +35,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # e.g. "401(k) Plan"
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -46,8 +48,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(company_id: T.nilable(::String), coverage_level: T.nilable(Models::Shared::CoverageLevel), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), employer_contribution_amount: T.nilable(::Float), employer_contribution_max_amount: T.nilable(::Float), employer_contribution_type: T.nilable(Models::Shared::EmployerContributionType), frequency: T.nilable(Models::Shared::HrisBenefitFrequency), id: T.nilable(::String), is_active: T.nilable(T::Boolean), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax: T.nilable(Models::Shared::Tax), type: T.nilable(Models::Shared::HrisBenefitType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(company_id: nil, coverage_level: nil, created_at: nil, currency: nil, description: nil, employer_contribution_amount: nil, employer_contribution_max_amount: nil, employer_contribution_type: nil, frequency: nil, id: nil, is_active: nil, name: nil, raw: nil, tax: nil, type: nil, updated_at: nil)
+        sig { params(company_id: T.nilable(::String), coverage_level: T.nilable(Models::Shared::CoverageLevel), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), employer_contribution_amount: T.nilable(::Float), employer_contribution_max_amount: T.nilable(::Float), employer_contribution_type: T.nilable(Models::Shared::EmployerContributionType), frequency: T.nilable(Models::Shared::HrisBenefitFrequency), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), tax: T.nilable(Models::Shared::Tax), type: T.nilable(Models::Shared::HrisBenefitType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(company_id: nil, coverage_level: nil, created_at: nil, currency: nil, description: nil, employer_contribution_amount: nil, employer_contribution_max_amount: nil, employer_contribution_type: nil, frequency: nil, id: nil, is_active: nil, metadata: nil, name: nil, raw: nil, tax: nil, type: nil, updated_at: nil)
           @company_id = company_id
           @coverage_level = coverage_level
           @created_at = created_at
@@ -59,6 +61,7 @@ module UnifiedRubySDK
           @frequency = frequency
           @id = id
           @is_active = is_active
+          @metadata = metadata
           @name = name
           @raw = raw
           @tax = tax
@@ -80,6 +83,7 @@ module UnifiedRubySDK
           return false unless @frequency == other.frequency
           return false unless @id == other.id
           return false unless @is_active == other.is_active
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @tax == other.tax

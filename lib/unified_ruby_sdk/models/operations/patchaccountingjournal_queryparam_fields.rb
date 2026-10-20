@@ -32,6 +32,7 @@ module UnifiedRubySDK
           EXCHANGE_RATE = new('exchange_rate')
           STATUS = new('status')
           IS_INCLUSIVE_OF_TAX = new('is_inclusive_of_tax')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

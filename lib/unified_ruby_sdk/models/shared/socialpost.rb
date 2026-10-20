@@ -25,6 +25,8 @@ module UnifiedRubySDK
         field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
         # Media assets attached to the post
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::SocialMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::SocialMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Engagement metrics for the post
         field :metrics, Crystalline::Nilable.new(Models::Shared::PropertySocialPostMetrics), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metrics') } }
         # The post this one replies to or references
@@ -46,14 +48,15 @@ module UnifiedRubySDK
         # Public permalink to the post
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
-        sig { params(body: T.nilable(::String), call_to_action: T.nilable(Models::Shared::PropertySocialPostCallToAction), created_at: T.nilable(::DateTime), id: T.nilable(::String), language: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::SocialMedia]), metrics: T.nilable(Models::Shared::PropertySocialPostMetrics), parent_post_id: T.nilable(::String), profile_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), scheduled_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::SocialPostStatus), title: T.nilable(::String), type: T.nilable(Models::Shared::SocialPostType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
-        def initialize(body: nil, call_to_action: nil, created_at: nil, id: nil, language: nil, media: nil, metrics: nil, parent_post_id: nil, profile_id: nil, raw: nil, scheduled_at: nil, status: nil, title: nil, type: nil, updated_at: nil, url: nil)
+        sig { params(body: T.nilable(::String), call_to_action: T.nilable(Models::Shared::PropertySocialPostCallToAction), created_at: T.nilable(::DateTime), id: T.nilable(::String), language: T.nilable(::String), media: T.nilable(T::Array[Models::Shared::SocialMedia]), metadata: T.nilable(T::Array[Models::Shared::SocialMetadata]), metrics: T.nilable(Models::Shared::PropertySocialPostMetrics), parent_post_id: T.nilable(::String), profile_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), scheduled_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::SocialPostStatus), title: T.nilable(::String), type: T.nilable(Models::Shared::SocialPostType), updated_at: T.nilable(::DateTime), url: T.nilable(::String)).void }
+        def initialize(body: nil, call_to_action: nil, created_at: nil, id: nil, language: nil, media: nil, metadata: nil, metrics: nil, parent_post_id: nil, profile_id: nil, raw: nil, scheduled_at: nil, status: nil, title: nil, type: nil, updated_at: nil, url: nil)
           @body = body
           @call_to_action = call_to_action
           @created_at = created_at
           @id = id
           @language = language
           @media = media
+          @metadata = metadata
           @metrics = metrics
           @parent_post_id = parent_post_id
           @profile_id = profile_id
@@ -75,6 +78,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @language == other.language
           return false unless @media == other.media
+          return false unless @metadata == other.metadata
           return false unless @metrics == other.metrics
           return false unless @parent_post_id == other.parent_post_id
           return false unless @profile_id == other.profile_id

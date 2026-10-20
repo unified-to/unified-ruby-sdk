@@ -22,6 +22,8 @@ class UnifiedRubySDK::Models::Shared::PaymentPayout
   def id=(str_); end
   def lineitems(); end
   def lineitems=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def net_amount(); end
   def net_amount=(str_); end
   def notes(); end

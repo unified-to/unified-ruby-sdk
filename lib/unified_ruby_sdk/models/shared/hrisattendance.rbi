@@ -42,6 +42,8 @@ class UnifiedRubySDK::Models::Shared::HrisAttendance
   def job_name=(str_); end
   def location_id(); end
   def location_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def non_cash_tips_amount(); end
   def non_cash_tips_amount=(str_); end
   def raw(); end

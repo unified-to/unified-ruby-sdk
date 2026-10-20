@@ -24,6 +24,7 @@ module UnifiedRubySDK
           UNIT = new('unit')
           COST_AMOUNT = new('cost_amount')
           CURRENCY = new('currency')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

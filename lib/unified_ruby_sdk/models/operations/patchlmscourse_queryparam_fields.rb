@@ -33,6 +33,7 @@ module UnifiedRubySDK
           PROVIDER_NAME = new('provider_name')
           PUBLISHED_AT = new('published_at')
           TIME_ESTIMATE_MINUTES = new('time_estimate_minutes')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

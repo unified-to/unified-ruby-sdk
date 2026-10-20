@@ -38,6 +38,8 @@ class UnifiedRubySDK::Models::Shared::PaymentSubscription
   def invoice_id=(str_); end
   def lineitems(); end
   def lineitems=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def month(); end
   def month=(str_); end
   def raw(); end

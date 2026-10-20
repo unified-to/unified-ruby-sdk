@@ -30,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::AssessmentPackage
   def integration_types=(str_); end
   def max_score(); end
   def max_score=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def needs_ip_address(); end

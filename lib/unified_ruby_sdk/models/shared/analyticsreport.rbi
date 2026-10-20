@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::AnalyticsReport
   def end_at=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def metrics(); end
   def metrics=(str_); end
   def property_id(); end

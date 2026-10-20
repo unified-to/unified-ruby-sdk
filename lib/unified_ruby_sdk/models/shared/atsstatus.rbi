@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::AtsStatus
   def id=(str_); end
   def job_id(); end
   def job_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def original_status(); end
   def original_status=(str_); end
   def raw(); end

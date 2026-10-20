@@ -22,6 +22,7 @@ module UnifiedRubySDK
           TASK_ID = new('task_id')
           PARENT_ID = new('parent_id')
           HAS_CHILDREN = new('has_children')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

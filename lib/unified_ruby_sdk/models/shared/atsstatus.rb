@@ -20,17 +20,20 @@ module UnifiedRubySDK
         # The ID of the job this status/stage belongs to, when the provider scopes statuses per job.
         field :job_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_id') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :original_status, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_status') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::AtsStatusStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AtsStatusStatus, true) } }
 
-        sig { params(description: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), original_status: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AtsStatusStatus)).void }
-        def initialize(description: nil, id: nil, job_id: nil, original_status: nil, raw: nil, status: nil)
+        sig { params(description: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), original_status: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AtsStatusStatus)).void }
+        def initialize(description: nil, id: nil, job_id: nil, metadata: nil, original_status: nil, raw: nil, status: nil)
           @description = description
           @id = id
           @job_id = job_id
+          @metadata = metadata
           @original_status = original_status
           @raw = raw
           @status = status
@@ -42,6 +45,7 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @id == other.id
           return false unless @job_id == other.job_id
+          return false unless @metadata == other.metadata
           return false unless @original_status == other.original_status
           return false unless @raw == other.raw
           return false unless @status == other.status

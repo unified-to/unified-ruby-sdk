@@ -23,6 +23,7 @@ module UnifiedRubySDK
           LANGUAGES = new('languages')
           INSTRUCTORS = new('instructors')
           STUDENTS = new('students')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

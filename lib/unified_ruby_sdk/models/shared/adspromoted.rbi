@@ -12,6 +12,8 @@ class UnifiedRubySDK::Models::Shared::AdsPromoted
   def id=(str_); end
   def type(); end
   def type=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def raw(); end

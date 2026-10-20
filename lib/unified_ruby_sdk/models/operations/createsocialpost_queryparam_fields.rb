@@ -28,6 +28,7 @@ module UnifiedRubySDK
           SCHEDULED_AT = new('scheduled_at')
           CALL_TO_ACTION = new('call_to_action')
           METRICS = new('metrics')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

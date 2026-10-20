@@ -47,6 +47,8 @@ module UnifiedRubySDK
         field :job_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_name') } }
         # (reference to HrisLocation)
         field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # card/non-cash tips attributed to this attendance record
         field :non_cash_tips_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('non_cash_tips_amount') } }
 
@@ -60,8 +62,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(employee_user_id: ::String, end_at: ::DateTime, start_at: ::DateTime, address: T.nilable(Models::Shared::PropertyHrisAttendanceAddress), approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), breaks: T.nilable(T::Array[Models::Shared::HrisAttendanceBreak]), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), declared_tips_amount: T.nilable(::Float), group_id: T.nilable(::String), hourly_rate: T.nilable(::Float), hours: T.nilable(::Float), id: T.nilable(::String), job_name: T.nilable(::String), location_id: T.nilable(::String), non_cash_tips_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::HrisAttendanceStatus), timeshift_id: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(employee_user_id:, end_at:, start_at:, address: nil, approved_at: nil, approver_user_id: nil, breaks: nil, company_id: nil, created_at: nil, currency: nil, declared_tips_amount: nil, group_id: nil, hourly_rate: nil, hours: nil, id: nil, job_name: nil, location_id: nil, non_cash_tips_amount: nil, raw: nil, status: nil, timeshift_id: nil, timezone: nil, updated_at: nil)
+        sig { params(employee_user_id: ::String, end_at: ::DateTime, start_at: ::DateTime, address: T.nilable(Models::Shared::PropertyHrisAttendanceAddress), approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), breaks: T.nilable(T::Array[Models::Shared::HrisAttendanceBreak]), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), declared_tips_amount: T.nilable(::Float), group_id: T.nilable(::String), hourly_rate: T.nilable(::Float), hours: T.nilable(::Float), id: T.nilable(::String), job_name: T.nilable(::String), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), non_cash_tips_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::HrisAttendanceStatus), timeshift_id: T.nilable(::String), timezone: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(employee_user_id:, end_at:, start_at:, address: nil, approved_at: nil, approver_user_id: nil, breaks: nil, company_id: nil, created_at: nil, currency: nil, declared_tips_amount: nil, group_id: nil, hourly_rate: nil, hours: nil, id: nil, job_name: nil, location_id: nil, metadata: nil, non_cash_tips_amount: nil, raw: nil, status: nil, timeshift_id: nil, timezone: nil, updated_at: nil)
           @employee_user_id = employee_user_id
           @end_at = end_at
           @start_at = start_at
@@ -79,6 +81,7 @@ module UnifiedRubySDK
           @id = id
           @job_name = job_name
           @location_id = location_id
+          @metadata = metadata
           @non_cash_tips_amount = non_cash_tips_amount
           @raw = raw
           @status = status
@@ -107,6 +110,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @job_name == other.job_name
           return false unless @location_id == other.location_id
+          return false unless @metadata == other.metadata
           return false unless @non_cash_tips_amount == other.non_cash_tips_amount
           return false unless @raw == other.raw
           return false unless @status == other.status

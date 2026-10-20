@@ -23,6 +23,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Free-text location (eg. city or state)
         field :location, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ComputeMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Display name of the region
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Raw data from integration
@@ -30,13 +32,14 @@ module UnifiedRubySDK
         # When the region was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(country: T.nilable(::String), created_at: T.nilable(::DateTime), gpu_models: T.nilable(T::Array[Models::Shared::PropertyComputeRegionGpuModels]), id: T.nilable(::String), location: T.nilable(::String), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(country: nil, created_at: nil, gpu_models: nil, id: nil, location: nil, name: nil, raw: nil, updated_at: nil)
+        sig { params(country: T.nilable(::String), created_at: T.nilable(::DateTime), gpu_models: T.nilable(T::Array[Models::Shared::PropertyComputeRegionGpuModels]), id: T.nilable(::String), location: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(country: nil, created_at: nil, gpu_models: nil, id: nil, location: nil, metadata: nil, name: nil, raw: nil, updated_at: nil)
           @country = country
           @created_at = created_at
           @gpu_models = gpu_models
           @id = id
           @location = location
+          @metadata = metadata
           @name = name
           @raw = raw
           @updated_at = updated_at
@@ -50,6 +53,7 @@ module UnifiedRubySDK
           return false unless @gpu_models == other.gpu_models
           return false unless @id == other.id
           return false unless @location == other.location
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @raw == other.raw
           return false unless @updated_at == other.updated_at

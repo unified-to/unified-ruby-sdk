@@ -22,6 +22,7 @@ module UnifiedRubySDK
           IS_ACTIVE = new('is_active')
           USER_ID = new('user_id')
           PARENT_PAGE_ID = new('parent_page_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

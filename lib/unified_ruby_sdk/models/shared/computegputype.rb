@@ -35,6 +35,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # System memory in MiB
         field :memory_mb, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('memory_mb') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ComputeMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Display name of the type
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # List prices by market and region
@@ -46,8 +48,8 @@ module UnifiedRubySDK
         # When the GPU type was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(architecture: T.nilable(Models::Shared::Architecture), availability: T.nilable(T::Array[Models::Shared::ComputeAvailability]), cpu_count: T.nilable(::Float), created_at: T.nilable(::DateTime), disk_mb: T.nilable(::Float), gpu_count: T.nilable(::Float), gpu_manufacturer: T.nilable(Models::Shared::GpuManufacturer), gpu_memory_mb: T.nilable(::Float), gpu_model: T.nilable(Models::Shared::GpuModel), id: T.nilable(::String), memory_mb: T.nilable(::Float), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::ComputePrice]), raw: T.nilable(T::Hash[Symbol, ::Object]), sku: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(architecture: nil, availability: nil, cpu_count: nil, created_at: nil, disk_mb: nil, gpu_count: nil, gpu_manufacturer: nil, gpu_memory_mb: nil, gpu_model: nil, id: nil, memory_mb: nil, name: nil, prices: nil, raw: nil, sku: nil, updated_at: nil)
+        sig { params(architecture: T.nilable(Models::Shared::Architecture), availability: T.nilable(T::Array[Models::Shared::ComputeAvailability]), cpu_count: T.nilable(::Float), created_at: T.nilable(::DateTime), disk_mb: T.nilable(::Float), gpu_count: T.nilable(::Float), gpu_manufacturer: T.nilable(Models::Shared::GpuManufacturer), gpu_memory_mb: T.nilable(::Float), gpu_model: T.nilable(Models::Shared::GpuModel), id: T.nilable(::String), memory_mb: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::ComputePrice]), raw: T.nilable(T::Hash[Symbol, ::Object]), sku: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(architecture: nil, availability: nil, cpu_count: nil, created_at: nil, disk_mb: nil, gpu_count: nil, gpu_manufacturer: nil, gpu_memory_mb: nil, gpu_model: nil, id: nil, memory_mb: nil, metadata: nil, name: nil, prices: nil, raw: nil, sku: nil, updated_at: nil)
           @architecture = architecture
           @availability = availability
           @cpu_count = cpu_count
@@ -59,6 +61,7 @@ module UnifiedRubySDK
           @gpu_model = gpu_model
           @id = id
           @memory_mb = memory_mb
+          @metadata = metadata
           @name = name
           @prices = prices
           @raw = raw
@@ -80,6 +83,7 @@ module UnifiedRubySDK
           return false unless @gpu_model == other.gpu_model
           return false unless @id == other.id
           return false unless @memory_mb == other.memory_mb
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @prices == other.prices
           return false unless @raw == other.raw

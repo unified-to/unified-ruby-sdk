@@ -25,6 +25,7 @@ module UnifiedRubySDK
           PROGRESS_PERCENTAGE = new('progress_percentage')
           STARTED_AT = new('started_at')
           COMPLETED_AT = new('completed_at')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

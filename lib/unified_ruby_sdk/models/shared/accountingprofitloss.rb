@@ -36,6 +36,8 @@ module UnifiedRubySDK
 
         field :income_total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('income_total_amount') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :net_income_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_income_amount') } }
@@ -46,8 +48,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(category_ids: T.nilable(T::Array[::String]), cost_of_goods_sold_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), cost_of_goods_sold_total_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), expenses_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), expenses_total_amount: T.nilable(::Float), id: T.nilable(::String), income_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), income_total_amount: T.nilable(::Float), name: T.nilable(::String), net_income_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
-        def initialize(category_ids: nil, cost_of_goods_sold_sections: nil, cost_of_goods_sold_total_amount: nil, created_at: nil, currency: nil, end_at: nil, expenses_sections: nil, expenses_total_amount: nil, id: nil, income_sections: nil, income_total_amount: nil, name: nil, net_income_amount: nil, raw: nil, start_at: nil, updated_at: nil)
+        sig { params(category_ids: T.nilable(T::Array[::String]), cost_of_goods_sold_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), cost_of_goods_sold_total_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), expenses_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), expenses_total_amount: T.nilable(::Float), id: T.nilable(::String), income_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), income_total_amount: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), net_income_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
+        def initialize(category_ids: nil, cost_of_goods_sold_sections: nil, cost_of_goods_sold_total_amount: nil, created_at: nil, currency: nil, end_at: nil, expenses_sections: nil, expenses_total_amount: nil, id: nil, income_sections: nil, income_total_amount: nil, metadata: nil, name: nil, net_income_amount: nil, raw: nil, start_at: nil, updated_at: nil)
           @category_ids = category_ids
           @cost_of_goods_sold_sections = cost_of_goods_sold_sections
           @cost_of_goods_sold_total_amount = cost_of_goods_sold_total_amount
@@ -59,6 +61,7 @@ module UnifiedRubySDK
           @id = id
           @income_sections = income_sections
           @income_total_amount = income_total_amount
+          @metadata = metadata
           @name = name
           @net_income_amount = net_income_amount
           @raw = raw
@@ -80,6 +83,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @income_sections == other.income_sections
           return false unless @income_total_amount == other.income_total_amount
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @net_income_amount == other.net_income_amount
           return false unless @raw == other.raw

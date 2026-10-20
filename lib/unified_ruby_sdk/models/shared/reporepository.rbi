@@ -18,6 +18,8 @@ class UnifiedRubySDK::Models::Shared::RepoRepository
   def id=(str_); end
   def is_private(); end
   def is_private=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def org_id(); end
   def org_id=(str_); end
   def owner(); end

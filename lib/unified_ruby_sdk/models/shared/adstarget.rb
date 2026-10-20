@@ -22,6 +22,8 @@ module UnifiedRubySDK
 
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
 
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
@@ -30,12 +32,13 @@ module UnifiedRubySDK
         # Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale, adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant)
         field :type, Crystalline::Nilable.new(Models::Shared::AdsTargetType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AdsTargetType, true) } }
 
-        sig { params(id: ::String, audience_count_max: T.nilable(::Float), audience_count_min: T.nilable(::Float), is_active: T.nilable(T::Boolean), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AdsTargetType)).void }
-        def initialize(id:, audience_count_max: nil, audience_count_min: nil, is_active: nil, name: nil, parent_id: nil, raw: nil, type: nil)
+        sig { params(id: ::String, audience_count_max: T.nilable(::Float), audience_count_min: T.nilable(::Float), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AdsTargetType)).void }
+        def initialize(id:, audience_count_max: nil, audience_count_min: nil, is_active: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, type: nil)
           @id = id
           @audience_count_max = audience_count_max
           @audience_count_min = audience_count_min
           @is_active = is_active
+          @metadata = metadata
           @name = name
           @parent_id = parent_id
           @raw = raw
@@ -49,6 +52,7 @@ module UnifiedRubySDK
           return false unless @audience_count_max == other.audience_count_max
           return false unless @audience_count_min == other.audience_count_min
           return false unless @is_active == other.is_active
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw

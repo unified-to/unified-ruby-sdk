@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Shared::AssessmentOrder
   def id=(str_); end
   def job_id(); end
   def job_id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def package_id(); end
   def package_id=(str_); end
   def parameters(); end

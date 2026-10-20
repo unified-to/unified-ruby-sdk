@@ -43,6 +43,8 @@ module UnifiedRubySDK
         field :invoice_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('invoice_id') } }
 
         field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PaymentLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PaymentMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
         field :month, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('month') } }
 
@@ -56,8 +58,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(canceled_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), current_period_end_at: T.nilable(::DateTime), current_period_start_at: T.nilable(::DateTime), day_of_month: T.nilable(::Float), day_of_week: T.nilable(::Float), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), interval: T.nilable(::Float), interval_unit: T.nilable(Models::Shared::IntervalUnit), invoice_id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), month: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PaymentSubscriptionStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(canceled_at: nil, contact_id: nil, created_at: nil, currency: nil, current_period_end_at: nil, current_period_start_at: nil, day_of_month: nil, day_of_week: nil, description: nil, end_at: nil, id: nil, interval: nil, interval_unit: nil, invoice_id: nil, lineitems: nil, month: nil, raw: nil, start_at: nil, status: nil, total_amount: nil, updated_at: nil)
+        sig { params(canceled_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), current_period_end_at: T.nilable(::DateTime), current_period_start_at: T.nilable(::DateTime), day_of_month: T.nilable(::Float), day_of_week: T.nilable(::Float), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), interval: T.nilable(::Float), interval_unit: T.nilable(Models::Shared::IntervalUnit), invoice_id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::PaymentLineitem]), metadata: T.nilable(T::Array[Models::Shared::PaymentMetadata]), month: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::PaymentSubscriptionStatus), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(canceled_at: nil, contact_id: nil, created_at: nil, currency: nil, current_period_end_at: nil, current_period_start_at: nil, day_of_month: nil, day_of_week: nil, description: nil, end_at: nil, id: nil, interval: nil, interval_unit: nil, invoice_id: nil, lineitems: nil, metadata: nil, month: nil, raw: nil, start_at: nil, status: nil, total_amount: nil, updated_at: nil)
           @canceled_at = canceled_at
           @contact_id = contact_id
           @created_at = created_at
@@ -73,6 +75,7 @@ module UnifiedRubySDK
           @interval_unit = interval_unit
           @invoice_id = invoice_id
           @lineitems = lineitems
+          @metadata = metadata
           @month = month
           @raw = raw
           @start_at = start_at
@@ -99,6 +102,7 @@ module UnifiedRubySDK
           return false unless @interval_unit == other.interval_unit
           return false unless @invoice_id == other.invoice_id
           return false unless @lineitems == other.lineitems
+          return false unless @metadata == other.metadata
           return false unless @month == other.month
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at

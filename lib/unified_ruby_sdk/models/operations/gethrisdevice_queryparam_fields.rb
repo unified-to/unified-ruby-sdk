@@ -32,6 +32,7 @@ module UnifiedRubySDK
           HAS_HD_ENCRYPTED = new('has_hd_encrypted')
           HAS_SCREENLOCK = new('has_screenlock')
           IS_MISSING = new('is_missing')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

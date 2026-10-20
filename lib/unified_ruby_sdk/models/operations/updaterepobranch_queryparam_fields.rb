@@ -18,6 +18,7 @@ module UnifiedRubySDK
           UPDATED_AT = new('updated_at')
           NAME = new('name')
           REPO_ID = new('repo_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

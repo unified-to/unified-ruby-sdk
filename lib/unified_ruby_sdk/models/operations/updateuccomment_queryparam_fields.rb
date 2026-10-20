@@ -19,6 +19,7 @@ module UnifiedRubySDK
           CONTENT = new('content')
           USER_ID = new('user_id')
           CALL_ID = new('call_id')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

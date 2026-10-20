@@ -30,6 +30,7 @@ module UnifiedRubySDK
           IS_ACKNOWLEDGED = new('is_acknowledged')
           SUBMITTED_AT = new('submitted_at')
           COMPLETED_AT = new('completed_at')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -27,6 +27,8 @@ module UnifiedRubySDK
         field :label_format, Crystalline::Nilable.new(Models::Shared::LabelFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label_format'), 'decoder': Utils.enum_from_string(Models::Shared::LabelFormat, true) } }
         # URL to download the label
         field :label_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label_url') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ShippingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Rate used for this label; points to ShippingRate
         field :rate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_id') } }
         # The raw data returned by the integration for this label
@@ -42,8 +44,8 @@ module UnifiedRubySDK
         # The last date that this label object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), id: T.nilable(::String), is_voided: T.nilable(T::Boolean), label_cost: T.nilable(::Float), label_cost_currency: T.nilable(::String), label_format: T.nilable(Models::Shared::LabelFormat), label_url: T.nilable(::String), rate_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), service_code: T.nilable(::String), shipment_id: T.nilable(::String), status: T.nilable(Models::Shared::ShippingLabelStatus), tracking_number: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
-        def initialize(created_at: nil, id: nil, is_voided: nil, label_cost: nil, label_cost_currency: nil, label_format: nil, label_url: nil, rate_id: nil, raw: nil, service_code: nil, shipment_id: nil, status: nil, tracking_number: nil, updated_at: nil)
+        sig { params(created_at: T.nilable(::DateTime), id: T.nilable(::String), is_voided: T.nilable(T::Boolean), label_cost: T.nilable(::Float), label_cost_currency: T.nilable(::String), label_format: T.nilable(Models::Shared::LabelFormat), label_url: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ShippingMetadata]), rate_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), service_code: T.nilable(::String), shipment_id: T.nilable(::String), status: T.nilable(Models::Shared::ShippingLabelStatus), tracking_number: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        def initialize(created_at: nil, id: nil, is_voided: nil, label_cost: nil, label_cost_currency: nil, label_format: nil, label_url: nil, metadata: nil, rate_id: nil, raw: nil, service_code: nil, shipment_id: nil, status: nil, tracking_number: nil, updated_at: nil)
           @created_at = created_at
           @id = id
           @is_voided = is_voided
@@ -51,6 +53,7 @@ module UnifiedRubySDK
           @label_cost_currency = label_cost_currency
           @label_format = label_format
           @label_url = label_url
+          @metadata = metadata
           @rate_id = rate_id
           @raw = raw
           @service_code = service_code
@@ -70,6 +73,7 @@ module UnifiedRubySDK
           return false unless @label_cost_currency == other.label_cost_currency
           return false unless @label_format == other.label_format
           return false unless @label_url == other.label_url
+          return false unless @metadata == other.metadata
           return false unless @rate_id == other.rate_id
           return false unless @raw == other.raw
           return false unless @service_code == other.service_code

@@ -30,6 +30,7 @@ module UnifiedRubySDK
           PAYROLL_ID = new('payroll_id')
           PAYSLIP_ID = new('payslip_id')
           NOTES = new('notes')
+          METADATA = new('metadata')
           RAW = new('raw')
         end
       end

@@ -18,3 +18,4 @@
 | `DOWNLOAD_URL` | download_url   |
 | `CREATOR_ID`   | creator_id     |
 | `RAW`          | raw            |
+| `METADATA`     | metadata       |

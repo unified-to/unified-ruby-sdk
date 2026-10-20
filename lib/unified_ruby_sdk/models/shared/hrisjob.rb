@@ -33,6 +33,8 @@ module UnifiedRubySDK
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
         # where this job is worked. May not have all of the Location fields present, but should have id and name
         field :locations, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisLocation)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locations') } }
+
+        field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # the job or position title
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # the hris_job this job reports to (position hierarchy)
@@ -44,8 +46,8 @@ module UnifiedRubySDK
         # the employees currently holding this job. May not have all of the Employee fields present, but should have id and name
         field :users, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisEmployee)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('users') } }
 
-        sig { params(code: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), description: T.nilable(::String), employment_type: T.nilable(Models::Shared::HrisJobEmploymentType), groups: T.nilable(T::Array[Models::Shared::HrisGroup]), id: T.nilable(::String), is_active: T.nilable(T::Boolean), locations: T.nilable(T::Array[Models::Shared::HrisLocation]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), users: T.nilable(T::Array[Models::Shared::HrisEmployee])).void }
-        def initialize(code: nil, company_id: nil, compensation: nil, created_at: nil, description: nil, employment_type: nil, groups: nil, id: nil, is_active: nil, locations: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil, users: nil)
+        sig { params(code: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), description: T.nilable(::String), employment_type: T.nilable(Models::Shared::HrisJobEmploymentType), groups: T.nilable(T::Array[Models::Shared::HrisGroup]), id: T.nilable(::String), is_active: T.nilable(T::Boolean), locations: T.nilable(T::Array[Models::Shared::HrisLocation]), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), users: T.nilable(T::Array[Models::Shared::HrisEmployee])).void }
+        def initialize(code: nil, company_id: nil, compensation: nil, created_at: nil, description: nil, employment_type: nil, groups: nil, id: nil, is_active: nil, locations: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil, users: nil)
           @code = code
           @company_id = company_id
           @compensation = compensation
@@ -56,6 +58,7 @@ module UnifiedRubySDK
           @id = id
           @is_active = is_active
           @locations = locations
+          @metadata = metadata
           @name = name
           @parent_id = parent_id
           @raw = raw
@@ -76,6 +79,7 @@ module UnifiedRubySDK
           return false unless @id == other.id
           return false unless @is_active == other.is_active
           return false unless @locations == other.locations
+          return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw

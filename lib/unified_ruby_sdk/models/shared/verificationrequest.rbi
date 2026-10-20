@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::VerificationRequest
   def created_at=(str_); end
   def id(); end
   def id=(str_); end
+  def metadata(); end
+  def metadata=(str_); end
   def package_id(); end
   def package_id=(str_); end
   def parameters(); end
