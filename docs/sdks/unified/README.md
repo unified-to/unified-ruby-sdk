@@ -188,8 +188,8 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Shared::SecretsManager.new(
   auth: {
-    "key1": '<value>',
     "key": '<value>',
+    "key1": '<value>',
   },
   name: '<value>',
   type: Models::Shared::SecretsManagerType::AKEYLESS,

@@ -108,6 +108,7 @@ module UnifiedRubySDK
       autoload :AdsCampaign, 'unified_ruby_sdk/models/shared/adscampaign.rb'
       autoload :AdsCampaignStatus, 'unified_ruby_sdk/models/shared/adscampaign_status.rb'
       autoload :AdsCreative, 'unified_ruby_sdk/models/shared/adscreative.rb'
+      autoload :AdsCreativeCard, 'unified_ruby_sdk/models/shared/adscreativecard.rb'
       autoload :AdsCreativeStatus, 'unified_ruby_sdk/models/shared/adscreative_status.rb'
       autoload :AdsGroup, 'unified_ruby_sdk/models/shared/adsgroup.rb'
       autoload :AdsGroupBudgetPeriod, 'unified_ruby_sdk/models/shared/adsgroup_budget_period.rb'

@@ -15,7 +15,7 @@ module UnifiedRubySDK
 
 
         field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
-        # This is the unified object type that this metadata is associated with. eg. crm_contact or coomerce_item
+        # This is the unified object type that this metadata is associated with. eg. crm_contact or commerce_item
         field :object_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), required: true } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -23,10 +23,10 @@ module UnifiedRubySDK
         field :format, Crystalline::Nilable.new(Models::Shared::MetadataMetadataFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::MetadataMetadataFormat, true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # When true, this metadata slug is required for create for this integration.
         field :is_required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_required') } }
 
-        field :objects, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('objects') } }
+        field :objects, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('objects') } }
 
         field :options, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
 
@@ -38,7 +38,7 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(name: ::String, object_type: ::String, created_at: T.nilable(::DateTime), format: T.nilable(Models::Shared::MetadataMetadataFormat), id: T.nilable(::String), is_required: T.nilable(T::Boolean), objects: T.nilable(T::Hash[Symbol, ::Object]), options: T.nilable(T::Array[::String]), original_format: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(name: ::String, object_type: ::String, created_at: T.nilable(::DateTime), format: T.nilable(Models::Shared::MetadataMetadataFormat), id: T.nilable(::String), is_required: T.nilable(T::Boolean), objects: T.nilable(T::Hash[Symbol, ::String]), options: T.nilable(T::Array[::String]), original_format: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), slug: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(name:, object_type:, created_at: nil, format: nil, id: nil, is_required: nil, objects: nil, options: nil, original_format: nil, raw: nil, slug: nil, updated_at: nil)
           @name = name
           @object_type = object_type

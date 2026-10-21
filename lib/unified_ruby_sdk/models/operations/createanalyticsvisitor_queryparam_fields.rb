@@ -19,6 +19,8 @@ module UnifiedRubySDK
           PROPERTY_ID = new('property_id')
           EMAIL = new('email')
           NAME = new('name')
+          FIRST_NAME = new('first_name')
+          LAST_NAME = new('last_name')
           AGE = new('age')
           GENDER = new('gender')
           COUNTRY = new('country')

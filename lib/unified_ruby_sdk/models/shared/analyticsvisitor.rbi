@@ -20,6 +20,8 @@ class UnifiedRubySDK::Models::Shared::AnalyticsVisitor
   def created_at=(str_); end
   def email(); end
   def email=(str_); end
+  def first_name(); end
+  def first_name=(str_); end
   def first_seen_at(); end
   def first_seen_at=(str_); end
   def gender(); end
@@ -28,6 +30,8 @@ class UnifiedRubySDK::Models::Shared::AnalyticsVisitor
   def id=(str_); end
   def language(); end
   def language=(str_); end
+  def last_name(); end
+  def last_name=(str_); end
   def last_seen_at(); end
   def last_seen_at=(str_); end
   def metadata(); end

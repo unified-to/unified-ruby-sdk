@@ -27,6 +27,7 @@ module UnifiedRubySDK
           WIDTH = new('width')
           HEIGHT = new('height')
           ASSET_URLS = new('asset_urls')
+          CARDS = new('cards')
           LINK_URL = new('link_url')
           URL_TAGS = new('url_tags')
           BODY = new('body')

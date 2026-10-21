@@ -25,6 +25,8 @@ module UnifiedRubySDK
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
+
+        field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :first_seen_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_seen_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
@@ -33,6 +35,8 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
+
+        field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :last_seen_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_seen_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
@@ -54,18 +58,20 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(age: T.nilable(::Float), city: T.nilable(::String), country: T.nilable(::String), country_code: T.nilable(::String), created_at: T.nilable(::DateTime), email: T.nilable(::String), first_seen_at: T.nilable(::DateTime), gender: T.nilable(Models::Shared::Gender), id: T.nilable(::String), language: T.nilable(::String), last_seen_at: T.nilable(::DateTime), metadata: T.nilable(T::Hash[Symbol, Models::Shared::PropertyAnalyticsVisitorMetadata]), name: T.nilable(::String), property_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), total_events: T.nilable(::Float), total_page_views: T.nilable(::Float), total_sessions: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(age: nil, city: nil, country: nil, country_code: nil, created_at: nil, email: nil, first_seen_at: nil, gender: nil, id: nil, language: nil, last_seen_at: nil, metadata: nil, name: nil, property_id: nil, raw: nil, timezone: nil, total_events: nil, total_page_views: nil, total_sessions: nil, updated_at: nil)
+        sig { params(age: T.nilable(::Float), city: T.nilable(::String), country: T.nilable(::String), country_code: T.nilable(::String), created_at: T.nilable(::DateTime), email: T.nilable(::String), first_name: T.nilable(::String), first_seen_at: T.nilable(::DateTime), gender: T.nilable(Models::Shared::Gender), id: T.nilable(::String), language: T.nilable(::String), last_name: T.nilable(::String), last_seen_at: T.nilable(::DateTime), metadata: T.nilable(T::Hash[Symbol, Models::Shared::PropertyAnalyticsVisitorMetadata]), name: T.nilable(::String), property_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String), total_events: T.nilable(::Float), total_page_views: T.nilable(::Float), total_sessions: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(age: nil, city: nil, country: nil, country_code: nil, created_at: nil, email: nil, first_name: nil, first_seen_at: nil, gender: nil, id: nil, language: nil, last_name: nil, last_seen_at: nil, metadata: nil, name: nil, property_id: nil, raw: nil, timezone: nil, total_events: nil, total_page_views: nil, total_sessions: nil, updated_at: nil)
           @age = age
           @city = city
           @country = country
           @country_code = country_code
           @created_at = created_at
           @email = email
+          @first_name = first_name
           @first_seen_at = first_seen_at
           @gender = gender
           @id = id
           @language = language
+          @last_name = last_name
           @last_seen_at = last_seen_at
           @metadata = metadata
           @name = name
@@ -87,10 +93,12 @@ module UnifiedRubySDK
           return false unless @country_code == other.country_code
           return false unless @created_at == other.created_at
           return false unless @email == other.email
+          return false unless @first_name == other.first_name
           return false unless @first_seen_at == other.first_seen_at
           return false unless @gender == other.gender
           return false unless @id == other.id
           return false unless @language == other.language
+          return false unless @last_name == other.last_name
           return false unless @last_seen_at == other.last_seen_at
           return false unless @metadata == other.metadata
           return false unless @name == other.name

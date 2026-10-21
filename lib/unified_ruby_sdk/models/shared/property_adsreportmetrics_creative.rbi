@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::PropertyAdsReportMetricsCreative
   def body=(str_); end
   def campaign_id(); end
   def campaign_id=(str_); end
+  def cards(); end
+  def cards=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def creative_type(); end
