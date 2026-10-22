@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(cdp_profile: Models::Shared::CdpProfile, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCdpProfileQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCdpProfileResponse) }
     def create_cdp_profile(cdp_profile:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_cdp_profile - Create a profile
+      # Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to the provider's API. Returns the created CdpProfile.
       request = Models::Operations::CreateCdpProfileRequest.new(
         cdp_profile: cdp_profile,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCdpProfileQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCdpProfileResponse) }
     def get_cdp_profile(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_cdp_profile - Retrieve a profile
+      # Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCdpProfileRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSocialProfileQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSocialProfileResponse) }
     def get_social_profile(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_social_profile - Retrieve a profile
+      # Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetSocialProfileRequest.new(
         connection_id: connection_id,
         id: id,
@@ -402,6 +405,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCdpProfilesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCdpProfilesResponse) }
     def list_cdp_profiles(request:, timeout_ms: nil)
       # list_cdp_profiles - List all profiles
+      # Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -512,6 +516,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListSocialProfilesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSocialProfilesResponse) }
     def list_social_profiles(request:, timeout_ms: nil)
       # list_social_profiles - List all profiles
+      # Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -622,6 +627,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCdpProfileRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCdpProfileResponse) }
     def patch_cdp_profile(request:, timeout_ms: nil)
       # patch_cdp_profile - Update a profile
+      # Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -744,6 +750,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCdpProfileResponse) }
     def remove_cdp_profile(connection_id:, id:, timeout_ms: nil)
       # remove_cdp_profile - Remove a profile
+      # Deletes the CdpProfile identified by `id`.
       request = Models::Operations::RemoveCdpProfileRequest.new(
         connection_id: connection_id,
         id: id
@@ -858,6 +865,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCdpProfileRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCdpProfileResponse) }
     def update_cdp_profile(request:, timeout_ms: nil)
       # update_cdp_profile - Update a profile
+      # Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

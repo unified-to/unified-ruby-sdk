@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # StorageFileType - Whether this is a file or a folder
       class StorageFileType < T::Enum
 
 

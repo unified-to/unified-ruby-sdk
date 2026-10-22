@@ -14,7 +14,7 @@
 
 ## create_compute_envvar
 
-Create an envvar
+Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
 
 ### Example Usage
 
@@ -34,11 +34,11 @@ res = s.envvar.create_compute_envvar(compute_envvar: Models::Shared::ComputeEnvv
   environments: [
     Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
   ],
-  id: '5c354e68-66c7-4e3d-8c30-acdaee168414',
+  id: '45267d80-0151-4bb4-8576-dce993a3529c',
   is_secret: true,
   metadata: [],
   name: 'AEGER_SUBSTANTIA',
-  updated_at: DateTime.iso8601('2025-07-03T14:22:07.159Z'),
+  updated_at: DateTime.iso8601('2025-07-04T08:10:42.741Z'),
 ), connection_id: '<id>')
 
 unless res.compute_envvar.nil?
@@ -68,7 +68,7 @@ end
 
 ## get_compute_envvar
 
-Retrieve an envvar
+Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -112,7 +112,7 @@ end
 
 ## list_compute_envvars
 
-List all envvars
+Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -157,7 +157,7 @@ end
 
 ## patch_compute_envvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -178,11 +178,11 @@ req = Models::Operations::PatchComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: '64c98e54-a680-4235-b4b7-03f073fc5eda',
+    id: 'f0db2170-df5b-4931-a32a-b0958fe98b2c',
     is_secret: true,
     metadata: [],
     name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-07-03T14:22:07.165Z'),
+    updated_at: DateTime.iso8601('2025-07-04T08:10:42.750Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -214,7 +214,7 @@ end
 
 ## remove_compute_envvar
 
-Remove an envvar
+Deletes the ComputeEnvvar identified by `id`.
 
 ### Example Usage
 
@@ -256,7 +256,7 @@ end
 
 ## update_compute_envvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -277,11 +277,11 @@ req = Models::Operations::UpdateComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: '64c98e54-a680-4235-b4b7-03f073fc5eda',
+    id: 'f0db2170-df5b-4931-a32a-b0958fe98b2c',
     is_secret: true,
     metadata: [],
     name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-07-03T14:22:07.165Z'),
+    updated_at: DateTime.iso8601('2025-07-04T08:10:42.750Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

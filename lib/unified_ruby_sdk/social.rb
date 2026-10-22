@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(social_post: Models::Shared::SocialPost, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateSocialPostQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateSocialPostResponse) }
     def create_social_post(social_post:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_social_post - Create a post
+      # Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to the provider's API. Returns the created SocialPost.
       request = Models::Operations::CreateSocialPostRequest.new(
         social_post: social_post,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSocialInsightQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSocialInsightResponse) }
     def get_social_insight(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_social_insight - Retrieve an insight
+      # Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetSocialInsightRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSocialPostQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSocialPostResponse) }
     def get_social_post(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_social_post - Retrieve a post
+      # Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetSocialPostRequest.new(
         connection_id: connection_id,
         id: id,
@@ -402,6 +405,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSocialProfileQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSocialProfileResponse) }
     def get_social_profile(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_social_profile - Retrieve a profile
+      # Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetSocialProfileRequest.new(
         connection_id: connection_id,
         id: id,
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSocialReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSocialReviewResponse) }
     def get_social_review(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_social_review - Retrieve a review
+      # Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetSocialReviewRequest.new(
         connection_id: connection_id,
         id: id,
@@ -634,6 +639,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListSocialInsightsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSocialInsightsResponse) }
     def list_social_insights(request:, timeout_ms: nil)
       # list_social_insights - List all insights
+      # Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -744,6 +750,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListSocialPostsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSocialPostsResponse) }
     def list_social_posts(request:, timeout_ms: nil)
       # list_social_posts - List all posts
+      # Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -854,6 +861,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListSocialProfilesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSocialProfilesResponse) }
     def list_social_profiles(request:, timeout_ms: nil)
       # list_social_profiles - List all profiles
+      # Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -964,6 +972,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListSocialReviewsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSocialReviewsResponse) }
     def list_social_reviews(request:, timeout_ms: nil)
       # list_social_reviews - List all reviews
+      # Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1074,6 +1083,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchSocialPostRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchSocialPostResponse) }
     def patch_social_post(request:, timeout_ms: nil)
       # patch_social_post - Update a post
+      # Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1196,6 +1206,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchSocialReviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchSocialReviewResponse) }
     def patch_social_review(request:, timeout_ms: nil)
       # patch_social_review - Update a review
+      # Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1318,6 +1329,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveSocialPostResponse) }
     def remove_social_post(connection_id:, id:, timeout_ms: nil)
       # remove_social_post - Remove a post
+      # Deletes the SocialPost identified by `id`.
       request = Models::Operations::RemoveSocialPostRequest.new(
         connection_id: connection_id,
         id: id
@@ -1432,6 +1444,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateSocialPostRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateSocialPostResponse) }
     def update_social_post(request:, timeout_ms: nil)
       # update_social_post - Update a post
+      # Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1554,6 +1567,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateSocialReviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateSocialReviewResponse) }
     def update_social_review(request:, timeout_ms: nil)
       # update_social_review - Update a review
+      # Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -13,7 +13,7 @@
 
 ## create_healthcare_patient
 
-Create a patient
+Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 
 ### Example Usage
 
@@ -36,7 +36,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
     postal_code: '54031',
     region: 'Nebraska',
   ),
-  birthdate: '2025-02-12',
+  birthdate: '2025-02-13',
   created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
   emails: [
     Models::Shared::HealthcareEmail.new(
@@ -46,7 +46,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '71bef0d8-2160-4fef-8b45-37b8a6bb244f',
+  id: 'bff90549-5920-4a01-933d-a669aa5b05f7',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -66,7 +66,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
       type: Models::Shared::HealthcareTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-22T20:18:33.735Z'),
+  updated_at: DateTime.iso8601('2026-06-23T18:37:32.861Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -96,7 +96,7 @@ end
 
 ## get_healthcare_patient
 
-Retrieve a patient
+Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -140,7 +140,7 @@ end
 
 ## list_healthcare_patients
 
-List all patients
+Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -185,7 +185,7 @@ end
 
 ## patch_healthcare_patient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -209,7 +209,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska',
     ),
-    birthdate: '2025-02-12',
+    birthdate: '2025-02-13',
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
@@ -219,7 +219,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '570149a1-cb28-49d2-861b-e9417dc279e4',
+    id: 'e0aa04a2-ee2c-4f84-963b-2cb8213f03bb',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -239,7 +239,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-22T20:18:33.752Z'),
+    updated_at: DateTime.iso8601('2026-06-23T18:37:32.888Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -271,7 +271,7 @@ end
 
 ## update_healthcare_patient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -295,7 +295,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska',
     ),
-    birthdate: '2025-02-12',
+    birthdate: '2025-02-13',
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
@@ -305,7 +305,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '570149a1-cb28-49d2-861b-e9417dc279e4',
+    id: 'e0aa04a2-ee2c-4f84-963b-2cb8213f03bb',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -325,7 +325,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-22T20:18:33.752Z'),
+    updated_at: DateTime.iso8601('2026-06-23T18:37:32.888Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

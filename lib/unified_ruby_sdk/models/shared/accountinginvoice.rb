@@ -41,7 +41,7 @@ module UnifiedRubySDK
         field :invoice_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('invoice_number') } }
         # True when the document amounts already include tax
         field :is_inclusive_of_tax, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_inclusive_of_tax') } }
-
+        # The invoice's line items: what is billed, with the quantity, price and amount of each
         field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }

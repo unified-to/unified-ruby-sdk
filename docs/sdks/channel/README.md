@@ -14,7 +14,7 @@
 
 ## create_messaging_channel
 
-Create a channel
+Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they are mapped to the provider's API. Returns the created MessagingChannel.
 
 ### Example Usage
 
@@ -33,13 +33,13 @@ res = s.channel.create_messaging_channel(messaging_channel: Models::Shared::Mess
   created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
   description: 'Dolores tutis.',
   has_subchannels: true,
-  id: 'd9e11e3c-2e30-4962-857a-b0faf012090c',
+  id: 'cee1e969-9044-4ce5-9796-0f9998ee811e',
   is_active: false,
   is_private: true,
   members: [],
   metadata: [],
   name: 'tego',
-  updated_at: DateTime.iso8601('2026-05-21T13:53:36.504Z'),
+  updated_at: DateTime.iso8601('2026-05-22T10:24:21.806Z'),
   web_url: 'https://svelte-rule.name/',
 ), connection_id: '<id>')
 
@@ -70,7 +70,7 @@ end
 
 ## get_messaging_channel
 
-Retrieve a channel
+Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -114,7 +114,7 @@ end
 
 ## list_messaging_channels
 
-List all channels
+Returns a list of MessagingChannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -159,7 +159,7 @@ end
 
 ## patch_messaging_channel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -179,13 +179,13 @@ req = Models::Operations::PatchMessagingChannelRequest.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Dolores tutis.',
     has_subchannels: true,
-    id: '017f7008-218c-4aa0-ae0b-b5feeaffee37',
+    id: 'e830d3e5-6cca-4ac1-bc1a-19992f36ecd6',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tego',
-    updated_at: DateTime.iso8601('2026-05-21T13:53:36.518Z'),
+    updated_at: DateTime.iso8601('2026-05-22T10:24:21.821Z'),
     web_url: 'https://svelte-rule.name/',
   ),
   connection_id: '<id>',
@@ -218,7 +218,7 @@ end
 
 ## remove_messaging_channel
 
-Remove a channel
+Deletes the MessagingChannel identified by `id`.
 
 ### Example Usage
 
@@ -260,7 +260,7 @@ end
 
 ## update_messaging_channel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -280,13 +280,13 @@ req = Models::Operations::UpdateMessagingChannelRequest.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Dolores tutis.',
     has_subchannels: true,
-    id: '017f7008-218c-4aa0-ae0b-b5feeaffee37',
+    id: 'e830d3e5-6cca-4ac1-bc1a-19992f36ecd6',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tego',
-    updated_at: DateTime.iso8601('2026-05-21T13:53:36.518Z'),
+    updated_at: DateTime.iso8601('2026-05-22T10:24:21.821Z'),
     web_url: 'https://svelte-rule.name/',
   ),
   connection_id: '<id>',

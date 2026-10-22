@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(compute_envvar: Models::Shared::ComputeEnvvar, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateComputeEnvvarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateComputeEnvvarResponse) }
     def create_compute_envvar(compute_envvar:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_compute_envvar - Create an envvar
+      # Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
       request = Models::Operations::CreateComputeEnvvarRequest.new(
         compute_envvar: compute_envvar,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetComputeEnvvarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetComputeEnvvarResponse) }
     def get_compute_envvar(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_compute_envvar - Retrieve an envvar
+      # Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetComputeEnvvarRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListComputeEnvvarsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListComputeEnvvarsResponse) }
     def list_compute_envvars(request:, timeout_ms: nil)
       # list_compute_envvars - List all envvars
+      # Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchComputeEnvvarRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchComputeEnvvarResponse) }
     def patch_compute_envvar(request:, timeout_ms: nil)
       # patch_compute_envvar - Update an envvar
+      # Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveComputeEnvvarResponse) }
     def remove_compute_envvar(connection_id:, id:, timeout_ms: nil)
       # remove_compute_envvar - Remove an envvar
+      # Deletes the ComputeEnvvar identified by `id`.
       request = Models::Operations::RemoveComputeEnvvarRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateComputeEnvvarRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateComputeEnvvarResponse) }
     def update_compute_envvar(request:, timeout_ms: nil)
       # update_compute_envvar - Update an envvar
+      # Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

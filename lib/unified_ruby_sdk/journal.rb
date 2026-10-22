@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_journal: Models::Shared::AccountingJournal, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingJournalQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingJournalResponse) }
     def create_accounting_journal(accounting_journal:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_journal - Create a journal
+      # Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
       request = Models::Operations::CreateAccountingJournalRequest.new(
         accounting_journal: accounting_journal,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingJournalQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingJournalResponse) }
     def get_accounting_journal(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_journal - Retrieve a journal
+      # Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingJournalRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingJournalsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingJournalsResponse) }
     def list_accounting_journals(request:, timeout_ms: nil)
       # list_accounting_journals - List all journals
+      # Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingJournalRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingJournalResponse) }
     def patch_accounting_journal(request:, timeout_ms: nil)
       # patch_accounting_journal - Update a journal
+      # Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingJournalResponse) }
     def remove_accounting_journal(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_journal - Remove a journal
+      # Deletes the AccountingJournal identified by `id`.
       request = Models::Operations::RemoveAccountingJournalRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingJournalRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingJournalResponse) }
     def update_accounting_journal(request:, timeout_ms: nil)
       # update_accounting_journal - Update a journal
+      # Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

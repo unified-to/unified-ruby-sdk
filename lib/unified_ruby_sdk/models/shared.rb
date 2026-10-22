@@ -397,6 +397,8 @@ module UnifiedRubySDK
       autoload :DatastoreFieldValue, 'unified_ruby_sdk/models/shared/datastorefieldvalue.rb'
       autoload :DatastoreFieldType, 'unified_ruby_sdk/models/shared/datastorefield_type.rb'
       autoload :DatastoreFilter, 'unified_ruby_sdk/models/shared/datastorefilter.rb'
+      autoload :DatastoreFilterGroup, 'unified_ruby_sdk/models/shared/datastorefiltergroup.rb'
+      autoload :DatastoreFilterGroupType, 'unified_ruby_sdk/models/shared/datastorefiltergroup_type.rb'
       autoload :DatastoreMetadata, 'unified_ruby_sdk/models/shared/datastoremetadata.rb'
       autoload :DatastoreMetadata1, 'unified_ruby_sdk/models/shared/datastoremetadata_1.rb'
       autoload :DatastoreMetadata5, 'unified_ruby_sdk/models/shared/datastoremetadata_5.rb'

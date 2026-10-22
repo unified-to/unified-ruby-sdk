@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_expensereport: Models::Shared::AccountingExpensereport, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingExpensereportQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingExpensereportResponse) }
     def create_accounting_expensereport(accounting_expensereport:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_expensereport - Create an expensereport
+      # Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
       request = Models::Operations::CreateAccountingExpensereportRequest.new(
         accounting_expensereport: accounting_expensereport,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingExpensereportQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingExpensereportResponse) }
     def get_accounting_expensereport(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_expensereport - Retrieve an expensereport
+      # Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingExpensereportRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingExpensereportsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingExpensereportsResponse) }
     def list_accounting_expensereports(request:, timeout_ms: nil)
       # list_accounting_expensereports - List all expensereports
+      # Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingExpensereportRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingExpensereportResponse) }
     def patch_accounting_expensereport(request:, timeout_ms: nil)
       # patch_accounting_expensereport - Update an expensereport
+      # Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingExpensereportResponse) }
     def remove_accounting_expensereport(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_expensereport - Remove an expensereport
+      # Deletes the AccountingExpensereport identified by `id`.
       request = Models::Operations::RemoveAccountingExpensereportRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingExpensereportRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingExpensereportResponse) }
     def update_accounting_expensereport(request:, timeout_ms: nil)
       # update_accounting_expensereport - Update an expensereport
+      # Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

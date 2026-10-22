@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(genai_prompt: Models::Shared::GenaiPrompt, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiPromptQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiPromptResponse) }
     def create_genai_prompt(genai_prompt:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_genai_prompt - Create a prompt
+      # Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped to the provider's API. Returns the created GenaiPrompt.
       request = Models::Operations::CreateGenaiPromptRequest.new(
         genai_prompt: genai_prompt,
         connection_id: connection_id,

@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ats_activity: Models::Shared::AtsActivity, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsActivityResponse) }
     def create_ats_activity(ats_activity:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_activity - Create an activity
+      # Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
       request = Models::Operations::CreateAtsActivityRequest.new(
         ats_activity: ats_activity,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(ats_application: Models::Shared::AtsApplication, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsApplicationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsApplicationResponse) }
     def create_ats_application(ats_application:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_application - Create an application
+      # Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
       request = Models::Operations::CreateAtsApplicationRequest.new(
         ats_application: ats_application,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(ats_candidate: Models::Shared::AtsCandidate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsCandidateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsCandidateResponse) }
     def create_ats_candidate(ats_candidate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_candidate - Create a candidate
+      # Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
       request = Models::Operations::CreateAtsCandidateRequest.new(
         ats_candidate: ats_candidate,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(ats_company: Models::Shared::AtsCompany, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsCompanyResponse) }
     def create_ats_company(ats_company:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_company - Create a company
+      # Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
       request = Models::Operations::CreateAtsCompanyRequest.new(
         ats_company: ats_company,
         connection_id: connection_id,
@@ -554,6 +558,7 @@ module UnifiedRubySDK
     sig { params(ats_document: Models::Shared::AtsDocument, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsDocumentResponse) }
     def create_ats_document(ats_document:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_document - Create a document
+      # Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
       request = Models::Operations::CreateAtsDocumentRequest.new(
         ats_document: ats_document,
         connection_id: connection_id,
@@ -682,6 +687,7 @@ module UnifiedRubySDK
     sig { params(ats_interview: Models::Shared::AtsInterview, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsInterviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsInterviewResponse) }
     def create_ats_interview(ats_interview:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_interview - Create an interview
+      # Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
       request = Models::Operations::CreateAtsInterviewRequest.new(
         ats_interview: ats_interview,
         connection_id: connection_id,
@@ -810,6 +816,7 @@ module UnifiedRubySDK
     sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsJobResponse) }
     def create_ats_job(ats_job:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_job - Create a job
+      # Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
       request = Models::Operations::CreateAtsJobRequest.new(
         ats_job: ats_job,
         connection_id: connection_id,
@@ -938,6 +945,7 @@ module UnifiedRubySDK
     sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsScorecardQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsScorecardResponse) }
     def create_ats_scorecard(ats_scorecard:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_scorecard - Create a scorecard
+      # Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
       request = Models::Operations::CreateAtsScorecardRequest.new(
         ats_scorecard: ats_scorecard,
         connection_id: connection_id,
@@ -1066,6 +1074,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsActivityResponse) }
     def get_ats_activity(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_activity - Retrieve an activity
+      # Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsActivityRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1182,6 +1191,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsApplicationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsApplicationResponse) }
     def get_ats_application(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_application - Retrieve an application
+      # Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsApplicationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1298,6 +1308,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsApplicationstatusQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsApplicationstatusResponse) }
     def get_ats_applicationstatus(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_applicationstatus - Retrieve an applicationstatus
+      # Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsApplicationstatusRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1414,6 +1425,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsCandidateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsCandidateResponse) }
     def get_ats_candidate(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_candidate - Retrieve a candidate
+      # Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsCandidateRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1530,6 +1542,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsCompanyResponse) }
     def get_ats_company(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_company - Retrieve a company
+      # Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsCompanyRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1646,6 +1659,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsDocumentResponse) }
     def get_ats_document(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_document - Retrieve a document
+      # Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsDocumentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1762,6 +1776,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsInterviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsInterviewResponse) }
     def get_ats_interview(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_interview - Retrieve an interview
+      # Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsInterviewRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1878,6 +1893,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsJobResponse) }
     def get_ats_job(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_job - Retrieve a job
+      # Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsJobRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1994,6 +2010,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsScorecardQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsScorecardResponse) }
     def get_ats_scorecard(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_scorecard - Retrieve a scorecard
+      # Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsScorecardRequest.new(
         connection_id: connection_id,
         id: id,
@@ -2110,6 +2127,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsActivitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsActivitiesResponse) }
     def list_ats_activities(request:, timeout_ms: nil)
       # list_ats_activities - List all activities
+      # Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2220,6 +2238,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsApplicationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsApplicationsResponse) }
     def list_ats_applications(request:, timeout_ms: nil)
       # list_ats_applications - List all applications
+      # Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2330,6 +2349,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsApplicationstatusesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsApplicationstatusesResponse) }
     def list_ats_applicationstatuses(request:, timeout_ms: nil)
       # list_ats_applicationstatuses - List all applicationstatuses
+      # Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2440,6 +2460,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsCandidatesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsCandidatesResponse) }
     def list_ats_candidates(request:, timeout_ms: nil)
       # list_ats_candidates - List all candidates
+      # Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2550,6 +2571,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsCompaniesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsCompaniesResponse) }
     def list_ats_companies(request:, timeout_ms: nil)
       # list_ats_companies - List all companies
+      # Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2660,6 +2682,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsDocumentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsDocumentsResponse) }
     def list_ats_documents(request:, timeout_ms: nil)
       # list_ats_documents - List all documents
+      # Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2770,6 +2793,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsInterviewsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsInterviewsResponse) }
     def list_ats_interviews(request:, timeout_ms: nil)
       # list_ats_interviews - List all interviews
+      # Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2880,6 +2904,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsJobsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsJobsResponse) }
     def list_ats_jobs(request:, timeout_ms: nil)
       # list_ats_jobs - List all jobs
+      # Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2990,6 +3015,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsScorecardsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsScorecardsResponse) }
     def list_ats_scorecards(request:, timeout_ms: nil)
       # list_ats_scorecards - List all scorecards
+      # Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3100,6 +3126,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsActivityRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsActivityResponse) }
     def patch_ats_activity(request:, timeout_ms: nil)
       # patch_ats_activity - Update an activity
+      # Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3222,6 +3249,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsApplicationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsApplicationResponse) }
     def patch_ats_application(request:, timeout_ms: nil)
       # patch_ats_application - Update an application
+      # Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3344,6 +3372,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsCandidateRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsCandidateResponse) }
     def patch_ats_candidate(request:, timeout_ms: nil)
       # patch_ats_candidate - Update a candidate
+      # Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3466,6 +3495,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsCompanyResponse) }
     def patch_ats_company(request:, timeout_ms: nil)
       # patch_ats_company - Update a company
+      # Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3588,6 +3618,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsDocumentResponse) }
     def patch_ats_document(request:, timeout_ms: nil)
       # patch_ats_document - Update a document
+      # Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3710,6 +3741,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsInterviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsInterviewResponse) }
     def patch_ats_interview(request:, timeout_ms: nil)
       # patch_ats_interview - Update an interview
+      # Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3832,6 +3864,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsJobRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsJobResponse) }
     def patch_ats_job(request:, timeout_ms: nil)
       # patch_ats_job - Update a job
+      # Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3954,6 +3987,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsScorecardRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsScorecardResponse) }
     def patch_ats_scorecard(request:, timeout_ms: nil)
       # patch_ats_scorecard - Update a scorecard
+      # Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -4076,6 +4110,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsActivityResponse) }
     def remove_ats_activity(connection_id:, id:, timeout_ms: nil)
       # remove_ats_activity - Remove an activity
+      # Deletes the AtsActivity identified by `id`.
       request = Models::Operations::RemoveAtsActivityRequest.new(
         connection_id: connection_id,
         id: id
@@ -4190,6 +4225,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsApplicationResponse) }
     def remove_ats_application(connection_id:, id:, timeout_ms: nil)
       # remove_ats_application - Remove an application
+      # Deletes the AtsApplication identified by `id`.
       request = Models::Operations::RemoveAtsApplicationRequest.new(
         connection_id: connection_id,
         id: id
@@ -4304,6 +4340,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsCandidateResponse) }
     def remove_ats_candidate(connection_id:, id:, timeout_ms: nil)
       # remove_ats_candidate - Remove a candidate
+      # Deletes the AtsCandidate identified by `id`.
       request = Models::Operations::RemoveAtsCandidateRequest.new(
         connection_id: connection_id,
         id: id
@@ -4418,6 +4455,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsCompanyResponse) }
     def remove_ats_company(connection_id:, id:, timeout_ms: nil)
       # remove_ats_company - Remove a company
+      # Deletes the AtsCompany identified by `id`.
       request = Models::Operations::RemoveAtsCompanyRequest.new(
         connection_id: connection_id,
         id: id
@@ -4532,6 +4570,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsDocumentResponse) }
     def remove_ats_document(connection_id:, id:, timeout_ms: nil)
       # remove_ats_document - Remove a document
+      # Deletes the AtsDocument identified by `id`.
       request = Models::Operations::RemoveAtsDocumentRequest.new(
         connection_id: connection_id,
         id: id
@@ -4646,6 +4685,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsInterviewResponse) }
     def remove_ats_interview(connection_id:, id:, timeout_ms: nil)
       # remove_ats_interview - Remove an interview
+      # Deletes the AtsInterview identified by `id`.
       request = Models::Operations::RemoveAtsInterviewRequest.new(
         connection_id: connection_id,
         id: id
@@ -4760,6 +4800,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsJobResponse) }
     def remove_ats_job(connection_id:, id:, timeout_ms: nil)
       # remove_ats_job - Remove a job
+      # Deletes the AtsJob identified by `id`.
       request = Models::Operations::RemoveAtsJobRequest.new(
         connection_id: connection_id,
         id: id
@@ -4874,6 +4915,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsScorecardResponse) }
     def remove_ats_scorecard(connection_id:, id:, timeout_ms: nil)
       # remove_ats_scorecard - Remove a scorecard
+      # Deletes the AtsScorecard identified by `id`.
       request = Models::Operations::RemoveAtsScorecardRequest.new(
         connection_id: connection_id,
         id: id
@@ -4988,6 +5030,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsActivityRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsActivityResponse) }
     def update_ats_activity(request:, timeout_ms: nil)
       # update_ats_activity - Update an activity
+      # Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5110,6 +5153,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsApplicationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsApplicationResponse) }
     def update_ats_application(request:, timeout_ms: nil)
       # update_ats_application - Update an application
+      # Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5232,6 +5276,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsCandidateRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsCandidateResponse) }
     def update_ats_candidate(request:, timeout_ms: nil)
       # update_ats_candidate - Update a candidate
+      # Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5354,6 +5399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsCompanyResponse) }
     def update_ats_company(request:, timeout_ms: nil)
       # update_ats_company - Update a company
+      # Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5476,6 +5522,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsDocumentResponse) }
     def update_ats_document(request:, timeout_ms: nil)
       # update_ats_document - Update a document
+      # Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5598,6 +5645,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsInterviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsInterviewResponse) }
     def update_ats_interview(request:, timeout_ms: nil)
       # update_ats_interview - Update an interview
+      # Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5720,6 +5768,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsJobRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsJobResponse) }
     def update_ats_job(request:, timeout_ms: nil)
       # update_ats_job - Update a job
+      # Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5842,6 +5891,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsScorecardRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsScorecardResponse) }
     def update_ats_scorecard(request:, timeout_ms: nil)
       # update_ats_scorecard - Update a scorecard
+      # Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

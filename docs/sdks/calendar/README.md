@@ -35,7 +35,7 @@
 
 ## create_calendar_calendar
 
-Create a calendar
+Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they are mapped to the provider's API. Returns the created CalendarCalendar.
 
 ### Example Usage
 
@@ -53,12 +53,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.calendar.create_calendar_calendar(calendar_calendar: Models::Shared::CalendarCalendar.new(
   created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
   description: 'Acer supra vallum suasoria thesaurus.',
-  id: '32209386-016d-4231-972e-3af2d888186d',
+  id: 'c8c93adb-5907-4eab-b1f7-4703c334ae13',
   is_primary: false,
   metadata: [],
   name: 'Interviews',
   timezone: 'Asia/Kolkata',
-  updated_at: DateTime.iso8601('2023-03-28T03:26:46.838Z'),
+  updated_at: DateTime.iso8601('2023-03-28T14:42:33.832Z'),
 ), connection_id: '<id>')
 
 unless res.calendar_calendar.nil?
@@ -88,7 +88,7 @@ end
 
 ## create_calendar_event
 
-Create an event
+Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
 
 ### Example Usage
 
@@ -107,9 +107,9 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
   attachments: [],
   conference: [],
   created_at: '2019-08-04T14:33:51.814Z',
-  end_at: '2020-05-24T07:01:09.232Z',
+  end_at: '2020-05-24T09:40:09.347Z',
   has_conference: false,
-  id: 'e9913106-d288-4504-8cd9-df2838bed13c',
+  id: '00111fbd-d5e6-4c13-9c93-be91f7154f38',
   is_all_day: false,
   is_free: false,
   is_private: false,
@@ -119,15 +119,15 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 4.0,
-      end_at: DateTime.iso8601('2025-03-24T15:41:05.059Z'),
+      end_at: DateTime.iso8601('2025-03-25T10:15:51.349Z'),
       excluded_dates: [
-        '2024-02-02T18:45:37.233Z',
+        '2024-02-03T09:35:14.298Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
       included_dates: [
-        '2023-07-07T01:28:09.892Z',
-        '2025-01-23T21:40:25.793Z',
-        '2024-04-01T23:41:13.035Z',
+        '2023-07-07T14:23:41.891Z',
+        '2025-01-24T15:42:51.143Z',
+        '2024-04-02T15:02:53.330Z',
       ],
       interval: 7.0,
       on_days: [
@@ -464,11 +464,11 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
       week_start: Models::Shared::WeekStart::TU,
     ),
   ],
-  start_at: '2020-05-23T21:47:32.005Z',
+  start_at: '2020-05-24T00:26:19.631Z',
   status: Models::Shared::CalendarEventStatus::CONFIRMED,
   subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
   timezone: 'Asia/Bangkok',
-  updated_at: '2020-06-30T05:23:45.736Z',
+  updated_at: '2020-06-30T08:22:45.566Z',
   web_url: 'https://another-pinstripe.com',
 ), connection_id: '<id>')
 
@@ -499,7 +499,7 @@ end
 
 ## create_calendar_link
 
-Create a link
+Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
 
 ### Example Usage
 
@@ -518,13 +518,13 @@ res = s.calendar.create_calendar_link(calendar_link: Models::Shared::CalendarLin
   created_at: '2023-03-07T13:34:11.959Z',
   description: 'Vitium clibanus laboriosam uxor denuncio.',
   duration: 74.0,
-  id: 'ac5a258c-077d-4fdd-988e-bad749ee7965',
+  id: 'bd90d587-d2a9-4c4e-ac90-3966a5ceec25',
   is_active: true,
   metadata: [],
   name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
   price_amount: 44.0,
   price_currency: 'USD',
-  updated_at: '2024-03-15T13:01:57.661Z',
+  updated_at: '2024-03-15T19:44:59.931Z',
   url: 'https://annual-apricot.info/',
 ), connection_id: '<id>')
 
@@ -555,7 +555,7 @@ end
 
 ## create_calendar_webinar
 
-Create a webinar
+Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are mapped to the provider's API. Returns the created CalendarWebinar.
 
 ### Example Usage
 
@@ -573,10 +573,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::CalendarWebinar.new(
   conference: [],
   created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-  end_at: DateTime.iso8601('2025-10-28T17:21:45.961Z'),
+  end_at: DateTime.iso8601('2025-10-29T11:42:57.165Z'),
   has_polls: false,
   has_recording: false,
-  id: '2a4f8547-57e0-41fe-80a7-6476aa0b4aed',
+  id: '72b71ec6-2069-4cfd-bc0f-cc3f1643716f',
   is_auto_approve: false,
   is_enabled: true,
   is_webcast: false,
@@ -586,13 +586,13 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 10.0,
-      end_at: DateTime.iso8601('2023-08-31T14:48:28.871Z'),
+      end_at: DateTime.iso8601('2023-08-31T21:11:39.790Z'),
       excluded_dates: [
-        '2025-02-13T00:36:02.077Z',
+        '2025-02-13T15:02:44.557Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
       included_dates: [
-        '2024-04-28T06:47:23.929Z',
+        '2024-04-28T16:49:33.705Z',
       ],
       interval: 8.0,
       on_days: [
@@ -983,16 +983,16 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 3.0,
-      end_at: DateTime.iso8601('2022-09-30T16:13:39.582Z'),
+      end_at: DateTime.iso8601('2022-09-30T17:32:04.821Z'),
       excluded_dates: [
-        '2024-09-01T18:06:20.618Z',
-        '2024-08-17T05:08:18.362Z',
+        '2024-09-02T06:03:34.947Z',
+        '2024-08-17T16:51:24.287Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
       included_dates: [
-        '2024-03-25T04:12:17.419Z',
-        '2026-01-13T09:41:00.061Z',
-        '2023-08-14T06:22:20.269Z',
+        '2024-03-25T13:43:25.126Z',
+        '2026-01-14T05:11:57.516Z',
+        '2023-08-14T12:29:43.904Z',
       ],
       interval: 1.0,
       on_days: [
@@ -1136,16 +1136,16 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 8.0,
-      end_at: DateTime.iso8601('2026-07-26T12:49:27.132Z'),
+      end_at: DateTime.iso8601('2026-07-27T11:17:02.921Z'),
       excluded_dates: [
-        '2023-06-18T14:29:30.222Z',
-        '2023-06-07T15:19:59.215Z',
+        '2023-06-18T19:45:20.483Z',
+        '2023-06-07T20:25:50.859Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
       included_dates: [
-        '2024-04-02T05:04:36.332Z',
-        '2023-08-20T01:47:57.968Z',
-        '2024-09-26T22:53:16.696Z',
+        '2024-04-02T14:43:02.772Z',
+        '2023-08-20T08:00:38.765Z',
+        '2024-09-27T11:13:26.747Z',
       ],
       interval: 8.0,
       on_days: [
@@ -1298,11 +1298,11 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
   registrant_password: 'W7J6DhkM',
   require_address: false,
   require_job_title: false,
-  start_at: DateTime.iso8601('2025-04-30T13:48:53.479Z'),
+  start_at: DateTime.iso8601('2025-05-01T05:25:15.143Z'),
   status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
   subject: 'Harum culpa decipio ex cubo ancilla cresco.',
   timezone: 'Europe/Kaliningrad',
-  updated_at: DateTime.iso8601('2026-09-30T12:05:38.043Z'),
+  updated_at: DateTime.iso8601('2026-10-01T11:33:15.359Z'),
   web_url: 'https://quiet-permafrost.name',
 ), connection_id: '<id>')
 
@@ -1333,7 +1333,7 @@ end
 
 ## get_calendar_calendar
 
-Retrieve a calendar
+Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1377,7 +1377,7 @@ end
 
 ## get_calendar_event
 
-Retrieve an event
+Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1421,7 +1421,7 @@ end
 
 ## get_calendar_link
 
-Retrieve a link
+Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1465,7 +1465,7 @@ end
 
 ## get_calendar_recording
 
-Retrieve a recording
+Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1509,7 +1509,7 @@ end
 
 ## get_calendar_webinar
 
-Retrieve a webinar
+Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1553,7 +1553,7 @@ end
 
 ## list_calendar_busies
 
-List all busies
+Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1598,7 +1598,7 @@ end
 
 ## list_calendar_calendars
 
-List all calendars
+Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1643,7 +1643,7 @@ end
 
 ## list_calendar_events
 
-List all events
+Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1688,7 +1688,7 @@ end
 
 ## list_calendar_links
 
-List all links
+Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1733,7 +1733,7 @@ end
 
 ## list_calendar_recordings
 
-List all recordings
+Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1778,7 +1778,7 @@ end
 
 ## list_calendar_webinars
 
-List all webinars
+Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1823,7 +1823,7 @@ end
 
 ## patch_calendar_calendar
 
-Update a calendar
+Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
 
 ### Example Usage
 
@@ -1842,12 +1842,12 @@ req = Models::Operations::PatchCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
     created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
     description: 'Acer supra vallum suasoria thesaurus.',
-    id: 'fc9558ee-6201-430d-94cf-e8b9a21a2a77',
+    id: '304a91a3-c2ac-44fd-add7-7208efad4ad8',
     is_primary: false,
     metadata: [],
     name: 'Interviews',
     timezone: 'Asia/Kolkata',
-    updated_at: DateTime.iso8601('2023-03-28T03:26:46.842Z'),
+    updated_at: DateTime.iso8601('2023-03-28T14:42:33.838Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1879,7 +1879,7 @@ end
 
 ## patch_calendar_event
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1899,9 +1899,9 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-24T07:01:09.236Z',
+    end_at: '2020-05-24T09:40:09.353Z',
     has_conference: false,
-    id: '14a1cdee-441e-4ea7-ba56-39b688c8d77f',
+    id: '251c8515-1230-4346-bb6c-8759c4f5fad3',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -1911,15 +1911,15 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-03-24T15:41:05.085Z'),
+        end_at: DateTime.iso8601('2025-03-25T10:15:51.393Z'),
         excluded_dates: [
-          '2024-02-02T18:45:37.253Z',
+          '2024-02-03T09:35:14.333Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-07T01:28:09.910Z',
-          '2025-01-23T21:40:25.818Z',
-          '2024-04-01T23:41:13.055Z',
+          '2023-07-07T14:23:41.922Z',
+          '2025-01-24T15:42:51.186Z',
+          '2024-04-02T15:02:53.366Z',
         ],
         interval: 7.0,
         on_days: [
@@ -2256,11 +2256,11 @@ req = Models::Operations::PatchCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU,
       ),
     ],
-    start_at: '2020-05-23T21:47:32.009Z',
+    start_at: '2020-05-24T00:26:19.637Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-06-30T05:23:45.740Z',
+    updated_at: '2020-06-30T08:22:45.573Z',
     web_url: 'https://another-pinstripe.com',
   ),
   connection_id: '<id>',
@@ -2293,7 +2293,7 @@ end
 
 ## patch_calendar_link
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -2313,13 +2313,13 @@ req = Models::Operations::PatchCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: 'd5c1154a-0df1-447f-9a79-a861d4aa4320',
+    id: '4f70f5c3-d6f9-4560-b50f-04fb279a483e',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-15T13:01:57.665Z',
+    updated_at: '2024-03-15T19:44:59.936Z',
     url: 'https://annual-apricot.info/',
   ),
   connection_id: '<id>',
@@ -2352,7 +2352,7 @@ end
 
 ## patch_calendar_webinar
 
-Update a webinar
+Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
 
 ### Example Usage
 
@@ -2371,10 +2371,10 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-10-28T17:21:45.988Z'),
+    end_at: DateTime.iso8601('2025-10-29T11:42:57.213Z'),
     has_polls: false,
     has_recording: false,
-    id: '8206e85f-c36d-41f8-b29d-1ef9f08ddb16',
+    id: 'c7fe4933-0d11-47cf-8704-1fd422ad72bc',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -2384,13 +2384,13 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-08-31T14:48:28.881Z'),
+        end_at: DateTime.iso8601('2023-08-31T21:11:39.807Z'),
         excluded_dates: [
-          '2025-02-13T00:36:02.099Z',
+          '2025-02-13T15:02:44.595Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-04-28T06:47:23.945Z',
+          '2024-04-28T16:49:33.731Z',
         ],
         interval: 8.0,
         on_days: [
@@ -2781,16 +2781,16 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-09-30T16:13:39.584Z'),
+        end_at: DateTime.iso8601('2022-09-30T17:32:04.825Z'),
         excluded_dates: [
-          '2024-09-01T18:06:20.636Z',
-          '2024-08-17T05:08:18.379Z',
+          '2024-09-02T06:03:34.978Z',
+          '2024-08-17T16:51:24.318Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-03-25T04:12:17.433Z',
-          '2026-01-13T09:41:00.090Z',
-          '2023-08-14T06:22:20.278Z',
+          '2024-03-25T13:43:25.151Z',
+          '2026-01-14T05:11:57.568Z',
+          '2023-08-14T12:29:43.921Z',
         ],
         interval: 1.0,
         on_days: [
@@ -2934,16 +2934,16 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-07-26T12:49:27.166Z'),
+        end_at: DateTime.iso8601('2026-07-27T11:17:02.980Z'),
         excluded_dates: [
-          '2023-06-18T14:29:30.230Z',
-          '2023-06-07T15:19:59.223Z',
+          '2023-06-18T19:45:20.497Z',
+          '2023-06-07T20:25:50.873Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-02T05:04:36.346Z',
-          '2023-08-20T01:47:57.978Z',
-          '2024-09-26T22:53:16.715Z',
+          '2024-04-02T14:43:02.798Z',
+          '2023-08-20T08:00:38.781Z',
+          '2024-09-27T11:13:26.780Z',
         ],
         interval: 8.0,
         on_days: [
@@ -3096,11 +3096,11 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-04-30T13:48:53.503Z'),
+    start_at: DateTime.iso8601('2025-05-01T05:25:15.184Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-09-30T12:05:38.079Z'),
+    updated_at: DateTime.iso8601('2026-10-01T11:33:15.421Z'),
     web_url: 'https://quiet-permafrost.name',
   ),
   connection_id: '<id>',
@@ -3133,7 +3133,7 @@ end
 
 ## remove_calendar_calendar
 
-Remove a calendar
+Deletes the CalendarCalendar identified by `id`.
 
 ### Example Usage
 
@@ -3175,7 +3175,7 @@ end
 
 ## remove_calendar_event
 
-Remove an event
+Deletes the CalendarEvent identified by `id`.
 
 ### Example Usage
 
@@ -3217,7 +3217,7 @@ end
 
 ## remove_calendar_link
 
-Remove a link
+Deletes the CalendarLink identified by `id`.
 
 ### Example Usage
 
@@ -3259,7 +3259,7 @@ end
 
 ## remove_calendar_webinar
 
-Remove a webinar
+Deletes the CalendarWebinar identified by `id`.
 
 ### Example Usage
 
@@ -3301,7 +3301,7 @@ end
 
 ## update_calendar_calendar
 
-Update a calendar
+Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
 
 ### Example Usage
 
@@ -3320,12 +3320,12 @@ req = Models::Operations::UpdateCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
     created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
     description: 'Acer supra vallum suasoria thesaurus.',
-    id: 'fc9558ee-6201-430d-94cf-e8b9a21a2a77',
+    id: '304a91a3-c2ac-44fd-add7-7208efad4ad8',
     is_primary: false,
     metadata: [],
     name: 'Interviews',
     timezone: 'Asia/Kolkata',
-    updated_at: DateTime.iso8601('2023-03-28T03:26:46.842Z'),
+    updated_at: DateTime.iso8601('2023-03-28T14:42:33.838Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3357,7 +3357,7 @@ end
 
 ## update_calendar_event
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -3377,9 +3377,9 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-24T07:01:09.236Z',
+    end_at: '2020-05-24T09:40:09.353Z',
     has_conference: false,
-    id: '14a1cdee-441e-4ea7-ba56-39b688c8d77f',
+    id: '251c8515-1230-4346-bb6c-8759c4f5fad3',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -3389,15 +3389,15 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-03-24T15:41:05.085Z'),
+        end_at: DateTime.iso8601('2025-03-25T10:15:51.393Z'),
         excluded_dates: [
-          '2024-02-02T18:45:37.253Z',
+          '2024-02-03T09:35:14.333Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-07T01:28:09.910Z',
-          '2025-01-23T21:40:25.818Z',
-          '2024-04-01T23:41:13.055Z',
+          '2023-07-07T14:23:41.922Z',
+          '2025-01-24T15:42:51.186Z',
+          '2024-04-02T15:02:53.366Z',
         ],
         interval: 7.0,
         on_days: [
@@ -3734,11 +3734,11 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU,
       ),
     ],
-    start_at: '2020-05-23T21:47:32.009Z',
+    start_at: '2020-05-24T00:26:19.637Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-06-30T05:23:45.740Z',
+    updated_at: '2020-06-30T08:22:45.573Z',
     web_url: 'https://another-pinstripe.com',
   ),
   connection_id: '<id>',
@@ -3771,7 +3771,7 @@ end
 
 ## update_calendar_link
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -3791,13 +3791,13 @@ req = Models::Operations::UpdateCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: 'd5c1154a-0df1-447f-9a79-a861d4aa4320',
+    id: '4f70f5c3-d6f9-4560-b50f-04fb279a483e',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-15T13:01:57.665Z',
+    updated_at: '2024-03-15T19:44:59.936Z',
     url: 'https://annual-apricot.info/',
   ),
   connection_id: '<id>',
@@ -3830,7 +3830,7 @@ end
 
 ## update_calendar_webinar
 
-Update a webinar
+Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
 
 ### Example Usage
 
@@ -3849,10 +3849,10 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-10-28T17:21:45.988Z'),
+    end_at: DateTime.iso8601('2025-10-29T11:42:57.213Z'),
     has_polls: false,
     has_recording: false,
-    id: '8206e85f-c36d-41f8-b29d-1ef9f08ddb16',
+    id: 'c7fe4933-0d11-47cf-8704-1fd422ad72bc',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -3862,13 +3862,13 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-08-31T14:48:28.881Z'),
+        end_at: DateTime.iso8601('2023-08-31T21:11:39.807Z'),
         excluded_dates: [
-          '2025-02-13T00:36:02.099Z',
+          '2025-02-13T15:02:44.595Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-04-28T06:47:23.945Z',
+          '2024-04-28T16:49:33.731Z',
         ],
         interval: 8.0,
         on_days: [
@@ -4259,16 +4259,16 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-09-30T16:13:39.584Z'),
+        end_at: DateTime.iso8601('2022-09-30T17:32:04.825Z'),
         excluded_dates: [
-          '2024-09-01T18:06:20.636Z',
-          '2024-08-17T05:08:18.379Z',
+          '2024-09-02T06:03:34.978Z',
+          '2024-08-17T16:51:24.318Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-03-25T04:12:17.433Z',
-          '2026-01-13T09:41:00.090Z',
-          '2023-08-14T06:22:20.278Z',
+          '2024-03-25T13:43:25.151Z',
+          '2026-01-14T05:11:57.568Z',
+          '2023-08-14T12:29:43.921Z',
         ],
         interval: 1.0,
         on_days: [
@@ -4412,16 +4412,16 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-07-26T12:49:27.166Z'),
+        end_at: DateTime.iso8601('2026-07-27T11:17:02.980Z'),
         excluded_dates: [
-          '2023-06-18T14:29:30.230Z',
-          '2023-06-07T15:19:59.223Z',
+          '2023-06-18T19:45:20.497Z',
+          '2023-06-07T20:25:50.873Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-02T05:04:36.346Z',
-          '2023-08-20T01:47:57.978Z',
-          '2024-09-26T22:53:16.715Z',
+          '2024-04-02T14:43:02.798Z',
+          '2023-08-20T08:00:38.781Z',
+          '2024-09-27T11:13:26.780Z',
         ],
         interval: 8.0,
         on_days: [
@@ -4574,11 +4574,11 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-04-30T13:48:53.503Z'),
+    start_at: DateTime.iso8601('2025-05-01T05:25:15.184Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-09-30T12:05:38.079Z'),
+    updated_at: DateTime.iso8601('2026-10-01T11:33:15.421Z'),
     web_url: 'https://quiet-permafrost.name',
   ),
   connection_id: '<id>',

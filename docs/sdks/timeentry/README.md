@@ -14,7 +14,7 @@
 
 ## create_legal_timeentry
 
-Create a timeentry
+Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 
 ### Example Usage
 
@@ -34,13 +34,13 @@ res = s.timeentry.create_legal_timeentry(legal_timeentry: Models::Shared::LegalT
   created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
   currency: 'ZAR',
   description: 'Ea derideo adulatio torrens.',
-  id: '5556370f-407c-48ae-aa6e-e4e3257f9514',
+  id: 'ae2c0d52-8cb7-4a6b-9d3d-ae3ff9f57b82',
   is_billable: true,
   metadata: [],
   minutes: 390.0,
   rate_amount: 637.0,
   total_amount: 4_140.5,
-  updated_at: DateTime.iso8601('2022-06-30T01:49:26.576Z'),
+  updated_at: DateTime.iso8601('2022-06-30T02:37:32.644Z'),
   worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
 ), connection_id: '<id>')
 
@@ -71,7 +71,7 @@ end
 
 ## get_legal_timeentry
 
-Retrieve a timeentry
+Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -115,7 +115,7 @@ end
 
 ## list_legal_timeentries
 
-List all timeentries
+Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -160,7 +160,7 @@ end
 
 ## patch_legal_timeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -181,13 +181,13 @@ req = Models::Operations::PatchLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'ZAR',
     description: 'Ea derideo adulatio torrens.',
-    id: '93c9e28c-8664-4e15-a188-ad57cf91af64',
+    id: '4e531b0d-4ddd-4eee-9a69-1e4583eca5bc',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
     total_amount: 4_140.5,
-    updated_at: DateTime.iso8601('2022-06-30T01:49:26.577Z'),
+    updated_at: DateTime.iso8601('2022-06-30T02:37:32.645Z'),
     worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
   ),
   connection_id: '<id>',
@@ -220,7 +220,7 @@ end
 
 ## remove_legal_timeentry
 
-Remove a timeentry
+Deletes the LegalTimeentry identified by `id`.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ end
 
 ## update_legal_timeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -283,13 +283,13 @@ req = Models::Operations::UpdateLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'ZAR',
     description: 'Ea derideo adulatio torrens.',
-    id: '93c9e28c-8664-4e15-a188-ad57cf91af64',
+    id: '4e531b0d-4ddd-4eee-9a69-1e4583eca5bc',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
     total_amount: 4_140.5,
-    updated_at: DateTime.iso8601('2022-06-30T01:49:26.577Z'),
+    updated_at: DateTime.iso8601('2022-06-30T02:37:32.645Z'),
     worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
   ),
   connection_id: '<id>',

@@ -14,7 +14,7 @@
 
 ## create_commerce_saleschannel
 
-Create a saleschannel
+Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 
 ### Example Usage
 
@@ -33,11 +33,11 @@ res = s.saleschannel.create_commerce_saleschannel(commerce_saleschannel: Models:
   collections: [],
   created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
   description: 'Utroque denuncio solutio.',
-  id: 'cc3de979-f65e-4409-9afc-44337c992d3c',
+  id: 'f5000683-c155-418d-ba03-716ec32f7165',
   is_active: false,
   metadata: [],
   slug: 'amiculum-congregatio-suspendo',
-  updated_at: DateTime.iso8601('2025-01-28T00:01:54.549Z'),
+  updated_at: DateTime.iso8601('2025-01-28T15:20:47.188Z'),
 ), connection_id: '<id>')
 
 unless res.commerce_saleschannel.nil?
@@ -67,7 +67,7 @@ end
 
 ## get_commerce_saleschannel
 
-Retrieve a saleschannel
+Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -111,7 +111,7 @@ end
 
 ## list_commerce_saleschannels
 
-List all saleschannels
+Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -156,7 +156,7 @@ end
 
 ## patch_commerce_saleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -176,11 +176,11 @@ req = Models::Operations::PatchCommerceSaleschannelRequest.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Utroque denuncio solutio.',
-    id: 'dcf669f2-72fe-4f86-bf18-a0776d1f5b30',
+    id: '91b0c154-d7b0-4359-9c83-044aed157d8b',
     is_active: false,
     metadata: [],
     slug: 'amiculum-congregatio-suspendo',
-    updated_at: DateTime.iso8601('2025-01-28T00:01:54.554Z'),
+    updated_at: DateTime.iso8601('2025-01-28T15:20:47.199Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -212,7 +212,7 @@ end
 
 ## remove_commerce_saleschannel
 
-Remove a saleschannel
+Deletes the CommerceSaleschannel identified by `id`.
 
 ### Example Usage
 
@@ -254,7 +254,7 @@ end
 
 ## update_commerce_saleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -274,11 +274,11 @@ req = Models::Operations::UpdateCommerceSaleschannelRequest.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Utroque denuncio solutio.',
-    id: 'dcf669f2-72fe-4f86-bf18-a0776d1f5b30',
+    id: '91b0c154-d7b0-4359-9c83-044aed157d8b',
     is_active: false,
     metadata: [],
     slug: 'amiculum-congregatio-suspendo',
-    updated_at: DateTime.iso8601('2025-01-28T00:01:54.554Z'),
+    updated_at: DateTime.iso8601('2025-01-28T15:20:47.199Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

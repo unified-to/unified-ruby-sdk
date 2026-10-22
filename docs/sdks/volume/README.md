@@ -14,7 +14,7 @@
 
 ## create_compute_volume
 
-Create a volume
+Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 
 ### Example Usage
 
@@ -31,14 +31,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.volume.create_compute_volume(compute_volume: Models::Shared::ComputeVolume.new(
   created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-  id: 'b5c3e485-e508-4dc0-96a7-2c707f0ca0a9',
+  id: '55825a37-409f-476f-89bc-18142a68869a',
   instance_ids: [],
   metadata: [],
   name: 'vol-solum',
   size_mb: 1_024_000.0,
   status: Models::Shared::ComputeVolumeStatus::OTHER,
   type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-  updated_at: DateTime.iso8601('2024-02-09T21:51:12.903Z'),
+  updated_at: DateTime.iso8601('2024-02-10T05:19:38.193Z'),
   used_mb: 524_986.0,
 ), connection_id: '<id>')
 
@@ -69,7 +69,7 @@ end
 
 ## get_compute_volume
 
-Retrieve a volume
+Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -113,7 +113,7 @@ end
 
 ## list_compute_volumes
 
-List all volumes
+Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -158,7 +158,7 @@ end
 
 ## patch_compute_volume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -176,14 +176,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'eaf8fe41-8674-4052-864b-ae1e1cf307f4',
+    id: '33536cfd-0184-4e65-ab51-dcf407b45b59',
     instance_ids: [],
     metadata: [],
     name: 'vol-solum',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-09T21:51:12.908Z'),
+    updated_at: DateTime.iso8601('2024-02-10T05:19:38.198Z'),
     used_mb: 524_986.0,
   ),
   connection_id: '<id>',
@@ -216,7 +216,7 @@ end
 
 ## remove_compute_volume
 
-Remove a volume
+Deletes the ComputeVolume identified by `id`.
 
 ### Example Usage
 
@@ -258,7 +258,7 @@ end
 
 ## update_compute_volume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -276,14 +276,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'eaf8fe41-8674-4052-864b-ae1e1cf307f4',
+    id: '33536cfd-0184-4e65-ab51-dcf407b45b59',
     instance_ids: [],
     metadata: [],
     name: 'vol-solum',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-09T21:51:12.908Z'),
+    updated_at: DateTime.iso8601('2024-02-10T05:19:38.198Z'),
     used_mb: 524_986.0,
   ),
   connection_id: '<id>',

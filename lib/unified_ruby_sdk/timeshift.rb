@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(hris_timeshift: Models::Shared::HrisTimeshift, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisTimeshiftQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisTimeshiftResponse) }
     def create_hris_timeshift(hris_timeshift:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_timeshift - Create a timeshift
+      # Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
       request = Models::Operations::CreateHrisTimeshiftRequest.new(
         hris_timeshift: hris_timeshift,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisTimeshiftQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTimeshiftResponse) }
     def get_hris_timeshift(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_timeshift - Retrieve a timeshift
+      # Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisTimeshiftRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisTimeshiftsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisTimeshiftsResponse) }
     def list_hris_timeshifts(request:, timeout_ms: nil)
       # list_hris_timeshifts - List all timeshifts
+      # Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisTimeshiftRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisTimeshiftResponse) }
     def patch_hris_timeshift(request:, timeout_ms: nil)
       # patch_hris_timeshift - Update a timeshift
+      # Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisTimeshiftResponse) }
     def remove_hris_timeshift(connection_id:, id:, timeout_ms: nil)
       # remove_hris_timeshift - Remove a timeshift
+      # Deletes the HrisTimeshift identified by `id`.
       request = Models::Operations::RemoveHrisTimeshiftRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisTimeshiftRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisTimeshiftResponse) }
     def update_hris_timeshift(request:, timeout_ms: nil)
       # update_hris_timeshift - Update a timeshift
+      # Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -14,7 +14,7 @@
 
 ## create_hris_device
 
-Create a device
+Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 
 ### Example Usage
 
@@ -38,7 +38,7 @@ res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   has_hd_encrypted: true,
   has_password_manager: true,
   has_screenlock: false,
-  id: '08f0179d-117e-4e0b-9712-d1fd2a9ab777',
+  id: '8948d49b-375f-49ed-a723-905a47075ae9',
   is_missing: false,
   manufacturer: 'Hackett Inc',
   metadata: [],
@@ -46,7 +46,7 @@ res = s.device.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   name: 'august-laptop',
   os: 'transmitter',
   os_version: '8.4.8',
-  updated_at: DateTime.iso8601('2023-06-08T07:20:57.814Z'),
+  updated_at: DateTime.iso8601('2023-06-08T20:30:23.493Z'),
   version: '4.15.7',
 ), connection_id: '<id>')
 
@@ -77,7 +77,7 @@ end
 
 ## get_hris_device
 
-Retrieve a device
+Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -121,7 +121,7 @@ end
 
 ## list_hris_devices
 
-List all devices
+Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -166,7 +166,7 @@ end
 
 ## patch_hris_device
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -191,7 +191,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '23a8d248-5900-4fd8-9b12-17935dbde1f4',
+    id: 'afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -199,7 +199,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-08T07:20:57.824Z'),
+    updated_at: DateTime.iso8601('2023-06-08T20:30:23.500Z'),
     version: '4.15.7',
   ),
   connection_id: '<id>',
@@ -232,7 +232,7 @@ end
 
 ## remove_hris_device
 
-Remove a device
+Deletes the HrisDevice identified by `id`.
 
 ### Example Usage
 
@@ -274,7 +274,7 @@ end
 
 ## update_hris_device
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -299,7 +299,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '23a8d248-5900-4fd8-9b12-17935dbde1f4',
+    id: 'afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -307,7 +307,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-08T07:20:57.824Z'),
+    updated_at: DateTime.iso8601('2023-06-08T20:30:23.500Z'),
     version: '4.15.7',
   ),
   connection_id: '<id>',

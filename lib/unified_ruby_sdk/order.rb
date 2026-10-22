@@ -42,6 +42,9 @@ module UnifiedRubySDK
     sig { params(accounting_order: Models::Shared::AccountingOrder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingOrderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingOrderResponse) }
     def create_accounting_order(accounting_order:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_order - Create an order
+      # Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+      # 
+      # @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
       request = Models::Operations::CreateAccountingOrderRequest.new(
         accounting_order: accounting_order,
         connection_id: connection_id,
@@ -170,6 +173,7 @@ module UnifiedRubySDK
     sig { params(assessment_order: Models::Shared::AssessmentOrder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAssessmentOrderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAssessmentOrderResponse) }
     def create_assessment_order(assessment_order:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_assessment_order - Create an order
+      # Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
       request = Models::Operations::CreateAssessmentOrderRequest.new(
         assessment_order: assessment_order,
         connection_id: connection_id,
@@ -298,6 +302,9 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingOrderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrderResponse) }
     def get_accounting_order(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_order - Retrieve an order
+      # Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+      # 
+      # @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
       request = Models::Operations::GetAccountingOrderRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +421,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAssessmentOrderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAssessmentOrderResponse) }
     def get_assessment_order(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_assessment_order - Retrieve an order
+      # Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAssessmentOrderRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +538,9 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingOrdersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingOrdersResponse) }
     def list_accounting_orders(request:, timeout_ms: nil)
       # list_accounting_orders - List all orders
+      # Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+      # 
+      # @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -640,6 +651,9 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingOrderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingOrderResponse) }
     def patch_accounting_order(request:, timeout_ms: nil)
       # patch_accounting_order - Update an order
+      # Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+      # 
+      # @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -762,6 +776,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAssessmentOrderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAssessmentOrderResponse) }
     def patch_assessment_order(request:, timeout_ms: nil)
       # patch_assessment_order - Update an order
+      # Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -884,6 +899,9 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingOrderResponse) }
     def remove_accounting_order(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_order - Remove an order
+      # Deletes the AccountingOrder identified by `id`.
+      # 
+      # @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
       request = Models::Operations::RemoveAccountingOrderRequest.new(
         connection_id: connection_id,
         id: id
@@ -998,6 +1016,9 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingOrderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingOrderResponse) }
     def update_accounting_order(request:, timeout_ms: nil)
       # update_accounting_order - Update an order
+      # Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+      # 
+      # @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1120,6 +1141,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAssessmentOrderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAssessmentOrderResponse) }
     def update_assessment_order(request:, timeout_ms: nil)
       # update_assessment_order - Update an order
+      # Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

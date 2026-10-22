@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(calendar_calendar: Models::Shared::CalendarCalendar, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarCalendarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarCalendarResponse) }
     def create_calendar_calendar(calendar_calendar:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_calendar_calendar - Create a calendar
+      # Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they are mapped to the provider's API. Returns the created CalendarCalendar.
       request = Models::Operations::CreateCalendarCalendarRequest.new(
         calendar_calendar: calendar_calendar,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(calendar_event: Models::Shared::CalendarEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarEventResponse) }
     def create_calendar_event(calendar_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_calendar_event - Create an event
+      # Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
       request = Models::Operations::CreateCalendarEventRequest.new(
         calendar_event: calendar_event,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(calendar_link: Models::Shared::CalendarLink, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarLinkResponse) }
     def create_calendar_link(calendar_link:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_calendar_link - Create a link
+      # Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
       request = Models::Operations::CreateCalendarLinkRequest.new(
         calendar_link: calendar_link,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(calendar_webinar: Models::Shared::CalendarWebinar, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarWebinarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarWebinarResponse) }
     def create_calendar_webinar(calendar_webinar:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_calendar_webinar - Create a webinar
+      # Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are mapped to the provider's API. Returns the created CalendarWebinar.
       request = Models::Operations::CreateCalendarWebinarRequest.new(
         calendar_webinar: calendar_webinar,
         connection_id: connection_id,
@@ -554,6 +558,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarCalendarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarCalendarResponse) }
     def get_calendar_calendar(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_calendar - Retrieve a calendar
+      # Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCalendarCalendarRequest.new(
         connection_id: connection_id,
         id: id,
@@ -670,6 +675,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarEventResponse) }
     def get_calendar_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_event - Retrieve an event
+      # Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCalendarEventRequest.new(
         connection_id: connection_id,
         id: id,
@@ -786,6 +792,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarLinkResponse) }
     def get_calendar_link(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_link - Retrieve a link
+      # Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCalendarLinkRequest.new(
         connection_id: connection_id,
         id: id,
@@ -902,6 +909,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarRecordingResponse) }
     def get_calendar_recording(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_recording - Retrieve a recording
+      # Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCalendarRecordingRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1018,6 +1026,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarWebinarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarWebinarResponse) }
     def get_calendar_webinar(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_webinar - Retrieve a webinar
+      # Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCalendarWebinarRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1134,6 +1143,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCalendarBusiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarBusiesResponse) }
     def list_calendar_busies(request:, timeout_ms: nil)
       # list_calendar_busies - List all busies
+      # Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1244,6 +1254,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCalendarCalendarsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarCalendarsResponse) }
     def list_calendar_calendars(request:, timeout_ms: nil)
       # list_calendar_calendars - List all calendars
+      # Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1354,6 +1365,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCalendarEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarEventsResponse) }
     def list_calendar_events(request:, timeout_ms: nil)
       # list_calendar_events - List all events
+      # Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1464,6 +1476,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCalendarLinksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarLinksResponse) }
     def list_calendar_links(request:, timeout_ms: nil)
       # list_calendar_links - List all links
+      # Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1574,6 +1587,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCalendarRecordingsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarRecordingsResponse) }
     def list_calendar_recordings(request:, timeout_ms: nil)
       # list_calendar_recordings - List all recordings
+      # Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1684,6 +1698,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCalendarWebinarsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarWebinarsResponse) }
     def list_calendar_webinars(request:, timeout_ms: nil)
       # list_calendar_webinars - List all webinars
+      # Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1794,6 +1809,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCalendarCalendarRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarCalendarResponse) }
     def patch_calendar_calendar(request:, timeout_ms: nil)
       # patch_calendar_calendar - Update a calendar
+      # Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1916,6 +1932,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCalendarEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarEventResponse) }
     def patch_calendar_event(request:, timeout_ms: nil)
       # patch_calendar_event - Update an event
+      # Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2038,6 +2055,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCalendarLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarLinkResponse) }
     def patch_calendar_link(request:, timeout_ms: nil)
       # patch_calendar_link - Update a link
+      # Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2160,6 +2178,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCalendarWebinarRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarWebinarResponse) }
     def patch_calendar_webinar(request:, timeout_ms: nil)
       # patch_calendar_webinar - Update a webinar
+      # Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2282,6 +2301,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarCalendarResponse) }
     def remove_calendar_calendar(connection_id:, id:, timeout_ms: nil)
       # remove_calendar_calendar - Remove a calendar
+      # Deletes the CalendarCalendar identified by `id`.
       request = Models::Operations::RemoveCalendarCalendarRequest.new(
         connection_id: connection_id,
         id: id
@@ -2396,6 +2416,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarEventResponse) }
     def remove_calendar_event(connection_id:, id:, timeout_ms: nil)
       # remove_calendar_event - Remove an event
+      # Deletes the CalendarEvent identified by `id`.
       request = Models::Operations::RemoveCalendarEventRequest.new(
         connection_id: connection_id,
         id: id
@@ -2510,6 +2531,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarLinkResponse) }
     def remove_calendar_link(connection_id:, id:, timeout_ms: nil)
       # remove_calendar_link - Remove a link
+      # Deletes the CalendarLink identified by `id`.
       request = Models::Operations::RemoveCalendarLinkRequest.new(
         connection_id: connection_id,
         id: id
@@ -2624,6 +2646,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarWebinarResponse) }
     def remove_calendar_webinar(connection_id:, id:, timeout_ms: nil)
       # remove_calendar_webinar - Remove a webinar
+      # Deletes the CalendarWebinar identified by `id`.
       request = Models::Operations::RemoveCalendarWebinarRequest.new(
         connection_id: connection_id,
         id: id
@@ -2738,6 +2761,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCalendarCalendarRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarCalendarResponse) }
     def update_calendar_calendar(request:, timeout_ms: nil)
       # update_calendar_calendar - Update a calendar
+      # Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2860,6 +2884,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCalendarEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarEventResponse) }
     def update_calendar_event(request:, timeout_ms: nil)
       # update_calendar_event - Update an event
+      # Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2982,6 +3007,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCalendarLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarLinkResponse) }
     def update_calendar_link(request:, timeout_ms: nil)
       # update_calendar_link - Update a link
+      # Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3104,6 +3130,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCalendarWebinarRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarWebinarResponse) }
     def update_calendar_webinar(request:, timeout_ms: nil)
       # update_calendar_webinar - Update a webinar
+      # Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

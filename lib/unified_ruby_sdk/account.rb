@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_account: Models::Shared::AccountingAccount, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::Fields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingAccountResponse) }
     def create_accounting_account(accounting_account:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_account - Create an account
+      # Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
       request = Models::Operations::CreateAccountingAccountRequest.new(
         accounting_account: accounting_account,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::QueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingAccountResponse) }
     def get_accounting_account(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_account - Retrieve an account
+      # Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingAccountRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingAccountsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingAccountsResponse) }
     def list_accounting_accounts(request:, timeout_ms: nil)
       # list_accounting_accounts - List all accounts
+      # Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingAccountRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingAccountResponse) }
     def patch_accounting_account(request:, timeout_ms: nil)
       # patch_accounting_account - Update an account
+      # Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingAccountResponse) }
     def remove_accounting_account(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_account - Remove an account
+      # Deletes the AccountingAccount identified by `id`.
       request = Models::Operations::RemoveAccountingAccountRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingAccountRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingAccountResponse) }
     def update_accounting_account(request:, timeout_ms: nil)
       # update_accounting_account - Update an account
+      # Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

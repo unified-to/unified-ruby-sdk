@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(datastore_record: Models::Shared::DatastoreRecord, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateDatastoreRecordQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateDatastoreRecordResponse) }
     def create_datastore_record(datastore_record:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_datastore_record - Create a record
+      # Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are mapped to the provider's API. Returns the created DatastoreRecord.
       request = Models::Operations::CreateDatastoreRecordRequest.new(
         datastore_record: datastore_record,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetDatastoreRecordQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetDatastoreRecordResponse) }
     def get_datastore_record(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_datastore_record - Retrieve a record
+      # Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetDatastoreRecordRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListDatastoreRecordsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListDatastoreRecordsResponse) }
     def list_datastore_records(request:, timeout_ms: nil)
       # list_datastore_records - List all records
+      # Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchDatastoreRecordRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchDatastoreRecordResponse) }
     def patch_datastore_record(request:, timeout_ms: nil)
       # patch_datastore_record - Update a record
+      # Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveDatastoreRecordResponse) }
     def remove_datastore_record(connection_id:, id:, timeout_ms: nil)
       # remove_datastore_record - Remove a record
+      # Deletes the DatastoreRecord identified by `id`.
       request = Models::Operations::RemoveDatastoreRecordRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateDatastoreRecordRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateDatastoreRecordResponse) }
     def update_datastore_record(request:, timeout_ms: nil)
       # update_datastore_record - Update a record
+      # Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

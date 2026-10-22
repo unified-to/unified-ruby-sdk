@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(forms_form: Models::Shared::FormsForm, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateFormsFormQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateFormsFormResponse) }
     def create_forms_form(forms_form:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_forms_form - Create a form
+      # Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to the provider's API. Returns the created FormsForm.
       request = Models::Operations::CreateFormsFormRequest.new(
         forms_form: forms_form,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetFormsFormQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsFormResponse) }
     def get_forms_form(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_forms_form - Retrieve a form
+      # Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetFormsFormRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetFormsSubmissionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetFormsSubmissionResponse) }
     def get_forms_submission(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_forms_submission - Retrieve a submission
+      # Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetFormsSubmissionRequest.new(
         connection_id: connection_id,
         id: id,
@@ -402,6 +405,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListFormsFormsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListFormsFormsResponse) }
     def list_forms_forms(request:, timeout_ms: nil)
       # list_forms_forms - List all forms
+      # Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -512,6 +516,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListFormsSubmissionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListFormsSubmissionsResponse) }
     def list_forms_submissions(request:, timeout_ms: nil)
       # list_forms_submissions - List all submissions
+      # Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -622,6 +627,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchFormsFormRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchFormsFormResponse) }
     def patch_forms_form(request:, timeout_ms: nil)
       # patch_forms_form - Update a form
+      # Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -744,6 +750,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveFormsFormResponse) }
     def remove_forms_form(connection_id:, id:, timeout_ms: nil)
       # remove_forms_form - Remove a form
+      # Deletes the FormsForm identified by `id`.
       request = Models::Operations::RemoveFormsFormRequest.new(
         connection_id: connection_id,
         id: id
@@ -858,6 +865,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateFormsFormRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateFormsFormResponse) }
     def update_forms_form(request:, timeout_ms: nil)
       # update_forms_form - Update a form
+      # Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

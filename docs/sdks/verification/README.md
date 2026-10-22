@@ -16,7 +16,7 @@
 
 ## create_verification_request
 
-Create a request
+Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body; they are mapped to the provider's API. Returns the created VerificationRequest.
 
 ### Example Usage
 
@@ -33,7 +33,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.verification.create_verification_request(verification_request: Models::Shared::VerificationRequest.new(
   created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-  id: '1a8fe6a0-7e21-4bc0-9457-1f5f5859be91',
+  id: 'c14f6a36-7d13-4ae6-9bfe-07855cae3d9b',
   metadata: [],
   parameters: [],
   profile_addresses: [],
@@ -43,7 +43,7 @@ res = s.verification.create_verification_request(verification_request: Models::S
   response_download_urls: [],
   response_source: 'Implemented regional protocol',
   response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-12-27T07:01:08.205Z'),
+  updated_at: DateTime.iso8601('2023-12-27T07:50:35.190Z'),
 ), connection_id: '<id>')
 
 unless res.verification_request.nil?
@@ -73,7 +73,7 @@ end
 
 ## get_verification_package
 
-Retrieve a package
+Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -117,7 +117,7 @@ end
 
 ## get_verification_request
 
-Retrieve a request
+Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -161,7 +161,7 @@ end
 
 ## list_verification_packages
 
-List all packages
+Returns a list of VerificationPackages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -206,7 +206,7 @@ end
 
 ## list_verification_requests
 
-List all requests
+Returns a list of VerificationRequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -251,7 +251,7 @@ end
 
 ## patch_verification_request
 
-Update a request
+Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 
 ### Example Usage
 
@@ -269,7 +269,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchVerificationRequestRequest.new(
   verification_request: Models::Shared::VerificationRequest.new(
     created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-    id: 'e99d027a-89a1-4f08-8c6c-bc0e20fd0f8a',
+    id: '91a8b308-2168-487f-9993-9e68ed2309ca',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -279,7 +279,7 @@ req = Models::Operations::PatchVerificationRequestRequest.new(
     response_download_urls: [],
     response_source: 'Implemented regional protocol',
     response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-12-27T07:01:08.207Z'),
+    updated_at: DateTime.iso8601('2023-12-27T07:50:35.191Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -311,7 +311,7 @@ end
 
 ## remove_verification_request
 
-Remove a request
+Deletes the VerificationRequest identified by `id`.
 
 ### Example Usage
 
@@ -353,7 +353,7 @@ end
 
 ## update_verification_request
 
-Update a request
+Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 
 ### Example Usage
 
@@ -371,7 +371,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateVerificationRequestRequest.new(
   verification_request: Models::Shared::VerificationRequest.new(
     created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-    id: 'e99d027a-89a1-4f08-8c6c-bc0e20fd0f8a',
+    id: '91a8b308-2168-487f-9993-9e68ed2309ca',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -381,7 +381,7 @@ req = Models::Operations::UpdateVerificationRequestRequest.new(
     response_download_urls: [],
     response_source: 'Implemented regional protocol',
     response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-12-27T07:01:08.207Z'),
+    updated_at: DateTime.iso8601('2023-12-27T07:50:35.191Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

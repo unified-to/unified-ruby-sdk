@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(commerce_review: Models::Shared::CommerceReview, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceReviewResponse) }
     def create_commerce_review(commerce_review:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_review - Create a review
+      # Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
       request = Models::Operations::CreateCommerceReviewRequest.new(
         commerce_review: commerce_review,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceReviewResponse) }
     def get_commerce_review(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_review - Retrieve a review
+      # Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceReviewRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPerformanceReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPerformanceReviewResponse) }
     def get_performance_review(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_performance_review - Retrieve a review
+      # Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPerformanceReviewRequest.new(
         connection_id: connection_id,
         id: id,
@@ -402,6 +405,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSocialReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSocialReviewResponse) }
     def get_social_review(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_social_review - Retrieve a review
+      # Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetSocialReviewRequest.new(
         connection_id: connection_id,
         id: id,
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceReviewsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceReviewsResponse) }
     def list_commerce_reviews(request:, timeout_ms: nil)
       # list_commerce_reviews - List all reviews
+      # Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -628,6 +633,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPerformanceReviewsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPerformanceReviewsResponse) }
     def list_performance_reviews(request:, timeout_ms: nil)
       # list_performance_reviews - List all reviews
+      # Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -738,6 +744,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListSocialReviewsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSocialReviewsResponse) }
     def list_social_reviews(request:, timeout_ms: nil)
       # list_social_reviews - List all reviews
+      # Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -848,6 +855,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceReviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceReviewResponse) }
     def patch_commerce_review(request:, timeout_ms: nil)
       # patch_commerce_review - Update a review
+      # Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -970,6 +978,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchSocialReviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchSocialReviewResponse) }
     def patch_social_review(request:, timeout_ms: nil)
       # patch_social_review - Update a review
+      # Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1092,6 +1101,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceReviewResponse) }
     def remove_commerce_review(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_review - Remove a review
+      # Deletes the CommerceReview identified by `id`.
       request = Models::Operations::RemoveCommerceReviewRequest.new(
         connection_id: connection_id,
         id: id
@@ -1206,6 +1216,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceReviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceReviewResponse) }
     def update_commerce_review(request:, timeout_ms: nil)
       # update_commerce_review - Update a review
+      # Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1328,6 +1339,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateSocialReviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateSocialReviewResponse) }
     def update_social_review(request:, timeout_ms: nil)
       # update_social_review - Update a review
+      # Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

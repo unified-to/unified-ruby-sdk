@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AssessmentOrderStatus - The current state of the assessment order
       class AssessmentOrderStatus < T::Enum
 
 

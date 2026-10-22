@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(legal_timeentry: Models::Shared::LegalTimeentry, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLegalTimeentryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLegalTimeentryResponse) }
     def create_legal_timeentry(legal_timeentry:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_legal_timeentry - Create a timeentry
+      # Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
       request = Models::Operations::CreateLegalTimeentryRequest.new(
         legal_timeentry: legal_timeentry,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLegalTimeentryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLegalTimeentryResponse) }
     def get_legal_timeentry(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_legal_timeentry - Retrieve a timeentry
+      # Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLegalTimeentryRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLegalTimeentriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLegalTimeentriesResponse) }
     def list_legal_timeentries(request:, timeout_ms: nil)
       # list_legal_timeentries - List all timeentries
+      # Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLegalTimeentryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLegalTimeentryResponse) }
     def patch_legal_timeentry(request:, timeout_ms: nil)
       # patch_legal_timeentry - Update a timeentry
+      # Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLegalTimeentryResponse) }
     def remove_legal_timeentry(connection_id:, id:, timeout_ms: nil)
       # remove_legal_timeentry - Remove a timeentry
+      # Deletes the LegalTimeentry identified by `id`.
       request = Models::Operations::RemoveLegalTimeentryRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLegalTimeentryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLegalTimeentryResponse) }
     def update_legal_timeentry(request:, timeout_ms: nil)
       # update_legal_timeentry - Update a timeentry
+      # Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

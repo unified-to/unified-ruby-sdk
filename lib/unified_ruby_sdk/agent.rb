@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(genai_agent: Models::Shared::GenaiAgent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiAgentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiAgentResponse) }
     def create_genai_agent(genai_agent:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_genai_agent - Create an agent
+      # Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
       request = Models::Operations::CreateGenaiAgentRequest.new(
         genai_agent: genai_agent,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetGenaiAgentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetGenaiAgentResponse) }
     def get_genai_agent(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_genai_agent - Retrieve an agent
+      # Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetGenaiAgentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListGenaiAgentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListGenaiAgentsResponse) }
     def list_genai_agents(request:, timeout_ms: nil)
       # list_genai_agents - List all agents
+      # Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchGenaiAgentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchGenaiAgentResponse) }
     def patch_genai_agent(request:, timeout_ms: nil)
       # patch_genai_agent - Update an agent
+      # Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveGenaiAgentResponse) }
     def remove_genai_agent(connection_id:, id:, timeout_ms: nil)
       # remove_genai_agent - Remove an agent
+      # Deletes the GenaiAgent identified by `id`.
       request = Models::Operations::RemoveGenaiAgentRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateGenaiAgentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateGenaiAgentResponse) }
     def update_genai_agent(request:, timeout_ms: nil)
       # update_genai_agent - Update an agent
+      # Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -26,7 +26,7 @@
 
 ## create_kms_comment
 
-Create a comment
+Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 
 ### Example Usage
 
@@ -45,10 +45,10 @@ res = s.kms.create_kms_comment(kms_comment: Models::Shared::KmsComment.new(
   content: 'Decimus tolero viriliter usque.',
   content_type: Models::Shared::ContentType::HTML,
   created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-  id: '7d48c048-f83a-497e-932d-ae75226e4a84',
+  id: 'f70dadbf-c49e-4d15-b95b-76c9be0a9360',
   metadata: [],
   type: Models::Shared::KmsCommentType::PAGE,
-  updated_at: DateTime.iso8601('2023-11-26T06:47:39.913Z'),
+  updated_at: DateTime.iso8601('2023-11-26T13:57:11.798Z'),
 ), connection_id: '<id>')
 
 unless res.kms_comment.nil?
@@ -78,7 +78,7 @@ end
 
 ## create_kms_page
 
-Create a page
+Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
 
 ### Example Usage
 
@@ -97,12 +97,12 @@ res = s.kms.create_kms_page(kms_page: Models::Shared::KmsPage.new(
   created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
   download_url: 'https://agitated-validity.info',
   has_children: true,
-  id: '6ddf7535-f377-4882-8d68-f853b3459224',
+  id: '09d346b6-e6f1-48d9-88f3-ad33c3498f06',
   is_active: true,
   metadata: [],
   title: 'even minister extract',
   type: Models::Shared::KmsPageType::HTML,
-  updated_at: DateTime.iso8601('2025-10-09T04:22:36.892Z'),
+  updated_at: DateTime.iso8601('2025-10-10T00:50:34.700Z'),
   web_url: 'https://another-petticoat.info',
 ), connection_id: '<id>')
 
@@ -133,7 +133,7 @@ end
 
 ## create_kms_space
 
-Create a space
+Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the provider's API. Returns the created KmsSpace.
 
 ### Example Usage
 
@@ -151,11 +151,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.kms.create_kms_space(kms_space: Models::Shared::KmsSpace.new(
   created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
   description: 'Acer.',
-  id: 'b21eed38-3f30-4a30-868f-0c292f061c9e',
+  id: '446ff652-9d3f-47e2-8138-b6d4e60961ff',
   is_active: false,
   metadata: [],
   name: 'into nor afore',
-  updated_at: DateTime.iso8601('2025-12-29T22:52:33.056Z'),
+  updated_at: DateTime.iso8601('2025-12-30T17:48:47.665Z'),
 ), connection_id: '<id>')
 
 unless res.kms_space.nil?
@@ -185,7 +185,7 @@ end
 
 ## get_kms_comment
 
-Retrieve a comment
+Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -229,7 +229,7 @@ end
 
 ## get_kms_page
 
-Retrieve a page
+Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -273,7 +273,7 @@ end
 
 ## get_kms_space
 
-Retrieve a space
+Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -317,7 +317,7 @@ end
 
 ## list_kms_comments
 
-List all comments
+Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -362,7 +362,7 @@ end
 
 ## list_kms_pages
 
-List all pages
+Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -407,7 +407,7 @@ end
 
 ## list_kms_spaces
 
-List all spaces
+Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -452,7 +452,7 @@ end
 
 ## patch_kms_comment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -472,10 +472,10 @@ req = Models::Operations::PatchKmsCommentRequest.new(
     content: 'Decimus tolero viriliter usque.',
     content_type: Models::Shared::ContentType::HTML,
     created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-    id: '481c0558-3e28-4883-a956-58b21d1bee75',
+    id: 'a08fa0b1-2d59-4bd9-afd2-b70b50910414',
     metadata: [],
     type: Models::Shared::KmsCommentType::PAGE,
-    updated_at: DateTime.iso8601('2023-11-26T06:47:39.916Z'),
+    updated_at: DateTime.iso8601('2023-11-26T13:57:11.803Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -507,7 +507,7 @@ end
 
 ## patch_kms_page
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -527,12 +527,12 @@ req = Models::Operations::PatchKmsPageRequest.new(
     created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
     download_url: 'https://agitated-validity.info',
     has_children: true,
-    id: '8c9ed97f-b8be-41ce-bb37-2ba55ccd95c7',
+    id: '92edceee-2b74-46db-a8ae-060c225ade64',
     is_active: true,
     metadata: [],
     title: 'even minister extract',
     type: Models::Shared::KmsPageType::HTML,
-    updated_at: DateTime.iso8601('2025-10-09T04:22:36.905Z'),
+    updated_at: DateTime.iso8601('2025-10-10T00:50:34.716Z'),
     web_url: 'https://another-petticoat.info',
   ),
   connection_id: '<id>',
@@ -565,7 +565,7 @@ end
 
 ## patch_kms_space
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -584,11 +584,11 @@ req = Models::Operations::PatchKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
     created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
     description: 'Acer.',
-    id: 'c6ed6ca0-1967-40b3-bd60-612e0db9ec51',
+    id: '64d1bceb-c2c9-4d49-a9a6-82cc4c5ee096',
     is_active: false,
     metadata: [],
     name: 'into nor afore',
-    updated_at: DateTime.iso8601('2025-12-29T22:52:33.064Z'),
+    updated_at: DateTime.iso8601('2025-12-30T17:48:47.677Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -620,7 +620,7 @@ end
 
 ## remove_kms_comment
 
-Remove a comment
+Deletes the KmsComment identified by `id`.
 
 ### Example Usage
 
@@ -662,7 +662,7 @@ end
 
 ## remove_kms_page
 
-Remove a page
+Deletes the KmsPage identified by `id`.
 
 ### Example Usage
 
@@ -704,7 +704,7 @@ end
 
 ## remove_kms_space
 
-Remove a space
+Deletes the KmsSpace identified by `id`.
 
 ### Example Usage
 
@@ -746,7 +746,7 @@ end
 
 ## update_kms_comment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -766,10 +766,10 @@ req = Models::Operations::UpdateKmsCommentRequest.new(
     content: 'Decimus tolero viriliter usque.',
     content_type: Models::Shared::ContentType::HTML,
     created_at: DateTime.iso8601('2022-08-26T14:40:49.732Z'),
-    id: '481c0558-3e28-4883-a956-58b21d1bee75',
+    id: 'a08fa0b1-2d59-4bd9-afd2-b70b50910414',
     metadata: [],
     type: Models::Shared::KmsCommentType::PAGE,
-    updated_at: DateTime.iso8601('2023-11-26T06:47:39.916Z'),
+    updated_at: DateTime.iso8601('2023-11-26T13:57:11.803Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -801,7 +801,7 @@ end
 
 ## update_kms_page
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -821,12 +821,12 @@ req = Models::Operations::UpdateKmsPageRequest.new(
     created_at: DateTime.iso8601('2019-05-20T18:06:50.749Z'),
     download_url: 'https://agitated-validity.info',
     has_children: true,
-    id: '8c9ed97f-b8be-41ce-bb37-2ba55ccd95c7',
+    id: '92edceee-2b74-46db-a8ae-060c225ade64',
     is_active: true,
     metadata: [],
     title: 'even minister extract',
     type: Models::Shared::KmsPageType::HTML,
-    updated_at: DateTime.iso8601('2025-10-09T04:22:36.905Z'),
+    updated_at: DateTime.iso8601('2025-10-10T00:50:34.716Z'),
     web_url: 'https://another-petticoat.info',
   ),
   connection_id: '<id>',
@@ -859,7 +859,7 @@ end
 
 ## update_kms_space
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -878,11 +878,11 @@ req = Models::Operations::UpdateKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
     created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
     description: 'Acer.',
-    id: 'c6ed6ca0-1967-40b3-bd60-612e0db9ec51',
+    id: '64d1bceb-c2c9-4d49-a9a6-82cc4c5ee096',
     is_active: false,
     metadata: [],
     name: 'into nor afore',
-    updated_at: DateTime.iso8601('2025-12-29T22:52:33.064Z'),
+    updated_at: DateTime.iso8601('2025-12-30T17:48:47.677Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

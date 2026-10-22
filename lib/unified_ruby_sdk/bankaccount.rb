@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(hris_bankaccount: Models::Shared::HrisBankaccount, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisBankaccountQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisBankaccountResponse) }
     def create_hris_bankaccount(hris_bankaccount:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_bankaccount - Create a bankaccount
+      # Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
       request = Models::Operations::CreateHrisBankaccountRequest.new(
         hris_bankaccount: hris_bankaccount,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisBankaccountQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisBankaccountResponse) }
     def get_hris_bankaccount(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_bankaccount - Retrieve a bankaccount
+      # Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisBankaccountRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisBankaccountsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisBankaccountsResponse) }
     def list_hris_bankaccounts(request:, timeout_ms: nil)
       # list_hris_bankaccounts - List all bankaccounts
+      # Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisBankaccountRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisBankaccountResponse) }
     def patch_hris_bankaccount(request:, timeout_ms: nil)
       # patch_hris_bankaccount - Update a bankaccount
+      # Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisBankaccountResponse) }
     def remove_hris_bankaccount(connection_id:, id:, timeout_ms: nil)
       # remove_hris_bankaccount - Remove a bankaccount
+      # Deletes the HrisBankaccount identified by `id`.
       request = Models::Operations::RemoveHrisBankaccountRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisBankaccountRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisBankaccountResponse) }
     def update_hris_bankaccount(request:, timeout_ms: nil)
       # update_hris_bankaccount - Update a bankaccount
+      # Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

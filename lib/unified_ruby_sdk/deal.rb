@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(crm_deal: Models::Shared::CrmDeal, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmDealQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmDealResponse) }
     def create_crm_deal(crm_deal:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_deal - Create a deal
+      # Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
       request = Models::Operations::CreateCrmDealRequest.new(
         crm_deal: crm_deal,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmDealQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmDealResponse) }
     def get_crm_deal(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_deal - Retrieve a deal
+      # Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCrmDealRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCrmDealsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmDealsResponse) }
     def list_crm_deals(request:, timeout_ms: nil)
       # list_crm_deals - List all deals
+      # Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCrmDealRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmDealResponse) }
     def patch_crm_deal(request:, timeout_ms: nil)
       # patch_crm_deal - Update a deal
+      # Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmDealResponse) }
     def remove_crm_deal(connection_id:, id:, timeout_ms: nil)
       # remove_crm_deal - Remove a deal
+      # Deletes the CrmDeal identified by `id`.
       request = Models::Operations::RemoveCrmDealRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCrmDealRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmDealResponse) }
     def update_crm_deal(request:, timeout_ms: nil)
       # update_crm_deal - Update a deal
+      # Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

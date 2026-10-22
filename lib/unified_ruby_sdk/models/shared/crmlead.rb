@@ -17,7 +17,7 @@ module UnifiedRubySDK
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyCrmLeadAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
         # (reference to CrmCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
-
+        # The name of the company the lead works for
         field :company_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
         # (reference to CrmContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
@@ -37,9 +37,9 @@ module UnifiedRubySDK
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
 
         field :link_urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
-
+        # Custom field values. Include only existing custom fields and only the ones being set; omit to leave them unchanged.
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CrmMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # The lead's full name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }

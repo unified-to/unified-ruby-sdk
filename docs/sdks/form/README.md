@@ -14,7 +14,7 @@
 
 ## create_forms_form
 
-Create a form
+Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to the provider's API. Returns the created FormsForm.
 
 ### Example Usage
 
@@ -36,24 +36,24 @@ res = s.form.create_forms_form(forms_form: Models::Shared::FormsForm.new(
   fields_: [
     Models::Shared::FormField.new(
       created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-      id: '259e3054-2f56-4598-a481-594e42144463',
+      id: 'd7d1f512-00af-41ae-8848-a81b9fdd7ef7',
       is_active: true,
       is_required: true,
       max_length: 146.0,
       name: 'cornu creta confugo',
       order: 0.0,
       type: Models::Shared::FormFieldType::TEXTAREA,
-      updated_at: DateTime.iso8601('2025-04-28T16:10:47.286Z'),
+      updated_at: DateTime.iso8601('2025-04-29T04:23:28.408Z'),
     ),
     Models::Shared::FormField.new(
       created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-      id: '2ea6abf4-abd3-4231-bc19-e9ba60bb97da',
+      id: 'b9e35f9d-0745-43bf-976d-54b8d47bd449',
       is_active: true,
       is_required: false,
       name: 'tracto nostrum desidero',
       order: 1.0,
       type: Models::Shared::FormFieldType::TEXTAREA,
-      updated_at: DateTime.iso8601('2024-09-02T04:02:05.119Z'),
+      updated_at: DateTime.iso8601('2024-09-02T11:08:36.500Z'),
     ),
     Models::Shared::FormField.new(
       choices: [
@@ -65,36 +65,36 @@ res = s.form.create_forms_form(forms_form: Models::Shared::FormsForm.new(
       ],
       created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
       default_value: 'somniculosus',
-      id: 'b8432254-8ecc-4dbe-bd02-e2c55c774453',
+      id: '2115df7c-e0eb-4d99-bc29-1d93831f1680',
       is_active: true,
       is_required: false,
       name: 'officia supra consequatur',
       order: 2.0,
       type: Models::Shared::FormFieldType::MULTIPLE_SELECT,
-      updated_at: DateTime.iso8601('2024-02-26T08:30:25.764Z'),
+      updated_at: DateTime.iso8601('2024-02-26T11:34:34.712Z'),
     ),
     Models::Shared::FormField.new(
       created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
       description: 'Antepono cursim aurum voluptatum placeat audax tripudio amo.',
-      id: 'a4966f8b-d191-4b0c-8a62-d895c0df3b70',
+      id: 'a35e7b54-0286-4976-bb95-adfa8f35479c',
       is_active: true,
       is_required: false,
       name: 'curtus fugiat audentia',
       order: 3.0,
       type: Models::Shared::FormFieldType::TEXTAREA,
-      updated_at: DateTime.iso8601('2024-11-27T10:04:32.566Z'),
+      updated_at: DateTime.iso8601('2024-11-27T19:01:47.055Z'),
     ),
   ],
   has_multiple_submissions: false,
   has_progress_bar: false,
   has_shuffle_questions: true,
-  id: 'f34aaf0b-3045-4a27-880e-a8a8c129035c',
+  id: '52e84c28-f204-46e5-9464-a3715c87ccc5',
   is_active: false,
   metadata: [],
   name: 'tandem tracto vivo Form',
   published_url: 'https://massive-blowgun.info',
   response_count: 423.0,
-  updated_at: DateTime.iso8601('2024-08-24T19:17:44.074Z'),
+  updated_at: DateTime.iso8601('2024-08-25T02:13:31.249Z'),
 ), connection_id: '<id>')
 
 unless res.forms_form.nil?
@@ -124,7 +124,7 @@ end
 
 ## get_forms_form
 
-Retrieve a form
+Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -168,7 +168,7 @@ end
 
 ## list_forms_forms
 
-List all forms
+Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -213,7 +213,7 @@ end
 
 ## patch_forms_form
 
-Update a form
+Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
 ### Example Usage
 
@@ -236,24 +236,24 @@ req = Models::Operations::PatchFormsFormRequest.new(
     fields_: [
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-        id: '49f3b591-a412-4d9d-86c2-5946fb9b51fe',
+        id: '088e5958-3a96-4c0d-902c-75f6c5a156db',
         is_active: true,
         is_required: true,
         max_length: 146.0,
         name: 'cornu creta confugo',
         order: 0.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2025-04-28T16:10:47.299Z'),
+        updated_at: DateTime.iso8601('2025-04-29T04:23:28.423Z'),
       ),
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-        id: '5cc38b5d-9a1f-4602-8d8b-ef8bb2126477',
+        id: 'bb7e7ca5-ca1d-456e-b914-599b6cc213d1',
         is_active: true,
         is_required: false,
         name: 'tracto nostrum desidero',
         order: 1.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2024-09-02T04:02:05.127Z'),
+        updated_at: DateTime.iso8601('2024-09-02T11:08:36.508Z'),
       ),
       Models::Shared::FormField.new(
         choices: [
@@ -265,36 +265,36 @@ req = Models::Operations::PatchFormsFormRequest.new(
         ],
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
         default_value: 'somniculosus',
-        id: '02ff61fe-3dac-4fcf-bc2f-79906828e4b5',
+        id: '2acb1e27-8d73-4728-978c-d812a931dcef',
         is_active: true,
         is_required: false,
         name: 'officia supra consequatur',
         order: 2.0,
         type: Models::Shared::FormFieldType::MULTIPLE_SELECT,
-        updated_at: DateTime.iso8601('2024-02-26T08:30:25.768Z'),
+        updated_at: DateTime.iso8601('2024-02-26T11:34:34.716Z'),
       ),
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
         description: 'Antepono cursim aurum voluptatum placeat audax tripudio amo.',
-        id: '0765bee4-5f1c-4e3c-8393-6cc3a4ea84ec',
+        id: '6d2d6426-b9b2-4538-a528-751d00512c2b',
         is_active: true,
         is_required: false,
         name: 'curtus fugiat audentia',
         order: 3.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2024-11-27T10:04:32.575Z'),
+        updated_at: DateTime.iso8601('2024-11-27T19:01:47.066Z'),
       ),
     ],
     has_multiple_submissions: false,
     has_progress_bar: false,
     has_shuffle_questions: true,
-    id: 'ced3b9b1-be79-4af6-ab0c-c62a0c199374',
+    id: '508b1418-fc70-4deb-b5b8-6067c7b9e915',
     is_active: false,
     metadata: [],
     name: 'tandem tracto vivo Form',
     published_url: 'https://massive-blowgun.info',
     response_count: 423.0,
-    updated_at: DateTime.iso8601('2024-08-24T19:17:44.082Z'),
+    updated_at: DateTime.iso8601('2024-08-25T02:13:31.257Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -326,7 +326,7 @@ end
 
 ## remove_forms_form
 
-Remove a form
+Deletes the FormsForm identified by `id`.
 
 ### Example Usage
 
@@ -368,7 +368,7 @@ end
 
 ## update_forms_form
 
-Update a form
+Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
 ### Example Usage
 
@@ -391,24 +391,24 @@ req = Models::Operations::UpdateFormsFormRequest.new(
     fields_: [
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-        id: '49f3b591-a412-4d9d-86c2-5946fb9b51fe',
+        id: '088e5958-3a96-4c0d-902c-75f6c5a156db',
         is_active: true,
         is_required: true,
         max_length: 146.0,
         name: 'cornu creta confugo',
         order: 0.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2025-04-28T16:10:47.299Z'),
+        updated_at: DateTime.iso8601('2025-04-29T04:23:28.423Z'),
       ),
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-        id: '5cc38b5d-9a1f-4602-8d8b-ef8bb2126477',
+        id: 'bb7e7ca5-ca1d-456e-b914-599b6cc213d1',
         is_active: true,
         is_required: false,
         name: 'tracto nostrum desidero',
         order: 1.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2024-09-02T04:02:05.127Z'),
+        updated_at: DateTime.iso8601('2024-09-02T11:08:36.508Z'),
       ),
       Models::Shared::FormField.new(
         choices: [
@@ -420,36 +420,36 @@ req = Models::Operations::UpdateFormsFormRequest.new(
         ],
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
         default_value: 'somniculosus',
-        id: '02ff61fe-3dac-4fcf-bc2f-79906828e4b5',
+        id: '2acb1e27-8d73-4728-978c-d812a931dcef',
         is_active: true,
         is_required: false,
         name: 'officia supra consequatur',
         order: 2.0,
         type: Models::Shared::FormFieldType::MULTIPLE_SELECT,
-        updated_at: DateTime.iso8601('2024-02-26T08:30:25.768Z'),
+        updated_at: DateTime.iso8601('2024-02-26T11:34:34.716Z'),
       ),
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
         description: 'Antepono cursim aurum voluptatum placeat audax tripudio amo.',
-        id: '0765bee4-5f1c-4e3c-8393-6cc3a4ea84ec',
+        id: '6d2d6426-b9b2-4538-a528-751d00512c2b',
         is_active: true,
         is_required: false,
         name: 'curtus fugiat audentia',
         order: 3.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2024-11-27T10:04:32.575Z'),
+        updated_at: DateTime.iso8601('2024-11-27T19:01:47.066Z'),
       ),
     ],
     has_multiple_submissions: false,
     has_progress_bar: false,
     has_shuffle_questions: true,
-    id: 'ced3b9b1-be79-4af6-ab0c-c62a0c199374',
+    id: '508b1418-fc70-4deb-b5b8-6067c7b9e915',
     is_active: false,
     metadata: [],
     name: 'tandem tracto vivo Form',
     published_url: 'https://massive-blowgun.info',
     response_count: 423.0,
-    updated_at: DateTime.iso8601('2024-08-24T19:17:44.082Z'),
+    updated_at: DateTime.iso8601('2024-08-25T02:13:31.257Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

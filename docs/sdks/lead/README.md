@@ -14,7 +14,7 @@
 
 ## create_crm_lead
 
-Create a lead
+Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
 
 ### Example Usage
 
@@ -47,7 +47,7 @@ res = s.lead.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
     ),
   ],
   first_name: 'Velda',
-  id: 'fdf5c447-a048-4324-91ea-918517eaf80b',
+  id: 'a5ff2dbc-ac11-4d68-87c6-e797c08278bb',
   is_active: true,
   last_name: 'Sporer',
   link_urls: [
@@ -59,7 +59,7 @@ res = s.lead.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'f9248f76-97df-44eb-9efe-20e1c22d7ac4',
+      id: '8a6b03f1-da64-4cf4-869c-768a877990b1',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'vitiosus',
@@ -83,7 +83,7 @@ res = s.lead.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
     ),
   ],
   title: 'International Factors Administrator',
-  updated_at: DateTime.iso8601('2020-05-17T21:34:50.146Z'),
+  updated_at: DateTime.iso8601('2020-05-17T23:36:15.811Z'),
 ), connection_id: '<id>')
 
 unless res.crm_lead.nil?
@@ -113,7 +113,7 @@ end
 
 ## get_crm_lead
 
-Retrieve a lead
+Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -157,7 +157,7 @@ end
 
 ## list_crm_leads
 
-List all leads
+Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -202,7 +202,7 @@ end
 
 ## patch_crm_lead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -236,7 +236,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
       ),
     ],
     first_name: 'Velda',
-    id: '6c8c585e-50d2-4a85-a7c8-7909fac94b4c',
+    id: '52f44fbc-4a77-45dc-94c8-577758fff89f',
     is_active: true,
     last_name: 'Sporer',
     link_urls: [
@@ -248,7 +248,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8f740a58-690e-4ddc-9d90-630a91b6caa2',
+        id: '7d5aa530-b73a-44e0-93ca-7e6fa6eabd74',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'vitiosus',
@@ -272,7 +272,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
       ),
     ],
     title: 'International Factors Administrator',
-    updated_at: DateTime.iso8601('2020-05-17T21:34:50.148Z'),
+    updated_at: DateTime.iso8601('2020-05-17T23:36:15.815Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -304,7 +304,7 @@ end
 
 ## remove_crm_lead
 
-Remove a lead
+Deletes the CrmLead identified by `id`.
 
 ### Example Usage
 
@@ -346,7 +346,7 @@ end
 
 ## update_crm_lead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -380,7 +380,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
       ),
     ],
     first_name: 'Velda',
-    id: '6c8c585e-50d2-4a85-a7c8-7909fac94b4c',
+    id: '52f44fbc-4a77-45dc-94c8-577758fff89f',
     is_active: true,
     last_name: 'Sporer',
     link_urls: [
@@ -392,7 +392,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8f740a58-690e-4ddc-9d90-630a91b6caa2',
+        id: '7d5aa530-b73a-44e0-93ca-7e6fa6eabd74',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'vitiosus',
@@ -416,7 +416,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
       ),
     ],
     title: 'International Factors Administrator',
-    updated_at: DateTime.iso8601('2020-05-17T21:34:50.148Z'),
+    updated_at: DateTime.iso8601('2020-05-17T23:36:15.815Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

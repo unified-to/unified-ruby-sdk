@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(cdp_destination: Models::Shared::CdpDestination, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCdpDestinationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCdpDestinationResponse) }
     def create_cdp_destination(cdp_destination:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_cdp_destination - Create a destination
+      # Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are mapped to the provider's API. Returns the created CdpDestination.
       request = Models::Operations::CreateCdpDestinationRequest.new(
         cdp_destination: cdp_destination,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCdpDestinationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCdpDestinationResponse) }
     def get_cdp_destination(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_cdp_destination - Retrieve a destination
+      # Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCdpDestinationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCdpDestinationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCdpDestinationsResponse) }
     def list_cdp_destinations(request:, timeout_ms: nil)
       # list_cdp_destinations - List all destinations
+      # Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCdpDestinationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCdpDestinationResponse) }
     def patch_cdp_destination(request:, timeout_ms: nil)
       # patch_cdp_destination - Update a destination
+      # Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCdpDestinationResponse) }
     def remove_cdp_destination(connection_id:, id:, timeout_ms: nil)
       # remove_cdp_destination - Remove a destination
+      # Deletes the CdpDestination identified by `id`.
       request = Models::Operations::RemoveCdpDestinationRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCdpDestinationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCdpDestinationResponse) }
     def update_cdp_destination(request:, timeout_ms: nil)
       # update_cdp_destination - Update a destination
+      # Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

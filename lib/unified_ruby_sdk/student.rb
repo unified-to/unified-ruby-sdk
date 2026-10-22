@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(lms_student: Models::Shared::LmsStudent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsStudentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsStudentResponse) }
     def create_lms_student(lms_student:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_student - Create a student
+      # Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
       request = Models::Operations::CreateLmsStudentRequest.new(
         lms_student: lms_student,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsStudentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsStudentResponse) }
     def get_lms_student(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_student - Retrieve a student
+      # Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLmsStudentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLmsStudentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsStudentsResponse) }
     def list_lms_students(request:, timeout_ms: nil)
       # list_lms_students - List all students
+      # Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLmsStudentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsStudentResponse) }
     def patch_lms_student(request:, timeout_ms: nil)
       # patch_lms_student - Update a student
+      # Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsStudentResponse) }
     def remove_lms_student(connection_id:, id:, timeout_ms: nil)
       # remove_lms_student - Remove a student
+      # Deletes the LmsStudent identified by `id`.
       request = Models::Operations::RemoveLmsStudentRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLmsStudentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsStudentResponse) }
     def update_lms_student(request:, timeout_ms: nil)
       # update_lms_student - Update a student
+      # Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

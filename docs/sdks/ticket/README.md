@@ -14,7 +14,7 @@
 
 ## create_ticketing_ticket
 
-Create a ticket
+Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
 
 ### Example Usage
 
@@ -34,7 +34,7 @@ res = s.ticket.create_ticketing_ticket(ticketing_ticket: Models::Shared::Ticketi
   created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
   description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
   due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-  id: 'deedd6a3-2f17-44dd-9af1-a0e87655ca78',
+  id: '62d86b9c-a84d-4a19-a0eb-83fe1be551e3',
   metadata: [],
   priority: 'MEDIUM',
   source: 'email',
@@ -43,7 +43,7 @@ res = s.ticket.create_ticketing_ticket(ticketing_ticket: Models::Shared::Ticketi
   tags: [
     'vilicus',
   ],
-  updated_at: DateTime.iso8601('2021-07-03T18:28:56.759Z'),
+  updated_at: DateTime.iso8601('2021-07-03T18:34:47.521Z'),
   url: 'https://similar-velocity.net/',
 ), connection_id: '<id>')
 
@@ -74,7 +74,7 @@ end
 
 ## get_ticketing_ticket
 
-Retrieve a ticket
+Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -118,7 +118,7 @@ end
 
 ## list_ticketing_tickets
 
-List all tickets
+Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ end
 
 ## patch_ticketing_ticket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -184,7 +184,7 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: 'a6e2a7b5-95b9-4d6b-adf4-3393f513e96b',
+    id: '60b58c10-795c-4a62-be1b-a56385a1a24c',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
@@ -193,7 +193,7 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
     tags: [
       'vilicus',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T18:28:56.759Z'),
+    updated_at: DateTime.iso8601('2021-07-03T18:34:47.521Z'),
     url: 'https://similar-velocity.net/',
   ),
   connection_id: '<id>',
@@ -226,7 +226,7 @@ end
 
 ## remove_ticketing_ticket
 
-Remove a ticket
+Deletes the TicketingTicket identified by `id`.
 
 ### Example Usage
 
@@ -268,7 +268,7 @@ end
 
 ## update_ticketing_ticket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -289,7 +289,7 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: 'a6e2a7b5-95b9-4d6b-adf4-3393f513e96b',
+    id: '60b58c10-795c-4a62-be1b-a56385a1a24c',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
@@ -298,7 +298,7 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
     tags: [
       'vilicus',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T18:28:56.759Z'),
+    updated_at: DateTime.iso8601('2021-07-03T18:34:47.521Z'),
     url: 'https://similar-velocity.net/',
   ),
   connection_id: '<id>',

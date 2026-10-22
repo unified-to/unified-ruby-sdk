@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(verification_request: Models::Shared::VerificationRequest, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateVerificationRequestQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateVerificationRequestResponse) }
     def create_verification_request(verification_request:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_verification_request - Create a request
+      # Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body; they are mapped to the provider's API. Returns the created VerificationRequest.
       request = Models::Operations::CreateVerificationRequestRequest.new(
         verification_request: verification_request,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetVerificationPackageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetVerificationPackageResponse) }
     def get_verification_package(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_verification_package - Retrieve a package
+      # Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetVerificationPackageRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetVerificationRequestQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetVerificationRequestResponse) }
     def get_verification_request(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_verification_request - Retrieve a request
+      # Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetVerificationRequestRequest.new(
         connection_id: connection_id,
         id: id,
@@ -402,6 +405,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListVerificationPackagesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListVerificationPackagesResponse) }
     def list_verification_packages(request:, timeout_ms: nil)
       # list_verification_packages - List all packages
+      # Returns a list of VerificationPackages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -512,6 +516,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListVerificationRequestsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListVerificationRequestsResponse) }
     def list_verification_requests(request:, timeout_ms: nil)
       # list_verification_requests - List all requests
+      # Returns a list of VerificationRequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -622,6 +627,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchVerificationRequestRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchVerificationRequestResponse) }
     def patch_verification_request(request:, timeout_ms: nil)
       # patch_verification_request - Update a request
+      # Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -744,6 +750,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveVerificationRequestResponse) }
     def remove_verification_request(connection_id:, id:, timeout_ms: nil)
       # remove_verification_request - Remove a request
+      # Deletes the VerificationRequest identified by `id`.
       request = Models::Operations::RemoveVerificationRequestRequest.new(
         connection_id: connection_id,
         id: id
@@ -858,6 +865,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateVerificationRequestRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateVerificationRequestResponse) }
     def update_verification_request(request:, timeout_ms: nil)
       # update_verification_request - Update a request
+      # Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

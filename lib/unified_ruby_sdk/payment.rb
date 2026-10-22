@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePaymentLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentLinkResponse) }
     def create_payment_link(payment_link:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_payment_link - Create a link
+      # Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
       request = Models::Operations::CreatePaymentLinkRequest.new(
         payment_link: payment_link,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(payment_payment: Models::Shared::PaymentPayment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePaymentPaymentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentPaymentResponse) }
     def create_payment_payment(payment_payment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_payment_payment - Create a payment
+      # Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are mapped to the provider's API. Returns the created PaymentPayment.
       request = Models::Operations::CreatePaymentPaymentRequest.new(
         payment_payment: payment_payment,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePaymentSubscriptionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentSubscriptionResponse) }
     def create_payment_subscription(payment_subscription:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_payment_subscription - Create a subscription
+      # Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
       request = Models::Operations::CreatePaymentSubscriptionRequest.new(
         payment_subscription: payment_subscription,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentLinkResponse) }
     def get_payment_link(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_link - Retrieve a link
+      # Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPaymentLinkRequest.new(
         connection_id: connection_id,
         id: id,
@@ -542,6 +546,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentPaymentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentPaymentResponse) }
     def get_payment_payment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_payment - Retrieve a payment
+      # Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPaymentPaymentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -658,6 +663,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentPayoutQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentPayoutResponse) }
     def get_payment_payout(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_payout - Retrieve a payout
+      # Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPaymentPayoutRequest.new(
         connection_id: connection_id,
         id: id,
@@ -774,6 +780,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentRefundQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentRefundResponse) }
     def get_payment_refund(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_refund - Retrieve a refund
+      # Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPaymentRefundRequest.new(
         connection_id: connection_id,
         id: id,
@@ -890,6 +897,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentSubscriptionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentSubscriptionResponse) }
     def get_payment_subscription(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_subscription - Retrieve a subscription
+      # Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPaymentSubscriptionRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1006,6 +1014,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPaymentLinksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentLinksResponse) }
     def list_payment_links(request:, timeout_ms: nil)
       # list_payment_links - List all links
+      # Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1116,6 +1125,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPaymentPaymentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentPaymentsResponse) }
     def list_payment_payments(request:, timeout_ms: nil)
       # list_payment_payments - List all payments
+      # Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1226,6 +1236,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPaymentPayoutsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentPayoutsResponse) }
     def list_payment_payouts(request:, timeout_ms: nil)
       # list_payment_payouts - List all payouts
+      # Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1336,6 +1347,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPaymentRefundsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentRefundsResponse) }
     def list_payment_refunds(request:, timeout_ms: nil)
       # list_payment_refunds - List all refunds
+      # Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1446,6 +1458,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPaymentSubscriptionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentSubscriptionsResponse) }
     def list_payment_subscriptions(request:, timeout_ms: nil)
       # list_payment_subscriptions - List all subscriptions
+      # Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1556,6 +1569,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchPaymentLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentLinkResponse) }
     def patch_payment_link(request:, timeout_ms: nil)
       # patch_payment_link - Update a link
+      # Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1678,6 +1692,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchPaymentPaymentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentPaymentResponse) }
     def patch_payment_payment(request:, timeout_ms: nil)
       # patch_payment_payment - Update a payment
+      # Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1800,6 +1815,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchPaymentSubscriptionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentSubscriptionResponse) }
     def patch_payment_subscription(request:, timeout_ms: nil)
       # patch_payment_subscription - Update a subscription
+      # Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1922,6 +1938,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentLinkResponse) }
     def remove_payment_link(connection_id:, id:, timeout_ms: nil)
       # remove_payment_link - Remove a link
+      # Deletes the PaymentLink identified by `id`.
       request = Models::Operations::RemovePaymentLinkRequest.new(
         connection_id: connection_id,
         id: id
@@ -2036,6 +2053,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentPaymentResponse) }
     def remove_payment_payment(connection_id:, id:, timeout_ms: nil)
       # remove_payment_payment - Remove a payment
+      # Deletes the PaymentPayment identified by `id`.
       request = Models::Operations::RemovePaymentPaymentRequest.new(
         connection_id: connection_id,
         id: id
@@ -2150,6 +2168,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentSubscriptionResponse) }
     def remove_payment_subscription(connection_id:, id:, timeout_ms: nil)
       # remove_payment_subscription - Remove a subscription
+      # Deletes the PaymentSubscription identified by `id`.
       request = Models::Operations::RemovePaymentSubscriptionRequest.new(
         connection_id: connection_id,
         id: id
@@ -2264,6 +2283,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdatePaymentLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentLinkResponse) }
     def update_payment_link(request:, timeout_ms: nil)
       # update_payment_link - Update a link
+      # Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2386,6 +2406,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdatePaymentPaymentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentPaymentResponse) }
     def update_payment_payment(request:, timeout_ms: nil)
       # update_payment_payment - Update a payment
+      # Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2508,6 +2529,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdatePaymentSubscriptionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentSubscriptionResponse) }
     def update_payment_subscription(request:, timeout_ms: nil)
       # update_payment_subscription - Update a subscription
+      # Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

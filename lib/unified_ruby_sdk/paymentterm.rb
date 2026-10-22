@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_paymentterm: Models::Shared::AccountingPaymentterm, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingPaymenttermQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingPaymenttermResponse) }
     def create_accounting_paymentterm(accounting_paymentterm:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_paymentterm - Create a paymentterm
+      # Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
       request = Models::Operations::CreateAccountingPaymenttermRequest.new(
         accounting_paymentterm: accounting_paymentterm,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingPaymenttermQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingPaymenttermResponse) }
     def get_accounting_paymentterm(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_paymentterm - Retrieve a paymentterm
+      # Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingPaymenttermRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingPaymenttermsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingPaymenttermsResponse) }
     def list_accounting_paymentterms(request:, timeout_ms: nil)
       # list_accounting_paymentterms - List all paymentterms
+      # Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingPaymenttermRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingPaymenttermResponse) }
     def patch_accounting_paymentterm(request:, timeout_ms: nil)
       # patch_accounting_paymentterm - Update a paymentterm
+      # Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingPaymenttermResponse) }
     def remove_accounting_paymentterm(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_paymentterm - Remove a paymentterm
+      # Deletes the AccountingPaymentterm identified by `id`.
       request = Models::Operations::RemoveAccountingPaymenttermRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingPaymenttermRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingPaymenttermResponse) }
     def update_accounting_paymentterm(request:, timeout_ms: nil)
       # update_accounting_paymentterm - Update a paymentterm
+      # Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

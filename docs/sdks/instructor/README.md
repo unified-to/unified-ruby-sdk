@@ -14,7 +14,7 @@
 
 ## create_lms_instructor
 
-Create an instructor
+Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
 
 ### Example Usage
 
@@ -35,7 +35,7 @@ res = s.instructor.create_lms_instructor(lms_instructor: Models::Shared::LmsInst
     Models::Shared::LmsEmail.new(),
   ],
   first_name: 'Deangelo',
-  id: 'ed7352b2-b4e5-46cd-8c4b-b8efc95d1370',
+  id: '57402488-af3f-404b-8ada-780956f69f5b',
   image_url: 'https://avatars.githubusercontent.com/u/95131132',
   last_name: 'Ritchie',
   metadata: [],
@@ -51,7 +51,7 @@ res = s.instructor.create_lms_instructor(lms_instructor: Models::Shared::LmsInst
     ),
   ],
   title: 'Regional Security Agent',
-  updated_at: DateTime.iso8601('2025-07-24T10:19:49.914Z'),
+  updated_at: DateTime.iso8601('2025-07-25T04:13:25.928Z'),
 ), connection_id: '<id>')
 
 unless res.lms_instructor.nil?
@@ -81,7 +81,7 @@ end
 
 ## get_lms_instructor
 
-Retrieve an instructor
+Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ end
 
 ## list_lms_instructors
 
-List all instructors
+Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ end
 
 ## patch_lms_instructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ req = Models::Operations::PatchLmsInstructorRequest.new(
       Models::Shared::LmsEmail.new(),
     ],
     first_name: 'Deangelo',
-    id: '1327c6b3-eddf-40fb-b758-98ccff3a7545',
+    id: '7ef6015d-4d96-4456-8b89-51b9e4139eb2',
     image_url: 'https://avatars.githubusercontent.com/u/95131132',
     last_name: 'Ritchie',
     metadata: [],
@@ -208,7 +208,7 @@ req = Models::Operations::PatchLmsInstructorRequest.new(
       ),
     ],
     title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-07-24T10:19:49.926Z'),
+    updated_at: DateTime.iso8601('2025-07-25T04:13:25.942Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -240,7 +240,7 @@ end
 
 ## remove_lms_instructor
 
-Remove an instructor
+Deletes the LmsInstructor identified by `id`.
 
 ### Example Usage
 
@@ -282,7 +282,7 @@ end
 
 ## update_lms_instructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ req = Models::Operations::UpdateLmsInstructorRequest.new(
       Models::Shared::LmsEmail.new(),
     ],
     first_name: 'Deangelo',
-    id: '1327c6b3-eddf-40fb-b758-98ccff3a7545',
+    id: '7ef6015d-4d96-4456-8b89-51b9e4139eb2',
     image_url: 'https://avatars.githubusercontent.com/u/95131132',
     last_name: 'Ritchie',
     metadata: [],
@@ -320,7 +320,7 @@ req = Models::Operations::UpdateLmsInstructorRequest.new(
       ),
     ],
     title: 'Regional Security Agent',
-    updated_at: DateTime.iso8601('2025-07-24T10:19:49.926Z'),
+    updated_at: DateTime.iso8601('2025-07-25T04:13:25.942Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

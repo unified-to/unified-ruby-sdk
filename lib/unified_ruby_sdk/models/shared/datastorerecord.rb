@@ -13,7 +13,7 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The record's values, keyed by the table's field (column) names; each value is a typed value object (e.g. { "string": "Acme" } or { "number": 3 })
         field :fields_, Crystalline::Hash.new(Symbol, Models::Shared::DatastoreFieldValue), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('fields'), required: true } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }

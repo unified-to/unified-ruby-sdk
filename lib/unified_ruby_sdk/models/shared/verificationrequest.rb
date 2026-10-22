@@ -21,7 +21,7 @@ module UnifiedRubySDK
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::VerificationMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # The ID of the verification package (the check) to run (a VerificationPackage ID)
         field :package_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('package_id') } }
 
         field :parameters, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::VerificationParameterInput)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parameters') } }
@@ -29,13 +29,13 @@ module UnifiedRubySDK
         field :profile_addresses, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::VerificationAddress)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_addresses') } }
         # YYYY-MM-DD
         field :profile_date_of_birth, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_date_of_birth') } }
-
+        # The email addresses of the person being verified
         field :profile_emails, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_emails') } }
 
         field :profile_gender, Crystalline::Nilable.new(Models::Shared::VerificationRequestProfileGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_gender'), 'decoder': Utils.enum_from_string(Models::Shared::VerificationRequestProfileGender, true) } }
         # XXX.XXX.XXX.XXX
         field :profile_ip_address, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_ip_address') } }
-
+        # The full name of the person being verified
         field :profile_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_name') } }
 
         field :profile_national_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('profile_national_identifier') } }

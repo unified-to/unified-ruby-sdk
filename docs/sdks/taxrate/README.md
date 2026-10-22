@@ -14,7 +14,7 @@
 
 ## create_accounting_taxrate
 
-Create a taxrate
+Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they are mapped to the provider's API. Returns the created AccountingTaxrate.
 
 ### Example Usage
 
@@ -41,7 +41,7 @@ res = s.taxrate.create_accounting_taxrate(accounting_taxrate: Models::Shared::Ac
   created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
   description: 'Exempt (0%)',
   effective_rate: 0.0,
-  id: '1eeede99-19ce-4185-9054-69df8fb32710',
+  id: '01c2eb64-87ee-4c55-9300-b6e0dfec82ad',
   is_active: false,
   is_compound: false,
   metadata: [],
@@ -50,7 +50,7 @@ res = s.taxrate.create_accounting_taxrate(accounting_taxrate: Models::Shared::Ac
   region: 'KS',
   total_rate: 0.0,
   type: Models::Shared::AccountingTaxrateType::SALES,
-  updated_at: DateTime.iso8601('2020-02-13T05:09:51.173Z'),
+  updated_at: DateTime.iso8601('2020-02-13T05:32:42.700Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_taxrate.nil?
@@ -80,7 +80,7 @@ end
 
 ## get_accounting_taxrate
 
-Retrieve a taxrate
+Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ end
 
 ## list_accounting_taxrates
 
-List all taxrates
+Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -169,7 +169,7 @@ end
 
 ## patch_accounting_taxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -197,7 +197,7 @@ req = Models::Operations::PatchAccountingTaxrateRequest.new(
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: '7efef66d-926b-4c67-9803-216a861ed3ec',
+    id: '6fadebf2-8c72-4fb3-97f5-5057ddd19842',
     is_active: false,
     is_compound: false,
     metadata: [],
@@ -206,7 +206,7 @@ req = Models::Operations::PatchAccountingTaxrateRequest.new(
     region: 'KS',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T05:09:51.173Z'),
+    updated_at: DateTime.iso8601('2020-02-13T05:32:42.700Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -238,7 +238,7 @@ end
 
 ## remove_accounting_taxrate
 
-Remove a taxrate
+Deletes the AccountingTaxrate identified by `id`.
 
 ### Example Usage
 
@@ -280,7 +280,7 @@ end
 
 ## update_accounting_taxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -308,7 +308,7 @@ req = Models::Operations::UpdateAccountingTaxrateRequest.new(
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: '7efef66d-926b-4c67-9803-216a861ed3ec',
+    id: '6fadebf2-8c72-4fb3-97f5-5057ddd19842',
     is_active: false,
     is_compound: false,
     metadata: [],
@@ -317,7 +317,7 @@ req = Models::Operations::UpdateAccountingTaxrateRequest.new(
     region: 'KS',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T05:09:51.173Z'),
+    updated_at: DateTime.iso8601('2020-02-13T05:32:42.700Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

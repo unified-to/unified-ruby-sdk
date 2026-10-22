@@ -89,7 +89,7 @@ module UnifiedRubySDK
         field :response_status, Crystalline::Nilable.new(Models::Shared::ResponseStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_status'), 'decoder': Utils.enum_from_string(Models::Shared::ResponseStatus, true) } }
         # URL to view detailed results
         field :response_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('response_url') } }
-
+        # The current state of the assessment order
         field :status, Crystalline::Nilable.new(Models::Shared::AssessmentOrderStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AssessmentOrderStatus, true) } }
         # URL to redirect user to after assessment
         field :target_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('target_url') } }

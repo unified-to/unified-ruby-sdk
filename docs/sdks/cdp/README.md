@@ -44,7 +44,7 @@
 
 ## create_cdp_activation
 
-Create an activation
+Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are mapped to the provider's API. Returns the created CdpActivation.
 
 ### Example Usage
 
@@ -88,7 +88,7 @@ end
 
 ## create_cdp_destination
 
-Create a destination
+Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are mapped to the provider's API. Returns the created CdpDestination.
 
 ### Example Usage
 
@@ -132,7 +132,7 @@ end
 
 ## create_cdp_event
 
-Create an event
+Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
 
 ### Example Usage
 
@@ -176,7 +176,7 @@ end
 
 ## create_cdp_profile
 
-Create a profile
+Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to the provider's API. Returns the created CdpProfile.
 
 ### Example Usage
 
@@ -220,7 +220,7 @@ end
 
 ## create_cdp_segment
 
-Create a segment
+Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to the provider's API. Returns the created CdpSegment.
 
 ### Example Usage
 
@@ -264,7 +264,7 @@ end
 
 ## create_cdp_source
 
-Create a source
+Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to the provider's API. Returns the created CdpSource.
 
 ### Example Usage
 
@@ -308,7 +308,7 @@ end
 
 ## get_cdp_activation
 
-Retrieve an activation
+Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -352,7 +352,7 @@ end
 
 ## get_cdp_destination
 
-Retrieve a destination
+Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -396,7 +396,7 @@ end
 
 ## get_cdp_event
 
-Retrieve an event
+Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -440,7 +440,7 @@ end
 
 ## get_cdp_profile
 
-Retrieve a profile
+Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -484,7 +484,7 @@ end
 
 ## get_cdp_segment
 
-Retrieve a segment
+Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -528,7 +528,7 @@ end
 
 ## get_cdp_source
 
-Retrieve a source
+Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -572,7 +572,7 @@ end
 
 ## list_cdp_activations
 
-List all activations
+Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -617,7 +617,7 @@ end
 
 ## list_cdp_destinations
 
-List all destinations
+Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -662,7 +662,7 @@ end
 
 ## list_cdp_events
 
-List all events
+Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -707,7 +707,7 @@ end
 
 ## list_cdp_profiles
 
-List all profiles
+Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -752,7 +752,7 @@ end
 
 ## list_cdp_segments
 
-List all segments
+Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -797,7 +797,7 @@ end
 
 ## list_cdp_sources
 
-List all sources
+Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -842,7 +842,7 @@ end
 
 ## patch_cdp_activation
 
-Update an activation
+Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
 
 ### Example Usage
 
@@ -889,7 +889,7 @@ end
 
 ## patch_cdp_destination
 
-Update a destination
+Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
 
 ### Example Usage
 
@@ -936,7 +936,7 @@ end
 
 ## patch_cdp_event
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -983,7 +983,7 @@ end
 
 ## patch_cdp_profile
 
-Update a profile
+Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
 
 ### Example Usage
 
@@ -1030,7 +1030,7 @@ end
 
 ## patch_cdp_segment
 
-Update a segment
+Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
 
 ### Example Usage
 
@@ -1077,7 +1077,7 @@ end
 
 ## patch_cdp_source
 
-Update a source
+Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
 
 ### Example Usage
 
@@ -1124,7 +1124,7 @@ end
 
 ## remove_cdp_activation
 
-Remove an activation
+Deletes the CdpActivation identified by `id`.
 
 ### Example Usage
 
@@ -1166,7 +1166,7 @@ end
 
 ## remove_cdp_destination
 
-Remove a destination
+Deletes the CdpDestination identified by `id`.
 
 ### Example Usage
 
@@ -1208,7 +1208,7 @@ end
 
 ## remove_cdp_event
 
-Remove an event
+Deletes the CdpEvent identified by `id`.
 
 ### Example Usage
 
@@ -1250,7 +1250,7 @@ end
 
 ## remove_cdp_profile
 
-Remove a profile
+Deletes the CdpProfile identified by `id`.
 
 ### Example Usage
 
@@ -1292,7 +1292,7 @@ end
 
 ## remove_cdp_segment
 
-Remove a segment
+Deletes the CdpSegment identified by `id`.
 
 ### Example Usage
 
@@ -1334,7 +1334,7 @@ end
 
 ## remove_cdp_source
 
-Remove a source
+Deletes the CdpSource identified by `id`.
 
 ### Example Usage
 
@@ -1376,7 +1376,7 @@ end
 
 ## update_cdp_activation
 
-Update an activation
+Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
 
 ### Example Usage
 
@@ -1423,7 +1423,7 @@ end
 
 ## update_cdp_destination
 
-Update a destination
+Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
 
 ### Example Usage
 
@@ -1470,7 +1470,7 @@ end
 
 ## update_cdp_event
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1517,7 +1517,7 @@ end
 
 ## update_cdp_profile
 
-Update a profile
+Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
 
 ### Example Usage
 
@@ -1564,7 +1564,7 @@ end
 
 ## update_cdp_segment
 
-Update a segment
+Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
 
 ### Example Usage
 
@@ -1611,7 +1611,7 @@ end
 
 ## update_cdp_source
 
-Update a source
+Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
 
 ### Example Usage
 

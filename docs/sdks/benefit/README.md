@@ -14,7 +14,7 @@
 
 ## create_hris_benefit
 
-Create a benefit
+Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 
 ### Example Usage
 
@@ -38,13 +38,13 @@ res = s.benefit.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.ne
   employer_contribution_max_amount: 179_093.0,
   employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
   frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-  id: 'cb407db1-1a01-42f0-a62e-30e0f329f245',
+  id: '100e64a1-48f0-479c-90df-02d8e4b037cc',
   is_active: false,
   metadata: [],
   name: 'Frozen Wooden Ball',
   tax: Models::Shared::Tax::PRE_TAX,
   type: Models::Shared::HrisBenefitType::OTHER,
-  updated_at: DateTime.iso8601('2023-03-20T20:21:01.309Z'),
+  updated_at: DateTime.iso8601('2023-03-21T06:42:51.802Z'),
 ), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
@@ -74,7 +74,7 @@ end
 
 ## get_hris_benefit
 
-Retrieve a benefit
+Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -118,7 +118,7 @@ end
 
 ## list_hris_benefits
 
-List all benefits
+Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ end
 
 ## patch_hris_benefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -188,13 +188,13 @@ req = Models::Operations::PatchHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c',
+    id: 'b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-20T20:21:01.318Z'),
+    updated_at: DateTime.iso8601('2023-03-21T06:42:51.811Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -226,7 +226,7 @@ end
 
 ## remove_hris_benefit
 
-Remove a benefit
+Deletes the HrisBenefit identified by `id`.
 
 ### Example Usage
 
@@ -268,7 +268,7 @@ end
 
 ## update_hris_benefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -293,13 +293,13 @@ req = Models::Operations::UpdateHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c',
+    id: 'b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-20T20:21:01.318Z'),
+    updated_at: DateTime.iso8601('2023-03-21T06:42:51.811Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

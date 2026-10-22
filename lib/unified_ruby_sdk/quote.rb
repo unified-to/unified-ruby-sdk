@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_quote: Models::Shared::AccountingQuote, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingQuoteQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingQuoteResponse) }
     def create_accounting_quote(accounting_quote:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_quote - Create a quote
+      # Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are mapped to the provider's API. Returns the created AccountingQuote.
       request = Models::Operations::CreateAccountingQuoteRequest.new(
         accounting_quote: accounting_quote,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingQuoteQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingQuoteResponse) }
     def get_accounting_quote(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_quote - Retrieve a quote
+      # Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingQuoteRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingQuotesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingQuotesResponse) }
     def list_accounting_quotes(request:, timeout_ms: nil)
       # list_accounting_quotes - List all quotes
+      # Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingQuoteRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingQuoteResponse) }
     def patch_accounting_quote(request:, timeout_ms: nil)
       # patch_accounting_quote - Update a quote
+      # Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingQuoteResponse) }
     def remove_accounting_quote(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_quote - Remove a quote
+      # Deletes the AccountingQuote identified by `id`.
       request = Models::Operations::RemoveAccountingQuoteRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingQuoteRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingQuoteResponse) }
     def update_accounting_quote(request:, timeout_ms: nil)
       # update_accounting_quote - Update a quote
+      # Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

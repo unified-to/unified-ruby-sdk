@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(signing_document: Models::Shared::SigningDocument, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateSigningDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateSigningDocumentResponse) }
     def create_signing_document(signing_document:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_signing_document - Create a document
+      # Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
       request = Models::Operations::CreateSigningDocumentRequest.new(
         signing_document: signing_document,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(signing_signatory: Models::Shared::SigningSignatory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateSigningSignatoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateSigningSignatoryResponse) }
     def create_signing_signatory(signing_signatory:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_signing_signatory - Create a signatory
+      # Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
       request = Models::Operations::CreateSigningSignatoryRequest.new(
         signing_signatory: signing_signatory,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSigningDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSigningDocumentResponse) }
     def get_signing_document(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_signing_document - Retrieve a document
+      # Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetSigningDocumentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSigningSignatoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSigningSignatoryResponse) }
     def get_signing_signatory(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_signing_signatory - Retrieve a signatory
+      # Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetSigningSignatoryRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSigningTemplateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSigningTemplateResponse) }
     def get_signing_template(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_signing_template - Retrieve a template
+      # Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetSigningTemplateRequest.new(
         connection_id: connection_id,
         id: id,
@@ -646,6 +651,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListSigningDocumentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSigningDocumentsResponse) }
     def list_signing_documents(request:, timeout_ms: nil)
       # list_signing_documents - List all documents
+      # Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -756,6 +762,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListSigningSignatoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSigningSignatoriesResponse) }
     def list_signing_signatories(request:, timeout_ms: nil)
       # list_signing_signatories - List all signatories
+      # Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -866,6 +873,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListSigningTemplatesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSigningTemplatesResponse) }
     def list_signing_templates(request:, timeout_ms: nil)
       # list_signing_templates - List all templates
+      # Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -976,6 +984,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchSigningDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchSigningDocumentResponse) }
     def patch_signing_document(request:, timeout_ms: nil)
       # patch_signing_document - Update a document
+      # Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1098,6 +1107,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchSigningSignatoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchSigningSignatoryResponse) }
     def patch_signing_signatory(request:, timeout_ms: nil)
       # patch_signing_signatory - Update a signatory
+      # Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1220,6 +1230,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveSigningDocumentResponse) }
     def remove_signing_document(connection_id:, id:, timeout_ms: nil)
       # remove_signing_document - Remove a document
+      # Deletes the SigningDocument identified by `id`.
       request = Models::Operations::RemoveSigningDocumentRequest.new(
         connection_id: connection_id,
         id: id
@@ -1334,6 +1345,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveSigningSignatoryResponse) }
     def remove_signing_signatory(connection_id:, id:, timeout_ms: nil)
       # remove_signing_signatory - Remove a signatory
+      # Deletes the SigningSignatory identified by `id`.
       request = Models::Operations::RemoveSigningSignatoryRequest.new(
         connection_id: connection_id,
         id: id
@@ -1448,6 +1460,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateSigningDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateSigningDocumentResponse) }
     def update_signing_document(request:, timeout_ms: nil)
       # update_signing_document - Update a document
+      # Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1570,6 +1583,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateSigningSignatoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateSigningSignatoryResponse) }
     def update_signing_signatory(request:, timeout_ms: nil)
       # update_signing_signatory - Update a signatory
+      # Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

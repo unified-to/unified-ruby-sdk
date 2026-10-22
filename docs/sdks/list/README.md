@@ -14,7 +14,7 @@
 
 ## create_martech_list
 
-Create a list
+Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.n
   ),
   created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
   description: 'Vilis.',
-  id: 'fa25e1e6-f0a8-45b9-b31f-6dfd003964d6',
+  id: '2485bd30-b777-49c0-b8f0-bddbe8d2a0fd',
   is_active: true,
   language: 'ru',
   metadata: [],
@@ -50,7 +50,7 @@ res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.n
   sender_name: 'Blake Kuhn',
   sender_phone: '359.305.7962 x28115',
   subject: 'Theca caecus copia crebro valeo ulciscor.',
-  updated_at: DateTime.iso8601('2022-09-13T10:08:43.347Z'),
+  updated_at: DateTime.iso8601('2022-09-13T20:09:43.170Z'),
 ), connection_id: '<id>')
 
 unless res.marketing_list.nil?
@@ -80,7 +80,7 @@ end
 
 ## get_martech_list
 
-Retrieve a list
+Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ end
 
 ## list_martech_lists
 
-List all lists
+Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -169,7 +169,7 @@ end
 
 ## patch_martech_list
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ req = Models::Operations::PatchMartechListRequest.new(
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
     description: 'Vilis.',
-    id: 'fbf9dae2-4ca6-4dd6-8113-05be28e2eadc',
+    id: '0032fa3c-da58-495e-9422-ab015754772d',
     is_active: true,
     language: 'ru',
     metadata: [],
@@ -206,7 +206,7 @@ req = Models::Operations::PatchMartechListRequest.new(
     sender_name: 'Blake Kuhn',
     sender_phone: '359.305.7962 x28115',
     subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-13T10:08:43.358Z'),
+    updated_at: DateTime.iso8601('2022-09-13T20:09:43.183Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -238,7 +238,7 @@ end
 
 ## remove_martech_list
 
-Remove a list
+Deletes the MarketingList identified by `id`.
 
 ### Example Usage
 
@@ -280,7 +280,7 @@ end
 
 ## update_martech_list
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -307,7 +307,7 @@ req = Models::Operations::UpdateMartechListRequest.new(
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
     description: 'Vilis.',
-    id: 'fbf9dae2-4ca6-4dd6-8113-05be28e2eadc',
+    id: '0032fa3c-da58-495e-9422-ab015754772d',
     is_active: true,
     language: 'ru',
     metadata: [],
@@ -317,7 +317,7 @@ req = Models::Operations::UpdateMartechListRequest.new(
     sender_name: 'Blake Kuhn',
     sender_phone: '359.305.7962 x28115',
     subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-13T10:08:43.358Z'),
+    updated_at: DateTime.iso8601('2022-09-13T20:09:43.183Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

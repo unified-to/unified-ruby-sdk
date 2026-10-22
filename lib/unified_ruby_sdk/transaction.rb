@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_transaction: Models::Shared::AccountingTransaction, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingTransactionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingTransactionResponse) }
     def create_accounting_transaction(accounting_transaction:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_transaction - Create a transaction
+      # Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
       request = Models::Operations::CreateAccountingTransactionRequest.new(
         accounting_transaction: accounting_transaction,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingTransactionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingTransactionResponse) }
     def get_accounting_transaction(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_transaction - Retrieve a transaction
+      # Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingTransactionRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingTransactionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingTransactionsResponse) }
     def list_accounting_transactions(request:, timeout_ms: nil)
       # list_accounting_transactions - List all transactions
+      # Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingTransactionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingTransactionResponse) }
     def patch_accounting_transaction(request:, timeout_ms: nil)
       # patch_accounting_transaction - Update a transaction
+      # Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingTransactionResponse) }
     def remove_accounting_transaction(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_transaction - Remove a transaction
+      # Deletes the AccountingTransaction identified by `id`.
       request = Models::Operations::RemoveAccountingTransactionRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingTransactionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingTransactionResponse) }
     def update_accounting_transaction(request:, timeout_ms: nil)
       # update_accounting_transaction - Update a transaction
+      # Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

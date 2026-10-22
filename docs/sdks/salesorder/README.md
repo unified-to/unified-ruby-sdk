@@ -14,7 +14,7 @@
 
 ## create_accounting_salesorder
 
-Create a salesorder
+Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 
 ### Example Usage
 
@@ -40,13 +40,13 @@ res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::S
     region_code: 'MO',
   ),
   category_ids: [],
-  closed_at: DateTime.iso8601('2023-03-25T12:57:23.155Z'),
+  closed_at: DateTime.iso8601('2023-03-25T18:51:55.584Z'),
   created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
   currency: 'USD',
   discount_amount: 0.0,
   fees: [],
   fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-  id: '2ee1a550-d200-4b90-84de-64861a01cf0a',
+  id: '31b40f4c-8c74-473c-834c-108a496eb083',
   lineitems: [],
   metadata: [],
   order_number: '832663',
@@ -68,7 +68,7 @@ res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::S
   tax_amount: 0.0,
   tip_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-03-25T12:57:23.155Z'),
+  updated_at: DateTime.iso8601('2023-03-25T18:51:55.584Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_salesorder.nil?
@@ -98,7 +98,7 @@ end
 
 ## get_accounting_salesorder
 
-Retrieve a salesorder
+Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ end
 
 ## list_accounting_salesorders
 
-List all salesorders
+Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ end
 
 ## patch_accounting_salesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -214,13 +214,13 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
       region_code: 'MO',
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-03-25T12:57:23.174Z'),
+    closed_at: DateTime.iso8601('2023-03-25T18:51:55.597Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: '81444e74-2438-4d48-a12a-446390d8c063',
+    id: 'eb857dee-e60e-475f-bdcd-edb5a376f942',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -242,7 +242,7 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-03-25T12:57:23.174Z'),
+    updated_at: DateTime.iso8601('2023-03-25T18:51:55.597Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -274,7 +274,7 @@ end
 
 ## remove_accounting_salesorder
 
-Remove a salesorder
+Deletes the AccountingSalesorder identified by `id`.
 
 ### Example Usage
 
@@ -316,7 +316,7 @@ end
 
 ## update_accounting_salesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -343,13 +343,13 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
       region_code: 'MO',
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-03-25T12:57:23.174Z'),
+    closed_at: DateTime.iso8601('2023-03-25T18:51:55.597Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: '81444e74-2438-4d48-a12a-446390d8c063',
+    id: 'eb857dee-e60e-475f-bdcd-edb5a376f942',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -371,7 +371,7 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-03-25T12:57:23.174Z'),
+    updated_at: DateTime.iso8601('2023-03-25T18:51:55.597Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

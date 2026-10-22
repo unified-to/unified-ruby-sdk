@@ -14,7 +14,7 @@
 
 ## create_crm_deal
 
-Create a deal
+Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
 
 ### Example Usage
 
@@ -31,19 +31,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   amount: 98_162.0,
-  closed_at: DateTime.iso8601('2024-03-10T10:06:36.060Z'),
-  closing_at: DateTime.iso8601('2025-08-31T12:37:54.634Z'),
+  closed_at: DateTime.iso8601('2024-03-10T15:02:30.290Z'),
+  closing_at: DateTime.iso8601('2025-09-01T04:12:11.705Z'),
   created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
   currency: 'USD',
   description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-  id: '7d6cd0b2-f9c5-42c1-a68b-d59f7680ea80',
+  id: '14ef397c-6011-4e50-90b6-053bbdfd46aa',
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'de172c9b-9f28-4356-b8cd-d329d4ff5974',
+      id: 'f71d3c5e-3680-4811-8ccf-9761d634c9a0',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'conatus',
@@ -56,7 +56,7 @@ res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
     'causa',
     'suus',
   ],
-  updated_at: DateTime.iso8601('2024-10-11T21:12:58.993Z'),
+  updated_at: DateTime.iso8601('2024-10-12T06:24:01.623Z'),
   won_reason: 'Usque libero soleo.',
 ), connection_id: '<id>')
 
@@ -87,7 +87,7 @@ end
 
 ## get_crm_deal
 
-Retrieve a deal
+Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -131,7 +131,7 @@ end
 
 ## list_crm_deals
 
-List all deals
+Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -176,7 +176,7 @@ end
 
 ## patch_crm_deal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -194,19 +194,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-10T10:06:36.063Z'),
-    closing_at: DateTime.iso8601('2025-08-31T12:37:54.643Z'),
+    closed_at: DateTime.iso8601('2024-03-10T15:02:30.296Z'),
+    closing_at: DateTime.iso8601('2025-09-01T04:12:11.724Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3',
+    id: '7b95c55d-c096-4489-9655-08807542832c',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '4ce364e7-3ae1-4d8c-8353-0bcb57c73575',
+        id: '68c0b75f-f90f-4795-916c-ea0dc7f99352',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'conatus',
@@ -219,7 +219,7 @@ req = Models::Operations::PatchCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-11T21:12:58.999Z'),
+    updated_at: DateTime.iso8601('2024-10-12T06:24:01.634Z'),
     won_reason: 'Usque libero soleo.',
   ),
   connection_id: '<id>',
@@ -252,7 +252,7 @@ end
 
 ## remove_crm_deal
 
-Remove a deal
+Deletes the CrmDeal identified by `id`.
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ end
 
 ## update_crm_deal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -312,19 +312,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-10T10:06:36.063Z'),
-    closing_at: DateTime.iso8601('2025-08-31T12:37:54.643Z'),
+    closed_at: DateTime.iso8601('2024-03-10T15:02:30.296Z'),
+    closing_at: DateTime.iso8601('2025-09-01T04:12:11.724Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3',
+    id: '7b95c55d-c096-4489-9655-08807542832c',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '4ce364e7-3ae1-4d8c-8353-0bcb57c73575',
+        id: '68c0b75f-f90f-4795-916c-ea0dc7f99352',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'conatus',
@@ -337,7 +337,7 @@ req = Models::Operations::UpdateCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-11T21:12:58.999Z'),
+    updated_at: DateTime.iso8601('2024-10-12T06:24:01.634Z'),
     won_reason: 'Usque libero soleo.',
   ),
   connection_id: '<id>',

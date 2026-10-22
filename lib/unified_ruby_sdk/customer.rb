@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ticketing_customer: Models::Shared::TicketingCustomer, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingCustomerQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingCustomerResponse) }
     def create_ticketing_customer(ticketing_customer:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ticketing_customer - Create a customer
+      # Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
       request = Models::Operations::CreateTicketingCustomerRequest.new(
         ticketing_customer: ticketing_customer,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingCustomerQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingCustomerResponse) }
     def get_ticketing_customer(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ticketing_customer - Retrieve a customer
+      # Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetTicketingCustomerRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListTicketingCustomersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTicketingCustomersResponse) }
     def list_ticketing_customers(request:, timeout_ms: nil)
       # list_ticketing_customers - List all customers
+      # Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchTicketingCustomerRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTicketingCustomerResponse) }
     def patch_ticketing_customer(request:, timeout_ms: nil)
       # patch_ticketing_customer - Update a customer
+      # Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTicketingCustomerResponse) }
     def remove_ticketing_customer(connection_id:, id:, timeout_ms: nil)
       # remove_ticketing_customer - Remove a customer
+      # Deletes the TicketingCustomer identified by `id`.
       request = Models::Operations::RemoveTicketingCustomerRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateTicketingCustomerRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTicketingCustomerResponse) }
     def update_ticketing_customer(request:, timeout_ms: nil)
       # update_ticketing_customer - Update a customer
+      # Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -14,7 +14,7 @@
 
 ## create_lms_content
 
-Create a content
+Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 
 ### Example Usage
 
@@ -37,7 +37,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   description: 'Usque laboriosam ventosus adflicto.',
   difficulty: 'Beginner',
   duration_minutes: 19.0,
-  id: '30e4f460-4b55-4fc2-956e-f6f5ff936ab5',
+  id: 'c1a50c5f-3b8d-4e1a-89d7-24e8071225bc',
   instructors: [],
   is_active: true,
   languages: [
@@ -97,7 +97,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   metadata: [],
   name: 'ut',
   provider_name: 'Bins LLC',
-  published_at: DateTime.iso8601('2022-09-03T06:18:34.592Z'),
+  published_at: DateTime.iso8601('2022-09-03T13:41:50.364Z'),
   short_description: 'Caritas.',
   skills: [
     'trucido',
@@ -112,7 +112,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   tags: [
     'dens',
   ],
-  updated_at: DateTime.iso8601('2022-10-04T04:34:53.718Z'),
+  updated_at: DateTime.iso8601('2022-10-04T12:18:18.550Z'),
 ), connection_id: '<id>')
 
 unless res.lms_content.nil?
@@ -142,7 +142,7 @@ end
 
 ## get_lms_content
 
-Retrieve a content
+Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ end
 
 ## list_lms_contents
 
-List all contents
+Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -231,7 +231,7 @@ end
 
 ## patch_lms_content
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -255,7 +255,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: 'de227394-fbd0-4a0b-8f28-9e960cc07406',
+    id: '47939b71-9963-4c72-adb3-0c27c660cd9d',
     instructors: [],
     is_active: true,
     languages: [
@@ -315,7 +315,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     metadata: [],
     name: 'ut',
     provider_name: 'Bins LLC',
-    published_at: DateTime.iso8601('2022-09-03T06:18:34.603Z'),
+    published_at: DateTime.iso8601('2022-09-03T13:41:50.375Z'),
     short_description: 'Caritas.',
     skills: [
       'trucido',
@@ -330,7 +330,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-04T04:34:53.729Z'),
+    updated_at: DateTime.iso8601('2022-10-04T12:18:18.562Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -362,7 +362,7 @@ end
 
 ## remove_lms_content
 
-Remove a content
+Deletes the LmsContent identified by `id`.
 
 ### Example Usage
 
@@ -404,7 +404,7 @@ end
 
 ## update_lms_content
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -428,7 +428,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: 'de227394-fbd0-4a0b-8f28-9e960cc07406',
+    id: '47939b71-9963-4c72-adb3-0c27c660cd9d',
     instructors: [],
     is_active: true,
     languages: [
@@ -488,7 +488,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     metadata: [],
     name: 'ut',
     provider_name: 'Bins LLC',
-    published_at: DateTime.iso8601('2022-09-03T06:18:34.603Z'),
+    published_at: DateTime.iso8601('2022-09-03T13:41:50.375Z'),
     short_description: 'Caritas.',
     skills: [
       'trucido',
@@ -503,7 +503,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-04T04:34:53.729Z'),
+    updated_at: DateTime.iso8601('2022-10-04T12:18:18.562Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

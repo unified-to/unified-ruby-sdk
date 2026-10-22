@@ -14,7 +14,7 @@
 
 ## create_hris_attendance
 
-Create an attendance
+Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 
 ### Example Usage
 
@@ -38,32 +38,32 @@ res = s.attendance.create_hris_attendance(hris_attendance: Models::Shared::HrisA
     region: 'Tennessee',
     region_code: 'CA',
   ),
-  approved_at: DateTime.iso8601('2021-09-19T14:06:30.623Z'),
+  approved_at: DateTime.iso8601('2021-09-19T14:36:24.348Z'),
   breaks: [
     Models::Shared::HrisAttendanceBreak.new(
       duration_minutes: 51.0,
-      end_at: DateTime.iso8601('2024-02-14T13:16:00.525Z'),
-      id: '90e38399-cdd9-4d0f-9dea-ce081a3fdf76',
+      end_at: DateTime.iso8601('2024-02-15T00:45:56.493Z'),
+      id: '2febbb18-e9d7-4d0b-b18b-58013d50e9ae',
       is_paid: false,
       name: 'Lunch',
-      start_at: DateTime.iso8601('2023-10-29T23:03:00.394Z'),
+      start_at: DateTime.iso8601('2023-10-30T09:12:03.208Z'),
     ),
   ],
   created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
   currency: 'EUR',
   declared_tips_amount: 54.0,
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2024-04-23T07:48:11.832Z'),
+  end_at: DateTime.iso8601('2024-04-23T20:09:49.905Z'),
   hourly_rate: 16.0,
   hours: 10.0,
-  id: 'd6a7c321-3372-4891-9b5d-f2d24e9a30c5',
+  id: '5e087bcc-2314-41cf-bef5-c866d0a6f59a',
   job_name: 'Human Accountability Administrator',
   metadata: [],
   non_cash_tips_amount: 167.0,
-  start_at: DateTime.iso8601('2021-11-11T00:56:01.833Z'),
+  start_at: DateTime.iso8601('2021-11-11T02:05:21.460Z'),
   status: Models::Shared::HrisAttendanceStatus::OPEN,
   timezone: 'America/Atikokan',
-  updated_at: DateTime.iso8601('2022-01-19T21:04:34.807Z'),
+  updated_at: DateTime.iso8601('2022-01-19T23:06:24.665Z'),
 ), connection_id: '<id>')
 
 unless res.hris_attendance.nil?
@@ -93,7 +93,7 @@ end
 
 ## get_hris_attendance
 
-Retrieve an attendance
+Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -137,7 +137,7 @@ end
 
 ## list_hris_attendances
 
-List all attendances
+Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -182,7 +182,7 @@ end
 
 ## patch_hris_attendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -207,32 +207,32 @@ req = Models::Operations::PatchHrisAttendanceRequest.new(
       region: 'Tennessee',
       region_code: 'CA',
     ),
-    approved_at: DateTime.iso8601('2021-09-19T14:06:30.624Z'),
+    approved_at: DateTime.iso8601('2021-09-19T14:36:24.348Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-14T13:16:00.540Z'),
-        id: '939123d3-e26b-44f5-855a-b592fc011641',
+        end_at: DateTime.iso8601('2024-02-15T00:45:56.503Z'),
+        id: '6aaf0655-e6e5-451b-8099-50e6f3a2a33d',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-10-29T23:03:00.407Z'),
+        start_at: DateTime.iso8601('2023-10-30T09:12:03.217Z'),
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-04-23T07:48:11.848Z'),
+    end_at: DateTime.iso8601('2024-04-23T20:09:49.916Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: 'de583745-c602-4069-9149-69ec0f9587aa',
+    id: '31e79ecd-e0a3-43a4-b3a8-492aff61cb64',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-11T00:56:01.835Z'),
+    start_at: DateTime.iso8601('2021-11-11T02:05:21.461Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-19T21:04:34.810Z'),
+    updated_at: DateTime.iso8601('2022-01-19T23:06:24.667Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -264,7 +264,7 @@ end
 
 ## remove_hris_attendance
 
-Remove an attendance
+Deletes the HrisAttendance identified by `id`.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ end
 
 ## update_hris_attendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -331,32 +331,32 @@ req = Models::Operations::UpdateHrisAttendanceRequest.new(
       region: 'Tennessee',
       region_code: 'CA',
     ),
-    approved_at: DateTime.iso8601('2021-09-19T14:06:30.624Z'),
+    approved_at: DateTime.iso8601('2021-09-19T14:36:24.348Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-14T13:16:00.540Z'),
-        id: '939123d3-e26b-44f5-855a-b592fc011641',
+        end_at: DateTime.iso8601('2024-02-15T00:45:56.503Z'),
+        id: '6aaf0655-e6e5-451b-8099-50e6f3a2a33d',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-10-29T23:03:00.407Z'),
+        start_at: DateTime.iso8601('2023-10-30T09:12:03.217Z'),
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-04-23T07:48:11.848Z'),
+    end_at: DateTime.iso8601('2024-04-23T20:09:49.916Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: 'de583745-c602-4069-9149-69ec0f9587aa',
+    id: '31e79ecd-e0a3-43a4-b3a8-492aff61cb64',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-11T00:56:01.835Z'),
+    start_at: DateTime.iso8601('2021-11-11T02:05:21.461Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-19T21:04:34.810Z'),
+    updated_at: DateTime.iso8601('2022-01-19T23:06:24.667Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

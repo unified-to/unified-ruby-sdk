@@ -14,7 +14,7 @@
 
 ## create_ads_ad
 
-Create an ad
+Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 
 ### Example Usage
 
@@ -37,11 +37,11 @@ res = s.ad.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
   creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
   description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
   final_url: 'https://improbable-sanity.com',
-  id: '1607f143-283d-4a82-ace1-3ebc68008f8f',
+  id: '79efa2ba-b89a-4321-9695-db7067961ed4',
   metadata: [],
   name: 'Hermiston Group',
   status: Models::Shared::AdsAdStatus::ARCHIVED,
-  updated_at: DateTime.iso8601('2024-06-18T13:39:37.415Z'),
+  updated_at: DateTime.iso8601('2024-06-18T23:21:17.005Z'),
 ), connection_id: '<id>')
 
 unless res.ads_ad.nil?
@@ -71,7 +71,7 @@ end
 
 ## get_ads_ad
 
-Retrieve an ad
+Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -115,7 +115,7 @@ end
 
 ## list_ads_ads
 
-List all ads
+Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -160,7 +160,7 @@ end
 
 ## patch_ads_ad
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -184,11 +184,11 @@ req = Models::Operations::PatchAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: '95185ea9-82a3-415a-b9ce-ae773a1ace06',
+    id: 'e492fe18-8c3c-4017-9124-e101e5326ca6',
     metadata: [],
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-18T13:39:37.425Z'),
+    updated_at: DateTime.iso8601('2024-06-18T23:21:17.023Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -220,7 +220,7 @@ end
 
 ## remove_ads_ad
 
-Remove an ad
+Deletes the AdsAd identified by `id`.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ end
 
 ## update_ads_ad
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -286,11 +286,11 @@ req = Models::Operations::UpdateAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: '95185ea9-82a3-415a-b9ce-ae773a1ace06',
+    id: 'e492fe18-8c3c-4017-9124-e101e5326ca6',
     metadata: [],
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-18T13:39:37.425Z'),
+    updated_at: DateTime.iso8601('2024-06-18T23:21:17.023Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

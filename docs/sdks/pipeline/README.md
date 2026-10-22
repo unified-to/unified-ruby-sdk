@@ -14,7 +14,7 @@
 
 ## create_crm_pipeline
 
-Create a pipeline
+Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 
 ### Example Usage
 
@@ -33,7 +33,7 @@ res = s.pipeline.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.n
   created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
   deal_probability: 99.0,
   display_order: 8.0,
-  id: '020faeaa-7aef-48eb-8503-9e5b08726b8e',
+  id: '314b38fc-3392-4486-9232-bf4854c6611c',
   is_active: true,
   metadata: [],
   name: 'Small Steel Bacon',
@@ -43,13 +43,13 @@ res = s.pipeline.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.n
       created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
       deal_probability: 84.0,
       display_order: 72.0,
-      id: '431f199f-0e23-4baa-a7b9-9c583698c712',
+      id: '38d5c0fb-d5a7-4980-8b1b-6cc7ad149ac7',
       is_closed: true,
       name: 'Veniam.',
-      updated_at: DateTime.iso8601('2025-10-10T12:28:32.951Z'),
+      updated_at: DateTime.iso8601('2025-10-11T05:50:12.601Z'),
     ),
   ],
-  updated_at: DateTime.iso8601('2025-11-01T05:54:52.602Z'),
+  updated_at: DateTime.iso8601('2025-11-01T23:38:47.531Z'),
 ), connection_id: '<id>')
 
 unless res.crm_pipeline.nil?
@@ -79,7 +79,7 @@ end
 
 ## get_crm_pipeline
 
-Retrieve a pipeline
+Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -123,7 +123,7 @@ end
 
 ## list_crm_pipelines
 
-List all pipelines
+Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -168,7 +168,7 @@ end
 
 ## patch_crm_pipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: 'e646ed6a-5891-4590-920f-56531ac2c297',
+    id: '1241cfda-16af-44f0-9452-228e4c096473',
     is_active: true,
     metadata: [],
     name: 'Small Steel Bacon',
@@ -198,13 +198,13 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: 'adb7be55-98ab-4e90-9d73-31fb8021e556',
+        id: '142fac8b-ac6e-4b8d-927c-ec9f5b6b87da',
         is_closed: true,
         name: 'Veniam.',
-        updated_at: DateTime.iso8601('2025-10-10T12:28:32.963Z'),
+        updated_at: DateTime.iso8601('2025-10-11T05:50:12.613Z'),
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-01T05:54:52.614Z'),
+    updated_at: DateTime.iso8601('2025-11-01T23:38:47.543Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -236,7 +236,7 @@ end
 
 ## remove_crm_pipeline
 
-Remove a pipeline
+Deletes the CrmPipeline identified by `id`.
 
 ### Example Usage
 
@@ -278,7 +278,7 @@ end
 
 ## update_crm_pipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -298,7 +298,7 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: 'e646ed6a-5891-4590-920f-56531ac2c297',
+    id: '1241cfda-16af-44f0-9452-228e4c096473',
     is_active: true,
     metadata: [],
     name: 'Small Steel Bacon',
@@ -308,13 +308,13 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: 'adb7be55-98ab-4e90-9d73-31fb8021e556',
+        id: '142fac8b-ac6e-4b8d-927c-ec9f5b6b87da',
         is_closed: true,
         name: 'Veniam.',
-        updated_at: DateTime.iso8601('2025-10-10T12:28:32.963Z'),
+        updated_at: DateTime.iso8601('2025-10-11T05:50:12.613Z'),
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-01T05:54:52.614Z'),
+    updated_at: DateTime.iso8601('2025-11-01T23:38:47.543Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

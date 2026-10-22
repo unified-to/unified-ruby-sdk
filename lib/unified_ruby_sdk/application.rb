@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ats_application: Models::Shared::AtsApplication, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsApplicationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsApplicationResponse) }
     def create_ats_application(ats_application:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_application - Create an application
+      # Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
       request = Models::Operations::CreateAtsApplicationRequest.new(
         ats_application: ats_application,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsApplicationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsApplicationResponse) }
     def get_ats_application(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_application - Retrieve an application
+      # Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsApplicationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsApplicationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsApplicationsResponse) }
     def list_ats_applications(request:, timeout_ms: nil)
       # list_ats_applications - List all applications
+      # Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsApplicationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsApplicationResponse) }
     def patch_ats_application(request:, timeout_ms: nil)
       # patch_ats_application - Update an application
+      # Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsApplicationResponse) }
     def remove_ats_application(connection_id:, id:, timeout_ms: nil)
       # remove_ats_application - Remove an application
+      # Deletes the AtsApplication identified by `id`.
       request = Models::Operations::RemoveAtsApplicationRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsApplicationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsApplicationResponse) }
     def update_ats_application(request:, timeout_ms: nil)
       # update_ats_application - Update an application
+      # Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

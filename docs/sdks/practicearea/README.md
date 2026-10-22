@@ -14,7 +14,7 @@
 
 ## create_legal_practicearea
 
-Create a practicearea
+Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 
 ### Example Usage
 
@@ -32,11 +32,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.practicearea.create_legal_practicearea(legal_practicearea: Models::Shared::LegalPracticearea.new(
   code: 'QCA',
   created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-  id: 'ad6630d8-1aec-45c2-9620-ed1693d104c8',
+  id: '14c1b0ec-9925-4ac1-a8ac-f6491f0df2a0',
   metadata: [],
   name: 'witty Law',
   type: Models::Shared::LegalPracticeareaType::EDUCATION,
-  updated_at: DateTime.iso8601('2025-08-27T17:08:43.506Z'),
+  updated_at: DateTime.iso8601('2025-08-28T09:35:39.147Z'),
 ), connection_id: '<id>')
 
 unless res.legal_practicearea.nil?
@@ -66,7 +66,7 @@ end
 
 ## get_legal_practicearea
 
-Retrieve a practicearea
+Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -110,7 +110,7 @@ end
 
 ## list_legal_practiceareas
 
-List all practiceareas
+Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -155,7 +155,7 @@ end
 
 ## patch_legal_practicearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -174,11 +174,11 @@ req = Models::Operations::PatchLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'e61009e9-ee31-4608-b2c4-39e037f7d5e1',
+    id: '592d6358-4956-42ee-8be7-964244924972',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-08-27T17:08:43.521Z'),
+    updated_at: DateTime.iso8601('2025-08-28T09:35:39.162Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -210,7 +210,7 @@ end
 
 ## remove_legal_practicearea
 
-Remove a practicearea
+Deletes the LegalPracticearea identified by `id`.
 
 ### Example Usage
 
@@ -252,7 +252,7 @@ end
 
 ## update_legal_practicearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -271,11 +271,11 @@ req = Models::Operations::UpdateLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'e61009e9-ee31-4608-b2c4-39e037f7d5e1',
+    id: '592d6358-4956-42ee-8be7-964244924972',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-08-27T17:08:43.521Z'),
+    updated_at: DateTime.iso8601('2025-08-28T09:35:39.162Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

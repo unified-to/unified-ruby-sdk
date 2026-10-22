@@ -14,7 +14,7 @@
 
 ## create_hris_deduction
 
-Create a deduction
+Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 
 ### Example Usage
 
@@ -37,14 +37,14 @@ res = s.deduction.create_hris_deduction(hris_deduction: Models::Shared::HrisDedu
   employer_type: Models::Shared::EmployerType::PERCENTAGE,
   frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
   garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-  id: 'b93fdf66-995f-4f76-b945-d3a17ab7254b',
+  id: 'a86ffc16-9876-48ec-aaf3-43e7a64c206d',
   is_active: true,
   max_amount: 21_794.0,
   metadata: [],
   notes: 'Carmen desidero.',
-  start_at: DateTime.iso8601('2025-03-15T07:40:47.474Z'),
+  start_at: DateTime.iso8601('2025-03-16T01:46:40.270Z'),
   type: Models::Shared::HrisDeductionType::FIXED,
-  updated_at: DateTime.iso8601('2024-03-22T06:59:33.108Z'),
+  updated_at: DateTime.iso8601('2024-03-22T21:37:00.011Z'),
 ), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -74,7 +74,7 @@ end
 
 ## get_hris_deduction
 
-Retrieve a deduction
+Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -118,7 +118,7 @@ end
 
 ## list_hris_deductions
 
-List all deductions
+Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ end
 
 ## patch_hris_deduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -187,14 +187,14 @@ req = Models::Operations::PatchHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'c3213a23-98f3-4a00-85e5-4297c58c69b9',
+    id: '2b0eecf4-4ef5-4c58-952b-20761e9d8c04',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-03-15T07:40:47.491Z'),
+    start_at: DateTime.iso8601('2025-03-16T01:46:40.283Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-03-22T06:59:33.122Z'),
+    updated_at: DateTime.iso8601('2024-03-22T21:37:00.022Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -226,7 +226,7 @@ end
 
 ## remove_hris_deduction
 
-Remove a deduction
+Deletes the HrisDeduction identified by `id`.
 
 ### Example Usage
 
@@ -268,7 +268,7 @@ end
 
 ## update_hris_deduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -292,14 +292,14 @@ req = Models::Operations::UpdateHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'c3213a23-98f3-4a00-85e5-4297c58c69b9',
+    id: '2b0eecf4-4ef5-4c58-952b-20761e9d8c04',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-03-15T07:40:47.491Z'),
+    start_at: DateTime.iso8601('2025-03-16T01:46:40.283Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-03-22T06:59:33.122Z'),
+    updated_at: DateTime.iso8601('2024-03-22T21:37:00.022Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

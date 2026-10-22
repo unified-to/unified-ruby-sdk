@@ -35,7 +35,7 @@ module UnifiedRubySDK
         field :is_unread, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_unread') } }
         # for email systems, this field represents the CC value
         field :mentioned_members, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingMember)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mentioned_members') } }
-
+        # The message body as plain text
         field :message, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
 
         field :message_html, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message_html') } }

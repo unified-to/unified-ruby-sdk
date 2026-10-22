@@ -23,7 +23,7 @@ module UnifiedRubySDK
         field :company_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The contact's email addresses
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
@@ -41,7 +41,7 @@ module UnifiedRubySDK
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # The contact's display name: the company name for a business, or the person's full name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }

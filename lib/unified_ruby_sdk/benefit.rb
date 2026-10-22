@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(hris_benefit: Models::Shared::HrisBenefit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisBenefitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisBenefitResponse) }
     def create_hris_benefit(hris_benefit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_benefit - Create a benefit
+      # Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
       request = Models::Operations::CreateHrisBenefitRequest.new(
         hris_benefit: hris_benefit,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisBenefitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisBenefitResponse) }
     def get_hris_benefit(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_benefit - Retrieve a benefit
+      # Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisBenefitRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisBenefitsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisBenefitsResponse) }
     def list_hris_benefits(request:, timeout_ms: nil)
       # list_hris_benefits - List all benefits
+      # Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisBenefitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisBenefitResponse) }
     def patch_hris_benefit(request:, timeout_ms: nil)
       # patch_hris_benefit - Update a benefit
+      # Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisBenefitResponse) }
     def remove_hris_benefit(connection_id:, id:, timeout_ms: nil)
       # remove_hris_benefit - Remove a benefit
+      # Deletes the HrisBenefit identified by `id`.
       request = Models::Operations::RemoveHrisBenefitRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisBenefitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisBenefitResponse) }
     def update_hris_benefit(request:, timeout_ms: nil)
       # update_hris_benefit - Update a benefit
+      # Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -14,7 +14,7 @@
 
 ## create_accounting_journal
 
-Create a journal
+Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 
 ### Example Usage
 
@@ -35,16 +35,16 @@ res = s.journal.create_accounting_journal(accounting_journal: Models::Shared::Ac
   created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
   currency: 'CAD',
   description: 'Cilicium minima calco constans adipisci.',
-  id: 'fb4cb023-dbc9-43ae-bb15-ccbfbf28de12',
+  id: 'b9302d8f-af88-40b1-a888-c2f2f8fe9263',
   is_inclusive_of_tax: true,
   lineitems: [],
   metadata: [],
-  posted_at: DateTime.iso8601('2023-11-06T10:40:52.829Z'),
+  posted_at: DateTime.iso8601('2023-11-06T23:54:38.642Z'),
   reference: 'JE-78884',
   source: 'crustulum',
   status: Models::Shared::AccountingJournalStatus::VOID,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2022-01-10T19:42:52.129Z'),
+  updated_at: DateTime.iso8601('2022-01-11T02:27:14.336Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_journal.nil?
@@ -74,7 +74,7 @@ end
 
 ## get_accounting_journal
 
-Retrieve a journal
+Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -118,7 +118,7 @@ end
 
 ## list_accounting_journals
 
-List all journals
+Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ end
 
 ## patch_accounting_journal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -185,16 +185,16 @@ req = Models::Operations::PatchAccountingJournalRequest.new(
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
     description: 'Cilicium minima calco constans adipisci.',
-    id: 'd31da702-1e25-44be-a4d9-de209d629dab',
+    id: '3975395e-fb4b-446b-9434-0530f747cc4f',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-06T10:40:52.844Z'),
+    posted_at: DateTime.iso8601('2023-11-06T23:54:38.655Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-10T19:42:52.137Z'),
+    updated_at: DateTime.iso8601('2022-01-11T02:27:14.342Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -226,7 +226,7 @@ end
 
 ## remove_accounting_journal
 
-Remove a journal
+Deletes the AccountingJournal identified by `id`.
 
 ### Example Usage
 
@@ -268,7 +268,7 @@ end
 
 ## update_accounting_journal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -290,16 +290,16 @@ req = Models::Operations::UpdateAccountingJournalRequest.new(
     created_at: DateTime.iso8601('2020-02-20T15:14:55.881Z'),
     currency: 'CAD',
     description: 'Cilicium minima calco constans adipisci.',
-    id: 'd31da702-1e25-44be-a4d9-de209d629dab',
+    id: '3975395e-fb4b-446b-9434-0530f747cc4f',
     is_inclusive_of_tax: true,
     lineitems: [],
     metadata: [],
-    posted_at: DateTime.iso8601('2023-11-06T10:40:52.844Z'),
+    posted_at: DateTime.iso8601('2023-11-06T23:54:38.655Z'),
     reference: 'JE-78884',
     source: 'crustulum',
     status: Models::Shared::AccountingJournalStatus::VOID,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2022-01-10T19:42:52.137Z'),
+    updated_at: DateTime.iso8601('2022-01-11T02:27:14.342Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

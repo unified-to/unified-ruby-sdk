@@ -45,7 +45,7 @@ module UnifiedRubySDK
         field :minimum_degree, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('minimum_degree') } }
 
         field :minimum_experience_years, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('minimum_experience_years') } }
-
+        # The job's title
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Number of openings for the job
         field :number_of_openings, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('number_of_openings') } }

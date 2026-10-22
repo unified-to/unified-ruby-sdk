@@ -20,7 +20,7 @@
 
 ## create_commerce_collection
 
-Create a collection
+Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 
 ### Example Usage
 
@@ -38,7 +38,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.collection.create_commerce_collection(commerce_collection: Models::Shared::CommerceCollection.new(
   created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
   description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-  id: '1991e4a2-1f34-47c0-8486-bcee77e5935d',
+  id: '560e3cd0-8477-4d34-8817-5267ee4dd2e8',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -47,10 +47,10 @@ res = s.collection.create_commerce_collection(commerce_collection: Models::Share
     Models::Shared::CommerceItemMedia.new(
       alt: 'Defungo adopto thorax.',
       height: 759.0,
-      id: 'd299b709-a77d-4d3b-b544-ec9239c78317',
+      id: 'ccbbc897-00c8-45af-8cfe-3f86deb56e50',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '6df6510d-b37f-41f1-8606-9f92778811de',
+          id: 'ddc27840-37e5-4eb7-8548-ea2dce367895',
           slug: 'censura',
           value: 'toties',
         ),
@@ -63,7 +63,7 @@ res = s.collection.create_commerce_collection(commerce_collection: Models::Share
   ],
   metadata: [
     Models::Shared::CommerceMetadata.new(
-      id: '25c38385-e463-4e8f-a923-ecef43f8e92b',
+      id: 'ae39db6a-f878-4ab2-8db7-5b7a0d697d3e',
       slug: 'aetas',
       value: 'consuasor',
     ),
@@ -77,7 +77,7 @@ res = s.collection.create_commerce_collection(commerce_collection: Models::Share
     'contego',
   ],
   type: Models::Shared::CommerceCollectionType::COLLECTION,
-  updated_at: DateTime.iso8601('2025-03-15T01:18:21.480Z'),
+  updated_at: DateTime.iso8601('2025-03-15T13:26:27.513Z'),
 ), connection_id: '<id>')
 
 unless res.commerce_collection.nil?
@@ -107,7 +107,7 @@ end
 
 ## create_lms_collection
 
-Create a collection
+Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.collection.create_lms_collection(lms_collection: Models::Shared::LmsCollection.new(
   created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
   description: 'Ab.',
-  id: 'ad8c76c0-de0d-461e-99ec-2610973fca28',
+  id: '0eef2f70-ca9e-44d8-9319-214f259637da',
   is_active: true,
   media: [
     Models::Shared::LmsMedia.new(
@@ -142,7 +142,7 @@ res = s.collection.create_lms_collection(lms_collection: Models::Shared::LmsColl
   ],
   metadata: [],
   name: 'ara',
-  updated_at: DateTime.iso8601('2026-07-30T07:04:58.077Z'),
+  updated_at: DateTime.iso8601('2026-07-31T06:06:12.452Z'),
 ), connection_id: '<id>')
 
 unless res.lms_collection.nil?
@@ -172,7 +172,7 @@ end
 
 ## get_commerce_collection
 
-Retrieve a collection
+Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -216,7 +216,7 @@ end
 
 ## get_lms_collection
 
-Retrieve a collection
+Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -260,7 +260,7 @@ end
 
 ## list_commerce_collections
 
-List all collections
+Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -305,7 +305,7 @@ end
 
 ## list_lms_collections
 
-List all collections
+Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -350,7 +350,7 @@ end
 
 ## patch_commerce_collection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -369,7 +369,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: 'b9e54251-c92b-4782-b1bb-926437414e65',
+    id: '6661f3a1-7c4f-405f-b3a5-1163410c2d96',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -378,10 +378,10 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Defungo adopto thorax.',
         height: 759.0,
-        id: 'b5d8356e-a5c4-4e37-88f1-f0f6c4baf524',
+        id: 'bea5d4e2-18f3-4900-a6c6-8002a365d0d3',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'be896d4e-ad51-4055-86be-b2da90d4641b',
+            id: '1b01c6f9-cebf-4586-b996-c6351c02781a',
             slug: 'censura',
             value: 'toties',
           ),
@@ -394,7 +394,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: 'e6a20238-d170-498a-be5d-6832a5df7d28',
+        id: '05eecd1d-72a1-4c34-b80c-a9b9fc79cd03',
         slug: 'aetas',
         value: 'consuasor',
       ),
@@ -408,7 +408,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       'contego',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-15T01:18:21.493Z'),
+    updated_at: DateTime.iso8601('2025-03-15T13:26:27.534Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -440,7 +440,7 @@ end
 
 ## patch_lms_collection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -459,7 +459,7 @@ req = Models::Operations::PatchLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Ab.',
-    id: '776423a0-c2ca-4984-93a0-d53a46ddee1b',
+    id: '935b9a6d-4c66-441d-a9cb-34b4e9e56c7f',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -476,7 +476,7 @@ req = Models::Operations::PatchLmsCollectionRequest.new(
     ],
     metadata: [],
     name: 'ara',
-    updated_at: DateTime.iso8601('2026-07-30T07:04:58.094Z'),
+    updated_at: DateTime.iso8601('2026-07-31T06:06:12.473Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -508,7 +508,7 @@ end
 
 ## remove_commerce_collection
 
-Remove a collection
+Deletes the CommerceCollection identified by `id`.
 
 ### Example Usage
 
@@ -550,7 +550,7 @@ end
 
 ## remove_lms_collection
 
-Remove a collection
+Deletes the LmsCollection identified by `id`.
 
 ### Example Usage
 
@@ -592,7 +592,7 @@ end
 
 ## update_commerce_collection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -611,7 +611,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: 'b9e54251-c92b-4782-b1bb-926437414e65',
+    id: '6661f3a1-7c4f-405f-b3a5-1163410c2d96',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -620,10 +620,10 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Defungo adopto thorax.',
         height: 759.0,
-        id: 'b5d8356e-a5c4-4e37-88f1-f0f6c4baf524',
+        id: 'bea5d4e2-18f3-4900-a6c6-8002a365d0d3',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'be896d4e-ad51-4055-86be-b2da90d4641b',
+            id: '1b01c6f9-cebf-4586-b996-c6351c02781a',
             slug: 'censura',
             value: 'toties',
           ),
@@ -636,7 +636,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: 'e6a20238-d170-498a-be5d-6832a5df7d28',
+        id: '05eecd1d-72a1-4c34-b80c-a9b9fc79cd03',
         slug: 'aetas',
         value: 'consuasor',
       ),
@@ -650,7 +650,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       'contego',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-15T01:18:21.493Z'),
+    updated_at: DateTime.iso8601('2025-03-15T13:26:27.534Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -682,7 +682,7 @@ end
 
 ## update_lms_collection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -701,7 +701,7 @@ req = Models::Operations::UpdateLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Ab.',
-    id: '776423a0-c2ca-4984-93a0-d53a46ddee1b',
+    id: '935b9a6d-4c66-441d-a9cb-34b4e9e56c7f',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -718,7 +718,7 @@ req = Models::Operations::UpdateLmsCollectionRequest.new(
     ],
     metadata: [],
     name: 'ara',
-    updated_at: DateTime.iso8601('2026-07-30T07:04:58.094Z'),
+    updated_at: DateTime.iso8601('2026-07-31T06:06:12.473Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

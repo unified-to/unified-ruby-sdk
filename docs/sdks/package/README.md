@@ -39,7 +39,7 @@ res = s.package.create_assessment_package(assessment_package: Models::Shared::As
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: '2d44f122-f4ea-4ce0-9cb8-b0ba6a0ec042',
+  id: 'eb4d661b-ca91-4c5c-a007-2e86a0271834',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -54,7 +54,7 @@ res = s.package.create_assessment_package(assessment_package: Models::Shared::As
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-25T09:14:33.770Z'),
+  updated_at: DateTime.iso8601('2023-09-25T14:23:50.448Z'),
 ), connection_id: '<id>')
 
 unless res.assessment_package.nil?
@@ -124,7 +124,7 @@ end
 
 ## get_verification_package
 
-Retrieve a package
+Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -211,7 +211,7 @@ end
 
 ## list_verification_packages
 
-List all packages
+Returns a list of VerificationPackages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -279,7 +279,7 @@ res = s.package.patch_assessment_package(assessment_package: Models::Shared::Ass
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: 'cf09d7d7-035a-4cc5-b696-f2c8c469f143',
+  id: '0c12b87f-9455-4a8a-926b-cea0e8c84d25',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -294,7 +294,7 @@ res = s.package.patch_assessment_package(assessment_package: Models::Shared::Ass
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-25T09:14:33.775Z'),
+  updated_at: DateTime.iso8601('2023-09-25T14:23:50.454Z'),
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?
@@ -388,7 +388,7 @@ res = s.package.update_assessment_package(assessment_package: Models::Shared::As
   description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
   has_redirect_url: true,
   has_target_url: false,
-  id: 'cf09d7d7-035a-4cc5-b696-f2c8c469f143',
+  id: '0c12b87f-9455-4a8a-926b-cea0e8c84d25',
   info_url: 'https://ugly-instance.biz/',
   integration_types: [
     'viridis',
@@ -403,7 +403,7 @@ res = s.package.update_assessment_package(assessment_package: Models::Shared::As
     'clamo',
   ],
   type: Models::Shared::AssessmentPackageType::VIDEO_INTERVIEW,
-  updated_at: DateTime.iso8601('2023-09-25T09:14:33.775Z'),
+  updated_at: DateTime.iso8601('2023-09-25T14:23:50.454Z'),
 ), connection_id: '<id>', id: '<id>')
 
 unless res.assessment_package.nil?

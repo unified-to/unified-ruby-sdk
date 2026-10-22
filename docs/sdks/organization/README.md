@@ -28,7 +28,7 @@
 
 ## create_ads_organization
 
-Create an organization
+Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
 
 ### Example Usage
 
@@ -47,13 +47,13 @@ res = s.organization.create_ads_organization(ads_organization: Models::Shared::A
   account_number: 'LQUJx8zQBW',
   created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
   currency: 'USD',
-  id: '37fa02a7-2485-4c88-a329-c38febfa1be4',
+  id: 'f5896d7a-b8b5-4867-832d-d97788717610',
   managers: [],
   metadata: [],
   name: 'Ankunding Inc',
   status: Models::Shared::AdsOrganizationStatus::PROCESSING,
   timezone: 'Europe/Chisinau',
-  updated_at: DateTime.iso8601('2026-03-29T03:04:47.129Z'),
+  updated_at: DateTime.iso8601('2026-03-30T00:42:16.467Z'),
 ), connection_id: '<id>')
 
 unless res.ads_organization.nil?
@@ -83,7 +83,7 @@ end
 
 ## create_genai_organization
 
-Create an organization
+Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 
 ### Example Usage
 
@@ -101,10 +101,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.organization.create_genai_organization(genai_organization: Models::Shared::GenaiOrganization.new(
   created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
   description: 'Voluptates abeo subseco.',
-  id: 'f9efe1a2-99d3-49e7-b858-8a1f79714fb9',
+  id: '979ae74f-14ff-48a7-ad20-609831f3425d',
   is_active: false,
   name: 'officially about',
-  updated_at: DateTime.iso8601('2023-01-26T10:38:34.878Z'),
+  updated_at: DateTime.iso8601('2023-01-26T19:34:30.479Z'),
 ), connection_id: '<id>')
 
 unless res.genai_organization.nil?
@@ -134,7 +134,7 @@ end
 
 ## create_repo_organization
 
-Create an organization
+Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
 ### Example Usage
 
@@ -153,10 +153,10 @@ res = s.organization.create_repo_organization(repo_organization: Models::Shared:
   avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
   created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
   description: 'Trepide defendo supra testimonium ager.',
-  id: 'd11dbf84-08b3-42b3-9028-bf71a50ce463',
+  id: '933e206a-d0b9-4551-b0a1-48ec334aa3f3',
   metadata: [],
   name: 'Denesik - Lemke',
-  updated_at: DateTime.iso8601('2023-08-21T15:08:19.151Z'),
+  updated_at: DateTime.iso8601('2023-08-21T21:22:03.917Z'),
   web_url: 'https://turbulent-overheard.biz',
 ), connection_id: '<id>')
 
@@ -187,7 +187,7 @@ end
 
 ## get_accounting_organization
 
-Retrieve an organization
+Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -231,7 +231,7 @@ end
 
 ## get_ads_organization
 
-Retrieve an organization
+Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -275,7 +275,7 @@ end
 
 ## get_genai_organization
 
-Retrieve an organization
+Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -319,7 +319,7 @@ end
 
 ## get_repo_organization
 
-Retrieve an organization
+Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -363,7 +363,7 @@ end
 
 ## list_accounting_organizations
 
-List all organizations
+Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -408,7 +408,7 @@ end
 
 ## list_ads_organizations
 
-List all organizations
+Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -453,7 +453,7 @@ end
 
 ## list_genai_organizations
 
-List all organizations
+Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -498,7 +498,7 @@ end
 
 ## list_repo_organizations
 
-List all organizations
+Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -543,7 +543,7 @@ end
 
 ## patch_ads_organization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -563,13 +563,13 @@ req = Models::Operations::PatchAdsOrganizationRequest.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: 'dc95b21f-c5ad-4cb6-b1db-4c172e0343f0',
+    id: 'd88adc9e-4dfa-4add-881f-5451e79f73a9',
     managers: [],
     metadata: [],
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-03-29T03:04:47.143Z'),
+    updated_at: DateTime.iso8601('2026-03-30T00:42:16.483Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -601,7 +601,7 @@ end
 
 ## patch_genai_organization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -620,10 +620,10 @@ req = Models::Operations::PatchGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: '8efc655b-1348-44e4-92a1-1ab5ab8473bc',
+    id: 'f8be95c0-9ebe-4e98-8012-81311a8cd9b5',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-01-26T10:38:34.880Z'),
+    updated_at: DateTime.iso8601('2023-01-26T19:34:30.483Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -655,7 +655,7 @@ end
 
 ## patch_repo_organization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -675,10 +675,10 @@ req = Models::Operations::PatchRepoOrganizationRequest.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: '5e3f6bde-51ce-47b1-bc1a-309e3993a0df',
+    id: '85be66a9-5510-4ada-ac47-f32a603fd07c',
     metadata: [],
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-21T15:08:19.154Z'),
+    updated_at: DateTime.iso8601('2023-08-21T21:22:03.920Z'),
     web_url: 'https://turbulent-overheard.biz',
   ),
   connection_id: '<id>',
@@ -711,7 +711,7 @@ end
 
 ## remove_ads_organization
 
-Remove an organization
+Deletes the AdsOrganization identified by `id`.
 
 ### Example Usage
 
@@ -753,7 +753,7 @@ end
 
 ## remove_genai_organization
 
-Remove an organization
+Deletes the GenaiOrganization identified by `id`.
 
 ### Example Usage
 
@@ -795,7 +795,7 @@ end
 
 ## remove_repo_organization
 
-Remove an organization
+Deletes the RepoOrganization identified by `id`.
 
 ### Example Usage
 
@@ -837,7 +837,7 @@ end
 
 ## update_ads_organization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -857,13 +857,13 @@ req = Models::Operations::UpdateAdsOrganizationRequest.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: 'dc95b21f-c5ad-4cb6-b1db-4c172e0343f0',
+    id: 'd88adc9e-4dfa-4add-881f-5451e79f73a9',
     managers: [],
     metadata: [],
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-03-29T03:04:47.143Z'),
+    updated_at: DateTime.iso8601('2026-03-30T00:42:16.483Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -895,7 +895,7 @@ end
 
 ## update_genai_organization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -914,10 +914,10 @@ req = Models::Operations::UpdateGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: '8efc655b-1348-44e4-92a1-1ab5ab8473bc',
+    id: 'f8be95c0-9ebe-4e98-8012-81311a8cd9b5',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-01-26T10:38:34.880Z'),
+    updated_at: DateTime.iso8601('2023-01-26T19:34:30.483Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -949,7 +949,7 @@ end
 
 ## update_repo_organization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -969,10 +969,10 @@ req = Models::Operations::UpdateRepoOrganizationRequest.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: '5e3f6bde-51ce-47b1-bc1a-309e3993a0df',
+    id: '85be66a9-5510-4ada-ac47-f32a603fd07c',
     metadata: [],
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-21T15:08:19.154Z'),
+    updated_at: DateTime.iso8601('2023-08-21T21:22:03.920Z'),
     web_url: 'https://turbulent-overheard.biz',
   ),
   connection_id: '<id>',

@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(compute_volume: Models::Shared::ComputeVolume, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateComputeVolumeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateComputeVolumeResponse) }
     def create_compute_volume(compute_volume:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_compute_volume - Create a volume
+      # Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
       request = Models::Operations::CreateComputeVolumeRequest.new(
         compute_volume: compute_volume,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetComputeVolumeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetComputeVolumeResponse) }
     def get_compute_volume(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_compute_volume - Retrieve a volume
+      # Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetComputeVolumeRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListComputeVolumesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListComputeVolumesResponse) }
     def list_compute_volumes(request:, timeout_ms: nil)
       # list_compute_volumes - List all volumes
+      # Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchComputeVolumeRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchComputeVolumeResponse) }
     def patch_compute_volume(request:, timeout_ms: nil)
       # patch_compute_volume - Update a volume
+      # Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveComputeVolumeResponse) }
     def remove_compute_volume(connection_id:, id:, timeout_ms: nil)
       # remove_compute_volume - Remove a volume
+      # Deletes the ComputeVolume identified by `id`.
       request = Models::Operations::RemoveComputeVolumeRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateComputeVolumeRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateComputeVolumeResponse) }
     def update_compute_volume(request:, timeout_ms: nil)
       # update_compute_volume - Update a volume
+      # Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

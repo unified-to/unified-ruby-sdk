@@ -27,7 +27,7 @@
 
 ## create_ats_company
 
-Create a company
+Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 
 ### Example Usage
 
@@ -44,10 +44,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.company.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
   created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-  id: 'bc88c053-d149-4889-9144-a45bbbbb011e',
+  id: 'fc717eb1-789d-4f47-8cb9-f011b597131a',
   name: 'Gulgowski, Dibbert and Wilderman',
   phone: '1-882-360-2010',
-  updated_at: DateTime.iso8601('2020-10-01T04:12:23.715Z'),
+  updated_at: DateTime.iso8601('2020-10-01T08:47:21.666Z'),
   website_url: 'https://www.gulgowskidibbert.com',
 ), connection_id: '<id>')
 
@@ -78,7 +78,7 @@ end
 
 ## create_crm_company
 
-Create a company
+Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 
 ### Example Usage
 
@@ -123,7 +123,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   employees: 4177.0,
-  id: '76899288-87bf-4646-974b-44a0fd1b3acd',
+  id: '45430102-9d60-4dcb-95de-6b3395a6edf2',
   industry: 'Metrics',
   is_active: true,
   link_urls: [
@@ -135,7 +135,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '31a67396-12ff-4ae0-b56e-f60d44ae7d5d',
+      id: '7d810a72-f45b-4353-9559-e181734fb9bd',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'unde',
@@ -154,7 +154,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   timezone: 'Atlantic/Azores',
-  updated_at: DateTime.iso8601('2025-03-03T03:44:26.054Z'),
+  updated_at: DateTime.iso8601('2025-03-03T21:28:57.322Z'),
   websites: [
     'https://www.goodwinsons.com',
   ],
@@ -187,7 +187,7 @@ end
 
 ## create_hris_company
 
-Create a company
+Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 
 ### Example Usage
 
@@ -212,11 +212,11 @@ res = s.company.create_hris_company(hris_company: Models::Shared::HrisCompany.ne
     region_code: 'MO',
   ),
   created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-  id: 'c6c4605a-089e-4cfb-91a8-c88c7fcf7a68',
+  id: '1e4e818e-c91c-4ce8-bb9f-87c290b58f50',
   legal_name: 'Gottlieb Group LLC',
   metadata: [],
   name: 'Gottlieb Group',
-  updated_at: DateTime.iso8601('2026-10-08T16:22:56.386Z'),
+  updated_at: DateTime.iso8601('2026-10-09T16:00:24.278Z'),
 ), connection_id: '<id>')
 
 unless res.hris_company.nil?
@@ -246,7 +246,7 @@ end
 
 ## get_ats_company
 
-Retrieve a company
+Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ end
 
 ## get_crm_company
 
-Retrieve a company
+Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -334,7 +334,7 @@ end
 
 ## get_hris_company
 
-Retrieve a company
+Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -378,7 +378,7 @@ end
 
 ## list_ats_companies
 
-List all companies
+Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -423,7 +423,7 @@ end
 
 ## list_crm_companies
 
-List all companies
+Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -511,7 +511,7 @@ end
 
 ## list_hris_companies
 
-List all companies
+Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -556,7 +556,7 @@ end
 
 ## patch_ats_company
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -574,10 +574,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: 'b636b5e8-021c-497e-9250-478a87440e00',
+    id: '9919fbbc-af06-4156-8ed3-2d8d682ca7e2',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-01T04:12:23.719Z'),
+    updated_at: DateTime.iso8601('2020-10-01T08:47:21.669Z'),
     website_url: 'https://www.gulgowskidibbert.com',
   ),
   connection_id: '<id>',
@@ -610,7 +610,7 @@ end
 
 ## patch_crm_company
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -656,7 +656,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: 'cc28f72c-f444-453c-b4f6-2697156e25e2',
+    id: 'f6118c33-c025-4e57-8713-96353decbba9',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -668,7 +668,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '01f0ae9f-23c2-49fe-a397-7f5bda43cc3e',
+        id: 'eb7e0ab1-617c-42aa-9140-805dc92181d9',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'unde',
@@ -687,7 +687,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-03T03:44:26.077Z'),
+    updated_at: DateTime.iso8601('2025-03-03T21:28:57.348Z'),
     websites: [
       'https://www.goodwinsons.com',
     ],
@@ -722,7 +722,7 @@ end
 
 ## patch_hris_company
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -748,11 +748,11 @@ req = Models::Operations::PatchHrisCompanyRequest.new(
       region_code: 'MO',
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '1a037787-e022-401d-a3e7-32542733f2d2',
+    id: '614c60e7-805a-4ebe-9b04-71aabf2ea7b8',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-08T16:22:56.398Z'),
+    updated_at: DateTime.iso8601('2026-10-09T16:00:24.302Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -784,7 +784,7 @@ end
 
 ## remove_ats_company
 
-Remove a company
+Deletes the AtsCompany identified by `id`.
 
 ### Example Usage
 
@@ -826,7 +826,7 @@ end
 
 ## remove_crm_company
 
-Remove a company
+Deletes the CrmCompany identified by `id`.
 
 ### Example Usage
 
@@ -868,7 +868,7 @@ end
 
 ## remove_hris_company
 
-Remove a company
+Deletes the HrisCompany identified by `id`.
 
 ### Example Usage
 
@@ -910,7 +910,7 @@ end
 
 ## update_ats_company
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -928,10 +928,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: 'b636b5e8-021c-497e-9250-478a87440e00',
+    id: '9919fbbc-af06-4156-8ed3-2d8d682ca7e2',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-01T04:12:23.719Z'),
+    updated_at: DateTime.iso8601('2020-10-01T08:47:21.669Z'),
     website_url: 'https://www.gulgowskidibbert.com',
   ),
   connection_id: '<id>',
@@ -964,7 +964,7 @@ end
 
 ## update_crm_company
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1010,7 +1010,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: 'cc28f72c-f444-453c-b4f6-2697156e25e2',
+    id: 'f6118c33-c025-4e57-8713-96353decbba9',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -1022,7 +1022,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '01f0ae9f-23c2-49fe-a397-7f5bda43cc3e',
+        id: 'eb7e0ab1-617c-42aa-9140-805dc92181d9',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'unde',
@@ -1041,7 +1041,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-03T03:44:26.077Z'),
+    updated_at: DateTime.iso8601('2025-03-03T21:28:57.348Z'),
     websites: [
       'https://www.goodwinsons.com',
     ],
@@ -1076,7 +1076,7 @@ end
 
 ## update_hris_company
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1102,11 +1102,11 @@ req = Models::Operations::UpdateHrisCompanyRequest.new(
       region_code: 'MO',
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '1a037787-e022-401d-a3e7-32542733f2d2',
+    id: '614c60e7-805a-4ebe-9b04-71aabf2ea7b8',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-08T16:22:56.398Z'),
+    updated_at: DateTime.iso8601('2026-10-09T16:00:24.302Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

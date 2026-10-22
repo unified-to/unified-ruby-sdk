@@ -16,13 +16,13 @@ module UnifiedRubySDK
 
         field :type, Models::Shared::PropertyDatastoreQueryExpandFilterType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::PropertyDatastoreQueryExpandFilterType, false) } }
 
-        field :and_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyDatastoreQueryExpandFilter)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('and') } }
+        field :and_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DatastoreFilterGroup)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('and') } }
 
         field :filters, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DatastoreFilter)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filters') } }
 
-        field :or_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyDatastoreQueryExpandFilter)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('or') } }
+        field :or_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DatastoreFilterGroup)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('or') } }
 
-        sig { params(type: Models::Shared::PropertyDatastoreQueryExpandFilterType, and_: T.nilable(T::Array[Models::Shared::PropertyDatastoreQueryExpandFilter]), filters: T.nilable(T::Array[Models::Shared::DatastoreFilter]), or_: T.nilable(T::Array[Models::Shared::PropertyDatastoreQueryExpandFilter])).void }
+        sig { params(type: Models::Shared::PropertyDatastoreQueryExpandFilterType, and_: T.nilable(T::Array[Models::Shared::DatastoreFilterGroup]), filters: T.nilable(T::Array[Models::Shared::DatastoreFilter]), or_: T.nilable(T::Array[Models::Shared::DatastoreFilterGroup])).void }
         def initialize(type:, and_: nil, filters: nil, or_: nil)
           @type = type
           @and_ = and_

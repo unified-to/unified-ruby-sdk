@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(lms_instructor: Models::Shared::LmsInstructor, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsInstructorQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsInstructorResponse) }
     def create_lms_instructor(lms_instructor:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_instructor - Create an instructor
+      # Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
       request = Models::Operations::CreateLmsInstructorRequest.new(
         lms_instructor: lms_instructor,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsInstructorQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsInstructorResponse) }
     def get_lms_instructor(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_instructor - Retrieve an instructor
+      # Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLmsInstructorRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLmsInstructorsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsInstructorsResponse) }
     def list_lms_instructors(request:, timeout_ms: nil)
       # list_lms_instructors - List all instructors
+      # Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLmsInstructorRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsInstructorResponse) }
     def patch_lms_instructor(request:, timeout_ms: nil)
       # patch_lms_instructor - Update an instructor
+      # Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsInstructorResponse) }
     def remove_lms_instructor(connection_id:, id:, timeout_ms: nil)
       # remove_lms_instructor - Remove an instructor
+      # Deletes the LmsInstructor identified by `id`.
       request = Models::Operations::RemoveLmsInstructorRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLmsInstructorRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsInstructorResponse) }
     def update_lms_instructor(request:, timeout_ms: nil)
       # update_lms_instructor - Update an instructor
+      # Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

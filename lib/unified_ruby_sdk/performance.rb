@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(performance_feedback: Models::Shared::PerformanceFeedback, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePerformanceFeedbackQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePerformanceFeedbackResponse) }
     def create_performance_feedback(performance_feedback:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_performance_feedback - Create a feedback
+      # Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body; they are mapped to the provider's API. Returns the created PerformanceFeedback.
       request = Models::Operations::CreatePerformanceFeedbackRequest.new(
         performance_feedback: performance_feedback,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(performance_goal: Models::Shared::PerformanceGoal, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePerformanceGoalQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePerformanceGoalResponse) }
     def create_performance_goal(performance_goal:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_performance_goal - Create a goal
+      # Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are mapped to the provider's API. Returns the created PerformanceGoal.
       request = Models::Operations::CreatePerformanceGoalRequest.new(
         performance_goal: performance_goal,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPerformanceCycleQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPerformanceCycleResponse) }
     def get_performance_cycle(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_performance_cycle - Retrieve a cycle
+      # Retrieves a single PerformanceCycle by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPerformanceCycleRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPerformanceFeedbackQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPerformanceFeedbackResponse) }
     def get_performance_feedback(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_performance_feedback - Retrieve a feedback
+      # Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPerformanceFeedbackRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPerformanceGoalQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPerformanceGoalResponse) }
     def get_performance_goal(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_performance_goal - Retrieve a goal
+      # Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPerformanceGoalRequest.new(
         connection_id: connection_id,
         id: id,
@@ -646,6 +651,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPerformanceReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPerformanceReviewResponse) }
     def get_performance_review(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_performance_review - Retrieve a review
+      # Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPerformanceReviewRequest.new(
         connection_id: connection_id,
         id: id,
@@ -762,6 +768,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPerformanceCyclesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPerformanceCyclesResponse) }
     def list_performance_cycles(request:, timeout_ms: nil)
       # list_performance_cycles - List all cycles
+      # Returns a list of PerformanceCycles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -872,6 +879,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPerformanceFeedbacksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPerformanceFeedbacksResponse) }
     def list_performance_feedbacks(request:, timeout_ms: nil)
       # list_performance_feedbacks - List all feedbacks
+      # Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -982,6 +990,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPerformanceGoalsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPerformanceGoalsResponse) }
     def list_performance_goals(request:, timeout_ms: nil)
       # list_performance_goals - List all goals
+      # Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1092,6 +1101,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPerformanceReviewsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPerformanceReviewsResponse) }
     def list_performance_reviews(request:, timeout_ms: nil)
       # list_performance_reviews - List all reviews
+      # Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1202,6 +1212,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchPerformanceGoalRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPerformanceGoalResponse) }
     def patch_performance_goal(request:, timeout_ms: nil)
       # patch_performance_goal - Update a goal
+      # Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1324,6 +1335,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePerformanceGoalResponse) }
     def remove_performance_goal(connection_id:, id:, timeout_ms: nil)
       # remove_performance_goal - Remove a goal
+      # Deletes the PerformanceGoal identified by `id`.
       request = Models::Operations::RemovePerformanceGoalRequest.new(
         connection_id: connection_id,
         id: id
@@ -1438,6 +1450,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdatePerformanceGoalRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePerformanceGoalResponse) }
     def update_performance_goal(request:, timeout_ms: nil)
       # update_performance_goal - Update a goal
+      # Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

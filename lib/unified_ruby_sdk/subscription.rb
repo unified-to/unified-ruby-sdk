@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(payment_subscription: Models::Shared::PaymentSubscription, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePaymentSubscriptionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentSubscriptionResponse) }
     def create_payment_subscription(payment_subscription:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_payment_subscription - Create a subscription
+      # Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
       request = Models::Operations::CreatePaymentSubscriptionRequest.new(
         payment_subscription: payment_subscription,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentSubscriptionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentSubscriptionResponse) }
     def get_payment_subscription(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_subscription - Retrieve a subscription
+      # Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPaymentSubscriptionRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPaymentSubscriptionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentSubscriptionsResponse) }
     def list_payment_subscriptions(request:, timeout_ms: nil)
       # list_payment_subscriptions - List all subscriptions
+      # Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchPaymentSubscriptionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentSubscriptionResponse) }
     def patch_payment_subscription(request:, timeout_ms: nil)
       # patch_payment_subscription - Update a subscription
+      # Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentSubscriptionResponse) }
     def remove_payment_subscription(connection_id:, id:, timeout_ms: nil)
       # remove_payment_subscription - Remove a subscription
+      # Deletes the PaymentSubscription identified by `id`.
       request = Models::Operations::RemovePaymentSubscriptionRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdatePaymentSubscriptionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentSubscriptionResponse) }
     def update_payment_subscription(request:, timeout_ms: nil)
       # update_payment_subscription - Update a subscription
+      # Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

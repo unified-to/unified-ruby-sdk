@@ -14,7 +14,7 @@
 
 ## create_compute_deployment
 
-Create a deployment
+Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 
 ### Example Usage
 
@@ -35,13 +35,13 @@ res = s.deployment.create_compute_deployment(compute_deployment: Models::Shared:
   commit_message: 'copy primary pixel',
   created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
   environment: Models::Shared::Environment::PREVIEW,
-  finished_at: DateTime.iso8601('2025-08-29T15:05:51.661Z'),
-  id: 'ca841094-cd73-4024-bfea-725904a495cd',
+  finished_at: DateTime.iso8601('2025-08-30T08:39:21.131Z'),
+  id: '25ba96fd-fe07-48cd-b826-6741970cfc4f',
   metadata: [],
-  started_at: DateTime.iso8601('2025-04-10T07:30:12.606Z'),
+  started_at: DateTime.iso8601('2025-04-10T22:57:28.715Z'),
   status: Models::Shared::ComputeDeploymentStatus::LIVE,
   trigger: Models::Shared::Trigger::API,
-  updated_at: DateTime.iso8601('2026-02-28T18:03:13.449Z'),
+  updated_at: DateTime.iso8601('2026-03-01T14:20:16.768Z'),
   url: 'https://comfortable-petal.name',
 ), connection_id: '<id>')
 
@@ -72,7 +72,7 @@ end
 
 ## get_compute_deployment
 
-Retrieve a deployment
+Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -116,7 +116,7 @@ end
 
 ## list_compute_deployments
 
-List all deployments
+Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -161,7 +161,7 @@ end
 
 ## patch_compute_deployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -183,13 +183,13 @@ req = Models::Operations::PatchComputeDeploymentRequest.new(
     commit_message: 'copy primary pixel',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-08-29T15:05:51.669Z'),
-    id: '9eed3546-cbe3-49c2-9354-a3897f19a658',
+    finished_at: DateTime.iso8601('2025-08-30T08:39:21.145Z'),
+    id: 'd3cda7e1-1d2a-4128-8ecf-16721fcf731a',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-10T07:30:12.613Z'),
+    started_at: DateTime.iso8601('2025-04-10T22:57:28.727Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-02-28T18:03:13.459Z'),
+    updated_at: DateTime.iso8601('2026-03-01T14:20:16.783Z'),
     url: 'https://comfortable-petal.name',
   ),
   connection_id: '<id>',
@@ -222,7 +222,7 @@ end
 
 ## remove_compute_deployment
 
-Remove a deployment
+Deletes the ComputeDeployment identified by `id`.
 
 ### Example Usage
 
@@ -264,7 +264,7 @@ end
 
 ## update_compute_deployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -286,13 +286,13 @@ req = Models::Operations::UpdateComputeDeploymentRequest.new(
     commit_message: 'copy primary pixel',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-08-29T15:05:51.669Z'),
-    id: '9eed3546-cbe3-49c2-9354-a3897f19a658',
+    finished_at: DateTime.iso8601('2025-08-30T08:39:21.145Z'),
+    id: 'd3cda7e1-1d2a-4128-8ecf-16721fcf731a',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-10T07:30:12.613Z'),
+    started_at: DateTime.iso8601('2025-04-10T22:57:28.727Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-02-28T18:03:13.459Z'),
+    updated_at: DateTime.iso8601('2026-03-01T14:20:16.783Z'),
     url: 'https://comfortable-petal.name',
   ),
   connection_id: '<id>',

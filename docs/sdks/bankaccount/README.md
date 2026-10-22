@@ -14,7 +14,7 @@
 
 ## create_hris_bankaccount
 
-Create a bankaccount
+Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 
 ### Example Usage
 
@@ -37,7 +37,7 @@ res = s.bankaccount.create_hris_bankaccount(hris_bankaccount: Models::Shared::Hr
   country_code: 'US',
   created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
   currency: 'USD',
-  id: '873b3ffd-2308-487d-a12d-eaadd026c278',
+  id: '3468ebd9-250e-4abe-9b97-508bf2361433',
   is_primary: true,
   metadata: [],
   name: 'Granville Schumm - Checking',
@@ -45,7 +45,7 @@ res = s.bankaccount.create_hris_bankaccount(hris_bankaccount: Models::Shared::Hr
   routing_number: '448650724',
   split_amount: 98.0,
   split_type: Models::Shared::SplitType::PERCENTAGE,
-  updated_at: DateTime.iso8601('2025-07-01T06:21:20.400Z'),
+  updated_at: DateTime.iso8601('2025-07-02T01:38:52.642Z'),
 ), connection_id: '<id>')
 
 unless res.hris_bankaccount.nil?
@@ -75,7 +75,7 @@ end
 
 ## get_hris_bankaccount
 
-Retrieve a bankaccount
+Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -119,7 +119,7 @@ end
 
 ## list_hris_bankaccounts
 
-List all bankaccounts
+Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -164,7 +164,7 @@ end
 
 ## patch_hris_bankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '226e7e5d-1767-47a1-b0fd-6b38c5ed69ab',
+    id: 'b83bd056-9674-4f6e-a525-95182b7b0bd0',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -196,7 +196,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-01T06:21:20.416Z'),
+    updated_at: DateTime.iso8601('2025-07-02T01:38:52.658Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -228,7 +228,7 @@ end
 
 ## remove_hris_bankaccount
 
-Remove a bankaccount
+Deletes the HrisBankaccount identified by `id`.
 
 ### Example Usage
 
@@ -270,7 +270,7 @@ end
 
 ## update_hris_bankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '226e7e5d-1767-47a1-b0fd-6b38c5ed69ab',
+    id: 'b83bd056-9674-4f6e-a525-95182b7b0bd0',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -302,7 +302,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-01T06:21:20.416Z'),
+    updated_at: DateTime.iso8601('2025-07-02T01:38:52.658Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

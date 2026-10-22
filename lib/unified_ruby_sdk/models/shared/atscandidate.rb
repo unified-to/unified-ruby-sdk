@@ -25,7 +25,7 @@ module UnifiedRubySDK
         field :date_of_birth, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('date_of_birth'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :education, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsCandidateEducation)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('education') } }
-
+        # The candidate's email addresses
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
 
         field :experiences, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsCandidateExperience)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('experiences') } }
@@ -45,7 +45,7 @@ module UnifiedRubySDK
         field :link_urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # The candidate's full name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :origin, Crystalline::Nilable.new(Models::Shared::Origin), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('origin'), 'decoder': Utils.enum_from_string(Models::Shared::Origin, true) } }

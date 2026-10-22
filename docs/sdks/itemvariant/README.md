@@ -14,7 +14,7 @@
 
 ## create_commerce_itemvariant
 
-Create an itemvariant
+Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
 
 ### Example Usage
 
@@ -34,7 +34,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
   created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
   description: 'Stylish Salad designed to make you stand out with little looks',
   height: 54.0,
-  id: '21db4bbc-5da8-4b7e-8542-9513b516847a',
+  id: 'da268092-975a-4945-94fa-915b3ee17c31',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -43,10 +43,10 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
     Models::Shared::CommerceItemMedia.new(
       alt: 'Hic desipio thorax.',
       height: 961.0,
-      id: 'ca51d48c-b6b2-4f76-b640-30f89cdc34cb',
+      id: '4f41d288-a7bb-4cbf-880e-b3dfa6c8540d',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'd1e9b8f7-eeff-45d5-9e9e-027461c63701',
+          id: '173c2688-c2bb-4bde-9395-9aec88431b88',
           slug: 'ubi',
           value: 'textus',
         ),
@@ -63,7 +63,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: 'f1dc1de2-ad01-4062-ad1d-26fcbdb0f39a',
+      id: 'd26cccae-de25-4c1e-8f3a-2169bc566f80',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'absens',
@@ -72,7 +72,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
   name: 'Chair',
   options: [
     Models::Shared::CommerceItemOption.new(
-      id: 'de487d6a-518f-4143-832a-f0e5d623f17d',
+      id: '5420d690-9652-4aa1-a39c-8952aa39a9ed',
       name: 'Color',
       position: 1.0,
       values: [
@@ -80,7 +80,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
       ],
     ),
     Models::Shared::CommerceItemOption.new(
-      id: '2d0a0790-a7e6-430c-aa3e-d5168c991f3c',
+      id: 'f26e6d4b-3f61-44a2-ba2e-c20b72eda1f0',
       name: 'Size',
       position: 2.0,
       values: [
@@ -103,7 +103,7 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
     'deserunt',
   ],
   total_stock: 436.0,
-  updated_at: DateTime.iso8601('2026-03-09T16:20:44.119Z'),
+  updated_at: DateTime.iso8601('2026-03-10T13:01:42.865Z'),
   weight: 46.0,
   weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
   width: 40.0,
@@ -136,7 +136,7 @@ end
 
 ## get_commerce_itemvariant
 
-Retrieve an itemvariant
+Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -180,7 +180,7 @@ end
 
 ## list_commerce_itemvariants
 
-List all itemvariants
+Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -225,7 +225,7 @@ end
 
 ## patch_commerce_itemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -246,7 +246,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Stylish Salad designed to make you stand out with little looks',
     height: 54.0,
-    id: 'e5b6c614-77df-4640-9851-1b017edac238',
+    id: '374f7a4f-2d84-4eb2-bf9a-eaf1a1e33543',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -255,10 +255,10 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Hic desipio thorax.',
         height: 961.0,
-        id: '193d724e-664a-4ff3-9e5e-f06a3a6d6bce',
+        id: '0376e3aa-d7fa-4e75-9236-2c6ad590c3e3',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'be94f989-1203-4816-9c17-6ec4a183fb8c',
+            id: '3ff94cc0-8697-4531-adcb-fca5d5432da6',
             slug: 'ubi',
             value: 'textus',
           ),
@@ -275,7 +275,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '029b8520-9463-4356-9fca-a3b2058019a8',
+        id: 'ebde1a45-2bd9-4fda-9a4d-076114ab38fe',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'absens',
@@ -284,7 +284,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     name: 'Chair',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: 'e1ec43ce-9696-49ad-9233-4941ec412803',
+        id: '6955550c-1dfa-412a-95e0-ce7164c07f63',
         name: 'Color',
         position: 1.0,
         values: [
@@ -292,7 +292,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
         ],
       ),
       Models::Shared::CommerceItemOption.new(
-        id: '9c026072-0592-40da-a00c-9556e7198eed',
+        id: 'd01dd6e8-336a-420e-be06-8a1c0cf117f4',
         name: 'Size',
         position: 2.0,
         values: [
@@ -315,7 +315,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       'deserunt',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-03-09T16:20:44.143Z'),
+    updated_at: DateTime.iso8601('2026-03-10T13:01:42.903Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 40.0,
@@ -350,7 +350,7 @@ end
 
 ## remove_commerce_itemvariant
 
-Remove an itemvariant
+Deletes the CommerceItemvariant identified by `id`.
 
 ### Example Usage
 
@@ -392,7 +392,7 @@ end
 
 ## update_commerce_itemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -413,7 +413,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Stylish Salad designed to make you stand out with little looks',
     height: 54.0,
-    id: 'e5b6c614-77df-4640-9851-1b017edac238',
+    id: '374f7a4f-2d84-4eb2-bf9a-eaf1a1e33543',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -422,10 +422,10 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Hic desipio thorax.',
         height: 961.0,
-        id: '193d724e-664a-4ff3-9e5e-f06a3a6d6bce',
+        id: '0376e3aa-d7fa-4e75-9236-2c6ad590c3e3',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'be94f989-1203-4816-9c17-6ec4a183fb8c',
+            id: '3ff94cc0-8697-4531-adcb-fca5d5432da6',
             slug: 'ubi',
             value: 'textus',
           ),
@@ -442,7 +442,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '029b8520-9463-4356-9fca-a3b2058019a8',
+        id: 'ebde1a45-2bd9-4fda-9a4d-076114ab38fe',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'absens',
@@ -451,7 +451,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     name: 'Chair',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: 'e1ec43ce-9696-49ad-9233-4941ec412803',
+        id: '6955550c-1dfa-412a-95e0-ce7164c07f63',
         name: 'Color',
         position: 1.0,
         values: [
@@ -459,7 +459,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
         ],
       ),
       Models::Shared::CommerceItemOption.new(
-        id: '9c026072-0592-40da-a00c-9556e7198eed',
+        id: 'd01dd6e8-336a-420e-be06-8a1c0cf117f4',
         name: 'Size',
         position: 2.0,
         values: [
@@ -482,7 +482,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       'deserunt',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-03-09T16:20:44.143Z'),
+    updated_at: DateTime.iso8601('2026-03-10T13:01:42.903Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 40.0,

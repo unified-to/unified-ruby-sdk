@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(kms_comment: Models::Shared::KmsComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateKmsCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsCommentResponse) }
     def create_kms_comment(kms_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_kms_comment - Create a comment
+      # Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
       request = Models::Operations::CreateKmsCommentRequest.new(
         kms_comment: kms_comment,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(task_comment: Models::Shared::TaskComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskCommentResponse) }
     def create_task_comment(task_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_task_comment - Create a comment
+      # Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
       request = Models::Operations::CreateTaskCommentRequest.new(
         task_comment: task_comment,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(uc_comment: Models::Shared::UcComment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcCommentResponse) }
     def create_uc_comment(uc_comment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_uc_comment - Create a comment
+      # Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
       request = Models::Operations::CreateUcCommentRequest.new(
         uc_comment: uc_comment,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetKmsCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsCommentResponse) }
     def get_kms_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_kms_comment - Retrieve a comment
+      # Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetKmsCommentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -542,6 +546,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskCommentResponse) }
     def get_task_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_comment - Retrieve a comment
+      # Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetTaskCommentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -658,6 +663,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcCommentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcCommentResponse) }
     def get_uc_comment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_uc_comment - Retrieve a comment
+      # Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetUcCommentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -774,6 +780,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListKmsCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsCommentsResponse) }
     def list_kms_comments(request:, timeout_ms: nil)
       # list_kms_comments - List all comments
+      # Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -884,6 +891,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListTaskCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskCommentsResponse) }
     def list_task_comments(request:, timeout_ms: nil)
       # list_task_comments - List all comments
+      # Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListUcCommentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcCommentsResponse) }
     def list_uc_comments(request:, timeout_ms: nil)
       # list_uc_comments - List all comments
+      # Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1104,6 +1113,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchKmsCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsCommentResponse) }
     def patch_kms_comment(request:, timeout_ms: nil)
       # patch_kms_comment - Update a comment
+      # Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1226,6 +1236,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchTaskCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskCommentResponse) }
     def patch_task_comment(request:, timeout_ms: nil)
       # patch_task_comment - Update a comment
+      # Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1348,6 +1359,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchUcCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcCommentResponse) }
     def patch_uc_comment(request:, timeout_ms: nil)
       # patch_uc_comment - Update a comment
+      # Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1470,6 +1482,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveKmsCommentResponse) }
     def remove_kms_comment(connection_id:, id:, timeout_ms: nil)
       # remove_kms_comment - Remove a comment
+      # Deletes the KmsComment identified by `id`.
       request = Models::Operations::RemoveKmsCommentRequest.new(
         connection_id: connection_id,
         id: id
@@ -1584,6 +1597,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskCommentResponse) }
     def remove_task_comment(connection_id:, id:, timeout_ms: nil)
       # remove_task_comment - Remove a comment
+      # Deletes the TaskComment identified by `id`.
       request = Models::Operations::RemoveTaskCommentRequest.new(
         connection_id: connection_id,
         id: id
@@ -1698,6 +1712,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcCommentResponse) }
     def remove_uc_comment(connection_id:, id:, timeout_ms: nil)
       # remove_uc_comment - Remove a comment
+      # Deletes the UcComment identified by `id`.
       request = Models::Operations::RemoveUcCommentRequest.new(
         connection_id: connection_id,
         id: id
@@ -1812,6 +1827,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateKmsCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsCommentResponse) }
     def update_kms_comment(request:, timeout_ms: nil)
       # update_kms_comment - Update a comment
+      # Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1934,6 +1950,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateTaskCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskCommentResponse) }
     def update_task_comment(request:, timeout_ms: nil)
       # update_task_comment - Update a comment
+      # Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2056,6 +2073,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateUcCommentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcCommentResponse) }
     def update_uc_comment(request:, timeout_ms: nil)
       # update_uc_comment - Update a comment
+      # Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -14,7 +14,7 @@
 
 ## create_accounting_account
 
-Create an account
+Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 
 ### Example Usage
 
@@ -35,7 +35,7 @@ res = s.account.create_accounting_account(accounting_account: Models::Shared::Ac
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'e1ef892f-3b71-470e-9366-7d11f6594355',
+  id: 'cf355b43-f7e4-4200-abd9-da8905ac9789',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -48,7 +48,7 @@ res = s.account.create_accounting_account(accounting_account: Models::Shared::Ac
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-06T21:40:54.101Z'),
+  updated_at: DateTime.iso8601('2023-08-07T03:43:27.331Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -78,7 +78,7 @@ end
 
 ## get_accounting_account
 
-Retrieve an account
+Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ end
 
 ## list_accounting_accounts
 
-List all accounts
+Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ end
 
 ## patch_accounting_account
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -189,7 +189,7 @@ req = Models::Operations::PatchAccountingAccountRequest.new(
     currency: 'CAD',
     customer_defined_code: '6170',
     description: 'Voluptatibus valde spoliatio.',
-    id: 'b89164f4-16d4-421e-842f-56eca530ec45',
+    id: 'b074017e-1dd1-4e9c-9a9a-ba6ae9afe0cc',
     is_payable: false,
     metadata: [],
     name: 'Auto Loan Account',
@@ -202,7 +202,7 @@ req = Models::Operations::PatchAccountingAccountRequest.new(
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-06T21:40:54.106Z'),
+    updated_at: DateTime.iso8601('2023-08-07T03:43:27.336Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -234,7 +234,7 @@ end
 
 ## remove_accounting_account
 
-Remove an account
+Deletes the AccountingAccount identified by `id`.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ end
 
 ## update_accounting_account
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -298,7 +298,7 @@ req = Models::Operations::UpdateAccountingAccountRequest.new(
     currency: 'CAD',
     customer_defined_code: '6170',
     description: 'Voluptatibus valde spoliatio.',
-    id: 'b89164f4-16d4-421e-842f-56eca530ec45',
+    id: 'b074017e-1dd1-4e9c-9a9a-ba6ae9afe0cc',
     is_payable: false,
     metadata: [],
     name: 'Auto Loan Account',
@@ -311,7 +311,7 @@ req = Models::Operations::UpdateAccountingAccountRequest.new(
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-06T21:40:54.106Z'),
+    updated_at: DateTime.iso8601('2023-08-07T03:43:27.336Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

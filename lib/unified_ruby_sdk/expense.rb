@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_expense: Models::Shared::AccountingExpense, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingExpenseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingExpenseResponse) }
     def create_accounting_expense(accounting_expense:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_expense - Create an expense
+      # Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
       request = Models::Operations::CreateAccountingExpenseRequest.new(
         accounting_expense: accounting_expense,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(legal_expense: Models::Shared::LegalExpense, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLegalExpenseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLegalExpenseResponse) }
     def create_legal_expense(legal_expense:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_legal_expense - Create an expense
+      # Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
       request = Models::Operations::CreateLegalExpenseRequest.new(
         legal_expense: legal_expense,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingExpenseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingExpenseResponse) }
     def get_accounting_expense(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_expense - Retrieve an expense
+      # Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingExpenseRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLegalExpenseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLegalExpenseResponse) }
     def get_legal_expense(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_legal_expense - Retrieve an expense
+      # Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLegalExpenseRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingExpensesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingExpensesResponse) }
     def list_accounting_expenses(request:, timeout_ms: nil)
       # list_accounting_expenses - List all expenses
+      # Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -640,6 +645,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLegalExpensesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLegalExpensesResponse) }
     def list_legal_expenses(request:, timeout_ms: nil)
       # list_legal_expenses - List all expenses
+      # Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -750,6 +756,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingExpenseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingExpenseResponse) }
     def patch_accounting_expense(request:, timeout_ms: nil)
       # patch_accounting_expense - Update an expense
+      # Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -872,6 +879,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLegalExpenseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLegalExpenseResponse) }
     def patch_legal_expense(request:, timeout_ms: nil)
       # patch_legal_expense - Update an expense
+      # Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingExpenseResponse) }
     def remove_accounting_expense(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_expense - Remove an expense
+      # Deletes the AccountingExpense identified by `id`.
       request = Models::Operations::RemoveAccountingExpenseRequest.new(
         connection_id: connection_id,
         id: id
@@ -1108,6 +1117,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLegalExpenseResponse) }
     def remove_legal_expense(connection_id:, id:, timeout_ms: nil)
       # remove_legal_expense - Remove an expense
+      # Deletes the LegalExpense identified by `id`.
       request = Models::Operations::RemoveLegalExpenseRequest.new(
         connection_id: connection_id,
         id: id
@@ -1222,6 +1232,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingExpenseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingExpenseResponse) }
     def update_accounting_expense(request:, timeout_ms: nil)
       # update_accounting_expense - Update an expense
+      # Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1344,6 +1355,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLegalExpenseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLegalExpenseResponse) }
     def update_legal_expense(request:, timeout_ms: nil)
       # update_legal_expense - Update an expense
+      # Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

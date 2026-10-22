@@ -39,7 +39,7 @@ module UnifiedRubySDK
         field :extended_notes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingExtendedNote)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extended_notes') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # The bill's line items: what is billed, with the quantity, price and amount of each
         field :lineitems, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingLineitem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('lineitems') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }

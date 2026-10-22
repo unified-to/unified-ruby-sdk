@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(commerce_collection: Models::Shared::CommerceCollection, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceCollectionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceCollectionResponse) }
     def create_commerce_collection(commerce_collection:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_collection - Create a collection
+      # Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
       request = Models::Operations::CreateCommerceCollectionRequest.new(
         commerce_collection: commerce_collection,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(commerce_inventory: Models::Shared::CommerceInventory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceInventoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceInventoryResponse) }
     def create_commerce_inventory(commerce_inventory:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_inventory - Create an inventory
+      # Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
       request = Models::Operations::CreateCommerceInventoryRequest.new(
         commerce_inventory: commerce_inventory,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(commerce_item: Models::Shared::CommerceItem, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceItemQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceItemResponse) }
     def create_commerce_item(commerce_item:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_item - Create an item
+      # Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
       request = Models::Operations::CreateCommerceItemRequest.new(
         commerce_item: commerce_item,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(commerce_itemvariant: Models::Shared::CommerceItemvariant, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceItemvariantQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceItemvariantResponse) }
     def create_commerce_itemvariant(commerce_itemvariant:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_itemvariant - Create an itemvariant
+      # Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
       request = Models::Operations::CreateCommerceItemvariantRequest.new(
         commerce_itemvariant: commerce_itemvariant,
         connection_id: connection_id,
@@ -554,6 +558,7 @@ module UnifiedRubySDK
     sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceLocationResponse) }
     def create_commerce_location(commerce_location:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_location - Create a location
+      # Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
       request = Models::Operations::CreateCommerceLocationRequest.new(
         commerce_location: commerce_location,
         connection_id: connection_id,
@@ -682,6 +687,7 @@ module UnifiedRubySDK
     sig { params(commerce_reservation: Models::Shared::CommerceReservation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceReservationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceReservationResponse) }
     def create_commerce_reservation(commerce_reservation:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_reservation - Create a reservation
+      # Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
       request = Models::Operations::CreateCommerceReservationRequest.new(
         commerce_reservation: commerce_reservation,
         connection_id: connection_id,
@@ -810,6 +816,7 @@ module UnifiedRubySDK
     sig { params(commerce_review: Models::Shared::CommerceReview, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceReviewResponse) }
     def create_commerce_review(commerce_review:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_review - Create a review
+      # Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
       request = Models::Operations::CreateCommerceReviewRequest.new(
         commerce_review: commerce_review,
         connection_id: connection_id,
@@ -938,6 +945,7 @@ module UnifiedRubySDK
     sig { params(commerce_saleschannel: Models::Shared::CommerceSaleschannel, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceSaleschannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceSaleschannelResponse) }
     def create_commerce_saleschannel(commerce_saleschannel:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_saleschannel - Create a saleschannel
+      # Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
       request = Models::Operations::CreateCommerceSaleschannelRequest.new(
         commerce_saleschannel: commerce_saleschannel,
         connection_id: connection_id,
@@ -1066,6 +1074,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceCollectionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceCollectionResponse) }
     def get_commerce_collection(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_collection - Retrieve a collection
+      # Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceCollectionRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1182,6 +1191,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceInventoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceInventoryResponse) }
     def get_commerce_inventory(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_inventory - Retrieve an inventory
+      # Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceInventoryRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1298,6 +1308,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceItemQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceItemResponse) }
     def get_commerce_item(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_item - Retrieve an item
+      # Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceItemRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1414,6 +1425,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceItemvariantQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceItemvariantResponse) }
     def get_commerce_itemvariant(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_itemvariant - Retrieve an itemvariant
+      # Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceItemvariantRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1530,6 +1542,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceLocationResponse) }
     def get_commerce_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_location - Retrieve a location
+      # Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceLocationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1646,6 +1659,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceReservationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceReservationResponse) }
     def get_commerce_reservation(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_reservation - Retrieve a reservation
+      # Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceReservationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1762,6 +1776,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceReviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceReviewResponse) }
     def get_commerce_review(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_review - Retrieve a review
+      # Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceReviewRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1878,6 +1893,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceSaleschannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceSaleschannelResponse) }
     def get_commerce_saleschannel(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_saleschannel - Retrieve a saleschannel
+      # Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceSaleschannelRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1994,6 +2010,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceAvailabilitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceAvailabilitiesResponse) }
     def list_commerce_availabilities(request:, timeout_ms: nil)
       # list_commerce_availabilities - List all availabilities
+      # Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2104,6 +2121,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceCollectionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceCollectionsResponse) }
     def list_commerce_collections(request:, timeout_ms: nil)
       # list_commerce_collections - List all collections
+      # Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2214,6 +2232,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceInventoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceInventoriesResponse) }
     def list_commerce_inventories(request:, timeout_ms: nil)
       # list_commerce_inventories - List all inventories
+      # Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2324,6 +2343,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceItemsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceItemsResponse) }
     def list_commerce_items(request:, timeout_ms: nil)
       # list_commerce_items - List all items
+      # Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2434,6 +2454,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceItemvariantsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceItemvariantsResponse) }
     def list_commerce_itemvariants(request:, timeout_ms: nil)
       # list_commerce_itemvariants - List all itemvariants
+      # Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2544,6 +2565,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceLocationsResponse) }
     def list_commerce_locations(request:, timeout_ms: nil)
       # list_commerce_locations - List all locations
+      # Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2654,6 +2676,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceReservationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceReservationsResponse) }
     def list_commerce_reservations(request:, timeout_ms: nil)
       # list_commerce_reservations - List all reservations
+      # Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2764,6 +2787,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceReviewsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceReviewsResponse) }
     def list_commerce_reviews(request:, timeout_ms: nil)
       # list_commerce_reviews - List all reviews
+      # Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2874,6 +2898,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceSaleschannelsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceSaleschannelsResponse) }
     def list_commerce_saleschannels(request:, timeout_ms: nil)
       # list_commerce_saleschannels - List all saleschannels
+      # Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2984,6 +3009,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceCollectionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceCollectionResponse) }
     def patch_commerce_collection(request:, timeout_ms: nil)
       # patch_commerce_collection - Update a collection
+      # Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3106,6 +3132,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceInventoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceInventoryResponse) }
     def patch_commerce_inventory(request:, timeout_ms: nil)
       # patch_commerce_inventory - Update an inventory
+      # Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3228,6 +3255,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceItemRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceItemResponse) }
     def patch_commerce_item(request:, timeout_ms: nil)
       # patch_commerce_item - Update an item
+      # Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3350,6 +3378,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceItemvariantRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceItemvariantResponse) }
     def patch_commerce_itemvariant(request:, timeout_ms: nil)
       # patch_commerce_itemvariant - Update an itemvariant
+      # Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3472,6 +3501,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceLocationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceLocationResponse) }
     def patch_commerce_location(request:, timeout_ms: nil)
       # patch_commerce_location - Update a location
+      # Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3594,6 +3624,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceReservationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceReservationResponse) }
     def patch_commerce_reservation(request:, timeout_ms: nil)
       # patch_commerce_reservation - Update a reservation
+      # Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3716,6 +3747,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceReviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceReviewResponse) }
     def patch_commerce_review(request:, timeout_ms: nil)
       # patch_commerce_review - Update a review
+      # Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3838,6 +3870,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceSaleschannelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceSaleschannelResponse) }
     def patch_commerce_saleschannel(request:, timeout_ms: nil)
       # patch_commerce_saleschannel - Update a saleschannel
+      # Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3960,6 +3993,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceCollectionResponse) }
     def remove_commerce_collection(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_collection - Remove a collection
+      # Deletes the CommerceCollection identified by `id`.
       request = Models::Operations::RemoveCommerceCollectionRequest.new(
         connection_id: connection_id,
         id: id
@@ -4074,6 +4108,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceInventoryResponse) }
     def remove_commerce_inventory(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_inventory - Remove an inventory
+      # Deletes the CommerceInventory identified by `id`.
       request = Models::Operations::RemoveCommerceInventoryRequest.new(
         connection_id: connection_id,
         id: id
@@ -4188,6 +4223,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceItemResponse) }
     def remove_commerce_item(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_item - Remove an item
+      # Deletes the CommerceItem identified by `id`.
       request = Models::Operations::RemoveCommerceItemRequest.new(
         connection_id: connection_id,
         id: id
@@ -4302,6 +4338,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceItemvariantResponse) }
     def remove_commerce_itemvariant(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_itemvariant - Remove an itemvariant
+      # Deletes the CommerceItemvariant identified by `id`.
       request = Models::Operations::RemoveCommerceItemvariantRequest.new(
         connection_id: connection_id,
         id: id
@@ -4416,6 +4453,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceLocationResponse) }
     def remove_commerce_location(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_location - Remove a location
+      # Deletes the CommerceLocation identified by `id`.
       request = Models::Operations::RemoveCommerceLocationRequest.new(
         connection_id: connection_id,
         id: id
@@ -4530,6 +4568,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceReservationResponse) }
     def remove_commerce_reservation(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_reservation - Remove a reservation
+      # Deletes the CommerceReservation identified by `id`.
       request = Models::Operations::RemoveCommerceReservationRequest.new(
         connection_id: connection_id,
         id: id
@@ -4644,6 +4683,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceReviewResponse) }
     def remove_commerce_review(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_review - Remove a review
+      # Deletes the CommerceReview identified by `id`.
       request = Models::Operations::RemoveCommerceReviewRequest.new(
         connection_id: connection_id,
         id: id
@@ -4758,6 +4798,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceSaleschannelResponse) }
     def remove_commerce_saleschannel(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_saleschannel - Remove a saleschannel
+      # Deletes the CommerceSaleschannel identified by `id`.
       request = Models::Operations::RemoveCommerceSaleschannelRequest.new(
         connection_id: connection_id,
         id: id
@@ -4872,6 +4913,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceCollectionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceCollectionResponse) }
     def update_commerce_collection(request:, timeout_ms: nil)
       # update_commerce_collection - Update a collection
+      # Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -4994,6 +5036,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceInventoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceInventoryResponse) }
     def update_commerce_inventory(request:, timeout_ms: nil)
       # update_commerce_inventory - Update an inventory
+      # Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5116,6 +5159,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceItemRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceItemResponse) }
     def update_commerce_item(request:, timeout_ms: nil)
       # update_commerce_item - Update an item
+      # Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5238,6 +5282,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceItemvariantRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceItemvariantResponse) }
     def update_commerce_itemvariant(request:, timeout_ms: nil)
       # update_commerce_itemvariant - Update an itemvariant
+      # Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5360,6 +5405,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceLocationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceLocationResponse) }
     def update_commerce_location(request:, timeout_ms: nil)
       # update_commerce_location - Update a location
+      # Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5482,6 +5528,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceReservationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceReservationResponse) }
     def update_commerce_reservation(request:, timeout_ms: nil)
       # update_commerce_reservation - Update a reservation
+      # Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5604,6 +5651,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceReviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceReviewResponse) }
     def update_commerce_review(request:, timeout_ms: nil)
       # update_commerce_review - Update a review
+      # Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5726,6 +5774,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceSaleschannelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceSaleschannelResponse) }
     def update_commerce_saleschannel(request:, timeout_ms: nil)
       # update_commerce_saleschannel - Update a saleschannel
+      # Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

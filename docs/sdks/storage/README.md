@@ -14,7 +14,7 @@
 
 ## create_storage_file
 
-Create a file
+Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped to the provider's API. Returns the created StorageFile.
 
 ### Example Usage
 
@@ -34,7 +34,7 @@ res = s.storage.create_storage_file(storage_file: Models::Shared::StorageFile.ne
   description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
   download_url: 'https://clueless-laughter.biz',
   hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-  id: '5a3b2522-ba9a-4fc0-b63a-50257b278c9b',
+  id: '0d1cd6f6-0356-40db-aa64-5bd641156fd9',
   metadata: [],
   mime_type: 'application/pdf',
   name: 'softly.pdf',
@@ -43,7 +43,7 @@ res = s.storage.create_storage_file(storage_file: Models::Shared::StorageFile.ne
     'suasoria',
   ],
   type: Models::Shared::StorageFileType::FOLDER,
-  updated_at: DateTime.iso8601('2023-02-05T13:00:18.919Z'),
+  updated_at: DateTime.iso8601('2023-02-05T19:31:07.733Z'),
   version: '1',
   web_url: 'https://faraway-inspection.org',
 ), connection_id: '<id>')
@@ -75,7 +75,7 @@ end
 
 ## get_storage_file
 
-Retrieve a file
+Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -119,7 +119,7 @@ end
 
 ## list_storage_files
 
-List all files
+Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -164,7 +164,7 @@ end
 
 ## patch_storage_file
 
-Update a file
+Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 
 ### Example Usage
 
@@ -185,7 +185,7 @@ req = Models::Operations::PatchStorageFileRequest.new(
     description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
     download_url: 'https://clueless-laughter.biz',
     hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-    id: '78dc5fa1-2bf0-4000-a4ed-49fb5198ac5e',
+    id: '73931f2f-2719-461f-bde3-d18f871c1ec2',
     metadata: [],
     mime_type: 'application/pdf',
     name: 'softly.pdf',
@@ -194,7 +194,7 @@ req = Models::Operations::PatchStorageFileRequest.new(
       'suasoria',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-05T13:00:18.925Z'),
+    updated_at: DateTime.iso8601('2023-02-05T19:31:07.740Z'),
     version: '1',
     web_url: 'https://faraway-inspection.org',
   ),
@@ -228,7 +228,7 @@ end
 
 ## remove_storage_file
 
-Remove a file
+Deletes the StorageFile identified by `id`.
 
 ### Example Usage
 
@@ -270,7 +270,7 @@ end
 
 ## update_storage_file
 
-Update a file
+Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 
 ### Example Usage
 
@@ -291,7 +291,7 @@ req = Models::Operations::UpdateStorageFileRequest.new(
     description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
     download_url: 'https://clueless-laughter.biz',
     hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-    id: '78dc5fa1-2bf0-4000-a4ed-49fb5198ac5e',
+    id: '73931f2f-2719-461f-bde3-d18f871c1ec2',
     metadata: [],
     mime_type: 'application/pdf',
     name: 'softly.pdf',
@@ -300,7 +300,7 @@ req = Models::Operations::UpdateStorageFileRequest.new(
       'suasoria',
     ],
     type: Models::Shared::StorageFileType::FOLDER,
-    updated_at: DateTime.iso8601('2023-02-05T13:00:18.925Z'),
+    updated_at: DateTime.iso8601('2023-02-05T19:31:07.740Z'),
     version: '1',
     web_url: 'https://faraway-inspection.org',
   ),

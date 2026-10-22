@@ -14,7 +14,7 @@
 
 ## create_payment_subscription
 
-Create a subscription
+Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 
 ### Example Usage
 
@@ -36,7 +36,7 @@ res = s.subscription.create_payment_subscription(payment_subscription: Models::S
   current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   day_of_month: 8.0,
   description: 'Innovative Mouse featuring important technology and Bamboo construction',
-  id: 'a394f325-5551-4a99-af71-bf68f958a0f6',
+  id: 'ec15d0db-8265-4e03-93fb-6af020431b8f',
   interval: 1.0,
   interval_unit: Models::Shared::IntervalUnit::YEAR,
   lineitems: [],
@@ -45,7 +45,7 @@ res = s.subscription.create_payment_subscription(payment_subscription: Models::S
   start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-04T12:52:53.384Z'),
+  updated_at: DateTime.iso8601('2023-10-04T15:41:28.097Z'),
 ), connection_id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -75,7 +75,7 @@ end
 
 ## get_payment_subscription
 
-Retrieve a subscription
+Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -119,7 +119,7 @@ end
 
 ## list_payment_subscriptions
 
-List all subscriptions
+Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -164,7 +164,7 @@ end
 
 ## patch_payment_subscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: 'a1331b76-e046-45c2-8dec-da55813f253f',
+    id: 'd45db3c0-8446-4d27-878e-56e3b0022611',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -196,7 +196,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-04T12:52:53.388Z'),
+    updated_at: DateTime.iso8601('2023-10-04T15:41:28.101Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -228,7 +228,7 @@ end
 
 ## remove_payment_subscription
 
-Remove a subscription
+Deletes the PaymentSubscription identified by `id`.
 
 ### Example Usage
 
@@ -270,7 +270,7 @@ end
 
 ## update_payment_subscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -293,7 +293,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: 'a1331b76-e046-45c2-8dec-da55813f253f',
+    id: 'd45db3c0-8446-4d27-878e-56e3b0022611',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -302,7 +302,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-04T12:52:53.388Z'),
+    updated_at: DateTime.iso8601('2023-10-04T15:41:28.101Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

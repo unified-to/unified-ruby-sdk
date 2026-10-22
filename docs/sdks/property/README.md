@@ -14,7 +14,7 @@
 
 ## create_analytics_property
 
-Create a property
+Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
 
 ### Example Usage
 
@@ -32,10 +32,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.property.create_analytics_property(analytics_property: Models::Shared::AnalyticsProperty.new(
   created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
   currency: 'USD',
-  id: '8e5d696a-a1b8-4bc8-a358-72945257ff51',
+  id: '71b0065a-cedf-4ebd-b738-ea24062a4b62',
   name: 'Daniel, Goldner and Dickinson',
   timezone: 'UTC',
-  updated_at: DateTime.iso8601('2021-09-14T20:26:18.306Z'),
+  updated_at: DateTime.iso8601('2021-09-14T20:33:12.491Z'),
 ), connection_id: '<id>')
 
 unless res.analytics_property.nil?
@@ -65,7 +65,7 @@ end
 
 ## get_analytics_property
 
-Retrieve a property
+Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -109,7 +109,7 @@ end
 
 ## list_analytics_properties
 
-List all properties
+Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -154,7 +154,7 @@ end
 
 ## patch_analytics_property
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -173,10 +173,10 @@ req = Models::Operations::PatchAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: '88eebe3b-1dfe-4b0d-afcf-dc721adea84d',
+    id: '268894e4-9c95-4bbb-a4d8-a5f48fb56dc7',
     name: 'Daniel, Goldner and Dickinson',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T20:26:18.306Z'),
+    updated_at: DateTime.iso8601('2021-09-14T20:33:12.491Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -208,7 +208,7 @@ end
 
 ## remove_analytics_property
 
-Remove a property
+Deletes the AnalyticsProperty identified by `id`.
 
 ### Example Usage
 
@@ -250,7 +250,7 @@ end
 
 ## update_analytics_property
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -269,10 +269,10 @@ req = Models::Operations::UpdateAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: '88eebe3b-1dfe-4b0d-afcf-dc721adea84d',
+    id: '268894e4-9c95-4bbb-a4d8-a5f48fb56dc7',
     name: 'Daniel, Goldner and Dickinson',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T20:26:18.306Z'),
+    updated_at: DateTime.iso8601('2021-09-14T20:33:12.491Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

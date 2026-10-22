@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate)
       class PropertyDatastoreQueryQuery
         extend T::Sig
         include Crystalline::MetadataFields

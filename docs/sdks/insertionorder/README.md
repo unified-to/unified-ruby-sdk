@@ -14,7 +14,7 @@
 
 ## create_ads_insertionorder
 
-Create an insertionorder
+Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 
 ### Example Usage
 
@@ -31,11 +31,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.insertionorder.create_ads_insertionorder(ads_insertionorder: Models::Shared::AdsInsertionorder.new(
   created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-  id: '29e470ca-1a4f-4c5c-91fc-6a28fa9d22d7',
+  id: 'd9d82f2b-7a23-44c2-85d8-f8c463819d02',
   metadata: [],
   name: 'Kunde, Smith and Reinger',
   status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-  updated_at: DateTime.iso8601('2021-04-28T19:47:29.630Z'),
+  updated_at: DateTime.iso8601('2021-04-28T20:00:34.954Z'),
 ), connection_id: '<id>')
 
 unless res.ads_insertionorder.nil?
@@ -65,7 +65,7 @@ end
 
 ## get_ads_insertionorder
 
-Retrieve an insertionorder
+Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -109,7 +109,7 @@ end
 
 ## list_ads_insertionorders
 
-List all insertionorders
+Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -154,7 +154,7 @@ end
 
 ## patch_ads_insertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -172,11 +172,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: 'e53f2bec-eced-427d-9568-4b613573b749',
+    id: 'd8e61816-9b36-4ba0-a417-2c6160c1d42a',
     metadata: [],
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-28T19:47:29.630Z'),
+    updated_at: DateTime.iso8601('2021-04-28T20:00:34.954Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -208,7 +208,7 @@ end
 
 ## remove_ads_insertionorder
 
-Remove an insertionorder
+Deletes the AdsInsertionorder identified by `id`.
 
 ### Example Usage
 
@@ -250,7 +250,7 @@ end
 
 ## update_ads_insertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -268,11 +268,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: 'e53f2bec-eced-427d-9568-4b613573b749',
+    id: 'd8e61816-9b36-4ba0-a417-2c6160c1d42a',
     metadata: [],
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-28T19:47:29.630Z'),
+    updated_at: DateTime.iso8601('2021-04-28T20:00:34.954Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

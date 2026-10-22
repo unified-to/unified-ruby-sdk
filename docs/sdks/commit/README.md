@@ -14,7 +14,7 @@
 
 ## create_repo_commit
 
-Create a commit
+Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 
 ### Example Usage
 
@@ -31,14 +31,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.commit.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
   created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-  id: '8faaf651-733b-4d26-92d1-0103bdcae980',
+  id: '592bcae2-bd76-458c-98cd-2ab53079eb09',
   lines_added: 313.0,
   lines_changed: 659.0,
   lines_deleted: 482.0,
   message: 'quantify bluetooth bandwidth',
   metadata: [],
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2023-05-31T06:51:27.908Z'),
+  updated_at: DateTime.iso8601('2023-05-31T17:46:40.721Z'),
 ), connection_id: '<id>')
 
 unless res.repo_commit.nil?
@@ -68,7 +68,7 @@ end
 
 ## get_repo_commit
 
-Retrieve a commit
+Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -112,7 +112,7 @@ end
 
 ## list_repo_commits
 
-List all commits
+Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -157,7 +157,7 @@ end
 
 ## patch_repo_commit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -175,14 +175,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: 'eced1575-116e-4bb5-92fe-18bea53520fd',
+    id: 'f72dc39a-23be-4866-b859-2830fde4bcf8',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'quantify bluetooth bandwidth',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-05-31T06:51:27.914Z'),
+    updated_at: DateTime.iso8601('2023-05-31T17:46:40.728Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -214,7 +214,7 @@ end
 
 ## remove_repo_commit
 
-Remove a commit
+Deletes the RepoCommit identified by `id`.
 
 ### Example Usage
 
@@ -256,7 +256,7 @@ end
 
 ## update_repo_commit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -274,14 +274,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: 'eced1575-116e-4bb5-92fe-18bea53520fd',
+    id: 'f72dc39a-23be-4866-b859-2830fde4bcf8',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'quantify bluetooth bandwidth',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-05-31T06:51:27.914Z'),
+    updated_at: DateTime.iso8601('2023-05-31T17:46:40.728Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

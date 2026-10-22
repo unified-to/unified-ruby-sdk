@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_project: Models::Shared::AccountingProject, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingProjectQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingProjectResponse) }
     def create_accounting_project(accounting_project:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_project - Create a project
+      # Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
       request = Models::Operations::CreateAccountingProjectRequest.new(
         accounting_project: accounting_project,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(task_project: Models::Shared::TaskProject, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTaskProjectQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTaskProjectResponse) }
     def create_task_project(task_project:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_task_project - Create a project
+      # Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
       request = Models::Operations::CreateTaskProjectRequest.new(
         task_project: task_project,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingProjectQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingProjectResponse) }
     def get_accounting_project(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_project - Retrieve a project
+      # Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingProjectRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTaskProjectQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTaskProjectResponse) }
     def get_task_project(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_task_project - Retrieve a project
+      # Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetTaskProjectRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingProjectsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingProjectsResponse) }
     def list_accounting_projects(request:, timeout_ms: nil)
       # list_accounting_projects - List all projects
+      # Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -640,6 +645,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListTaskProjectsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTaskProjectsResponse) }
     def list_task_projects(request:, timeout_ms: nil)
       # list_task_projects - List all projects
+      # Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -750,6 +756,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingProjectRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingProjectResponse) }
     def patch_accounting_project(request:, timeout_ms: nil)
       # patch_accounting_project - Update a project
+      # Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -872,6 +879,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchTaskProjectRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTaskProjectResponse) }
     def patch_task_project(request:, timeout_ms: nil)
       # patch_task_project - Update a project
+      # Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingProjectResponse) }
     def remove_accounting_project(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_project - Remove a project
+      # Deletes the AccountingProject identified by `id`.
       request = Models::Operations::RemoveAccountingProjectRequest.new(
         connection_id: connection_id,
         id: id
@@ -1108,6 +1117,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTaskProjectResponse) }
     def remove_task_project(connection_id:, id:, timeout_ms: nil)
       # remove_task_project - Remove a project
+      # Deletes the TaskProject identified by `id`.
       request = Models::Operations::RemoveTaskProjectRequest.new(
         connection_id: connection_id,
         id: id
@@ -1222,6 +1232,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingProjectRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingProjectResponse) }
     def update_accounting_project(request:, timeout_ms: nil)
       # update_accounting_project - Update a project
+      # Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1344,6 +1355,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateTaskProjectRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTaskProjectResponse) }
     def update_task_project(request:, timeout_ms: nil)
       # update_task_project - Update a project
+      # Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

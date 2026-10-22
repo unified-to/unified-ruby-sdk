@@ -39,7 +39,7 @@
 
 ## create_genai_agent
 
-Create an agent
+Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
 
 ### Example Usage
 
@@ -57,11 +57,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.genai.create_genai_agent(genai_agent: Models::Shared::GenaiAgent.new(
   created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
   description: 'Assentator tero sequi.',
-  id: 'bddafc1a-890a-4ac9-81f7-8a777f0d9001',
+  id: 'e6383f2d-b4d2-489e-9384-0cca840ad6f3',
   instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
   is_active: false,
   name: 'daughter with',
-  updated_at: DateTime.iso8601('2025-10-15T10:47:48.979Z'),
+  updated_at: DateTime.iso8601('2025-10-16T06:26:17.706Z'),
 ), connection_id: '<id>')
 
 unless res.genai_agent.nil?
@@ -91,7 +91,7 @@ end
 
 ## create_genai_embedding
 
-Create an embedding
+Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
 
 ### Example Usage
 
@@ -115,7 +115,7 @@ res = s.genai.create_genai_embedding(genai_embedding: Models::Shared::GenaiEmbed
   dimension: 423.0,
   embeddings: 'Est.',
   enconding_format: Models::Shared::EncondingFormat::FLOAT,
-  id: '69ad3ee9-3be3-46ae-a50b-94cabdd48b98',
+  id: '6f64474a-e4ea-475a-a3a2-7ed4a98a77ca',
   max_tokens: 223.0,
   tokens_used: 836.0,
   type: 'classification',
@@ -148,7 +148,7 @@ end
 
 ## create_genai_memory
 
-Create a memory
+Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
 
 ### Example Usage
 
@@ -166,7 +166,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.genai.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
   content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
   created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-  id: '88bb3c43-4389-4a83-839c-696b4051536e',
+  id: '8b8d63fc-2487-4efa-b199-2f4f3735511d',
   metadata: [
     Models::Shared::GenaiMetadata.new(
       extra_data: {
@@ -181,7 +181,7 @@ res = s.genai.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
   ],
   name: 'sponte.md',
   type: Models::Shared::GenaiMemoryType::MEMORY,
-  updated_at: DateTime.iso8601('2023-04-25T21:28:57.374Z'),
+  updated_at: DateTime.iso8601('2023-04-26T04:39:23.581Z'),
   user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
 ), connection_id: '<id>')
 
@@ -212,7 +212,7 @@ end
 
 ## create_genai_organization
 
-Create an organization
+Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 
 ### Example Usage
 
@@ -230,10 +230,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.genai.create_genai_organization(genai_organization: Models::Shared::GenaiOrganization.new(
   created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
   description: 'Voluptates abeo subseco.',
-  id: 'f9efe1a2-99d3-49e7-b858-8a1f79714fb9',
+  id: '979ae74f-14ff-48a7-ad20-609831f3425d',
   is_active: false,
   name: 'officially about',
-  updated_at: DateTime.iso8601('2023-01-26T10:38:34.878Z'),
+  updated_at: DateTime.iso8601('2023-01-26T19:34:30.479Z'),
 ), connection_id: '<id>')
 
 unless res.genai_organization.nil?
@@ -263,7 +263,7 @@ end
 
 ## create_genai_prompt
 
-Create a prompt
+Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped to the provider's API. Returns the created GenaiPrompt.
 
 ### Example Usage
 
@@ -380,7 +380,7 @@ end
 
 ## create_genai_task
 
-Create a task
+Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
 
 ### Example Usage
 
@@ -396,10 +396,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.genai.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
-  completed_at: DateTime.iso8601('2025-10-01T06:40:21.561Z'),
+  completed_at: DateTime.iso8601('2025-10-02T02:15:37.668Z'),
   created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
   files_changed: 19.0,
-  id: 'ac164b9c-0c3f-45ee-8b6a-bf1116489adc',
+  id: '442fcbae-d067-4f9c-9db3-a70e9c393a98',
   instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
   lines_added: 244.0,
   lines_deleted: 118.0,
@@ -414,12 +414,12 @@ res = s.genai.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
   pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
   repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
   source_branch_identifier: 'main',
-  started_at: DateTime.iso8601('2024-05-21T10:29:55.285Z'),
+  started_at: DateTime.iso8601('2024-05-22T00:40:23.675Z'),
   status: Models::Shared::GenaiTaskStatus::BLOCKED,
   summary: 'Cur aeternus cogito vesper.',
   target_branch_identifier: 'agent/joshingly-ignorance',
   tokens_used: 2165.0,
-  updated_at: DateTime.iso8601('2023-02-26T07:15:11.602Z'),
+  updated_at: DateTime.iso8601('2023-02-26T16:31:59.677Z'),
   web_url: 'https://inexperienced-adrenalin.biz/',
 ), connection_id: '<id>')
 
@@ -450,7 +450,7 @@ end
 
 ## get_genai_agent
 
-Retrieve an agent
+Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -494,7 +494,7 @@ end
 
 ## get_genai_memory
 
-Retrieve a memory
+Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -538,7 +538,7 @@ end
 
 ## get_genai_model
 
-Retrieve a model
+Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -582,7 +582,7 @@ end
 
 ## get_genai_organization
 
-Retrieve an organization
+Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -626,7 +626,7 @@ end
 
 ## get_genai_skill
 
-Retrieve a skill
+Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -670,7 +670,7 @@ end
 
 ## get_genai_task
 
-Retrieve a task
+Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -714,7 +714,7 @@ end
 
 ## list_genai_agents
 
-List all agents
+Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -759,7 +759,7 @@ end
 
 ## list_genai_memories
 
-List all memories
+Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -804,7 +804,7 @@ end
 
 ## list_genai_models
 
-List all models
+Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -849,7 +849,7 @@ end
 
 ## list_genai_organizations
 
-List all organizations
+Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -894,7 +894,7 @@ end
 
 ## list_genai_skills
 
-List all skills
+Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -939,7 +939,7 @@ end
 
 ## list_genai_tasks
 
-List all tasks
+Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -984,7 +984,7 @@ end
 
 ## patch_genai_agent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -1003,11 +1003,11 @@ req = Models::Operations::PatchGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: '84fc5f34-c274-43ed-9767-bf6338847936',
+    id: '691117f4-f6f3-456b-90b6-e5ab838c6c45',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-10-15T10:47:48.983Z'),
+    updated_at: DateTime.iso8601('2025-10-16T06:26:17.713Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1039,7 +1039,7 @@ end
 
 ## patch_genai_memory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -1058,7 +1058,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '9365b4e5-aab5-4ff3-ba49-ac556dab74c1',
+    id: 'eedef7f5-cf14-4aff-a523-5470405a3db1',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -1073,7 +1073,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-04-25T21:28:57.376Z'),
+    updated_at: DateTime.iso8601('2023-04-26T04:39:23.586Z'),
     user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
   ),
   connection_id: '<id>',
@@ -1106,7 +1106,7 @@ end
 
 ## patch_genai_organization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1125,10 +1125,10 @@ req = Models::Operations::PatchGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: '8efc655b-1348-44e4-92a1-1ab5ab8473bc',
+    id: 'f8be95c0-9ebe-4e98-8012-81311a8cd9b5',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-01-26T10:38:34.880Z'),
+    updated_at: DateTime.iso8601('2023-01-26T19:34:30.483Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1160,7 +1160,7 @@ end
 
 ## patch_genai_task
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1177,10 +1177,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-01T06:40:21.574Z'),
+    completed_at: DateTime.iso8601('2025-10-02T02:15:37.686Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: 'ca1027a1-41c3-436f-99a9-a9acef634c3f',
+    id: '4013dc78-f8cd-401f-8553-cc0548fc6a44',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1195,12 +1195,12 @@ req = Models::Operations::PatchGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-05-21T10:29:55.294Z'),
+    started_at: DateTime.iso8601('2024-05-22T00:40:23.688Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-02-26T07:15:11.609Z'),
+    updated_at: DateTime.iso8601('2023-02-26T16:31:59.686Z'),
     web_url: 'https://inexperienced-adrenalin.biz/',
   ),
   connection_id: '<id>',
@@ -1233,7 +1233,7 @@ end
 
 ## remove_genai_agent
 
-Remove an agent
+Deletes the GenaiAgent identified by `id`.
 
 ### Example Usage
 
@@ -1275,7 +1275,7 @@ end
 
 ## remove_genai_memory
 
-Remove a memory
+Deletes the GenaiMemory identified by `id`.
 
 ### Example Usage
 
@@ -1317,7 +1317,7 @@ end
 
 ## remove_genai_organization
 
-Remove an organization
+Deletes the GenaiOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1359,7 +1359,7 @@ end
 
 ## remove_genai_skill
 
-Remove a skill
+Deletes the GenaiSkill identified by `id`.
 
 ### Example Usage
 
@@ -1401,7 +1401,7 @@ end
 
 ## remove_genai_task
 
-Remove a task
+Deletes the GenaiTask identified by `id`.
 
 ### Example Usage
 
@@ -1443,7 +1443,7 @@ end
 
 ## update_genai_agent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -1462,11 +1462,11 @@ req = Models::Operations::UpdateGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: '84fc5f34-c274-43ed-9767-bf6338847936',
+    id: '691117f4-f6f3-456b-90b6-e5ab838c6c45',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-10-15T10:47:48.983Z'),
+    updated_at: DateTime.iso8601('2025-10-16T06:26:17.713Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1498,7 +1498,7 @@ end
 
 ## update_genai_memory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -1517,7 +1517,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '9365b4e5-aab5-4ff3-ba49-ac556dab74c1',
+    id: 'eedef7f5-cf14-4aff-a523-5470405a3db1',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -1532,7 +1532,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-04-25T21:28:57.376Z'),
+    updated_at: DateTime.iso8601('2023-04-26T04:39:23.586Z'),
     user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
   ),
   connection_id: '<id>',
@@ -1565,7 +1565,7 @@ end
 
 ## update_genai_organization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1584,10 +1584,10 @@ req = Models::Operations::UpdateGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: '8efc655b-1348-44e4-92a1-1ab5ab8473bc',
+    id: 'f8be95c0-9ebe-4e98-8012-81311a8cd9b5',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-01-26T10:38:34.880Z'),
+    updated_at: DateTime.iso8601('2023-01-26T19:34:30.483Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1619,7 +1619,7 @@ end
 
 ## update_genai_task
 
-Update a task
+Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
 
 ### Example Usage
 
@@ -1636,10 +1636,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-01T06:40:21.574Z'),
+    completed_at: DateTime.iso8601('2025-10-02T02:15:37.686Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: 'ca1027a1-41c3-436f-99a9-a9acef634c3f',
+    id: '4013dc78-f8cd-401f-8553-cc0548fc6a44',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1654,12 +1654,12 @@ req = Models::Operations::UpdateGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-05-21T10:29:55.294Z'),
+    started_at: DateTime.iso8601('2024-05-22T00:40:23.688Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-02-26T07:15:11.609Z'),
+    updated_at: DateTime.iso8601('2023-02-26T16:31:59.686Z'),
     web_url: 'https://inexperienced-adrenalin.biz/',
   ),
   connection_id: '<id>',

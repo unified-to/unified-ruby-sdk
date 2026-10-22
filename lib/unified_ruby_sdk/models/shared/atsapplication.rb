@@ -17,7 +17,7 @@ module UnifiedRubySDK
         field :answers, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsApplicationAnswer)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answers') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :applied_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('applied_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The ID of the candidate who is applying (an AtsCandidate ID)
         field :candidate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -25,7 +25,7 @@ module UnifiedRubySDK
         field :hired_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('hired_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # The ID of the job being applied to (an AtsJob ID)
         field :job_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_id') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }

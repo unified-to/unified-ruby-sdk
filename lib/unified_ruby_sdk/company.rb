@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ats_company: Models::Shared::AtsCompany, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsCompanyResponse) }
     def create_ats_company(ats_company:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_company - Create a company
+      # Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
       request = Models::Operations::CreateAtsCompanyRequest.new(
         ats_company: ats_company,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(crm_company: Models::Shared::CrmCompany, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmCompanyResponse) }
     def create_crm_company(crm_company:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_company - Create a company
+      # Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
       request = Models::Operations::CreateCrmCompanyRequest.new(
         crm_company: crm_company,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(hris_company: Models::Shared::HrisCompany, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisCompanyResponse) }
     def create_hris_company(hris_company:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_company - Create a company
+      # Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
       request = Models::Operations::CreateHrisCompanyRequest.new(
         hris_company: hris_company,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsCompanyResponse) }
     def get_ats_company(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_company - Retrieve a company
+      # Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsCompanyRequest.new(
         connection_id: connection_id,
         id: id,
@@ -542,6 +546,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmCompanyResponse) }
     def get_crm_company(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_company - Retrieve a company
+      # Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCrmCompanyRequest.new(
         connection_id: connection_id,
         id: id,
@@ -658,6 +663,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisCompanyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisCompanyResponse) }
     def get_hris_company(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_company - Retrieve a company
+      # Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisCompanyRequest.new(
         connection_id: connection_id,
         id: id,
@@ -774,6 +780,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsCompaniesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsCompaniesResponse) }
     def list_ats_companies(request:, timeout_ms: nil)
       # list_ats_companies - List all companies
+      # Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -884,6 +891,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCrmCompaniesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmCompaniesResponse) }
     def list_crm_companies(request:, timeout_ms: nil)
       # list_crm_companies - List all companies
+      # Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1109,6 +1117,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisCompaniesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisCompaniesResponse) }
     def list_hris_companies(request:, timeout_ms: nil)
       # list_hris_companies - List all companies
+      # Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1219,6 +1228,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsCompanyResponse) }
     def patch_ats_company(request:, timeout_ms: nil)
       # patch_ats_company - Update a company
+      # Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1341,6 +1351,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCrmCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmCompanyResponse) }
     def patch_crm_company(request:, timeout_ms: nil)
       # patch_crm_company - Update a company
+      # Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1463,6 +1474,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisCompanyResponse) }
     def patch_hris_company(request:, timeout_ms: nil)
       # patch_hris_company - Update a company
+      # Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1585,6 +1597,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsCompanyResponse) }
     def remove_ats_company(connection_id:, id:, timeout_ms: nil)
       # remove_ats_company - Remove a company
+      # Deletes the AtsCompany identified by `id`.
       request = Models::Operations::RemoveAtsCompanyRequest.new(
         connection_id: connection_id,
         id: id
@@ -1699,6 +1712,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmCompanyResponse) }
     def remove_crm_company(connection_id:, id:, timeout_ms: nil)
       # remove_crm_company - Remove a company
+      # Deletes the CrmCompany identified by `id`.
       request = Models::Operations::RemoveCrmCompanyRequest.new(
         connection_id: connection_id,
         id: id
@@ -1813,6 +1827,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisCompanyResponse) }
     def remove_hris_company(connection_id:, id:, timeout_ms: nil)
       # remove_hris_company - Remove a company
+      # Deletes the HrisCompany identified by `id`.
       request = Models::Operations::RemoveHrisCompanyRequest.new(
         connection_id: connection_id,
         id: id
@@ -1927,6 +1942,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsCompanyResponse) }
     def update_ats_company(request:, timeout_ms: nil)
       # update_ats_company - Update a company
+      # Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2049,6 +2065,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCrmCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmCompanyResponse) }
     def update_crm_company(request:, timeout_ms: nil)
       # update_crm_company - Update a company
+      # Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2171,6 +2188,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisCompanyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisCompanyResponse) }
     def update_hris_company(request:, timeout_ms: nil)
       # update_hris_company - Update a company
+      # Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

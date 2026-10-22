@@ -30,7 +30,7 @@
 
 ## create_payment_link
 
-Create a link
+Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 
 ### Example Usage
 
@@ -50,13 +50,13 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
   created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
   currency: 'CAD',
   description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-  id: '44af6dd3-1389-49e9-8034-8adbc5265f45',
+  id: 'fc515664-3d8a-4056-95ed-aaf2662aefd8',
   is_active: true,
   is_chargeable_now: true,
   lineitems: [
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: 'f9b9e527-2508-4223-bdf6-7fdebfada7ea',
+      id: '77b51887-c151-4811-aff1-67b93542f04a',
       item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
       item_name: 'Soft Marble Cheese',
       tax_amount: 0.0,
@@ -68,7 +68,7 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
       discount_amount: 424.32,
-      id: '1009ccc2-d6fe-4236-8c68-d0fdab642432',
+      id: '4a10838e-ed44-472c-b4ef-88a6d0b75590',
       item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
       item_name: 'Sleek Aluminum Shoes',
       notes: 'Cervus decretum viridis doloremque.',
@@ -80,7 +80,7 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
     ),
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: '35cf0b54-224b-4149-847c-02116695cc67',
+      id: 'b19062d1-03db-4538-8b1a-d279ccaa2c70',
       item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
       item_name: 'Elegant Concrete Gloves',
       notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -93,8 +93,8 @@ res = s.payment.create_payment_link(payment_link: Models::Shared::PaymentLink.ne
   ],
   metadata: [],
   success_url: 'https://tinted-jet.info',
-  updated_at: DateTime.iso8601('2024-04-13T09:31:26.812Z'),
-  url: 'https://pay.example.com/44af6dd3-1389-49e9-8034-8adbc5265f45',
+  updated_at: DateTime.iso8601('2024-04-13T15:33:57.274Z'),
+  url: 'https://pay.example.com/fc515664-3d8a-4056-95ed-aaf2662aefd8',
 ), connection_id: '<id>')
 
 unless res.payment_link.nil?
@@ -124,7 +124,7 @@ end
 
 ## create_payment_payment
 
-Create a payment
+Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are mapped to the provider's API. Returns the created PaymentPayment.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ res = s.payment.create_payment_payment(payment_payment: Models::Shared::PaymentP
   created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
   currency: 'EUR',
   fee_amount: 2_055.82,
-  id: '3d3ebe10-9f28-42c2-b967-793cf13d2dcd',
+  id: '6417fb64-0ec5-46b0-9311-17b57d95df10',
   metadata: [],
   net_amount: 68_824.18,
   notes: 'Bibo tactus vilicus.',
@@ -159,7 +159,7 @@ res = s.payment.create_payment_payment(payment_payment: Models::Shared::PaymentP
   tip_amount: 0.0,
   total_amount: 70_880.0,
   type: Models::Shared::PaymentPaymentType::INVOICE,
-  updated_at: DateTime.iso8601('2025-10-08T00:35:44.643Z'),
+  updated_at: DateTime.iso8601('2025-10-08T19:02:15.634Z'),
 ), connection_id: '<id>')
 
 unless res.payment_payment.nil?
@@ -189,7 +189,7 @@ end
 
 ## create_payment_subscription
 
-Create a subscription
+Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 
 ### Example Usage
 
@@ -211,7 +211,7 @@ res = s.payment.create_payment_subscription(payment_subscription: Models::Shared
   current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   day_of_month: 8.0,
   description: 'Innovative Mouse featuring important technology and Bamboo construction',
-  id: 'a394f325-5551-4a99-af71-bf68f958a0f6',
+  id: 'ec15d0db-8265-4e03-93fb-6af020431b8f',
   interval: 1.0,
   interval_unit: Models::Shared::IntervalUnit::YEAR,
   lineitems: [],
@@ -220,7 +220,7 @@ res = s.payment.create_payment_subscription(payment_subscription: Models::Shared
   start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
   status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-04T12:52:53.384Z'),
+  updated_at: DateTime.iso8601('2023-10-04T15:41:28.097Z'),
 ), connection_id: '<id>')
 
 unless res.payment_subscription.nil?
@@ -250,7 +250,7 @@ end
 
 ## get_payment_link
 
-Retrieve a link
+Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ end
 
 ## get_payment_payment
 
-Retrieve a payment
+Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -338,7 +338,7 @@ end
 
 ## get_payment_payout
 
-Retrieve a payout
+Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -382,7 +382,7 @@ end
 
 ## get_payment_refund
 
-Retrieve a refund
+Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -426,7 +426,7 @@ end
 
 ## get_payment_subscription
 
-Retrieve a subscription
+Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -470,7 +470,7 @@ end
 
 ## list_payment_links
 
-List all links
+Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -515,7 +515,7 @@ end
 
 ## list_payment_payments
 
-List all payments
+Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -560,7 +560,7 @@ end
 
 ## list_payment_payouts
 
-List all payouts
+Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -605,7 +605,7 @@ end
 
 ## list_payment_refunds
 
-List all refunds
+Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -650,7 +650,7 @@ end
 
 ## list_payment_subscriptions
 
-List all subscriptions
+Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -695,7 +695,7 @@ end
 
 ## patch_payment_link
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -716,13 +716,13 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: '0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+    id: '08f916f2-a958-486e-9292-d7529bd8ccba',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'a4992b6e-470c-465d-b2ef-ed9254b71ac6',
+        id: '3530b134-abde-4de0-ac67-e0478bf02437',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
@@ -734,7 +734,7 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: '2cbd3403-33b5-4168-a882-a350fd62271b',
+        id: '37245c21-0f1d-4cb1-95ee-fdffdda2bc73',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
@@ -746,7 +746,7 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '807d9e84-427d-4fd9-9060-9ca6fac75118',
+        id: 'b60c42d8-7654-4944-b7a1-a96966847949',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -759,8 +759,8 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-13T09:31:26.816Z'),
-    url: 'https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+    updated_at: DateTime.iso8601('2024-04-13T15:33:57.282Z'),
+    url: 'https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -792,7 +792,7 @@ end
 
 ## patch_payment_payment
 
-Update a payment
+Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 
 ### Example Usage
 
@@ -816,7 +816,7 @@ req = Models::Operations::PatchPaymentPaymentRequest.new(
     created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     currency: 'EUR',
     fee_amount: 2_055.82,
-    id: '8fffaf3e-a7e1-4753-b96e-207496205429',
+    id: '08b1fd70-0071-4b52-838f-889911be728e',
     metadata: [],
     net_amount: 68_824.18,
     notes: 'Bibo tactus vilicus.',
@@ -828,7 +828,7 @@ req = Models::Operations::PatchPaymentPaymentRequest.new(
     tip_amount: 0.0,
     total_amount: 70_880.0,
     type: Models::Shared::PaymentPaymentType::INVOICE,
-    updated_at: DateTime.iso8601('2025-10-08T00:35:44.667Z'),
+    updated_at: DateTime.iso8601('2025-10-08T19:02:15.660Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -860,7 +860,7 @@ end
 
 ## patch_payment_subscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -883,7 +883,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: 'a1331b76-e046-45c2-8dec-da55813f253f',
+    id: 'd45db3c0-8446-4d27-878e-56e3b0022611',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -892,7 +892,7 @@ req = Models::Operations::PatchPaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-04T12:52:53.388Z'),
+    updated_at: DateTime.iso8601('2023-10-04T15:41:28.101Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -924,7 +924,7 @@ end
 
 ## remove_payment_link
 
-Remove a link
+Deletes the PaymentLink identified by `id`.
 
 ### Example Usage
 
@@ -966,7 +966,7 @@ end
 
 ## remove_payment_payment
 
-Remove a payment
+Deletes the PaymentPayment identified by `id`.
 
 ### Example Usage
 
@@ -1008,7 +1008,7 @@ end
 
 ## remove_payment_subscription
 
-Remove a subscription
+Deletes the PaymentSubscription identified by `id`.
 
 ### Example Usage
 
@@ -1050,7 +1050,7 @@ end
 
 ## update_payment_link
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -1071,13 +1071,13 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: '0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+    id: '08f916f2-a958-486e-9292-d7529bd8ccba',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'a4992b6e-470c-465d-b2ef-ed9254b71ac6',
+        id: '3530b134-abde-4de0-ac67-e0478bf02437',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
@@ -1089,7 +1089,7 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: '2cbd3403-33b5-4168-a882-a350fd62271b',
+        id: '37245c21-0f1d-4cb1-95ee-fdffdda2bc73',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
@@ -1101,7 +1101,7 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '807d9e84-427d-4fd9-9060-9ca6fac75118',
+        id: 'b60c42d8-7654-4944-b7a1-a96966847949',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -1114,8 +1114,8 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-13T09:31:26.816Z'),
-    url: 'https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+    updated_at: DateTime.iso8601('2024-04-13T15:33:57.282Z'),
+    url: 'https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1147,7 +1147,7 @@ end
 
 ## update_payment_payment
 
-Update a payment
+Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 
 ### Example Usage
 
@@ -1171,7 +1171,7 @@ req = Models::Operations::UpdatePaymentPaymentRequest.new(
     created_at: DateTime.iso8601('2022-03-10T00:19:42.086Z'),
     currency: 'EUR',
     fee_amount: 2_055.82,
-    id: '8fffaf3e-a7e1-4753-b96e-207496205429',
+    id: '08b1fd70-0071-4b52-838f-889911be728e',
     metadata: [],
     net_amount: 68_824.18,
     notes: 'Bibo tactus vilicus.',
@@ -1183,7 +1183,7 @@ req = Models::Operations::UpdatePaymentPaymentRequest.new(
     tip_amount: 0.0,
     total_amount: 70_880.0,
     type: Models::Shared::PaymentPaymentType::INVOICE,
-    updated_at: DateTime.iso8601('2025-10-08T00:35:44.667Z'),
+    updated_at: DateTime.iso8601('2025-10-08T19:02:15.660Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1215,7 +1215,7 @@ end
 
 ## update_payment_subscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -1238,7 +1238,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     current_period_start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     day_of_month: 8.0,
     description: 'Innovative Mouse featuring important technology and Bamboo construction',
-    id: 'a1331b76-e046-45c2-8dec-da55813f253f',
+    id: 'd45db3c0-8446-4d27-878e-56e3b0022611',
     interval: 1.0,
     interval_unit: Models::Shared::IntervalUnit::YEAR,
     lineitems: [],
@@ -1247,7 +1247,7 @@ req = Models::Operations::UpdatePaymentSubscriptionRequest.new(
     start_at: DateTime.iso8601('2023-05-08T10:11:03.414Z'),
     status: Models::Shared::PaymentSubscriptionStatus::ACTIVE,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-04T12:52:53.388Z'),
+    updated_at: DateTime.iso8601('2023-10-04T15:41:28.101Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

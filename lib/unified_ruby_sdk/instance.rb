@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(compute_instance: Models::Shared::ComputeInstance, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateComputeInstanceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateComputeInstanceResponse) }
     def create_compute_instance(compute_instance:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_compute_instance - Create an instance
+      # Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
       request = Models::Operations::CreateComputeInstanceRequest.new(
         compute_instance: compute_instance,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetComputeInstanceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetComputeInstanceResponse) }
     def get_compute_instance(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_compute_instance - Retrieve an instance
+      # Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetComputeInstanceRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListComputeInstancesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListComputeInstancesResponse) }
     def list_compute_instances(request:, timeout_ms: nil)
       # list_compute_instances - List all instances
+      # Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchComputeInstanceRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchComputeInstanceResponse) }
     def patch_compute_instance(request:, timeout_ms: nil)
       # patch_compute_instance - Update an instance
+      # Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveComputeInstanceResponse) }
     def remove_compute_instance(connection_id:, id:, timeout_ms: nil)
       # remove_compute_instance - Remove an instance
+      # Deletes the ComputeInstance identified by `id`.
       request = Models::Operations::RemoveComputeInstanceRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateComputeInstanceRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateComputeInstanceResponse) }
     def update_compute_instance(request:, timeout_ms: nil)
       # update_compute_instance - Update an instance
+      # Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

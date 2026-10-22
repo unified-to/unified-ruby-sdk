@@ -38,7 +38,7 @@
 
 ## create_repo_branch
 
-Create a branch
+Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
 
 ### Example Usage
 
@@ -55,11 +55,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.repo.create_repo_branch(repo_branch: Models::Shared::RepoBranch.new(
   created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-  id: 'd3de22aa-944f-4ed3-96e8-7b83f147ffae',
+  id: '2e0abdc1-3bc6-4576-86b2-498ceec9b4b3',
   metadata: [],
   name: 'transmitter-calculate',
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2020-01-07T08:02:55.995Z'),
+  updated_at: DateTime.iso8601('2020-01-07T10:44:37.774Z'),
 ), connection_id: '<id>')
 
 unless res.repo_branch.nil?
@@ -89,7 +89,7 @@ end
 
 ## create_repo_commit
 
-Create a commit
+Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 
 ### Example Usage
 
@@ -106,14 +106,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.repo.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
   created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-  id: '8faaf651-733b-4d26-92d1-0103bdcae980',
+  id: '592bcae2-bd76-458c-98cd-2ab53079eb09',
   lines_added: 313.0,
   lines_changed: 659.0,
   lines_deleted: 482.0,
   message: 'quantify bluetooth bandwidth',
   metadata: [],
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2023-05-31T06:51:27.908Z'),
+  updated_at: DateTime.iso8601('2023-05-31T17:46:40.721Z'),
 ), connection_id: '<id>')
 
 unless res.repo_commit.nil?
@@ -143,7 +143,7 @@ end
 
 ## create_repo_organization
 
-Create an organization
+Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
 ### Example Usage
 
@@ -162,10 +162,10 @@ res = s.repo.create_repo_organization(repo_organization: Models::Shared::RepoOrg
   avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
   created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
   description: 'Trepide defendo supra testimonium ager.',
-  id: 'd11dbf84-08b3-42b3-9028-bf71a50ce463',
+  id: '933e206a-d0b9-4551-b0a1-48ec334aa3f3',
   metadata: [],
   name: 'Denesik - Lemke',
-  updated_at: DateTime.iso8601('2023-08-21T15:08:19.151Z'),
+  updated_at: DateTime.iso8601('2023-08-21T21:22:03.917Z'),
   web_url: 'https://turbulent-overheard.biz',
 ), connection_id: '<id>')
 
@@ -196,7 +196,7 @@ end
 
 ## create_repo_pullrequest
 
-Create a pullrequest
+Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 
 ### Example Usage
 
@@ -212,9 +212,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.repo.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(
-  closed_at: DateTime.iso8601('2025-05-01T13:52:56.618Z'),
+  closed_at: DateTime.iso8601('2025-05-02T04:03:35.410Z'),
   created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-  id: 'f056c8e3-203d-4efa-b38e-98ababfea7f3',
+  id: '5d31e7a9-e7a6-4efe-a22d-7c351e02021d',
   labels: [
     'creptio',
     'tutamen',
@@ -223,7 +223,7 @@ res = s.repo.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullr
   notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
   status: Models::Shared::RepoPullrequestStatus::APPROVED,
   title: 'reboot mobile application',
-  updated_at: DateTime.iso8601('2026-01-17T07:06:04.358Z'),
+  updated_at: DateTime.iso8601('2026-01-18T01:55:58.476Z'),
 ), connection_id: '<id>')
 
 unless res.repo_pullrequest.nil?
@@ -253,7 +253,7 @@ end
 
 ## create_repo_repository
 
-Create a repository
+Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 
 ### Example Usage
 
@@ -271,11 +271,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.repo.create_repo_repository(repo_repository: Models::Shared::RepoRepository.new(
   created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
   description: 'Sed somnus crastinus armarium.',
-  id: '1becda54-75c5-4934-8961-9ca4ffa219f1',
+  id: '86f236b6-8cd3-488a-b7b2-ce93a56c7517',
   is_private: false,
   metadata: [],
   name: 'bah-bogus',
-  updated_at: DateTime.iso8601('2024-03-01T02:05:05.865Z'),
+  updated_at: DateTime.iso8601('2024-03-01T07:10:32.663Z'),
   web_url: 'https://neat-birdbath.org',
 ), connection_id: '<id>')
 
@@ -306,7 +306,7 @@ end
 
 ## get_repo_branch
 
-Retrieve a branch
+Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -350,7 +350,7 @@ end
 
 ## get_repo_commit
 
-Retrieve a commit
+Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -394,7 +394,7 @@ end
 
 ## get_repo_organization
 
-Retrieve an organization
+Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -438,7 +438,7 @@ end
 
 ## get_repo_pullrequest
 
-Retrieve a pullrequest
+Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -482,7 +482,7 @@ end
 
 ## get_repo_repository
 
-Retrieve a repository
+Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -526,7 +526,7 @@ end
 
 ## list_repo_branches
 
-List all branches
+Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -571,7 +571,7 @@ end
 
 ## list_repo_commits
 
-List all commits
+Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -616,7 +616,7 @@ end
 
 ## list_repo_organizations
 
-List all organizations
+Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -661,7 +661,7 @@ end
 
 ## list_repo_pullrequests
 
-List all pullrequests
+Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -706,7 +706,7 @@ end
 
 ## list_repo_repositories
 
-List all repositories
+Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -751,7 +751,7 @@ end
 
 ## patch_repo_branch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -769,11 +769,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
     created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-    id: '2d9cf7e3-a566-41e8-87b2-6bd47606fe69',
+    id: '61096c53-c8e7-4fe5-b5b6-a2ff57e6c228',
     metadata: [],
     name: 'transmitter-calculate',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2020-01-07T08:02:55.996Z'),
+    updated_at: DateTime.iso8601('2020-01-07T10:44:37.776Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -805,7 +805,7 @@ end
 
 ## patch_repo_commit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -823,14 +823,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: 'eced1575-116e-4bb5-92fe-18bea53520fd',
+    id: 'f72dc39a-23be-4866-b859-2830fde4bcf8',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'quantify bluetooth bandwidth',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-05-31T06:51:27.914Z'),
+    updated_at: DateTime.iso8601('2023-05-31T17:46:40.728Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -862,7 +862,7 @@ end
 
 ## patch_repo_organization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -882,10 +882,10 @@ req = Models::Operations::PatchRepoOrganizationRequest.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: '5e3f6bde-51ce-47b1-bc1a-309e3993a0df',
+    id: '85be66a9-5510-4ada-ac47-f32a603fd07c',
     metadata: [],
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-21T15:08:19.154Z'),
+    updated_at: DateTime.iso8601('2023-08-21T21:22:03.920Z'),
     web_url: 'https://turbulent-overheard.biz',
   ),
   connection_id: '<id>',
@@ -918,7 +918,7 @@ end
 
 ## patch_repo_pullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -935,9 +935,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-01T13:52:56.628Z'),
+    closed_at: DateTime.iso8601('2025-05-02T04:03:35.421Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '680f10ed-25c1-4071-ab27-a124bc8edbbd',
+    id: '23ed0922-82e8-4b77-9733-8682bc9d3310',
     labels: [
       'creptio',
       'tutamen',
@@ -946,7 +946,7 @@ req = Models::Operations::PatchRepoPullrequestRequest.new(
     notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-01-17T07:06:04.372Z'),
+    updated_at: DateTime.iso8601('2026-01-18T01:55:58.490Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -978,7 +978,7 @@ end
 
 ## patch_repo_repository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -997,11 +997,11 @@ req = Models::Operations::PatchRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
     description: 'Sed somnus crastinus armarium.',
-    id: '03073f42-04d8-46d4-8264-186828af3e72',
+    id: '2702d848-a85c-4e23-af94-267ef6cff2da',
     is_private: false,
     metadata: [],
     name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-01T02:05:05.868Z'),
+    updated_at: DateTime.iso8601('2024-03-01T07:10:32.666Z'),
     web_url: 'https://neat-birdbath.org',
   ),
   connection_id: '<id>',
@@ -1034,7 +1034,7 @@ end
 
 ## remove_repo_branch
 
-Remove a branch
+Deletes the RepoBranch identified by `id`.
 
 ### Example Usage
 
@@ -1076,7 +1076,7 @@ end
 
 ## remove_repo_commit
 
-Remove a commit
+Deletes the RepoCommit identified by `id`.
 
 ### Example Usage
 
@@ -1118,7 +1118,7 @@ end
 
 ## remove_repo_organization
 
-Remove an organization
+Deletes the RepoOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1160,7 +1160,7 @@ end
 
 ## remove_repo_pullrequest
 
-Remove a pullrequest
+Deletes the RepoPullrequest identified by `id`.
 
 ### Example Usage
 
@@ -1202,7 +1202,7 @@ end
 
 ## remove_repo_repository
 
-Remove a repository
+Deletes the RepoRepository identified by `id`.
 
 ### Example Usage
 
@@ -1244,7 +1244,7 @@ end
 
 ## update_repo_branch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -1262,11 +1262,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
     created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-    id: '2d9cf7e3-a566-41e8-87b2-6bd47606fe69',
+    id: '61096c53-c8e7-4fe5-b5b6-a2ff57e6c228',
     metadata: [],
     name: 'transmitter-calculate',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2020-01-07T08:02:55.996Z'),
+    updated_at: DateTime.iso8601('2020-01-07T10:44:37.776Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1298,7 +1298,7 @@ end
 
 ## update_repo_commit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -1316,14 +1316,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: 'eced1575-116e-4bb5-92fe-18bea53520fd',
+    id: 'f72dc39a-23be-4866-b859-2830fde4bcf8',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'quantify bluetooth bandwidth',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-05-31T06:51:27.914Z'),
+    updated_at: DateTime.iso8601('2023-05-31T17:46:40.728Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1355,7 +1355,7 @@ end
 
 ## update_repo_organization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1375,10 +1375,10 @@ req = Models::Operations::UpdateRepoOrganizationRequest.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: '5e3f6bde-51ce-47b1-bc1a-309e3993a0df',
+    id: '85be66a9-5510-4ada-ac47-f32a603fd07c',
     metadata: [],
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-21T15:08:19.154Z'),
+    updated_at: DateTime.iso8601('2023-08-21T21:22:03.920Z'),
     web_url: 'https://turbulent-overheard.biz',
   ),
   connection_id: '<id>',
@@ -1411,7 +1411,7 @@ end
 
 ## update_repo_pullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -1428,9 +1428,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-01T13:52:56.628Z'),
+    closed_at: DateTime.iso8601('2025-05-02T04:03:35.421Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '680f10ed-25c1-4071-ab27-a124bc8edbbd',
+    id: '23ed0922-82e8-4b77-9733-8682bc9d3310',
     labels: [
       'creptio',
       'tutamen',
@@ -1439,7 +1439,7 @@ req = Models::Operations::UpdateRepoPullrequestRequest.new(
     notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-01-17T07:06:04.372Z'),
+    updated_at: DateTime.iso8601('2026-01-18T01:55:58.490Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1471,7 +1471,7 @@ end
 
 ## update_repo_repository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -1490,11 +1490,11 @@ req = Models::Operations::UpdateRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
     description: 'Sed somnus crastinus armarium.',
-    id: '03073f42-04d8-46d4-8264-186828af3e72',
+    id: '2702d848-a85c-4e23-af94-267ef6cff2da',
     is_private: false,
     metadata: [],
     name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-01T02:05:05.868Z'),
+    updated_at: DateTime.iso8601('2024-03-01T07:10:32.666Z'),
     web_url: 'https://neat-birdbath.org',
   ),
   connection_id: '<id>',

@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(cdp_segment: Models::Shared::CdpSegment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCdpSegmentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCdpSegmentResponse) }
     def create_cdp_segment(cdp_segment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_cdp_segment - Create a segment
+      # Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to the provider's API. Returns the created CdpSegment.
       request = Models::Operations::CreateCdpSegmentRequest.new(
         cdp_segment: cdp_segment,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCdpSegmentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCdpSegmentResponse) }
     def get_cdp_segment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_cdp_segment - Retrieve a segment
+      # Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCdpSegmentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCdpSegmentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCdpSegmentsResponse) }
     def list_cdp_segments(request:, timeout_ms: nil)
       # list_cdp_segments - List all segments
+      # Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCdpSegmentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCdpSegmentResponse) }
     def patch_cdp_segment(request:, timeout_ms: nil)
       # patch_cdp_segment - Update a segment
+      # Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCdpSegmentResponse) }
     def remove_cdp_segment(connection_id:, id:, timeout_ms: nil)
       # remove_cdp_segment - Remove a segment
+      # Deletes the CdpSegment identified by `id`.
       request = Models::Operations::RemoveCdpSegmentRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCdpSegmentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCdpSegmentResponse) }
     def update_cdp_segment(request:, timeout_ms: nil)
       # update_cdp_segment - Update a segment
+      # Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

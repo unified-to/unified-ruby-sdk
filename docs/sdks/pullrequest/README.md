@@ -14,7 +14,7 @@
 
 ## create_repo_pullrequest
 
-Create a pullrequest
+Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 
 ### Example Usage
 
@@ -30,9 +30,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(
-  closed_at: DateTime.iso8601('2025-05-01T13:52:56.618Z'),
+  closed_at: DateTime.iso8601('2025-05-02T04:03:35.410Z'),
   created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-  id: 'f056c8e3-203d-4efa-b38e-98ababfea7f3',
+  id: '5d31e7a9-e7a6-4efe-a22d-7c351e02021d',
   labels: [
     'creptio',
     'tutamen',
@@ -41,7 +41,7 @@ res = s.pullrequest.create_repo_pullrequest(repo_pullrequest: Models::Shared::Re
   notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
   status: Models::Shared::RepoPullrequestStatus::APPROVED,
   title: 'reboot mobile application',
-  updated_at: DateTime.iso8601('2026-01-17T07:06:04.358Z'),
+  updated_at: DateTime.iso8601('2026-01-18T01:55:58.476Z'),
 ), connection_id: '<id>')
 
 unless res.repo_pullrequest.nil?
@@ -71,7 +71,7 @@ end
 
 ## get_repo_pullrequest
 
-Retrieve a pullrequest
+Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -115,7 +115,7 @@ end
 
 ## list_repo_pullrequests
 
-List all pullrequests
+Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -160,7 +160,7 @@ end
 
 ## patch_repo_pullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -177,9 +177,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-01T13:52:56.628Z'),
+    closed_at: DateTime.iso8601('2025-05-02T04:03:35.421Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '680f10ed-25c1-4071-ab27-a124bc8edbbd',
+    id: '23ed0922-82e8-4b77-9733-8682bc9d3310',
     labels: [
       'creptio',
       'tutamen',
@@ -188,7 +188,7 @@ req = Models::Operations::PatchRepoPullrequestRequest.new(
     notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-01-17T07:06:04.372Z'),
+    updated_at: DateTime.iso8601('2026-01-18T01:55:58.490Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -220,7 +220,7 @@ end
 
 ## remove_repo_pullrequest
 
-Remove a pullrequest
+Deletes the RepoPullrequest identified by `id`.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ end
 
 ## update_repo_pullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -279,9 +279,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-01T13:52:56.628Z'),
+    closed_at: DateTime.iso8601('2025-05-02T04:03:35.421Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: '680f10ed-25c1-4071-ab27-a124bc8edbbd',
+    id: '23ed0922-82e8-4b77-9733-8682bc9d3310',
     labels: [
       'creptio',
       'tutamen',
@@ -290,7 +290,7 @@ req = Models::Operations::UpdateRepoPullrequestRequest.new(
     notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-01-17T07:06:04.372Z'),
+    updated_at: DateTime.iso8601('2026-01-18T01:55:58.490Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

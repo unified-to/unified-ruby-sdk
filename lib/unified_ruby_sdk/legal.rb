@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(legal_expense: Models::Shared::LegalExpense, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLegalExpenseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLegalExpenseResponse) }
     def create_legal_expense(legal_expense:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_legal_expense - Create an expense
+      # Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
       request = Models::Operations::CreateLegalExpenseRequest.new(
         legal_expense: legal_expense,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(legal_matter: Models::Shared::LegalMatter, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLegalMatterQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLegalMatterResponse) }
     def create_legal_matter(legal_matter:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_legal_matter - Create a matter
+      # Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
       request = Models::Operations::CreateLegalMatterRequest.new(
         legal_matter: legal_matter,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(legal_practicearea: Models::Shared::LegalPracticearea, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLegalPracticeareaQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLegalPracticeareaResponse) }
     def create_legal_practicearea(legal_practicearea:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_legal_practicearea - Create a practicearea
+      # Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
       request = Models::Operations::CreateLegalPracticeareaRequest.new(
         legal_practicearea: legal_practicearea,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(legal_timeentry: Models::Shared::LegalTimeentry, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLegalTimeentryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLegalTimeentryResponse) }
     def create_legal_timeentry(legal_timeentry:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_legal_timeentry - Create a timeentry
+      # Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
       request = Models::Operations::CreateLegalTimeentryRequest.new(
         legal_timeentry: legal_timeentry,
         connection_id: connection_id,
@@ -554,6 +558,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLegalExpenseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLegalExpenseResponse) }
     def get_legal_expense(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_legal_expense - Retrieve an expense
+      # Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLegalExpenseRequest.new(
         connection_id: connection_id,
         id: id,
@@ -670,6 +675,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLegalMatterQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLegalMatterResponse) }
     def get_legal_matter(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_legal_matter - Retrieve a matter
+      # Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLegalMatterRequest.new(
         connection_id: connection_id,
         id: id,
@@ -786,6 +792,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLegalPracticeareaQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLegalPracticeareaResponse) }
     def get_legal_practicearea(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_legal_practicearea - Retrieve a practicearea
+      # Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLegalPracticeareaRequest.new(
         connection_id: connection_id,
         id: id,
@@ -902,6 +909,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLegalTimeentryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLegalTimeentryResponse) }
     def get_legal_timeentry(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_legal_timeentry - Retrieve a timeentry
+      # Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLegalTimeentryRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1018,6 +1026,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLegalExpensesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLegalExpensesResponse) }
     def list_legal_expenses(request:, timeout_ms: nil)
       # list_legal_expenses - List all expenses
+      # Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1128,6 +1137,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLegalMattersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLegalMattersResponse) }
     def list_legal_matters(request:, timeout_ms: nil)
       # list_legal_matters - List all matters
+      # Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1238,6 +1248,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLegalPracticeareasRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLegalPracticeareasResponse) }
     def list_legal_practiceareas(request:, timeout_ms: nil)
       # list_legal_practiceareas - List all practiceareas
+      # Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1348,6 +1359,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLegalTimeentriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLegalTimeentriesResponse) }
     def list_legal_timeentries(request:, timeout_ms: nil)
       # list_legal_timeentries - List all timeentries
+      # Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1458,6 +1470,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLegalExpenseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLegalExpenseResponse) }
     def patch_legal_expense(request:, timeout_ms: nil)
       # patch_legal_expense - Update an expense
+      # Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1580,6 +1593,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLegalMatterRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLegalMatterResponse) }
     def patch_legal_matter(request:, timeout_ms: nil)
       # patch_legal_matter - Update a matter
+      # Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1702,6 +1716,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLegalPracticeareaRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLegalPracticeareaResponse) }
     def patch_legal_practicearea(request:, timeout_ms: nil)
       # patch_legal_practicearea - Update a practicearea
+      # Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1824,6 +1839,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLegalTimeentryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLegalTimeentryResponse) }
     def patch_legal_timeentry(request:, timeout_ms: nil)
       # patch_legal_timeentry - Update a timeentry
+      # Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1946,6 +1962,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLegalExpenseResponse) }
     def remove_legal_expense(connection_id:, id:, timeout_ms: nil)
       # remove_legal_expense - Remove an expense
+      # Deletes the LegalExpense identified by `id`.
       request = Models::Operations::RemoveLegalExpenseRequest.new(
         connection_id: connection_id,
         id: id
@@ -2060,6 +2077,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLegalMatterResponse) }
     def remove_legal_matter(connection_id:, id:, timeout_ms: nil)
       # remove_legal_matter - Remove a matter
+      # Deletes the LegalMatter identified by `id`.
       request = Models::Operations::RemoveLegalMatterRequest.new(
         connection_id: connection_id,
         id: id
@@ -2174,6 +2192,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLegalPracticeareaResponse) }
     def remove_legal_practicearea(connection_id:, id:, timeout_ms: nil)
       # remove_legal_practicearea - Remove a practicearea
+      # Deletes the LegalPracticearea identified by `id`.
       request = Models::Operations::RemoveLegalPracticeareaRequest.new(
         connection_id: connection_id,
         id: id
@@ -2288,6 +2307,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLegalTimeentryResponse) }
     def remove_legal_timeentry(connection_id:, id:, timeout_ms: nil)
       # remove_legal_timeentry - Remove a timeentry
+      # Deletes the LegalTimeentry identified by `id`.
       request = Models::Operations::RemoveLegalTimeentryRequest.new(
         connection_id: connection_id,
         id: id
@@ -2402,6 +2422,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLegalExpenseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLegalExpenseResponse) }
     def update_legal_expense(request:, timeout_ms: nil)
       # update_legal_expense - Update an expense
+      # Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2524,6 +2545,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLegalMatterRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLegalMatterResponse) }
     def update_legal_matter(request:, timeout_ms: nil)
       # update_legal_matter - Update a matter
+      # Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2646,6 +2668,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLegalPracticeareaRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLegalPracticeareaResponse) }
     def update_legal_practicearea(request:, timeout_ms: nil)
       # update_legal_practicearea - Update a practicearea
+      # Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2768,6 +2791,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLegalTimeentryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLegalTimeentryResponse) }
     def update_legal_timeentry(request:, timeout_ms: nil)
       # update_legal_timeentry - Update a timeentry
+      # Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

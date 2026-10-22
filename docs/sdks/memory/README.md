@@ -14,7 +14,7 @@
 
 ## create_genai_memory
 
-Create a memory
+Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
 
 ### Example Usage
 
@@ -32,7 +32,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.memory.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
   content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
   created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-  id: '88bb3c43-4389-4a83-839c-696b4051536e',
+  id: '8b8d63fc-2487-4efa-b199-2f4f3735511d',
   metadata: [
     Models::Shared::GenaiMetadata.new(
       extra_data: {
@@ -47,7 +47,7 @@ res = s.memory.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new
   ],
   name: 'sponte.md',
   type: Models::Shared::GenaiMemoryType::MEMORY,
-  updated_at: DateTime.iso8601('2023-04-25T21:28:57.374Z'),
+  updated_at: DateTime.iso8601('2023-04-26T04:39:23.581Z'),
   user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
 ), connection_id: '<id>')
 
@@ -78,7 +78,7 @@ end
 
 ## get_genai_memory
 
-Retrieve a memory
+Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ end
 
 ## list_genai_memories
 
-List all memories
+Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ end
 
 ## patch_genai_memory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '9365b4e5-aab5-4ff3-ba49-ac556dab74c1',
+    id: 'eedef7f5-cf14-4aff-a523-5470405a3db1',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -201,7 +201,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-04-25T21:28:57.376Z'),
+    updated_at: DateTime.iso8601('2023-04-26T04:39:23.586Z'),
     user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
   ),
   connection_id: '<id>',
@@ -234,7 +234,7 @@ end
 
 ## remove_genai_memory
 
-Remove a memory
+Deletes the GenaiMemory identified by `id`.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ end
 
 ## update_genai_memory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -295,7 +295,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '9365b4e5-aab5-4ff3-ba49-ac556dab74c1',
+    id: 'eedef7f5-cf14-4aff-a523-5470405a3db1',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -310,7 +310,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-04-25T21:28:57.376Z'),
+    updated_at: DateTime.iso8601('2023-04-26T04:39:23.586Z'),
     user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
   ),
   connection_id: '<id>',

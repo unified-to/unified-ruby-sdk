@@ -17,7 +17,7 @@ module UnifiedRubySDK
         field :avg, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('avg') } }
 
         field :count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('count') } }
-
+        # Each item is one group row: a map of field name to value
         field :groups, Crystalline::Nilable.new(Crystalline::Array.new(Crystalline::Hash.new(Symbol, Models::Shared::DatastoreFieldValue))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groups') } }
 
         field :max, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Float)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max') } }

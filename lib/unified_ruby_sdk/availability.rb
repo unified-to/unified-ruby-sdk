@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceAvailabilitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceAvailabilitiesResponse) }
     def list_commerce_availabilities(request:, timeout_ms: nil)
       # list_commerce_availabilities - List all availabilities
+      # Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(commerce_itemvariant: Models::Shared::CommerceItemvariant, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceItemvariantQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceItemvariantResponse) }
     def create_commerce_itemvariant(commerce_itemvariant:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_itemvariant - Create an itemvariant
+      # Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
       request = Models::Operations::CreateCommerceItemvariantRequest.new(
         commerce_itemvariant: commerce_itemvariant,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceItemvariantQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceItemvariantResponse) }
     def get_commerce_itemvariant(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_itemvariant - Retrieve an itemvariant
+      # Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceItemvariantRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceItemvariantsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceItemvariantsResponse) }
     def list_commerce_itemvariants(request:, timeout_ms: nil)
       # list_commerce_itemvariants - List all itemvariants
+      # Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceItemvariantRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceItemvariantResponse) }
     def patch_commerce_itemvariant(request:, timeout_ms: nil)
       # patch_commerce_itemvariant - Update an itemvariant
+      # Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceItemvariantResponse) }
     def remove_commerce_itemvariant(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_itemvariant - Remove an itemvariant
+      # Deletes the CommerceItemvariant identified by `id`.
       request = Models::Operations::RemoveCommerceItemvariantRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceItemvariantRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceItemvariantResponse) }
     def update_commerce_itemvariant(request:, timeout_ms: nil)
       # update_commerce_itemvariant - Update an itemvariant
+      # Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -14,7 +14,7 @@
 
 ## create_accounting_invoice
 
-Create an invoice
+Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
 
 ### Example Usage
 
@@ -33,13 +33,13 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://glossy-markup.net/',
-      id: '8785a531-c170-4e0a-a23b-6026aeb2808f',
+      id: 'af834e8b-1f37-45e1-a6da-09cde99b20c9',
       mime_type: 'application/pdf',
       name: 'INV-77705.pdf',
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://earnest-giggle.net',
-      id: '795784ec-1677-4171-87a9-191b7246647a',
+      id: '89fae7cd-e0cc-487d-b776-164dc14d6664',
       mime_type: 'application/pdf',
       name: 'INV-77705-1.pdf',
     ),
@@ -51,7 +51,7 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
   extended_notes: [],
-  id: '96f21cc2-029b-451f-bf63-27b0da867a12',
+  id: '05c0496e-f40e-433d-85e0-7982db3c2176',
   invoice_number: 'INV-77705',
   is_inclusive_of_tax: false,
   lineitems: [],
@@ -69,7 +69,7 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   term: Models::Shared::AccountingInvoiceTerm::NET_25,
   total_amount: 0.0,
   type: Models::Shared::AccountingInvoiceType::INVOICE,
-  updated_at: DateTime.iso8601('2026-04-23T13:03:42.762Z'),
+  updated_at: DateTime.iso8601('2026-04-24T09:51:39.852Z'),
   url: 'https://gifted-yarmulke.info/invoices/INV-77705',
 ), connection_id: '<id>')
 
@@ -100,7 +100,7 @@ end
 
 ## get_accounting_invoice
 
-Retrieve an invoice
+Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ end
 
 ## list_accounting_invoices
 
-List all invoices
+Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -189,7 +189,7 @@ end
 
 ## patch_accounting_invoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -209,13 +209,13 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://glossy-markup.net/',
-        id: '21a65956-7898-49fe-954e-657be9079de1',
+        id: '1614570e-8426-44b9-a5b3-9ed962bb37fe',
         mime_type: 'application/pdf',
         name: 'INV-77705.pdf',
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://earnest-giggle.net',
-        id: '0de07f5c-0422-4bf1-8312-b38a6e63a87d',
+        id: 'e4c33475-8125-472b-b327-5a7e63b662ad',
         mime_type: 'application/pdf',
         name: 'INV-77705-1.pdf',
       ),
@@ -227,7 +227,7 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '896edd87-b896-4ec1-9035-22e2a216a31b',
+    id: '3b31841e-3d5f-4920-ae4f-5fbe81bd9de0',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -245,7 +245,7 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-04-23T13:03:42.816Z'),
+    updated_at: DateTime.iso8601('2026-04-24T09:51:39.899Z'),
     url: 'https://gifted-yarmulke.info/invoices/INV-77705',
   ),
   connection_id: '<id>',
@@ -278,7 +278,7 @@ end
 
 ## remove_accounting_invoice
 
-Remove an invoice
+Deletes the AccountingInvoice identified by `id`.
 
 ### Example Usage
 
@@ -320,7 +320,7 @@ end
 
 ## update_accounting_invoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -340,13 +340,13 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://glossy-markup.net/',
-        id: '21a65956-7898-49fe-954e-657be9079de1',
+        id: '1614570e-8426-44b9-a5b3-9ed962bb37fe',
         mime_type: 'application/pdf',
         name: 'INV-77705.pdf',
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://earnest-giggle.net',
-        id: '0de07f5c-0422-4bf1-8312-b38a6e63a87d',
+        id: 'e4c33475-8125-472b-b327-5a7e63b662ad',
         mime_type: 'application/pdf',
         name: 'INV-77705-1.pdf',
       ),
@@ -358,7 +358,7 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '896edd87-b896-4ec1-9035-22e2a216a31b',
+    id: '3b31841e-3d5f-4920-ae4f-5fbe81bd9de0',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -376,7 +376,7 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-04-23T13:03:42.816Z'),
+    updated_at: DateTime.iso8601('2026-04-24T09:51:39.899Z'),
     url: 'https://gifted-yarmulke.info/invoices/INV-77705',
   ),
   connection_id: '<id>',

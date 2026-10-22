@@ -13,7 +13,7 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The texts to create embeddings for
         field :content, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiEmbeddingContent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
         # 256, 512, 1024, and 1536
         field :dimension, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension') } }

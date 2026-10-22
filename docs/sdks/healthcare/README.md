@@ -38,7 +38,7 @@
 
 ## create_healthcare_appointment
 
-Create an appointment
+Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 
 ### Example Usage
 
@@ -57,7 +57,7 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'clarus aptus cetera',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: 'e57d4ec5-b3c7-47c7-bf0d-adb561ff2349',
+  id: '26c0c976-c996-4dbb-8b58-5166dbe67220',
   metadata: [],
   practitioner_ids: [],
   reasons: [
@@ -77,7 +77,7 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2025-11-19T10:41:19.860Z'),
+  updated_at: DateTime.iso8601('2025-11-20T04:16:13.523Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -107,7 +107,7 @@ end
 
 ## create_healthcare_observation
 
-Create an observation
+Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
 
 ### Example Usage
 
@@ -155,15 +155,15 @@ res = s.healthcare.create_healthcare_observation(healthcare_observation: Models:
     ),
   ],
   created_at: DateTime.iso8601('2022-12-06T21:34:04.293Z'),
-  id: 'c618a863-9850-40c0-979c-241f62edc05a',
+  id: '3d95939a-fd15-4205-a9a7-8996dcd8717c',
   interpretation: Models::Shared::Interpretation::CRITICAL_HIGH,
-  issued_at: DateTime.iso8601('2025-05-11T10:29:32.163Z'),
+  issued_at: DateTime.iso8601('2025-05-12T01:23:42.793Z'),
   metadata: [],
   name: 'Blood pressure panel',
-  observed_at: DateTime.iso8601('2025-01-20T04:00:19.834Z'),
+  observed_at: DateTime.iso8601('2025-01-20T17:02:16.723Z'),
   status: Models::Shared::HealthcareObservationStatus::CORRECTED,
   type: Models::Shared::HealthcareObservationType::VITAL_SIGNS,
-  updated_at: DateTime.iso8601('2026-03-24T06:24:42.917Z'),
+  updated_at: DateTime.iso8601('2026-03-25T02:38:27.139Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -193,7 +193,7 @@ end
 
 ## create_healthcare_patient
 
-Create a patient
+Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 
 ### Example Usage
 
@@ -216,7 +216,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
     postal_code: '54031',
     region: 'Nebraska',
   ),
-  birthdate: '2025-02-12',
+  birthdate: '2025-02-13',
   created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
   emails: [
     Models::Shared::HealthcareEmail.new(
@@ -226,7 +226,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '71bef0d8-2160-4fef-8b45-37b8a6bb244f',
+  id: 'bff90549-5920-4a01-933d-a669aa5b05f7',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -246,7 +246,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
       type: Models::Shared::HealthcareTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-22T20:18:33.735Z'),
+  updated_at: DateTime.iso8601('2026-06-23T18:37:32.861Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -276,7 +276,7 @@ end
 
 ## get_healthcare_allergy
 
-Retrieve an allergy
+Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -320,7 +320,7 @@ end
 
 ## get_healthcare_appointment
 
-Retrieve an appointment
+Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -364,7 +364,7 @@ end
 
 ## get_healthcare_condition
 
-Retrieve a condition
+Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -408,7 +408,7 @@ end
 
 ## get_healthcare_encounter
 
-Retrieve an encounter
+Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -452,7 +452,7 @@ end
 
 ## get_healthcare_immunization
 
-Retrieve an immunization
+Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -496,7 +496,7 @@ end
 
 ## get_healthcare_location
 
-Retrieve a location
+Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -540,7 +540,7 @@ end
 
 ## get_healthcare_medication
 
-Retrieve a medication
+Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -584,7 +584,7 @@ end
 
 ## get_healthcare_observation
 
-Retrieve an observation
+Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -628,7 +628,7 @@ end
 
 ## get_healthcare_patient
 
-Retrieve a patient
+Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -672,7 +672,7 @@ end
 
 ## get_healthcare_practitioner
 
-Retrieve a practitioner
+Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -716,7 +716,7 @@ end
 
 ## get_healthcare_slot
 
-Retrieve a slot
+Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -760,7 +760,7 @@ end
 
 ## list_healthcare_allergies
 
-List all allergies
+Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -805,7 +805,7 @@ end
 
 ## list_healthcare_appointments
 
-List all appointments
+Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -850,7 +850,7 @@ end
 
 ## list_healthcare_conditions
 
-List all conditions
+Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -895,7 +895,7 @@ end
 
 ## list_healthcare_encounters
 
-List all encounters
+Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -940,7 +940,7 @@ end
 
 ## list_healthcare_immunizations
 
-List all immunizations
+Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -985,7 +985,7 @@ end
 
 ## list_healthcare_locations
 
-List all locations
+Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1030,7 +1030,7 @@ end
 
 ## list_healthcare_medications
 
-List all medications
+Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1075,7 +1075,7 @@ end
 
 ## list_healthcare_observations
 
-List all observations
+Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1120,7 +1120,7 @@ end
 
 ## list_healthcare_patients
 
-List all patients
+Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1165,7 +1165,7 @@ end
 
 ## list_healthcare_practitioners
 
-List all practitioners
+Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1210,7 +1210,7 @@ end
 
 ## list_healthcare_slots
 
-List all slots
+Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1255,7 +1255,7 @@ end
 
 ## patch_healthcare_appointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -1275,7 +1275,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'cc805b15-1b9f-4db2-9608-a1472e62c59d',
+    id: '76ec3204-d039-4780-a1a6-9d82e5c58b81',
     metadata: [],
     practitioner_ids: [],
     reasons: [
@@ -1295,7 +1295,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-19T10:41:19.878Z'),
+    updated_at: DateTime.iso8601('2025-11-20T04:16:13.539Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1327,7 +1327,7 @@ end
 
 ## patch_healthcare_patient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -1351,7 +1351,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska',
     ),
-    birthdate: '2025-02-12',
+    birthdate: '2025-02-13',
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
@@ -1361,7 +1361,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '570149a1-cb28-49d2-861b-e9417dc279e4',
+    id: 'e0aa04a2-ee2c-4f84-963b-2cb8213f03bb',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -1381,7 +1381,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-22T20:18:33.752Z'),
+    updated_at: DateTime.iso8601('2026-06-23T18:37:32.888Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1413,7 +1413,7 @@ end
 
 ## remove_healthcare_appointment
 
-Remove an appointment
+Deletes the HealthcareAppointment identified by `id`.
 
 ### Example Usage
 
@@ -1455,7 +1455,7 @@ end
 
 ## update_healthcare_appointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -1475,7 +1475,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'cc805b15-1b9f-4db2-9608-a1472e62c59d',
+    id: '76ec3204-d039-4780-a1a6-9d82e5c58b81',
     metadata: [],
     practitioner_ids: [],
     reasons: [
@@ -1495,7 +1495,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-19T10:41:19.878Z'),
+    updated_at: DateTime.iso8601('2025-11-20T04:16:13.539Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1527,7 +1527,7 @@ end
 
 ## update_healthcare_patient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -1551,7 +1551,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska',
     ),
-    birthdate: '2025-02-12',
+    birthdate: '2025-02-13',
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
@@ -1561,7 +1561,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '570149a1-cb28-49d2-861b-e9417dc279e4',
+    id: 'e0aa04a2-ee2c-4f84-963b-2cb8213f03bb',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -1581,7 +1581,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-22T20:18:33.752Z'),
+    updated_at: DateTime.iso8601('2026-06-23T18:37:32.888Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

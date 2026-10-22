@@ -14,7 +14,7 @@
 
 ## create_accounting_bankfeedtransaction
 
-Create a bankfeedtransaction
+Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 
 ### Example Usage
 
@@ -36,15 +36,15 @@ res = s.bankfeedtransaction.create_accounting_bankfeedtransaction(accounting_ban
   created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
   currency: 'CAD',
   description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-  id: 'e0f4b5f3-8bf9-44f4-b365-f37524184310',
+  id: '7554558e-75d6-4b22-a53e-2fb82bd0a8bc',
   is_pending: true,
   merchant_name: 'Buckridge - Feest',
   metadata: [],
-  posted_at: DateTime.iso8601('2025-04-14T19:58:00.131Z'),
+  posted_at: DateTime.iso8601('2025-04-15T11:51:15.882Z'),
   reference: '79574105',
-  transaction_at: DateTime.iso8601('2022-07-30T08:10:12.137Z'),
+  transaction_at: DateTime.iso8601('2022-07-30T09:58:54.151Z'),
   type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-  updated_at: DateTime.iso8601('2022-05-25T01:44:39.014Z'),
+  updated_at: DateTime.iso8601('2022-05-25T02:36:47.333Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedtransaction.nil?
@@ -74,7 +74,7 @@ end
 
 ## get_accounting_bankfeedtransaction
 
-Retrieve a bankfeedtransaction
+Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -118,7 +118,7 @@ end
 
 ## list_accounting_bankfeedtransactions
 
-List all bankfeedtransactions
+Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ end
 
 ## patch_accounting_bankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -186,15 +186,15 @@ req = Models::Operations::PatchAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: '37cd0e2a-1f6a-43b1-a20e-2cdd60ec6423',
+    id: 'b3decb3e-ed00-4600-8302-27158f3ab3e0',
     is_pending: true,
     merchant_name: 'Buckridge - Feest',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-04-14T19:58:00.144Z'),
+    posted_at: DateTime.iso8601('2025-04-15T11:51:15.898Z'),
     reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-07-30T08:10:12.138Z'),
+    transaction_at: DateTime.iso8601('2022-07-30T09:58:54.153Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-25T01:44:39.015Z'),
+    updated_at: DateTime.iso8601('2022-05-25T02:36:47.333Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -226,7 +226,7 @@ end
 
 ## remove_accounting_bankfeedtransaction
 
-Remove a bankfeedtransaction
+Deletes the AccountingBankfeedtransaction identified by `id`.
 
 ### Example Usage
 
@@ -268,7 +268,7 @@ end
 
 ## update_accounting_bankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -291,15 +291,15 @@ req = Models::Operations::UpdateAccountingBankfeedtransactionRequest.new(
     created_at: DateTime.iso8601('2022-03-24T23:41:08.374Z'),
     currency: 'CAD',
     description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-    id: '37cd0e2a-1f6a-43b1-a20e-2cdd60ec6423',
+    id: 'b3decb3e-ed00-4600-8302-27158f3ab3e0',
     is_pending: true,
     merchant_name: 'Buckridge - Feest',
     metadata: [],
-    posted_at: DateTime.iso8601('2025-04-14T19:58:00.144Z'),
+    posted_at: DateTime.iso8601('2025-04-15T11:51:15.898Z'),
     reference: '79574105',
-    transaction_at: DateTime.iso8601('2022-07-30T08:10:12.138Z'),
+    transaction_at: DateTime.iso8601('2022-07-30T09:58:54.153Z'),
     type: Models::Shared::AccountingBankfeedtransactionType::CREDIT,
-    updated_at: DateTime.iso8601('2022-05-25T01:44:39.015Z'),
+    updated_at: DateTime.iso8601('2022-05-25T02:36:47.333Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

@@ -22,7 +22,7 @@
 
 ## create_messaging_channel
 
-Create a channel
+Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they are mapped to the provider's API. Returns the created MessagingChannel.
 
 ### Example Usage
 
@@ -41,13 +41,13 @@ res = s.messaging.create_messaging_channel(messaging_channel: Models::Shared::Me
   created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
   description: 'Dolores tutis.',
   has_subchannels: true,
-  id: 'd9e11e3c-2e30-4962-857a-b0faf012090c',
+  id: 'cee1e969-9044-4ce5-9796-0f9998ee811e',
   is_active: false,
   is_private: true,
   members: [],
   metadata: [],
   name: 'tego',
-  updated_at: DateTime.iso8601('2026-05-21T13:53:36.504Z'),
+  updated_at: DateTime.iso8601('2026-05-22T10:24:21.806Z'),
   web_url: 'https://svelte-rule.name/',
 ), connection_id: '<id>')
 
@@ -78,7 +78,7 @@ end
 
 ## create_messaging_message
 
-Create a message
+Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they are mapped to the provider's API. Returns the created MessagingMessage.
 
 ### Example Usage
 
@@ -96,17 +96,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.messaging.create_messaging_message(messaging_message: Models::Shared::MessagingMessage.new(
   attachments: [
     Models::Shared::MessagingAttachment.new(
-      content_identifier: '04e45111-bc68-4a8e-bd3d-b3fa0e97f6ec',
+      content_identifier: '71251831-efff-4acd-bff0-718ffdb5592f',
       content_type: 'coaegresco',
       download_url: 'https://rotating-advertisement.org',
       filename: 'super',
-      message_id: '4bdf761b-5982-4226-a859-f701491f4395',
+      message_id: 'b51a6699-62e4-45fb-a069-aeed40d3b31a',
       size: 327.0,
     ),
   ],
   buttons: [
     Models::Shared::MessagingButton.new(
-      id: '40290deb-4326-4491-83e5-5f3efe588a90',
+      id: 'f5b39dff-6d90-4a5f-8c44-ac3141fe15f4',
       text: 'comparo',
     ),
   ],
@@ -114,7 +114,7 @@ res = s.messaging.create_messaging_message(messaging_message: Models::Shared::Me
   destination_members: [],
   has_children: true,
   hidden_members: [],
-  id: '4bdf761b-5982-4226-a859-f701491f4395',
+  id: 'b51a6699-62e4-45fb-a069-aeed40d3b31a',
   is_unread: false,
   mentioned_members: [],
   message: 'Sum utique aliquid.',
@@ -123,7 +123,7 @@ res = s.messaging.create_messaging_message(messaging_message: Models::Shared::Me
   metadata: [],
   reactions: [],
   subject: 'Cernuus optio cohaero summisse in.',
-  updated_at: DateTime.iso8601('2023-07-17T11:56:35.209Z'),
+  updated_at: DateTime.iso8601('2023-07-17T19:53:15.452Z'),
   web_url: 'https://grumpy-kit.net',
 ), connection_id: '<id>')
 
@@ -154,7 +154,7 @@ end
 
 ## get_messaging_channel
 
-Retrieve a channel
+Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -198,7 +198,7 @@ end
 
 ## get_messaging_message
 
-Retrieve a message
+Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -242,7 +242,7 @@ end
 
 ## list_messaging_channels
 
-List all channels
+Returns a list of MessagingChannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -287,7 +287,7 @@ end
 
 ## list_messaging_messages
 
-List all messages
+Returns a list of MessagingMessages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -332,7 +332,7 @@ end
 
 ## patch_messaging_channel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -352,13 +352,13 @@ req = Models::Operations::PatchMessagingChannelRequest.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Dolores tutis.',
     has_subchannels: true,
-    id: '017f7008-218c-4aa0-ae0b-b5feeaffee37',
+    id: 'e830d3e5-6cca-4ac1-bc1a-19992f36ecd6',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tego',
-    updated_at: DateTime.iso8601('2026-05-21T13:53:36.518Z'),
+    updated_at: DateTime.iso8601('2026-05-22T10:24:21.821Z'),
     web_url: 'https://svelte-rule.name/',
   ),
   connection_id: '<id>',
@@ -391,7 +391,7 @@ end
 
 ## patch_messaging_event
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -413,7 +413,7 @@ req = Models::Operations::PatchMessagingEventRequest.new(
       name: '',
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: '7557665c-8c74-4a4b-9f0f-811c0fb08e7a',
+    id: '21655438-a41c-4f8c-9a2e-cb9cb2a996fd',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK,
@@ -448,7 +448,7 @@ end
 
 ## patch_messaging_message
 
-Update a message
+Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 
 ### Example Usage
 
@@ -467,17 +467,17 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: '79549f0f-f993-4179-9a67-edef3885b2c3',
+        content_identifier: '0a5154eb-de68-4b49-973a-c4e8a350541d',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: '34eefc31-7e2a-43f9-9c71-8cc9aff190ad',
+        message_id: 'bba941bf-1847-47d8-8710-5260ff885ba9',
         size: 327.0,
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: 'c1b75a2d-be6b-44e2-96cf-6f0e95770135',
+        id: 'f96c3b6c-285f-4940-8c09-cf254d959c10',
         text: 'comparo',
       ),
     ],
@@ -485,7 +485,7 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: '34eefc31-7e2a-43f9-9c71-8cc9aff190ad',
+    id: 'bba941bf-1847-47d8-8710-5260ff885ba9',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -494,7 +494,7 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Cernuus optio cohaero summisse in.',
-    updated_at: DateTime.iso8601('2023-07-17T11:56:35.225Z'),
+    updated_at: DateTime.iso8601('2023-07-17T19:53:15.467Z'),
     web_url: 'https://grumpy-kit.net',
   ),
   connection_id: '<id>',
@@ -527,7 +527,7 @@ end
 
 ## remove_messaging_channel
 
-Remove a channel
+Deletes the MessagingChannel identified by `id`.
 
 ### Example Usage
 
@@ -569,7 +569,7 @@ end
 
 ## remove_messaging_message
 
-Remove a message
+Deletes the MessagingMessage identified by `id`.
 
 ### Example Usage
 
@@ -611,7 +611,7 @@ end
 
 ## update_messaging_channel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -631,13 +631,13 @@ req = Models::Operations::UpdateMessagingChannelRequest.new(
     created_at: DateTime.iso8601('2023-10-05T02:09:22.795Z'),
     description: 'Dolores tutis.',
     has_subchannels: true,
-    id: '017f7008-218c-4aa0-ae0b-b5feeaffee37',
+    id: 'e830d3e5-6cca-4ac1-bc1a-19992f36ecd6',
     is_active: false,
     is_private: true,
     members: [],
     metadata: [],
     name: 'tego',
-    updated_at: DateTime.iso8601('2026-05-21T13:53:36.518Z'),
+    updated_at: DateTime.iso8601('2026-05-22T10:24:21.821Z'),
     web_url: 'https://svelte-rule.name/',
   ),
   connection_id: '<id>',
@@ -670,7 +670,7 @@ end
 
 ## update_messaging_event
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -692,7 +692,7 @@ req = Models::Operations::UpdateMessagingEventRequest.new(
       name: '',
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: '7557665c-8c74-4a4b-9f0f-811c0fb08e7a',
+    id: '21655438-a41c-4f8c-9a2e-cb9cb2a996fd',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK,
@@ -727,7 +727,7 @@ end
 
 ## update_messaging_message
 
-Update a message
+Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 
 ### Example Usage
 
@@ -746,17 +746,17 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: '79549f0f-f993-4179-9a67-edef3885b2c3',
+        content_identifier: '0a5154eb-de68-4b49-973a-c4e8a350541d',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: '34eefc31-7e2a-43f9-9c71-8cc9aff190ad',
+        message_id: 'bba941bf-1847-47d8-8710-5260ff885ba9',
         size: 327.0,
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: 'c1b75a2d-be6b-44e2-96cf-6f0e95770135',
+        id: 'f96c3b6c-285f-4940-8c09-cf254d959c10',
         text: 'comparo',
       ),
     ],
@@ -764,7 +764,7 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: '34eefc31-7e2a-43f9-9c71-8cc9aff190ad',
+    id: 'bba941bf-1847-47d8-8710-5260ff885ba9',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -773,7 +773,7 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Cernuus optio cohaero summisse in.',
-    updated_at: DateTime.iso8601('2023-07-17T11:56:35.225Z'),
+    updated_at: DateTime.iso8601('2023-07-17T19:53:15.467Z'),
     web_url: 'https://grumpy-kit.net',
   ),
   connection_id: '<id>',

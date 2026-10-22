@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(crm_lead: Models::Shared::CrmLead, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmLeadQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmLeadResponse) }
     def create_crm_lead(crm_lead:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_lead - Create a lead
+      # Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
       request = Models::Operations::CreateCrmLeadRequest.new(
         crm_lead: crm_lead,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmLeadQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmLeadResponse) }
     def get_crm_lead(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_lead - Retrieve a lead
+      # Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCrmLeadRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCrmLeadsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmLeadsResponse) }
     def list_crm_leads(request:, timeout_ms: nil)
       # list_crm_leads - List all leads
+      # Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCrmLeadRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmLeadResponse) }
     def patch_crm_lead(request:, timeout_ms: nil)
       # patch_crm_lead - Update a lead
+      # Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmLeadResponse) }
     def remove_crm_lead(connection_id:, id:, timeout_ms: nil)
       # remove_crm_lead - Remove a lead
+      # Deletes the CrmLead identified by `id`.
       request = Models::Operations::RemoveCrmLeadRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCrmLeadRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmLeadResponse) }
     def update_crm_lead(request:, timeout_ms: nil)
       # update_crm_lead - Update a lead
+      # Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

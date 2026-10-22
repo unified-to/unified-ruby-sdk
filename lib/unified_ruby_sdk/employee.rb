@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(hris_employee: Models::Shared::HrisEmployee, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisEmployeeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisEmployeeResponse) }
     def create_hris_employee(hris_employee:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_employee - Create an employee
+      # Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
       request = Models::Operations::CreateHrisEmployeeRequest.new(
         hris_employee: hris_employee,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisEmployeeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisEmployeeResponse) }
     def get_hris_employee(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_employee - Retrieve an employee
+      # Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisEmployeeRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisEmployeesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisEmployeesResponse) }
     def list_hris_employees(request:, timeout_ms: nil)
       # list_hris_employees - List all employees
+      # Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisEmployeeRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisEmployeeResponse) }
     def patch_hris_employee(request:, timeout_ms: nil)
       # patch_hris_employee - Update an employee
+      # Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisEmployeeResponse) }
     def remove_hris_employee(connection_id:, id:, timeout_ms: nil)
       # remove_hris_employee - Remove an employee
+      # Deletes the HrisEmployee identified by `id`.
       request = Models::Operations::RemoveHrisEmployeeRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisEmployeeRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisEmployeeResponse) }
     def update_hris_employee(request:, timeout_ms: nil)
       # update_hris_employee - Update an employee
+      # Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

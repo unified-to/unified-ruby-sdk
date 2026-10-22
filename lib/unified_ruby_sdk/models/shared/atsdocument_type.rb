@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AtsDocumentType - The kind of document
       class AtsDocumentType < T::Enum
 
 

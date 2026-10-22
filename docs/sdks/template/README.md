@@ -16,7 +16,7 @@
 
 ## create_compute_template
 
-Create a template
+Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 
 ### Example Usage
 
@@ -39,10 +39,10 @@ res = s.template.create_compute_template(compute_template: Models::Shared::Compu
   "RUN apt-get update',
   gpu_count: 2.0,
   gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-  id: '87214967-c388-454a-b15b-d7ea77a70778',
+  id: 'eaa43204-8bb4-45ef-a7a2-05e9a78e76d8',
   image: 'perfumed-molasses/cohibeo:5.2',
   is_public: false,
-  last_used_at: DateTime.iso8601('2026-03-23T20:27:16.056Z'),
+  last_used_at: DateTime.iso8601('2026-03-24T16:28:06.696Z'),
   memory_mb: 8192.0,
   metadata: [],
   name: 'multi-byte-card',
@@ -50,7 +50,7 @@ res = s.template.create_compute_template(compute_template: Models::Shared::Compu
     8080.0,
   ],
   status: Models::Shared::ComputeTemplateStatus::OTHER,
-  updated_at: DateTime.iso8601('2025-02-12T18:38:51.398Z'),
+  updated_at: DateTime.iso8601('2025-02-13T07:28:16.292Z'),
 ), connection_id: '<id>')
 
 unless res.compute_template.nil?
@@ -80,7 +80,7 @@ end
 
 ## get_compute_template
 
-Retrieve a template
+Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ end
 
 ## get_signing_template
 
-Retrieve a template
+Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -168,7 +168,7 @@ end
 
 ## list_compute_templates
 
-List all templates
+Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -213,7 +213,7 @@ end
 
 ## list_signing_templates
 
-List all templates
+Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -258,7 +258,7 @@ end
 
 ## patch_compute_template
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -282,10 +282,10 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
     "RUN apt-get update',
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '9cb36833-667b-4fd1-a64c-9bad7d4d2a50',
+    id: '54d4604d-270c-4610-8aab-cf1d48975452',
     image: 'perfumed-molasses/cohibeo:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-03-23T20:27:16.077Z'),
+    last_used_at: DateTime.iso8601('2026-03-24T16:28:06.720Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'multi-byte-card',
@@ -293,7 +293,7 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-12T18:38:51.411Z'),
+    updated_at: DateTime.iso8601('2025-02-13T07:28:16.307Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -325,7 +325,7 @@ end
 
 ## remove_compute_template
 
-Remove a template
+Deletes the ComputeTemplate identified by `id`.
 
 ### Example Usage
 
@@ -367,7 +367,7 @@ end
 
 ## update_compute_template
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -391,10 +391,10 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
     "RUN apt-get update',
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '9cb36833-667b-4fd1-a64c-9bad7d4d2a50',
+    id: '54d4604d-270c-4610-8aab-cf1d48975452',
     image: 'perfumed-molasses/cohibeo:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-03-23T20:27:16.077Z'),
+    last_used_at: DateTime.iso8601('2026-03-24T16:28:06.720Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'multi-byte-card',
@@ -402,7 +402,7 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-12T18:38:51.411Z'),
+    updated_at: DateTime.iso8601('2025-02-13T07:28:16.307Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

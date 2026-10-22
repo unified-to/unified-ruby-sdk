@@ -14,7 +14,7 @@
 
 ## create_shipping_shipment
 
-Create a shipment
+Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
 
 ### Example Usage
 
@@ -31,7 +31,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.shipment.create_shipping_shipment(shipping_shipment: Models::Shared::ShippingShipment.new(
   created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-  id: 'aa5f6c4a-01d3-48d7-882d-b4d25280042f',
+  id: '0a5cf88a-9ecb-4aef-8699-32f07ffa8215',
   is_return: false,
   lineitems: [],
   metadata: [],
@@ -41,7 +41,7 @@ res = s.shipment.create_shipping_shipment(shipping_shipment: Models::Shared::Shi
   service_code: 'OVERNIGHT',
   shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
   status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-  updated_at: DateTime.iso8601('2022-11-15T06:46:20.874Z'),
+  updated_at: DateTime.iso8601('2022-11-15T07:47:20.988Z'),
 ), connection_id: '<id>')
 
 unless res.shipping_shipment.nil?
@@ -71,7 +71,7 @@ end
 
 ## get_shipping_shipment
 
-Retrieve a shipment
+Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -115,7 +115,7 @@ end
 
 ## list_shipping_shipments
 
-List all shipments
+Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -160,7 +160,7 @@ end
 
 ## patch_shipping_shipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -178,7 +178,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchShippingShipmentRequest.new(
   shipping_shipment: Models::Shared::ShippingShipment.new(
     created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-    id: '1a7f03d0-ee89-4708-871e-abbc7015a961',
+    id: 'd29b9c53-a7f2-4b7c-a271-5ac5254ed575',
     is_return: false,
     lineitems: [],
     metadata: [],
@@ -188,7 +188,7 @@ req = Models::Operations::PatchShippingShipmentRequest.new(
     service_code: 'OVERNIGHT',
     shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
     status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-    updated_at: DateTime.iso8601('2022-11-15T06:46:20.878Z'),
+    updated_at: DateTime.iso8601('2022-11-15T07:47:20.993Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -220,7 +220,7 @@ end
 
 ## remove_shipping_shipment
 
-Remove a shipment
+Deletes the ShippingShipment identified by `id`.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ end
 
 ## update_shipping_shipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -280,7 +280,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateShippingShipmentRequest.new(
   shipping_shipment: Models::Shared::ShippingShipment.new(
     created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-    id: '1a7f03d0-ee89-4708-871e-abbc7015a961',
+    id: 'd29b9c53-a7f2-4b7c-a271-5ac5254ed575',
     is_return: false,
     lineitems: [],
     metadata: [],
@@ -290,7 +290,7 @@ req = Models::Operations::UpdateShippingShipmentRequest.new(
     service_code: 'OVERNIGHT',
     shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
     status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-    updated_at: DateTime.iso8601('2022-11-15T06:46:20.878Z'),
+    updated_at: DateTime.iso8601('2022-11-15T07:47:20.993Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

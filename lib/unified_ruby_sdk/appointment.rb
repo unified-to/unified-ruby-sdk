@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(healthcare_appointment: Models::Shared::HealthcareAppointment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHealthcareAppointmentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHealthcareAppointmentResponse) }
     def create_healthcare_appointment(healthcare_appointment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_healthcare_appointment - Create an appointment
+      # Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
       request = Models::Operations::CreateHealthcareAppointmentRequest.new(
         healthcare_appointment: healthcare_appointment,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcareAppointmentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcareAppointmentResponse) }
     def get_healthcare_appointment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_appointment - Retrieve an appointment
+      # Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcareAppointmentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcareAppointmentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcareAppointmentsResponse) }
     def list_healthcare_appointments(request:, timeout_ms: nil)
       # list_healthcare_appointments - List all appointments
+      # Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHealthcareAppointmentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHealthcareAppointmentResponse) }
     def patch_healthcare_appointment(request:, timeout_ms: nil)
       # patch_healthcare_appointment - Update an appointment
+      # Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHealthcareAppointmentResponse) }
     def remove_healthcare_appointment(connection_id:, id:, timeout_ms: nil)
       # remove_healthcare_appointment - Remove an appointment
+      # Deletes the HealthcareAppointment identified by `id`.
       request = Models::Operations::RemoveHealthcareAppointmentRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHealthcareAppointmentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHealthcareAppointmentResponse) }
     def update_healthcare_appointment(request:, timeout_ms: nil)
       # update_healthcare_appointment - Update an appointment
+      # Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

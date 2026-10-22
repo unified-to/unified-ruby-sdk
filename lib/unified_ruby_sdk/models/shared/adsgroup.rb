@@ -29,7 +29,7 @@ module UnifiedRubySDK
         field :budget_period, Crystalline::Nilable.new(Models::Shared::AdsGroupBudgetPeriod), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_period'), 'decoder': Utils.enum_from_string(Models::Shared::AdsGroupBudgetPeriod, true) } }
 
         field :budget_unit, Crystalline::Nilable.new(Models::Shared::AdsGroupBudgetUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('budget_unit'), 'decoder': Utils.enum_from_string(Models::Shared::AdsGroupBudgetUnit, true) } }
-
+        # The ID of the campaign the ad group belongs to (an AdsCampaign ID)
         field :campaign_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -55,7 +55,7 @@ module UnifiedRubySDK
         field :language_locale, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # The ad group's name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
         field :optimization_goal, Crystalline::Nilable.new(Models::Shared::OptimizationGoal), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('optimization_goal'), 'decoder': Utils.enum_from_string(Models::Shared::OptimizationGoal, true) } }

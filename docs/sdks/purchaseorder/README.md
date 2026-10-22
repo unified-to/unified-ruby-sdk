@@ -14,7 +14,7 @@
 
 ## create_accounting_purchaseorder
 
-Create a purchaseorder
+Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
 
 ### Example Usage
 
@@ -43,7 +43,7 @@ res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: 
   category_ids: [],
   created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
   currency: 'EUR',
-  id: '95fc4c52-e984-4e27-a4ce-4dbf003425b2',
+  id: 'e2480d4a-e417-498a-aa01-91742640660d',
   lineitems: [],
   metadata: [],
   posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -57,7 +57,7 @@ res = s.purchaseorder.create_accounting_purchaseorder(accounting_purchaseorder: 
   ),
   status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2021-08-11T06:00:23.901Z'),
+  updated_at: DateTime.iso8601('2021-08-11T08:41:44.885Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_purchaseorder.nil?
@@ -87,7 +87,7 @@ end
 
 ## get_accounting_purchaseorder
 
-Retrieve a purchaseorder
+Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -131,7 +131,7 @@ end
 
 ## list_accounting_purchaseorders
 
-List all purchaseorders
+Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -176,7 +176,7 @@ end
 
 ## patch_accounting_purchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -206,7 +206,7 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: '48e97068-ce4d-4074-985d-773cfe1d221d',
+    id: 'a416ea74-f483-42a8-8e48-58535d9028ce',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -220,7 +220,7 @@ req = Models::Operations::PatchAccountingPurchaseorderRequest.new(
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-11T06:00:23.906Z'),
+    updated_at: DateTime.iso8601('2021-08-11T08:41:44.890Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -252,7 +252,7 @@ end
 
 ## remove_accounting_purchaseorder
 
-Remove a purchaseorder
+Deletes the AccountingPurchaseorder identified by `id`.
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ end
 
 ## update_accounting_purchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -324,7 +324,7 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
     category_ids: [],
     created_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
     currency: 'EUR',
-    id: '48e97068-ce4d-4074-985d-773cfe1d221d',
+    id: 'a416ea74-f483-42a8-8e48-58535d9028ce',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-12-12T07:17:47.021Z'),
@@ -338,7 +338,7 @@ req = Models::Operations::UpdateAccountingPurchaseorderRequest.new(
     ),
     status: Models::Shared::AccountingPurchaseorderStatus::SUBMITTED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2021-08-11T06:00:23.906Z'),
+    updated_at: DateTime.iso8601('2021-08-11T08:41:44.890Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

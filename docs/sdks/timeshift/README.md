@@ -14,7 +14,7 @@
 
 ## create_hris_timeshift
 
-Create a timeshift
+Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 
 ### Example Usage
 
@@ -30,7 +30,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.timeshift.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
-  approved_at: DateTime.iso8601('2022-07-18T01:51:06.464Z'),
+  approved_at: DateTime.iso8601('2022-07-18T11:45:36.212Z'),
   compensation: [
     Models::Shared::HrisCompensation.new(
       amount: 76_761.0,
@@ -42,13 +42,13 @@ res = s.timeshift.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTime
   ],
   created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2026-09-27T01:26:47.942Z'),
+  end_at: DateTime.iso8601('2026-09-28T01:00:15.668Z'),
   hours: 6.0,
-  id: '6b0e3410-8eef-4221-b88e-e4d4be208730',
+  id: '92b01fd8-ed4d-4643-95ba-0d8a8b541854',
   is_approved: false,
   metadata: [],
-  start_at: DateTime.iso8601('2023-07-13T00:30:36.291Z'),
-  updated_at: DateTime.iso8601('2021-07-01T21:53:01.115Z'),
+  start_at: DateTime.iso8601('2023-07-13T13:37:31.157Z'),
+  updated_at: DateTime.iso8601('2021-07-02T04:23:45.080Z'),
 ), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -78,7 +78,7 @@ end
 
 ## get_hris_timeshift
 
-Retrieve a timeshift
+Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ end
 
 ## list_hris_timeshifts
 
-List all timeshifts
+Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ end
 
 ## patch_hris_timeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -184,7 +184,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-18T01:51:06.472Z'),
+    approved_at: DateTime.iso8601('2022-07-18T11:45:36.221Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
@@ -196,13 +196,13 @@ req = Models::Operations::PatchHrisTimeshiftRequest.new(
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-09-27T01:26:47.962Z'),
+    end_at: DateTime.iso8601('2026-09-28T01:00:15.689Z'),
     hours: 6.0,
-    id: '860cce82-b177-4974-b6a6-dda841cb1baa',
+    id: 'be8b2098-4454-4b17-a20f-c3f23a1d0e71',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-13T00:30:36.302Z'),
-    updated_at: DateTime.iso8601('2021-07-01T21:53:01.120Z'),
+    start_at: DateTime.iso8601('2023-07-13T13:37:31.169Z'),
+    updated_at: DateTime.iso8601('2021-07-02T04:23:45.085Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -234,7 +234,7 @@ end
 
 ## remove_hris_timeshift
 
-Remove a timeshift
+Deletes the HrisTimeshift identified by `id`.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ end
 
 ## update_hris_timeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -293,7 +293,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-18T01:51:06.472Z'),
+    approved_at: DateTime.iso8601('2022-07-18T11:45:36.221Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
@@ -305,13 +305,13 @@ req = Models::Operations::UpdateHrisTimeshiftRequest.new(
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-09-27T01:26:47.962Z'),
+    end_at: DateTime.iso8601('2026-09-28T01:00:15.689Z'),
     hours: 6.0,
-    id: '860cce82-b177-4974-b6a6-dda841cb1baa',
+    id: 'be8b2098-4454-4b17-a20f-c3f23a1d0e71',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-13T00:30:36.302Z'),
-    updated_at: DateTime.iso8601('2021-07-01T21:53:01.120Z'),
+    start_at: DateTime.iso8601('2023-07-13T13:37:31.169Z'),
+    updated_at: DateTime.iso8601('2021-07-02T04:23:45.085Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

@@ -14,7 +14,7 @@
 
 ## create_commerce_reservation
 
-Create a reservation
+Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
 
 ### Example Usage
 
@@ -35,13 +35,13 @@ res = s.reservation.create_commerce_reservation(commerce_reservation: Models::Sh
   guest_email: 'julien.bartoletti@icloud.com',
   guest_name: 'Julien Bartoletti',
   guest_phone: '(728) 596-2620',
-  id: '0ef71e6c-d9d9-4c9f-b62a-3f0f0f56fb0f',
+  id: '60c10133-52cf-40e4-bb0c-3c0be69d6146',
   metadata: [],
   notes: 'Adsum textilis ipsum despecto.',
   size: 10.0,
   start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
   status: Models::Shared::CommerceReservationStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-01-03T21:23:50.117Z'),
+  updated_at: DateTime.iso8601('2023-01-04T02:33:54.875Z'),
   url: 'https://expensive-gift.org',
 ), connection_id: '<id>')
 
@@ -72,7 +72,7 @@ end
 
 ## get_commerce_reservation
 
-Retrieve a reservation
+Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -116,7 +116,7 @@ end
 
 ## list_commerce_reservations
 
-List all reservations
+Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -161,7 +161,7 @@ end
 
 ## patch_commerce_reservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -183,13 +183,13 @@ req = Models::Operations::PatchCommerceReservationRequest.new(
     guest_email: 'julien.bartoletti@icloud.com',
     guest_name: 'Julien Bartoletti',
     guest_phone: '(728) 596-2620',
-    id: '4c9dd695-6c67-4102-9022-4ea5300139ad',
+    id: '4f525164-06a5-4358-aede-fbd19be29b8c',
     metadata: [],
     notes: 'Adsum textilis ipsum despecto.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-03T21:23:50.121Z'),
+    updated_at: DateTime.iso8601('2023-01-04T02:33:54.879Z'),
     url: 'https://expensive-gift.org',
   ),
   connection_id: '<id>',
@@ -222,7 +222,7 @@ end
 
 ## remove_commerce_reservation
 
-Remove a reservation
+Deletes the CommerceReservation identified by `id`.
 
 ### Example Usage
 
@@ -264,7 +264,7 @@ end
 
 ## update_commerce_reservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -286,13 +286,13 @@ req = Models::Operations::UpdateCommerceReservationRequest.new(
     guest_email: 'julien.bartoletti@icloud.com',
     guest_name: 'Julien Bartoletti',
     guest_phone: '(728) 596-2620',
-    id: '4c9dd695-6c67-4102-9022-4ea5300139ad',
+    id: '4f525164-06a5-4358-aede-fbd19be29b8c',
     metadata: [],
     notes: 'Adsum textilis ipsum despecto.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-03T21:23:50.121Z'),
+    updated_at: DateTime.iso8601('2023-01-04T02:33:54.879Z'),
     url: 'https://expensive-gift.org',
   ),
   connection_id: '<id>',

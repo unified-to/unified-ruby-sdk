@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(shipping_rate: Models::Shared::ShippingRate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateShippingRateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateShippingRateResponse) }
     def create_shipping_rate(shipping_rate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_shipping_rate - Create a rate
+      # Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
       request = Models::Operations::CreateShippingRateRequest.new(
         shipping_rate: shipping_rate,
         connection_id: connection_id,

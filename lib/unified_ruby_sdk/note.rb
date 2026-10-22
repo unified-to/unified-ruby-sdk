@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ticketing_note: Models::Shared::TicketingNote, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingNoteQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingNoteResponse) }
     def create_ticketing_note(ticketing_note:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ticketing_note - Create a note
+      # Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
       request = Models::Operations::CreateTicketingNoteRequest.new(
         ticketing_note: ticketing_note,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingNoteQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingNoteResponse) }
     def get_ticketing_note(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ticketing_note - Retrieve a note
+      # Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetTicketingNoteRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListTicketingNotesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTicketingNotesResponse) }
     def list_ticketing_notes(request:, timeout_ms: nil)
       # list_ticketing_notes - List all notes
+      # Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchTicketingNoteRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTicketingNoteResponse) }
     def patch_ticketing_note(request:, timeout_ms: nil)
       # patch_ticketing_note - Update a note
+      # Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTicketingNoteResponse) }
     def remove_ticketing_note(connection_id:, id:, timeout_ms: nil)
       # remove_ticketing_note - Remove a note
+      # Deletes the TicketingNote identified by `id`.
       request = Models::Operations::RemoveTicketingNoteRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateTicketingNoteRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTicketingNoteResponse) }
     def update_ticketing_note(request:, timeout_ms: nil)
       # update_ticketing_note - Update a note
+      # Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

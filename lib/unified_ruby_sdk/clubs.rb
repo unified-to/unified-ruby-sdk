@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsActivityResponse) }
     def get_clubs_activity(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_clubs_activity - Retrieve an activity
+      # Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetClubsActivityRequest.new(
         connection_id: connection_id,
         id: id,
@@ -158,6 +159,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsEventResponse) }
     def get_clubs_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_clubs_event - Retrieve an event
+      # Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetClubsEventRequest.new(
         connection_id: connection_id,
         id: id,
@@ -274,6 +276,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsGroupResponse) }
     def get_clubs_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_clubs_group - Retrieve a group
+      # Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetClubsGroupRequest.new(
         connection_id: connection_id,
         id: id,
@@ -390,6 +393,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsLocationResponse) }
     def get_clubs_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_clubs_location - Retrieve a location
+      # Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetClubsLocationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -506,6 +510,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsMemberQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsMemberResponse) }
     def get_clubs_member(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_clubs_member - Retrieve a member
+      # Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetClubsMemberRequest.new(
         connection_id: connection_id,
         id: id,
@@ -622,6 +627,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListClubsActivitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsActivitiesResponse) }
     def list_clubs_activities(request:, timeout_ms: nil)
       # list_clubs_activities - List all activities
+      # Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -732,6 +738,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListClubsEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsEventsResponse) }
     def list_clubs_events(request:, timeout_ms: nil)
       # list_clubs_events - List all events
+      # Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -842,6 +849,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListClubsGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsGroupsResponse) }
     def list_clubs_groups(request:, timeout_ms: nil)
       # list_clubs_groups - List all groups
+      # Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -952,6 +960,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListClubsLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsLocationsResponse) }
     def list_clubs_locations(request:, timeout_ms: nil)
       # list_clubs_locations - List all locations
+      # Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1062,6 +1071,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListClubsMembersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsMembersResponse) }
     def list_clubs_members(request:, timeout_ms: nil)
       # list_clubs_members - List all members
+      # Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

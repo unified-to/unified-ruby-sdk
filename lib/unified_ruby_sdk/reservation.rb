@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(commerce_reservation: Models::Shared::CommerceReservation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceReservationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceReservationResponse) }
     def create_commerce_reservation(commerce_reservation:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_reservation - Create a reservation
+      # Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
       request = Models::Operations::CreateCommerceReservationRequest.new(
         commerce_reservation: commerce_reservation,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceReservationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceReservationResponse) }
     def get_commerce_reservation(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_reservation - Retrieve a reservation
+      # Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceReservationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceReservationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceReservationsResponse) }
     def list_commerce_reservations(request:, timeout_ms: nil)
       # list_commerce_reservations - List all reservations
+      # Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceReservationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceReservationResponse) }
     def patch_commerce_reservation(request:, timeout_ms: nil)
       # patch_commerce_reservation - Update a reservation
+      # Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceReservationResponse) }
     def remove_commerce_reservation(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_reservation - Remove a reservation
+      # Deletes the CommerceReservation identified by `id`.
       request = Models::Operations::RemoveCommerceReservationRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceReservationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceReservationResponse) }
     def update_commerce_reservation(request:, timeout_ms: nil)
       # update_commerce_reservation - Update a reservation
+      # Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

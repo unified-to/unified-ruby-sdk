@@ -22,7 +22,7 @@
 
 ## create_ats_activity
 
-Create an activity
+Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
   created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
   description: 'Sapiente.',
-  id: 'e8a2f1e7-5ef1-44d6-b9b0-dd4ae05406d4',
+  id: 'f31f8ba6-5c20-4ce8-91ff-b36db9861837',
   is_private: false,
   metadata: [
     Models::Shared::AtsMetadata.new(
@@ -48,7 +48,7 @@ res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.n
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'e90754bb-3fc5-46ca-87c0-2ef0049e309a',
+      id: 'ecf256cf-449b-41d7-93b4-7fe6a1aeff92',
       namespace: 'activity',
       slug: 'cimentarius',
       value: 'Reprehenderit verto.',
@@ -57,7 +57,7 @@ res = s.activity.create_ats_activity(ats_activity: Models::Shared::AtsActivity.n
   sub_type: 'TASK',
   title: 'Venio blandior aureus.',
   type: Models::Shared::AtsActivityType::TASK,
-  updated_at: DateTime.iso8601('2026-04-04T06:38:15.355Z'),
+  updated_at: DateTime.iso8601('2026-04-05T03:19:02.969Z'),
 ), connection_id: '<id>')
 
 unless res.ats_activity.nil?
@@ -87,7 +87,7 @@ end
 
 ## create_lms_activity
 
-Create an activity
+Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
 
 ### Example Usage
 
@@ -104,15 +104,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.activity.create_lms_activity(lms_activity: Models::Shared::LmsActivity.new(
   assigned_grade: 'summopere',
-  completed_at: DateTime.iso8601('2023-12-05T23:40:40.743Z'),
+  completed_at: DateTime.iso8601('2023-12-06T12:04:39.234Z'),
   created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
   duration_minutes: 55.0,
-  id: '0b1206e4-ebf4-461d-ad66-a9ed815927b6',
+  id: '0a87f169-efad-4aba-b463-b08da0add2bd',
   is_completed: true,
   metadata: [],
   progress_percentage: 100.0,
-  started_at: DateTime.iso8601('2021-04-25T04:23:32.793Z'),
-  updated_at: DateTime.iso8601('2022-01-30T23:41:21.299Z'),
+  started_at: DateTime.iso8601('2021-04-25T06:27:05.348Z'),
+  updated_at: DateTime.iso8601('2022-01-31T04:47:21.858Z'),
 ), connection_id: '<id>')
 
 unless res.lms_activity.nil?
@@ -142,7 +142,7 @@ end
 
 ## get_ats_activity
 
-Retrieve an activity
+Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ end
 
 ## get_clubs_activity
 
-Retrieve an activity
+Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -230,7 +230,7 @@ end
 
 ## get_lms_activity
 
-Retrieve an activity
+Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -274,7 +274,7 @@ end
 
 ## list_ats_activities
 
-List all activities
+Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -319,7 +319,7 @@ end
 
 ## list_clubs_activities
 
-List all activities
+Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -364,7 +364,7 @@ end
 
 ## list_lms_activities
 
-List all activities
+Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -409,7 +409,7 @@ end
 
 ## patch_ats_activity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -428,7 +428,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Sapiente.',
-    id: '1dd88965-536d-4641-a508-0b97b622bef5',
+    id: '36bdb311-6067-41a5-ab75-6998e9b203d4',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -436,7 +436,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '26853e59-8a39-416d-88e8-757699c82c57',
+        id: '578f731c-d74a-4d7c-a885-88f5ca8458ed',
         namespace: 'activity',
         slug: 'cimentarius',
         value: 'Reprehenderit verto.',
@@ -445,7 +445,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
     sub_type: 'TASK',
     title: 'Venio blandior aureus.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-04-04T06:38:15.375Z'),
+    updated_at: DateTime.iso8601('2026-04-05T03:19:02.987Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -477,7 +477,7 @@ end
 
 ## patch_lms_activity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -495,15 +495,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'summopere',
-    completed_at: DateTime.iso8601('2023-12-05T23:40:40.748Z'),
+    completed_at: DateTime.iso8601('2023-12-06T12:04:39.243Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: '72d4119b-e5e6-45cd-9941-cd292c426d45',
+    id: '5e21e9ae-106a-48db-8731-1534e0864f1f',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-25T04:23:32.794Z'),
-    updated_at: DateTime.iso8601('2022-01-30T23:41:21.301Z'),
+    started_at: DateTime.iso8601('2021-04-25T06:27:05.350Z'),
+    updated_at: DateTime.iso8601('2022-01-31T04:47:21.861Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -535,7 +535,7 @@ end
 
 ## remove_ats_activity
 
-Remove an activity
+Deletes the AtsActivity identified by `id`.
 
 ### Example Usage
 
@@ -577,7 +577,7 @@ end
 
 ## remove_lms_activity
 
-Remove an activity
+Deletes the LmsActivity identified by `id`.
 
 ### Example Usage
 
@@ -619,7 +619,7 @@ end
 
 ## update_ats_activity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -638,7 +638,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Sapiente.',
-    id: '1dd88965-536d-4641-a508-0b97b622bef5',
+    id: '36bdb311-6067-41a5-ab75-6998e9b203d4',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -646,7 +646,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '26853e59-8a39-416d-88e8-757699c82c57',
+        id: '578f731c-d74a-4d7c-a885-88f5ca8458ed',
         namespace: 'activity',
         slug: 'cimentarius',
         value: 'Reprehenderit verto.',
@@ -655,7 +655,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
     sub_type: 'TASK',
     title: 'Venio blandior aureus.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-04-04T06:38:15.375Z'),
+    updated_at: DateTime.iso8601('2026-04-05T03:19:02.987Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -687,7 +687,7 @@ end
 
 ## update_lms_activity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -705,15 +705,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateLmsActivityRequest.new(
   lms_activity: Models::Shared::LmsActivity.new(
     assigned_grade: 'summopere',
-    completed_at: DateTime.iso8601('2023-12-05T23:40:40.748Z'),
+    completed_at: DateTime.iso8601('2023-12-06T12:04:39.243Z'),
     created_at: DateTime.iso8601('2020-10-17T01:25:21.745Z'),
     duration_minutes: 55.0,
-    id: '72d4119b-e5e6-45cd-9941-cd292c426d45',
+    id: '5e21e9ae-106a-48db-8731-1534e0864f1f',
     is_completed: true,
     metadata: [],
     progress_percentage: 100.0,
-    started_at: DateTime.iso8601('2021-04-25T04:23:32.794Z'),
-    updated_at: DateTime.iso8601('2022-01-30T23:41:21.301Z'),
+    started_at: DateTime.iso8601('2021-04-25T06:27:05.350Z'),
+    updated_at: DateTime.iso8601('2022-01-31T04:47:21.861Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

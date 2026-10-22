@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # MetadataMetadataFormat - The data type of the custom field's values
       class MetadataMetadataFormat < T::Enum
 
 

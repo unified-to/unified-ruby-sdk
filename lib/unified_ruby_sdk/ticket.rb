@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ticketing_ticket: Models::Shared::TicketingTicket, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingTicketQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingTicketResponse) }
     def create_ticketing_ticket(ticketing_ticket:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ticketing_ticket - Create a ticket
+      # Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
       request = Models::Operations::CreateTicketingTicketRequest.new(
         ticketing_ticket: ticketing_ticket,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingTicketQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingTicketResponse) }
     def get_ticketing_ticket(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ticketing_ticket - Retrieve a ticket
+      # Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetTicketingTicketRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListTicketingTicketsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTicketingTicketsResponse) }
     def list_ticketing_tickets(request:, timeout_ms: nil)
       # list_ticketing_tickets - List all tickets
+      # Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchTicketingTicketRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTicketingTicketResponse) }
     def patch_ticketing_ticket(request:, timeout_ms: nil)
       # patch_ticketing_ticket - Update a ticket
+      # Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTicketingTicketResponse) }
     def remove_ticketing_ticket(connection_id:, id:, timeout_ms: nil)
       # remove_ticketing_ticket - Remove a ticket
+      # Deletes the TicketingTicket identified by `id`.
       request = Models::Operations::RemoveTicketingTicketRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateTicketingTicketRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTicketingTicketResponse) }
     def update_ticketing_ticket(request:, timeout_ms: nil)
       # update_ticketing_ticket - Update a ticket
+      # Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

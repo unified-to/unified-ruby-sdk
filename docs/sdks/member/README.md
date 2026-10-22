@@ -16,7 +16,7 @@
 
 ## create_martech_member
 
-Create a member
+Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
 
 ### Example Usage
 
@@ -41,7 +41,7 @@ res = s.member.create_martech_member(marketing_member: Models::Shared::Marketing
     ),
   ],
   first_name: 'Jude',
-  id: 'd7b88a89-ae37-4349-a4d9-8a4beafb4569',
+  id: 'e53d71a3-ca93-4d27-b463-3e298d43176a',
   last_name: 'Leffler',
   metadata: [],
   name: 'Jude Leffler',
@@ -50,7 +50,7 @@ res = s.member.create_martech_member(marketing_member: Models::Shared::Marketing
     'adnuo',
     'verumtamen',
   ],
-  updated_at: DateTime.iso8601('2025-07-08T19:52:27.940Z'),
+  updated_at: DateTime.iso8601('2025-07-09T12:53:01.027Z'),
 ), connection_id: '<id>')
 
 unless res.marketing_member.nil?
@@ -80,7 +80,7 @@ end
 
 ## get_clubs_member
 
-Retrieve a member
+Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ end
 
 ## get_martech_member
 
-Retrieve a member
+Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -168,7 +168,7 @@ end
 
 ## list_clubs_members
 
-List all members
+Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -213,7 +213,7 @@ end
 
 ## list_martech_members
 
-List all members
+Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -258,7 +258,7 @@ end
 
 ## patch_martech_member
 
-Update a member
+Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ req = Models::Operations::PatchMartechMemberRequest.new(
       ),
     ],
     first_name: 'Jude',
-    id: 'e1a7a651-8834-4eb6-b703-61cf8cec3e72',
+    id: '40880c0e-6de0-452f-8e79-4d94aef8d633',
     last_name: 'Leffler',
     metadata: [],
     name: 'Jude Leffler',
@@ -293,7 +293,7 @@ req = Models::Operations::PatchMartechMemberRequest.new(
       'adnuo',
       'verumtamen',
     ],
-    updated_at: DateTime.iso8601('2025-07-08T19:52:27.952Z'),
+    updated_at: DateTime.iso8601('2025-07-09T12:53:01.040Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -325,7 +325,7 @@ end
 
 ## remove_martech_member
 
-Remove a member
+Deletes the MarketingMember identified by `id`.
 
 ### Example Usage
 
@@ -367,7 +367,7 @@ end
 
 ## update_martech_member
 
-Update a member
+Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
 ### Example Usage
 
@@ -393,7 +393,7 @@ req = Models::Operations::UpdateMartechMemberRequest.new(
       ),
     ],
     first_name: 'Jude',
-    id: 'e1a7a651-8834-4eb6-b703-61cf8cec3e72',
+    id: '40880c0e-6de0-452f-8e79-4d94aef8d633',
     last_name: 'Leffler',
     metadata: [],
     name: 'Jude Leffler',
@@ -402,7 +402,7 @@ req = Models::Operations::UpdateMartechMemberRequest.new(
       'adnuo',
       'verumtamen',
     ],
-    updated_at: DateTime.iso8601('2025-07-08T19:52:27.952Z'),
+    updated_at: DateTime.iso8601('2025-07-09T12:53:01.040Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

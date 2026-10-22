@@ -17,17 +17,17 @@ module UnifiedRubySDK
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :extra_data, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::CommerceMetadata1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
-
+        # The data type of the custom field, which determines how `value` is formatted.
         field :format, Crystalline::Nilable.new(Models::Shared::CommerceMetadataFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::CommerceMetadataFormat, true) } }
-
+        # The ID of the custom field definition (from the metadata/metadata endpoint).
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :is_required, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_required') } }
 
         field :namespace, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('namespace') } }
-
+        # The integration's API name (key) of an existing custom field. List valid slugs for this object with the metadata/metadata endpoint; unknown slugs are rejected by the integration.
         field :slug, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
-
+        # The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string.
         field :value, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::CommerceMetadataSchemas1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
         sig { params(description: T.nilable(::String), extra_data: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CommerceMetadata1, ::String, ::Float, T::Boolean)])), format: T.nilable(Models::Shared::CommerceMetadataFormat), id: T.nilable(::String), is_required: T.nilable(T::Boolean), namespace: T.nilable(::String), slug: T.nilable(::String), value: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CommerceMetadataSchemas1, ::String, ::Float, T::Boolean)]))).void }

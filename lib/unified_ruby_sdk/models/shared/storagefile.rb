@@ -29,7 +29,7 @@ module UnifiedRubySDK
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::StorageMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
         field :mime_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mime_type') } }
-
+        # The file or folder name, including the file's extension
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
@@ -37,13 +37,13 @@ module UnifiedRubySDK
         field :permissions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::StoragePermission)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('permissions') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
-
+        # The records the file is attached to (e.g. an invoice or a candidate), each by its id and type
         field :references, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::StorageReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('references') } }
 
         field :size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size') } }
         # labels
         field :tags, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tags') } }
-
+        # Whether this is a file or a folder
         field :type, Crystalline::Nilable.new(Models::Shared::StorageFileType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::StorageFileType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }

@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(analytics_visitor: Models::Shared::AnalyticsVisitor, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAnalyticsVisitorQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAnalyticsVisitorResponse) }
     def create_analytics_visitor(analytics_visitor:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_analytics_visitor - Create a visitor
+      # Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
       request = Models::Operations::CreateAnalyticsVisitorRequest.new(
         analytics_visitor: analytics_visitor,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAnalyticsVisitorQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAnalyticsVisitorResponse) }
     def get_analytics_visitor(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_analytics_visitor - Retrieve a visitor
+      # Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAnalyticsVisitorRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAnalyticsVisitorsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAnalyticsVisitorsResponse) }
     def list_analytics_visitors(request:, timeout_ms: nil)
       # list_analytics_visitors - List all visitors
+      # Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAnalyticsVisitorRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAnalyticsVisitorResponse) }
     def patch_analytics_visitor(request:, timeout_ms: nil)
       # patch_analytics_visitor - Update a visitor
+      # Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAnalyticsVisitorResponse) }
     def remove_analytics_visitor(connection_id:, id:, timeout_ms: nil)
       # remove_analytics_visitor - Remove a visitor
+      # Deletes the AnalyticsVisitor identified by `id`.
       request = Models::Operations::RemoveAnalyticsVisitorRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAnalyticsVisitorRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAnalyticsVisitorResponse) }
     def update_analytics_visitor(request:, timeout_ms: nil)
       # update_analytics_visitor - Update a visitor
+      # Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

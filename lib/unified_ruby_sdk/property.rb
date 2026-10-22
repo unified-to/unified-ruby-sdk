@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(analytics_property: Models::Shared::AnalyticsProperty, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAnalyticsPropertyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAnalyticsPropertyResponse) }
     def create_analytics_property(analytics_property:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_analytics_property - Create a property
+      # Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
       request = Models::Operations::CreateAnalyticsPropertyRequest.new(
         analytics_property: analytics_property,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAnalyticsPropertyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAnalyticsPropertyResponse) }
     def get_analytics_property(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_analytics_property - Retrieve a property
+      # Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAnalyticsPropertyRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAnalyticsPropertiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAnalyticsPropertiesResponse) }
     def list_analytics_properties(request:, timeout_ms: nil)
       # list_analytics_properties - List all properties
+      # Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAnalyticsPropertyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAnalyticsPropertyResponse) }
     def patch_analytics_property(request:, timeout_ms: nil)
       # patch_analytics_property - Update a property
+      # Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAnalyticsPropertyResponse) }
     def remove_analytics_property(connection_id:, id:, timeout_ms: nil)
       # remove_analytics_property - Remove a property
+      # Deletes the AnalyticsProperty identified by `id`.
       request = Models::Operations::RemoveAnalyticsPropertyRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAnalyticsPropertyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAnalyticsPropertyResponse) }
     def update_analytics_property(request:, timeout_ms: nil)
       # update_analytics_property - Update a property
+      # Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

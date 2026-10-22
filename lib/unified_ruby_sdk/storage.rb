@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(storage_file: Models::Shared::StorageFile, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateStorageFileQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateStorageFileResponse) }
     def create_storage_file(storage_file:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_storage_file - Create a file
+      # Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped to the provider's API. Returns the created StorageFile.
       request = Models::Operations::CreateStorageFileRequest.new(
         storage_file: storage_file,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetStorageFileQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetStorageFileResponse) }
     def get_storage_file(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_storage_file - Retrieve a file
+      # Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetStorageFileRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListStorageFilesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListStorageFilesResponse) }
     def list_storage_files(request:, timeout_ms: nil)
       # list_storage_files - List all files
+      # Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchStorageFileRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchStorageFileResponse) }
     def patch_storage_file(request:, timeout_ms: nil)
       # patch_storage_file - Update a file
+      # Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveStorageFileResponse) }
     def remove_storage_file(connection_id:, id:, timeout_ms: nil)
       # remove_storage_file - Remove a file
+      # Deletes the StorageFile identified by `id`.
       request = Models::Operations::RemoveStorageFileRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateStorageFileRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateStorageFileResponse) }
     def update_storage_file(request:, timeout_ms: nil)
       # update_storage_file - Update a file
+      # Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

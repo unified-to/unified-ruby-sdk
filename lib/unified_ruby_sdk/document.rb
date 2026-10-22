@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ats_document: Models::Shared::AtsDocument, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsDocumentResponse) }
     def create_ats_document(ats_document:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_document - Create a document
+      # Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
       request = Models::Operations::CreateAtsDocumentRequest.new(
         ats_document: ats_document,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(hris_document: Models::Shared::HrisDocument, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDocumentResponse) }
     def create_hris_document(hris_document:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_document - Create a document
+      # Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
       request = Models::Operations::CreateHrisDocumentRequest.new(
         hris_document: hris_document,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(signing_document: Models::Shared::SigningDocument, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateSigningDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateSigningDocumentResponse) }
     def create_signing_document(signing_document:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_signing_document - Create a document
+      # Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
       request = Models::Operations::CreateSigningDocumentRequest.new(
         signing_document: signing_document,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsDocumentResponse) }
     def get_ats_document(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_document - Retrieve a document
+      # Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsDocumentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -542,6 +546,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDocumentResponse) }
     def get_hris_document(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_document - Retrieve a document
+      # Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisDocumentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -658,6 +663,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSigningDocumentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSigningDocumentResponse) }
     def get_signing_document(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_signing_document - Retrieve a document
+      # Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetSigningDocumentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -774,6 +780,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsDocumentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsDocumentsResponse) }
     def list_ats_documents(request:, timeout_ms: nil)
       # list_ats_documents - List all documents
+      # Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -884,6 +891,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisDocumentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisDocumentsResponse) }
     def list_hris_documents(request:, timeout_ms: nil)
       # list_hris_documents - List all documents
+      # Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListSigningDocumentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSigningDocumentsResponse) }
     def list_signing_documents(request:, timeout_ms: nil)
       # list_signing_documents - List all documents
+      # Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1104,6 +1113,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsDocumentResponse) }
     def patch_ats_document(request:, timeout_ms: nil)
       # patch_ats_document - Update a document
+      # Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1226,6 +1236,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisDocumentResponse) }
     def patch_hris_document(request:, timeout_ms: nil)
       # patch_hris_document - Update a document
+      # Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1348,6 +1359,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchSigningDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchSigningDocumentResponse) }
     def patch_signing_document(request:, timeout_ms: nil)
       # patch_signing_document - Update a document
+      # Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1470,6 +1482,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsDocumentResponse) }
     def remove_ats_document(connection_id:, id:, timeout_ms: nil)
       # remove_ats_document - Remove a document
+      # Deletes the AtsDocument identified by `id`.
       request = Models::Operations::RemoveAtsDocumentRequest.new(
         connection_id: connection_id,
         id: id
@@ -1584,6 +1597,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisDocumentResponse) }
     def remove_hris_document(connection_id:, id:, timeout_ms: nil)
       # remove_hris_document - Remove a document
+      # Deletes the HrisDocument identified by `id`.
       request = Models::Operations::RemoveHrisDocumentRequest.new(
         connection_id: connection_id,
         id: id
@@ -1698,6 +1712,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveSigningDocumentResponse) }
     def remove_signing_document(connection_id:, id:, timeout_ms: nil)
       # remove_signing_document - Remove a document
+      # Deletes the SigningDocument identified by `id`.
       request = Models::Operations::RemoveSigningDocumentRequest.new(
         connection_id: connection_id,
         id: id
@@ -1812,6 +1827,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsDocumentResponse) }
     def update_ats_document(request:, timeout_ms: nil)
       # update_ats_document - Update a document
+      # Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1934,6 +1950,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisDocumentResponse) }
     def update_hris_document(request:, timeout_ms: nil)
       # update_hris_document - Update a document
+      # Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2056,6 +2073,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateSigningDocumentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateSigningDocumentResponse) }
     def update_signing_document(request:, timeout_ms: nil)
       # update_signing_document - Update a document
+      # Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

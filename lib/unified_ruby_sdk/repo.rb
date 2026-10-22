@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoBranchQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoBranchResponse) }
     def create_repo_branch(repo_branch:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_branch - Create a branch
+      # Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
       request = Models::Operations::CreateRepoBranchRequest.new(
         repo_branch: repo_branch,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoCommitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoCommitResponse) }
     def create_repo_commit(repo_commit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_commit - Create a commit
+      # Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
       request = Models::Operations::CreateRepoCommitRequest.new(
         repo_commit: repo_commit,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoOrganizationResponse) }
     def create_repo_organization(repo_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_organization - Create an organization
+      # Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
       request = Models::Operations::CreateRepoOrganizationRequest.new(
         repo_organization: repo_organization,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(repo_pullrequest: Models::Shared::RepoPullrequest, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoPullrequestQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoPullrequestResponse) }
     def create_repo_pullrequest(repo_pullrequest:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_pullrequest - Create a pullrequest
+      # Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
       request = Models::Operations::CreateRepoPullrequestRequest.new(
         repo_pullrequest: repo_pullrequest,
         connection_id: connection_id,
@@ -554,6 +558,7 @@ module UnifiedRubySDK
     sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoRepositoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoRepositoryResponse) }
     def create_repo_repository(repo_repository:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_repository - Create a repository
+      # Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
       request = Models::Operations::CreateRepoRepositoryRequest.new(
         repo_repository: repo_repository,
         connection_id: connection_id,
@@ -682,6 +687,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoBranchQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoBranchResponse) }
     def get_repo_branch(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_branch - Retrieve a branch
+      # Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetRepoBranchRequest.new(
         connection_id: connection_id,
         id: id,
@@ -798,6 +804,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoCommitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoCommitResponse) }
     def get_repo_commit(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_commit - Retrieve a commit
+      # Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetRepoCommitRequest.new(
         connection_id: connection_id,
         id: id,
@@ -914,6 +921,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoOrganizationResponse) }
     def get_repo_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_organization - Retrieve an organization
+      # Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetRepoOrganizationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1030,6 +1038,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoPullrequestQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoPullrequestResponse) }
     def get_repo_pullrequest(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_pullrequest - Retrieve a pullrequest
+      # Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetRepoPullrequestRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1146,6 +1155,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoRepositoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoRepositoryResponse) }
     def get_repo_repository(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_repository - Retrieve a repository
+      # Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetRepoRepositoryRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1262,6 +1272,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListRepoBranchesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoBranchesResponse) }
     def list_repo_branches(request:, timeout_ms: nil)
       # list_repo_branches - List all branches
+      # Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1372,6 +1383,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListRepoCommitsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoCommitsResponse) }
     def list_repo_commits(request:, timeout_ms: nil)
       # list_repo_commits - List all commits
+      # Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1482,6 +1494,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListRepoOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoOrganizationsResponse) }
     def list_repo_organizations(request:, timeout_ms: nil)
       # list_repo_organizations - List all organizations
+      # Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1592,6 +1605,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListRepoPullrequestsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoPullrequestsResponse) }
     def list_repo_pullrequests(request:, timeout_ms: nil)
       # list_repo_pullrequests - List all pullrequests
+      # Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1702,6 +1716,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListRepoRepositoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoRepositoriesResponse) }
     def list_repo_repositories(request:, timeout_ms: nil)
       # list_repo_repositories - List all repositories
+      # Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1812,6 +1827,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchRepoBranchRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoBranchResponse) }
     def patch_repo_branch(request:, timeout_ms: nil)
       # patch_repo_branch - Update a branch
+      # Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1934,6 +1950,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchRepoCommitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoCommitResponse) }
     def patch_repo_commit(request:, timeout_ms: nil)
       # patch_repo_commit - Update a commit
+      # Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2056,6 +2073,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchRepoOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoOrganizationResponse) }
     def patch_repo_organization(request:, timeout_ms: nil)
       # patch_repo_organization - Update an organization
+      # Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2178,6 +2196,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchRepoPullrequestRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoPullrequestResponse) }
     def patch_repo_pullrequest(request:, timeout_ms: nil)
       # patch_repo_pullrequest - Update a pullrequest
+      # Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2300,6 +2319,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchRepoRepositoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoRepositoryResponse) }
     def patch_repo_repository(request:, timeout_ms: nil)
       # patch_repo_repository - Update a repository
+      # Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2422,6 +2442,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoBranchResponse) }
     def remove_repo_branch(connection_id:, id:, timeout_ms: nil)
       # remove_repo_branch - Remove a branch
+      # Deletes the RepoBranch identified by `id`.
       request = Models::Operations::RemoveRepoBranchRequest.new(
         connection_id: connection_id,
         id: id
@@ -2536,6 +2557,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoCommitResponse) }
     def remove_repo_commit(connection_id:, id:, timeout_ms: nil)
       # remove_repo_commit - Remove a commit
+      # Deletes the RepoCommit identified by `id`.
       request = Models::Operations::RemoveRepoCommitRequest.new(
         connection_id: connection_id,
         id: id
@@ -2650,6 +2672,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoOrganizationResponse) }
     def remove_repo_organization(connection_id:, id:, timeout_ms: nil)
       # remove_repo_organization - Remove an organization
+      # Deletes the RepoOrganization identified by `id`.
       request = Models::Operations::RemoveRepoOrganizationRequest.new(
         connection_id: connection_id,
         id: id
@@ -2764,6 +2787,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoPullrequestResponse) }
     def remove_repo_pullrequest(connection_id:, id:, timeout_ms: nil)
       # remove_repo_pullrequest - Remove a pullrequest
+      # Deletes the RepoPullrequest identified by `id`.
       request = Models::Operations::RemoveRepoPullrequestRequest.new(
         connection_id: connection_id,
         id: id
@@ -2878,6 +2902,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoRepositoryResponse) }
     def remove_repo_repository(connection_id:, id:, timeout_ms: nil)
       # remove_repo_repository - Remove a repository
+      # Deletes the RepoRepository identified by `id`.
       request = Models::Operations::RemoveRepoRepositoryRequest.new(
         connection_id: connection_id,
         id: id
@@ -2992,6 +3017,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateRepoBranchRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoBranchResponse) }
     def update_repo_branch(request:, timeout_ms: nil)
       # update_repo_branch - Update a branch
+      # Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3114,6 +3140,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateRepoCommitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoCommitResponse) }
     def update_repo_commit(request:, timeout_ms: nil)
       # update_repo_commit - Update a commit
+      # Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3236,6 +3263,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateRepoOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoOrganizationResponse) }
     def update_repo_organization(request:, timeout_ms: nil)
       # update_repo_organization - Update an organization
+      # Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3358,6 +3386,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateRepoPullrequestRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoPullrequestResponse) }
     def update_repo_pullrequest(request:, timeout_ms: nil)
       # update_repo_pullrequest - Update a pullrequest
+      # Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3480,6 +3509,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateRepoRepositoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoRepositoryResponse) }
     def update_repo_repository(request:, timeout_ms: nil)
       # update_repo_repository - Update a repository
+      # Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetGenaiSkillQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetGenaiSkillResponse) }
     def get_genai_skill(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_genai_skill - Retrieve a skill
+      # Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetGenaiSkillRequest.new(
         connection_id: connection_id,
         id: id,
@@ -158,6 +159,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListGenaiSkillsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListGenaiSkillsResponse) }
     def list_genai_skills(request:, timeout_ms: nil)
       # list_genai_skills - List all skills
+      # Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -268,6 +270,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveGenaiSkillResponse) }
     def remove_genai_skill(connection_id:, id:, timeout_ms: nil)
       # remove_genai_skill - Remove a skill
+      # Deletes the GenaiSkill identified by `id`.
       request = Models::Operations::RemoveGenaiSkillRequest.new(
         connection_id: connection_id,
         id: id

@@ -14,7 +14,7 @@
 
 ## create_ticketing_note
 
-Create a note
+Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
 
 ### Example Usage
 
@@ -32,9 +32,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.note.create_ticketing_note(ticketing_note: Models::Shared::TicketingNote.new(
   created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
   description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-  id: '379fd407-2c1a-4c4f-9408-8cce16d25ad2',
+  id: '86334ced-97d3-4ff2-9d8e-f069597c280d',
   metadata: [],
-  updated_at: DateTime.iso8601('2024-09-29T06:43:21.104Z'),
+  updated_at: DateTime.iso8601('2024-09-29T23:44:28.352Z'),
 ), connection_id: '<id>')
 
 unless res.ticketing_note.nil?
@@ -64,7 +64,7 @@ end
 
 ## get_ticketing_note
 
-Retrieve a note
+Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -108,7 +108,7 @@ end
 
 ## list_ticketing_notes
 
-List all notes
+Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -153,7 +153,7 @@ end
 
 ## patch_ticketing_note
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -172,9 +172,9 @@ req = Models::Operations::PatchTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
     description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-    id: '6a4cdc74-ca84-46cc-aae0-c8f72b91303e',
+    id: 'df11d5bd-3ba0-413e-b03a-41438bcf0f2a',
     metadata: [],
-    updated_at: DateTime.iso8601('2024-09-29T06:43:21.114Z'),
+    updated_at: DateTime.iso8601('2024-09-29T23:44:28.358Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -206,7 +206,7 @@ end
 
 ## remove_ticketing_note
 
-Remove a note
+Deletes the TicketingNote identified by `id`.
 
 ### Example Usage
 
@@ -248,7 +248,7 @@ end
 
 ## update_ticketing_note
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -267,9 +267,9 @@ req = Models::Operations::UpdateTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
     description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-    id: '6a4cdc74-ca84-46cc-aae0-c8f72b91303e',
+    id: 'df11d5bd-3ba0-413e-b03a-41438bcf0f2a',
     metadata: [],
-    updated_at: DateTime.iso8601('2024-09-29T06:43:21.114Z'),
+    updated_at: DateTime.iso8601('2024-09-29T23:44:28.358Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

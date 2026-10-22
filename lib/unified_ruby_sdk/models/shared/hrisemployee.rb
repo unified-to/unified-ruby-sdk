@@ -27,7 +27,7 @@ module UnifiedRubySDK
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # YYYYMM/DD
         field :date_of_birth, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('date_of_birth'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The employee's email addresses
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
         # the company's ID for this employee
         field :employee_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employee_number') } }
@@ -37,7 +37,7 @@ module UnifiedRubySDK
         field :employment_status, Crystalline::Nilable.new(Models::Shared::EmploymentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_status'), 'decoder': Utils.enum_from_string(Models::Shared::EmploymentStatus, true) } }
 
         field :employment_type, Crystalline::Nilable.new(Models::Shared::HrisEmployeeEmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisEmployeeEmploymentType, true) } }
-
+        # The employee's first (given) name
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
         # US Fair Labor Standards Act classification
         field :flsa_status, Crystalline::Nilable.new(Models::Shared::FlsaStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('flsa_status'), 'decoder': Utils.enum_from_string(Models::Shared::FlsaStatus, true) } }
@@ -57,7 +57,7 @@ module UnifiedRubySDK
         field :job_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('job_id') } }
 
         field :language_locale, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language_locale') } }
-
+        # The employee's last (family) name
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
 
         field :locations, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisLocation)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('locations') } }
@@ -67,7 +67,7 @@ module UnifiedRubySDK
         field :marital_status, Crystalline::Nilable.new(Models::Shared::MaritalStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('marital_status'), 'decoder': Utils.enum_from_string(Models::Shared::MaritalStatus, true) } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # The employee's full name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # how often the employee is paid (eg. BIWEEKLY)
         field :pay_frequency, Crystalline::Nilable.new(Models::Shared::PayFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pay_frequency'), 'decoder': Utils.enum_from_string(Models::Shared::PayFrequency, true) } }

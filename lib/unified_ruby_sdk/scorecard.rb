@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ats_scorecard: Models::Shared::AtsScorecard, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsScorecardQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsScorecardResponse) }
     def create_ats_scorecard(ats_scorecard:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_scorecard - Create a scorecard
+      # Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
       request = Models::Operations::CreateAtsScorecardRequest.new(
         ats_scorecard: ats_scorecard,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsScorecardQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsScorecardResponse) }
     def get_ats_scorecard(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_scorecard - Retrieve a scorecard
+      # Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsScorecardRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcScorecardQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcScorecardResponse) }
     def get_uc_scorecard(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_uc_scorecard - Retrieve a scorecard
+      # Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetUcScorecardRequest.new(
         connection_id: connection_id,
         id: id,
@@ -402,6 +405,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsScorecardsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsScorecardsResponse) }
     def list_ats_scorecards(request:, timeout_ms: nil)
       # list_ats_scorecards - List all scorecards
+      # Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -512,6 +516,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListUcScorecardsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcScorecardsResponse) }
     def list_uc_scorecards(request:, timeout_ms: nil)
       # list_uc_scorecards - List all scorecards
+      # Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -622,6 +627,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsScorecardRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsScorecardResponse) }
     def patch_ats_scorecard(request:, timeout_ms: nil)
       # patch_ats_scorecard - Update a scorecard
+      # Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -744,6 +750,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsScorecardResponse) }
     def remove_ats_scorecard(connection_id:, id:, timeout_ms: nil)
       # remove_ats_scorecard - Remove a scorecard
+      # Deletes the AtsScorecard identified by `id`.
       request = Models::Operations::RemoveAtsScorecardRequest.new(
         connection_id: connection_id,
         id: id
@@ -858,6 +865,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsScorecardRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsScorecardResponse) }
     def update_ats_scorecard(request:, timeout_ms: nil)
       # update_ats_scorecard - Update a scorecard
+      # Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

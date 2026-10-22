@@ -9,7 +9,7 @@
 
 ## create_shipping_rate
 
-Create a rate
+Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
 
 ### Example Usage
 
@@ -26,7 +26,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.rate.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.new(
   currency: 'USD',
-  id: '01f6f2cf-1d29-4d5f-833e-d6d1dcfad6c9',
+  id: '36f2bf2c-0eaf-479b-9001-08394a563150',
   metadata: [],
   rates: [
     Models::Shared::ShippingRateRate.new(

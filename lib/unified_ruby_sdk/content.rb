@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(lms_content: Models::Shared::LmsContent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsContentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsContentResponse) }
     def create_lms_content(lms_content:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_content - Create a content
+      # Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
       request = Models::Operations::CreateLmsContentRequest.new(
         lms_content: lms_content,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsContentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsContentResponse) }
     def get_lms_content(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_content - Retrieve a content
+      # Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLmsContentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLmsContentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsContentsResponse) }
     def list_lms_contents(request:, timeout_ms: nil)
       # list_lms_contents - List all contents
+      # Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLmsContentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsContentResponse) }
     def patch_lms_content(request:, timeout_ms: nil)
       # patch_lms_content - Update a content
+      # Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsContentResponse) }
     def remove_lms_content(connection_id:, id:, timeout_ms: nil)
       # remove_lms_content - Remove a content
+      # Deletes the LmsContent identified by `id`.
       request = Models::Operations::RemoveLmsContentRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLmsContentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsContentResponse) }
     def update_lms_content(request:, timeout_ms: nil)
       # update_lms_content - Update a content
+      # Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

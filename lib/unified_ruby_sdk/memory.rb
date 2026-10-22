@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(genai_memory: Models::Shared::GenaiMemory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiMemoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiMemoryResponse) }
     def create_genai_memory(genai_memory:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_genai_memory - Create a memory
+      # Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
       request = Models::Operations::CreateGenaiMemoryRequest.new(
         genai_memory: genai_memory,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetGenaiMemoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetGenaiMemoryResponse) }
     def get_genai_memory(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_genai_memory - Retrieve a memory
+      # Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetGenaiMemoryRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListGenaiMemoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListGenaiMemoriesResponse) }
     def list_genai_memories(request:, timeout_ms: nil)
       # list_genai_memories - List all memories
+      # Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchGenaiMemoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchGenaiMemoryResponse) }
     def patch_genai_memory(request:, timeout_ms: nil)
       # patch_genai_memory - Update a memory
+      # Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveGenaiMemoryResponse) }
     def remove_genai_memory(connection_id:, id:, timeout_ms: nil)
       # remove_genai_memory - Remove a memory
+      # Deletes the GenaiMemory identified by `id`.
       request = Models::Operations::RemoveGenaiMemoryRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateGenaiMemoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateGenaiMemoryResponse) }
     def update_genai_memory(request:, timeout_ms: nil)
       # update_genai_memory - Update a memory
+      # Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

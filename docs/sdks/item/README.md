@@ -14,7 +14,7 @@
 
 ## create_commerce_item
 
-Create an item
+Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
 
 ### Example Usage
 
@@ -35,7 +35,7 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
   description: 'Decretum vulnero ustulo abeo.',
   duration: 104.0,
   global_code: '978-0-85270-680-0',
-  id: 'b932dc7d-d4ba-4c4f-9234-98804f973add',
+  id: 'fe4c1760-dd1d-4260-96a4-bad0e53bec82',
   is_active: false,
   is_featured: false,
   is_taxable: true,
@@ -44,10 +44,10 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
     Models::Shared::CommerceItemMedia.new(
       alt: 'Caterva eveniet acies candidus.',
       height: 876.0,
-      id: 'd49b8ce9-d4c0-4aca-9fa5-bd21a100e401',
+      id: '8759e0fd-2c61-45e3-981d-5f23256302d4',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'a65c394d-c43b-4776-98e5-71eb1f9fdb41',
+          id: '553ccae7-1fa0-472b-a39f-89fa5081f0d3',
           slug: 'doloremque',
           value: 'allatus',
         ),
@@ -60,10 +60,10 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
     Models::Shared::CommerceItemMedia.new(
       alt: 'Comedo.',
       height: 651.0,
-      id: '8fff6f50-742f-453a-800c-20bda1039b3a',
+      id: '1896f31b-fd70-4c98-95e7-199e800a8bfe',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '1552eab6-e15b-4322-9fea-dad4178a11e9',
+          id: '6e03dc91-db6e-49a7-bbfc-e7ba7697f29e',
           slug: 'bis',
           value: 'somniculosus',
         ),
@@ -80,7 +80,7 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '85f2a1e8-f760-443f-ac8b-c6a1c1831565',
+      id: 'daa29a61-22f3-479b-bd26-39f3809db791',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'abstergo',
@@ -103,7 +103,7 @@ res = s.item.create_commerce_item(commerce_item: Models::Shared::CommerceItem.ne
   ],
   total_stock: 682.0,
   type: 'SERVICE',
-  updated_at: DateTime.iso8601('2022-04-19T12:01:33.154Z'),
+  updated_at: DateTime.iso8601('2022-04-19T21:11:29.775Z'),
   vendor_name: 'Mayer - Flatley',
   weight: 37.0,
   weight_unit: Models::Shared::WeightUnit::OZ,
@@ -136,7 +136,7 @@ end
 
 ## get_commerce_item
 
-Retrieve an item
+Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -180,7 +180,7 @@ end
 
 ## list_commerce_items
 
-List all items
+Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -225,7 +225,7 @@ end
 
 ## patch_commerce_item
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -247,7 +247,7 @@ req = Models::Operations::PatchCommerceItemRequest.new(
     description: 'Decretum vulnero ustulo abeo.',
     duration: 104.0,
     global_code: '978-0-85270-680-0',
-    id: 'c13a38fe-fad4-4198-bf4a-7b5dc5f77b0d',
+    id: '27828a84-f47c-4d8d-b65b-9bae0b6ac3c4',
     is_active: false,
     is_featured: false,
     is_taxable: true,
@@ -256,10 +256,10 @@ req = Models::Operations::PatchCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Caterva eveniet acies candidus.',
         height: 876.0,
-        id: '9bda371f-7ce3-4f50-b725-587283bf4f2d',
+        id: 'c6006932-3c9c-40f7-8358-67e85c54b2b4',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '79b75953-de77-4893-9da0-5b030a19f949',
+            id: '7657b784-22d3-43b7-a3b4-8b70507e45e4',
             slug: 'doloremque',
             value: 'allatus',
           ),
@@ -272,10 +272,10 @@ req = Models::Operations::PatchCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 651.0,
-        id: '99807e35-840c-4c23-bb17-9c5b9c3fd475',
+        id: 'b5a64600-20fe-4fd9-8f29-bcbce6bdf87d',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '78ff5b2d-8ab5-4eab-a0d4-abb192ef8de7',
+            id: '9e6576a7-7aa4-4967-8996-7a533c4f95a0',
             slug: 'bis',
             value: 'somniculosus',
           ),
@@ -292,7 +292,7 @@ req = Models::Operations::PatchCommerceItemRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '10b73839-3f28-45d3-b97e-b2c5fe46fa8f',
+        id: '201410db-b358-4e4d-ac4c-6052277cb222',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'abstergo',
@@ -315,7 +315,7 @@ req = Models::Operations::PatchCommerceItemRequest.new(
     ],
     total_stock: 682.0,
     type: 'SERVICE',
-    updated_at: DateTime.iso8601('2022-04-19T12:01:33.164Z'),
+    updated_at: DateTime.iso8601('2022-04-19T21:11:29.792Z'),
     vendor_name: 'Mayer - Flatley',
     weight: 37.0,
     weight_unit: Models::Shared::WeightUnit::OZ,
@@ -350,7 +350,7 @@ end
 
 ## remove_commerce_item
 
-Remove an item
+Deletes the CommerceItem identified by `id`.
 
 ### Example Usage
 
@@ -392,7 +392,7 @@ end
 
 ## update_commerce_item
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -414,7 +414,7 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
     description: 'Decretum vulnero ustulo abeo.',
     duration: 104.0,
     global_code: '978-0-85270-680-0',
-    id: 'c13a38fe-fad4-4198-bf4a-7b5dc5f77b0d',
+    id: '27828a84-f47c-4d8d-b65b-9bae0b6ac3c4',
     is_active: false,
     is_featured: false,
     is_taxable: true,
@@ -423,10 +423,10 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Caterva eveniet acies candidus.',
         height: 876.0,
-        id: '9bda371f-7ce3-4f50-b725-587283bf4f2d',
+        id: 'c6006932-3c9c-40f7-8358-67e85c54b2b4',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '79b75953-de77-4893-9da0-5b030a19f949',
+            id: '7657b784-22d3-43b7-a3b4-8b70507e45e4',
             slug: 'doloremque',
             value: 'allatus',
           ),
@@ -439,10 +439,10 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 651.0,
-        id: '99807e35-840c-4c23-bb17-9c5b9c3fd475',
+        id: 'b5a64600-20fe-4fd9-8f29-bcbce6bdf87d',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '78ff5b2d-8ab5-4eab-a0d4-abb192ef8de7',
+            id: '9e6576a7-7aa4-4967-8996-7a533c4f95a0',
             slug: 'bis',
             value: 'somniculosus',
           ),
@@ -459,7 +459,7 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '10b73839-3f28-45d3-b97e-b2c5fe46fa8f',
+        id: '201410db-b358-4e4d-ac4c-6052277cb222',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'abstergo',
@@ -482,7 +482,7 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
     ],
     total_stock: 682.0,
     type: 'SERVICE',
-    updated_at: DateTime.iso8601('2022-04-19T12:01:33.164Z'),
+    updated_at: DateTime.iso8601('2022-04-19T21:11:29.792Z'),
     vendor_name: 'Mayer - Flatley',
     weight: 37.0,
     weight_unit: Models::Shared::WeightUnit::OZ,

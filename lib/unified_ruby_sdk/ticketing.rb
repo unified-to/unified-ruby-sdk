@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ticketing_category: Models::Shared::TicketingCategory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingCategoryResponse) }
     def create_ticketing_category(ticketing_category:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ticketing_category - Create a category
+      # Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
       request = Models::Operations::CreateTicketingCategoryRequest.new(
         ticketing_category: ticketing_category,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(ticketing_customer: Models::Shared::TicketingCustomer, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingCustomerQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingCustomerResponse) }
     def create_ticketing_customer(ticketing_customer:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ticketing_customer - Create a customer
+      # Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
       request = Models::Operations::CreateTicketingCustomerRequest.new(
         ticketing_customer: ticketing_customer,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(ticketing_note: Models::Shared::TicketingNote, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingNoteQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingNoteResponse) }
     def create_ticketing_note(ticketing_note:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ticketing_note - Create a note
+      # Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
       request = Models::Operations::CreateTicketingNoteRequest.new(
         ticketing_note: ticketing_note,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(ticketing_ticket: Models::Shared::TicketingTicket, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingTicketQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingTicketResponse) }
     def create_ticketing_ticket(ticketing_ticket:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ticketing_ticket - Create a ticket
+      # Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
       request = Models::Operations::CreateTicketingTicketRequest.new(
         ticketing_ticket: ticketing_ticket,
         connection_id: connection_id,
@@ -554,6 +558,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingCategoryResponse) }
     def get_ticketing_category(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ticketing_category - Retrieve a category
+      # Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetTicketingCategoryRequest.new(
         connection_id: connection_id,
         id: id,
@@ -670,6 +675,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingCustomerQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingCustomerResponse) }
     def get_ticketing_customer(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ticketing_customer - Retrieve a customer
+      # Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetTicketingCustomerRequest.new(
         connection_id: connection_id,
         id: id,
@@ -786,6 +792,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingNoteQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingNoteResponse) }
     def get_ticketing_note(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ticketing_note - Retrieve a note
+      # Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetTicketingNoteRequest.new(
         connection_id: connection_id,
         id: id,
@@ -902,6 +909,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingTicketQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingTicketResponse) }
     def get_ticketing_ticket(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ticketing_ticket - Retrieve a ticket
+      # Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetTicketingTicketRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1018,6 +1026,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListTicketingCategoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTicketingCategoriesResponse) }
     def list_ticketing_categories(request:, timeout_ms: nil)
       # list_ticketing_categories - List all categories
+      # Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1128,6 +1137,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListTicketingCustomersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTicketingCustomersResponse) }
     def list_ticketing_customers(request:, timeout_ms: nil)
       # list_ticketing_customers - List all customers
+      # Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1238,6 +1248,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListTicketingNotesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTicketingNotesResponse) }
     def list_ticketing_notes(request:, timeout_ms: nil)
       # list_ticketing_notes - List all notes
+      # Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1348,6 +1359,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListTicketingTicketsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTicketingTicketsResponse) }
     def list_ticketing_tickets(request:, timeout_ms: nil)
       # list_ticketing_tickets - List all tickets
+      # Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1458,6 +1470,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchTicketingCategoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTicketingCategoryResponse) }
     def patch_ticketing_category(request:, timeout_ms: nil)
       # patch_ticketing_category - Update a category
+      # Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1580,6 +1593,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchTicketingCustomerRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTicketingCustomerResponse) }
     def patch_ticketing_customer(request:, timeout_ms: nil)
       # patch_ticketing_customer - Update a customer
+      # Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1702,6 +1716,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchTicketingNoteRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTicketingNoteResponse) }
     def patch_ticketing_note(request:, timeout_ms: nil)
       # patch_ticketing_note - Update a note
+      # Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1824,6 +1839,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchTicketingTicketRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTicketingTicketResponse) }
     def patch_ticketing_ticket(request:, timeout_ms: nil)
       # patch_ticketing_ticket - Update a ticket
+      # Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1946,6 +1962,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTicketingCategoryResponse) }
     def remove_ticketing_category(connection_id:, id:, timeout_ms: nil)
       # remove_ticketing_category - Remove a category
+      # Deletes the TicketingCategory identified by `id`.
       request = Models::Operations::RemoveTicketingCategoryRequest.new(
         connection_id: connection_id,
         id: id
@@ -2060,6 +2077,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTicketingCustomerResponse) }
     def remove_ticketing_customer(connection_id:, id:, timeout_ms: nil)
       # remove_ticketing_customer - Remove a customer
+      # Deletes the TicketingCustomer identified by `id`.
       request = Models::Operations::RemoveTicketingCustomerRequest.new(
         connection_id: connection_id,
         id: id
@@ -2174,6 +2192,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTicketingNoteResponse) }
     def remove_ticketing_note(connection_id:, id:, timeout_ms: nil)
       # remove_ticketing_note - Remove a note
+      # Deletes the TicketingNote identified by `id`.
       request = Models::Operations::RemoveTicketingNoteRequest.new(
         connection_id: connection_id,
         id: id
@@ -2288,6 +2307,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTicketingTicketResponse) }
     def remove_ticketing_ticket(connection_id:, id:, timeout_ms: nil)
       # remove_ticketing_ticket - Remove a ticket
+      # Deletes the TicketingTicket identified by `id`.
       request = Models::Operations::RemoveTicketingTicketRequest.new(
         connection_id: connection_id,
         id: id
@@ -2402,6 +2422,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateTicketingCategoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTicketingCategoryResponse) }
     def update_ticketing_category(request:, timeout_ms: nil)
       # update_ticketing_category - Update a category
+      # Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2524,6 +2545,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateTicketingCustomerRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTicketingCustomerResponse) }
     def update_ticketing_customer(request:, timeout_ms: nil)
       # update_ticketing_customer - Update a customer
+      # Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2646,6 +2668,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateTicketingNoteRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTicketingNoteResponse) }
     def update_ticketing_note(request:, timeout_ms: nil)
       # update_ticketing_note - Update a note
+      # Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2768,6 +2791,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateTicketingTicketRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTicketingTicketResponse) }
     def update_ticketing_ticket(request:, timeout_ms: nil)
       # update_ticketing_ticket - Update a ticket
+      # Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

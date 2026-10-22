@@ -14,7 +14,7 @@
 
 ## create_shipping_label
 
-Create a label
+Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
 
 ### Example Usage
 
@@ -31,17 +31,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.label.create_shipping_label(shipping_label: Models::Shared::ShippingLabel.new(
   created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-  id: 'd84cfc51-3ee3-43f1-85b1-a3f3e9704c6a',
+  id: '0a7687ba-1b2d-4861-a73f-bd0f245ecb14',
   is_voided: false,
   label_cost: 40.83_653_403_213_248,
   label_cost_currency: 'USD',
   label_format: Models::Shared::LabelFormat::PNG,
-  label_url: 'https://labels.example.com/d84cfc51-3ee3-43f1-85b1-a3f3e9704c6a.pdf',
+  label_url: 'https://labels.example.com/0a7687ba-1b2d-4861-a73f-bd0f245ecb14.pdf',
   metadata: [],
   service_code: 'Dzy',
   status: Models::Shared::ShippingLabelStatus::EXCEPTION,
   tracking_number: 'ZYV60FOIBUJ6',
-  updated_at: DateTime.iso8601('2024-04-28T21:53:50.785Z'),
+  updated_at: DateTime.iso8601('2024-04-29T06:38:50.663Z'),
 ), connection_id: '<id>')
 
 unless res.shipping_label.nil?
@@ -71,7 +71,7 @@ end
 
 ## get_shipping_label
 
-Retrieve a label
+Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -115,7 +115,7 @@ end
 
 ## list_shipping_labels
 
-List all labels
+Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -160,7 +160,7 @@ end
 
 ## patch_shipping_label
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -178,17 +178,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: 'b135e7ce-742d-4e70-9ad5-86820cfc5773',
+    id: 'dc4fada4-942f-4b74-95d8-576e6405865f',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
     label_format: Models::Shared::LabelFormat::PNG,
-    label_url: 'https://labels.example.com/b135e7ce-742d-4e70-9ad5-86820cfc5773.pdf',
+    label_url: 'https://labels.example.com/dc4fada4-942f-4b74-95d8-576e6405865f.pdf',
     metadata: [],
     service_code: 'Dzy',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'ZYV60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-04-28T21:53:50.790Z'),
+    updated_at: DateTime.iso8601('2024-04-29T06:38:50.677Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -220,7 +220,7 @@ end
 
 ## remove_shipping_label
 
-Remove a label
+Deletes the ShippingLabel identified by `id`.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ end
 
 ## update_shipping_label
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -280,17 +280,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: 'b135e7ce-742d-4e70-9ad5-86820cfc5773',
+    id: 'dc4fada4-942f-4b74-95d8-576e6405865f',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
     label_format: Models::Shared::LabelFormat::PNG,
-    label_url: 'https://labels.example.com/b135e7ce-742d-4e70-9ad5-86820cfc5773.pdf',
+    label_url: 'https://labels.example.com/dc4fada4-942f-4b74-95d8-576e6405865f.pdf',
     metadata: [],
     service_code: 'Dzy',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'ZYV60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-04-28T21:53:50.790Z'),
+    updated_at: DateTime.iso8601('2024-04-29T06:38:50.677Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

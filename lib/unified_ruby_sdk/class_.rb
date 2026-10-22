@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(lms_class: Models::Shared::LmsClass, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsClassQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsClassResponse) }
     def create_lms_class(lms_class:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_class - Create a class
+      # Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
       request = Models::Operations::CreateLmsClassRequest.new(
         lms_class: lms_class,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsClassQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsClassResponse) }
     def get_lms_class(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_class - Retrieve a class
+      # Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLmsClassRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLmsClassesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsClassesResponse) }
     def list_lms_classes(request:, timeout_ms: nil)
       # list_lms_classes - List all classes
+      # Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLmsClassRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsClassResponse) }
     def patch_lms_class(request:, timeout_ms: nil)
       # patch_lms_class - Update a class
+      # Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsClassResponse) }
     def remove_lms_class(connection_id:, id:, timeout_ms: nil)
       # remove_lms_class - Remove a class
+      # Deletes the LmsClass identified by `id`.
       request = Models::Operations::RemoveLmsClassRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLmsClassRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsClassResponse) }
     def update_lms_class(request:, timeout_ms: nil)
       # update_lms_class - Update a class
+      # Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -27,7 +27,7 @@ module UnifiedRubySDK
         field :manager_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('manager_ids') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # The name of the group (e.g. a team or department)
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :next_paid_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('next_paid_at'), 'decoder': Utils.datetime_from_iso_format(true) } }

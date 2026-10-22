@@ -14,7 +14,7 @@
 
 ## create_compute_key
 
-Create a key
+Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
 
 ### Example Usage
 
@@ -31,11 +31,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.key.create_compute_key(compute_key: Models::Shared::ComputeKey.new(
   created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-  id: '54e64597-39da-487e-a0d4-40da5496fb18',
+  id: '725133a7-c506-47e4-81d0-3b0553657a5f',
   metadata: [],
   name: 'nienow-secret',
   type: Models::Shared::ComputeKeyType::SECRET,
-  updated_at: DateTime.iso8601('2024-10-06T23:20:44.187Z'),
+  updated_at: DateTime.iso8601('2024-10-07T07:50:55.892Z'),
 ), connection_id: '<id>')
 
 unless res.compute_key.nil?
@@ -65,7 +65,7 @@ end
 
 ## get_compute_key
 
-Retrieve a key
+Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -109,7 +109,7 @@ end
 
 ## list_compute_keys
 
-List all keys
+Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -154,7 +154,7 @@ end
 
 ## patch_compute_key
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -172,11 +172,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '29896d38-9bc4-4ba4-b23b-324c0c78a71a',
+    id: '75e89696-fc90-4cd8-8c31-b54eb0d5c71f',
     metadata: [],
     name: 'nienow-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-06T23:20:44.193Z'),
+    updated_at: DateTime.iso8601('2024-10-07T07:50:55.897Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -208,7 +208,7 @@ end
 
 ## remove_compute_key
 
-Remove a key
+Deletes the ComputeKey identified by `id`.
 
 ### Example Usage
 
@@ -250,7 +250,7 @@ end
 
 ## update_compute_key
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -268,11 +268,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '29896d38-9bc4-4ba4-b23b-324c0c78a71a',
+    id: '75e89696-fc90-4cd8-8c31-b54eb0d5c71f',
     metadata: [],
     name: 'nienow-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-06T23:20:44.193Z'),
+    updated_at: DateTime.iso8601('2024-10-07T07:50:55.897Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

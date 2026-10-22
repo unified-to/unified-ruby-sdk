@@ -65,7 +65,7 @@
 
 ## create_compute_deployment
 
-Create a deployment
+Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 
 ### Example Usage
 
@@ -86,13 +86,13 @@ res = s.compute.create_compute_deployment(compute_deployment: Models::Shared::Co
   commit_message: 'copy primary pixel',
   created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
   environment: Models::Shared::Environment::PREVIEW,
-  finished_at: DateTime.iso8601('2025-08-29T15:05:51.661Z'),
-  id: 'ca841094-cd73-4024-bfea-725904a495cd',
+  finished_at: DateTime.iso8601('2025-08-30T08:39:21.131Z'),
+  id: '25ba96fd-fe07-48cd-b826-6741970cfc4f',
   metadata: [],
-  started_at: DateTime.iso8601('2025-04-10T07:30:12.606Z'),
+  started_at: DateTime.iso8601('2025-04-10T22:57:28.715Z'),
   status: Models::Shared::ComputeDeploymentStatus::LIVE,
   trigger: Models::Shared::Trigger::API,
-  updated_at: DateTime.iso8601('2026-02-28T18:03:13.449Z'),
+  updated_at: DateTime.iso8601('2026-03-01T14:20:16.768Z'),
   url: 'https://comfortable-petal.name',
 ), connection_id: '<id>')
 
@@ -123,7 +123,7 @@ end
 
 ## create_compute_domain
 
-Create a domain
+Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
 
 ### Example Usage
 
@@ -140,12 +140,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.compute.create_compute_domain(compute_domain: Models::Shared::ComputeDomain.new(
   created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-  id: 'd1214327-0d8d-4738-b98c-02c549ea5128',
+  id: '551bfdc5-f3f9-4bec-b4ac-aebb4840484d',
   is_primary: false,
   metadata: [],
   name: 'mysterious-republican.usable-section.info',
   status: Models::Shared::ComputeDomainStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-11-03T15:11:50.494Z'),
+  updated_at: DateTime.iso8601('2023-11-04T04:46:33.831Z'),
 ), connection_id: '<id>')
 
 unless res.compute_domain.nil?
@@ -175,7 +175,7 @@ end
 
 ## create_compute_envvar
 
-Create an envvar
+Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
 
 ### Example Usage
 
@@ -195,11 +195,11 @@ res = s.compute.create_compute_envvar(compute_envvar: Models::Shared::ComputeEnv
   environments: [
     Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
   ],
-  id: '5c354e68-66c7-4e3d-8c30-acdaee168414',
+  id: '45267d80-0151-4bb4-8576-dce993a3529c',
   is_secret: true,
   metadata: [],
   name: 'AEGER_SUBSTANTIA',
-  updated_at: DateTime.iso8601('2025-07-03T14:22:07.159Z'),
+  updated_at: DateTime.iso8601('2025-07-04T08:10:42.741Z'),
 ), connection_id: '<id>')
 
 unless res.compute_envvar.nil?
@@ -229,7 +229,7 @@ end
 
 ## create_compute_instance
 
-Create an instance
+Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 
 ### Example Usage
 
@@ -263,7 +263,7 @@ res = s.compute.create_compute_instance(compute_instance: Models::Shared::Comput
   ],
   gpu_count: 0.0,
   has_internet_access: true,
-  id: '4077e3bd-a54f-466b-b69d-d9c1e5cad805',
+  id: '468756b5-e6c9-4689-8e98-6b4bd5f7940d',
   image: 'ubuntu:24.04',
   market: Models::Shared::Market::SPOT,
   memory_mb: 2048.0,
@@ -278,11 +278,11 @@ res = s.compute.create_compute_instance(compute_instance: Models::Shared::Comput
     port: 22.0,
     username: 'root',
   ),
-  started_at: DateTime.iso8601('2025-03-23T23:18:11.036Z'),
+  started_at: DateTime.iso8601('2025-03-24T13:47:14.312Z'),
   status: Models::Shared::ComputeInstanceStatus::ERROR,
   status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
   type: Models::Shared::ComputeInstanceType::BAREMETAL,
-  updated_at: DateTime.iso8601('2025-06-16T04:50:44.691Z'),
+  updated_at: DateTime.iso8601('2025-06-16T20:41:16.883Z'),
 ), connection_id: '<id>')
 
 unless res.compute_instance.nil?
@@ -312,7 +312,7 @@ end
 
 ## create_compute_key
 
-Create a key
+Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
 
 ### Example Usage
 
@@ -329,11 +329,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.compute.create_compute_key(compute_key: Models::Shared::ComputeKey.new(
   created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-  id: '54e64597-39da-487e-a0d4-40da5496fb18',
+  id: '725133a7-c506-47e4-81d0-3b0553657a5f',
   metadata: [],
   name: 'nienow-secret',
   type: Models::Shared::ComputeKeyType::SECRET,
-  updated_at: DateTime.iso8601('2024-10-06T23:20:44.187Z'),
+  updated_at: DateTime.iso8601('2024-10-07T07:50:55.892Z'),
 ), connection_id: '<id>')
 
 unless res.compute_key.nil?
@@ -363,7 +363,7 @@ end
 
 ## create_compute_service
 
-Create a service
+Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 
 ### Example Usage
 
@@ -382,7 +382,7 @@ res = s.compute.create_compute_service(compute_service: Models::Shared::ComputeS
   branch: 'main',
   build_command: 'npm run build',
   created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-  id: 'b1ada32d-e859-4f4d-9be6-71cddc9e2727',
+  id: '5aa4a9da-3136-44d7-b67a-774ca43245eb',
   instance_count: 6.0,
   max_instance_count: 6.0,
   metadata: [],
@@ -393,7 +393,7 @@ res = s.compute.create_compute_service(compute_service: Models::Shared::ComputeS
   runtime: 'python',
   status: Models::Shared::ComputeServiceStatus::SUSPENDED,
   type: Models::Shared::ComputeServiceType::OTHER,
-  updated_at: DateTime.iso8601('2025-04-04T16:30:27.060Z'),
+  updated_at: DateTime.iso8601('2025-04-05T04:13:31.628Z'),
   url: 'https://tame-sideboard.rotating-shoulder.biz',
 ), connection_id: '<id>')
 
@@ -424,7 +424,7 @@ end
 
 ## create_compute_snapshot
 
-Create a snapshot
+Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
 
 ### Example Usage
 
@@ -441,13 +441,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.compute.create_compute_snapshot(compute_snapshot: Models::Shared::ComputeSnapshot.new(
   created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-  id: 'abdaf705-cd8b-45f5-acb1-4ea71458961b',
+  id: '7a18b86c-23c2-464c-a653-5b452e03d454',
   metadata: [],
   name: 'snap-alius',
   size_mb: 169_984.0,
   status: Models::Shared::ComputeSnapshotStatus::DELETING,
   type: Models::Shared::ComputeSnapshotType::DISK,
-  updated_at: DateTime.iso8601('2026-03-30T21:24:26.180Z'),
+  updated_at: DateTime.iso8601('2026-03-31T18:33:33.680Z'),
 ), connection_id: '<id>')
 
 unless res.compute_snapshot.nil?
@@ -477,7 +477,7 @@ end
 
 ## create_compute_template
 
-Create a template
+Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 
 ### Example Usage
 
@@ -500,10 +500,10 @@ res = s.compute.create_compute_template(compute_template: Models::Shared::Comput
   "RUN apt-get update',
   gpu_count: 2.0,
   gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-  id: '87214967-c388-454a-b15b-d7ea77a70778',
+  id: 'eaa43204-8bb4-45ef-a7a2-05e9a78e76d8',
   image: 'perfumed-molasses/cohibeo:5.2',
   is_public: false,
-  last_used_at: DateTime.iso8601('2026-03-23T20:27:16.056Z'),
+  last_used_at: DateTime.iso8601('2026-03-24T16:28:06.696Z'),
   memory_mb: 8192.0,
   metadata: [],
   name: 'multi-byte-card',
@@ -511,7 +511,7 @@ res = s.compute.create_compute_template(compute_template: Models::Shared::Comput
     8080.0,
   ],
   status: Models::Shared::ComputeTemplateStatus::OTHER,
-  updated_at: DateTime.iso8601('2025-02-12T18:38:51.398Z'),
+  updated_at: DateTime.iso8601('2025-02-13T07:28:16.292Z'),
 ), connection_id: '<id>')
 
 unless res.compute_template.nil?
@@ -541,7 +541,7 @@ end
 
 ## create_compute_volume
 
-Create a volume
+Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 
 ### Example Usage
 
@@ -558,14 +558,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.compute.create_compute_volume(compute_volume: Models::Shared::ComputeVolume.new(
   created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-  id: 'b5c3e485-e508-4dc0-96a7-2c707f0ca0a9',
+  id: '55825a37-409f-476f-89bc-18142a68869a',
   instance_ids: [],
   metadata: [],
   name: 'vol-solum',
   size_mb: 1_024_000.0,
   status: Models::Shared::ComputeVolumeStatus::OTHER,
   type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-  updated_at: DateTime.iso8601('2024-02-09T21:51:12.903Z'),
+  updated_at: DateTime.iso8601('2024-02-10T05:19:38.193Z'),
   used_mb: 524_986.0,
 ), connection_id: '<id>')
 
@@ -596,7 +596,7 @@ end
 
 ## get_compute_deployment
 
-Retrieve a deployment
+Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -640,7 +640,7 @@ end
 
 ## get_compute_domain
 
-Retrieve a domain
+Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -684,7 +684,7 @@ end
 
 ## get_compute_envvar
 
-Retrieve an envvar
+Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -728,7 +728,7 @@ end
 
 ## get_compute_gputype
 
-Retrieve a gputype
+Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -772,7 +772,7 @@ end
 
 ## get_compute_instance
 
-Retrieve an instance
+Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -816,7 +816,7 @@ end
 
 ## get_compute_key
 
-Retrieve a key
+Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -860,7 +860,7 @@ end
 
 ## get_compute_region
 
-Retrieve a region
+Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -904,7 +904,7 @@ end
 
 ## get_compute_service
 
-Retrieve a service
+Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -948,7 +948,7 @@ end
 
 ## get_compute_snapshot
 
-Retrieve a snapshot
+Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -992,7 +992,7 @@ end
 
 ## get_compute_template
 
-Retrieve a template
+Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1036,7 +1036,7 @@ end
 
 ## get_compute_volume
 
-Retrieve a volume
+Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1080,7 +1080,7 @@ end
 
 ## list_compute_deployments
 
-List all deployments
+Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1125,7 +1125,7 @@ end
 
 ## list_compute_domains
 
-List all domains
+Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1170,7 +1170,7 @@ end
 
 ## list_compute_envvars
 
-List all envvars
+Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1215,7 +1215,7 @@ end
 
 ## list_compute_gputypes
 
-List all gputypes
+Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1260,7 +1260,7 @@ end
 
 ## list_compute_instances
 
-List all instances
+Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1305,7 +1305,7 @@ end
 
 ## list_compute_keys
 
-List all keys
+Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1350,7 +1350,7 @@ end
 
 ## list_compute_regions
 
-List all regions
+Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1395,7 +1395,7 @@ end
 
 ## list_compute_services
 
-List all services
+Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1440,7 +1440,7 @@ end
 
 ## list_compute_snapshots
 
-List all snapshots
+Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1485,7 +1485,7 @@ end
 
 ## list_compute_templates
 
-List all templates
+Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1530,7 +1530,7 @@ end
 
 ## list_compute_usages
 
-List all usages
+Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1575,7 +1575,7 @@ end
 
 ## list_compute_volumes
 
-List all volumes
+Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1620,7 +1620,7 @@ end
 
 ## patch_compute_deployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -1642,13 +1642,13 @@ req = Models::Operations::PatchComputeDeploymentRequest.new(
     commit_message: 'copy primary pixel',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-08-29T15:05:51.669Z'),
-    id: '9eed3546-cbe3-49c2-9354-a3897f19a658',
+    finished_at: DateTime.iso8601('2025-08-30T08:39:21.145Z'),
+    id: 'd3cda7e1-1d2a-4128-8ecf-16721fcf731a',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-10T07:30:12.613Z'),
+    started_at: DateTime.iso8601('2025-04-10T22:57:28.727Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-02-28T18:03:13.459Z'),
+    updated_at: DateTime.iso8601('2026-03-01T14:20:16.783Z'),
     url: 'https://comfortable-petal.name',
   ),
   connection_id: '<id>',
@@ -1681,7 +1681,7 @@ end
 
 ## patch_compute_domain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -1699,12 +1699,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: 'e8f3231f-b9e3-46c7-8c74-885565e1ae9f',
+    id: '0654d12c-42c7-4802-974c-08c6d4f0f544',
     is_primary: false,
     metadata: [],
     name: 'mysterious-republican.usable-section.info',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-03T15:11:50.499Z'),
+    updated_at: DateTime.iso8601('2023-11-04T04:46:33.838Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1736,7 +1736,7 @@ end
 
 ## patch_compute_envvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -1757,11 +1757,11 @@ req = Models::Operations::PatchComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: '64c98e54-a680-4235-b4b7-03f073fc5eda',
+    id: 'f0db2170-df5b-4931-a32a-b0958fe98b2c',
     is_secret: true,
     metadata: [],
     name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-07-03T14:22:07.165Z'),
+    updated_at: DateTime.iso8601('2025-07-04T08:10:42.750Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1793,7 +1793,7 @@ end
 
 ## patch_compute_instance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -1828,7 +1828,7 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: '68a4cfd4-c11d-4807-8d5e-f972fde6e258',
+    id: 'e8839c42-59e6-46ea-b661-3ffe8d9568e5',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
@@ -1843,11 +1843,11 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
       port: 22.0,
       username: 'root',
     ),
-    started_at: DateTime.iso8601('2025-03-23T23:18:11.066Z'),
+    started_at: DateTime.iso8601('2025-03-24T13:47:14.341Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
     status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-06-16T04:50:44.724Z'),
+    updated_at: DateTime.iso8601('2025-06-16T20:41:16.915Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1879,7 +1879,7 @@ end
 
 ## patch_compute_key
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -1897,11 +1897,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '29896d38-9bc4-4ba4-b23b-324c0c78a71a',
+    id: '75e89696-fc90-4cd8-8c31-b54eb0d5c71f',
     metadata: [],
     name: 'nienow-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-06T23:20:44.193Z'),
+    updated_at: DateTime.iso8601('2024-10-07T07:50:55.897Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1933,7 +1933,7 @@ end
 
 ## patch_compute_service
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -1953,7 +1953,7 @@ req = Models::Operations::PatchComputeServiceRequest.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '43273ad6-5268-461f-88b5-814d999d20b3',
+    id: '8ce46942-4d37-431a-b3d0-f3fb463c15a9',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -1964,7 +1964,7 @@ req = Models::Operations::PatchComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-04T16:30:27.072Z'),
+    updated_at: DateTime.iso8601('2025-04-05T04:13:31.639Z'),
     url: 'https://tame-sideboard.rotating-shoulder.biz',
   ),
   connection_id: '<id>',
@@ -1997,7 +1997,7 @@ end
 
 ## patch_compute_template
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -2021,10 +2021,10 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
     "RUN apt-get update',
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '9cb36833-667b-4fd1-a64c-9bad7d4d2a50',
+    id: '54d4604d-270c-4610-8aab-cf1d48975452',
     image: 'perfumed-molasses/cohibeo:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-03-23T20:27:16.077Z'),
+    last_used_at: DateTime.iso8601('2026-03-24T16:28:06.720Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'multi-byte-card',
@@ -2032,7 +2032,7 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-12T18:38:51.411Z'),
+    updated_at: DateTime.iso8601('2025-02-13T07:28:16.307Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2064,7 +2064,7 @@ end
 
 ## patch_compute_volume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -2082,14 +2082,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'eaf8fe41-8674-4052-864b-ae1e1cf307f4',
+    id: '33536cfd-0184-4e65-ab51-dcf407b45b59',
     instance_ids: [],
     metadata: [],
     name: 'vol-solum',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-09T21:51:12.908Z'),
+    updated_at: DateTime.iso8601('2024-02-10T05:19:38.198Z'),
     used_mb: 524_986.0,
   ),
   connection_id: '<id>',
@@ -2122,7 +2122,7 @@ end
 
 ## remove_compute_deployment
 
-Remove a deployment
+Deletes the ComputeDeployment identified by `id`.
 
 ### Example Usage
 
@@ -2164,7 +2164,7 @@ end
 
 ## remove_compute_domain
 
-Remove a domain
+Deletes the ComputeDomain identified by `id`.
 
 ### Example Usage
 
@@ -2206,7 +2206,7 @@ end
 
 ## remove_compute_envvar
 
-Remove an envvar
+Deletes the ComputeEnvvar identified by `id`.
 
 ### Example Usage
 
@@ -2248,7 +2248,7 @@ end
 
 ## remove_compute_instance
 
-Remove an instance
+Deletes the ComputeInstance identified by `id`.
 
 ### Example Usage
 
@@ -2290,7 +2290,7 @@ end
 
 ## remove_compute_key
 
-Remove a key
+Deletes the ComputeKey identified by `id`.
 
 ### Example Usage
 
@@ -2332,7 +2332,7 @@ end
 
 ## remove_compute_service
 
-Remove a service
+Deletes the ComputeService identified by `id`.
 
 ### Example Usage
 
@@ -2374,7 +2374,7 @@ end
 
 ## remove_compute_snapshot
 
-Remove a snapshot
+Deletes the ComputeSnapshot identified by `id`.
 
 ### Example Usage
 
@@ -2416,7 +2416,7 @@ end
 
 ## remove_compute_template
 
-Remove a template
+Deletes the ComputeTemplate identified by `id`.
 
 ### Example Usage
 
@@ -2458,7 +2458,7 @@ end
 
 ## remove_compute_volume
 
-Remove a volume
+Deletes the ComputeVolume identified by `id`.
 
 ### Example Usage
 
@@ -2500,7 +2500,7 @@ end
 
 ## update_compute_deployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -2522,13 +2522,13 @@ req = Models::Operations::UpdateComputeDeploymentRequest.new(
     commit_message: 'copy primary pixel',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-08-29T15:05:51.669Z'),
-    id: '9eed3546-cbe3-49c2-9354-a3897f19a658',
+    finished_at: DateTime.iso8601('2025-08-30T08:39:21.145Z'),
+    id: 'd3cda7e1-1d2a-4128-8ecf-16721fcf731a',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-10T07:30:12.613Z'),
+    started_at: DateTime.iso8601('2025-04-10T22:57:28.727Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-02-28T18:03:13.459Z'),
+    updated_at: DateTime.iso8601('2026-03-01T14:20:16.783Z'),
     url: 'https://comfortable-petal.name',
   ),
   connection_id: '<id>',
@@ -2561,7 +2561,7 @@ end
 
 ## update_compute_domain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -2579,12 +2579,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: 'e8f3231f-b9e3-46c7-8c74-885565e1ae9f',
+    id: '0654d12c-42c7-4802-974c-08c6d4f0f544',
     is_primary: false,
     metadata: [],
     name: 'mysterious-republican.usable-section.info',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-03T15:11:50.499Z'),
+    updated_at: DateTime.iso8601('2023-11-04T04:46:33.838Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2616,7 +2616,7 @@ end
 
 ## update_compute_envvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -2637,11 +2637,11 @@ req = Models::Operations::UpdateComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: '64c98e54-a680-4235-b4b7-03f073fc5eda',
+    id: 'f0db2170-df5b-4931-a32a-b0958fe98b2c',
     is_secret: true,
     metadata: [],
     name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-07-03T14:22:07.165Z'),
+    updated_at: DateTime.iso8601('2025-07-04T08:10:42.750Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2673,7 +2673,7 @@ end
 
 ## update_compute_instance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -2708,7 +2708,7 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: '68a4cfd4-c11d-4807-8d5e-f972fde6e258',
+    id: 'e8839c42-59e6-46ea-b661-3ffe8d9568e5',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
@@ -2723,11 +2723,11 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
       port: 22.0,
       username: 'root',
     ),
-    started_at: DateTime.iso8601('2025-03-23T23:18:11.066Z'),
+    started_at: DateTime.iso8601('2025-03-24T13:47:14.341Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
     status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-06-16T04:50:44.724Z'),
+    updated_at: DateTime.iso8601('2025-06-16T20:41:16.915Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2759,7 +2759,7 @@ end
 
 ## update_compute_key
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -2777,11 +2777,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '29896d38-9bc4-4ba4-b23b-324c0c78a71a',
+    id: '75e89696-fc90-4cd8-8c31-b54eb0d5c71f',
     metadata: [],
     name: 'nienow-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-06T23:20:44.193Z'),
+    updated_at: DateTime.iso8601('2024-10-07T07:50:55.897Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2813,7 +2813,7 @@ end
 
 ## update_compute_service
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -2833,7 +2833,7 @@ req = Models::Operations::UpdateComputeServiceRequest.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '43273ad6-5268-461f-88b5-814d999d20b3',
+    id: '8ce46942-4d37-431a-b3d0-f3fb463c15a9',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -2844,7 +2844,7 @@ req = Models::Operations::UpdateComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-04T16:30:27.072Z'),
+    updated_at: DateTime.iso8601('2025-04-05T04:13:31.639Z'),
     url: 'https://tame-sideboard.rotating-shoulder.biz',
   ),
   connection_id: '<id>',
@@ -2877,7 +2877,7 @@ end
 
 ## update_compute_template
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -2901,10 +2901,10 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
     "RUN apt-get update',
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '9cb36833-667b-4fd1-a64c-9bad7d4d2a50',
+    id: '54d4604d-270c-4610-8aab-cf1d48975452',
     image: 'perfumed-molasses/cohibeo:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-03-23T20:27:16.077Z'),
+    last_used_at: DateTime.iso8601('2026-03-24T16:28:06.720Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'multi-byte-card',
@@ -2912,7 +2912,7 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-12T18:38:51.411Z'),
+    updated_at: DateTime.iso8601('2025-02-13T07:28:16.307Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2944,7 +2944,7 @@ end
 
 ## update_compute_volume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -2962,14 +2962,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'eaf8fe41-8674-4052-864b-ae1e1cf307f4',
+    id: '33536cfd-0184-4e65-ab51-dcf407b45b59',
     instance_ids: [],
     metadata: [],
     name: 'vol-solum',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-09T21:51:12.908Z'),
+    updated_at: DateTime.iso8601('2024-02-10T05:19:38.198Z'),
     used_mb: 524_986.0,
   ),
   connection_id: '<id>',

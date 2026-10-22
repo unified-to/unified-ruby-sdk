@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(genai_embedding: Models::Shared::GenaiEmbedding, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiEmbeddingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiEmbeddingResponse) }
     def create_genai_embedding(genai_embedding:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_genai_embedding - Create an embedding
+      # Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
       request = Models::Operations::CreateGenaiEmbeddingRequest.new(
         genai_embedding: genai_embedding,
         connection_id: connection_id,

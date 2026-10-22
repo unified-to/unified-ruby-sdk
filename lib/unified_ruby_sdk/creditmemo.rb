@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_creditmemo: Models::Shared::AccountingCreditmemo, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingCreditmemoQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCreditmemoResponse) }
     def create_accounting_creditmemo(accounting_creditmemo:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_creditmemo - Create a creditmemo
+      # Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
       request = Models::Operations::CreateAccountingCreditmemoRequest.new(
         accounting_creditmemo: accounting_creditmemo,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCreditmemoQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCreditmemoResponse) }
     def get_accounting_creditmemo(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_creditmemo - Retrieve a creditmemo
+      # Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingCreditmemoRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingCreditmemoesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingCreditmemoesResponse) }
     def list_accounting_creditmemoes(request:, timeout_ms: nil)
       # list_accounting_creditmemoes - List all creditmemoes
+      # Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingCreditmemoRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingCreditmemoResponse) }
     def patch_accounting_creditmemo(request:, timeout_ms: nil)
       # patch_accounting_creditmemo - Update a creditmemo
+      # Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingCreditmemoResponse) }
     def remove_accounting_creditmemo(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_creditmemo - Remove a creditmemo
+      # Deletes the AccountingCreditmemo identified by `id`.
       request = Models::Operations::RemoveAccountingCreditmemoRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingCreditmemoRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingCreditmemoResponse) }
     def update_accounting_creditmemo(request:, timeout_ms: nil)
       # update_accounting_creditmemo - Update a creditmemo
+      # Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

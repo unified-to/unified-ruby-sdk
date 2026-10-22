@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ats_activity: Models::Shared::AtsActivity, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsActivityResponse) }
     def create_ats_activity(ats_activity:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_activity - Create an activity
+      # Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
       request = Models::Operations::CreateAtsActivityRequest.new(
         ats_activity: ats_activity,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(lms_activity: Models::Shared::LmsActivity, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsActivityResponse) }
     def create_lms_activity(lms_activity:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_activity - Create an activity
+      # Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
       request = Models::Operations::CreateLmsActivityRequest.new(
         lms_activity: lms_activity,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsActivityResponse) }
     def get_ats_activity(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_activity - Retrieve an activity
+      # Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsActivityRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsActivityResponse) }
     def get_clubs_activity(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_clubs_activity - Retrieve an activity
+      # Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetClubsActivityRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsActivityQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsActivityResponse) }
     def get_lms_activity(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_activity - Retrieve an activity
+      # Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLmsActivityRequest.new(
         connection_id: connection_id,
         id: id,
@@ -646,6 +651,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsActivitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsActivitiesResponse) }
     def list_ats_activities(request:, timeout_ms: nil)
       # list_ats_activities - List all activities
+      # Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -756,6 +762,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListClubsActivitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsActivitiesResponse) }
     def list_clubs_activities(request:, timeout_ms: nil)
       # list_clubs_activities - List all activities
+      # Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -866,6 +873,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLmsActivitiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsActivitiesResponse) }
     def list_lms_activities(request:, timeout_ms: nil)
       # list_lms_activities - List all activities
+      # Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -976,6 +984,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsActivityRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsActivityResponse) }
     def patch_ats_activity(request:, timeout_ms: nil)
       # patch_ats_activity - Update an activity
+      # Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1098,6 +1107,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLmsActivityRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsActivityResponse) }
     def patch_lms_activity(request:, timeout_ms: nil)
       # patch_lms_activity - Update an activity
+      # Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1220,6 +1230,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsActivityResponse) }
     def remove_ats_activity(connection_id:, id:, timeout_ms: nil)
       # remove_ats_activity - Remove an activity
+      # Deletes the AtsActivity identified by `id`.
       request = Models::Operations::RemoveAtsActivityRequest.new(
         connection_id: connection_id,
         id: id
@@ -1334,6 +1345,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsActivityResponse) }
     def remove_lms_activity(connection_id:, id:, timeout_ms: nil)
       # remove_lms_activity - Remove an activity
+      # Deletes the LmsActivity identified by `id`.
       request = Models::Operations::RemoveLmsActivityRequest.new(
         connection_id: connection_id,
         id: id
@@ -1448,6 +1460,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsActivityRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsActivityResponse) }
     def update_ats_activity(request:, timeout_ms: nil)
       # update_ats_activity - Update an activity
+      # Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1570,6 +1583,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLmsActivityRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsActivityResponse) }
     def update_lms_activity(request:, timeout_ms: nil)
       # update_lms_activity - Update an activity
+      # Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

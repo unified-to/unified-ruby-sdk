@@ -1,0 +1,11 @@
+# DatastoreFilterGroup
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `and_`                                                                                        | T::Array<[Models::Shared::DatastoreFilterGroup](../../models/shared/datastorefiltergroup.md)> | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `filters`                                                                                     | T::Array<[Models::Shared::DatastoreFilter](../../models/shared/datastorefilter.md)>           | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `or_`                                                                                         | T::Array<[Models::Shared::DatastoreFilterGroup](../../models/shared/datastorefiltergroup.md)> | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `type`                                                                                        | [Models::Shared::DatastoreFilterGroupType](../../models/shared/datastorefiltergrouptype.md)   | :heavy_check_mark:                                                                            | N/A                                                                                           |

@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(cdp_source: Models::Shared::CdpSource, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCdpSourceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCdpSourceResponse) }
     def create_cdp_source(cdp_source:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_cdp_source - Create a source
+      # Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to the provider's API. Returns the created CdpSource.
       request = Models::Operations::CreateCdpSourceRequest.new(
         cdp_source: cdp_source,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCdpSourceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCdpSourceResponse) }
     def get_cdp_source(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_cdp_source - Retrieve a source
+      # Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCdpSourceRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCdpSourcesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCdpSourcesResponse) }
     def list_cdp_sources(request:, timeout_ms: nil)
       # list_cdp_sources - List all sources
+      # Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCdpSourceRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCdpSourceResponse) }
     def patch_cdp_source(request:, timeout_ms: nil)
       # patch_cdp_source - Update a source
+      # Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCdpSourceResponse) }
     def remove_cdp_source(connection_id:, id:, timeout_ms: nil)
       # remove_cdp_source - Remove a source
+      # Deletes the CdpSource identified by `id`.
       request = Models::Operations::RemoveCdpSourceRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCdpSourceRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCdpSourceResponse) }
     def update_cdp_source(request:, timeout_ms: nil)
       # update_cdp_source - Update a source
+      # Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -14,7 +14,7 @@
 
 ## create_legal_matter
 
-Create a matter
+Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 
 ### Example Usage
 
@@ -37,11 +37,11 @@ res = s.matter.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new
   created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
   currency: 'BOB',
   description: 'Speciosus cresco aut cotidie temeritas arma.',
-  id: '758a09bf-ac35-4ca0-9297-ac6c2c6e768e',
+  id: '0a3fcc05-e27a-4b82-949f-badc14cd9a55',
   metadata: [],
   name: 'Walter v. Franecki - Spinka',
   number: '2023-3062',
-  opened_at: DateTime.iso8601('2023-07-05T06:18:43.614Z'),
+  opened_at: DateTime.iso8601('2023-07-05T07:02:28.411Z'),
   parties: [
     Models::Shared::LegalParty.new(
       description: 'Urban Walter',
@@ -50,8 +50,8 @@ res = s.matter.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new
   ],
   stage: 'currus',
   status: Models::Shared::LegalMatterStatus::OPEN,
-  statute_of_limitations_at: DateTime.iso8601('2027-06-28T21:12:06.224Z'),
-  updated_at: DateTime.iso8601('2023-07-17T10:05:24.278Z'),
+  statute_of_limitations_at: DateTime.iso8601('2027-06-29T20:58:22.479Z'),
+  updated_at: DateTime.iso8601('2023-07-17T11:03:06.872Z'),
 ), connection_id: '<id>')
 
 unless res.legal_matter.nil?
@@ -81,7 +81,7 @@ end
 
 ## get_legal_matter
 
-Retrieve a matter
+Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ end
 
 ## list_legal_matters
 
-List all matters
+Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ end
 
 ## patch_legal_matter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -194,11 +194,11 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: 'a08b5258-b003-44e5-ad6e-92b4727c2be4',
+    id: '0b6277a1-c527-4b4f-be63-395f7b3ff9b0',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T06:18:43.615Z'),
+    opened_at: DateTime.iso8601('2023-07-05T07:02:28.412Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
@@ -207,8 +207,8 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-06-28T21:12:06.253Z'),
-    updated_at: DateTime.iso8601('2023-07-17T10:05:24.279Z'),
+    statute_of_limitations_at: DateTime.iso8601('2027-06-29T20:58:22.506Z'),
+    updated_at: DateTime.iso8601('2023-07-17T11:03:06.873Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -240,7 +240,7 @@ end
 
 ## remove_legal_matter
 
-Remove a matter
+Deletes the LegalMatter identified by `id`.
 
 ### Example Usage
 
@@ -282,7 +282,7 @@ end
 
 ## update_legal_matter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -306,11 +306,11 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: 'a08b5258-b003-44e5-ad6e-92b4727c2be4',
+    id: '0b6277a1-c527-4b4f-be63-395f7b3ff9b0',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T06:18:43.615Z'),
+    opened_at: DateTime.iso8601('2023-07-05T07:02:28.412Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
@@ -319,8 +319,8 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-06-28T21:12:06.253Z'),
-    updated_at: DateTime.iso8601('2023-07-17T10:05:24.279Z'),
+    statute_of_limitations_at: DateTime.iso8601('2027-06-29T20:58:22.506Z'),
+    updated_at: DateTime.iso8601('2023-07-17T11:03:06.873Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

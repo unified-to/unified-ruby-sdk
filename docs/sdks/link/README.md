@@ -20,7 +20,7 @@
 
 ## create_calendar_link
 
-Create a link
+Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
 
 ### Example Usage
 
@@ -39,13 +39,13 @@ res = s.link.create_calendar_link(calendar_link: Models::Shared::CalendarLink.ne
   created_at: '2023-03-07T13:34:11.959Z',
   description: 'Vitium clibanus laboriosam uxor denuncio.',
   duration: 74.0,
-  id: 'ac5a258c-077d-4fdd-988e-bad749ee7965',
+  id: 'bd90d587-d2a9-4c4e-ac90-3966a5ceec25',
   is_active: true,
   metadata: [],
   name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
   price_amount: 44.0,
   price_currency: 'USD',
-  updated_at: '2024-03-15T13:01:57.661Z',
+  updated_at: '2024-03-15T19:44:59.931Z',
   url: 'https://annual-apricot.info/',
 ), connection_id: '<id>')
 
@@ -76,7 +76,7 @@ end
 
 ## create_payment_link
 
-Create a link
+Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 
 ### Example Usage
 
@@ -96,13 +96,13 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
   created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
   currency: 'CAD',
   description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-  id: '44af6dd3-1389-49e9-8034-8adbc5265f45',
+  id: 'fc515664-3d8a-4056-95ed-aaf2662aefd8',
   is_active: true,
   is_chargeable_now: true,
   lineitems: [
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: 'f9b9e527-2508-4223-bdf6-7fdebfada7ea',
+      id: '77b51887-c151-4811-aff1-67b93542f04a',
       item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
       item_name: 'Soft Marble Cheese',
       tax_amount: 0.0,
@@ -114,7 +114,7 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
       discount_amount: 424.32,
-      id: '1009ccc2-d6fe-4236-8c68-d0fdab642432',
+      id: '4a10838e-ed44-472c-b4ef-88a6d0b75590',
       item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
       item_name: 'Sleek Aluminum Shoes',
       notes: 'Cervus decretum viridis doloremque.',
@@ -126,7 +126,7 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
     ),
     Models::Shared::PaymentLineitem.new(
       created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-      id: '35cf0b54-224b-4149-847c-02116695cc67',
+      id: 'b19062d1-03db-4538-8b1a-d279ccaa2c70',
       item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
       item_name: 'Elegant Concrete Gloves',
       notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -139,8 +139,8 @@ res = s.link.create_payment_link(payment_link: Models::Shared::PaymentLink.new(
   ],
   metadata: [],
   success_url: 'https://tinted-jet.info',
-  updated_at: DateTime.iso8601('2024-04-13T09:31:26.812Z'),
-  url: 'https://pay.example.com/44af6dd3-1389-49e9-8034-8adbc5265f45',
+  updated_at: DateTime.iso8601('2024-04-13T15:33:57.274Z'),
+  url: 'https://pay.example.com/fc515664-3d8a-4056-95ed-aaf2662aefd8',
 ), connection_id: '<id>')
 
 unless res.payment_link.nil?
@@ -170,7 +170,7 @@ end
 
 ## get_calendar_link
 
-Retrieve a link
+Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -214,7 +214,7 @@ end
 
 ## get_payment_link
 
-Retrieve a link
+Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -258,7 +258,7 @@ end
 
 ## list_calendar_links
 
-List all links
+Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -303,7 +303,7 @@ end
 
 ## list_payment_links
 
-List all links
+Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -348,7 +348,7 @@ end
 
 ## patch_calendar_link
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -368,13 +368,13 @@ req = Models::Operations::PatchCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: 'd5c1154a-0df1-447f-9a79-a861d4aa4320',
+    id: '4f70f5c3-d6f9-4560-b50f-04fb279a483e',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-15T13:01:57.665Z',
+    updated_at: '2024-03-15T19:44:59.936Z',
     url: 'https://annual-apricot.info/',
   ),
   connection_id: '<id>',
@@ -407,7 +407,7 @@ end
 
 ## patch_payment_link
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -428,13 +428,13 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: '0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+    id: '08f916f2-a958-486e-9292-d7529bd8ccba',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'a4992b6e-470c-465d-b2ef-ed9254b71ac6',
+        id: '3530b134-abde-4de0-ac67-e0478bf02437',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
@@ -446,7 +446,7 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: '2cbd3403-33b5-4168-a882-a350fd62271b',
+        id: '37245c21-0f1d-4cb1-95ee-fdffdda2bc73',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
@@ -458,7 +458,7 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '807d9e84-427d-4fd9-9060-9ca6fac75118',
+        id: 'b60c42d8-7654-4944-b7a1-a96966847949',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -471,8 +471,8 @@ req = Models::Operations::PatchPaymentLinkRequest.new(
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-13T09:31:26.816Z'),
-    url: 'https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+    updated_at: DateTime.iso8601('2024-04-13T15:33:57.282Z'),
+    url: 'https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -504,7 +504,7 @@ end
 
 ## remove_calendar_link
 
-Remove a link
+Deletes the CalendarLink identified by `id`.
 
 ### Example Usage
 
@@ -546,7 +546,7 @@ end
 
 ## remove_payment_link
 
-Remove a link
+Deletes the PaymentLink identified by `id`.
 
 ### Example Usage
 
@@ -588,7 +588,7 @@ end
 
 ## update_calendar_link
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -608,13 +608,13 @@ req = Models::Operations::UpdateCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: 'd5c1154a-0df1-447f-9a79-a861d4aa4320',
+    id: '4f70f5c3-d6f9-4560-b50f-04fb279a483e',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-15T13:01:57.665Z',
+    updated_at: '2024-03-15T19:44:59.936Z',
     url: 'https://annual-apricot.info/',
   ),
   connection_id: '<id>',
@@ -647,7 +647,7 @@ end
 
 ## update_payment_link
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -668,13 +668,13 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
     currency: 'CAD',
     description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-    id: '0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+    id: '08f916f2-a958-486e-9292-d7529bd8ccba',
     is_active: true,
     is_chargeable_now: true,
     lineitems: [
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: 'a4992b6e-470c-465d-b2ef-ed9254b71ac6',
+        id: '3530b134-abde-4de0-ac67-e0478bf02437',
         item_description: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
         item_name: 'Soft Marble Cheese',
         tax_amount: 0.0,
@@ -686,7 +686,7 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
         discount_amount: 424.32,
-        id: '2cbd3403-33b5-4168-a882-a350fd62271b',
+        id: '37245c21-0f1d-4cb1-95ee-fdffdda2bc73',
         item_description: 'Innovative Shoes featuring utilized technology and Cotton construction',
         item_name: 'Sleek Aluminum Shoes',
         notes: 'Cervus decretum viridis doloremque.',
@@ -698,7 +698,7 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
       ),
       Models::Shared::PaymentLineitem.new(
         created_at: DateTime.iso8601('2023-06-04T16:11:45.685Z'),
-        id: '807d9e84-427d-4fd9-9060-9ca6fac75118',
+        id: 'b60c42d8-7654-4944-b7a1-a96966847949',
         item_description: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
         item_name: 'Elegant Concrete Gloves',
         notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -711,8 +711,8 @@ req = Models::Operations::UpdatePaymentLinkRequest.new(
     ],
     metadata: [],
     success_url: 'https://tinted-jet.info',
-    updated_at: DateTime.iso8601('2024-04-13T09:31:26.816Z'),
-    url: 'https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+    updated_at: DateTime.iso8601('2024-04-13T15:33:57.282Z'),
+    url: 'https://pay.example.com/08f916f2-a958-486e-9292-d7529bd8ccba',
   ),
   connection_id: '<id>',
   id: '<id>',

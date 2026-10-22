@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(metadata_metadata: Models::Shared::MetadataMetadata, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMetadataMetadataQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMetadataMetadataResponse) }
     def create_metadata_metadata(metadata_metadata:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_metadata_metadata - Create a metadata
+      # Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the request body; they are mapped to the provider's API. Returns the created MetadataMetadata.
       request = Models::Operations::CreateMetadataMetadataRequest.new(
         metadata_metadata: metadata_metadata,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMetadataMetadataQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMetadataMetadataResponse) }
     def get_metadata_metadata(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_metadata_metadata - Retrieve a metadata
+      # Retrieves a single MetadataMetadata by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetMetadataMetadataRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListMetadataMetadatasRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMetadataMetadatasResponse) }
     def list_metadata_metadatas(request:, timeout_ms: nil)
       # list_metadata_metadatas - List all metadatas
+      # Returns a list of MetadataMetadatas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchMetadataMetadataRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMetadataMetadataResponse) }
     def patch_metadata_metadata(request:, timeout_ms: nil)
       # patch_metadata_metadata - Update a metadata
+      # Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMetadataMetadataResponse) }
     def remove_metadata_metadata(connection_id:, id:, timeout_ms: nil)
       # remove_metadata_metadata - Remove a metadata
+      # Deletes the MetadataMetadata identified by `id`.
       request = Models::Operations::RemoveMetadataMetadataRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateMetadataMetadataRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMetadataMetadataResponse) }
     def update_metadata_metadata(request:, timeout_ms: nil)
       # update_metadata_metadata - Update a metadata
+      # Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

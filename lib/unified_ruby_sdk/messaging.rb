@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(messaging_channel: Models::Shared::MessagingChannel, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMessagingChannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMessagingChannelResponse) }
     def create_messaging_channel(messaging_channel:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_messaging_channel - Create a channel
+      # Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they are mapped to the provider's API. Returns the created MessagingChannel.
       request = Models::Operations::CreateMessagingChannelRequest.new(
         messaging_channel: messaging_channel,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(messaging_message: Models::Shared::MessagingMessage, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMessagingMessageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMessagingMessageResponse) }
     def create_messaging_message(messaging_message:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_messaging_message - Create a message
+      # Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they are mapped to the provider's API. Returns the created MessagingMessage.
       request = Models::Operations::CreateMessagingMessageRequest.new(
         messaging_message: messaging_message,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMessagingChannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingChannelResponse) }
     def get_messaging_channel(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_messaging_channel - Retrieve a channel
+      # Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetMessagingChannelRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMessagingMessageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMessagingMessageResponse) }
     def get_messaging_message(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_messaging_message - Retrieve a message
+      # Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetMessagingMessageRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListMessagingChannelsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMessagingChannelsResponse) }
     def list_messaging_channels(request:, timeout_ms: nil)
       # list_messaging_channels - List all channels
+      # Returns a list of MessagingChannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -640,6 +645,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListMessagingMessagesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMessagingMessagesResponse) }
     def list_messaging_messages(request:, timeout_ms: nil)
       # list_messaging_messages - List all messages
+      # Returns a list of MessagingMessages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -750,6 +756,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchMessagingChannelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMessagingChannelResponse) }
     def patch_messaging_channel(request:, timeout_ms: nil)
       # patch_messaging_channel - Update a channel
+      # Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -872,6 +879,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchMessagingEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMessagingEventResponse) }
     def patch_messaging_event(request:, timeout_ms: nil)
       # patch_messaging_event - Update an event
+      # Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchMessagingMessageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMessagingMessageResponse) }
     def patch_messaging_message(request:, timeout_ms: nil)
       # patch_messaging_message - Update a message
+      # Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1116,6 +1125,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMessagingChannelResponse) }
     def remove_messaging_channel(connection_id:, id:, timeout_ms: nil)
       # remove_messaging_channel - Remove a channel
+      # Deletes the MessagingChannel identified by `id`.
       request = Models::Operations::RemoveMessagingChannelRequest.new(
         connection_id: connection_id,
         id: id
@@ -1230,6 +1240,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMessagingMessageResponse) }
     def remove_messaging_message(connection_id:, id:, timeout_ms: nil)
       # remove_messaging_message - Remove a message
+      # Deletes the MessagingMessage identified by `id`.
       request = Models::Operations::RemoveMessagingMessageRequest.new(
         connection_id: connection_id,
         id: id
@@ -1344,6 +1355,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateMessagingChannelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMessagingChannelResponse) }
     def update_messaging_channel(request:, timeout_ms: nil)
       # update_messaging_channel - Update a channel
+      # Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1466,6 +1478,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateMessagingEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMessagingEventResponse) }
     def update_messaging_event(request:, timeout_ms: nil)
       # update_messaging_event - Update an event
+      # Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1588,6 +1601,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateMessagingMessageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMessagingMessageResponse) }
     def update_messaging_message(request:, timeout_ms: nil)
       # update_messaging_message - Update a message
+      # Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

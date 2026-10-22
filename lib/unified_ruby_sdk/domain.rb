@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(compute_domain: Models::Shared::ComputeDomain, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateComputeDomainQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateComputeDomainResponse) }
     def create_compute_domain(compute_domain:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_compute_domain - Create a domain
+      # Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
       request = Models::Operations::CreateComputeDomainRequest.new(
         compute_domain: compute_domain,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetComputeDomainQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetComputeDomainResponse) }
     def get_compute_domain(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_compute_domain - Retrieve a domain
+      # Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetComputeDomainRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListComputeDomainsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListComputeDomainsResponse) }
     def list_compute_domains(request:, timeout_ms: nil)
       # list_compute_domains - List all domains
+      # Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchComputeDomainRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchComputeDomainResponse) }
     def patch_compute_domain(request:, timeout_ms: nil)
       # patch_compute_domain - Update a domain
+      # Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveComputeDomainResponse) }
     def remove_compute_domain(connection_id:, id:, timeout_ms: nil)
       # remove_compute_domain - Remove a domain
+      # Deletes the ComputeDomain identified by `id`.
       request = Models::Operations::RemoveComputeDomainRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateComputeDomainRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateComputeDomainResponse) }
     def update_compute_domain(request:, timeout_ms: nil)
       # update_compute_domain - Update a domain
+      # Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

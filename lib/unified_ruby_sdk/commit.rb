@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(repo_commit: Models::Shared::RepoCommit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoCommitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoCommitResponse) }
     def create_repo_commit(repo_commit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_commit - Create a commit
+      # Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
       request = Models::Operations::CreateRepoCommitRequest.new(
         repo_commit: repo_commit,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoCommitQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoCommitResponse) }
     def get_repo_commit(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_commit - Retrieve a commit
+      # Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetRepoCommitRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListRepoCommitsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoCommitsResponse) }
     def list_repo_commits(request:, timeout_ms: nil)
       # list_repo_commits - List all commits
+      # Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchRepoCommitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoCommitResponse) }
     def patch_repo_commit(request:, timeout_ms: nil)
       # patch_repo_commit - Update a commit
+      # Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoCommitResponse) }
     def remove_repo_commit(connection_id:, id:, timeout_ms: nil)
       # remove_repo_commit - Remove a commit
+      # Deletes the RepoCommit identified by `id`.
       request = Models::Operations::RemoveRepoCommitRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateRepoCommitRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoCommitResponse) }
     def update_repo_commit(request:, timeout_ms: nil)
       # update_repo_commit - Update a commit
+      # Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

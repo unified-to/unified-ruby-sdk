@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ads_group: Models::Shared::AdsGroup, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsGroupResponse) }
     def create_ads_group(ads_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_group - Create a group
+      # Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
       request = Models::Operations::CreateAdsGroupRequest.new(
         ads_group: ads_group,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(hris_group: Models::Shared::HrisGroup, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisGroupResponse) }
     def create_hris_group(hris_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_group - Create a group
+      # Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
       request = Models::Operations::CreateHrisGroupRequest.new(
         hris_group: hris_group,
         connection_id: connection_id,
@@ -422,6 +424,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsGroupResponse) }
     def get_ads_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_group - Retrieve a group
+      # Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsGroupRequest.new(
         connection_id: connection_id,
         id: id,
@@ -538,6 +541,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsGroupResponse) }
     def get_clubs_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_clubs_group - Retrieve a group
+      # Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetClubsGroupRequest.new(
         connection_id: connection_id,
         id: id,
@@ -654,6 +658,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisGroupResponse) }
     def get_hris_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_group - Retrieve a group
+      # Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisGroupRequest.new(
         connection_id: connection_id,
         id: id,
@@ -882,6 +887,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsGroupsResponse) }
     def list_ads_groups(request:, timeout_ms: nil)
       # list_ads_groups - List all groups
+      # Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -992,6 +998,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListClubsGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsGroupsResponse) }
     def list_clubs_groups(request:, timeout_ms: nil)
       # list_clubs_groups - List all groups
+      # Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1102,6 +1109,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisGroupsResponse) }
     def list_hris_groups(request:, timeout_ms: nil)
       # list_hris_groups - List all groups
+      # Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1322,6 +1330,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAdsGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsGroupResponse) }
     def patch_ads_group(request:, timeout_ms: nil)
       # patch_ads_group - Update a group
+      # Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1444,6 +1453,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisGroupResponse) }
     def patch_hris_group(request:, timeout_ms: nil)
       # patch_hris_group - Update a group
+      # Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1691,6 +1701,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsGroupResponse) }
     def remove_ads_group(connection_id:, id:, timeout_ms: nil)
       # remove_ads_group - Remove a group
+      # Deletes the AdsGroup identified by `id`.
       request = Models::Operations::RemoveAdsGroupRequest.new(
         connection_id: connection_id,
         id: id
@@ -1805,6 +1816,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisGroupResponse) }
     def remove_hris_group(connection_id:, id:, timeout_ms: nil)
       # remove_hris_group - Remove a group
+      # Deletes the HrisGroup identified by `id`.
       request = Models::Operations::RemoveHrisGroupRequest.new(
         connection_id: connection_id,
         id: id
@@ -2033,6 +2045,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAdsGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsGroupResponse) }
     def update_ads_group(request:, timeout_ms: nil)
       # update_ads_group - Update a group
+      # Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2155,6 +2168,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisGroupResponse) }
     def update_hris_group(request:, timeout_ms: nil)
       # update_hris_group - Update a group
+      # Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

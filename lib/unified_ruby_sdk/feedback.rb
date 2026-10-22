@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(performance_feedback: Models::Shared::PerformanceFeedback, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePerformanceFeedbackQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePerformanceFeedbackResponse) }
     def create_performance_feedback(performance_feedback:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_performance_feedback - Create a feedback
+      # Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body; they are mapped to the provider's API. Returns the created PerformanceFeedback.
       request = Models::Operations::CreatePerformanceFeedbackRequest.new(
         performance_feedback: performance_feedback,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPerformanceFeedbackQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPerformanceFeedbackResponse) }
     def get_performance_feedback(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_performance_feedback - Retrieve a feedback
+      # Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPerformanceFeedbackRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPerformanceFeedbacksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPerformanceFeedbacksResponse) }
     def list_performance_feedbacks(request:, timeout_ms: nil)
       # list_performance_feedbacks - List all feedbacks
+      # Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # KmsPageMetadataFormat - The data type of the custom field, which determines how `value` is formatted.
       class KmsPageMetadataFormat < T::Enum
 
 

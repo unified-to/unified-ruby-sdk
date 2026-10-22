@@ -14,7 +14,7 @@
 
 ## create_hris_earning
 
-Create an earning
+Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 
 ### Example Usage
 
@@ -34,12 +34,12 @@ res = s.earning.create_hris_earning(hris_earning: Models::Shared::HrisEarning.ne
   created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
   currency: 'USD',
   frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-  id: 'e217da60-71ee-4135-afac-bd2548e026c2',
+  id: 'fc526592-d3cd-43c8-b69a-04fc3f803646',
   metadata: [],
   notes: 'Deporto truculenter vinum beatae.',
-  start_at: DateTime.iso8601('2022-07-25T11:48:48.385Z'),
+  start_at: DateTime.iso8601('2022-07-25T22:33:07.377Z'),
   status: Models::Shared::HrisEarningStatus::ENDED,
-  updated_at: DateTime.iso8601('2020-02-08T20:32:52.338Z'),
+  updated_at: DateTime.iso8601('2020-02-08T23:43:54.807Z'),
 ), connection_id: '<id>')
 
 unless res.hris_earning.nil?
@@ -69,7 +69,7 @@ end
 
 ## get_hris_earning
 
-Retrieve an earning
+Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -113,7 +113,7 @@ end
 
 ## list_hris_earnings
 
-List all earnings
+Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -158,7 +158,7 @@ end
 
 ## patch_hris_earning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -179,12 +179,12 @@ req = Models::Operations::PatchHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: 'ae74f559-3b04-412c-92c7-6b4867daa099',
+    id: 'c30ab4a5-6379-402f-94ce-29656bc968ac',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-07-25T11:48:48.394Z'),
+    start_at: DateTime.iso8601('2022-07-25T22:33:07.384Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-08T20:32:52.341Z'),
+    updated_at: DateTime.iso8601('2020-02-08T23:43:54.809Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -216,7 +216,7 @@ end
 
 ## remove_hris_earning
 
-Remove an earning
+Deletes the HrisEarning identified by `id`.
 
 ### Example Usage
 
@@ -258,7 +258,7 @@ end
 
 ## update_hris_earning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -279,12 +279,12 @@ req = Models::Operations::UpdateHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: 'ae74f559-3b04-412c-92c7-6b4867daa099',
+    id: 'c30ab4a5-6379-402f-94ce-29656bc968ac',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-07-25T11:48:48.394Z'),
+    start_at: DateTime.iso8601('2022-07-25T22:33:07.384Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-08T20:32:52.341Z'),
+    updated_at: DateTime.iso8601('2020-02-08T23:43:54.809Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

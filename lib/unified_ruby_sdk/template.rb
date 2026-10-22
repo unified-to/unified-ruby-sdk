@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(compute_template: Models::Shared::ComputeTemplate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateComputeTemplateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateComputeTemplateResponse) }
     def create_compute_template(compute_template:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_compute_template - Create a template
+      # Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
       request = Models::Operations::CreateComputeTemplateRequest.new(
         compute_template: compute_template,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetComputeTemplateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetComputeTemplateResponse) }
     def get_compute_template(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_compute_template - Retrieve a template
+      # Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetComputeTemplateRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetSigningTemplateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetSigningTemplateResponse) }
     def get_signing_template(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_signing_template - Retrieve a template
+      # Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetSigningTemplateRequest.new(
         connection_id: connection_id,
         id: id,
@@ -402,6 +405,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListComputeTemplatesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListComputeTemplatesResponse) }
     def list_compute_templates(request:, timeout_ms: nil)
       # list_compute_templates - List all templates
+      # Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -512,6 +516,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListSigningTemplatesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListSigningTemplatesResponse) }
     def list_signing_templates(request:, timeout_ms: nil)
       # list_signing_templates - List all templates
+      # Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -622,6 +627,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchComputeTemplateRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchComputeTemplateResponse) }
     def patch_compute_template(request:, timeout_ms: nil)
       # patch_compute_template - Update a template
+      # Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -744,6 +750,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveComputeTemplateResponse) }
     def remove_compute_template(connection_id:, id:, timeout_ms: nil)
       # remove_compute_template - Remove a template
+      # Deletes the ComputeTemplate identified by `id`.
       request = Models::Operations::RemoveComputeTemplateRequest.new(
         connection_id: connection_id,
         id: id
@@ -858,6 +865,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateComputeTemplateRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateComputeTemplateResponse) }
     def update_compute_template(request:, timeout_ms: nil)
       # update_compute_template - Update a template
+      # Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

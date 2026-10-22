@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(legal_matter: Models::Shared::LegalMatter, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLegalMatterQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLegalMatterResponse) }
     def create_legal_matter(legal_matter:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_legal_matter - Create a matter
+      # Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
       request = Models::Operations::CreateLegalMatterRequest.new(
         legal_matter: legal_matter,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLegalMatterQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLegalMatterResponse) }
     def get_legal_matter(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_legal_matter - Retrieve a matter
+      # Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLegalMatterRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLegalMattersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLegalMattersResponse) }
     def list_legal_matters(request:, timeout_ms: nil)
       # list_legal_matters - List all matters
+      # Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLegalMatterRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLegalMatterResponse) }
     def patch_legal_matter(request:, timeout_ms: nil)
       # patch_legal_matter - Update a matter
+      # Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLegalMatterResponse) }
     def remove_legal_matter(connection_id:, id:, timeout_ms: nil)
       # remove_legal_matter - Remove a matter
+      # Deletes the LegalMatter identified by `id`.
       request = Models::Operations::RemoveLegalMatterRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLegalMatterRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLegalMatterResponse) }
     def update_legal_matter(request:, timeout_ms: nil)
       # update_legal_matter - Update a matter
+      # Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

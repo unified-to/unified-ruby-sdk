@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(repo_repository: Models::Shared::RepoRepository, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoRepositoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoRepositoryResponse) }
     def create_repo_repository(repo_repository:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_repository - Create a repository
+      # Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
       request = Models::Operations::CreateRepoRepositoryRequest.new(
         repo_repository: repo_repository,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoRepositoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoRepositoryResponse) }
     def get_repo_repository(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_repository - Retrieve a repository
+      # Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetRepoRepositoryRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListRepoRepositoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoRepositoriesResponse) }
     def list_repo_repositories(request:, timeout_ms: nil)
       # list_repo_repositories - List all repositories
+      # Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchRepoRepositoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoRepositoryResponse) }
     def patch_repo_repository(request:, timeout_ms: nil)
       # patch_repo_repository - Update a repository
+      # Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoRepositoryResponse) }
     def remove_repo_repository(connection_id:, id:, timeout_ms: nil)
       # remove_repo_repository - Remove a repository
+      # Deletes the RepoRepository identified by `id`.
       request = Models::Operations::RemoveRepoRepositoryRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateRepoRepositoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoRepositoryResponse) }
     def update_repo_repository(request:, timeout_ms: nil)
       # update_repo_repository - Update a repository
+      # Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

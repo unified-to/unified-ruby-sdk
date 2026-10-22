@@ -17,7 +17,7 @@ module UnifiedRubySDK
         field :application_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('application_id') } }
 
         field :bcc, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bcc') } }
-
+        # The ID of the candidate the activity is about (an AtsCandidate ID)
         field :candidate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('candidate_id') } }
 
         field :cc, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cc') } }
@@ -25,7 +25,7 @@ module UnifiedRubySDK
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The activity's content, such as the text of a note or the body of an email
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # IDs for AtsDocument.get
         field :document_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('document_ids') } }

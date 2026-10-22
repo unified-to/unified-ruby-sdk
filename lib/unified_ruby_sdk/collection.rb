@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(commerce_collection: Models::Shared::CommerceCollection, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceCollectionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceCollectionResponse) }
     def create_commerce_collection(commerce_collection:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_collection - Create a collection
+      # Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
       request = Models::Operations::CreateCommerceCollectionRequest.new(
         commerce_collection: commerce_collection,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(lms_collection: Models::Shared::LmsCollection, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLmsCollectionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLmsCollectionResponse) }
     def create_lms_collection(lms_collection:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_lms_collection - Create a collection
+      # Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
       request = Models::Operations::CreateLmsCollectionRequest.new(
         lms_collection: lms_collection,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceCollectionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceCollectionResponse) }
     def get_commerce_collection(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_collection - Retrieve a collection
+      # Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceCollectionRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLmsCollectionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLmsCollectionResponse) }
     def get_lms_collection(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_lms_collection - Retrieve a collection
+      # Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLmsCollectionRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceCollectionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceCollectionsResponse) }
     def list_commerce_collections(request:, timeout_ms: nil)
       # list_commerce_collections - List all collections
+      # Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -640,6 +645,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLmsCollectionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLmsCollectionsResponse) }
     def list_lms_collections(request:, timeout_ms: nil)
       # list_lms_collections - List all collections
+      # Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -750,6 +756,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceCollectionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceCollectionResponse) }
     def patch_commerce_collection(request:, timeout_ms: nil)
       # patch_commerce_collection - Update a collection
+      # Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -872,6 +879,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLmsCollectionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLmsCollectionResponse) }
     def patch_lms_collection(request:, timeout_ms: nil)
       # patch_lms_collection - Update a collection
+      # Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceCollectionResponse) }
     def remove_commerce_collection(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_collection - Remove a collection
+      # Deletes the CommerceCollection identified by `id`.
       request = Models::Operations::RemoveCommerceCollectionRequest.new(
         connection_id: connection_id,
         id: id
@@ -1108,6 +1117,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLmsCollectionResponse) }
     def remove_lms_collection(connection_id:, id:, timeout_ms: nil)
       # remove_lms_collection - Remove a collection
+      # Deletes the LmsCollection identified by `id`.
       request = Models::Operations::RemoveLmsCollectionRequest.new(
         connection_id: connection_id,
         id: id
@@ -1222,6 +1232,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceCollectionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceCollectionResponse) }
     def update_commerce_collection(request:, timeout_ms: nil)
       # update_commerce_collection - Update a collection
+      # Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1344,6 +1355,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLmsCollectionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLmsCollectionResponse) }
     def update_lms_collection(request:, timeout_ms: nil)
       # update_lms_collection - Update a collection
+      # Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

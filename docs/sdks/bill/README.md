@@ -14,7 +14,7 @@
 
 ## create_accounting_bill
 
-Create a bill
+Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 
 ### Example Usage
 
@@ -33,13 +33,13 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://puny-foodstuffs.name',
-      id: 'cebeee36-97bb-4330-9a85-5c69fc343f29',
+      id: '6c9209f9-761e-4b05-bad7-d11aada20346',
       mime_type: 'application/pdf',
       name: 'BILL-2466.pdf',
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://grimy-characterization.net',
-      id: '668457df-b516-4b78-9532-eb2cf6d62589',
+      id: '043c0df2-d8b5-4766-856e-78913fedeec5',
       mime_type: 'application/pdf',
       name: 'BILL-2466-1.pdf',
     ),
@@ -52,7 +52,7 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
   extended_notes: [],
-  id: '7e27068a-669c-4caa-8506-8d9a42328ae2',
+  id: 'b0d3a065-8e95-4707-848a-38944e7d7452',
   lineitems: [],
   metadata: [],
   notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -68,7 +68,7 @@ res = s.bill.create_accounting_bill(accounting_bill: Models::Shared::AccountingB
   tax_amount: 0.0,
   term: Models::Shared::Term::NET_90,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2020-06-01T05:48:10.626Z'),
+  updated_at: DateTime.iso8601('2020-06-01T08:26:07.744Z'),
   url: 'https://cluttered-importance.org/bills/BILL-2466',
 ), connection_id: '<id>')
 
@@ -99,7 +99,7 @@ end
 
 ## get_accounting_bill
 
-Retrieve a bill
+Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -143,7 +143,7 @@ end
 
 ## list_accounting_bills
 
-List all bills
+Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ end
 
 ## patch_accounting_bill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -208,13 +208,13 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://puny-foodstuffs.name',
-        id: '5f7b5dee-8c62-4964-bedd-56fd074ac361',
+        id: '4527ae4f-25b4-4131-a05b-228a6f649e97',
         mime_type: 'application/pdf',
         name: 'BILL-2466.pdf',
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://grimy-characterization.net',
-        id: '5095116b-b393-4afd-87bc-d967ca04b70f',
+        id: '5743dca5-30a1-4e95-92ce-8a27d46e5b0c',
         mime_type: 'application/pdf',
         name: 'BILL-2466-1.pdf',
       ),
@@ -227,7 +227,7 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: 'c1f11f76-1eff-43e7-8f44-6a829c9ec2c4',
+    id: 'ebe23029-ea98-4dc0-a1ec-eb5de14a04e5',
     lineitems: [],
     metadata: [],
     notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -243,7 +243,7 @@ req = Models::Operations::PatchAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-01T05:48:10.630Z'),
+    updated_at: DateTime.iso8601('2020-06-01T08:26:07.748Z'),
     url: 'https://cluttered-importance.org/bills/BILL-2466',
   ),
   connection_id: '<id>',
@@ -276,7 +276,7 @@ end
 
 ## remove_accounting_bill
 
-Remove a bill
+Deletes the AccountingBill identified by `id`.
 
 ### Example Usage
 
@@ -318,7 +318,7 @@ end
 
 ## update_accounting_bill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -338,13 +338,13 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://puny-foodstuffs.name',
-        id: '5f7b5dee-8c62-4964-bedd-56fd074ac361',
+        id: '4527ae4f-25b4-4131-a05b-228a6f649e97',
         mime_type: 'application/pdf',
         name: 'BILL-2466.pdf',
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://grimy-characterization.net',
-        id: '5095116b-b393-4afd-87bc-d967ca04b70f',
+        id: '5743dca5-30a1-4e95-92ce-8a27d46e5b0c',
         mime_type: 'application/pdf',
         name: 'BILL-2466-1.pdf',
       ),
@@ -357,7 +357,7 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2019-09-07T23:03:14.104Z'),
     extended_notes: [],
-    id: 'c1f11f76-1eff-43e7-8f44-6a829c9ec2c4',
+    id: 'ebe23029-ea98-4dc0-a1ec-eb5de14a04e5',
     lineitems: [],
     metadata: [],
     notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -373,7 +373,7 @@ req = Models::Operations::UpdateAccountingBillRequest.new(
     tax_amount: 0.0,
     term: Models::Shared::Term::NET_90,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2020-06-01T05:48:10.630Z'),
+    updated_at: DateTime.iso8601('2020-06-01T08:26:07.748Z'),
     url: 'https://cluttered-importance.org/bills/BILL-2466',
   ),
   connection_id: '<id>',

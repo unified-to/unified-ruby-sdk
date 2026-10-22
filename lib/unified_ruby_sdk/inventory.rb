@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(commerce_inventory: Models::Shared::CommerceInventory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceInventoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceInventoryResponse) }
     def create_commerce_inventory(commerce_inventory:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_inventory - Create an inventory
+      # Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
       request = Models::Operations::CreateCommerceInventoryRequest.new(
         commerce_inventory: commerce_inventory,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceInventoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceInventoryResponse) }
     def get_commerce_inventory(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_inventory - Retrieve an inventory
+      # Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceInventoryRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceInventoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceInventoriesResponse) }
     def list_commerce_inventories(request:, timeout_ms: nil)
       # list_commerce_inventories - List all inventories
+      # Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceInventoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceInventoryResponse) }
     def patch_commerce_inventory(request:, timeout_ms: nil)
       # patch_commerce_inventory - Update an inventory
+      # Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceInventoryResponse) }
     def remove_commerce_inventory(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_inventory - Remove an inventory
+      # Deletes the CommerceInventory identified by `id`.
       request = Models::Operations::RemoveCommerceInventoryRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceInventoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceInventoryResponse) }
     def update_commerce_inventory(request:, timeout_ms: nil)
       # update_commerce_inventory - Update an inventory
+      # Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

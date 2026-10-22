@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(shipping_label: Models::Shared::ShippingLabel, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateShippingLabelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateShippingLabelResponse) }
     def create_shipping_label(shipping_label:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_shipping_label - Create a label
+      # Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
       request = Models::Operations::CreateShippingLabelRequest.new(
         shipping_label: shipping_label,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(shipping_rate: Models::Shared::ShippingRate, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateShippingRateQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateShippingRateResponse) }
     def create_shipping_rate(shipping_rate:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_shipping_rate - Create a rate
+      # Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
       request = Models::Operations::CreateShippingRateRequest.new(
         shipping_rate: shipping_rate,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(shipping_shipment: Models::Shared::ShippingShipment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateShippingShipmentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateShippingShipmentResponse) }
     def create_shipping_shipment(shipping_shipment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_shipping_shipment - Create a shipment
+      # Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
       request = Models::Operations::CreateShippingShipmentRequest.new(
         shipping_shipment: shipping_shipment,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingCarrierQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingCarrierResponse) }
     def get_shipping_carrier(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_shipping_carrier - Retrieve a carrier
+      # Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetShippingCarrierRequest.new(
         connection_id: connection_id,
         id: id,
@@ -542,6 +546,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingLabelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingLabelResponse) }
     def get_shipping_label(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_shipping_label - Retrieve a label
+      # Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetShippingLabelRequest.new(
         connection_id: connection_id,
         id: id,
@@ -658,6 +663,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingShipmentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingShipmentResponse) }
     def get_shipping_shipment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_shipping_shipment - Retrieve a shipment
+      # Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetShippingShipmentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -774,6 +780,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetShippingTrackingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetShippingTrackingResponse) }
     def get_shipping_tracking(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_shipping_tracking - Retrieve a tracking
+      # Retrieves a single ShippingTracking by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetShippingTrackingRequest.new(
         connection_id: connection_id,
         id: id,
@@ -890,6 +897,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListShippingCarriersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingCarriersResponse) }
     def list_shipping_carriers(request:, timeout_ms: nil)
       # list_shipping_carriers - List all carriers
+      # Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1000,6 +1008,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListShippingLabelsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingLabelsResponse) }
     def list_shipping_labels(request:, timeout_ms: nil)
       # list_shipping_labels - List all labels
+      # Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1110,6 +1119,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListShippingShipmentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingShipmentsResponse) }
     def list_shipping_shipments(request:, timeout_ms: nil)
       # list_shipping_shipments - List all shipments
+      # Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1220,6 +1230,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListShippingTrackingsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListShippingTrackingsResponse) }
     def list_shipping_trackings(request:, timeout_ms: nil)
       # list_shipping_trackings - List all trackings
+      # Returns a list of ShippingTrackings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1330,6 +1341,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchShippingLabelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchShippingLabelResponse) }
     def patch_shipping_label(request:, timeout_ms: nil)
       # patch_shipping_label - Update a label
+      # Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1452,6 +1464,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchShippingShipmentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchShippingShipmentResponse) }
     def patch_shipping_shipment(request:, timeout_ms: nil)
       # patch_shipping_shipment - Update a shipment
+      # Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1574,6 +1587,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveShippingLabelResponse) }
     def remove_shipping_label(connection_id:, id:, timeout_ms: nil)
       # remove_shipping_label - Remove a label
+      # Deletes the ShippingLabel identified by `id`.
       request = Models::Operations::RemoveShippingLabelRequest.new(
         connection_id: connection_id,
         id: id
@@ -1688,6 +1702,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveShippingShipmentResponse) }
     def remove_shipping_shipment(connection_id:, id:, timeout_ms: nil)
       # remove_shipping_shipment - Remove a shipment
+      # Deletes the ShippingShipment identified by `id`.
       request = Models::Operations::RemoveShippingShipmentRequest.new(
         connection_id: connection_id,
         id: id
@@ -1802,6 +1817,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateShippingLabelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateShippingLabelResponse) }
     def update_shipping_label(request:, timeout_ms: nil)
       # update_shipping_label - Update a label
+      # Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1924,6 +1940,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateShippingShipmentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateShippingShipmentResponse) }
     def update_shipping_shipment(request:, timeout_ms: nil)
       # update_shipping_shipment - Update a shipment
+      # Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

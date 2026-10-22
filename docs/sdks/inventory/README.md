@@ -14,7 +14,7 @@
 
 ## create_commerce_inventory
 
-Create an inventory
+Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
 
 ### Example Usage
 
@@ -31,9 +31,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.inventory.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(
   available: 337.0,
-  id: 'b3ba51df-a271-4054-9b23-658b4ddf92d9',
+  id: 'a6aa3268-f037-410f-9c86-d1e39d32c421',
   metadata: [],
-  updated_at: DateTime.iso8601('2025-11-20T09:48:39.178Z'),
+  updated_at: DateTime.iso8601('2025-11-21T04:57:50.421Z'),
 ), connection_id: '<id>')
 
 unless res.commerce_inventory.nil?
@@ -63,7 +63,7 @@ end
 
 ## get_commerce_inventory
 
-Retrieve an inventory
+Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -107,7 +107,7 @@ end
 
 ## list_commerce_inventories
 
-List all inventories
+Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -152,7 +152,7 @@ end
 
 ## patch_commerce_inventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -170,9 +170,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: '505d8fdb-6d3e-4cc6-8aca-7a9b4ef5be26',
+    id: '33d89345-882b-4ab1-b502-ad37be2a7167',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-11-20T09:48:39.185Z'),
+    updated_at: DateTime.iso8601('2025-11-21T04:57:50.432Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -204,7 +204,7 @@ end
 
 ## remove_commerce_inventory
 
-Remove an inventory
+Deletes the CommerceInventory identified by `id`.
 
 ### Example Usage
 
@@ -246,7 +246,7 @@ end
 
 ## update_commerce_inventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -264,9 +264,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: '505d8fdb-6d3e-4cc6-8aca-7a9b4ef5be26',
+    id: '33d89345-882b-4ab1-b502-ad37be2a7167',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-11-20T09:48:39.185Z'),
+    updated_at: DateTime.iso8601('2025-11-21T04:57:50.432Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

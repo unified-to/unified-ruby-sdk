@@ -13,13 +13,13 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # The display name of the custom field
         field :name, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name'), required: true } }
         # This is the unified object type that this metadata is associated with. eg. crm_contact or commerce_item
         field :object_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('object_type'), required: true } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # The data type of the custom field's values
         field :format, Crystalline::Nilable.new(Models::Shared::MetadataMetadataFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::MetadataMetadataFormat, true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }

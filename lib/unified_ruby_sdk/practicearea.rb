@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(legal_practicearea: Models::Shared::LegalPracticearea, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateLegalPracticeareaQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateLegalPracticeareaResponse) }
     def create_legal_practicearea(legal_practicearea:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_legal_practicearea - Create a practicearea
+      # Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
       request = Models::Operations::CreateLegalPracticeareaRequest.new(
         legal_practicearea: legal_practicearea,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetLegalPracticeareaQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetLegalPracticeareaResponse) }
     def get_legal_practicearea(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_legal_practicearea - Retrieve a practicearea
+      # Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetLegalPracticeareaRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListLegalPracticeareasRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListLegalPracticeareasResponse) }
     def list_legal_practiceareas(request:, timeout_ms: nil)
       # list_legal_practiceareas - List all practiceareas
+      # Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchLegalPracticeareaRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchLegalPracticeareaResponse) }
     def patch_legal_practicearea(request:, timeout_ms: nil)
       # patch_legal_practicearea - Update a practicearea
+      # Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveLegalPracticeareaResponse) }
     def remove_legal_practicearea(connection_id:, id:, timeout_ms: nil)
       # remove_legal_practicearea - Remove a practicearea
+      # Deletes the LegalPracticearea identified by `id`.
       request = Models::Operations::RemoveLegalPracticeareaRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateLegalPracticeareaRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateLegalPracticeareaResponse) }
     def update_legal_practicearea(request:, timeout_ms: nil)
       # update_legal_practicearea - Update a practicearea
+      # Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -14,7 +14,7 @@
 
 ## create_ats_interview
 
-Create an interview
+Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
 
 ### Example Usage
 
@@ -32,13 +32,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.interview.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(
   created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
   end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-  id: '75d45222-2444-450b-8db6-d716949cdd12',
+  id: 'bbff662e-1b0a-4b74-ae44-126c9ba08ca6',
   location: '26596 Halle Trafficway',
   meeting_url: 'https://immaculate-foodstuffs.biz',
   metadata: [],
   start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
   status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-  updated_at: DateTime.iso8601('2023-09-23T16:39:11.717Z'),
+  updated_at: DateTime.iso8601('2023-09-24T01:29:20.700Z'),
 ), connection_id: '<id>')
 
 unless res.ats_interview.nil?
@@ -68,7 +68,7 @@ end
 
 ## get_ats_interview
 
-Retrieve an interview
+Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -112,7 +112,7 @@ end
 
 ## list_ats_interviews
 
-List all interviews
+Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -157,7 +157,7 @@ end
 
 ## patch_ats_interview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -176,13 +176,13 @@ req = Models::Operations::PatchAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: 'e4f6fa22-60cf-4f9b-98c5-bf66341af9c5',
+    id: '233684a9-a898-473b-a48f-b075574510d6',
     location: '26596 Halle Trafficway',
     meeting_url: 'https://immaculate-foodstuffs.biz',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-09-23T16:39:11.723Z'),
+    updated_at: DateTime.iso8601('2023-09-24T01:29:20.706Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -214,7 +214,7 @@ end
 
 ## remove_ats_interview
 
-Remove an interview
+Deletes the AtsInterview identified by `id`.
 
 ### Example Usage
 
@@ -256,7 +256,7 @@ end
 
 ## update_ats_interview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -275,13 +275,13 @@ req = Models::Operations::UpdateAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: 'e4f6fa22-60cf-4f9b-98c5-bf66341af9c5',
+    id: '233684a9-a898-473b-a48f-b075574510d6',
     location: '26596 Halle Trafficway',
     meeting_url: 'https://immaculate-foodstuffs.biz',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-09-23T16:39:11.723Z'),
+    updated_at: DateTime.iso8601('2023-09-24T01:29:20.706Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

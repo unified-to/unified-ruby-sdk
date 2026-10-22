@@ -8,7 +8,7 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # AtsMetadataFormat - The data type of the custom field, which determines how `value` is formatted.
       class AtsMetadataFormat < T::Enum
 
 

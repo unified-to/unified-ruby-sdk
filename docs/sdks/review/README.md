@@ -20,7 +20,7 @@
 
 ## create_commerce_review
 
-Create a review
+Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
 
 ### Example Usage
 
@@ -44,7 +44,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   content: 'Taedium thymum adipiscor amicitia cui.',
   created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
   helpful_votes: 66.0,
-  id: 'a701a537-140d-43ca-82c9-18ce8f785886',
+  id: '5511e647-c88b-49ec-a719-ff9102b72c8a',
   is_featured: false,
   is_public: true,
   is_verified: false,
@@ -52,10 +52,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Desipio carpo sol laudantium colo.',
       height: 749.0,
-      id: '7d289800-5f77-4fbe-92b2-b1eb3fa9e31e',
+      id: '655ee5a2-586f-49e6-b928-af0c396e311b',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'fdc2101f-e2db-4cd0-be49-c031a306184a',
+          id: 'f431de97-875f-45bb-b368-5a2124680506',
           slug: 'textor',
           value: 'quos',
         ),
@@ -68,10 +68,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Adopto teneo numquam.',
       height: 957.0,
-      id: '6ee6be79-1ed9-45eb-a395-3bd13d182f01',
+      id: '8ab75126-17bf-45c6-b025-20689efa94a0',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '8b9b79fe-905f-496d-9674-d3111c203fe4',
+          id: '37f21345-4a56-42ee-bdba-e3331ac2b3a7',
           slug: 'bos',
           value: 'casso',
         ),
@@ -87,7 +87,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   status: Models::Shared::CommerceReviewStatus::APPROVED,
   title: 'Coepi adamo amicitia auxilium toties.',
   unhelpful_votes: 88.0,
-  updated_at: DateTime.iso8601('2025-08-21T08:42:36.697Z'),
+  updated_at: DateTime.iso8601('2025-08-22T04:26:27.338Z'),
   url: 'https://diligent-bandwidth.biz',
   verified_purchase: true,
 ), connection_id: '<id>')
@@ -119,7 +119,7 @@ end
 
 ## get_commerce_review
 
-Retrieve a review
+Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -163,7 +163,7 @@ end
 
 ## get_performance_review
 
-Retrieve a review
+Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -207,7 +207,7 @@ end
 
 ## get_social_review
 
-Retrieve a review
+Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -251,7 +251,7 @@ end
 
 ## list_commerce_reviews
 
-List all reviews
+Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ end
 
 ## list_performance_reviews
 
-List all reviews
+Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -341,7 +341,7 @@ end
 
 ## list_social_reviews
 
-List all reviews
+Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -386,7 +386,7 @@ end
 
 ## patch_commerce_review
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -411,7 +411,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '578fe127-194b-4d01-a25f-c54fc1709240',
+    id: '68f33a18-c78b-4069-a9b5-44e7f13e5a51',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -419,10 +419,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '65be1798-462d-44e5-84c9-515cac1619eb',
+        id: '34369488-7bac-478b-9dcd-1a33de100275',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '9f916c18-3b91-4219-8d26-0639d2363609',
+            id: '54ecfb50-7895-4f9d-87d5-db6f71068c76',
             slug: 'textor',
             value: 'quos',
           ),
@@ -435,10 +435,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: 'c1af0dea-75ef-4e0b-a7aa-d6d3b840ec10',
+        id: '1e8a1d76-307a-42fa-aa87-d954fe49d115',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '9ad8d0f3-c8b8-4fd9-a4a7-53a7062bf74d',
+            id: '0cbc7a59-778a-4ad9-9e52-3788fb32cc25',
             slug: 'bos',
             value: 'casso',
           ),
@@ -454,7 +454,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-08-21T08:42:36.722Z'),
+    updated_at: DateTime.iso8601('2025-08-22T04:26:27.383Z'),
     url: 'https://diligent-bandwidth.biz',
     verified_purchase: true,
   ),
@@ -488,7 +488,7 @@ end
 
 ## patch_social_review
 
-Update a review
+Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
 ### Example Usage
 
@@ -535,7 +535,7 @@ end
 
 ## remove_commerce_review
 
-Remove a review
+Deletes the CommerceReview identified by `id`.
 
 ### Example Usage
 
@@ -577,7 +577,7 @@ end
 
 ## update_commerce_review
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -602,7 +602,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '578fe127-194b-4d01-a25f-c54fc1709240',
+    id: '68f33a18-c78b-4069-a9b5-44e7f13e5a51',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -610,10 +610,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '65be1798-462d-44e5-84c9-515cac1619eb',
+        id: '34369488-7bac-478b-9dcd-1a33de100275',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '9f916c18-3b91-4219-8d26-0639d2363609',
+            id: '54ecfb50-7895-4f9d-87d5-db6f71068c76',
             slug: 'textor',
             value: 'quos',
           ),
@@ -626,10 +626,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: 'c1af0dea-75ef-4e0b-a7aa-d6d3b840ec10',
+        id: '1e8a1d76-307a-42fa-aa87-d954fe49d115',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '9ad8d0f3-c8b8-4fd9-a4a7-53a7062bf74d',
+            id: '0cbc7a59-778a-4ad9-9e52-3788fb32cc25',
             slug: 'bos',
             value: 'casso',
           ),
@@ -645,7 +645,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-08-21T08:42:36.722Z'),
+    updated_at: DateTime.iso8601('2025-08-22T04:26:27.383Z'),
     url: 'https://diligent-bandwidth.biz',
     verified_purchase: true,
   ),
@@ -679,7 +679,7 @@ end
 
 ## update_social_review
 
-Update a review
+Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
 ### Example Usage
 

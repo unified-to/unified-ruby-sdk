@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(repo_branch: Models::Shared::RepoBranch, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoBranchQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoBranchResponse) }
     def create_repo_branch(repo_branch:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_branch - Create a branch
+      # Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
       request = Models::Operations::CreateRepoBranchRequest.new(
         repo_branch: repo_branch,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoBranchQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoBranchResponse) }
     def get_repo_branch(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_branch - Retrieve a branch
+      # Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetRepoBranchRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListRepoBranchesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoBranchesResponse) }
     def list_repo_branches(request:, timeout_ms: nil)
       # list_repo_branches - List all branches
+      # Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchRepoBranchRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoBranchResponse) }
     def patch_repo_branch(request:, timeout_ms: nil)
       # patch_repo_branch - Update a branch
+      # Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoBranchResponse) }
     def remove_repo_branch(connection_id:, id:, timeout_ms: nil)
       # remove_repo_branch - Remove a branch
+      # Deletes the RepoBranch identified by `id`.
       request = Models::Operations::RemoveRepoBranchRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateRepoBranchRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoBranchResponse) }
     def update_repo_branch(request:, timeout_ms: nil)
       # update_repo_branch - Update a branch
+      # Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

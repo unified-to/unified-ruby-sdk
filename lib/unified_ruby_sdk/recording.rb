@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(uc_recording: Models::Shared::UcRecording, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcRecordingResponse) }
     def create_uc_recording(uc_recording:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_uc_recording - Create a recording
+      # Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
       request = Models::Operations::CreateUcRecordingRequest.new(
         uc_recording: uc_recording,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarRecordingResponse) }
     def get_calendar_recording(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_recording - Retrieve a recording
+      # Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCalendarRecordingRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcRecordingQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcRecordingResponse) }
     def get_uc_recording(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_uc_recording - Retrieve a recording
+      # Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetUcRecordingRequest.new(
         connection_id: connection_id,
         id: id,
@@ -402,6 +405,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCalendarRecordingsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarRecordingsResponse) }
     def list_calendar_recordings(request:, timeout_ms: nil)
       # list_calendar_recordings - List all recordings
+      # Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -512,6 +516,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListUcRecordingsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcRecordingsResponse) }
     def list_uc_recordings(request:, timeout_ms: nil)
       # list_uc_recordings - List all recordings
+      # Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -622,6 +627,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchUcRecordingRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcRecordingResponse) }
     def patch_uc_recording(request:, timeout_ms: nil)
       # patch_uc_recording - Update a recording
+      # Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -744,6 +750,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcRecordingResponse) }
     def remove_uc_recording(connection_id:, id:, timeout_ms: nil)
       # remove_uc_recording - Remove a recording
+      # Deletes the UcRecording identified by `id`.
       request = Models::Operations::RemoveUcRecordingRequest.new(
         connection_id: connection_id,
         id: id
@@ -858,6 +865,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateUcRecordingRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcRecordingResponse) }
     def update_uc_recording(request:, timeout_ms: nil)
       # update_uc_recording - Update a recording
+      # Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

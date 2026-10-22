@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(datastore_database: Models::Shared::DatastoreDatabase, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateDatastoreDatabaseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateDatastoreDatabaseResponse) }
     def create_datastore_database(datastore_database:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_datastore_database - Create a database
+      # Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they are mapped to the provider's API. Returns the created DatastoreDatabase.
       request = Models::Operations::CreateDatastoreDatabaseRequest.new(
         datastore_database: datastore_database,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(datastore_query: Models::Shared::DatastoreQuery, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateDatastoreQueryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateDatastoreQueryResponse) }
     def create_datastore_query(datastore_query:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_datastore_query - Create a query
+      # Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are mapped to the provider's API. Returns the created DatastoreQuery.
       request = Models::Operations::CreateDatastoreQueryRequest.new(
         datastore_query: datastore_query,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(datastore_record: Models::Shared::DatastoreRecord, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateDatastoreRecordQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateDatastoreRecordResponse) }
     def create_datastore_record(datastore_record:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_datastore_record - Create a record
+      # Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are mapped to the provider's API. Returns the created DatastoreRecord.
       request = Models::Operations::CreateDatastoreRecordRequest.new(
         datastore_record: datastore_record,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(datastore_table: Models::Shared::DatastoreTable, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateDatastoreTableQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateDatastoreTableResponse) }
     def create_datastore_table(datastore_table:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_datastore_table - Create a table
+      # Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are mapped to the provider's API. Returns the created DatastoreTable.
       request = Models::Operations::CreateDatastoreTableRequest.new(
         datastore_table: datastore_table,
         connection_id: connection_id,
@@ -554,6 +558,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetDatastoreDatabaseQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetDatastoreDatabaseResponse) }
     def get_datastore_database(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_datastore_database - Retrieve a database
+      # Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetDatastoreDatabaseRequest.new(
         connection_id: connection_id,
         id: id,
@@ -670,6 +675,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetDatastoreRecordQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetDatastoreRecordResponse) }
     def get_datastore_record(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_datastore_record - Retrieve a record
+      # Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetDatastoreRecordRequest.new(
         connection_id: connection_id,
         id: id,
@@ -786,6 +792,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetDatastoreTableQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetDatastoreTableResponse) }
     def get_datastore_table(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_datastore_table - Retrieve a table
+      # Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetDatastoreTableRequest.new(
         connection_id: connection_id,
         id: id,
@@ -902,6 +909,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListDatastoreDatabasesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListDatastoreDatabasesResponse) }
     def list_datastore_databases(request:, timeout_ms: nil)
       # list_datastore_databases - List all databases
+      # Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1012,6 +1020,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListDatastoreRecordsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListDatastoreRecordsResponse) }
     def list_datastore_records(request:, timeout_ms: nil)
       # list_datastore_records - List all records
+      # Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1122,6 +1131,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListDatastoreTablesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListDatastoreTablesResponse) }
     def list_datastore_tables(request:, timeout_ms: nil)
       # list_datastore_tables - List all tables
+      # Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1232,6 +1242,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchDatastoreDatabaseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchDatastoreDatabaseResponse) }
     def patch_datastore_database(request:, timeout_ms: nil)
       # patch_datastore_database - Update a database
+      # Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1354,6 +1365,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchDatastoreRecordRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchDatastoreRecordResponse) }
     def patch_datastore_record(request:, timeout_ms: nil)
       # patch_datastore_record - Update a record
+      # Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1476,6 +1488,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchDatastoreTableRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchDatastoreTableResponse) }
     def patch_datastore_table(request:, timeout_ms: nil)
       # patch_datastore_table - Update a table
+      # Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1598,6 +1611,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveDatastoreDatabaseResponse) }
     def remove_datastore_database(connection_id:, id:, timeout_ms: nil)
       # remove_datastore_database - Remove a database
+      # Deletes the DatastoreDatabase identified by `id`.
       request = Models::Operations::RemoveDatastoreDatabaseRequest.new(
         connection_id: connection_id,
         id: id
@@ -1712,6 +1726,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveDatastoreRecordResponse) }
     def remove_datastore_record(connection_id:, id:, timeout_ms: nil)
       # remove_datastore_record - Remove a record
+      # Deletes the DatastoreRecord identified by `id`.
       request = Models::Operations::RemoveDatastoreRecordRequest.new(
         connection_id: connection_id,
         id: id
@@ -1826,6 +1841,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveDatastoreTableResponse) }
     def remove_datastore_table(connection_id:, id:, timeout_ms: nil)
       # remove_datastore_table - Remove a table
+      # Deletes the DatastoreTable identified by `id`.
       request = Models::Operations::RemoveDatastoreTableRequest.new(
         connection_id: connection_id,
         id: id
@@ -1940,6 +1956,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateDatastoreDatabaseRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateDatastoreDatabaseResponse) }
     def update_datastore_database(request:, timeout_ms: nil)
       # update_datastore_database - Update a database
+      # Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2062,6 +2079,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateDatastoreRecordRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateDatastoreRecordResponse) }
     def update_datastore_record(request:, timeout_ms: nil)
       # update_datastore_record - Update a record
+      # Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2184,6 +2202,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateDatastoreTableRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateDatastoreTableResponse) }
     def update_datastore_table(request:, timeout_ms: nil)
       # update_datastore_table - Update a table
+      # Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

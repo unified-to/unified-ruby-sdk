@@ -14,7 +14,7 @@
 
 ## create_accounting_vendorcredit
 
-Create a vendorcredit
+Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
 
 ### Example Usage
 
@@ -34,14 +34,14 @@ res = s.vendorcredit.create_accounting_vendorcredit(accounting_vendorcredit: Mod
   balance_amount: 0.0,
   created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
   currency: 'USD',
-  id: 'fe3ac716-b436-4a30-adb2-714237b7c28f',
+  id: 'e0ad29dd-9fb5-4e4f-8296-935abcee8fd1',
   lineitems: [],
   metadata: [],
   notes: 'Volup conatus cruciamentum decor avaritia.',
   posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
   status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-10-03T01:42:12.409Z'),
+  updated_at: DateTime.iso8601('2023-10-03T04:51:13.945Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_vendorcredit.nil?
@@ -71,7 +71,7 @@ end
 
 ## get_accounting_vendorcredit
 
-Retrieve a vendorcredit
+Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -115,7 +115,7 @@ end
 
 ## list_accounting_vendorcredits
 
-List all vendorcredits
+Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -160,7 +160,7 @@ end
 
 ## patch_accounting_vendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -181,14 +181,14 @@ req = Models::Operations::PatchAccountingVendorcreditRequest.new(
     balance_amount: 0.0,
     created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     currency: 'USD',
-    id: '421efb11-574f-4a58-b1b3-c13d3675e8d3',
+    id: '4e28d8ea-334a-44d8-a5ac-bdb5cce5570b',
     lineitems: [],
     metadata: [],
     notes: 'Volup conatus cruciamentum decor avaritia.',
     posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-03T01:42:12.414Z'),
+    updated_at: DateTime.iso8601('2023-10-03T04:51:13.949Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -220,7 +220,7 @@ end
 
 ## remove_accounting_vendorcredit
 
-Remove a vendorcredit
+Deletes the AccountingVendorcredit identified by `id`.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ end
 
 ## update_accounting_vendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -283,14 +283,14 @@ req = Models::Operations::UpdateAccountingVendorcreditRequest.new(
     balance_amount: 0.0,
     created_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     currency: 'USD',
-    id: '421efb11-574f-4a58-b1b3-c13d3675e8d3',
+    id: '4e28d8ea-334a-44d8-a5ac-bdb5cce5570b',
     lineitems: [],
     metadata: [],
     notes: 'Volup conatus cruciamentum decor avaritia.',
     posted_at: DateTime.iso8601('2023-04-15T21:14:08.197Z'),
     status: Models::Shared::AccountingVendorcreditStatus::AUTHORIZED,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-10-03T01:42:12.414Z'),
+    updated_at: DateTime.iso8601('2023-10-03T04:51:13.949Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

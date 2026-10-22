@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ads_ad: Models::Shared::AdsAd, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsAdQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsAdResponse) }
     def create_ads_ad(ads_ad:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_ad - Create an ad
+      # Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
       request = Models::Operations::CreateAdsAdRequest.new(
         ads_ad: ads_ad,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(ads_asset: Models::Shared::AdsAsset, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsAssetQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsAssetResponse) }
     def create_ads_asset(ads_asset:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_asset - Create an asset
+      # Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
       request = Models::Operations::CreateAdsAssetRequest.new(
         ads_asset: ads_asset,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(ads_campaign: Models::Shared::AdsCampaign, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsCampaignResponse) }
     def create_ads_campaign(ads_campaign:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_campaign - Create a campaign
+      # Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
       request = Models::Operations::CreateAdsCampaignRequest.new(
         ads_campaign: ads_campaign,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(ads_creative: Models::Shared::AdsCreative, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsCreativeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsCreativeResponse) }
     def create_ads_creative(ads_creative:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_creative - Create a creative
+      # Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
       request = Models::Operations::CreateAdsCreativeRequest.new(
         ads_creative: ads_creative,
         connection_id: connection_id,
@@ -554,6 +558,7 @@ module UnifiedRubySDK
     sig { params(ads_group: Models::Shared::AdsGroup, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsGroupResponse) }
     def create_ads_group(ads_group:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_group - Create a group
+      # Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
       request = Models::Operations::CreateAdsGroupRequest.new(
         ads_group: ads_group,
         connection_id: connection_id,
@@ -682,6 +687,7 @@ module UnifiedRubySDK
     sig { params(ads_insertionorder: Models::Shared::AdsInsertionorder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsInsertionorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsInsertionorderResponse) }
     def create_ads_insertionorder(ads_insertionorder:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_insertionorder - Create an insertionorder
+      # Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
       request = Models::Operations::CreateAdsInsertionorderRequest.new(
         ads_insertionorder: ads_insertionorder,
         connection_id: connection_id,
@@ -810,6 +816,7 @@ module UnifiedRubySDK
     sig { params(ads_organization: Models::Shared::AdsOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsOrganizationResponse) }
     def create_ads_organization(ads_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_organization - Create an organization
+      # Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
       request = Models::Operations::CreateAdsOrganizationRequest.new(
         ads_organization: ads_organization,
         connection_id: connection_id,
@@ -938,6 +945,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsAdQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsAdResponse) }
     def get_ads_ad(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_ad - Retrieve an ad
+      # Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsAdRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1054,6 +1062,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsAssetQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsAssetResponse) }
     def get_ads_asset(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_asset - Retrieve an asset
+      # Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsAssetRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1170,6 +1179,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsCampaignResponse) }
     def get_ads_campaign(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_campaign - Retrieve a campaign
+      # Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsCampaignRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1286,6 +1296,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsCreativeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsCreativeResponse) }
     def get_ads_creative(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_creative - Retrieve a creative
+      # Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsCreativeRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1402,6 +1413,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsGroupQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsGroupResponse) }
     def get_ads_group(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_group - Retrieve a group
+      # Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsGroupRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1518,6 +1530,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsInsertionorderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsInsertionorderResponse) }
     def get_ads_insertionorder(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_insertionorder - Retrieve an insertionorder
+      # Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsInsertionorderRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1634,6 +1647,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsOrganizationResponse) }
     def get_ads_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_organization - Retrieve an organization
+      # Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsOrganizationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1750,6 +1764,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsPromotedQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsPromotedResponse) }
     def get_ads_promoted(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_promoted - Retrieve a promoted
+      # Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsPromotedRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1866,6 +1881,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsTargetQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsTargetResponse) }
     def get_ads_target(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_target - Retrieve a target
+      # Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsTargetRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1982,6 +1998,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsAdsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsAdsResponse) }
     def list_ads_ads(request:, timeout_ms: nil)
       # list_ads_ads - List all ads
+      # Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2092,6 +2109,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsAssetsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsAssetsResponse) }
     def list_ads_assets(request:, timeout_ms: nil)
       # list_ads_assets - List all assets
+      # Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2202,6 +2220,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsCampaignsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsCampaignsResponse) }
     def list_ads_campaigns(request:, timeout_ms: nil)
       # list_ads_campaigns - List all campaigns
+      # Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2312,6 +2331,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsCreativesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsCreativesResponse) }
     def list_ads_creatives(request:, timeout_ms: nil)
       # list_ads_creatives - List all creatives
+      # Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2422,6 +2442,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsGroupsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsGroupsResponse) }
     def list_ads_groups(request:, timeout_ms: nil)
       # list_ads_groups - List all groups
+      # Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2532,6 +2553,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsInsertionordersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsInsertionordersResponse) }
     def list_ads_insertionorders(request:, timeout_ms: nil)
       # list_ads_insertionorders - List all insertionorders
+      # Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2642,6 +2664,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsOrganizationsResponse) }
     def list_ads_organizations(request:, timeout_ms: nil)
       # list_ads_organizations - List all organizations
+      # Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2752,6 +2775,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsPromotedsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsPromotedsResponse) }
     def list_ads_promoteds(request:, timeout_ms: nil)
       # list_ads_promoteds - List all promoteds
+      # Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2862,6 +2886,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsReportsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsReportsResponse) }
     def list_ads_reports(request:, timeout_ms: nil)
       # list_ads_reports - List all reports
+      # Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2972,6 +2997,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsTargetsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsTargetsResponse) }
     def list_ads_targets(request:, timeout_ms: nil)
       # list_ads_targets - List all targets
+      # Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3082,6 +3108,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAdsAdRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsAdResponse) }
     def patch_ads_ad(request:, timeout_ms: nil)
       # patch_ads_ad - Update an ad
+      # Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3204,6 +3231,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAdsCampaignRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsCampaignResponse) }
     def patch_ads_campaign(request:, timeout_ms: nil)
       # patch_ads_campaign - Update a campaign
+      # Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3326,6 +3354,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAdsCreativeRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsCreativeResponse) }
     def patch_ads_creative(request:, timeout_ms: nil)
       # patch_ads_creative - Update a creative
+      # Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3448,6 +3477,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAdsGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsGroupResponse) }
     def patch_ads_group(request:, timeout_ms: nil)
       # patch_ads_group - Update a group
+      # Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3570,6 +3600,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAdsInsertionorderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsInsertionorderResponse) }
     def patch_ads_insertionorder(request:, timeout_ms: nil)
       # patch_ads_insertionorder - Update an insertionorder
+      # Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3692,6 +3723,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAdsOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsOrganizationResponse) }
     def patch_ads_organization(request:, timeout_ms: nil)
       # patch_ads_organization - Update an organization
+      # Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3814,6 +3846,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsAdResponse) }
     def remove_ads_ad(connection_id:, id:, timeout_ms: nil)
       # remove_ads_ad - Remove an ad
+      # Deletes the AdsAd identified by `id`.
       request = Models::Operations::RemoveAdsAdRequest.new(
         connection_id: connection_id,
         id: id
@@ -3928,6 +3961,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsCampaignResponse) }
     def remove_ads_campaign(connection_id:, id:, timeout_ms: nil)
       # remove_ads_campaign - Remove a campaign
+      # Deletes the AdsCampaign identified by `id`.
       request = Models::Operations::RemoveAdsCampaignRequest.new(
         connection_id: connection_id,
         id: id
@@ -4042,6 +4076,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsCreativeResponse) }
     def remove_ads_creative(connection_id:, id:, timeout_ms: nil)
       # remove_ads_creative - Remove a creative
+      # Deletes the AdsCreative identified by `id`.
       request = Models::Operations::RemoveAdsCreativeRequest.new(
         connection_id: connection_id,
         id: id
@@ -4156,6 +4191,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsGroupResponse) }
     def remove_ads_group(connection_id:, id:, timeout_ms: nil)
       # remove_ads_group - Remove a group
+      # Deletes the AdsGroup identified by `id`.
       request = Models::Operations::RemoveAdsGroupRequest.new(
         connection_id: connection_id,
         id: id
@@ -4270,6 +4306,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsInsertionorderResponse) }
     def remove_ads_insertionorder(connection_id:, id:, timeout_ms: nil)
       # remove_ads_insertionorder - Remove an insertionorder
+      # Deletes the AdsInsertionorder identified by `id`.
       request = Models::Operations::RemoveAdsInsertionorderRequest.new(
         connection_id: connection_id,
         id: id
@@ -4384,6 +4421,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsOrganizationResponse) }
     def remove_ads_organization(connection_id:, id:, timeout_ms: nil)
       # remove_ads_organization - Remove an organization
+      # Deletes the AdsOrganization identified by `id`.
       request = Models::Operations::RemoveAdsOrganizationRequest.new(
         connection_id: connection_id,
         id: id
@@ -4498,6 +4536,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAdsAdRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsAdResponse) }
     def update_ads_ad(request:, timeout_ms: nil)
       # update_ads_ad - Update an ad
+      # Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -4620,6 +4659,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAdsCampaignRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsCampaignResponse) }
     def update_ads_campaign(request:, timeout_ms: nil)
       # update_ads_campaign - Update a campaign
+      # Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -4742,6 +4782,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAdsCreativeRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsCreativeResponse) }
     def update_ads_creative(request:, timeout_ms: nil)
       # update_ads_creative - Update a creative
+      # Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -4864,6 +4905,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAdsGroupRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsGroupResponse) }
     def update_ads_group(request:, timeout_ms: nil)
       # update_ads_group - Update a group
+      # Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -4986,6 +5028,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAdsInsertionorderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsInsertionorderResponse) }
     def update_ads_insertionorder(request:, timeout_ms: nil)
       # update_ads_insertionorder - Update an insertionorder
+      # Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -5108,6 +5151,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAdsOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsOrganizationResponse) }
     def update_ads_organization(request:, timeout_ms: nil)
       # update_ads_organization - Update an organization
+      # Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

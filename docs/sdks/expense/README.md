@@ -20,7 +20,7 @@
 
 ## create_accounting_expense
 
-Create an expense
+Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 
 ### Example Usage
 
@@ -39,13 +39,13 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://rubbery-couch.biz/',
-      id: '5edd15cd-3ee2-41e4-a439-cf81408cf82f',
+      id: '9aabf60d-0097-4632-aaf4-994d747eae41',
       mime_type: 'application/pdf',
       name: 'receipt-9696.pdf',
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://appropriate-smog.biz/',
-      id: '73fd5b4c-31e3-4336-a108-759567af0a3f',
+      id: 'e86d99a2-10c8-4f17-9bad-f9d328ac4f39',
       mime_type: 'application/pdf',
       name: 'receipt-9696-1.pdf',
     ),
@@ -54,10 +54,10 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
   currency: 'GBP',
   external_number: 'EXP-38303',
-  id: 'e7de8dcf-e617-4a6e-975f-acf17d8382ca',
+  id: 'fc5b3f57-18bd-4021-a137-4246201f6077',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: '6d3e2ee5-06b5-4989-a6e9-665b2b9819a2',
+      id: 'd2e7ed56-b5e3-45c7-9fa6-e0e7a5a555a3',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 364.74,
@@ -65,7 +65,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0,
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'cb82d68a-1992-402a-9cf6-0ae358ead56c',
+      id: 'a74ba4b7-02a3-4d2c-aec0-9ae6bb4ec6cf',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 258.35,
@@ -73,7 +73,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0,
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '7b15d942-74d8-467f-8356-46ace7e92225',
+      id: '04917fce-3562-48b4-b20b-868a6fefebf3',
       item_name: 'Conference ticket',
       notes: 'Casus umquam conicio cinis demitto sint.',
       tax_amount: 0.0,
@@ -82,7 +82,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0,
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '5160b1b1-9a99-4700-af18-a01383019a6f',
+      id: '3219eb0f-659b-491e-bc64-9d497ef1055d',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 157.04,
@@ -90,7 +90,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
       unit_quantity: 1.0,
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '799420c6-5830-4d0d-ac14-6c143e72a5e7',
+      id: '217d79c7-ec0c-4226-9351-944aa1f6ef6f',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 164.02,
@@ -106,7 +106,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   tax_amount: 0.0,
   total_amount: 972.29,
   type: Models::Shared::AccountingExpenseType::COMPANY,
-  updated_at: DateTime.iso8601('2020-09-02T07:17:12.137Z'),
+  updated_at: DateTime.iso8601('2020-09-02T08:08:15.486Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_expense.nil?
@@ -136,7 +136,7 @@ end
 
 ## create_legal_expense
 
-Create an expense
+Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 
 ### Example Usage
 
@@ -156,7 +156,7 @@ res = s.expense.create_legal_expense(legal_expense: Models::Shared::LegalExpense
   created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   currency: 'MVR',
   description: 'Temporibus agnitio sui.',
-  id: 'c69864e8-ba64-4b75-9084-fe989722d7cf',
+  id: '21864e35-8eca-4e7f-81cc-e81c04f58bf5',
   incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   is_billed: false,
   metadata: [],
@@ -164,7 +164,7 @@ res = s.expense.create_legal_expense(legal_expense: Models::Shared::LegalExpense
   quantity: 3.0,
   total_amount: 300.0,
   type: Models::Shared::LegalExpenseType::OTHER,
-  updated_at: DateTime.iso8601('2024-03-30T23:21:13.014Z'),
+  updated_at: DateTime.iso8601('2024-03-31T12:54:25.595Z'),
 ), connection_id: '<id>')
 
 unless res.legal_expense.nil?
@@ -194,7 +194,7 @@ end
 
 ## get_accounting_expense
 
-Retrieve an expense
+Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -238,7 +238,7 @@ end
 
 ## get_legal_expense
 
-Retrieve an expense
+Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -282,7 +282,7 @@ end
 
 ## list_accounting_expenses
 
-List all expenses
+Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -327,7 +327,7 @@ end
 
 ## list_legal_expenses
 
-List all expenses
+Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -372,7 +372,7 @@ end
 
 ## patch_accounting_expense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -392,13 +392,13 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://rubbery-couch.biz/',
-        id: '6c24dd53-2b45-4334-bbcf-75c636f28f60',
+        id: 'd58b40c5-3bab-4eb8-8953-45045eb60e9f',
         mime_type: 'application/pdf',
         name: 'receipt-9696.pdf',
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://appropriate-smog.biz/',
-        id: 'e1a08bed-3ed0-4fdc-b9ee-fc332c88cd5f',
+        id: '77647132-cdbd-485d-a2c5-c2ea5ce89131',
         mime_type: 'application/pdf',
         name: 'receipt-9696-1.pdf',
       ),
@@ -407,10 +407,10 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '3c876856-b200-4d87-b983-23fea5ab9ebe',
+    id: '542e253e-9be2-4769-9e7b-513144533652',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '81fbe3f0-5c73-41bd-9bbc-612377427866',
+        id: '077d67ff-ee2e-4c5f-ac4f-bb6481113a38',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
@@ -418,7 +418,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0,
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '0d93bd35-f966-4737-a0c1-2a6f5b7f9429',
+        id: '0906ed39-7dae-456f-9c82-077543591acd',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
@@ -426,7 +426,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0,
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '6f9434e8-5db2-474b-8f0e-3ae4fb4de269',
+        id: 'f4ae5862-e96c-4dbc-a116-2f9d71403708',
         item_name: 'Conference ticket',
         notes: 'Casus umquam conicio cinis demitto sint.',
         tax_amount: 0.0,
@@ -435,7 +435,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0,
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'be81f7a9-a03d-4972-be6a-ff45503fa595',
+        id: '9ad8a271-29b8-4c2f-a966-e56e1d5fa671',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
@@ -443,7 +443,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
         unit_quantity: 1.0,
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'be6beea5-ab5d-4c48-93ee-b9e4551935ff',
+        id: 'e783cbf5-5d97-4777-8798-596b0362a0c4',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
@@ -459,7 +459,7 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-02T07:17:12.139Z'),
+    updated_at: DateTime.iso8601('2020-09-02T08:08:15.489Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -491,7 +491,7 @@ end
 
 ## patch_legal_expense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -512,7 +512,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '17ac53c3-22e7-4a63-8a7f-7d7ad85275e4',
+    id: '5b3cb8a3-5737-4b18-b126-5266526343a7',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -520,7 +520,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-03-30T23:21:13.027Z'),
+    updated_at: DateTime.iso8601('2024-03-31T12:54:25.603Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -552,7 +552,7 @@ end
 
 ## remove_accounting_expense
 
-Remove an expense
+Deletes the AccountingExpense identified by `id`.
 
 ### Example Usage
 
@@ -594,7 +594,7 @@ end
 
 ## remove_legal_expense
 
-Remove an expense
+Deletes the LegalExpense identified by `id`.
 
 ### Example Usage
 
@@ -636,7 +636,7 @@ end
 
 ## update_accounting_expense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -656,13 +656,13 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://rubbery-couch.biz/',
-        id: '6c24dd53-2b45-4334-bbcf-75c636f28f60',
+        id: 'd58b40c5-3bab-4eb8-8953-45045eb60e9f',
         mime_type: 'application/pdf',
         name: 'receipt-9696.pdf',
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://appropriate-smog.biz/',
-        id: 'e1a08bed-3ed0-4fdc-b9ee-fc332c88cd5f',
+        id: '77647132-cdbd-485d-a2c5-c2ea5ce89131',
         mime_type: 'application/pdf',
         name: 'receipt-9696-1.pdf',
       ),
@@ -671,10 +671,10 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '3c876856-b200-4d87-b983-23fea5ab9ebe',
+    id: '542e253e-9be2-4769-9e7b-513144533652',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '81fbe3f0-5c73-41bd-9bbc-612377427866',
+        id: '077d67ff-ee2e-4c5f-ac4f-bb6481113a38',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
@@ -682,7 +682,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0,
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '0d93bd35-f966-4737-a0c1-2a6f5b7f9429',
+        id: '0906ed39-7dae-456f-9c82-077543591acd',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
@@ -690,7 +690,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0,
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '6f9434e8-5db2-474b-8f0e-3ae4fb4de269',
+        id: 'f4ae5862-e96c-4dbc-a116-2f9d71403708',
         item_name: 'Conference ticket',
         notes: 'Casus umquam conicio cinis demitto sint.',
         tax_amount: 0.0,
@@ -699,7 +699,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0,
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'be81f7a9-a03d-4972-be6a-ff45503fa595',
+        id: '9ad8a271-29b8-4c2f-a966-e56e1d5fa671',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
@@ -707,7 +707,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
         unit_quantity: 1.0,
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'be6beea5-ab5d-4c48-93ee-b9e4551935ff',
+        id: 'e783cbf5-5d97-4777-8798-596b0362a0c4',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
@@ -723,7 +723,7 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-02T07:17:12.139Z'),
+    updated_at: DateTime.iso8601('2020-09-02T08:08:15.489Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -755,7 +755,7 @@ end
 
 ## update_legal_expense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -776,7 +776,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '17ac53c3-22e7-4a63-8a7f-7d7ad85275e4',
+    id: '5b3cb8a3-5737-4b18-b126-5266526343a7',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -784,7 +784,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-03-30T23:21:13.027Z'),
+    updated_at: DateTime.iso8601('2024-03-31T12:54:25.603Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

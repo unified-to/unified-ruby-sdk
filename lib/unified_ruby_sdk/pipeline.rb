@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(crm_pipeline: Models::Shared::CrmPipeline, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmPipelineQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmPipelineResponse) }
     def create_crm_pipeline(crm_pipeline:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_pipeline - Create a pipeline
+      # Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
       request = Models::Operations::CreateCrmPipelineRequest.new(
         crm_pipeline: crm_pipeline,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmPipelineQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmPipelineResponse) }
     def get_crm_pipeline(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_pipeline - Retrieve a pipeline
+      # Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCrmPipelineRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCrmPipelinesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmPipelinesResponse) }
     def list_crm_pipelines(request:, timeout_ms: nil)
       # list_crm_pipelines - List all pipelines
+      # Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCrmPipelineRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmPipelineResponse) }
     def patch_crm_pipeline(request:, timeout_ms: nil)
       # patch_crm_pipeline - Update a pipeline
+      # Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmPipelineResponse) }
     def remove_crm_pipeline(connection_id:, id:, timeout_ms: nil)
       # remove_crm_pipeline - Remove a pipeline
+      # Deletes the CrmPipeline identified by `id`.
       request = Models::Operations::RemoveCrmPipelineRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCrmPipelineRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmPipelineResponse) }
     def update_crm_pipeline(request:, timeout_ms: nil)
       # update_crm_pipeline - Update a pipeline
+      # Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

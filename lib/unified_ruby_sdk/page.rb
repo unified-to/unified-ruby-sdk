@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(kms_page: Models::Shared::KmsPage, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateKmsPageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateKmsPageResponse) }
     def create_kms_page(kms_page:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_kms_page - Create a page
+      # Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
       request = Models::Operations::CreateKmsPageRequest.new(
         kms_page: kms_page,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetKmsPageQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetKmsPageResponse) }
     def get_kms_page(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_kms_page - Retrieve a page
+      # Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetKmsPageRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListKmsPagesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListKmsPagesResponse) }
     def list_kms_pages(request:, timeout_ms: nil)
       # list_kms_pages - List all pages
+      # Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchKmsPageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchKmsPageResponse) }
     def patch_kms_page(request:, timeout_ms: nil)
       # patch_kms_page - Update a page
+      # Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveKmsPageResponse) }
     def remove_kms_page(connection_id:, id:, timeout_ms: nil)
       # remove_kms_page - Remove a page
+      # Deletes the KmsPage identified by `id`.
       request = Models::Operations::RemoveKmsPageRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateKmsPageRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateKmsPageResponse) }
     def update_kms_page(request:, timeout_ms: nil)
       # update_kms_page - Update a page
+      # Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

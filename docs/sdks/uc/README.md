@@ -32,7 +32,7 @@
 
 ## create_uc_comment
 
-Create a comment
+Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
 
 ### Example Usage
 
@@ -50,9 +50,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.uc.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
   content: 'Vociferor vitiosus.',
   created_at: '2023-04-02T23:42:31.571Z',
-  id: '121f972a-c2c1-475c-ba1e-5c6f63ee28fa',
+  id: 'b9065532-34c2-4db6-87db-7596b91ab742',
   metadata: [],
-  updated_at: '2024-02-09T18:30:03.825Z',
+  updated_at: '2024-02-10T00:14:01.047Z',
 ), connection_id: '<id>')
 
 unless res.uc_comment.nil?
@@ -82,7 +82,7 @@ end
 
 ## create_uc_contact
 
-Create a contact
+Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
 
 ### Example Usage
 
@@ -107,7 +107,7 @@ res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   first_name: 'Luther',
-  id: '16034c6d-9641-43cf-88ab-f1dafcdc65e2',
+  id: '07d54d1d-38a4-4c25-aa39-d52da829527a',
   last_name: 'Rogahn',
   metadata: [],
   name: 'Luther Rogahn',
@@ -126,7 +126,7 @@ res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   title: 'Chief Optimization Executive',
-  updated_at: DateTime.iso8601('2023-12-08T09:06:39.793Z'),
+  updated_at: DateTime.iso8601('2023-12-08T23:06:51.843Z'),
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -156,7 +156,7 @@ end
 
 ## create_uc_recording
 
-Create a recording
+Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
 
 ### Example Usage
 
@@ -173,36 +173,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.uc.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(
   contacts: [],
-  conversation_identifier: 'f0a1da69-f7cb-4208-a2ce-423718fb0f03',
+  conversation_identifier: 'ce79efe1-cc1c-4c2c-acec-02afbbdf5310',
   created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-  end_at: DateTime.iso8601('2024-05-04T23:55:47.113Z'),
-  expires_at: DateTime.iso8601('2026-04-26T18:28:50.983Z'),
-  id: 'f0a1da69-f7cb-4208-a2ce-423718fb0f03',
+  end_at: DateTime.iso8601('2024-05-05T09:23:54.557Z'),
+  expires_at: DateTime.iso8601('2026-04-27T15:25:56.416Z'),
+  id: 'ce79efe1-cc1c-4c2c-acec-02afbbdf5310',
   media: [
     Models::Shared::UcRecordingMedia.new(
-      end_at: DateTime.iso8601('2024-04-01T19:35:52.943Z'),
+      end_at: DateTime.iso8601('2024-04-02T04:32:20.046Z'),
       language: 'en',
       recording_download_url: 'https://parched-wasabi.com/',
-      start_at: DateTime.iso8601('2026-05-15T10:32:45.247Z'),
+      start_at: DateTime.iso8601('2026-05-16T07:47:39.929Z'),
       transcript_download_url: 'https://colossal-cuckoo.name',
       transcripts: [
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2026-02-24T12:18:11.290Z'),
-          start_at: DateTime.iso8601('2024-06-02T06:04:20.365Z'),
+          end_at: DateTime.iso8601('2026-02-25T08:16:48.339Z'),
+          start_at: DateTime.iso8601('2024-06-02T15:59:26.107Z'),
           text: 'Turpis maiores ducimus tero speculum.',
         ),
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2024-10-12T13:12:34.085Z'),
-          start_at: DateTime.iso8601('2026-08-02T21:07:30.377Z'),
+          end_at: DateTime.iso8601('2024-10-13T01:13:56.875Z'),
+          start_at: DateTime.iso8601('2026-08-03T19:38:14.859Z'),
           text: 'Magnam consuasor uxor tergiversatio subseco.',
         ),
       ],
     ),
   ],
   metadata: [],
-  start_at: DateTime.iso8601('2023-04-27T18:04:18.259Z'),
+  start_at: DateTime.iso8601('2023-04-27T21:36:08.953Z'),
   type: Models::Shared::UcRecordingType::OUTBOUND,
-  updated_at: DateTime.iso8601('2025-03-16T11:08:19.904Z'),
+  updated_at: DateTime.iso8601('2025-03-17T01:37:35.043Z'),
   user_phone: '1-915-327-0429 x509',
   web_url: 'https://spherical-comparison.org',
 ), connection_id: '<id>')
@@ -234,7 +234,7 @@ end
 
 ## get_uc_call
 
-Retrieve a call
+Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -278,7 +278,7 @@ end
 
 ## get_uc_comment
 
-Retrieve a comment
+Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -322,7 +322,7 @@ end
 
 ## get_uc_contact
 
-Retrieve a contact
+Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -366,7 +366,7 @@ end
 
 ## get_uc_recording
 
-Retrieve a recording
+Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -410,7 +410,7 @@ end
 
 ## get_uc_scorecard
 
-Retrieve a scorecard
+Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -454,7 +454,7 @@ end
 
 ## get_uc_scorecardtemplate
 
-Retrieve a scorecardtemplate
+Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -498,7 +498,7 @@ end
 
 ## list_uc_calls
 
-List all calls
+Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -543,7 +543,7 @@ end
 
 ## list_uc_comments
 
-List all comments
+Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -588,7 +588,7 @@ end
 
 ## list_uc_contacts
 
-List all contacts
+Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -633,7 +633,7 @@ end
 
 ## list_uc_recordings
 
-List all recordings
+Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -678,7 +678,7 @@ end
 
 ## list_uc_scorecards
 
-List all scorecards
+Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -723,7 +723,7 @@ end
 
 ## list_uc_scorecardtemplates
 
-List all scorecardtemplates
+Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -768,7 +768,7 @@ end
 
 ## patch_uc_comment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -787,9 +787,9 @@ req = Models::Operations::PatchUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: '30263a06-2d22-4649-8857-dab9e9ac5b3a',
+    id: 'f9542e44-6a26-42ef-b104-7bb1a17b8698',
     metadata: [],
-    updated_at: '2024-02-09T18:30:03.828Z',
+    updated_at: '2024-02-10T00:14:01.049Z',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -821,7 +821,7 @@ end
 
 ## patch_uc_contact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -847,7 +847,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: '3d110359-50a8-4975-82a9-90517f97f779',
+    id: '62d40703-2d73-48d4-98f9-bd4bfc5324d5',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
@@ -866,7 +866,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-08T09:06:39.805Z'),
+    updated_at: DateTime.iso8601('2023-12-08T23:06:51.851Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -898,7 +898,7 @@ end
 
 ## patch_uc_recording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -916,36 +916,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: '5693602d-54d0-4d1d-ab90-ad48b8752a62',
+    conversation_identifier: '12f12c15-a763-464e-b713-8b7b1c4b7c11',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-04T23:55:47.126Z'),
-    expires_at: DateTime.iso8601('2026-04-26T18:28:51.012Z'),
-    id: '5693602d-54d0-4d1d-ab90-ad48b8752a62',
+    end_at: DateTime.iso8601('2024-05-05T09:23:54.571Z'),
+    expires_at: DateTime.iso8601('2026-04-27T15:25:56.447Z'),
+    id: '12f12c15-a763-464e-b713-8b7b1c4b7c11',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-01T19:35:52.955Z'),
+        end_at: DateTime.iso8601('2024-04-02T04:32:20.059Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-05-15T10:32:45.277Z'),
+        start_at: DateTime.iso8601('2026-05-16T07:47:39.960Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-02-24T12:18:11.318Z'),
-            start_at: DateTime.iso8601('2024-06-02T06:04:20.379Z'),
+            end_at: DateTime.iso8601('2026-02-25T08:16:48.368Z'),
+            start_at: DateTime.iso8601('2024-06-02T15:59:26.122Z'),
             text: 'Turpis maiores ducimus tero speculum.',
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-12T13:12:34.102Z'),
-            start_at: DateTime.iso8601('2026-08-02T21:07:30.408Z'),
+            end_at: DateTime.iso8601('2024-10-13T01:13:56.892Z'),
+            start_at: DateTime.iso8601('2026-08-03T19:38:14.893Z'),
             text: 'Magnam consuasor uxor tergiversatio subseco.',
           ),
         ],
       ),
     ],
     metadata: [],
-    start_at: DateTime.iso8601('2023-04-27T18:04:18.264Z'),
+    start_at: DateTime.iso8601('2023-04-27T21:36:08.958Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-16T11:08:19.924Z'),
+    updated_at: DateTime.iso8601('2025-03-17T01:37:35.064Z'),
     user_phone: '1-915-327-0429 x509',
     web_url: 'https://spherical-comparison.org',
   ),
@@ -979,7 +979,7 @@ end
 
 ## remove_uc_comment
 
-Remove a comment
+Deletes the UcComment identified by `id`.
 
 ### Example Usage
 
@@ -1021,7 +1021,7 @@ end
 
 ## remove_uc_contact
 
-Remove a contact
+Deletes the UcContact identified by `id`.
 
 ### Example Usage
 
@@ -1063,7 +1063,7 @@ end
 
 ## remove_uc_recording
 
-Remove a recording
+Deletes the UcRecording identified by `id`.
 
 ### Example Usage
 
@@ -1105,7 +1105,7 @@ end
 
 ## update_uc_comment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -1124,9 +1124,9 @@ req = Models::Operations::UpdateUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: '30263a06-2d22-4649-8857-dab9e9ac5b3a',
+    id: 'f9542e44-6a26-42ef-b104-7bb1a17b8698',
     metadata: [],
-    updated_at: '2024-02-09T18:30:03.828Z',
+    updated_at: '2024-02-10T00:14:01.049Z',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1158,7 +1158,7 @@ end
 
 ## update_uc_contact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1184,7 +1184,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: '3d110359-50a8-4975-82a9-90517f97f779',
+    id: '62d40703-2d73-48d4-98f9-bd4bfc5324d5',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
@@ -1203,7 +1203,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-08T09:06:39.805Z'),
+    updated_at: DateTime.iso8601('2023-12-08T23:06:51.851Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1235,7 +1235,7 @@ end
 
 ## update_uc_recording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -1253,36 +1253,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: '5693602d-54d0-4d1d-ab90-ad48b8752a62',
+    conversation_identifier: '12f12c15-a763-464e-b713-8b7b1c4b7c11',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-04T23:55:47.126Z'),
-    expires_at: DateTime.iso8601('2026-04-26T18:28:51.012Z'),
-    id: '5693602d-54d0-4d1d-ab90-ad48b8752a62',
+    end_at: DateTime.iso8601('2024-05-05T09:23:54.571Z'),
+    expires_at: DateTime.iso8601('2026-04-27T15:25:56.447Z'),
+    id: '12f12c15-a763-464e-b713-8b7b1c4b7c11',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-01T19:35:52.955Z'),
+        end_at: DateTime.iso8601('2024-04-02T04:32:20.059Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-05-15T10:32:45.277Z'),
+        start_at: DateTime.iso8601('2026-05-16T07:47:39.960Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-02-24T12:18:11.318Z'),
-            start_at: DateTime.iso8601('2024-06-02T06:04:20.379Z'),
+            end_at: DateTime.iso8601('2026-02-25T08:16:48.368Z'),
+            start_at: DateTime.iso8601('2024-06-02T15:59:26.122Z'),
             text: 'Turpis maiores ducimus tero speculum.',
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-12T13:12:34.102Z'),
-            start_at: DateTime.iso8601('2026-08-02T21:07:30.408Z'),
+            end_at: DateTime.iso8601('2024-10-13T01:13:56.892Z'),
+            start_at: DateTime.iso8601('2026-08-03T19:38:14.893Z'),
             text: 'Magnam consuasor uxor tergiversatio subseco.',
           ),
         ],
       ),
     ],
     metadata: [],
-    start_at: DateTime.iso8601('2023-04-27T18:04:18.264Z'),
+    start_at: DateTime.iso8601('2023-04-27T21:36:08.958Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-16T11:08:19.924Z'),
+    updated_at: DateTime.iso8601('2025-03-17T01:37:35.064Z'),
     user_phone: '1-915-327-0429 x509',
     web_url: 'https://spherical-comparison.org',
   ),

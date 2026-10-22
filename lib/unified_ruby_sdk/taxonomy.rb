@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(hris_taxonomy: Models::Shared::HrisTaxonomy, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisTaxonomyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisTaxonomyResponse) }
     def create_hris_taxonomy(hris_taxonomy:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_taxonomy - Create a taxonomy
+      # Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
       request = Models::Operations::CreateHrisTaxonomyRequest.new(
         hris_taxonomy: hris_taxonomy,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisTaxonomyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisTaxonomyResponse) }
     def get_hris_taxonomy(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_taxonomy - Retrieve a taxonomy
+      # Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisTaxonomyRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCrmTaxonomiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmTaxonomiesResponse) }
     def list_crm_taxonomies(request:, timeout_ms: nil)
       # list_crm_taxonomies - List all taxonomies
+      # Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisTaxonomiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisTaxonomiesResponse) }
     def list_hris_taxonomies(request:, timeout_ms: nil)
       # list_hris_taxonomies - List all taxonomies
+      # Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -14,7 +14,7 @@
 
 ## create_compute_service
 
-Create a service
+Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 
 ### Example Usage
 
@@ -33,7 +33,7 @@ res = s.service.create_compute_service(compute_service: Models::Shared::ComputeS
   branch: 'main',
   build_command: 'npm run build',
   created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-  id: 'b1ada32d-e859-4f4d-9be6-71cddc9e2727',
+  id: '5aa4a9da-3136-44d7-b67a-774ca43245eb',
   instance_count: 6.0,
   max_instance_count: 6.0,
   metadata: [],
@@ -44,7 +44,7 @@ res = s.service.create_compute_service(compute_service: Models::Shared::ComputeS
   runtime: 'python',
   status: Models::Shared::ComputeServiceStatus::SUSPENDED,
   type: Models::Shared::ComputeServiceType::OTHER,
-  updated_at: DateTime.iso8601('2025-04-04T16:30:27.060Z'),
+  updated_at: DateTime.iso8601('2025-04-05T04:13:31.628Z'),
   url: 'https://tame-sideboard.rotating-shoulder.biz',
 ), connection_id: '<id>')
 
@@ -75,7 +75,7 @@ end
 
 ## get_compute_service
 
-Retrieve a service
+Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -119,7 +119,7 @@ end
 
 ## list_compute_services
 
-List all services
+Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -164,7 +164,7 @@ end
 
 ## patch_compute_service
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -184,7 +184,7 @@ req = Models::Operations::PatchComputeServiceRequest.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '43273ad6-5268-461f-88b5-814d999d20b3',
+    id: '8ce46942-4d37-431a-b3d0-f3fb463c15a9',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -195,7 +195,7 @@ req = Models::Operations::PatchComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-04T16:30:27.072Z'),
+    updated_at: DateTime.iso8601('2025-04-05T04:13:31.639Z'),
     url: 'https://tame-sideboard.rotating-shoulder.biz',
   ),
   connection_id: '<id>',
@@ -228,7 +228,7 @@ end
 
 ## remove_compute_service
 
-Remove a service
+Deletes the ComputeService identified by `id`.
 
 ### Example Usage
 
@@ -270,7 +270,7 @@ end
 
 ## update_compute_service
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ req = Models::Operations::UpdateComputeServiceRequest.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '43273ad6-5268-461f-88b5-814d999d20b3',
+    id: '8ce46942-4d37-431a-b3d0-f3fb463c15a9',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -301,7 +301,7 @@ req = Models::Operations::UpdateComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-04T16:30:27.072Z'),
+    updated_at: DateTime.iso8601('2025-04-05T04:13:31.639Z'),
     url: 'https://tame-sideboard.rotating-shoulder.biz',
   ),
   connection_id: '<id>',

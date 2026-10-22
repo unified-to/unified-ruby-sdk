@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(calendar_webinar: Models::Shared::CalendarWebinar, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarWebinarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarWebinarResponse) }
     def create_calendar_webinar(calendar_webinar:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_calendar_webinar - Create a webinar
+      # Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are mapped to the provider's API. Returns the created CalendarWebinar.
       request = Models::Operations::CreateCalendarWebinarRequest.new(
         calendar_webinar: calendar_webinar,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarWebinarQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarWebinarResponse) }
     def get_calendar_webinar(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_webinar - Retrieve a webinar
+      # Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCalendarWebinarRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCalendarWebinarsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarWebinarsResponse) }
     def list_calendar_webinars(request:, timeout_ms: nil)
       # list_calendar_webinars - List all webinars
+      # Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCalendarWebinarRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarWebinarResponse) }
     def patch_calendar_webinar(request:, timeout_ms: nil)
       # patch_calendar_webinar - Update a webinar
+      # Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarWebinarResponse) }
     def remove_calendar_webinar(connection_id:, id:, timeout_ms: nil)
       # remove_calendar_webinar - Remove a webinar
+      # Deletes the CalendarWebinar identified by `id`.
       request = Models::Operations::RemoveCalendarWebinarRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCalendarWebinarRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarWebinarResponse) }
     def update_calendar_webinar(request:, timeout_ms: nil)
       # update_calendar_webinar - Update a webinar
+      # Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -33,7 +33,7 @@
 
 ## create_analytics_event
 
-Create an event
+Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
 
 ### Example Usage
 
@@ -51,13 +51,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.event.create_analytics_event(analytics_event: Models::Shared::AnalyticsEvent.new(
   created_at: DateTime.iso8601('2023-06-21T03:13:22.954Z'),
   event_type: Models::Shared::EventType::SCREEN_VIEW,
-  id: '16a850a1-a7e9-458c-bd8d-4efe8a5d66ac',
+  id: '4bfc96a9-ff67-44ae-b446-152ef1a3d100',
   metadata: {
     "key": Models::Shared::PropertyAnalyticsEventMetadata.new(),
   },
   name: 'page_view',
   page_url: 'https://golden-carboxyl.biz',
-  updated_at: DateTime.iso8601('2023-09-24T16:23:03.740Z'),
+  updated_at: DateTime.iso8601('2023-09-24T18:14:57.746Z'),
 ), connection_id: '<id>')
 
 unless res.analytics_event.nil?
@@ -87,7 +87,7 @@ end
 
 ## create_calendar_event
 
-Create an event
+Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
 
 ### Example Usage
 
@@ -106,9 +106,9 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
   attachments: [],
   conference: [],
   created_at: '2019-08-04T14:33:51.814Z',
-  end_at: '2020-05-24T07:01:09.232Z',
+  end_at: '2020-05-24T09:40:09.347Z',
   has_conference: false,
-  id: 'e9913106-d288-4504-8cd9-df2838bed13c',
+  id: '00111fbd-d5e6-4c13-9c93-be91f7154f38',
   is_all_day: false,
   is_free: false,
   is_private: false,
@@ -118,15 +118,15 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 4.0,
-      end_at: DateTime.iso8601('2025-03-24T15:41:05.059Z'),
+      end_at: DateTime.iso8601('2025-03-25T10:15:51.349Z'),
       excluded_dates: [
-        '2024-02-02T18:45:37.233Z',
+        '2024-02-03T09:35:14.298Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
       included_dates: [
-        '2023-07-07T01:28:09.892Z',
-        '2025-01-23T21:40:25.793Z',
-        '2024-04-01T23:41:13.035Z',
+        '2023-07-07T14:23:41.891Z',
+        '2025-01-24T15:42:51.143Z',
+        '2024-04-02T15:02:53.330Z',
       ],
       interval: 7.0,
       on_days: [
@@ -463,11 +463,11 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
       week_start: Models::Shared::WeekStart::TU,
     ),
   ],
-  start_at: '2020-05-23T21:47:32.005Z',
+  start_at: '2020-05-24T00:26:19.631Z',
   status: Models::Shared::CalendarEventStatus::CONFIRMED,
   subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
   timezone: 'Asia/Bangkok',
-  updated_at: '2020-06-30T05:23:45.736Z',
+  updated_at: '2020-06-30T08:22:45.566Z',
   web_url: 'https://another-pinstripe.com',
 ), connection_id: '<id>')
 
@@ -498,7 +498,7 @@ end
 
 ## create_cdp_event
 
-Create an event
+Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
 
 ### Example Usage
 
@@ -542,7 +542,7 @@ end
 
 ## create_crm_event
 
-Create an event
+Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 
 ### Example Usage
 
@@ -561,13 +561,13 @@ res = s.event.create_crm_event(crm_event: Models::Shared::CrmEvent.new(
   call: Models::Shared::PropertyCrmEventCall.new(
     description: 'Arbitro aptus.',
     duration: 64.0,
-    start_at: DateTime.iso8601('2024-12-11T00:48:21.026Z'),
+    start_at: DateTime.iso8601('2024-12-11T17:31:41.901Z'),
   ),
   created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-  id: '2861a115-b973-4d8a-8ef6-7c9a7f2efb64',
+  id: 'cb6a3ace-0074-470f-a9c3-3bd2cee96a09',
   metadata: [],
   type: Models::Shared::CrmEventType::CALL,
-  updated_at: DateTime.iso8601('2026-10-11T12:55:45.327Z'),
+  updated_at: DateTime.iso8601('2026-10-12T12:36:07.340Z'),
 ), connection_id: '<id>')
 
 unless res.crm_event.nil?
@@ -597,7 +597,7 @@ end
 
 ## get_analytics_event
 
-Retrieve an event
+Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -641,7 +641,7 @@ end
 
 ## get_calendar_event
 
-Retrieve an event
+Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -685,7 +685,7 @@ end
 
 ## get_cdp_event
 
-Retrieve an event
+Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -729,7 +729,7 @@ end
 
 ## get_clubs_event
 
-Retrieve an event
+Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -773,7 +773,7 @@ end
 
 ## get_crm_event
 
-Retrieve an event
+Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -817,7 +817,7 @@ end
 
 ## list_analytics_events
 
-List all events
+Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -862,7 +862,7 @@ end
 
 ## list_calendar_events
 
-List all events
+Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -907,7 +907,7 @@ end
 
 ## list_cdp_events
 
-List all events
+Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -952,7 +952,7 @@ end
 
 ## list_clubs_events
 
-List all events
+Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -997,7 +997,7 @@ end
 
 ## list_crm_events
 
-List all events
+Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1042,7 +1042,7 @@ end
 
 ## patch_calendar_event
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1062,9 +1062,9 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-24T07:01:09.236Z',
+    end_at: '2020-05-24T09:40:09.353Z',
     has_conference: false,
-    id: '14a1cdee-441e-4ea7-ba56-39b688c8d77f',
+    id: '251c8515-1230-4346-bb6c-8759c4f5fad3',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -1074,15 +1074,15 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-03-24T15:41:05.085Z'),
+        end_at: DateTime.iso8601('2025-03-25T10:15:51.393Z'),
         excluded_dates: [
-          '2024-02-02T18:45:37.253Z',
+          '2024-02-03T09:35:14.333Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-07T01:28:09.910Z',
-          '2025-01-23T21:40:25.818Z',
-          '2024-04-01T23:41:13.055Z',
+          '2023-07-07T14:23:41.922Z',
+          '2025-01-24T15:42:51.186Z',
+          '2024-04-02T15:02:53.366Z',
         ],
         interval: 7.0,
         on_days: [
@@ -1419,11 +1419,11 @@ req = Models::Operations::PatchCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU,
       ),
     ],
-    start_at: '2020-05-23T21:47:32.009Z',
+    start_at: '2020-05-24T00:26:19.637Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-06-30T05:23:45.740Z',
+    updated_at: '2020-06-30T08:22:45.573Z',
     web_url: 'https://another-pinstripe.com',
   ),
   connection_id: '<id>',
@@ -1456,7 +1456,7 @@ end
 
 ## patch_cdp_event
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1503,7 +1503,7 @@ end
 
 ## patch_crm_event
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1523,13 +1523,13 @@ req = Models::Operations::PatchCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-11T00:48:21.064Z'),
+      start_at: DateTime.iso8601('2024-12-11T17:31:41.949Z'),
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: 'fc1b8c52-fc3c-4ad5-8c05-6d3e8eb071aa',
+    id: '6ee8337c-85b4-45ae-8759-aaa2e283bb04',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-10-11T12:55:45.381Z'),
+    updated_at: DateTime.iso8601('2026-10-12T12:36:07.407Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1561,7 +1561,7 @@ end
 
 ## patch_messaging_event
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1583,7 +1583,7 @@ req = Models::Operations::PatchMessagingEventRequest.new(
       name: '',
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: '7557665c-8c74-4a4b-9f0f-811c0fb08e7a',
+    id: '21655438-a41c-4f8c-9a2e-cb9cb2a996fd',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK,
@@ -1618,7 +1618,7 @@ end
 
 ## remove_calendar_event
 
-Remove an event
+Deletes the CalendarEvent identified by `id`.
 
 ### Example Usage
 
@@ -1660,7 +1660,7 @@ end
 
 ## remove_cdp_event
 
-Remove an event
+Deletes the CdpEvent identified by `id`.
 
 ### Example Usage
 
@@ -1702,7 +1702,7 @@ end
 
 ## remove_crm_event
 
-Remove an event
+Deletes the CrmEvent identified by `id`.
 
 ### Example Usage
 
@@ -1744,7 +1744,7 @@ end
 
 ## update_calendar_event
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1764,9 +1764,9 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-24T07:01:09.236Z',
+    end_at: '2020-05-24T09:40:09.353Z',
     has_conference: false,
-    id: '14a1cdee-441e-4ea7-ba56-39b688c8d77f',
+    id: '251c8515-1230-4346-bb6c-8759c4f5fad3',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -1776,15 +1776,15 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-03-24T15:41:05.085Z'),
+        end_at: DateTime.iso8601('2025-03-25T10:15:51.393Z'),
         excluded_dates: [
-          '2024-02-02T18:45:37.253Z',
+          '2024-02-03T09:35:14.333Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-07T01:28:09.910Z',
-          '2025-01-23T21:40:25.818Z',
-          '2024-04-01T23:41:13.055Z',
+          '2023-07-07T14:23:41.922Z',
+          '2025-01-24T15:42:51.186Z',
+          '2024-04-02T15:02:53.366Z',
         ],
         interval: 7.0,
         on_days: [
@@ -2121,11 +2121,11 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU,
       ),
     ],
-    start_at: '2020-05-23T21:47:32.009Z',
+    start_at: '2020-05-24T00:26:19.637Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-06-30T05:23:45.740Z',
+    updated_at: '2020-06-30T08:22:45.573Z',
     web_url: 'https://another-pinstripe.com',
   ),
   connection_id: '<id>',
@@ -2158,7 +2158,7 @@ end
 
 ## update_cdp_event
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2205,7 +2205,7 @@ end
 
 ## update_crm_event
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2225,13 +2225,13 @@ req = Models::Operations::UpdateCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-11T00:48:21.064Z'),
+      start_at: DateTime.iso8601('2024-12-11T17:31:41.949Z'),
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: 'fc1b8c52-fc3c-4ad5-8c05-6d3e8eb071aa',
+    id: '6ee8337c-85b4-45ae-8759-aaa2e283bb04',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-10-11T12:55:45.381Z'),
+    updated_at: DateTime.iso8601('2026-10-12T12:36:07.407Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2263,7 +2263,7 @@ end
 
 ## update_messaging_event
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2285,7 +2285,7 @@ req = Models::Operations::UpdateMessagingEventRequest.new(
       name: '',
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: '7557665c-8c74-4a4b-9f0f-811c0fb08e7a',
+    id: '21655438-a41c-4f8c-9a2e-cb9cb2a996fd',
     is_replacing_original: false,
     metadata: [],
     type: Models::Shared::MessagingEventType::BUTTON_CLICK,

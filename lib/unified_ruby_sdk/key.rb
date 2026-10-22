@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(compute_key: Models::Shared::ComputeKey, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateComputeKeyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateComputeKeyResponse) }
     def create_compute_key(compute_key:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_compute_key - Create a key
+      # Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
       request = Models::Operations::CreateComputeKeyRequest.new(
         compute_key: compute_key,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetComputeKeyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetComputeKeyResponse) }
     def get_compute_key(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_compute_key - Retrieve a key
+      # Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetComputeKeyRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListComputeKeysRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListComputeKeysResponse) }
     def list_compute_keys(request:, timeout_ms: nil)
       # list_compute_keys - List all keys
+      # Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchComputeKeyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchComputeKeyResponse) }
     def patch_compute_key(request:, timeout_ms: nil)
       # patch_compute_key - Update a key
+      # Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveComputeKeyResponse) }
     def remove_compute_key(connection_id:, id:, timeout_ms: nil)
       # remove_compute_key - Remove a key
+      # Deletes the ComputeKey identified by `id`.
       request = Models::Operations::RemoveComputeKeyRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateComputeKeyRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateComputeKeyResponse) }
     def update_compute_key(request:, timeout_ms: nil)
       # update_compute_key - Update a key
+      # Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

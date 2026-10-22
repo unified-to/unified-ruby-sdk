@@ -14,7 +14,7 @@
 
 ## create_lms_course
 
-Create a course
+Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
 
 ### Example Usage
 
@@ -38,7 +38,7 @@ res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   currency: 'FJD',
   description: 'Vinco alias aut capitulus.',
   duration_minutes: 148.0,
-  id: 'd646526e-939a-4320-9798-869d3a2a42da',
+  id: 'cdaaee30-a874-4db8-8776-f21dd9b770e4',
   instructors: [],
   is_active: true,
   is_private: false,
@@ -65,14 +65,14 @@ res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   name: 'comptus',
   price_amount: 84.0,
   provider_name: 'Homenick - Wunsch',
-  published_at: DateTime.iso8601('2022-11-05T18:11:06.158Z'),
+  published_at: DateTime.iso8601('2022-11-05T18:40:25.835Z'),
   skills: [
     'adiuvo',
     'tam',
   ],
   students: [],
   time_estimate_minutes: 100.0,
-  updated_at: DateTime.iso8601('2023-02-09T18:20:08.719Z'),
+  updated_at: DateTime.iso8601('2023-02-09T20:22:16.292Z'),
 ), connection_id: '<id>')
 
 unless res.lms_course.nil?
@@ -102,7 +102,7 @@ end
 
 ## get_lms_course
 
-Retrieve a course
+Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -146,7 +146,7 @@ end
 
 ## list_lms_courses
 
-List all courses
+Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -191,7 +191,7 @@ end
 
 ## patch_lms_course
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -216,7 +216,7 @@ req = Models::Operations::PatchLmsCourseRequest.new(
     currency: 'FJD',
     description: 'Vinco alias aut capitulus.',
     duration_minutes: 148.0,
-    id: 'efcb5073-ec55-445b-b744-96bc88b5942f',
+    id: 'bc14f3a8-fe41-4546-8e4e-4e48882fa65d',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -243,14 +243,14 @@ req = Models::Operations::PatchLmsCourseRequest.new(
     name: 'comptus',
     price_amount: 84.0,
     provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-05T18:11:06.159Z'),
+    published_at: DateTime.iso8601('2022-11-05T18:40:25.836Z'),
     skills: [
       'adiuvo',
       'tam',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-09T18:20:08.721Z'),
+    updated_at: DateTime.iso8601('2023-02-09T20:22:16.294Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -282,7 +282,7 @@ end
 
 ## remove_lms_course
 
-Remove a course
+Deletes the LmsCourse identified by `id`.
 
 ### Example Usage
 
@@ -324,7 +324,7 @@ end
 
 ## update_lms_course
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -349,7 +349,7 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
     currency: 'FJD',
     description: 'Vinco alias aut capitulus.',
     duration_minutes: 148.0,
-    id: 'efcb5073-ec55-445b-b744-96bc88b5942f',
+    id: 'bc14f3a8-fe41-4546-8e4e-4e48882fa65d',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -376,14 +376,14 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
     name: 'comptus',
     price_amount: 84.0,
     provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-05T18:11:06.159Z'),
+    published_at: DateTime.iso8601('2022-11-05T18:40:25.836Z'),
     skills: [
       'adiuvo',
       'tam',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-09T18:20:08.721Z'),
+    updated_at: DateTime.iso8601('2023-02-09T20:22:16.294Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

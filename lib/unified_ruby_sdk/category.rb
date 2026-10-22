@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_category: Models::Shared::AccountingCategory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingCategoryResponse) }
     def create_accounting_category(accounting_category:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_category - Create a category
+      # Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
       request = Models::Operations::CreateAccountingCategoryRequest.new(
         accounting_category: accounting_category,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(ticketing_category: Models::Shared::TicketingCategory, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateTicketingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateTicketingCategoryResponse) }
     def create_ticketing_category(ticketing_category:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ticketing_category - Create a category
+      # Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
       request = Models::Operations::CreateTicketingCategoryRequest.new(
         ticketing_category: ticketing_category,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingCategoryResponse) }
     def get_accounting_category(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_category - Retrieve a category
+      # Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingCategoryRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetTicketingCategoryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetTicketingCategoryResponse) }
     def get_ticketing_category(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ticketing_category - Retrieve a category
+      # Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetTicketingCategoryRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingCategoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingCategoriesResponse) }
     def list_accounting_categories(request:, timeout_ms: nil)
       # list_accounting_categories - List all categories
+      # Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -640,6 +645,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListTicketingCategoriesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListTicketingCategoriesResponse) }
     def list_ticketing_categories(request:, timeout_ms: nil)
       # list_ticketing_categories - List all categories
+      # Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -750,6 +756,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingCategoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingCategoryResponse) }
     def patch_accounting_category(request:, timeout_ms: nil)
       # patch_accounting_category - Update a category
+      # Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -872,6 +879,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchTicketingCategoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchTicketingCategoryResponse) }
     def patch_ticketing_category(request:, timeout_ms: nil)
       # patch_ticketing_category - Update a category
+      # Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingCategoryResponse) }
     def remove_accounting_category(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_category - Remove a category
+      # Deletes the AccountingCategory identified by `id`.
       request = Models::Operations::RemoveAccountingCategoryRequest.new(
         connection_id: connection_id,
         id: id
@@ -1108,6 +1117,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveTicketingCategoryResponse) }
     def remove_ticketing_category(connection_id:, id:, timeout_ms: nil)
       # remove_ticketing_category - Remove a category
+      # Deletes the TicketingCategory identified by `id`.
       request = Models::Operations::RemoveTicketingCategoryRequest.new(
         connection_id: connection_id,
         id: id
@@ -1222,6 +1232,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingCategoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingCategoryResponse) }
     def update_accounting_category(request:, timeout_ms: nil)
       # update_accounting_category - Update a category
+      # Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1344,6 +1355,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateTicketingCategoryRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateTicketingCategoryResponse) }
     def update_ticketing_category(request:, timeout_ms: nil)
       # update_ticketing_category - Update a category
+      # Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

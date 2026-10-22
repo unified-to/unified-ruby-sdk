@@ -14,7 +14,7 @@
 
 ## create_healthcare_appointment
 
-Create an appointment
+Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 
 ### Example Usage
 
@@ -33,7 +33,7 @@ res = s.appointment.create_healthcare_appointment(healthcare_appointment: Models
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'clarus aptus cetera',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: 'e57d4ec5-b3c7-47c7-bf0d-adb561ff2349',
+  id: '26c0c976-c996-4dbb-8b58-5166dbe67220',
   metadata: [],
   practitioner_ids: [],
   reasons: [
@@ -53,7 +53,7 @@ res = s.appointment.create_healthcare_appointment(healthcare_appointment: Models
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2025-11-19T10:41:19.860Z'),
+  updated_at: DateTime.iso8601('2025-11-20T04:16:13.523Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -83,7 +83,7 @@ end
 
 ## get_healthcare_appointment
 
-Retrieve an appointment
+Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -127,7 +127,7 @@ end
 
 ## list_healthcare_appointments
 
-List all appointments
+Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -172,7 +172,7 @@ end
 
 ## patch_healthcare_appointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'cc805b15-1b9f-4db2-9608-a1472e62c59d',
+    id: '76ec3204-d039-4780-a1a6-9d82e5c58b81',
     metadata: [],
     practitioner_ids: [],
     reasons: [
@@ -212,7 +212,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-19T10:41:19.878Z'),
+    updated_at: DateTime.iso8601('2025-11-20T04:16:13.539Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -244,7 +244,7 @@ end
 
 ## remove_healthcare_appointment
 
-Remove an appointment
+Deletes the HealthcareAppointment identified by `id`.
 
 ### Example Usage
 
@@ -286,7 +286,7 @@ end
 
 ## update_healthcare_appointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'cc805b15-1b9f-4db2-9608-a1472e62c59d',
+    id: '76ec3204-d039-4780-a1a6-9d82e5c58b81',
     metadata: [],
     practitioner_ids: [],
     reasons: [
@@ -326,7 +326,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-19T10:41:19.878Z'),
+    updated_at: DateTime.iso8601('2025-11-20T04:16:13.539Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

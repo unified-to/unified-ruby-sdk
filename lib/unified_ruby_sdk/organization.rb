@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ads_organization: Models::Shared::AdsOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsOrganizationResponse) }
     def create_ads_organization(ads_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_organization - Create an organization
+      # Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
       request = Models::Operations::CreateAdsOrganizationRequest.new(
         ads_organization: ads_organization,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(genai_organization: Models::Shared::GenaiOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateGenaiOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateGenaiOrganizationResponse) }
     def create_genai_organization(genai_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_genai_organization - Create an organization
+      # Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
       request = Models::Operations::CreateGenaiOrganizationRequest.new(
         genai_organization: genai_organization,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(repo_organization: Models::Shared::RepoOrganization, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateRepoOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateRepoOrganizationResponse) }
     def create_repo_organization(repo_organization:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_repo_organization - Create an organization
+      # Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
       request = Models::Operations::CreateRepoOrganizationRequest.new(
         repo_organization: repo_organization,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingOrganizationResponse) }
     def get_accounting_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_organization - Retrieve an organization
+      # Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingOrganizationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -542,6 +546,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsOrganizationResponse) }
     def get_ads_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_organization - Retrieve an organization
+      # Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsOrganizationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -658,6 +663,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetGenaiOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetGenaiOrganizationResponse) }
     def get_genai_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_genai_organization - Retrieve an organization
+      # Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetGenaiOrganizationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -774,6 +780,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetRepoOrganizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetRepoOrganizationResponse) }
     def get_repo_organization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_repo_organization - Retrieve an organization
+      # Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetRepoOrganizationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -890,6 +897,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingOrganizationsResponse) }
     def list_accounting_organizations(request:, timeout_ms: nil)
       # list_accounting_organizations - List all organizations
+      # Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1000,6 +1008,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsOrganizationsResponse) }
     def list_ads_organizations(request:, timeout_ms: nil)
       # list_ads_organizations - List all organizations
+      # Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1110,6 +1119,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListGenaiOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListGenaiOrganizationsResponse) }
     def list_genai_organizations(request:, timeout_ms: nil)
       # list_genai_organizations - List all organizations
+      # Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1220,6 +1230,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListRepoOrganizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListRepoOrganizationsResponse) }
     def list_repo_organizations(request:, timeout_ms: nil)
       # list_repo_organizations - List all organizations
+      # Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1330,6 +1341,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAdsOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsOrganizationResponse) }
     def patch_ads_organization(request:, timeout_ms: nil)
       # patch_ads_organization - Update an organization
+      # Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1452,6 +1464,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchGenaiOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchGenaiOrganizationResponse) }
     def patch_genai_organization(request:, timeout_ms: nil)
       # patch_genai_organization - Update an organization
+      # Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1574,6 +1587,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchRepoOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchRepoOrganizationResponse) }
     def patch_repo_organization(request:, timeout_ms: nil)
       # patch_repo_organization - Update an organization
+      # Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1696,6 +1710,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsOrganizationResponse) }
     def remove_ads_organization(connection_id:, id:, timeout_ms: nil)
       # remove_ads_organization - Remove an organization
+      # Deletes the AdsOrganization identified by `id`.
       request = Models::Operations::RemoveAdsOrganizationRequest.new(
         connection_id: connection_id,
         id: id
@@ -1810,6 +1825,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveGenaiOrganizationResponse) }
     def remove_genai_organization(connection_id:, id:, timeout_ms: nil)
       # remove_genai_organization - Remove an organization
+      # Deletes the GenaiOrganization identified by `id`.
       request = Models::Operations::RemoveGenaiOrganizationRequest.new(
         connection_id: connection_id,
         id: id
@@ -1924,6 +1940,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveRepoOrganizationResponse) }
     def remove_repo_organization(connection_id:, id:, timeout_ms: nil)
       # remove_repo_organization - Remove an organization
+      # Deletes the RepoOrganization identified by `id`.
       request = Models::Operations::RemoveRepoOrganizationRequest.new(
         connection_id: connection_id,
         id: id
@@ -2038,6 +2055,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAdsOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsOrganizationResponse) }
     def update_ads_organization(request:, timeout_ms: nil)
       # update_ads_organization - Update an organization
+      # Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2160,6 +2178,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateGenaiOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateGenaiOrganizationResponse) }
     def update_genai_organization(request:, timeout_ms: nil)
       # update_genai_organization - Update an organization
+      # Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2282,6 +2301,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateRepoOrganizationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateRepoOrganizationResponse) }
     def update_repo_organization(request:, timeout_ms: nil)
       # update_repo_organization - Update an organization
+      # Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

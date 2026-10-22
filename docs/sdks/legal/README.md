@@ -32,7 +32,7 @@
 
 ## create_legal_expense
 
-Create an expense
+Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 
 ### Example Usage
 
@@ -52,7 +52,7 @@ res = s.legal.create_legal_expense(legal_expense: Models::Shared::LegalExpense.n
   created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   currency: 'MVR',
   description: 'Temporibus agnitio sui.',
-  id: 'c69864e8-ba64-4b75-9084-fe989722d7cf',
+  id: '21864e35-8eca-4e7f-81cc-e81c04f58bf5',
   incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   is_billed: false,
   metadata: [],
@@ -60,7 +60,7 @@ res = s.legal.create_legal_expense(legal_expense: Models::Shared::LegalExpense.n
   quantity: 3.0,
   total_amount: 300.0,
   type: Models::Shared::LegalExpenseType::OTHER,
-  updated_at: DateTime.iso8601('2024-03-30T23:21:13.014Z'),
+  updated_at: DateTime.iso8601('2024-03-31T12:54:25.595Z'),
 ), connection_id: '<id>')
 
 unless res.legal_expense.nil?
@@ -90,7 +90,7 @@ end
 
 ## create_legal_matter
 
-Create a matter
+Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 
 ### Example Usage
 
@@ -113,11 +113,11 @@ res = s.legal.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new(
   created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
   currency: 'BOB',
   description: 'Speciosus cresco aut cotidie temeritas arma.',
-  id: '758a09bf-ac35-4ca0-9297-ac6c2c6e768e',
+  id: '0a3fcc05-e27a-4b82-949f-badc14cd9a55',
   metadata: [],
   name: 'Walter v. Franecki - Spinka',
   number: '2023-3062',
-  opened_at: DateTime.iso8601('2023-07-05T06:18:43.614Z'),
+  opened_at: DateTime.iso8601('2023-07-05T07:02:28.411Z'),
   parties: [
     Models::Shared::LegalParty.new(
       description: 'Urban Walter',
@@ -126,8 +126,8 @@ res = s.legal.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new(
   ],
   stage: 'currus',
   status: Models::Shared::LegalMatterStatus::OPEN,
-  statute_of_limitations_at: DateTime.iso8601('2027-06-28T21:12:06.224Z'),
-  updated_at: DateTime.iso8601('2023-07-17T10:05:24.278Z'),
+  statute_of_limitations_at: DateTime.iso8601('2027-06-29T20:58:22.479Z'),
+  updated_at: DateTime.iso8601('2023-07-17T11:03:06.872Z'),
 ), connection_id: '<id>')
 
 unless res.legal_matter.nil?
@@ -157,7 +157,7 @@ end
 
 ## create_legal_practicearea
 
-Create a practicearea
+Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 
 ### Example Usage
 
@@ -175,11 +175,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.legal.create_legal_practicearea(legal_practicearea: Models::Shared::LegalPracticearea.new(
   code: 'QCA',
   created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-  id: 'ad6630d8-1aec-45c2-9620-ed1693d104c8',
+  id: '14c1b0ec-9925-4ac1-a8ac-f6491f0df2a0',
   metadata: [],
   name: 'witty Law',
   type: Models::Shared::LegalPracticeareaType::EDUCATION,
-  updated_at: DateTime.iso8601('2025-08-27T17:08:43.506Z'),
+  updated_at: DateTime.iso8601('2025-08-28T09:35:39.147Z'),
 ), connection_id: '<id>')
 
 unless res.legal_practicearea.nil?
@@ -209,7 +209,7 @@ end
 
 ## create_legal_timeentry
 
-Create a timeentry
+Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 
 ### Example Usage
 
@@ -229,13 +229,13 @@ res = s.legal.create_legal_timeentry(legal_timeentry: Models::Shared::LegalTimee
   created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
   currency: 'ZAR',
   description: 'Ea derideo adulatio torrens.',
-  id: '5556370f-407c-48ae-aa6e-e4e3257f9514',
+  id: 'ae2c0d52-8cb7-4a6b-9d3d-ae3ff9f57b82',
   is_billable: true,
   metadata: [],
   minutes: 390.0,
   rate_amount: 637.0,
   total_amount: 4_140.5,
-  updated_at: DateTime.iso8601('2022-06-30T01:49:26.576Z'),
+  updated_at: DateTime.iso8601('2022-06-30T02:37:32.644Z'),
   worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
 ), connection_id: '<id>')
 
@@ -266,7 +266,7 @@ end
 
 ## get_legal_expense
 
-Retrieve an expense
+Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -310,7 +310,7 @@ end
 
 ## get_legal_matter
 
-Retrieve a matter
+Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -354,7 +354,7 @@ end
 
 ## get_legal_practicearea
 
-Retrieve a practicearea
+Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -398,7 +398,7 @@ end
 
 ## get_legal_timeentry
 
-Retrieve a timeentry
+Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -442,7 +442,7 @@ end
 
 ## list_legal_expenses
 
-List all expenses
+Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -487,7 +487,7 @@ end
 
 ## list_legal_matters
 
-List all matters
+Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -532,7 +532,7 @@ end
 
 ## list_legal_practiceareas
 
-List all practiceareas
+Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -577,7 +577,7 @@ end
 
 ## list_legal_timeentries
 
-List all timeentries
+Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -622,7 +622,7 @@ end
 
 ## patch_legal_expense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -643,7 +643,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '17ac53c3-22e7-4a63-8a7f-7d7ad85275e4',
+    id: '5b3cb8a3-5737-4b18-b126-5266526343a7',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -651,7 +651,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-03-30T23:21:13.027Z'),
+    updated_at: DateTime.iso8601('2024-03-31T12:54:25.603Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -683,7 +683,7 @@ end
 
 ## patch_legal_matter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -707,11 +707,11 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: 'a08b5258-b003-44e5-ad6e-92b4727c2be4',
+    id: '0b6277a1-c527-4b4f-be63-395f7b3ff9b0',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T06:18:43.615Z'),
+    opened_at: DateTime.iso8601('2023-07-05T07:02:28.412Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
@@ -720,8 +720,8 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-06-28T21:12:06.253Z'),
-    updated_at: DateTime.iso8601('2023-07-17T10:05:24.279Z'),
+    statute_of_limitations_at: DateTime.iso8601('2027-06-29T20:58:22.506Z'),
+    updated_at: DateTime.iso8601('2023-07-17T11:03:06.873Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -753,7 +753,7 @@ end
 
 ## patch_legal_practicearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -772,11 +772,11 @@ req = Models::Operations::PatchLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'e61009e9-ee31-4608-b2c4-39e037f7d5e1',
+    id: '592d6358-4956-42ee-8be7-964244924972',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-08-27T17:08:43.521Z'),
+    updated_at: DateTime.iso8601('2025-08-28T09:35:39.162Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -808,7 +808,7 @@ end
 
 ## patch_legal_timeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -829,13 +829,13 @@ req = Models::Operations::PatchLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'ZAR',
     description: 'Ea derideo adulatio torrens.',
-    id: '93c9e28c-8664-4e15-a188-ad57cf91af64',
+    id: '4e531b0d-4ddd-4eee-9a69-1e4583eca5bc',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
     total_amount: 4_140.5,
-    updated_at: DateTime.iso8601('2022-06-30T01:49:26.577Z'),
+    updated_at: DateTime.iso8601('2022-06-30T02:37:32.645Z'),
     worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
   ),
   connection_id: '<id>',
@@ -868,7 +868,7 @@ end
 
 ## remove_legal_expense
 
-Remove an expense
+Deletes the LegalExpense identified by `id`.
 
 ### Example Usage
 
@@ -910,7 +910,7 @@ end
 
 ## remove_legal_matter
 
-Remove a matter
+Deletes the LegalMatter identified by `id`.
 
 ### Example Usage
 
@@ -952,7 +952,7 @@ end
 
 ## remove_legal_practicearea
 
-Remove a practicearea
+Deletes the LegalPracticearea identified by `id`.
 
 ### Example Usage
 
@@ -994,7 +994,7 @@ end
 
 ## remove_legal_timeentry
 
-Remove a timeentry
+Deletes the LegalTimeentry identified by `id`.
 
 ### Example Usage
 
@@ -1036,7 +1036,7 @@ end
 
 ## update_legal_expense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -1057,7 +1057,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '17ac53c3-22e7-4a63-8a7f-7d7ad85275e4',
+    id: '5b3cb8a3-5737-4b18-b126-5266526343a7',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -1065,7 +1065,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-03-30T23:21:13.027Z'),
+    updated_at: DateTime.iso8601('2024-03-31T12:54:25.603Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1097,7 +1097,7 @@ end
 
 ## update_legal_matter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -1121,11 +1121,11 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: 'a08b5258-b003-44e5-ad6e-92b4727c2be4',
+    id: '0b6277a1-c527-4b4f-be63-395f7b3ff9b0',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T06:18:43.615Z'),
+    opened_at: DateTime.iso8601('2023-07-05T07:02:28.412Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
@@ -1134,8 +1134,8 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-06-28T21:12:06.253Z'),
-    updated_at: DateTime.iso8601('2023-07-17T10:05:24.279Z'),
+    statute_of_limitations_at: DateTime.iso8601('2027-06-29T20:58:22.506Z'),
+    updated_at: DateTime.iso8601('2023-07-17T11:03:06.873Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1167,7 +1167,7 @@ end
 
 ## update_legal_practicearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -1186,11 +1186,11 @@ req = Models::Operations::UpdateLegalPracticeareaRequest.new(
   legal_practicearea: Models::Shared::LegalPracticearea.new(
     code: 'QCA',
     created_at: DateTime.iso8601('2023-01-28T21:00:26.264Z'),
-    id: 'e61009e9-ee31-4608-b2c4-39e037f7d5e1',
+    id: '592d6358-4956-42ee-8be7-964244924972',
     metadata: [],
     name: 'witty Law',
     type: Models::Shared::LegalPracticeareaType::EDUCATION,
-    updated_at: DateTime.iso8601('2025-08-27T17:08:43.521Z'),
+    updated_at: DateTime.iso8601('2025-08-28T09:35:39.162Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1222,7 +1222,7 @@ end
 
 ## update_legal_timeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -1243,13 +1243,13 @@ req = Models::Operations::UpdateLegalTimeentryRequest.new(
     created_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
     currency: 'ZAR',
     description: 'Ea derideo adulatio torrens.',
-    id: '93c9e28c-8664-4e15-a188-ad57cf91af64',
+    id: '4e531b0d-4ddd-4eee-9a69-1e4583eca5bc',
     is_billable: true,
     metadata: [],
     minutes: 390.0,
     rate_amount: 637.0,
     total_amount: 4_140.5,
-    updated_at: DateTime.iso8601('2022-06-30T01:49:26.577Z'),
+    updated_at: DateTime.iso8601('2022-06-30T02:37:32.645Z'),
     worked_at: DateTime.iso8601('2022-05-06T03:26:03.756Z'),
   ),
   connection_id: '<id>',

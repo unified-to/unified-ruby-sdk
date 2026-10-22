@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ads_campaign: Models::Shared::AdsCampaign, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsCampaignResponse) }
     def create_ads_campaign(ads_campaign:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_campaign - Create a campaign
+      # Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
       request = Models::Operations::CreateAdsCampaignRequest.new(
         ads_campaign: ads_campaign,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(marketing_campaign: Models::Shared::MarketingCampaign, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechCampaignResponse) }
     def create_martech_campaign(marketing_campaign:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_martech_campaign - Create a campaign
+      # Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
       request = Models::Operations::CreateMartechCampaignRequest.new(
         marketing_campaign: marketing_campaign,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsCampaignResponse) }
     def get_ads_campaign(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_campaign - Retrieve a campaign
+      # Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsCampaignRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechCampaignResponse) }
     def get_martech_campaign(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_martech_campaign - Retrieve a campaign
+      # Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetMartechCampaignRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsCampaignsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsCampaignsResponse) }
     def list_ads_campaigns(request:, timeout_ms: nil)
       # list_ads_campaigns - List all campaigns
+      # Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -640,6 +645,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListMartechCampaignsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechCampaignsResponse) }
     def list_martech_campaigns(request:, timeout_ms: nil)
       # list_martech_campaigns - List all campaigns
+      # Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -750,6 +756,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAdsCampaignRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsCampaignResponse) }
     def patch_ads_campaign(request:, timeout_ms: nil)
       # patch_ads_campaign - Update a campaign
+      # Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -872,6 +879,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchMartechCampaignRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechCampaignResponse) }
     def patch_martech_campaign(request:, timeout_ms: nil)
       # patch_martech_campaign - Update a campaign
+      # Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsCampaignResponse) }
     def remove_ads_campaign(connection_id:, id:, timeout_ms: nil)
       # remove_ads_campaign - Remove a campaign
+      # Deletes the AdsCampaign identified by `id`.
       request = Models::Operations::RemoveAdsCampaignRequest.new(
         connection_id: connection_id,
         id: id
@@ -1108,6 +1117,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechCampaignResponse) }
     def remove_martech_campaign(connection_id:, id:, timeout_ms: nil)
       # remove_martech_campaign - Remove a campaign
+      # Deletes the MarketingCampaign identified by `id`.
       request = Models::Operations::RemoveMartechCampaignRequest.new(
         connection_id: connection_id,
         id: id
@@ -1222,6 +1232,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAdsCampaignRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsCampaignResponse) }
     def update_ads_campaign(request:, timeout_ms: nil)
       # update_ads_campaign - Update a campaign
+      # Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1344,6 +1355,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateMartechCampaignRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechCampaignResponse) }
     def update_martech_campaign(request:, timeout_ms: nil)
       # update_martech_campaign - Update a campaign
+      # Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

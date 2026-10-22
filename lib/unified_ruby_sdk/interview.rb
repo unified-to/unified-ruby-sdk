@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ats_interview: Models::Shared::AtsInterview, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsInterviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsInterviewResponse) }
     def create_ats_interview(ats_interview:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_interview - Create an interview
+      # Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
       request = Models::Operations::CreateAtsInterviewRequest.new(
         ats_interview: ats_interview,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsInterviewQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsInterviewResponse) }
     def get_ats_interview(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_interview - Retrieve an interview
+      # Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsInterviewRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsInterviewsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsInterviewsResponse) }
     def list_ats_interviews(request:, timeout_ms: nil)
       # list_ats_interviews - List all interviews
+      # Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsInterviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsInterviewResponse) }
     def patch_ats_interview(request:, timeout_ms: nil)
       # patch_ats_interview - Update an interview
+      # Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsInterviewResponse) }
     def remove_ats_interview(connection_id:, id:, timeout_ms: nil)
       # remove_ats_interview - Remove an interview
+      # Deletes the AtsInterview identified by `id`.
       request = Models::Operations::RemoveAtsInterviewRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsInterviewRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsInterviewResponse) }
     def update_ats_interview(request:, timeout_ms: nil)
       # update_ats_interview - Update an interview
+      # Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

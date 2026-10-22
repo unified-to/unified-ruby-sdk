@@ -26,7 +26,7 @@
 
 ## create_accounting_contact
 
-Create a contact
+Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 
 ### Example Usage
 
@@ -66,7 +66,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
     ),
   ],
   first_name: 'Delores',
-  id: '5ed9cc63-e0d5-4b24-8c5f-3e0e3ae59897',
+  id: 'fdf93d62-2079-4d04-a659-6a963caddc00',
   identification: '531850872',
   is_active: true,
   is_customer: true,
@@ -77,7 +77,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
   payment_methods: [
     Models::Shared::AccountingContactPaymentMethod.new(
       default: true,
-      id: 'e1e27032-ccb2-4ac9-b501-b3a64c114b9f',
+      id: '8636e7f8-2c88-4c9e-9549-3751ae2979e6',
       name: 'Visa 7844',
       type: Models::Shared::AccountingContactPaymentMethodType::CARD,
     ),
@@ -99,7 +99,7 @@ res = s.contact.create_accounting_contact(accounting_contact: Models::Shared::Ac
       type: Models::Shared::AccountingTelephoneType::FAX,
     ),
   ],
-  updated_at: DateTime.iso8601('2023-12-19T20:51:25.364Z'),
+  updated_at: DateTime.iso8601('2023-12-20T07:36:45.907Z'),
   website: 'https://kertzmanngroup.com',
 ), connection_id: '<id>')
 
@@ -130,7 +130,7 @@ end
 
 ## create_crm_contact
 
-Create a contact
+Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 
 ### Example Usage
 
@@ -164,7 +164,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   first_name: 'Mohammad',
-  id: '300f2e85-3d9e-4075-840a-4fd9fe523962',
+  id: '6be397fd-fb29-4e99-a32c-895bf4fc4e3a',
   image_url: 'https://avatars.githubusercontent.com/u/26803724',
   last_name: 'Bartell',
   link_urls: [
@@ -176,7 +176,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'f5f35195-7412-4359-8cd1-f82139af7291',
+      id: 'c1ac2149-70d3-459b-b9d2-79bef51441d7',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'antiquus',
@@ -194,7 +194,7 @@ res = s.contact.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   title: 'National Tactics Analyst',
-  updated_at: DateTime.iso8601('2021-02-24T05:06:32.253Z'),
+  updated_at: DateTime.iso8601('2021-02-24T05:42:21.126Z'),
 ), connection_id: '<id>')
 
 unless res.crm_contact.nil?
@@ -224,7 +224,7 @@ end
 
 ## create_uc_contact
 
-Create a contact
+Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
 
 ### Example Usage
 
@@ -249,7 +249,7 @@ res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   first_name: 'Luther',
-  id: '16034c6d-9641-43cf-88ab-f1dafcdc65e2',
+  id: '07d54d1d-38a4-4c25-aa39-d52da829527a',
   last_name: 'Rogahn',
   metadata: [],
   name: 'Luther Rogahn',
@@ -268,7 +268,7 @@ res = s.contact.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   title: 'Chief Optimization Executive',
-  updated_at: DateTime.iso8601('2023-12-08T09:06:39.793Z'),
+  updated_at: DateTime.iso8601('2023-12-08T23:06:51.843Z'),
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -298,7 +298,7 @@ end
 
 ## get_accounting_contact
 
-Retrieve a contact
+Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -342,7 +342,7 @@ end
 
 ## get_crm_contact
 
-Retrieve a contact
+Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -386,7 +386,7 @@ end
 
 ## get_uc_contact
 
-Retrieve a contact
+Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -430,7 +430,7 @@ end
 
 ## list_accounting_contacts
 
-List all contacts
+Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -475,7 +475,7 @@ end
 
 ## list_crm_contacts
 
-List all contacts
+Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -520,7 +520,7 @@ end
 
 ## list_uc_contacts
 
-List all contacts
+Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -565,7 +565,7 @@ end
 
 ## patch_accounting_contact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -606,7 +606,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
       ),
     ],
     first_name: 'Delores',
-    id: 'f99279d9-5e04-4e2f-aac5-98630e0e6481',
+    id: '2094babf-af16-43a0-af2f-3f8e8126dab1',
     identification: '531850872',
     is_active: true,
     is_customer: true,
@@ -617,7 +617,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'c10d1ec1-1157-467d-97e9-a468cfcb5576',
+        id: '4b732532-2bc6-4d80-8805-357304c02d5a',
         name: 'Visa 7844',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD,
       ),
@@ -639,7 +639,7 @@ req = Models::Operations::PatchAccountingContactRequest.new(
         type: Models::Shared::AccountingTelephoneType::FAX,
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-19T20:51:25.388Z'),
+    updated_at: DateTime.iso8601('2023-12-20T07:36:45.925Z'),
     website: 'https://kertzmanngroup.com',
   ),
   connection_id: '<id>',
@@ -672,7 +672,7 @@ end
 
 ## patch_crm_contact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -707,7 +707,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     first_name: 'Mohammad',
-    id: '6ed2fb9f-37d9-4e9b-94e4-71fc8efcf77f',
+    id: '86854558-d801-4b6a-8b08-c5c9087fc5c5',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -719,7 +719,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'ae413485-8c49-40a3-833a-1a5f212c344f',
+        id: 'e061d87c-c4a7-4741-8734-8aca32ffae2c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'antiquus',
@@ -737,7 +737,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T05:06:32.254Z'),
+    updated_at: DateTime.iso8601('2021-02-24T05:42:21.127Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -769,7 +769,7 @@ end
 
 ## patch_uc_contact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -795,7 +795,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: '3d110359-50a8-4975-82a9-90517f97f779',
+    id: '62d40703-2d73-48d4-98f9-bd4bfc5324d5',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
@@ -814,7 +814,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-08T09:06:39.805Z'),
+    updated_at: DateTime.iso8601('2023-12-08T23:06:51.851Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -846,7 +846,7 @@ end
 
 ## remove_accounting_contact
 
-Remove a contact
+Deletes the AccountingContact identified by `id`.
 
 ### Example Usage
 
@@ -888,7 +888,7 @@ end
 
 ## remove_crm_contact
 
-Remove a contact
+Deletes the CrmContact identified by `id`.
 
 ### Example Usage
 
@@ -930,7 +930,7 @@ end
 
 ## remove_uc_contact
 
-Remove a contact
+Deletes the UcContact identified by `id`.
 
 ### Example Usage
 
@@ -972,7 +972,7 @@ end
 
 ## update_accounting_contact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1013,7 +1013,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
       ),
     ],
     first_name: 'Delores',
-    id: 'f99279d9-5e04-4e2f-aac5-98630e0e6481',
+    id: '2094babf-af16-43a0-af2f-3f8e8126dab1',
     identification: '531850872',
     is_active: true,
     is_customer: true,
@@ -1024,7 +1024,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
     payment_methods: [
       Models::Shared::AccountingContactPaymentMethod.new(
         default: true,
-        id: 'c10d1ec1-1157-467d-97e9-a468cfcb5576',
+        id: '4b732532-2bc6-4d80-8805-357304c02d5a',
         name: 'Visa 7844',
         type: Models::Shared::AccountingContactPaymentMethodType::CARD,
       ),
@@ -1046,7 +1046,7 @@ req = Models::Operations::UpdateAccountingContactRequest.new(
         type: Models::Shared::AccountingTelephoneType::FAX,
       ),
     ],
-    updated_at: DateTime.iso8601('2023-12-19T20:51:25.388Z'),
+    updated_at: DateTime.iso8601('2023-12-20T07:36:45.925Z'),
     website: 'https://kertzmanngroup.com',
   ),
   connection_id: '<id>',
@@ -1079,7 +1079,7 @@ end
 
 ## update_crm_contact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1114,7 +1114,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     first_name: 'Mohammad',
-    id: '6ed2fb9f-37d9-4e9b-94e4-71fc8efcf77f',
+    id: '86854558-d801-4b6a-8b08-c5c9087fc5c5',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -1126,7 +1126,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'ae413485-8c49-40a3-833a-1a5f212c344f',
+        id: 'e061d87c-c4a7-4741-8734-8aca32ffae2c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'antiquus',
@@ -1144,7 +1144,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T05:06:32.254Z'),
+    updated_at: DateTime.iso8601('2021-02-24T05:42:21.127Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1176,7 +1176,7 @@ end
 
 ## update_uc_contact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1202,7 +1202,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: '3d110359-50a8-4975-82a9-90517f97f779',
+    id: '62d40703-2d73-48d4-98f9-bd4bfc5324d5',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
@@ -1221,7 +1221,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-08T09:06:39.805Z'),
+    updated_at: DateTime.iso8601('2023-12-08T23:06:51.851Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

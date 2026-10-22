@@ -5,20 +5,22 @@
 
 ### Available Operations
 
-* [create_accounting_order](#create_accounting_order) - Create an order
+* [~~create_accounting_order~~](#create_accounting_order) - Create an order :warning: **Deprecated**
 * [create_assessment_order](#create_assessment_order) - Create an order
-* [get_accounting_order](#get_accounting_order) - Retrieve an order
+* [~~get_accounting_order~~](#get_accounting_order) - Retrieve an order :warning: **Deprecated**
 * [get_assessment_order](#get_assessment_order) - Retrieve an order
-* [list_accounting_orders](#list_accounting_orders) - List all orders
-* [patch_accounting_order](#patch_accounting_order) - Update an order
+* [~~list_accounting_orders~~](#list_accounting_orders) - List all orders :warning: **Deprecated**
+* [~~patch_accounting_order~~](#patch_accounting_order) - Update an order :warning: **Deprecated**
 * [patch_assessment_order](#patch_assessment_order) - Update an order
-* [remove_accounting_order](#remove_accounting_order) - Remove an order
-* [update_accounting_order](#update_accounting_order) - Update an order
+* [~~remove_accounting_order~~](#remove_accounting_order) - Remove an order :warning: **Deprecated**
+* [~~update_accounting_order~~](#update_accounting_order) - Update an order :warning: **Deprecated**
 * [update_assessment_order](#update_assessment_order) - Update an order
 
-## create_accounting_order
+## ~~create_accounting_order~~
 
-Create an order
+Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -44,7 +46,7 @@ res = s.order.create_accounting_order(accounting_order: Models::Shared::Accounti
   ),
   created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
   currency: 'GBP',
-  id: 'f86dd8f6-a014-47f6-9134-f31f328acb2f',
+  id: '28d3b89f-0446-43dd-9b12-88dae6df1211',
   lineitems: [],
   metadata: [],
   posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -59,7 +61,7 @@ res = s.order.create_accounting_order(accounting_order: Models::Shared::Accounti
   status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
   total_amount: 0.0,
   type: Models::Shared::AccountingOrderType::SALES,
-  updated_at: DateTime.iso8601('2022-02-08T07:18:52.782Z'),
+  updated_at: DateTime.iso8601('2022-02-08T12:12:41.888Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_order.nil?
@@ -89,7 +91,7 @@ end
 
 ## create_assessment_order
 
-Create an order
+Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 
 ### Example Usage
 
@@ -107,7 +109,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.order.create_assessment_order(assessment_order: Models::Shared::AssessmentOrder.new(
   connection_id: '<id>',
   created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-  id: '46cb793e-1410-48a9-86d0-1a4baf1eeaa6',
+  id: '8f2ded2a-b22c-42ae-a1c7-7dffc14e2cc3',
   metadata: [],
   parameters: [],
   profile_addresses: [],
@@ -134,7 +136,7 @@ res = s.order.create_assessment_order(assessment_order: Models::Shared::Assessme
   response_url: 'https://rowdy-fisherman.biz/',
   status: Models::Shared::AssessmentOrderStatus::REJECTED,
   target_url: 'https://cautious-turret.info',
-  updated_at: DateTime.iso8601('2023-01-25T20:34:45.957Z'),
+  updated_at: DateTime.iso8601('2023-01-26T02:54:10.939Z'),
   workspace_id: '<id>',
 ), connection_id: '<id>')
 
@@ -163,9 +165,11 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## get_accounting_order
+## ~~get_accounting_order~~
 
-Retrieve an order
+Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -209,7 +213,7 @@ end
 
 ## get_assessment_order
 
-Retrieve an order
+Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -251,9 +255,11 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## list_accounting_orders
+## ~~list_accounting_orders~~
 
-List all orders
+Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -296,9 +302,11 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## patch_accounting_order
+## ~~patch_accounting_order~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -325,7 +333,7 @@ req = Models::Operations::PatchAccountingOrderRequest.new(
     ),
     created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
     currency: 'GBP',
-    id: '4c2c437b-fa37-41d5-a10b-c8e726820b58',
+    id: 'a2722865-e3c2-4eb8-9c96-bde5f90cfaf2',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -340,7 +348,7 @@ req = Models::Operations::PatchAccountingOrderRequest.new(
     status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
     total_amount: 0.0,
     type: Models::Shared::AccountingOrderType::SALES,
-    updated_at: DateTime.iso8601('2022-02-08T07:18:52.791Z'),
+    updated_at: DateTime.iso8601('2022-02-08T12:12:41.895Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -372,7 +380,7 @@ end
 
 ## patch_assessment_order
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -391,7 +399,7 @@ req = Models::Operations::PatchAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
     created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-    id: '5bfd87cf-d33d-4ceb-a9fc-922f4bbd52ec',
+    id: 'a89a5324-7724-4a6a-a3f2-52534dfbbf5a',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -418,7 +426,7 @@ req = Models::Operations::PatchAssessmentOrderRequest.new(
     response_url: 'https://rowdy-fisherman.biz/',
     status: Models::Shared::AssessmentOrderStatus::REJECTED,
     target_url: 'https://cautious-turret.info',
-    updated_at: DateTime.iso8601('2023-01-25T20:34:45.967Z'),
+    updated_at: DateTime.iso8601('2023-01-26T02:54:10.953Z'),
     workspace_id: '<id>',
   ),
   connection_id: '<id>',
@@ -449,9 +457,11 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## remove_accounting_order
+## ~~remove_accounting_order~~
 
-Remove an order
+Deletes the AccountingOrder identified by `id`.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -491,9 +501,11 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
-## update_accounting_order
+## ~~update_accounting_order~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -520,7 +532,7 @@ req = Models::Operations::UpdateAccountingOrderRequest.new(
     ),
     created_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
     currency: 'GBP',
-    id: '4c2c437b-fa37-41d5-a10b-c8e726820b58',
+    id: 'a2722865-e3c2-4eb8-9c96-bde5f90cfaf2',
     lineitems: [],
     metadata: [],
     posted_at: DateTime.iso8601('2020-11-20T03:46:49.837Z'),
@@ -535,7 +547,7 @@ req = Models::Operations::UpdateAccountingOrderRequest.new(
     status: Models::Shared::AccountingOrderStatus::AUTHORIZED,
     total_amount: 0.0,
     type: Models::Shared::AccountingOrderType::SALES,
-    updated_at: DateTime.iso8601('2022-02-08T07:18:52.791Z'),
+    updated_at: DateTime.iso8601('2022-02-08T12:12:41.895Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -567,7 +579,7 @@ end
 
 ## update_assessment_order
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -586,7 +598,7 @@ req = Models::Operations::UpdateAssessmentOrderRequest.new(
   assessment_order: Models::Shared::AssessmentOrder.new(
     connection_id: '<id>',
     created_at: DateTime.iso8601('2021-09-18T10:33:57.803Z'),
-    id: '5bfd87cf-d33d-4ceb-a9fc-922f4bbd52ec',
+    id: 'a89a5324-7724-4a6a-a3f2-52534dfbbf5a',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -613,7 +625,7 @@ req = Models::Operations::UpdateAssessmentOrderRequest.new(
     response_url: 'https://rowdy-fisherman.biz/',
     status: Models::Shared::AssessmentOrderStatus::REJECTED,
     target_url: 'https://cautious-turret.info',
-    updated_at: DateTime.iso8601('2023-01-25T20:34:45.967Z'),
+    updated_at: DateTime.iso8601('2023-01-26T02:54:10.953Z'),
     workspace_id: '<id>',
   ),
   connection_id: '<id>',

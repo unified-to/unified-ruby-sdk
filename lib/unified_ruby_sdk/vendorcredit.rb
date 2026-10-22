@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_vendorcredit: Models::Shared::AccountingVendorcredit, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingVendorcreditQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingVendorcreditResponse) }
     def create_accounting_vendorcredit(accounting_vendorcredit:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_vendorcredit - Create a vendorcredit
+      # Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
       request = Models::Operations::CreateAccountingVendorcreditRequest.new(
         accounting_vendorcredit: accounting_vendorcredit,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingVendorcreditQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingVendorcreditResponse) }
     def get_accounting_vendorcredit(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_vendorcredit - Retrieve a vendorcredit
+      # Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingVendorcreditRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingVendorcreditsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingVendorcreditsResponse) }
     def list_accounting_vendorcredits(request:, timeout_ms: nil)
       # list_accounting_vendorcredits - List all vendorcredits
+      # Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingVendorcreditRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingVendorcreditResponse) }
     def patch_accounting_vendorcredit(request:, timeout_ms: nil)
       # patch_accounting_vendorcredit - Update a vendorcredit
+      # Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingVendorcreditResponse) }
     def remove_accounting_vendorcredit(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_vendorcredit - Remove a vendorcredit
+      # Deletes the AccountingVendorcredit identified by `id`.
       request = Models::Operations::RemoveAccountingVendorcreditRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingVendorcreditRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingVendorcreditResponse) }
     def update_accounting_vendorcredit(request:, timeout_ms: nil)
       # update_accounting_vendorcredit - Update a vendorcredit
+      # Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

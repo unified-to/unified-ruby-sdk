@@ -101,7 +101,7 @@
 
 ## create_hris_attendance
 
-Create an attendance
+Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 
 ### Example Usage
 
@@ -125,32 +125,32 @@ res = s.hris.create_hris_attendance(hris_attendance: Models::Shared::HrisAttenda
     region: 'Tennessee',
     region_code: 'CA',
   ),
-  approved_at: DateTime.iso8601('2021-09-19T14:06:30.623Z'),
+  approved_at: DateTime.iso8601('2021-09-19T14:36:24.348Z'),
   breaks: [
     Models::Shared::HrisAttendanceBreak.new(
       duration_minutes: 51.0,
-      end_at: DateTime.iso8601('2024-02-14T13:16:00.525Z'),
-      id: '90e38399-cdd9-4d0f-9dea-ce081a3fdf76',
+      end_at: DateTime.iso8601('2024-02-15T00:45:56.493Z'),
+      id: '2febbb18-e9d7-4d0b-b18b-58013d50e9ae',
       is_paid: false,
       name: 'Lunch',
-      start_at: DateTime.iso8601('2023-10-29T23:03:00.394Z'),
+      start_at: DateTime.iso8601('2023-10-30T09:12:03.208Z'),
     ),
   ],
   created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
   currency: 'EUR',
   declared_tips_amount: 54.0,
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2024-04-23T07:48:11.832Z'),
+  end_at: DateTime.iso8601('2024-04-23T20:09:49.905Z'),
   hourly_rate: 16.0,
   hours: 10.0,
-  id: 'd6a7c321-3372-4891-9b5d-f2d24e9a30c5',
+  id: '5e087bcc-2314-41cf-bef5-c866d0a6f59a',
   job_name: 'Human Accountability Administrator',
   metadata: [],
   non_cash_tips_amount: 167.0,
-  start_at: DateTime.iso8601('2021-11-11T00:56:01.833Z'),
+  start_at: DateTime.iso8601('2021-11-11T02:05:21.460Z'),
   status: Models::Shared::HrisAttendanceStatus::OPEN,
   timezone: 'America/Atikokan',
-  updated_at: DateTime.iso8601('2022-01-19T21:04:34.807Z'),
+  updated_at: DateTime.iso8601('2022-01-19T23:06:24.665Z'),
 ), connection_id: '<id>')
 
 unless res.hris_attendance.nil?
@@ -180,7 +180,7 @@ end
 
 ## create_hris_bankaccount
 
-Create a bankaccount
+Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 
 ### Example Usage
 
@@ -203,7 +203,7 @@ res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBanka
   country_code: 'US',
   created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
   currency: 'USD',
-  id: '873b3ffd-2308-487d-a12d-eaadd026c278',
+  id: '3468ebd9-250e-4abe-9b97-508bf2361433',
   is_primary: true,
   metadata: [],
   name: 'Granville Schumm - Checking',
@@ -211,7 +211,7 @@ res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBanka
   routing_number: '448650724',
   split_amount: 98.0,
   split_type: Models::Shared::SplitType::PERCENTAGE,
-  updated_at: DateTime.iso8601('2025-07-01T06:21:20.400Z'),
+  updated_at: DateTime.iso8601('2025-07-02T01:38:52.642Z'),
 ), connection_id: '<id>')
 
 unless res.hris_bankaccount.nil?
@@ -241,7 +241,7 @@ end
 
 ## create_hris_benefit
 
-Create a benefit
+Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 
 ### Example Usage
 
@@ -265,13 +265,13 @@ res = s.hris.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(
   employer_contribution_max_amount: 179_093.0,
   employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
   frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-  id: 'cb407db1-1a01-42f0-a62e-30e0f329f245',
+  id: '100e64a1-48f0-479c-90df-02d8e4b037cc',
   is_active: false,
   metadata: [],
   name: 'Frozen Wooden Ball',
   tax: Models::Shared::Tax::PRE_TAX,
   type: Models::Shared::HrisBenefitType::OTHER,
-  updated_at: DateTime.iso8601('2023-03-20T20:21:01.309Z'),
+  updated_at: DateTime.iso8601('2023-03-21T06:42:51.802Z'),
 ), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
@@ -301,7 +301,7 @@ end
 
 ## create_hris_company
 
-Create a company
+Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 
 ### Example Usage
 
@@ -326,11 +326,11 @@ res = s.hris.create_hris_company(hris_company: Models::Shared::HrisCompany.new(
     region_code: 'MO',
   ),
   created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-  id: 'c6c4605a-089e-4cfb-91a8-c88c7fcf7a68',
+  id: '1e4e818e-c91c-4ce8-bb9f-87c290b58f50',
   legal_name: 'Gottlieb Group LLC',
   metadata: [],
   name: 'Gottlieb Group',
-  updated_at: DateTime.iso8601('2026-10-08T16:22:56.386Z'),
+  updated_at: DateTime.iso8601('2026-10-09T16:00:24.278Z'),
 ), connection_id: '<id>')
 
 unless res.hris_company.nil?
@@ -360,7 +360,7 @@ end
 
 ## create_hris_deduction
 
-Create a deduction
+Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 
 ### Example Usage
 
@@ -383,14 +383,14 @@ res = s.hris.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction
   employer_type: Models::Shared::EmployerType::PERCENTAGE,
   frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
   garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-  id: 'b93fdf66-995f-4f76-b945-d3a17ab7254b',
+  id: 'a86ffc16-9876-48ec-aaf3-43e7a64c206d',
   is_active: true,
   max_amount: 21_794.0,
   metadata: [],
   notes: 'Carmen desidero.',
-  start_at: DateTime.iso8601('2025-03-15T07:40:47.474Z'),
+  start_at: DateTime.iso8601('2025-03-16T01:46:40.270Z'),
   type: Models::Shared::HrisDeductionType::FIXED,
-  updated_at: DateTime.iso8601('2024-03-22T06:59:33.108Z'),
+  updated_at: DateTime.iso8601('2024-03-22T21:37:00.011Z'),
 ), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -420,7 +420,7 @@ end
 
 ## create_hris_device
 
-Create a device
+Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 
 ### Example Usage
 
@@ -444,7 +444,7 @@ res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   has_hd_encrypted: true,
   has_password_manager: true,
   has_screenlock: false,
-  id: '08f0179d-117e-4e0b-9712-d1fd2a9ab777',
+  id: '8948d49b-375f-49ed-a723-905a47075ae9',
   is_missing: false,
   manufacturer: 'Hackett Inc',
   metadata: [],
@@ -452,7 +452,7 @@ res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   name: 'august-laptop',
   os: 'transmitter',
   os_version: '8.4.8',
-  updated_at: DateTime.iso8601('2023-06-08T07:20:57.814Z'),
+  updated_at: DateTime.iso8601('2023-06-08T20:30:23.493Z'),
   version: '4.15.7',
 ), connection_id: '<id>')
 
@@ -483,7 +483,7 @@ end
 
 ## create_hris_document
 
-Create a document
+Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 
 ### Example Usage
 
@@ -502,10 +502,10 @@ res = s.hris.create_hris_document(hris_document: Models::Shared::HrisDocument.ne
   created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
   document_url: 'https://sore-decision.biz/',
   filename: 'ridge_forager.xsl',
-  id: 'b25835b6-2aaf-4225-a1f4-e0249d981e29',
+  id: '4fcc4bf2-5c06-437d-8c9c-cb0f58e4ac41',
   metadata: [],
   type: Models::Shared::HrisDocumentType::POLICY,
-  updated_at: DateTime.iso8601('2025-10-11T14:06:05.581Z'),
+  updated_at: DateTime.iso8601('2025-10-12T07:45:12.953Z'),
 ), connection_id: '<id>')
 
 unless res.hris_document.nil?
@@ -535,7 +535,7 @@ end
 
 ## create_hris_earning
 
-Create an earning
+Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 
 ### Example Usage
 
@@ -555,12 +555,12 @@ res = s.hris.create_hris_earning(hris_earning: Models::Shared::HrisEarning.new(
   created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
   currency: 'USD',
   frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-  id: 'e217da60-71ee-4135-afac-bd2548e026c2',
+  id: 'fc526592-d3cd-43c8-b69a-04fc3f803646',
   metadata: [],
   notes: 'Deporto truculenter vinum beatae.',
-  start_at: DateTime.iso8601('2022-07-25T11:48:48.385Z'),
+  start_at: DateTime.iso8601('2022-07-25T22:33:07.377Z'),
   status: Models::Shared::HrisEarningStatus::ENDED,
-  updated_at: DateTime.iso8601('2020-02-08T20:32:52.338Z'),
+  updated_at: DateTime.iso8601('2020-02-08T23:43:54.807Z'),
 ), connection_id: '<id>')
 
 unless res.hris_earning.nil?
@@ -590,7 +590,7 @@ end
 
 ## create_hris_employee
 
-Create an employee
+Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 
 ### Example Usage
 
@@ -642,7 +642,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
   gender: Models::Shared::HrisEmployeeGender::MALE,
   has_mfa: true,
   hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-  id: '5ece6f77-35df-48e1-9496-7d1879563189',
+  id: 'f0059d37-f7f5-475f-ba3a-ae687313ebe6',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
   language_locale: 'in',
   last_name: 'Prohaska',
@@ -654,7 +654,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
         "display_name": 'Custom Property',
       },
       format: Models::Shared::HrisMetadataFormat::TEXT,
-      id: 'db8a06c6-9b85-4baa-8142-748cdc88efd4',
+      id: 'a100a8c6-503b-48c0-b130-a362a3c5bdad',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'tutis',
@@ -702,7 +702,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
   timeoff_days_used: 9.0,
   timezone: 'Europe/Ljubljana',
   title: 'District Branding Specialist',
-  updated_at: DateTime.iso8601('2020-07-19T04:12:43.588Z'),
+  updated_at: DateTime.iso8601('2020-07-19T07:01:26.701Z'),
 ), connection_id: '<id>')
 
 unless res.hris_employee.nil?
@@ -732,7 +732,7 @@ end
 
 ## create_hris_group
 
-Create a group
+Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
 ### Example Usage
 
@@ -750,12 +750,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.hris.create_hris_group(hris_group: Models::Shared::HrisGroup.new(
   created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
   description: 'Absorbeo casso.',
-  id: 'a367376f-3ee9-4b6c-8743-d83e2575917d',
+  id: '1d18b974-d325-49fa-b0e1-a2e01f2dd256',
   is_active: false,
   metadata: [],
   name: 'Games',
   type: Models::Shared::HrisGroupType::BRANCH,
-  updated_at: DateTime.iso8601('2026-05-21T23:27:42.075Z'),
+  updated_at: DateTime.iso8601('2026-05-22T19:54:01.894Z'),
 ), connection_id: '<id>')
 
 unless res.hris_group.nil?
@@ -785,7 +785,7 @@ end
 
 ## create_hris_job
 
-Create a job
+Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 
 ### Example Usage
 
@@ -805,11 +805,11 @@ res = s.hris.create_hris_job(hris_job: Models::Shared::HrisJob.new(
   created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
   description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
   employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-  id: '9a3cb5cb-f487-4b03-8119-62f5eec3c16a',
+  id: '40d8a395-8f3c-45c7-9458-c256a829c475',
   is_active: false,
   metadata: [],
   name: 'Internal Integration Specialist',
-  updated_at: DateTime.iso8601('2023-01-30T05:18:40.719Z'),
+  updated_at: DateTime.iso8601('2023-01-30T14:16:54.965Z'),
 ), connection_id: '<id>')
 
 unless res.hris_job.nil?
@@ -839,7 +839,7 @@ end
 
 ## create_hris_location
 
-Create a location
+Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
 ### Example Usage
 
@@ -867,7 +867,7 @@ res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.ne
   created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
   currency: 'MNT',
   description: 'Commemoro acervus.',
-  id: '9d705c51-711f-45a7-a73a-717ad8e2b7b3',
+  id: '1ecb6270-3dbb-4d0c-b876-5c1c8bb0ddef',
   is_active: false,
   is_hq: true,
   language_locale: 'it',
@@ -888,7 +888,7 @@ res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.ne
     ),
   ],
   timezone: 'Asia/Jerusalem',
-  updated_at: DateTime.iso8601('2023-06-21T02:27:35.009Z'),
+  updated_at: DateTime.iso8601('2023-06-21T11:09:24.068Z'),
 ), connection_id: '<id>')
 
 unless res.hris_location.nil?
@@ -918,7 +918,7 @@ end
 
 ## create_hris_taxonomy
 
-Create a taxonomy
+Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
 
 ### Example Usage
 
@@ -941,13 +941,13 @@ res = s.hris.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.ne
   created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
   description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
   domain: 'Health',
-  id: '2181864e-6f7a-4346-aea3-29f05f968d16',
+  id: '563a331c-0d6e-47dc-9fe1-fbd0303dc9fa',
   is_active: false,
   metadata: [],
   name: 'International Functionality Architect',
   subcategory: 'Marble',
   type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-  updated_at: DateTime.iso8601('2023-05-29T07:25:03.542Z'),
+  updated_at: DateTime.iso8601('2023-05-29T12:31:59.841Z'),
   url: 'https://fixed-membership.biz/',
 ), connection_id: '<id>')
 
@@ -978,7 +978,7 @@ end
 
 ## create_hris_timeoff
 
-Create a timeoff
+Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 
 ### Example Usage
 
@@ -994,21 +994,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.hris.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
-  approved_at: DateTime.iso8601('2022-02-23T09:08:38.740Z'),
+  approved_at: DateTime.iso8601('2022-02-23T10:56:51.892Z'),
   comments: 'Blandior ventus curiositas amplitudo.',
   created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
   duration: 4.0,
   duration_type: Models::Shared::DurationType::DAY,
-  end_at: DateTime.iso8601('2024-12-28T17:18:17.498Z'),
-  id: 'f0b66e32-63b5-4634-8ced-df6263f431d8',
+  end_at: DateTime.iso8601('2024-12-29T08:32:02.355Z'),
+  id: '9cb84118-4f94-475f-9ce1-f629fe9fdc82',
   is_paid: true,
   metadata: [],
   original_type: 'acerbitas ut',
   reason: 'verto',
-  start_at: DateTime.iso8601('2023-09-04T19:24:22.037Z'),
+  start_at: DateTime.iso8601('2023-09-05T04:25:23.358Z'),
   status: Models::Shared::HrisTimeoffStatus::DENIED,
   type: Models::Shared::HrisTimeoffType::IN_LIEU,
-  updated_at: DateTime.iso8601('2022-07-12T19:42:00.487Z'),
+  updated_at: DateTime.iso8601('2022-07-12T23:18:17.913Z'),
   user_id: '<id>',
 ), connection_id: '<id>')
 
@@ -1039,7 +1039,7 @@ end
 
 ## create_hris_timeshift
 
-Create a timeshift
+Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 
 ### Example Usage
 
@@ -1055,7 +1055,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.hris.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
-  approved_at: DateTime.iso8601('2022-07-18T01:51:06.464Z'),
+  approved_at: DateTime.iso8601('2022-07-18T11:45:36.212Z'),
   compensation: [
     Models::Shared::HrisCompensation.new(
       amount: 76_761.0,
@@ -1067,13 +1067,13 @@ res = s.hris.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift
   ],
   created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2026-09-27T01:26:47.942Z'),
+  end_at: DateTime.iso8601('2026-09-28T01:00:15.668Z'),
   hours: 6.0,
-  id: '6b0e3410-8eef-4221-b88e-e4d4be208730',
+  id: '92b01fd8-ed4d-4643-95ba-0d8a8b541854',
   is_approved: false,
   metadata: [],
-  start_at: DateTime.iso8601('2023-07-13T00:30:36.291Z'),
-  updated_at: DateTime.iso8601('2021-07-01T21:53:01.115Z'),
+  start_at: DateTime.iso8601('2023-07-13T13:37:31.157Z'),
+  updated_at: DateTime.iso8601('2021-07-02T04:23:45.080Z'),
 ), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -1103,7 +1103,7 @@ end
 
 ## get_hris_attendance
 
-Retrieve an attendance
+Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1147,7 +1147,7 @@ end
 
 ## get_hris_bankaccount
 
-Retrieve a bankaccount
+Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1191,7 +1191,7 @@ end
 
 ## get_hris_benefit
 
-Retrieve a benefit
+Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1235,7 +1235,7 @@ end
 
 ## get_hris_company
 
-Retrieve a company
+Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1279,7 +1279,7 @@ end
 
 ## get_hris_deduction
 
-Retrieve a deduction
+Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1323,7 +1323,7 @@ end
 
 ## get_hris_device
 
-Retrieve a device
+Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1367,7 +1367,7 @@ end
 
 ## get_hris_document
 
-Retrieve a document
+Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1411,7 +1411,7 @@ end
 
 ## get_hris_earning
 
-Retrieve an earning
+Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1455,7 +1455,7 @@ end
 
 ## get_hris_employee
 
-Retrieve an employee
+Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1499,7 +1499,7 @@ end
 
 ## get_hris_group
 
-Retrieve a group
+Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1543,7 +1543,7 @@ end
 
 ## get_hris_job
 
-Retrieve a job
+Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1587,7 +1587,7 @@ end
 
 ## get_hris_location
 
-Retrieve a location
+Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1631,7 +1631,7 @@ end
 
 ## get_hris_paycode
 
-Retrieve a paycode
+Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1675,7 +1675,7 @@ end
 
 ## get_hris_payroll
 
-Retrieve a payroll
+Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1719,7 +1719,7 @@ end
 
 ## get_hris_payslip
 
-Retrieve a payslip
+Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1763,7 +1763,7 @@ end
 
 ## get_hris_taxonomy
 
-Retrieve a taxonomy
+Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1807,7 +1807,7 @@ end
 
 ## get_hris_timeoff
 
-Retrieve a timeoff
+Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1851,7 +1851,7 @@ end
 
 ## get_hris_timeshift
 
-Retrieve a timeshift
+Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1895,7 +1895,7 @@ end
 
 ## list_hris_attendances
 
-List all attendances
+Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1940,7 +1940,7 @@ end
 
 ## list_hris_bankaccounts
 
-List all bankaccounts
+Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1985,7 +1985,7 @@ end
 
 ## list_hris_benefits
 
-List all benefits
+Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2030,7 +2030,7 @@ end
 
 ## list_hris_companies
 
-List all companies
+Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2075,7 +2075,7 @@ end
 
 ## list_hris_deductions
 
-List all deductions
+Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2120,7 +2120,7 @@ end
 
 ## list_hris_devices
 
-List all devices
+Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2165,7 +2165,7 @@ end
 
 ## list_hris_documents
 
-List all documents
+Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2210,7 +2210,7 @@ end
 
 ## list_hris_earnings
 
-List all earnings
+Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2255,7 +2255,7 @@ end
 
 ## list_hris_employees
 
-List all employees
+Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2300,7 +2300,7 @@ end
 
 ## list_hris_groups
 
-List all groups
+Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2345,7 +2345,7 @@ end
 
 ## list_hris_jobs
 
-List all jobs
+Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2390,7 +2390,7 @@ end
 
 ## list_hris_locations
 
-List all locations
+Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2435,7 +2435,7 @@ end
 
 ## list_hris_paycodes
 
-List all paycodes
+Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2480,7 +2480,7 @@ end
 
 ## list_hris_payrolls
 
-List all payrolls
+Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2525,7 +2525,7 @@ end
 
 ## list_hris_payslips
 
-List all payslips
+Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2570,7 +2570,7 @@ end
 
 ## list_hris_taxonomies
 
-List all taxonomies
+Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2615,7 +2615,7 @@ end
 
 ## list_hris_timeoffs
 
-List all timeoffs
+Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2660,7 +2660,7 @@ end
 
 ## list_hris_timeshifts
 
-List all timeshifts
+Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2705,7 +2705,7 @@ end
 
 ## patch_hris_attendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -2730,32 +2730,32 @@ req = Models::Operations::PatchHrisAttendanceRequest.new(
       region: 'Tennessee',
       region_code: 'CA',
     ),
-    approved_at: DateTime.iso8601('2021-09-19T14:06:30.624Z'),
+    approved_at: DateTime.iso8601('2021-09-19T14:36:24.348Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-14T13:16:00.540Z'),
-        id: '939123d3-e26b-44f5-855a-b592fc011641',
+        end_at: DateTime.iso8601('2024-02-15T00:45:56.503Z'),
+        id: '6aaf0655-e6e5-451b-8099-50e6f3a2a33d',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-10-29T23:03:00.407Z'),
+        start_at: DateTime.iso8601('2023-10-30T09:12:03.217Z'),
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-04-23T07:48:11.848Z'),
+    end_at: DateTime.iso8601('2024-04-23T20:09:49.916Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: 'de583745-c602-4069-9149-69ec0f9587aa',
+    id: '31e79ecd-e0a3-43a4-b3a8-492aff61cb64',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-11T00:56:01.835Z'),
+    start_at: DateTime.iso8601('2021-11-11T02:05:21.461Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-19T21:04:34.810Z'),
+    updated_at: DateTime.iso8601('2022-01-19T23:06:24.667Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2787,7 +2787,7 @@ end
 
 ## patch_hris_bankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -2811,7 +2811,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '226e7e5d-1767-47a1-b0fd-6b38c5ed69ab',
+    id: 'b83bd056-9674-4f6e-a525-95182b7b0bd0',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -2819,7 +2819,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-01T06:21:20.416Z'),
+    updated_at: DateTime.iso8601('2025-07-02T01:38:52.658Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2851,7 +2851,7 @@ end
 
 ## patch_hris_benefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -2876,13 +2876,13 @@ req = Models::Operations::PatchHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c',
+    id: 'b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-20T20:21:01.318Z'),
+    updated_at: DateTime.iso8601('2023-03-21T06:42:51.811Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2914,7 +2914,7 @@ end
 
 ## patch_hris_company
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -2940,11 +2940,11 @@ req = Models::Operations::PatchHrisCompanyRequest.new(
       region_code: 'MO',
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '1a037787-e022-401d-a3e7-32542733f2d2',
+    id: '614c60e7-805a-4ebe-9b04-71aabf2ea7b8',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-08T16:22:56.398Z'),
+    updated_at: DateTime.iso8601('2026-10-09T16:00:24.302Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2976,7 +2976,7 @@ end
 
 ## patch_hris_deduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -3000,14 +3000,14 @@ req = Models::Operations::PatchHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'c3213a23-98f3-4a00-85e5-4297c58c69b9',
+    id: '2b0eecf4-4ef5-4c58-952b-20761e9d8c04',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-03-15T07:40:47.491Z'),
+    start_at: DateTime.iso8601('2025-03-16T01:46:40.283Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-03-22T06:59:33.122Z'),
+    updated_at: DateTime.iso8601('2024-03-22T21:37:00.022Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3039,7 +3039,7 @@ end
 
 ## patch_hris_device
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -3064,7 +3064,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '23a8d248-5900-4fd8-9b12-17935dbde1f4',
+    id: 'afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -3072,7 +3072,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-08T07:20:57.824Z'),
+    updated_at: DateTime.iso8601('2023-06-08T20:30:23.500Z'),
     version: '4.15.7',
   ),
   connection_id: '<id>',
@@ -3105,7 +3105,7 @@ end
 
 ## patch_hris_document
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -3125,10 +3125,10 @@ req = Models::Operations::PatchHrisDocumentRequest.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: 'b54cade5-8f1a-4f99-99b1-63b35119660c',
+    id: '7d80c112-dc78-40ac-9983-b4e0e520055f',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-11T14:06:05.593Z'),
+    updated_at: DateTime.iso8601('2025-10-12T07:45:12.961Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3160,7 +3160,7 @@ end
 
 ## patch_hris_earning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -3181,12 +3181,12 @@ req = Models::Operations::PatchHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: 'ae74f559-3b04-412c-92c7-6b4867daa099',
+    id: 'c30ab4a5-6379-402f-94ce-29656bc968ac',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-07-25T11:48:48.394Z'),
+    start_at: DateTime.iso8601('2022-07-25T22:33:07.384Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-08T20:32:52.341Z'),
+    updated_at: DateTime.iso8601('2020-02-08T23:43:54.809Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3218,7 +3218,7 @@ end
 
 ## patch_hris_employee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -3271,7 +3271,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '9609249d-8821-468a-b0ee-7d78f4b1ae6a',
+    id: 'af401a62-954a-4750-b0f9-c63eb87066ea',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -3283,7 +3283,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '20b100c1-0a48-47af-920c-3385a2834306',
+        id: 'cea3e721-d03d-409d-b8f2-ca5f08895117',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis',
@@ -3331,7 +3331,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-19T04:12:43.602Z'),
+    updated_at: DateTime.iso8601('2020-07-19T07:01:26.712Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3363,7 +3363,7 @@ end
 
 ## patch_hris_group
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -3382,12 +3382,12 @@ req = Models::Operations::PatchHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: '0c7aa9a3-c25c-4e54-9338-a92812e404ce',
+    id: '4a3e0f10-b197-48b9-b1d1-20f46e3874fd',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-05-21T23:27:42.085Z'),
+    updated_at: DateTime.iso8601('2026-05-22T19:54:01.911Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3419,7 +3419,7 @@ end
 
 ## patch_hris_job
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -3440,11 +3440,11 @@ req = Models::Operations::PatchHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: '51987954-bfbe-4f6d-8e56-6f516c79198d',
+    id: 'efdd1e58-1ea2-4e0c-b5c0-6a8691cdab7a',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-01-30T05:18:40.762Z'),
+    updated_at: DateTime.iso8601('2023-01-30T14:16:55.027Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3476,7 +3476,7 @@ end
 
 ## patch_hris_location
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -3505,7 +3505,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'c28a0039-b5ac-4680-a8cc-2afb4f82d97b',
+    id: 'f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -3526,7 +3526,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-21T02:27:35.015Z'),
+    updated_at: DateTime.iso8601('2023-06-21T11:09:24.079Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3558,7 +3558,7 @@ end
 
 ## patch_hris_timeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -3575,21 +3575,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-23T09:08:38.741Z'),
+    approved_at: DateTime.iso8601('2022-02-23T10:56:51.893Z'),
     comments: 'Blandior ventus curiositas amplitudo.',
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2024-12-28T17:18:17.511Z'),
-    id: 'd8855007-ff38-4e99-8643-55c97eb6ff18',
+    end_at: DateTime.iso8601('2024-12-29T08:32:02.364Z'),
+    id: '9453aff1-d935-4270-a1e8-4e535ec124e9',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-04T19:24:22.045Z'),
+    start_at: DateTime.iso8601('2023-09-05T04:25:23.363Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-12T19:42:00.490Z'),
+    updated_at: DateTime.iso8601('2022-07-12T23:18:17.915Z'),
     user_id: '<id>',
   ),
   connection_id: '<id>',
@@ -3622,7 +3622,7 @@ end
 
 ## patch_hris_timeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -3639,7 +3639,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-18T01:51:06.472Z'),
+    approved_at: DateTime.iso8601('2022-07-18T11:45:36.221Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
@@ -3651,13 +3651,13 @@ req = Models::Operations::PatchHrisTimeshiftRequest.new(
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-09-27T01:26:47.962Z'),
+    end_at: DateTime.iso8601('2026-09-28T01:00:15.689Z'),
     hours: 6.0,
-    id: '860cce82-b177-4974-b6a6-dda841cb1baa',
+    id: 'be8b2098-4454-4b17-a20f-c3f23a1d0e71',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-13T00:30:36.302Z'),
-    updated_at: DateTime.iso8601('2021-07-01T21:53:01.120Z'),
+    start_at: DateTime.iso8601('2023-07-13T13:37:31.169Z'),
+    updated_at: DateTime.iso8601('2021-07-02T04:23:45.085Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3689,7 +3689,7 @@ end
 
 ## remove_hris_attendance
 
-Remove an attendance
+Deletes the HrisAttendance identified by `id`.
 
 ### Example Usage
 
@@ -3731,7 +3731,7 @@ end
 
 ## remove_hris_bankaccount
 
-Remove a bankaccount
+Deletes the HrisBankaccount identified by `id`.
 
 ### Example Usage
 
@@ -3773,7 +3773,7 @@ end
 
 ## remove_hris_benefit
 
-Remove a benefit
+Deletes the HrisBenefit identified by `id`.
 
 ### Example Usage
 
@@ -3815,7 +3815,7 @@ end
 
 ## remove_hris_company
 
-Remove a company
+Deletes the HrisCompany identified by `id`.
 
 ### Example Usage
 
@@ -3857,7 +3857,7 @@ end
 
 ## remove_hris_deduction
 
-Remove a deduction
+Deletes the HrisDeduction identified by `id`.
 
 ### Example Usage
 
@@ -3899,7 +3899,7 @@ end
 
 ## remove_hris_device
 
-Remove a device
+Deletes the HrisDevice identified by `id`.
 
 ### Example Usage
 
@@ -3941,7 +3941,7 @@ end
 
 ## remove_hris_document
 
-Remove a document
+Deletes the HrisDocument identified by `id`.
 
 ### Example Usage
 
@@ -3983,7 +3983,7 @@ end
 
 ## remove_hris_earning
 
-Remove an earning
+Deletes the HrisEarning identified by `id`.
 
 ### Example Usage
 
@@ -4025,7 +4025,7 @@ end
 
 ## remove_hris_employee
 
-Remove an employee
+Deletes the HrisEmployee identified by `id`.
 
 ### Example Usage
 
@@ -4067,7 +4067,7 @@ end
 
 ## remove_hris_group
 
-Remove a group
+Deletes the HrisGroup identified by `id`.
 
 ### Example Usage
 
@@ -4109,7 +4109,7 @@ end
 
 ## remove_hris_job
 
-Remove a job
+Deletes the HrisJob identified by `id`.
 
 ### Example Usage
 
@@ -4151,7 +4151,7 @@ end
 
 ## remove_hris_location
 
-Remove a location
+Deletes the HrisLocation identified by `id`.
 
 ### Example Usage
 
@@ -4193,7 +4193,7 @@ end
 
 ## remove_hris_timeoff
 
-Remove a timeoff
+Deletes the HrisTimeoff identified by `id`.
 
 ### Example Usage
 
@@ -4235,7 +4235,7 @@ end
 
 ## remove_hris_timeshift
 
-Remove a timeshift
+Deletes the HrisTimeshift identified by `id`.
 
 ### Example Usage
 
@@ -4277,7 +4277,7 @@ end
 
 ## update_hris_attendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -4302,32 +4302,32 @@ req = Models::Operations::UpdateHrisAttendanceRequest.new(
       region: 'Tennessee',
       region_code: 'CA',
     ),
-    approved_at: DateTime.iso8601('2021-09-19T14:06:30.624Z'),
+    approved_at: DateTime.iso8601('2021-09-19T14:36:24.348Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-14T13:16:00.540Z'),
-        id: '939123d3-e26b-44f5-855a-b592fc011641',
+        end_at: DateTime.iso8601('2024-02-15T00:45:56.503Z'),
+        id: '6aaf0655-e6e5-451b-8099-50e6f3a2a33d',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-10-29T23:03:00.407Z'),
+        start_at: DateTime.iso8601('2023-10-30T09:12:03.217Z'),
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-04-23T07:48:11.848Z'),
+    end_at: DateTime.iso8601('2024-04-23T20:09:49.916Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: 'de583745-c602-4069-9149-69ec0f9587aa',
+    id: '31e79ecd-e0a3-43a4-b3a8-492aff61cb64',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-11T00:56:01.835Z'),
+    start_at: DateTime.iso8601('2021-11-11T02:05:21.461Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-19T21:04:34.810Z'),
+    updated_at: DateTime.iso8601('2022-01-19T23:06:24.667Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -4359,7 +4359,7 @@ end
 
 ## update_hris_bankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -4383,7 +4383,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '226e7e5d-1767-47a1-b0fd-6b38c5ed69ab',
+    id: 'b83bd056-9674-4f6e-a525-95182b7b0bd0',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -4391,7 +4391,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-01T06:21:20.416Z'),
+    updated_at: DateTime.iso8601('2025-07-02T01:38:52.658Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -4423,7 +4423,7 @@ end
 
 ## update_hris_benefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -4448,13 +4448,13 @@ req = Models::Operations::UpdateHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c',
+    id: 'b36c4fbf-0ca7-4e3c-8e02-7d201f16ca93',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-20T20:21:01.318Z'),
+    updated_at: DateTime.iso8601('2023-03-21T06:42:51.811Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -4486,7 +4486,7 @@ end
 
 ## update_hris_company
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -4512,11 +4512,11 @@ req = Models::Operations::UpdateHrisCompanyRequest.new(
       region_code: 'MO',
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '1a037787-e022-401d-a3e7-32542733f2d2',
+    id: '614c60e7-805a-4ebe-9b04-71aabf2ea7b8',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-08T16:22:56.398Z'),
+    updated_at: DateTime.iso8601('2026-10-09T16:00:24.302Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -4548,7 +4548,7 @@ end
 
 ## update_hris_deduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -4572,14 +4572,14 @@ req = Models::Operations::UpdateHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'c3213a23-98f3-4a00-85e5-4297c58c69b9',
+    id: '2b0eecf4-4ef5-4c58-952b-20761e9d8c04',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-03-15T07:40:47.491Z'),
+    start_at: DateTime.iso8601('2025-03-16T01:46:40.283Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-03-22T06:59:33.122Z'),
+    updated_at: DateTime.iso8601('2024-03-22T21:37:00.022Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -4611,7 +4611,7 @@ end
 
 ## update_hris_device
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -4636,7 +4636,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '23a8d248-5900-4fd8-9b12-17935dbde1f4',
+    id: 'afc52eb2-dd4b-4278-b6f0-3f16a2a2e6dd',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -4644,7 +4644,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-08T07:20:57.824Z'),
+    updated_at: DateTime.iso8601('2023-06-08T20:30:23.500Z'),
     version: '4.15.7',
   ),
   connection_id: '<id>',
@@ -4677,7 +4677,7 @@ end
 
 ## update_hris_document
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -4697,10 +4697,10 @@ req = Models::Operations::UpdateHrisDocumentRequest.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: 'b54cade5-8f1a-4f99-99b1-63b35119660c',
+    id: '7d80c112-dc78-40ac-9983-b4e0e520055f',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-11T14:06:05.593Z'),
+    updated_at: DateTime.iso8601('2025-10-12T07:45:12.961Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -4732,7 +4732,7 @@ end
 
 ## update_hris_earning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -4753,12 +4753,12 @@ req = Models::Operations::UpdateHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: 'ae74f559-3b04-412c-92c7-6b4867daa099',
+    id: 'c30ab4a5-6379-402f-94ce-29656bc968ac',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-07-25T11:48:48.394Z'),
+    start_at: DateTime.iso8601('2022-07-25T22:33:07.384Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-08T20:32:52.341Z'),
+    updated_at: DateTime.iso8601('2020-02-08T23:43:54.809Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -4790,7 +4790,7 @@ end
 
 ## update_hris_employee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -4843,7 +4843,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '9609249d-8821-468a-b0ee-7d78f4b1ae6a',
+    id: 'af401a62-954a-4750-b0f9-c63eb87066ea',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -4855,7 +4855,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '20b100c1-0a48-47af-920c-3385a2834306',
+        id: 'cea3e721-d03d-409d-b8f2-ca5f08895117',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis',
@@ -4903,7 +4903,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-19T04:12:43.602Z'),
+    updated_at: DateTime.iso8601('2020-07-19T07:01:26.712Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -4935,7 +4935,7 @@ end
 
 ## update_hris_group
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -4954,12 +4954,12 @@ req = Models::Operations::UpdateHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: '0c7aa9a3-c25c-4e54-9338-a92812e404ce',
+    id: '4a3e0f10-b197-48b9-b1d1-20f46e3874fd',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-05-21T23:27:42.085Z'),
+    updated_at: DateTime.iso8601('2026-05-22T19:54:01.911Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -4991,7 +4991,7 @@ end
 
 ## update_hris_job
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -5012,11 +5012,11 @@ req = Models::Operations::UpdateHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: '51987954-bfbe-4f6d-8e56-6f516c79198d',
+    id: 'efdd1e58-1ea2-4e0c-b5c0-6a8691cdab7a',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-01-30T05:18:40.762Z'),
+    updated_at: DateTime.iso8601('2023-01-30T14:16:55.027Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -5048,7 +5048,7 @@ end
 
 ## update_hris_location
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -5077,7 +5077,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'c28a0039-b5ac-4680-a8cc-2afb4f82d97b',
+    id: 'f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -5098,7 +5098,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-21T02:27:35.015Z'),
+    updated_at: DateTime.iso8601('2023-06-21T11:09:24.079Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -5130,7 +5130,7 @@ end
 
 ## update_hris_timeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -5147,21 +5147,21 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-23T09:08:38.741Z'),
+    approved_at: DateTime.iso8601('2022-02-23T10:56:51.893Z'),
     comments: 'Blandior ventus curiositas amplitudo.',
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2024-12-28T17:18:17.511Z'),
-    id: 'd8855007-ff38-4e99-8643-55c97eb6ff18',
+    end_at: DateTime.iso8601('2024-12-29T08:32:02.364Z'),
+    id: '9453aff1-d935-4270-a1e8-4e535ec124e9',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-04T19:24:22.045Z'),
+    start_at: DateTime.iso8601('2023-09-05T04:25:23.363Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-12T19:42:00.490Z'),
+    updated_at: DateTime.iso8601('2022-07-12T23:18:17.915Z'),
     user_id: '<id>',
   ),
   connection_id: '<id>',
@@ -5194,7 +5194,7 @@ end
 
 ## update_hris_timeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -5211,7 +5211,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-18T01:51:06.472Z'),
+    approved_at: DateTime.iso8601('2022-07-18T11:45:36.221Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
@@ -5223,13 +5223,13 @@ req = Models::Operations::UpdateHrisTimeshiftRequest.new(
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-09-27T01:26:47.962Z'),
+    end_at: DateTime.iso8601('2026-09-28T01:00:15.689Z'),
     hours: 6.0,
-    id: '860cce82-b177-4974-b6a6-dda841cb1baa',
+    id: 'be8b2098-4454-4b17-a20f-c3f23a1d0e71',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-13T00:30:36.302Z'),
-    updated_at: DateTime.iso8601('2021-07-01T21:53:01.120Z'),
+    start_at: DateTime.iso8601('2023-07-13T13:37:31.169Z'),
+    updated_at: DateTime.iso8601('2021-07-02T04:23:45.085Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

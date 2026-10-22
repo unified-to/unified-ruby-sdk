@@ -14,7 +14,7 @@
 
 ## create_repo_repository
 
-Create a repository
+Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 
 ### Example Usage
 
@@ -32,11 +32,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.repository.create_repo_repository(repo_repository: Models::Shared::RepoRepository.new(
   created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
   description: 'Sed somnus crastinus armarium.',
-  id: '1becda54-75c5-4934-8961-9ca4ffa219f1',
+  id: '86f236b6-8cd3-488a-b7b2-ce93a56c7517',
   is_private: false,
   metadata: [],
   name: 'bah-bogus',
-  updated_at: DateTime.iso8601('2024-03-01T02:05:05.865Z'),
+  updated_at: DateTime.iso8601('2024-03-01T07:10:32.663Z'),
   web_url: 'https://neat-birdbath.org',
 ), connection_id: '<id>')
 
@@ -67,7 +67,7 @@ end
 
 ## get_repo_repository
 
-Retrieve a repository
+Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -111,7 +111,7 @@ end
 
 ## list_repo_repositories
 
-List all repositories
+Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -156,7 +156,7 @@ end
 
 ## patch_repo_repository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -175,11 +175,11 @@ req = Models::Operations::PatchRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
     description: 'Sed somnus crastinus armarium.',
-    id: '03073f42-04d8-46d4-8264-186828af3e72',
+    id: '2702d848-a85c-4e23-af94-267ef6cff2da',
     is_private: false,
     metadata: [],
     name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-01T02:05:05.868Z'),
+    updated_at: DateTime.iso8601('2024-03-01T07:10:32.666Z'),
     web_url: 'https://neat-birdbath.org',
   ),
   connection_id: '<id>',
@@ -212,7 +212,7 @@ end
 
 ## remove_repo_repository
 
-Remove a repository
+Deletes the RepoRepository identified by `id`.
 
 ### Example Usage
 
@@ -254,7 +254,7 @@ end
 
 ## update_repo_repository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -273,11 +273,11 @@ req = Models::Operations::UpdateRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
     description: 'Sed somnus crastinus armarium.',
-    id: '03073f42-04d8-46d4-8264-186828af3e72',
+    id: '2702d848-a85c-4e23-af94-267ef6cff2da',
     is_private: false,
     metadata: [],
     name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-01T02:05:05.868Z'),
+    updated_at: DateTime.iso8601('2024-03-01T07:10:32.666Z'),
     web_url: 'https://neat-birdbath.org',
   ),
   connection_id: '<id>',

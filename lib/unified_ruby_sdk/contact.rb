@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_contact: Models::Shared::AccountingContact, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingContactResponse) }
     def create_accounting_contact(accounting_contact:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_contact - Create a contact
+      # Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
       request = Models::Operations::CreateAccountingContactRequest.new(
         accounting_contact: accounting_contact,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(crm_contact: Models::Shared::CrmContact, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmContactResponse) }
     def create_crm_contact(crm_contact:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_contact - Create a contact
+      # Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
       request = Models::Operations::CreateCrmContactRequest.new(
         crm_contact: crm_contact,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(uc_contact: Models::Shared::UcContact, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateUcContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateUcContactResponse) }
     def create_uc_contact(uc_contact:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_uc_contact - Create a contact
+      # Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
       request = Models::Operations::CreateUcContactRequest.new(
         uc_contact: uc_contact,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingContactResponse) }
     def get_accounting_contact(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_contact - Retrieve a contact
+      # Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingContactRequest.new(
         connection_id: connection_id,
         id: id,
@@ -542,6 +546,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmContactResponse) }
     def get_crm_contact(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_contact - Retrieve a contact
+      # Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCrmContactRequest.new(
         connection_id: connection_id,
         id: id,
@@ -658,6 +663,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetUcContactQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetUcContactResponse) }
     def get_uc_contact(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_uc_contact - Retrieve a contact
+      # Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetUcContactRequest.new(
         connection_id: connection_id,
         id: id,
@@ -774,6 +780,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingContactsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingContactsResponse) }
     def list_accounting_contacts(request:, timeout_ms: nil)
       # list_accounting_contacts - List all contacts
+      # Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -884,6 +891,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCrmContactsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmContactsResponse) }
     def list_crm_contacts(request:, timeout_ms: nil)
       # list_crm_contacts - List all contacts
+      # Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListUcContactsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListUcContactsResponse) }
     def list_uc_contacts(request:, timeout_ms: nil)
       # list_uc_contacts - List all contacts
+      # Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1104,6 +1113,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingContactResponse) }
     def patch_accounting_contact(request:, timeout_ms: nil)
       # patch_accounting_contact - Update a contact
+      # Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1226,6 +1236,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCrmContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmContactResponse) }
     def patch_crm_contact(request:, timeout_ms: nil)
       # patch_crm_contact - Update a contact
+      # Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1348,6 +1359,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchUcContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchUcContactResponse) }
     def patch_uc_contact(request:, timeout_ms: nil)
       # patch_uc_contact - Update a contact
+      # Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1470,6 +1482,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingContactResponse) }
     def remove_accounting_contact(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_contact - Remove a contact
+      # Deletes the AccountingContact identified by `id`.
       request = Models::Operations::RemoveAccountingContactRequest.new(
         connection_id: connection_id,
         id: id
@@ -1584,6 +1597,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmContactResponse) }
     def remove_crm_contact(connection_id:, id:, timeout_ms: nil)
       # remove_crm_contact - Remove a contact
+      # Deletes the CrmContact identified by `id`.
       request = Models::Operations::RemoveCrmContactRequest.new(
         connection_id: connection_id,
         id: id
@@ -1698,6 +1712,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveUcContactResponse) }
     def remove_uc_contact(connection_id:, id:, timeout_ms: nil)
       # remove_uc_contact - Remove a contact
+      # Deletes the UcContact identified by `id`.
       request = Models::Operations::RemoveUcContactRequest.new(
         connection_id: connection_id,
         id: id
@@ -1812,6 +1827,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingContactResponse) }
     def update_accounting_contact(request:, timeout_ms: nil)
       # update_accounting_contact - Update a contact
+      # Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1934,6 +1950,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCrmContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmContactResponse) }
     def update_crm_contact(request:, timeout_ms: nil)
       # update_crm_contact - Update a contact
+      # Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2056,6 +2073,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateUcContactRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateUcContactResponse) }
     def update_uc_contact(request:, timeout_ms: nil)
       # update_uc_contact - Update a contact
+      # Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

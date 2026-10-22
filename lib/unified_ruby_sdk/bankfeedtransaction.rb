@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_bankfeedtransaction: Models::Shared::AccountingBankfeedtransaction, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingBankfeedtransactionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingBankfeedtransactionResponse) }
     def create_accounting_bankfeedtransaction(accounting_bankfeedtransaction:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_bankfeedtransaction - Create a bankfeedtransaction
+      # Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
       request = Models::Operations::CreateAccountingBankfeedtransactionRequest.new(
         accounting_bankfeedtransaction: accounting_bankfeedtransaction,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingBankfeedtransactionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingBankfeedtransactionResponse) }
     def get_accounting_bankfeedtransaction(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_bankfeedtransaction - Retrieve a bankfeedtransaction
+      # Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingBankfeedtransactionRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingBankfeedtransactionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingBankfeedtransactionsResponse) }
     def list_accounting_bankfeedtransactions(request:, timeout_ms: nil)
       # list_accounting_bankfeedtransactions - List all bankfeedtransactions
+      # Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingBankfeedtransactionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingBankfeedtransactionResponse) }
     def patch_accounting_bankfeedtransaction(request:, timeout_ms: nil)
       # patch_accounting_bankfeedtransaction - Update a bankfeedtransaction
+      # Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingBankfeedtransactionResponse) }
     def remove_accounting_bankfeedtransaction(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_bankfeedtransaction - Remove a bankfeedtransaction
+      # Deletes the AccountingBankfeedtransaction identified by `id`.
       request = Models::Operations::RemoveAccountingBankfeedtransactionRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingBankfeedtransactionRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingBankfeedtransactionResponse) }
     def update_accounting_bankfeedtransaction(request:, timeout_ms: nil)
       # update_accounting_bankfeedtransaction - Update a bankfeedtransaction
+      # Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(analytics_event: Models::Shared::AnalyticsEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAnalyticsEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAnalyticsEventResponse) }
     def create_analytics_event(analytics_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_analytics_event - Create an event
+      # Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
       request = Models::Operations::CreateAnalyticsEventRequest.new(
         analytics_event: analytics_event,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(calendar_event: Models::Shared::CalendarEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarEventResponse) }
     def create_calendar_event(calendar_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_calendar_event - Create an event
+      # Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
       request = Models::Operations::CreateCalendarEventRequest.new(
         calendar_event: calendar_event,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(cdp_event: Models::Shared::CdpEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCdpEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCdpEventResponse) }
     def create_cdp_event(cdp_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_cdp_event - Create an event
+      # Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
       request = Models::Operations::CreateCdpEventRequest.new(
         cdp_event: cdp_event,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(crm_event: Models::Shared::CrmEvent, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCrmEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCrmEventResponse) }
     def create_crm_event(crm_event:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_crm_event - Create an event
+      # Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
       request = Models::Operations::CreateCrmEventRequest.new(
         crm_event: crm_event,
         connection_id: connection_id,
@@ -554,6 +558,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAnalyticsEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAnalyticsEventResponse) }
     def get_analytics_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_analytics_event - Retrieve an event
+      # Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAnalyticsEventRequest.new(
         connection_id: connection_id,
         id: id,
@@ -670,6 +675,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarEventResponse) }
     def get_calendar_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_event - Retrieve an event
+      # Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCalendarEventRequest.new(
         connection_id: connection_id,
         id: id,
@@ -786,6 +792,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCdpEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCdpEventResponse) }
     def get_cdp_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_cdp_event - Retrieve an event
+      # Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCdpEventRequest.new(
         connection_id: connection_id,
         id: id,
@@ -902,6 +909,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsEventResponse) }
     def get_clubs_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_clubs_event - Retrieve an event
+      # Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetClubsEventRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1018,6 +1026,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCrmEventQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCrmEventResponse) }
     def get_crm_event(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_crm_event - Retrieve an event
+      # Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCrmEventRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1134,6 +1143,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAnalyticsEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAnalyticsEventsResponse) }
     def list_analytics_events(request:, timeout_ms: nil)
       # list_analytics_events - List all events
+      # Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1244,6 +1254,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCalendarEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarEventsResponse) }
     def list_calendar_events(request:, timeout_ms: nil)
       # list_calendar_events - List all events
+      # Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1354,6 +1365,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCdpEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCdpEventsResponse) }
     def list_cdp_events(request:, timeout_ms: nil)
       # list_cdp_events - List all events
+      # Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1464,6 +1476,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListClubsEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsEventsResponse) }
     def list_clubs_events(request:, timeout_ms: nil)
       # list_clubs_events - List all events
+      # Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1574,6 +1587,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCrmEventsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCrmEventsResponse) }
     def list_crm_events(request:, timeout_ms: nil)
       # list_crm_events - List all events
+      # Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1684,6 +1698,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCalendarEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarEventResponse) }
     def patch_calendar_event(request:, timeout_ms: nil)
       # patch_calendar_event - Update an event
+      # Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1806,6 +1821,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCdpEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCdpEventResponse) }
     def patch_cdp_event(request:, timeout_ms: nil)
       # patch_cdp_event - Update an event
+      # Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1928,6 +1944,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCrmEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCrmEventResponse) }
     def patch_crm_event(request:, timeout_ms: nil)
       # patch_crm_event - Update an event
+      # Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2050,6 +2067,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchMessagingEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMessagingEventResponse) }
     def patch_messaging_event(request:, timeout_ms: nil)
       # patch_messaging_event - Update an event
+      # Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2172,6 +2190,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarEventResponse) }
     def remove_calendar_event(connection_id:, id:, timeout_ms: nil)
       # remove_calendar_event - Remove an event
+      # Deletes the CalendarEvent identified by `id`.
       request = Models::Operations::RemoveCalendarEventRequest.new(
         connection_id: connection_id,
         id: id
@@ -2286,6 +2305,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCdpEventResponse) }
     def remove_cdp_event(connection_id:, id:, timeout_ms: nil)
       # remove_cdp_event - Remove an event
+      # Deletes the CdpEvent identified by `id`.
       request = Models::Operations::RemoveCdpEventRequest.new(
         connection_id: connection_id,
         id: id
@@ -2400,6 +2420,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCrmEventResponse) }
     def remove_crm_event(connection_id:, id:, timeout_ms: nil)
       # remove_crm_event - Remove an event
+      # Deletes the CrmEvent identified by `id`.
       request = Models::Operations::RemoveCrmEventRequest.new(
         connection_id: connection_id,
         id: id
@@ -2514,6 +2535,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCalendarEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarEventResponse) }
     def update_calendar_event(request:, timeout_ms: nil)
       # update_calendar_event - Update an event
+      # Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2636,6 +2658,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCdpEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCdpEventResponse) }
     def update_cdp_event(request:, timeout_ms: nil)
       # update_cdp_event - Update an event
+      # Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2758,6 +2781,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCrmEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCrmEventResponse) }
     def update_crm_event(request:, timeout_ms: nil)
       # update_crm_event - Update an event
+      # Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2880,6 +2904,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateMessagingEventRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMessagingEventResponse) }
     def update_messaging_event(request:, timeout_ms: nil)
       # update_messaging_event - Update an event
+      # Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingBalancesheetQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingBalancesheetResponse) }
     def get_accounting_balancesheet(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_balancesheet - Retrieve a balancesheet
+      # Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingBalancesheetRequest.new(
         connection_id: connection_id,
         id: id,
@@ -158,6 +159,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingBalancesheetsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingBalancesheetsResponse) }
     def list_accounting_balancesheets(request:, timeout_ms: nil)
       # list_accounting_balancesheets - List all balancesheets
+      # Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

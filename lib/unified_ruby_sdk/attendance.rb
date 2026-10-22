@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(hris_attendance: Models::Shared::HrisAttendance, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisAttendanceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisAttendanceResponse) }
     def create_hris_attendance(hris_attendance:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_attendance - Create an attendance
+      # Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
       request = Models::Operations::CreateHrisAttendanceRequest.new(
         hris_attendance: hris_attendance,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisAttendanceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisAttendanceResponse) }
     def get_hris_attendance(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_attendance - Retrieve an attendance
+      # Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisAttendanceRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisAttendancesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisAttendancesResponse) }
     def list_hris_attendances(request:, timeout_ms: nil)
       # list_hris_attendances - List all attendances
+      # Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisAttendanceRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisAttendanceResponse) }
     def patch_hris_attendance(request:, timeout_ms: nil)
       # patch_hris_attendance - Update an attendance
+      # Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisAttendanceResponse) }
     def remove_hris_attendance(connection_id:, id:, timeout_ms: nil)
       # remove_hris_attendance - Remove an attendance
+      # Deletes the HrisAttendance identified by `id`.
       request = Models::Operations::RemoveHrisAttendanceRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisAttendanceRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisAttendanceResponse) }
     def update_hris_attendance(request:, timeout_ms: nil)
       # update_hris_attendance - Update an attendance
+      # Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

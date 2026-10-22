@@ -23,9 +23,9 @@ module UnifiedRubySDK
         field :mcp_deferred_tools, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mcp_deferred_tools') } }
         # Supply a remote MCP URL to send to the LLM API for it to call its tools.  Note: Some LLM APIs do not yet support remote MCP URLs. 
         field :mcp_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mcp_url') } }
-
+        # The conversation to send to the model, in order; each message has a role and its content
         field :messages, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiContent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('messages') } }
-
+        # The ID of the model to use (a GenaiModel ID)
         field :model_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('model_id') } }
         # Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
         field :questions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiQuestion)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }

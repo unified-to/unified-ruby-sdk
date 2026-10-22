@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(assessment_order: Models::Shared::AssessmentOrder, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAssessmentOrderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAssessmentOrderResponse) }
     def create_assessment_order(assessment_order:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_assessment_order - Create an order
+      # Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
       request = Models::Operations::CreateAssessmentOrderRequest.new(
         assessment_order: assessment_order,
         connection_id: connection_id,
@@ -294,6 +295,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAssessmentOrderQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAssessmentOrderResponse) }
     def get_assessment_order(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_assessment_order - Retrieve an order
+      # Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAssessmentOrderRequest.new(
         connection_id: connection_id,
         id: id,
@@ -637,6 +639,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAssessmentOrderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAssessmentOrderResponse) }
     def patch_assessment_order(request:, timeout_ms: nil)
       # patch_assessment_order - Update an order
+      # Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -998,6 +1001,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAssessmentOrderRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAssessmentOrderResponse) }
     def update_assessment_order(request:, timeout_ms: nil)
       # update_assessment_order - Update an order
+      # Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

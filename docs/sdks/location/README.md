@@ -24,7 +24,7 @@
 
 ## create_commerce_location
 
-Create a location
+Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
 
 ### Example Usage
 
@@ -52,7 +52,7 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
   created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
   currency: 'XCD',
   description: 'Adsidue audentia.',
-  id: 'cfb9fd29-22d5-44ed-9d15-7b8865a2d9d9',
+  id: '8709883e-a42c-47cb-8667-a2cb41249df1',
   image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
   is_active: false,
   language_locale: 'vulgaris',
@@ -63,10 +63,10 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
     Models::Shared::CommerceItemMedia.new(
       alt: 'Addo.',
       height: 283.0,
-      id: '1bc20b62-1ed8-468f-a07a-1270eb5f886d',
+      id: '569f1f0e-ac7d-449b-b76d-93adcb8e00c4',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '2db7ffe1-096a-4d3b-ae95-79468699a9df',
+          id: '7dcf0591-7cc3-4ea0-a31a-d0fa45b96fc0',
           slug: 'abutor',
           value: 'damno',
         ),
@@ -92,7 +92,7 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
       type: Models::Shared::CommerceTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2024-04-20T17:56:50.699Z'),
+  updated_at: DateTime.iso8601('2024-04-21T02:07:15.519Z'),
   web_url: 'https://chilly-edge.info',
 ), connection_id: '<id>')
 
@@ -123,7 +123,7 @@ end
 
 ## create_hris_location
 
-Create a location
+Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
 ### Example Usage
 
@@ -151,7 +151,7 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
   created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
   currency: 'MNT',
   description: 'Commemoro acervus.',
-  id: '9d705c51-711f-45a7-a73a-717ad8e2b7b3',
+  id: '1ecb6270-3dbb-4d0c-b876-5c1c8bb0ddef',
   is_active: false,
   is_hq: true,
   language_locale: 'it',
@@ -172,7 +172,7 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
     ),
   ],
   timezone: 'Asia/Jerusalem',
-  updated_at: DateTime.iso8601('2023-06-21T02:27:35.009Z'),
+  updated_at: DateTime.iso8601('2023-06-21T11:09:24.068Z'),
 ), connection_id: '<id>')
 
 unless res.hris_location.nil?
@@ -202,7 +202,7 @@ end
 
 ## get_clubs_location
 
-Retrieve a location
+Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -246,7 +246,7 @@ end
 
 ## get_commerce_location
 
-Retrieve a location
+Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ end
 
 ## get_healthcare_location
 
-Retrieve a location
+Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -334,7 +334,7 @@ end
 
 ## get_hris_location
 
-Retrieve a location
+Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -378,7 +378,7 @@ end
 
 ## list_clubs_locations
 
-List all locations
+Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -423,7 +423,7 @@ end
 
 ## list_commerce_locations
 
-List all locations
+Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -468,7 +468,7 @@ end
 
 ## list_healthcare_locations
 
-List all locations
+Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -513,7 +513,7 @@ end
 
 ## list_hris_locations
 
-List all locations
+Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -558,7 +558,7 @@ end
 
 ## patch_commerce_location
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -587,7 +587,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: '40a4434d-2376-4620-9003-349464d19ca7',
+    id: '02f6ba18-90d1-4d24-b9c5-628f9067495d',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -598,10 +598,10 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '3e6802f0-02a0-4d54-b944-d6a4b261d631',
+        id: 'aed7dbb7-9440-4f3d-b59c-2622d5a172de',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '0b3ca168-ec82-4454-aaac-eff637558b65',
+            id: 'f7434651-445a-4b09-b33a-46f7af515a96',
             slug: 'abutor',
             value: 'damno',
           ),
@@ -627,7 +627,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-20T17:56:50.709Z'),
+    updated_at: DateTime.iso8601('2024-04-21T02:07:15.534Z'),
     web_url: 'https://chilly-edge.info',
   ),
   connection_id: '<id>',
@@ -660,7 +660,7 @@ end
 
 ## patch_hris_location
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -689,7 +689,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'c28a0039-b5ac-4680-a8cc-2afb4f82d97b',
+    id: 'f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -710,7 +710,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-21T02:27:35.015Z'),
+    updated_at: DateTime.iso8601('2023-06-21T11:09:24.079Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -742,7 +742,7 @@ end
 
 ## remove_commerce_location
 
-Remove a location
+Deletes the CommerceLocation identified by `id`.
 
 ### Example Usage
 
@@ -784,7 +784,7 @@ end
 
 ## remove_hris_location
 
-Remove a location
+Deletes the HrisLocation identified by `id`.
 
 ### Example Usage
 
@@ -826,7 +826,7 @@ end
 
 ## update_commerce_location
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -855,7 +855,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: '40a4434d-2376-4620-9003-349464d19ca7',
+    id: '02f6ba18-90d1-4d24-b9c5-628f9067495d',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -866,10 +866,10 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '3e6802f0-02a0-4d54-b944-d6a4b261d631',
+        id: 'aed7dbb7-9440-4f3d-b59c-2622d5a172de',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '0b3ca168-ec82-4454-aaac-eff637558b65',
+            id: 'f7434651-445a-4b09-b33a-46f7af515a96',
             slug: 'abutor',
             value: 'damno',
           ),
@@ -895,7 +895,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-20T17:56:50.709Z'),
+    updated_at: DateTime.iso8601('2024-04-21T02:07:15.534Z'),
     web_url: 'https://chilly-edge.info',
   ),
   connection_id: '<id>',
@@ -928,7 +928,7 @@ end
 
 ## update_hris_location
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -957,7 +957,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'c28a0039-b5ac-4680-a8cc-2afb4f82d97b',
+    id: 'f595f8c1-17ee-4c09-9c8a-d9d6fe90e62f',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -978,7 +978,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-21T02:27:35.015Z'),
+    updated_at: DateTime.iso8601('2023-06-21T11:09:24.079Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

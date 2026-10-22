@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(commerce_location: Models::Shared::CommerceLocation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceLocationResponse) }
     def create_commerce_location(commerce_location:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_location - Create a location
+      # Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
       request = Models::Operations::CreateCommerceLocationRequest.new(
         commerce_location: commerce_location,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(hris_location: Models::Shared::HrisLocation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisLocationResponse) }
     def create_hris_location(hris_location:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_location - Create a location
+      # Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
       request = Models::Operations::CreateHrisLocationRequest.new(
         hris_location: hris_location,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetClubsLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetClubsLocationResponse) }
     def get_clubs_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_clubs_location - Retrieve a location
+      # Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetClubsLocationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceLocationResponse) }
     def get_commerce_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_location - Retrieve a location
+      # Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceLocationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcareLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcareLocationResponse) }
     def get_healthcare_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_location - Retrieve a location
+      # Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcareLocationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -646,6 +651,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisLocationResponse) }
     def get_hris_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_location - Retrieve a location
+      # Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisLocationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -762,6 +768,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListClubsLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListClubsLocationsResponse) }
     def list_clubs_locations(request:, timeout_ms: nil)
       # list_clubs_locations - List all locations
+      # Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -872,6 +879,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceLocationsResponse) }
     def list_commerce_locations(request:, timeout_ms: nil)
       # list_commerce_locations - List all locations
+      # Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -982,6 +990,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcareLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcareLocationsResponse) }
     def list_healthcare_locations(request:, timeout_ms: nil)
       # list_healthcare_locations - List all locations
+      # Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1092,6 +1101,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisLocationsResponse) }
     def list_hris_locations(request:, timeout_ms: nil)
       # list_hris_locations - List all locations
+      # Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1202,6 +1212,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceLocationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceLocationResponse) }
     def patch_commerce_location(request:, timeout_ms: nil)
       # patch_commerce_location - Update a location
+      # Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1324,6 +1335,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisLocationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisLocationResponse) }
     def patch_hris_location(request:, timeout_ms: nil)
       # patch_hris_location - Update a location
+      # Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1446,6 +1458,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceLocationResponse) }
     def remove_commerce_location(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_location - Remove a location
+      # Deletes the CommerceLocation identified by `id`.
       request = Models::Operations::RemoveCommerceLocationRequest.new(
         connection_id: connection_id,
         id: id
@@ -1560,6 +1573,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisLocationResponse) }
     def remove_hris_location(connection_id:, id:, timeout_ms: nil)
       # remove_hris_location - Remove a location
+      # Deletes the HrisLocation identified by `id`.
       request = Models::Operations::RemoveHrisLocationRequest.new(
         connection_id: connection_id,
         id: id
@@ -1674,6 +1688,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceLocationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceLocationResponse) }
     def update_commerce_location(request:, timeout_ms: nil)
       # update_commerce_location - Update a location
+      # Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1796,6 +1811,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisLocationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisLocationResponse) }
     def update_hris_location(request:, timeout_ms: nil)
       # update_hris_location - Update a location
+      # Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

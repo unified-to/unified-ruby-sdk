@@ -28,7 +28,7 @@
 
 ## create_ads_group
 
-Create a group
+Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 
 ### Example Usage
 
@@ -50,15 +50,15 @@ res = s.group.create_ads_group(ads_group: Models::Shared::AdsGroup.new(
   created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
   currency: 'USD',
   effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-  end_at: DateTime.iso8601('2026-06-25T01:34:52.041Z'),
-  id: 'a2c68603-1f08-42c7-bf47-91462bbd8ae3',
+  end_at: DateTime.iso8601('2026-06-26T00:16:40.347Z'),
+  id: '12560f3e-69eb-4197-9710-683515cc09a8',
   language_locale: 'fr-FR',
   metadata: [],
   name: 'Stark - Baumbach',
-  start_at: DateTime.iso8601('2026-01-09T06:49:11.398Z'),
+  start_at: DateTime.iso8601('2026-01-10T03:59:49.722Z'),
   status: Models::Shared::AdsGroupStatus::PROCESSING,
   targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-  updated_at: DateTime.iso8601('2022-01-13T16:14:01.125Z'),
+  updated_at: DateTime.iso8601('2022-01-14T00:08:26.728Z'),
 ), connection_id: '<id>')
 
 unless res.ads_group.nil?
@@ -88,7 +88,7 @@ end
 
 ## create_hris_group
 
-Create a group
+Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
 ### Example Usage
 
@@ -106,12 +106,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.group.create_hris_group(hris_group: Models::Shared::HrisGroup.new(
   created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
   description: 'Absorbeo casso.',
-  id: 'a367376f-3ee9-4b6c-8743-d83e2575917d',
+  id: '1d18b974-d325-49fa-b0e1-a2e01f2dd256',
   is_active: false,
   metadata: [],
   name: 'Games',
   type: Models::Shared::HrisGroupType::BRANCH,
-  updated_at: DateTime.iso8601('2026-05-21T23:27:42.075Z'),
+  updated_at: DateTime.iso8601('2026-05-22T19:54:01.894Z'),
 ), connection_id: '<id>')
 
 unless res.hris_group.nil?
@@ -185,7 +185,7 @@ end
 
 ## get_ads_group
 
-Retrieve a group
+Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -229,7 +229,7 @@ end
 
 ## get_clubs_group
 
-Retrieve a group
+Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -273,7 +273,7 @@ end
 
 ## get_hris_group
 
-Retrieve a group
+Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -359,7 +359,7 @@ end
 
 ## list_ads_groups
 
-List all groups
+Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -404,7 +404,7 @@ end
 
 ## list_clubs_groups
 
-List all groups
+Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -449,7 +449,7 @@ end
 
 ## list_hris_groups
 
-List all groups
+Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -539,7 +539,7 @@ end
 
 ## patch_ads_group
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -562,15 +562,15 @@ req = Models::Operations::PatchAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-06-25T01:34:52.194Z'),
-    id: '7881867d-720e-4bd6-9ea7-1347033a25c3',
+    end_at: DateTime.iso8601('2026-06-26T00:16:40.530Z'),
+    id: '2bc07cae-346a-45af-9571-099f47cdbe81',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-01-09T06:49:11.540Z'),
+    start_at: DateTime.iso8601('2026-01-10T03:59:49.894Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-    updated_at: DateTime.iso8601('2022-01-13T16:14:01.179Z'),
+    updated_at: DateTime.iso8601('2022-01-14T00:08:26.792Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -602,7 +602,7 @@ end
 
 ## patch_hris_group
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -621,12 +621,12 @@ req = Models::Operations::PatchHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: '0c7aa9a3-c25c-4e54-9338-a92812e404ce',
+    id: '4a3e0f10-b197-48b9-b1d1-20f46e3874fd',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-05-21T23:27:42.085Z'),
+    updated_at: DateTime.iso8601('2026-05-22T19:54:01.911Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -703,7 +703,7 @@ end
 
 ## remove_ads_group
 
-Remove a group
+Deletes the AdsGroup identified by `id`.
 
 ### Example Usage
 
@@ -745,7 +745,7 @@ end
 
 ## remove_hris_group
 
-Remove a group
+Deletes the HrisGroup identified by `id`.
 
 ### Example Usage
 
@@ -829,7 +829,7 @@ end
 
 ## update_ads_group
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -852,15 +852,15 @@ req = Models::Operations::UpdateAdsGroupRequest.new(
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-06-25T01:34:52.194Z'),
-    id: '7881867d-720e-4bd6-9ea7-1347033a25c3',
+    end_at: DateTime.iso8601('2026-06-26T00:16:40.530Z'),
+    id: '2bc07cae-346a-45af-9571-099f47cdbe81',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-01-09T06:49:11.540Z'),
+    start_at: DateTime.iso8601('2026-01-10T03:59:49.894Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
     targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-    updated_at: DateTime.iso8601('2022-01-13T16:14:01.179Z'),
+    updated_at: DateTime.iso8601('2022-01-14T00:08:26.792Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -892,7 +892,7 @@ end
 
 ## update_hris_group
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -911,12 +911,12 @@ req = Models::Operations::UpdateHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: '0c7aa9a3-c25c-4e54-9338-a92812e404ce',
+    id: '4a3e0f10-b197-48b9-b1d1-20f46e3874fd',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-05-21T23:27:42.085Z'),
+    updated_at: DateTime.iso8601('2026-05-22T19:54:01.911Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

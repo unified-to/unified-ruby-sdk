@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(marketing_campaign: Models::Shared::MarketingCampaign, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechCampaignResponse) }
     def create_martech_campaign(marketing_campaign:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_martech_campaign - Create a campaign
+      # Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
       request = Models::Operations::CreateMartechCampaignRequest.new(
         marketing_campaign: marketing_campaign,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(marketing_list: Models::Shared::MarketingList, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechListQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechListResponse) }
     def create_martech_list(marketing_list:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_martech_list - Create a list
+      # Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
       request = Models::Operations::CreateMartechListRequest.new(
         marketing_list: marketing_list,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(marketing_member: Models::Shared::MarketingMember, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateMartechMemberQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateMartechMemberResponse) }
     def create_martech_member(marketing_member:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_martech_member - Create a member
+      # Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
       request = Models::Operations::CreateMartechMemberRequest.new(
         marketing_member: marketing_member,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechCampaignQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechCampaignResponse) }
     def get_martech_campaign(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_martech_campaign - Retrieve a campaign
+      # Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetMartechCampaignRequest.new(
         connection_id: connection_id,
         id: id,
@@ -542,6 +546,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechListQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechListResponse) }
     def get_martech_list(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_martech_list - Retrieve a list
+      # Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetMartechListRequest.new(
         connection_id: connection_id,
         id: id,
@@ -658,6 +663,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetMartechMemberQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetMartechMemberResponse) }
     def get_martech_member(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_martech_member - Retrieve a member
+      # Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetMartechMemberRequest.new(
         connection_id: connection_id,
         id: id,
@@ -774,6 +780,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListMartechCampaignsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechCampaignsResponse) }
     def list_martech_campaigns(request:, timeout_ms: nil)
       # list_martech_campaigns - List all campaigns
+      # Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -884,6 +891,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListMartechListsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechListsResponse) }
     def list_martech_lists(request:, timeout_ms: nil)
       # list_martech_lists - List all lists
+      # Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListMartechMembersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechMembersResponse) }
     def list_martech_members(request:, timeout_ms: nil)
       # list_martech_members - List all members
+      # Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1104,6 +1113,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListMartechReportsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListMartechReportsResponse) }
     def list_martech_reports(request:, timeout_ms: nil)
       # list_martech_reports - List all reports
+      # Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1214,6 +1224,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchMartechCampaignRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechCampaignResponse) }
     def patch_martech_campaign(request:, timeout_ms: nil)
       # patch_martech_campaign - Update a campaign
+      # Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1336,6 +1347,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchMartechListRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechListResponse) }
     def patch_martech_list(request:, timeout_ms: nil)
       # patch_martech_list - Update a list
+      # Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1458,6 +1470,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchMartechMemberRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchMartechMemberResponse) }
     def patch_martech_member(request:, timeout_ms: nil)
       # patch_martech_member - Update a member
+      # Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1580,6 +1593,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechCampaignResponse) }
     def remove_martech_campaign(connection_id:, id:, timeout_ms: nil)
       # remove_martech_campaign - Remove a campaign
+      # Deletes the MarketingCampaign identified by `id`.
       request = Models::Operations::RemoveMartechCampaignRequest.new(
         connection_id: connection_id,
         id: id
@@ -1694,6 +1708,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechListResponse) }
     def remove_martech_list(connection_id:, id:, timeout_ms: nil)
       # remove_martech_list - Remove a list
+      # Deletes the MarketingList identified by `id`.
       request = Models::Operations::RemoveMartechListRequest.new(
         connection_id: connection_id,
         id: id
@@ -1808,6 +1823,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveMartechMemberResponse) }
     def remove_martech_member(connection_id:, id:, timeout_ms: nil)
       # remove_martech_member - Remove a member
+      # Deletes the MarketingMember identified by `id`.
       request = Models::Operations::RemoveMartechMemberRequest.new(
         connection_id: connection_id,
         id: id
@@ -1922,6 +1938,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateMartechCampaignRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechCampaignResponse) }
     def update_martech_campaign(request:, timeout_ms: nil)
       # update_martech_campaign - Update a campaign
+      # Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2044,6 +2061,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateMartechListRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechListResponse) }
     def update_martech_list(request:, timeout_ms: nil)
       # update_martech_list - Update a list
+      # Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2166,6 +2184,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateMartechMemberRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateMartechMemberResponse) }
     def update_martech_member(request:, timeout_ms: nil)
       # update_martech_member - Update a member
+      # Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

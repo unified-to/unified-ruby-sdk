@@ -17,7 +17,7 @@ module UnifiedRubySDK
         field :database_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('database_id') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DatastoreMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate)
         field :query, Crystalline::Nilable.new(Models::Shared::PropertyDatastoreQueryQuery), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('query') } }
 
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }

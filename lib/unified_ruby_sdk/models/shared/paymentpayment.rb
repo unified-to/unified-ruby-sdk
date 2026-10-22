@@ -67,7 +67,7 @@ module UnifiedRubySDK
         field :tender_type, Crystalline::Nilable.new(Models::Shared::TenderType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tender_type'), 'decoder': Utils.enum_from_string(Models::Shared::TenderType, true) } }
 
         field :tip_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tip_amount') } }
-
+        # The amount paid, in the payment's currency
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
 
         field :type, Crystalline::Nilable.new(Models::Shared::PaymentPaymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PaymentPaymentType, true) } }

@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ads_creative: Models::Shared::AdsCreative, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAdsCreativeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAdsCreativeResponse) }
     def create_ads_creative(ads_creative:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ads_creative - Create a creative
+      # Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
       request = Models::Operations::CreateAdsCreativeRequest.new(
         ads_creative: ads_creative,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAdsCreativeQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAdsCreativeResponse) }
     def get_ads_creative(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ads_creative - Retrieve a creative
+      # Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAdsCreativeRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAdsCreativesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAdsCreativesResponse) }
     def list_ads_creatives(request:, timeout_ms: nil)
       # list_ads_creatives - List all creatives
+      # Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAdsCreativeRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAdsCreativeResponse) }
     def patch_ads_creative(request:, timeout_ms: nil)
       # patch_ads_creative - Update a creative
+      # Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAdsCreativeResponse) }
     def remove_ads_creative(connection_id:, id:, timeout_ms: nil)
       # remove_ads_creative - Remove a creative
+      # Deletes the AdsCreative identified by `id`.
       request = Models::Operations::RemoveAdsCreativeRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAdsCreativeRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAdsCreativeResponse) }
     def update_ads_creative(request:, timeout_ms: nil)
       # update_ads_creative - Update a creative
+      # Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

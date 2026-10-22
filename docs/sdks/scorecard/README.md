@@ -16,7 +16,7 @@
 
 ## create_ats_scorecard
 
-Create a scorecard
+Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 
 ### Example Usage
 
@@ -34,7 +34,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
   comment: 'Maiores enim.',
   created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-  id: '2dea7d23-46fb-48d0-a30a-b909d9a83d91',
+  id: 'edf3676f-3ef2-4767-bc7c-83962a8433f3',
   metadata: [],
   questions: [
     Models::Shared::AtsScorecardQuestion.new(
@@ -48,7 +48,7 @@ res = s.scorecard.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScoreca
     ),
   ],
   recommendation: Models::Shared::Recommendation::STRONG_YES,
-  updated_at: DateTime.iso8601('2023-06-05T13:40:04.404Z'),
+  updated_at: DateTime.iso8601('2023-06-05T20:13:30.676Z'),
 ), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -78,7 +78,7 @@ end
 
 ## get_ats_scorecard
 
-Retrieve a scorecard
+Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ end
 
 ## get_uc_scorecard
 
-Retrieve a scorecard
+Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -166,7 +166,7 @@ end
 
 ## list_ats_scorecards
 
-List all scorecards
+Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -211,7 +211,7 @@ end
 
 ## list_uc_scorecards
 
-List all scorecards
+Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -256,7 +256,7 @@ end
 
 ## patch_ats_scorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -275,7 +275,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'b9b9b7a0-dae3-4133-a9d1-fa9a7b5843ed',
+    id: '03c41823-53e4-40f4-ad4a-ea8f6aacc6f7',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
@@ -289,7 +289,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-05T13:40:04.409Z'),
+    updated_at: DateTime.iso8601('2023-06-05T20:13:30.679Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -321,7 +321,7 @@ end
 
 ## remove_ats_scorecard
 
-Remove a scorecard
+Deletes the AtsScorecard identified by `id`.
 
 ### Example Usage
 
@@ -363,7 +363,7 @@ end
 
 ## update_ats_scorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -382,7 +382,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'b9b9b7a0-dae3-4133-a9d1-fa9a7b5843ed',
+    id: '03c41823-53e4-40f4-ad4a-ea8f6aacc6f7',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
@@ -396,7 +396,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-05T13:40:04.409Z'),
+    updated_at: DateTime.iso8601('2023-06-05T20:13:30.679Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

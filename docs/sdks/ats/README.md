@@ -58,7 +58,7 @@
 
 ## create_ats_activity
 
-Create an activity
+Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 
 ### Example Usage
 
@@ -76,7 +76,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
   created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
   description: 'Sapiente.',
-  id: 'e8a2f1e7-5ef1-44d6-b9b0-dd4ae05406d4',
+  id: 'f31f8ba6-5c20-4ce8-91ff-b36db9861837',
   is_private: false,
   metadata: [
     Models::Shared::AtsMetadata.new(
@@ -84,7 +84,7 @@ res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'e90754bb-3fc5-46ca-87c0-2ef0049e309a',
+      id: 'ecf256cf-449b-41d7-93b4-7fe6a1aeff92',
       namespace: 'activity',
       slug: 'cimentarius',
       value: 'Reprehenderit verto.',
@@ -93,7 +93,7 @@ res = s.ats.create_ats_activity(ats_activity: Models::Shared::AtsActivity.new(
   sub_type: 'TASK',
   title: 'Venio blandior aureus.',
   type: Models::Shared::AtsActivityType::TASK,
-  updated_at: DateTime.iso8601('2026-04-04T06:38:15.355Z'),
+  updated_at: DateTime.iso8601('2026-04-05T03:19:02.969Z'),
 ), connection_id: '<id>')
 
 unless res.ats_activity.nil?
@@ -123,7 +123,7 @@ end
 
 ## create_ats_application
 
-Create an application
+Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
 
 ### Example Usage
 
@@ -140,17 +140,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.ats.create_ats_application(ats_application: Models::Shared::AtsApplication.new(
   answers: [],
-  applied_at: DateTime.iso8601('2025-09-29T18:41:44.737Z'),
+  applied_at: DateTime.iso8601('2025-09-30T10:07:05.968Z'),
   created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-  hired_at: DateTime.iso8601('2026-05-12T18:30:35.439Z'),
-  id: '26ec1638-c52c-492b-9fd7-09de41cb00e7',
+  hired_at: DateTime.iso8601('2026-05-13T14:47:45.163Z'),
+  id: '9c2e6ea4-6b90-4c68-93a2-344b71e7dd8d',
   metadata: [
     Models::Shared::AtsMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'c5228933-7b14-40ad-9f1b-19a455f0df4a',
+      id: '38390c94-ee6e-49d6-9af9-49bf6b77284a',
       namespace: 'application',
       slug: 'stella',
       value: 'Caput.',
@@ -159,12 +159,12 @@ res = s.ats.create_ats_application(ats_application: Models::Shared::AtsApplicati
   offers: [],
   original_status: 'vomica',
   original_substatus: 'allatus',
-  rejected_at: DateTime.iso8601('2026-10-11T13:07:05.713Z'),
+  rejected_at: DateTime.iso8601('2026-10-12T12:41:06.322Z'),
   rejected_reason: 'Cometes amplitudo videlicet talio.',
   source: 'credo',
   status: Models::Shared::AtsApplicationStatus::REVIEWING,
   summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-  updated_at: DateTime.iso8601('2026-10-18T09:21:22.037Z'),
+  updated_at: DateTime.iso8601('2026-10-19T09:04:15.175Z'),
 ), connection_id: '<id>')
 
 unless res.ats_application.nil?
@@ -194,7 +194,7 @@ end
 
 ## create_ats_candidate
 
-Create a candidate
+Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
 
 ### Example Usage
 
@@ -261,7 +261,7 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
     ),
   ],
   first_name: 'Ardith',
-  id: '664f6e73-f63a-457c-8af7-87c2ab8ec9c2',
+  id: 'd6158514-0b98-44b7-b485-fe144b84b2a8',
   image_url: 'https://avatars.githubusercontent.com/u/27464445',
   job_ids: [],
   last_name: 'Beatty',
@@ -274,7 +274,7 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '7971fe19-2a15-4b5f-9240-5511e39c68cd',
+      id: '2c40bd7e-b0aa-4953-8489-fb78f25489d3',
       namespace: 'custom',
       slug: 'custom_field',
       value: 'officia',
@@ -301,7 +301,7 @@ res = s.ats.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new
     ),
   ],
   title: 'Customer Division Producer',
-  updated_at: DateTime.iso8601('2024-04-28T17:47:32.446Z'),
+  updated_at: DateTime.iso8601('2024-04-28T22:00:51.392Z'),
   web_url: 'https://fragrant-husband.net/',
 ), connection_id: '<id>')
 
@@ -332,7 +332,7 @@ end
 
 ## create_ats_company
 
-Create a company
+Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 
 ### Example Usage
 
@@ -349,10 +349,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.ats.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
   created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-  id: 'bc88c053-d149-4889-9144-a45bbbbb011e',
+  id: 'fc717eb1-789d-4f47-8cb9-f011b597131a',
   name: 'Gulgowski, Dibbert and Wilderman',
   phone: '1-882-360-2010',
-  updated_at: DateTime.iso8601('2020-10-01T04:12:23.715Z'),
+  updated_at: DateTime.iso8601('2020-10-01T08:47:21.666Z'),
   website_url: 'https://www.gulgowskidibbert.com',
 ), connection_id: '<id>')
 
@@ -383,7 +383,7 @@ end
 
 ## create_ats_document
 
-Create a document
+Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
 
 ### Example Usage
 
@@ -402,10 +402,10 @@ res = s.ats.create_ats_document(ats_document: Models::Shared::AtsDocument.new(
   created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
   document_url: 'https://vengeful-lashes.biz',
   filename: 'lonzo_schowalter_resume.pdf',
-  id: '29c939d9-2af8-44c4-a7d5-67e03b8e6897',
+  id: '53b6fefe-210f-464d-a3c2-ceb0cc0e755d',
   metadata: [],
   type: Models::Shared::AtsDocumentType::COVER_LETTER,
-  updated_at: DateTime.iso8601('2022-12-07T04:59:55.140Z'),
+  updated_at: DateTime.iso8601('2022-12-07T10:57:57.857Z'),
 ), connection_id: '<id>')
 
 unless res.ats_document.nil?
@@ -435,7 +435,7 @@ end
 
 ## create_ats_interview
 
-Create an interview
+Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
 
 ### Example Usage
 
@@ -453,13 +453,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ats.create_ats_interview(ats_interview: Models::Shared::AtsInterview.new(
   created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
   end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-  id: '75d45222-2444-450b-8db6-d716949cdd12',
+  id: 'bbff662e-1b0a-4b74-ae44-126c9ba08ca6',
   location: '26596 Halle Trafficway',
   meeting_url: 'https://immaculate-foodstuffs.biz',
   metadata: [],
   start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
   status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-  updated_at: DateTime.iso8601('2023-09-23T16:39:11.717Z'),
+  updated_at: DateTime.iso8601('2023-09-24T01:29:20.700Z'),
 ), connection_id: '<id>')
 
 unless res.ats_interview.nil?
@@ -489,7 +489,7 @@ end
 
 ## create_ats_job
 
-Create a job
+Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
 
 ### Example Usage
 
@@ -535,7 +535,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   description: 'Global',
   employment_type: Models::Shared::EmploymentType::FREELANCE,
   hiring_managers: [],
-  id: 'f1ed3a25-8406-4efd-afcf-0a385a1fadb2',
+  id: '2f1b7ebc-9852-4931-90f1-89dd6c2ce9cb',
   industry: 'Handcrafted Bamboo Soap',
   language_locale: 'en',
   metadata: [
@@ -544,7 +544,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         "display_name": 'Custom Property',
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: '6413a6cc-6a8e-4306-8822-db3f3900f798',
+      id: 'c75075fd-9a62-4aa4-a635-a8c78c9e0ad9',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'desolo',
@@ -557,7 +557,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   openings: [
     Models::Shared::AtsJobOpening.new(
       close_reason: 'Admoveo trado textilis.',
-      opened_at: DateTime.iso8601('2026-06-07T21:28:07.896Z'),
+      opened_at: DateTime.iso8601('2026-06-08T18:36:46.211Z'),
       status: Models::Shared::AtsJobOpeningStatus::OPEN,
     ),
   ],
@@ -571,14 +571,14 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
         region: 'Wisconsin',
         region_code: 'CO',
       ),
-      created_at: DateTime.iso8601('2026-08-02T00:29:26.215Z'),
+      created_at: DateTime.iso8601('2026-08-02T22:42:23.508Z'),
       description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-      id: 'b6f8c91a-7f05-4e3b-ac0a-c79968a8a9af',
+      id: '3ba66c8e-ea9e-4ce8-bdf4-cc6d1106ddb3',
       is_active: false,
       location: '1725 Hessel Keys',
       name: 'International Identity Manager',
       posting_url: 'https://obedient-yak.com',
-      updated_at: DateTime.iso8601('2026-08-28T07:52:25.733Z'),
+      updated_at: DateTime.iso8601('2026-08-29T06:36:04.638Z'),
     ),
   ],
   public_job_urls: [
@@ -588,7 +588,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   questions: [
     Models::Shared::AtsJobQuestion.new(
       description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-      id: '81736c36-1b8a-4700-a981-c384da1e68f5',
+      id: 'a5a8c189-4d6f-4700-9166-2777d1882265',
       max_length: 117.0,
       min_length: 1.0,
       options: [
@@ -601,7 +601,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
       type: Models::Shared::AtsJobQuestionType::TEXT,
     ),
     Models::Shared::AtsJobQuestion.new(
-      id: 'fcd02da9-266c-4de9-a918-9a98f813e617',
+      id: '32a1bbdf-b4e0-4ae0-8e0b-0dc217e89fb2',
       max_length: 453.0,
       min_length: 1.0,
       options: [
@@ -614,7 +614,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
     ),
     Models::Shared::AtsJobQuestion.new(
       description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-      id: 'e29c1433-3d51-4fa1-8492-3354e0f8e77d',
+      id: 'aef905ab-59c5-442f-8c48-57a3ecebc53d',
       max_length: 66.0,
       min_length: 1.0,
       options: [
@@ -632,7 +632,7 @@ res = s.ats.create_ats_job(ats_job: Models::Shared::AtsJob.new(
   ],
   status: Models::Shared::AtsJobStatus::ARCHIVED,
   summary: 'Crepusculum adsuesco vere.',
-  updated_at: DateTime.iso8601('2026-02-27T09:47:18.130Z'),
+  updated_at: DateTime.iso8601('2026-02-28T04:58:42.080Z'),
 ), connection_id: '<id>')
 
 unless res.ats_job.nil?
@@ -662,7 +662,7 @@ end
 
 ## create_ats_scorecard
 
-Create a scorecard
+Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 
 ### Example Usage
 
@@ -680,7 +680,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ats.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new(
   comment: 'Maiores enim.',
   created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-  id: '2dea7d23-46fb-48d0-a30a-b909d9a83d91',
+  id: 'edf3676f-3ef2-4767-bc7c-83962a8433f3',
   metadata: [],
   questions: [
     Models::Shared::AtsScorecardQuestion.new(
@@ -694,7 +694,7 @@ res = s.ats.create_ats_scorecard(ats_scorecard: Models::Shared::AtsScorecard.new
     ),
   ],
   recommendation: Models::Shared::Recommendation::STRONG_YES,
-  updated_at: DateTime.iso8601('2023-06-05T13:40:04.404Z'),
+  updated_at: DateTime.iso8601('2023-06-05T20:13:30.676Z'),
 ), connection_id: '<id>')
 
 unless res.ats_scorecard.nil?
@@ -724,7 +724,7 @@ end
 
 ## get_ats_activity
 
-Retrieve an activity
+Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -768,7 +768,7 @@ end
 
 ## get_ats_application
 
-Retrieve an application
+Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -812,7 +812,7 @@ end
 
 ## get_ats_applicationstatus
 
-Retrieve an applicationstatus
+Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -856,7 +856,7 @@ end
 
 ## get_ats_candidate
 
-Retrieve a candidate
+Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -900,7 +900,7 @@ end
 
 ## get_ats_company
 
-Retrieve a company
+Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -944,7 +944,7 @@ end
 
 ## get_ats_document
 
-Retrieve a document
+Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -988,7 +988,7 @@ end
 
 ## get_ats_interview
 
-Retrieve an interview
+Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1032,7 +1032,7 @@ end
 
 ## get_ats_job
 
-Retrieve a job
+Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1076,7 +1076,7 @@ end
 
 ## get_ats_scorecard
 
-Retrieve a scorecard
+Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1120,7 +1120,7 @@ end
 
 ## list_ats_activities
 
-List all activities
+Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1165,7 +1165,7 @@ end
 
 ## list_ats_applications
 
-List all applications
+Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1210,7 +1210,7 @@ end
 
 ## list_ats_applicationstatuses
 
-List all applicationstatuses
+Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1255,7 +1255,7 @@ end
 
 ## list_ats_candidates
 
-List all candidates
+Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1300,7 +1300,7 @@ end
 
 ## list_ats_companies
 
-List all companies
+Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1345,7 +1345,7 @@ end
 
 ## list_ats_documents
 
-List all documents
+Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1390,7 +1390,7 @@ end
 
 ## list_ats_interviews
 
-List all interviews
+Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1435,7 +1435,7 @@ end
 
 ## list_ats_jobs
 
-List all jobs
+Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1480,7 +1480,7 @@ end
 
 ## list_ats_scorecards
 
-List all scorecards
+Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1525,7 +1525,7 @@ end
 
 ## patch_ats_activity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -1544,7 +1544,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Sapiente.',
-    id: '1dd88965-536d-4641-a508-0b97b622bef5',
+    id: '36bdb311-6067-41a5-ab75-6998e9b203d4',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -1552,7 +1552,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '26853e59-8a39-416d-88e8-757699c82c57',
+        id: '578f731c-d74a-4d7c-a885-88f5ca8458ed',
         namespace: 'activity',
         slug: 'cimentarius',
         value: 'Reprehenderit verto.',
@@ -1561,7 +1561,7 @@ req = Models::Operations::PatchAtsActivityRequest.new(
     sub_type: 'TASK',
     title: 'Venio blandior aureus.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-04-04T06:38:15.375Z'),
+    updated_at: DateTime.iso8601('2026-04-05T03:19:02.987Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1593,7 +1593,7 @@ end
 
 ## patch_ats_application
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -1611,17 +1611,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-09-29T18:41:44.750Z'),
+    applied_at: DateTime.iso8601('2025-09-30T10:07:05.985Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-12T18:30:35.456Z'),
-    id: '95d97fad-3b9a-4527-bb22-1953ed79ef05',
+    hired_at: DateTime.iso8601('2026-05-13T14:47:45.185Z'),
+    id: '4be98c80-0842-49db-af54-a6568bd8bde2',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '382ffa38-ae9e-4b90-9c6f-f3dacf302b7c',
+        id: '69265a38-6757-4b66-b686-94690afae256',
         namespace: 'application',
         slug: 'stella',
         value: 'Caput.',
@@ -1630,12 +1630,12 @@ req = Models::Operations::PatchAtsApplicationRequest.new(
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-11T13:07:05.733Z'),
+    rejected_at: DateTime.iso8601('2026-10-12T12:41:06.348Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-    updated_at: DateTime.iso8601('2026-10-18T09:21:22.057Z'),
+    updated_at: DateTime.iso8601('2026-10-19T09:04:15.201Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1667,7 +1667,7 @@ end
 
 ## patch_ats_candidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -1735,7 +1735,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
       ),
     ],
     first_name: 'Ardith',
-    id: 'e2d5ef47-da9e-4500-8493-4ce44bec7b6e',
+    id: '33c70965-b05d-40b8-a4f6-7140edb9bf1b',
     image_url: 'https://avatars.githubusercontent.com/u/27464445',
     job_ids: [],
     last_name: 'Beatty',
@@ -1748,7 +1748,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'cca4fa50-af15-422e-8c16-8ed5906d98de',
+        id: 'd21457b0-099d-4edc-b53c-7a891e833870',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'officia',
@@ -1775,7 +1775,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
       ),
     ],
     title: 'Customer Division Producer',
-    updated_at: DateTime.iso8601('2024-04-28T17:47:32.451Z'),
+    updated_at: DateTime.iso8601('2024-04-28T22:00:51.397Z'),
     web_url: 'https://fragrant-husband.net/',
   ),
   connection_id: '<id>',
@@ -1808,7 +1808,7 @@ end
 
 ## patch_ats_company
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1826,10 +1826,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: 'b636b5e8-021c-497e-9250-478a87440e00',
+    id: '9919fbbc-af06-4156-8ed3-2d8d682ca7e2',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-01T04:12:23.719Z'),
+    updated_at: DateTime.iso8601('2020-10-01T08:47:21.669Z'),
     website_url: 'https://www.gulgowskidibbert.com',
   ),
   connection_id: '<id>',
@@ -1862,7 +1862,7 @@ end
 
 ## patch_ats_document
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -1882,10 +1882,10 @@ req = Models::Operations::PatchAtsDocumentRequest.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'lonzo_schowalter_resume.pdf',
-    id: '907ef7b6-235a-44f3-8ec7-d96d3a868fc2',
+    id: '5631ea6c-256d-485c-af43-f26a1cbf1216',
     metadata: [],
     type: Models::Shared::AtsDocumentType::COVER_LETTER,
-    updated_at: DateTime.iso8601('2022-12-07T04:59:55.146Z'),
+    updated_at: DateTime.iso8601('2022-12-07T10:57:57.861Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1917,7 +1917,7 @@ end
 
 ## patch_ats_interview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -1936,13 +1936,13 @@ req = Models::Operations::PatchAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: 'e4f6fa22-60cf-4f9b-98c5-bf66341af9c5',
+    id: '233684a9-a898-473b-a48f-b075574510d6',
     location: '26596 Halle Trafficway',
     meeting_url: 'https://immaculate-foodstuffs.biz',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-09-23T16:39:11.723Z'),
+    updated_at: DateTime.iso8601('2023-09-24T01:29:20.706Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1974,7 +1974,7 @@ end
 
 ## patch_ats_job
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -2021,7 +2021,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     description: 'Global',
     employment_type: Models::Shared::EmploymentType::FREELANCE,
     hiring_managers: [],
-    id: '0b07a34e-39f9-404a-af24-ab50ae45bbd3',
+    id: '9a66fe38-546a-43c1-a6e2-64e49af50e1a',
     industry: 'Handcrafted Bamboo Soap',
     language_locale: 'en',
     metadata: [
@@ -2030,7 +2030,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '5ae4056e-ffe0-4bd5-bc78-8b4c4dae688f',
+        id: '133a3986-25d9-47c6-948f-1b6cee5cf06c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'desolo',
@@ -2043,7 +2043,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-06-07T21:28:07.934Z'),
+        opened_at: DateTime.iso8601('2026-06-08T18:36:46.273Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN,
       ),
     ],
@@ -2057,14 +2057,14 @@ req = Models::Operations::PatchAtsJobRequest.new(
           region: 'Wisconsin',
           region_code: 'CO',
         ),
-        created_at: DateTime.iso8601('2026-08-02T00:29:26.254Z'),
+        created_at: DateTime.iso8601('2026-08-02T22:42:23.571Z'),
         description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-        id: '0711f01a-d966-4692-856e-ebefe2c72287',
+        id: '539d9969-b0aa-4be3-8f98-1de80d87ee85',
         is_active: false,
         location: '1725 Hessel Keys',
         name: 'International Identity Manager',
         posting_url: 'https://obedient-yak.com',
-        updated_at: DateTime.iso8601('2026-08-28T07:52:25.774Z'),
+        updated_at: DateTime.iso8601('2026-08-29T06:36:04.703Z'),
       ),
     ],
     public_job_urls: [
@@ -2074,7 +2074,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-        id: '8a96c284-ea18-4779-bda9-ab1be23a235d',
+        id: 'f6c9e280-dc94-4f9f-8f68-2d9380362403',
         max_length: 117.0,
         min_length: 1.0,
         options: [
@@ -2087,7 +2087,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
         type: Models::Shared::AtsJobQuestionType::TEXT,
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: '9ed04038-4f62-4955-ba05-9ccf7856a92c',
+        id: 'c763b368-3f14-4a1b-abf1-d64283996603',
         max_length: 453.0,
         min_length: 1.0,
         options: [
@@ -2100,7 +2100,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-        id: '6306a3f2-d536-4273-9170-bad83ea4b5ae',
+        id: '9bff608e-1937-49d0-ba78-9df903fcdc1f',
         max_length: 66.0,
         min_length: 1.0,
         options: [
@@ -2118,7 +2118,7 @@ req = Models::Operations::PatchAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Crepusculum adsuesco vere.',
-    updated_at: DateTime.iso8601('2026-02-27T09:47:18.165Z'),
+    updated_at: DateTime.iso8601('2026-02-28T04:58:42.136Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2150,7 +2150,7 @@ end
 
 ## patch_ats_scorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -2169,7 +2169,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'b9b9b7a0-dae3-4133-a9d1-fa9a7b5843ed',
+    id: '03c41823-53e4-40f4-ad4a-ea8f6aacc6f7',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
@@ -2183,7 +2183,7 @@ req = Models::Operations::PatchAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-05T13:40:04.409Z'),
+    updated_at: DateTime.iso8601('2023-06-05T20:13:30.679Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2215,7 +2215,7 @@ end
 
 ## remove_ats_activity
 
-Remove an activity
+Deletes the AtsActivity identified by `id`.
 
 ### Example Usage
 
@@ -2257,7 +2257,7 @@ end
 
 ## remove_ats_application
 
-Remove an application
+Deletes the AtsApplication identified by `id`.
 
 ### Example Usage
 
@@ -2299,7 +2299,7 @@ end
 
 ## remove_ats_candidate
 
-Remove a candidate
+Deletes the AtsCandidate identified by `id`.
 
 ### Example Usage
 
@@ -2341,7 +2341,7 @@ end
 
 ## remove_ats_company
 
-Remove a company
+Deletes the AtsCompany identified by `id`.
 
 ### Example Usage
 
@@ -2383,7 +2383,7 @@ end
 
 ## remove_ats_document
 
-Remove a document
+Deletes the AtsDocument identified by `id`.
 
 ### Example Usage
 
@@ -2425,7 +2425,7 @@ end
 
 ## remove_ats_interview
 
-Remove an interview
+Deletes the AtsInterview identified by `id`.
 
 ### Example Usage
 
@@ -2467,7 +2467,7 @@ end
 
 ## remove_ats_job
 
-Remove a job
+Deletes the AtsJob identified by `id`.
 
 ### Example Usage
 
@@ -2509,7 +2509,7 @@ end
 
 ## remove_ats_scorecard
 
-Remove a scorecard
+Deletes the AtsScorecard identified by `id`.
 
 ### Example Usage
 
@@ -2551,7 +2551,7 @@ end
 
 ## update_ats_activity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -2570,7 +2570,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
   ats_activity: Models::Shared::AtsActivity.new(
     created_at: DateTime.iso8601('2022-08-07T03:16:43.865Z'),
     description: 'Sapiente.',
-    id: '1dd88965-536d-4641-a508-0b97b622bef5',
+    id: '36bdb311-6067-41a5-ab75-6998e9b203d4',
     is_private: false,
     metadata: [
       Models::Shared::AtsMetadata.new(
@@ -2578,7 +2578,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '26853e59-8a39-416d-88e8-757699c82c57',
+        id: '578f731c-d74a-4d7c-a885-88f5ca8458ed',
         namespace: 'activity',
         slug: 'cimentarius',
         value: 'Reprehenderit verto.',
@@ -2587,7 +2587,7 @@ req = Models::Operations::UpdateAtsActivityRequest.new(
     sub_type: 'TASK',
     title: 'Venio blandior aureus.',
     type: Models::Shared::AtsActivityType::TASK,
-    updated_at: DateTime.iso8601('2026-04-04T06:38:15.375Z'),
+    updated_at: DateTime.iso8601('2026-04-05T03:19:02.987Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2619,7 +2619,7 @@ end
 
 ## update_ats_application
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -2637,17 +2637,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsApplicationRequest.new(
   ats_application: Models::Shared::AtsApplication.new(
     answers: [],
-    applied_at: DateTime.iso8601('2025-09-29T18:41:44.750Z'),
+    applied_at: DateTime.iso8601('2025-09-30T10:07:05.985Z'),
     created_at: DateTime.iso8601('2023-10-17T07:19:48.787Z'),
-    hired_at: DateTime.iso8601('2026-05-12T18:30:35.456Z'),
-    id: '95d97fad-3b9a-4527-bb22-1953ed79ef05',
+    hired_at: DateTime.iso8601('2026-05-13T14:47:45.185Z'),
+    id: '4be98c80-0842-49db-af54-a6568bd8bde2',
     metadata: [
       Models::Shared::AtsMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '382ffa38-ae9e-4b90-9c6f-f3dacf302b7c',
+        id: '69265a38-6757-4b66-b686-94690afae256',
         namespace: 'application',
         slug: 'stella',
         value: 'Caput.',
@@ -2656,12 +2656,12 @@ req = Models::Operations::UpdateAtsApplicationRequest.new(
     offers: [],
     original_status: 'vomica',
     original_substatus: 'allatus',
-    rejected_at: DateTime.iso8601('2026-10-11T13:07:05.733Z'),
+    rejected_at: DateTime.iso8601('2026-10-12T12:41:06.348Z'),
     rejected_reason: 'Cometes amplitudo videlicet talio.',
     source: 'credo',
     status: Models::Shared::AtsApplicationStatus::REVIEWING,
     summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-    updated_at: DateTime.iso8601('2026-10-18T09:21:22.057Z'),
+    updated_at: DateTime.iso8601('2026-10-19T09:04:15.201Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2693,7 +2693,7 @@ end
 
 ## update_ats_candidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -2761,7 +2761,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
       ),
     ],
     first_name: 'Ardith',
-    id: 'e2d5ef47-da9e-4500-8493-4ce44bec7b6e',
+    id: '33c70965-b05d-40b8-a4f6-7140edb9bf1b',
     image_url: 'https://avatars.githubusercontent.com/u/27464445',
     job_ids: [],
     last_name: 'Beatty',
@@ -2774,7 +2774,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: 'cca4fa50-af15-422e-8c16-8ed5906d98de',
+        id: 'd21457b0-099d-4edc-b53c-7a891e833870',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'officia',
@@ -2801,7 +2801,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
       ),
     ],
     title: 'Customer Division Producer',
-    updated_at: DateTime.iso8601('2024-04-28T17:47:32.451Z'),
+    updated_at: DateTime.iso8601('2024-04-28T22:00:51.397Z'),
     web_url: 'https://fragrant-husband.net/',
   ),
   connection_id: '<id>',
@@ -2834,7 +2834,7 @@ end
 
 ## update_ats_company
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -2852,10 +2852,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: 'b636b5e8-021c-497e-9250-478a87440e00',
+    id: '9919fbbc-af06-4156-8ed3-2d8d682ca7e2',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-01T04:12:23.719Z'),
+    updated_at: DateTime.iso8601('2020-10-01T08:47:21.669Z'),
     website_url: 'https://www.gulgowskidibbert.com',
   ),
   connection_id: '<id>',
@@ -2888,7 +2888,7 @@ end
 
 ## update_ats_document
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -2908,10 +2908,10 @@ req = Models::Operations::UpdateAtsDocumentRequest.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'lonzo_schowalter_resume.pdf',
-    id: '907ef7b6-235a-44f3-8ec7-d96d3a868fc2',
+    id: '5631ea6c-256d-485c-af43-f26a1cbf1216',
     metadata: [],
     type: Models::Shared::AtsDocumentType::COVER_LETTER,
-    updated_at: DateTime.iso8601('2022-12-07T04:59:55.146Z'),
+    updated_at: DateTime.iso8601('2022-12-07T10:57:57.861Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2943,7 +2943,7 @@ end
 
 ## update_ats_interview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -2962,13 +2962,13 @@ req = Models::Operations::UpdateAtsInterviewRequest.new(
   ats_interview: Models::Shared::AtsInterview.new(
     created_at: DateTime.iso8601('2021-11-28T03:14:47.774Z'),
     end_at: DateTime.iso8601('2021-12-08T06:33:19.583Z'),
-    id: 'e4f6fa22-60cf-4f9b-98c5-bf66341af9c5',
+    id: '233684a9-a898-473b-a48f-b075574510d6',
     location: '26596 Halle Trafficway',
     meeting_url: 'https://immaculate-foodstuffs.biz',
     metadata: [],
     start_at: DateTime.iso8601('2021-12-08T06:03:19.583Z'),
     status: Models::Shared::AtsInterviewStatus::SCHEDULED,
-    updated_at: DateTime.iso8601('2023-09-23T16:39:11.723Z'),
+    updated_at: DateTime.iso8601('2023-09-24T01:29:20.706Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3000,7 +3000,7 @@ end
 
 ## update_ats_job
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -3047,7 +3047,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     description: 'Global',
     employment_type: Models::Shared::EmploymentType::FREELANCE,
     hiring_managers: [],
-    id: '0b07a34e-39f9-404a-af24-ab50ae45bbd3',
+    id: '9a66fe38-546a-43c1-a6e2-64e49af50e1a',
     industry: 'Handcrafted Bamboo Soap',
     language_locale: 'en',
     metadata: [
@@ -3056,7 +3056,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '5ae4056e-ffe0-4bd5-bc78-8b4c4dae688f',
+        id: '133a3986-25d9-47c6-948f-1b6cee5cf06c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'desolo',
@@ -3069,7 +3069,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     openings: [
       Models::Shared::AtsJobOpening.new(
         close_reason: 'Admoveo trado textilis.',
-        opened_at: DateTime.iso8601('2026-06-07T21:28:07.934Z'),
+        opened_at: DateTime.iso8601('2026-06-08T18:36:46.273Z'),
         status: Models::Shared::AtsJobOpeningStatus::OPEN,
       ),
     ],
@@ -3083,14 +3083,14 @@ req = Models::Operations::UpdateAtsJobRequest.new(
           region: 'Wisconsin',
           region_code: 'CO',
         ),
-        created_at: DateTime.iso8601('2026-08-02T00:29:26.254Z'),
+        created_at: DateTime.iso8601('2026-08-02T22:42:23.571Z'),
         description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-        id: '0711f01a-d966-4692-856e-ebefe2c72287',
+        id: '539d9969-b0aa-4be3-8f98-1de80d87ee85',
         is_active: false,
         location: '1725 Hessel Keys',
         name: 'International Identity Manager',
         posting_url: 'https://obedient-yak.com',
-        updated_at: DateTime.iso8601('2026-08-28T07:52:25.774Z'),
+        updated_at: DateTime.iso8601('2026-08-29T06:36:04.703Z'),
       ),
     ],
     public_job_urls: [
@@ -3100,7 +3100,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     questions: [
       Models::Shared::AtsJobQuestion.new(
         description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-        id: '8a96c284-ea18-4779-bda9-ab1be23a235d',
+        id: 'f6c9e280-dc94-4f9f-8f68-2d9380362403',
         max_length: 117.0,
         min_length: 1.0,
         options: [
@@ -3113,7 +3113,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
         type: Models::Shared::AtsJobQuestionType::TEXT,
       ),
       Models::Shared::AtsJobQuestion.new(
-        id: '9ed04038-4f62-4955-ba05-9ccf7856a92c',
+        id: 'c763b368-3f14-4a1b-abf1-d64283996603',
         max_length: 453.0,
         min_length: 1.0,
         options: [
@@ -3126,7 +3126,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
       ),
       Models::Shared::AtsJobQuestion.new(
         description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-        id: '6306a3f2-d536-4273-9170-bad83ea4b5ae',
+        id: '9bff608e-1937-49d0-ba78-9df903fcdc1f',
         max_length: 66.0,
         min_length: 1.0,
         options: [
@@ -3144,7 +3144,7 @@ req = Models::Operations::UpdateAtsJobRequest.new(
     ],
     status: Models::Shared::AtsJobStatus::ARCHIVED,
     summary: 'Crepusculum adsuesco vere.',
-    updated_at: DateTime.iso8601('2026-02-27T09:47:18.165Z'),
+    updated_at: DateTime.iso8601('2026-02-28T04:58:42.136Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3176,7 +3176,7 @@ end
 
 ## update_ats_scorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -3195,7 +3195,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
   ats_scorecard: Models::Shared::AtsScorecard.new(
     comment: 'Maiores enim.',
     created_at: DateTime.iso8601('2022-02-20T17:09:45.498Z'),
-    id: 'b9b9b7a0-dae3-4133-a9d1-fa9a7b5843ed',
+    id: '03c41823-53e4-40f4-ad4a-ea8f6aacc6f7',
     metadata: [],
     questions: [
       Models::Shared::AtsScorecardQuestion.new(
@@ -3209,7 +3209,7 @@ req = Models::Operations::UpdateAtsScorecardRequest.new(
       ),
     ],
     recommendation: Models::Shared::Recommendation::STRONG_YES,
-    updated_at: DateTime.iso8601('2023-06-05T13:40:04.409Z'),
+    updated_at: DateTime.iso8601('2023-06-05T20:13:30.679Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

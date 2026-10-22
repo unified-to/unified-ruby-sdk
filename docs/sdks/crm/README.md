@@ -45,7 +45,7 @@
 
 ## create_crm_company
 
-Create a company
+Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 
 ### Example Usage
 
@@ -90,7 +90,7 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   employees: 4177.0,
-  id: '76899288-87bf-4646-974b-44a0fd1b3acd',
+  id: '45430102-9d60-4dcb-95de-6b3395a6edf2',
   industry: 'Metrics',
   is_active: true,
   link_urls: [
@@ -102,7 +102,7 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '31a67396-12ff-4ae0-b56e-f60d44ae7d5d',
+      id: '7d810a72-f45b-4353-9559-e181734fb9bd',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'unde',
@@ -121,7 +121,7 @@ res = s.crm.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   timezone: 'Atlantic/Azores',
-  updated_at: DateTime.iso8601('2025-03-03T03:44:26.054Z'),
+  updated_at: DateTime.iso8601('2025-03-03T21:28:57.322Z'),
   websites: [
     'https://www.goodwinsons.com',
   ],
@@ -154,7 +154,7 @@ end
 
 ## create_crm_contact
 
-Create a contact
+Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   first_name: 'Mohammad',
-  id: '300f2e85-3d9e-4075-840a-4fd9fe523962',
+  id: '6be397fd-fb29-4e99-a32c-895bf4fc4e3a',
   image_url: 'https://avatars.githubusercontent.com/u/26803724',
   last_name: 'Bartell',
   link_urls: [
@@ -200,7 +200,7 @@ res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'f5f35195-7412-4359-8cd1-f82139af7291',
+      id: 'c1ac2149-70d3-459b-b9d2-79bef51441d7',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'antiquus',
@@ -218,7 +218,7 @@ res = s.crm.create_crm_contact(crm_contact: Models::Shared::CrmContact.new(
     ),
   ],
   title: 'National Tactics Analyst',
-  updated_at: DateTime.iso8601('2021-02-24T05:06:32.253Z'),
+  updated_at: DateTime.iso8601('2021-02-24T05:42:21.126Z'),
 ), connection_id: '<id>')
 
 unless res.crm_contact.nil?
@@ -248,7 +248,7 @@ end
 
 ## create_crm_deal
 
-Create a deal
+Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
 
 ### Example Usage
 
@@ -265,19 +265,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.crm.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   amount: 98_162.0,
-  closed_at: DateTime.iso8601('2024-03-10T10:06:36.060Z'),
-  closing_at: DateTime.iso8601('2025-08-31T12:37:54.634Z'),
+  closed_at: DateTime.iso8601('2024-03-10T15:02:30.290Z'),
+  closing_at: DateTime.iso8601('2025-09-01T04:12:11.705Z'),
   created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
   currency: 'USD',
   description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-  id: '7d6cd0b2-f9c5-42c1-a68b-d59f7680ea80',
+  id: '14ef397c-6011-4e50-90b6-053bbdfd46aa',
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'de172c9b-9f28-4356-b8cd-d329d4ff5974',
+      id: 'f71d3c5e-3680-4811-8ccf-9761d634c9a0',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'conatus',
@@ -290,7 +290,7 @@ res = s.crm.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
     'causa',
     'suus',
   ],
-  updated_at: DateTime.iso8601('2024-10-11T21:12:58.993Z'),
+  updated_at: DateTime.iso8601('2024-10-12T06:24:01.623Z'),
   won_reason: 'Usque libero soleo.',
 ), connection_id: '<id>')
 
@@ -321,7 +321,7 @@ end
 
 ## create_crm_event
 
-Create an event
+Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 
 ### Example Usage
 
@@ -340,13 +340,13 @@ res = s.crm.create_crm_event(crm_event: Models::Shared::CrmEvent.new(
   call: Models::Shared::PropertyCrmEventCall.new(
     description: 'Arbitro aptus.',
     duration: 64.0,
-    start_at: DateTime.iso8601('2024-12-11T00:48:21.026Z'),
+    start_at: DateTime.iso8601('2024-12-11T17:31:41.901Z'),
   ),
   created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-  id: '2861a115-b973-4d8a-8ef6-7c9a7f2efb64',
+  id: 'cb6a3ace-0074-470f-a9c3-3bd2cee96a09',
   metadata: [],
   type: Models::Shared::CrmEventType::CALL,
-  updated_at: DateTime.iso8601('2026-10-11T12:55:45.327Z'),
+  updated_at: DateTime.iso8601('2026-10-12T12:36:07.340Z'),
 ), connection_id: '<id>')
 
 unless res.crm_event.nil?
@@ -376,7 +376,7 @@ end
 
 ## create_crm_lead
 
-Create a lead
+Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
 
 ### Example Usage
 
@@ -409,7 +409,7 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
     ),
   ],
   first_name: 'Velda',
-  id: 'fdf5c447-a048-4324-91ea-918517eaf80b',
+  id: 'a5ff2dbc-ac11-4d68-87c6-e797c08278bb',
   is_active: true,
   last_name: 'Sporer',
   link_urls: [
@@ -421,7 +421,7 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'f9248f76-97df-44eb-9efe-20e1c22d7ac4',
+      id: '8a6b03f1-da64-4cf4-869c-768a877990b1',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'vitiosus',
@@ -445,7 +445,7 @@ res = s.crm.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
     ),
   ],
   title: 'International Factors Administrator',
-  updated_at: DateTime.iso8601('2020-05-17T21:34:50.146Z'),
+  updated_at: DateTime.iso8601('2020-05-17T23:36:15.811Z'),
 ), connection_id: '<id>')
 
 unless res.crm_lead.nil?
@@ -475,7 +475,7 @@ end
 
 ## create_crm_pipeline
 
-Create a pipeline
+Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 
 ### Example Usage
 
@@ -494,7 +494,7 @@ res = s.crm.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(
   created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
   deal_probability: 99.0,
   display_order: 8.0,
-  id: '020faeaa-7aef-48eb-8503-9e5b08726b8e',
+  id: '314b38fc-3392-4486-9232-bf4854c6611c',
   is_active: true,
   metadata: [],
   name: 'Small Steel Bacon',
@@ -504,13 +504,13 @@ res = s.crm.create_crm_pipeline(crm_pipeline: Models::Shared::CrmPipeline.new(
       created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
       deal_probability: 84.0,
       display_order: 72.0,
-      id: '431f199f-0e23-4baa-a7b9-9c583698c712',
+      id: '38d5c0fb-d5a7-4980-8b1b-6cc7ad149ac7',
       is_closed: true,
       name: 'Veniam.',
-      updated_at: DateTime.iso8601('2025-10-10T12:28:32.951Z'),
+      updated_at: DateTime.iso8601('2025-10-11T05:50:12.601Z'),
     ),
   ],
-  updated_at: DateTime.iso8601('2025-11-01T05:54:52.602Z'),
+  updated_at: DateTime.iso8601('2025-11-01T23:38:47.531Z'),
 ), connection_id: '<id>')
 
 unless res.crm_pipeline.nil?
@@ -540,7 +540,7 @@ end
 
 ## get_crm_company
 
-Retrieve a company
+Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -584,7 +584,7 @@ end
 
 ## get_crm_contact
 
-Retrieve a contact
+Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -628,7 +628,7 @@ end
 
 ## get_crm_deal
 
-Retrieve a deal
+Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -672,7 +672,7 @@ end
 
 ## get_crm_event
 
-Retrieve an event
+Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -716,7 +716,7 @@ end
 
 ## get_crm_lead
 
-Retrieve a lead
+Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -760,7 +760,7 @@ end
 
 ## get_crm_pipeline
 
-Retrieve a pipeline
+Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -804,7 +804,7 @@ end
 
 ## list_crm_companies
 
-List all companies
+Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -849,7 +849,7 @@ end
 
 ## list_crm_contacts
 
-List all contacts
+Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -894,7 +894,7 @@ end
 
 ## list_crm_deals
 
-List all deals
+Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -939,7 +939,7 @@ end
 
 ## list_crm_events
 
-List all events
+Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -984,7 +984,7 @@ end
 
 ## list_crm_leads
 
-List all leads
+Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1029,7 +1029,7 @@ end
 
 ## list_crm_pipelines
 
-List all pipelines
+Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1074,7 +1074,7 @@ end
 
 ## list_crm_taxonomies
 
-List all taxonomies
+Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1119,7 +1119,7 @@ end
 
 ## patch_crm_company
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1165,7 +1165,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: 'cc28f72c-f444-453c-b4f6-2697156e25e2',
+    id: 'f6118c33-c025-4e57-8713-96353decbba9',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -1177,7 +1177,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '01f0ae9f-23c2-49fe-a397-7f5bda43cc3e',
+        id: 'eb7e0ab1-617c-42aa-9140-805dc92181d9',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'unde',
@@ -1196,7 +1196,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-03T03:44:26.077Z'),
+    updated_at: DateTime.iso8601('2025-03-03T21:28:57.348Z'),
     websites: [
       'https://www.goodwinsons.com',
     ],
@@ -1231,7 +1231,7 @@ end
 
 ## patch_crm_contact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1266,7 +1266,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     first_name: 'Mohammad',
-    id: '6ed2fb9f-37d9-4e9b-94e4-71fc8efcf77f',
+    id: '86854558-d801-4b6a-8b08-c5c9087fc5c5',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -1278,7 +1278,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'ae413485-8c49-40a3-833a-1a5f212c344f',
+        id: 'e061d87c-c4a7-4741-8734-8aca32ffae2c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'antiquus',
@@ -1296,7 +1296,7 @@ req = Models::Operations::PatchCrmContactRequest.new(
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T05:06:32.254Z'),
+    updated_at: DateTime.iso8601('2021-02-24T05:42:21.127Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1328,7 +1328,7 @@ end
 
 ## patch_crm_deal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -1346,19 +1346,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-10T10:06:36.063Z'),
-    closing_at: DateTime.iso8601('2025-08-31T12:37:54.643Z'),
+    closed_at: DateTime.iso8601('2024-03-10T15:02:30.296Z'),
+    closing_at: DateTime.iso8601('2025-09-01T04:12:11.724Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3',
+    id: '7b95c55d-c096-4489-9655-08807542832c',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '4ce364e7-3ae1-4d8c-8353-0bcb57c73575',
+        id: '68c0b75f-f90f-4795-916c-ea0dc7f99352',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'conatus',
@@ -1371,7 +1371,7 @@ req = Models::Operations::PatchCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-11T21:12:58.999Z'),
+    updated_at: DateTime.iso8601('2024-10-12T06:24:01.634Z'),
     won_reason: 'Usque libero soleo.',
   ),
   connection_id: '<id>',
@@ -1404,7 +1404,7 @@ end
 
 ## patch_crm_event
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1424,13 +1424,13 @@ req = Models::Operations::PatchCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-11T00:48:21.064Z'),
+      start_at: DateTime.iso8601('2024-12-11T17:31:41.949Z'),
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: 'fc1b8c52-fc3c-4ad5-8c05-6d3e8eb071aa',
+    id: '6ee8337c-85b4-45ae-8759-aaa2e283bb04',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-10-11T12:55:45.381Z'),
+    updated_at: DateTime.iso8601('2026-10-12T12:36:07.407Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1462,7 +1462,7 @@ end
 
 ## patch_crm_lead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -1496,7 +1496,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
       ),
     ],
     first_name: 'Velda',
-    id: '6c8c585e-50d2-4a85-a7c8-7909fac94b4c',
+    id: '52f44fbc-4a77-45dc-94c8-577758fff89f',
     is_active: true,
     last_name: 'Sporer',
     link_urls: [
@@ -1508,7 +1508,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8f740a58-690e-4ddc-9d90-630a91b6caa2',
+        id: '7d5aa530-b73a-44e0-93ca-7e6fa6eabd74',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'vitiosus',
@@ -1532,7 +1532,7 @@ req = Models::Operations::PatchCrmLeadRequest.new(
       ),
     ],
     title: 'International Factors Administrator',
-    updated_at: DateTime.iso8601('2020-05-17T21:34:50.148Z'),
+    updated_at: DateTime.iso8601('2020-05-17T23:36:15.815Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1564,7 +1564,7 @@ end
 
 ## patch_crm_pipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -1584,7 +1584,7 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: 'e646ed6a-5891-4590-920f-56531ac2c297',
+    id: '1241cfda-16af-44f0-9452-228e4c096473',
     is_active: true,
     metadata: [],
     name: 'Small Steel Bacon',
@@ -1594,13 +1594,13 @@ req = Models::Operations::PatchCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: 'adb7be55-98ab-4e90-9d73-31fb8021e556',
+        id: '142fac8b-ac6e-4b8d-927c-ec9f5b6b87da',
         is_closed: true,
         name: 'Veniam.',
-        updated_at: DateTime.iso8601('2025-10-10T12:28:32.963Z'),
+        updated_at: DateTime.iso8601('2025-10-11T05:50:12.613Z'),
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-01T05:54:52.614Z'),
+    updated_at: DateTime.iso8601('2025-11-01T23:38:47.543Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1632,7 +1632,7 @@ end
 
 ## remove_crm_company
 
-Remove a company
+Deletes the CrmCompany identified by `id`.
 
 ### Example Usage
 
@@ -1674,7 +1674,7 @@ end
 
 ## remove_crm_contact
 
-Remove a contact
+Deletes the CrmContact identified by `id`.
 
 ### Example Usage
 
@@ -1716,7 +1716,7 @@ end
 
 ## remove_crm_deal
 
-Remove a deal
+Deletes the CrmDeal identified by `id`.
 
 ### Example Usage
 
@@ -1758,7 +1758,7 @@ end
 
 ## remove_crm_event
 
-Remove an event
+Deletes the CrmEvent identified by `id`.
 
 ### Example Usage
 
@@ -1800,7 +1800,7 @@ end
 
 ## remove_crm_lead
 
-Remove a lead
+Deletes the CrmLead identified by `id`.
 
 ### Example Usage
 
@@ -1842,7 +1842,7 @@ end
 
 ## remove_crm_pipeline
 
-Remove a pipeline
+Deletes the CrmPipeline identified by `id`.
 
 ### Example Usage
 
@@ -1884,7 +1884,7 @@ end
 
 ## update_crm_company
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1930,7 +1930,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: 'cc28f72c-f444-453c-b4f6-2697156e25e2',
+    id: 'f6118c33-c025-4e57-8713-96353decbba9',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -1942,7 +1942,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '01f0ae9f-23c2-49fe-a397-7f5bda43cc3e',
+        id: 'eb7e0ab1-617c-42aa-9140-805dc92181d9',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'unde',
@@ -1961,7 +1961,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-03T03:44:26.077Z'),
+    updated_at: DateTime.iso8601('2025-03-03T21:28:57.348Z'),
     websites: [
       'https://www.goodwinsons.com',
     ],
@@ -1996,7 +1996,7 @@ end
 
 ## update_crm_contact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -2031,7 +2031,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     first_name: 'Mohammad',
-    id: '6ed2fb9f-37d9-4e9b-94e4-71fc8efcf77f',
+    id: '86854558-d801-4b6a-8b08-c5c9087fc5c5',
     image_url: 'https://avatars.githubusercontent.com/u/26803724',
     last_name: 'Bartell',
     link_urls: [
@@ -2043,7 +2043,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'ae413485-8c49-40a3-833a-1a5f212c344f',
+        id: 'e061d87c-c4a7-4741-8734-8aca32ffae2c',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'antiquus',
@@ -2061,7 +2061,7 @@ req = Models::Operations::UpdateCrmContactRequest.new(
       ),
     ],
     title: 'National Tactics Analyst',
-    updated_at: DateTime.iso8601('2021-02-24T05:06:32.254Z'),
+    updated_at: DateTime.iso8601('2021-02-24T05:42:21.127Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2093,7 +2093,7 @@ end
 
 ## update_crm_deal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -2111,19 +2111,19 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-10T10:06:36.063Z'),
-    closing_at: DateTime.iso8601('2025-08-31T12:37:54.643Z'),
+    closed_at: DateTime.iso8601('2024-03-10T15:02:30.296Z'),
+    closing_at: DateTime.iso8601('2025-09-01T04:12:11.724Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3',
+    id: '7b95c55d-c096-4489-9655-08807542832c',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '4ce364e7-3ae1-4d8c-8353-0bcb57c73575',
+        id: '68c0b75f-f90f-4795-916c-ea0dc7f99352',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'conatus',
@@ -2136,7 +2136,7 @@ req = Models::Operations::UpdateCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-11T21:12:58.999Z'),
+    updated_at: DateTime.iso8601('2024-10-12T06:24:01.634Z'),
     won_reason: 'Usque libero soleo.',
   ),
   connection_id: '<id>',
@@ -2169,7 +2169,7 @@ end
 
 ## update_crm_event
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2189,13 +2189,13 @@ req = Models::Operations::UpdateCrmEventRequest.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-11T00:48:21.064Z'),
+      start_at: DateTime.iso8601('2024-12-11T17:31:41.949Z'),
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: 'fc1b8c52-fc3c-4ad5-8c05-6d3e8eb071aa',
+    id: '6ee8337c-85b4-45ae-8759-aaa2e283bb04',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-10-11T12:55:45.381Z'),
+    updated_at: DateTime.iso8601('2026-10-12T12:36:07.407Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2227,7 +2227,7 @@ end
 
 ## update_crm_lead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -2261,7 +2261,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
       ),
     ],
     first_name: 'Velda',
-    id: '6c8c585e-50d2-4a85-a7c8-7909fac94b4c',
+    id: '52f44fbc-4a77-45dc-94c8-577758fff89f',
     is_active: true,
     last_name: 'Sporer',
     link_urls: [
@@ -2273,7 +2273,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8f740a58-690e-4ddc-9d90-630a91b6caa2',
+        id: '7d5aa530-b73a-44e0-93ca-7e6fa6eabd74',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'vitiosus',
@@ -2297,7 +2297,7 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
       ),
     ],
     title: 'International Factors Administrator',
-    updated_at: DateTime.iso8601('2020-05-17T21:34:50.148Z'),
+    updated_at: DateTime.iso8601('2020-05-17T23:36:15.815Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2329,7 +2329,7 @@ end
 
 ## update_crm_pipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -2349,7 +2349,7 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
     created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
     deal_probability: 99.0,
     display_order: 8.0,
-    id: 'e646ed6a-5891-4590-920f-56531ac2c297',
+    id: '1241cfda-16af-44f0-9452-228e4c096473',
     is_active: true,
     metadata: [],
     name: 'Small Steel Bacon',
@@ -2359,13 +2359,13 @@ req = Models::Operations::UpdateCrmPipelineRequest.new(
         created_at: DateTime.iso8601('2022-12-28T13:45:38.446Z'),
         deal_probability: 84.0,
         display_order: 72.0,
-        id: 'adb7be55-98ab-4e90-9d73-31fb8021e556',
+        id: '142fac8b-ac6e-4b8d-927c-ec9f5b6b87da',
         is_closed: true,
         name: 'Veniam.',
-        updated_at: DateTime.iso8601('2025-10-10T12:28:32.963Z'),
+        updated_at: DateTime.iso8601('2025-10-11T05:50:12.613Z'),
       ),
     ],
-    updated_at: DateTime.iso8601('2025-11-01T05:54:52.614Z'),
+    updated_at: DateTime.iso8601('2025-11-01T23:38:47.543Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

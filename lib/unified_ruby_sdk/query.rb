@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(datastore_query: Models::Shared::DatastoreQuery, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateDatastoreQueryQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateDatastoreQueryResponse) }
     def create_datastore_query(datastore_query:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_datastore_query - Create a query
+      # Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are mapped to the provider's API. Returns the created DatastoreQuery.
       request = Models::Operations::CreateDatastoreQueryRequest.new(
         datastore_query: datastore_query,
         connection_id: connection_id,

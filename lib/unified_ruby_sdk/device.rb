@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(hris_device: Models::Shared::HrisDevice, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisDeviceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisDeviceResponse) }
     def create_hris_device(hris_device:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_device - Create a device
+      # Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
       request = Models::Operations::CreateHrisDeviceRequest.new(
         hris_device: hris_device,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisDeviceQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisDeviceResponse) }
     def get_hris_device(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_device - Retrieve a device
+      # Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisDeviceRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisDevicesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisDevicesResponse) }
     def list_hris_devices(request:, timeout_ms: nil)
       # list_hris_devices - List all devices
+      # Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisDeviceRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisDeviceResponse) }
     def patch_hris_device(request:, timeout_ms: nil)
       # patch_hris_device - Update a device
+      # Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisDeviceResponse) }
     def remove_hris_device(connection_id:, id:, timeout_ms: nil)
       # remove_hris_device - Remove a device
+      # Deletes the HrisDevice identified by `id`.
       request = Models::Operations::RemoveHrisDeviceRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisDeviceRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisDeviceResponse) }
     def update_hris_device(request:, timeout_ms: nil)
       # update_hris_device - Update a device
+      # Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

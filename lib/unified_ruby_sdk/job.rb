@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(ats_job: Models::Shared::AtsJob, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAtsJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAtsJobResponse) }
     def create_ats_job(ats_job:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_ats_job - Create a job
+      # Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
       request = Models::Operations::CreateAtsJobRequest.new(
         ats_job: ats_job,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(hris_job: Models::Shared::HrisJob, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisJobResponse) }
     def create_hris_job(hris_job:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_job - Create a job
+      # Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
       request = Models::Operations::CreateHrisJobRequest.new(
         hris_job: hris_job,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAtsJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAtsJobResponse) }
     def get_ats_job(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_ats_job - Retrieve a job
+      # Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAtsJobRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisJobQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisJobResponse) }
     def get_hris_job(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_job - Retrieve a job
+      # Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisJobRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAtsJobsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAtsJobsResponse) }
     def list_ats_jobs(request:, timeout_ms: nil)
       # list_ats_jobs - List all jobs
+      # Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -640,6 +645,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisJobsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisJobsResponse) }
     def list_hris_jobs(request:, timeout_ms: nil)
       # list_hris_jobs - List all jobs
+      # Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -750,6 +756,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAtsJobRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAtsJobResponse) }
     def patch_ats_job(request:, timeout_ms: nil)
       # patch_ats_job - Update a job
+      # Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -872,6 +879,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisJobRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisJobResponse) }
     def patch_hris_job(request:, timeout_ms: nil)
       # patch_hris_job - Update a job
+      # Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAtsJobResponse) }
     def remove_ats_job(connection_id:, id:, timeout_ms: nil)
       # remove_ats_job - Remove a job
+      # Deletes the AtsJob identified by `id`.
       request = Models::Operations::RemoveAtsJobRequest.new(
         connection_id: connection_id,
         id: id
@@ -1108,6 +1117,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisJobResponse) }
     def remove_hris_job(connection_id:, id:, timeout_ms: nil)
       # remove_hris_job - Remove a job
+      # Deletes the HrisJob identified by `id`.
       request = Models::Operations::RemoveHrisJobRequest.new(
         connection_id: connection_id,
         id: id
@@ -1222,6 +1232,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAtsJobRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAtsJobResponse) }
     def update_ats_job(request:, timeout_ms: nil)
       # update_ats_job - Update a job
+      # Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1344,6 +1355,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisJobRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisJobResponse) }
     def update_hris_job(request:, timeout_ms: nil)
       # update_hris_job - Update a job
+      # Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

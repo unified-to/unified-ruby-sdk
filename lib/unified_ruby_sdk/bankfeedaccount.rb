@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateAccountingBankfeedaccountQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateAccountingBankfeedaccountResponse) }
     def create_accounting_bankfeedaccount(accounting_bankfeedaccount:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_accounting_bankfeedaccount - Create a bankfeedaccount
+      # Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
       request = Models::Operations::CreateAccountingBankfeedaccountRequest.new(
         accounting_bankfeedaccount: accounting_bankfeedaccount,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetAccountingBankfeedaccountQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetAccountingBankfeedaccountResponse) }
     def get_accounting_bankfeedaccount(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_accounting_bankfeedaccount - Retrieve a bankfeedaccount
+      # Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetAccountingBankfeedaccountRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListAccountingBankfeedaccountsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListAccountingBankfeedaccountsResponse) }
     def list_accounting_bankfeedaccounts(request:, timeout_ms: nil)
       # list_accounting_bankfeedaccounts - List all bankfeedaccounts
+      # Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchAccountingBankfeedaccountRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchAccountingBankfeedaccountResponse) }
     def patch_accounting_bankfeedaccount(request:, timeout_ms: nil)
       # patch_accounting_bankfeedaccount - Update a bankfeedaccount
+      # Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveAccountingBankfeedaccountResponse) }
     def remove_accounting_bankfeedaccount(connection_id:, id:, timeout_ms: nil)
       # remove_accounting_bankfeedaccount - Remove a bankfeedaccount
+      # Deletes the AccountingBankfeedaccount identified by `id`.
       request = Models::Operations::RemoveAccountingBankfeedaccountRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateAccountingBankfeedaccountRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateAccountingBankfeedaccountResponse) }
     def update_accounting_bankfeedaccount(request:, timeout_ms: nil)
       # update_accounting_bankfeedaccount - Update a bankfeedaccount
+      # Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

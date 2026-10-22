@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(healthcare_appointment: Models::Shared::HealthcareAppointment, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHealthcareAppointmentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHealthcareAppointmentResponse) }
     def create_healthcare_appointment(healthcare_appointment:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_healthcare_appointment - Create an appointment
+      # Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
       request = Models::Operations::CreateHealthcareAppointmentRequest.new(
         healthcare_appointment: healthcare_appointment,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(healthcare_observation: Models::Shared::HealthcareObservation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHealthcareObservationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHealthcareObservationResponse) }
     def create_healthcare_observation(healthcare_observation:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_healthcare_observation - Create an observation
+      # Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
       request = Models::Operations::CreateHealthcareObservationRequest.new(
         healthcare_observation: healthcare_observation,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(healthcare_patient: Models::Shared::HealthcarePatient, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHealthcarePatientQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHealthcarePatientResponse) }
     def create_healthcare_patient(healthcare_patient:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_healthcare_patient - Create a patient
+      # Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
       request = Models::Operations::CreateHealthcarePatientRequest.new(
         healthcare_patient: healthcare_patient,
         connection_id: connection_id,
@@ -426,6 +429,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcareAllergyQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcareAllergyResponse) }
     def get_healthcare_allergy(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_allergy - Retrieve an allergy
+      # Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcareAllergyRequest.new(
         connection_id: connection_id,
         id: id,
@@ -542,6 +546,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcareAppointmentQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcareAppointmentResponse) }
     def get_healthcare_appointment(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_appointment - Retrieve an appointment
+      # Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcareAppointmentRequest.new(
         connection_id: connection_id,
         id: id,
@@ -658,6 +663,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcareConditionQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcareConditionResponse) }
     def get_healthcare_condition(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_condition - Retrieve a condition
+      # Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcareConditionRequest.new(
         connection_id: connection_id,
         id: id,
@@ -774,6 +780,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcareEncounterQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcareEncounterResponse) }
     def get_healthcare_encounter(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_encounter - Retrieve an encounter
+      # Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcareEncounterRequest.new(
         connection_id: connection_id,
         id: id,
@@ -890,6 +897,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcareImmunizationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcareImmunizationResponse) }
     def get_healthcare_immunization(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_immunization - Retrieve an immunization
+      # Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcareImmunizationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1006,6 +1014,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcareLocationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcareLocationResponse) }
     def get_healthcare_location(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_location - Retrieve a location
+      # Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcareLocationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1122,6 +1131,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcareMedicationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcareMedicationResponse) }
     def get_healthcare_medication(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_medication - Retrieve a medication
+      # Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcareMedicationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1238,6 +1248,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcareObservationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcareObservationResponse) }
     def get_healthcare_observation(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_observation - Retrieve an observation
+      # Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcareObservationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1354,6 +1365,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcarePatientQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcarePatientResponse) }
     def get_healthcare_patient(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_patient - Retrieve a patient
+      # Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcarePatientRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1470,6 +1482,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcarePractitionerQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcarePractitionerResponse) }
     def get_healthcare_practitioner(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_practitioner - Retrieve a practitioner
+      # Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcarePractitionerRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1586,6 +1599,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHealthcareSlotQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHealthcareSlotResponse) }
     def get_healthcare_slot(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_healthcare_slot - Retrieve a slot
+      # Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHealthcareSlotRequest.new(
         connection_id: connection_id,
         id: id,
@@ -1702,6 +1716,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcareAllergiesRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcareAllergiesResponse) }
     def list_healthcare_allergies(request:, timeout_ms: nil)
       # list_healthcare_allergies - List all allergies
+      # Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1812,6 +1827,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcareAppointmentsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcareAppointmentsResponse) }
     def list_healthcare_appointments(request:, timeout_ms: nil)
       # list_healthcare_appointments - List all appointments
+      # Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1922,6 +1938,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcareConditionsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcareConditionsResponse) }
     def list_healthcare_conditions(request:, timeout_ms: nil)
       # list_healthcare_conditions - List all conditions
+      # Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2032,6 +2049,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcareEncountersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcareEncountersResponse) }
     def list_healthcare_encounters(request:, timeout_ms: nil)
       # list_healthcare_encounters - List all encounters
+      # Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2142,6 +2160,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcareImmunizationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcareImmunizationsResponse) }
     def list_healthcare_immunizations(request:, timeout_ms: nil)
       # list_healthcare_immunizations - List all immunizations
+      # Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2252,6 +2271,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcareLocationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcareLocationsResponse) }
     def list_healthcare_locations(request:, timeout_ms: nil)
       # list_healthcare_locations - List all locations
+      # Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2362,6 +2382,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcareMedicationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcareMedicationsResponse) }
     def list_healthcare_medications(request:, timeout_ms: nil)
       # list_healthcare_medications - List all medications
+      # Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2472,6 +2493,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcareObservationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcareObservationsResponse) }
     def list_healthcare_observations(request:, timeout_ms: nil)
       # list_healthcare_observations - List all observations
+      # Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2582,6 +2604,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcarePatientsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcarePatientsResponse) }
     def list_healthcare_patients(request:, timeout_ms: nil)
       # list_healthcare_patients - List all patients
+      # Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2692,6 +2715,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcarePractitionersRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcarePractitionersResponse) }
     def list_healthcare_practitioners(request:, timeout_ms: nil)
       # list_healthcare_practitioners - List all practitioners
+      # Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2802,6 +2826,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHealthcareSlotsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHealthcareSlotsResponse) }
     def list_healthcare_slots(request:, timeout_ms: nil)
       # list_healthcare_slots - List all slots
+      # Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -2912,6 +2937,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHealthcareAppointmentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHealthcareAppointmentResponse) }
     def patch_healthcare_appointment(request:, timeout_ms: nil)
       # patch_healthcare_appointment - Update an appointment
+      # Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3034,6 +3060,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHealthcarePatientRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHealthcarePatientResponse) }
     def patch_healthcare_patient(request:, timeout_ms: nil)
       # patch_healthcare_patient - Update a patient
+      # Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3156,6 +3183,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHealthcareAppointmentResponse) }
     def remove_healthcare_appointment(connection_id:, id:, timeout_ms: nil)
       # remove_healthcare_appointment - Remove an appointment
+      # Deletes the HealthcareAppointment identified by `id`.
       request = Models::Operations::RemoveHealthcareAppointmentRequest.new(
         connection_id: connection_id,
         id: id
@@ -3270,6 +3298,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHealthcareAppointmentRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHealthcareAppointmentResponse) }
     def update_healthcare_appointment(request:, timeout_ms: nil)
       # update_healthcare_appointment - Update an appointment
+      # Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -3392,6 +3421,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHealthcarePatientRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHealthcarePatientResponse) }
     def update_healthcare_patient(request:, timeout_ms: nil)
       # update_healthcare_patient - Update a patient
+      # Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

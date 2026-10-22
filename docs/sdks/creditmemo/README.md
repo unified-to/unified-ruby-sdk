@@ -14,7 +14,7 @@
 
 ## create_accounting_creditmemo
 
-Create a creditmemo
+Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 
 ### Example Usage
 
@@ -37,7 +37,7 @@ res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::S
   creditmemo_number: 'CM-99537',
   currency: 'AUD',
   discount_amount: 0.0,
-  id: '9c7c8eca-81ef-4776-840b-210a14223b3c',
+  id: 'abafb946-a93b-47e1-a26b-a262d14db967',
   lineitems: [],
   metadata: [],
   notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -46,7 +46,7 @@ res = s.creditmemo.create_accounting_creditmemo(accounting_creditmemo: Models::S
   status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
   tax_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2025-09-11T07:57:22.889Z'),
+  updated_at: DateTime.iso8601('2025-09-11T23:11:29.386Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_creditmemo.nil?
@@ -76,7 +76,7 @@ end
 
 ## get_accounting_creditmemo
 
-Retrieve a creditmemo
+Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -120,7 +120,7 @@ end
 
 ## list_accounting_creditmemoes
 
-List all creditmemoes
+Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -165,7 +165,7 @@ end
 
 ## patch_accounting_creditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -189,7 +189,7 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: '568d9318-1556-4402-88ff-ea980ec43dbe',
+    id: '8a145713-1fbd-40e2-b361-bdd9b06ef0da',
     lineitems: [],
     metadata: [],
     notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -198,7 +198,7 @@ req = Models::Operations::PatchAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-11T07:57:22.916Z'),
+    updated_at: DateTime.iso8601('2025-09-11T23:11:29.409Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -230,7 +230,7 @@ end
 
 ## remove_accounting_creditmemo
 
-Remove a creditmemo
+Deletes the AccountingCreditmemo identified by `id`.
 
 ### Example Usage
 
@@ -272,7 +272,7 @@ end
 
 ## update_accounting_creditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     creditmemo_number: 'CM-99537',
     currency: 'AUD',
     discount_amount: 0.0,
-    id: '568d9318-1556-4402-88ff-ea980ec43dbe',
+    id: '8a145713-1fbd-40e2-b361-bdd9b06ef0da',
     lineitems: [],
     metadata: [],
     notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -305,7 +305,7 @@ req = Models::Operations::UpdateAccountingCreditmemoRequest.new(
     status: Models::Shared::AccountingCreditmemoStatus::AUTHORIZED,
     tax_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2025-09-11T07:57:22.916Z'),
+    updated_at: DateTime.iso8601('2025-09-11T23:11:29.409Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

@@ -14,7 +14,7 @@
 
 ## create_accounting_transaction
 
-Create a transaction
+Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
 
 ### Example Usage
 
@@ -31,12 +31,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.transaction.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(
   created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  id: '8c13a9ec-0a69-4abd-b610-a83a0fba33cf',
+  id: '52dd8af7-7cd7-4625-ab77-a9d341b24d4c',
   lineitems: [
     Models::Shared::AccountingTransactionLineItem.new(
       category_ids: [],
       description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-      id: '9c79732b-0fb8-4393-bed0-bfbd5b8e002e',
+      id: 'd314aa8e-2877-4e1f-8e2d-e1854503d98a',
       name: 'Shirt',
       total_amount: 10_184.0,
       unit_amount: 536.0,
@@ -48,7 +48,7 @@ res = s.transaction.create_accounting_transaction(accounting_transaction: Models
   tax_amount: 0.0,
   total_amount: 10_184.0,
   transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  updated_at: DateTime.iso8601('2019-10-14T06:08:29.411Z'),
+  updated_at: DateTime.iso8601('2019-10-14T06:18:51.360Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_transaction.nil?
@@ -78,7 +78,7 @@ end
 
 ## get_accounting_transaction
 
-Retrieve a transaction
+Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ end
 
 ## list_accounting_transactions
 
-List all transactions
+Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -167,7 +167,7 @@ end
 
 ## patch_accounting_transaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -185,12 +185,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '3fc62cc2-c890-432a-baa8-21b3a333e541',
+    id: '22225963-66fb-48f2-9300-11e70830bb12',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: 'b4303d20-48f1-49bc-9d58-f21e053cdbcc',
+        id: '577033d5-6fa9-46c2-938e-3831528b30c8',
         name: 'Shirt',
         total_amount: 10_184.0,
         unit_amount: 536.0,
@@ -202,7 +202,7 @@ req = Models::Operations::PatchAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T06:08:29.411Z'),
+    updated_at: DateTime.iso8601('2019-10-14T06:18:51.360Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -234,7 +234,7 @@ end
 
 ## remove_accounting_transaction
 
-Remove a transaction
+Deletes the AccountingTransaction identified by `id`.
 
 ### Example Usage
 
@@ -276,7 +276,7 @@ end
 
 ## update_accounting_transaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -294,12 +294,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '3fc62cc2-c890-432a-baa8-21b3a333e541',
+    id: '22225963-66fb-48f2-9300-11e70830bb12',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: 'b4303d20-48f1-49bc-9d58-f21e053cdbcc',
+        id: '577033d5-6fa9-46c2-938e-3831528b30c8',
         name: 'Shirt',
         total_amount: 10_184.0,
         unit_amount: 536.0,
@@ -311,7 +311,7 @@ req = Models::Operations::UpdateAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T06:08:29.411Z'),
+    updated_at: DateTime.iso8601('2019-10-14T06:18:51.360Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

@@ -14,7 +14,7 @@
 
 ## create_hris_employee
 
-Create an employee
+Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 
 ### Example Usage
 
@@ -66,7 +66,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   gender: Models::Shared::HrisEmployeeGender::MALE,
   has_mfa: true,
   hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-  id: '5ece6f77-35df-48e1-9496-7d1879563189',
+  id: 'f0059d37-f7f5-475f-ba3a-ae687313ebe6',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
   language_locale: 'in',
   last_name: 'Prohaska',
@@ -78,7 +78,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
         "display_name": 'Custom Property',
       },
       format: Models::Shared::HrisMetadataFormat::TEXT,
-      id: 'db8a06c6-9b85-4baa-8142-748cdc88efd4',
+      id: 'a100a8c6-503b-48c0-b130-a362a3c5bdad',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'tutis',
@@ -126,7 +126,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   timeoff_days_used: 9.0,
   timezone: 'Europe/Ljubljana',
   title: 'District Branding Specialist',
-  updated_at: DateTime.iso8601('2020-07-19T04:12:43.588Z'),
+  updated_at: DateTime.iso8601('2020-07-19T07:01:26.701Z'),
 ), connection_id: '<id>')
 
 unless res.hris_employee.nil?
@@ -156,7 +156,7 @@ end
 
 ## get_hris_employee
 
-Retrieve an employee
+Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -200,7 +200,7 @@ end
 
 ## list_hris_employees
 
-List all employees
+Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -245,7 +245,7 @@ end
 
 ## patch_hris_employee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -298,7 +298,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '9609249d-8821-468a-b0ee-7d78f4b1ae6a',
+    id: 'af401a62-954a-4750-b0f9-c63eb87066ea',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -310,7 +310,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '20b100c1-0a48-47af-920c-3385a2834306',
+        id: 'cea3e721-d03d-409d-b8f2-ca5f08895117',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis',
@@ -358,7 +358,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-19T04:12:43.602Z'),
+    updated_at: DateTime.iso8601('2020-07-19T07:01:26.712Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -390,7 +390,7 @@ end
 
 ## remove_hris_employee
 
-Remove an employee
+Deletes the HrisEmployee identified by `id`.
 
 ### Example Usage
 
@@ -432,7 +432,7 @@ end
 
 ## update_hris_employee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -485,7 +485,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '9609249d-8821-468a-b0ee-7d78f4b1ae6a',
+    id: 'af401a62-954a-4750-b0f9-c63eb87066ea',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -497,7 +497,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '20b100c1-0a48-47af-920c-3385a2834306',
+        id: 'cea3e721-d03d-409d-b8f2-ca5f08895117',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'tutis',
@@ -545,7 +545,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-19T04:12:43.602Z'),
+    updated_at: DateTime.iso8601('2020-07-19T07:01:26.712Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

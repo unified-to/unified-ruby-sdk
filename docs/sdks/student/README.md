@@ -14,7 +14,7 @@
 
 ## create_lms_student
 
-Create a student
+Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 
 ### Example Usage
 
@@ -43,7 +43,7 @@ res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
     Models::Shared::LmsEmail.new(),
   ],
   first_name: 'Marcella',
-  id: '04f331a8-dc9c-4c07-8736-fa1537e3c7cb',
+  id: '3969f57c-214d-4f0b-aa7c-8d5395c21384',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
   last_name: 'Murazik',
   metadata: [],
@@ -62,7 +62,7 @@ res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
       type: Models::Shared::LmsTelephoneType::FAX,
     ),
   ],
-  updated_at: DateTime.iso8601('2022-06-30T23:26:48.052Z'),
+  updated_at: DateTime.iso8601('2022-07-01T07:39:18.663Z'),
 ), connection_id: '<id>')
 
 unless res.lms_student.nil?
@@ -92,7 +92,7 @@ end
 
 ## get_lms_student
 
-Retrieve a student
+Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -136,7 +136,7 @@ end
 
 ## list_lms_students
 
-List all students
+Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -181,7 +181,7 @@ end
 
 ## patch_lms_student
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -211,7 +211,7 @@ req = Models::Operations::PatchLmsStudentRequest.new(
       Models::Shared::LmsEmail.new(),
     ],
     first_name: 'Marcella',
-    id: '24f1db3e-48d4-45d8-a0f7-78d5a7bcd6fa',
+    id: 'f37eded4-a6e6-482e-81be-849ac16fa098',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
     metadata: [],
@@ -230,7 +230,7 @@ req = Models::Operations::PatchLmsStudentRequest.new(
         type: Models::Shared::LmsTelephoneType::FAX,
       ),
     ],
-    updated_at: DateTime.iso8601('2022-06-30T23:26:48.060Z'),
+    updated_at: DateTime.iso8601('2022-07-01T07:39:18.672Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -262,7 +262,7 @@ end
 
 ## remove_lms_student
 
-Remove a student
+Deletes the LmsStudent identified by `id`.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ end
 
 ## update_lms_student
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -334,7 +334,7 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
       Models::Shared::LmsEmail.new(),
     ],
     first_name: 'Marcella',
-    id: '24f1db3e-48d4-45d8-a0f7-78d5a7bcd6fa',
+    id: 'f37eded4-a6e6-482e-81be-849ac16fa098',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
     metadata: [],
@@ -353,7 +353,7 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
         type: Models::Shared::LmsTelephoneType::FAX,
       ),
     ],
-    updated_at: DateTime.iso8601('2022-06-30T23:26:48.060Z'),
+    updated_at: DateTime.iso8601('2022-07-01T07:39:18.672Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

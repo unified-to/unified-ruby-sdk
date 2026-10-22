@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(cdp_activation: Models::Shared::CdpActivation, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCdpActivationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCdpActivationResponse) }
     def create_cdp_activation(cdp_activation:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_cdp_activation - Create an activation
+      # Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are mapped to the provider's API. Returns the created CdpActivation.
       request = Models::Operations::CreateCdpActivationRequest.new(
         cdp_activation: cdp_activation,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCdpActivationQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCdpActivationResponse) }
     def get_cdp_activation(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_cdp_activation - Retrieve an activation
+      # Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCdpActivationRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCdpActivationsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCdpActivationsResponse) }
     def list_cdp_activations(request:, timeout_ms: nil)
       # list_cdp_activations - List all activations
+      # Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCdpActivationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCdpActivationResponse) }
     def patch_cdp_activation(request:, timeout_ms: nil)
       # patch_cdp_activation - Update an activation
+      # Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCdpActivationResponse) }
     def remove_cdp_activation(connection_id:, id:, timeout_ms: nil)
       # remove_cdp_activation - Remove an activation
+      # Deletes the CdpActivation identified by `id`.
       request = Models::Operations::RemoveCdpActivationRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCdpActivationRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCdpActivationResponse) }
     def update_cdp_activation(request:, timeout_ms: nil)
       # update_cdp_activation - Update an activation
+      # Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

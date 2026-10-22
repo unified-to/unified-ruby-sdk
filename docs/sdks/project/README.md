@@ -20,7 +20,7 @@
 
 ## create_accounting_project
 
-Create a project
+Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 
 ### Example Usage
 
@@ -64,7 +64,7 @@ end
 
 ## create_task_project
 
-Create a project
+Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
 
 ### Example Usage
 
@@ -84,14 +84,14 @@ res = s.project.create_task_project(task_project: Models::Shared::TaskProject.ne
   description: 'Valetudo aggredior accommodo curiositas vox.',
   has_children: false,
   has_tasks: false,
-  id: 'aeb39b9d-e5b0-4a0c-bcb3-cda26afa1b4c',
+  id: '586e2b04-721f-4fb4-b1c9-ff0295b8f983',
   metadata: [
     Models::Shared::TaskMetadata.new(
       extra_data: {
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: 'd98f2b9a-ab7e-405e-8df0-fa5004566c47',
+      id: 'ac6d7296-95fc-4c6c-b2b1-b41a06651184',
       namespace: 'custom',
       slug: 'decens',
       value: 'uterque',
@@ -101,14 +101,14 @@ res = s.project.create_task_project(task_project: Models::Shared::TaskProject.ne
 
       },
       format: Models::Shared::TaskMetadataFormat::TEXT,
-      id: 'c06402ac-1b9b-481d-9e29-7d11c4f81614',
+      id: '9bfa2064-4758-497f-942c-b3cc0ea19dfd',
       namespace: 'custom',
       slug: 'benevolentia',
       value: 'pariatur',
     ),
   ],
   name: 'Garden',
-  updated_at: DateTime.iso8601('2023-10-11T14:30:33.168Z'),
+  updated_at: DateTime.iso8601('2023-10-11T16:39:32.559Z'),
 ), connection_id: '<id>')
 
 unless res.task_project.nil?
@@ -138,7 +138,7 @@ end
 
 ## get_accounting_project
 
-Retrieve a project
+Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -182,7 +182,7 @@ end
 
 ## get_task_project
 
-Retrieve a project
+Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -226,7 +226,7 @@ end
 
 ## list_accounting_projects
 
-List all projects
+Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -271,7 +271,7 @@ end
 
 ## list_task_projects
 
-List all projects
+Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -316,7 +316,7 @@ end
 
 ## patch_accounting_project
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -363,7 +363,7 @@ end
 
 ## patch_task_project
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -384,14 +384,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: 'b4f834dc-8dc6-45c7-a5d5-5b99e2863128',
+    id: '4b217ca0-ecb9-4c4b-ae3d-75b658e307e7',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'dd0adf29-9721-4b90-9a60-ba85528e7dd8',
+        id: 'b7b73d5c-f1ff-48b2-8a4c-101025b18919',
         namespace: 'custom',
         slug: 'decens',
         value: 'uterque',
@@ -401,14 +401,14 @@ req = Models::Operations::PatchTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '3076015c-7c01-4e61-b07b-1a523274e786',
+        id: '279643ea-8251-402f-bc4c-eeb7f28d150a',
         namespace: 'custom',
         slug: 'benevolentia',
         value: 'pariatur',
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-11T14:30:33.169Z'),
+    updated_at: DateTime.iso8601('2023-10-11T16:39:32.560Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -440,7 +440,7 @@ end
 
 ## remove_accounting_project
 
-Remove a project
+Deletes the AccountingProject identified by `id`.
 
 ### Example Usage
 
@@ -482,7 +482,7 @@ end
 
 ## remove_task_project
 
-Remove a project
+Deletes the TaskProject identified by `id`.
 
 ### Example Usage
 
@@ -524,7 +524,7 @@ end
 
 ## update_accounting_project
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -571,7 +571,7 @@ end
 
 ## update_task_project
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -592,14 +592,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
     description: 'Valetudo aggredior accommodo curiositas vox.',
     has_children: false,
     has_tasks: false,
-    id: 'b4f834dc-8dc6-45c7-a5d5-5b99e2863128',
+    id: '4b217ca0-ecb9-4c4b-ae3d-75b658e307e7',
     metadata: [
       Models::Shared::TaskMetadata.new(
         extra_data: {
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: 'dd0adf29-9721-4b90-9a60-ba85528e7dd8',
+        id: 'b7b73d5c-f1ff-48b2-8a4c-101025b18919',
         namespace: 'custom',
         slug: 'decens',
         value: 'uterque',
@@ -609,14 +609,14 @@ req = Models::Operations::UpdateTaskProjectRequest.new(
 
         },
         format: Models::Shared::TaskMetadataFormat::TEXT,
-        id: '3076015c-7c01-4e61-b07b-1a523274e786',
+        id: '279643ea-8251-402f-bc4c-eeb7f28d150a',
         namespace: 'custom',
         slug: 'benevolentia',
         value: 'pariatur',
       ),
     ],
     name: 'Garden',
-    updated_at: DateTime.iso8601('2023-10-11T14:30:33.169Z'),
+    updated_at: DateTime.iso8601('2023-10-11T16:39:32.560Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

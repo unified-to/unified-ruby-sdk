@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(hris_earning: Models::Shared::HrisEarning, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateHrisEarningQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateHrisEarningResponse) }
     def create_hris_earning(hris_earning:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_hris_earning - Create an earning
+      # Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
       request = Models::Operations::CreateHrisEarningRequest.new(
         hris_earning: hris_earning,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetHrisEarningQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetHrisEarningResponse) }
     def get_hris_earning(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_hris_earning - Retrieve an earning
+      # Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetHrisEarningRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListHrisEarningsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListHrisEarningsResponse) }
     def list_hris_earnings(request:, timeout_ms: nil)
       # list_hris_earnings - List all earnings
+      # Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchHrisEarningRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchHrisEarningResponse) }
     def patch_hris_earning(request:, timeout_ms: nil)
       # patch_hris_earning - Update an earning
+      # Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveHrisEarningResponse) }
     def remove_hris_earning(connection_id:, id:, timeout_ms: nil)
       # remove_hris_earning - Remove an earning
+      # Deletes the HrisEarning identified by `id`.
       request = Models::Operations::RemoveHrisEarningRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateHrisEarningRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateHrisEarningResponse) }
     def update_hris_earning(request:, timeout_ms: nil)
       # update_hris_earning - Update an earning
+      # Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

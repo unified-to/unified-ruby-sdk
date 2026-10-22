@@ -14,7 +14,7 @@
 
 ## create_compute_instance
 
-Create an instance
+Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 
 ### Example Usage
 
@@ -48,7 +48,7 @@ res = s.instance.create_compute_instance(compute_instance: Models::Shared::Compu
   ],
   gpu_count: 0.0,
   has_internet_access: true,
-  id: '4077e3bd-a54f-466b-b69d-d9c1e5cad805',
+  id: '468756b5-e6c9-4689-8e98-6b4bd5f7940d',
   image: 'ubuntu:24.04',
   market: Models::Shared::Market::SPOT,
   memory_mb: 2048.0,
@@ -63,11 +63,11 @@ res = s.instance.create_compute_instance(compute_instance: Models::Shared::Compu
     port: 22.0,
     username: 'root',
   ),
-  started_at: DateTime.iso8601('2025-03-23T23:18:11.036Z'),
+  started_at: DateTime.iso8601('2025-03-24T13:47:14.312Z'),
   status: Models::Shared::ComputeInstanceStatus::ERROR,
   status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
   type: Models::Shared::ComputeInstanceType::BAREMETAL,
-  updated_at: DateTime.iso8601('2025-06-16T04:50:44.691Z'),
+  updated_at: DateTime.iso8601('2025-06-16T20:41:16.883Z'),
 ), connection_id: '<id>')
 
 unless res.compute_instance.nil?
@@ -97,7 +97,7 @@ end
 
 ## get_compute_instance
 
-Retrieve an instance
+Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -141,7 +141,7 @@ end
 
 ## list_compute_instances
 
-List all instances
+Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ end
 
 ## patch_compute_instance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -221,7 +221,7 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: '68a4cfd4-c11d-4807-8d5e-f972fde6e258',
+    id: 'e8839c42-59e6-46ea-b661-3ffe8d9568e5',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
@@ -236,11 +236,11 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
       port: 22.0,
       username: 'root',
     ),
-    started_at: DateTime.iso8601('2025-03-23T23:18:11.066Z'),
+    started_at: DateTime.iso8601('2025-03-24T13:47:14.341Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
     status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-06-16T04:50:44.724Z'),
+    updated_at: DateTime.iso8601('2025-06-16T20:41:16.915Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -272,7 +272,7 @@ end
 
 ## remove_compute_instance
 
-Remove an instance
+Deletes the ComputeInstance identified by `id`.
 
 ### Example Usage
 
@@ -314,7 +314,7 @@ end
 
 ## update_compute_instance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -349,7 +349,7 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: '68a4cfd4-c11d-4807-8d5e-f972fde6e258',
+    id: 'e8839c42-59e6-46ea-b661-3ffe8d9568e5',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
@@ -364,11 +364,11 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
       port: 22.0,
       username: 'root',
     ),
-    started_at: DateTime.iso8601('2025-03-23T23:18:11.066Z'),
+    started_at: DateTime.iso8601('2025-03-24T13:47:14.341Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
     status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-06-16T04:50:44.724Z'),
+    updated_at: DateTime.iso8601('2025-06-16T20:41:16.915Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

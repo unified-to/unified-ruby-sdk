@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(calendar_link: Models::Shared::CalendarLink, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCalendarLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCalendarLinkResponse) }
     def create_calendar_link(calendar_link:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_calendar_link - Create a link
+      # Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
       request = Models::Operations::CreateCalendarLinkRequest.new(
         calendar_link: calendar_link,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(payment_link: Models::Shared::PaymentLink, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreatePaymentLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePaymentLinkResponse) }
     def create_payment_link(payment_link:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_payment_link - Create a link
+      # Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
       request = Models::Operations::CreatePaymentLinkRequest.new(
         payment_link: payment_link,
         connection_id: connection_id,
@@ -298,6 +300,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCalendarLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCalendarLinkResponse) }
     def get_calendar_link(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_calendar_link - Retrieve a link
+      # Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCalendarLinkRequest.new(
         connection_id: connection_id,
         id: id,
@@ -414,6 +417,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetPaymentLinkQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetPaymentLinkResponse) }
     def get_payment_link(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_payment_link - Retrieve a link
+      # Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetPaymentLinkRequest.new(
         connection_id: connection_id,
         id: id,
@@ -530,6 +534,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCalendarLinksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCalendarLinksResponse) }
     def list_calendar_links(request:, timeout_ms: nil)
       # list_calendar_links - List all links
+      # Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -640,6 +645,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListPaymentLinksRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPaymentLinksResponse) }
     def list_payment_links(request:, timeout_ms: nil)
       # list_payment_links - List all links
+      # Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -750,6 +756,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCalendarLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCalendarLinkResponse) }
     def patch_calendar_link(request:, timeout_ms: nil)
       # patch_calendar_link - Update a link
+      # Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -872,6 +879,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchPaymentLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPaymentLinkResponse) }
     def patch_payment_link(request:, timeout_ms: nil)
       # patch_payment_link - Update a link
+      # Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -994,6 +1002,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCalendarLinkResponse) }
     def remove_calendar_link(connection_id:, id:, timeout_ms: nil)
       # remove_calendar_link - Remove a link
+      # Deletes the CalendarLink identified by `id`.
       request = Models::Operations::RemoveCalendarLinkRequest.new(
         connection_id: connection_id,
         id: id
@@ -1108,6 +1117,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePaymentLinkResponse) }
     def remove_payment_link(connection_id:, id:, timeout_ms: nil)
       # remove_payment_link - Remove a link
+      # Deletes the PaymentLink identified by `id`.
       request = Models::Operations::RemovePaymentLinkRequest.new(
         connection_id: connection_id,
         id: id
@@ -1222,6 +1232,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCalendarLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCalendarLinkResponse) }
     def update_calendar_link(request:, timeout_ms: nil)
       # update_calendar_link - Update a link
+      # Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -1344,6 +1355,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdatePaymentLinkRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePaymentLinkResponse) }
     def update_payment_link(request:, timeout_ms: nil)
       # update_payment_link - Update a link
+      # Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(

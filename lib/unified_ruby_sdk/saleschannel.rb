@@ -42,6 +42,7 @@ module UnifiedRubySDK
     sig { params(commerce_saleschannel: Models::Shared::CommerceSaleschannel, connection_id: ::String, fields_: T.nilable(T::Array[Models::Operations::CreateCommerceSaleschannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreateCommerceSaleschannelResponse) }
     def create_commerce_saleschannel(commerce_saleschannel:, connection_id:, fields_: nil, raw: nil, timeout_ms: nil)
       # create_commerce_saleschannel - Create a saleschannel
+      # Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
       request = Models::Operations::CreateCommerceSaleschannelRequest.new(
         commerce_saleschannel: commerce_saleschannel,
         connection_id: connection_id,
@@ -170,6 +171,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, fields_: T.nilable(T::Array[Models::Operations::GetCommerceSaleschannelQueryParamFields]), raw: T.nilable(::String), timeout_ms: T.nilable(Integer)).returns(Models::Operations::GetCommerceSaleschannelResponse) }
     def get_commerce_saleschannel(connection_id:, id:, fields_: nil, raw: nil, timeout_ms: nil)
       # get_commerce_saleschannel - Retrieve a saleschannel
+      # Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
       request = Models::Operations::GetCommerceSaleschannelRequest.new(
         connection_id: connection_id,
         id: id,
@@ -286,6 +288,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::ListCommerceSaleschannelsRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListCommerceSaleschannelsResponse) }
     def list_commerce_saleschannels(request:, timeout_ms: nil)
       # list_commerce_saleschannels - List all saleschannels
+      # Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -396,6 +399,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::PatchCommerceSaleschannelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchCommerceSaleschannelResponse) }
     def patch_commerce_saleschannel(request:, timeout_ms: nil)
       # patch_commerce_saleschannel - Update a saleschannel
+      # Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
@@ -518,6 +522,7 @@ module UnifiedRubySDK
     sig { params(connection_id: ::String, id: ::String, timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemoveCommerceSaleschannelResponse) }
     def remove_commerce_saleschannel(connection_id:, id:, timeout_ms: nil)
       # remove_commerce_saleschannel - Remove a saleschannel
+      # Deletes the CommerceSaleschannel identified by `id`.
       request = Models::Operations::RemoveCommerceSaleschannelRequest.new(
         connection_id: connection_id,
         id: id
@@ -632,6 +637,7 @@ module UnifiedRubySDK
     sig { params(request: Models::Operations::UpdateCommerceSaleschannelRequest, timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdateCommerceSaleschannelResponse) }
     def update_commerce_saleschannel(request:, timeout_ms: nil)
       # update_commerce_saleschannel - Update a saleschannel
+      # Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
       url, params = @sdk_configuration.get_server_details
       base_url = Utils.template_url(url, params)
       url = Utils.generate_url(
