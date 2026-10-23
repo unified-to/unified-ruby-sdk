@@ -44,10 +44,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.company.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
   created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-  id: 'fc717eb1-789d-4f47-8cb9-f011b597131a',
+  id: '65aa9526-a605-4697-b0ac-3a18d9bad4f9',
   name: 'Gulgowski, Dibbert and Wilderman',
   phone: '1-882-360-2010',
-  updated_at: DateTime.iso8601('2020-10-01T08:47:21.666Z'),
+  updated_at: DateTime.iso8601('2020-10-01T13:23:51.891Z'),
   website_url: 'https://www.gulgowskidibbert.com',
 ), connection_id: '<id>')
 
@@ -123,7 +123,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   employees: 4177.0,
-  id: '45430102-9d60-4dcb-95de-6b3395a6edf2',
+  id: '6a388d88-c09e-4d11-976a-d3c2920ffbf8',
   industry: 'Metrics',
   is_active: true,
   link_urls: [
@@ -135,7 +135,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: '7d810a72-f45b-4353-9559-e181734fb9bd',
+      id: '4535e03c-2a68-45e9-a8de-edb61c2de92f',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'unde',
@@ -154,7 +154,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     ),
   ],
   timezone: 'Atlantic/Azores',
-  updated_at: DateTime.iso8601('2025-03-03T21:28:57.322Z'),
+  updated_at: DateTime.iso8601('2025-03-04T15:19:25.848Z'),
   websites: [
     'https://www.goodwinsons.com',
   ],
@@ -212,11 +212,11 @@ res = s.company.create_hris_company(hris_company: Models::Shared::HrisCompany.ne
     region_code: 'MO',
   ),
   created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-  id: '1e4e818e-c91c-4ce8-bb9f-87c290b58f50',
+  id: '7c750bde-2fb2-4c0c-93a5-cc962069e617',
   legal_name: 'Gottlieb Group LLC',
   metadata: [],
   name: 'Gottlieb Group',
-  updated_at: DateTime.iso8601('2026-10-09T16:00:24.278Z'),
+  updated_at: DateTime.iso8601('2026-10-10T15:45:47.999Z'),
 ), connection_id: '<id>')
 
 unless res.hris_company.nil?
@@ -574,10 +574,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: '9919fbbc-af06-4156-8ed3-2d8d682ca7e2',
+    id: '04306bc4-29e8-4ac5-83fb-6732d84841b9',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-01T08:47:21.669Z'),
+    updated_at: DateTime.iso8601('2020-10-01T13:23:51.895Z'),
     website_url: 'https://www.gulgowskidibbert.com',
   ),
   connection_id: '<id>',
@@ -656,7 +656,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: 'f6118c33-c025-4e57-8713-96353decbba9',
+    id: '5a27ccfb-b0fb-49cd-8739-5707c69b2474',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -668,7 +668,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'eb7e0ab1-617c-42aa-9140-805dc92181d9',
+        id: 'cb79908e-7d5f-4534-a067-1e54a01d8df9',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'unde',
@@ -687,7 +687,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-03T21:28:57.348Z'),
+    updated_at: DateTime.iso8601('2025-03-04T15:19:25.864Z'),
     websites: [
       'https://www.goodwinsons.com',
     ],
@@ -748,11 +748,11 @@ req = Models::Operations::PatchHrisCompanyRequest.new(
       region_code: 'MO',
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '614c60e7-805a-4ebe-9b04-71aabf2ea7b8',
+    id: '85b73e0f-ec9b-45ff-aa0b-c382b00eba76',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-09T16:00:24.302Z'),
+    updated_at: DateTime.iso8601('2026-10-10T15:45:48.033Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -928,10 +928,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: '9919fbbc-af06-4156-8ed3-2d8d682ca7e2',
+    id: '04306bc4-29e8-4ac5-83fb-6732d84841b9',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-01T08:47:21.669Z'),
+    updated_at: DateTime.iso8601('2020-10-01T13:23:51.895Z'),
     website_url: 'https://www.gulgowskidibbert.com',
   ),
   connection_id: '<id>',
@@ -1010,7 +1010,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     employees: 4177.0,
-    id: 'f6118c33-c025-4e57-8713-96353decbba9',
+    id: '5a27ccfb-b0fb-49cd-8739-5707c69b2474',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -1022,7 +1022,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: 'eb7e0ab1-617c-42aa-9140-805dc92181d9',
+        id: 'cb79908e-7d5f-4534-a067-1e54a01d8df9',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'unde',
@@ -1041,7 +1041,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-03T21:28:57.348Z'),
+    updated_at: DateTime.iso8601('2025-03-04T15:19:25.864Z'),
     websites: [
       'https://www.goodwinsons.com',
     ],
@@ -1102,11 +1102,11 @@ req = Models::Operations::UpdateHrisCompanyRequest.new(
       region_code: 'MO',
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '614c60e7-805a-4ebe-9b04-71aabf2ea7b8',
+    id: '85b73e0f-ec9b-45ff-aa0b-c382b00eba76',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-09T16:00:24.302Z'),
+    updated_at: DateTime.iso8601('2026-10-10T15:45:48.033Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

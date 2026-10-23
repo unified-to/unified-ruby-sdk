@@ -57,7 +57,7 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'clarus aptus cetera',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: '26c0c976-c996-4dbb-8b58-5166dbe67220',
+  id: '4c54fcd9-632b-4b42-8562-8c42fd33efe1',
   metadata: [],
   practitioner_ids: [],
   reasons: [
@@ -77,7 +77,7 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2025-11-20T04:16:13.523Z'),
+  updated_at: DateTime.iso8601('2025-11-20T21:57:00.639Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -155,15 +155,15 @@ res = s.healthcare.create_healthcare_observation(healthcare_observation: Models:
     ),
   ],
   created_at: DateTime.iso8601('2022-12-06T21:34:04.293Z'),
-  id: '3d95939a-fd15-4205-a9a7-8996dcd8717c',
+  id: 'b1726807-dcc2-4bfa-943a-0f9ed186fee6',
   interpretation: Models::Shared::Interpretation::CRITICAL_HIGH,
-  issued_at: DateTime.iso8601('2025-05-12T01:23:42.793Z'),
+  issued_at: DateTime.iso8601('2025-05-12T16:22:53.032Z'),
   metadata: [],
   name: 'Blood pressure panel',
-  observed_at: DateTime.iso8601('2025-01-20T17:02:16.723Z'),
+  observed_at: DateTime.iso8601('2025-01-21T06:08:35.617Z'),
   status: Models::Shared::HealthcareObservationStatus::CORRECTED,
   type: Models::Shared::HealthcareObservationType::VITAL_SIGNS,
-  updated_at: DateTime.iso8601('2026-03-25T02:38:27.139Z'),
+  updated_at: DateTime.iso8601('2026-03-25T22:58:58.045Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -216,7 +216,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
     postal_code: '54031',
     region: 'Nebraska',
   ),
-  birthdate: '2025-02-13',
+  birthdate: '2025-02-14',
   created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
   emails: [
     Models::Shared::HealthcareEmail.new(
@@ -226,7 +226,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: 'bff90549-5920-4a01-933d-a669aa5b05f7',
+  id: 'a52c9f25-c4f9-40c5-bd59-e9b9432ac692',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -246,7 +246,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
       type: Models::Shared::HealthcareTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-23T18:37:32.861Z'),
+  updated_at: DateTime.iso8601('2026-06-24T17:04:00.614Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -1275,7 +1275,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '76ec3204-d039-4780-a1a6-9d82e5c58b81',
+    id: '69b278e9-f7f9-4adc-bae7-8fee1aad0b6a',
     metadata: [],
     practitioner_ids: [],
     reasons: [
@@ -1295,7 +1295,7 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-20T04:16:13.539Z'),
+    updated_at: DateTime.iso8601('2025-11-20T21:57:00.654Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1351,7 +1351,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska',
     ),
-    birthdate: '2025-02-13',
+    birthdate: '2025-02-14',
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
@@ -1361,7 +1361,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'e0aa04a2-ee2c-4f84-963b-2cb8213f03bb',
+    id: 'bed47327-7098-4f38-8997-3634f77f065a',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -1381,7 +1381,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-23T18:37:32.888Z'),
+    updated_at: DateTime.iso8601('2026-06-24T17:04:00.643Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1475,7 +1475,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '76ec3204-d039-4780-a1a6-9d82e5c58b81',
+    id: '69b278e9-f7f9-4adc-bae7-8fee1aad0b6a',
     metadata: [],
     practitioner_ids: [],
     reasons: [
@@ -1495,7 +1495,7 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-20T04:16:13.539Z'),
+    updated_at: DateTime.iso8601('2025-11-20T21:57:00.654Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1551,7 +1551,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska',
     ),
-    birthdate: '2025-02-13',
+    birthdate: '2025-02-14',
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
@@ -1561,7 +1561,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'e0aa04a2-ee2c-4f84-963b-2cb8213f03bb',
+    id: 'bed47327-7098-4f38-8997-3634f77f065a',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -1581,7 +1581,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-23T18:37:32.888Z'),
+    updated_at: DateTime.iso8601('2026-06-24T17:04:00.643Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

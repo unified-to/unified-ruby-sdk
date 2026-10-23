@@ -30,7 +30,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.timeshift.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
-  approved_at: DateTime.iso8601('2022-07-18T11:45:36.212Z'),
+  approved_at: DateTime.iso8601('2022-07-18T21:43:25.563Z'),
   compensation: [
     Models::Shared::HrisCompensation.new(
       amount: 76_761.0,
@@ -42,13 +42,13 @@ res = s.timeshift.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTime
   ],
   created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2026-09-28T01:00:15.668Z'),
+  end_at: DateTime.iso8601('2026-09-29T00:41:37.965Z'),
   hours: 6.0,
-  id: '92b01fd8-ed4d-4643-95ba-0d8a8b541854',
+  id: '220cff1c-9e52-44ee-8079-44ef6ca61acd',
   is_approved: false,
   metadata: [],
-  start_at: DateTime.iso8601('2023-07-13T13:37:31.157Z'),
-  updated_at: DateTime.iso8601('2021-07-02T04:23:45.080Z'),
+  start_at: DateTime.iso8601('2023-07-14T02:48:50.230Z'),
+  updated_at: DateTime.iso8601('2021-07-02T10:56:40.233Z'),
 ), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -184,7 +184,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-18T11:45:36.221Z'),
+    approved_at: DateTime.iso8601('2022-07-18T21:43:25.574Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
@@ -196,13 +196,13 @@ req = Models::Operations::PatchHrisTimeshiftRequest.new(
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-09-28T01:00:15.689Z'),
+    end_at: DateTime.iso8601('2026-09-29T00:41:37.990Z'),
     hours: 6.0,
-    id: 'be8b2098-4454-4b17-a20f-c3f23a1d0e71',
+    id: 'ca9ee199-3154-4f5b-b34b-264ec1a5017e',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-13T13:37:31.169Z'),
-    updated_at: DateTime.iso8601('2021-07-02T04:23:45.085Z'),
+    start_at: DateTime.iso8601('2023-07-14T02:48:50.244Z'),
+    updated_at: DateTime.iso8601('2021-07-02T10:56:40.240Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -293,7 +293,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-18T11:45:36.221Z'),
+    approved_at: DateTime.iso8601('2022-07-18T21:43:25.574Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
@@ -305,13 +305,13 @@ req = Models::Operations::UpdateHrisTimeshiftRequest.new(
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-09-28T01:00:15.689Z'),
+    end_at: DateTime.iso8601('2026-09-29T00:41:37.990Z'),
     hours: 6.0,
-    id: 'be8b2098-4454-4b17-a20f-c3f23a1d0e71',
+    id: 'ca9ee199-3154-4f5b-b34b-264ec1a5017e',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-13T13:37:31.169Z'),
-    updated_at: DateTime.iso8601('2021-07-02T04:23:45.085Z'),
+    start_at: DateTime.iso8601('2023-07-14T02:48:50.244Z'),
+    updated_at: DateTime.iso8601('2021-07-02T10:56:40.240Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
