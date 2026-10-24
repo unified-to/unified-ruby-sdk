@@ -29,6 +29,13 @@ module UnifiedRubySDK
           METADATA = new('metadata')
           RAW = new('raw')
           CONVERSATION_IDENTIFIER = new('conversation_identifier')
+          STATUS = new('status')
+          ANSWER_AT = new('answer_at')
+          DURATION_SECONDS = new('duration_seconds')
+          COST_AMOUNT = new('cost_amount')
+          CURRENCY = new('currency')
+          PARENT_ID = new('parent_id')
+          INSTRUCTIONS = new('instructions')
         end
       end
     end

@@ -56,7 +56,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '898bd106-40b2-43f3-9e8a-03eca401222f',
+  id: '4c2bc402-a7bf-450d-bb55-223b2200260f',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -69,7 +69,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-07T09:48:02.330Z'),
+  updated_at: DateTime.iso8601('2023-08-07T16:10:06.240Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -107,7 +107,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '898bd106-40b2-43f3-9e8a-03eca401222f',
+  id: '4c2bc402-a7bf-450d-bb55-223b2200260f',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -120,7 +120,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-07T09:48:02.330Z'),
+  updated_at: DateTime.iso8601('2023-08-07T16:10:06.240Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -627,8 +627,11 @@ end
 
 ### [call](docs/sdks/call/README.md)
 
+* [create_uc_call](docs/sdks/call/README.md#create_uc_call) - Create a call
 * [get_uc_call](docs/sdks/call/README.md#get_uc_call) - Retrieve a call
 * [list_uc_calls](docs/sdks/call/README.md#list_uc_calls) - List all calls
+* [patch_uc_call](docs/sdks/call/README.md#patch_uc_call) - Update a call
+* [update_uc_call](docs/sdks/call/README.md#update_uc_call) - Update a call
 
 ### [campaign](docs/sdks/campaign/README.md)
 
@@ -2663,6 +2666,7 @@ end
 
 ### [uc](docs/sdks/uc/README.md)
 
+* [create_uc_call](docs/sdks/uc/README.md#create_uc_call) - Create a call
 * [create_uc_comment](docs/sdks/uc/README.md#create_uc_comment) - Create a comment
 * [create_uc_contact](docs/sdks/uc/README.md#create_uc_contact) - Create a contact
 * [create_uc_recording](docs/sdks/uc/README.md#create_uc_recording) - Create a recording
@@ -2678,12 +2682,14 @@ end
 * [list_uc_recordings](docs/sdks/uc/README.md#list_uc_recordings) - List all recordings
 * [list_uc_scorecards](docs/sdks/uc/README.md#list_uc_scorecards) - List all scorecards
 * [list_uc_scorecardtemplates](docs/sdks/uc/README.md#list_uc_scorecardtemplates) - List all scorecardtemplates
+* [patch_uc_call](docs/sdks/uc/README.md#patch_uc_call) - Update a call
 * [patch_uc_comment](docs/sdks/uc/README.md#patch_uc_comment) - Update a comment
 * [patch_uc_contact](docs/sdks/uc/README.md#patch_uc_contact) - Update a contact
 * [patch_uc_recording](docs/sdks/uc/README.md#patch_uc_recording) - Update a recording
 * [remove_uc_comment](docs/sdks/uc/README.md#remove_uc_comment) - Remove a comment
 * [remove_uc_contact](docs/sdks/uc/README.md#remove_uc_contact) - Remove a contact
 * [remove_uc_recording](docs/sdks/uc/README.md#remove_uc_recording) - Remove a recording
+* [update_uc_call](docs/sdks/uc/README.md#update_uc_call) - Update a call
 * [update_uc_comment](docs/sdks/uc/README.md#update_uc_comment) - Update a comment
 * [update_uc_contact](docs/sdks/uc/README.md#update_uc_contact) - Update a contact
 * [update_uc_recording](docs/sdks/uc/README.md#update_uc_recording) - Update a recording
@@ -2837,7 +2843,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Voluptatibus valde spoliatio.',
-      id: '898bd106-40b2-43f3-9e8a-03eca401222f',
+      id: '4c2bc402-a7bf-450d-bb55-223b2200260f',
       is_payable: false,
       metadata: [],
       name: 'Auto Loan Account',
@@ -2850,7 +2856,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-07T09:48:02.330Z'),
+      updated_at: DateTime.iso8601('2023-08-07T16:10:06.240Z'),
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -2896,7 +2902,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '898bd106-40b2-43f3-9e8a-03eca401222f',
+  id: '4c2bc402-a7bf-450d-bb55-223b2200260f',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -2909,7 +2915,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-07T09:48:02.330Z'),
+  updated_at: DateTime.iso8601('2023-08-07T16:10:06.240Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -2938,7 +2944,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '898bd106-40b2-43f3-9e8a-03eca401222f',
+  id: '4c2bc402-a7bf-450d-bb55-223b2200260f',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -2951,7 +2957,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-07T09:48:02.330Z'),
+  updated_at: DateTime.iso8601('2023-08-07T16:10:06.240Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

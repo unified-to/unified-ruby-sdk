@@ -13,26 +13,40 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
+        # When the call was answered (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        field :answer_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('answer_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # The contact ID for call (reference to UcContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
 
         field :contacts, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::UcContact)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contacts') } }
         # opaque identifier shared across legs of one interaction
         field :conversation_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('conversation_identifier') } }
+        # What the integration charged for the call
+        field :cost_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_amount') } }
         # The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        # ISO 4217 currency of cost_amount
+        field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
+        # Call length in seconds
+        field :duration_seconds, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration_seconds') } }
         # The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # Unique identifier for this call object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        # Write-only: what the call does once answered (create/update only; never returned)
+        field :instructions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::UcCallInstruction)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructions') } }
 
         field :is_private, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_private') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::UcMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+        # The parent call (leg) that this call belongs to
+        field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
         # The raw data returned by the integration for this call
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        # The current or final status of the call
+        field :status, Crystalline::Nilable.new(Models::Shared::UcCallStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::UcCallStatus, true) } }
         # The telephone number called
         field :telephone, Crystalline::Nilable.new(Models::Shared::PropertyUcCallTelephone), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone') } }
 
@@ -46,18 +60,25 @@ module UnifiedRubySDK
 
         field :user_phone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_phone') } }
 
-        sig { params(contact_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::UcContact]), conversation_identifier: T.nilable(::String), created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_private: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), telephone: T.nilable(Models::Shared::PropertyUcCallTelephone), type: T.nilable(Models::Shared::UcCallType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String), user_phone: T.nilable(::String)).void }
-        def initialize(contact_id: nil, contacts: nil, conversation_identifier: nil, created_at: nil, end_at: nil, id: nil, is_private: nil, metadata: nil, raw: nil, start_at: nil, telephone: nil, type: nil, updated_at: nil, user_id: nil, user_name: nil, user_phone: nil)
+        sig { params(answer_at: T.nilable(::DateTime), contact_id: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::UcContact]), conversation_identifier: T.nilable(::String), cost_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), duration_seconds: T.nilable(::Float), end_at: T.nilable(::DateTime), id: T.nilable(::String), instructions: T.nilable(T::Array[Models::Shared::UcCallInstruction]), is_private: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::UcCallStatus), telephone: T.nilable(Models::Shared::PropertyUcCallTelephone), type: T.nilable(Models::Shared::UcCallType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), user_name: T.nilable(::String), user_phone: T.nilable(::String)).void }
+        def initialize(answer_at: nil, contact_id: nil, contacts: nil, conversation_identifier: nil, cost_amount: nil, created_at: nil, currency: nil, duration_seconds: nil, end_at: nil, id: nil, instructions: nil, is_private: nil, metadata: nil, parent_id: nil, raw: nil, start_at: nil, status: nil, telephone: nil, type: nil, updated_at: nil, user_id: nil, user_name: nil, user_phone: nil)
+          @answer_at = answer_at
           @contact_id = contact_id
           @contacts = contacts
           @conversation_identifier = conversation_identifier
+          @cost_amount = cost_amount
           @created_at = created_at
+          @currency = currency
+          @duration_seconds = duration_seconds
           @end_at = end_at
           @id = id
+          @instructions = instructions
           @is_private = is_private
           @metadata = metadata
+          @parent_id = parent_id
           @raw = raw
           @start_at = start_at
+          @status = status
           @telephone = telephone
           @type = type
           @updated_at = updated_at
@@ -69,16 +90,23 @@ module UnifiedRubySDK
         sig { params(other: T.untyped).returns(T::Boolean) }
         def ==(other)
           return false unless other.is_a? self.class
+          return false unless @answer_at == other.answer_at
           return false unless @contact_id == other.contact_id
           return false unless @contacts == other.contacts
           return false unless @conversation_identifier == other.conversation_identifier
+          return false unless @cost_amount == other.cost_amount
           return false unless @created_at == other.created_at
+          return false unless @currency == other.currency
+          return false unless @duration_seconds == other.duration_seconds
           return false unless @end_at == other.end_at
           return false unless @id == other.id
+          return false unless @instructions == other.instructions
           return false unless @is_private == other.is_private
           return false unless @metadata == other.metadata
+          return false unless @parent_id == other.parent_id
           return false unless @raw == other.raw
           return false unless @start_at == other.start_at
+          return false unless @status == other.status
           return false unless @telephone == other.telephone
           return false unless @type == other.type
           return false unless @updated_at == other.updated_at

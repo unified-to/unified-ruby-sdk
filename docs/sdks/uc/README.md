@@ -5,6 +5,7 @@
 
 ### Available Operations
 
+* [create_uc_call](#create_uc_call) - Create a call
 * [create_uc_comment](#create_uc_comment) - Create a comment
 * [create_uc_contact](#create_uc_contact) - Create a contact
 * [create_uc_recording](#create_uc_recording) - Create a recording
@@ -20,15 +21,93 @@
 * [list_uc_recordings](#list_uc_recordings) - List all recordings
 * [list_uc_scorecards](#list_uc_scorecards) - List all scorecards
 * [list_uc_scorecardtemplates](#list_uc_scorecardtemplates) - List all scorecardtemplates
+* [patch_uc_call](#patch_uc_call) - Update a call
 * [patch_uc_comment](#patch_uc_comment) - Update a comment
 * [patch_uc_contact](#patch_uc_contact) - Update a contact
 * [patch_uc_recording](#patch_uc_recording) - Update a recording
 * [remove_uc_comment](#remove_uc_comment) - Remove a comment
 * [remove_uc_contact](#remove_uc_contact) - Remove a contact
 * [remove_uc_recording](#remove_uc_recording) - Remove a recording
+* [update_uc_call](#update_uc_call) - Update a call
 * [update_uc_comment](#update_uc_comment) - Update a comment
 * [update_uc_contact](#update_uc_contact) - Update a contact
 * [update_uc_recording](#update_uc_recording) - Update a recording
+
+## create_uc_call
+
+Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the provider's API. Returns the created UcCall.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createUcCall" method="post" path="/uc/{connection_id}/call" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.uc.create_uc_call(uc_call: Models::Shared::UcCall.new(
+  answer_at: DateTime.iso8601('2025-05-15T10:09:20.039Z'),
+  contacts: [],
+  conversation_identifier: 'dddfd7fa-5a0f-4dcb-abd0-41ab63b568dd',
+  cost_amount: 1.564,
+  created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
+  currency: 'USD',
+  duration_seconds: 2556.0,
+  end_at: DateTime.iso8601('2024-05-31T00:32:41.093Z'),
+  id: 'dddfd7fa-5a0f-4dcb-abd0-41ab63b568dd',
+  is_private: false,
+  metadata: [
+    Models::Shared::UcMetadata.new(
+      extra_data: {
+
+      },
+      format: Models::Shared::UcMetadataFormat::PRICE,
+      id: '976bb701-3f71-41c1-949a-4bec3c1686e7',
+      namespace: 'custom',
+      slug: 'custom_field',
+      value: 'tui',
+    ),
+  ],
+  start_at: DateTime.iso8601('2023-12-17T23:36:45.966Z'),
+  status: Models::Shared::UcCallStatus::IN_PROGRESS,
+  telephone: Models::Shared::PropertyUcCallTelephone.new(
+    telephone: '(493) 534-0768',
+    type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
+  ),
+  type: Models::Shared::UcCallType::INBOUND,
+  updated_at: DateTime.iso8601('2023-08-03T14:25:02.536Z'),
+  user_phone: '819-894-3317 x163',
+), connection_id: '<id>')
+
+unless res.uc_call.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `uc_call`                                                                                                                                        | [Models::Shared::UcCall](../../models/shared/uccall.md)                                                                                          | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateUcCallQueryParamFields](../../models/operations/createuccallqueryparamfields.md)>                            | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateUcCallResponse)](../../models/operations/createuccallresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_uc_comment
 
@@ -50,9 +129,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.uc.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
   content: 'Vociferor vitiosus.',
   created_at: '2023-04-02T23:42:31.571Z',
-  id: '50773d7c-4630-49fb-961b-cba9fe034632',
+  id: '554fb245-a7db-4cc4-a626-b5d90fc731a3',
   metadata: [],
-  updated_at: '2024-02-10T05:59:53.692Z',
+  updated_at: '2024-02-10T12:02:21.633Z',
 ), connection_id: '<id>')
 
 unless res.uc_comment.nil?
@@ -107,7 +186,7 @@ res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   first_name: 'Luther',
-  id: 'fa41b6a2-8e93-42a0-81fa-c6c20dd65f16',
+  id: '826b46c7-c5f5-48cc-950c-113fa03b4cad',
   last_name: 'Rogahn',
   metadata: [],
   name: 'Luther Rogahn',
@@ -126,7 +205,7 @@ res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   title: 'Chief Optimization Executive',
-  updated_at: DateTime.iso8601('2023-12-09T13:11:45.837Z'),
+  updated_at: DateTime.iso8601('2023-12-10T03:57:11.125Z'),
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -173,36 +252,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.uc.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(
   contacts: [],
-  conversation_identifier: '166ae753-2570-4f63-aa2c-4c71ee0a8183',
+  conversation_identifier: 'cb99940b-4397-4f19-b392-d57f35aaf8f5',
   created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-  end_at: DateTime.iso8601('2024-05-05T18:55:12.659Z'),
-  expires_at: DateTime.iso8601('2026-04-28T12:30:03.720Z'),
-  id: '166ae753-2570-4f63-aa2c-4c71ee0a8183',
+  end_at: DateTime.iso8601('2024-05-06T04:53:54.724Z'),
+  expires_at: DateTime.iso8601('2026-04-29T10:34:48.627Z'),
+  id: 'cb99940b-4397-4f19-b392-d57f35aaf8f5',
   media: [
     Models::Shared::UcRecordingMedia.new(
-      end_at: DateTime.iso8601('2024-04-02T13:31:47.178Z'),
+      end_at: DateTime.iso8601('2024-04-02T22:57:06.624Z'),
       language: 'en',
       recording_download_url: 'https://parched-wasabi.com/',
-      start_at: DateTime.iso8601('2026-05-17T05:09:42.461Z'),
+      start_at: DateTime.iso8601('2026-05-18T03:33:14.165Z'),
       transcript_download_url: 'https://colossal-cuckoo.name',
       transcripts: [
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2026-02-26T04:22:07.634Z'),
-          start_at: DateTime.iso8601('2024-06-03T01:57:51.559Z'),
+          end_at: DateTime.iso8601('2026-02-27T01:25:15.330Z'),
+          start_at: DateTime.iso8601('2024-06-03T12:24:59.020Z'),
           text: 'Turpis maiores ducimus tero speculum.',
         ),
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2024-10-13T13:19:21.754Z'),
-          start_at: DateTime.iso8601('2026-08-04T18:16:32.641Z'),
+          end_at: DateTime.iso8601('2024-10-14T01:59:34.066Z'),
+          start_at: DateTime.iso8601('2026-08-05T17:59:59.019Z'),
           text: 'Magnam consuasor uxor tergiversatio subseco.',
         ),
       ],
     ),
   ],
   metadata: [],
-  start_at: DateTime.iso8601('2023-04-28T01:09:10.741Z'),
+  start_at: DateTime.iso8601('2023-04-28T04:52:25.538Z'),
   type: Models::Shared::UcRecordingType::OUTBOUND,
-  updated_at: DateTime.iso8601('2025-03-17T16:11:41.896Z'),
+  updated_at: DateTime.iso8601('2025-03-18T07:27:44.077Z'),
   user_phone: '1-915-327-0429 x509',
   web_url: 'https://spherical-comparison.org',
 ), connection_id: '<id>')
@@ -766,6 +845,85 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_uc_call
+
+Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchUcCall" method="patch" path="/uc/{connection_id}/call/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchUcCallRequest.new(
+  uc_call: Models::Shared::UcCall.new(
+    answer_at: DateTime.iso8601('2025-05-15T10:09:20.063Z'),
+    contacts: [],
+    conversation_identifier: 'fabe8773-7f00-4ad3-8a66-274cf78c25cd',
+    cost_amount: 1.564,
+    created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
+    currency: 'USD',
+    duration_seconds: 2556.0,
+    end_at: DateTime.iso8601('2024-05-31T00:32:41.105Z'),
+    id: 'fabe8773-7f00-4ad3-8a66-274cf78c25cd',
+    is_private: false,
+    metadata: [
+      Models::Shared::UcMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::UcMetadataFormat::PRICE,
+        id: 'f24d9654-a31c-4aef-9268-684b7c3484ed',
+        namespace: 'custom',
+        slug: 'custom_field',
+        value: 'tui',
+      ),
+    ],
+    start_at: DateTime.iso8601('2023-12-17T23:36:45.974Z'),
+    status: Models::Shared::UcCallStatus::IN_PROGRESS,
+    telephone: Models::Shared::PropertyUcCallTelephone.new(
+      telephone: '(493) 534-0768',
+      type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
+    ),
+    type: Models::Shared::UcCallType::INBOUND,
+    updated_at: DateTime.iso8601('2023-08-03T14:25:02.539Z'),
+    user_phone: '819-894-3317 x163',
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.uc.patch_uc_call(request: req)
+
+unless res.uc_call.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [Models::Operations::PatchUcCallRequest](../../models/operations/patchuccallrequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchUcCallResponse)](../../models/operations/patchuccallresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_uc_comment
 
 Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
@@ -787,9 +945,9 @@ req = Models::Operations::PatchUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: '395be5cd-ad5d-4d86-bb3a-5d79de78227d',
+    id: '0aae7af5-8307-4ef5-9de0-c7bd48c2d2b0',
     metadata: [],
-    updated_at: '2024-02-10T05:59:53.696Z',
+    updated_at: '2024-02-10T12:02:21.635Z',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -847,7 +1005,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: '1e48d49c-5c49-4401-9d4f-8dce4db19741',
+    id: 'f9af77f1-053f-4714-a434-30ef424ad0d9',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
@@ -866,7 +1024,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-09T13:11:45.848Z'),
+    updated_at: DateTime.iso8601('2023-12-10T03:57:11.134Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -916,36 +1074,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: '9f3b5f29-332a-4f02-886b-9fe246af9c9a',
+    conversation_identifier: '384d9728-9a4d-4a40-89ba-c94c5f0dc091',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-05T18:55:12.675Z'),
-    expires_at: DateTime.iso8601('2026-04-28T12:30:03.756Z'),
-    id: '9f3b5f29-332a-4f02-886b-9fe246af9c9a',
+    end_at: DateTime.iso8601('2024-05-06T04:53:54.737Z'),
+    expires_at: DateTime.iso8601('2026-04-29T10:34:48.656Z'),
+    id: '384d9728-9a4d-4a40-89ba-c94c5f0dc091',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-02T13:31:47.193Z'),
+        end_at: DateTime.iso8601('2024-04-02T22:57:06.636Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-05-17T05:09:42.498Z'),
+        start_at: DateTime.iso8601('2026-05-18T03:33:14.194Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-02-26T04:22:07.667Z'),
-            start_at: DateTime.iso8601('2024-06-03T01:57:51.576Z'),
+            end_at: DateTime.iso8601('2026-02-27T01:25:15.357Z'),
+            start_at: DateTime.iso8601('2024-06-03T12:24:59.034Z'),
             text: 'Turpis maiores ducimus tero speculum.',
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-13T13:19:21.774Z'),
-            start_at: DateTime.iso8601('2026-08-04T18:16:32.678Z'),
+            end_at: DateTime.iso8601('2024-10-14T01:59:34.083Z'),
+            start_at: DateTime.iso8601('2026-08-05T17:59:59.050Z'),
             text: 'Magnam consuasor uxor tergiversatio subseco.',
           ),
         ],
       ),
     ],
     metadata: [],
-    start_at: DateTime.iso8601('2023-04-28T01:09:10.747Z'),
+    start_at: DateTime.iso8601('2023-04-28T04:52:25.543Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-17T16:11:41.920Z'),
+    updated_at: DateTime.iso8601('2025-03-18T07:27:44.097Z'),
     user_phone: '1-915-327-0429 x509',
     web_url: 'https://spherical-comparison.org',
   ),
@@ -1103,6 +1261,85 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## update_uc_call
+
+Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateUcCall" method="put" path="/uc/{connection_id}/call/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateUcCallRequest.new(
+  uc_call: Models::Shared::UcCall.new(
+    answer_at: DateTime.iso8601('2025-05-15T10:09:20.063Z'),
+    contacts: [],
+    conversation_identifier: 'fabe8773-7f00-4ad3-8a66-274cf78c25cd',
+    cost_amount: 1.564,
+    created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
+    currency: 'USD',
+    duration_seconds: 2556.0,
+    end_at: DateTime.iso8601('2024-05-31T00:32:41.105Z'),
+    id: 'fabe8773-7f00-4ad3-8a66-274cf78c25cd',
+    is_private: false,
+    metadata: [
+      Models::Shared::UcMetadata.new(
+        extra_data: {
+
+        },
+        format: Models::Shared::UcMetadataFormat::PRICE,
+        id: 'f24d9654-a31c-4aef-9268-684b7c3484ed',
+        namespace: 'custom',
+        slug: 'custom_field',
+        value: 'tui',
+      ),
+    ],
+    start_at: DateTime.iso8601('2023-12-17T23:36:45.974Z'),
+    status: Models::Shared::UcCallStatus::IN_PROGRESS,
+    telephone: Models::Shared::PropertyUcCallTelephone.new(
+      telephone: '(493) 534-0768',
+      type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
+    ),
+    type: Models::Shared::UcCallType::INBOUND,
+    updated_at: DateTime.iso8601('2023-08-03T14:25:02.539Z'),
+    user_phone: '819-894-3317 x163',
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.uc.update_uc_call(request: req)
+
+unless res.uc_call.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [Models::Operations::UpdateUcCallRequest](../../models/operations/updateuccallrequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateUcCallResponse)](../../models/operations/updateuccallresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## update_uc_comment
 
 Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
@@ -1124,9 +1361,9 @@ req = Models::Operations::UpdateUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: '395be5cd-ad5d-4d86-bb3a-5d79de78227d',
+    id: '0aae7af5-8307-4ef5-9de0-c7bd48c2d2b0',
     metadata: [],
-    updated_at: '2024-02-10T05:59:53.696Z',
+    updated_at: '2024-02-10T12:02:21.635Z',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1184,7 +1421,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: '1e48d49c-5c49-4401-9d4f-8dce4db19741',
+    id: 'f9af77f1-053f-4714-a434-30ef424ad0d9',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
@@ -1203,7 +1440,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-09T13:11:45.848Z'),
+    updated_at: DateTime.iso8601('2023-12-10T03:57:11.134Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1253,36 +1490,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: '9f3b5f29-332a-4f02-886b-9fe246af9c9a',
+    conversation_identifier: '384d9728-9a4d-4a40-89ba-c94c5f0dc091',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-05T18:55:12.675Z'),
-    expires_at: DateTime.iso8601('2026-04-28T12:30:03.756Z'),
-    id: '9f3b5f29-332a-4f02-886b-9fe246af9c9a',
+    end_at: DateTime.iso8601('2024-05-06T04:53:54.737Z'),
+    expires_at: DateTime.iso8601('2026-04-29T10:34:48.656Z'),
+    id: '384d9728-9a4d-4a40-89ba-c94c5f0dc091',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-02T13:31:47.193Z'),
+        end_at: DateTime.iso8601('2024-04-02T22:57:06.636Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-05-17T05:09:42.498Z'),
+        start_at: DateTime.iso8601('2026-05-18T03:33:14.194Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-02-26T04:22:07.667Z'),
-            start_at: DateTime.iso8601('2024-06-03T01:57:51.576Z'),
+            end_at: DateTime.iso8601('2026-02-27T01:25:15.357Z'),
+            start_at: DateTime.iso8601('2024-06-03T12:24:59.034Z'),
             text: 'Turpis maiores ducimus tero speculum.',
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-13T13:19:21.774Z'),
-            start_at: DateTime.iso8601('2026-08-04T18:16:32.678Z'),
+            end_at: DateTime.iso8601('2024-10-14T01:59:34.083Z'),
+            start_at: DateTime.iso8601('2026-08-05T17:59:59.050Z'),
             text: 'Magnam consuasor uxor tergiversatio subseco.',
           ),
         ],
       ),
     ],
     metadata: [],
-    start_at: DateTime.iso8601('2023-04-28T01:09:10.747Z'),
+    start_at: DateTime.iso8601('2023-04-28T04:52:25.543Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-17T16:11:41.920Z'),
+    updated_at: DateTime.iso8601('2025-03-18T07:27:44.097Z'),
     user_phone: '1-915-327-0429 x509',
     web_url: 'https://spherical-comparison.org',
   ),

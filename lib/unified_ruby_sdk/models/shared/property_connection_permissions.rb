@@ -183,6 +183,7 @@ module UnifiedRubySDK
           HRIS_EARNING_READ = new('hris_earning_read')
           HRIS_EARNING_WRITE = new('hris_earning_write')
           UC_CALL_READ = new('uc_call_read')
+          UC_CALL_WRITE = new('uc_call_write')
           UC_CONTACT_READ = new('uc_contact_read')
           UC_CONTACT_WRITE = new('uc_contact_write')
           UC_COMMENT_READ = new('uc_comment_read')

@@ -31,14 +31,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.volume.create_compute_volume(compute_volume: Models::Shared::ComputeVolume.new(
   created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-  id: '0f4c19d6-4226-482b-a3fb-8806217d3b9a',
+  id: 'd9ba7dd2-a276-4650-81c4-4f017de70a28',
   instance_ids: [],
   metadata: [],
   name: 'vol-solum',
   size_mb: 1_024_000.0,
   status: Models::Shared::ComputeVolumeStatus::OTHER,
   type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-  updated_at: DateTime.iso8601('2024-02-10T12:50:33.737Z'),
+  updated_at: DateTime.iso8601('2024-02-10T20:43:06.781Z'),
   used_mb: 524_986.0,
 ), connection_id: '<id>')
 
@@ -176,14 +176,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'e4badeea-b975-49df-b1d7-f8110458a2c5',
+    id: '1bcf2b87-bebe-408d-9ca5-58b850763940',
     instance_ids: [],
     metadata: [],
     name: 'vol-solum',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-10T12:50:33.744Z'),
+    updated_at: DateTime.iso8601('2024-02-10T20:43:06.793Z'),
     used_mb: 524_986.0,
   ),
   connection_id: '<id>',
@@ -276,14 +276,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'e4badeea-b975-49df-b1d7-f8110458a2c5',
+    id: '1bcf2b87-bebe-408d-9ca5-58b850763940',
     instance_ids: [],
     metadata: [],
     name: 'vol-solum',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-10T12:50:33.744Z'),
+    updated_at: DateTime.iso8601('2024-02-10T20:43:06.793Z'),
     used_mb: 524_986.0,
   ),
   connection_id: '<id>',
