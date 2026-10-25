@@ -16,7 +16,7 @@ module UnifiedRubySDK
   class UnifiedTo
     extend T::Sig
 
-    attr_accessor :accounting, :account, :agedpayable, :agedreceivable, :balancesheet, :bankfeedaccount, :bankfeedtransaction, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :expensereport, :invoice, :journal, :order, :organization, :paymentterm, :profitloss, :project, :purchaseorder, :purchasereceipt, :quote, :salesorder, :salesreceipt, :taxrate, :transaction, :trialbalance, :vendorcredit, :ads, :ad, :asset, :campaign, :creative, :group, :insertionorder, :promoted, :report, :target, :analytics, :event, :property, :session, :visitor, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :link, :recording, :webinar, :cdp, :activation, :destination, :profile, :segment, :source, :clubs, :location, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :review, :saleschannel, :compute, :deployment, :domain, :envvar, :gputype, :instance, :key, :region, :service, :snapshot, :template, :usage, :volume, :crm, :deal, :lead, :pipeline, :taxonomy, :datastore, :database, :query, :record, :table, :enrich, :person, :forms, :form, :submission, :genai, :agent, :embedding, :memory, :model, :prompt, :skill, :task, :healthcare, :allergy, :appointment, :condition, :encounter, :immunization, :medication, :observation, :patient, :practitioner, :slot, :hris, :attendance, :bankaccount, :benefit, :deduction, :device, :earning, :employee, :paycode, :payroll, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :legal, :matter, :practicearea, :timeentry, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :performance, :cycle, :feedback, :goal, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :social, :insight, :post, :storage, :file, :change, :ticketing, :customer, :note, :ticket, :uc, :call, :scorecardtemplate, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :saml, :issue, :notification, :secretsmanager, :webhook, :verification, :request
+    attr_accessor :accounting, :account, :agedpayable, :agedreceivable, :balancesheet, :bankfeedaccount, :bankfeedtransaction, :bill, :cashflow, :category, :contact, :creditmemo, :expense, :expensereport, :invoice, :journal, :order, :organization, :paymentterm, :profitloss, :project, :purchaseorder, :purchasereceipt, :quote, :salesorder, :salesreceipt, :taxrate, :transaction, :trialbalance, :vendorcredit, :ads, :ad, :asset, :campaign, :creative, :group, :insertionorder, :promoted, :report, :target, :analytics, :event, :property, :session, :visitor, :assessment, :package, :ats, :activity, :application, :applicationstatus, :candidate, :company, :document, :interview, :job, :scorecard, :calendar, :busy, :link, :recording, :webinar, :cdp, :activation, :destination, :profile, :segment, :source, :clubs, :location, :member, :commerce, :availability, :collection, :inventory, :item, :itemvariant, :reservation, :review, :saleschannel, :compute, :deployment, :domain, :envvar, :gputype, :instance, :key, :region, :service, :snapshot, :template, :usage, :volume, :crm, :deal, :lead, :pipeline, :taxonomy, :datastore, :database, :query, :record, :table, :enrich, :person, :forms, :form, :submission, :genai, :agent, :embedding, :memory, :model, :prompt, :skill, :task, :healthcare, :allergy, :appointment, :careplan, :condition, :coverage, :encounter, :goal, :immunization, :medication, :observation, :patient, :practitioner, :procedure, :slot, :hris, :attendance, :bankaccount, :benefit, :deduction, :device, :earning, :employee, :paycode, :payroll, :payslip, :timeoff, :timeshift, :kms, :comment, :page, :space, :legal, :matter, :practicearea, :timeentry, :lms, :class_, :content, :course, :instructor, :student, :martech, :list, :messaging, :channel, :message, :metadata, :passthrough, :payment, :payout, :refund, :subscription, :performance, :cycle, :feedback, :repo, :branch, :commit, :pullrequest, :repository, :scim, :user, :shipping, :carrier, :label, :rate, :shipment, :tracking, :signing, :signatory, :social, :insight, :post, :storage, :file, :change, :ticketing, :customer, :note, :ticket, :uc, :call, :scorecardtemplate, :unified, :apicall, :connection, :environment, :integration, :auth, :login, :saml, :issue, :notification, :secretsmanager, :webhook, :verification, :request
 
     sig do
       params(
@@ -196,13 +196,17 @@ module UnifiedRubySDK
       @healthcare = Healthcare.new(@sdk_configuration)
       @allergy = Allergy.new(@sdk_configuration)
       @appointment = Appointment.new(@sdk_configuration)
+      @careplan = Careplan.new(@sdk_configuration)
       @condition = Condition.new(@sdk_configuration)
+      @coverage = Coverage.new(@sdk_configuration)
       @encounter = Encounter.new(@sdk_configuration)
+      @goal = Goal.new(@sdk_configuration)
       @immunization = Immunization.new(@sdk_configuration)
       @medication = Medication.new(@sdk_configuration)
       @observation = Observation.new(@sdk_configuration)
       @patient = Patient.new(@sdk_configuration)
       @practitioner = Practitioner.new(@sdk_configuration)
+      @procedure = Procedure.new(@sdk_configuration)
       @slot = Slot.new(@sdk_configuration)
       @hris = Hris.new(@sdk_configuration)
       @attendance = Attendance.new(@sdk_configuration)
@@ -245,7 +249,6 @@ module UnifiedRubySDK
       @performance = Performance.new(@sdk_configuration)
       @cycle = Cycle.new(@sdk_configuration)
       @feedback = Feedback.new(@sdk_configuration)
-      @goal = Goal.new(@sdk_configuration)
       @repo = Repo.new(@sdk_configuration)
       @branch = Branch.new(@sdk_configuration)
       @commit = Commit.new(@sdk_configuration)

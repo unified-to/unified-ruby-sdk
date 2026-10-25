@@ -23,8 +23,12 @@ module UnifiedRubySDK
         field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the appointment
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
+        # Whether the appointment is a telehealth/virtual visit
+        field :is_virtual, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_virtual') } }
         # Where the appointment takes place
         field :location_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_id') } }
+        # Join link for a telehealth/virtual visit
+        field :meeting_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meeting_url') } }
         # Custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Free-text notes or comments
@@ -48,14 +52,16 @@ module UnifiedRubySDK
         # When the appointment was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(cancellation_reason: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), notes: T.nilable(::String), patient_id: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), reasons: T.nilable(T::Array[Models::Shared::HealthcareCode]), service_types: T.nilable(T::Array[Models::Shared::HealthcareCode]), slot_ids: T.nilable(T::Array[::String]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareAppointmentStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(cancellation_reason: nil, created_at: nil, description: nil, end_at: nil, id: nil, location_id: nil, metadata: nil, notes: nil, patient_id: nil, practitioner_ids: nil, raw: nil, reasons: nil, service_types: nil, slot_ids: nil, start_at: nil, status: nil, updated_at: nil)
+        sig { params(cancellation_reason: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_virtual: T.nilable(T::Boolean), location_id: T.nilable(::String), meeting_url: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), notes: T.nilable(::String), patient_id: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), reasons: T.nilable(T::Array[Models::Shared::HealthcareCode]), service_types: T.nilable(T::Array[Models::Shared::HealthcareCode]), slot_ids: T.nilable(T::Array[::String]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareAppointmentStatus), updated_at: T.nilable(::DateTime)).void }
+        def initialize(cancellation_reason: nil, created_at: nil, description: nil, end_at: nil, id: nil, is_virtual: nil, location_id: nil, meeting_url: nil, metadata: nil, notes: nil, patient_id: nil, practitioner_ids: nil, raw: nil, reasons: nil, service_types: nil, slot_ids: nil, start_at: nil, status: nil, updated_at: nil)
           @cancellation_reason = cancellation_reason
           @created_at = created_at
           @description = description
           @end_at = end_at
           @id = id
+          @is_virtual = is_virtual
           @location_id = location_id
+          @meeting_url = meeting_url
           @metadata = metadata
           @notes = notes
           @patient_id = patient_id
@@ -77,7 +83,9 @@ module UnifiedRubySDK
           return false unless @description == other.description
           return false unless @end_at == other.end_at
           return false unless @id == other.id
+          return false unless @is_virtual == other.is_virtual
           return false unless @location_id == other.location_id
+          return false unless @meeting_url == other.meeting_url
           return false unless @metadata == other.metadata
           return false unless @notes == other.notes
           return false unless @patient_id == other.patient_id

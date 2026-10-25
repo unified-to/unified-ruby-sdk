@@ -75,7 +75,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.commerce.create_commerce_collection(commerce_collection: Models::Shared::CommerceCollection.new(
   created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
   description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-  id: 'be90baa2-5289-4d0a-97e5-eaf4ea2e2404',
+  id: '53dcaa1b-0c3e-41f5-b033-3029922cfbd5',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -84,10 +84,10 @@ res = s.commerce.create_commerce_collection(commerce_collection: Models::Shared:
     Models::Shared::CommerceItemMedia.new(
       alt: 'Defungo adopto thorax.',
       height: 759.0,
-      id: 'c4f6a50c-a4a8-47b5-aaea-2c651829dda6',
+      id: 'ee852ea6-3203-429f-b17d-55dca2bc56aa',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '74f3a014-dad5-4514-b435-ad9d7297fa59',
+          id: '5ea22a5b-8fbd-4cdf-b187-fb20258c3262',
           slug: 'censura',
           value: 'toties',
         ),
@@ -100,7 +100,7 @@ res = s.commerce.create_commerce_collection(commerce_collection: Models::Shared:
   ],
   metadata: [
     Models::Shared::CommerceMetadata.new(
-      id: '85d9b63f-f923-4a86-90ff-18135c390620',
+      id: '724f949d-6236-44ca-abfa-d3fe17c4315b',
       slug: 'aetas',
       value: 'consuasor',
     ),
@@ -114,7 +114,7 @@ res = s.commerce.create_commerce_collection(commerce_collection: Models::Shared:
     'contego',
   ],
   type: Models::Shared::CommerceCollectionType::COLLECTION,
-  updated_at: DateTime.iso8601('2025-03-16T14:25:55.340Z'),
+  updated_at: DateTime.iso8601('2025-03-17T02:03:28.996Z'),
 ), connection_id: '<id>')
 
 unless res.commerce_collection.nil?
@@ -161,9 +161,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.commerce.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(
   available: 337.0,
-  id: 'a1bb547a-b0c6-4702-a2b2-1f380c3b7a96',
+  id: '9483d407-6a8b-4ab0-b634-e755d6053d12',
   metadata: [],
-  updated_at: DateTime.iso8601('2025-11-22T20:24:29.845Z'),
+  updated_at: DateTime.iso8601('2025-11-23T14:45:28.954Z'),
 ), connection_id: '<id>')
 
 unless res.commerce_inventory.nil?
@@ -214,7 +214,7 @@ res = s.commerce.create_commerce_item(commerce_item: Models::Shared::CommerceIte
   description: 'Decretum vulnero ustulo abeo.',
   duration: 104.0,
   global_code: '978-0-85270-680-0',
-  id: 'a0a1567d-6822-4b4b-a5f5-c2ce9ce892a1',
+  id: '6ac6aaf6-909c-461f-aee5-3bc0ebcf1bf6',
   is_active: false,
   is_featured: false,
   is_taxable: true,
@@ -223,10 +223,10 @@ res = s.commerce.create_commerce_item(commerce_item: Models::Shared::CommerceIte
     Models::Shared::CommerceItemMedia.new(
       alt: 'Caterva eveniet acies candidus.',
       height: 876.0,
-      id: '42a7e8af-0fdf-4234-8897-f39fa9ffed32',
+      id: '7858fb93-6dfc-4fa1-a39c-a596d433a0ce',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'badd6001-e139-439b-ad2d-aa8b532c6ccb',
+          id: 'e0cc97ad-989b-4ff3-bb34-3bfaad155e60',
           slug: 'doloremque',
           value: 'allatus',
         ),
@@ -239,10 +239,10 @@ res = s.commerce.create_commerce_item(commerce_item: Models::Shared::CommerceIte
     Models::Shared::CommerceItemMedia.new(
       alt: 'Comedo.',
       height: 651.0,
-      id: '38a5cc50-dc1b-4504-baff-b4c48e73d36e',
+      id: 'c50b354a-cb92-4746-9b0a-133cfa049249',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '67245fc8-eb02-4770-b8a6-248b8a635a35',
+          id: 'f824a4ab-5427-43e3-949d-2b1b215fbc1c',
           slug: 'bis',
           value: 'somniculosus',
         ),
@@ -259,7 +259,7 @@ res = s.commerce.create_commerce_item(commerce_item: Models::Shared::CommerceIte
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '198e4b88-b97c-4335-8725-a89fd86655d2',
+      id: '4a112a49-e5ea-4f15-8118-d56977111923',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'abstergo',
@@ -282,7 +282,7 @@ res = s.commerce.create_commerce_item(commerce_item: Models::Shared::CommerceIte
   ],
   total_stock: 682.0,
   type: 'SERVICE',
-  updated_at: DateTime.iso8601('2022-04-20T16:04:03.654Z'),
+  updated_at: DateTime.iso8601('2022-04-21T00:50:56.272Z'),
   vendor_name: 'Mayer - Flatley',
   weight: 37.0,
   weight_unit: Models::Shared::WeightUnit::OZ,
@@ -335,7 +335,7 @@ res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Share
   created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
   description: 'Stylish Salad designed to make you stand out with little looks',
   height: 54.0,
-  id: '33dac53f-b1cc-4347-af04-7d3087c85369',
+  id: 'eb89a854-44ca-47e3-8aaf-54dcfdf7a0ce',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -344,10 +344,10 @@ res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Share
     Models::Shared::CommerceItemMedia.new(
       alt: 'Hic desipio thorax.',
       height: 961.0,
-      id: '8ee897d1-15f1-4677-94b1-9d3bca530325',
+      id: '8f45ef41-7536-4870-84aa-a1f467ab661a',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '76c63978-513f-40f5-ae85-4bf2f54e54fe',
+          id: '52e9c1fc-6688-4b86-b1a9-4a255225cd51',
           slug: 'ubi',
           value: 'textus',
         ),
@@ -364,7 +364,7 @@ res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Share
         "display_name": 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '2b9f539c-3586-4d9b-a7ec-c2d5237685e3',
+      id: '6564084e-7bf1-4a54-911e-31bd052c4333',
       namespace: 'custom',
       slug: 'custom_property',
       value: 'absens',
@@ -373,7 +373,7 @@ res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Share
   name: 'Chair',
   options: [
     Models::Shared::CommerceItemOption.new(
-      id: '3bbd63e4-578f-4b48-ac03-b5d86cbac1ad',
+      id: 'cfb74873-c8d2-470f-af56-1cd123729736',
       name: 'Color',
       position: 1.0,
       values: [
@@ -381,7 +381,7 @@ res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Share
       ],
     ),
     Models::Shared::CommerceItemOption.new(
-      id: '9f6c4e21-764c-4465-b065-d1f6dd804c98',
+      id: 'a5428367-8d96-4630-90c0-959a748b1515',
       name: 'Size',
       position: 2.0,
       values: [
@@ -404,7 +404,7 @@ res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Share
     'deserunt',
   ],
   total_stock: 436.0,
-  updated_at: DateTime.iso8601('2026-03-12T07:37:24.260Z'),
+  updated_at: DateTime.iso8601('2026-03-13T03:26:19.822Z'),
   weight: 46.0,
   weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
   width: 40.0,
@@ -465,7 +465,7 @@ res = s.commerce.create_commerce_location(commerce_location: Models::Shared::Com
   created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
   currency: 'XCD',
   description: 'Adsidue audentia.',
-  id: 'def5f02b-4d20-47ec-9f7d-627cc270fd94',
+  id: '5dcaf10c-751b-4d37-b509-d7f11a7a3121',
   image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
   is_active: false,
   language_locale: 'vulgaris',
@@ -476,10 +476,10 @@ res = s.commerce.create_commerce_location(commerce_location: Models::Shared::Com
     Models::Shared::CommerceItemMedia.new(
       alt: 'Addo.',
       height: 283.0,
-      id: '8dbbcf1e-de47-4a62-9e16-b96163689222',
+      id: '70c9d10c-6887-4a1f-b95c-29c4fc0e667d',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'fe1de34d-f490-4b6c-81b6-1bccbe10946a',
+          id: '5f826428-eab9-4d17-9ded-560a757ae72e',
           slug: 'abutor',
           value: 'damno',
         ),
@@ -505,7 +505,7 @@ res = s.commerce.create_commerce_location(commerce_location: Models::Shared::Com
       type: Models::Shared::CommerceTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2024-04-21T18:57:13.515Z'),
+  updated_at: DateTime.iso8601('2024-04-22T02:47:04.115Z'),
   web_url: 'https://chilly-edge.info',
 ), connection_id: '<id>')
 
@@ -557,13 +557,13 @@ res = s.commerce.create_commerce_reservation(commerce_reservation: Models::Share
   guest_email: 'julien.bartoletti@icloud.com',
   guest_name: 'Julien Bartoletti',
   guest_phone: '(728) 596-2620',
-  id: 'ba624675-43ab-47f6-be1f-e179a88400c9',
+  id: '4fb3bb48-bfaf-4293-9202-8e264e6ec457',
   metadata: [],
   notes: 'Adsum textilis ipsum despecto.',
   size: 10.0,
   start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
   status: Models::Shared::CommerceReservationStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-01-04T13:12:29.802Z'),
+  updated_at: DateTime.iso8601('2023-01-04T18:09:34.180Z'),
   url: 'https://expensive-gift.org',
 ), connection_id: '<id>')
 
@@ -618,7 +618,7 @@ res = s.commerce.create_commerce_review(commerce_review: Models::Shared::Commerc
   content: 'Taedium thymum adipiscor amicitia cui.',
   created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
   helpful_votes: 66.0,
-  id: 'dcc5c3fa-bf69-4500-a587-a76932410f93',
+  id: 'c93b592f-edb2-4e80-81b4-380291f17e03',
   is_featured: false,
   is_public: true,
   is_verified: false,
@@ -626,10 +626,10 @@ res = s.commerce.create_commerce_review(commerce_review: Models::Shared::Commerc
     Models::Shared::CommerceItemMedia.new(
       alt: 'Desipio carpo sol laudantium colo.',
       height: 749.0,
-      id: '99bda4de-9598-45bf-91a3-f59612674a0a',
+      id: '0423217e-812d-48be-84ff-13b295a9b3ab',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '0bae6a15-9986-41f7-b37a-3e8ddddb1533',
+          id: '5fd2c2db-c743-4641-be16-64a3768166f9',
           slug: 'textor',
           value: 'quos',
         ),
@@ -642,10 +642,10 @@ res = s.commerce.create_commerce_review(commerce_review: Models::Shared::Commerc
     Models::Shared::CommerceItemMedia.new(
       alt: 'Adopto teneo numquam.',
       height: 957.0,
-      id: '35ee671c-8c89-45c9-a35a-8b3ce2e8f4b4',
+      id: '6964ea19-ca2a-4470-b818-04a19cb3b499',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'b77a17f5-18bf-441b-9859-8b4f69bc143e',
+          id: '98757efb-3cf3-4104-b093-68b06b1dbf41',
           slug: 'bos',
           value: 'casso',
         ),
@@ -661,7 +661,7 @@ res = s.commerce.create_commerce_review(commerce_review: Models::Shared::Commerc
   status: Models::Shared::CommerceReviewStatus::APPROVED,
   title: 'Coepi adamo amicitia auxilium toties.',
   unhelpful_votes: 88.0,
-  updated_at: DateTime.iso8601('2025-08-23T21:04:29.034Z'),
+  updated_at: DateTime.iso8601('2025-08-24T15:58:40.297Z'),
   url: 'https://diligent-bandwidth.biz',
   verified_purchase: true,
 ), connection_id: '<id>')
@@ -712,11 +712,11 @@ res = s.commerce.create_commerce_saleschannel(commerce_saleschannel: Models::Sha
   collections: [],
   created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
   description: 'Utroque denuncio solutio.',
-  id: '9bd02050-3d17-4e49-99f1-6368767dffcb',
+  id: 'ccda0eb7-0cd4-4d92-a916-00a400df7d0b',
   is_active: false,
   metadata: [],
   slug: 'amiculum-congregatio-suspendo',
-  updated_at: DateTime.iso8601('2025-01-29T22:53:08.163Z'),
+  updated_at: DateTime.iso8601('2025-01-30T13:33:28.257Z'),
 ), connection_id: '<id>')
 
 unless res.commerce_saleschannel.nil?
@@ -1522,7 +1522,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: 'f8127090-6827-4ec6-af0f-c8862ad02465',
+    id: '7698739a-d70c-412b-9e2b-3032f3a44064',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -1531,10 +1531,10 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Defungo adopto thorax.',
         height: 759.0,
-        id: 'b0f66863-d42b-489f-b584-9e4bea62cb2f',
+        id: '502dbc6d-7e10-47ef-8b66-c62a02017db9',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '8ce030df-26de-418e-9d7f-a7a52f135438',
+            id: '423508f1-8589-475c-be81-c0e241043729',
             slug: 'censura',
             value: 'toties',
           ),
@@ -1547,7 +1547,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: 'b1b55034-7419-418e-9077-5755c5ae04c0',
+        id: 'c7bc47f9-877a-49aa-af1b-ee86f2acc5f4',
         slug: 'aetas',
         value: 'consuasor',
       ),
@@ -1561,7 +1561,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       'contego',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-16T14:25:55.360Z'),
+    updated_at: DateTime.iso8601('2025-03-17T02:03:29.013Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1611,9 +1611,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: '1d9dc6ea-2bde-4372-8d82-dc693e413084',
+    id: '5680692d-2378-4e49-9091-b0f5dc8d66c8',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-11-22T20:24:29.858Z'),
+    updated_at: DateTime.iso8601('2025-11-23T14:45:28.967Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1667,7 +1667,7 @@ req = Models::Operations::PatchCommerceItemRequest.new(
     description: 'Decretum vulnero ustulo abeo.',
     duration: 104.0,
     global_code: '978-0-85270-680-0',
-    id: 'ba4cd60f-38f4-4381-b459-d38ed90d1449',
+    id: '354b51dd-bbd5-46aa-82b9-601b00ba91b0',
     is_active: false,
     is_featured: false,
     is_taxable: true,
@@ -1676,10 +1676,10 @@ req = Models::Operations::PatchCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Caterva eveniet acies candidus.',
         height: 876.0,
-        id: 'bd96ba6c-de69-4802-9981-2894c7bcabd5',
+        id: '1b11ac53-4b18-4655-a839-6edb30464a77',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '0d5e0023-a544-4ee3-9b47-4fc6e0f1c906',
+            id: '1185528a-e5ae-4fe9-8798-72eeec61dd2b',
             slug: 'doloremque',
             value: 'allatus',
           ),
@@ -1692,10 +1692,10 @@ req = Models::Operations::PatchCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 651.0,
-        id: '454b51c1-0f28-4fc4-aaeb-9608b62e4f50',
+        id: 'e6fbf2e9-e6cd-49a9-9d81-acd33102d5a1',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '1a335ffb-420e-408e-b336-a5653ec633e2',
+            id: '00ae9546-8057-4cd7-889d-c0a1a0f93b92',
             slug: 'bis',
             value: 'somniculosus',
           ),
@@ -1712,7 +1712,7 @@ req = Models::Operations::PatchCommerceItemRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: 'd80a9584-29ab-4fb5-aec5-92392f21dc21',
+        id: 'ed27b6ff-6f5c-4dc2-ba26-93dd7a58bf99',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'abstergo',
@@ -1735,7 +1735,7 @@ req = Models::Operations::PatchCommerceItemRequest.new(
     ],
     total_stock: 682.0,
     type: 'SERVICE',
-    updated_at: DateTime.iso8601('2022-04-20T16:04:03.668Z'),
+    updated_at: DateTime.iso8601('2022-04-21T00:50:56.284Z'),
     vendor_name: 'Mayer - Flatley',
     weight: 37.0,
     weight_unit: Models::Shared::WeightUnit::OZ,
@@ -1791,7 +1791,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Stylish Salad designed to make you stand out with little looks',
     height: 54.0,
-    id: '411d567c-0296-4a51-9d0d-57b2d0f5e652',
+    id: 'b9c7aa74-2c20-4247-9259-b6a489a6c8f7',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -1800,10 +1800,10 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Hic desipio thorax.',
         height: 961.0,
-        id: 'a1bc5619-85a4-429a-9e2e-9d0e3a8f4e2c',
+        id: '8bcf15f5-e754-4631-86ee-51f329b72b68',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '9fbcc5f1-af2f-496a-9c0d-2f1c3cafdcf5',
+            id: '20939ac8-b91f-46ed-92d2-fef25f74cb50',
             slug: 'ubi',
             value: 'textus',
           ),
@@ -1820,7 +1820,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: 'b409ecef-d1ec-4c88-a25b-310da585a36b',
+        id: '190bf3c5-220d-43eb-b25f-8467bab76531',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'absens',
@@ -1829,7 +1829,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     name: 'Chair',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: 'c25bca81-b0f2-4e6b-9402-3c308250ee7a',
+        id: '4bb708ca-812e-4e2a-9254-6dcc2c009130',
         name: 'Color',
         position: 1.0,
         values: [
@@ -1837,7 +1837,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
         ],
       ),
       Models::Shared::CommerceItemOption.new(
-        id: '0c176a91-caed-450e-b4b8-23ba32f6433a',
+        id: 'fb54eac3-d6bc-49f8-a506-83a2bcd13752',
         name: 'Size',
         position: 2.0,
         values: [
@@ -1860,7 +1860,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       'deserunt',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-03-12T07:37:24.286Z'),
+    updated_at: DateTime.iso8601('2026-03-13T03:26:19.857Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 40.0,
@@ -1924,7 +1924,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: '7bb4bb9c-090b-4543-8ad2-d06be1070fff',
+    id: 'ab256dee-9b58-440f-ab9c-50ab0866015c',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -1935,10 +1935,10 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '17f53c27-e8ed-4072-b521-93f2dc431804',
+        id: '6c40e3bf-fa2d-4c6b-9911-a76c325c6531',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '1142ec37-2867-43b9-84c1-1ca2b981b4d5',
+            id: '278b7d69-abcb-451a-b3a0-e3b835bf486a',
             slug: 'abutor',
             value: 'damno',
           ),
@@ -1964,7 +1964,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-21T18:57:13.527Z'),
+    updated_at: DateTime.iso8601('2024-04-22T02:47:04.129Z'),
     web_url: 'https://chilly-edge.info',
   ),
   connection_id: '<id>',
@@ -2019,13 +2019,13 @@ req = Models::Operations::PatchCommerceReservationRequest.new(
     guest_email: 'julien.bartoletti@icloud.com',
     guest_name: 'Julien Bartoletti',
     guest_phone: '(728) 596-2620',
-    id: 'db72a111-6f5c-4aaa-bba8-a47453e5fd96',
+    id: '73752d39-ba5e-4e91-9d56-bcb50a39e57b',
     metadata: [],
     notes: 'Adsum textilis ipsum despecto.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-04T13:12:29.805Z'),
+    updated_at: DateTime.iso8601('2023-01-04T18:09:34.185Z'),
     url: 'https://expensive-gift.org',
   ),
   connection_id: '<id>',
@@ -2083,7 +2083,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '55decac3-6017-4ea4-ae8d-bc206f03b6c6',
+    id: '43a09d85-7671-45b7-a802-0a6619d34015',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -2091,10 +2091,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '754ad034-c6a5-4ac9-92be-a376d4e3c86d',
+        id: '226f87e3-3f66-4fe1-9095-aac8572c996c',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '3b145627-c7b0-46cb-aca1-1fe06b8bfb43',
+            id: 'a1579f1e-6caf-4d2d-bff6-d908532309b4',
             slug: 'textor',
             value: 'quos',
           ),
@@ -2107,10 +2107,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: '7d8108cb-866b-475d-8480-a74888bc1a68',
+        id: '2f9ae6c2-f8a9-4ac9-a47d-5c16ea43f98b',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '9652a2cf-7767-4522-ba8c-90920304b308',
+            id: '47ba08fe-4e9e-48a6-8f1d-056898f4104e',
             slug: 'bos',
             value: 'casso',
           ),
@@ -2126,7 +2126,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-08-23T21:04:29.067Z'),
+    updated_at: DateTime.iso8601('2025-08-24T15:58:40.337Z'),
     url: 'https://diligent-bandwidth.biz',
     verified_purchase: true,
   ),
@@ -2180,11 +2180,11 @@ req = Models::Operations::PatchCommerceSaleschannelRequest.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Utroque denuncio solutio.',
-    id: 'cbf88583-c6fd-483b-9105-3a3ac9782195',
+    id: '6d7f8491-83a4-4e71-aec7-48423c011de1',
     is_active: false,
     metadata: [],
     slug: 'amiculum-congregatio-suspendo',
-    updated_at: DateTime.iso8601('2025-01-29T22:53:08.171Z'),
+    updated_at: DateTime.iso8601('2025-01-30T13:33:28.267Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2571,7 +2571,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: 'f8127090-6827-4ec6-af0f-c8862ad02465',
+    id: '7698739a-d70c-412b-9e2b-3032f3a44064',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -2580,10 +2580,10 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Defungo adopto thorax.',
         height: 759.0,
-        id: 'b0f66863-d42b-489f-b584-9e4bea62cb2f',
+        id: '502dbc6d-7e10-47ef-8b66-c62a02017db9',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '8ce030df-26de-418e-9d7f-a7a52f135438',
+            id: '423508f1-8589-475c-be81-c0e241043729',
             slug: 'censura',
             value: 'toties',
           ),
@@ -2596,7 +2596,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: 'b1b55034-7419-418e-9077-5755c5ae04c0',
+        id: 'c7bc47f9-877a-49aa-af1b-ee86f2acc5f4',
         slug: 'aetas',
         value: 'consuasor',
       ),
@@ -2610,7 +2610,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       'contego',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-16T14:25:55.360Z'),
+    updated_at: DateTime.iso8601('2025-03-17T02:03:29.013Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2660,9 +2660,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: '1d9dc6ea-2bde-4372-8d82-dc693e413084',
+    id: '5680692d-2378-4e49-9091-b0f5dc8d66c8',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-11-22T20:24:29.858Z'),
+    updated_at: DateTime.iso8601('2025-11-23T14:45:28.967Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2716,7 +2716,7 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
     description: 'Decretum vulnero ustulo abeo.',
     duration: 104.0,
     global_code: '978-0-85270-680-0',
-    id: 'ba4cd60f-38f4-4381-b459-d38ed90d1449',
+    id: '354b51dd-bbd5-46aa-82b9-601b00ba91b0',
     is_active: false,
     is_featured: false,
     is_taxable: true,
@@ -2725,10 +2725,10 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Caterva eveniet acies candidus.',
         height: 876.0,
-        id: 'bd96ba6c-de69-4802-9981-2894c7bcabd5',
+        id: '1b11ac53-4b18-4655-a839-6edb30464a77',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '0d5e0023-a544-4ee3-9b47-4fc6e0f1c906',
+            id: '1185528a-e5ae-4fe9-8798-72eeec61dd2b',
             slug: 'doloremque',
             value: 'allatus',
           ),
@@ -2741,10 +2741,10 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 651.0,
-        id: '454b51c1-0f28-4fc4-aaeb-9608b62e4f50',
+        id: 'e6fbf2e9-e6cd-49a9-9d81-acd33102d5a1',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '1a335ffb-420e-408e-b336-a5653ec633e2',
+            id: '00ae9546-8057-4cd7-889d-c0a1a0f93b92',
             slug: 'bis',
             value: 'somniculosus',
           ),
@@ -2761,7 +2761,7 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: 'd80a9584-29ab-4fb5-aec5-92392f21dc21',
+        id: 'ed27b6ff-6f5c-4dc2-ba26-93dd7a58bf99',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'abstergo',
@@ -2784,7 +2784,7 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
     ],
     total_stock: 682.0,
     type: 'SERVICE',
-    updated_at: DateTime.iso8601('2022-04-20T16:04:03.668Z'),
+    updated_at: DateTime.iso8601('2022-04-21T00:50:56.284Z'),
     vendor_name: 'Mayer - Flatley',
     weight: 37.0,
     weight_unit: Models::Shared::WeightUnit::OZ,
@@ -2840,7 +2840,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Stylish Salad designed to make you stand out with little looks',
     height: 54.0,
-    id: '411d567c-0296-4a51-9d0d-57b2d0f5e652',
+    id: 'b9c7aa74-2c20-4247-9259-b6a489a6c8f7',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -2849,10 +2849,10 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Hic desipio thorax.',
         height: 961.0,
-        id: 'a1bc5619-85a4-429a-9e2e-9d0e3a8f4e2c',
+        id: '8bcf15f5-e754-4631-86ee-51f329b72b68',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '9fbcc5f1-af2f-496a-9c0d-2f1c3cafdcf5',
+            id: '20939ac8-b91f-46ed-92d2-fef25f74cb50',
             slug: 'ubi',
             value: 'textus',
           ),
@@ -2869,7 +2869,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
           "display_name": 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: 'b409ecef-d1ec-4c88-a25b-310da585a36b',
+        id: '190bf3c5-220d-43eb-b25f-8467bab76531',
         namespace: 'custom',
         slug: 'custom_property',
         value: 'absens',
@@ -2878,7 +2878,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     name: 'Chair',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: 'c25bca81-b0f2-4e6b-9402-3c308250ee7a',
+        id: '4bb708ca-812e-4e2a-9254-6dcc2c009130',
         name: 'Color',
         position: 1.0,
         values: [
@@ -2886,7 +2886,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
         ],
       ),
       Models::Shared::CommerceItemOption.new(
-        id: '0c176a91-caed-450e-b4b8-23ba32f6433a',
+        id: 'fb54eac3-d6bc-49f8-a506-83a2bcd13752',
         name: 'Size',
         position: 2.0,
         values: [
@@ -2909,7 +2909,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       'deserunt',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-03-12T07:37:24.286Z'),
+    updated_at: DateTime.iso8601('2026-03-13T03:26:19.857Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
     width: 40.0,
@@ -2973,7 +2973,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: '7bb4bb9c-090b-4543-8ad2-d06be1070fff',
+    id: 'ab256dee-9b58-440f-ab9c-50ab0866015c',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -2984,10 +2984,10 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '17f53c27-e8ed-4072-b521-93f2dc431804',
+        id: '6c40e3bf-fa2d-4c6b-9911-a76c325c6531',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '1142ec37-2867-43b9-84c1-1ca2b981b4d5',
+            id: '278b7d69-abcb-451a-b3a0-e3b835bf486a',
             slug: 'abutor',
             value: 'damno',
           ),
@@ -3013,7 +3013,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-21T18:57:13.527Z'),
+    updated_at: DateTime.iso8601('2024-04-22T02:47:04.129Z'),
     web_url: 'https://chilly-edge.info',
   ),
   connection_id: '<id>',
@@ -3068,13 +3068,13 @@ req = Models::Operations::UpdateCommerceReservationRequest.new(
     guest_email: 'julien.bartoletti@icloud.com',
     guest_name: 'Julien Bartoletti',
     guest_phone: '(728) 596-2620',
-    id: 'db72a111-6f5c-4aaa-bba8-a47453e5fd96',
+    id: '73752d39-ba5e-4e91-9d56-bcb50a39e57b',
     metadata: [],
     notes: 'Adsum textilis ipsum despecto.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-04T13:12:29.805Z'),
+    updated_at: DateTime.iso8601('2023-01-04T18:09:34.185Z'),
     url: 'https://expensive-gift.org',
   ),
   connection_id: '<id>',
@@ -3132,7 +3132,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '55decac3-6017-4ea4-ae8d-bc206f03b6c6',
+    id: '43a09d85-7671-45b7-a802-0a6619d34015',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -3140,10 +3140,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '754ad034-c6a5-4ac9-92be-a376d4e3c86d',
+        id: '226f87e3-3f66-4fe1-9095-aac8572c996c',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '3b145627-c7b0-46cb-aca1-1fe06b8bfb43',
+            id: 'a1579f1e-6caf-4d2d-bff6-d908532309b4',
             slug: 'textor',
             value: 'quos',
           ),
@@ -3156,10 +3156,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: '7d8108cb-866b-475d-8480-a74888bc1a68',
+        id: '2f9ae6c2-f8a9-4ac9-a47d-5c16ea43f98b',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '9652a2cf-7767-4522-ba8c-90920304b308',
+            id: '47ba08fe-4e9e-48a6-8f1d-056898f4104e',
             slug: 'bos',
             value: 'casso',
           ),
@@ -3175,7 +3175,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-08-23T21:04:29.067Z'),
+    updated_at: DateTime.iso8601('2025-08-24T15:58:40.337Z'),
     url: 'https://diligent-bandwidth.biz',
     verified_purchase: true,
   ),
@@ -3229,11 +3229,11 @@ req = Models::Operations::UpdateCommerceSaleschannelRequest.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Utroque denuncio solutio.',
-    id: 'cbf88583-c6fd-483b-9105-3a3ac9782195',
+    id: '6d7f8491-83a4-4e71-aec7-48423c011de1',
     is_active: false,
     metadata: [],
     slug: 'amiculum-congregatio-suspendo',
-    updated_at: DateTime.iso8601('2025-01-29T22:53:08.171Z'),
+    updated_at: DateTime.iso8601('2025-01-30T13:33:28.267Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

@@ -18,8 +18,12 @@ class UnifiedRubySDK::Models::Shared::HealthcareAppointment
   def end_at=(str_); end
   def id(); end
   def id=(str_); end
+  def is_virtual(); end
+  def is_virtual=(str_); end
   def location_id(); end
   def location_id=(str_); end
+  def meeting_url(); end
+  def meeting_url=(str_); end
   def metadata(); end
   def metadata=(str_); end
   def notes(); end

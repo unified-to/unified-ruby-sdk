@@ -28,6 +28,9 @@ module UnifiedRubySDK
           START_AT = new('start_at')
           END_AT = new('end_at')
           NOTES = new('notes')
+          ROUTE = new('route')
+          DOSE_NUMBER = new('dose_number')
+          DOSE_UNIT = new('dose_unit')
           METADATA = new('metadata')
           RAW = new('raw')
         end

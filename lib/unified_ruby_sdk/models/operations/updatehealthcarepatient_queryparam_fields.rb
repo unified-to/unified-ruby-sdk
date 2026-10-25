@@ -30,6 +30,10 @@ module UnifiedRubySDK
           IDENTIFIERS = new('identifiers')
           PRACTITIONER_IDS = new('practitioner_ids')
           IS_ACTIVE = new('is_active')
+          RACES = new('races')
+          ETHNICITIES = new('ethnicities')
+          MARITAL_STATUS = new('marital_status')
+          CONTACTS = new('contacts')
           METADATA = new('metadata')
           RAW = new('raw')
         end

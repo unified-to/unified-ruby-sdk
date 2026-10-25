@@ -21,6 +21,10 @@ module UnifiedRubySDK
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # Free-text dosage instructions (e.g. "1 tablet by mouth twice daily")
         field :dosage, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dosage') } }
+        # Amount of medication per dose
+        field :dose_number, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dose_number') } }
+        # Unit of the dose amount (e.g. mg, tablet)
+        field :dose_unit, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dose_unit') } }
         # The encounter in which the medication was ordered
         field :encounter_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('encounter_id') } }
         # When the patient should stop taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -41,6 +45,8 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Number of refills authorized
         field :refill_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('refill_count') } }
+        # How the medication is taken (e.g. oral, intravenous)
+        field :route, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('route') } }
         # When the patient should start taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # Status of the medication order
@@ -48,12 +54,14 @@ module UnifiedRubySDK
         # When the medication record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(authored_at: T.nilable(::DateTime), codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), dosage: T.nilable(::String), encounter_id: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), refill_count: T.nilable(::Float), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareMedicationStatus), updated_at: T.nilable(::DateTime)).void }
-        def initialize(authored_at: nil, codes: nil, created_at: nil, dosage: nil, encounter_id: nil, end_at: nil, id: nil, metadata: nil, name: nil, notes: nil, patient_id: nil, practitioner_id: nil, raw: nil, refill_count: nil, start_at: nil, status: nil, updated_at: nil)
+        sig { params(authored_at: T.nilable(::DateTime), codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), dosage: T.nilable(::String), dose_number: T.nilable(::Float), dose_unit: T.nilable(::String), encounter_id: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), refill_count: T.nilable(::Float), route: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareMedicationStatus), updated_at: T.nilable(::DateTime)).void }
+        def initialize(authored_at: nil, codes: nil, created_at: nil, dosage: nil, dose_number: nil, dose_unit: nil, encounter_id: nil, end_at: nil, id: nil, metadata: nil, name: nil, notes: nil, patient_id: nil, practitioner_id: nil, raw: nil, refill_count: nil, route: nil, start_at: nil, status: nil, updated_at: nil)
           @authored_at = authored_at
           @codes = codes
           @created_at = created_at
           @dosage = dosage
+          @dose_number = dose_number
+          @dose_unit = dose_unit
           @encounter_id = encounter_id
           @end_at = end_at
           @id = id
@@ -64,6 +72,7 @@ module UnifiedRubySDK
           @practitioner_id = practitioner_id
           @raw = raw
           @refill_count = refill_count
+          @route = route
           @start_at = start_at
           @status = status
           @updated_at = updated_at
@@ -76,6 +85,8 @@ module UnifiedRubySDK
           return false unless @codes == other.codes
           return false unless @created_at == other.created_at
           return false unless @dosage == other.dosage
+          return false unless @dose_number == other.dose_number
+          return false unless @dose_unit == other.dose_unit
           return false unless @encounter_id == other.encounter_id
           return false unless @end_at == other.end_at
           return false unless @id == other.id
@@ -86,6 +97,7 @@ module UnifiedRubySDK
           return false unless @practitioner_id == other.practitioner_id
           return false unless @raw == other.raw
           return false unless @refill_count == other.refill_count
+          return false unless @route == other.route
           return false unless @start_at == other.start_at
           return false unless @status == other.status
           return false unless @updated_at == other.updated_at

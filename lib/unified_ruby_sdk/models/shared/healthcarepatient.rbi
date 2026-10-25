@@ -12,12 +12,16 @@ class UnifiedRubySDK::Models::Shared::HealthcarePatient
   def address=(str_); end
   def birthdate(); end
   def birthdate=(str_); end
+  def contacts(); end
+  def contacts=(str_); end
   def created_at(); end
   def created_at=(str_); end
   def deceased_at(); end
   def deceased_at=(str_); end
   def emails(); end
   def emails=(str_); end
+  def ethnicities(); end
+  def ethnicities=(str_); end
   def first_name(); end
   def first_name=(str_); end
   def gender(); end
@@ -34,12 +38,16 @@ class UnifiedRubySDK::Models::Shared::HealthcarePatient
   def language=(str_); end
   def last_name(); end
   def last_name=(str_); end
+  def marital_status(); end
+  def marital_status=(str_); end
   def metadata(); end
   def metadata=(str_); end
   def name(); end
   def name=(str_); end
   def practitioner_ids(); end
   def practitioner_ids=(str_); end
+  def races(); end
+  def races=(str_); end
   def raw(); end
   def raw=(str_); end
   def telephones(); end

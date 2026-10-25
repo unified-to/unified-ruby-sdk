@@ -226,6 +226,12 @@ module UnifiedRubySDK
           HEALTHCARE_MEDICATION = new('healthcare_medication')
           HEALTHCARE_OBSERVATION = new('healthcare_observation')
           HEALTHCARE_IMMUNIZATION = new('healthcare_immunization')
+          HEALTHCARE_DOCUMENT = new('healthcare_document')
+          HEALTHCARE_COVERAGE = new('healthcare_coverage')
+          HEALTHCARE_PROCEDURE = new('healthcare_procedure')
+          HEALTHCARE_REPORT = new('healthcare_report')
+          HEALTHCARE_CAREPLAN = new('healthcare_careplan')
+          HEALTHCARE_GOAL = new('healthcare_goal')
         end
       end
     end

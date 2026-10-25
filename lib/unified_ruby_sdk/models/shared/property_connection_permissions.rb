@@ -410,6 +410,18 @@ module UnifiedRubySDK
           HEALTHCARE_OBSERVATION_WRITE = new('healthcare_observation_write')
           HEALTHCARE_IMMUNIZATION_READ = new('healthcare_immunization_read')
           HEALTHCARE_IMMUNIZATION_WRITE = new('healthcare_immunization_write')
+          HEALTHCARE_DOCUMENT_READ = new('healthcare_document_read')
+          HEALTHCARE_DOCUMENT_WRITE = new('healthcare_document_write')
+          HEALTHCARE_COVERAGE_READ = new('healthcare_coverage_read')
+          HEALTHCARE_COVERAGE_WRITE = new('healthcare_coverage_write')
+          HEALTHCARE_PROCEDURE_READ = new('healthcare_procedure_read')
+          HEALTHCARE_PROCEDURE_WRITE = new('healthcare_procedure_write')
+          HEALTHCARE_REPORT_READ = new('healthcare_report_read')
+          HEALTHCARE_REPORT_WRITE = new('healthcare_report_write')
+          HEALTHCARE_CAREPLAN_READ = new('healthcare_careplan_read')
+          HEALTHCARE_CAREPLAN_WRITE = new('healthcare_careplan_write')
+          HEALTHCARE_GOAL_READ = new('healthcare_goal_read')
+          HEALTHCARE_GOAL_WRITE = new('healthcare_goal_write')
         end
       end
     end

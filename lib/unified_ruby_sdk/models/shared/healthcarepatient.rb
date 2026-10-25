@@ -17,12 +17,16 @@ module UnifiedRubySDK
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyHealthcarePatientAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
         # Date of birth (YYYY-MM-DD)
         field :birthdate, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('birthdate') } }
+        # Emergency contacts, guardians and other contact persons for the patient
+        field :contacts, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcarePatientContact)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contacts') } }
         # When the patient record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # When the patient died (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :deceased_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deceased_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # Email addresses of the patient
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
+        # Codings for the patient's ethnicity (e.g. CDC ethnicity codes)
+        field :ethnicities, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ethnicities') } }
         # Given name of the patient
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
         # Administrative gender of the patient
@@ -39,12 +43,16 @@ module UnifiedRubySDK
         field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
         # Family name of the patient
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
+        # Marital status of the patient
+        field :marital_status, Crystalline::Nilable.new(Models::Shared::MaritalStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('marital_status'), 'decoder': Utils.enum_from_string(Models::Shared::MaritalStatus, true) } }
         # Custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Full name of the patient
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The patient's primary care practitioners
         field :practitioner_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('practitioner_ids') } }
+        # Codings for the patient's race (e.g. CDC race codes)
+        field :races, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('races') } }
         # Raw data from integration
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Phone numbers of the patient
@@ -52,13 +60,15 @@ module UnifiedRubySDK
         # When the patient record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyHealthcarePatientAddress), birthdate: T.nilable(::String), created_at: T.nilable(::DateTime), deceased_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HealthcareEmail]), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::HealthcarePatientGender), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), is_active: T.nilable(T::Boolean), is_deceased: T.nilable(T::Boolean), language: T.nilable(::String), last_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::HealthcareTelephone]), updated_at: T.nilable(::DateTime)).void }
-        def initialize(address: nil, birthdate: nil, created_at: nil, deceased_at: nil, emails: nil, first_name: nil, gender: nil, id: nil, identifiers: nil, is_active: nil, is_deceased: nil, language: nil, last_name: nil, metadata: nil, name: nil, practitioner_ids: nil, raw: nil, telephones: nil, updated_at: nil)
+        sig { params(address: T.nilable(Models::Shared::PropertyHealthcarePatientAddress), birthdate: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::HealthcarePatientContact]), created_at: T.nilable(::DateTime), deceased_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HealthcareEmail]), ethnicities: T.nilable(T::Array[Models::Shared::HealthcareCode]), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::HealthcarePatientGender), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), is_active: T.nilable(T::Boolean), is_deceased: T.nilable(T::Boolean), language: T.nilable(::String), last_name: T.nilable(::String), marital_status: T.nilable(Models::Shared::MaritalStatus), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), races: T.nilable(T::Array[Models::Shared::HealthcareCode]), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::HealthcareTelephone]), updated_at: T.nilable(::DateTime)).void }
+        def initialize(address: nil, birthdate: nil, contacts: nil, created_at: nil, deceased_at: nil, emails: nil, ethnicities: nil, first_name: nil, gender: nil, id: nil, identifiers: nil, is_active: nil, is_deceased: nil, language: nil, last_name: nil, marital_status: nil, metadata: nil, name: nil, practitioner_ids: nil, races: nil, raw: nil, telephones: nil, updated_at: nil)
           @address = address
           @birthdate = birthdate
+          @contacts = contacts
           @created_at = created_at
           @deceased_at = deceased_at
           @emails = emails
+          @ethnicities = ethnicities
           @first_name = first_name
           @gender = gender
           @id = id
@@ -67,9 +77,11 @@ module UnifiedRubySDK
           @is_deceased = is_deceased
           @language = language
           @last_name = last_name
+          @marital_status = marital_status
           @metadata = metadata
           @name = name
           @practitioner_ids = practitioner_ids
+          @races = races
           @raw = raw
           @telephones = telephones
           @updated_at = updated_at
@@ -80,9 +92,11 @@ module UnifiedRubySDK
           return false unless other.is_a? self.class
           return false unless @address == other.address
           return false unless @birthdate == other.birthdate
+          return false unless @contacts == other.contacts
           return false unless @created_at == other.created_at
           return false unless @deceased_at == other.deceased_at
           return false unless @emails == other.emails
+          return false unless @ethnicities == other.ethnicities
           return false unless @first_name == other.first_name
           return false unless @gender == other.gender
           return false unless @id == other.id
@@ -91,9 +105,11 @@ module UnifiedRubySDK
           return false unless @is_deceased == other.is_deceased
           return false unless @language == other.language
           return false unless @last_name == other.last_name
+          return false unless @marital_status == other.marital_status
           return false unless @metadata == other.metadata
           return false unless @name == other.name
           return false unless @practitioner_ids == other.practitioner_ids
+          return false unless @races == other.races
           return false unless @raw == other.raw
           return false unless @telephones == other.telephones
           return false unless @updated_at == other.updated_at

@@ -28,6 +28,8 @@ module UnifiedRubySDK
           REASONS = new('reasons')
           CANCELLATION_REASON = new('cancellation_reason')
           NOTES = new('notes')
+          IS_VIRTUAL = new('is_virtual')
+          MEETING_URL = new('meeting_url')
           METADATA = new('metadata')
           RAW = new('raw')
         end

@@ -6,12 +6,15 @@
 ### Available Operations
 
 * [create_ats_document](#create_ats_document) - Create a document
+* [create_healthcare_document](#create_healthcare_document) - Create a document
 * [create_hris_document](#create_hris_document) - Create a document
 * [create_signing_document](#create_signing_document) - Create a document
 * [get_ats_document](#get_ats_document) - Retrieve a document
+* [get_healthcare_document](#get_healthcare_document) - Retrieve a document
 * [get_hris_document](#get_hris_document) - Retrieve a document
 * [get_signing_document](#get_signing_document) - Retrieve a document
 * [list_ats_documents](#list_ats_documents) - List all documents
+* [list_healthcare_documents](#list_healthcare_documents) - List all documents
 * [list_hris_documents](#list_hris_documents) - List all documents
 * [list_signing_documents](#list_signing_documents) - List all documents
 * [patch_ats_document](#patch_ats_document) - Update a document
@@ -45,10 +48,10 @@ res = s.document.create_ats_document(ats_document: Models::Shared::AtsDocument.n
   created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
   document_url: 'https://vengeful-lashes.biz',
   filename: 'lonzo_schowalter_resume.pdf',
-  id: '09153b84-443c-4283-a5e6-e3cd8b4daee1',
+  id: '2e52940c-8025-44e5-bc23-6d61f73f5635',
   metadata: [],
   type: Models::Shared::AtsDocumentType::COVER_LETTER,
-  updated_at: DateTime.iso8601('2022-12-07T23:15:19.641Z'),
+  updated_at: DateTime.iso8601('2022-12-08T04:58:21.451Z'),
 ), connection_id: '<id>')
 
 unless res.ats_document.nil?
@@ -69,6 +72,69 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateAtsDocumentResponse)](../../models/operations/createatsdocumentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_healthcare_document
+
+Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body; they are mapped to the provider's API. Returns the created HealthcareDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.document.create_healthcare_document(healthcare_document: Models::Shared::HealthcareDocument.new(
+  authored_at: DateTime.iso8601('2023-07-16T04:00:25.853Z'),
+  codes: [
+    Models::Shared::HealthcareCode.new(
+      code: '23671711',
+      display: 'History and physical',
+      system: 'http://loinc.org',
+    ),
+  ],
+  created_at: DateTime.iso8601('2023-07-16T04:00:25.853Z'),
+  document_url: 'https://overcooked-yogurt.org',
+  filename: 'ugh_after.elc',
+  id: '766a21a7-2722-465d-a3ae-acd6b4ce9075',
+  metadata: [],
+  mime_type: 'application/pdf',
+  name: 'History and physical',
+  status: Models::Shared::HealthcareDocumentStatus::SUPERSEDED,
+  type: Models::Shared::HealthcareDocumentType::CONSULTATION_NOTE,
+  updated_at: DateTime.iso8601('2024-12-28T12:54:59.596Z'),
+), connection_id: '<id>')
+
+unless res.healthcare_document.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `healthcare_document`                                                                                                                            | [Models::Shared::HealthcareDocument](../../models/shared/healthcaredocument.md)                                                                  | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHealthcareDocumentQueryParamFields](../../models/operations/createhealthcaredocumentqueryparamfields.md)>    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateHealthcareDocumentResponse)](../../models/operations/createhealthcaredocumentresponse.md)**
 
 ### Errors
 
@@ -97,10 +163,10 @@ res = s.document.create_hris_document(hris_document: Models::Shared::HrisDocumen
   created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
   document_url: 'https://sore-decision.biz/',
   filename: 'ridge_forager.xsl',
-  id: 'c3bd9212-518b-4e6d-870f-5b93b74f6c3a',
+  id: '34fb7a37-e7cb-4a94-8e04-913b4a2fb128',
   metadata: [],
   type: Models::Shared::HrisDocumentType::POLICY,
-  updated_at: DateTime.iso8601('2025-10-13T20:06:23.318Z'),
+  updated_at: DateTime.iso8601('2025-10-14T13:01:05.698Z'),
 ), connection_id: '<id>')
 
 unless res.hris_document.nil?
@@ -149,12 +215,12 @@ res = s.document.create_signing_document(signing_document: Models::Shared::Signi
   created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
   description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
   expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
-  id: 'b43b3a06-b6e2-4faa-b1ce-4d1e8669cebe',
+  id: '1beb0743-f602-4ef1-8f9c-9a9914dbfda1',
   metadata: [],
   name: 'Denesik Group NDA',
-  sent_at: DateTime.iso8601('2022-06-30T03:30:12.149Z'),
+  sent_at: DateTime.iso8601('2022-06-30T08:19:37.197Z'),
   status: Models::Shared::SigningDocumentStatus::DRAFT,
-  updated_at: DateTime.iso8601('2025-09-05T08:10:03.578Z'),
+  updated_at: DateTime.iso8601('2025-09-06T02:13:56.110Z'),
 ), connection_id: '<id>')
 
 unless res.signing_document.nil?
@@ -219,6 +285,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetAtsDocumentResponse)](../../models/operations/getatsdocumentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_healthcare_document
+
+Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHealthcareDocument" method="get" path="/healthcare/{connection_id}/document/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.document.get_healthcare_document(connection_id: '<id>', id: '<id>')
+
+unless res.healthcare_document.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Document                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHealthcareDocumentQueryParamFields](../../models/operations/gethealthcaredocumentqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHealthcareDocumentResponse)](../../models/operations/gethealthcaredocumentresponse.md)**
 
 ### Errors
 
@@ -359,6 +469,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_healthcare_documents
+
+Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHealthcareDocuments" method="get" path="/healthcare/{connection_id}/document" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHealthcareDocumentsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.document.list_healthcare_documents(request: req)
+
+unless res.healthcare_documents.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::ListHealthcareDocumentsRequest](../../models/operations/listhealthcaredocumentsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHealthcareDocumentsResponse)](../../models/operations/listhealthcaredocumentsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_hris_documents
 
 Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -471,10 +626,10 @@ req = Models::Operations::PatchAtsDocumentRequest.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'lonzo_schowalter_resume.pdf',
-    id: '8a4fe119-088f-4009-a658-679756eafb26',
+    id: '3194a787-1915-456c-a0b3-f86aee9720db',
     metadata: [],
     type: Models::Shared::AtsDocumentType::COVER_LETTER,
-    updated_at: DateTime.iso8601('2022-12-07T23:15:19.647Z'),
+    updated_at: DateTime.iso8601('2022-12-08T04:58:21.454Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -526,10 +681,10 @@ req = Models::Operations::PatchHrisDocumentRequest.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: '099bee0d-1e8f-4ac8-bfa8-35da03888a2e',
+    id: 'a465370e-7edd-495e-9456-f6e792fc0bba',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-13T20:06:23.329Z'),
+    updated_at: DateTime.iso8601('2025-10-14T13:01:05.710Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -581,12 +736,12 @@ req = Models::Operations::PatchSigningDocumentRequest.new(
     created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
     description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
     expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
-    id: '02310b61-61fc-46a7-b2cc-d9c2dc9afd30',
+    id: 'd3928ea8-690b-4557-9da4-09e7d71a8b1c',
     metadata: [],
     name: 'Denesik Group NDA',
-    sent_at: DateTime.iso8601('2022-06-30T03:30:12.155Z'),
+    sent_at: DateTime.iso8601('2022-06-30T08:19:37.200Z'),
     status: Models::Shared::SigningDocumentStatus::DRAFT,
-    updated_at: DateTime.iso8601('2025-09-05T08:10:03.599Z'),
+    updated_at: DateTime.iso8601('2025-09-06T02:13:56.123Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -764,10 +919,10 @@ req = Models::Operations::UpdateAtsDocumentRequest.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'lonzo_schowalter_resume.pdf',
-    id: '8a4fe119-088f-4009-a658-679756eafb26',
+    id: '3194a787-1915-456c-a0b3-f86aee9720db',
     metadata: [],
     type: Models::Shared::AtsDocumentType::COVER_LETTER,
-    updated_at: DateTime.iso8601('2022-12-07T23:15:19.647Z'),
+    updated_at: DateTime.iso8601('2022-12-08T04:58:21.454Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -819,10 +974,10 @@ req = Models::Operations::UpdateHrisDocumentRequest.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: '099bee0d-1e8f-4ac8-bfa8-35da03888a2e',
+    id: 'a465370e-7edd-495e-9456-f6e792fc0bba',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-13T20:06:23.329Z'),
+    updated_at: DateTime.iso8601('2025-10-14T13:01:05.710Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -874,12 +1029,12 @@ req = Models::Operations::UpdateSigningDocumentRequest.new(
     created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
     description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
     expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
-    id: '02310b61-61fc-46a7-b2cc-d9c2dc9afd30',
+    id: 'd3928ea8-690b-4557-9da4-09e7d71a8b1c',
     metadata: [],
     name: 'Denesik Group NDA',
-    sent_at: DateTime.iso8601('2022-06-30T03:30:12.155Z'),
+    sent_at: DateTime.iso8601('2022-06-30T08:19:37.200Z'),
     status: Models::Shared::SigningDocumentStatus::DRAFT,
-    updated_at: DateTime.iso8601('2025-09-05T08:10:03.599Z'),
+    updated_at: DateTime.iso8601('2025-09-06T02:13:56.123Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

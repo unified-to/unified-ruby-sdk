@@ -31,12 +31,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.domain.create_compute_domain(compute_domain: Models::Shared::ComputeDomain.new(
   created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-  id: 'e7fd17d3-af40-434e-baac-ade2dc2b99eb',
+  id: '9459be7c-309d-49eb-8845-d83ee83ba6a8',
   is_primary: false,
   metadata: [],
   name: 'mysterious-republican.usable-section.info',
   status: Models::Shared::ComputeDomainStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-11-05T08:44:23.866Z'),
+  updated_at: DateTime.iso8601('2023-11-05T21:44:55.436Z'),
 ), connection_id: '<id>')
 
 unless res.compute_domain.nil?
@@ -173,12 +173,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: '46cedb7f-1882-4391-9c52-034dba58d70d',
+    id: '6f7a8b15-5281-4292-9a92-490ded32ba8b',
     is_primary: false,
     metadata: [],
     name: 'mysterious-republican.usable-section.info',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-05T08:44:23.876Z'),
+    updated_at: DateTime.iso8601('2023-11-05T21:44:55.444Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -270,12 +270,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: '46cedb7f-1882-4391-9c52-034dba58d70d',
+    id: '6f7a8b15-5281-4292-9a92-490ded32ba8b',
     is_primary: false,
     metadata: [],
     name: 'mysterious-republican.usable-section.info',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-05T08:44:23.876Z'),
+    updated_at: DateTime.iso8601('2023-11-05T21:44:55.444Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

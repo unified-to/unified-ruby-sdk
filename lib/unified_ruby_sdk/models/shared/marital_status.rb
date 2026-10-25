@@ -8,13 +8,20 @@ module UnifiedRubySDK
   module Models
     module Shared
     
-
+      # MaritalStatus - Marital status of the patient
       class MaritalStatus < T::Enum
 
 
         enums do
           MARRIED = new('MARRIED')
           SINGLE = new('SINGLE')
+          DOMESTIC_PARTNER = new('DOMESTIC_PARTNER')
+          SEPARATED = new('SEPARATED')
+          DIVORCED = new('DIVORCED')
+          WIDOWED = new('WIDOWED')
+          ANNULLED = new('ANNULLED')
+          UNKNOWN = new('UNKNOWN')
+          OTHER = new('OTHER')
         end
       end
     end

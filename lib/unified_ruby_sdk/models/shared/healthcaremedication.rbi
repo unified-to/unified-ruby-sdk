@@ -16,6 +16,10 @@ class UnifiedRubySDK::Models::Shared::HealthcareMedication
   def created_at=(str_); end
   def dosage(); end
   def dosage=(str_); end
+  def dose_number(); end
+  def dose_number=(str_); end
+  def dose_unit(); end
+  def dose_unit=(str_); end
   def encounter_id(); end
   def encounter_id=(str_); end
   def end_at(); end
@@ -36,6 +40,8 @@ class UnifiedRubySDK::Models::Shared::HealthcareMedication
   def raw=(str_); end
   def refill_count(); end
   def refill_count=(str_); end
+  def route(); end
+  def route=(str_); end
   def start_at(); end
   def start_at=(str_); end
   def status(); end

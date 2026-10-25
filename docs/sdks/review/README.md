@@ -44,7 +44,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   content: 'Taedium thymum adipiscor amicitia cui.',
   created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
   helpful_votes: 66.0,
-  id: 'dcc5c3fa-bf69-4500-a587-a76932410f93',
+  id: 'c93b592f-edb2-4e80-81b4-380291f17e03',
   is_featured: false,
   is_public: true,
   is_verified: false,
@@ -52,10 +52,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Desipio carpo sol laudantium colo.',
       height: 749.0,
-      id: '99bda4de-9598-45bf-91a3-f59612674a0a',
+      id: '0423217e-812d-48be-84ff-13b295a9b3ab',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '0bae6a15-9986-41f7-b37a-3e8ddddb1533',
+          id: '5fd2c2db-c743-4641-be16-64a3768166f9',
           slug: 'textor',
           value: 'quos',
         ),
@@ -68,10 +68,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Adopto teneo numquam.',
       height: 957.0,
-      id: '35ee671c-8c89-45c9-a35a-8b3ce2e8f4b4',
+      id: '6964ea19-ca2a-4470-b818-04a19cb3b499',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'b77a17f5-18bf-441b-9859-8b4f69bc143e',
+          id: '98757efb-3cf3-4104-b093-68b06b1dbf41',
           slug: 'bos',
           value: 'casso',
         ),
@@ -87,7 +87,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   status: Models::Shared::CommerceReviewStatus::APPROVED,
   title: 'Coepi adamo amicitia auxilium toties.',
   unhelpful_votes: 88.0,
-  updated_at: DateTime.iso8601('2025-08-23T21:04:29.034Z'),
+  updated_at: DateTime.iso8601('2025-08-24T15:58:40.297Z'),
   url: 'https://diligent-bandwidth.biz',
   verified_purchase: true,
 ), connection_id: '<id>')
@@ -411,7 +411,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '55decac3-6017-4ea4-ae8d-bc206f03b6c6',
+    id: '43a09d85-7671-45b7-a802-0a6619d34015',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -419,10 +419,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '754ad034-c6a5-4ac9-92be-a376d4e3c86d',
+        id: '226f87e3-3f66-4fe1-9095-aac8572c996c',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '3b145627-c7b0-46cb-aca1-1fe06b8bfb43',
+            id: 'a1579f1e-6caf-4d2d-bff6-d908532309b4',
             slug: 'textor',
             value: 'quos',
           ),
@@ -435,10 +435,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: '7d8108cb-866b-475d-8480-a74888bc1a68',
+        id: '2f9ae6c2-f8a9-4ac9-a47d-5c16ea43f98b',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '9652a2cf-7767-4522-ba8c-90920304b308',
+            id: '47ba08fe-4e9e-48a6-8f1d-056898f4104e',
             slug: 'bos',
             value: 'casso',
           ),
@@ -454,7 +454,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-08-23T21:04:29.067Z'),
+    updated_at: DateTime.iso8601('2025-08-24T15:58:40.337Z'),
     url: 'https://diligent-bandwidth.biz',
     verified_purchase: true,
   ),
@@ -602,7 +602,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '55decac3-6017-4ea4-ae8d-bc206f03b6c6',
+    id: '43a09d85-7671-45b7-a802-0a6619d34015',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -610,10 +610,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '754ad034-c6a5-4ac9-92be-a376d4e3c86d',
+        id: '226f87e3-3f66-4fe1-9095-aac8572c996c',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '3b145627-c7b0-46cb-aca1-1fe06b8bfb43',
+            id: 'a1579f1e-6caf-4d2d-bff6-d908532309b4',
             slug: 'textor',
             value: 'quos',
           ),
@@ -626,10 +626,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: '7d8108cb-866b-475d-8480-a74888bc1a68',
+        id: '2f9ae6c2-f8a9-4ac9-a47d-5c16ea43f98b',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '9652a2cf-7767-4522-ba8c-90920304b308',
+            id: '47ba08fe-4e9e-48a6-8f1d-056898f4104e',
             slug: 'bos',
             value: 'casso',
           ),
@@ -645,7 +645,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-08-23T21:04:29.067Z'),
+    updated_at: DateTime.iso8601('2025-08-24T15:58:40.337Z'),
     url: 'https://diligent-bandwidth.biz',
     verified_purchase: true,
   ),

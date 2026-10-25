@@ -6,29 +6,42 @@
 ### Available Operations
 
 * [create_healthcare_appointment](#create_healthcare_appointment) - Create an appointment
+* [create_healthcare_document](#create_healthcare_document) - Create a document
 * [create_healthcare_observation](#create_healthcare_observation) - Create an observation
 * [create_healthcare_patient](#create_healthcare_patient) - Create a patient
 * [get_healthcare_allergy](#get_healthcare_allergy) - Retrieve an allergy
 * [get_healthcare_appointment](#get_healthcare_appointment) - Retrieve an appointment
+* [get_healthcare_careplan](#get_healthcare_careplan) - Retrieve a careplan
 * [get_healthcare_condition](#get_healthcare_condition) - Retrieve a condition
+* [get_healthcare_coverage](#get_healthcare_coverage) - Retrieve a coverage
+* [get_healthcare_document](#get_healthcare_document) - Retrieve a document
 * [get_healthcare_encounter](#get_healthcare_encounter) - Retrieve an encounter
+* [get_healthcare_goal](#get_healthcare_goal) - Retrieve a goal
 * [get_healthcare_immunization](#get_healthcare_immunization) - Retrieve an immunization
 * [get_healthcare_location](#get_healthcare_location) - Retrieve a location
 * [get_healthcare_medication](#get_healthcare_medication) - Retrieve a medication
 * [get_healthcare_observation](#get_healthcare_observation) - Retrieve an observation
 * [get_healthcare_patient](#get_healthcare_patient) - Retrieve a patient
 * [get_healthcare_practitioner](#get_healthcare_practitioner) - Retrieve a practitioner
+* [get_healthcare_procedure](#get_healthcare_procedure) - Retrieve a procedure
+* [get_healthcare_report](#get_healthcare_report) - Retrieve a report
 * [get_healthcare_slot](#get_healthcare_slot) - Retrieve a slot
 * [list_healthcare_allergies](#list_healthcare_allergies) - List all allergies
 * [list_healthcare_appointments](#list_healthcare_appointments) - List all appointments
+* [list_healthcare_careplans](#list_healthcare_careplans) - List all careplans
 * [list_healthcare_conditions](#list_healthcare_conditions) - List all conditions
+* [list_healthcare_coverages](#list_healthcare_coverages) - List all coverages
+* [list_healthcare_documents](#list_healthcare_documents) - List all documents
 * [list_healthcare_encounters](#list_healthcare_encounters) - List all encounters
+* [list_healthcare_goals](#list_healthcare_goals) - List all goals
 * [list_healthcare_immunizations](#list_healthcare_immunizations) - List all immunizations
 * [list_healthcare_locations](#list_healthcare_locations) - List all locations
 * [list_healthcare_medications](#list_healthcare_medications) - List all medications
 * [list_healthcare_observations](#list_healthcare_observations) - List all observations
 * [list_healthcare_patients](#list_healthcare_patients) - List all patients
 * [list_healthcare_practitioners](#list_healthcare_practitioners) - List all practitioners
+* [list_healthcare_procedures](#list_healthcare_procedures) - List all procedures
+* [list_healthcare_reports](#list_healthcare_reports) - List all reports
 * [list_healthcare_slots](#list_healthcare_slots) - List all slots
 * [patch_healthcare_appointment](#patch_healthcare_appointment) - Update an appointment
 * [patch_healthcare_patient](#patch_healthcare_patient) - Update a patient
@@ -57,27 +70,23 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'clarus aptus cetera',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: '73c81f1d-0ec5-4313-826f-8a73f4807e3e',
+  id: '11f4b1c8-4bc8-4743-b73f-5a4f7cfd1343',
+  is_virtual: true,
+  meeting_url: 'https://expensive-slipper.name/',
   metadata: [],
+  notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
   practitioner_ids: [],
-  reasons: [
-    Models::Shared::HealthcareCode.new(
-      code: '12762740',
-      display: 'cubicularis caput',
-      system: 'http://snomed.info/sct',
-    ),
-  ],
   service_types: [
     Models::Shared::HealthcareCode.new(
-      code: '61128108',
-      display: 'Annual physical',
+      code: '12762740',
+      display: 'New patient visit',
       system: 'http://snomed.info/sct',
     ),
   ],
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2025-11-21T16:28:40.063Z'),
+  updated_at: DateTime.iso8601('2026-09-26T02:53:33.933Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -98,6 +107,69 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateHealthcareAppointmentResponse)](../../models/operations/createhealthcareappointmentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_healthcare_document
+
+Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body; they are mapped to the provider's API. Returns the created HealthcareDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.healthcare.create_healthcare_document(healthcare_document: Models::Shared::HealthcareDocument.new(
+  authored_at: DateTime.iso8601('2023-07-16T04:00:25.853Z'),
+  codes: [
+    Models::Shared::HealthcareCode.new(
+      code: '23671711',
+      display: 'History and physical',
+      system: 'http://loinc.org',
+    ),
+  ],
+  created_at: DateTime.iso8601('2023-07-16T04:00:25.853Z'),
+  document_url: 'https://overcooked-yogurt.org',
+  filename: 'ugh_after.elc',
+  id: '766a21a7-2722-465d-a3ae-acd6b4ce9075',
+  metadata: [],
+  mime_type: 'application/pdf',
+  name: 'History and physical',
+  status: Models::Shared::HealthcareDocumentStatus::SUPERSEDED,
+  type: Models::Shared::HealthcareDocumentType::CONSULTATION_NOTE,
+  updated_at: DateTime.iso8601('2024-12-28T12:54:59.596Z'),
+), connection_id: '<id>')
+
+unless res.healthcare_document.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `healthcare_document`                                                                                                                            | [Models::Shared::HealthcareDocument](../../models/shared/healthcaredocument.md)                                                                  | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateHealthcareDocumentQueryParamFields](../../models/operations/createhealthcaredocumentqueryparamfields.md)>    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateHealthcareDocumentResponse)](../../models/operations/createhealthcaredocumentresponse.md)**
 
 ### Errors
 
@@ -155,15 +227,15 @@ res = s.healthcare.create_healthcare_observation(healthcare_observation: Models:
     ),
   ],
   created_at: DateTime.iso8601('2022-12-06T21:34:04.293Z'),
-  id: '5b30bb2f-8773-4427-a48c-7e1e45fb8e7b',
+  id: 'a9ce0018-0aa9-4ae6-a250-cfdc79f12b20',
   interpretation: Models::Shared::Interpretation::CRITICAL_HIGH,
-  issued_at: DateTime.iso8601('2025-05-13T08:05:10.562Z'),
+  issued_at: DateTime.iso8601('2025-05-13T22:21:49.334Z'),
   metadata: [],
   name: 'Blood pressure panel',
-  observed_at: DateTime.iso8601('2025-01-21T19:52:37.069Z'),
+  observed_at: DateTime.iso8601('2025-01-22T08:21:44.733Z'),
   status: Models::Shared::HealthcareObservationStatus::CORRECTED,
   type: Models::Shared::HealthcareObservationType::VITAL_SIGNS,
-  updated_at: DateTime.iso8601('2026-03-26T20:18:00.885Z'),
+  updated_at: DateTime.iso8601('2026-03-27T15:40:48.483Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -216,7 +288,20 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
     postal_code: '54031',
     region: 'Nebraska',
   ),
-  birthdate: '2025-02-15',
+  birthdate: '2025-02-16',
+  contacts: [
+    Models::Shared::HealthcarePatientContact.new(
+      emails: [],
+      name: 'Antonia Lebsack',
+      relationship: 'Spouse',
+      telephones: [
+        Models::Shared::HealthcareTelephone.new(
+          telephone: '(695) 328-7029 x4412',
+          type: Models::Shared::HealthcareTelephoneType::MOBILE,
+        ),
+      ],
+    ),
+  ],
   created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
   emails: [
     Models::Shared::HealthcareEmail.new(
@@ -226,7 +311,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: 'b16287a9-c5da-469b-9860-afd2421c2737',
+  id: '0739ee16-d4bd-4980-97db-1575cfaace48',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -246,7 +331,7 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
       type: Models::Shared::HealthcareTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-25T16:35:02.724Z'),
+  updated_at: DateTime.iso8601('2026-06-26T13:57:49.769Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -362,6 +447,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_healthcare_careplan
+
+Retrieves a single HealthcareCareplan by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHealthcareCareplan" method="get" path="/healthcare/{connection_id}/careplan/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.healthcare.get_healthcare_careplan(connection_id: '<id>', id: '<id>')
+
+unless res.healthcare_careplan.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Careplan                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHealthcareCareplanQueryParamFields](../../models/operations/gethealthcarecareplanqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHealthcareCareplanResponse)](../../models/operations/gethealthcarecareplanresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_healthcare_condition
 
 Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -406,6 +535,94 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_healthcare_coverage
+
+Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHealthcareCoverage" method="get" path="/healthcare/{connection_id}/coverage/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.healthcare.get_healthcare_coverage(connection_id: '<id>', id: '<id>')
+
+unless res.healthcare_coverage.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Coverage                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHealthcareCoverageQueryParamFields](../../models/operations/gethealthcarecoveragequeryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHealthcareCoverageResponse)](../../models/operations/gethealthcarecoverageresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_healthcare_document
+
+Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHealthcareDocument" method="get" path="/healthcare/{connection_id}/document/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.healthcare.get_healthcare_document(connection_id: '<id>', id: '<id>')
+
+unless res.healthcare_document.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Document                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHealthcareDocumentQueryParamFields](../../models/operations/gethealthcaredocumentqueryparamfields.md)>          | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHealthcareDocumentResponse)](../../models/operations/gethealthcaredocumentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_healthcare_encounter
 
 Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -443,6 +660,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHealthcareEncounterResponse)](../../models/operations/gethealthcareencounterresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_healthcare_goal
+
+Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHealthcareGoal" method="get" path="/healthcare/{connection_id}/goal/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.healthcare.get_healthcare_goal(connection_id: '<id>', id: '<id>')
+
+unless res.healthcare_goal.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Goal                                                                                                                                   |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHealthcareGoalQueryParamFields](../../models/operations/gethealthcaregoalqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHealthcareGoalResponse)](../../models/operations/gethealthcaregoalresponse.md)**
 
 ### Errors
 
@@ -714,6 +975,94 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_healthcare_procedure
+
+Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHealthcareProcedure" method="get" path="/healthcare/{connection_id}/procedure/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.healthcare.get_healthcare_procedure(connection_id: '<id>', id: '<id>')
+
+unless res.healthcare_procedure.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Procedure                                                                                                                              |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHealthcareProcedureQueryParamFields](../../models/operations/gethealthcareprocedurequeryparamfields.md)>        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHealthcareProcedureResponse)](../../models/operations/gethealthcareprocedureresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_healthcare_report
+
+Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getHealthcareReport" method="get" path="/healthcare/{connection_id}/report/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.healthcare.get_healthcare_report(connection_id: '<id>', id: '<id>')
+
+unless res.healthcare_report.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Report                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetHealthcareReportQueryParamFields](../../models/operations/gethealthcarereportqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetHealthcareReportResponse)](../../models/operations/gethealthcarereportresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_healthcare_slot
 
 Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -848,6 +1197,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_healthcare_careplans
+
+Returns a list of HealthcareCareplans. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHealthcareCareplans" method="get" path="/healthcare/{connection_id}/careplan" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHealthcareCareplansRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.healthcare.list_healthcare_careplans(request: req)
+
+unless res.healthcare_careplans.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::ListHealthcareCareplansRequest](../../models/operations/listhealthcarecareplansrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHealthcareCareplansResponse)](../../models/operations/listhealthcarecareplansresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_healthcare_conditions
 
 Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -893,6 +1287,96 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_healthcare_coverages
+
+Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHealthcareCoverages" method="get" path="/healthcare/{connection_id}/coverage" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHealthcareCoveragesRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.healthcare.list_healthcare_coverages(request: req)
+
+unless res.healthcare_coverages.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::ListHealthcareCoveragesRequest](../../models/operations/listhealthcarecoveragesrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHealthcareCoveragesResponse)](../../models/operations/listhealthcarecoveragesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_healthcare_documents
+
+Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHealthcareDocuments" method="get" path="/healthcare/{connection_id}/document" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHealthcareDocumentsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.healthcare.list_healthcare_documents(request: req)
+
+unless res.healthcare_documents.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                       | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                       | [Models::Operations::ListHealthcareDocumentsRequest](../../models/operations/listhealthcaredocumentsrequest.md) | :heavy_check_mark:                                                                                              | The request object to use for the request.                                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHealthcareDocumentsResponse)](../../models/operations/listhealthcaredocumentsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_healthcare_encounters
 
 Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -931,6 +1415,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListHealthcareEncountersResponse)](../../models/operations/listhealthcareencountersresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_healthcare_goals
+
+Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHealthcareGoals" method="get" path="/healthcare/{connection_id}/goal" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHealthcareGoalsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.healthcare.list_healthcare_goals(request: req)
+
+unless res.healthcare_goals.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::ListHealthcareGoalsRequest](../../models/operations/listhealthcaregoalsrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHealthcareGoalsResponse)](../../models/operations/listhealthcaregoalsresponse.md)**
 
 ### Errors
 
@@ -1208,6 +1737,96 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_healthcare_procedures
+
+Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHealthcareProcedures" method="get" path="/healthcare/{connection_id}/procedure" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHealthcareProceduresRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.healthcare.list_healthcare_procedures(request: req)
+
+unless res.healthcare_procedures.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                         | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                         | [Models::Operations::ListHealthcareProceduresRequest](../../models/operations/listhealthcareproceduresrequest.md) | :heavy_check_mark:                                                                                                | The request object to use for the request.                                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHealthcareProceduresResponse)](../../models/operations/listhealthcareproceduresresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_healthcare_reports
+
+Returns a list of HealthcareReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listHealthcareReports" method="get" path="/healthcare/{connection_id}/report" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListHealthcareReportsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.healthcare.list_healthcare_reports(request: req)
+
+unless res.healthcare_reports.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::ListHealthcareReportsRequest](../../models/operations/listhealthcarereportsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::ListHealthcareReportsResponse)](../../models/operations/listhealthcarereportsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_healthcare_slots
 
 Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1275,27 +1894,23 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '440c1720-972c-4b35-b659-b1c9fc8ff2a1',
+    id: 'ea189e41-8345-498f-abc1-d92dbfddc86d',
+    is_virtual: true,
+    meeting_url: 'https://expensive-slipper.name/',
     metadata: [],
+    notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
     practitioner_ids: [],
-    reasons: [
-      Models::Shared::HealthcareCode.new(
-        code: '12762740',
-        display: 'cubicularis caput',
-        system: 'http://snomed.info/sct',
-      ),
-    ],
     service_types: [
       Models::Shared::HealthcareCode.new(
-        code: '61128108',
-        display: 'Annual physical',
+        code: '12762740',
+        display: 'New patient visit',
         system: 'http://snomed.info/sct',
       ),
     ],
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-21T16:28:40.080Z'),
+    updated_at: DateTime.iso8601('2026-09-26T02:53:33.961Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1351,7 +1966,20 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska',
     ),
-    birthdate: '2025-02-15',
+    birthdate: '2025-02-16',
+    contacts: [
+      Models::Shared::HealthcarePatientContact.new(
+        emails: [],
+        name: 'Antonia Lebsack',
+        relationship: 'Spouse',
+        telephones: [
+          Models::Shared::HealthcareTelephone.new(
+            telephone: '(695) 328-7029 x4412',
+            type: Models::Shared::HealthcareTelephoneType::MOBILE,
+          ),
+        ],
+      ),
+    ],
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
@@ -1361,7 +1989,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'a14f7140-fb14-4832-b536-0696887b6da0',
+    id: '84c9cfec-09ef-4a67-9c06-1976392f89df',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -1381,7 +2009,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-25T16:35:02.752Z'),
+    updated_at: DateTime.iso8601('2026-06-26T13:57:49.816Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1475,27 +2103,23 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: '440c1720-972c-4b35-b659-b1c9fc8ff2a1',
+    id: 'ea189e41-8345-498f-abc1-d92dbfddc86d',
+    is_virtual: true,
+    meeting_url: 'https://expensive-slipper.name/',
     metadata: [],
+    notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
     practitioner_ids: [],
-    reasons: [
-      Models::Shared::HealthcareCode.new(
-        code: '12762740',
-        display: 'cubicularis caput',
-        system: 'http://snomed.info/sct',
-      ),
-    ],
     service_types: [
       Models::Shared::HealthcareCode.new(
-        code: '61128108',
-        display: 'Annual physical',
+        code: '12762740',
+        display: 'New patient visit',
         system: 'http://snomed.info/sct',
       ),
     ],
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2025-11-21T16:28:40.080Z'),
+    updated_at: DateTime.iso8601('2026-09-26T02:53:33.961Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1551,7 +2175,20 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska',
     ),
-    birthdate: '2025-02-15',
+    birthdate: '2025-02-16',
+    contacts: [
+      Models::Shared::HealthcarePatientContact.new(
+        emails: [],
+        name: 'Antonia Lebsack',
+        relationship: 'Spouse',
+        telephones: [
+          Models::Shared::HealthcareTelephone.new(
+            telephone: '(695) 328-7029 x4412',
+            type: Models::Shared::HealthcareTelephoneType::MOBILE,
+          ),
+        ],
+      ),
+    ],
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
@@ -1561,7 +2198,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'a14f7140-fb14-4832-b536-0696887b6da0',
+    id: '84c9cfec-09ef-4a67-9c06-1976392f89df',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -1581,7 +2218,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-25T16:35:02.752Z'),
+    updated_at: DateTime.iso8601('2026-06-26T13:57:49.816Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
