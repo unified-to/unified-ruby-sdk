@@ -7,10 +7,12 @@
 
 * [create_commerce_location](#create_commerce_location) - Create a location
 * [create_hris_location](#create_hris_location) - Create a location
+* [get_calendar_location](#get_calendar_location) - Retrieve a location
 * [get_clubs_location](#get_clubs_location) - Retrieve a location
 * [get_commerce_location](#get_commerce_location) - Retrieve a location
 * [get_healthcare_location](#get_healthcare_location) - Retrieve a location
 * [get_hris_location](#get_hris_location) - Retrieve a location
+* [list_calendar_locations](#list_calendar_locations) - List all locations
 * [list_clubs_locations](#list_clubs_locations) - List all locations
 * [list_commerce_locations](#list_commerce_locations) - List all locations
 * [list_healthcare_locations](#list_healthcare_locations) - List all locations
@@ -52,7 +54,7 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
   created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
   currency: 'XCD',
   description: 'Adsidue audentia.',
-  id: '5dcaf10c-751b-4d37-b509-d7f11a7a3121',
+  id: 'b789cdaa-fc99-4912-8cd6-48dda7445490',
   image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
   is_active: false,
   language_locale: 'vulgaris',
@@ -63,10 +65,10 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
     Models::Shared::CommerceItemMedia.new(
       alt: 'Addo.',
       height: 283.0,
-      id: '70c9d10c-6887-4a1f-b95c-29c4fc0e667d',
+      id: '1ab7ad3e-9c8f-4cd1-9567-e6e271a5ca68',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '5f826428-eab9-4d17-9ded-560a757ae72e',
+          id: '962d501f-a16d-4186-83f0-034a64af76fc',
           slug: 'abutor',
           value: 'damno',
         ),
@@ -92,7 +94,7 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
       type: Models::Shared::CommerceTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2024-04-22T02:47:04.115Z'),
+  updated_at: DateTime.iso8601('2024-04-22T09:44:28.532Z'),
   web_url: 'https://chilly-edge.info',
 ), connection_id: '<id>')
 
@@ -151,7 +153,7 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
   created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
   currency: 'MNT',
   description: 'Commemoro acervus.',
-  id: '9c97d943-e597-4f52-bfe4-27f8559f4a3a',
+  id: '8d94339c-463d-4fc8-850d-bfa2657e280b',
   is_active: false,
   is_hq: true,
   language_locale: 'it',
@@ -172,7 +174,7 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
     ),
   ],
   timezone: 'Asia/Jerusalem',
-  updated_at: DateTime.iso8601('2023-06-22T13:23:58.443Z'),
+  updated_at: DateTime.iso8601('2023-06-22T20:48:06.464Z'),
 ), connection_id: '<id>')
 
 unless res.hris_location.nil?
@@ -193,6 +195,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateHrisLocationResponse)](../../models/operations/createhrislocationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_calendar_location
+
+Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getCalendarLocation" method="get" path="/calendar/{connection_id}/location/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.location.get_calendar_location(connection_id: '<id>', id: '<id>')
+
+unless res.calendar_location.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Location                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCalendarLocationQueryParamFields](../../models/operations/getcalendarlocationqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetCalendarLocationResponse)](../../models/operations/getcalendarlocationresponse.md)**
 
 ### Errors
 
@@ -369,6 +415,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetHrisLocationResponse)](../../models/operations/gethrislocationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_calendar_locations
+
+Returns a list of CalendarLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listCalendarLocations" method="get" path="/calendar/{connection_id}/location" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListCalendarLocationsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.location.list_calendar_locations(request: req)
+
+unless res.calendar_locations.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::ListCalendarLocationsRequest](../../models/operations/listcalendarlocationsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::ListCalendarLocationsResponse)](../../models/operations/listcalendarlocationsresponse.md)**
 
 ### Errors
 
@@ -587,7 +678,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: 'ab256dee-9b58-440f-ab9c-50ab0866015c',
+    id: '3aa6ff45-6917-4a29-85c1-cf7aebbb84af',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -598,10 +689,10 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '6c40e3bf-fa2d-4c6b-9911-a76c325c6531',
+        id: 'ad93b150-9898-449c-a19a-34d8761580be',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '278b7d69-abcb-451a-b3a0-e3b835bf486a',
+            id: 'a00dbbf0-0c2e-41c7-9e80-f59496f772d0',
             slug: 'abutor',
             value: 'damno',
           ),
@@ -627,7 +718,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-22T02:47:04.129Z'),
+    updated_at: DateTime.iso8601('2024-04-22T09:44:28.548Z'),
     web_url: 'https://chilly-edge.info',
   ),
   connection_id: '<id>',
@@ -689,7 +780,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'c4df9945-b9d5-4e9d-8753-fa7c43a17d98',
+    id: '475ad660-47f3-4ae1-8c5f-e231749ff9d6',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -710,7 +801,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-22T13:23:58.450Z'),
+    updated_at: DateTime.iso8601('2023-06-22T20:48:06.472Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -855,7 +946,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: 'ab256dee-9b58-440f-ab9c-50ab0866015c',
+    id: '3aa6ff45-6917-4a29-85c1-cf7aebbb84af',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -866,10 +957,10 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '6c40e3bf-fa2d-4c6b-9911-a76c325c6531',
+        id: 'ad93b150-9898-449c-a19a-34d8761580be',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '278b7d69-abcb-451a-b3a0-e3b835bf486a',
+            id: 'a00dbbf0-0c2e-41c7-9e80-f59496f772d0',
             slug: 'abutor',
             value: 'damno',
           ),
@@ -895,7 +986,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-22T02:47:04.129Z'),
+    updated_at: DateTime.iso8601('2024-04-22T09:44:28.548Z'),
     web_url: 'https://chilly-edge.info',
   ),
   connection_id: '<id>',
@@ -957,7 +1048,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'c4df9945-b9d5-4e9d-8753-fa7c43a17d98',
+    id: '475ad660-47f3-4ae1-8c5f-e231749ff9d6',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -978,7 +1069,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-22T13:23:58.450Z'),
+    updated_at: DateTime.iso8601('2023-06-22T20:48:06.472Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

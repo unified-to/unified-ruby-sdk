@@ -39,6 +39,7 @@ module UnifiedRubySDK
           MATTER_ID = new('matter_id')
           METADATA = new('metadata')
           RAW = new('raw')
+          ROOM_IDS = new('room_ids')
         end
       end
     end

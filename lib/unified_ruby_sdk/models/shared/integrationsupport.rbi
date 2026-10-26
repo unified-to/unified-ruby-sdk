@@ -172,6 +172,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_repo_id=(str_); end
   def list_role_id(); end
   def list_role_id=(str_); end
+  def list_room_id(); end
+  def list_room_id=(str_); end
   def list_root_id(); end
   def list_root_id=(str_); end
   def list_saleschannel_id(); end

@@ -26,7 +26,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.rate.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.new(
   currency: 'USD',
-  id: 'e72bf5ee-e51e-4010-a13d-8d2015e04f0e',
+  id: 'ac9919ce-2689-4226-9b31-8e8e744fb0d4',
   metadata: [],
   rates: [
     Models::Shared::ShippingRateRate.new(

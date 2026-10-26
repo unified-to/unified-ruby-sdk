@@ -269,6 +269,8 @@ module UnifiedRubySDK
           CALENDAR_RECORDING_WRITE = new('calendar_recording_write')
           CALENDAR_WEBINAR_READ = new('calendar_webinar_read')
           CALENDAR_WEBINAR_WRITE = new('calendar_webinar_write')
+          CALENDAR_ROOM_READ = new('calendar_room_read')
+          CALENDAR_LOCATION_READ = new('calendar_location_read')
           ENRICH_PERSON_READ = new('enrich_person_read')
           ENRICH_COMPANY_READ = new('enrich_company_read')
           ADS_AD_READ = new('ads_ad_read')

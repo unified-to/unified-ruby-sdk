@@ -31,11 +31,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.key.create_compute_key(compute_key: Models::Shared::ComputeKey.new(
   created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-  id: '4d9cdf33-22ad-4b63-a97f-9bfe83b1b206',
+  id: 'b805e2ac-ee53-46dc-a5c6-0090c1b9fe29',
   metadata: [],
   name: 'nienow-secret',
   type: Models::Shared::ComputeKeyType::SECRET,
-  updated_at: DateTime.iso8601('2024-10-08T09:30:24.314Z'),
+  updated_at: DateTime.iso8601('2024-10-08T16:44:38.632Z'),
 ), connection_id: '<id>')
 
 unless res.compute_key.nil?
@@ -172,11 +172,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '382de9f7-ac54-4ef0-b0e5-139135d76997',
+    id: 'b80e2e00-6985-4cff-905c-fef5ce541002',
     metadata: [],
     name: 'nienow-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-08T09:30:24.319Z'),
+    updated_at: DateTime.iso8601('2024-10-08T16:44:38.638Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -268,11 +268,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '382de9f7-ac54-4ef0-b0e5-139135d76997',
+    id: 'b80e2e00-6985-4cff-905c-fef5ce541002',
     metadata: [],
     name: 'nienow-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-08T09:30:24.319Z'),
+    updated_at: DateTime.iso8601('2024-10-08T16:44:38.638Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

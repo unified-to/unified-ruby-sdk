@@ -12,13 +12,17 @@
 * [get_calendar_calendar](#get_calendar_calendar) - Retrieve a calendar
 * [get_calendar_event](#get_calendar_event) - Retrieve an event
 * [get_calendar_link](#get_calendar_link) - Retrieve a link
+* [get_calendar_location](#get_calendar_location) - Retrieve a location
 * [get_calendar_recording](#get_calendar_recording) - Retrieve a recording
+* [get_calendar_room](#get_calendar_room) - Retrieve a room
 * [get_calendar_webinar](#get_calendar_webinar) - Retrieve a webinar
 * [list_calendar_busies](#list_calendar_busies) - List all busies
 * [list_calendar_calendars](#list_calendar_calendars) - List all calendars
 * [list_calendar_events](#list_calendar_events) - List all events
 * [list_calendar_links](#list_calendar_links) - List all links
+* [list_calendar_locations](#list_calendar_locations) - List all locations
 * [list_calendar_recordings](#list_calendar_recordings) - List all recordings
+* [list_calendar_rooms](#list_calendar_rooms) - List all rooms
 * [list_calendar_webinars](#list_calendar_webinars) - List all webinars
 * [patch_calendar_calendar](#patch_calendar_calendar) - Update a calendar
 * [patch_calendar_event](#patch_calendar_event) - Update an event
@@ -53,12 +57,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.calendar.create_calendar_calendar(calendar_calendar: Models::Shared::CalendarCalendar.new(
   created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
   description: 'Acer supra vallum suasoria thesaurus.',
-  id: '7f835537-b6e0-4fb2-add1-f6e9e7eebf87',
+  id: '47beef92-da2a-4e49-9996-44b6cff88175',
   is_primary: false,
   metadata: [],
   name: 'Interviews',
   timezone: 'Asia/Kolkata',
-  updated_at: DateTime.iso8601('2023-03-30T00:41:42.801Z'),
+  updated_at: DateTime.iso8601('2023-03-30T10:16:53.567Z'),
 ), connection_id: '<id>')
 
 unless res.calendar_calendar.nil?
@@ -107,9 +111,9 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
   attachments: [],
   conference: [],
   created_at: '2019-08-04T14:33:51.814Z',
-  end_at: '2020-05-24T17:39:56.266Z',
+  end_at: '2020-05-24T19:55:16.142Z',
   has_conference: false,
-  id: '9e0c336f-7e80-4363-b27e-70f5262b8453',
+  id: '0bea7cfb-428a-430f-af61-6fef6c14357c',
   is_all_day: false,
   is_free: false,
   is_private: false,
@@ -119,15 +123,15 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 4.0,
-      end_at: DateTime.iso8601('2025-03-27T18:19:38.080Z'),
+      end_at: DateTime.iso8601('2025-03-28T10:08:27.006Z'),
       excluded_dates: [
-        '2024-02-05T06:19:37.477Z',
+        '2024-02-05T18:56:48.296Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
       included_dates: [
-        '2023-07-09T05:23:50.357Z',
-        '2025-01-26T22:09:01.164Z',
-        '2024-04-04T13:23:59.781Z',
+        '2023-07-09T16:23:55.135Z',
+        '2025-01-27T13:30:18.097Z',
+        '2024-04-05T02:28:27.519Z',
       ],
       interval: 7.0,
       on_days: [
@@ -464,11 +468,11 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
       week_start: Models::Shared::WeekStart::TU,
     ),
   ],
-  start_at: '2020-05-24T08:25:28.865Z',
+  start_at: '2020-05-24T10:40:38.112Z',
   status: Models::Shared::CalendarEventStatus::CONFIRMED,
   subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
   timezone: 'Asia/Bangkok',
-  updated_at: '2020-06-30T17:22:52.576Z',
+  updated_at: '2020-06-30T19:55:13.567Z',
   web_url: 'https://another-pinstripe.com',
 ), connection_id: '<id>')
 
@@ -518,13 +522,13 @@ res = s.calendar.create_calendar_link(calendar_link: Models::Shared::CalendarLin
   created_at: '2023-03-07T13:34:11.959Z',
   description: 'Vitium clibanus laboriosam uxor denuncio.',
   duration: 74.0,
-  id: 'a175291b-7368-41af-a62c-63223f1ae3f0',
+  id: '6a3f54f0-a379-437a-8d84-993d423a37cc',
   is_active: true,
   metadata: [],
   name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
   price_amount: 44.0,
   price_currency: 'USD',
-  updated_at: '2024-03-16T16:01:08.941Z',
+  updated_at: '2024-03-16T21:44:11.185Z',
   url: 'https://annual-apricot.info/',
 ), connection_id: '<id>')
 
@@ -573,10 +577,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::CalendarWebinar.new(
   conference: [],
   created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-  end_at: DateTime.iso8601('2025-10-31T19:05:44.251Z'),
+  end_at: DateTime.iso8601('2025-11-01T10:42:59.381Z'),
   has_polls: false,
   has_recording: false,
-  id: 'ab6f418c-fe7c-4769-b5ba-1edae5e8d0d7',
+  id: '93d71dca-51a9-4eb0-bbc4-6eb43c7c985b',
   is_auto_approve: false,
   is_enabled: true,
   is_webcast: false,
@@ -586,13 +590,13 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 10.0,
-      end_at: DateTime.iso8601('2023-09-01T16:27:53.922Z'),
+      end_at: DateTime.iso8601('2023-09-01T21:54:02.164Z'),
       excluded_dates: [
-        '2025-02-15T10:37:59.854Z',
+        '2025-02-15T22:55:40.683Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
       included_dates: [
-        '2024-04-29T23:06:33.784Z',
+        '2024-04-30T07:39:04.891Z',
       ],
       interval: 8.0,
       on_days: [
@@ -983,16 +987,16 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 3.0,
-      end_at: DateTime.iso8601('2022-09-30T21:28:42.684Z'),
+      end_at: DateTime.iso8601('2022-09-30T22:35:27.450Z'),
       excluded_dates: [
-        '2024-09-03T18:07:49.227Z',
-        '2024-08-19T04:12:58.546Z',
+        '2024-09-04T04:18:17.001Z',
+        '2024-08-19T14:11:24.219Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
       included_dates: [
-        '2024-03-26T18:26:46.493Z',
-        '2026-01-16T16:05:16.436Z',
-        '2023-08-15T06:58:19.650Z',
+        '2024-03-27T02:32:52.738Z',
+        '2026-01-17T08:41:54.608Z',
+        '2023-08-15T12:11:01.632Z',
       ],
       interval: 1.0,
       on_days: [
@@ -1136,16 +1140,16 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 8.0,
-      end_at: DateTime.iso8601('2026-07-30T07:03:21.868Z'),
+      end_at: DateTime.iso8601('2026-07-31T02:10:20.590Z'),
       excluded_dates: [
-        '2023-06-19T11:38:22.101Z',
-        '2023-06-08T11:48:46.174Z',
+        '2023-06-19T16:07:11.221Z',
+        '2023-06-08T16:09:05.793Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
       included_dates: [
-        '2024-04-03T19:48:27.999Z',
-        '2023-08-21T02:45:11.528Z',
-        '2024-09-29T00:26:52.212Z',
+        '2024-04-04T04:00:47.663Z',
+        '2023-08-21T08:02:23.455Z',
+        '2024-09-29T10:56:50.904Z',
       ],
       interval: 8.0,
       on_days: [
@@ -1298,11 +1302,11 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
   registrant_password: 'W7J6DhkM',
   require_address: false,
   require_job_title: false,
-  start_at: DateTime.iso8601('2025-05-03T04:30:40.955Z'),
+  start_at: DateTime.iso8601('2025-05-03T17:47:38.809Z'),
   status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
   subject: 'Harum culpa decipio ex cubo ancilla cresco.',
   timezone: 'Europe/Kaliningrad',
-  updated_at: DateTime.iso8601('2026-10-04T10:20:41.761Z'),
+  updated_at: DateTime.iso8601('2026-10-05T06:18:45.848Z'),
   web_url: 'https://quiet-permafrost.name',
 ), connection_id: '<id>')
 
@@ -1463,6 +1467,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_calendar_location
+
+Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getCalendarLocation" method="get" path="/calendar/{connection_id}/location/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.calendar.get_calendar_location(connection_id: '<id>', id: '<id>')
+
+unless res.calendar_location.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Location                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCalendarLocationQueryParamFields](../../models/operations/getcalendarlocationqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetCalendarLocationResponse)](../../models/operations/getcalendarlocationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_calendar_recording
 
 Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -1500,6 +1548,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetCalendarRecordingResponse)](../../models/operations/getcalendarrecordingresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_calendar_room
+
+Retrieves a single CalendarRoom by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getCalendarRoom" method="get" path="/calendar/{connection_id}/room/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.calendar.get_calendar_room(connection_id: '<id>', id: '<id>')
+
+unless res.calendar_room.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Room                                                                                                                                   |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCalendarRoomQueryParamFields](../../models/operations/getcalendarroomqueryparamfields.md)>                      | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetCalendarRoomResponse)](../../models/operations/getcalendarroomresponse.md)**
 
 ### Errors
 
@@ -1731,6 +1823,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_calendar_locations
+
+Returns a list of CalendarLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listCalendarLocations" method="get" path="/calendar/{connection_id}/location" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListCalendarLocationsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.calendar.list_calendar_locations(request: req)
+
+unless res.calendar_locations.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                   | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                   | [Models::Operations::ListCalendarLocationsRequest](../../models/operations/listcalendarlocationsrequest.md) | :heavy_check_mark:                                                                                          | The request object to use for the request.                                                                  |
+
+### Response
+
+**[T.nilable(Models::Operations::ListCalendarLocationsResponse)](../../models/operations/listcalendarlocationsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_calendar_recordings
 
 Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1769,6 +1906,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::ListCalendarRecordingsResponse)](../../models/operations/listcalendarrecordingsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_calendar_rooms
+
+Returns a list of CalendarRooms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listCalendarRooms" method="get" path="/calendar/{connection_id}/room" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListCalendarRoomsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.calendar.list_calendar_rooms(request: req)
+
+unless res.calendar_rooms.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListCalendarRoomsRequest](../../models/operations/listcalendarroomsrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::ListCalendarRoomsResponse)](../../models/operations/listcalendarroomsresponse.md)**
 
 ### Errors
 
@@ -1842,12 +2024,12 @@ req = Models::Operations::PatchCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
     created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
     description: 'Acer supra vallum suasoria thesaurus.',
-    id: '28fec928-4540-4bfa-85bf-2fecfbbe50c0',
+    id: 'e223fda1-a5c2-4fb9-a548-a4680092f12b',
     is_primary: false,
     metadata: [],
     name: 'Interviews',
     timezone: 'Asia/Kolkata',
-    updated_at: DateTime.iso8601('2023-03-30T00:41:42.807Z'),
+    updated_at: DateTime.iso8601('2023-03-30T10:16:53.576Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1899,9 +2081,9 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-24T17:39:56.271Z',
+    end_at: '2020-05-24T19:55:16.147Z',
     has_conference: false,
-    id: 'ad657d5c-8702-4607-826d-1f2f5a250bbd',
+    id: '83c78bb9-8797-47d5-b006-bbe210598405',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -1911,15 +2093,15 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-03-27T18:19:38.121Z'),
+        end_at: DateTime.iso8601('2025-03-28T10:08:27.040Z'),
         excluded_dates: [
-          '2024-02-05T06:19:37.510Z',
+          '2024-02-05T18:56:48.324Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-09T05:23:50.385Z',
-          '2025-01-26T22:09:01.204Z',
-          '2024-04-04T13:23:59.814Z',
+          '2023-07-09T16:23:55.159Z',
+          '2025-01-27T13:30:18.131Z',
+          '2024-04-05T02:28:27.547Z',
         ],
         interval: 7.0,
         on_days: [
@@ -2256,11 +2438,11 @@ req = Models::Operations::PatchCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU,
       ),
     ],
-    start_at: '2020-05-24T08:25:28.870Z',
+    start_at: '2020-05-24T10:40:38.117Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-06-30T17:22:52.582Z',
+    updated_at: '2020-06-30T19:55:13.572Z',
     web_url: 'https://another-pinstripe.com',
   ),
   connection_id: '<id>',
@@ -2313,13 +2495,13 @@ req = Models::Operations::PatchCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: '949c005f-7fa2-4cbf-9709-130afda5386f',
+    id: 'cac2ee6d-eb56-47d3-bd5d-9a54d94cde7b',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-16T16:01:08.945Z',
+    updated_at: '2024-03-16T21:44:11.188Z',
     url: 'https://annual-apricot.info/',
   ),
   connection_id: '<id>',
@@ -2371,10 +2553,10 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-10-31T19:05:44.276Z'),
+    end_at: DateTime.iso8601('2025-11-01T10:42:59.430Z'),
     has_polls: false,
     has_recording: false,
-    id: '60a75718-0e1c-48da-a50f-d4a2617ca1aa',
+    id: '7a779453-fa8e-4dc6-abcb-b7ab995c3a23',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -2384,13 +2566,13 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-01T16:27:53.931Z'),
+        end_at: DateTime.iso8601('2023-09-01T21:54:02.181Z'),
         excluded_dates: [
-          '2025-02-15T10:37:59.874Z',
+          '2025-02-15T22:55:40.721Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-04-29T23:06:33.798Z',
+          '2024-04-30T07:39:04.917Z',
         ],
         interval: 8.0,
         on_days: [
@@ -2781,16 +2963,16 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-09-30T21:28:42.685Z'),
+        end_at: DateTime.iso8601('2022-09-30T22:35:27.454Z'),
         excluded_dates: [
-          '2024-09-03T18:07:49.244Z',
-          '2024-08-19T04:12:58.562Z',
+          '2024-09-04T04:18:17.033Z',
+          '2024-08-19T14:11:24.250Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-03-26T18:26:46.506Z',
-          '2026-01-16T16:05:16.464Z',
-          '2023-08-15T06:58:19.658Z',
+          '2024-03-27T02:32:52.764Z',
+          '2026-01-17T08:41:54.659Z',
+          '2023-08-15T12:11:01.648Z',
         ],
         interval: 1.0,
         on_days: [
@@ -2934,16 +3116,16 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-07-30T07:03:21.899Z'),
+        end_at: DateTime.iso8601('2026-07-31T02:10:20.649Z'),
         excluded_dates: [
-          '2023-06-19T11:38:22.108Z',
-          '2023-06-08T11:48:46.181Z',
+          '2023-06-19T16:07:11.235Z',
+          '2023-06-08T16:09:05.807Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-03T19:48:28.012Z',
-          '2023-08-21T02:45:11.537Z',
-          '2024-09-29T00:26:52.230Z',
+          '2024-04-04T04:00:47.689Z',
+          '2023-08-21T08:02:23.471Z',
+          '2024-09-29T10:56:50.936Z',
         ],
         interval: 8.0,
         on_days: [
@@ -3096,11 +3278,11 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-03T04:30:40.976Z'),
+    start_at: DateTime.iso8601('2025-05-03T17:47:38.850Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-04T10:20:41.794Z'),
+    updated_at: DateTime.iso8601('2026-10-05T06:18:45.910Z'),
     web_url: 'https://quiet-permafrost.name',
   ),
   connection_id: '<id>',
@@ -3320,12 +3502,12 @@ req = Models::Operations::UpdateCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
     created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
     description: 'Acer supra vallum suasoria thesaurus.',
-    id: '28fec928-4540-4bfa-85bf-2fecfbbe50c0',
+    id: 'e223fda1-a5c2-4fb9-a548-a4680092f12b',
     is_primary: false,
     metadata: [],
     name: 'Interviews',
     timezone: 'Asia/Kolkata',
-    updated_at: DateTime.iso8601('2023-03-30T00:41:42.807Z'),
+    updated_at: DateTime.iso8601('2023-03-30T10:16:53.576Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3377,9 +3559,9 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-24T17:39:56.271Z',
+    end_at: '2020-05-24T19:55:16.147Z',
     has_conference: false,
-    id: 'ad657d5c-8702-4607-826d-1f2f5a250bbd',
+    id: '83c78bb9-8797-47d5-b006-bbe210598405',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -3389,15 +3571,15 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-03-27T18:19:38.121Z'),
+        end_at: DateTime.iso8601('2025-03-28T10:08:27.040Z'),
         excluded_dates: [
-          '2024-02-05T06:19:37.510Z',
+          '2024-02-05T18:56:48.324Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-09T05:23:50.385Z',
-          '2025-01-26T22:09:01.204Z',
-          '2024-04-04T13:23:59.814Z',
+          '2023-07-09T16:23:55.159Z',
+          '2025-01-27T13:30:18.131Z',
+          '2024-04-05T02:28:27.547Z',
         ],
         interval: 7.0,
         on_days: [
@@ -3734,11 +3916,11 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU,
       ),
     ],
-    start_at: '2020-05-24T08:25:28.870Z',
+    start_at: '2020-05-24T10:40:38.117Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-06-30T17:22:52.582Z',
+    updated_at: '2020-06-30T19:55:13.572Z',
     web_url: 'https://another-pinstripe.com',
   ),
   connection_id: '<id>',
@@ -3791,13 +3973,13 @@ req = Models::Operations::UpdateCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: '949c005f-7fa2-4cbf-9709-130afda5386f',
+    id: 'cac2ee6d-eb56-47d3-bd5d-9a54d94cde7b',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-16T16:01:08.945Z',
+    updated_at: '2024-03-16T21:44:11.188Z',
     url: 'https://annual-apricot.info/',
   ),
   connection_id: '<id>',
@@ -3849,10 +4031,10 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-10-31T19:05:44.276Z'),
+    end_at: DateTime.iso8601('2025-11-01T10:42:59.430Z'),
     has_polls: false,
     has_recording: false,
-    id: '60a75718-0e1c-48da-a50f-d4a2617ca1aa',
+    id: '7a779453-fa8e-4dc6-abcb-b7ab995c3a23',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -3862,13 +4044,13 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-01T16:27:53.931Z'),
+        end_at: DateTime.iso8601('2023-09-01T21:54:02.181Z'),
         excluded_dates: [
-          '2025-02-15T10:37:59.874Z',
+          '2025-02-15T22:55:40.721Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-04-29T23:06:33.798Z',
+          '2024-04-30T07:39:04.917Z',
         ],
         interval: 8.0,
         on_days: [
@@ -4259,16 +4441,16 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-09-30T21:28:42.685Z'),
+        end_at: DateTime.iso8601('2022-09-30T22:35:27.454Z'),
         excluded_dates: [
-          '2024-09-03T18:07:49.244Z',
-          '2024-08-19T04:12:58.562Z',
+          '2024-09-04T04:18:17.033Z',
+          '2024-08-19T14:11:24.250Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-03-26T18:26:46.506Z',
-          '2026-01-16T16:05:16.464Z',
-          '2023-08-15T06:58:19.658Z',
+          '2024-03-27T02:32:52.764Z',
+          '2026-01-17T08:41:54.659Z',
+          '2023-08-15T12:11:01.648Z',
         ],
         interval: 1.0,
         on_days: [
@@ -4412,16 +4594,16 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-07-30T07:03:21.899Z'),
+        end_at: DateTime.iso8601('2026-07-31T02:10:20.649Z'),
         excluded_dates: [
-          '2023-06-19T11:38:22.108Z',
-          '2023-06-08T11:48:46.181Z',
+          '2023-06-19T16:07:11.235Z',
+          '2023-06-08T16:09:05.807Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-03T19:48:28.012Z',
-          '2023-08-21T02:45:11.537Z',
-          '2024-09-29T00:26:52.230Z',
+          '2024-04-04T04:00:47.689Z',
+          '2023-08-21T08:02:23.471Z',
+          '2024-09-29T10:56:50.936Z',
         ],
         interval: 8.0,
         on_days: [
@@ -4574,11 +4756,11 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-03T04:30:40.976Z'),
+    start_at: DateTime.iso8601('2025-05-03T17:47:38.850Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-04T10:20:41.794Z'),
+    updated_at: DateTime.iso8601('2026-10-05T06:18:45.910Z'),
     web_url: 'https://quiet-permafrost.name',
   ),
   connection_id: '<id>',

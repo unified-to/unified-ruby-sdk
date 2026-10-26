@@ -29,15 +29,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.call.create_uc_call(uc_call: Models::Shared::UcCall.new(
-  answer_at: DateTime.iso8601('2025-05-15T23:33:43.094Z'),
+  answer_at: DateTime.iso8601('2025-05-16T11:28:18.940Z'),
   contacts: [],
-  conversation_identifier: '0aa84d0a-089f-4151-89b7-010814018540',
+  conversation_identifier: '1f482ef2-5155-48e1-b70c-bd3a4b7fada8',
   cost_amount: 1.564,
   created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
   currency: 'USD',
   duration_seconds: 2556.0,
-  end_at: DateTime.iso8601('2024-05-31T07:44:08.198Z'),
-  id: '0aa84d0a-089f-4151-89b7-010814018540',
+  end_at: DateTime.iso8601('2024-05-31T14:07:25.738Z'),
+  id: '1f482ef2-5155-48e1-b70c-bd3a4b7fada8',
   is_private: false,
   metadata: [
     Models::Shared::UcMetadata.new(
@@ -45,20 +45,20 @@ res = s.call.create_uc_call(uc_call: Models::Shared::UcCall.new(
 
       },
       format: Models::Shared::UcMetadataFormat::PRICE,
-      id: '16cda5a9-dbb4-42bb-931e-d2085b854c1f',
+      id: '022c1053-0d74-4378-b292-e7039db61074',
       namespace: 'custom',
       slug: 'custom_field',
       value: 'tui',
     ),
   ],
-  start_at: DateTime.iso8601('2023-12-18T03:52:03.822Z'),
+  start_at: DateTime.iso8601('2023-12-18T07:38:51.871Z'),
   status: Models::Shared::UcCallStatus::IN_PROGRESS,
   telephone: Models::Shared::PropertyUcCallTelephone.new(
     telephone: '(493) 534-0768',
     type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
   ),
   type: Models::Shared::UcCallType::INBOUND,
-  updated_at: DateTime.iso8601('2023-08-03T16:14:46.281Z'),
+  updated_at: DateTime.iso8601('2023-08-03T17:52:15.136Z'),
   user_phone: '819-894-3317 x163',
 ), connection_id: '<id>')
 
@@ -195,15 +195,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchUcCallRequest.new(
   uc_call: Models::Shared::UcCall.new(
-    answer_at: DateTime.iso8601('2025-05-15T23:33:43.114Z'),
+    answer_at: DateTime.iso8601('2025-05-16T11:28:18.960Z'),
     contacts: [],
-    conversation_identifier: 'b1358c1f-0684-47d8-8e95-4db9f3e425bf',
+    conversation_identifier: '8662da10-9939-4f8e-a45a-83a484e04595',
     cost_amount: 1.564,
     created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
     currency: 'USD',
     duration_seconds: 2556.0,
-    end_at: DateTime.iso8601('2024-05-31T07:44:08.209Z'),
-    id: 'b1358c1f-0684-47d8-8e95-4db9f3e425bf',
+    end_at: DateTime.iso8601('2024-05-31T14:07:25.749Z'),
+    id: '8662da10-9939-4f8e-a45a-83a484e04595',
     is_private: false,
     metadata: [
       Models::Shared::UcMetadata.new(
@@ -211,20 +211,20 @@ req = Models::Operations::PatchUcCallRequest.new(
 
         },
         format: Models::Shared::UcMetadataFormat::PRICE,
-        id: '6b8245d3-d4a5-4c0c-9bb9-0b89dfb1d7be',
+        id: '6755cd4f-2e24-42b4-96c2-549aeeb0d36e',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'tui',
       ),
     ],
-    start_at: DateTime.iso8601('2023-12-18T03:52:03.828Z'),
+    start_at: DateTime.iso8601('2023-12-18T07:38:51.878Z'),
     status: Models::Shared::UcCallStatus::IN_PROGRESS,
     telephone: Models::Shared::PropertyUcCallTelephone.new(
       telephone: '(493) 534-0768',
       type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
     ),
     type: Models::Shared::UcCallType::INBOUND,
-    updated_at: DateTime.iso8601('2023-08-03T16:14:46.283Z'),
+    updated_at: DateTime.iso8601('2023-08-03T17:52:15.139Z'),
     user_phone: '819-894-3317 x163',
   ),
   connection_id: '<id>',
@@ -274,15 +274,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateUcCallRequest.new(
   uc_call: Models::Shared::UcCall.new(
-    answer_at: DateTime.iso8601('2025-05-15T23:33:43.114Z'),
+    answer_at: DateTime.iso8601('2025-05-16T11:28:18.960Z'),
     contacts: [],
-    conversation_identifier: 'b1358c1f-0684-47d8-8e95-4db9f3e425bf',
+    conversation_identifier: '8662da10-9939-4f8e-a45a-83a484e04595',
     cost_amount: 1.564,
     created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
     currency: 'USD',
     duration_seconds: 2556.0,
-    end_at: DateTime.iso8601('2024-05-31T07:44:08.209Z'),
-    id: 'b1358c1f-0684-47d8-8e95-4db9f3e425bf',
+    end_at: DateTime.iso8601('2024-05-31T14:07:25.749Z'),
+    id: '8662da10-9939-4f8e-a45a-83a484e04595',
     is_private: false,
     metadata: [
       Models::Shared::UcMetadata.new(
@@ -290,20 +290,20 @@ req = Models::Operations::UpdateUcCallRequest.new(
 
         },
         format: Models::Shared::UcMetadataFormat::PRICE,
-        id: '6b8245d3-d4a5-4c0c-9bb9-0b89dfb1d7be',
+        id: '6755cd4f-2e24-42b4-96c2-549aeeb0d36e',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'tui',
       ),
     ],
-    start_at: DateTime.iso8601('2023-12-18T03:52:03.828Z'),
+    start_at: DateTime.iso8601('2023-12-18T07:38:51.878Z'),
     status: Models::Shared::UcCallStatus::IN_PROGRESS,
     telephone: Models::Shared::PropertyUcCallTelephone.new(
       telephone: '(493) 534-0768',
       type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
     ),
     type: Models::Shared::UcCallType::INBOUND,
-    updated_at: DateTime.iso8601('2023-08-03T16:14:46.283Z'),
+    updated_at: DateTime.iso8601('2023-08-03T17:52:15.139Z'),
     user_phone: '819-894-3317 x163',
   ),
   connection_id: '<id>',

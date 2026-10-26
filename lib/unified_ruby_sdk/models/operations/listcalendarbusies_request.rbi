@@ -26,6 +26,8 @@ class UnifiedRubySDK::Models::Operations::ListCalendarBusiesRequest
   def query=(str_); end
   def raw(); end
   def raw=(str_); end
+  def room_id(); end
+  def room_id=(str_); end
   def sort(); end
   def sort=(str_); end
   def start_gte(); end

@@ -56,7 +56,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '4d8f2d07-f8de-4c60-86a7-16e285004229',
+  id: 'd0ce1960-e8fb-4a4a-93a1-afa55b349d81',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -69,7 +69,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-07T21:57:27.213Z'),
+  updated_at: DateTime.iso8601('2023-08-08T03:06:02.012Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -107,7 +107,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '4d8f2d07-f8de-4c60-86a7-16e285004229',
+  id: 'd0ce1960-e8fb-4a4a-93a1-afa55b349d81',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -120,7 +120,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-07T21:57:27.213Z'),
+  updated_at: DateTime.iso8601('2023-08-08T03:06:02.012Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -604,13 +604,17 @@ end
 * [get_calendar_calendar](docs/sdks/calendar/README.md#get_calendar_calendar) - Retrieve a calendar
 * [get_calendar_event](docs/sdks/calendar/README.md#get_calendar_event) - Retrieve an event
 * [get_calendar_link](docs/sdks/calendar/README.md#get_calendar_link) - Retrieve a link
+* [get_calendar_location](docs/sdks/calendar/README.md#get_calendar_location) - Retrieve a location
 * [get_calendar_recording](docs/sdks/calendar/README.md#get_calendar_recording) - Retrieve a recording
+* [get_calendar_room](docs/sdks/calendar/README.md#get_calendar_room) - Retrieve a room
 * [get_calendar_webinar](docs/sdks/calendar/README.md#get_calendar_webinar) - Retrieve a webinar
 * [list_calendar_busies](docs/sdks/calendar/README.md#list_calendar_busies) - List all busies
 * [list_calendar_calendars](docs/sdks/calendar/README.md#list_calendar_calendars) - List all calendars
 * [list_calendar_events](docs/sdks/calendar/README.md#list_calendar_events) - List all events
 * [list_calendar_links](docs/sdks/calendar/README.md#list_calendar_links) - List all links
+* [list_calendar_locations](docs/sdks/calendar/README.md#list_calendar_locations) - List all locations
 * [list_calendar_recordings](docs/sdks/calendar/README.md#list_calendar_recordings) - List all recordings
+* [list_calendar_rooms](docs/sdks/calendar/README.md#list_calendar_rooms) - List all rooms
 * [list_calendar_webinars](docs/sdks/calendar/README.md#list_calendar_webinars) - List all webinars
 * [patch_calendar_calendar](docs/sdks/calendar/README.md#patch_calendar_calendar) - Update a calendar
 * [patch_calendar_event](docs/sdks/calendar/README.md#patch_calendar_event) - Update an event
@@ -1795,10 +1799,12 @@ end
 
 * [create_commerce_location](docs/sdks/location/README.md#create_commerce_location) - Create a location
 * [create_hris_location](docs/sdks/location/README.md#create_hris_location) - Create a location
+* [get_calendar_location](docs/sdks/location/README.md#get_calendar_location) - Retrieve a location
 * [get_clubs_location](docs/sdks/location/README.md#get_clubs_location) - Retrieve a location
 * [get_commerce_location](docs/sdks/location/README.md#get_commerce_location) - Retrieve a location
 * [get_healthcare_location](docs/sdks/location/README.md#get_healthcare_location) - Retrieve a location
 * [get_hris_location](docs/sdks/location/README.md#get_hris_location) - Retrieve a location
+* [list_calendar_locations](docs/sdks/location/README.md#list_calendar_locations) - List all locations
 * [list_clubs_locations](docs/sdks/location/README.md#list_clubs_locations) - List all locations
 * [list_commerce_locations](docs/sdks/location/README.md#list_commerce_locations) - List all locations
 * [list_healthcare_locations](docs/sdks/location/README.md#list_healthcare_locations) - List all locations
@@ -2316,6 +2322,11 @@ end
 * [remove_commerce_review](docs/sdks/review/README.md#remove_commerce_review) - Remove a review
 * [update_commerce_review](docs/sdks/review/README.md#update_commerce_review) - Update a review
 * [update_social_review](docs/sdks/review/README.md#update_social_review) - Update a review
+
+### [room](docs/sdks/room/README.md)
+
+* [get_calendar_room](docs/sdks/room/README.md#get_calendar_room) - Retrieve a room
+* [list_calendar_rooms](docs/sdks/room/README.md#list_calendar_rooms) - List all rooms
 
 ### [saleschannel](docs/sdks/saleschannel/README.md)
 
@@ -2878,7 +2889,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Voluptatibus valde spoliatio.',
-      id: '4d8f2d07-f8de-4c60-86a7-16e285004229',
+      id: 'd0ce1960-e8fb-4a4a-93a1-afa55b349d81',
       is_payable: false,
       metadata: [],
       name: 'Auto Loan Account',
@@ -2891,7 +2902,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-07T21:57:27.213Z'),
+      updated_at: DateTime.iso8601('2023-08-08T03:06:02.012Z'),
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -2937,7 +2948,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '4d8f2d07-f8de-4c60-86a7-16e285004229',
+  id: 'd0ce1960-e8fb-4a4a-93a1-afa55b349d81',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -2950,7 +2961,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-07T21:57:27.213Z'),
+  updated_at: DateTime.iso8601('2023-08-08T03:06:02.012Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -2979,7 +2990,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '4d8f2d07-f8de-4c60-86a7-16e285004229',
+  id: 'd0ce1960-e8fb-4a4a-93a1-afa55b349d81',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -2992,7 +3003,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-07T21:57:27.213Z'),
+  updated_at: DateTime.iso8601('2023-08-08T03:06:02.012Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
