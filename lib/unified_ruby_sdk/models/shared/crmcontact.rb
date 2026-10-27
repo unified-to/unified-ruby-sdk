@@ -15,7 +15,7 @@ module UnifiedRubySDK
 
 
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyCrmContactAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
-        # The companyorganization name  of the contact
+        # The company/organization name  of the contact
         field :company, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company') } }
         # An array of company IDs associated with this contact
         field :company_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_ids') } }
@@ -27,13 +27,13 @@ module UnifiedRubySDK
         field :department, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('department') } }
         # An array of email addresses for this contact
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CrmEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
-
+        # The contact's first (given) name
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
         # Unique identifier for this contact object
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
         field :image_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image_url') } }
-
+        # The contact's last (family) name
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
         # Additional URLs associated with the contact e.g., LinkedIn, website, etc
         field :link_urls, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('link_urls') } }

@@ -56,7 +56,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'd0ce1960-e8fb-4a4a-93a1-afa55b349d81',
+  id: '0aba55b9-4485-4420-bf95-827ebdb33a38',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -69,7 +69,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-08T03:06:02.012Z'),
+  updated_at: DateTime.iso8601('2023-08-08T09:48:14.634Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -107,7 +107,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'd0ce1960-e8fb-4a4a-93a1-afa55b349d81',
+  id: '0aba55b9-4485-4420-bf95-827ebdb33a38',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -120,7 +120,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-08T03:06:02.012Z'),
+  updated_at: DateTime.iso8601('2023-08-08T09:48:14.634Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -2766,6 +2766,7 @@ end
 * [list_unified_webhooks](docs/sdks/unified/README.md#list_unified_webhooks) - Returns all registered webhooks
 * [patch_unified_connection](docs/sdks/unified/README.md#patch_unified_connection) - Update connection
 * [patch_unified_webhook](docs/sdks/unified/README.md#patch_unified_webhook) - Update webhook subscription
+* [patch_unified_webhook_resume](docs/sdks/unified/README.md#patch_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
 * [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment) - Remove an environment
@@ -2773,6 +2774,7 @@ end
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription
+* [update_unified_webhook_resume](docs/sdks/unified/README.md#update_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook
 
 
@@ -2833,9 +2835,11 @@ end
 * [get_unified_webhook](docs/sdks/webhook/README.md#get_unified_webhook) - Retrieve webhook by its ID
 * [list_unified_webhooks](docs/sdks/webhook/README.md#list_unified_webhooks) - Returns all registered webhooks
 * [patch_unified_webhook](docs/sdks/webhook/README.md#patch_unified_webhook) - Update webhook subscription
+* [patch_unified_webhook_resume](docs/sdks/webhook/README.md#patch_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/webhook/README.md#patch_unified_webhook_trigger) - Trigger webhook
 * [remove_unified_webhook](docs/sdks/webhook/README.md#remove_unified_webhook) - Remove webhook subscription
 * [update_unified_webhook](docs/sdks/webhook/README.md#update_unified_webhook) - Update webhook subscription
+* [update_unified_webhook_resume](docs/sdks/webhook/README.md#update_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/webhook/README.md#update_unified_webhook_trigger) - Trigger webhook
 
 ### [webinar](docs/sdks/webinar/README.md)
@@ -2889,7 +2893,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Voluptatibus valde spoliatio.',
-      id: 'd0ce1960-e8fb-4a4a-93a1-afa55b349d81',
+      id: '0aba55b9-4485-4420-bf95-827ebdb33a38',
       is_payable: false,
       metadata: [],
       name: 'Auto Loan Account',
@@ -2902,7 +2906,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-08T03:06:02.012Z'),
+      updated_at: DateTime.iso8601('2023-08-08T09:48:14.634Z'),
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -2948,7 +2952,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'd0ce1960-e8fb-4a4a-93a1-afa55b349d81',
+  id: '0aba55b9-4485-4420-bf95-827ebdb33a38',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -2961,7 +2965,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-08T03:06:02.012Z'),
+  updated_at: DateTime.iso8601('2023-08-08T09:48:14.634Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -2990,7 +2994,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'd0ce1960-e8fb-4a4a-93a1-afa55b349d81',
+  id: '0aba55b9-4485-4420-bf95-827ebdb33a38',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3003,7 +3007,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-08T03:06:02.012Z'),
+  updated_at: DateTime.iso8601('2023-08-08T09:48:14.634Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

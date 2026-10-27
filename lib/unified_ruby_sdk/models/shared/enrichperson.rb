@@ -19,7 +19,7 @@ module UnifiedRubySDK
         field :bio, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('bio') } }
         # The birth date of the person
         field :birthdate, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('birthdate') } }
-        # The companyorganization name  of the person
+        # The company/organization name  of the person
         field :company, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company') } }
         # The company's domain
         field :company_domain, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_domain') } }

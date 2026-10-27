@@ -33,7 +33,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.verification.create_verification_request(verification_request: Models::Shared::VerificationRequest.new(
   created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-  id: '2b6aba7c-298a-454b-b0ae-4e9c51d9f3d4',
+  id: 'f8e8020a-1e91-4733-84cd-a43bd59f28bd',
   metadata: [],
   parameters: [],
   profile_addresses: [],
@@ -43,7 +43,7 @@ res = s.verification.create_verification_request(verification_request: Models::S
   response_download_urls: [],
   response_source: 'Implemented regional protocol',
   response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-12-27T11:01:53.287Z'),
+  updated_at: DateTime.iso8601('2023-12-27T11:56:44.803Z'),
 ), connection_id: '<id>')
 
 unless res.verification_request.nil?
@@ -269,7 +269,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchVerificationRequestRequest.new(
   verification_request: Models::Shared::VerificationRequest.new(
     created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-    id: '2a2a9392-121e-4f4e-81e2-f53315312da1',
+    id: 'f7244d68-b43c-44a7-a62a-96f11734521d',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -279,7 +279,7 @@ req = Models::Operations::PatchVerificationRequestRequest.new(
     response_download_urls: [],
     response_source: 'Implemented regional protocol',
     response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-12-27T11:01:53.287Z'),
+    updated_at: DateTime.iso8601('2023-12-27T11:56:44.804Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -371,7 +371,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateVerificationRequestRequest.new(
   verification_request: Models::Shared::VerificationRequest.new(
     created_at: DateTime.iso8601('2023-11-20T08:17:29.950Z'),
-    id: '2a2a9392-121e-4f4e-81e2-f53315312da1',
+    id: 'f7244d68-b43c-44a7-a62a-96f11734521d',
     metadata: [],
     parameters: [],
     profile_addresses: [],
@@ -381,7 +381,7 @@ req = Models::Operations::UpdateVerificationRequestRequest.new(
     response_download_urls: [],
     response_source: 'Implemented regional protocol',
     response_status: Models::Shared::VerificationRequestResponseStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-12-27T11:01:53.287Z'),
+    updated_at: DateTime.iso8601('2023-12-27T11:56:44.804Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
