@@ -14,15 +14,15 @@ module UnifiedRubySDK
 
         enums do
           ID = new('id')
+          CREATED_AT = new('created_at')
+          UPDATED_AT = new('updated_at')
           NAME = new('name')
           PARENT_ID = new('parent_id')
           TYPE = new('type')
           ADDRESS = new('address')
-          RAW = new('raw')
-          CREATED_AT = new('created_at')
-          UPDATED_AT = new('updated_at')
           TIMEZONE = new('timezone')
           METADATA = new('metadata')
+          RAW = new('raw')
         end
       end
     end

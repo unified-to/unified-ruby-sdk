@@ -25,7 +25,7 @@ module UnifiedRubySDK
         field :redirect, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'redirect', 'style': 'form', 'explode': true } }
         # Extra state to send back to your success URL
         field :state, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'state', 'style': 'form', 'explode': true } }
-        # The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
+        # The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in (and a redirect claim matching this URL). When the workspace has trusted_domains configured, this host must be on that list.
         field :success_redirect, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'success_redirect', 'style': 'form', 'explode': true } }
 
         sig { params(integration_type: ::String, workspace_id: ::String, env: T.nilable(::String), failure_redirect: T.nilable(::String), redirect: T.nilable(T::Boolean), state: T.nilable(::String), success_redirect: T.nilable(::String)).void }

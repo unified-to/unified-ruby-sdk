@@ -39,7 +39,7 @@ module UnifiedRubySDK
         field :state, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'state', 'style': 'form', 'explode': true } }
         # Optional tenant domain or subdomain for integrations that require it to build the authorize, token, or API URL. Depending on the integration, this may be a bare subdomain or a full domain/URL.
         field :subdomain, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'subdomain', 'style': 'form', 'explode': true } }
-        # The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
+        # The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided. When the workspace has trusted_domains configured, this host must be on that list.
         field :success_redirect, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'success_redirect', 'style': 'form', 'explode': true } }
 
         sig { params(integration_type: ::String, workspace_id: ::String, connection_id: T.nilable(::String), env: T.nilable(::String), external_xref: T.nilable(::String), failure_redirect: T.nilable(::String), lang: T.nilable(::String), reauth_token: T.nilable(::String), redirect: T.nilable(T::Boolean), region: T.nilable(::String), scopes: T.nilable(T::Array[::String]), state: T.nilable(::String), subdomain: T.nilable(::String), success_redirect: T.nilable(::String)).void }

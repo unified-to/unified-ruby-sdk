@@ -42,17 +42,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.shipping.create_shipping_label(shipping_label: Models::Shared::ShippingLabel.new(
   created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-  id: '21181461-fbc9-4645-86b1-56e5d1e35bf8',
+  id: '97fce899-d4e6-4fcf-bb71-e0757ef3bf76',
   is_voided: false,
   label_cost: 40.83_653_403_213_248,
   label_cost_currency: 'USD',
   label_format: Models::Shared::LabelFormat::PNG,
-  label_url: 'https://labels.example.com/21181461-fbc9-4645-86b1-56e5d1e35bf8.pdf',
+  label_url: 'https://labels.example.com/97fce899-d4e6-4fcf-bb71-e0757ef3bf76.pdf',
   metadata: [],
   service_code: 'Dzy',
   status: Models::Shared::ShippingLabelStatus::EXCEPTION,
   tracking_number: 'ZYV60FOIBUJ6',
-  updated_at: DateTime.iso8601('2024-05-01T02:12:14.562Z'),
+  updated_at: DateTime.iso8601('2024-05-01T11:55:41.485Z'),
 ), connection_id: '<id>')
 
 unless res.shipping_label.nil?
@@ -99,7 +99,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.shipping.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.new(
   currency: 'USD',
-  id: '03c95029-24eb-4a81-ba7b-b32e431c3fd8',
+  id: '3ed4aed4-f8d9-4d64-8bf7-7c2535107352',
   metadata: [],
   rates: [
     Models::Shared::ShippingRateRate.new(
@@ -162,7 +162,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.shipping.create_shipping_shipment(shipping_shipment: Models::Shared::ShippingShipment.new(
   created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-  id: 'a6009479-9570-40a4-89fb-8c806db181d3',
+  id: 'cf5d14e6-800b-4f07-b4d8-58bb7220347b',
   is_return: false,
   lineitems: [],
   metadata: [],
@@ -172,7 +172,7 @@ res = s.shipping.create_shipping_shipment(shipping_shipment: Models::Shared::Shi
   service_code: 'OVERNIGHT',
   shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
   status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-  updated_at: DateTime.iso8601('2022-11-15T12:51:00.755Z'),
+  updated_at: DateTime.iso8601('2022-11-15T13:58:48.369Z'),
 ), connection_id: '<id>')
 
 unless res.shipping_shipment.nil?
@@ -576,17 +576,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: '6f62ceef-59ea-4eef-a8b1-ed055c81b7e7',
+    id: 'c718bddc-7551-4643-98f4-ac9e297cae3e',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
     label_format: Models::Shared::LabelFormat::PNG,
-    label_url: 'https://labels.example.com/6f62ceef-59ea-4eef-a8b1-ed055c81b7e7.pdf',
+    label_url: 'https://labels.example.com/c718bddc-7551-4643-98f4-ac9e297cae3e.pdf',
     metadata: [],
     service_code: 'Dzy',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'ZYV60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-05-01T02:12:14.569Z'),
+    updated_at: DateTime.iso8601('2024-05-01T11:55:41.492Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -636,7 +636,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchShippingShipmentRequest.new(
   shipping_shipment: Models::Shared::ShippingShipment.new(
     created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-    id: 'd18087ef-48e5-4139-a0c3-bbf448ec9272',
+    id: '464b6b5b-4381-41f4-8476-ec03a4d01d5c',
     is_return: false,
     lineitems: [],
     metadata: [],
@@ -646,7 +646,7 @@ req = Models::Operations::PatchShippingShipmentRequest.new(
     service_code: 'OVERNIGHT',
     shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
     status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-    updated_at: DateTime.iso8601('2022-11-15T12:51:00.759Z'),
+    updated_at: DateTime.iso8601('2022-11-15T13:58:48.373Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -780,17 +780,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: '6f62ceef-59ea-4eef-a8b1-ed055c81b7e7',
+    id: 'c718bddc-7551-4643-98f4-ac9e297cae3e',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
     label_format: Models::Shared::LabelFormat::PNG,
-    label_url: 'https://labels.example.com/6f62ceef-59ea-4eef-a8b1-ed055c81b7e7.pdf',
+    label_url: 'https://labels.example.com/c718bddc-7551-4643-98f4-ac9e297cae3e.pdf',
     metadata: [],
     service_code: 'Dzy',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'ZYV60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-05-01T02:12:14.569Z'),
+    updated_at: DateTime.iso8601('2024-05-01T11:55:41.492Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -840,7 +840,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateShippingShipmentRequest.new(
   shipping_shipment: Models::Shared::ShippingShipment.new(
     created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-    id: 'd18087ef-48e5-4139-a0c3-bbf448ec9272',
+    id: '464b6b5b-4381-41f4-8476-ec03a4d01d5c',
     is_return: false,
     lineitems: [],
     metadata: [],
@@ -850,7 +850,7 @@ req = Models::Operations::UpdateShippingShipmentRequest.new(
     service_code: 'OVERNIGHT',
     shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
     status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-    updated_at: DateTime.iso8601('2022-11-15T12:51:00.759Z'),
+    updated_at: DateTime.iso8601('2022-11-15T13:58:48.373Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
