@@ -31,14 +31,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.commit.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
   created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-  id: '8da008ee-d4cb-4d8e-85d8-c597d023632b',
+  id: 'b34567ce-6177-45c1-b4f4-03cfa788a06f',
   lines_added: 313.0,
   lines_changed: 659.0,
   lines_deleted: 482.0,
   message: 'quantify bluetooth bandwidth',
   metadata: [],
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2023-06-03T12:16:26.782Z'),
+  updated_at: DateTime.iso8601('2023-06-03T23:25:28.793Z'),
 ), connection_id: '<id>')
 
 unless res.repo_commit.nil?
@@ -175,14 +175,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: '18db59c1-2dac-4a68-90d4-aa5d27f04552',
+    id: 'dcf2ffe6-9d85-4edd-97f6-209db99c3bcb',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'quantify bluetooth bandwidth',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-06-03T12:16:26.788Z'),
+    updated_at: DateTime.iso8601('2023-06-03T23:25:28.796Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -274,14 +274,14 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: '18db59c1-2dac-4a68-90d4-aa5d27f04552',
+    id: 'dcf2ffe6-9d85-4edd-97f6-209db99c3bcb',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'quantify bluetooth bandwidth',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-06-03T12:16:26.788Z'),
+    updated_at: DateTime.iso8601('2023-06-03T23:25:28.796Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

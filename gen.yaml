@@ -11,6 +11,9 @@ generation:
     requestResponseComponentNamesFeb2024: false
     securityFeb2025: false
     sharedErrorComponentsApr2025: false
+    nameOverrideFeb2026: false
+    openSingleValueEnumsOct2026: false
+    sharedNestedComponentsJan2026: false
   auth:
     oAuth2ClientCredentialsEnabled: false
     oAuth2PasswordEnabled: false
@@ -20,9 +23,14 @@ generation:
     skipResponseBodyAssertions: false
   baseServerURL: ""
   flattenGlobalSecurity: true
+  persistentEdits: {}
+  requestBodyFieldName: ""
+  schemas:
+    allOfMergeStrategy: shallowMerge
   telemetryEnabled: false
+  versioningStrategy: automatic
 ruby:
-  version: 0.68.6
+  version: 0.68.7
   additionalDependencies:
     development: {}
     runtime: {}
@@ -32,7 +40,10 @@ ruby:
   constFieldsAlwaysOptional: false
   defaultErrorName: APIError
   description: Ruby Client SDK for Unified.to
+  enableFormatting: false
   flattenGlobalSecurity: false
+  forwardCompatibleEnumsByDefault: false
+  forwardCompatibleUnionsByDefault: "false"
   imports:
     option: openapi
     paths:
@@ -41,9 +52,13 @@ ruby:
       operations: models/operations
       shared: models/shared
       webhooks: models/webhooks
+  inferUnionDiscriminators: false
   inputModelSuffix: input
+  license: Apache-2.0
   maxMethodParams: 4
   module: UnifiedRubySDK
+  multipartArrayFormat: legacy
   outputModelSuffix: output
   packageName: unified_ruby_sdk
   typingStrategy: sorbet
+  unionStrategy: left-to-right

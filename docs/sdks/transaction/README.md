@@ -31,12 +31,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.transaction.create_accounting_transaction(accounting_transaction: Models::Shared::AccountingTransaction.new(
   created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  id: '3ddb8fb8-7d1e-4fcb-b723-b4ccab8a1ec9',
+  id: '107745b8-6c42-4139-a09f-ab6391b4c255',
   lineitems: [
     Models::Shared::AccountingTransactionLineItem.new(
       category_ids: [],
       description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-      id: 'e8a1d9f2-c253-4279-8ee8-a04efb9f8d81',
+      id: '632b934a-117d-41a5-97e7-f59e588444da',
       name: 'Shirt',
       total_amount: 10_184.0,
       unit_amount: 536.0,
@@ -48,7 +48,7 @@ res = s.transaction.create_accounting_transaction(accounting_transaction: Models
   tax_amount: 0.0,
   total_amount: 10_184.0,
   transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-  updated_at: DateTime.iso8601('2019-10-14T07:21:58.609Z'),
+  updated_at: DateTime.iso8601('2019-10-14T07:32:33.701Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_transaction.nil?
@@ -185,12 +185,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '457ce95e-c76a-4ae2-8396-a143d508d89a',
+    id: '9073ba05-1ed9-4dde-9b9e-1329da3f726e',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: '3e6f2203-3da6-489e-970e-a95c1aa58afd',
+        id: '25b6a55d-6a02-4609-8f42-5d2fbcb3c9d1',
         name: 'Shirt',
         total_amount: 10_184.0,
         unit_amount: 536.0,
@@ -202,7 +202,7 @@ req = Models::Operations::PatchAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T07:21:58.609Z'),
+    updated_at: DateTime.iso8601('2019-10-14T07:32:33.701Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -294,12 +294,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAccountingTransactionRequest.new(
   accounting_transaction: Models::Shared::AccountingTransaction.new(
     created_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    id: '457ce95e-c76a-4ae2-8396-a143d508d89a',
+    id: '9073ba05-1ed9-4dde-9b9e-1329da3f726e',
     lineitems: [
       Models::Shared::AccountingTransactionLineItem.new(
         category_ids: [],
         description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-        id: '3e6f2203-3da6-489e-970e-a95c1aa58afd',
+        id: '25b6a55d-6a02-4609-8f42-5d2fbcb3c9d1',
         name: 'Shirt',
         total_amount: 10_184.0,
         unit_amount: 536.0,
@@ -311,7 +311,7 @@ req = Models::Operations::UpdateAccountingTransactionRequest.new(
     tax_amount: 0.0,
     total_amount: 10_184.0,
     transaction_at: DateTime.iso8601('2019-09-25T11:40:42.574Z'),
-    updated_at: DateTime.iso8601('2019-10-14T07:21:58.609Z'),
+    updated_at: DateTime.iso8601('2019-10-14T07:32:33.701Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

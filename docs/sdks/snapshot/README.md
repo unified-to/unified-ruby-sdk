@@ -29,13 +29,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.snapshot.create_compute_snapshot(compute_snapshot: Models::Shared::ComputeSnapshot.new(
   created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-  id: '1bd52596-e87e-49d7-9fb5-4812f1fa3f7b',
+  id: '98b05e9a-29a4-4e20-ad6e-bc77cc0082a3',
   metadata: [],
   name: 'snap-alius',
   size_mb: 169_984.0,
   status: Models::Shared::ComputeSnapshotStatus::DELETING,
   type: Models::Shared::ComputeSnapshotType::DISK,
-  updated_at: DateTime.iso8601('2026-04-06T03:21:33.968Z'),
+  updated_at: DateTime.iso8601('2026-04-07T00:57:26.531Z'),
 ), connection_id: '<id>')
 
 unless res.compute_snapshot.nil?

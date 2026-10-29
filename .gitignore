@@ -1,3 +1,7 @@
+.speakeasy/reports
+sorbet/rbi
+.env
+.env.local
 bin/
 sorbet/
 **/.speakeasy/temp/
