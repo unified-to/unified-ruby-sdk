@@ -51,6 +51,7 @@ module UnifiedRubySDK
           LEGAL = new('legal')
           COMPUTE = new('compute')
           HEALTHCARE = new('healthcare')
+          PROPERTY = new('property')
         end
       end
     end

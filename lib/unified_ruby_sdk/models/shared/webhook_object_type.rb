@@ -234,6 +234,14 @@ module UnifiedRubySDK
           HEALTHCARE_REPORT = new('healthcare_report')
           HEALTHCARE_CAREPLAN = new('healthcare_careplan')
           HEALTHCARE_GOAL = new('healthcare_goal')
+          PROPERTY_LISTING = new('property_listing')
+          PROPERTY_UNITTYPE = new('property_unittype')
+          PROPERTY_GUEST = new('property_guest')
+          PROPERTY_RESERVATION = new('property_reservation')
+          PROPERTY_AVAILABILITY = new('property_availability')
+          PROPERTY_QUOTE = new('property_quote')
+          PROPERTY_REVIEW = new('property_review')
+          PROPERTY_CONVERSATION = new('property_conversation')
         end
       end
     end

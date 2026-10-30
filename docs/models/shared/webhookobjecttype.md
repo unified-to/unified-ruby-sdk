@@ -228,3 +228,11 @@ The object to return (eg. CRM "contact")
 | `HEALTHCARE_REPORT`              | healthcare_report                |
 | `HEALTHCARE_CAREPLAN`            | healthcare_careplan              |
 | `HEALTHCARE_GOAL`                | healthcare_goal                  |
+| `PROPERTY_LISTING`               | property_listing                 |
+| `PROPERTY_UNITTYPE`              | property_unittype                |
+| `PROPERTY_GUEST`                 | property_guest                   |
+| `PROPERTY_RESERVATION`           | property_reservation             |
+| `PROPERTY_AVAILABILITY`          | property_availability            |
+| `PROPERTY_QUOTE`                 | property_quote                   |
+| `PROPERTY_REVIEW`                | property_review                  |
+| `PROPERTY_CONVERSATION`          | property_conversation            |

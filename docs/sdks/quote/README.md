@@ -6,6 +6,7 @@
 ### Available Operations
 
 * [create_accounting_quote](#create_accounting_quote) - Create a quote
+* [create_property_quote](#create_property_quote) - Create a quote
 * [get_accounting_quote](#get_accounting_quote) - Retrieve a quote
 * [list_accounting_quotes](#list_accounting_quotes) - List all quotes
 * [patch_accounting_quote](#patch_accounting_quote) - Update a quote
@@ -49,6 +50,82 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateAccountingQuoteResponse)](../../models/operations/createaccountingquoteresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_property_quote
+
+Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are mapped to the provider's API. Returns the created PropertyQuote.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createPropertyQuote" method="post" path="/property/{connection_id}/quote" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.quote.create_property_quote(property_quote: Models::Shared::PropertyQuote.new(
+  adults: 1.0,
+  children: 1.0,
+  created_at: DateTime.iso8601('2020-12-18T19:14:11.415Z'),
+  currency: 'USD',
+  deposit_amount: 594.54,
+  end_at: DateTime.iso8601('2026-11-13'),
+  guests: 2.0,
+  id: '87a163c7-0ac2-47c2-9dfe-2e6f7d3e203a',
+  line_items: [
+    Models::Shared::PropertyLineitem.new(
+      amount: 1665.0,
+      description: '9 nights',
+      is_mandatory: true,
+      name: 'Accommodation',
+      type: Models::Shared::PropertyLineitemType::BASE,
+    ),
+    Models::Shared::PropertyLineitem.new(
+      amount: 117.0,
+      is_mandatory: true,
+      name: 'Cleaning fee',
+      type: Models::Shared::PropertyLineitemType::FEE,
+    ),
+    Models::Shared::PropertyLineitem.new(
+      amount: 199.8,
+      is_mandatory: true,
+      name: 'Lodging tax',
+      type: Models::Shared::PropertyLineitemType::TAX,
+    ),
+  ],
+  start_at: DateTime.iso8601('2026-11-04'),
+  total_amount: 1_981.8,
+), connection_id: '<id>')
+
+unless res.property_quote.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `property_quote`                                                                                                                                 | [Models::Shared::PropertyQuote](../../models/shared/propertyquote.md)                                                                            | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreatePropertyQuoteQueryParamFields](../../models/operations/createpropertyquotequeryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreatePropertyQuoteResponse)](../../models/operations/createpropertyquoteresponse.md)**
 
 ### Errors
 

@@ -424,6 +424,20 @@ module UnifiedRubySDK
           HEALTHCARE_CAREPLAN_WRITE = new('healthcare_careplan_write')
           HEALTHCARE_GOAL_READ = new('healthcare_goal_read')
           HEALTHCARE_GOAL_WRITE = new('healthcare_goal_write')
+          PROPERTY_LISTING_READ = new('property_listing_read')
+          PROPERTY_LISTING_WRITE = new('property_listing_write')
+          PROPERTY_UNITTYPE_READ = new('property_unittype_read')
+          PROPERTY_GUEST_READ = new('property_guest_read')
+          PROPERTY_GUEST_WRITE = new('property_guest_write')
+          PROPERTY_RESERVATION_READ = new('property_reservation_read')
+          PROPERTY_RESERVATION_WRITE = new('property_reservation_write')
+          PROPERTY_AVAILABILITY_READ = new('property_availability_read')
+          PROPERTY_QUOTE_READ = new('property_quote_read')
+          PROPERTY_QUOTE_WRITE = new('property_quote_write')
+          PROPERTY_REVIEW_READ = new('property_review_read')
+          PROPERTY_REVIEW_WRITE = new('property_review_write')
+          PROPERTY_CONVERSATION_READ = new('property_conversation_read')
+          PROPERTY_CONVERSATION_WRITE = new('property_conversation_write')
         end
       end
     end

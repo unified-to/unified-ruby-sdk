@@ -59,7 +59,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: 'a5c4f8b6-0e61-4693-b065-8f6b8e1b59e0',
+  id: 'd0117b96-94bd-49d4-8874-7fd3c573da48',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -79,7 +79,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
       type: Models::Shared::HealthcareTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-30T09:18:09.210Z'),
+  updated_at: DateTime.iso8601('2026-07-01T03:02:51.808Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -245,7 +245,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'dc8a7b0f-7972-4099-97aa-4a367f4dfd69',
+    id: '3b1e578b-deac-4202-ba1f-d42c4068a019',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -265,7 +265,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-30T09:18:09.244Z'),
+    updated_at: DateTime.iso8601('2026-07-01T03:02:51.846Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -344,7 +344,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'dc8a7b0f-7972-4099-97aa-4a367f4dfd69',
+    id: '3b1e578b-deac-4202-ba1f-d42c4068a019',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -364,7 +364,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-30T09:18:09.244Z'),
+    updated_at: DateTime.iso8601('2026-07-01T03:02:51.846Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

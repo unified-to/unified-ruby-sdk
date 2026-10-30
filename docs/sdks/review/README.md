@@ -8,14 +8,18 @@
 * [create_commerce_review](#create_commerce_review) - Create a review
 * [get_commerce_review](#get_commerce_review) - Retrieve a review
 * [get_performance_review](#get_performance_review) - Retrieve a review
+* [get_property_review](#get_property_review) - Retrieve a review
 * [get_social_review](#get_social_review) - Retrieve a review
 * [list_commerce_reviews](#list_commerce_reviews) - List all reviews
 * [list_performance_reviews](#list_performance_reviews) - List all reviews
+* [list_property_reviews](#list_property_reviews) - List all reviews
 * [list_social_reviews](#list_social_reviews) - List all reviews
 * [patch_commerce_review](#patch_commerce_review) - Update a review
+* [patch_property_review](#patch_property_review) - Update a review
 * [patch_social_review](#patch_social_review) - Update a review
 * [remove_commerce_review](#remove_commerce_review) - Remove a review
 * [update_commerce_review](#update_commerce_review) - Update a review
+* [update_property_review](#update_property_review) - Update a review
 * [update_social_review](#update_social_review) - Update a review
 
 ## create_commerce_review
@@ -44,7 +48,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   content: 'Taedium thymum adipiscor amicitia cui.',
   created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
   helpful_votes: 66.0,
-  id: 'ef4db775-d380-4ea3-954e-613a89b355d8',
+  id: 'f94f7da2-99b1-4716-9f34-bb1183dd77c7',
   is_featured: false,
   is_public: true,
   is_verified: false,
@@ -52,10 +56,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Desipio carpo sol laudantium colo.',
       height: 749.0,
-      id: '2a0d2ac4-d217-42a2-91d6-603e6caddaea',
+      id: '9ebb6c45-7fcf-4145-ba7f-030163ef08d7',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '521f18db-a047-4701-8024-7f4d4271a87e',
+          id: '3e470a8e-dae8-45f7-8c92-ebd1c9f62926',
           slug: 'textor',
           value: 'quos',
         ),
@@ -68,10 +72,10 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Adopto teneo numquam.',
       height: 957.0,
-      id: 'a8d602ad-b8ea-460a-873a-d09b624fde8c',
+      id: '37499c23-7147-4591-ab92-dec9802c7055',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '24445fe6-7d53-4dfd-b680-3d08c9a1e7d4',
+          id: '10260a81-5ceb-4ed6-acad-e145a52e4c71',
           slug: 'bos',
           value: 'casso',
         ),
@@ -87,7 +91,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   status: Models::Shared::CommerceReviewStatus::APPROVED,
   title: 'Coepi adamo amicitia auxilium toties.',
   unhelpful_votes: 88.0,
-  updated_at: DateTime.iso8601('2025-08-28T00:44:06.383Z'),
+  updated_at: DateTime.iso8601('2025-08-28T16:25:25.628Z'),
   url: 'https://diligent-bandwidth.biz',
   verified_purchase: true,
 ), connection_id: '<id>')
@@ -198,6 +202,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetPerformanceReviewResponse)](../../models/operations/getperformancereviewresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_property_review
+
+Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getPropertyReview" method="get" path="/property/{connection_id}/review/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.review.get_property_review(connection_id: '<id>', id: '<id>')
+
+unless res.property_review.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Review                                                                                                                                 |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetPropertyReviewQueryParamFields](../../models/operations/getpropertyreviewqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetPropertyReviewResponse)](../../models/operations/getpropertyreviewresponse.md)**
 
 ### Errors
 
@@ -339,6 +387,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_property_reviews
+
+Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listPropertyReviews" method="get" path="/property/{connection_id}/review" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListPropertyReviewsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.review.list_property_reviews(request: req)
+
+unless res.property_reviews.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::ListPropertyReviewsRequest](../../models/operations/listpropertyreviewsrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::ListPropertyReviewsResponse)](../../models/operations/listpropertyreviewsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_social_reviews
 
 Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -411,7 +504,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: 'd87109bd-311d-42a4-a14e-be35c48e96a1',
+    id: '370b1411-7f2a-4808-a238-0ab2cff258c3',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -419,10 +512,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: 'f6528874-eec8-4075-9bf2-eb3b1f151424',
+        id: '5c1c8a4d-8d1c-42bc-9a57-8f7a72bcc584',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'ad2bd2be-5601-485c-9dbd-c2e62d83707b',
+            id: '851d1bb4-9e1e-4c76-aa0d-fd358513f8c1',
             slug: 'textor',
             value: 'quos',
           ),
@@ -435,10 +528,10 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: 'ac9e59e5-5fff-45ad-bf73-6bbfa17b886f',
+        id: '095cee3f-1f75-4b5b-a45f-e940e092bc8a',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '52eab880-dfaa-4fd8-b932-b9b276e853b9',
+            id: 'dd9e78d3-f6cb-4f20-bea9-234b09307324',
             slug: 'bos',
             value: 'casso',
           ),
@@ -454,7 +547,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-08-28T00:44:06.406Z'),
+    updated_at: DateTime.iso8601('2025-08-28T16:25:25.667Z'),
     url: 'https://diligent-bandwidth.biz',
     verified_purchase: true,
   ),
@@ -479,6 +572,93 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::PatchCommerceReviewResponse)](../../models/operations/patchcommercereviewresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## patch_property_review
+
+Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchPropertyReview" method="patch" path="/property/{connection_id}/review/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchPropertyReviewRequest.new(
+  property_review: Models::Shared::PropertyReview.new(
+    author_name: 'Benton Jast',
+    category_ratings: [
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::CLEANLINESS,
+        comment: 'Umquam perferendis amitto voluptas sum blanditiis terreo.',
+        rating: 5.0,
+      ),
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::ACCURACY,
+        comment: 'Capitulus dolorem verus.',
+        rating: 4.0,
+      ),
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::COMMUNICATION,
+        rating: 1.0,
+      ),
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::CHECKIN,
+        rating: 1.0,
+      ),
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::LOCATION,
+        rating: 2.0,
+      ),
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::VALUE,
+        comment: 'Quos constans aperte tero sollers.',
+        rating: 5.0,
+      ),
+    ],
+    content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
+    created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
+    id: 'dc5b9885-3a99-48f5-b9bd-89c6cf785ee1',
+    is_public: true,
+    metadata: [],
+    private_feedback: 'Tripudio neque communis.',
+    rating: 3.0,
+    source: 'Airbnb',
+    updated_at: DateTime.iso8601('2026-02-18T05:30:12.820Z'),
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.review.patch_property_review(request: req)
+
+unless res.property_review.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::PatchPropertyReviewRequest](../../models/operations/patchpropertyreviewrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchPropertyReviewResponse)](../../models/operations/patchpropertyreviewresponse.md)**
 
 ### Errors
 
@@ -602,7 +782,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: 'd87109bd-311d-42a4-a14e-be35c48e96a1',
+    id: '370b1411-7f2a-4808-a238-0ab2cff258c3',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -610,10 +790,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: 'f6528874-eec8-4075-9bf2-eb3b1f151424',
+        id: '5c1c8a4d-8d1c-42bc-9a57-8f7a72bcc584',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'ad2bd2be-5601-485c-9dbd-c2e62d83707b',
+            id: '851d1bb4-9e1e-4c76-aa0d-fd358513f8c1',
             slug: 'textor',
             value: 'quos',
           ),
@@ -626,10 +806,10 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: 'ac9e59e5-5fff-45ad-bf73-6bbfa17b886f',
+        id: '095cee3f-1f75-4b5b-a45f-e940e092bc8a',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '52eab880-dfaa-4fd8-b932-b9b276e853b9',
+            id: 'dd9e78d3-f6cb-4f20-bea9-234b09307324',
             slug: 'bos',
             value: 'casso',
           ),
@@ -645,7 +825,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-08-28T00:44:06.406Z'),
+    updated_at: DateTime.iso8601('2025-08-28T16:25:25.667Z'),
     url: 'https://diligent-bandwidth.biz',
     verified_purchase: true,
   ),
@@ -670,6 +850,93 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateCommerceReviewResponse)](../../models/operations/updatecommercereviewresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_property_review
+
+Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updatePropertyReview" method="put" path="/property/{connection_id}/review/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdatePropertyReviewRequest.new(
+  property_review: Models::Shared::PropertyReview.new(
+    author_name: 'Benton Jast',
+    category_ratings: [
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::CLEANLINESS,
+        comment: 'Umquam perferendis amitto voluptas sum blanditiis terreo.',
+        rating: 5.0,
+      ),
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::ACCURACY,
+        comment: 'Capitulus dolorem verus.',
+        rating: 4.0,
+      ),
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::COMMUNICATION,
+        rating: 1.0,
+      ),
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::CHECKIN,
+        rating: 1.0,
+      ),
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::LOCATION,
+        rating: 2.0,
+      ),
+      Models::Shared::PropertyCategoryrating.new(
+        category: Models::Shared::PropertyCategoryratingCategory::VALUE,
+        comment: 'Quos constans aperte tero sollers.',
+        rating: 5.0,
+      ),
+    ],
+    content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
+    created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
+    id: 'dc5b9885-3a99-48f5-b9bd-89c6cf785ee1',
+    is_public: true,
+    metadata: [],
+    private_feedback: 'Tripudio neque communis.',
+    rating: 3.0,
+    source: 'Airbnb',
+    updated_at: DateTime.iso8601('2026-02-18T05:30:12.820Z'),
+  ),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.review.update_property_review(request: req)
+
+unless res.property_review.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                 | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                 | [Models::Operations::UpdatePropertyReviewRequest](../../models/operations/updatepropertyreviewrequest.md) | :heavy_check_mark:                                                                                        | The request object to use for the request.                                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdatePropertyReviewResponse)](../../models/operations/updatepropertyreviewresponse.md)**
 
 ### Errors
 

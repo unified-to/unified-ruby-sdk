@@ -92,6 +92,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_goal=(str_); end
   def list_group_id(); end
   def list_group_id=(str_); end
+  def list_guest_id(); end
+  def list_guest_id=(str_); end
   def list_instance_id(); end
   def list_instance_id=(str_); end
   def list_instructor_id(); end
@@ -118,6 +120,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_link_id=(str_); end
   def list_list_id(); end
   def list_list_id=(str_); end
+  def list_listing_id(); end
+  def list_listing_id=(str_); end
   def list_location_id(); end
   def list_location_id=(str_); end
   def list_matter_id(); end
@@ -170,6 +174,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_region_id=(str_); end
   def list_repo_id(); end
   def list_repo_id=(str_); end
+  def list_reservation_id(); end
+  def list_reservation_id=(str_); end
   def list_role_id(); end
   def list_role_id=(str_); end
   def list_room_id(); end
@@ -216,6 +222,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_ticket_id=(str_); end
   def list_type(); end
   def list_type=(str_); end
+  def list_unittype_id(); end
+  def list_unittype_id=(str_); end
   def list_updated_gte(); end
   def list_updated_gte=(str_); end
   def list_user_id(); end
@@ -350,6 +358,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_form_id=(str_); end
   def virtual_webhook_group_id(); end
   def virtual_webhook_group_id=(str_); end
+  def virtual_webhook_guest_id(); end
+  def virtual_webhook_guest_id=(str_); end
   def virtual_webhook_invoice_id(); end
   def virtual_webhook_invoice_id=(str_); end
   def virtual_webhook_io_id(); end
@@ -370,6 +380,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_link_id=(str_); end
   def virtual_webhook_list_id(); end
   def virtual_webhook_list_id=(str_); end
+  def virtual_webhook_listing_id(); end
+  def virtual_webhook_listing_id=(str_); end
   def virtual_webhook_location_id(); end
   def virtual_webhook_location_id=(str_); end
   def virtual_webhook_matter_id(); end
@@ -406,6 +418,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_reference=(str_); end
   def virtual_webhook_repo_id(); end
   def virtual_webhook_repo_id=(str_); end
+  def virtual_webhook_reservation_id(); end
+  def virtual_webhook_reservation_id=(str_); end
   def virtual_webhook_saleschannel_id(); end
   def virtual_webhook_saleschannel_id=(str_); end
   def virtual_webhook_session_id(); end
