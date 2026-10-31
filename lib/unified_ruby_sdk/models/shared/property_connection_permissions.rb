@@ -92,6 +92,8 @@ module UnifiedRubySDK
           COMMERCE_ITEMVARIANT_WRITE = new('commerce_itemvariant_write')
           COMMERCE_RESERVATION_READ = new('commerce_reservation_read')
           COMMERCE_RESERVATION_WRITE = new('commerce_reservation_write')
+          COMMERCE_RETURN_READ = new('commerce_return_read')
+          COMMERCE_RETURN_WRITE = new('commerce_return_write')
           COMMERCE_AVAILABILITY_READ = new('commerce_availability_read')
           COMMERCE_AVAILABILITY_WRITE = new('commerce_availability_write')
           VERIFICATION_PACKAGE_READ = new('verification_package_read')

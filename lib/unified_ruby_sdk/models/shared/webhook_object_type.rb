@@ -55,6 +55,7 @@ module UnifiedRubySDK
           COMMERCE_SALESCHANNEL = new('commerce_saleschannel')
           COMMERCE_ITEMVARIANT = new('commerce_itemvariant')
           COMMERCE_RESERVATION = new('commerce_reservation')
+          COMMERCE_RETURN = new('commerce_return')
           COMMERCE_AVAILABILITY = new('commerce_availability')
           VERIFICATION_PACKAGE = new('verification_package')
           VERIFICATION_REQUEST = new('verification_request')

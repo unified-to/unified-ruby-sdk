@@ -43,7 +43,7 @@ module UnifiedRubySDK
         field :media, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemMedia)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('media') } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
-
+        # The item's (product's) name
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :prices, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceItemPrice)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('prices') } }

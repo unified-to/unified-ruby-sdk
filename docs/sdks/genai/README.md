@@ -57,11 +57,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.genai.create_genai_agent(genai_agent: Models::Shared::GenaiAgent.new(
   created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
   description: 'Assentator tero sequi.',
-  id: 'd497eda2-988c-4405-8a23-c306935032db',
+  id: '0013a51c-5f54-48b9-b56b-764fd04cbaed',
   instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
   is_active: false,
   name: 'daughter with',
-  updated_at: DateTime.iso8601('2025-10-22T17:42:49.978Z'),
+  updated_at: DateTime.iso8601('2025-10-23T15:01:20.892Z'),
 ), connection_id: '<id>')
 
 unless res.genai_agent.nil?
@@ -115,7 +115,7 @@ res = s.genai.create_genai_embedding(genai_embedding: Models::Shared::GenaiEmbed
   dimension: 423.0,
   embeddings: 'Est.',
   enconding_format: Models::Shared::EncondingFormat::FLOAT,
-  id: '30e33042-2788-48aa-99d7-0c82811bf5aa',
+  id: 'c8401ed3-dc3c-4dcb-badc-81fde6d28e4b',
   max_tokens: 223.0,
   tokens_used: 836.0,
   type: 'classification',
@@ -166,7 +166,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.genai.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
   content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
   created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-  id: '09bbf702-e776-407b-af17-ea80b4e9fc02',
+  id: '336f9f49-cb4d-4abd-ad8f-51cd49bf8f3a',
   metadata: [
     Models::Shared::GenaiMetadata.new(
       extra_data: {
@@ -181,7 +181,7 @@ res = s.genai.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
   ],
   name: 'sponte.md',
   type: Models::Shared::GenaiMemoryType::MEMORY,
-  updated_at: DateTime.iso8601('2023-04-28T13:22:14.230Z'),
+  updated_at: DateTime.iso8601('2023-04-28T21:09:12.712Z'),
   user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
 ), connection_id: '<id>')
 
@@ -230,10 +230,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.genai.create_genai_organization(genai_organization: Models::Shared::GenaiOrganization.new(
   created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
   description: 'Voluptates abeo subseco.',
-  id: 'b2b89e3b-55ef-4beb-9ec3-6cefe07e9194',
+  id: '8a7d9a66-f0a8-4de4-80fd-b0fdb2ba8166',
   is_active: false,
   name: 'officially about',
-  updated_at: DateTime.iso8601('2023-01-29T18:11:18.573Z'),
+  updated_at: DateTime.iso8601('2023-01-30T03:52:43.731Z'),
 ), connection_id: '<id>')
 
 unless res.genai_organization.nil?
@@ -396,10 +396,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.genai.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
-  completed_at: DateTime.iso8601('2025-10-08T13:06:47.241Z'),
+  completed_at: DateTime.iso8601('2025-10-09T10:21:49.215Z'),
   created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
   files_changed: 19.0,
-  id: 'fe63a39c-f330-4d48-8de3-400559a6fa04',
+  id: '96b518e2-356c-4ee6-bf39-a239d45df226',
   instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
   lines_added: 244.0,
   lines_deleted: 118.0,
@@ -414,12 +414,12 @@ res = s.genai.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
   pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
   repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
   source_branch_identifier: 'main',
-  started_at: DateTime.iso8601('2024-05-26T16:43:51.861Z'),
+  started_at: DateTime.iso8601('2024-05-27T08:06:31.873Z'),
   status: Models::Shared::GenaiTaskStatus::BLOCKED,
   summary: 'Cur aeternus cogito vesper.',
   target_branch_identifier: 'agent/joshingly-ignorance',
   tokens_used: 2165.0,
-  updated_at: DateTime.iso8601('2023-03-01T17:53:49.340Z'),
+  updated_at: DateTime.iso8601('2023-03-02T03:57:53.310Z'),
   web_url: 'https://inexperienced-adrenalin.biz/',
 ), connection_id: '<id>')
 
@@ -1003,11 +1003,11 @@ req = Models::Operations::PatchGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: '91260bd1-cb74-4089-be0d-65d5cbc36b7e',
+    id: 'b5ed6513-0c32-4ab7-abbb-6387d18aaaa7',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-10-22T17:42:49.986Z'),
+    updated_at: DateTime.iso8601('2025-10-23T15:01:20.896Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1058,7 +1058,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '87b28be0-66ce-411d-bf84-75f717fa478c',
+    id: '23a5c04a-ce25-46a6-bf04-bc6fccc7a8c8',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -1073,7 +1073,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-04-28T13:22:14.234Z'),
+    updated_at: DateTime.iso8601('2023-04-28T21:09:12.715Z'),
     user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
   ),
   connection_id: '<id>',
@@ -1125,10 +1125,10 @@ req = Models::Operations::PatchGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: 'be31d9d9-e1a3-4ee6-a3aa-849faafdda24',
+    id: '79bb78ea-c18c-40df-9d65-e2f283b3e2c4',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-01-29T18:11:18.575Z'),
+    updated_at: DateTime.iso8601('2023-01-30T03:52:43.734Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1177,10 +1177,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-08T13:06:47.267Z'),
+    completed_at: DateTime.iso8601('2025-10-09T10:21:49.226Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '9b22f976-933a-4846-89ae-e4f2eb6ccb5d',
+    id: '7edc9a37-1c4b-4c06-8313-ee63fce4ae8c',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1195,12 +1195,12 @@ req = Models::Operations::PatchGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-05-26T16:43:51.879Z'),
+    started_at: DateTime.iso8601('2024-05-27T08:06:31.881Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-01T17:53:49.352Z'),
+    updated_at: DateTime.iso8601('2023-03-02T03:57:53.316Z'),
     web_url: 'https://inexperienced-adrenalin.biz/',
   ),
   connection_id: '<id>',
@@ -1462,11 +1462,11 @@ req = Models::Operations::UpdateGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: '91260bd1-cb74-4089-be0d-65d5cbc36b7e',
+    id: 'b5ed6513-0c32-4ab7-abbb-6387d18aaaa7',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-10-22T17:42:49.986Z'),
+    updated_at: DateTime.iso8601('2025-10-23T15:01:20.896Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1517,7 +1517,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '87b28be0-66ce-411d-bf84-75f717fa478c',
+    id: '23a5c04a-ce25-46a6-bf04-bc6fccc7a8c8',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -1532,7 +1532,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-04-28T13:22:14.234Z'),
+    updated_at: DateTime.iso8601('2023-04-28T21:09:12.715Z'),
     user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
   ),
   connection_id: '<id>',
@@ -1584,10 +1584,10 @@ req = Models::Operations::UpdateGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: 'be31d9d9-e1a3-4ee6-a3aa-849faafdda24',
+    id: '79bb78ea-c18c-40df-9d65-e2f283b3e2c4',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-01-29T18:11:18.575Z'),
+    updated_at: DateTime.iso8601('2023-01-30T03:52:43.734Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1636,10 +1636,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-08T13:06:47.267Z'),
+    completed_at: DateTime.iso8601('2025-10-09T10:21:49.226Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '9b22f976-933a-4846-89ae-e4f2eb6ccb5d',
+    id: '7edc9a37-1c4b-4c06-8313-ee63fce4ae8c',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1654,12 +1654,12 @@ req = Models::Operations::UpdateGenaiTaskRequest.new(
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-05-26T16:43:51.879Z'),
+    started_at: DateTime.iso8601('2024-05-27T08:06:31.881Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-01T17:53:49.352Z'),
+    updated_at: DateTime.iso8601('2023-03-02T03:57:53.316Z'),
     web_url: 'https://inexperienced-adrenalin.biz/',
   ),
   connection_id: '<id>',

@@ -84,6 +84,7 @@ module UnifiedRubySDK
   autoload :Item, 'unified_ruby_sdk/item'
   autoload :Itemvariant, 'unified_ruby_sdk/itemvariant'
   autoload :Reservation, 'unified_ruby_sdk/reservation'
+  autoload :Return, 'unified_ruby_sdk/return_'
   autoload :Review, 'unified_ruby_sdk/review'
   autoload :Saleschannel, 'unified_ruby_sdk/saleschannel'
   autoload :Compute, 'unified_ruby_sdk/compute'
