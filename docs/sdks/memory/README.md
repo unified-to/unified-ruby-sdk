@@ -32,7 +32,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.memory.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
   content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
   created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-  id: '336f9f49-cb4d-4abd-ad8f-51cd49bf8f3a',
+  id: 'c57fe731-546d-4f3f-95cb-da6937c8f3ab',
   metadata: [
     Models::Shared::GenaiMetadata.new(
       extra_data: {
@@ -47,7 +47,7 @@ res = s.memory.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new
   ],
   name: 'sponte.md',
   type: Models::Shared::GenaiMemoryType::MEMORY,
-  updated_at: DateTime.iso8601('2023-04-28T21:09:12.712Z'),
+  updated_at: DateTime.iso8601('2023-04-29T05:06:52.141Z'),
   user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
 ), connection_id: '<id>')
 
@@ -186,7 +186,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '23a5c04a-ce25-46a6-bf04-bc6fccc7a8c8',
+    id: '95f96f95-8068-44ed-ae2d-14418c29e001',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -201,7 +201,7 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-04-28T21:09:12.715Z'),
+    updated_at: DateTime.iso8601('2023-04-29T05:06:52.147Z'),
     user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
   ),
   connection_id: '<id>',
@@ -295,7 +295,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '23a5c04a-ce25-46a6-bf04-bc6fccc7a8c8',
+    id: '95f96f95-8068-44ed-ae2d-14418c29e001',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -310,7 +310,7 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-04-28T21:09:12.715Z'),
+    updated_at: DateTime.iso8601('2023-04-29T05:06:52.147Z'),
     user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
   ),
   connection_id: '<id>',
