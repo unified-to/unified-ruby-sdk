@@ -38,7 +38,7 @@ module UnifiedRubySDK
           SEND_NOTIFICATIONS = new('send_notifications')
           MATTER_ID = new('matter_id')
           METADATA = new('metadata')
-          ROOM_IDS = new('room_ids')
+          ROOMS = new('rooms')
           RAW = new('raw')
         end
       end

@@ -144,6 +144,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def list_page_id=(str_); end
   def list_parent_id(); end
   def list_parent_id=(str_); end
+  def list_part_id(); end
+  def list_part_id=(str_); end
   def list_patient_id(); end
   def list_patient_id=(str_); end
   def list_payment_id(); end
@@ -396,6 +398,8 @@ class UnifiedRubySDK::Models::Shared::IntegrationSupport
   def virtual_webhook_page_id=(str_); end
   def virtual_webhook_parent_id(); end
   def virtual_webhook_parent_id=(str_); end
+  def virtual_webhook_part_id(); end
+  def virtual_webhook_part_id=(str_); end
   def virtual_webhook_patient_id(); end
   def virtual_webhook_patient_id=(str_); end
   def virtual_webhook_payment_id(); end

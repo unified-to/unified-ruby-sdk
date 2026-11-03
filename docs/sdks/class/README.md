@@ -32,7 +32,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
   description: 'Anser sperno decerno.',
-  id: 'b5f26247-e7b5-4839-89fc-398dcd69e1ab',
+  id: '4f3351a4-698f-4832-b978-1b0fd8ab2a17',
   instructors: [],
   languages: [
     'in',
@@ -54,7 +54,7 @@ res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   metadata: [],
   name: 'virtus',
   students: [],
-  updated_at: DateTime.iso8601('2025-08-13T14:50:59.662Z'),
+  updated_at: DateTime.iso8601('2025-08-14T12:09:15.370Z'),
 ), connection_id: '<id>')
 
 unless res.lms_class.nil?
@@ -192,7 +192,7 @@ req = Models::Operations::PatchLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: 'e2194c9d-fff5-461a-82cd-4db6f4c3f520',
+    id: '05722598-f59b-4c3e-93a3-7743349c2413',
     instructors: [],
     languages: [
       'in',
@@ -214,7 +214,7 @@ req = Models::Operations::PatchLmsClassRequest.new(
     metadata: [],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-13T14:50:59.683Z'),
+    updated_at: DateTime.iso8601('2025-08-14T12:09:15.391Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -307,7 +307,7 @@ req = Models::Operations::UpdateLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: 'e2194c9d-fff5-461a-82cd-4db6f4c3f520',
+    id: '05722598-f59b-4c3e-93a3-7743349c2413',
     instructors: [],
     languages: [
       'in',
@@ -329,7 +329,7 @@ req = Models::Operations::UpdateLmsClassRequest.new(
     metadata: [],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-13T14:50:59.683Z'),
+    updated_at: DateTime.iso8601('2025-08-14T12:09:15.391Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

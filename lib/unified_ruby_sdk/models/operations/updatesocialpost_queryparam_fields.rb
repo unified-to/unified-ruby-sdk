@@ -17,7 +17,7 @@ module UnifiedRubySDK
           CREATED_AT = new('created_at')
           UPDATED_AT = new('updated_at')
           PROFILE_ID = new('profile_id')
-          PARENT_POST_ID = new('parent_post_id')
+          PARENT_ID = new('parent_id')
           TITLE = new('title')
           BODY = new('body')
           STATUS = new('status')

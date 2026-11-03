@@ -243,6 +243,11 @@ module UnifiedRubySDK
           PROPERTY_QUOTE = new('property_quote')
           PROPERTY_REVIEW = new('property_review')
           PROPERTY_CONVERSATION = new('property_conversation')
+          PLM_PART = new('plm_part')
+          PLM_BOMLINE = new('plm_bomline')
+          PLM_DOCUMENT = new('plm_document')
+          PLM_CHANGE = new('plm_change')
+          PLM_CATEGORY = new('plm_category')
         end
       end
     end

@@ -56,7 +56,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '66281ff5-5a74-4c18-9e6d-1275fb4d66d2',
+  id: '6e641593-eb75-4e82-81c8-6b587511f208',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -69,7 +69,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-09T22:11:40.715Z'),
+  updated_at: DateTime.iso8601('2023-08-10T04:48:54.609Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -107,7 +107,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '66281ff5-5a74-4c18-9e6d-1275fb4d66d2',
+  id: '6e641593-eb75-4e82-81c8-6b587511f208',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -120,7 +120,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-09T22:11:40.715Z'),
+  updated_at: DateTime.iso8601('2023-08-10T04:48:54.609Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -583,6 +583,15 @@ end
 * [remove_accounting_bill](docs/sdks/bill/README.md#remove_accounting_bill) - Remove a bill
 * [update_accounting_bill](docs/sdks/bill/README.md#update_accounting_bill) - Update a bill
 
+### [bomline](docs/sdks/bomline/README.md)
+
+* [create_plm_bomline](docs/sdks/bomline/README.md#create_plm_bomline) - Create a bomline
+* [get_plm_bomline](docs/sdks/bomline/README.md#get_plm_bomline) - Retrieve a bomline
+* [list_plm_bomlines](docs/sdks/bomline/README.md#list_plm_bomlines) - List all bomlines
+* [patch_plm_bomline](docs/sdks/bomline/README.md#patch_plm_bomline) - Update a bomline
+* [remove_plm_bomline](docs/sdks/bomline/README.md#remove_plm_bomline) - Remove a bomline
+* [update_plm_bomline](docs/sdks/bomline/README.md#update_plm_bomline) - Update a bomline
+
 ### [branch](docs/sdks/branch/README.md)
 
 * [create_repo_branch](docs/sdks/branch/README.md#create_repo_branch) - Create a branch
@@ -682,8 +691,10 @@ end
 * [create_accounting_category](docs/sdks/category/README.md#create_accounting_category) - Create a category
 * [create_ticketing_category](docs/sdks/category/README.md#create_ticketing_category) - Create a category
 * [get_accounting_category](docs/sdks/category/README.md#get_accounting_category) - Retrieve a category
+* [get_plm_category](docs/sdks/category/README.md#get_plm_category) - Retrieve a category
 * [get_ticketing_category](docs/sdks/category/README.md#get_ticketing_category) - Retrieve a category
 * [list_accounting_categories](docs/sdks/category/README.md#list_accounting_categories) - List all categories
+* [list_plm_categories](docs/sdks/category/README.md#list_plm_categories) - List all categories
 * [list_ticketing_categories](docs/sdks/category/README.md#list_ticketing_categories) - List all categories
 * [patch_accounting_category](docs/sdks/category/README.md#patch_accounting_category) - Update a category
 * [patch_ticketing_category](docs/sdks/category/README.md#patch_ticketing_category) - Update a category
@@ -733,8 +744,13 @@ end
 
 ### [change](docs/sdks/change/README.md)
 
+* [create_plm_change](docs/sdks/change/README.md#create_plm_change) - Create a change
+* [get_plm_change](docs/sdks/change/README.md#get_plm_change) - Retrieve a change
 * [get_task_change](docs/sdks/change/README.md#get_task_change) - Retrieve a change
+* [list_plm_changes](docs/sdks/change/README.md#list_plm_changes) - List all changes
 * [list_task_changes](docs/sdks/change/README.md#list_task_changes) - List all changes
+* [patch_plm_change](docs/sdks/change/README.md#patch_plm_change) - Update a change
+* [update_plm_change](docs/sdks/change/README.md#update_plm_change) - Update a change
 
 ### [channel](docs/sdks/channel/README.md)
 
@@ -1166,23 +1182,28 @@ end
 * [create_ats_document](docs/sdks/document/README.md#create_ats_document) - Create a document
 * [create_healthcare_document](docs/sdks/document/README.md#create_healthcare_document) - Create a document
 * [create_hris_document](docs/sdks/document/README.md#create_hris_document) - Create a document
+* [create_plm_document](docs/sdks/document/README.md#create_plm_document) - Create a document
 * [create_signing_document](docs/sdks/document/README.md#create_signing_document) - Create a document
 * [get_ats_document](docs/sdks/document/README.md#get_ats_document) - Retrieve a document
 * [get_healthcare_document](docs/sdks/document/README.md#get_healthcare_document) - Retrieve a document
 * [get_hris_document](docs/sdks/document/README.md#get_hris_document) - Retrieve a document
+* [get_plm_document](docs/sdks/document/README.md#get_plm_document) - Retrieve a document
 * [get_signing_document](docs/sdks/document/README.md#get_signing_document) - Retrieve a document
 * [list_ats_documents](docs/sdks/document/README.md#list_ats_documents) - List all documents
 * [list_healthcare_documents](docs/sdks/document/README.md#list_healthcare_documents) - List all documents
 * [list_hris_documents](docs/sdks/document/README.md#list_hris_documents) - List all documents
+* [list_plm_documents](docs/sdks/document/README.md#list_plm_documents) - List all documents
 * [list_signing_documents](docs/sdks/document/README.md#list_signing_documents) - List all documents
 * [patch_ats_document](docs/sdks/document/README.md#patch_ats_document) - Update a document
 * [patch_hris_document](docs/sdks/document/README.md#patch_hris_document) - Update a document
+* [patch_plm_document](docs/sdks/document/README.md#patch_plm_document) - Update a document
 * [patch_signing_document](docs/sdks/document/README.md#patch_signing_document) - Update a document
 * [remove_ats_document](docs/sdks/document/README.md#remove_ats_document) - Remove a document
 * [remove_hris_document](docs/sdks/document/README.md#remove_hris_document) - Remove a document
 * [remove_signing_document](docs/sdks/document/README.md#remove_signing_document) - Remove a document
 * [update_ats_document](docs/sdks/document/README.md#update_ats_document) - Update a document
 * [update_hris_document](docs/sdks/document/README.md#update_hris_document) - Update a document
+* [update_plm_document](docs/sdks/document/README.md#update_plm_document) - Update a document
 * [update_signing_document](docs/sdks/document/README.md#update_signing_document) - Update a document
 
 ### [domain](docs/sdks/domain/README.md)
@@ -2017,6 +2038,14 @@ end
 * [remove_kms_page](docs/sdks/page/README.md#remove_kms_page) - Remove a page
 * [update_kms_page](docs/sdks/page/README.md#update_kms_page) - Update a page
 
+### [part](docs/sdks/part/README.md)
+
+* [create_plm_part](docs/sdks/part/README.md#create_plm_part) - Create a part
+* [get_plm_part](docs/sdks/part/README.md#get_plm_part) - Retrieve a part
+* [list_plm_parts](docs/sdks/part/README.md#list_plm_parts) - List all parts
+* [patch_plm_part](docs/sdks/part/README.md#patch_plm_part) - Update a part
+* [update_plm_part](docs/sdks/part/README.md#update_plm_part) - Update a part
+
 ### [passthrough](docs/sdks/passthrough/README.md)
 
 * [create_passthrough_json](docs/sdks/passthrough/README.md#create_passthrough_json) - Passthrough POST
@@ -2118,6 +2147,32 @@ end
 * [patch_crm_pipeline](docs/sdks/pipeline/README.md#patch_crm_pipeline) - Update a pipeline
 * [remove_crm_pipeline](docs/sdks/pipeline/README.md#remove_crm_pipeline) - Remove a pipeline
 * [update_crm_pipeline](docs/sdks/pipeline/README.md#update_crm_pipeline) - Update a pipeline
+
+### [plm](docs/sdks/plm/README.md)
+
+* [create_plm_bomline](docs/sdks/plm/README.md#create_plm_bomline) - Create a bomline
+* [create_plm_change](docs/sdks/plm/README.md#create_plm_change) - Create a change
+* [create_plm_document](docs/sdks/plm/README.md#create_plm_document) - Create a document
+* [create_plm_part](docs/sdks/plm/README.md#create_plm_part) - Create a part
+* [get_plm_bomline](docs/sdks/plm/README.md#get_plm_bomline) - Retrieve a bomline
+* [get_plm_category](docs/sdks/plm/README.md#get_plm_category) - Retrieve a category
+* [get_plm_change](docs/sdks/plm/README.md#get_plm_change) - Retrieve a change
+* [get_plm_document](docs/sdks/plm/README.md#get_plm_document) - Retrieve a document
+* [get_plm_part](docs/sdks/plm/README.md#get_plm_part) - Retrieve a part
+* [list_plm_bomlines](docs/sdks/plm/README.md#list_plm_bomlines) - List all bomlines
+* [list_plm_categories](docs/sdks/plm/README.md#list_plm_categories) - List all categories
+* [list_plm_changes](docs/sdks/plm/README.md#list_plm_changes) - List all changes
+* [list_plm_documents](docs/sdks/plm/README.md#list_plm_documents) - List all documents
+* [list_plm_parts](docs/sdks/plm/README.md#list_plm_parts) - List all parts
+* [patch_plm_bomline](docs/sdks/plm/README.md#patch_plm_bomline) - Update a bomline
+* [patch_plm_change](docs/sdks/plm/README.md#patch_plm_change) - Update a change
+* [patch_plm_document](docs/sdks/plm/README.md#patch_plm_document) - Update a document
+* [patch_plm_part](docs/sdks/plm/README.md#patch_plm_part) - Update a part
+* [remove_plm_bomline](docs/sdks/plm/README.md#remove_plm_bomline) - Remove a bomline
+* [update_plm_bomline](docs/sdks/plm/README.md#update_plm_bomline) - Update a bomline
+* [update_plm_change](docs/sdks/plm/README.md#update_plm_change) - Update a change
+* [update_plm_document](docs/sdks/plm/README.md#update_plm_document) - Update a document
+* [update_plm_part](docs/sdks/plm/README.md#update_plm_part) - Update a part
 
 ### [post](docs/sdks/post/README.md)
 
@@ -2966,7 +3021,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Voluptatibus valde spoliatio.',
-      id: '66281ff5-5a74-4c18-9e6d-1275fb4d66d2',
+      id: '6e641593-eb75-4e82-81c8-6b587511f208',
       is_payable: false,
       metadata: [],
       name: 'Auto Loan Account',
@@ -2979,7 +3034,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-09T22:11:40.715Z'),
+      updated_at: DateTime.iso8601('2023-08-10T04:48:54.609Z'),
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -3025,7 +3080,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '66281ff5-5a74-4c18-9e6d-1275fb4d66d2',
+  id: '6e641593-eb75-4e82-81c8-6b587511f208',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3038,7 +3093,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-09T22:11:40.715Z'),
+  updated_at: DateTime.iso8601('2023-08-10T04:48:54.609Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3067,7 +3122,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '66281ff5-5a74-4c18-9e6d-1275fb4d66d2',
+  id: '6e641593-eb75-4e82-81c8-6b587511f208',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3080,7 +3135,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-09T22:11:40.715Z'),
+  updated_at: DateTime.iso8601('2023-08-10T04:48:54.609Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

@@ -8,8 +8,10 @@
 * [create_accounting_category](#create_accounting_category) - Create a category
 * [create_ticketing_category](#create_ticketing_category) - Create a category
 * [get_accounting_category](#get_accounting_category) - Retrieve a category
+* [get_plm_category](#get_plm_category) - Retrieve a category
 * [get_ticketing_category](#get_ticketing_category) - Retrieve a category
 * [list_accounting_categories](#list_accounting_categories) - List all categories
+* [list_plm_categories](#list_plm_categories) - List all categories
 * [list_ticketing_categories](#list_ticketing_categories) - List all categories
 * [patch_accounting_category](#patch_accounting_category) - Update a category
 * [patch_ticketing_category](#patch_ticketing_category) - Update a category
@@ -38,11 +40,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.category.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(
   created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
   description: 'Textus ab thymum labore basium.',
-  id: '465bebd5-cd66-40e6-a91a-6c07c1dc84db',
+  id: 'dde68e0d-8943-4930-aaa0-2d03042e69bb',
   is_active: false,
   metadata: [],
   name: 'Beauty',
-  updated_at: DateTime.iso8601('2025-09-19T12:21:12.641Z'),
+  updated_at: DateTime.iso8601('2025-09-20T05:53:56.114Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_category.nil?
@@ -90,11 +92,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.category.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(
   created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
   description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-  id: 'fed027b1-bb0f-459d-abaa-c2788df91415',
+  id: '034df176-1634-4373-bf7f-674185811ebb',
   is_active: true,
   metadata: [],
   name: 'amicitia',
-  updated_at: DateTime.iso8601('2026-01-24T14:36:24.217Z'),
+  updated_at: DateTime.iso8601('2026-01-25T13:48:02.495Z'),
 ), connection_id: '<id>')
 
 unless res.ticketing_category.nil?
@@ -159,6 +161,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetAccountingCategoryResponse)](../../models/operations/getaccountingcategoryresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_plm_category
+
+Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getPlmCategory" method="get" path="/plm/{connection_id}/category/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.category.get_plm_category(connection_id: '<id>', id: '<id>')
+
+unless res.plm_category.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Category                                                                                                                               |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetPlmCategoryQueryParamFields](../../models/operations/getplmcategoryqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetPlmCategoryResponse)](../../models/operations/getplmcategoryresponse.md)**
 
 ### Errors
 
@@ -255,6 +301,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_plm_categories
+
+Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listPlmCategories" method="get" path="/plm/{connection_id}/category" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListPlmCategoriesRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.category.list_plm_categories(request: req)
+
+unless res.plm_categories.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::ListPlmCategoriesRequest](../../models/operations/listplmcategoriesrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::ListPlmCategoriesResponse)](../../models/operations/listplmcategoriesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_ticketing_categories
 
 Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -321,11 +412,11 @@ req = Models::Operations::PatchAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Textus ab thymum labore basium.',
-    id: 'f46b2d0d-9878-40a4-b2e7-c017ee158474',
+    id: '11a9785b-b11f-4026-9b56-1deb559f1546',
     is_active: false,
     metadata: [],
     name: 'Beauty',
-    updated_at: DateTime.iso8601('2025-09-19T12:21:12.648Z'),
+    updated_at: DateTime.iso8601('2025-09-20T05:53:56.125Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -376,11 +467,11 @@ req = Models::Operations::PatchTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: '88006c0d-2e3a-4a48-a08b-74b61cc9a77b',
+    id: '7e98cb44-0ac5-4d72-a781-9c83fc34625b',
     is_active: true,
     metadata: [],
     name: 'amicitia',
-    updated_at: DateTime.iso8601('2026-01-24T14:36:24.225Z'),
+    updated_at: DateTime.iso8601('2026-01-25T13:48:02.507Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -515,11 +606,11 @@ req = Models::Operations::UpdateAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Textus ab thymum labore basium.',
-    id: 'f46b2d0d-9878-40a4-b2e7-c017ee158474',
+    id: '11a9785b-b11f-4026-9b56-1deb559f1546',
     is_active: false,
     metadata: [],
     name: 'Beauty',
-    updated_at: DateTime.iso8601('2025-09-19T12:21:12.648Z'),
+    updated_at: DateTime.iso8601('2025-09-20T05:53:56.125Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -570,11 +661,11 @@ req = Models::Operations::UpdateTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: '88006c0d-2e3a-4a48-a08b-74b61cc9a77b',
+    id: '7e98cb44-0ac5-4d72-a781-9c83fc34625b',
     is_active: true,
     metadata: [],
     name: 'amicitia',
-    updated_at: DateTime.iso8601('2026-01-24T14:36:24.225Z'),
+    updated_at: DateTime.iso8601('2026-01-25T13:48:02.507Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

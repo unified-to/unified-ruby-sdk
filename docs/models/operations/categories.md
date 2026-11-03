@@ -44,3 +44,4 @@
 | `COMPUTE`      | compute        |
 | `HEALTHCARE`   | healthcare     |
 | `PROPERTY`     | property       |
+| `PLM`          | plm            |

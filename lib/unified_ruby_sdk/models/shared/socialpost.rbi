@@ -24,8 +24,8 @@ class UnifiedRubySDK::Models::Shared::SocialPost
   def metadata=(str_); end
   def metrics(); end
   def metrics=(str_); end
-  def parent_post_id(); end
-  def parent_post_id=(str_); end
+  def parent_id(); end
+  def parent_id=(str_); end
   def profile_id(); end
   def profile_id=(str_); end
   def raw(); end

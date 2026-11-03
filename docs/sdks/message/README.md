@@ -32,17 +32,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.message.create_messaging_message(messaging_message: Models::Shared::MessagingMessage.new(
   attachments: [
     Models::Shared::MessagingAttachment.new(
-      content_identifier: 'f5594614-0767-4687-abf6-e4e79ae07721',
+      content_identifier: '1362a8f4-9680-4325-93ff-b333ed77ca74',
       content_type: 'coaegresco',
       download_url: 'https://rotating-advertisement.org',
       filename: 'super',
-      message_id: 'b74fd502-35be-433b-8b88-95b207966855',
+      message_id: '440f576f-90a2-4ebd-a58e-6c0830393744',
       size: 327.0,
     ),
   ],
   buttons: [
     Models::Shared::MessagingButton.new(
-      id: '9d491437-7dca-482e-9394-e30c861c0f1c',
+      id: '017b32d2-81de-4574-a173-20ab9aa50df7',
       text: 'comparo',
     ),
   ],
@@ -50,7 +50,7 @@ res = s.message.create_messaging_message(messaging_message: Models::Shared::Mess
   destination_members: [],
   has_children: true,
   hidden_members: [],
-  id: 'b74fd502-35be-433b-8b88-95b207966855',
+  id: '440f576f-90a2-4ebd-a58e-6c0830393744',
   is_unread: false,
   mentioned_members: [],
   message: 'Sum utique aliquid.',
@@ -59,7 +59,7 @@ res = s.message.create_messaging_message(messaging_message: Models::Shared::Mess
   metadata: [],
   reactions: [],
   subject: 'Cernuus optio cohaero summisse in.',
-  updated_at: DateTime.iso8601('2023-07-21T11:16:48.736Z'),
+  updated_at: DateTime.iso8601('2023-07-21T19:59:04.273Z'),
   web_url: 'https://grumpy-kit.net',
 ), connection_id: '<id>')
 
@@ -198,17 +198,17 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: '08bcbd73-cb3c-4aa4-9795-dec35404d5f7',
+        content_identifier: 'afd54d26-f0d0-450e-bd81-313d529f5e33',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: '06c6687e-10f7-4145-9bb8-4c1575721f18',
+        message_id: '855e18a1-0990-4b30-aefd-6f5afcdea61c',
         size: 327.0,
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: '953c8d74-e080-4636-b376-fdc7ea75dc9d',
+        id: '5d364dbe-e5c5-4d0d-afb2-fa277d8f7f61',
         text: 'comparo',
       ),
     ],
@@ -216,7 +216,7 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: '06c6687e-10f7-4145-9bb8-4c1575721f18',
+    id: '855e18a1-0990-4b30-aefd-6f5afcdea61c',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -225,7 +225,7 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Cernuus optio cohaero summisse in.',
-    updated_at: DateTime.iso8601('2023-07-21T11:16:48.744Z'),
+    updated_at: DateTime.iso8601('2023-07-21T19:59:04.287Z'),
     web_url: 'https://grumpy-kit.net',
   ),
   connection_id: '<id>',
@@ -319,17 +319,17 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: '08bcbd73-cb3c-4aa4-9795-dec35404d5f7',
+        content_identifier: 'afd54d26-f0d0-450e-bd81-313d529f5e33',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: '06c6687e-10f7-4145-9bb8-4c1575721f18',
+        message_id: '855e18a1-0990-4b30-aefd-6f5afcdea61c',
         size: 327.0,
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: '953c8d74-e080-4636-b376-fdc7ea75dc9d',
+        id: '5d364dbe-e5c5-4d0d-afb2-fa277d8f7f61',
         text: 'comparo',
       ),
     ],
@@ -337,7 +337,7 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: '06c6687e-10f7-4145-9bb8-4c1575721f18',
+    id: '855e18a1-0990-4b30-aefd-6f5afcdea61c',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -346,7 +346,7 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Cernuus optio cohaero summisse in.',
-    updated_at: DateTime.iso8601('2023-07-21T11:16:48.744Z'),
+    updated_at: DateTime.iso8601('2023-07-21T19:59:04.287Z'),
     web_url: 'https://grumpy-kit.net',
   ),
   connection_id: '<id>',

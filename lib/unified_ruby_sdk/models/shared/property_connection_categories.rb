@@ -52,6 +52,7 @@ module UnifiedRubySDK
           COMPUTE = new('compute')
           HEALTHCARE = new('healthcare')
           PROPERTY = new('property')
+          PLM = new('plm')
         end
       end
     end

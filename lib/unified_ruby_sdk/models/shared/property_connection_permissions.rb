@@ -440,6 +440,16 @@ module UnifiedRubySDK
           PROPERTY_REVIEW_WRITE = new('property_review_write')
           PROPERTY_CONVERSATION_READ = new('property_conversation_read')
           PROPERTY_CONVERSATION_WRITE = new('property_conversation_write')
+          PLM_PART_READ = new('plm_part_read')
+          PLM_PART_WRITE = new('plm_part_write')
+          PLM_BOMLINE_READ = new('plm_bomline_read')
+          PLM_BOMLINE_WRITE = new('plm_bomline_write')
+          PLM_DOCUMENT_READ = new('plm_document_read')
+          PLM_DOCUMENT_WRITE = new('plm_document_write')
+          PLM_CHANGE_READ = new('plm_change_read')
+          PLM_CHANGE_WRITE = new('plm_change_write')
+          PLM_CATEGORY_READ = new('plm_category_read')
+          PLM_CATEGORY_WRITE = new('plm_category_write')
         end
       end
     end
