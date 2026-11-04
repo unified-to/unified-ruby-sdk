@@ -32,12 +32,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.signatory.create_signing_signatory(signing_signatory: Models::Shared::SigningSignatory.new(
   created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
   email: 'anais.lakin@icloud.com',
-  id: 'bab557ee-4a3c-45ba-84a7-0731dcfb3539',
+  id: 'b72bbee6-8091-4028-bbf9-7314bdc7f95b',
   metadata: [],
   name: 'Anais Lakin',
   role: Models::Shared::SigningSignatoryRole::SIGNER,
   status: Models::Shared::SigningSignatoryStatus::ERROR,
-  updated_at: DateTime.iso8601('2024-05-23T19:53:33.441Z'),
+  updated_at: DateTime.iso8601('2024-05-24T06:23:49.322Z'),
 ), connection_id: '<id>')
 
 unless res.signing_signatory.nil?
@@ -175,12 +175,12 @@ req = Models::Operations::PatchSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
     email: 'anais.lakin@icloud.com',
-    id: '2f67a2bb-1653-41e9-97e0-ac01145c752e',
+    id: 'e3aa3620-d8f1-46b3-9515-b5ec415c409f',
     metadata: [],
     name: 'Anais Lakin',
     role: Models::Shared::SigningSignatoryRole::SIGNER,
     status: Models::Shared::SigningSignatoryStatus::ERROR,
-    updated_at: DateTime.iso8601('2024-05-23T19:53:33.446Z'),
+    updated_at: DateTime.iso8601('2024-05-24T06:23:49.330Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -273,12 +273,12 @@ req = Models::Operations::UpdateSigningSignatoryRequest.new(
   signing_signatory: Models::Shared::SigningSignatory.new(
     created_at: DateTime.iso8601('2022-04-16T19:25:01.966Z'),
     email: 'anais.lakin@icloud.com',
-    id: '2f67a2bb-1653-41e9-97e0-ac01145c752e',
+    id: 'e3aa3620-d8f1-46b3-9515-b5ec415c409f',
     metadata: [],
     name: 'Anais Lakin',
     role: Models::Shared::SigningSignatoryRole::SIGNER,
     status: Models::Shared::SigningSignatoryStatus::ERROR,
-    updated_at: DateTime.iso8601('2024-05-23T19:53:33.446Z'),
+    updated_at: DateTime.iso8601('2024-05-24T06:23:49.330Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

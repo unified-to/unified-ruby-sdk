@@ -32,7 +32,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::MetadataMetadata.new(
   created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
   format: Models::Shared::MetadataMetadataFormat::PRICE,
-  id: '326d074c-25f2-4e01-9eb1-8fd02392d03e',
+  id: '1959a42f-2050-4596-a893-a46f9cda5aae',
   is_required: false,
   name: 'autem',
   object_type: 'compute_domain',
@@ -42,7 +42,7 @@ res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::Met
   options: [],
   original_format: 'advoco',
   slug: 'arbustum',
-  updated_at: DateTime.iso8601('2025-03-31T06:06:44.463Z'),
+  updated_at: DateTime.iso8601('2025-03-31T22:22:54.164Z'),
 ), connection_id: '<id>')
 
 unless res.metadata_metadata.nil?
@@ -180,7 +180,7 @@ req = Models::Operations::PatchMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '93593681-4ed3-4ff6-a254-e5d21a7116e5',
+    id: 'b3e1cccd-7c94-47f5-a8f9-c41378f0709c',
     is_required: false,
     name: 'autem',
     object_type: 'compute_domain',
@@ -190,7 +190,7 @@ req = Models::Operations::PatchMetadataMetadataRequest.new(
     options: [],
     original_format: 'advoco',
     slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-03-31T06:06:44.472Z'),
+    updated_at: DateTime.iso8601('2025-03-31T22:22:54.174Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -283,7 +283,7 @@ req = Models::Operations::UpdateMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '93593681-4ed3-4ff6-a254-e5d21a7116e5',
+    id: 'b3e1cccd-7c94-47f5-a8f9-c41378f0709c',
     is_required: false,
     name: 'autem',
     object_type: 'compute_domain',
@@ -293,7 +293,7 @@ req = Models::Operations::UpdateMetadataMetadataRequest.new(
     options: [],
     original_format: 'advoco',
     slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-03-31T06:06:44.472Z'),
+    updated_at: DateTime.iso8601('2025-03-31T22:22:54.174Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

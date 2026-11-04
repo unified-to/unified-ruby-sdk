@@ -30,7 +30,7 @@ generation:
   telemetryEnabled: false
   versioningStrategy: automatic
 ruby:
-  version: 0.68.12
+  version: 0.68.13
   additionalDependencies:
     development: {}
     runtime: {}

@@ -54,7 +54,7 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
   created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
   currency: 'XCD',
   description: 'Adsidue audentia.',
-  id: '2ddf50e0-c199-48e8-bffc-b88e72767d01',
+  id: '0c5df94b-0272-4fe9-ab08-5d85d2039edd',
   image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
   is_active: false,
   language_locale: 'vulgaris',
@@ -65,10 +65,10 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
     Models::Shared::CommerceItemMedia.new(
       alt: 'Addo.',
       height: 283.0,
-      id: '0d4716be-28f0-4cb2-a56f-b8d1a735022f',
+      id: 'd645ee73-8571-4cda-8dd7-3a0617e4b8e2',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '70a5cf6a-f3d0-4b85-827a-2c6dcc70c6e8',
+          id: '652264a3-4470-4ccc-ae4f-e061487abc95',
           slug: 'abutor',
           value: 'damno',
         ),
@@ -94,7 +94,7 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
       type: Models::Shared::CommerceTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2024-04-25T04:59:18.358Z'),
+  updated_at: DateTime.iso8601('2024-04-25T12:48:02.304Z'),
   web_url: 'https://chilly-edge.info',
 ), connection_id: '<id>')
 
@@ -153,7 +153,7 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
   created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
   currency: 'MNT',
   description: 'Commemoro acervus.',
-  id: 'c733f67f-c4f1-4af9-ace8-b0f88a1357c4',
+  id: 'd4a0332f-f2a0-4132-b119-3569669ab7be',
   is_active: false,
   is_hq: true,
   language_locale: 'it',
@@ -174,7 +174,7 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
     ),
   ],
   timezone: 'Asia/Jerusalem',
-  updated_at: DateTime.iso8601('2023-06-25T20:21:18.408Z'),
+  updated_at: DateTime.iso8601('2023-06-26T04:40:03.529Z'),
 ), connection_id: '<id>')
 
 unless res.hris_location.nil?
@@ -678,7 +678,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: 'cb6a7b6c-8a87-4cdd-a093-eeef919a2a3a',
+    id: '56de9e5d-6294-4fc3-bb32-e119126c7314',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -689,10 +689,10 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '8f94aa8c-cb73-4d71-bf69-7fbfbfe06ebb',
+        id: '8db1b82e-5268-4a8b-bc73-ac3d2316a2b3',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '2d79b608-3fa0-4bdf-a021-76aecf834482',
+            id: '7d18a572-1e46-43d3-be95-21bf367eda9d',
             slug: 'abutor',
             value: 'damno',
           ),
@@ -718,7 +718,7 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-25T04:59:18.367Z'),
+    updated_at: DateTime.iso8601('2024-04-25T12:48:02.312Z'),
     web_url: 'https://chilly-edge.info',
   ),
   connection_id: '<id>',
@@ -780,7 +780,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'ba1e85c3-f95b-4663-8f89-b3bdee2462ab',
+    id: '892808e7-1040-4b5e-8b07-b653beb44e92',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -801,7 +801,7 @@ req = Models::Operations::PatchHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-25T20:21:18.416Z'),
+    updated_at: DateTime.iso8601('2023-06-26T04:40:03.535Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -946,7 +946,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: 'cb6a7b6c-8a87-4cdd-a093-eeef919a2a3a',
+    id: '56de9e5d-6294-4fc3-bb32-e119126c7314',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -957,10 +957,10 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '8f94aa8c-cb73-4d71-bf69-7fbfbfe06ebb',
+        id: '8db1b82e-5268-4a8b-bc73-ac3d2316a2b3',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '2d79b608-3fa0-4bdf-a021-76aecf834482',
+            id: '7d18a572-1e46-43d3-be95-21bf367eda9d',
             slug: 'abutor',
             value: 'damno',
           ),
@@ -986,7 +986,7 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
         type: Models::Shared::CommerceTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-25T04:59:18.367Z'),
+    updated_at: DateTime.iso8601('2024-04-25T12:48:02.312Z'),
     web_url: 'https://chilly-edge.info',
   ),
   connection_id: '<id>',
@@ -1048,7 +1048,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'ba1e85c3-f95b-4663-8f89-b3bdee2462ab',
+    id: '892808e7-1040-4b5e-8b07-b653beb44e92',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -1069,7 +1069,7 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-25T20:21:18.416Z'),
+    updated_at: DateTime.iso8601('2023-06-26T04:40:03.535Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

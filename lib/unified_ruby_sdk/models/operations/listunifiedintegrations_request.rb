@@ -21,24 +21,30 @@ module UnifiedRubySDK
         field :env, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'env', 'style': 'form', 'explode': true } }
 
         field :limit, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'limit', 'style': 'form', 'explode': true } }
+        # Only return support and OAuth2 scopes for these object types (e.g. crm_contact,crm_deal), to keep the response small
+        field :object_types, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'object_types', 'style': 'form', 'explode': true } }
 
         field :offset, Crystalline::Nilable.new(::Float), { 'query_param': { 'field_name': 'offset', 'style': 'form', 'explode': true } }
 
         field :summary, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'query_param': { 'field_name': 'summary', 'style': 'form', 'explode': true } }
         # Filter the results for only this integration type
         field :type, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'type', 'style': 'form', 'explode': true } }
+        # Filter the results for only these integration types (e.g. hubspot,salesforce)
+        field :types, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'query_param': { 'field_name': 'types', 'style': 'form', 'explode': true } }
 
         field :updated_gte, Crystalline::Nilable.new(::String), { 'query_param': { 'field_name': 'updated_gte', 'style': 'form', 'explode': true } }
 
-        sig { params(active: T.nilable(T::Boolean), categories: T.nilable(T::Array[Models::Operations::ListUnifiedIntegrationsQueryParamCategories]), env: T.nilable(::String), limit: T.nilable(::Float), offset: T.nilable(::Float), summary: T.nilable(T::Boolean), type: T.nilable(::String), updated_gte: T.nilable(::String)).void }
-        def initialize(active: nil, categories: nil, env: nil, limit: nil, offset: nil, summary: nil, type: nil, updated_gte: nil)
+        sig { params(active: T.nilable(T::Boolean), categories: T.nilable(T::Array[Models::Operations::ListUnifiedIntegrationsQueryParamCategories]), env: T.nilable(::String), limit: T.nilable(::Float), object_types: T.nilable(T::Array[::String]), offset: T.nilable(::Float), summary: T.nilable(T::Boolean), type: T.nilable(::String), types: T.nilable(T::Array[::String]), updated_gte: T.nilable(::String)).void }
+        def initialize(active: nil, categories: nil, env: nil, limit: nil, object_types: nil, offset: nil, summary: nil, type: nil, types: nil, updated_gte: nil)
           @active = active
           @categories = categories
           @env = env
           @limit = limit
+          @object_types = object_types
           @offset = offset
           @summary = summary
           @type = type
+          @types = types
           @updated_gte = updated_gte
         end
 
@@ -49,9 +55,11 @@ module UnifiedRubySDK
           return false unless @categories == other.categories
           return false unless @env == other.env
           return false unless @limit == other.limit
+          return false unless @object_types == other.object_types
           return false unless @offset == other.offset
           return false unless @summary == other.summary
           return false unless @type == other.type
+          return false unless @types == other.types
           return false unless @updated_gte == other.updated_gte
           true
         end

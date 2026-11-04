@@ -28,7 +28,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.feedback.create_performance_feedback(performance_feedback: Models::Shared::PerformanceFeedback.new(
   created_at: DateTime.iso8601('2023-04-11T16:21:53.862Z'),
-  id: '26465ace-59b4-4dc2-8f40-02d1f2992a99',
+  id: 'aaa42b88-4a8b-42dd-9d15-41ff86c50aab',
   is_visible: true,
   message: 'Tabernus corpus voluptate aestus.',
   metadata: [],
@@ -37,7 +37,7 @@ res = s.feedback.create_performance_feedback(performance_feedback: Models::Share
     'hexagon',
   ],
   type: Models::Shared::PerformanceFeedbackType::PRAISE,
-  updated_at: DateTime.iso8601('2025-09-12T22:14:39.721Z'),
+  updated_at: DateTime.iso8601('2025-09-13T13:42:02.020Z'),
   user_id: '<id>',
 ), connection_id: '<id>')
 

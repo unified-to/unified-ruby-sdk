@@ -16,12 +16,16 @@ class UnifiedRubySDK::Models::Operations::ListUnifiedIntegrationsRequest
   def env=(str_); end
   def limit(); end
   def limit=(str_); end
+  def object_types(); end
+  def object_types=(str_); end
   def offset(); end
   def offset=(str_); end
   def summary(); end
   def summary=(str_); end
   def type(); end
   def type=(str_); end
+  def types(); end
+  def types=(str_); end
   def updated_gte(); end
   def updated_gte=(str_); end
 end
