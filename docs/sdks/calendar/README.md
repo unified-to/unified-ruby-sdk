@@ -5,10 +5,12 @@
 
 ### Available Operations
 
+* [create_calendar_bot](#create_calendar_bot) - Create a bot
 * [create_calendar_calendar](#create_calendar_calendar) - Create a calendar
 * [create_calendar_event](#create_calendar_event) - Create an event
 * [create_calendar_link](#create_calendar_link) - Create a link
 * [create_calendar_webinar](#create_calendar_webinar) - Create a webinar
+* [get_calendar_bot](#get_calendar_bot) - Retrieve a bot
 * [get_calendar_calendar](#get_calendar_calendar) - Retrieve a calendar
 * [get_calendar_event](#get_calendar_event) - Retrieve an event
 * [get_calendar_link](#get_calendar_link) - Retrieve a link
@@ -16,6 +18,7 @@
 * [get_calendar_recording](#get_calendar_recording) - Retrieve a recording
 * [get_calendar_room](#get_calendar_room) - Retrieve a room
 * [get_calendar_webinar](#get_calendar_webinar) - Retrieve a webinar
+* [list_calendar_bots](#list_calendar_bots) - List all bots
 * [list_calendar_busies](#list_calendar_busies) - List all busies
 * [list_calendar_calendars](#list_calendar_calendars) - List all calendars
 * [list_calendar_events](#list_calendar_events) - List all events
@@ -24,18 +27,65 @@
 * [list_calendar_recordings](#list_calendar_recordings) - List all recordings
 * [list_calendar_rooms](#list_calendar_rooms) - List all rooms
 * [list_calendar_webinars](#list_calendar_webinars) - List all webinars
+* [patch_calendar_bot](#patch_calendar_bot) - Update a bot
 * [patch_calendar_calendar](#patch_calendar_calendar) - Update a calendar
 * [patch_calendar_event](#patch_calendar_event) - Update an event
 * [patch_calendar_link](#patch_calendar_link) - Update a link
 * [patch_calendar_webinar](#patch_calendar_webinar) - Update a webinar
+* [remove_calendar_bot](#remove_calendar_bot) - Remove a bot
 * [remove_calendar_calendar](#remove_calendar_calendar) - Remove a calendar
 * [remove_calendar_event](#remove_calendar_event) - Remove an event
 * [remove_calendar_link](#remove_calendar_link) - Remove a link
 * [remove_calendar_webinar](#remove_calendar_webinar) - Remove a webinar
+* [update_calendar_bot](#update_calendar_bot) - Update a bot
 * [update_calendar_calendar](#update_calendar_calendar) - Update a calendar
 * [update_calendar_event](#update_calendar_event) - Update an event
 * [update_calendar_link](#update_calendar_link) - Update a link
 * [update_calendar_webinar](#update_calendar_webinar) - Update a webinar
+
+## create_calendar_bot
+
+Creates a CalendarBot. Provide the unified CalendarBot fields in the request body; they are mapped to the provider's API. Returns the created CalendarBot.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createCalendarBot" method="post" path="/calendar/{connection_id}/bot" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.calendar.create_calendar_bot(calendar_bot: Models::Shared::CalendarBot.new(), connection_id: '<id>')
+
+unless res.calendar_bot.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `calendar_bot`                                                                                                                                   | [Models::Shared::CalendarBot](../../models/shared/calendarbot.md)                                                                                | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateCalendarBotQueryParamFields](../../models/operations/createcalendarbotqueryparamfields.md)>                  | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateCalendarBotResponse)](../../models/operations/createcalendarbotresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_calendar_calendar
 
@@ -57,12 +107,12 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.calendar.create_calendar_calendar(calendar_calendar: Models::Shared::CalendarCalendar.new(
   created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
   description: 'Acer supra vallum suasoria thesaurus.',
-  id: 'd49e4c4c-ba71-4b2b-b3a5-1529f2441445',
+  id: '9d30b07c-ef4b-4f8d-b32d-eca23ef1f08c',
   is_primary: false,
   metadata: [],
   name: 'Interviews',
   timezone: 'Asia/Kolkata',
-  updated_at: DateTime.iso8601('2023-04-03T17:42:42.932Z'),
+  updated_at: DateTime.iso8601('2023-04-04T04:18:42.798Z'),
 ), connection_id: '<id>')
 
 unless res.calendar_calendar.nil?
@@ -111,9 +161,9 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
   attachments: [],
   conference: [],
   created_at: '2019-08-04T14:33:51.814Z',
-  end_at: '2020-05-25T20:15:24.489Z',
+  end_at: '2020-05-25T22:45:02.945Z',
   has_conference: false,
-  id: '2fe7e264-c6ea-4543-8eba-05332c0c5875',
+  id: 'a85f38e3-088d-44db-918d-d2eecf2ce06c',
   is_all_day: false,
   is_free: false,
   is_private: false,
@@ -123,15 +173,15 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 4.0,
-      end_at: DateTime.iso8601('2025-04-04T12:45:34.132Z'),
+      end_at: DateTime.iso8601('2025-04-05T06:14:42.606Z'),
       excluded_dates: [
-        '2024-02-11T11:06:18.124Z',
+        '2024-02-12T01:03:32.704Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
       included_dates: [
-        '2023-07-14T15:05:45.669Z',
-        '2025-02-03T11:10:21.272Z',
-        '2024-04-10T23:32:18.668Z',
+        '2023-07-15T03:15:38.176Z',
+        '2025-02-04T04:09:03.075Z',
+        '2024-04-11T13:59:43.253Z',
       ],
       interval: 7.0,
       on_days: [
@@ -468,11 +518,11 @@ res = s.calendar.create_calendar_event(calendar_event: Models::Shared::CalendarE
       week_start: Models::Shared::WeekStart::TU,
     ),
   ],
-  start_at: '2020-05-25T10:58:51.772Z',
+  start_at: '2020-05-25T13:28:18.475Z',
   status: Models::Shared::CalendarEventStatus::CONFIRMED,
   subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
   timezone: 'Asia/Bangkok',
-  updated_at: '2020-07-01T23:18:59.080Z',
+  updated_at: '2020-07-02T02:07:26.620Z',
   web_url: 'https://another-pinstripe.com',
 ), connection_id: '<id>')
 
@@ -522,13 +572,13 @@ res = s.calendar.create_calendar_link(calendar_link: Models::Shared::CalendarLin
   created_at: '2023-03-07T13:34:11.959Z',
   description: 'Vitium clibanus laboriosam uxor denuncio.',
   duration: 74.0,
-  id: '1a8a8555-cc30-4eb0-99e8-6d6713958fd1',
+  id: 'ef0809b0-4ac2-4de9-b118-27617996c3ca',
   is_active: true,
   metadata: [],
   name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
   price_amount: 44.0,
   price_currency: 'USD',
-  updated_at: '2024-03-19T11:25:20.614Z',
+  updated_at: '2024-03-19T17:44:39.185Z',
   url: 'https://annual-apricot.info/',
 ), connection_id: '<id>')
 
@@ -577,10 +627,10 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::CalendarWebinar.new(
   conference: [],
   created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-  end_at: DateTime.iso8601('2025-11-08T11:15:21.024Z'),
+  end_at: DateTime.iso8601('2025-11-09T04:31:42.356Z'),
   has_polls: false,
   has_recording: false,
-  id: '8e358b73-693c-4b7b-aa65-830a747aab06',
+  id: 'ae43e3ab-7744-4979-8eb1-4adaa302504d',
   is_auto_approve: false,
   is_enabled: true,
   is_webcast: false,
@@ -590,13 +640,13 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 10.0,
-      end_at: DateTime.iso8601('2023-09-04T08:32:51.171Z'),
+      end_at: DateTime.iso8601('2023-09-04T14:33:28.523Z'),
       excluded_dates: [
-        '2025-02-21T11:34:47.141Z',
+        '2025-02-22T01:10:28.029Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
       included_dates: [
-        '2024-05-04T03:48:49.960Z',
+        '2024-05-04T13:15:32.633Z',
       ],
       interval: 8.0,
       on_days: [
@@ -987,16 +1037,16 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 3.0,
-      end_at: DateTime.iso8601('2022-10-01T10:35:36.359Z'),
+      end_at: DateTime.iso8601('2022-10-01T11:49:24.583Z'),
       excluded_dates: [
-        '2024-09-08T18:04:47.609Z',
-        '2024-08-24T01:48:03.811Z',
+        '2024-09-09T05:19:48.337Z',
+        '2024-08-24T12:49:46.084Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
       included_dates: [
-        '2024-03-30T17:57:38.160Z',
-        '2026-01-24T19:54:59.209Z',
-        '2023-08-17T20:24:51.599Z',
+        '2024-03-31T02:55:08.391Z',
+        '2026-01-25T14:17:00.330Z',
+        '2023-08-18T02:10:37.439Z',
       ],
       interval: 1.0,
       on_days: [
@@ -1140,16 +1190,16 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 8.0,
-      end_at: DateTime.iso8601('2026-08-08T16:25:31.255Z'),
+      end_at: DateTime.iso8601('2026-08-09T13:33:46.744Z'),
       excluded_dates: [
-        '2023-06-21T16:27:34.273Z',
-        '2023-06-10T14:57:51.653Z',
+        '2023-06-21T21:24:48.857Z',
+        '2023-06-10T19:45:42.863Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
       included_dates: [
-        '2024-04-07T20:32:42.039Z',
-        '2023-08-23T17:04:45.954Z',
-        '2024-10-04T04:13:54.973Z',
+        '2024-04-08T05:37:05.174Z',
+        '2023-08-23T22:55:30.282Z',
+        '2024-10-04T15:50:30.429Z',
       ],
       interval: 8.0,
       on_days: [
@@ -1302,11 +1352,11 @@ res = s.calendar.create_calendar_webinar(calendar_webinar: Models::Shared::Calen
   registrant_password: 'W7J6DhkM',
   require_address: false,
   require_job_title: false,
-  start_at: DateTime.iso8601('2025-05-09T17:06:23.337Z'),
+  start_at: DateTime.iso8601('2025-05-10T07:47:37.365Z'),
   status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
   subject: 'Harum culpa decipio ex cubo ancilla cresco.',
   timezone: 'Europe/Kaliningrad',
-  updated_at: DateTime.iso8601('2026-10-14T05:45:09.866Z'),
+  updated_at: DateTime.iso8601('2026-10-15T03:49:54.846Z'),
   web_url: 'https://quiet-permafrost.name',
 ), connection_id: '<id>')
 
@@ -1328,6 +1378,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateCalendarWebinarResponse)](../../models/operations/createcalendarwebinarresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_calendar_bot
+
+Retrieves a single CalendarBot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getCalendarBot" method="get" path="/calendar/{connection_id}/bot/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.calendar.get_calendar_bot(connection_id: '<id>', id: '<id>')
+
+unless res.calendar_bot.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Bot                                                                                                                                    |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCalendarBotQueryParamFields](../../models/operations/getcalendarbotqueryparamfields.md)>                        | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetCalendarBotResponse)](../../models/operations/getcalendarbotresponse.md)**
 
 ### Errors
 
@@ -1636,6 +1730,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetCalendarWebinarResponse)](../../models/operations/getcalendarwebinarresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_calendar_bots
+
+Returns a list of CalendarBots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listCalendarBots" method="get" path="/calendar/{connection_id}/bot" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListCalendarBotsRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.calendar.list_calendar_bots(request: req)
+
+unless res.calendar_bots.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::ListCalendarBotsRequest](../../models/operations/listcalendarbotsrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::ListCalendarBotsResponse)](../../models/operations/listcalendarbotsresponse.md)**
 
 ### Errors
 
@@ -2003,6 +2142,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_calendar_bot
+
+Updates the CalendarBot identified by `id`. Provide the unified CalendarBot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchCalendarBot" method="patch" path="/calendar/{connection_id}/bot/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::PatchCalendarBotRequest.new(
+  calendar_bot: Models::Shared::CalendarBot.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.calendar.patch_calendar_bot(request: req)
+
+unless res.calendar_bot.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [Models::Operations::PatchCalendarBotRequest](../../models/operations/patchcalendarbotrequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchCalendarBotResponse)](../../models/operations/patchcalendarbotresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_calendar_calendar
 
 Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
@@ -2024,12 +2210,12 @@ req = Models::Operations::PatchCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
     created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
     description: 'Acer supra vallum suasoria thesaurus.',
-    id: '0c21edb3-2e1c-4c17-b25b-80401c4ea400',
+    id: '681abfc2-0d0f-4571-acdc-aeeb96baf5f3',
     is_primary: false,
     metadata: [],
     name: 'Interviews',
     timezone: 'Asia/Kolkata',
-    updated_at: DateTime.iso8601('2023-04-03T17:42:42.939Z'),
+    updated_at: DateTime.iso8601('2023-04-04T04:18:42.804Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -2081,9 +2267,9 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-25T20:15:24.495Z',
+    end_at: '2020-05-25T22:45:02.951Z',
     has_conference: false,
-    id: '8634de2f-c108-44cb-b808-a0e30fd02c4a',
+    id: 'e707062e-112a-45dd-b1ab-928a872cdf6a',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -2093,15 +2279,15 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-04T12:45:34.178Z'),
+        end_at: DateTime.iso8601('2025-04-05T06:14:42.648Z'),
         excluded_dates: [
-          '2024-02-11T11:06:18.159Z',
+          '2024-02-12T01:03:32.738Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-14T15:05:45.700Z',
-          '2025-02-03T11:10:21.316Z',
-          '2024-04-10T23:32:18.705Z',
+          '2023-07-15T03:15:38.205Z',
+          '2025-02-04T04:09:03.115Z',
+          '2024-04-11T13:59:43.287Z',
         ],
         interval: 7.0,
         on_days: [
@@ -2438,11 +2624,11 @@ req = Models::Operations::PatchCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU,
       ),
     ],
-    start_at: '2020-05-25T10:58:51.778Z',
+    start_at: '2020-05-25T13:28:18.481Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-01T23:18:59.087Z',
+    updated_at: '2020-07-02T02:07:26.627Z',
     web_url: 'https://another-pinstripe.com',
   ),
   connection_id: '<id>',
@@ -2495,13 +2681,13 @@ req = Models::Operations::PatchCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: 'c564568e-4703-4272-8e6b-272958104b3b',
+    id: '8ae5070c-5819-4655-b70e-004334883671',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-19T11:25:20.618Z',
+    updated_at: '2024-03-19T17:44:39.190Z',
     url: 'https://annual-apricot.info/',
   ),
   connection_id: '<id>',
@@ -2553,10 +2739,10 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-11-08T11:15:21.065Z'),
+    end_at: DateTime.iso8601('2025-11-09T04:31:42.402Z'),
     has_polls: false,
     has_recording: false,
-    id: '017f60f7-4f9e-4baf-8e70-d33a27a97e90',
+    id: '910f494c-905c-4fee-be31-bd27de2e38a9',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -2566,13 +2752,13 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-04T08:32:51.185Z'),
+        end_at: DateTime.iso8601('2023-09-04T14:33:28.539Z'),
         excluded_dates: [
-          '2025-02-21T11:34:47.172Z',
+          '2025-02-22T01:10:28.065Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-05-04T03:48:49.982Z',
+          '2024-05-04T13:15:32.658Z',
         ],
         interval: 8.0,
         on_days: [
@@ -2963,16 +3149,16 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-10-01T10:35:36.362Z'),
+        end_at: DateTime.iso8601('2022-10-01T11:49:24.586Z'),
         excluded_dates: [
-          '2024-09-08T18:04:47.635Z',
-          '2024-08-24T01:48:03.837Z',
+          '2024-09-09T05:19:48.367Z',
+          '2024-08-24T12:49:46.114Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-03-30T17:57:38.180Z',
-          '2026-01-24T19:54:59.251Z',
-          '2023-08-17T20:24:51.612Z',
+          '2024-03-31T02:55:08.415Z',
+          '2026-01-25T14:17:00.379Z',
+          '2023-08-18T02:10:37.454Z',
         ],
         interval: 1.0,
         on_days: [
@@ -3116,16 +3302,16 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-08-08T16:25:31.305Z'),
+        end_at: DateTime.iso8601('2026-08-09T13:33:46.801Z'),
         excluded_dates: [
-          '2023-06-21T16:27:34.284Z',
-          '2023-06-10T14:57:51.664Z',
+          '2023-06-21T21:24:48.871Z',
+          '2023-06-10T19:45:42.876Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-07T20:32:42.060Z',
-          '2023-08-23T17:04:45.968Z',
-          '2024-10-04T04:13:55.000Z',
+          '2024-04-08T05:37:05.198Z',
+          '2023-08-23T22:55:30.297Z',
+          '2024-10-04T15:50:30.460Z',
         ],
         interval: 8.0,
         on_days: [
@@ -3278,11 +3464,11 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-09T17:06:23.372Z'),
+    start_at: DateTime.iso8601('2025-05-10T07:47:37.404Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-14T05:45:09.918Z'),
+    updated_at: DateTime.iso8601('2026-10-15T03:49:54.905Z'),
     web_url: 'https://quiet-permafrost.name',
   ),
   connection_id: '<id>',
@@ -3306,6 +3492,48 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::PatchCalendarWebinarResponse)](../../models/operations/patchcalendarwebinarresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_calendar_bot
+
+Deletes the CalendarBot identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeCalendarBot" method="delete" path="/calendar/{connection_id}/bot/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.calendar.remove_calendar_bot(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Bot        |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveCalendarBotResponse)](../../models/operations/removecalendarbotresponse.md)**
 
 ### Errors
 
@@ -3481,6 +3709,53 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## update_calendar_bot
+
+Updates the CalendarBot identified by `id`. Provide the unified CalendarBot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateCalendarBot" method="put" path="/calendar/{connection_id}/bot/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::UpdateCalendarBotRequest.new(
+  calendar_bot: Models::Shared::CalendarBot.new(),
+  connection_id: '<id>',
+  id: '<id>',
+)
+
+res = s.calendar.update_calendar_bot(request: req)
+
+unless res.calendar_bot.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                           | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `request`                                                                                           | [Models::Operations::UpdateCalendarBotRequest](../../models/operations/updatecalendarbotrequest.md) | :heavy_check_mark:                                                                                  | The request object to use for the request.                                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateCalendarBotResponse)](../../models/operations/updatecalendarbotresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## update_calendar_calendar
 
 Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
@@ -3502,12 +3777,12 @@ req = Models::Operations::UpdateCalendarCalendarRequest.new(
   calendar_calendar: Models::Shared::CalendarCalendar.new(
     created_at: DateTime.iso8601('2020-01-09T23:11:34.147Z'),
     description: 'Acer supra vallum suasoria thesaurus.',
-    id: '0c21edb3-2e1c-4c17-b25b-80401c4ea400',
+    id: '681abfc2-0d0f-4571-acdc-aeeb96baf5f3',
     is_primary: false,
     metadata: [],
     name: 'Interviews',
     timezone: 'Asia/Kolkata',
-    updated_at: DateTime.iso8601('2023-04-03T17:42:42.939Z'),
+    updated_at: DateTime.iso8601('2023-04-04T04:18:42.804Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -3559,9 +3834,9 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-25T20:15:24.495Z',
+    end_at: '2020-05-25T22:45:02.951Z',
     has_conference: false,
-    id: '8634de2f-c108-44cb-b808-a0e30fd02c4a',
+    id: 'e707062e-112a-45dd-b1ab-928a872cdf6a',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -3571,15 +3846,15 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-04T12:45:34.178Z'),
+        end_at: DateTime.iso8601('2025-04-05T06:14:42.648Z'),
         excluded_dates: [
-          '2024-02-11T11:06:18.159Z',
+          '2024-02-12T01:03:32.738Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-14T15:05:45.700Z',
-          '2025-02-03T11:10:21.316Z',
-          '2024-04-10T23:32:18.705Z',
+          '2023-07-15T03:15:38.205Z',
+          '2025-02-04T04:09:03.115Z',
+          '2024-04-11T13:59:43.287Z',
         ],
         interval: 7.0,
         on_days: [
@@ -3916,11 +4191,11 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
         week_start: Models::Shared::WeekStart::TU,
       ),
     ],
-    start_at: '2020-05-25T10:58:51.778Z',
+    start_at: '2020-05-25T13:28:18.481Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-01T23:18:59.087Z',
+    updated_at: '2020-07-02T02:07:26.627Z',
     web_url: 'https://another-pinstripe.com',
   ),
   connection_id: '<id>',
@@ -3973,13 +4248,13 @@ req = Models::Operations::UpdateCalendarLinkRequest.new(
     created_at: '2023-03-07T13:34:11.959Z',
     description: 'Vitium clibanus laboriosam uxor denuncio.',
     duration: 74.0,
-    id: 'c564568e-4703-4272-8e6b-272958104b3b',
+    id: '8ae5070c-5819-4655-b70e-004334883671',
     is_active: true,
     metadata: [],
     name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
     price_amount: 44.0,
     price_currency: 'USD',
-    updated_at: '2024-03-19T11:25:20.618Z',
+    updated_at: '2024-03-19T17:44:39.190Z',
     url: 'https://annual-apricot.info/',
   ),
   connection_id: '<id>',
@@ -4031,10 +4306,10 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-11-08T11:15:21.065Z'),
+    end_at: DateTime.iso8601('2025-11-09T04:31:42.402Z'),
     has_polls: false,
     has_recording: false,
-    id: '017f60f7-4f9e-4baf-8e70-d33a27a97e90',
+    id: '910f494c-905c-4fee-be31-bd27de2e38a9',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -4044,13 +4319,13 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-04T08:32:51.185Z'),
+        end_at: DateTime.iso8601('2023-09-04T14:33:28.539Z'),
         excluded_dates: [
-          '2025-02-21T11:34:47.172Z',
+          '2025-02-22T01:10:28.065Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-05-04T03:48:49.982Z',
+          '2024-05-04T13:15:32.658Z',
         ],
         interval: 8.0,
         on_days: [
@@ -4441,16 +4716,16 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-10-01T10:35:36.362Z'),
+        end_at: DateTime.iso8601('2022-10-01T11:49:24.586Z'),
         excluded_dates: [
-          '2024-09-08T18:04:47.635Z',
-          '2024-08-24T01:48:03.837Z',
+          '2024-09-09T05:19:48.367Z',
+          '2024-08-24T12:49:46.114Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-03-30T17:57:38.180Z',
-          '2026-01-24T19:54:59.251Z',
-          '2023-08-17T20:24:51.612Z',
+          '2024-03-31T02:55:08.415Z',
+          '2026-01-25T14:17:00.379Z',
+          '2023-08-18T02:10:37.454Z',
         ],
         interval: 1.0,
         on_days: [
@@ -4594,16 +4869,16 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-08-08T16:25:31.305Z'),
+        end_at: DateTime.iso8601('2026-08-09T13:33:46.801Z'),
         excluded_dates: [
-          '2023-06-21T16:27:34.284Z',
-          '2023-06-10T14:57:51.664Z',
+          '2023-06-21T21:24:48.871Z',
+          '2023-06-10T19:45:42.876Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-07T20:32:42.060Z',
-          '2023-08-23T17:04:45.968Z',
-          '2024-10-04T04:13:55.000Z',
+          '2024-04-08T05:37:05.198Z',
+          '2023-08-23T22:55:30.297Z',
+          '2024-10-04T15:50:30.460Z',
         ],
         interval: 8.0,
         on_days: [
@@ -4756,11 +5031,11 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-09T17:06:23.372Z'),
+    start_at: DateTime.iso8601('2025-05-10T07:47:37.404Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-14T05:45:09.918Z'),
+    updated_at: DateTime.iso8601('2026-10-15T03:49:54.905Z'),
     web_url: 'https://quiet-permafrost.name',
   ),
   connection_id: '<id>',

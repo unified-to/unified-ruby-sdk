@@ -63,6 +63,7 @@ module UnifiedRubySDK
   autoload :Job, 'unified_ruby_sdk/job'
   autoload :Scorecard, 'unified_ruby_sdk/scorecard'
   autoload :Calendar, 'unified_ruby_sdk/calendar'
+  autoload :Bot, 'unified_ruby_sdk/bot'
   autoload :Busy, 'unified_ruby_sdk/busy'
   autoload :Link, 'unified_ruby_sdk/link'
   autoload :Location, 'unified_ruby_sdk/location'

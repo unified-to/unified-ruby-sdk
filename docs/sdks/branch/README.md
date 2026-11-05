@@ -31,11 +31,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.branch.create_repo_branch(repo_branch: Models::Shared::RepoBranch.new(
   created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-  id: 'c7547bee-453c-469f-9c85-b4c07c5b42ee',
+  id: 'e7059ab5-e190-4bad-887f-dd42168c3d81',
   metadata: [],
   name: 'transmitter-calculate',
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2020-01-08T21:55:02.201Z'),
+  updated_at: DateTime.iso8601('2020-01-09T00:27:12.773Z'),
 ), connection_id: '<id>')
 
 unless res.repo_branch.nil?
@@ -172,11 +172,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
     created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-    id: 'b90f96ff-d1a0-4381-8f9d-8963541b66f4',
+    id: 'cfa92a6f-9757-44a0-96fa-0fcf901bec72',
     metadata: [],
     name: 'transmitter-calculate',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2020-01-08T21:55:02.203Z'),
+    updated_at: DateTime.iso8601('2020-01-09T00:27:12.774Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -268,11 +268,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
     created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-    id: 'b90f96ff-d1a0-4381-8f9d-8963541b66f4',
+    id: 'cfa92a6f-9757-44a0-96fa-0fcf901bec72',
     metadata: [],
     name: 'transmitter-calculate',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2020-01-08T21:55:02.203Z'),
+    updated_at: DateTime.iso8601('2020-01-09T00:27:12.774Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

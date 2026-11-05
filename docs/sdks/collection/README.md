@@ -38,7 +38,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.collection.create_commerce_collection(commerce_collection: Models::Shared::CommerceCollection.new(
   created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
   description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-  id: 'e8767fde-2861-4898-884d-fecbdcb61d92',
+  id: '37511c54-102f-4149-93c2-ae1f79c16a0e',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -47,10 +47,10 @@ res = s.collection.create_commerce_collection(commerce_collection: Models::Share
     Models::Shared::CommerceItemMedia.new(
       alt: 'Defungo adopto thorax.',
       height: 759.0,
-      id: '0c85361c-4777-4349-9b25-74c26dc471ad',
+      id: '85c4b102-0f5a-498d-8df5-e985bd8c85c7',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '3c873535-380a-4930-b261-bcd85774f15d',
+          id: 'ec7af80b-1b7a-4861-8d05-9f47caba902a',
           slug: 'censura',
           value: 'toties',
         ),
@@ -63,7 +63,7 @@ res = s.collection.create_commerce_collection(commerce_collection: Models::Share
   ],
   metadata: [
     Models::Shared::CommerceMetadata.new(
-      id: 'ef7d40c7-d8a9-479d-9950-a115f472c782',
+      id: '6dfa42df-1c0e-45d6-bc0e-0edd50c8350a',
       slug: 'aetas',
       value: 'consuasor',
     ),
@@ -77,7 +77,7 @@ res = s.collection.create_commerce_collection(commerce_collection: Models::Share
     'contego',
   ],
   type: Models::Shared::CommerceCollectionType::COLLECTION,
-  updated_at: DateTime.iso8601('2025-03-22T03:49:29.046Z'),
+  updated_at: DateTime.iso8601('2025-03-22T15:14:43.241Z'),
 ), connection_id: '<id>')
 
 unless res.commerce_collection.nil?
@@ -125,7 +125,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.collection.create_lms_collection(lms_collection: Models::Shared::LmsCollection.new(
   created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
   description: 'Ab.',
-  id: 'ed850fa1-850c-49b4-ac6b-241cd7171e8f',
+  id: 'e3b50492-bdf8-48c4-ad55-57543d8f5935',
   is_active: true,
   media: [
     Models::Shared::LmsMedia.new(
@@ -142,7 +142,7 @@ res = s.collection.create_lms_collection(lms_collection: Models::Shared::LmsColl
   ],
   metadata: [],
   name: 'ara',
-  updated_at: DateTime.iso8601('2026-08-12T18:33:41.817Z'),
+  updated_at: DateTime.iso8601('2026-08-13T16:13:36.854Z'),
 ), connection_id: '<id>')
 
 unless res.lms_collection.nil?
@@ -369,7 +369,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: 'd508cb8e-b01b-430f-b405-faea921c9fd6',
+    id: '6160581f-1c3d-4d87-8d56-85ef071daf14',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -378,10 +378,10 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Defungo adopto thorax.',
         height: 759.0,
-        id: '0bf5d979-cffa-4bae-8951-de4abc5e6ff9',
+        id: 'ba053409-3f8a-4aab-8e37-0bf71f5ae8c1',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '4464e776-e7bb-4f0a-984f-ac616017b2f7',
+            id: '3e17fc4c-cd6b-485d-b19e-22e5eaa3bdb2',
             slug: 'censura',
             value: 'toties',
           ),
@@ -394,7 +394,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: '76d4d4e7-c6fb-4e63-b8b9-1a2aeba40e3e',
+        id: '5246ba22-2b75-4111-b23b-ea589300574d',
         slug: 'aetas',
         value: 'consuasor',
       ),
@@ -408,7 +408,7 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       'contego',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-22T03:49:29.056Z'),
+    updated_at: DateTime.iso8601('2025-03-22T15:14:43.261Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -459,7 +459,7 @@ req = Models::Operations::PatchLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Ab.',
-    id: '1996bdb6-922c-44dd-9c4b-083b3028aca8',
+    id: '241f0c0d-1a5f-492f-a8c9-fed8e51b928c',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -476,7 +476,7 @@ req = Models::Operations::PatchLmsCollectionRequest.new(
     ],
     metadata: [],
     name: 'ara',
-    updated_at: DateTime.iso8601('2026-08-12T18:33:41.836Z'),
+    updated_at: DateTime.iso8601('2026-08-13T16:13:36.873Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -611,7 +611,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: 'd508cb8e-b01b-430f-b405-faea921c9fd6',
+    id: '6160581f-1c3d-4d87-8d56-85ef071daf14',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -620,10 +620,10 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Defungo adopto thorax.',
         height: 759.0,
-        id: '0bf5d979-cffa-4bae-8951-de4abc5e6ff9',
+        id: 'ba053409-3f8a-4aab-8e37-0bf71f5ae8c1',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '4464e776-e7bb-4f0a-984f-ac616017b2f7',
+            id: '3e17fc4c-cd6b-485d-b19e-22e5eaa3bdb2',
             slug: 'censura',
             value: 'toties',
           ),
@@ -636,7 +636,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: '76d4d4e7-c6fb-4e63-b8b9-1a2aeba40e3e',
+        id: '5246ba22-2b75-4111-b23b-ea589300574d',
         slug: 'aetas',
         value: 'consuasor',
       ),
@@ -650,7 +650,7 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       'contego',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-22T03:49:29.056Z'),
+    updated_at: DateTime.iso8601('2025-03-22T15:14:43.261Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -701,7 +701,7 @@ req = Models::Operations::UpdateLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Ab.',
-    id: '1996bdb6-922c-44dd-9c4b-083b3028aca8',
+    id: '241f0c0d-1a5f-492f-a8c9-fed8e51b928c',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -718,7 +718,7 @@ req = Models::Operations::UpdateLmsCollectionRequest.new(
     ],
     metadata: [],
     name: 'ara',
-    updated_at: DateTime.iso8601('2026-08-12T18:33:41.836Z'),
+    updated_at: DateTime.iso8601('2026-08-13T16:13:36.873Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

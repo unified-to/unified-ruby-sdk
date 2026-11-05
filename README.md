@@ -56,7 +56,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'fd167084-25a5-4234-84d9-1c0316686d0d',
+  id: 'a109011f-2a7c-4d67-9bf9-6e4d19457e44',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -69,7 +69,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-10T10:35:26.255Z'),
+  updated_at: DateTime.iso8601('2023-08-10T16:16:38.825Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -107,7 +107,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'fd167084-25a5-4234-84d9-1c0316686d0d',
+  id: 'a109011f-2a7c-4d67-9bf9-6e4d19457e44',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -120,7 +120,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-10T10:35:26.255Z'),
+  updated_at: DateTime.iso8601('2023-08-10T16:16:38.825Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -592,6 +592,15 @@ end
 * [remove_plm_bomline](docs/sdks/bomline/README.md#remove_plm_bomline) - Remove a bomline
 * [update_plm_bomline](docs/sdks/bomline/README.md#update_plm_bomline) - Update a bomline
 
+### [bot](docs/sdks/bot/README.md)
+
+* [create_calendar_bot](docs/sdks/bot/README.md#create_calendar_bot) - Create a bot
+* [get_calendar_bot](docs/sdks/bot/README.md#get_calendar_bot) - Retrieve a bot
+* [list_calendar_bots](docs/sdks/bot/README.md#list_calendar_bots) - List all bots
+* [patch_calendar_bot](docs/sdks/bot/README.md#patch_calendar_bot) - Update a bot
+* [remove_calendar_bot](docs/sdks/bot/README.md#remove_calendar_bot) - Remove a bot
+* [update_calendar_bot](docs/sdks/bot/README.md#update_calendar_bot) - Update a bot
+
 ### [branch](docs/sdks/branch/README.md)
 
 * [create_repo_branch](docs/sdks/branch/README.md#create_repo_branch) - Create a branch
@@ -607,10 +616,12 @@ end
 
 ### [calendar](docs/sdks/calendar/README.md)
 
+* [create_calendar_bot](docs/sdks/calendar/README.md#create_calendar_bot) - Create a bot
 * [create_calendar_calendar](docs/sdks/calendar/README.md#create_calendar_calendar) - Create a calendar
 * [create_calendar_event](docs/sdks/calendar/README.md#create_calendar_event) - Create an event
 * [create_calendar_link](docs/sdks/calendar/README.md#create_calendar_link) - Create a link
 * [create_calendar_webinar](docs/sdks/calendar/README.md#create_calendar_webinar) - Create a webinar
+* [get_calendar_bot](docs/sdks/calendar/README.md#get_calendar_bot) - Retrieve a bot
 * [get_calendar_calendar](docs/sdks/calendar/README.md#get_calendar_calendar) - Retrieve a calendar
 * [get_calendar_event](docs/sdks/calendar/README.md#get_calendar_event) - Retrieve an event
 * [get_calendar_link](docs/sdks/calendar/README.md#get_calendar_link) - Retrieve a link
@@ -618,6 +629,7 @@ end
 * [get_calendar_recording](docs/sdks/calendar/README.md#get_calendar_recording) - Retrieve a recording
 * [get_calendar_room](docs/sdks/calendar/README.md#get_calendar_room) - Retrieve a room
 * [get_calendar_webinar](docs/sdks/calendar/README.md#get_calendar_webinar) - Retrieve a webinar
+* [list_calendar_bots](docs/sdks/calendar/README.md#list_calendar_bots) - List all bots
 * [list_calendar_busies](docs/sdks/calendar/README.md#list_calendar_busies) - List all busies
 * [list_calendar_calendars](docs/sdks/calendar/README.md#list_calendar_calendars) - List all calendars
 * [list_calendar_events](docs/sdks/calendar/README.md#list_calendar_events) - List all events
@@ -626,14 +638,17 @@ end
 * [list_calendar_recordings](docs/sdks/calendar/README.md#list_calendar_recordings) - List all recordings
 * [list_calendar_rooms](docs/sdks/calendar/README.md#list_calendar_rooms) - List all rooms
 * [list_calendar_webinars](docs/sdks/calendar/README.md#list_calendar_webinars) - List all webinars
+* [patch_calendar_bot](docs/sdks/calendar/README.md#patch_calendar_bot) - Update a bot
 * [patch_calendar_calendar](docs/sdks/calendar/README.md#patch_calendar_calendar) - Update a calendar
 * [patch_calendar_event](docs/sdks/calendar/README.md#patch_calendar_event) - Update an event
 * [patch_calendar_link](docs/sdks/calendar/README.md#patch_calendar_link) - Update a link
 * [patch_calendar_webinar](docs/sdks/calendar/README.md#patch_calendar_webinar) - Update a webinar
+* [remove_calendar_bot](docs/sdks/calendar/README.md#remove_calendar_bot) - Remove a bot
 * [remove_calendar_calendar](docs/sdks/calendar/README.md#remove_calendar_calendar) - Remove a calendar
 * [remove_calendar_event](docs/sdks/calendar/README.md#remove_calendar_event) - Remove an event
 * [remove_calendar_link](docs/sdks/calendar/README.md#remove_calendar_link) - Remove a link
 * [remove_calendar_webinar](docs/sdks/calendar/README.md#remove_calendar_webinar) - Remove a webinar
+* [update_calendar_bot](docs/sdks/calendar/README.md#update_calendar_bot) - Update a bot
 * [update_calendar_calendar](docs/sdks/calendar/README.md#update_calendar_calendar) - Update a calendar
 * [update_calendar_event](docs/sdks/calendar/README.md#update_calendar_event) - Update an event
 * [update_calendar_link](docs/sdks/calendar/README.md#update_calendar_link) - Update a link
@@ -3021,7 +3036,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Voluptatibus valde spoliatio.',
-      id: 'fd167084-25a5-4234-84d9-1c0316686d0d',
+      id: 'a109011f-2a7c-4d67-9bf9-6e4d19457e44',
       is_payable: false,
       metadata: [],
       name: 'Auto Loan Account',
@@ -3034,7 +3049,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-10T10:35:26.255Z'),
+      updated_at: DateTime.iso8601('2023-08-10T16:16:38.825Z'),
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -3080,7 +3095,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'fd167084-25a5-4234-84d9-1c0316686d0d',
+  id: 'a109011f-2a7c-4d67-9bf9-6e4d19457e44',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3093,7 +3108,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-10T10:35:26.255Z'),
+  updated_at: DateTime.iso8601('2023-08-10T16:16:38.825Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3122,7 +3137,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'fd167084-25a5-4234-84d9-1c0316686d0d',
+  id: 'a109011f-2a7c-4d67-9bf9-6e4d19457e44',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3135,7 +3150,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-10T10:35:26.255Z'),
+  updated_at: DateTime.iso8601('2023-08-10T16:16:38.825Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

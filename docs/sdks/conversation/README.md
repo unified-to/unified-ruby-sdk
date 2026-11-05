@@ -29,13 +29,13 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.conversation.create_property_conversation(property_conversation: Models::Shared::PropertyConversation.new(
   created_at: DateTime.iso8601('2022-06-20T00:02:46.530Z'),
   guest_name: 'Evie Okuneva',
-  id: 'c1ca354a-a17c-4432-9f66-b12a68310a93',
+  id: '78c25584-12b8-45d5-a8fe-eed0baec4e64',
   is_unread: false,
   messages: [
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2025-04-25T14:19:53.119Z'),
-      id: '4d16355b-b4bd-4c75-81e5-8da31fafc103',
+      created_at: DateTime.iso8601('2025-04-26T04:54:01.764Z'),
+      id: '9da0a062-c193-4293-be81-deebc8718f7b',
       is_automatic: false,
       message: 'Vinitor caterva amor sophismata admitto colo tempore aufero torrens.',
       sender_name: 'Evie Okuneva',
@@ -43,8 +43,8 @@ res = s.conversation.create_property_conversation(property_conversation: Models:
     ),
     Models::Shared::PropertyMessage.new(
       attachments: [],
-      created_at: DateTime.iso8601('2026-05-10T00:41:16.307Z'),
-      id: 'a783d7ec-b28a-40a9-83d1-df5ca967ba8e',
+      created_at: DateTime.iso8601('2026-05-10T20:34:09.265Z'),
+      id: '48459df3-7c30-45b4-9541-373bde6b72a0',
       message: 'Aequitas torqueo curiositas cimentarius repellendus auditor degero ademptio adnuo.',
       sender_name: 'Ms. Patti Lynch',
       sender_type: Models::Shared::SenderType::HOST,
@@ -52,7 +52,7 @@ res = s.conversation.create_property_conversation(property_conversation: Models:
   ],
   metadata: [],
   source: 'Airbnb',
-  updated_at: DateTime.iso8601('2026-05-10T00:41:16.307Z'),
+  updated_at: DateTime.iso8601('2026-05-10T20:34:09.265Z'),
 ), connection_id: '<id>')
 
 unless res.property_conversation.nil?
