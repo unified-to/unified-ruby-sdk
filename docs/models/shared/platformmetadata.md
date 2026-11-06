@@ -1,2 +1,4 @@
 # PlatformMetadata
 
+Platform-specific metadata
+

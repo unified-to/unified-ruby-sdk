@@ -33,7 +33,7 @@ res = s.embedding.create_genai_embedding(genai_embedding: Models::Shared::GenaiE
   dimension: 423.0,
   embeddings: 'Est.',
   enconding_format: Models::Shared::EncondingFormat::FLOAT,
-  id: 'a2487240-bcb8-4ad0-942b-09eb5d73babc',
+  id: '799b7473-0062-4ad5-ad61-3c55b11eeabb',
   max_tokens: 223.0,
   tokens_used: 836.0,
   type: 'classification',

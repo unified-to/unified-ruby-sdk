@@ -13,11 +13,11 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Whether to identify speakers in transcript
         field :enable_speaker_labels, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('enable_speaker_labels') } }
-
+        # Whether to include word-level timestamps
         field :enable_word_timestamps, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('enable_word_timestamps') } }
-
+        # ISO language code (e.g., 'en-US')
         field :language, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('language') } }
 
         field :mode, Crystalline::Nilable.new(Models::Shared::PropertyCalendarBotRecordingConfigTranscriptionMode), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('mode'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyCalendarBotRecordingConfigTranscriptionMode, true) } }

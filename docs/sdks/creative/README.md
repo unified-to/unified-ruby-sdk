@@ -31,7 +31,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.creative.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-  id: 'e8bc1c84-fbd8-47c4-a206-8b34bc403ce5',
+  id: '8e55c4bf-0902-49cb-8ce2-cefc19a829c4',
   labels: [
     'coma',
     'accedo',
@@ -40,7 +40,7 @@ res = s.creative.create_ads_creative(ads_creative: Models::Shared::AdsCreative.n
   metadata: [],
   name: 'Brekke, Bradtke and Robel',
   status: Models::Shared::AdsCreativeStatus::PAUSED,
-  updated_at: DateTime.iso8601('2021-06-30T18:51:20.745Z'),
+  updated_at: DateTime.iso8601('2021-06-30T23:25:56.590Z'),
 ), connection_id: '<id>')
 
 unless res.ads_creative.nil?
@@ -177,7 +177,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '36682a08-0bab-47ce-9dce-a00f13ac5523',
+    id: '19902274-1ef6-4b9b-8a2b-21a5c2feab0c',
     labels: [
       'coma',
       'accedo',
@@ -186,7 +186,7 @@ req = Models::Operations::PatchAdsCreativeRequest.new(
     metadata: [],
     name: 'Brekke, Bradtke and Robel',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-06-30T18:51:20.760Z'),
+    updated_at: DateTime.iso8601('2021-06-30T23:25:56.597Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -278,7 +278,7 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '36682a08-0bab-47ce-9dce-a00f13ac5523',
+    id: '19902274-1ef6-4b9b-8a2b-21a5c2feab0c',
     labels: [
       'coma',
       'accedo',
@@ -287,7 +287,7 @@ req = Models::Operations::UpdateAdsCreativeRequest.new(
     metadata: [],
     name: 'Brekke, Bradtke and Robel',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-06-30T18:51:20.760Z'),
+    updated_at: DateTime.iso8601('2021-06-30T23:25:56.597Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

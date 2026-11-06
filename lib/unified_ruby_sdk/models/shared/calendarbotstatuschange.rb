@@ -15,11 +15,11 @@ module UnifiedRubySDK
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :changed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('changed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-
+        # Human-readable status message
         field :message, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('message') } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::CalendarBotStatusChangeStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarBotStatusChangeStatus, true) } }
-
+        # Platform-specific status sub-code
         field :sub_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_code') } }
 
         sig { params(changed_at: T.nilable(::DateTime), message: T.nilable(::String), status: T.nilable(Models::Shared::CalendarBotStatusChangeStatus), sub_code: T.nilable(::String)).void }

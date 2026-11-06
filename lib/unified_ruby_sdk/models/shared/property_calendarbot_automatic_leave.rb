@@ -13,11 +13,11 @@ module UnifiedRubySDK
         extend T::Sig
         include Crystalline::MetadataFields
 
-
+        # Whether to leave if only bots remain
         field :detect_bots, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('detect_bots') } }
-
+        # Seconds to wait when no other participants before leaving (default: 2)
         field :no_participants_timeout, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('no_participants_timeout') } }
-
+        # Seconds to wait in waiting room before leaving (default: 1200)
         field :waiting_room_timeout, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('waiting_room_timeout') } }
 
         sig { params(detect_bots: T.nilable(T::Boolean), no_participants_timeout: T.nilable(::Float), waiting_room_timeout: T.nilable(::Float)).void }

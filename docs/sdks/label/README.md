@@ -31,17 +31,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.label.create_shipping_label(shipping_label: Models::Shared::ShippingLabel.new(
   created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-  id: '8ae47ff1-fa0d-4a6f-ae68-65c0b458049b',
+  id: '53ea7b78-b4e7-43ec-b4bf-60b1c245bfa6',
   is_voided: false,
   label_cost: 40.83_653_403_213_248,
   label_cost_currency: 'USD',
   label_format: Models::Shared::LabelFormat::PNG,
-  label_url: 'https://labels.example.com/8ae47ff1-fa0d-4a6f-ae68-65c0b458049b.pdf',
+  label_url: 'https://labels.example.com/53ea7b78-b4e7-43ec-b4bf-60b1c245bfa6.pdf',
   metadata: [],
   service_code: 'Dzy',
   status: Models::Shared::ShippingLabelStatus::EXCEPTION,
   tracking_number: 'ZYV60FOIBUJ6',
-  updated_at: DateTime.iso8601('2024-05-04T09:05:01.504Z'),
+  updated_at: DateTime.iso8601('2024-05-04T17:21:27.548Z'),
 ), connection_id: '<id>')
 
 unless res.shipping_label.nil?
@@ -178,17 +178,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: 'c4c48d21-0eed-4fd9-a058-daea9bd0285c',
+    id: '2182af6e-ee68-44d7-b5e4-ba95b1c65f9b',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
     label_format: Models::Shared::LabelFormat::PNG,
-    label_url: 'https://labels.example.com/c4c48d21-0eed-4fd9-a058-daea9bd0285c.pdf',
+    label_url: 'https://labels.example.com/2182af6e-ee68-44d7-b5e4-ba95b1c65f9b.pdf',
     metadata: [],
     service_code: 'Dzy',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'ZYV60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-05-04T09:05:01.514Z'),
+    updated_at: DateTime.iso8601('2024-05-04T17:21:27.553Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -280,17 +280,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateShippingLabelRequest.new(
   shipping_label: Models::Shared::ShippingLabel.new(
     created_at: DateTime.iso8601('2022-11-18T16:45:38.067Z'),
-    id: 'c4c48d21-0eed-4fd9-a058-daea9bd0285c',
+    id: '2182af6e-ee68-44d7-b5e4-ba95b1c65f9b',
     is_voided: false,
     label_cost: 40.83_653_403_213_248,
     label_cost_currency: 'USD',
     label_format: Models::Shared::LabelFormat::PNG,
-    label_url: 'https://labels.example.com/c4c48d21-0eed-4fd9-a058-daea9bd0285c.pdf',
+    label_url: 'https://labels.example.com/2182af6e-ee68-44d7-b5e4-ba95b1c65f9b.pdf',
     metadata: [],
     service_code: 'Dzy',
     status: Models::Shared::ShippingLabelStatus::EXCEPTION,
     tracking_number: 'ZYV60FOIBUJ6',
-    updated_at: DateTime.iso8601('2024-05-04T09:05:01.514Z'),
+    updated_at: DateTime.iso8601('2024-05-04T17:21:27.553Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

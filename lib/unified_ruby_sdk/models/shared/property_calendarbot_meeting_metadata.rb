@@ -19,11 +19,11 @@ module UnifiedRubySDK
         field :host_email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('host_email') } }
 
         field :host_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('host_name') } }
-
+        # Platform-specific meeting identifier (not a unified object ref)
         field :meeting_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meeting_identifier') } }
 
         field :participant_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('participant_count') } }
-
+        # 'zoom', 'webex', 'google_meet', etc.
         field :platform, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('platform') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': Utils.datetime_from_iso_format(true) } }

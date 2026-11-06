@@ -32,11 +32,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.agent.create_genai_agent(genai_agent: Models::Shared::GenaiAgent.new(
   created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
   description: 'Assentator tero sequi.',
-  id: 'ec40e507-d3d8-4f7a-bb45-8c297cd3b63d',
+  id: '57439c14-b306-464b-9218-0872a2ed68f5',
   instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
   is_active: false,
   name: 'daughter with',
-  updated_at: DateTime.iso8601('2025-10-27T17:16:37.355Z'),
+  updated_at: DateTime.iso8601('2025-10-28T11:51:00.762Z'),
 ), connection_id: '<id>')
 
 unless res.genai_agent.nil?
@@ -174,11 +174,11 @@ req = Models::Operations::PatchGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: 'bc046332-4fd1-48f3-8e65-bbafb48e7a56',
+    id: '223b19b2-21bf-4b5a-8b81-0fcc812d6a0a',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-10-27T17:16:37.366Z'),
+    updated_at: DateTime.iso8601('2025-10-28T11:51:00.767Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -271,11 +271,11 @@ req = Models::Operations::UpdateGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: 'bc046332-4fd1-48f3-8e65-bbafb48e7a56',
+    id: '223b19b2-21bf-4b5a-8b81-0fcc812d6a0a',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-10-27T17:16:37.366Z'),
+    updated_at: DateTime.iso8601('2025-10-28T11:51:00.767Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

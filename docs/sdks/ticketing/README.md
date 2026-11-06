@@ -50,11 +50,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ticketing.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(
   created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
   description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-  id: '5fd7debc-aaf4-4817-a705-42fd643f60dd',
+  id: 'e0c0e93a-cb6e-493f-a988-427ef9ff6a31',
   is_active: true,
   metadata: [],
   name: 'amicitia',
-  updated_at: DateTime.iso8601('2026-01-27T05:57:25.964Z'),
+  updated_at: DateTime.iso8601('2026-01-28T01:58:32.455Z'),
 ), connection_id: '<id>')
 
 unless res.ticketing_category.nil?
@@ -107,7 +107,7 @@ res = s.ticketing.create_ticketing_customer(ticketing_customer: Models::Shared::
       type: Models::Shared::TicketingEmailType::HOME,
     ),
   ],
-  id: '7f328d67-11d3-40bc-a4d1-04181290204c',
+  id: '00ce1b90-8103-43da-8230-3a42433893b6',
   metadata: [],
   name: 'Christian Windler',
   tags: [
@@ -128,7 +128,7 @@ res = s.ticketing.create_ticketing_customer(ticketing_customer: Models::Shared::
       type: Models::Shared::TicketingTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2026-06-17T22:07:49.765Z'),
+  updated_at: DateTime.iso8601('2026-06-18T19:04:57.344Z'),
 ), connection_id: '<id>')
 
 unless res.ticketing_customer.nil?
@@ -176,9 +176,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.ticketing.create_ticketing_note(ticketing_note: Models::Shared::TicketingNote.new(
   created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
   description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-  id: 'f7a7a83d-391c-4867-9ad7-cae562e3cbba',
+  id: 'a8d7f701-6b97-495a-ae17-c0ef78ff7660',
   metadata: [],
-  updated_at: DateTime.iso8601('2024-10-09T21:52:55.913Z'),
+  updated_at: DateTime.iso8601('2024-10-10T13:58:32.454Z'),
 ), connection_id: '<id>')
 
 unless res.ticketing_note.nil?
@@ -228,7 +228,7 @@ res = s.ticketing.create_ticketing_ticket(ticketing_ticket: Models::Shared::Tick
   created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
   description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
   due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-  id: '5b456937-98fd-4dce-8c5b-0b67f24dbdcd',
+  id: 'b9ef641e-c0c6-4ad4-96d1-b4e85f04a526',
   metadata: [],
   priority: 'MEDIUM',
   source: 'email',
@@ -237,7 +237,7 @@ res = s.ticketing.create_ticketing_ticket(ticketing_ticket: Models::Shared::Tick
   tags: [
     'vilicus',
   ],
-  updated_at: DateTime.iso8601('2021-07-03T19:56:35.716Z'),
+  updated_at: DateTime.iso8601('2021-07-03T20:02:07.410Z'),
   url: 'https://similar-velocity.net/',
 ), connection_id: '<id>')
 
@@ -643,11 +643,11 @@ req = Models::Operations::PatchTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: 'fd2b9bdb-08c7-4604-a893-dbd755f57921',
+    id: '36ac6ba3-a476-4ffd-981d-e73900325023',
     is_active: true,
     metadata: [],
     name: 'amicitia',
-    updated_at: DateTime.iso8601('2026-01-27T05:57:25.982Z'),
+    updated_at: DateTime.iso8601('2026-01-28T01:58:32.462Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -703,7 +703,7 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
         type: Models::Shared::TicketingEmailType::HOME,
       ),
     ],
-    id: '8753ce7d-19a0-4e63-b2b2-32698b9e71a7',
+    id: '6d34c65e-47c0-4e17-9d88-0b46ebde0323',
     metadata: [],
     name: 'Christian Windler',
     tags: [
@@ -724,7 +724,7 @@ req = Models::Operations::PatchTicketingCustomerRequest.new(
         type: Models::Shared::TicketingTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-17T22:07:49.782Z'),
+    updated_at: DateTime.iso8601('2026-06-18T19:04:57.352Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -775,9 +775,9 @@ req = Models::Operations::PatchTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
     description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-    id: '10feab2c-9363-4451-913e-419684e00944',
+    id: '56e5202e-c68a-4f49-b884-cbe8862d4362',
     metadata: [],
-    updated_at: DateTime.iso8601('2024-10-09T21:52:55.923Z'),
+    updated_at: DateTime.iso8601('2024-10-10T13:58:32.460Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -830,7 +830,7 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: '1ac126af-4608-4506-a844-573e59bf67f5',
+    id: '8d354688-2420-47d7-8041-8483945fb626',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
@@ -839,7 +839,7 @@ req = Models::Operations::PatchTicketingTicketRequest.new(
     tags: [
       'vilicus',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T19:56:35.716Z'),
+    updated_at: DateTime.iso8601('2021-07-03T20:02:07.410Z'),
     url: 'https://similar-velocity.net/',
   ),
   connection_id: '<id>',
@@ -1059,11 +1059,11 @@ req = Models::Operations::UpdateTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: 'fd2b9bdb-08c7-4604-a893-dbd755f57921',
+    id: '36ac6ba3-a476-4ffd-981d-e73900325023',
     is_active: true,
     metadata: [],
     name: 'amicitia',
-    updated_at: DateTime.iso8601('2026-01-27T05:57:25.982Z'),
+    updated_at: DateTime.iso8601('2026-01-28T01:58:32.462Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1119,7 +1119,7 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
         type: Models::Shared::TicketingEmailType::HOME,
       ),
     ],
-    id: '8753ce7d-19a0-4e63-b2b2-32698b9e71a7',
+    id: '6d34c65e-47c0-4e17-9d88-0b46ebde0323',
     metadata: [],
     name: 'Christian Windler',
     tags: [
@@ -1140,7 +1140,7 @@ req = Models::Operations::UpdateTicketingCustomerRequest.new(
         type: Models::Shared::TicketingTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-06-17T22:07:49.782Z'),
+    updated_at: DateTime.iso8601('2026-06-18T19:04:57.352Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1191,9 +1191,9 @@ req = Models::Operations::UpdateTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
     description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-    id: '10feab2c-9363-4451-913e-419684e00944',
+    id: '56e5202e-c68a-4f49-b884-cbe8862d4362',
     metadata: [],
-    updated_at: DateTime.iso8601('2024-10-09T21:52:55.923Z'),
+    updated_at: DateTime.iso8601('2024-10-10T13:58:32.460Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1246,7 +1246,7 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
     created_at: DateTime.iso8601('2021-06-25T19:19:31.279Z'),
     description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
     due_at: DateTime.iso8601('2021-07-07T17:39:49.813Z'),
-    id: '1ac126af-4608-4506-a844-573e59bf67f5',
+    id: '8d354688-2420-47d7-8041-8483945fb626',
     metadata: [],
     priority: 'MEDIUM',
     source: 'email',
@@ -1255,7 +1255,7 @@ req = Models::Operations::UpdateTicketingTicketRequest.new(
     tags: [
       'vilicus',
     ],
-    updated_at: DateTime.iso8601('2021-07-03T19:56:35.716Z'),
+    updated_at: DateTime.iso8601('2021-07-03T20:02:07.410Z'),
     url: 'https://similar-velocity.net/',
   ),
   connection_id: '<id>',

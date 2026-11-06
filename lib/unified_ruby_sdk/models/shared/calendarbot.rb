@@ -17,19 +17,19 @@ module UnifiedRubySDK
         field :automatic_leave, Crystalline::Nilable.new(Models::Shared::PropertyCalendarBotAutomaticLeave), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('automatic_leave') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        # When the bot left (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :ended_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ended_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-        # (reference to CalendarEvent)
+        # Reference to calendar_event if scheduled via calendar (reference to CalendarEvent)
         field :event_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event_id') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        # When to join the meeting (for scheduled bots) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :join_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('join_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :meeting_metadata, Crystalline::Nilable.new(Models::Shared::PropertyCalendarBotMeetingMetadata), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meeting_metadata') } }
-
+        # URL of the meeting to join
         field :meeting_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meeting_url') } }
-
+        # Display name for the bot in the meeting
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
         field :participants, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarBotParticipant)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('participants') } }
@@ -37,13 +37,13 @@ module UnifiedRubySDK
         field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :recording_config, Crystalline::Nilable.new(Models::Shared::PropertyCalendarBotRecordingConfig), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recording_config') } }
-
+        # Reference to calendar_recording when ready
         field :recording_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recording_id') } }
-        # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+        # When the bot actually joined (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :status, Crystalline::Nilable.new(Models::Shared::CalendarBotStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarBotStatus, true) } }
-
+        # History of status changes
         field :status_changes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarBotStatusChange)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status_changes') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }

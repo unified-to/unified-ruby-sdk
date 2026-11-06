@@ -17,13 +17,13 @@ module UnifiedRubySDK
         field :email, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('email') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
-
+        # Whether this participant is a bot
         field :is_bot, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_bot') } }
 
         field :is_cohost, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_cohost') } }
 
         field :is_host, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_host') } }
-
+        # Whether this participant is the current bot
         field :is_self, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_self') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :joined_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('joined_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
@@ -31,15 +31,15 @@ module UnifiedRubySDK
         field :left_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('left_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
-
+        # Platform-specific participant identifier
         field :platform, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('platform') } }
-
+        # Platform-specific metadata
         field :platform_metadata, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::CalendarBotParticipant1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('platform_metadata') } }
-
+        # Whether participant is sharing screen
         field :screenshare_on, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('screenshare_on') } }
-
+        # Whether participant is currently speaking
         field :speaking, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('speaking') } }
-
+        # Whether participant's webcam is on
         field :webcam_on, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('webcam_on') } }
 
         sig { params(email: T.nilable(::String), id: T.nilable(::String), is_bot: T.nilable(T::Boolean), is_cohost: T.nilable(T::Boolean), is_host: T.nilable(T::Boolean), is_self: T.nilable(T::Boolean), joined_at: T.nilable(::DateTime), left_at: T.nilable(::DateTime), name: T.nilable(::String), platform: T.nilable(::String), platform_metadata: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::CalendarBotParticipant1, ::String, ::Float, T::Boolean)])), screenshare_on: T.nilable(T::Boolean), speaking: T.nilable(T::Boolean), webcam_on: T.nilable(T::Boolean)).void }

@@ -36,7 +36,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
     postal_code: '54031',
     region: 'Nebraska',
   ),
-  birthdate: '2025-02-26',
+  birthdate: '2025-02-27',
   contacts: [
     Models::Shared::HealthcarePatientContact.new(
       emails: [],
@@ -59,7 +59,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '03c36672-3a03-4b83-ad4f-0c9f147e8fd1',
+  id: 'c1e61aaa-4dc6-4c8f-b58a-17c1222ef3fe',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -79,7 +79,7 @@ res = s.patient.create_healthcare_patient(healthcare_patient: Models::Shared::He
       type: Models::Shared::HealthcareTelephoneType::MOBILE,
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-06T18:53:36.954Z'),
+  updated_at: DateTime.iso8601('2026-07-07T15:59:44.269Z'),
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -222,7 +222,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska',
     ),
-    birthdate: '2025-02-26',
+    birthdate: '2025-02-27',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -245,7 +245,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '9e457505-6c01-43a9-b05f-7c9d6bde5e35',
+    id: 'bd2c4a6c-1905-46be-a884-c6b5771c5e45',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -265,7 +265,7 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-06T18:53:37.022Z'),
+    updated_at: DateTime.iso8601('2026-07-07T15:59:44.293Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -321,7 +321,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
       postal_code: '54031',
       region: 'Nebraska',
     ),
-    birthdate: '2025-02-26',
+    birthdate: '2025-02-27',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -344,7 +344,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: '9e457505-6c01-43a9-b05f-7c9d6bde5e35',
+    id: 'bd2c4a6c-1905-46be-a884-c6b5771c5e45',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
@@ -364,7 +364,7 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         type: Models::Shared::HealthcareTelephoneType::MOBILE,
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-06T18:53:37.022Z'),
+    updated_at: DateTime.iso8601('2026-07-07T15:59:44.293Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
