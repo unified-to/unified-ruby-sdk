@@ -214,6 +214,7 @@ module UnifiedRubySDK
   autoload :Ticket, 'unified_ruby_sdk/ticket'
   autoload :Uc, 'unified_ruby_sdk/uc'
   autoload :Call, 'unified_ruby_sdk/call'
+  autoload :Fax, 'unified_ruby_sdk/fax'
   autoload :Scorecardtemplate, 'unified_ruby_sdk/scorecardtemplate'
   autoload :Unified, 'unified_ruby_sdk/unified'
   autoload :Apicall, 'unified_ruby_sdk/apicall'

@@ -180,6 +180,8 @@
 | `UC_CALL_WRITE`                        | uc_call_write                          |
 | `UC_CONTACT_READ`                      | uc_contact_read                        |
 | `UC_CONTACT_WRITE`                     | uc_contact_write                       |
+| `UC_FAX_READ`                          | uc_fax_read                            |
+| `UC_FAX_WRITE`                         | uc_fax_write                           |
 | `UC_COMMENT_READ`                      | uc_comment_read                        |
 | `UC_COMMENT_WRITE`                     | uc_comment_write                       |
 | `UC_RECORDING_READ`                    | uc_recording_read                      |

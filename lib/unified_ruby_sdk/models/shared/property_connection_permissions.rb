@@ -188,6 +188,8 @@ module UnifiedRubySDK
           UC_CALL_WRITE = new('uc_call_write')
           UC_CONTACT_READ = new('uc_contact_read')
           UC_CONTACT_WRITE = new('uc_contact_write')
+          UC_FAX_READ = new('uc_fax_read')
+          UC_FAX_WRITE = new('uc_fax_write')
           UC_COMMENT_READ = new('uc_comment_read')
           UC_COMMENT_WRITE = new('uc_comment_write')
           UC_RECORDING_READ = new('uc_recording_read')

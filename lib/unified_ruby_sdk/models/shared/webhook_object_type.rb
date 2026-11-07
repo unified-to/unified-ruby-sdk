@@ -105,6 +105,7 @@ module UnifiedRubySDK
           TICKETING_CUSTOMER = new('ticketing_customer')
           TICKETING_CATEGORY = new('ticketing_category')
           UC_CONTACT = new('uc_contact')
+          UC_FAX = new('uc_fax')
           UC_CALL = new('uc_call')
           UC_COMMENT = new('uc_comment')
           UC_RECORDING = new('uc_recording')

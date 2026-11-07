@@ -32,11 +32,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.space.create_kms_space(kms_space: Models::Shared::KmsSpace.new(
   created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
   description: 'Acer.',
-  id: '8eb85052-a909-4627-908c-45e1679dc109',
+  id: '211b7509-57b0-420f-8077-7b0902b7ad83',
   is_active: false,
   metadata: [],
   name: 'into nor afore',
-  updated_at: DateTime.iso8601('2026-01-11T12:42:34.369Z'),
+  updated_at: DateTime.iso8601('2026-01-12T12:16:34.866Z'),
 ), connection_id: '<id>')
 
 unless res.kms_space.nil?
@@ -174,11 +174,11 @@ req = Models::Operations::PatchKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
     created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
     description: 'Acer.',
-    id: '9ff55765-9303-4b4f-bfc4-44d8901e012b',
+    id: '955e028d-41a9-4edd-9d1a-5767d5d37d42',
     is_active: false,
     metadata: [],
     name: 'into nor afore',
-    updated_at: DateTime.iso8601('2026-01-11T12:42:34.375Z'),
+    updated_at: DateTime.iso8601('2026-01-12T12:16:34.873Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -271,11 +271,11 @@ req = Models::Operations::UpdateKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
     created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
     description: 'Acer.',
-    id: '9ff55765-9303-4b4f-bfc4-44d8901e012b',
+    id: '955e028d-41a9-4edd-9d1a-5767d5d37d42',
     is_active: false,
     metadata: [],
     name: 'into nor afore',
-    updated_at: DateTime.iso8601('2026-01-11T12:42:34.375Z'),
+    updated_at: DateTime.iso8601('2026-01-12T12:16:34.873Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

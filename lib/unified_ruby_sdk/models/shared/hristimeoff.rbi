@@ -14,6 +14,8 @@ class UnifiedRubySDK::Models::Shared::HrisTimeoff
   def approved_at=(str_); end
   def approver_user_id(); end
   def approver_user_id=(str_); end
+  def attachments(); end
+  def attachments=(str_); end
   def comments(); end
   def comments=(str_); end
   def company_id(); end

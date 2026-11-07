@@ -8,16 +8,19 @@
 * [create_uc_call](#create_uc_call) - Create a call
 * [create_uc_comment](#create_uc_comment) - Create a comment
 * [create_uc_contact](#create_uc_contact) - Create a contact
+* [create_uc_fax](#create_uc_fax) - Create a fax
 * [create_uc_recording](#create_uc_recording) - Create a recording
 * [get_uc_call](#get_uc_call) - Retrieve a call
 * [get_uc_comment](#get_uc_comment) - Retrieve a comment
 * [get_uc_contact](#get_uc_contact) - Retrieve a contact
+* [get_uc_fax](#get_uc_fax) - Retrieve a fax
 * [get_uc_recording](#get_uc_recording) - Retrieve a recording
 * [get_uc_scorecard](#get_uc_scorecard) - Retrieve a scorecard
 * [get_uc_scorecardtemplate](#get_uc_scorecardtemplate) - Retrieve a scorecardtemplate
 * [list_uc_calls](#list_uc_calls) - List all calls
 * [list_uc_comments](#list_uc_comments) - List all comments
 * [list_uc_contacts](#list_uc_contacts) - List all contacts
+* [list_uc_faxes](#list_uc_faxes) - List all faxes
 * [list_uc_recordings](#list_uc_recordings) - List all recordings
 * [list_uc_scorecards](#list_uc_scorecards) - List all scorecards
 * [list_uc_scorecardtemplates](#list_uc_scorecardtemplates) - List all scorecardtemplates
@@ -27,6 +30,7 @@
 * [patch_uc_recording](#patch_uc_recording) - Update a recording
 * [remove_uc_comment](#remove_uc_comment) - Remove a comment
 * [remove_uc_contact](#remove_uc_contact) - Remove a contact
+* [remove_uc_fax](#remove_uc_fax) - Remove a fax
 * [remove_uc_recording](#remove_uc_recording) - Remove a recording
 * [update_uc_call](#update_uc_call) - Update a call
 * [update_uc_comment](#update_uc_comment) - Update a comment
@@ -51,15 +55,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
     )
 
 res = s.uc.create_uc_call(uc_call: Models::Shared::UcCall.new(
-  answer_at: DateTime.iso8601('2025-05-22T22:22:33.332Z'),
+  answer_at: DateTime.iso8601('2025-05-23T15:47:23.855Z'),
   contacts: [],
-  conversation_identifier: '2b9be224-88ac-4c41-90d9-53ecb189f973',
+  conversation_identifier: '22856e15-599b-42e3-9ceb-eb4614c29ac1',
   cost_amount: 1.564,
   created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
   currency: 'USD',
   duration_seconds: 2556.0,
-  end_at: DateTime.iso8601('2024-06-04T01:12:37.722Z'),
-  id: '2b9be224-88ac-4c41-90d9-53ecb189f973',
+  end_at: DateTime.iso8601('2024-06-04T10:33:03.364Z'),
+  id: '22856e15-599b-42e3-9ceb-eb4614c29ac1',
   is_private: false,
   metadata: [
     Models::Shared::UcMetadata.new(
@@ -67,20 +71,20 @@ res = s.uc.create_uc_call(uc_call: Models::Shared::UcCall.new(
 
       },
       format: Models::Shared::UcMetadataFormat::PRICE,
-      id: '56c66547-3b7f-40de-b07c-067235163507',
+      id: '96d9da04-a4e0-4b89-b942-651d6f6a2e19',
       namespace: 'custom',
       slug: 'custom_field',
       value: 'tui',
     ),
   ],
-  start_at: DateTime.iso8601('2023-12-20T08:48:41.697Z'),
+  start_at: DateTime.iso8601('2023-12-20T14:20:18.581Z'),
   status: Models::Shared::UcCallStatus::IN_PROGRESS,
   telephone: Models::Shared::PropertyUcCallTelephone.new(
     telephone: '(493) 534-0768',
     type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
   ),
   type: Models::Shared::UcCallType::INBOUND,
-  updated_at: DateTime.iso8601('2023-08-04T15:00:06.873Z'),
+  updated_at: DateTime.iso8601('2023-08-04T17:22:38.723Z'),
   user_phone: '819-894-3317 x163',
 ), connection_id: '<id>')
 
@@ -129,9 +133,9 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.uc.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
   content: 'Vociferor vitiosus.',
   created_at: '2023-04-02T23:42:31.571Z',
-  id: '3cdadd44-6978-4c4d-a633-e30d9fb653f2',
+  id: '7716556f-435e-4368-9f68-77a038fb3f5a',
   metadata: [],
-  updated_at: '2024-02-13T13:52:11.354Z',
+  updated_at: '2024-02-13T21:00:13.644Z',
 ), connection_id: '<id>')
 
 unless res.uc_comment.nil?
@@ -186,7 +190,7 @@ res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   first_name: 'Luther',
-  id: 'd93dc557-2db0-46b9-89f8-72363cd67547',
+  id: '8529f2bc-17e5-4191-b706-d582d3d7998c',
   last_name: 'Rogahn',
   metadata: [],
   name: 'Luther Rogahn',
@@ -205,7 +209,7 @@ res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
     ),
   ],
   title: 'Chief Optimization Executive',
-  updated_at: DateTime.iso8601('2023-12-17T16:18:15.051Z'),
+  updated_at: DateTime.iso8601('2023-12-18T09:43:51.052Z'),
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -233,6 +237,63 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## create_uc_fax
+
+Creates a UcFax. Provide the unified UcFax fields in the request body; they are mapped to the provider's API. Returns the created UcFax.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createUcFax" method="post" path="/uc/{connection_id}/fax" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.uc.create_uc_fax(uc_fax: Models::Shared::UcFax.new(
+  cost_amount: 1.2_207,
+  created_at: DateTime.iso8601('2022-10-25T13:37:51.431Z'),
+  currency: 'USD',
+  from_telephone: '+13605107540',
+  id: '0f60ca3e-3acb-4418-a66f-0fd8b977a329',
+  media_url: 'https://doting-jump.biz',
+  metadata: [],
+  pages: 20.0,
+  status: Models::Shared::UcFaxStatus::DELIVERED,
+  to_telephone: '+19083998866',
+  type: Models::Shared::UcFaxType::INBOUND,
+  updated_at: DateTime.iso8601('2023-04-15T18:47:12.677Z'),
+), connection_id: '<id>')
+
+unless res.uc_fax.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `uc_fax`                                                                                                                                         | [Models::Shared::UcFax](../../models/shared/ucfax.md)                                                                                            | :heavy_check_mark:                                                                                                                               | A fax sent or received through a phone number                                                                                                    |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateUcFaxQueryParamFields](../../models/operations/createucfaxqueryparamfields.md)>                              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateUcFaxResponse)](../../models/operations/createucfaxresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## create_uc_recording
 
 Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
@@ -252,36 +313,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 res = s.uc.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(
   contacts: [],
-  conversation_identifier: 'acc9f851-b3bf-484d-860a-93892b0c0cf3',
+  conversation_identifier: 'c48f8cfd-f52c-4192-b38d-d39a7c74c104',
   created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-  end_at: DateTime.iso8601('2024-05-11T06:50:51.813Z'),
-  expires_at: DateTime.iso8601('2026-05-10T16:25:03.622Z'),
-  id: 'acc9f851-b3bf-484d-860a-93892b0c0cf3',
+  end_at: DateTime.iso8601('2024-05-11T18:37:52.431Z'),
+  expires_at: DateTime.iso8601('2026-05-11T18:29:27.907Z'),
+  id: 'c48f8cfd-f52c-4192-b38d-d39a7c74c104',
   media: [
     Models::Shared::UcRecordingMedia.new(
-      end_at: DateTime.iso8601('2024-04-07T18:06:08.949Z'),
+      end_at: DateTime.iso8601('2024-04-08T05:13:44.661Z'),
       language: 'en',
       recording_download_url: 'https://parched-wasabi.com/',
-      start_at: DateTime.iso8601('2026-05-29T13:13:00.163Z'),
+      start_at: DateTime.iso8601('2026-05-30T15:39:35.089Z'),
       transcript_download_url: 'https://colossal-cuckoo.name',
       transcripts: [
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2026-03-09T18:42:25.321Z'),
-          start_at: DateTime.iso8601('2024-06-08T20:09:18.402Z'),
+          end_at: DateTime.iso8601('2026-03-10T19:34:03.544Z'),
+          start_at: DateTime.iso8601('2024-06-09T08:29:52.935Z'),
           text: 'Turpis maiores ducimus tero speculum.',
         ),
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2024-10-20T12:50:19.326Z'),
-          start_at: DateTime.iso8601('2026-08-17T19:56:22.551Z'),
+          end_at: DateTime.iso8601('2024-10-21T03:48:03.227Z'),
+          start_at: DateTime.iso8601('2026-08-18T23:57:19.543Z'),
           text: 'Magnam consuasor uxor tergiversatio subseco.',
         ),
       ],
     ),
   ],
   metadata: [],
-  start_at: DateTime.iso8601('2023-04-30T02:20:48.394Z'),
+  start_at: DateTime.iso8601('2023-04-30T06:44:26.403Z'),
   type: Models::Shared::UcRecordingType::OUTBOUND,
-  updated_at: DateTime.iso8601('2025-03-26T02:02:57.601Z'),
+  updated_at: DateTime.iso8601('2025-03-26T20:04:42.826Z'),
   user_phone: '1-915-327-0429 x509',
   web_url: 'https://spherical-comparison.org',
 ), connection_id: '<id>')
@@ -436,6 +497,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetUcContactResponse)](../../models/operations/getuccontactresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_uc_fax
+
+Retrieves a single UcFax by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getUcFax" method="get" path="/uc/{connection_id}/fax/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.uc.get_uc_fax(connection_id: '<id>', id: '<id>')
+
+unless res.uc_fax.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Fax                                                                                                                                    |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetUcFaxQueryParamFields](../../models/operations/getucfaxqueryparamfields.md)>                                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetUcFaxResponse)](../../models/operations/getucfaxresponse.md)**
 
 ### Errors
 
@@ -710,6 +815,51 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_uc_faxes
+
+Returns a list of UcFaxes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listUcFaxes" method="get" path="/uc/{connection_id}/fax" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListUcFaxesRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.uc.list_uc_faxes(request: req)
+
+unless res.uc_faxes.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [Models::Operations::ListUcFaxesRequest](../../models/operations/listucfaxesrequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::ListUcFaxesResponse)](../../models/operations/listucfaxesresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_uc_recordings
 
 Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -864,15 +1014,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::PatchUcCallRequest.new(
   uc_call: Models::Shared::UcCall.new(
-    answer_at: DateTime.iso8601('2025-05-22T22:22:33.348Z'),
+    answer_at: DateTime.iso8601('2025-05-23T15:47:23.873Z'),
     contacts: [],
-    conversation_identifier: '820bc35a-6263-466a-8957-5c34bf6eab58',
+    conversation_identifier: 'd3482230-c106-4b82-a305-2408dba6cf90',
     cost_amount: 1.564,
     created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
     currency: 'USD',
     duration_seconds: 2556.0,
-    end_at: DateTime.iso8601('2024-06-04T01:12:37.731Z'),
-    id: '820bc35a-6263-466a-8957-5c34bf6eab58',
+    end_at: DateTime.iso8601('2024-06-04T10:33:03.374Z'),
+    id: 'd3482230-c106-4b82-a305-2408dba6cf90',
     is_private: false,
     metadata: [
       Models::Shared::UcMetadata.new(
@@ -880,20 +1030,20 @@ req = Models::Operations::PatchUcCallRequest.new(
 
         },
         format: Models::Shared::UcMetadataFormat::PRICE,
-        id: '74f8bf70-bc2b-42ff-9c07-c733e3ad6ccb',
+        id: '838fac7c-6061-461a-87e4-5c2dc287e9ff',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'tui',
       ),
     ],
-    start_at: DateTime.iso8601('2023-12-20T08:48:41.702Z'),
+    start_at: DateTime.iso8601('2023-12-20T14:20:18.587Z'),
     status: Models::Shared::UcCallStatus::IN_PROGRESS,
     telephone: Models::Shared::PropertyUcCallTelephone.new(
       telephone: '(493) 534-0768',
       type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
     ),
     type: Models::Shared::UcCallType::INBOUND,
-    updated_at: DateTime.iso8601('2023-08-04T15:00:06.875Z'),
+    updated_at: DateTime.iso8601('2023-08-04T17:22:38.726Z'),
     user_phone: '819-894-3317 x163',
   ),
   connection_id: '<id>',
@@ -945,9 +1095,9 @@ req = Models::Operations::PatchUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: 'baa4be56-4454-4576-ba94-e7fe9ae7ef35',
+    id: 'a4e21ebf-bef3-448b-99c1-980f225f7e6e',
     metadata: [],
-    updated_at: '2024-02-13T13:52:11.356Z',
+    updated_at: '2024-02-13T21:00:13.647Z',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1005,7 +1155,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: 'a45e5f76-4f14-4b28-8c98-84fc073ec894',
+    id: '69e590b0-7ccc-4e41-9827-02c352de9f81',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
@@ -1024,7 +1174,7 @@ req = Models::Operations::PatchUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-17T16:18:15.057Z'),
+    updated_at: DateTime.iso8601('2023-12-18T09:43:51.058Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1074,36 +1224,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::PatchUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: '273a42be-72cb-441a-a1ee-c0f35f7ef50e',
+    conversation_identifier: 'd8f7eed5-6b8c-41d9-a64c-01516a91278c',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-11T06:50:51.822Z'),
-    expires_at: DateTime.iso8601('2026-05-10T16:25:03.642Z'),
-    id: '273a42be-72cb-441a-a1ee-c0f35f7ef50e',
+    end_at: DateTime.iso8601('2024-05-11T18:37:52.440Z'),
+    expires_at: DateTime.iso8601('2026-05-11T18:29:27.926Z'),
+    id: 'd8f7eed5-6b8c-41d9-a64c-01516a91278c',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-07T18:06:08.958Z'),
+        end_at: DateTime.iso8601('2024-04-08T05:13:44.669Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-05-29T13:13:00.184Z'),
+        start_at: DateTime.iso8601('2026-05-30T15:39:35.109Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-03-09T18:42:25.341Z'),
-            start_at: DateTime.iso8601('2024-06-08T20:09:18.412Z'),
+            end_at: DateTime.iso8601('2026-03-10T19:34:03.562Z'),
+            start_at: DateTime.iso8601('2024-06-09T08:29:52.944Z'),
             text: 'Turpis maiores ducimus tero speculum.',
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-20T12:50:19.338Z'),
-            start_at: DateTime.iso8601('2026-08-17T19:56:22.573Z'),
+            end_at: DateTime.iso8601('2024-10-21T03:48:03.238Z'),
+            start_at: DateTime.iso8601('2026-08-18T23:57:19.564Z'),
             text: 'Magnam consuasor uxor tergiversatio subseco.',
           ),
         ],
       ),
     ],
     metadata: [],
-    start_at: DateTime.iso8601('2023-04-30T02:20:48.397Z'),
+    start_at: DateTime.iso8601('2023-04-30T06:44:26.407Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-26T02:02:57.615Z'),
+    updated_at: DateTime.iso8601('2025-03-26T20:04:42.840Z'),
     user_phone: '1-915-327-0429 x509',
     web_url: 'https://spherical-comparison.org',
   ),
@@ -1219,6 +1369,48 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_uc_fax
+
+Deletes the UcFax identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeUcFax" method="delete" path="/uc/{connection_id}/fax/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.uc.remove_uc_fax(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Fax        |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveUcFaxResponse)](../../models/operations/removeucfaxresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_uc_recording
 
 Deletes the UcRecording identified by `id`.
@@ -1280,15 +1472,15 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Operations::UpdateUcCallRequest.new(
   uc_call: Models::Shared::UcCall.new(
-    answer_at: DateTime.iso8601('2025-05-22T22:22:33.348Z'),
+    answer_at: DateTime.iso8601('2025-05-23T15:47:23.873Z'),
     contacts: [],
-    conversation_identifier: '820bc35a-6263-466a-8957-5c34bf6eab58',
+    conversation_identifier: 'd3482230-c106-4b82-a305-2408dba6cf90',
     cost_amount: 1.564,
     created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
     currency: 'USD',
     duration_seconds: 2556.0,
-    end_at: DateTime.iso8601('2024-06-04T01:12:37.731Z'),
-    id: '820bc35a-6263-466a-8957-5c34bf6eab58',
+    end_at: DateTime.iso8601('2024-06-04T10:33:03.374Z'),
+    id: 'd3482230-c106-4b82-a305-2408dba6cf90',
     is_private: false,
     metadata: [
       Models::Shared::UcMetadata.new(
@@ -1296,20 +1488,20 @@ req = Models::Operations::UpdateUcCallRequest.new(
 
         },
         format: Models::Shared::UcMetadataFormat::PRICE,
-        id: '74f8bf70-bc2b-42ff-9c07-c733e3ad6ccb',
+        id: '838fac7c-6061-461a-87e4-5c2dc287e9ff',
         namespace: 'custom',
         slug: 'custom_field',
         value: 'tui',
       ),
     ],
-    start_at: DateTime.iso8601('2023-12-20T08:48:41.702Z'),
+    start_at: DateTime.iso8601('2023-12-20T14:20:18.587Z'),
     status: Models::Shared::UcCallStatus::IN_PROGRESS,
     telephone: Models::Shared::PropertyUcCallTelephone.new(
       telephone: '(493) 534-0768',
       type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
     ),
     type: Models::Shared::UcCallType::INBOUND,
-    updated_at: DateTime.iso8601('2023-08-04T15:00:06.875Z'),
+    updated_at: DateTime.iso8601('2023-08-04T17:22:38.726Z'),
     user_phone: '819-894-3317 x163',
   ),
   connection_id: '<id>',
@@ -1361,9 +1553,9 @@ req = Models::Operations::UpdateUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: 'baa4be56-4454-4576-ba94-e7fe9ae7ef35',
+    id: 'a4e21ebf-bef3-448b-99c1-980f225f7e6e',
     metadata: [],
-    updated_at: '2024-02-13T13:52:11.356Z',
+    updated_at: '2024-02-13T21:00:13.647Z',
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1421,7 +1613,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     first_name: 'Luther',
-    id: 'a45e5f76-4f14-4b28-8c98-84fc073ec894',
+    id: '69e590b0-7ccc-4e41-9827-02c352de9f81',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
@@ -1440,7 +1632,7 @@ req = Models::Operations::UpdateUcContactRequest.new(
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-17T16:18:15.057Z'),
+    updated_at: DateTime.iso8601('2023-12-18T09:43:51.058Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -1490,36 +1682,36 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 req = Models::Operations::UpdateUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: '273a42be-72cb-441a-a1ee-c0f35f7ef50e',
+    conversation_identifier: 'd8f7eed5-6b8c-41d9-a64c-01516a91278c',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-11T06:50:51.822Z'),
-    expires_at: DateTime.iso8601('2026-05-10T16:25:03.642Z'),
-    id: '273a42be-72cb-441a-a1ee-c0f35f7ef50e',
+    end_at: DateTime.iso8601('2024-05-11T18:37:52.440Z'),
+    expires_at: DateTime.iso8601('2026-05-11T18:29:27.926Z'),
+    id: 'd8f7eed5-6b8c-41d9-a64c-01516a91278c',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-07T18:06:08.958Z'),
+        end_at: DateTime.iso8601('2024-04-08T05:13:44.669Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-05-29T13:13:00.184Z'),
+        start_at: DateTime.iso8601('2026-05-30T15:39:35.109Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-03-09T18:42:25.341Z'),
-            start_at: DateTime.iso8601('2024-06-08T20:09:18.412Z'),
+            end_at: DateTime.iso8601('2026-03-10T19:34:03.562Z'),
+            start_at: DateTime.iso8601('2024-06-09T08:29:52.944Z'),
             text: 'Turpis maiores ducimus tero speculum.',
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-20T12:50:19.338Z'),
-            start_at: DateTime.iso8601('2026-08-17T19:56:22.573Z'),
+            end_at: DateTime.iso8601('2024-10-21T03:48:03.238Z'),
+            start_at: DateTime.iso8601('2026-08-18T23:57:19.564Z'),
             text: 'Magnam consuasor uxor tergiversatio subseco.',
           ),
         ],
       ),
     ],
     metadata: [],
-    start_at: DateTime.iso8601('2023-04-30T02:20:48.397Z'),
+    start_at: DateTime.iso8601('2023-04-30T06:44:26.407Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-26T02:02:57.615Z'),
+    updated_at: DateTime.iso8601('2025-03-26T20:04:42.840Z'),
     user_phone: '1-915-327-0429 x509',
     web_url: 'https://spherical-comparison.org',
   ),

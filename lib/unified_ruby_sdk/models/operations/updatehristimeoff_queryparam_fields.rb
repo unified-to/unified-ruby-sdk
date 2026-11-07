@@ -30,6 +30,7 @@ module UnifiedRubySDK
           TYPE = new('type')
           DURATION = new('duration')
           DURATION_TYPE = new('duration_type')
+          ATTACHMENTS = new('attachments')
           METADATA = new('metadata')
           RAW = new('raw')
         end

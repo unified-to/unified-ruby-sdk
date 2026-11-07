@@ -56,7 +56,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '6995bedb-246d-4f91-934f-12685bd8908d',
+  id: 'c34c718e-58fc-4281-bcbf-94cc032a2d30',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -69,7 +69,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-10T21:59:29.221Z'),
+  updated_at: DateTime.iso8601('2023-08-11T05:30:40.415Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -107,7 +107,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '6995bedb-246d-4f91-934f-12685bd8908d',
+  id: 'c34c718e-58fc-4281-bcbf-94cc032a2d30',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -120,7 +120,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-10T21:59:29.221Z'),
+  updated_at: DateTime.iso8601('2023-08-11T05:30:40.415Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -1328,6 +1328,13 @@ end
 * [patch_accounting_expensereport](docs/sdks/expensereport/README.md#patch_accounting_expensereport) - Update an expensereport
 * [remove_accounting_expensereport](docs/sdks/expensereport/README.md#remove_accounting_expensereport) - Remove an expensereport
 * [update_accounting_expensereport](docs/sdks/expensereport/README.md#update_accounting_expensereport) - Update an expensereport
+
+### [fax](docs/sdks/fax/README.md)
+
+* [create_uc_fax](docs/sdks/fax/README.md#create_uc_fax) - Create a fax
+* [get_uc_fax](docs/sdks/fax/README.md#get_uc_fax) - Retrieve a fax
+* [list_uc_faxes](docs/sdks/fax/README.md#list_uc_faxes) - List all faxes
+* [remove_uc_fax](docs/sdks/fax/README.md#remove_uc_fax) - Remove a fax
 
 ### [feedback](docs/sdks/feedback/README.md)
 
@@ -2853,16 +2860,19 @@ end
 * [create_uc_call](docs/sdks/uc/README.md#create_uc_call) - Create a call
 * [create_uc_comment](docs/sdks/uc/README.md#create_uc_comment) - Create a comment
 * [create_uc_contact](docs/sdks/uc/README.md#create_uc_contact) - Create a contact
+* [create_uc_fax](docs/sdks/uc/README.md#create_uc_fax) - Create a fax
 * [create_uc_recording](docs/sdks/uc/README.md#create_uc_recording) - Create a recording
 * [get_uc_call](docs/sdks/uc/README.md#get_uc_call) - Retrieve a call
 * [get_uc_comment](docs/sdks/uc/README.md#get_uc_comment) - Retrieve a comment
 * [get_uc_contact](docs/sdks/uc/README.md#get_uc_contact) - Retrieve a contact
+* [get_uc_fax](docs/sdks/uc/README.md#get_uc_fax) - Retrieve a fax
 * [get_uc_recording](docs/sdks/uc/README.md#get_uc_recording) - Retrieve a recording
 * [get_uc_scorecard](docs/sdks/uc/README.md#get_uc_scorecard) - Retrieve a scorecard
 * [get_uc_scorecardtemplate](docs/sdks/uc/README.md#get_uc_scorecardtemplate) - Retrieve a scorecardtemplate
 * [list_uc_calls](docs/sdks/uc/README.md#list_uc_calls) - List all calls
 * [list_uc_comments](docs/sdks/uc/README.md#list_uc_comments) - List all comments
 * [list_uc_contacts](docs/sdks/uc/README.md#list_uc_contacts) - List all contacts
+* [list_uc_faxes](docs/sdks/uc/README.md#list_uc_faxes) - List all faxes
 * [list_uc_recordings](docs/sdks/uc/README.md#list_uc_recordings) - List all recordings
 * [list_uc_scorecards](docs/sdks/uc/README.md#list_uc_scorecards) - List all scorecards
 * [list_uc_scorecardtemplates](docs/sdks/uc/README.md#list_uc_scorecardtemplates) - List all scorecardtemplates
@@ -2872,6 +2882,7 @@ end
 * [patch_uc_recording](docs/sdks/uc/README.md#patch_uc_recording) - Update a recording
 * [remove_uc_comment](docs/sdks/uc/README.md#remove_uc_comment) - Remove a comment
 * [remove_uc_contact](docs/sdks/uc/README.md#remove_uc_contact) - Remove a contact
+* [remove_uc_fax](docs/sdks/uc/README.md#remove_uc_fax) - Remove a fax
 * [remove_uc_recording](docs/sdks/uc/README.md#remove_uc_recording) - Remove a recording
 * [update_uc_call](docs/sdks/uc/README.md#update_uc_call) - Update a call
 * [update_uc_comment](docs/sdks/uc/README.md#update_uc_comment) - Update a comment
@@ -3036,7 +3047,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Voluptatibus valde spoliatio.',
-      id: '6995bedb-246d-4f91-934f-12685bd8908d',
+      id: 'c34c718e-58fc-4281-bcbf-94cc032a2d30',
       is_payable: false,
       metadata: [],
       name: 'Auto Loan Account',
@@ -3049,7 +3060,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-10T21:59:29.221Z'),
+      updated_at: DateTime.iso8601('2023-08-11T05:30:40.415Z'),
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -3095,7 +3106,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '6995bedb-246d-4f91-934f-12685bd8908d',
+  id: 'c34c718e-58fc-4281-bcbf-94cc032a2d30',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3108,7 +3119,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-10T21:59:29.221Z'),
+  updated_at: DateTime.iso8601('2023-08-11T05:30:40.415Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3137,7 +3148,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '6995bedb-246d-4f91-934f-12685bd8908d',
+  id: 'c34c718e-58fc-4281-bcbf-94cc032a2d30',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3150,7 +3161,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-10T21:59:29.221Z'),
+  updated_at: DateTime.iso8601('2023-08-11T05:30:40.415Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

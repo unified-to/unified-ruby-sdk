@@ -40,11 +40,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.category.create_accounting_category(accounting_category: Models::Shared::AccountingCategory.new(
   created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
   description: 'Textus ab thymum labore basium.',
-  id: 'a129ad6b-35bb-4f60-a336-612895c4f284',
+  id: '917f26fe-a9c9-4e15-88d2-dff6c235402d',
   is_active: false,
   metadata: [],
   name: 'Beauty',
-  updated_at: DateTime.iso8601('2025-09-22T03:25:06.324Z'),
+  updated_at: DateTime.iso8601('2025-09-22T23:20:48.618Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_category.nil?
@@ -92,11 +92,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.category.create_ticketing_category(ticketing_category: Models::Shared::TicketingCategory.new(
   created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
   description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-  id: 'e0c0e93a-cb6e-493f-a988-427ef9ff6a31',
+  id: 'cd65e3d7-fdc3-4e26-9345-217a22b26385',
   is_active: true,
   metadata: [],
   name: 'amicitia',
-  updated_at: DateTime.iso8601('2026-01-28T01:58:32.455Z'),
+  updated_at: DateTime.iso8601('2026-01-29T04:19:12.494Z'),
 ), connection_id: '<id>')
 
 unless res.ticketing_category.nil?
@@ -412,11 +412,11 @@ req = Models::Operations::PatchAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Textus ab thymum labore basium.',
-    id: '81a179cb-75d3-4fbb-85a2-078572dfc9b8',
+    id: 'd3342644-c465-48af-b3ad-037d816a00ac',
     is_active: false,
     metadata: [],
     name: 'Beauty',
-    updated_at: DateTime.iso8601('2025-09-22T03:25:06.333Z'),
+    updated_at: DateTime.iso8601('2025-09-22T23:20:48.624Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -467,11 +467,11 @@ req = Models::Operations::PatchTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: '36ac6ba3-a476-4ffd-981d-e73900325023',
+    id: '6cc8e01e-aec8-42f1-9c00-9d0358cba3e1',
     is_active: true,
     metadata: [],
     name: 'amicitia',
-    updated_at: DateTime.iso8601('2026-01-28T01:58:32.462Z'),
+    updated_at: DateTime.iso8601('2026-01-29T04:19:12.501Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -606,11 +606,11 @@ req = Models::Operations::UpdateAccountingCategoryRequest.new(
   accounting_category: Models::Shared::AccountingCategory.new(
     created_at: DateTime.iso8601('2023-05-30T12:29:04.257Z'),
     description: 'Textus ab thymum labore basium.',
-    id: '81a179cb-75d3-4fbb-85a2-078572dfc9b8',
+    id: 'd3342644-c465-48af-b3ad-037d816a00ac',
     is_active: false,
     metadata: [],
     name: 'Beauty',
-    updated_at: DateTime.iso8601('2025-09-22T03:25:06.333Z'),
+    updated_at: DateTime.iso8601('2025-09-22T23:20:48.624Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -661,11 +661,11 @@ req = Models::Operations::UpdateTicketingCategoryRequest.new(
   ticketing_category: Models::Shared::TicketingCategory.new(
     created_at: DateTime.iso8601('2019-10-19T22:02:51.067Z'),
     description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-    id: '36ac6ba3-a476-4ffd-981d-e73900325023',
+    id: '6cc8e01e-aec8-42f1-9c00-9d0358cba3e1',
     is_active: true,
     metadata: [],
     name: 'amicitia',
-    updated_at: DateTime.iso8601('2026-01-28T01:58:32.462Z'),
+    updated_at: DateTime.iso8601('2026-01-29T04:19:12.501Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

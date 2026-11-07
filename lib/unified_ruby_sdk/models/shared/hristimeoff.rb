@@ -19,6 +19,8 @@ module UnifiedRubySDK
         field :approved_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approved_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :approver_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('approver_user_id') } }
+        # supporting documents (eg. doctor's notes) attached to the leave request
+        field :attachments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisAttachment)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('attachments') } }
 
         field :comments, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comments') } }
         # (reference to HrisCompany)
@@ -52,11 +54,12 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(user_id: ::String, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), comments: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), duration: T.nilable(::Float), duration_type: T.nilable(Models::Shared::DurationType), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_paid: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), original_type: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HrisTimeoffStatus), type: T.nilable(Models::Shared::HrisTimeoffType), updated_at: T.nilable(::DateTime)).void }
-        def initialize(user_id:, approved_at: nil, approver_user_id: nil, comments: nil, company_id: nil, created_at: nil, duration: nil, duration_type: nil, end_at: nil, id: nil, is_paid: nil, metadata: nil, original_type: nil, raw: nil, reason: nil, start_at: nil, status: nil, type: nil, updated_at: nil)
+        sig { params(user_id: ::String, approved_at: T.nilable(::DateTime), approver_user_id: T.nilable(::String), attachments: T.nilable(T::Array[Models::Shared::HrisAttachment]), comments: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), duration: T.nilable(::Float), duration_type: T.nilable(Models::Shared::DurationType), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_paid: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), original_type: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reason: T.nilable(::String), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HrisTimeoffStatus), type: T.nilable(Models::Shared::HrisTimeoffType), updated_at: T.nilable(::DateTime)).void }
+        def initialize(user_id:, approved_at: nil, approver_user_id: nil, attachments: nil, comments: nil, company_id: nil, created_at: nil, duration: nil, duration_type: nil, end_at: nil, id: nil, is_paid: nil, metadata: nil, original_type: nil, raw: nil, reason: nil, start_at: nil, status: nil, type: nil, updated_at: nil)
           @user_id = user_id
           @approved_at = approved_at
           @approver_user_id = approver_user_id
+          @attachments = attachments
           @comments = comments
           @company_id = company_id
           @created_at = created_at
@@ -81,6 +84,7 @@ module UnifiedRubySDK
           return false unless @user_id == other.user_id
           return false unless @approved_at == other.approved_at
           return false unless @approver_user_id == other.approver_user_id
+          return false unless @attachments == other.attachments
           return false unless @comments == other.comments
           return false unless @company_id == other.company_id
           return false unless @created_at == other.created_at
