@@ -32,17 +32,17 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.metadata.create_metadata_metadata(metadata_metadata: Models::Shared::MetadataMetadata.new(
   created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
   format: Models::Shared::MetadataMetadataFormat::PRICE,
-  id: '73dd85f3-ff9c-466f-8547-18a51f3c7053',
+  id: '7a09c8e9-42f3-4948-9a1c-9b045f686857',
   is_required: false,
   name: 'autem',
-  object_type: 'compute_domain',
+  object_type: 'compute_deployment',
   objects: {
 
   },
   options: [],
   original_format: 'advoco',
   slug: 'arbustum',
-  updated_at: DateTime.iso8601('2025-04-03T03:40:50.187Z'),
+  updated_at: DateTime.iso8601('2025-04-03T20:53:59.960Z'),
 ), connection_id: '<id>')
 
 unless res.metadata_metadata.nil?
@@ -180,17 +180,17 @@ req = Models::Operations::PatchMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '8f96a7b4-6156-4723-86c0-a6ce4b221dc0',
+    id: 'd76442bf-3a67-4a7f-ba9f-a7752f86daf0',
     is_required: false,
     name: 'autem',
-    object_type: 'compute_domain',
+    object_type: 'compute_deployment',
     objects: {
 
     },
     options: [],
     original_format: 'advoco',
     slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-04-03T03:40:50.195Z'),
+    updated_at: DateTime.iso8601('2025-04-03T20:53:59.969Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -283,17 +283,17 @@ req = Models::Operations::UpdateMetadataMetadataRequest.new(
   metadata_metadata: Models::Shared::MetadataMetadata.new(
     created_at: DateTime.iso8601('2021-03-25T03:02:17.656Z'),
     format: Models::Shared::MetadataMetadataFormat::PRICE,
-    id: '8f96a7b4-6156-4723-86c0-a6ce4b221dc0',
+    id: 'd76442bf-3a67-4a7f-ba9f-a7752f86daf0',
     is_required: false,
     name: 'autem',
-    object_type: 'compute_domain',
+    object_type: 'compute_deployment',
     objects: {
 
     },
     options: [],
     original_format: 'advoco',
     slug: 'arbustum',
-    updated_at: DateTime.iso8601('2025-04-03T03:40:50.195Z'),
+    updated_at: DateTime.iso8601('2025-04-03T20:53:59.969Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

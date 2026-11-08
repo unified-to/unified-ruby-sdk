@@ -6,7 +6,9 @@
 ### Available Operations
 
 * [create_datastore_table](#create_datastore_table) - Create a table
+* [get_commerce_table](#get_commerce_table) - Retrieve a table
 * [get_datastore_table](#get_datastore_table) - Retrieve a table
+* [list_commerce_tables](#list_commerce_tables) - List all tables
 * [list_datastore_tables](#list_datastore_tables) - List all tables
 * [patch_datastore_table](#patch_datastore_table) - Update a table
 * [remove_datastore_table](#remove_datastore_table) - Remove a table
@@ -35,7 +37,7 @@ res = s.table.create_datastore_table(datastore_table: Models::Shared::DatastoreT
   fields_: [
     Models::Shared::DatastoreField.new(
       description: 'Antea soluta itaque clamo despecto basium accendo.',
-      id: 'f2f92f73-331d-48eb-949a-ea669cc50db6',
+      id: '523ca0f8-08f7-4a8c-b66b-c4e805296699',
       is_indexed: true,
       is_unique: true,
       name: 'Ferry LLC',
@@ -45,7 +47,7 @@ res = s.table.create_datastore_table(datastore_table: Models::Shared::DatastoreT
     ),
     Models::Shared::DatastoreField.new(
       description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-      id: '481b19e1-a677-48ca-92c8-92280397d6a1',
+      id: '2ebc2910-ccb7-452e-a3a0-c0e1d825e871',
       is_nullable: true,
       is_unique: true,
       name: 'Hand - Nader',
@@ -55,7 +57,7 @@ res = s.table.create_datastore_table(datastore_table: Models::Shared::DatastoreT
     ),
     Models::Shared::DatastoreField.new(
       description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-      id: '707c5e4a-8949-4921-a163-b48b47d862d7',
+      id: '05bc65ac-b57f-4427-bbcf-f8305cb052f7',
       is_indexed: true,
       is_nullable: true,
       is_unique: true,
@@ -67,7 +69,7 @@ res = s.table.create_datastore_table(datastore_table: Models::Shared::DatastoreT
     ),
     Models::Shared::DatastoreField.new(
       description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-      id: '2618a5fe-09ed-47c7-b221-b23bc19b221a',
+      id: '97856465-4490-45b9-85c4-62d024946de4',
       name: 'Gislason, Gorczany and Hegmann',
       original_type: 'tego',
       precision: 94.0,
@@ -76,7 +78,7 @@ res = s.table.create_datastore_table(datastore_table: Models::Shared::DatastoreT
     ),
     Models::Shared::DatastoreField.new(
       description: 'Communis coma cura audio aduro acer canis expedita.',
-      id: '60d955e1-24d5-40e8-bbb7-fa366969997a',
+      id: '911c010c-42b1-4ef5-bf25-695d1d14de40',
       is_indexed: true,
       is_primary_key: true,
       is_required: true,
@@ -86,18 +88,18 @@ res = s.table.create_datastore_table(datastore_table: Models::Shared::DatastoreT
       type: Models::Shared::DatastoreFieldType::EMAIL,
     ),
   ],
-  id: 'e75a4e4e-7129-46c6-9755-cb72c6275765',
+  id: '392576d8-84dc-4c2d-85cc-473c53432ab2',
   metadata: [],
   name: 'Rogahn, Lowe and Heller',
   relationships: [
     Models::Shared::DatastoreRelationship.new(
       field: 'Macejkovic - Shields',
       name: 'Hyatt, Ryan and Nienow',
-      table_id: 'e75a4e4e-7129-46c6-9755-cb72c6275765',
+      table_id: '392576d8-84dc-4c2d-85cc-473c53432ab2',
       type: Models::Shared::DatastoreRelationshipType::MANY,
     ),
   ],
-  updated_at: DateTime.iso8601('2022-08-13T17:21:45.586Z'),
+  updated_at: DateTime.iso8601('2022-08-13T18:35:41.954Z'),
   web_url: 'https://nervous-deck.com',
 ), connection_id: '<id>')
 
@@ -119,6 +121,50 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateDatastoreTableResponse)](../../models/operations/createdatastoretableresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_commerce_table
+
+Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getCommerceTable" method="get" path="/commerce/{connection_id}/table/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.table.get_commerce_table(connection_id: '<id>', id: '<id>')
+
+unless res.commerce_table.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Table                                                                                                                                  |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetCommerceTableQueryParamFields](../../models/operations/getcommercetablequeryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetCommerceTableResponse)](../../models/operations/getcommercetableresponse.md)**
 
 ### Errors
 
@@ -163,6 +209,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetDatastoreTableResponse)](../../models/operations/getdatastoretableresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## list_commerce_tables
+
+Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listCommerceTables" method="get" path="/commerce/{connection_id}/table" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListCommerceTablesRequest.new(
+  connection_id: '<id>',
+)
+
+res = s.table.list_commerce_tables(request: req)
+
+unless res.commerce_tables.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListCommerceTablesRequest](../../models/operations/listcommercetablesrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::ListCommerceTablesResponse)](../../models/operations/listcommercetablesresponse.md)**
 
 ### Errors
 
@@ -239,7 +330,7 @@ req = Models::Operations::PatchDatastoreTableRequest.new(
     fields_: [
       Models::Shared::DatastoreField.new(
         description: 'Antea soluta itaque clamo despecto basium accendo.',
-        id: 'd68309e3-db66-4b05-ab91-fbcf6d8523c1',
+        id: '4392f855-65ca-42bb-a1be-c4f30762d7ee',
         is_indexed: true,
         is_unique: true,
         name: 'Ferry LLC',
@@ -249,7 +340,7 @@ req = Models::Operations::PatchDatastoreTableRequest.new(
       ),
       Models::Shared::DatastoreField.new(
         description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-        id: '7f3ca59e-beb9-4aa3-a105-420f603a2dbb',
+        id: '77d99115-7554-40a8-a0d7-d45a6db7c974',
         is_nullable: true,
         is_unique: true,
         name: 'Hand - Nader',
@@ -259,7 +350,7 @@ req = Models::Operations::PatchDatastoreTableRequest.new(
       ),
       Models::Shared::DatastoreField.new(
         description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-        id: '4f881f7a-430d-480d-8948-7e8f087ec9ed',
+        id: '6db225b8-d55e-4cf3-8c52-35d11c75c667',
         is_indexed: true,
         is_nullable: true,
         is_unique: true,
@@ -271,7 +362,7 @@ req = Models::Operations::PatchDatastoreTableRequest.new(
       ),
       Models::Shared::DatastoreField.new(
         description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-        id: '2c7bc9e4-920f-4257-8f92-7dbf5e6bfead',
+        id: '05b3e476-0f9e-4db8-ba61-c517fbeacae8',
         name: 'Gislason, Gorczany and Hegmann',
         original_type: 'tego',
         precision: 94.0,
@@ -280,7 +371,7 @@ req = Models::Operations::PatchDatastoreTableRequest.new(
       ),
       Models::Shared::DatastoreField.new(
         description: 'Communis coma cura audio aduro acer canis expedita.',
-        id: '6e86669b-85bd-40c4-89ba-3b306716982f',
+        id: '4db4276c-ff5b-42d8-8e1d-ef2bf4d74cf3',
         is_indexed: true,
         is_primary_key: true,
         is_required: true,
@@ -290,18 +381,18 @@ req = Models::Operations::PatchDatastoreTableRequest.new(
         type: Models::Shared::DatastoreFieldType::EMAIL,
       ),
     ],
-    id: 'e3d6db59-fdf5-4240-a99a-d2bba1d7e0e8',
+    id: '1c76b629-176c-4239-9209-459a407ef8e3',
     metadata: [],
     name: 'Rogahn, Lowe and Heller',
     relationships: [
       Models::Shared::DatastoreRelationship.new(
         field: 'Macejkovic - Shields',
         name: 'Hyatt, Ryan and Nienow',
-        table_id: 'e3d6db59-fdf5-4240-a99a-d2bba1d7e0e8',
+        table_id: '1c76b629-176c-4239-9209-459a407ef8e3',
         type: Models::Shared::DatastoreRelationshipType::MANY,
       ),
     ],
-    updated_at: DateTime.iso8601('2022-08-13T17:21:45.587Z'),
+    updated_at: DateTime.iso8601('2022-08-13T18:35:41.956Z'),
     web_url: 'https://nervous-deck.com',
   ),
   connection_id: '<id>',
@@ -398,7 +489,7 @@ req = Models::Operations::UpdateDatastoreTableRequest.new(
     fields_: [
       Models::Shared::DatastoreField.new(
         description: 'Antea soluta itaque clamo despecto basium accendo.',
-        id: 'd68309e3-db66-4b05-ab91-fbcf6d8523c1',
+        id: '4392f855-65ca-42bb-a1be-c4f30762d7ee',
         is_indexed: true,
         is_unique: true,
         name: 'Ferry LLC',
@@ -408,7 +499,7 @@ req = Models::Operations::UpdateDatastoreTableRequest.new(
       ),
       Models::Shared::DatastoreField.new(
         description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-        id: '7f3ca59e-beb9-4aa3-a105-420f603a2dbb',
+        id: '77d99115-7554-40a8-a0d7-d45a6db7c974',
         is_nullable: true,
         is_unique: true,
         name: 'Hand - Nader',
@@ -418,7 +509,7 @@ req = Models::Operations::UpdateDatastoreTableRequest.new(
       ),
       Models::Shared::DatastoreField.new(
         description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-        id: '4f881f7a-430d-480d-8948-7e8f087ec9ed',
+        id: '6db225b8-d55e-4cf3-8c52-35d11c75c667',
         is_indexed: true,
         is_nullable: true,
         is_unique: true,
@@ -430,7 +521,7 @@ req = Models::Operations::UpdateDatastoreTableRequest.new(
       ),
       Models::Shared::DatastoreField.new(
         description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-        id: '2c7bc9e4-920f-4257-8f92-7dbf5e6bfead',
+        id: '05b3e476-0f9e-4db8-ba61-c517fbeacae8',
         name: 'Gislason, Gorczany and Hegmann',
         original_type: 'tego',
         precision: 94.0,
@@ -439,7 +530,7 @@ req = Models::Operations::UpdateDatastoreTableRequest.new(
       ),
       Models::Shared::DatastoreField.new(
         description: 'Communis coma cura audio aduro acer canis expedita.',
-        id: '6e86669b-85bd-40c4-89ba-3b306716982f',
+        id: '4db4276c-ff5b-42d8-8e1d-ef2bf4d74cf3',
         is_indexed: true,
         is_primary_key: true,
         is_required: true,
@@ -449,18 +540,18 @@ req = Models::Operations::UpdateDatastoreTableRequest.new(
         type: Models::Shared::DatastoreFieldType::EMAIL,
       ),
     ],
-    id: 'e3d6db59-fdf5-4240-a99a-d2bba1d7e0e8',
+    id: '1c76b629-176c-4239-9209-459a407ef8e3',
     metadata: [],
     name: 'Rogahn, Lowe and Heller',
     relationships: [
       Models::Shared::DatastoreRelationship.new(
         field: 'Macejkovic - Shields',
         name: 'Hyatt, Ryan and Nienow',
-        table_id: 'e3d6db59-fdf5-4240-a99a-d2bba1d7e0e8',
+        table_id: '1c76b629-176c-4239-9209-459a407ef8e3',
         type: Models::Shared::DatastoreRelationshipType::MANY,
       ),
     ],
-    updated_at: DateTime.iso8601('2022-08-13T17:21:45.587Z'),
+    updated_at: DateTime.iso8601('2022-08-13T18:35:41.956Z'),
     web_url: 'https://nervous-deck.com',
   ),
   connection_id: '<id>',

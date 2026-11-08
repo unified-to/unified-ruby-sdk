@@ -51,6 +51,8 @@ module UnifiedRubySDK
         field :order_number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('order_number') } }
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
+        # total of the payments applied so far
+        field :paid_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paid_amount') } }
         # read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
         field :payments, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingPaymentReference)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('payments') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -71,6 +73,8 @@ module UnifiedRubySDK
         field :subscription_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subscription_id') } }
         # pre-tax, pre-tip amount
         field :subtotal_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('subtotal_amount') } }
+        # reference to a commerce_table (restaurant table) the order is seated at
+        field :table_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('table_id') } }
 
         field :tax_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tax_amount') } }
 
@@ -80,8 +84,8 @@ module UnifiedRubySDK
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
 
-        sig { params(account_id: T.nilable(::String), billing_address: T.nilable(Models::Shared::PropertyAccountingSalesorderBillingAddress), category_ids: T.nilable(T::Array[::String]), closed_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), device_id: T.nilable(::String), discount_amount: T.nilable(::Float), employee_user_id: T.nilable(::String), fees: T.nilable(T::Array[Models::Shared::AccountingFee]), fulfillment_type: T.nilable(Models::Shared::FulfillmentType), guest_count: T.nilable(::Float), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), order_number: T.nilable(::String), organization_id: T.nilable(::String), payments: T.nilable(T::Array[Models::Shared::AccountingPaymentReference]), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), refunded_amount: T.nilable(::Float), sales_channel: T.nilable(::String), service_charge_amount: T.nilable(::Float), shipping_address: T.nilable(Models::Shared::PropertyAccountingSalesorderShippingAddress), status: T.nilable(Models::Shared::AccountingSalesorderStatus), subscription_id: T.nilable(::String), subtotal_amount: T.nilable(::Float), tax_amount: T.nilable(::Float), tip_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
-        def initialize(account_id: nil, billing_address: nil, category_ids: nil, closed_at: nil, contact_id: nil, created_at: nil, currency: nil, device_id: nil, discount_amount: nil, employee_user_id: nil, fees: nil, fulfillment_type: nil, guest_count: nil, id: nil, lineitems: nil, location_id: nil, metadata: nil, order_number: nil, organization_id: nil, payments: nil, posted_at: nil, raw: nil, refunded_amount: nil, sales_channel: nil, service_charge_amount: nil, shipping_address: nil, status: nil, subscription_id: nil, subtotal_amount: nil, tax_amount: nil, tip_amount: nil, total_amount: nil, updated_at: nil)
+        sig { params(account_id: T.nilable(::String), billing_address: T.nilable(Models::Shared::PropertyAccountingSalesorderBillingAddress), category_ids: T.nilable(T::Array[::String]), closed_at: T.nilable(::DateTime), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), device_id: T.nilable(::String), discount_amount: T.nilable(::Float), employee_user_id: T.nilable(::String), fees: T.nilable(T::Array[Models::Shared::AccountingFee]), fulfillment_type: T.nilable(Models::Shared::FulfillmentType), guest_count: T.nilable(::Float), id: T.nilable(::String), lineitems: T.nilable(T::Array[Models::Shared::AccountingLineitem]), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), order_number: T.nilable(::String), organization_id: T.nilable(::String), paid_amount: T.nilable(::Float), payments: T.nilable(T::Array[Models::Shared::AccountingPaymentReference]), posted_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), refunded_amount: T.nilable(::Float), sales_channel: T.nilable(::String), service_charge_amount: T.nilable(::Float), shipping_address: T.nilable(Models::Shared::PropertyAccountingSalesorderShippingAddress), status: T.nilable(Models::Shared::AccountingSalesorderStatus), subscription_id: T.nilable(::String), subtotal_amount: T.nilable(::Float), table_id: T.nilable(::String), tax_amount: T.nilable(::Float), tip_amount: T.nilable(::Float), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        def initialize(account_id: nil, billing_address: nil, category_ids: nil, closed_at: nil, contact_id: nil, created_at: nil, currency: nil, device_id: nil, discount_amount: nil, employee_user_id: nil, fees: nil, fulfillment_type: nil, guest_count: nil, id: nil, lineitems: nil, location_id: nil, metadata: nil, order_number: nil, organization_id: nil, paid_amount: nil, payments: nil, posted_at: nil, raw: nil, refunded_amount: nil, sales_channel: nil, service_charge_amount: nil, shipping_address: nil, status: nil, subscription_id: nil, subtotal_amount: nil, table_id: nil, tax_amount: nil, tip_amount: nil, total_amount: nil, updated_at: nil)
           @account_id = account_id
           @billing_address = billing_address
           @category_ids = category_ids
@@ -101,6 +105,7 @@ module UnifiedRubySDK
           @metadata = metadata
           @order_number = order_number
           @organization_id = organization_id
+          @paid_amount = paid_amount
           @payments = payments
           @posted_at = posted_at
           @raw = raw
@@ -111,6 +116,7 @@ module UnifiedRubySDK
           @status = status
           @subscription_id = subscription_id
           @subtotal_amount = subtotal_amount
+          @table_id = table_id
           @tax_amount = tax_amount
           @tip_amount = tip_amount
           @total_amount = total_amount
@@ -139,6 +145,7 @@ module UnifiedRubySDK
           return false unless @metadata == other.metadata
           return false unless @order_number == other.order_number
           return false unless @organization_id == other.organization_id
+          return false unless @paid_amount == other.paid_amount
           return false unless @payments == other.payments
           return false unless @posted_at == other.posted_at
           return false unless @raw == other.raw
@@ -149,6 +156,7 @@ module UnifiedRubySDK
           return false unless @status == other.status
           return false unless @subscription_id == other.subscription_id
           return false unless @subtotal_amount == other.subtotal_amount
+          return false unless @table_id == other.table_id
           return false unless @tax_amount == other.tax_amount
           return false unless @tip_amount == other.tip_amount
           return false unless @total_amount == other.total_amount

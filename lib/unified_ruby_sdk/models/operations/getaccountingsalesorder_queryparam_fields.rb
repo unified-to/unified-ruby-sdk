@@ -45,6 +45,8 @@ module UnifiedRubySDK
           CLOSED_AT = new('closed_at')
           SUBSCRIPTION_ID = new('subscription_id')
           PAYMENTS = new('payments')
+          TABLE_ID = new('table_id')
+          PAID_AMOUNT = new('paid_amount')
           RAW = new('raw')
         end
       end

@@ -56,7 +56,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'c34c718e-58fc-4281-bcbf-94cc032a2d30',
+  id: '3e665fc4-b120-445c-8357-0778de51ed58',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -69,7 +69,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-11T05:30:40.415Z'),
+  updated_at: DateTime.iso8601('2023-08-11T11:37:25.487Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -107,7 +107,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'c34c718e-58fc-4281-bcbf-94cc032a2d30',
+  id: '3e665fc4-b120-445c-8357-0778de51ed58',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -120,7 +120,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-11T05:30:40.415Z'),
+  updated_at: DateTime.iso8601('2023-08-11T11:37:25.487Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -853,6 +853,7 @@ end
 * [get_commerce_return](docs/sdks/commerce/README.md#get_commerce_return) - Retrieve a return
 * [get_commerce_review](docs/sdks/commerce/README.md#get_commerce_review) - Retrieve a review
 * [get_commerce_saleschannel](docs/sdks/commerce/README.md#get_commerce_saleschannel) - Retrieve a saleschannel
+* [get_commerce_table](docs/sdks/commerce/README.md#get_commerce_table) - Retrieve a table
 * [list_commerce_availabilities](docs/sdks/commerce/README.md#list_commerce_availabilities) - List all availabilities
 * [list_commerce_collections](docs/sdks/commerce/README.md#list_commerce_collections) - List all collections
 * [list_commerce_inventories](docs/sdks/commerce/README.md#list_commerce_inventories) - List all inventories
@@ -863,6 +864,7 @@ end
 * [list_commerce_returns](docs/sdks/commerce/README.md#list_commerce_returns) - List all returns
 * [list_commerce_reviews](docs/sdks/commerce/README.md#list_commerce_reviews) - List all reviews
 * [list_commerce_saleschannels](docs/sdks/commerce/README.md#list_commerce_saleschannels) - List all saleschannels
+* [list_commerce_tables](docs/sdks/commerce/README.md#list_commerce_tables) - List all tables
 * [patch_commerce_collection](docs/sdks/commerce/README.md#patch_commerce_collection) - Update a collection
 * [patch_commerce_inventory](docs/sdks/commerce/README.md#patch_commerce_inventory) - Update an inventory
 * [patch_commerce_item](docs/sdks/commerce/README.md#patch_commerce_item) - Update an item
@@ -2706,7 +2708,9 @@ end
 ### [table](docs/sdks/table/README.md)
 
 * [create_datastore_table](docs/sdks/table/README.md#create_datastore_table) - Create a table
+* [get_commerce_table](docs/sdks/table/README.md#get_commerce_table) - Retrieve a table
 * [get_datastore_table](docs/sdks/table/README.md#get_datastore_table) - Retrieve a table
+* [list_commerce_tables](docs/sdks/table/README.md#list_commerce_tables) - List all tables
 * [list_datastore_tables](docs/sdks/table/README.md#list_datastore_tables) - List all tables
 * [patch_datastore_table](docs/sdks/table/README.md#patch_datastore_table) - Update a table
 * [remove_datastore_table](docs/sdks/table/README.md#remove_datastore_table) - Remove a table
@@ -3047,7 +3051,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Voluptatibus valde spoliatio.',
-      id: 'c34c718e-58fc-4281-bcbf-94cc032a2d30',
+      id: '3e665fc4-b120-445c-8357-0778de51ed58',
       is_payable: false,
       metadata: [],
       name: 'Auto Loan Account',
@@ -3060,7 +3064,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-11T05:30:40.415Z'),
+      updated_at: DateTime.iso8601('2023-08-11T11:37:25.487Z'),
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -3106,7 +3110,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'c34c718e-58fc-4281-bcbf-94cc032a2d30',
+  id: '3e665fc4-b120-445c-8357-0778de51ed58',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3119,7 +3123,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-11T05:30:40.415Z'),
+  updated_at: DateTime.iso8601('2023-08-11T11:37:25.487Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3148,7 +3152,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'c34c718e-58fc-4281-bcbf-94cc032a2d30',
+  id: '3e665fc4-b120-445c-8357-0778de51ed58',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3161,7 +3165,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-11T05:30:40.415Z'),
+  updated_at: DateTime.iso8601('2023-08-11T11:37:25.487Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

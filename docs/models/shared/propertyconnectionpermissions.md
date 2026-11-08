@@ -84,6 +84,8 @@
 | `COMMERCE_ITEMVARIANT_WRITE`           | commerce_itemvariant_write             |
 | `COMMERCE_RESERVATION_READ`            | commerce_reservation_read              |
 | `COMMERCE_RESERVATION_WRITE`           | commerce_reservation_write             |
+| `COMMERCE_TABLE_READ`                  | commerce_table_read                    |
+| `COMMERCE_TABLE_WRITE`                 | commerce_table_write                   |
 | `COMMERCE_RETURN_READ`                 | commerce_return_read                   |
 | `COMMERCE_RETURN_WRITE`                | commerce_return_write                  |
 | `COMMERCE_AVAILABILITY_READ`           | commerce_availability_read             |

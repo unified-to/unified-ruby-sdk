@@ -34,10 +34,10 @@ res = s.record.create_datastore_record(datastore_record: Models::Shared::Datasto
   fields_: {
 
   },
-  id: 'f34a87e1-feec-4911-8742-5ca71bc752cd',
+  id: '627f214b-ef62-41c5-b3bd-651f5fcfc659',
   metadata: [],
   row_number: 33.0,
-  updated_at: DateTime.iso8601('2025-03-15T16:15:20.957Z'),
+  updated_at: DateTime.iso8601('2025-03-16T07:09:19.281Z'),
 ), connection_id: '<id>')
 
 unless res.datastore_record.nil?
@@ -177,10 +177,10 @@ req = Models::Operations::PatchDatastoreRecordRequest.new(
     fields_: {
 
     },
-    id: 'ffb82329-c910-4f28-b3f8-e2890fc31f49',
+    id: 'bb691eb4-ce76-44eb-85ae-34550262a4c3',
     metadata: [],
     row_number: 33.0,
-    updated_at: DateTime.iso8601('2025-03-15T16:15:20.962Z'),
+    updated_at: DateTime.iso8601('2025-03-16T07:09:19.291Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -275,10 +275,10 @@ req = Models::Operations::UpdateDatastoreRecordRequest.new(
     fields_: {
 
     },
-    id: 'ffb82329-c910-4f28-b3f8-e2890fc31f49',
+    id: 'bb691eb4-ce76-44eb-85ae-34550262a4c3',
     metadata: [],
     row_number: 33.0,
-    updated_at: DateTime.iso8601('2025-03-15T16:15:20.962Z'),
+    updated_at: DateTime.iso8601('2025-03-16T07:09:19.291Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

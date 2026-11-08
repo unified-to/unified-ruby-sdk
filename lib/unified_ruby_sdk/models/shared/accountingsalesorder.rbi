@@ -46,6 +46,8 @@ class UnifiedRubySDK::Models::Shared::AccountingSalesorder
   def order_number=(str_); end
   def organization_id(); end
   def organization_id=(str_); end
+  def paid_amount(); end
+  def paid_amount=(str_); end
   def payments(); end
   def payments=(str_); end
   def posted_at(); end
@@ -66,6 +68,8 @@ class UnifiedRubySDK::Models::Shared::AccountingSalesorder
   def subscription_id=(str_); end
   def subtotal_amount(); end
   def subtotal_amount=(str_); end
+  def table_id(); end
+  def table_id=(str_); end
   def tax_amount(); end
   def tax_amount=(str_); end
   def tip_amount(); end
