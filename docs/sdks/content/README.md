@@ -37,7 +37,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   description: 'Usque laboriosam ventosus adflicto.',
   difficulty: 'Beginner',
   duration_minutes: 19.0,
-  id: 'b96cbdd8-305a-45d2-9e57-36b9e9e9cdc0',
+  id: '09fb970f-d2bf-4fe1-a165-4ea158e55169',
   instructors: [],
   is_active: true,
   languages: [
@@ -97,7 +97,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   metadata: [],
   name: 'ut',
   provider_name: 'Bins LLC',
-  published_at: DateTime.iso8601('2022-09-08T20:43:29.830Z'),
+  published_at: DateTime.iso8601('2022-09-09T04:04:13.321Z'),
   short_description: 'Caritas.',
   skills: [
     'trucido',
@@ -112,7 +112,7 @@ res = s.content.create_lms_content(lms_content: Models::Shared::LmsContent.new(
   tags: [
     'dens',
   ],
-  updated_at: DateTime.iso8601('2022-10-10T01:06:27.141Z'),
+  updated_at: DateTime.iso8601('2022-10-10T08:47:12.770Z'),
 ), connection_id: '<id>')
 
 unless res.lms_content.nil?
@@ -255,7 +255,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: '6e723c86-2891-4984-9a0f-b5a11880041a',
+    id: 'a3902cfd-3226-41f6-95ba-5044271175aa',
     instructors: [],
     is_active: true,
     languages: [
@@ -315,7 +315,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     metadata: [],
     name: 'ut',
     provider_name: 'Bins LLC',
-    published_at: DateTime.iso8601('2022-09-08T20:43:29.841Z'),
+    published_at: DateTime.iso8601('2022-09-09T04:04:13.332Z'),
     short_description: 'Caritas.',
     skills: [
       'trucido',
@@ -330,7 +330,7 @@ req = Models::Operations::PatchLmsContentRequest.new(
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-10T01:06:27.153Z'),
+    updated_at: DateTime.iso8601('2022-10-10T08:47:12.782Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -428,7 +428,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     description: 'Usque laboriosam ventosus adflicto.',
     difficulty: 'Beginner',
     duration_minutes: 19.0,
-    id: '6e723c86-2891-4984-9a0f-b5a11880041a',
+    id: 'a3902cfd-3226-41f6-95ba-5044271175aa',
     instructors: [],
     is_active: true,
     languages: [
@@ -488,7 +488,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     metadata: [],
     name: 'ut',
     provider_name: 'Bins LLC',
-    published_at: DateTime.iso8601('2022-09-08T20:43:29.841Z'),
+    published_at: DateTime.iso8601('2022-09-09T04:04:13.332Z'),
     short_description: 'Caritas.',
     skills: [
       'trucido',
@@ -503,7 +503,7 @@ req = Models::Operations::UpdateLmsContentRequest.new(
     tags: [
       'dens',
     ],
-    updated_at: DateTime.iso8601('2022-10-10T01:06:27.153Z'),
+    updated_at: DateTime.iso8601('2022-10-10T08:47:12.782Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

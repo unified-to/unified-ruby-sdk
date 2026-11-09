@@ -10,12 +10,14 @@
 * [create_unified_environment](#create_unified_environment) - Create new environments
 * [create_unified_secretsmanager](#create_unified_secretsmanager) - Create secrets manager
 * [create_unified_webhook](#create_unified_webhook) - Create webhook subscription
+* [create_unified_workspaceintegration](#create_unified_workspaceintegration) - Create workspace integration
 * [get_unified_apicall](#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](#get_unified_connection) - Retrieve connection
 * [get_unified_integration_auth](#get_unified_integration_auth) - Authorize or re-authorize a connection
 * [get_unified_issue](#get_unified_issue) - Retrieve support issue
 * [get_unified_secretsmanager](#get_unified_secretsmanager) - Retrieve secrets manager
 * [get_unified_webhook](#get_unified_webhook) - Retrieve webhook by its ID
+* [get_unified_workspaceintegration](#get_unified_workspaceintegration) - Retrieve workspace integration
 * [list_unified_apicalls](#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](#list_unified_connections) - List all connections
 * [list_unified_environments](#list_unified_environments) - Returns all environments
@@ -27,18 +29,22 @@
 * [list_unified_secretsmanager_secrets](#list_unified_secretsmanager_secrets) - List secrets in a secrets manager
 * [list_unified_secretsmanagers](#list_unified_secretsmanagers) - List secrets managers
 * [list_unified_webhooks](#list_unified_webhooks) - Returns all registered webhooks
+* [list_unified_workspaceintegrations](#list_unified_workspaceintegrations) - List workspace integrations
 * [patch_unified_connection](#patch_unified_connection) - Update connection
 * [patch_unified_webhook](#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_resume](#patch_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [patch_unified_webhook_trigger](#patch_unified_webhook_trigger) - Trigger webhook
+* [patch_unified_workspaceintegration](#patch_unified_workspaceintegration) - Update workspace integration
 * [remove_unified_connection](#remove_unified_connection) - Remove connection
 * [remove_unified_environment](#remove_unified_environment) - Remove an environment
 * [remove_unified_secretsmanager](#remove_unified_secretsmanager) - Remove secrets manager
 * [remove_unified_webhook](#remove_unified_webhook) - Remove webhook subscription
+* [remove_unified_workspaceintegration](#remove_unified_workspaceintegration) - Remove workspace integration
 * [update_unified_connection](#update_unified_connection) - Update connection
 * [update_unified_webhook](#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_resume](#update_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [update_unified_webhook_trigger](#update_unified_webhook_trigger) - Trigger webhook
+* [update_unified_workspaceintegration](#update_unified_workspaceintegration) - Update workspace integration
 
 ## create_unified_connection
 
@@ -190,8 +196,8 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 
 req = Models::Shared::SecretsManager.new(
   auth: {
-    "key": '<value>',
     "key1": '<value>',
+    "key": '<value>',
   },
   name: '<value>',
   type: Models::Shared::SecretsManagerType::AKEYLESS,
@@ -260,6 +266,52 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::CreateUnifiedWebhookResponse)](../../models/operations/createunifiedwebhookresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## create_unified_workspaceintegration
+
+Create workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createUnifiedWorkspaceintegration" method="post" path="/unified/workspaceintegration" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Shared::WorkspaceIntegration.new(
+  integration_type: '<value>',
+  is_active: true,
+)
+
+res = s.unified.create_unified_workspaceintegration(request: req)
+
+unless res.workspace_integration.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [Models::Shared::WorkspaceIntegration](../../models/shared/workspaceintegration.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateUnifiedWorkspaceintegrationResponse)](../../models/operations/createunifiedworkspaceintegrationresponse.md)**
 
 ### Errors
 
@@ -511,6 +563,47 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::GetUnifiedWebhookResponse)](../../models/operations/getunifiedwebhookresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## get_unified_workspaceintegration
+
+Retrieve workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getUnifiedWorkspaceintegration" method="get" path="/unified/workspaceintegration/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.unified.get_unified_workspaceintegration(id: '<id>')
+
+unless res.workspace_integration.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                      | Type                           | Required                       | Description                    |
+| ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ |
+| `id`                           | *::String*                     | :heavy_check_mark:             | ID of the Workspaceintegration |
+
+### Response
+
+**[T.nilable(Models::Operations::GetUnifiedWorkspaceintegrationResponse)](../../models/operations/getunifiedworkspaceintegrationresponse.md)**
 
 ### Errors
 
@@ -978,6 +1071,49 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_unified_workspaceintegrations
+
+List workspace integrations
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listUnifiedWorkspaceintegrations" method="get" path="/unified/workspaceintegration" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+req = Models::Operations::ListUnifiedWorkspaceintegrationsRequest.new()
+
+res = s.unified.list_unified_workspaceintegrations(request: req)
+
+unless res.workspace_integrations.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                         | Type                                                                                                                              | Required                                                                                                                          | Description                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                         | [Models::Operations::ListUnifiedWorkspaceintegrationsRequest](../../models/operations/listunifiedworkspaceintegrationsrequest.md) | :heavy_check_mark:                                                                                                                | The request object to use for the request.                                                                                        |
+
+### Response
+
+**[T.nilable(Models::Operations::ListUnifiedWorkspaceintegrationsResponse)](../../models/operations/listunifiedworkspaceintegrationsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_unified_connection
 
 Update connection
@@ -1152,6 +1288,48 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_unified_workspaceintegration
+
+Update workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchUnifiedWorkspaceintegration" method="patch" path="/unified/workspaceintegration/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.unified.patch_unified_workspaceintegration(workspace_integration_patch: Models::Shared::WorkspaceIntegrationPatch.new(), id: '<id>')
+
+unless res.workspace_integration.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `workspace_integration_patch`                                                                 | [Models::Shared::WorkspaceIntegrationPatch](../../models/shared/workspaceintegrationpatch.md) | :heavy_check_mark:                                                                            | N/A                                                                                           |
+| `id`                                                                                          | *::String*                                                                                    | :heavy_check_mark:                                                                            | ID of the Workspaceintegration                                                                |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchUnifiedWorkspaceintegrationResponse)](../../models/operations/patchunifiedworkspaceintegrationresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_unified_connection
 
 Remove connection
@@ -1309,6 +1487,47 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::RemoveUnifiedWebhookResponse)](../../models/operations/removeunifiedwebhookresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## remove_unified_workspaceintegration
+
+Remove workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeUnifiedWorkspaceintegration" method="delete" path="/unified/workspaceintegration/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.unified.remove_unified_workspaceintegration(id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                      | Type                           | Required                       | Description                    |
+| ------------------------------ | ------------------------------ | ------------------------------ | ------------------------------ |
+| `id`                           | *::String*                     | :heavy_check_mark:             | ID of the Workspaceintegration |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveUnifiedWorkspaceintegrationResponse)](../../models/operations/removeunifiedworkspaceintegrationresponse.md)**
 
 ### Errors
 
@@ -1485,6 +1704,51 @@ end
 ### Response
 
 **[T.nilable(Models::Operations::UpdateUnifiedWebhookTriggerResponse)](../../models/operations/updateunifiedwebhooktriggerresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
+## update_unified_workspaceintegration
+
+Update workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateUnifiedWorkspaceintegration" method="put" path="/unified/workspaceintegration/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+      security: Models::Shared::Security.new(
+        jwt: '<YOUR_API_KEY_HERE>',
+      ),
+    )
+
+res = s.unified.update_unified_workspaceintegration(workspace_integration: Models::Shared::WorkspaceIntegration.new(
+  integration_type: '<value>',
+  is_active: false,
+), id: '<id>')
+
+unless res.workspace_integration.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `workspace_integration`                                                             | [Models::Shared::WorkspaceIntegration](../../models/shared/workspaceintegration.md) | :heavy_check_mark:                                                                  | N/A                                                                                 |
+| `id`                                                                                | *::String*                                                                          | :heavy_check_mark:                                                                  | ID of the Workspaceintegration                                                      |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateUnifiedWorkspaceintegrationResponse)](../../models/operations/updateunifiedworkspaceintegrationresponse.md)**
 
 ### Errors
 

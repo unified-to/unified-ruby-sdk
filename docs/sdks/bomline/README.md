@@ -32,11 +32,11 @@ s = ::UnifiedRubySDK::UnifiedTo.new(
 res = s.bomline.create_plm_bomline(plm_bomline: Models::Shared::PlmBomline.new(
   created_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
   effective_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
-  id: 'b7bc9f73-0ad4-4731-b38e-62cc4e5c0381',
+  id: 'db6bd650-525f-4e20-86ab-ad49f941dc54',
   quantity: 7.0,
   reference_designators: [],
   unit_of_measure: 'EA',
-  updated_at: DateTime.iso8601('2023-04-18T14:45:48.575Z'),
+  updated_at: DateTime.iso8601('2023-04-18T20:07:32.791Z'),
 ), connection_id: '<id>')
 
 unless res.plm_bomline.nil?
@@ -174,11 +174,11 @@ req = Models::Operations::PatchPlmBomlineRequest.new(
   plm_bomline: Models::Shared::PlmBomline.new(
     created_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
     effective_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
-    id: '1701bcd6-bd6c-49d1-8873-5446b4aeb2ff',
+    id: '10b84695-678d-4879-8f95-3a2be6819616',
     quantity: 7.0,
     reference_designators: [],
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2023-04-18T14:45:48.577Z'),
+    updated_at: DateTime.iso8601('2023-04-18T20:07:32.793Z'),
   ),
   connection_id: '<id>',
   id: '<id>',
@@ -271,11 +271,11 @@ req = Models::Operations::UpdatePlmBomlineRequest.new(
   plm_bomline: Models::Shared::PlmBomline.new(
     created_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
     effective_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
-    id: '1701bcd6-bd6c-49d1-8873-5446b4aeb2ff',
+    id: '10b84695-678d-4879-8f95-3a2be6819616',
     quantity: 7.0,
     reference_designators: [],
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2023-04-18T14:45:48.577Z'),
+    updated_at: DateTime.iso8601('2023-04-18T20:07:32.793Z'),
   ),
   connection_id: '<id>',
   id: '<id>',

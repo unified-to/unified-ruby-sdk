@@ -56,7 +56,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '3e665fc4-b120-445c-8357-0778de51ed58',
+  id: 'ba69ff06-e2d3-4db2-a8ef-d3df011019a6',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -69,7 +69,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-11T11:37:25.487Z'),
+  updated_at: DateTime.iso8601('2023-08-11T17:37:54.471Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -107,7 +107,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '3e665fc4-b120-445c-8357-0778de51ed58',
+  id: 'ba69ff06-e2d3-4db2-a8ef-d3df011019a6',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -120,7 +120,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-11T11:37:25.487Z'),
+  updated_at: DateTime.iso8601('2023-08-11T17:37:54.471Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -2900,12 +2900,14 @@ end
 * [create_unified_environment](docs/sdks/unified/README.md#create_unified_environment) - Create new environments
 * [create_unified_secretsmanager](docs/sdks/unified/README.md#create_unified_secretsmanager) - Create secrets manager
 * [create_unified_webhook](docs/sdks/unified/README.md#create_unified_webhook) - Create webhook subscription
+* [create_unified_workspaceintegration](docs/sdks/unified/README.md#create_unified_workspaceintegration) - Create workspace integration
 * [get_unified_apicall](docs/sdks/unified/README.md#get_unified_apicall) - Retrieve specific API Call by its ID
 * [get_unified_connection](docs/sdks/unified/README.md#get_unified_connection) - Retrieve connection
 * [get_unified_integration_auth](docs/sdks/unified/README.md#get_unified_integration_auth) - Authorize or re-authorize a connection
 * [get_unified_issue](docs/sdks/unified/README.md#get_unified_issue) - Retrieve support issue
 * [get_unified_secretsmanager](docs/sdks/unified/README.md#get_unified_secretsmanager) - Retrieve secrets manager
 * [get_unified_webhook](docs/sdks/unified/README.md#get_unified_webhook) - Retrieve webhook by its ID
+* [get_unified_workspaceintegration](docs/sdks/unified/README.md#get_unified_workspaceintegration) - Retrieve workspace integration
 * [list_unified_apicalls](docs/sdks/unified/README.md#list_unified_apicalls) - Returns API Calls
 * [list_unified_connections](docs/sdks/unified/README.md#list_unified_connections) - List all connections
 * [list_unified_environments](docs/sdks/unified/README.md#list_unified_environments) - Returns all environments
@@ -2917,18 +2919,22 @@ end
 * [list_unified_secretsmanager_secrets](docs/sdks/unified/README.md#list_unified_secretsmanager_secrets) - List secrets in a secrets manager
 * [list_unified_secretsmanagers](docs/sdks/unified/README.md#list_unified_secretsmanagers) - List secrets managers
 * [list_unified_webhooks](docs/sdks/unified/README.md#list_unified_webhooks) - Returns all registered webhooks
+* [list_unified_workspaceintegrations](docs/sdks/unified/README.md#list_unified_workspaceintegrations) - List workspace integrations
 * [patch_unified_connection](docs/sdks/unified/README.md#patch_unified_connection) - Update connection
 * [patch_unified_webhook](docs/sdks/unified/README.md#patch_unified_webhook) - Update webhook subscription
 * [patch_unified_webhook_resume](docs/sdks/unified/README.md#patch_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [patch_unified_webhook_trigger](docs/sdks/unified/README.md#patch_unified_webhook_trigger) - Trigger webhook
+* [patch_unified_workspaceintegration](docs/sdks/unified/README.md#patch_unified_workspaceintegration) - Update workspace integration
 * [remove_unified_connection](docs/sdks/unified/README.md#remove_unified_connection) - Remove connection
 * [remove_unified_environment](docs/sdks/unified/README.md#remove_unified_environment) - Remove an environment
 * [remove_unified_secretsmanager](docs/sdks/unified/README.md#remove_unified_secretsmanager) - Remove secrets manager
 * [remove_unified_webhook](docs/sdks/unified/README.md#remove_unified_webhook) - Remove webhook subscription
+* [remove_unified_workspaceintegration](docs/sdks/unified/README.md#remove_unified_workspaceintegration) - Remove workspace integration
 * [update_unified_connection](docs/sdks/unified/README.md#update_unified_connection) - Update connection
 * [update_unified_webhook](docs/sdks/unified/README.md#update_unified_webhook) - Update webhook subscription
 * [update_unified_webhook_resume](docs/sdks/unified/README.md#update_unified_webhook_resume) - Resume an unhealthy webhook subscription
 * [update_unified_webhook_trigger](docs/sdks/unified/README.md#update_unified_webhook_trigger) - Trigger webhook
+* [update_unified_workspaceintegration](docs/sdks/unified/README.md#update_unified_workspaceintegration) - Update workspace integration
 
 
 ### [unittype](docs/sdks/unittype/README.md)
@@ -3009,6 +3015,15 @@ end
 * [remove_calendar_webinar](docs/sdks/webinar/README.md#remove_calendar_webinar) - Remove a webinar
 * [update_calendar_webinar](docs/sdks/webinar/README.md#update_calendar_webinar) - Update a webinar
 
+### [workspaceintegration](docs/sdks/workspaceintegration/README.md)
+
+* [create_unified_workspaceintegration](docs/sdks/workspaceintegration/README.md#create_unified_workspaceintegration) - Create workspace integration
+* [get_unified_workspaceintegration](docs/sdks/workspaceintegration/README.md#get_unified_workspaceintegration) - Retrieve workspace integration
+* [list_unified_workspaceintegrations](docs/sdks/workspaceintegration/README.md#list_unified_workspaceintegrations) - List workspace integrations
+* [patch_unified_workspaceintegration](docs/sdks/workspaceintegration/README.md#patch_unified_workspaceintegration) - Update workspace integration
+* [remove_unified_workspaceintegration](docs/sdks/workspaceintegration/README.md#remove_unified_workspaceintegration) - Remove workspace integration
+* [update_unified_workspaceintegration](docs/sdks/workspaceintegration/README.md#update_unified_workspaceintegration) - Update workspace integration
+
 </details>
 <!-- End Available Resources and Operations [operations] -->
 
@@ -3051,7 +3066,7 @@ begin
       currency: 'CAD',
       customer_defined_code: '6170',
       description: 'Voluptatibus valde spoliatio.',
-      id: '3e665fc4-b120-445c-8357-0778de51ed58',
+      id: 'ba69ff06-e2d3-4db2-a8ef-d3df011019a6',
       is_payable: false,
       metadata: [],
       name: 'Auto Loan Account',
@@ -3064,7 +3079,7 @@ begin
         ),
       ],
       type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-      updated_at: DateTime.iso8601('2023-08-11T11:37:25.487Z'),
+      updated_at: DateTime.iso8601('2023-08-11T17:37:54.471Z'),
     ), connection_id: '<id>')
 
     unless res.accounting_account.nil?
@@ -3110,7 +3125,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '3e665fc4-b120-445c-8357-0778de51ed58',
+  id: 'ba69ff06-e2d3-4db2-a8ef-d3df011019a6',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3123,7 +3138,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-11T11:37:25.487Z'),
+  updated_at: DateTime.iso8601('2023-08-11T17:37:54.471Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -3152,7 +3167,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: '3e665fc4-b120-445c-8357-0778de51ed58',
+  id: 'ba69ff06-e2d3-4db2-a8ef-d3df011019a6',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -3165,7 +3180,7 @@ res = s.accounting.create_accounting_account(accounting_account: Models::Shared:
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-11T11:37:25.487Z'),
+  updated_at: DateTime.iso8601('2023-08-11T17:37:54.471Z'),
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?

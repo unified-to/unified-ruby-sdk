@@ -61,7 +61,7 @@ res = s.listing.create_property_listing(property_listing: Models::Shared::Proper
   currency: 'USD',
   description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
   house_rules: 'No smoking. No parties or events.',
-  id: 'd51ef78e-9a51-435a-8d45-e3f20d870e56',
+  id: 'aeb00620-2b1c-47d4-934d-dae3ac44ca55',
   image_urls: [
     'https://loremflickr.com/23/1328?lock=5798241296161663',
     'https://loremflickr.com/12/1312?lock=6354590363728966',
@@ -78,7 +78,7 @@ res = s.listing.create_property_listing(property_listing: Models::Shared::Proper
   start_price_amount: 470.0,
   timezone: 'America/Los_Angeles',
   type: Models::Shared::PropertyListingType::ROOM,
-  updated_at: DateTime.iso8601('2026-09-15T15:49:57.724Z'),
+  updated_at: DateTime.iso8601('2026-09-16T14:52:32.380Z'),
   web_url: 'https://tight-pronoun.info/',
 ), connection_id: '<id>')
 
@@ -246,7 +246,7 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     currency: 'USD',
     description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
     house_rules: 'No smoking. No parties or events.',
-    id: '24980e2d-b202-4f66-93a4-6ed6b68aef3e',
+    id: '25bdc734-2dfe-40fb-93e0-29f5174520e3',
     image_urls: [
       'https://loremflickr.com/23/1328?lock=5798241296161663',
       'https://loremflickr.com/12/1312?lock=6354590363728966',
@@ -263,7 +263,7 @@ req = Models::Operations::PatchPropertyListingRequest.new(
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-09-15T15:49:57.765Z'),
+    updated_at: DateTime.iso8601('2026-09-16T14:52:32.422Z'),
     web_url: 'https://tight-pronoun.info/',
   ),
   connection_id: '<id>',
@@ -386,7 +386,7 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     currency: 'USD',
     description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
     house_rules: 'No smoking. No parties or events.',
-    id: '24980e2d-b202-4f66-93a4-6ed6b68aef3e',
+    id: '25bdc734-2dfe-40fb-93e0-29f5174520e3',
     image_urls: [
       'https://loremflickr.com/23/1328?lock=5798241296161663',
       'https://loremflickr.com/12/1312?lock=6354590363728966',
@@ -403,7 +403,7 @@ req = Models::Operations::UpdatePropertyListingRequest.new(
     start_price_amount: 470.0,
     timezone: 'America/Los_Angeles',
     type: Models::Shared::PropertyListingType::ROOM,
-    updated_at: DateTime.iso8601('2026-09-15T15:49:57.765Z'),
+    updated_at: DateTime.iso8601('2026-09-16T14:52:32.422Z'),
     web_url: 'https://tight-pronoun.info/',
   ),
   connection_id: '<id>',

@@ -228,6 +228,7 @@ module UnifiedRubySDK
   autoload :Notification, 'unified_ruby_sdk/notification'
   autoload :Secretsmanager, 'unified_ruby_sdk/secretsmanager'
   autoload :Webhook, 'unified_ruby_sdk/webhook'
+  autoload :Workspaceintegration, 'unified_ruby_sdk/workspaceintegration'
   autoload :Verification, 'unified_ruby_sdk/verification'
   autoload :Request, 'unified_ruby_sdk/request'
   module Models

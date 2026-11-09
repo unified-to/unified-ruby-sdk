@@ -35,13 +35,13 @@ res = s.taxonomy.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonom
   created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
   description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
   domain: 'Health',
-  id: 'b5bbe534-b57b-43e9-a11a-ca3cfe73a0b5',
+  id: '0b020e4d-4ad6-4822-ace0-c9a7f3f1aab0',
   is_active: false,
   metadata: [],
   name: 'International Functionality Architect',
   subcategory: 'Marble',
   type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-  updated_at: DateTime.iso8601('2023-06-02T04:29:40.733Z'),
+  updated_at: DateTime.iso8601('2023-06-02T09:34:51.847Z'),
   url: 'https://fixed-membership.biz/',
 ), connection_id: '<id>')
 

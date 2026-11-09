@@ -1,0 +1,18 @@
+# PropertyWorkspaceIntegrationAuth
+
+
+## Fields
+
+| Field                                                              | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `client_id`                                                        | *T.nilable(::String)*                                              | :heavy_minus_sign:                                                 | N/A                                                                |
+| `client_secret`                                                    | *T.nilable(::String)*                                              | :heavy_minus_sign:                                                 | N/A                                                                |
+| `consumer_key`                                                     | *T.nilable(::String)*                                              | :heavy_minus_sign:                                                 | N/A                                                                |
+| `consumer_secret`                                                  | *T.nilable(::String)*                                              | :heavy_minus_sign:                                                 | N/A                                                                |
+| `dev_api_key`                                                      | *T.nilable(::String)*                                              | :heavy_minus_sign:                                                 | N/A                                                                |
+| `key`                                                              | *T.nilable(::String)*                                              | :heavy_minus_sign:                                                 | the private KEY X.509 certificate in Base64 ASCII format           |
+| `needs_pkce`                                                       | *T.nilable(T::Boolean)*                                            | :heavy_minus_sign:                                                 | opt-in PKCE for OAuth2 when the integration app or org requires it |
+| `pem`                                                              | *T.nilable(::String)*                                              | :heavy_minus_sign:                                                 | the PEM X.509 certificate in Base64 ASCII format                   |
+| `saml_idp_entity_id`                                               | *T.nilable(::String)*                                              | :heavy_minus_sign:                                                 | the SAML IdP issuer/entity ID                                      |
+| `saml_idp_url`                                                     | *T.nilable(::String)*                                              | :heavy_minus_sign:                                                 | the SAML IdP SSO/login URL for end-user SAML login                 |
+| `saml_pem`                                                         | *T.nilable(::String)*                                              | :heavy_minus_sign:                                                 | the SAML IdP signing certificate; PEM X.509 in Base64 ASCII format |

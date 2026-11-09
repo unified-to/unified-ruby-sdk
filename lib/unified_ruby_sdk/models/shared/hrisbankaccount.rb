@@ -53,7 +53,7 @@ module UnifiedRubySDK
         field :split_type, Crystalline::Nilable.new(Models::Shared::SplitType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('split_type'), 'decoder': Utils.enum_from_string(Models::Shared::SplitType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
-        # employee ID (required for listcreate) (reference to HrisEmployee)
+        # employee ID (required for list and create) (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
         sig { params(account_number: T.nilable(::String), account_number_last4: T.nilable(::String), account_type: T.nilable(Models::Shared::HrisBankaccountAccountType), bank_name: T.nilable(::String), bic: T.nilable(::String), company_id: T.nilable(::String), country_code: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), iban: T.nilable(::String), id: T.nilable(::String), is_primary: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), priority: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), routing_number: T.nilable(::String), split_amount: T.nilable(::Float), split_type: T.nilable(Models::Shared::SplitType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
