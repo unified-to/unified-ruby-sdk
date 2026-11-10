@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # GpuManufacturer - GPU manufacturer
-      class GpuManufacturer < T::Enum
-
-
+      class GpuManufacturer
+        include ::Crystalline::Enum
         enums do
           NVIDIA = new('NVIDIA')
           AMD = new('AMD')
           INTEL = new('INTEL')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

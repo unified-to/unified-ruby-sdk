@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
       class PropertyHrisPayslipDeduction
         extend T::Sig
@@ -20,19 +19,19 @@ module UnifiedRubySDK
         # (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
         # Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
-        field :coverage_level, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeductionCoverageLevel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('coverage_level'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyHrisPayslipDeductionCoverageLevel, true) } }
+        field :coverage_level, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeductionCoverageLevel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('coverage_level'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyHrisPayslipDeductionCoverageLevel, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # percentage or absolute amount (employer's portion/match)
         field :employer_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employer_amount') } }
 
-        field :employer_type, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeductionEmployerType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employer_type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyHrisPayslipDeductionEmployerType, true) } }
+        field :employer_type, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeductionEmployerType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employer_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyHrisPayslipDeductionEmployerType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
-        field :frequency, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeductionFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyHrisPayslipDeductionFrequency, true) } }
+        field :frequency, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeductionFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyHrisPayslipDeductionFrequency, true) } }
         # set when this deduction is a court-ordered garnishment
-        field :garnishment_type, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeductionGarnishmentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('garnishment_type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyHrisPayslipDeductionGarnishmentType, true) } }
+        field :garnishment_type, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeductionGarnishmentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('garnishment_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyHrisPayslipDeductionGarnishmentType, true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -46,17 +45,17 @@ module UnifiedRubySDK
         # the hris_paycode (deduction code) this deduction uses
         field :paycode_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('paycode_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeductionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyHrisPayslipDeductionType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PropertyHrisPayslipDeductionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyHrisPayslipDeductionType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # employee ID (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(amount: T.nilable(::Float), benefit_id: T.nilable(::String), company_id: T.nilable(::String), coverage_level: T.nilable(Models::Shared::PropertyHrisPayslipDeductionCoverageLevel), created_at: T.nilable(::DateTime), employer_amount: T.nilable(::Float), employer_type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionEmployerType), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::PropertyHrisPayslipDeductionFrequency), garnishment_type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionGarnishmentType), id: T.nilable(::String), is_active: T.nilable(T::Boolean), max_amount: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), notes: T.nilable(::String), paycode_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(amount: T.nilable(::Float), benefit_id: T.nilable(::String), company_id: T.nilable(::String), coverage_level: T.nilable(Models::Shared::PropertyHrisPayslipDeductionCoverageLevel), created_at: T.nilable(::DateTime), employer_amount: T.nilable(::Float), employer_type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionEmployerType), end_at: T.nilable(::DateTime), frequency: T.nilable(Models::Shared::PropertyHrisPayslipDeductionFrequency), garnishment_type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionGarnishmentType), id: T.nilable(::String), is_active: T.nilable(T::Boolean), max_amount: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), notes: T.nilable(::String), paycode_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), type: T.nilable(Models::Shared::PropertyHrisPayslipDeductionType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
         def initialize(amount: nil, benefit_id: nil, company_id: nil, coverage_level: nil, created_at: nil, employer_amount: nil, employer_type: nil, end_at: nil, frequency: nil, garnishment_type: nil, id: nil, is_active: nil, max_amount: nil, metadata: nil, notes: nil, paycode_id: nil, raw: nil, start_at: nil, type: nil, updated_at: nil, user_id: nil)
           @amount = amount
           @benefit_id = benefit_id

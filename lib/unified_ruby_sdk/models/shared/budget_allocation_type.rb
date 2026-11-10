@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class BudgetAllocationType < T::Enum
-
-
+      class BudgetAllocationType
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           AUTOMATIC = new('AUTOMATIC')
           FIXED = new('FIXED')
           UNLIMITED = new('UNLIMITED')
         end
+        open!
       end
     end
   end

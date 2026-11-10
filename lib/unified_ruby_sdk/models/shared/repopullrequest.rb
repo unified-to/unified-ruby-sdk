@@ -7,18 +7,17 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class RepoPullrequest
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :closed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('closed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :commit_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('commit_ids') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -28,23 +27,23 @@ module UnifiedRubySDK
 
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (reference to RepoRepository)
         field :repo_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('repo_id') } }
 
         field :source_branch_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source_branch_id') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::RepoPullrequestStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::RepoPullrequestStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::RepoPullrequestStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::RepoPullrequestStatus, true) } }
 
         field :target_branch_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('target_branch_id') } }
 
         field :title, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('title') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-        sig { params(closed_at: T.nilable(::DateTime), commit_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), id: T.nilable(::String), labels: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::RepoMetadata]), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), repo_id: T.nilable(::String), source_branch_id: T.nilable(::String), status: T.nilable(Models::Shared::RepoPullrequestStatus), target_branch_id: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        sig { params(closed_at: T.nilable(::DateTime), commit_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), id: T.nilable(::String), labels: T.nilable(T::Array[::String]), metadata: T.nilable(T::Array[Models::Shared::RepoMetadata]), notes: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), repo_id: T.nilable(::String), source_branch_id: T.nilable(::String), status: T.nilable(Models::Shared::RepoPullrequestStatus), target_branch_id: T.nilable(::String), title: T.nilable(::String), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
         def initialize(closed_at: nil, commit_ids: nil, created_at: nil, id: nil, labels: nil, metadata: nil, notes: nil, raw: nil, repo_id: nil, source_branch_id: nil, status: nil, target_branch_id: nil, title: nil, updated_at: nil, user_ids: nil)
           @closed_at = closed_at
           @commit_ids = commit_ids

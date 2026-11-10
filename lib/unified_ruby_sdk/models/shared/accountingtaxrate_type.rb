@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AccountingTaxrateType - Whether the rate applies to sales, purchases, or both
-      class AccountingTaxrateType < T::Enum
-
-
+      class AccountingTaxrateType
+        include ::Crystalline::Enum
         enums do
           SALES = new('SALES')
           PURCHASE = new('PURCHASE')
           BOTH = new('BOTH')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

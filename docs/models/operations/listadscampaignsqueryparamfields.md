@@ -1,5 +1,13 @@
 # ListAdsCampaignsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListAdsCampaignsQueryParamFields::ID
+```
+
 
 ## Values
 

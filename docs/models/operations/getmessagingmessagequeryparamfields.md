@@ -1,5 +1,13 @@
 # GetMessagingMessageQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetMessagingMessageQueryParamFields::ID
+```
+
 
 ## Values
 

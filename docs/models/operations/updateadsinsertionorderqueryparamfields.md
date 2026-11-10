@@ -1,5 +1,13 @@
 # UpdateAdsInsertionorderQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateAdsInsertionorderQueryParamFields::ID
+```
+
 
 ## Values
 

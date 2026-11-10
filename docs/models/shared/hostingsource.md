@@ -1,5 +1,16 @@
 # HostingSource
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HostingSource::UNSPECIFIED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HostingSource.deserialize("custom_value")
+```
+
 
 ## Values
 

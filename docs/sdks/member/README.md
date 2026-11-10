@@ -1,5 +1,4 @@
 # Member
-(*member*)
 
 ## Overview
 
@@ -20,28 +19,27 @@ Creates a MarketingMember. Provide the unified MarketingMember fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="ruby" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" example="martech_member" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.member.create_martech_member(marketing_member: Models::Shared::MarketingMember.new(
   company: 'Miller - Franecki',
   created_at: DateTime.iso8601('2022-04-15T15:32:38.496Z'),
   emails: [
     Models::Shared::MarketingEmail.new(
       email: 'jude.leffler@hotmail.com',
-      type: Models::Shared::MarketingEmailType::HOME,
+      type: Models::Shared::MarketingEmailType::HOME
     ),
   ],
   first_name: 'Jude',
-  id: '8a62e89c-ca08-4e46-a078-8e3720212aa7',
+  id: '1f07b0e8-3651-442a-8294-f2597a45cbfb',
   last_name: 'Leffler',
   metadata: [],
   name: 'Jude Leffler',
@@ -50,7 +48,7 @@ res = s.member.create_martech_member(marketing_member: Models::Shared::Marketing
     'adnuo',
     'verumtamen',
   ],
-  updated_at: DateTime.iso8601('2025-07-22T10:15:42.008Z'),
+  updated_at: DateTime.iso8601('2025-07-23T15:25:14.482Z')
 ), connection_id: '<id>')
 
 unless res.marketing_member.nil?
@@ -90,11 +88,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.member.get_clubs_member(connection_id: '<id>', id: '<id>')
 
 unless res.clubs_member.nil?
@@ -134,11 +131,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.member.get_martech_member(connection_id: '<id>', id: '<id>')
 
 unless res.marketing_member.nil?
@@ -178,15 +174,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListClubsMembersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListClubsMembersRequest.new(
+  connection_id: '<id>'
+)
 res = s.member.list_clubs_members(request: req)
 
 unless res.clubs_members.nil?
@@ -223,15 +218,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListMartechMembersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListMartechMembersRequest.new(
+  connection_id: '<id>'
+)
 res = s.member.list_martech_members(request: req)
 
 unless res.marketing_members.nil?
@@ -262,16 +256,16 @@ Updates the MarketingMember identified by `id`. Provide the unified MarketingMem
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchMartechMemberRequest.new(
   marketing_member: Models::Shared::MarketingMember.new(
@@ -280,11 +274,11 @@ req = Models::Operations::PatchMartechMemberRequest.new(
     emails: [
       Models::Shared::MarketingEmail.new(
         email: 'jude.leffler@hotmail.com',
-        type: Models::Shared::MarketingEmailType::HOME,
+        type: Models::Shared::MarketingEmailType::HOME
       ),
     ],
     first_name: 'Jude',
-    id: 'c7d7d6b6-115a-4d0b-9d21-d785b9b7d292',
+    id: 'c3fca9fe-7040-4631-bee7-d4e5f0989bc5',
     last_name: 'Leffler',
     metadata: [],
     name: 'Jude Leffler',
@@ -293,12 +287,11 @@ req = Models::Operations::PatchMartechMemberRequest.new(
       'adnuo',
       'verumtamen',
     ],
-    updated_at: DateTime.iso8601('2025-07-22T10:15:42.020Z'),
+    updated_at: DateTime.iso8601('2025-07-23T15:25:14.495Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.member.patch_martech_member(request: req)
 
 unless res.marketing_member.nil?
@@ -335,11 +328,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.member.remove_martech_member(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -371,16 +363,16 @@ Updates the MarketingMember identified by `id`. Provide the unified MarketingMem
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateMartechMemberRequest.new(
   marketing_member: Models::Shared::MarketingMember.new(
@@ -389,11 +381,11 @@ req = Models::Operations::UpdateMartechMemberRequest.new(
     emails: [
       Models::Shared::MarketingEmail.new(
         email: 'jude.leffler@hotmail.com',
-        type: Models::Shared::MarketingEmailType::HOME,
+        type: Models::Shared::MarketingEmailType::HOME
       ),
     ],
     first_name: 'Jude',
-    id: 'c7d7d6b6-115a-4d0b-9d21-d785b9b7d292',
+    id: 'c3fca9fe-7040-4631-bee7-d4e5f0989bc5',
     last_name: 'Leffler',
     metadata: [],
     name: 'Jude Leffler',
@@ -402,12 +394,11 @@ req = Models::Operations::UpdateMartechMemberRequest.new(
       'adnuo',
       'verumtamen',
     ],
-    updated_at: DateTime.iso8601('2025-07-22T10:15:42.020Z'),
+    updated_at: DateTime.iso8601('2025-07-23T15:25:14.495Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.member.update_martech_member(request: req)
 
 unless res.marketing_member.nil?

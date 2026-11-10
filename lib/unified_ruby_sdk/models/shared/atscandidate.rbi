@@ -28,10 +28,14 @@ class UnifiedRubySDK::Models::Shared::AtsCandidate
   def external_identifier=(str_); end
   def first_name(); end
   def first_name=(str_); end
+  def has_do_not_contact(); end
+  def has_do_not_contact=(str_); end
   def id(); end
   def id=(str_); end
   def image_url(); end
   def image_url=(str_); end
+  def is_private(); end
+  def is_private=(str_); end
   def job_ids(); end
   def job_ids=(str_); end
   def last_name(); end

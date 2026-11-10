@@ -1,5 +1,13 @@
 # GetComputeDomainQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetComputeDomainQueryParamFields::ID
+```
+
 
 ## Values
 

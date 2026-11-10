@@ -1,5 +1,13 @@
 # CreateShippingRateQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateShippingRateQueryParamFields::SHIPMENT_ID
+```
+
 
 ## Values
 

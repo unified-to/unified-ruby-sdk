@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # SSH connection details
       class PropertyComputeInstanceSsh
         extend T::Sig

@@ -1,5 +1,16 @@
 # PropertyAdsReportMetricsCreativeHostingSource
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyAdsReportMetricsCreativeHostingSource::UNSPECIFIED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyAdsReportMetricsCreativeHostingSource.deserialize("custom_value")
+```
+
 
 ## Values
 

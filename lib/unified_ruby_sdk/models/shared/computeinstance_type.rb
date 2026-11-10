@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeInstanceType - The kind of compute unit
-      class ComputeInstanceType < T::Enum
-
-
+      class ComputeInstanceType
+        include ::Crystalline::Enum
         enums do
           CONTAINER = new('CONTAINER')
           VM = new('VM')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           SANDBOX = new('SANDBOX')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

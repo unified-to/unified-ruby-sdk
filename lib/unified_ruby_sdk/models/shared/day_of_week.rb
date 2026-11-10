@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class DayOfWeek < T::Enum
-
-
+      class DayOfWeek
+        include ::Crystalline::Enum
         enums do
           MONDAY = new('MONDAY')
           TUESDAY = new('TUESDAY')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           SATURDAY = new('SATURDAY')
           SUNDAY = new('SUNDAY')
         end
+        open!
       end
     end
   end

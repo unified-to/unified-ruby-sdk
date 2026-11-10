@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AccountingCategoryType - The kind of dimension
-      class AccountingCategoryType < T::Enum
-
-
+      class AccountingCategoryType
+        include ::Crystalline::Enum
         enums do
           CLASS = new('CLASS')
           DEPARTMENT = new('DEPARTMENT')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           EXPENSE = new('EXPENSE')
           INCOME = new('INCOME')
         end
+        open!
       end
     end
   end

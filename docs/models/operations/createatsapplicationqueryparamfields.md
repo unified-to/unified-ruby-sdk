@@ -1,5 +1,13 @@
 # CreateAtsApplicationQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateAtsApplicationQueryParamFields::ID
+```
+
 
 ## Values
 

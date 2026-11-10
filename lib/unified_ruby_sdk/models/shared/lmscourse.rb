@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class LmsCourse
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :content_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_ids') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The currency code (ISO) of the course price
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
@@ -46,9 +45,9 @@ module UnifiedRubySDK
 
         field :provider_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('provider_name') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :published_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('published_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :published_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('published_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :skills, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('skills') } }
 
@@ -56,9 +55,9 @@ module UnifiedRubySDK
 
         field :time_estimate_minutes, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('time_estimate_minutes') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(categories: T.nilable(T::Array[::String]), content_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), duration_minutes: T.nilable(::Float), id: T.nilable(::String), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), metadata: T.nilable(T::Array[Models::Shared::LmsMetadata]), name: T.nilable(::String), price_amount: T.nilable(::Float), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), skills: T.nilable(T::Array[::String]), students: T.nilable(T::Array[Models::Shared::LmsReference]), time_estimate_minutes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(categories: T.nilable(T::Array[::String]), content_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), duration_minutes: T.nilable(::Float), id: T.nilable(::String), instructors: T.nilable(T::Array[Models::Shared::LmsReference]), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), languages: T.nilable(T::Array[::String]), media: T.nilable(T::Array[Models::Shared::LmsMedia]), metadata: T.nilable(T::Array[Models::Shared::LmsMetadata]), name: T.nilable(::String), price_amount: T.nilable(::Float), provider_name: T.nilable(::String), published_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[::Symbol, ::Object]), skills: T.nilable(T::Array[::String]), students: T.nilable(T::Array[Models::Shared::LmsReference]), time_estimate_minutes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(categories: nil, content_ids: nil, created_at: nil, currency: nil, description: nil, duration_minutes: nil, id: nil, instructors: nil, is_active: nil, is_private: nil, languages: nil, media: nil, metadata: nil, name: nil, price_amount: nil, provider_name: nil, published_at: nil, raw: nil, skills: nil, students: nil, time_estimate_minutes: nil, updated_at: nil)
           @categories = categories
           @content_ids = content_ids

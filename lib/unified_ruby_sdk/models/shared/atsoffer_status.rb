@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AtsOfferStatus < T::Enum
-
-
+      class AtsOfferStatus
+        include ::Crystalline::Enum
         enums do
           CREATED = new('CREATED')
           SENT = new('SENT')
           ACCEPTED = new('ACCEPTED')
           REJECTED = new('REJECTED')
         end
+        open!
       end
     end
   end

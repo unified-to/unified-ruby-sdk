@@ -23,7 +23,7 @@ module UnifiedRubySDK
       
     end
 
-    sig { params(base_url: String, url_variables: T.nilable(T::Hash[Symbol, T.any(String, T::Enum)])).returns(String) }
+    sig { params(base_url: ::String, url_variables: T.nilable(T::Hash[::Symbol, T.any(::String, T::Enum)])).returns(::String) }
     def get_url(base_url:, url_variables: nil)
       sd_base_url, sd_options = @sdk_configuration.get_server_details
 
@@ -39,8 +39,10 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughJsonResponse) }
-    def create_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+
+
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[::Symbol, ::Object]), timeout_ms: T.nilable(::Integer), accept_header_override: T.nilable(::String), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::CreatePassthroughJsonResponse) }
+    def create_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil, accept_header_override: nil, http_headers: nil)
       # create_passthrough_json - Passthrough POST
       request = Models::Operations::CreatePassthroughJsonRequest.new(
         connection_id: connection_id,
@@ -57,41 +59,41 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       req_content_type, data, form = Utils.serialize_request_body(request, false, false, :request_body, :json)
       headers['content-type'] = req_content_type
 
-      if form
+      if form && !form.empty?
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
+        body = ::URI.encode_www_form(T.cast(data, T::Hash[::Symbol, ::Object]))
       else
         body = data
       end
       query_params = Utils.get_query_params(Models::Operations::CreatePassthroughJsonRequest, request, nil)
-      headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
+      headers['Accept'] = accept_header_override || 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createPassthrough_json',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).post(url) do |req|
           req.body = body
@@ -99,6 +101,9 @@ module UnifiedRubySDK
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -107,7 +112,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -126,13 +131,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['204', '205'])
         http_response = @sdk_configuration.hooks.after_success(
@@ -173,7 +178,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), ::Object)
           response = Models::Operations::CreatePassthroughJsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -190,7 +195,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::CreatePassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -206,7 +211,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::CreatePassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -222,7 +227,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::CreatePassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -238,7 +243,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::CreatePassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -254,8 +259,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::CreatePassthroughRawResponse) }
-    def create_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[::Symbol, ::Object]), timeout_ms: T.nilable(::Integer), accept_header_override: T.nilable(::String), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::CreatePassthroughRawResponse) }
+    def create_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil, accept_header_override: nil, http_headers: nil)
       # create_passthrough_raw - Passthrough POST
       request = Models::Operations::CreatePassthroughRawRequest.new(
         connection_id: connection_id,
@@ -272,41 +277,41 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       req_content_type, data, form = Utils.serialize_request_body(request, false, false, :request_body, :raw)
       headers['content-type'] = req_content_type
 
-      if form
+      if form && !form.empty?
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
+        body = ::URI.encode_www_form(T.cast(data, T::Hash[::Symbol, ::Object]))
       else
         body = data
       end
       query_params = Utils.get_query_params(Models::Operations::CreatePassthroughRawRequest, request, nil)
-      headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
+      headers['Accept'] = accept_header_override || 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'createPassthrough_raw',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).post(url) do |req|
           req.body = body
@@ -314,6 +319,9 @@ module UnifiedRubySDK
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -322,7 +330,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -341,13 +349,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['204', '205'])
         http_response = @sdk_configuration.hooks.after_success(
@@ -388,7 +396,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), ::Object)
           response = Models::Operations::CreatePassthroughRawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -405,7 +413,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::CreatePassthroughRawResponse.new(
             status_code: http_response.status,
@@ -421,7 +429,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::CreatePassthroughRawResponse.new(
             status_code: http_response.status,
@@ -437,7 +445,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::CreatePassthroughRawResponse.new(
             status_code: http_response.status,
@@ -453,7 +461,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::CreatePassthroughRawResponse.new(
             status_code: http_response.status,
@@ -469,8 +477,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::ListPassthroughsResponse) }
-    def list_passthroughs(connection_id:, path:, query: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[::Symbol, ::Object]), timeout_ms: T.nilable(::Integer), accept_header_override: T.nilable(::String), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::ListPassthroughsResponse) }
+    def list_passthroughs(connection_id:, path:, query: nil, timeout_ms: nil, accept_header_override: nil, http_headers: nil)
       # list_passthroughs - Passthrough GET
       request = Models::Operations::ListPassthroughsRequest.new(
         connection_id: connection_id,
@@ -486,37 +494,40 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       query_params = Utils.get_query_params(Models::Operations::ListPassthroughsRequest, request, nil)
-      headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
+      headers['Accept'] = accept_header_override || 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'listPassthroughs',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).get(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -525,7 +536,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -544,13 +555,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['204', '205'])
         http_response = @sdk_configuration.hooks.after_success(
@@ -591,7 +602,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), ::Object)
           response = Models::Operations::ListPassthroughsResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -608,7 +619,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::ListPassthroughsResponse.new(
             status_code: http_response.status,
@@ -624,7 +635,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::ListPassthroughsResponse.new(
             status_code: http_response.status,
@@ -640,7 +651,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::ListPassthroughsResponse.new(
             status_code: http_response.status,
@@ -656,7 +667,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::ListPassthroughsResponse.new(
             status_code: http_response.status,
@@ -672,8 +683,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughJsonResponse) }
-    def patch_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[::Symbol, ::Object]), timeout_ms: T.nilable(::Integer), accept_header_override: T.nilable(::String), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::PatchPassthroughJsonResponse) }
+    def patch_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil, accept_header_override: nil, http_headers: nil)
       # patch_passthrough_json - Passthrough PUT
       request = Models::Operations::PatchPassthroughJsonRequest.new(
         connection_id: connection_id,
@@ -690,41 +701,41 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       req_content_type, data, form = Utils.serialize_request_body(request, false, false, :request_body, :json)
       headers['content-type'] = req_content_type
 
-      if form
+      if form && !form.empty?
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
+        body = ::URI.encode_www_form(T.cast(data, T::Hash[::Symbol, ::Object]))
       else
         body = data
       end
       query_params = Utils.get_query_params(Models::Operations::PatchPassthroughJsonRequest, request, nil)
-      headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
+      headers['Accept'] = accept_header_override || 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchPassthrough_json',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).patch(url) do |req|
           req.body = body
@@ -732,6 +743,9 @@ module UnifiedRubySDK
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -740,7 +754,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -759,13 +773,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['204', '205'])
         http_response = @sdk_configuration.hooks.after_success(
@@ -806,7 +820,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), ::Object)
           response = Models::Operations::PatchPassthroughJsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -823,7 +837,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::PatchPassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -839,7 +853,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::PatchPassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -855,7 +869,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::PatchPassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -871,7 +885,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::PatchPassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -887,8 +901,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::PatchPassthroughRawResponse) }
-    def patch_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[::Symbol, ::Object]), timeout_ms: T.nilable(::Integer), accept_header_override: T.nilable(::String), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::PatchPassthroughRawResponse) }
+    def patch_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil, accept_header_override: nil, http_headers: nil)
       # patch_passthrough_raw - Passthrough PUT
       request = Models::Operations::PatchPassthroughRawRequest.new(
         connection_id: connection_id,
@@ -905,41 +919,41 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       req_content_type, data, form = Utils.serialize_request_body(request, false, false, :request_body, :raw)
       headers['content-type'] = req_content_type
 
-      if form
+      if form && !form.empty?
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
+        body = ::URI.encode_www_form(T.cast(data, T::Hash[::Symbol, ::Object]))
       else
         body = data
       end
       query_params = Utils.get_query_params(Models::Operations::PatchPassthroughRawRequest, request, nil)
-      headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
+      headers['Accept'] = accept_header_override || 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'patchPassthrough_raw',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).patch(url) do |req|
           req.body = body
@@ -947,6 +961,9 @@ module UnifiedRubySDK
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -955,7 +972,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -974,13 +991,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['204', '205'])
         http_response = @sdk_configuration.hooks.after_success(
@@ -1021,7 +1038,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), ::Object)
           response = Models::Operations::PatchPassthroughRawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -1038,7 +1055,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::PatchPassthroughRawResponse.new(
             status_code: http_response.status,
@@ -1054,7 +1071,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::PatchPassthroughRawResponse.new(
             status_code: http_response.status,
@@ -1070,7 +1087,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::PatchPassthroughRawResponse.new(
             status_code: http_response.status,
@@ -1086,7 +1103,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::PatchPassthroughRawResponse.new(
             status_code: http_response.status,
@@ -1102,8 +1119,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::RemovePassthroughResponse) }
-    def remove_passthrough(connection_id:, path:, query: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[::Symbol, ::Object]), timeout_ms: T.nilable(::Integer), accept_header_override: T.nilable(::String), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::RemovePassthroughResponse) }
+    def remove_passthrough(connection_id:, path:, query: nil, timeout_ms: nil, accept_header_override: nil, http_headers: nil)
       # remove_passthrough - Passthrough DELETE
       request = Models::Operations::RemovePassthroughRequest.new(
         connection_id: connection_id,
@@ -1119,37 +1136,40 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       query_params = Utils.get_query_params(Models::Operations::RemovePassthroughRequest, request, nil)
-      headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
+      headers['Accept'] = accept_header_override || 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'removePassthrough',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).delete(url) do |req|
           req.headers.merge!(headers)
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -1158,7 +1178,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -1177,13 +1197,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['204', '205'])
         http_response = @sdk_configuration.hooks.after_success(
@@ -1224,7 +1244,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), ::Object)
           response = Models::Operations::RemovePassthroughResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -1241,7 +1261,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::RemovePassthroughResponse.new(
             status_code: http_response.status,
@@ -1257,7 +1277,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::RemovePassthroughResponse.new(
             status_code: http_response.status,
@@ -1273,7 +1293,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::RemovePassthroughResponse.new(
             status_code: http_response.status,
@@ -1289,7 +1309,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::RemovePassthroughResponse.new(
             status_code: http_response.status,
@@ -1305,8 +1325,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughJsonResponse) }
-    def update_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::Object), query: T.nilable(T::Hash[::Symbol, ::Object]), timeout_ms: T.nilable(::Integer), accept_header_override: T.nilable(::String), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::UpdatePassthroughJsonResponse) }
+    def update_passthrough_json(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil, accept_header_override: nil, http_headers: nil)
       # update_passthrough_json - Passthrough PUT
       request = Models::Operations::UpdatePassthroughJsonRequest.new(
         connection_id: connection_id,
@@ -1323,41 +1343,41 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       req_content_type, data, form = Utils.serialize_request_body(request, false, false, :request_body, :json)
       headers['content-type'] = req_content_type
 
-      if form
+      if form && !form.empty?
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
+        body = ::URI.encode_www_form(T.cast(data, T::Hash[::Symbol, ::Object]))
       else
         body = data
       end
       query_params = Utils.get_query_params(Models::Operations::UpdatePassthroughJsonRequest, request, nil)
-      headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
+      headers['Accept'] = accept_header_override || 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updatePassthrough_json',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).put(url) do |req|
           req.body = body
@@ -1365,6 +1385,9 @@ module UnifiedRubySDK
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -1373,7 +1396,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -1392,13 +1415,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['204', '205'])
         http_response = @sdk_configuration.hooks.after_success(
@@ -1439,7 +1462,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), ::Object)
           response = Models::Operations::UpdatePassthroughJsonResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -1456,7 +1479,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::UpdatePassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -1472,7 +1495,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::UpdatePassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -1488,7 +1511,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::UpdatePassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -1504,7 +1527,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::UpdatePassthroughJsonResponse.new(
             status_code: http_response.status,
@@ -1520,8 +1543,8 @@ module UnifiedRubySDK
     end
 
 
-    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object]), timeout_ms: T.nilable(Integer)).returns(Models::Operations::UpdatePassthroughRawResponse) }
-    def update_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil)
+    sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[::Symbol, ::Object]), timeout_ms: T.nilable(::Integer), accept_header_override: T.nilable(::String), http_headers: T.nilable(T::Hash[T.any(::String, ::Symbol), ::String])).returns(Models::Operations::UpdatePassthroughRawResponse) }
+    def update_passthrough_raw(connection_id:, path:, request_body: nil, query: nil, timeout_ms: nil, accept_header_override: nil, http_headers: nil)
       # update_passthrough_raw - Passthrough PUT
       request = Models::Operations::UpdatePassthroughRawRequest.new(
         connection_id: connection_id,
@@ -1538,41 +1561,41 @@ module UnifiedRubySDK
         request
       )
       headers = {}
-      headers = T.cast(headers, T::Hash[String, String])
+      headers = T.cast(headers, T::Hash[::String, ::String])
       req_content_type, data, form = Utils.serialize_request_body(request, false, false, :request_body, :raw)
       headers['content-type'] = req_content_type
 
-      if form
+      if form && !form.empty?
         body = Utils.encode_form(form)
       elsif Utils.match_content_type(req_content_type, 'application/x-www-form-urlencoded')
-        body = URI.encode_www_form(T.cast(data, T::Hash[Symbol, Object]))
+        body = ::URI.encode_www_form(T.cast(data, T::Hash[::Symbol, ::Object]))
       else
         body = data
       end
       query_params = Utils.get_query_params(Models::Operations::UpdatePassthroughRawRequest, request, nil)
-      headers['Accept'] = 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
+      headers['Accept'] = accept_header_override || 'application/json;q=1, text/csv;q=0.8, text/plain;q=0.6, application/xml;q=0.4, */*;q=0'
       headers['user-agent'] = @sdk_configuration.user_agent
 
       security = @sdk_configuration.security_source&.call
 
       timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       timeout ||= @sdk_configuration.timeout
-      
+
 
       connection = @sdk_configuration.client
 
       hook_ctx = SDKHooks::HookContext.new(
         config: @sdk_configuration,
         base_url: base_url,
-        oauth2_scopes: [],
+        oauth2_scopes: nil,
         operation_id: 'updatePassthrough_raw',
         security_source: @sdk_configuration.security_source
       )
 
-      error = T.let(nil, T.nilable(StandardError))
+      error = T.let(nil, T.nilable(::StandardError))
       http_response = T.let(nil, T.nilable(Faraday::Response))
       
-      
+
       begin
         http_response = T.must(connection).put(url) do |req|
           req.body = body
@@ -1580,6 +1603,9 @@ module UnifiedRubySDK
           req.options.timeout = timeout unless timeout.nil?
           req.params = query_params
           Utils.configure_request_security(req, security)
+          http_headers&.each do |key, value|
+            req.headers[key.to_s] = value
+          end
 
           @sdk_configuration.hooks.before_request(
             hook_ctx: SDKHooks::BeforeRequestHookContext.new(
@@ -1588,7 +1614,7 @@ module UnifiedRubySDK
             request: req
           )
         end
-      rescue StandardError => e
+      rescue ::StandardError => e
         error = e
       ensure
         if http_response.nil? || Utils.error_status?(http_response.status)
@@ -1607,13 +1633,13 @@ module UnifiedRubySDK
             response: http_response
           )
         end
-        
+
         if http_response.nil?
           raise error if !error.nil?
           raise 'no response'
         end
       end
-      
+
       content_type = http_response.headers.fetch('Content-Type', 'application/octet-stream')
       if Utils.match_status_code(http_response.status, ['204', '205'])
         http_response = @sdk_configuration.hooks.after_success(
@@ -1654,7 +1680,7 @@ module UnifiedRubySDK
             response: http_response
           )
           response_data = http_response.env.response_body
-          obj = Crystalline.unmarshal_json(JSON.parse(response_data), ::Object)
+          obj = Crystalline.unmarshal_json(::JSON.parse(response_data), ::Object)
           response = Models::Operations::UpdatePassthroughRawResponse.new(
             status_code: http_response.status,
             content_type: content_type,
@@ -1671,7 +1697,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::UpdatePassthroughRawResponse.new(
             status_code: http_response.status,
@@ -1687,7 +1713,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::UpdatePassthroughRawResponse.new(
             status_code: http_response.status,
@@ -1703,7 +1729,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::UpdatePassthroughRawResponse.new(
             status_code: http_response.status,
@@ -1719,7 +1745,7 @@ module UnifiedRubySDK
             ),
             response: http_response
           )
-          obj = http_response.env.body
+          obj = http_response.env.body.force_encoding('UTF-8')
 
           return Models::Operations::UpdatePassthroughRawResponse.new(
             status_code: http_response.status,
@@ -1733,5 +1759,5 @@ module UnifiedRubySDK
         end
       end
     end
-  end
+end
 end

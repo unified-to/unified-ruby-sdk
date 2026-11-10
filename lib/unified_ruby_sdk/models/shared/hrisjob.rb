@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HrisJob
         extend T::Sig
@@ -20,11 +19,11 @@ module UnifiedRubySDK
         # pay attached to the job itself (eg. an hourly rate)
         field :compensation, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisCompensation)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('compensation') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :employment_type, Crystalline::Nilable.new(Models::Shared::HrisJobEmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisJobEmploymentType, true) } }
+        field :employment_type, Crystalline::Nilable.new(Models::Shared::HrisJobEmploymentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('employment_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisJobEmploymentType, true) } }
         # the groups (departments, teams, organizations) this job belongs to. May not have all of the Group fields present, but should have id and name
         field :groups, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisGroup)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('groups') } }
 
@@ -40,13 +39,13 @@ module UnifiedRubySDK
         # the hris_job this job reports to (position hierarchy)
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the employees currently holding this job. May not have all of the Employee fields present, but should have id and name
         field :users, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisEmployee)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('users') } }
 
-        sig { params(code: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), description: T.nilable(::String), employment_type: T.nilable(Models::Shared::HrisJobEmploymentType), groups: T.nilable(T::Array[Models::Shared::HrisGroup]), id: T.nilable(::String), is_active: T.nilable(T::Boolean), locations: T.nilable(T::Array[Models::Shared::HrisLocation]), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), users: T.nilable(T::Array[Models::Shared::HrisEmployee])).void }
+        sig { params(code: T.nilable(::String), company_id: T.nilable(::String), compensation: T.nilable(T::Array[Models::Shared::HrisCompensation]), created_at: T.nilable(::DateTime), description: T.nilable(::String), employment_type: T.nilable(Models::Shared::HrisJobEmploymentType), groups: T.nilable(T::Array[Models::Shared::HrisGroup]), id: T.nilable(::String), is_active: T.nilable(T::Boolean), locations: T.nilable(T::Array[Models::Shared::HrisLocation]), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), updated_at: T.nilable(::DateTime), users: T.nilable(T::Array[Models::Shared::HrisEmployee])).void }
         def initialize(code: nil, company_id: nil, compensation: nil, created_at: nil, description: nil, employment_type: nil, groups: nil, id: nil, is_active: nil, locations: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil, users: nil)
           @code = code
           @company_id = company_id

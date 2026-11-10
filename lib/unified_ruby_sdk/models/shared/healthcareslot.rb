@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareSlot
         extend T::Sig
         include Crystalline::MetadataFields
 
         # When the slot was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # When the slot ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the slot
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Whether the slot has been overbooked
@@ -30,17 +29,17 @@ module UnifiedRubySDK
         # The practitioner whose schedule the slot belongs to
         field :practitioner_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('practitioner_id') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Codings for the services that can be booked in the slot
         field :service_types, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('service_types') } }
         # When the slot starts (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Availability of the slot
-        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareSlotStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareSlotStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareSlotStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareSlotStatus, true) } }
         # When the slot was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_overbooked: T.nilable(T::Boolean), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), notes: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), service_types: T.nilable(T::Array[Models::Shared::HealthcareCode]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareSlotStatus), updated_at: T.nilable(::DateTime)).void }
+        sig { params(created_at: T.nilable(::DateTime), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_overbooked: T.nilable(T::Boolean), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), notes: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), service_types: T.nilable(T::Array[Models::Shared::HealthcareCode]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareSlotStatus), updated_at: T.nilable(::DateTime)).void }
         def initialize(created_at: nil, end_at: nil, id: nil, is_overbooked: nil, location_id: nil, metadata: nil, notes: nil, practitioner_id: nil, raw: nil, service_types: nil, start_at: nil, status: nil, updated_at: nil)
           @created_at = created_at
           @end_at = end_at

@@ -1,5 +1,13 @@
 # PatchTicketingTicketQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchTicketingTicketQueryParamFields::ID
+```
+
 
 ## Values
 

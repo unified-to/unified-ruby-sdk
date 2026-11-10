@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class CreateGenaiPromptQueryParamFields < T::Enum
-
-
         enums do
           MODEL_ID = new('model_id')
           MESSAGES = new('messages')

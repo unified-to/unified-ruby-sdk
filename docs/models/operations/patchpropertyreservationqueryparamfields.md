@@ -1,5 +1,13 @@
 # PatchPropertyReservationQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchPropertyReservationQueryParamFields::ID
+```
+
 
 ## Values
 

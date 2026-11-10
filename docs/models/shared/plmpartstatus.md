@@ -2,6 +2,17 @@
 
 Normalized lifecycle status
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PlmPartStatus::IN_WORK
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PlmPartStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

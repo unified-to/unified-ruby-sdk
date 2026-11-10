@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class ListPropertyAvailabilitiesQueryParamFields < T::Enum
-
-
         enums do
           LISTING_ID = new('listing_id')
           UNITTYPE_ID = new('unittype_id')

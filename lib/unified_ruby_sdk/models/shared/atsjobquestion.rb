@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AtsJobQuestion
         extend T::Sig
@@ -16,19 +15,19 @@ module UnifiedRubySDK
 
         field :question, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('question'), required: true } }
 
-        field :type, Models::Shared::AtsJobQuestionType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AtsJobQuestionType, false) } }
+        field :type, Models::Shared::AtsJobQuestionType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AtsJobQuestionType, false) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # latest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :max_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :max_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # maximum answer length (TEXT)
         field :max_length, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_length') } }
         # maximum answer value (NUMBER)
         field :max_value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_value') } }
         # earliest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :min_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :min_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # minimum answer length (TEXT)
         field :min_length, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('min_length') } }
         # minimum answer value (NUMBER)

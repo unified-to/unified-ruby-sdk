@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class LegalTimeentry
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # billable duration after rounding, in minutes
         field :billable_minutes, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billable_minutes') } }
         # when the time entry was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # ISO 4217 currency code
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # description of the work performed
@@ -40,19 +39,19 @@ module UnifiedRubySDK
         # hourly rate, or the flat amount for flat-rate entries
         field :rate_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate_amount') } }
         # raw data from the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # UTBMS/LEDES task code
         field :task_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('task_code') } }
         # total amount of the time entry
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
         # when the time entry was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # HR Employee who is the timekeeper (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
         # date the work was performed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :worked_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('worked_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :worked_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('worked_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(activity_code: T.nilable(::String), billable_minutes: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), is_billable: T.nilable(T::Boolean), is_billed: T.nilable(T::Boolean), matter_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::LegalMetadata]), minutes: T.nilable(::Float), rate_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), task_code: T.nilable(::String), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), worked_at: T.nilable(::DateTime)).void }
+        sig { params(activity_code: T.nilable(::String), billable_minutes: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), invoice_id: T.nilable(::String), is_billable: T.nilable(T::Boolean), is_billed: T.nilable(T::Boolean), matter_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::LegalMetadata]), minutes: T.nilable(::Float), rate_amount: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), task_code: T.nilable(::String), total_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), worked_at: T.nilable(::DateTime)).void }
         def initialize(activity_code: nil, billable_minutes: nil, created_at: nil, currency: nil, description: nil, id: nil, invoice_id: nil, is_billable: nil, is_billed: nil, matter_id: nil, metadata: nil, minutes: nil, rate_amount: nil, raw: nil, task_code: nil, total_amount: nil, updated_at: nil, user_id: nil, worked_at: nil)
           @activity_code = activity_code
           @billable_minutes = billable_minutes

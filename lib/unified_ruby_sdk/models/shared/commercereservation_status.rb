@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CommerceReservationStatus < T::Enum
-
-
+      class CommerceReservationStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           CONFIRMED = new('CONFIRMED')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           NO_SHOW = new('NO_SHOW')
           COMPLETED = new('COMPLETED')
         end
+        open!
       end
     end
   end

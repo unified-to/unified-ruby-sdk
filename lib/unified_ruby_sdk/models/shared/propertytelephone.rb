@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyTelephone
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # the telephone number
         field :telephone, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone'), required: true } }
         # the kind of telephone number
-        field :type, Crystalline::Nilable.new(Models::Shared::PropertyTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyTelephoneType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PropertyTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyTelephoneType, true) } }
 
         sig { params(telephone: ::String, type: T.nilable(Models::Shared::PropertyTelephoneType)).void }
         def initialize(telephone:, type: nil)

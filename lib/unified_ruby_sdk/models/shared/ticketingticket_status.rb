@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class TicketingTicketStatus < T::Enum
-
-
+      class TicketingTicketStatus
+        include ::Crystalline::Enum
         enums do
           ACTIVE = new('ACTIVE')
           CLOSED = new('CLOSED')
         end
+        open!
       end
     end
   end

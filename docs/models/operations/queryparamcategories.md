@@ -1,5 +1,13 @@
 # QueryParamCategories
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = QueryParamCategories::PASSTHROUGH
+```
+
 
 ## Values
 

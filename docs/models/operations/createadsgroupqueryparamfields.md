@@ -1,5 +1,13 @@
 # CreateAdsGroupQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateAdsGroupQueryParamFields::ID
+```
+
 
 ## Values
 

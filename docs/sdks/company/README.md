@@ -1,5 +1,4 @@
 # Company
-(*company*)
 
 ## Overview
 
@@ -31,24 +30,23 @@ Creates a AtsCompany. Provide the unified AtsCompany fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" example="ats_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.company.create_ats_company(ats_company: Models::Shared::AtsCompany.new(
   created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-  id: '7ddcdc96-22cd-4fc4-822d-70539198f80b',
+  id: '9ecbadd2-9f06-4c22-8f81-fd6907155fe2',
   name: 'Gulgowski, Dibbert and Wilderman',
   phone: '1-882-360-2010',
-  updated_at: DateTime.iso8601('2020-10-04T20:08:40.664Z'),
-  website_url: 'https://www.gulgowskidibbert.com',
+  updated_at: DateTime.iso8601('2020-10-05T04:00:03.221Z'),
+  website_url: 'https://www.gulgowskidibbert.com'
 ), connection_id: '<id>')
 
 unless res.ats_company.nil?
@@ -82,17 +80,16 @@ Creates a CrmCompany. Provide the unified CrmCompany fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" example="crm_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
   address: Models::Shared::PropertyCrmCompanyAddress.new(
     address1: '3328 Wunsch Flat',
@@ -101,7 +98,7 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
     country_code: 'US',
     postal_code: '04674',
     region: 'Delaware',
-    region_code: 'NY',
+    region_code: 'NY'
   ),
   created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
   description: 'Venustas cruentus votum patruus terebro.',
@@ -111,19 +108,19 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
   emails: [
     Models::Shared::CrmEmail.new(
       email: 'info@goodwinsons.com',
-      type: Models::Shared::CrmEmailType::WORK,
+      type: Models::Shared::CrmEmailType::WORK
     ),
     Models::Shared::CrmEmail.new(
       email: 'sales@goodwinsons.com',
-      type: Models::Shared::CrmEmailType::WORK,
+      type: Models::Shared::CrmEmailType::WORK
     ),
     Models::Shared::CrmEmail.new(
       email: 'support@goodwinsons.com',
-      type: Models::Shared::CrmEmailType::WORK,
+      type: Models::Shared::CrmEmailType::WORK
     ),
   ],
   employees: 4177.0,
-  id: 'c95f2169-c2fc-4825-b7d1-3633043ce85c',
+  id: 'a0a75a5d-3909-4592-8c27-79ca5529fcfa',
   industry: 'Metrics',
   is_active: true,
   link_urls: [
@@ -132,13 +129,13 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'dc2e2c3b-6114-4ce6-bb51-2a86c3e0b1c0',
+      id: 'ad9621e3-072a-42ce-b08f-6d931ab12445',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'unde',
+      value: 'unde'
     ),
   ],
   name: 'Goodwin and Sons',
@@ -150,14 +147,14 @@ res = s.company.create_crm_company(crm_company: Models::Shared::CrmCompany.new(
   telephones: [
     Models::Shared::CrmTelephone.new(
       telephone: '(667) 607-5872',
-      type: Models::Shared::CrmTelephoneType::HOME,
+      type: Models::Shared::CrmTelephoneType::HOME
     ),
   ],
   timezone: 'Atlantic/Azores',
-  updated_at: DateTime.iso8601('2025-03-17T08:11:24.451Z'),
+  updated_at: DateTime.iso8601('2025-03-18T14:36:19.687Z'),
   websites: [
     'https://www.goodwinsons.com',
-  ],
+  ]
 ), connection_id: '<id>')
 
 unless res.crm_company.nil?
@@ -191,17 +188,16 @@ Creates a HrisCompany. Provide the unified HrisCompany fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" example="hris_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.company.create_hris_company(hris_company: Models::Shared::HrisCompany.new(
   address: Models::Shared::PropertyHrisCompanyAddress.new(
     address1: '675 Lavinia Lights',
@@ -209,14 +205,14 @@ res = s.company.create_hris_company(hris_company: Models::Shared::HrisCompany.ne
     country_code: 'US',
     postal_code: '67325',
     region: 'Kentucky',
-    region_code: 'MO',
+    region_code: 'MO'
   ),
   created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-  id: '8cde6079-3bca-488c-8a04-c1470d55baaa',
+  id: '0fe3c109-f3cd-4d7d-b2ba-0765da2931ab',
   legal_name: 'Gottlieb Group LLC',
   metadata: [],
   name: 'Gottlieb Group',
-  updated_at: DateTime.iso8601('2026-10-27T13:42:30.266Z'),
+  updated_at: DateTime.iso8601('2026-10-29T06:12:28.566Z')
 ), connection_id: '<id>')
 
 unless res.hris_company.nil?
@@ -256,11 +252,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.company.get_ats_company(connection_id: '<id>', id: '<id>')
 
 unless res.ats_company.nil?
@@ -300,11 +295,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.company.get_crm_company(connection_id: '<id>', id: '<id>')
 
 unless res.crm_company.nil?
@@ -344,11 +338,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.company.get_hris_company(connection_id: '<id>', id: '<id>')
 
 unless res.hris_company.nil?
@@ -388,15 +381,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsCompaniesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsCompaniesRequest.new(
+  connection_id: '<id>'
+)
 res = s.company.list_ats_companies(request: req)
 
 unless res.ats_companies.nil?
@@ -433,15 +425,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmCompaniesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmCompaniesRequest.new(
+  connection_id: '<id>'
+)
 res = s.company.list_crm_companies(request: req)
 
 unless res.crm_companies.nil?
@@ -478,11 +469,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.company.list_enrich_companies(connection_id: '<id>')
 
 unless res.enrich_company.nil?
@@ -521,15 +511,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisCompaniesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisCompaniesRequest.new(
+  connection_id: '<id>'
+)
 res = s.company.list_hris_companies(request: req)
 
 unless res.hris_companies.nil?
@@ -560,30 +549,29 @@ Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: '7ceedfc6-59a0-4bb8-b325-5fc8977d3535',
+    id: 'd6abdd31-16d9-4c55-8835-b9792ca8b14a',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-04T20:08:40.668Z'),
-    website_url: 'https://www.gulgowskidibbert.com',
+    updated_at: DateTime.iso8601('2020-10-05T04:00:03.224Z'),
+    website_url: 'https://www.gulgowskidibbert.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.company.patch_ats_company(request: req)
 
 unless res.ats_company.nil?
@@ -614,16 +602,16 @@ Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCrmCompanyRequest.new(
   crm_company: Models::Shared::CrmCompany.new(
@@ -634,7 +622,7 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
       country_code: 'US',
       postal_code: '04674',
       region: 'Delaware',
-      region_code: 'NY',
+      region_code: 'NY'
     ),
     created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
     description: 'Venustas cruentus votum patruus terebro.',
@@ -644,19 +632,19 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'info@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
         email: 'sales@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
         email: 'support@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
     ],
     employees: 4177.0,
-    id: '61b048c9-a3df-4816-826a-3ae3e51e81dd',
+    id: 'e0a77f8b-11cd-410c-85e7-e4f79a0d7c28',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -665,13 +653,13 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '56e9cdce-76e3-4158-a28c-b471c5c2b09f',
+        id: '53db73d8-030b-44e2-9ff6-01bd3579a318',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'unde',
+        value: 'unde'
       ),
     ],
     name: 'Goodwin and Sons',
@@ -683,19 +671,18 @@ req = Models::Operations::PatchCrmCompanyRequest.new(
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(667) 607-5872',
-        type: Models::Shared::CrmTelephoneType::HOME,
+        type: Models::Shared::CrmTelephoneType::HOME
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-17T08:11:24.467Z'),
+    updated_at: DateTime.iso8601('2025-03-18T14:36:19.702Z'),
     websites: [
       'https://www.goodwinsons.com',
-    ],
+    ]
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.company.patch_crm_company(request: req)
 
 unless res.crm_company.nil?
@@ -726,16 +713,16 @@ Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisCompanyRequest.new(
   hris_company: Models::Shared::HrisCompany.new(
@@ -745,19 +732,18 @@ req = Models::Operations::PatchHrisCompanyRequest.new(
       country_code: 'US',
       postal_code: '67325',
       region: 'Kentucky',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '03c1c912-549c-43f7-b172-cd5f8a37dfd9',
+    id: 'f7d8d1c7-c382-4c85-b83a-242369effb80',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-27T13:42:30.285Z'),
+    updated_at: DateTime.iso8601('2026-10-29T06:12:28.583Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.company.patch_hris_company(request: req)
 
 unless res.hris_company.nil?
@@ -794,11 +780,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.company.remove_ats_company(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -836,11 +821,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.company.remove_crm_company(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -878,11 +862,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.company.remove_hris_company(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -914,30 +897,29 @@ Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsCompanyRequest.new(
   ats_company: Models::Shared::AtsCompany.new(
     created_at: DateTime.iso8601('2019-04-22T03:50:02.920Z'),
-    id: '7ceedfc6-59a0-4bb8-b325-5fc8977d3535',
+    id: 'd6abdd31-16d9-4c55-8835-b9792ca8b14a',
     name: 'Gulgowski, Dibbert and Wilderman',
     phone: '1-882-360-2010',
-    updated_at: DateTime.iso8601('2020-10-04T20:08:40.668Z'),
-    website_url: 'https://www.gulgowskidibbert.com',
+    updated_at: DateTime.iso8601('2020-10-05T04:00:03.224Z'),
+    website_url: 'https://www.gulgowskidibbert.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.company.update_ats_company(request: req)
 
 unless res.ats_company.nil?
@@ -968,16 +950,16 @@ Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCrmCompanyRequest.new(
   crm_company: Models::Shared::CrmCompany.new(
@@ -988,7 +970,7 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
       country_code: 'US',
       postal_code: '04674',
       region: 'Delaware',
-      region_code: 'NY',
+      region_code: 'NY'
     ),
     created_at: DateTime.iso8601('2020-05-11T18:26:32.925Z'),
     description: 'Venustas cruentus votum patruus terebro.',
@@ -998,19 +980,19 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'info@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
         email: 'sales@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
       Models::Shared::CrmEmail.new(
         email: 'support@goodwinsons.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
     ],
     employees: 4177.0,
-    id: '61b048c9-a3df-4816-826a-3ae3e51e81dd',
+    id: 'e0a77f8b-11cd-410c-85e7-e4f79a0d7c28',
     industry: 'Metrics',
     is_active: true,
     link_urls: [
@@ -1019,13 +1001,13 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '56e9cdce-76e3-4158-a28c-b471c5c2b09f',
+        id: '53db73d8-030b-44e2-9ff6-01bd3579a318',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'unde',
+        value: 'unde'
       ),
     ],
     name: 'Goodwin and Sons',
@@ -1037,19 +1019,18 @@ req = Models::Operations::UpdateCrmCompanyRequest.new(
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(667) 607-5872',
-        type: Models::Shared::CrmTelephoneType::HOME,
+        type: Models::Shared::CrmTelephoneType::HOME
       ),
     ],
     timezone: 'Atlantic/Azores',
-    updated_at: DateTime.iso8601('2025-03-17T08:11:24.467Z'),
+    updated_at: DateTime.iso8601('2025-03-18T14:36:19.702Z'),
     websites: [
       'https://www.goodwinsons.com',
-    ],
+    ]
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.company.update_crm_company(request: req)
 
 unless res.crm_company.nil?
@@ -1080,16 +1061,16 @@ Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisCompanyRequest.new(
   hris_company: Models::Shared::HrisCompany.new(
@@ -1099,19 +1080,18 @@ req = Models::Operations::UpdateHrisCompanyRequest.new(
       country_code: 'US',
       postal_code: '67325',
       region: 'Kentucky',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '03c1c912-549c-43f7-b172-cd5f8a37dfd9',
+    id: 'f7d8d1c7-c382-4c85-b83a-242369effb80',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-27T13:42:30.285Z'),
+    updated_at: DateTime.iso8601('2026-10-29T06:12:28.583Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.company.update_hris_company(request: req)
 
 unless res.hris_company.nil?

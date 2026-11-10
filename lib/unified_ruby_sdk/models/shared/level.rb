@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Level - Normalized stock level
-      class Level < T::Enum
-
-
+      class Level
+        include ::Crystalline::Enum
         enums do
           NONE = new('NONE')
           LOW = new('LOW')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           HIGH = new('HIGH')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

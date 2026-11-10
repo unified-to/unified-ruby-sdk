@@ -1,5 +1,13 @@
 # ListMessagingMessagesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListMessagingMessagesQueryParamFields::ID
+```
+
 
 ## Values
 

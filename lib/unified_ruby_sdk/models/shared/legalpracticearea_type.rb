@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # LegalPracticeareaType - the normalized practice area type
-      class LegalPracticeareaType < T::Enum
-
-
+      class LegalPracticeareaType
+        include ::Crystalline::Enum
         enums do
           ADMINISTRATIVE = new('ADMINISTRATIVE')
           ADMIRALTY_AND_MARITIME = new('ADMIRALTY_AND_MARITIME')
@@ -72,6 +70,7 @@ module UnifiedRubySDK
           WILLS_AND_ESTATES = new('WILLS_AND_ESTATES')
           WORKERS_COMPENSATION = new('WORKERS_COMPENSATION')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,13 @@
 # GetSocialReviewQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetSocialReviewQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # SocialMetadataFormat
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = SocialMetadataFormat::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = SocialMetadataFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

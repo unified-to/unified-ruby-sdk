@@ -1,5 +1,13 @@
 # CreateAtsJobQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateAtsJobQueryParamFields::ID
+```
+
 
 ## Values
 

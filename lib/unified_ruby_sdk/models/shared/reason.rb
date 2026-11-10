@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Reason - Why the refund was issued
-      class Reason < T::Enum
-
-
+      class Reason
+        include ::Crystalline::Enum
         enums do
           DUPLICATE = new('DUPLICATE')
           FRAUDULENT = new('FRAUDULENT')
           REQUESTED_BY_CUSTOMER = new('REQUESTED_BY_CUSTOMER')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

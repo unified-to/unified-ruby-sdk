@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareObservation
         extend T::Sig
@@ -18,15 +17,15 @@ module UnifiedRubySDK
         # Component results (e.g. systolic and diastolic blood pressure)
         field :components, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareObservationComponent)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('components') } }
         # When the observation record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The encounter in which the observation was made
         field :encounter_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('encounter_id') } }
         # Unique identifier for the observation
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Interpretation of the result (e.g. high, low)
-        field :interpretation, Crystalline::Nilable.new(Models::Shared::Interpretation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interpretation'), 'decoder': Utils.enum_from_string(Models::Shared::Interpretation, true) } }
+        field :interpretation, Crystalline::Nilable.new(Models::Shared::Interpretation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interpretation'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Interpretation, true) } }
         # When the result was released (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :issued_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('issued_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :issued_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('issued_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Human-readable name of what was observed
@@ -34,21 +33,21 @@ module UnifiedRubySDK
         # Free-text notes about the observation
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
         # When the observation was made (effective time) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :observed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('observed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :observed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('observed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The patient the observation is about
         field :patient_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('patient_id') } }
         # The practitioner who performed the observation
         field :practitioner_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('practitioner_id') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Normal range for the result
         field :reference_range, Crystalline::Nilable.new(Models::Shared::PropertyHealthcareObservationReferenceRange), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference_range') } }
         # Status of the observation result
-        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareObservationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareObservationStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareObservationStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareObservationStatus, true) } }
         # Category of the observation
-        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareObservationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareObservationType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareObservationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareObservationType, true) } }
         # When the observation record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Numeric result value
         field :value_number, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value_number') } }
         # Text or coded result value
@@ -56,7 +55,7 @@ module UnifiedRubySDK
         # Unit of the numeric result (e.g. mg/dL)
         field :value_unit, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value_unit') } }
 
-        sig { params(codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), components: T.nilable(T::Array[Models::Shared::HealthcareObservationComponent]), created_at: T.nilable(::DateTime), encounter_id: T.nilable(::String), id: T.nilable(::String), interpretation: T.nilable(Models::Shared::Interpretation), issued_at: T.nilable(::DateTime), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), observed_at: T.nilable(::DateTime), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), reference_range: T.nilable(Models::Shared::PropertyHealthcareObservationReferenceRange), status: T.nilable(Models::Shared::HealthcareObservationStatus), type: T.nilable(Models::Shared::HealthcareObservationType), updated_at: T.nilable(::DateTime), value_number: T.nilable(::Float), value_text: T.nilable(::String), value_unit: T.nilable(::String)).void }
+        sig { params(codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), components: T.nilable(T::Array[Models::Shared::HealthcareObservationComponent]), created_at: T.nilable(::DateTime), encounter_id: T.nilable(::String), id: T.nilable(::String), interpretation: T.nilable(Models::Shared::Interpretation), issued_at: T.nilable(::DateTime), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), notes: T.nilable(::String), observed_at: T.nilable(::DateTime), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), reference_range: T.nilable(Models::Shared::PropertyHealthcareObservationReferenceRange), status: T.nilable(Models::Shared::HealthcareObservationStatus), type: T.nilable(Models::Shared::HealthcareObservationType), updated_at: T.nilable(::DateTime), value_number: T.nilable(::Float), value_text: T.nilable(::String), value_unit: T.nilable(::String)).void }
         def initialize(codes: nil, components: nil, created_at: nil, encounter_id: nil, id: nil, interpretation: nil, issued_at: nil, metadata: nil, name: nil, notes: nil, observed_at: nil, patient_id: nil, practitioner_id: nil, raw: nil, reference_range: nil, status: nil, type: nil, updated_at: nil, value_number: nil, value_text: nil, value_unit: nil)
           @codes = codes
           @components = components

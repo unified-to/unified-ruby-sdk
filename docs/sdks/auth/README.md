@@ -1,5 +1,4 @@
 # Auth
-(*auth*)
 
 ## Overview
 
@@ -21,16 +20,15 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::GetUnifiedIntegrationAuthRequest.new(
   integration_type: '<value>',
-  workspace_id: '<id>',
+  workspace_id: '<id>'
 )
-
 res = s.auth.get_unified_integration_auth(request: req)
 
 unless res.res.nil?
@@ -67,16 +65,15 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::GetUnifiedIntegrationLoginRequest.new(
   integration_type: '<value>',
-  workspace_id: '<id>',
+  workspace_id: '<id>'
 )
-
 res = s.auth.get_unified_integration_login(request: req)
 
 unless res.res.nil?
@@ -113,16 +110,15 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::GetUnifiedIntegrationSamlRequest.new(
   integration_type: '<value>',
-  workspace_id: '<id>',
+  workspace_id: '<id>'
 )
-
 res = s.auth.get_unified_integration_saml(request: req)
 
 unless res.res.nil?

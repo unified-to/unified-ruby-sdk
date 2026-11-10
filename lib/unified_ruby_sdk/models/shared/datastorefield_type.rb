@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class DatastoreFieldType < T::Enum
-
-
+      class DatastoreFieldType
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')
@@ -28,6 +26,7 @@ module UnifiedRubySDK
           LINKED_RECORD = new('LINKED_RECORD')
           RELATION = new('RELATION')
         end
+        open!
       end
     end
   end

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # CrmEventType - The type of event
-      class CrmEventType < T::Enum
-
-
+      class CrmEventType
+        include ::Crystalline::Enum
         enums do
           NOTE = new('NOTE')
           EMAIL = new('EMAIL')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           FORM = new('FORM')
           PAGE_VIEW = new('PAGE_VIEW')
         end
+        open!
       end
     end
   end

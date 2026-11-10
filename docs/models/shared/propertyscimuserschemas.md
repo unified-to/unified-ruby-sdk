@@ -1,5 +1,16 @@
 # PropertyScimUserSchemas
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyScimUserSchemas::URN_IETF_PARAMS_SCIM_SCHEMAS_CORE_2_0_USER
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyScimUserSchemas.deserialize("custom_value")
+```
+
 
 ## Values
 

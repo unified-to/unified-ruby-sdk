@@ -1,5 +1,13 @@
 # PatchCdpSegmentQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchCdpSegmentQueryParamFields::ID
+```
+
 
 ## Values
 

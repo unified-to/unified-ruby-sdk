@@ -1,5 +1,4 @@
 # Lead
-(*lead*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a CrmLead. Provide the unified CrmLead fields in the request body; they 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" example="crm_lead" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lead.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
   address: Models::Shared::PropertyCrmLeadAddress.new(
     address1: '87206 Hudson Street',
@@ -36,18 +34,18 @@ res = s.lead.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
     country_code: 'US',
     postal_code: '49909-1183',
     region: 'Michigan',
-    region_code: 'MO',
+    region_code: 'MO'
   ),
   company_name: 'Tillman - Wiegand',
   created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
   emails: [
     Models::Shared::CrmEmail.new(
       email: 'velda.sporer@icloud.com',
-      type: Models::Shared::CrmEmailType::WORK,
+      type: Models::Shared::CrmEmailType::WORK
     ),
   ],
   first_name: 'Velda',
-  id: '5841dffb-383b-4eda-8dde-8b222bfc039e',
+  id: '4f29ab33-3c87-4948-8e18-31b2fb2039e3',
   is_active: true,
   last_name: 'Sporer',
   link_urls: [
@@ -56,13 +54,13 @@ res = s.lead.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'f3de749c-8618-4ffa-b943-bc23a428d00a',
+      id: 'cefdf4d1-4d09-4870-ba32-e972f6689d98',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'vitiosus',
+      value: 'vitiosus'
     ),
   ],
   name: 'Velda Sporer',
@@ -71,19 +69,19 @@ res = s.lead.create_crm_lead(crm_lead: Models::Shared::CrmLead.new(
   telephones: [
     Models::Shared::CrmTelephone.new(
       telephone: '(841) 271-0595',
-      type: Models::Shared::CrmTelephoneType::FAX,
+      type: Models::Shared::CrmTelephoneType::FAX
     ),
     Models::Shared::CrmTelephone.new(
       telephone: '(664) 498-4952',
-      type: Models::Shared::CrmTelephoneType::HOME,
+      type: Models::Shared::CrmTelephoneType::HOME
     ),
     Models::Shared::CrmTelephone.new(
       telephone: '(281) 288-0037',
-      type: Models::Shared::CrmTelephoneType::OTHER,
+      type: Models::Shared::CrmTelephoneType::OTHER
     ),
   ],
   title: 'International Factors Administrator',
-  updated_at: DateTime.iso8601('2020-05-19T12:24:53.906Z'),
+  updated_at: DateTime.iso8601('2020-05-19T15:53:03.798Z')
 ), connection_id: '<id>')
 
 unless res.crm_lead.nil?
@@ -123,11 +121,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lead.get_crm_lead(connection_id: '<id>', id: '<id>')
 
 unless res.crm_lead.nil?
@@ -167,15 +164,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmLeadsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmLeadsRequest.new(
+  connection_id: '<id>'
+)
 res = s.lead.list_crm_leads(request: req)
 
 unless res.crm_leads.nil?
@@ -206,16 +202,16 @@ Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCrmLeadRequest.new(
   crm_lead: Models::Shared::CrmLead.new(
@@ -225,18 +221,18 @@ req = Models::Operations::PatchCrmLeadRequest.new(
       country_code: 'US',
       postal_code: '49909-1183',
       region: 'Michigan',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     company_name: 'Tillman - Wiegand',
     created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'velda.sporer@icloud.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
     ],
     first_name: 'Velda',
-    id: '394633c4-86ef-4848-812a-b84238d16abc',
+    id: '0cafdfec-d239-4300-b0bd-959ee5ead4ab',
     is_active: true,
     last_name: 'Sporer',
     link_urls: [
@@ -245,13 +241,13 @@ req = Models::Operations::PatchCrmLeadRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8e76d15b-190c-4713-b7a4-58f8fc39799d',
+        id: '739b5bc1-382f-49ea-9c8c-74e1ca1c3730',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'vitiosus',
+        value: 'vitiosus'
       ),
     ],
     name: 'Velda Sporer',
@@ -260,24 +256,23 @@ req = Models::Operations::PatchCrmLeadRequest.new(
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(841) 271-0595',
-        type: Models::Shared::CrmTelephoneType::FAX,
+        type: Models::Shared::CrmTelephoneType::FAX
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(664) 498-4952',
-        type: Models::Shared::CrmTelephoneType::HOME,
+        type: Models::Shared::CrmTelephoneType::HOME
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(281) 288-0037',
-        type: Models::Shared::CrmTelephoneType::OTHER,
+        type: Models::Shared::CrmTelephoneType::OTHER
       ),
     ],
     title: 'International Factors Administrator',
-    updated_at: DateTime.iso8601('2020-05-19T12:24:53.908Z'),
+    updated_at: DateTime.iso8601('2020-05-19T15:53:03.800Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lead.patch_crm_lead(request: req)
 
 unless res.crm_lead.nil?
@@ -314,11 +309,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.lead.remove_crm_lead(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -350,16 +344,16 @@ Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCrmLeadRequest.new(
   crm_lead: Models::Shared::CrmLead.new(
@@ -369,18 +363,18 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
       country_code: 'US',
       postal_code: '49909-1183',
       region: 'Michigan',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     company_name: 'Tillman - Wiegand',
     created_at: DateTime.iso8601('2019-10-12T11:27:59.003Z'),
     emails: [
       Models::Shared::CrmEmail.new(
         email: 'velda.sporer@icloud.com',
-        type: Models::Shared::CrmEmailType::WORK,
+        type: Models::Shared::CrmEmailType::WORK
       ),
     ],
     first_name: 'Velda',
-    id: '394633c4-86ef-4848-812a-b84238d16abc',
+    id: '0cafdfec-d239-4300-b0bd-959ee5ead4ab',
     is_active: true,
     last_name: 'Sporer',
     link_urls: [
@@ -389,13 +383,13 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8e76d15b-190c-4713-b7a4-58f8fc39799d',
+        id: '739b5bc1-382f-49ea-9c8c-74e1ca1c3730',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'vitiosus',
+        value: 'vitiosus'
       ),
     ],
     name: 'Velda Sporer',
@@ -404,24 +398,23 @@ req = Models::Operations::UpdateCrmLeadRequest.new(
     telephones: [
       Models::Shared::CrmTelephone.new(
         telephone: '(841) 271-0595',
-        type: Models::Shared::CrmTelephoneType::FAX,
+        type: Models::Shared::CrmTelephoneType::FAX
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(664) 498-4952',
-        type: Models::Shared::CrmTelephoneType::HOME,
+        type: Models::Shared::CrmTelephoneType::HOME
       ),
       Models::Shared::CrmTelephone.new(
         telephone: '(281) 288-0037',
-        type: Models::Shared::CrmTelephoneType::OTHER,
+        type: Models::Shared::CrmTelephoneType::OTHER
       ),
     ],
     title: 'International Factors Administrator',
-    updated_at: DateTime.iso8601('2020-05-19T12:24:53.908Z'),
+    updated_at: DateTime.iso8601('2020-05-19T15:53:03.800Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.lead.update_crm_lead(request: req)
 
 unless res.crm_lead.nil?

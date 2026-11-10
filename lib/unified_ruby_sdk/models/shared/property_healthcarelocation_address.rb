@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Postal address of the location
       class PropertyHealthcareLocationAddress
         extend T::Sig

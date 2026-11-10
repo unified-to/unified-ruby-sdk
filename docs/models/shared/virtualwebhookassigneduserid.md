@@ -1,5 +1,16 @@
 # VirtualWebhookAssignedUserId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = VirtualWebhookAssignedUserId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = VirtualWebhookAssignedUserId.deserialize("custom_value")
+```
+
 
 ## Values
 

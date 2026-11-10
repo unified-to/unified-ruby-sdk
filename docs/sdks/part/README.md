@@ -1,5 +1,4 @@
 # Part
-(*part*)
 
 ## Overview
 
@@ -17,26 +16,25 @@ Creates a PlmPart. Provide the unified PlmPart fields in the request body; they 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPlmPart" method="post" path="/plm/{connection_id}/part" -->
+<!-- UsageSnippet language="ruby" operationID="createPlmPart" method="post" path="/plm/{connection_id}/part" example="plm_part" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.part.create_plm_part(plm_part: Models::Shared::PlmPart.new(
   created_at: DateTime.iso8601('2019-04-13T06:25:34.770Z'),
   description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
   document_ids: [],
   file_ids: [],
-  id: '05d8cf7b-4113-45b8-8ec9-cbced7090ee3',
+  id: 'd0e429d9-9413-43bd-b8af-6f756c3d8309',
   is_assembly: false,
   lifecycle_state: 'Design',
-  master_identifier: '8e75c8bb-abce-427b-a8cc-60cd4f363d5b',
+  master_identifier: 'ae974b01-0d26-4eed-9855-f15eb64bb553',
   metadata: [],
   name: 'grumpy PCB',
   number: 'PRT-009154',
@@ -46,8 +44,8 @@ res = s.part.create_plm_part(plm_part: Models::Shared::PlmPart.new(
   status: Models::Shared::PlmPartStatus::IN_WORK,
   type: Models::Shared::PlmPartType::SOFTWARE,
   unit_of_measure: 'EA',
-  updated_at: DateTime.iso8601('2021-04-11T02:40:21.078Z'),
-  url: 'https://inborn-independence.info',
+  updated_at: DateTime.iso8601('2021-04-11T13:24:26.712Z'),
+  url: 'https://inborn-independence.info'
 ), connection_id: '<id>')
 
 unless res.plm_part.nil?
@@ -87,11 +85,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.part.get_plm_part(connection_id: '<id>', id: '<id>')
 
 unless res.plm_part.nil?
@@ -131,15 +128,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPlmPartsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPlmPartsRequest.new(
+  connection_id: '<id>'
+)
 res = s.part.list_plm_parts(request: req)
 
 unless res.plm_parts.nil?
@@ -170,16 +166,16 @@ Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPlmPart" method="patch" path="/plm/{connection_id}/part/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPlmPart" method="patch" path="/plm/{connection_id}/part/{id}" example="plm_part" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPlmPartRequest.new(
   plm_part: Models::Shared::PlmPart.new(
@@ -187,10 +183,10 @@ req = Models::Operations::PatchPlmPartRequest.new(
     description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
     document_ids: [],
     file_ids: [],
-    id: '042ea10d-3111-4b6c-8e08-8406d9ae810d',
+    id: 'd2e12f1a-8bd0-42e6-9e37-3cabe19fc9c1',
     is_assembly: false,
     lifecycle_state: 'Design',
-    master_identifier: '33e68ad9-4978-4fbb-b5c5-ff96d1783f45',
+    master_identifier: '2f0e3dda-4d40-4bd0-be27-f2a76a440736',
     metadata: [],
     name: 'grumpy PCB',
     number: 'PRT-009154',
@@ -200,13 +196,12 @@ req = Models::Operations::PatchPlmPartRequest.new(
     status: Models::Shared::PlmPartStatus::IN_WORK,
     type: Models::Shared::PlmPartType::SOFTWARE,
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2021-04-11T02:40:21.084Z'),
-    url: 'https://inborn-independence.info',
+    updated_at: DateTime.iso8601('2021-04-11T13:24:26.717Z'),
+    url: 'https://inborn-independence.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.part.patch_plm_part(request: req)
 
 unless res.plm_part.nil?
@@ -237,16 +232,16 @@ Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePlmPart" method="put" path="/plm/{connection_id}/part/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePlmPart" method="put" path="/plm/{connection_id}/part/{id}" example="plm_part" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePlmPartRequest.new(
   plm_part: Models::Shared::PlmPart.new(
@@ -254,10 +249,10 @@ req = Models::Operations::UpdatePlmPartRequest.new(
     description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
     document_ids: [],
     file_ids: [],
-    id: '042ea10d-3111-4b6c-8e08-8406d9ae810d',
+    id: 'd2e12f1a-8bd0-42e6-9e37-3cabe19fc9c1',
     is_assembly: false,
     lifecycle_state: 'Design',
-    master_identifier: '33e68ad9-4978-4fbb-b5c5-ff96d1783f45',
+    master_identifier: '2f0e3dda-4d40-4bd0-be27-f2a76a440736',
     metadata: [],
     name: 'grumpy PCB',
     number: 'PRT-009154',
@@ -267,13 +262,12 @@ req = Models::Operations::UpdatePlmPartRequest.new(
     status: Models::Shared::PlmPartStatus::IN_WORK,
     type: Models::Shared::PlmPartType::SOFTWARE,
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2021-04-11T02:40:21.084Z'),
-    url: 'https://inborn-independence.info',
+    updated_at: DateTime.iso8601('2021-04-11T13:24:26.717Z'),
+    url: 'https://inborn-independence.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.part.update_plm_part(request: req)
 
 unless res.plm_part.nil?

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CommerceReviewComment
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
 
         field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :helpful_votes, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('helpful_votes') } }
 
@@ -36,15 +35,15 @@ module UnifiedRubySDK
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Original review data from source platform
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::CommerceReviewCommentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CommerceReviewCommentStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::CommerceReviewCommentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CommerceReviewCommentStatus, true) } }
 
         field :unhelpful_votes, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unhelpful_votes') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(author_avatar_url: T.nilable(::String), author_email: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::DateTime), helpful_votes: T.nilable(::Float), id: T.nilable(::String), is_public: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::CommerceReviewCommentStatus), unhelpful_votes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(author_avatar_url: T.nilable(::String), author_email: T.nilable(::String), author_location: T.nilable(::String), author_name: T.nilable(::String), content: T.nilable(::String), created_at: T.nilable(::DateTime), helpful_votes: T.nilable(::Float), id: T.nilable(::String), is_public: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::CommerceReviewCommentStatus), unhelpful_votes: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(author_avatar_url: nil, author_email: nil, author_location: nil, author_name: nil, content: nil, created_at: nil, helpful_votes: nil, id: nil, is_public: nil, is_verified: nil, metadata: nil, raw: nil, status: nil, unhelpful_votes: nil, updated_at: nil)
           @author_avatar_url = author_avatar_url
           @author_email = author_email

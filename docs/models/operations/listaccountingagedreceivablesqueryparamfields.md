@@ -1,5 +1,13 @@
 # ListAccountingAgedreceivablesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListAccountingAgedreceivablesQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,4 @@
 # Course
-(*course*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" example="lms_course" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   categories: [
     'tergiversatio',
@@ -38,7 +36,7 @@ res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
   currency: 'FJD',
   description: 'Vinco alias aut capitulus.',
   duration_minutes: 148.0,
-  id: '179355ef-4f7b-495b-85f0-12037e0a60e1',
+  id: '6dd745f0-6ef5-482d-803c-e24c79066d68',
   instructors: [],
   is_active: true,
   is_private: false,
@@ -58,21 +56,21 @@ res = s.course.create_lms_course(lms_course: Models::Shared::LmsCourse.new(
       name: 'tandem',
       thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
       type: Models::Shared::LmsMediaType::OTHER,
-      url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+      url: 'https://picsum.photos/seed/fQAbsk/2472/1671'
     ),
   ],
   metadata: [],
   name: 'comptus',
   price_amount: 84.0,
   provider_name: 'Homenick - Wunsch',
-  published_at: DateTime.iso8601('2022-11-06T03:33:52.120Z'),
+  published_at: DateTime.iso8601('2022-11-06T04:24:08.700Z'),
   skills: [
     'adiuvo',
     'tam',
   ],
   students: [],
   time_estimate_minutes: 100.0,
-  updated_at: DateTime.iso8601('2023-02-11T09:23:35.509Z'),
+  updated_at: DateTime.iso8601('2023-02-11T12:52:57.024Z')
 ), connection_id: '<id>')
 
 unless res.lms_course.nil?
@@ -112,11 +110,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.course.get_lms_course(connection_id: '<id>', id: '<id>')
 
 unless res.lms_course.nil?
@@ -156,15 +153,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsCoursesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsCoursesRequest.new(
+  connection_id: '<id>'
+)
 res = s.course.list_lms_courses(request: req)
 
 unless res.lms_courses.nil?
@@ -195,16 +191,16 @@ Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsCourseRequest.new(
   lms_course: Models::Shared::LmsCourse.new(
@@ -216,7 +212,7 @@ req = Models::Operations::PatchLmsCourseRequest.new(
     currency: 'FJD',
     description: 'Vinco alias aut capitulus.',
     duration_minutes: 148.0,
-    id: 'bce173ff-747a-46a0-b92c-467aed2659c4',
+    id: 'b56a7bfd-46fa-43cd-a599-c1b886615b03',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -236,26 +232,25 @@ req = Models::Operations::PatchLmsCourseRequest.new(
         name: 'tandem',
         thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
         type: Models::Shared::LmsMediaType::OTHER,
-        url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+        url: 'https://picsum.photos/seed/fQAbsk/2472/1671'
       ),
     ],
     metadata: [],
     name: 'comptus',
     price_amount: 84.0,
     provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-06T03:33:52.121Z'),
+    published_at: DateTime.iso8601('2022-11-06T04:24:08.701Z'),
     skills: [
       'adiuvo',
       'tam',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-11T09:23:35.512Z'),
+    updated_at: DateTime.iso8601('2023-02-11T12:52:57.027Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.course.patch_lms_course(request: req)
 
 unless res.lms_course.nil?
@@ -292,11 +287,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.course.remove_lms_course(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -328,16 +322,16 @@ Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsCourseRequest.new(
   lms_course: Models::Shared::LmsCourse.new(
@@ -349,7 +343,7 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
     currency: 'FJD',
     description: 'Vinco alias aut capitulus.',
     duration_minutes: 148.0,
-    id: 'bce173ff-747a-46a0-b92c-467aed2659c4',
+    id: 'b56a7bfd-46fa-43cd-a599-c1b886615b03',
     instructors: [],
     is_active: true,
     is_private: false,
@@ -369,26 +363,25 @@ req = Models::Operations::UpdateLmsCourseRequest.new(
         name: 'tandem',
         thumbnail_url: 'https://picsum.photos/seed/syTatRhK03/928/273',
         type: Models::Shared::LmsMediaType::OTHER,
-        url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+        url: 'https://picsum.photos/seed/fQAbsk/2472/1671'
       ),
     ],
     metadata: [],
     name: 'comptus',
     price_amount: 84.0,
     provider_name: 'Homenick - Wunsch',
-    published_at: DateTime.iso8601('2022-11-06T03:33:52.121Z'),
+    published_at: DateTime.iso8601('2022-11-06T04:24:08.701Z'),
     skills: [
       'adiuvo',
       'tam',
     ],
     students: [],
     time_estimate_minutes: 100.0,
-    updated_at: DateTime.iso8601('2023-02-11T09:23:35.512Z'),
+    updated_at: DateTime.iso8601('2023-02-11T12:52:57.027Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.course.update_lms_course(request: req)
 
 unless res.lms_course.nil?

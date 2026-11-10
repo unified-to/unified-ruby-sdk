@@ -1,5 +1,16 @@
 # AtsApplicationStatus
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AtsApplicationStatus::NEW
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AtsApplicationStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

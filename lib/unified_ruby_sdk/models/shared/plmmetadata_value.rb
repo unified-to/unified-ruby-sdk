@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # The field's value, typed by `format`.
       class PlmMetadataValue
         extend T::Sig

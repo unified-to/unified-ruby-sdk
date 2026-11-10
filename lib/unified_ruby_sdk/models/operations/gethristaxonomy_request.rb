@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class GetHrisTaxonomyRequest
         extend T::Sig

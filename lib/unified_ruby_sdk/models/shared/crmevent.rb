@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # An event represents an event, activity, or engagement and is always associated with a deal, contact, or company
       class CrmEvent
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
         # An array of contact IDs associated with this event
         field :contact_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_ids') } }
         # The date that this event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # An array of deal IDs associated with this event
         field :deal_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deal_ids') } }
         # The email object, when type = email
@@ -42,17 +41,17 @@ module UnifiedRubySDK
 
         field :page_view, Crystalline::Nilable.new(Models::Shared::PropertyCrmEventPageView), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('page_view') } }
         # The raw data returned by the integration for this event.
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The task object, when type = task
         field :task, Crystalline::Nilable.new(Models::Shared::PropertyCrmEventTask), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('task') } }
         # The type of event
-        field :type, Crystalline::Nilable.new(Models::Shared::CrmEventType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CrmEventType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::CrmEventType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CrmEventType, true) } }
         # The last date that this event object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(call: T.nilable(Models::Shared::PropertyCrmEventCall), company_ids: T.nilable(T::Array[::String]), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), email: T.nilable(Models::Shared::PropertyCrmEventEmail), form: T.nilable(Models::Shared::PropertyCrmEventForm), id: T.nilable(::String), lead_ids: T.nilable(T::Array[::String]), marketing_email: T.nilable(Models::Shared::PropertyCrmEventMarketingEmail), meeting: T.nilable(Models::Shared::PropertyCrmEventMeeting), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), note: T.nilable(Models::Shared::PropertyCrmEventNote), page_view: T.nilable(Models::Shared::PropertyCrmEventPageView), raw: T.nilable(T::Hash[Symbol, ::Object]), task: T.nilable(Models::Shared::PropertyCrmEventTask), type: T.nilable(Models::Shared::CrmEventType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(call: T.nilable(Models::Shared::PropertyCrmEventCall), company_ids: T.nilable(T::Array[::String]), contact_ids: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), deal_ids: T.nilable(T::Array[::String]), email: T.nilable(Models::Shared::PropertyCrmEventEmail), form: T.nilable(Models::Shared::PropertyCrmEventForm), id: T.nilable(::String), lead_ids: T.nilable(T::Array[::String]), marketing_email: T.nilable(Models::Shared::PropertyCrmEventMarketingEmail), meeting: T.nilable(Models::Shared::PropertyCrmEventMeeting), metadata: T.nilable(T::Array[Models::Shared::CrmMetadata]), note: T.nilable(Models::Shared::PropertyCrmEventNote), page_view: T.nilable(Models::Shared::PropertyCrmEventPageView), raw: T.nilable(T::Hash[::Symbol, ::Object]), task: T.nilable(Models::Shared::PropertyCrmEventTask), type: T.nilable(Models::Shared::CrmEventType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
         def initialize(call: nil, company_ids: nil, contact_ids: nil, created_at: nil, deal_ids: nil, email: nil, form: nil, id: nil, lead_ids: nil, marketing_email: nil, meeting: nil, metadata: nil, note: nil, page_view: nil, raw: nil, task: nil, type: nil, updated_at: nil, user_id: nil)
           @call = call
           @company_ids = company_ids

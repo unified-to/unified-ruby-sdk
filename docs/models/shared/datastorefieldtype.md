@@ -1,5 +1,16 @@
 # DatastoreFieldType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = DatastoreFieldType::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = DatastoreFieldType.deserialize("custom_value")
+```
+
 
 ## Values
 

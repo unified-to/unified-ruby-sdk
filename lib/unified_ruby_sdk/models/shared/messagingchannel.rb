@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class MessagingChannel
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
@@ -34,13 +33,13 @@ module UnifiedRubySDK
 
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), has_subchannels: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), members: T.nilable(T::Array[Models::Shared::MessagingMember]), metadata: T.nilable(T::Array[Models::Shared::MessagingMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        sig { params(created_at: T.nilable(::DateTime), description: T.nilable(::String), has_subchannels: T.nilable(T::Boolean), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_private: T.nilable(T::Boolean), members: T.nilable(T::Array[Models::Shared::MessagingMember]), metadata: T.nilable(T::Array[Models::Shared::MessagingMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
         def initialize(created_at: nil, description: nil, has_subchannels: nil, id: nil, is_active: nil, is_private: nil, members: nil, metadata: nil, name: nil, parent_id: nil, raw: nil, updated_at: nil, web_url: nil)
           @created_at = created_at
           @description = description

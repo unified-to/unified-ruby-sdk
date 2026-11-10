@@ -1,5 +1,13 @@
 # PatchAccountingPurchaseorderQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchAccountingPurchaseorderQueryParamFields::ID
+```
+
 
 ## Values
 

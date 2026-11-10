@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyAdsCampaignTargetingContentVideo
         extend T::Sig

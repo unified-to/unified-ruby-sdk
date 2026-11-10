@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class LegalExpense
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # the vendor's expense category name
         field :category, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category') } }
         # when the expense was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # ISO 4217 currency code
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # free-text description of the expense
@@ -26,7 +25,7 @@ module UnifiedRubySDK
         # unique identifier for the expense
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # date the expense was incurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :incurred_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('incurred_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :incurred_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('incurred_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # pointer to the Accounting Invoice this expense was billed on (reference to AccountingInvoice)
         field :invoice_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('invoice_id') } }
         # whether the expense is billable
@@ -42,17 +41,17 @@ module UnifiedRubySDK
         # number of units
         field :quantity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('quantity') } }
         # raw data from the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # total amount of the expense
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
         # hard cost, soft cost or other
-        field :type, Crystalline::Nilable.new(Models::Shared::LegalExpenseType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::LegalExpenseType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::LegalExpenseType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::LegalExpenseType, true) } }
         # when the expense was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # HR Employee who incurred or recorded the expense (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(category: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), expense_code: T.nilable(::String), id: T.nilable(::String), incurred_at: T.nilable(::DateTime), invoice_id: T.nilable(::String), is_billable: T.nilable(T::Boolean), is_billed: T.nilable(T::Boolean), matter_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::LegalMetadata]), price_amount: T.nilable(::Float), quantity: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::LegalExpenseType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(category: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), expense_code: T.nilable(::String), id: T.nilable(::String), incurred_at: T.nilable(::DateTime), invoice_id: T.nilable(::String), is_billable: T.nilable(T::Boolean), is_billed: T.nilable(T::Boolean), matter_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::LegalMetadata]), price_amount: T.nilable(::Float), quantity: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), total_amount: T.nilable(::Float), type: T.nilable(Models::Shared::LegalExpenseType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
         def initialize(category: nil, created_at: nil, currency: nil, description: nil, expense_code: nil, id: nil, incurred_at: nil, invoice_id: nil, is_billable: nil, is_billed: nil, matter_id: nil, metadata: nil, price_amount: nil, quantity: nil, raw: nil, total_amount: nil, type: nil, updated_at: nil, user_id: nil)
           @category = category
           @created_at = created_at

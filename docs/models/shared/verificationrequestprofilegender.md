@@ -1,5 +1,16 @@
 # VerificationRequestProfileGender
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = VerificationRequestProfileGender::MALE
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = VerificationRequestProfileGender.deserialize("custom_value")
+```
+
 
 ## Values
 

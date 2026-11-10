@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PlmDocumentType - Normalized document type
-      class PlmDocumentType < T::Enum
-
-
+      class PlmDocumentType
+        include ::Crystalline::Enum
         enums do
           DRAWING = new('DRAWING')
           CAD_MODEL = new('CAD_MODEL')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           REPORT = new('REPORT')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

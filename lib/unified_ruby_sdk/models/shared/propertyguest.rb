@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyGuest
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # the guest company name
         field :company_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_name') } }
         # when the guest was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # email addresses of the guest
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
         # the guest first name
@@ -40,13 +39,13 @@ module UnifiedRubySDK
         # free-text notes about the guest
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
         # raw data from the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # telephone numbers of the guest
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
         # when the guest was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyPropertyGuestAddress), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::PropertyEmail]), first_name: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), language: T.nilable(::String), last_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), name: T.nilable(::String), nationality: T.nilable(::String), notes: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::PropertyTelephone]), updated_at: T.nilable(::DateTime)).void }
+        sig { params(address: T.nilable(Models::Shared::PropertyPropertyGuestAddress), company_name: T.nilable(::String), created_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::PropertyEmail]), first_name: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), language: T.nilable(::String), last_name: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PropertyMetadata]), name: T.nilable(::String), nationality: T.nilable(::String), notes: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::PropertyTelephone]), updated_at: T.nilable(::DateTime)).void }
         def initialize(address: nil, company_name: nil, created_at: nil, emails: nil, first_name: nil, id: nil, image_url: nil, language: nil, last_name: nil, metadata: nil, name: nil, nationality: nil, notes: nil, raw: nil, telephones: nil, updated_at: nil)
           @address = address
           @company_name = company_name

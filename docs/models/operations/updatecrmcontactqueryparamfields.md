@@ -1,5 +1,13 @@
 # UpdateCrmContactQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateCrmContactQueryParamFields::ID
+```
+
 
 ## Values
 

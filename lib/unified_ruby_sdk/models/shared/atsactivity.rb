@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AtsActivity
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # (reference to AtsCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The activity's content, such as the text of a note or the body of an email
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # IDs for AtsDocument.get
@@ -42,7 +41,7 @@ module UnifiedRubySDK
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :sub_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sub_type') } }
 
@@ -50,13 +49,13 @@ module UnifiedRubySDK
 
         field :to, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AtsEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::AtsActivityType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsActivityType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AtsActivityType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AtsActivityType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # id values of the recruiters associated with the activity.
         field :user_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_ids') } }
 
-        sig { params(application_id: T.nilable(::String), bcc: T.nilable(T::Array[Models::Shared::AtsEmail]), candidate_id: T.nilable(::String), cc: T.nilable(T::Array[Models::Shared::AtsEmail]), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_ids: T.nilable(T::Array[::String]), from: T.nilable(Models::Shared::PropertyAtsActivityFrom), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), sub_type: T.nilable(::String), title: T.nilable(::String), to: T.nilable(T::Array[Models::Shared::AtsEmail]), type: T.nilable(Models::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
+        sig { params(application_id: T.nilable(::String), bcc: T.nilable(T::Array[Models::Shared::AtsEmail]), candidate_id: T.nilable(::String), cc: T.nilable(T::Array[Models::Shared::AtsEmail]), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_ids: T.nilable(T::Array[::String]), from: T.nilable(Models::Shared::PropertyAtsActivityFrom), id: T.nilable(::String), interview_id: T.nilable(::String), is_private: T.nilable(T::Boolean), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), raw: T.nilable(T::Hash[::Symbol, ::Object]), sub_type: T.nilable(::String), title: T.nilable(::String), to: T.nilable(T::Array[Models::Shared::AtsEmail]), type: T.nilable(Models::Shared::AtsActivityType), updated_at: T.nilable(::DateTime), user_ids: T.nilable(T::Array[::String])).void }
         def initialize(application_id: nil, bcc: nil, candidate_id: nil, cc: nil, company_id: nil, created_at: nil, description: nil, document_ids: nil, from: nil, id: nil, interview_id: nil, is_private: nil, job_id: nil, metadata: nil, raw: nil, sub_type: nil, title: nil, to: nil, type: nil, updated_at: nil, user_ids: nil)
           @application_id = application_id
           @bcc = bcc

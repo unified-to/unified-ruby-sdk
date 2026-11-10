@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareConditionType - Category of the condition
-      class HealthcareConditionType < T::Enum
-
-
+      class HealthcareConditionType
+        include ::Crystalline::Enum
         enums do
           PROBLEM = new('PROBLEM')
           DIAGNOSIS = new('DIAGNOSIS')
           HEALTH_CONCERN = new('HEALTH_CONCERN')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

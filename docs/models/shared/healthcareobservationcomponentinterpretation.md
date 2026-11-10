@@ -2,6 +2,17 @@
 
 Interpretation of the component value
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HealthcareObservationComponentInterpretation::NORMAL
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HealthcareObservationComponentInterpretation.deserialize("custom_value")
+```
+
 
 ## Values
 

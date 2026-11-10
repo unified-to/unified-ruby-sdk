@@ -1,5 +1,4 @@
 # Ads
-(*ads*)
 
 ## Overview
 
@@ -56,17 +55,16 @@ Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" example="ads_ad" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
   ad_copy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
   ad_type: Models::Shared::AdType::SOCIAL,
@@ -75,11 +73,11 @@ res = s.ads.create_ads_ad(ads_ad: Models::Shared::AdsAd.new(
   creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
   description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
   final_url: 'https://improbable-sanity.com',
-  id: '3e6f3a63-50a2-44fc-9260-2391bef1fd3d',
+  id: 'b3a67b72-105d-4dcf-a887-712bb8fe4e89',
   metadata: [],
   name: 'Hermiston Group',
   status: Models::Shared::AdsAdStatus::ARCHIVED,
-  updated_at: DateTime.iso8601('2024-06-26T07:40:56.258Z'),
+  updated_at: DateTime.iso8601('2024-06-27T00:18:04.004Z')
 ), connection_id: '<id>')
 
 unless res.ads_ad.nil?
@@ -113,28 +111,27 @@ Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" example="ads_asset" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.create_ads_asset(ads_asset: Models::Shared::AdsAsset.new(
   created_at: DateTime.iso8601('2020-03-27T20:14:38.603Z'),
   height: 400.0,
-  id: '05ed7d70-2db6-4653-93d7-715ff13d0230',
+  id: 'faae8f57-f51d-47ca-86e7-2fdcbac080c8',
   metadata: [],
   mime_type: 'IMAGE_PNG',
   name: 'Lockman - DuBuque',
   type: Models::Shared::AdsAssetType::IMAGE,
-  updated_at: DateTime.iso8601('2022-03-30T22:59:46.091Z'),
+  updated_at: DateTime.iso8601('2022-03-31T11:21:20.201Z'),
   url: 'https://informal-perfection.com/',
-  width: 600.0,
+  width: 600.0
 ), connection_id: '<id>')
 
 unless res.ads_asset.nil?
@@ -168,36 +165,35 @@ Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" example="ads_campaign" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.create_ads_campaign(ads_campaign: Models::Shared::AdsCampaign.new(
-  budget_amount: 8_743.179_536_121_897,
+  budget_amount: 8743.179_536_121_897,
   budget_period: Models::Shared::BudgetPeriod::MONTHLY,
   category: 'CREDIT',
   created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
   currency: 'USD',
   effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-  end_at: DateTime.iso8601('2025-06-14T00:19:21.799Z'),
-  id: '11c6dbc7-0b4f-482c-a6fd-df577020033f',
+  end_at: DateTime.iso8601('2025-06-15T04:16:08.794Z'),
+  id: '6192ea47-aa4a-4b3c-9572-c3592a7cb942',
   labels: [
     'comedo',
   ],
   metadata: [],
   name: 'Emard Inc',
-  start_at: DateTime.iso8601('2022-07-22T04:06:21.637Z'),
+  start_at: DateTime.iso8601('2022-07-22T05:38:54.918Z'),
   status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
-  targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
-  total_spend_amount: 2_349.8_642_875_347_286,
-  updated_at: DateTime.iso8601('2026-01-17T03:36:44.517Z'),
+  targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
+  total_spend_amount: 2349.8_642_875_347_286,
+  updated_at: DateTime.iso8601('2026-01-18T12:58:42.628Z')
 ), connection_id: '<id>')
 
 unless res.ads_campaign.nil?
@@ -231,20 +227,19 @@ Creates a AdsCreative. Provide the unified AdsCreative fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" example="ads_creative" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-  id: '3add6849-cb3a-456d-87ae-60414cee8fb0',
+  id: '92ebc28f-3b8e-46d8-a839-249cd97f5767',
   labels: [
     'coma',
     'accedo',
@@ -253,7 +248,7 @@ res = s.ads.create_ads_creative(ads_creative: Models::Shared::AdsCreative.new(
   metadata: [],
   name: 'Brekke, Bradtke and Robel',
   status: Models::Shared::AdsCreativeStatus::PAUSED,
-  updated_at: DateTime.iso8601('2021-07-01T15:09:48.730Z'),
+  updated_at: DateTime.iso8601('2021-07-01T23:27:37.682Z')
 ), connection_id: '<id>')
 
 unless res.ads_creative.nil?
@@ -287,33 +282,32 @@ Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" example="ads_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.create_ads_group(ads_group: Models::Shared::AdsGroup.new(
   bid_amount: 26.16_030_164_062_977,
-  budget_amount: 5_099.175_239_447_504,
+  budget_amount: 5099.175_239_447_504,
   budget_period: Models::Shared::AdsGroupBudgetPeriod::MONTHLY,
   created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
   currency: 'USD',
   effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-  end_at: DateTime.iso8601('2026-07-13T05:06:12.253Z'),
-  id: 'a7d4c505-bd95-4598-99a1-0e378365967c',
+  end_at: DateTime.iso8601('2026-07-14T20:00:43.595Z'),
+  id: '511294fa-04ce-4471-a565-e586d69a2560',
   language_locale: 'fr-FR',
   metadata: [],
   name: 'Stark - Baumbach',
-  start_at: DateTime.iso8601('2026-01-26T05:11:09.514Z'),
+  start_at: DateTime.iso8601('2026-01-27T17:29:23.749Z'),
   status: Models::Shared::AdsGroupStatus::PROCESSING,
-  targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-  updated_at: DateTime.iso8601('2022-01-19T23:57:40.441Z'),
+  targeting: Models::Shared::PropertyAdsGroupTargeting.new,
+  updated_at: DateTime.iso8601('2022-01-20T13:30:58.603Z')
 ), connection_id: '<id>')
 
 unless res.ads_group.nil?
@@ -347,24 +341,23 @@ Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" example="ads_insertionorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.create_ads_insertionorder(ads_insertionorder: Models::Shared::AdsInsertionorder.new(
   created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-  id: '5241f94a-ad3c-473d-87b7-1dad02dbff6b',
+  id: '4cc4c8e8-685b-46f0-9d60-396f3f815f37',
   metadata: [],
   name: 'Kunde, Smith and Reinger',
   status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-  updated_at: DateTime.iso8601('2021-04-28T23:58:39.018Z'),
+  updated_at: DateTime.iso8601('2021-04-29T00:21:05.288Z')
 ), connection_id: '<id>')
 
 unless res.ads_insertionorder.nil?
@@ -398,28 +391,27 @@ Creates a AdsOrganization. Provide the unified AdsOrganization fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" example="ads_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.create_ads_organization(ads_organization: Models::Shared::AdsOrganization.new(
   account_number: 'LQUJx8zQBW',
   created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
   currency: 'USD',
-  id: '2502c597-0615-4a93-b7a0-700a503c58fd',
+  id: '367f4dd4-6533-473b-9f83-4bb26105f6fb',
   managers: [],
   metadata: [],
   name: 'Ankunding Inc',
   status: Models::Shared::AdsOrganizationStatus::PROCESSING,
   timezone: 'Europe/Chisinau',
-  updated_at: DateTime.iso8601('2026-04-15T10:02:01.977Z'),
+  updated_at: DateTime.iso8601('2026-04-16T23:06:18.284Z')
 ), connection_id: '<id>')
 
 unless res.ads_organization.nil?
@@ -459,11 +451,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.get_ads_ad(connection_id: '<id>', id: '<id>')
 
 unless res.ads_ad.nil?
@@ -503,11 +494,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.get_ads_asset(connection_id: '<id>', id: '<id>')
 
 unless res.ads_asset.nil?
@@ -547,11 +537,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.get_ads_campaign(connection_id: '<id>', id: '<id>')
 
 unless res.ads_campaign.nil?
@@ -591,11 +580,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.get_ads_creative(connection_id: '<id>', id: '<id>')
 
 unless res.ads_creative.nil?
@@ -635,11 +623,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.get_ads_group(connection_id: '<id>', id: '<id>')
 
 unless res.ads_group.nil?
@@ -679,11 +666,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.get_ads_insertionorder(connection_id: '<id>', id: '<id>')
 
 unless res.ads_insertionorder.nil?
@@ -723,11 +709,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.get_ads_organization(connection_id: '<id>', id: '<id>')
 
 unless res.ads_organization.nil?
@@ -767,11 +752,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.get_ads_promoted(connection_id: '<id>', id: '<id>')
 
 unless res.ads_promoted.nil?
@@ -811,11 +795,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.get_ads_target(connection_id: '<id>', id: '<id>')
 
 unless res.ads_target.nil?
@@ -855,15 +838,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsAdsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsAdsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ads.list_ads_ads(request: req)
 
 unless res.ads_ads.nil?
@@ -900,15 +882,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsAssetsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsAssetsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ads.list_ads_assets(request: req)
 
 unless res.ads_assets.nil?
@@ -945,15 +926,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsCampaignsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsCampaignsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ads.list_ads_campaigns(request: req)
 
 unless res.ads_campaigns.nil?
@@ -990,15 +970,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsCreativesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsCreativesRequest.new(
+  connection_id: '<id>'
+)
 res = s.ads.list_ads_creatives(request: req)
 
 unless res.ads_creatives.nil?
@@ -1035,15 +1014,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsGroupsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsGroupsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ads.list_ads_groups(request: req)
 
 unless res.ads_groups.nil?
@@ -1080,15 +1058,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsInsertionordersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsInsertionordersRequest.new(
+  connection_id: '<id>'
+)
 res = s.ads.list_ads_insertionorders(request: req)
 
 unless res.ads_insertionorders.nil?
@@ -1125,15 +1102,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsOrganizationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsOrganizationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ads.list_ads_organizations(request: req)
 
 unless res.ads_organizations.nil?
@@ -1170,15 +1146,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsPromotedsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsPromotedsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ads.list_ads_promoteds(request: req)
 
 unless res.ads_promoteds.nil?
@@ -1215,15 +1190,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsReportsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsReportsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ads.list_ads_reports(request: req)
 
 unless res.ads_reports.nil?
@@ -1260,15 +1234,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsTargetsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsTargetsRequest.new(
+  connection_id: '<id>'
+)
 res = s.ads.list_ads_targets(request: req)
 
 unless res.ads_targets.nil?
@@ -1299,16 +1272,16 @@ Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAdsAdRequest.new(
   ads_ad: Models::Shared::AdsAd.new(
@@ -1319,16 +1292,15 @@ req = Models::Operations::PatchAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: 'ee36bda5-87ee-4a52-bcf0-ec7968b10f6e',
+    id: '919e5147-9129-425a-8157-687ac0c01c18',
     metadata: [],
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-26T07:40:56.280Z'),
+    updated_at: DateTime.iso8601('2024-06-27T00:18:04.017Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.patch_ads_ad(request: req)
 
 unless res.ads_ad.nil?
@@ -1359,42 +1331,41 @@ Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAdsCampaignRequest.new(
   ads_campaign: Models::Shared::AdsCampaign.new(
-    budget_amount: 8_743.179_536_121_897,
+    budget_amount: 8743.179_536_121_897,
     budget_period: Models::Shared::BudgetPeriod::MONTHLY,
     category: 'CREDIT',
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-14T00:19:21.895Z'),
-    id: '173d2964-e788-49e4-97aa-9f5c04f362bd',
+    end_at: DateTime.iso8601('2025-06-15T04:16:08.902Z'),
+    id: '5841535e-73f4-40a6-940e-8880c0ef2ff9',
     labels: [
       'comedo',
     ],
     metadata: [],
     name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-22T04:06:21.642Z'),
+    start_at: DateTime.iso8601('2022-07-22T05:38:54.924Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
-    targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
-    total_spend_amount: 2_349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-17T03:36:44.632Z'),
+    targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
+    total_spend_amount: 2349.8_642_875_347_286,
+    updated_at: DateTime.iso8601('2026-01-18T12:58:42.757Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.patch_ads_campaign(request: req)
 
 unless res.ads_campaign.nil?
@@ -1425,21 +1396,21 @@ Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '9128ecb7-53c7-45bc-a4a1-0b111c8ca0c8',
+    id: '63608fea-2c59-45e4-83fd-2eb72b9246cb',
     labels: [
       'coma',
       'accedo',
@@ -1448,12 +1419,11 @@ req = Models::Operations::PatchAdsCreativeRequest.new(
     metadata: [],
     name: 'Brekke, Bradtke and Robel',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-07-01T15:09:48.740Z'),
+    updated_at: DateTime.iso8601('2021-07-01T23:27:37.690Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.patch_ads_creative(request: req)
 
 unless res.ads_creative.nil?
@@ -1484,39 +1454,38 @@ Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAdsGroupRequest.new(
   ads_group: Models::Shared::AdsGroup.new(
     bid_amount: 26.16_030_164_062_977,
-    budget_amount: 5_099.175_239_447_504,
+    budget_amount: 5099.175_239_447_504,
     budget_period: Models::Shared::AdsGroupBudgetPeriod::MONTHLY,
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-13T05:06:12.442Z'),
-    id: '7794c549-33b6-4712-862f-9e9698c7e921',
+    end_at: DateTime.iso8601('2026-07-14T20:00:43.705Z'),
+    id: '482546e8-9e18-45dc-b72a-e3ca25da5f73',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-01-26T05:11:09.691Z'),
+    start_at: DateTime.iso8601('2026-01-27T17:29:23.851Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
-    targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-    updated_at: DateTime.iso8601('2022-01-19T23:57:40.507Z'),
+    targeting: Models::Shared::PropertyAdsGroupTargeting.new,
+    updated_at: DateTime.iso8601('2022-01-20T13:30:58.642Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.patch_ads_group(request: req)
 
 unless res.ads_group.nil?
@@ -1547,30 +1516,29 @@ Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInserti
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: 'e38290d6-7f4a-44da-b06b-159546d2b116',
+    id: 'e91dedf0-9e06-4ecc-81f6-836c51113713',
     metadata: [],
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-28T23:58:39.018Z'),
+    updated_at: DateTime.iso8601('2021-04-29T00:21:05.288Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.patch_ads_insertionorder(request: req)
 
 unless res.ads_insertionorder.nil?
@@ -1601,34 +1569,33 @@ Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganizat
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAdsOrganizationRequest.new(
   ads_organization: Models::Shared::AdsOrganization.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '92299613-3bf3-42ae-b449-54ac28881565',
+    id: 'a89470f8-1357-4083-b082-2cff85f441ef',
     managers: [],
     metadata: [],
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-04-15T10:02:01.992Z'),
+    updated_at: DateTime.iso8601('2026-04-16T23:06:18.300Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.patch_ads_organization(request: req)
 
 unless res.ads_organization.nil?
@@ -1665,11 +1632,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.remove_ads_ad(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1707,11 +1673,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.remove_ads_campaign(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1749,11 +1714,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.remove_ads_creative(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1791,11 +1755,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.remove_ads_group(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1833,11 +1796,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.remove_ads_insertionorder(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1875,11 +1837,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.ads.remove_ads_organization(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1911,16 +1872,16 @@ Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAdsAdRequest.new(
   ads_ad: Models::Shared::AdsAd.new(
@@ -1931,16 +1892,15 @@ req = Models::Operations::UpdateAdsAdRequest.new(
     creative_asset_url: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
     description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
     final_url: 'https://improbable-sanity.com',
-    id: 'ee36bda5-87ee-4a52-bcf0-ec7968b10f6e',
+    id: '919e5147-9129-425a-8157-687ac0c01c18',
     metadata: [],
     name: 'Hermiston Group',
     status: Models::Shared::AdsAdStatus::ARCHIVED,
-    updated_at: DateTime.iso8601('2024-06-26T07:40:56.280Z'),
+    updated_at: DateTime.iso8601('2024-06-27T00:18:04.017Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.update_ads_ad(request: req)
 
 unless res.ads_ad.nil?
@@ -1971,42 +1931,41 @@ Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAdsCampaignRequest.new(
   ads_campaign: Models::Shared::AdsCampaign.new(
-    budget_amount: 8_743.179_536_121_897,
+    budget_amount: 8743.179_536_121_897,
     budget_period: Models::Shared::BudgetPeriod::MONTHLY,
     category: 'CREDIT',
     created_at: DateTime.iso8601('2022-05-21T08:51:41.868Z'),
     currency: 'USD',
     effective_status: Models::Shared::EffectiveStatus::NOT_ELIGIBLE,
-    end_at: DateTime.iso8601('2025-06-14T00:19:21.895Z'),
-    id: '173d2964-e788-49e4-97aa-9f5c04f362bd',
+    end_at: DateTime.iso8601('2025-06-15T04:16:08.902Z'),
+    id: '5841535e-73f4-40a6-940e-8880c0ef2ff9',
     labels: [
       'comedo',
     ],
     metadata: [],
     name: 'Emard Inc',
-    start_at: DateTime.iso8601('2022-07-22T04:06:21.642Z'),
+    start_at: DateTime.iso8601('2022-07-22T05:38:54.924Z'),
     status: Models::Shared::AdsCampaignStatus::PROCESSING_FAILED,
-    targeting: Models::Shared::PropertyAdsCampaignTargeting.new(),
-    total_spend_amount: 2_349.8_642_875_347_286,
-    updated_at: DateTime.iso8601('2026-01-17T03:36:44.632Z'),
+    targeting: Models::Shared::PropertyAdsCampaignTargeting.new,
+    total_spend_amount: 2349.8_642_875_347_286,
+    updated_at: DateTime.iso8601('2026-01-18T12:58:42.757Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.update_ads_campaign(request: req)
 
 unless res.ads_campaign.nil?
@@ -2037,21 +1996,21 @@ Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAdsCreativeRequest.new(
   ads_creative: Models::Shared::AdsCreative.new(
     created_at: DateTime.iso8601('2020-02-17T11:24:51.093Z'),
-    id: '9128ecb7-53c7-45bc-a4a1-0b111c8ca0c8',
+    id: '63608fea-2c59-45e4-83fd-2eb72b9246cb',
     labels: [
       'coma',
       'accedo',
@@ -2060,12 +2019,11 @@ req = Models::Operations::UpdateAdsCreativeRequest.new(
     metadata: [],
     name: 'Brekke, Bradtke and Robel',
     status: Models::Shared::AdsCreativeStatus::PAUSED,
-    updated_at: DateTime.iso8601('2021-07-01T15:09:48.740Z'),
+    updated_at: DateTime.iso8601('2021-07-01T23:27:37.690Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.update_ads_creative(request: req)
 
 unless res.ads_creative.nil?
@@ -2096,39 +2054,38 @@ Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAdsGroupRequest.new(
   ads_group: Models::Shared::AdsGroup.new(
     bid_amount: 26.16_030_164_062_977,
-    budget_amount: 5_099.175_239_447_504,
+    budget_amount: 5099.175_239_447_504,
     budget_period: Models::Shared::AdsGroupBudgetPeriod::MONTHLY,
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-13T05:06:12.442Z'),
-    id: '7794c549-33b6-4712-862f-9e9698c7e921',
+    end_at: DateTime.iso8601('2026-07-14T20:00:43.705Z'),
+    id: '482546e8-9e18-45dc-b72a-e3ca25da5f73',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-01-26T05:11:09.691Z'),
+    start_at: DateTime.iso8601('2026-01-27T17:29:23.851Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
-    targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-    updated_at: DateTime.iso8601('2022-01-19T23:57:40.507Z'),
+    targeting: Models::Shared::PropertyAdsGroupTargeting.new,
+    updated_at: DateTime.iso8601('2022-01-20T13:30:58.642Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.update_ads_group(request: req)
 
 unless res.ads_group.nil?
@@ -2159,30 +2116,29 @@ Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInserti
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAdsInsertionorderRequest.new(
   ads_insertionorder: Models::Shared::AdsInsertionorder.new(
     created_at: DateTime.iso8601('2021-04-10T06:57:36.611Z'),
-    id: 'e38290d6-7f4a-44da-b06b-159546d2b116',
+    id: 'e91dedf0-9e06-4ecc-81f6-836c51113713',
     metadata: [],
     name: 'Kunde, Smith and Reinger',
     status: Models::Shared::AdsInsertionorderStatus::UNSPECIFIED,
-    updated_at: DateTime.iso8601('2021-04-28T23:58:39.018Z'),
+    updated_at: DateTime.iso8601('2021-04-29T00:21:05.288Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.update_ads_insertionorder(request: req)
 
 unless res.ads_insertionorder.nil?
@@ -2213,34 +2169,33 @@ Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganizat
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAdsOrganizationRequest.new(
   ads_organization: Models::Shared::AdsOrganization.new(
     account_number: 'LQUJx8zQBW',
     created_at: DateTime.iso8601('2020-07-23T21:47:11.440Z'),
     currency: 'USD',
-    id: '92299613-3bf3-42ae-b449-54ac28881565',
+    id: 'a89470f8-1357-4083-b082-2cff85f441ef',
     managers: [],
     metadata: [],
     name: 'Ankunding Inc',
     status: Models::Shared::AdsOrganizationStatus::PROCESSING,
     timezone: 'Europe/Chisinau',
-    updated_at: DateTime.iso8601('2026-04-15T10:02:01.992Z'),
+    updated_at: DateTime.iso8601('2026-04-16T23:06:18.300Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.ads.update_ads_organization(request: req)
 
 unless res.ads_organization.nil?

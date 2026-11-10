@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class GenaiTask
         extend T::Sig
@@ -16,9 +15,9 @@ module UnifiedRubySDK
         # id of the genai_agent (the reusable agent/preset configuration) that runs this task.
         field :agent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('agent_id') } }
         # When the coding agent stopped working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The failure description (when the status is FAILED).
         field :error, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('error') } }
 
@@ -42,15 +41,15 @@ module UnifiedRubySDK
         # The pull/merge request that the coding agent opened for its work.
         field :pullrequest_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pullrequest_url') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The git repository that the coding agent works in.
         field :repo_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('repo_url') } }
         # The name of the branch that the coding agent starts its work from.
         field :source_branch_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source_branch_identifier') } }
         # When the coding agent started working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::GenaiTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::GenaiTaskStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::GenaiTaskStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::GenaiTaskStatus, true) } }
         # The coding agent's summary of the work that it performed.
         field :summary, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('summary') } }
         # The name of the branch that the coding agent pushed its work to.
@@ -58,13 +57,13 @@ module UnifiedRubySDK
 
         field :tokens_used, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
         # The provider's own web page for this task.
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(agent_id: T.nilable(::String), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), error: T.nilable(::String), files_changed: T.nilable(::Float), id: T.nilable(::String), instructions: T.nilable(::String), lines_added: T.nilable(::Float), lines_deleted: T.nilable(::Float), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), pullrequest_url: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), repo_url: T.nilable(::String), source_branch_identifier: T.nilable(::String), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::GenaiTaskStatus), summary: T.nilable(::String), target_branch_identifier: T.nilable(::String), tokens_used: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
+        sig { params(agent_id: T.nilable(::String), completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), error: T.nilable(::String), files_changed: T.nilable(::Float), id: T.nilable(::String), instructions: T.nilable(::String), lines_added: T.nilable(::Float), lines_deleted: T.nilable(::Float), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), pullrequest_url: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), repo_url: T.nilable(::String), source_branch_identifier: T.nilable(::String), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::GenaiTaskStatus), summary: T.nilable(::String), target_branch_identifier: T.nilable(::String), tokens_used: T.nilable(::Float), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String), web_url: T.nilable(::String)).void }
         def initialize(agent_id: nil, completed_at: nil, created_at: nil, error: nil, files_changed: nil, id: nil, instructions: nil, lines_added: nil, lines_deleted: nil, messages: nil, model_id: nil, name: nil, organization_id: nil, pullrequest_url: nil, raw: nil, repo_url: nil, source_branch_identifier: nil, started_at: nil, status: nil, summary: nil, target_branch_identifier: nil, tokens_used: nil, updated_at: nil, user_id: nil, web_url: nil)
           @agent_id = agent_id
           @completed_at = completed_at

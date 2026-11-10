@@ -1,5 +1,16 @@
 # ListGoal
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListGoal::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListGoal.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -1,5 +1,4 @@
 # Event
-(*event*)
 
 ## Overview
 
@@ -37,27 +36,26 @@ Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAnalyticsEvent" method="post" path="/analytics/{connection_id}/event" -->
+<!-- UsageSnippet language="ruby" operationID="createAnalyticsEvent" method="post" path="/analytics/{connection_id}/event" example="analytics_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.event.create_analytics_event(analytics_event: Models::Shared::AnalyticsEvent.new(
   created_at: DateTime.iso8601('2023-06-21T03:13:22.954Z'),
   event_type: Models::Shared::EventType::SCREEN_VIEW,
-  id: '72e4adeb-a8d3-4604-aef1-01a50e519e3c',
+  id: '328f018c-5ed3-4b93-b138-a63068288929',
   metadata: {
-    "key": Models::Shared::PropertyAnalyticsEventMetadata.new(),
+    'key' => Models::Shared::PropertyAnalyticsEventMetadata.new,
   },
   name: 'page_view',
   page_url: 'https://golden-carboxyl.biz',
-  updated_at: DateTime.iso8601('2023-09-26T04:10:16.533Z'),
+  updated_at: DateTime.iso8601('2023-09-26T07:22:06.178Z')
 ), connection_id: '<id>')
 
 unless res.analytics_event.nil?
@@ -91,24 +89,23 @@ Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" -->
+<!-- UsageSnippet language="ruby" operationID="createCalendarEvent" method="post" path="/calendar/{connection_id}/event" example="calendar_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEvent.new(
   attachments: [],
   conference: [],
   created_at: '2019-08-04T14:33:51.814Z',
-  end_at: '2020-05-26T09:52:12.726Z',
+  end_at: '2020-05-26T14:24:47.271Z',
   has_conference: false,
-  id: '0fb5347f-22ff-4007-a87b-a6fea489996e',
+  id: 'c367fb2e-e69b-4989-81b3-50249a63b516',
   is_all_day: false,
   is_free: false,
   is_private: false,
@@ -118,15 +115,15 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 4.0,
-      end_at: DateTime.iso8601('2025-04-08T12:12:13.689Z'),
+      end_at: DateTime.iso8601('2025-04-09T20:03:16.343Z'),
       excluded_dates: [
-        '2024-02-14T15:16:19.844Z',
+        '2024-02-15T16:41:23.737Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
       included_dates: [
-        '2023-07-17T09:29:43.808Z',
-        '2025-02-07T07:50:50.083Z',
-        '2024-04-14T06:27:00.158Z',
+        '2023-07-18T07:39:13.258Z',
+        '2025-02-08T14:46:25.399Z',
+        '2024-04-15T08:47:01.031Z',
       ],
       interval: 7.0,
       on_days: [
@@ -460,15 +457,15 @@ res = s.event.create_calendar_event(calendar_event: Models::Shared::CalendarEven
         -254.0,
       ],
       timezone: 'Asia/Ho_Chi_Minh',
-      week_start: Models::Shared::WeekStart::TU,
+      week_start: Models::Shared::WeekStart::TU
     ),
   ],
-  start_at: '2020-05-26T00:34:35.853Z',
+  start_at: '2020-05-26T05:06:48.989Z',
   status: Models::Shared::CalendarEventStatus::CONFIRMED,
   subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
   timezone: 'Asia/Bangkok',
-  updated_at: '2020-07-02T14:38:30.336Z',
-  web_url: 'https://another-pinstripe.com',
+  updated_at: '2020-07-02T19:45:21.544Z',
+  web_url: 'https://another-pinstripe.com'
 ), connection_id: '<id>')
 
 unless res.calendar_event.nil?
@@ -508,12 +505,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.event.create_cdp_event(cdp_event: Models::Shared::CdpEvent.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.event.create_cdp_event(cdp_event: Models::Shared::CdpEvent.new, connection_id: '<id>')
 
 unless res.cdp_event.nil?
   # handle response
@@ -546,28 +542,27 @@ Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" example="crm_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.event.create_crm_event(crm_event: Models::Shared::CrmEvent.new(
   call: Models::Shared::PropertyCrmEventCall.new(
     description: 'Arbitro aptus.',
     duration: 64.0,
-    start_at: DateTime.iso8601('2024-12-24T09:41:28.595Z'),
+    start_at: DateTime.iso8601('2024-12-25T14:21:31.620Z')
   ),
   created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-  id: '2e2790c4-8d27-48d0-968d-44a8e54e2dd7',
+  id: 'f9cfbc05-7d22-4991-8c84-a1aae04e1764',
   metadata: [],
   type: Models::Shared::CrmEventType::CALL,
-  updated_at: DateTime.iso8601('2026-10-30T11:11:00.595Z'),
+  updated_at: DateTime.iso8601('2026-11-01T03:45:57.632Z')
 ), connection_id: '<id>')
 
 unless res.crm_event.nil?
@@ -607,11 +602,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.event.get_analytics_event(connection_id: '<id>', id: '<id>')
 
 unless res.analytics_event.nil?
@@ -651,11 +645,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.event.get_calendar_event(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_event.nil?
@@ -695,11 +688,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.event.get_cdp_event(connection_id: '<id>', id: '<id>')
 
 unless res.cdp_event.nil?
@@ -739,11 +731,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.event.get_clubs_event(connection_id: '<id>', id: '<id>')
 
 unless res.clubs_event.nil?
@@ -783,11 +774,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.event.get_crm_event(connection_id: '<id>', id: '<id>')
 
 unless res.crm_event.nil?
@@ -827,15 +817,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAnalyticsEventsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAnalyticsEventsRequest.new(
+  connection_id: '<id>'
+)
 res = s.event.list_analytics_events(request: req)
 
 unless res.analytics_events.nil?
@@ -872,15 +861,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarEventsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarEventsRequest.new(
+  connection_id: '<id>'
+)
 res = s.event.list_calendar_events(request: req)
 
 unless res.calendar_events.nil?
@@ -917,15 +905,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCdpEventsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCdpEventsRequest.new(
+  connection_id: '<id>'
+)
 res = s.event.list_cdp_events(request: req)
 
 unless res.cdp_events.nil?
@@ -962,15 +949,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListClubsEventsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListClubsEventsRequest.new(
+  connection_id: '<id>'
+)
 res = s.event.list_clubs_events(request: req)
 
 unless res.clubs_events.nil?
@@ -1007,15 +993,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmEventsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmEventsRequest.new(
+  connection_id: '<id>'
+)
 res = s.event.list_crm_events(request: req)
 
 unless res.crm_events.nil?
@@ -1046,25 +1031,25 @@ Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCalendarEvent" method="patch" path="/calendar/{connection_id}/event/{id}" example="calendar_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCalendarEventRequest.new(
   calendar_event: Models::Shared::CalendarEvent.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-26T09:52:12.733Z',
+    end_at: '2020-05-26T14:24:47.276Z',
     has_conference: false,
-    id: '65ef7ff6-5f52-47b1-99cc-97d043792d85',
+    id: 'd010a2ae-bafe-44b8-b9d5-d68ec543369e',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -1074,15 +1059,15 @@ req = Models::Operations::PatchCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-08T12:12:13.734Z'),
+        end_at: DateTime.iso8601('2025-04-09T20:03:16.378Z'),
         excluded_dates: [
-          '2024-02-14T15:16:19.881Z',
+          '2024-02-15T16:41:23.765Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-17T09:29:43.840Z',
-          '2025-02-07T07:50:50.128Z',
-          '2024-04-14T06:27:00.196Z',
+          '2023-07-18T07:39:13.283Z',
+          '2025-02-08T14:46:25.433Z',
+          '2024-04-15T08:47:01.060Z',
         ],
         interval: 7.0,
         on_days: [
@@ -1416,20 +1401,19 @@ req = Models::Operations::PatchCalendarEventRequest.new(
           -254.0,
         ],
         timezone: 'Asia/Ho_Chi_Minh',
-        week_start: Models::Shared::WeekStart::TU,
+        week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-26T00:34:35.860Z',
+    start_at: '2020-05-26T05:06:48.994Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-02T14:38:30.344Z',
-    web_url: 'https://another-pinstripe.com',
+    updated_at: '2020-07-02T19:45:21.550Z',
+    web_url: 'https://another-pinstripe.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.event.patch_calendar_event(request: req)
 
 unless res.calendar_event.nil?
@@ -1466,17 +1450,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCdpEventRequest.new(
-  cdp_event: Models::Shared::CdpEvent.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCdpEventRequest.new(
+  cdp_event: Models::Shared::CdpEvent.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.event.patch_cdp_event(request: req)
 
 unless res.cdp_event.nil?
@@ -1507,34 +1490,33 @@ Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" example="crm_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCrmEventRequest.new(
   crm_event: Models::Shared::CrmEvent.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-24T09:41:28.631Z'),
+      start_at: DateTime.iso8601('2024-12-25T14:21:31.646Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: 'd1cc7dbe-3319-4bde-ac30-e60280a9ee2f',
+    id: '95f6ad9e-0aee-4317-9e35-27ad9ba54c48',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-10-30T11:11:00.644Z'),
+    updated_at: DateTime.iso8601('2026-11-01T03:45:57.669Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.event.patch_crm_event(request: req)
 
 unless res.crm_event.nil?
@@ -1565,33 +1547,32 @@ Updates the MessagingEvent identified by `id`. Provide the unified MessagingEven
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" example="messaging_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchMessagingEventRequest.new(
   messaging_event: Models::Shared::MessagingEvent.new(
     channel: Models::Shared::PropertyMessagingEventChannel.new(
       id: '',
-      name: '',
+      name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'd62ceaf5-162d-445c-b1e6-90135721ad0b',
+    id: '0b222da5-0184-47ae-bfb6-6a0f4ef22289',
     is_replacing_original: false,
     metadata: [],
-    type: Models::Shared::MessagingEventType::BUTTON_CLICK,
+    type: Models::Shared::MessagingEventType::BUTTON_CLICK
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.event.patch_messaging_event(request: req)
 
 unless res.messaging_event.nil?
@@ -1628,11 +1609,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.event.remove_calendar_event(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1670,11 +1650,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.event.remove_cdp_event(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1712,11 +1691,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.event.remove_crm_event(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1748,25 +1726,25 @@ Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCalendarEvent" method="put" path="/calendar/{connection_id}/event/{id}" example="calendar_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCalendarEventRequest.new(
   calendar_event: Models::Shared::CalendarEvent.new(
     attachments: [],
     conference: [],
     created_at: '2019-08-04T14:33:51.814Z',
-    end_at: '2020-05-26T09:52:12.733Z',
+    end_at: '2020-05-26T14:24:47.276Z',
     has_conference: false,
-    id: '65ef7ff6-5f52-47b1-99cc-97d043792d85',
+    id: 'd010a2ae-bafe-44b8-b9d5-d68ec543369e',
     is_all_day: false,
     is_free: false,
     is_private: false,
@@ -1776,15 +1754,15 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 4.0,
-        end_at: DateTime.iso8601('2025-04-08T12:12:13.734Z'),
+        end_at: DateTime.iso8601('2025-04-09T20:03:16.378Z'),
         excluded_dates: [
-          '2024-02-14T15:16:19.881Z',
+          '2024-02-15T16:41:23.765Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::YEARLY,
         included_dates: [
-          '2023-07-17T09:29:43.840Z',
-          '2025-02-07T07:50:50.128Z',
-          '2024-04-14T06:27:00.196Z',
+          '2023-07-18T07:39:13.283Z',
+          '2025-02-08T14:46:25.433Z',
+          '2024-04-15T08:47:01.060Z',
         ],
         interval: 7.0,
         on_days: [
@@ -2118,20 +2096,19 @@ req = Models::Operations::UpdateCalendarEventRequest.new(
           -254.0,
         ],
         timezone: 'Asia/Ho_Chi_Minh',
-        week_start: Models::Shared::WeekStart::TU,
+        week_start: Models::Shared::WeekStart::TU
       ),
     ],
-    start_at: '2020-05-26T00:34:35.860Z',
+    start_at: '2020-05-26T05:06:48.994Z',
     status: Models::Shared::CalendarEventStatus::CONFIRMED,
     subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
     timezone: 'Asia/Bangkok',
-    updated_at: '2020-07-02T14:38:30.344Z',
-    web_url: 'https://another-pinstripe.com',
+    updated_at: '2020-07-02T19:45:21.550Z',
+    web_url: 'https://another-pinstripe.com'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.event.update_calendar_event(request: req)
 
 unless res.calendar_event.nil?
@@ -2168,17 +2145,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCdpEventRequest.new(
-  cdp_event: Models::Shared::CdpEvent.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCdpEventRequest.new(
+  cdp_event: Models::Shared::CdpEvent.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.event.update_cdp_event(request: req)
 
 unless res.cdp_event.nil?
@@ -2209,34 +2185,33 @@ Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" example="crm_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCrmEventRequest.new(
   crm_event: Models::Shared::CrmEvent.new(
     call: Models::Shared::PropertyCrmEventCall.new(
       description: 'Arbitro aptus.',
       duration: 64.0,
-      start_at: DateTime.iso8601('2024-12-24T09:41:28.631Z'),
+      start_at: DateTime.iso8601('2024-12-25T14:21:31.646Z')
     ),
     created_at: DateTime.iso8601('2020-07-14T04:53:23.784Z'),
-    id: 'd1cc7dbe-3319-4bde-ac30-e60280a9ee2f',
+    id: '95f6ad9e-0aee-4317-9e35-27ad9ba54c48',
     metadata: [],
     type: Models::Shared::CrmEventType::CALL,
-    updated_at: DateTime.iso8601('2026-10-30T11:11:00.644Z'),
+    updated_at: DateTime.iso8601('2026-11-01T03:45:57.669Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.event.update_crm_event(request: req)
 
 unless res.crm_event.nil?
@@ -2267,33 +2242,32 @@ Updates the MessagingEvent identified by `id`. Provide the unified MessagingEven
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" example="messaging_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateMessagingEventRequest.new(
   messaging_event: Models::Shared::MessagingEvent.new(
     channel: Models::Shared::PropertyMessagingEventChannel.new(
       id: '',
-      name: '',
+      name: ''
     ),
     created_at: DateTime.iso8601('2019-05-30T19:44:46.461Z'),
-    id: 'd62ceaf5-162d-445c-b1e6-90135721ad0b',
+    id: '0b222da5-0184-47ae-bfb6-6a0f4ef22289',
     is_replacing_original: false,
     metadata: [],
-    type: Models::Shared::MessagingEventType::BUTTON_CLICK,
+    type: Models::Shared::MessagingEventType::BUTTON_CLICK
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.event.update_messaging_event(request: req)
 
 unless res.messaging_event.nil?

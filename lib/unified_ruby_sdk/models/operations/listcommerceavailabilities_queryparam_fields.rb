@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class ListCommerceAvailabilitiesQueryParamFields < T::Enum
-
-
         enums do
           LOCATION_ID = new('location_id')
           START_AT = new('start_at')

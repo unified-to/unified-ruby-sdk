@@ -1,5 +1,4 @@
 # Cdp
-(*cdp*)
 
 ## Overview
 
@@ -54,12 +53,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.cdp.create_cdp_activation(cdp_activation: Models::Shared::CdpActivation.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.cdp.create_cdp_activation(cdp_activation: Models::Shared::CdpActivation.new, connection_id: '<id>')
 
 unless res.cdp_activation.nil?
   # handle response
@@ -98,12 +96,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.cdp.create_cdp_destination(cdp_destination: Models::Shared::CdpDestination.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.cdp.create_cdp_destination(cdp_destination: Models::Shared::CdpDestination.new, connection_id: '<id>')
 
 unless res.cdp_destination.nil?
   # handle response
@@ -142,12 +139,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.cdp.create_cdp_event(cdp_event: Models::Shared::CdpEvent.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.cdp.create_cdp_event(cdp_event: Models::Shared::CdpEvent.new, connection_id: '<id>')
 
 unless res.cdp_event.nil?
   # handle response
@@ -186,12 +182,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.cdp.create_cdp_profile(cdp_profile: Models::Shared::CdpProfile.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.cdp.create_cdp_profile(cdp_profile: Models::Shared::CdpProfile.new, connection_id: '<id>')
 
 unless res.cdp_profile.nil?
   # handle response
@@ -230,12 +225,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.cdp.create_cdp_segment(cdp_segment: Models::Shared::CdpSegment.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.cdp.create_cdp_segment(cdp_segment: Models::Shared::CdpSegment.new, connection_id: '<id>')
 
 unless res.cdp_segment.nil?
   # handle response
@@ -274,12 +268,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.cdp.create_cdp_source(cdp_source: Models::Shared::CdpSource.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.cdp.create_cdp_source(cdp_source: Models::Shared::CdpSource.new, connection_id: '<id>')
 
 unless res.cdp_source.nil?
   # handle response
@@ -318,11 +311,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.get_cdp_activation(connection_id: '<id>', id: '<id>')
 
 unless res.cdp_activation.nil?
@@ -362,11 +354,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.get_cdp_destination(connection_id: '<id>', id: '<id>')
 
 unless res.cdp_destination.nil?
@@ -406,11 +397,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.get_cdp_event(connection_id: '<id>', id: '<id>')
 
 unless res.cdp_event.nil?
@@ -450,11 +440,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.get_cdp_profile(connection_id: '<id>', id: '<id>')
 
 unless res.cdp_profile.nil?
@@ -494,11 +483,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.get_cdp_segment(connection_id: '<id>', id: '<id>')
 
 unless res.cdp_segment.nil?
@@ -538,11 +526,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.get_cdp_source(connection_id: '<id>', id: '<id>')
 
 unless res.cdp_source.nil?
@@ -582,15 +569,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCdpActivationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCdpActivationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.cdp.list_cdp_activations(request: req)
 
 unless res.cdp_activations.nil?
@@ -627,15 +613,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCdpDestinationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCdpDestinationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.cdp.list_cdp_destinations(request: req)
 
 unless res.cdp_destinations.nil?
@@ -672,15 +657,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCdpEventsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCdpEventsRequest.new(
+  connection_id: '<id>'
+)
 res = s.cdp.list_cdp_events(request: req)
 
 unless res.cdp_events.nil?
@@ -717,15 +701,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCdpProfilesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCdpProfilesRequest.new(
+  connection_id: '<id>'
+)
 res = s.cdp.list_cdp_profiles(request: req)
 
 unless res.cdp_profiles.nil?
@@ -762,15 +745,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCdpSegmentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCdpSegmentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.cdp.list_cdp_segments(request: req)
 
 unless res.cdp_segments.nil?
@@ -807,15 +789,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCdpSourcesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCdpSourcesRequest.new(
+  connection_id: '<id>'
+)
 res = s.cdp.list_cdp_sources(request: req)
 
 unless res.cdp_sources.nil?
@@ -852,17 +833,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCdpActivationRequest.new(
-  cdp_activation: Models::Shared::CdpActivation.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCdpActivationRequest.new(
+  cdp_activation: Models::Shared::CdpActivation.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.patch_cdp_activation(request: req)
 
 unless res.cdp_activation.nil?
@@ -899,17 +879,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCdpDestinationRequest.new(
-  cdp_destination: Models::Shared::CdpDestination.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCdpDestinationRequest.new(
+  cdp_destination: Models::Shared::CdpDestination.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.patch_cdp_destination(request: req)
 
 unless res.cdp_destination.nil?
@@ -946,17 +925,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCdpEventRequest.new(
-  cdp_event: Models::Shared::CdpEvent.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCdpEventRequest.new(
+  cdp_event: Models::Shared::CdpEvent.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.patch_cdp_event(request: req)
 
 unless res.cdp_event.nil?
@@ -993,17 +971,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCdpProfileRequest.new(
-  cdp_profile: Models::Shared::CdpProfile.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCdpProfileRequest.new(
+  cdp_profile: Models::Shared::CdpProfile.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.patch_cdp_profile(request: req)
 
 unless res.cdp_profile.nil?
@@ -1040,17 +1017,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCdpSegmentRequest.new(
-  cdp_segment: Models::Shared::CdpSegment.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCdpSegmentRequest.new(
+  cdp_segment: Models::Shared::CdpSegment.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.patch_cdp_segment(request: req)
 
 unless res.cdp_segment.nil?
@@ -1087,17 +1063,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCdpSourceRequest.new(
-  cdp_source: Models::Shared::CdpSource.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCdpSourceRequest.new(
+  cdp_source: Models::Shared::CdpSource.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.patch_cdp_source(request: req)
 
 unless res.cdp_source.nil?
@@ -1134,11 +1109,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.remove_cdp_activation(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1176,11 +1150,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.remove_cdp_destination(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1218,11 +1191,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.remove_cdp_event(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1260,11 +1232,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.remove_cdp_profile(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1302,11 +1273,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.remove_cdp_segment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1344,11 +1314,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.cdp.remove_cdp_source(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1386,17 +1355,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCdpActivationRequest.new(
-  cdp_activation: Models::Shared::CdpActivation.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCdpActivationRequest.new(
+  cdp_activation: Models::Shared::CdpActivation.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.update_cdp_activation(request: req)
 
 unless res.cdp_activation.nil?
@@ -1433,17 +1401,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCdpDestinationRequest.new(
-  cdp_destination: Models::Shared::CdpDestination.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCdpDestinationRequest.new(
+  cdp_destination: Models::Shared::CdpDestination.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.update_cdp_destination(request: req)
 
 unless res.cdp_destination.nil?
@@ -1480,17 +1447,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCdpEventRequest.new(
-  cdp_event: Models::Shared::CdpEvent.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCdpEventRequest.new(
+  cdp_event: Models::Shared::CdpEvent.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.update_cdp_event(request: req)
 
 unless res.cdp_event.nil?
@@ -1527,17 +1493,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCdpProfileRequest.new(
-  cdp_profile: Models::Shared::CdpProfile.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCdpProfileRequest.new(
+  cdp_profile: Models::Shared::CdpProfile.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.update_cdp_profile(request: req)
 
 unless res.cdp_profile.nil?
@@ -1574,17 +1539,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCdpSegmentRequest.new(
-  cdp_segment: Models::Shared::CdpSegment.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCdpSegmentRequest.new(
+  cdp_segment: Models::Shared::CdpSegment.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.update_cdp_segment(request: req)
 
 unless res.cdp_segment.nil?
@@ -1621,17 +1585,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCdpSourceRequest.new(
-  cdp_source: Models::Shared::CdpSource.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCdpSourceRequest.new(
+  cdp_source: Models::Shared::CdpSource.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.cdp.update_cdp_source(request: req)
 
 unless res.cdp_source.nil?

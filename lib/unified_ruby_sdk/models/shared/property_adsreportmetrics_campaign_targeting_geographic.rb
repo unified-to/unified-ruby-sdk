@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyAdsReportMetricsCampaignTargetingGeographic
         extend T::Sig
@@ -32,7 +31,7 @@ module UnifiedRubySDK
 
         field :postal_codes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('postal_codes') } }
 
-        field :presence_type, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('presence_type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType, true) } }
+        field :presence_type, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('presence_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyAdsReportMetricsCampaignTargetingGeographicPresenceType, true) } }
 
         field :regions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::TargetRef)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('regions') } }
 

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AdsAsset
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # inbound create-only: base64-encoded image/media bytes to upload
         field :content, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :file_size, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('file_size') } }
 
@@ -32,17 +31,17 @@ module UnifiedRubySDK
 
         field :organization_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('organization_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::AdsAssetType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AdsAssetType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AdsAssetType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AdsAssetType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # outbound: public asset URL; inbound (create): source URL to fetch bytes from when content is not supplied
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 
         field :width, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('width') } }
 
-        sig { params(content: T.nilable(::String), created_at: T.nilable(::DateTime), file_size: T.nilable(::Float), height: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), mime_type: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::AdsAssetType), updated_at: T.nilable(::DateTime), url: T.nilable(::String), width: T.nilable(::Float)).void }
+        sig { params(content: T.nilable(::String), created_at: T.nilable(::DateTime), file_size: T.nilable(::Float), height: T.nilable(::Float), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), mime_type: T.nilable(::String), name: T.nilable(::String), organization_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), type: T.nilable(Models::Shared::AdsAssetType), updated_at: T.nilable(::DateTime), url: T.nilable(::String), width: T.nilable(::Float)).void }
         def initialize(content: nil, created_at: nil, file_size: nil, height: nil, id: nil, metadata: nil, mime_type: nil, name: nil, organization_id: nil, raw: nil, type: nil, updated_at: nil, url: nil, width: nil)
           @content = content
           @created_at = created_at

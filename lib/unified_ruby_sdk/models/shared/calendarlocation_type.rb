@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CalendarLocationType < T::Enum
-
-
+      class CalendarLocationType
+        include ::Crystalline::Enum
         enums do
           BUILDING = new('BUILDING')
           FLOOR = new('FLOOR')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           COUNTRY = new('COUNTRY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

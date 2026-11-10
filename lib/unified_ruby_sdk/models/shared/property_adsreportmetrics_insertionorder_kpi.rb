@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyAdsReportMetricsInsertionorderKpi
         extend T::Sig
@@ -22,7 +21,7 @@ module UnifiedRubySDK
 
         field :string_value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('string_value') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsInsertionorderKpiType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsReportMetricsInsertionorderKpiType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PropertyAdsReportMetricsInsertionorderKpiType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyAdsReportMetricsInsertionorderKpiType, true) } }
 
         sig { params(algorithm_id: T.nilable(::String), amount: T.nilable(::Float), percentage: T.nilable(::Float), string_value: T.nilable(::String), type: T.nilable(Models::Shared::PropertyAdsReportMetricsInsertionorderKpiType)).void }
         def initialize(algorithm_id: nil, amount: nil, percentage: nil, string_value: nil, type: nil)

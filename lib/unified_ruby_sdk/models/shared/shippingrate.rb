@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ShippingRate
         extend T::Sig
@@ -28,15 +27,15 @@ module UnifiedRubySDK
 
         field :rates, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ShippingRateRate)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rates') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Latest date to ship (from order) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :ship_by_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ship_by_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :ship_by_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ship_by_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Reference to the shipping object (if rate is for existing shipment)
         field :shipment_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('shipment_id') } }
         # Destination address
         field :to_address, Crystalline::Nilable.new(Models::Shared::PropertyShippingRateToAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to_address') } }
 
-        sig { params(carrier_id: T.nilable(::String), currency: T.nilable(::String), from_address: T.nilable(Models::Shared::PropertyShippingRateFromAddress), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ShippingMetadata]), packages: T.nilable(T::Array[Models::Shared::ShippingPackage]), rates: T.nilable(T::Array[Models::Shared::ShippingRateRate]), raw: T.nilable(T::Hash[Symbol, ::Object]), ship_by_at: T.nilable(::DateTime), shipment_id: T.nilable(::String), to_address: T.nilable(Models::Shared::PropertyShippingRateToAddress)).void }
+        sig { params(carrier_id: T.nilable(::String), currency: T.nilable(::String), from_address: T.nilable(Models::Shared::PropertyShippingRateFromAddress), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ShippingMetadata]), packages: T.nilable(T::Array[Models::Shared::ShippingPackage]), rates: T.nilable(T::Array[Models::Shared::ShippingRateRate]), raw: T.nilable(T::Hash[::Symbol, ::Object]), ship_by_at: T.nilable(::DateTime), shipment_id: T.nilable(::String), to_address: T.nilable(Models::Shared::PropertyShippingRateToAddress)).void }
         def initialize(carrier_id: nil, currency: nil, from_address: nil, id: nil, metadata: nil, packages: nil, rates: nil, raw: nil, ship_by_at: nil, shipment_id: nil, to_address: nil)
           @carrier_id = carrier_id
           @currency = currency

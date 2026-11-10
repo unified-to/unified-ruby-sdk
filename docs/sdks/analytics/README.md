@@ -1,5 +1,4 @@
 # Analytics
-(*analytics*)
 
 ## Overview
 
@@ -30,27 +29,26 @@ Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAnalyticsEvent" method="post" path="/analytics/{connection_id}/event" -->
+<!-- UsageSnippet language="ruby" operationID="createAnalyticsEvent" method="post" path="/analytics/{connection_id}/event" example="analytics_event" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.analytics.create_analytics_event(analytics_event: Models::Shared::AnalyticsEvent.new(
   created_at: DateTime.iso8601('2023-06-21T03:13:22.954Z'),
   event_type: Models::Shared::EventType::SCREEN_VIEW,
-  id: '72e4adeb-a8d3-4604-aef1-01a50e519e3c',
+  id: '328f018c-5ed3-4b93-b138-a63068288929',
   metadata: {
-    "key": Models::Shared::PropertyAnalyticsEventMetadata.new(),
+    'key' => Models::Shared::PropertyAnalyticsEventMetadata.new,
   },
   name: 'page_view',
   page_url: 'https://golden-carboxyl.biz',
-  updated_at: DateTime.iso8601('2023-09-26T04:10:16.533Z'),
+  updated_at: DateTime.iso8601('2023-09-26T07:22:06.178Z')
 ), connection_id: '<id>')
 
 unless res.analytics_event.nil?
@@ -84,24 +82,23 @@ Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" -->
+<!-- UsageSnippet language="ruby" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" example="analytics_property" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.analytics.create_analytics_property(analytics_property: Models::Shared::AnalyticsProperty.new(
   created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
   currency: 'USD',
-  id: '7110bdc8-a2c8-42dd-9630-28ec7f0b40e0',
+  id: '8f4fc4b9-24ef-411a-a1cd-6e1102c55fdb',
   name: 'Daniel, Goldner and Dickinson',
   timezone: 'UTC',
-  updated_at: DateTime.iso8601('2021-09-14T22:38:45.958Z'),
+  updated_at: DateTime.iso8601('2021-09-14T22:50:35.984Z')
 ), connection_id: '<id>')
 
 unless res.analytics_property.nil?
@@ -135,28 +132,27 @@ Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" -->
+<!-- UsageSnippet language="ruby" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" example="analytics_visitor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.analytics.create_analytics_visitor(analytics_visitor: Models::Shared::AnalyticsVisitor.new(
   created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
   email: 'desiree.o.hara@icloud.com',
   first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-  id: 'b0d91122-1dd7-4265-9417-4bd734fa18f9',
-  last_seen_at: DateTime.iso8601('2025-01-25T03:26:30.597Z'),
+  id: 'b5d19870-89ba-4de7-ab32-ff4e04a23db3',
+  last_seen_at: DateTime.iso8601('2025-01-26T09:05:38.301Z'),
   metadata: {
-    "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+    'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
   },
   total_events: 2916.0,
-  updated_at: DateTime.iso8601('2025-07-14T21:39:02.382Z'),
+  updated_at: DateTime.iso8601('2025-07-16T06:12:20.245Z')
 ), connection_id: '<id>')
 
 unless res.analytics_visitor.nil?
@@ -196,11 +192,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.analytics.get_analytics_event(connection_id: '<id>', id: '<id>')
 
 unless res.analytics_event.nil?
@@ -240,11 +235,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.analytics.get_analytics_property(connection_id: '<id>', id: '<id>')
 
 unless res.analytics_property.nil?
@@ -284,11 +278,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.analytics.get_analytics_session(connection_id: '<id>', id: '<id>')
 
 unless res.analytics_session.nil?
@@ -328,11 +321,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.analytics.get_analytics_visitor(connection_id: '<id>', id: '<id>')
 
 unless res.analytics_visitor.nil?
@@ -372,15 +364,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAnalyticsEventsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAnalyticsEventsRequest.new(
+  connection_id: '<id>'
+)
 res = s.analytics.list_analytics_events(request: req)
 
 unless res.analytics_events.nil?
@@ -417,15 +408,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAnalyticsPropertiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAnalyticsPropertiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.analytics.list_analytics_properties(request: req)
 
 unless res.analytics_properties.nil?
@@ -462,15 +452,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAnalyticsReportsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAnalyticsReportsRequest.new(
+  connection_id: '<id>'
+)
 res = s.analytics.list_analytics_reports(request: req)
 
 unless res.analytics_reports.nil?
@@ -507,15 +496,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAnalyticsSessionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAnalyticsSessionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.analytics.list_analytics_sessions(request: req)
 
 unless res.analytics_sessions.nil?
@@ -552,15 +540,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAnalyticsVisitorsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAnalyticsVisitorsRequest.new(
+  connection_id: '<id>'
+)
 res = s.analytics.list_analytics_visitors(request: req)
 
 unless res.analytics_visitors.nil?
@@ -591,30 +578,29 @@ Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsP
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: 'a6810209-8e46-438c-9fae-a2191019b59a',
+    id: '5a2e7913-4a6f-4929-aef8-af7d46a5d0d1',
     name: 'Daniel, Goldner and Dickinson',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T22:38:45.958Z'),
+    updated_at: DateTime.iso8601('2021-09-14T22:50:35.984Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.analytics.patch_analytics_property(request: req)
 
 unless res.analytics_property.nil?
@@ -645,34 +631,33 @@ Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAnalyticsVisitorRequest.new(
   analytics_visitor: Models::Shared::AnalyticsVisitor.new(
     created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
     email: 'desiree.o.hara@icloud.com',
     first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    id: 'e0d4b192-27b4-4d84-89ce-43e82c915af3',
-    last_seen_at: DateTime.iso8601('2025-01-25T03:26:30.603Z'),
+    id: '03c438f4-7635-4b7f-ad70-35c1a769df89',
+    last_seen_at: DateTime.iso8601('2025-01-26T09:05:38.307Z'),
     metadata: {
-      "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+      'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
     },
     total_events: 2916.0,
-    updated_at: DateTime.iso8601('2025-07-14T21:39:02.390Z'),
+    updated_at: DateTime.iso8601('2025-07-16T06:12:20.252Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.analytics.patch_analytics_visitor(request: req)
 
 unless res.analytics_visitor.nil?
@@ -709,11 +694,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.analytics.remove_analytics_property(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -751,11 +735,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.analytics.remove_analytics_visitor(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -787,30 +770,29 @@ Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsP
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAnalyticsPropertyRequest.new(
   analytics_property: Models::Shared::AnalyticsProperty.new(
     created_at: DateTime.iso8601('2021-09-05T19:04:58.430Z'),
     currency: 'USD',
-    id: 'a6810209-8e46-438c-9fae-a2191019b59a',
+    id: '5a2e7913-4a6f-4929-aef8-af7d46a5d0d1',
     name: 'Daniel, Goldner and Dickinson',
     timezone: 'UTC',
-    updated_at: DateTime.iso8601('2021-09-14T22:38:45.958Z'),
+    updated_at: DateTime.iso8601('2021-09-14T22:50:35.984Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.analytics.update_analytics_property(request: req)
 
 unless res.analytics_property.nil?
@@ -841,34 +823,33 @@ Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAnalyticsVisitorRequest.new(
   analytics_visitor: Models::Shared::AnalyticsVisitor.new(
     created_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
     email: 'desiree.o.hara@icloud.com',
     first_seen_at: DateTime.iso8601('2020-04-16T20:29:48.281Z'),
-    id: 'e0d4b192-27b4-4d84-89ce-43e82c915af3',
-    last_seen_at: DateTime.iso8601('2025-01-25T03:26:30.603Z'),
+    id: '03c438f4-7635-4b7f-ad70-35c1a769df89',
+    last_seen_at: DateTime.iso8601('2025-01-26T09:05:38.307Z'),
     metadata: {
-      "segment": Models::Shared::PropertyAnalyticsVisitorMetadata.new(),
+      'segment' => Models::Shared::PropertyAnalyticsVisitorMetadata.new,
     },
     total_events: 2916.0,
-    updated_at: DateTime.iso8601('2025-07-14T21:39:02.390Z'),
+    updated_at: DateTime.iso8601('2025-07-16T06:12:20.252Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.analytics.update_analytics_visitor(request: req)
 
 unless res.analytics_visitor.nil?

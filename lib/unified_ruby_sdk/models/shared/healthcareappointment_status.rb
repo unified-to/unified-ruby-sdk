@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareAppointmentStatus - Status of the appointment
-      class HealthcareAppointmentStatus < T::Enum
-
-
+      class HealthcareAppointmentStatus
+        include ::Crystalline::Enum
         enums do
           PROPOSED = new('PROPOSED')
           PENDING = new('PENDING')
@@ -25,6 +23,7 @@ module UnifiedRubySDK
           ENTERED_IN_ERROR = new('ENTERED_IN_ERROR')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

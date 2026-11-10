@@ -1,5 +1,13 @@
 # ListHealthcareCoveragesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListHealthcareCoveragesQueryParamFields::ID
+```
+
 
 ## Values
 

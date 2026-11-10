@@ -13,13 +13,13 @@ module UnifiedRubySDK
       sig { returns(SDKConfiguration) }
       attr_accessor :config
 
-      sig { returns(String) }
+      sig { returns(::String) }
       attr_accessor :base_url
 
-      sig { returns(T.nilable(T::Array[String])) }
+      sig { returns(T.nilable(T::Array[::String])) }
       attr_accessor :oauth2_scopes
 
-      sig { returns(String) }
+      sig { returns(::String) }
       attr_accessor :operation_id
 
       sig { returns(T.nilable(T.proc.returns(T.untyped))) }
@@ -28,17 +28,17 @@ module UnifiedRubySDK
       sig do
         params(
           config: SDKConfiguration,
-          base_url: String,
-          oauth2_scopes: T.nilable(T::Array[String]),
-          operation_id: String,
+          base_url: ::String,
+          oauth2_scopes: T.nilable(T::Array[::String]),
+          operation_id: ::String,
           security_source: T.nilable(T.proc.returns(T.untyped))
         ).void
       end
       def initialize(config:, base_url:, oauth2_scopes:, operation_id:, security_source:)
         @config = T.let(config, SDKConfiguration)
-        @base_url = T.let(base_url, String)
-        @oauth2_scopes = T.let(oauth2_scopes, T.nilable(T::Array[String]))
-        @operation_id = T.let(operation_id, String)
+        @base_url = T.let(base_url, ::String)
+        @oauth2_scopes = T.let(oauth2_scopes, T.nilable(T::Array[::String]))
+        @operation_id = T.let(operation_id, ::String)
         @security_source = T.let(security_source, T.nilable(T.proc.returns(T.untyped)))
       end
     end
@@ -107,7 +107,7 @@ module UnifiedRubySDK
 
       sig { overridable.params(config: SDKConfiguration).returns(SDKConfiguration) }
       def sdk_init(config:)
-        Kernel.raise NotImplementedError.new
+        ::Kernel.raise ::NotImplementedError.new
       end
     end
 
@@ -123,7 +123,7 @@ module UnifiedRubySDK
         ).returns(Faraday::Request)
       end
       def before_request(hook_ctx:, request:)
-        Kernel.raise NotImplementedError.new
+        ::Kernel.raise ::NotImplementedError.new
       end
     end
 
@@ -139,7 +139,7 @@ module UnifiedRubySDK
         ).returns(Faraday::Response)
       end
       def after_success(hook_ctx:, response:)
-        Kernel.raise NotImplementedError.new
+        ::Kernel.raise ::NotImplementedError.new
       end
     end
 
@@ -150,13 +150,13 @@ module UnifiedRubySDK
 
       sig do
         overridable.params(
-          error: T.nilable(StandardError),
+          error: T.nilable(::StandardError),
           hook_ctx: AfterErrorHookContext,
           response: T.nilable(Faraday::Response)
         ).returns(T.nilable(Faraday::Response))
       end
       def after_error(error:, hook_ctx:, response:)
-        Kernel.raise NotImplementedError.new
+        ::Kernel.raise ::NotImplementedError.new
       end
     end
 

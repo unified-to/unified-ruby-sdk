@@ -1,5 +1,13 @@
 # UpdateTaskTaskQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateTaskTaskQueryParamFields::ID
+```
+
 
 ## Values
 

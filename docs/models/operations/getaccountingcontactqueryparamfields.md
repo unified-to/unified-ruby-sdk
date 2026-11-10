@@ -1,5 +1,13 @@
 # GetAccountingContactQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetAccountingContactQueryParamFields::ID
+```
+
 
 ## Values
 

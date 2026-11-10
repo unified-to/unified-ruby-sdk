@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Postal address of the contact person
       class PropertyHealthcarePatientContactAddress
         extend T::Sig

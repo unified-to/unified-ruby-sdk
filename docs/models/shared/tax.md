@@ -2,6 +2,17 @@
 
 Tax describes the tax treatment of the benefit
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = Tax::PRE_TAX
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = Tax.deserialize("custom_value")
+```
+
 
 ## Values
 

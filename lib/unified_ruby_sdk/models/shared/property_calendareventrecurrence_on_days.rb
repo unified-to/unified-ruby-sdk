@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyCalendarEventRecurrenceOnDays < T::Enum
-
-
+      class PropertyCalendarEventRecurrenceOnDays
+        include ::Crystalline::Enum
         enums do
           SU = new('SU')
           MO = new('MO')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           FR = new('FR')
           SA = new('SA')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,4 @@
 # Employee
-(*employee*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" example="hris_employee" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.new(
   address: Models::Shared::PropertyHrisEmployeeAddress.new(
     address1: '7431 Hintz Parkway',
@@ -37,7 +35,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
     country_code: 'US',
     postal_code: '01711',
     region: 'Missouri',
-    region_code: 'TN',
+    region_code: 'TN'
   ),
   bio: 'fun advocate  🇱🇻',
   compensation: [
@@ -46,7 +44,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
       currency: 'USD',
       frequency: Models::Shared::HrisCompensationFrequency::YEAR,
       notes: 'Eius.',
-      type: Models::Shared::HrisCompensationType::OTHER,
+      type: Models::Shared::HrisCompensationType::OTHER
     ),
   ],
   created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
@@ -55,7 +53,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   emails: [
     Models::Shared::HrisEmail.new(
       email: 'zetta.prohaska@insidious-stump.net',
-      type: Models::Shared::HrisEmailType::WORK,
+      type: Models::Shared::HrisEmailType::WORK
     ),
   ],
   employee_number: 'uCk3qaL1ei',
@@ -66,7 +64,7 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   gender: Models::Shared::HrisEmployeeGender::MALE,
   has_mfa: true,
   hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-  id: '113b2952-6e21-49ab-a9a6-51f0e062519a',
+  id: '0f81f2df-c93d-4195-af31-cf6959300afc',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
   language_locale: 'in',
   last_name: 'Prohaska',
@@ -75,13 +73,13 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   metadata: [
     Models::Shared::HrisMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::HrisMetadataFormat::TEXT,
-      id: 'ba44329d-b516-4ae8-a97a-e1fb0a0626d3',
+      id: 'f38b5295-8160-4e67-8422-a7c76ddb64bf',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'tutis',
+      value: 'tutis'
     ),
   ],
   name: 'Zetta Prohaska',
@@ -91,20 +89,20 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
     Models::Shared::HrisEmployeerelationship.new(
       emails: [
         Models::Shared::HrisEmail.new(
-          email: 'keith.prohaska@gmail.com',
+          email: 'keith.prohaska@gmail.com'
         ),
       ],
       name: 'Keith Prohaska',
-      type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+      type: Models::Shared::HrisEmployeerelationshipType::SIBLING
     ),
     Models::Shared::HrisEmployeerelationship.new(
       emails: [
         Models::Shared::HrisEmail.new(
-          email: 'keely.prohaska@icloud.com',
+          email: 'keely.prohaska@icloud.com'
         ),
       ],
       name: 'Keely Prohaska',
-      type: Models::Shared::HrisEmployeerelationshipType::OTHER,
+      type: Models::Shared::HrisEmployeerelationshipType::OTHER
     ),
   ],
   salutation: 'Ms.',
@@ -115,18 +113,18 @@ res = s.employee.create_hris_employee(hris_employee: Models::Shared::HrisEmploye
   telephones: [
     Models::Shared::HrisTelephone.new(
       telephone: '(320) 980-1370',
-      type: Models::Shared::HrisTelephoneType::HOME,
+      type: Models::Shared::HrisTelephoneType::HOME
     ),
     Models::Shared::HrisTelephone.new(
       telephone: '(694) 840-0166',
-      type: Models::Shared::HrisTelephoneType::FAX,
+      type: Models::Shared::HrisTelephoneType::FAX
     ),
   ],
   timeoff_days_total: 17.0,
   timeoff_days_used: 9.0,
   timezone: 'Europe/Ljubljana',
   title: 'District Branding Specialist',
-  updated_at: DateTime.iso8601('2020-07-21T10:10:14.689Z'),
+  updated_at: DateTime.iso8601('2020-07-21T14:59:28.818Z')
 ), connection_id: '<id>')
 
 unless res.hris_employee.nil?
@@ -166,11 +164,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.employee.get_hris_employee(connection_id: '<id>', id: '<id>')
 
 unless res.hris_employee.nil?
@@ -210,15 +207,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisEmployeesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisEmployeesRequest.new(
+  connection_id: '<id>'
+)
 res = s.employee.list_hris_employees(request: req)
 
 unless res.hris_employees.nil?
@@ -249,16 +245,16 @@ Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisEmployeeRequest.new(
   hris_employee: Models::Shared::HrisEmployee.new(
@@ -269,7 +265,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
       country_code: 'US',
       postal_code: '01711',
       region: 'Missouri',
-      region_code: 'TN',
+      region_code: 'TN'
     ),
     bio: 'fun advocate  🇱🇻',
     compensation: [
@@ -278,7 +274,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
         currency: 'USD',
         frequency: Models::Shared::HrisCompensationFrequency::YEAR,
         notes: 'Eius.',
-        type: Models::Shared::HrisCompensationType::OTHER,
+        type: Models::Shared::HrisCompensationType::OTHER
       ),
     ],
     created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
@@ -287,7 +283,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     emails: [
       Models::Shared::HrisEmail.new(
         email: 'zetta.prohaska@insidious-stump.net',
-        type: Models::Shared::HrisEmailType::WORK,
+        type: Models::Shared::HrisEmailType::WORK
       ),
     ],
     employee_number: 'uCk3qaL1ei',
@@ -298,7 +294,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '388159cb-7232-481d-a701-64bd83f6f9cf',
+    id: '55c70939-3b65-4955-9f68-52fff74e27af',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -307,13 +303,13 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     metadata: [
       Models::Shared::HrisMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '815d115a-757b-46c6-b01d-59ccf3c0e19b',
+        id: 'fa6b7c4f-0570-4f11-a440-8d3258318f35',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'tutis',
+        value: 'tutis'
       ),
     ],
     name: 'Zetta Prohaska',
@@ -323,20 +319,20 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keith.prohaska@gmail.com',
+            email: 'keith.prohaska@gmail.com'
           ),
         ],
         name: 'Keith Prohaska',
-        type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+        type: Models::Shared::HrisEmployeerelationshipType::SIBLING
       ),
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keely.prohaska@icloud.com',
+            email: 'keely.prohaska@icloud.com'
           ),
         ],
         name: 'Keely Prohaska',
-        type: Models::Shared::HrisEmployeerelationshipType::OTHER,
+        type: Models::Shared::HrisEmployeerelationshipType::OTHER
       ),
     ],
     salutation: 'Ms.',
@@ -347,23 +343,22 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     telephones: [
       Models::Shared::HrisTelephone.new(
         telephone: '(320) 980-1370',
-        type: Models::Shared::HrisTelephoneType::HOME,
+        type: Models::Shared::HrisTelephoneType::HOME
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(694) 840-0166',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
     ],
     timeoff_days_total: 17.0,
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-21T10:10:14.702Z'),
+    updated_at: DateTime.iso8601('2020-07-21T14:59:28.830Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.employee.patch_hris_employee(request: req)
 
 unless res.hris_employee.nil?
@@ -400,11 +395,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.employee.remove_hris_employee(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -436,16 +430,16 @@ Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisEmployeeRequest.new(
   hris_employee: Models::Shared::HrisEmployee.new(
@@ -456,7 +450,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
       country_code: 'US',
       postal_code: '01711',
       region: 'Missouri',
-      region_code: 'TN',
+      region_code: 'TN'
     ),
     bio: 'fun advocate  🇱🇻',
     compensation: [
@@ -465,7 +459,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
         currency: 'USD',
         frequency: Models::Shared::HrisCompensationFrequency::YEAR,
         notes: 'Eius.',
-        type: Models::Shared::HrisCompensationType::OTHER,
+        type: Models::Shared::HrisCompensationType::OTHER
       ),
     ],
     created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
@@ -474,7 +468,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     emails: [
       Models::Shared::HrisEmail.new(
         email: 'zetta.prohaska@insidious-stump.net',
-        type: Models::Shared::HrisEmailType::WORK,
+        type: Models::Shared::HrisEmailType::WORK
       ),
     ],
     employee_number: 'uCk3qaL1ei',
@@ -485,7 +479,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '388159cb-7232-481d-a701-64bd83f6f9cf',
+    id: '55c70939-3b65-4955-9f68-52fff74e27af',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -494,13 +488,13 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     metadata: [
       Models::Shared::HrisMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '815d115a-757b-46c6-b01d-59ccf3c0e19b',
+        id: 'fa6b7c4f-0570-4f11-a440-8d3258318f35',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'tutis',
+        value: 'tutis'
       ),
     ],
     name: 'Zetta Prohaska',
@@ -510,20 +504,20 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keith.prohaska@gmail.com',
+            email: 'keith.prohaska@gmail.com'
           ),
         ],
         name: 'Keith Prohaska',
-        type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+        type: Models::Shared::HrisEmployeerelationshipType::SIBLING
       ),
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keely.prohaska@icloud.com',
+            email: 'keely.prohaska@icloud.com'
           ),
         ],
         name: 'Keely Prohaska',
-        type: Models::Shared::HrisEmployeerelationshipType::OTHER,
+        type: Models::Shared::HrisEmployeerelationshipType::OTHER
       ),
     ],
     salutation: 'Ms.',
@@ -534,23 +528,22 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     telephones: [
       Models::Shared::HrisTelephone.new(
         telephone: '(320) 980-1370',
-        type: Models::Shared::HrisTelephoneType::HOME,
+        type: Models::Shared::HrisTelephoneType::HOME
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(694) 840-0166',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
     ],
     timeoff_days_total: 17.0,
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-21T10:10:14.702Z'),
+    updated_at: DateTime.iso8601('2020-07-21T14:59:28.830Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.employee.update_hris_employee(request: req)
 
 unless res.hris_employee.nil?

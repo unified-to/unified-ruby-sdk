@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class CreateDatastoreQueryQueryParamFields < T::Enum
-
-
         enums do
           TABLE_ID = new('table_id')
           DATABASE_ID = new('database_id')

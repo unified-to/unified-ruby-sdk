@@ -1,5 +1,13 @@
 # CreatePlmBomlineQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreatePlmBomlineQueryParamFields::ID
+```
+
 
 ## Values
 

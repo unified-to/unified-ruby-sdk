@@ -1,5 +1,13 @@
 # GetHrisJobQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetHrisJobQueryParamFields::ID
+```
+
 
 ## Values
 

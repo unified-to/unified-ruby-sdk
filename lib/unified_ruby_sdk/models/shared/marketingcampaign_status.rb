@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # MarketingCampaignStatus - Campaign status
-      class MarketingCampaignStatus < T::Enum
-
-
+      class MarketingCampaignStatus
+        include ::Crystalline::Enum
         enums do
           DRAFT = new('DRAFT')
           SCHEDULED = new('SCHEDULED')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           ARCHIVED = new('ARCHIVED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

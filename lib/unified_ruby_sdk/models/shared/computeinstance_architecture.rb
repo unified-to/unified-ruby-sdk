@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeInstanceArchitecture - CPU architecture
-      class ComputeInstanceArchitecture < T::Enum
-
-
+      class ComputeInstanceArchitecture
+        include ::Crystalline::Enum
         enums do
           X86_64 = new('X86_64')
           ARM64 = new('ARM64')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

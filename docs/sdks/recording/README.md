@@ -1,5 +1,4 @@
 # Recording
-(*recording*)
 
 ## Overview
 
@@ -20,51 +19,50 @@ Creates a UcRecording. Provide the unified UcRecording fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="ruby" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" example="uc_recording" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.recording.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(
   contacts: [],
-  conversation_identifier: 'b1008485-b423-486c-991b-2e01ae71ec72',
+  conversation_identifier: '1b6746f4-2787-4a9f-98e9-9b0a3be865c1',
   created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-  end_at: DateTime.iso8601('2024-05-12T13:37:26.999Z'),
-  expires_at: DateTime.iso8601('2026-05-13T12:31:00.606Z'),
-  id: 'b1008485-b423-486c-991b-2e01ae71ec72',
+  end_at: DateTime.iso8601('2024-05-13T05:51:23.432Z'),
+  expires_at: DateTime.iso8601('2026-05-15T00:26:03.152Z'),
+  id: '1b6746f4-2787-4a9f-98e9-9b0a3be865c1',
   media: [
     Models::Shared::UcRecordingMedia.new(
-      end_at: DateTime.iso8601('2024-04-08T23:09:47.415Z'),
+      end_at: DateTime.iso8601('2024-04-09T14:29:26.075Z'),
       language: 'en',
       recording_download_url: 'https://parched-wasabi.com/',
-      start_at: DateTime.iso8601('2026-06-01T10:16:52.549Z'),
+      start_at: DateTime.iso8601('2026-06-02T22:42:28.118Z'),
       transcript_download_url: 'https://colossal-cuckoo.name',
       transcripts: [
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2026-03-12T11:38:18.921Z'),
-          start_at: DateTime.iso8601('2024-06-10T04:23:33.579Z'),
-          text: 'Turpis maiores ducimus tero speculum.',
+          end_at: DateTime.iso8601('2026-03-13T21:53:07.008Z'),
+          start_at: DateTime.iso8601('2024-06-10T21:23:44.276Z'),
+          text: 'Turpis maiores ducimus tero speculum.'
         ),
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2024-10-22T03:55:02.351Z'),
-          start_at: DateTime.iso8601('2026-08-20T21:06:43.257Z'),
-          text: 'Magnam consuasor uxor tergiversatio subseco.',
+          end_at: DateTime.iso8601('2024-10-23T00:31:42.453Z'),
+          start_at: DateTime.iso8601('2026-08-22T11:42:18.592Z'),
+          text: 'Magnam consuasor uxor tergiversatio subseco.'
         ),
-      ],
+      ]
     ),
   ],
   metadata: [],
-  start_at: DateTime.iso8601('2023-04-30T13:49:22.249Z'),
+  start_at: DateTime.iso8601('2023-04-30T19:52:32.315Z'),
   type: Models::Shared::UcRecordingType::OUTBOUND,
-  updated_at: DateTime.iso8601('2025-03-28T01:08:18.622Z'),
+  updated_at: DateTime.iso8601('2025-03-29T01:58:28.677Z'),
   user_phone: '1-915-327-0429 x509',
-  web_url: 'https://spherical-comparison.org',
+  web_url: 'https://spherical-comparison.org'
 ), connection_id: '<id>')
 
 unless res.uc_recording.nil?
@@ -104,11 +102,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.recording.get_calendar_recording(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_recording.nil?
@@ -148,11 +145,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.recording.get_uc_recording(connection_id: '<id>', id: '<id>')
 
 unless res.uc_recording.nil?
@@ -192,15 +188,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarRecordingsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarRecordingsRequest.new(
+  connection_id: '<id>'
+)
 res = s.recording.list_calendar_recordings(request: req)
 
 unless res.calendar_recordings.nil?
@@ -237,15 +232,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcRecordingsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcRecordingsRequest.new(
+  connection_id: '<id>'
+)
 res = s.recording.list_uc_recordings(request: req)
 
 unless res.uc_recordings.nil?
@@ -276,57 +270,56 @@ Updates the UcRecording identified by `id`. Provide the unified UcRecording fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: 'bc0684eb-4e90-4aaa-ad9c-770384d9e89e',
+    conversation_identifier: '98cf867c-9fe7-4047-a902-06ba06dc0c5a',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-12T13:37:27.012Z'),
-    expires_at: DateTime.iso8601('2026-05-13T12:31:00.635Z'),
-    id: 'bc0684eb-4e90-4aaa-ad9c-770384d9e89e',
+    end_at: DateTime.iso8601('2024-05-13T05:51:23.446Z'),
+    expires_at: DateTime.iso8601('2026-05-15T00:26:03.183Z'),
+    id: '98cf867c-9fe7-4047-a902-06ba06dc0c5a',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-08T23:09:47.427Z'),
+        end_at: DateTime.iso8601('2024-04-09T14:29:26.089Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-06-01T10:16:52.579Z'),
+        start_at: DateTime.iso8601('2026-06-02T22:42:28.149Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-03-12T11:38:18.948Z'),
-            start_at: DateTime.iso8601('2024-06-10T04:23:33.593Z'),
-            text: 'Turpis maiores ducimus tero speculum.',
+            end_at: DateTime.iso8601('2026-03-13T21:53:07.037Z'),
+            start_at: DateTime.iso8601('2024-06-10T21:23:44.291Z'),
+            text: 'Turpis maiores ducimus tero speculum.'
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-22T03:55:02.367Z'),
-            start_at: DateTime.iso8601('2026-08-20T21:06:43.287Z'),
-            text: 'Magnam consuasor uxor tergiversatio subseco.',
+            end_at: DateTime.iso8601('2024-10-23T00:31:42.470Z'),
+            start_at: DateTime.iso8601('2026-08-22T11:42:18.625Z'),
+            text: 'Magnam consuasor uxor tergiversatio subseco.'
           ),
-        ],
+        ]
       ),
     ],
     metadata: [],
-    start_at: DateTime.iso8601('2023-04-30T13:49:22.254Z'),
+    start_at: DateTime.iso8601('2023-04-30T19:52:32.320Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-28T01:08:18.642Z'),
+    updated_at: DateTime.iso8601('2025-03-29T01:58:28.699Z'),
     user_phone: '1-915-327-0429 x509',
-    web_url: 'https://spherical-comparison.org',
+    web_url: 'https://spherical-comparison.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.recording.patch_uc_recording(request: req)
 
 unless res.uc_recording.nil?
@@ -363,11 +356,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.recording.remove_uc_recording(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -399,57 +391,56 @@ Updates the UcRecording identified by `id`. Provide the unified UcRecording fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: 'bc0684eb-4e90-4aaa-ad9c-770384d9e89e',
+    conversation_identifier: '98cf867c-9fe7-4047-a902-06ba06dc0c5a',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-12T13:37:27.012Z'),
-    expires_at: DateTime.iso8601('2026-05-13T12:31:00.635Z'),
-    id: 'bc0684eb-4e90-4aaa-ad9c-770384d9e89e',
+    end_at: DateTime.iso8601('2024-05-13T05:51:23.446Z'),
+    expires_at: DateTime.iso8601('2026-05-15T00:26:03.183Z'),
+    id: '98cf867c-9fe7-4047-a902-06ba06dc0c5a',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-08T23:09:47.427Z'),
+        end_at: DateTime.iso8601('2024-04-09T14:29:26.089Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-06-01T10:16:52.579Z'),
+        start_at: DateTime.iso8601('2026-06-02T22:42:28.149Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-03-12T11:38:18.948Z'),
-            start_at: DateTime.iso8601('2024-06-10T04:23:33.593Z'),
-            text: 'Turpis maiores ducimus tero speculum.',
+            end_at: DateTime.iso8601('2026-03-13T21:53:07.037Z'),
+            start_at: DateTime.iso8601('2024-06-10T21:23:44.291Z'),
+            text: 'Turpis maiores ducimus tero speculum.'
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-22T03:55:02.367Z'),
-            start_at: DateTime.iso8601('2026-08-20T21:06:43.287Z'),
-            text: 'Magnam consuasor uxor tergiversatio subseco.',
+            end_at: DateTime.iso8601('2024-10-23T00:31:42.470Z'),
+            start_at: DateTime.iso8601('2026-08-22T11:42:18.625Z'),
+            text: 'Magnam consuasor uxor tergiversatio subseco.'
           ),
-        ],
+        ]
       ),
     ],
     metadata: [],
-    start_at: DateTime.iso8601('2023-04-30T13:49:22.254Z'),
+    start_at: DateTime.iso8601('2023-04-30T19:52:32.320Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-28T01:08:18.642Z'),
+    updated_at: DateTime.iso8601('2025-03-29T01:58:28.699Z'),
     user_phone: '1-915-327-0429 x509',
-    web_url: 'https://spherical-comparison.org',
+    web_url: 'https://spherical-comparison.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.recording.update_uc_recording(request: req)
 
 unless res.uc_recording.nil?

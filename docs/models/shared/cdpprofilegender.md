@@ -2,6 +2,17 @@
 
 The gender of the profile
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CdpProfileGender::MALE
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = CdpProfileGender.deserialize("custom_value")
+```
+
 
 ## Values
 

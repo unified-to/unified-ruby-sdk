@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ShippingTrackingEvent
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # Carrier's status code at this event
         field :carrier_status_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('carrier_status_code') } }
         # The date that this tracking event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Description of the tracking event
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # Carrier-specific event code
@@ -32,7 +31,7 @@ module UnifiedRubySDK
         # Who signed for delivery
         field :signed_by, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('signed_by') } }
         # Status at the time of this event
-        field :status, Crystalline::Nilable.new(Models::Shared::ShippingTrackingEventStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::ShippingTrackingEventStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::ShippingTrackingEventStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ShippingTrackingEventStatus, true) } }
 
         sig { params(carrier_status_code: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), event_code: T.nilable(::String), location_address: T.nilable(Models::Shared::PropertyShippingTrackingEventLocationAddress), location_id: T.nilable(::String), location_name: T.nilable(::String), notes: T.nilable(::String), signed_by: T.nilable(::String), status: T.nilable(Models::Shared::ShippingTrackingEventStatus)).void }
         def initialize(carrier_status_code: nil, created_at: nil, description: nil, event_code: nil, location_address: nil, location_id: nil, location_name: nil, notes: nil, signed_by: nil, status: nil)

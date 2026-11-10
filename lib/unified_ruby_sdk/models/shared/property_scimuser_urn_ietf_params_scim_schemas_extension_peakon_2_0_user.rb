@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20User
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :date_of_birth, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Date of Birth'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :date_of_birth, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Date of Birth'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :gender, Crystalline::Nilable.new(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Gender'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender, true) } }
+        field :gender, Crystalline::Nilable.new(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Gender'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender, true) } }
 
         field :manager, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('Manager') } }
 

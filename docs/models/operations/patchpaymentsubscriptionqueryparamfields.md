@@ -1,5 +1,13 @@
 # PatchPaymentSubscriptionQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchPaymentSubscriptionQueryParamFields::ID
+```
+
 
 ## Values
 

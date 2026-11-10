@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # The address of the person
       class PropertyEnrichPersonAddress
         extend T::Sig

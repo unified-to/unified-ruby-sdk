@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Structured postal address
       class PropertySocialProfileAddress
         extend T::Sig

@@ -1,5 +1,13 @@
 # CreateHrisBankaccountQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateHrisBankaccountQueryParamFields::ID
+```
+
 
 ## Values
 

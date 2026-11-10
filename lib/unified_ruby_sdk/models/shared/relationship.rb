@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Relationship - Relationship of the patient to the policy holder
-      class Relationship < T::Enum
-
-
+      class Relationship
+        include ::Crystalline::Enum
         enums do
           SELF = new('SELF')
           SPOUSE = new('SPOUSE')
           CHILD = new('CHILD')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

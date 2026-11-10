@@ -2,6 +2,17 @@
 
 unified, normalized document type (OTHER when unmappable)
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HrisDocumentType::CONTRACT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HrisDocumentType.deserialize("custom_value")
+```
+
 
 ## Values
 

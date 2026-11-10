@@ -1,5 +1,4 @@
 # Bankaccount
-(*bankaccount*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" example="hris_bankaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bankaccount.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBankaccount.new(
   account_number: '****3777',
   account_number_last4: '3777',
@@ -37,7 +35,7 @@ res = s.bankaccount.create_hris_bankaccount(hris_bankaccount: Models::Shared::Hr
   country_code: 'US',
   created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
   currency: 'USD',
-  id: '6d408758-6447-40e9-b8bf-1d3536e95a2a',
+  id: 'da6ab065-378c-4e54-82bc-8d0951722f1d',
   is_primary: true,
   metadata: [],
   name: 'Granville Schumm - Checking',
@@ -45,7 +43,7 @@ res = s.bankaccount.create_hris_bankaccount(hris_bankaccount: Models::Shared::Hr
   routing_number: '448650724',
   split_amount: 98.0,
   split_type: Models::Shared::SplitType::PERCENTAGE,
-  updated_at: DateTime.iso8601('2025-07-16T16:33:11.591Z'),
+  updated_at: DateTime.iso8601('2025-07-18T01:37:34.022Z')
 ), connection_id: '<id>')
 
 unless res.hris_bankaccount.nil?
@@ -85,11 +83,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bankaccount.get_hris_bankaccount(connection_id: '<id>', id: '<id>')
 
 unless res.hris_bankaccount.nil?
@@ -129,15 +126,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisBankaccountsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisBankaccountsRequest.new(
+  connection_id: '<id>'
+)
 res = s.bankaccount.list_hris_bankaccounts(request: req)
 
 unless res.hris_bankaccounts.nil?
@@ -168,16 +164,16 @@ Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankacco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisBankaccountRequest.new(
   hris_bankaccount: Models::Shared::HrisBankaccount.new(
@@ -188,7 +184,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '0d28e4dd-5731-4c13-b1ac-2931a0103353',
+    id: 'c0221f26-6f69-408f-a1c9-d074ac4d7b5f',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -196,12 +192,11 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-16T16:33:11.609Z'),
+    updated_at: DateTime.iso8601('2025-07-18T01:37:34.036Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.bankaccount.patch_hris_bankaccount(request: req)
 
 unless res.hris_bankaccount.nil?
@@ -238,11 +233,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bankaccount.remove_hris_bankaccount(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -274,16 +268,16 @@ Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankacco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisBankaccountRequest.new(
   hris_bankaccount: Models::Shared::HrisBankaccount.new(
@@ -294,7 +288,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '0d28e4dd-5731-4c13-b1ac-2931a0103353',
+    id: 'c0221f26-6f69-408f-a1c9-d074ac4d7b5f',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -302,12 +296,11 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-16T16:33:11.609Z'),
+    updated_at: DateTime.iso8601('2025-07-18T01:37:34.036Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.bankaccount.update_hris_bankaccount(request: req)
 
 unless res.hris_bankaccount.nil?

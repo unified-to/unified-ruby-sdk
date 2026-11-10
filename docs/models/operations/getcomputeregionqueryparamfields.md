@@ -1,5 +1,13 @@
 # GetComputeRegionQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetComputeRegionQueryParamFields::ID
+```
+
 
 ## Values
 

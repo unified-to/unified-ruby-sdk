@@ -1,5 +1,13 @@
 # UpdateCrmLeadQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateCrmLeadQueryParamFields::ID
+```
+
 
 ## Values
 

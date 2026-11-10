@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class WorkspaceIntegration
         extend T::Sig
@@ -22,7 +21,7 @@ module UnifiedRubySDK
 
         field :auth, Crystalline::Nilable.new(Models::Shared::PropertyWorkspaceIntegrationAuth), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth') } }
         # the authentication method to use for this workspace integration; when set, it overrides the default auth-method selection (e.g. force 'token' even when Unified OAUTH credentials exist)
-        field :auth_type, Crystalline::Nilable.new(Models::Shared::AuthType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth_type'), 'decoder': Utils.enum_from_string(Models::Shared::AuthType, true) } }
+        field :auth_type, Crystalline::Nilable.new(Models::Shared::AuthType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('auth_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AuthType, true) } }
 
         field :authorize_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('authorize_url') } }
 
@@ -30,7 +29,7 @@ module UnifiedRubySDK
         # derived from `permissions` (plus the auth, passthrough and saml categories, which have no permissions)
         field :categories, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyWorkspaceIntegrationCategories)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Post-OAuth failure URL for marketplace installs. Used by `/oauth/code/{workspace}/{env}/{integration}`.
         field :failure_redirect, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('failure_redirect') } }
 
@@ -52,7 +51,7 @@ module UnifiedRubySDK
 
         field :token_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('token_url') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :use_unified_redirect, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('use_unified_redirect') } }
         # (reference to KmsSpace)

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Trigger - What started the deployment
-      class Trigger < T::Enum
-
-
+      class Trigger
+        include ::Crystalline::Enum
         enums do
           GIT = new('GIT')
           MANUAL = new('MANUAL')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           ROLLBACK = new('ROLLBACK')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

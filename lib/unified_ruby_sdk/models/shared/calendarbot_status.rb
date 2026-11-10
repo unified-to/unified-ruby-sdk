@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CalendarBotStatus < T::Enum
-
-
+      class CalendarBotStatus
+        include ::Crystalline::Enum
         enums do
           READY = new('READY')
           JOINING_CALL = new('JOINING_CALL')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           DONE = new('DONE')
           FATAL = new('FATAL')
         end
+        open!
       end
     end
   end

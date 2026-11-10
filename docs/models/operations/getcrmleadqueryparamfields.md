@@ -1,5 +1,13 @@
 # GetCrmLeadQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetCrmLeadQueryParamFields::ID
+```
+
 
 ## Values
 

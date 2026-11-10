@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HrisTaxonomyType - the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation
-      class HrisTaxonomyType < T::Enum
-
-
+      class HrisTaxonomyType
+        include ::Crystalline::Enum
         enums do
           SKILL = new('SKILL')
           KNOWLEDGE = new('KNOWLEDGE')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           HOLIDAY = new('HOLIDAY')
           LEAVE = new('LEAVE')
         end
+        open!
       end
     end
   end

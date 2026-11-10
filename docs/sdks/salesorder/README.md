@@ -1,5 +1,4 @@
 # Salesorder
-(*salesorder*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" example="accounting_salesorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::Shared::AccountingSalesorder.new(
   billing_address: Models::Shared::PropertyAccountingSalesorderBillingAddress.new(
     address1: '26530 Stroman Rest',
@@ -37,16 +35,16 @@ res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::S
     country_code: 'US',
     postal_code: '05015-8546',
     region: 'Louisiana',
-    region_code: 'MO',
+    region_code: 'MO'
   ),
   category_ids: [],
-  closed_at: DateTime.iso8601('2023-03-30T06:20:38.024Z'),
+  closed_at: DateTime.iso8601('2023-03-30T16:28:25.484Z'),
   created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
   currency: 'USD',
   discount_amount: 0.0,
   fees: [],
   fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-  id: 'd7b75c3e-a1f3-4ad1-b68c-43f68b068942',
+  id: 'ae9151c0-a4d1-4e24-8198-f2420aa0b0a1',
   lineitems: [],
   metadata: [],
   order_number: '832663',
@@ -62,14 +60,14 @@ res = s.salesorder.create_accounting_salesorder(accounting_salesorder: Models::S
     country_code: 'US',
     postal_code: '07989-2148',
     region: 'Arkansas',
-    region_code: 'AK',
+    region_code: 'AK'
   ),
   status: Models::Shared::AccountingSalesorderStatus::PAID,
   subtotal_amount: 0.0,
   tax_amount: 0.0,
   tip_amount: 0.0,
   total_amount: 0.0,
-  updated_at: DateTime.iso8601('2023-03-30T06:20:38.024Z'),
+  updated_at: DateTime.iso8601('2023-03-30T16:28:25.484Z')
 ), connection_id: '<id>')
 
 unless res.accounting_salesorder.nil?
@@ -109,11 +107,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.salesorder.get_accounting_salesorder(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_salesorder.nil?
@@ -153,15 +150,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingSalesordersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingSalesordersRequest.new(
+  connection_id: '<id>'
+)
 res = s.salesorder.list_accounting_salesorders(request: req)
 
 unless res.accounting_salesorders.nil?
@@ -192,16 +188,16 @@ Updates the AccountingSalesorder identified by `id`. Provide the unified Account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingSalesorderRequest.new(
   accounting_salesorder: Models::Shared::AccountingSalesorder.new(
@@ -212,16 +208,16 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
       country_code: 'US',
       postal_code: '05015-8546',
       region: 'Louisiana',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-03-30T06:20:38.043Z'),
+    closed_at: DateTime.iso8601('2023-03-30T16:28:25.495Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: 'e2503a2f-250f-4f89-8f42-eefb27d66dda',
+    id: '8cdda4df-6b5e-46c0-9ec5-aa01e02410b6',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -237,19 +233,18 @@ req = Models::Operations::PatchAccountingSalesorderRequest.new(
       country_code: 'US',
       postal_code: '07989-2148',
       region: 'Arkansas',
-      region_code: 'AK',
+      region_code: 'AK'
     ),
     status: Models::Shared::AccountingSalesorderStatus::PAID,
     subtotal_amount: 0.0,
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-03-30T06:20:38.043Z'),
+    updated_at: DateTime.iso8601('2023-03-30T16:28:25.495Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.salesorder.patch_accounting_salesorder(request: req)
 
 unless res.accounting_salesorder.nil?
@@ -286,11 +281,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.salesorder.remove_accounting_salesorder(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -322,16 +316,16 @@ Updates the AccountingSalesorder identified by `id`. Provide the unified Account
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingSalesorderRequest.new(
   accounting_salesorder: Models::Shared::AccountingSalesorder.new(
@@ -342,16 +336,16 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
       country_code: 'US',
       postal_code: '05015-8546',
       region: 'Louisiana',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     category_ids: [],
-    closed_at: DateTime.iso8601('2023-03-30T06:20:38.043Z'),
+    closed_at: DateTime.iso8601('2023-03-30T16:28:25.495Z'),
     created_at: DateTime.iso8601('2022-01-17T16:11:50.310Z'),
     currency: 'USD',
     discount_amount: 0.0,
     fees: [],
     fulfillment_type: Models::Shared::FulfillmentType::OTHER,
-    id: 'e2503a2f-250f-4f89-8f42-eefb27d66dda',
+    id: '8cdda4df-6b5e-46c0-9ec5-aa01e02410b6',
     lineitems: [],
     metadata: [],
     order_number: '832663',
@@ -367,19 +361,18 @@ req = Models::Operations::UpdateAccountingSalesorderRequest.new(
       country_code: 'US',
       postal_code: '07989-2148',
       region: 'Arkansas',
-      region_code: 'AK',
+      region_code: 'AK'
     ),
     status: Models::Shared::AccountingSalesorderStatus::PAID,
     subtotal_amount: 0.0,
     tax_amount: 0.0,
     tip_amount: 0.0,
     total_amount: 0.0,
-    updated_at: DateTime.iso8601('2023-03-30T06:20:38.043Z'),
+    updated_at: DateTime.iso8601('2023-03-30T16:28:25.495Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.salesorder.update_accounting_salesorder(request: req)
 
 unless res.accounting_salesorder.nil?

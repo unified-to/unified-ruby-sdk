@@ -1,5 +1,13 @@
 # GetHrisEmployeeQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetHrisEmployeeQueryParamFields::ID
+```
+
 
 ## Values
 

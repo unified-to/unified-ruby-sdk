@@ -2,6 +2,17 @@
 
 Default GPU model
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ComputeTemplateGpuModel::NVIDIA_GB300
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ComputeTemplateGpuModel.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CalendarBot
         extend T::Sig
@@ -16,15 +15,15 @@ module UnifiedRubySDK
 
         field :automatic_leave, Crystalline::Nilable.new(Models::Shared::PropertyCalendarBotAutomaticLeave), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('automatic_leave') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # When the bot left (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :ended_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ended_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :ended_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ended_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Reference to calendar_event if scheduled via calendar (reference to CalendarEvent)
         field :event_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event_id') } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # When to join the meeting (for scheduled bots) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :join_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('join_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :join_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('join_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :meeting_metadata, Crystalline::Nilable.new(Models::Shared::PropertyCalendarBotMeetingMetadata), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('meeting_metadata') } }
         # URL of the meeting to join
@@ -34,21 +33,21 @@ module UnifiedRubySDK
 
         field :participants, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarBotParticipant)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('participants') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :recording_config, Crystalline::Nilable.new(Models::Shared::PropertyCalendarBotRecordingConfig), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recording_config') } }
         # Reference to calendar_recording when ready
         field :recording_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('recording_id') } }
         # When the bot actually joined (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::CalendarBotStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarBotStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::CalendarBotStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CalendarBotStatus, true) } }
         # History of status changes
         field :status_changes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarBotStatusChange)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status_changes') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(automatic_leave: T.nilable(Models::Shared::PropertyCalendarBotAutomaticLeave), created_at: T.nilable(::DateTime), ended_at: T.nilable(::DateTime), event_id: T.nilable(::String), id: T.nilable(::String), join_at: T.nilable(::DateTime), meeting_metadata: T.nilable(Models::Shared::PropertyCalendarBotMeetingMetadata), meeting_url: T.nilable(::String), name: T.nilable(::String), participants: T.nilable(T::Array[Models::Shared::CalendarBotParticipant]), raw: T.nilable(T::Hash[Symbol, ::Object]), recording_config: T.nilable(Models::Shared::PropertyCalendarBotRecordingConfig), recording_id: T.nilable(::String), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::CalendarBotStatus), status_changes: T.nilable(T::Array[Models::Shared::CalendarBotStatusChange]), updated_at: T.nilable(::DateTime)).void }
+        sig { params(automatic_leave: T.nilable(Models::Shared::PropertyCalendarBotAutomaticLeave), created_at: T.nilable(::DateTime), ended_at: T.nilable(::DateTime), event_id: T.nilable(::String), id: T.nilable(::String), join_at: T.nilable(::DateTime), meeting_metadata: T.nilable(Models::Shared::PropertyCalendarBotMeetingMetadata), meeting_url: T.nilable(::String), name: T.nilable(::String), participants: T.nilable(T::Array[Models::Shared::CalendarBotParticipant]), raw: T.nilable(T::Hash[::Symbol, ::Object]), recording_config: T.nilable(Models::Shared::PropertyCalendarBotRecordingConfig), recording_id: T.nilable(::String), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::CalendarBotStatus), status_changes: T.nilable(T::Array[Models::Shared::CalendarBotStatusChange]), updated_at: T.nilable(::DateTime)).void }
         def initialize(automatic_leave: nil, created_at: nil, ended_at: nil, event_id: nil, id: nil, join_at: nil, meeting_metadata: nil, meeting_url: nil, name: nil, participants: nil, raw: nil, recording_config: nil, recording_id: nil, started_at: nil, status: nil, status_changes: nil, updated_at: nil)
           @automatic_leave = automatic_leave
           @created_at = created_at

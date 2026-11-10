@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PerformanceGoalStatus < T::Enum
-
-
+      class PerformanceGoalStatus
+        include ::Crystalline::Enum
         enums do
           NOT_STARTED = new('NOT_STARTED')
           IN_PROGRESS = new('IN_PROGRESS')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           CLOSED = new('CLOSED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

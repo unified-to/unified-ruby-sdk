@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Status - Account status, such as ACTIVE or ARCHIVED
-      class Status < T::Enum
-
-
+      class Status
+        include ::Crystalline::Enum
         enums do
           ACTIVE = new('ACTIVE')
           ARCHIVED = new('ARCHIVED')
         end
+        open!
       end
     end
   end

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeInstance
         extend T::Sig
@@ -16,11 +15,11 @@ module UnifiedRubySDK
         # Lifecycle actions the vendor currently allows
         field :allowed_actions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyComputeInstanceAllowedActions)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('allowed_actions') } }
         # CPU architecture
-        field :architecture, Crystalline::Nilable.new(Models::Shared::ComputeInstanceArchitecture), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('architecture'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeInstanceArchitecture, true) } }
+        field :architecture, Crystalline::Nilable.new(Models::Shared::ComputeInstanceArchitecture), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('architecture'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeInstanceArchitecture, true) } }
         # Number of vCPUs; may be fractional
         field :cpu_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cpu_count') } }
         # When the instance was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Currency of price_amount (ISO 4217)
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # Disk size in MiB
@@ -30,11 +29,11 @@ module UnifiedRubySDK
         # Environment variables (write-only values)
         field :env, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ComputeEnv)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('env') } }
         # When the instance will expire (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Number of GPUs attached (0 for CPU-only)
         field :gpu_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_count') } }
         # Normalized GPU model
-        field :gpu_model, Crystalline::Nilable.new(Models::Shared::ComputeInstanceGpuModel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_model'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeInstanceGpuModel, true) } }
+        field :gpu_model, Crystalline::Nilable.new(Models::Shared::ComputeInstanceGpuModel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_model'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeInstanceGpuModel, true) } }
         # The GPU or instance type of this instance
         field :gputype_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gputype_id') } }
         # Whether outbound network access is allowed
@@ -46,7 +45,7 @@ module UnifiedRubySDK
         # Container or OS image, when not created from a template
         field :image, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('image') } }
         # Pricing market the instance runs in
-        field :market, Crystalline::Nilable.new(Models::Shared::Market), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('market'), 'decoder': Utils.enum_from_string(Models::Shared::Market, true) } }
+        field :market, Crystalline::Nilable.new(Models::Shared::Market), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('market'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Market, true) } }
         # System memory in MiB
         field :memory_mb, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('memory_mb') } }
         # Vendor labels, tags and metadata
@@ -54,19 +53,19 @@ module UnifiedRubySDK
         # Display name of the instance
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # What happens when the instance expires
-        field :on_expire, Crystalline::Nilable.new(Models::Shared::OnExpire), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_expire'), 'decoder': Utils.enum_from_string(Models::Shared::OnExpire, true) } }
+        field :on_expire, Crystalline::Nilable.new(Models::Shared::OnExpire), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_expire'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::OnExpire, true) } }
         # What happens when the instance is idle
-        field :on_idle, Crystalline::Nilable.new(Models::Shared::OnIdle), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_idle'), 'decoder': Utils.enum_from_string(Models::Shared::OnIdle, true) } }
+        field :on_idle, Crystalline::Nilable.new(Models::Shared::OnIdle), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('on_idle'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::OnIdle, true) } }
         # The instance this one was forked from
         field :parent_instance_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_instance_id') } }
         # List price for the instance
         field :price_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_amount') } }
         # Unit that price_amount is quoted in
-        field :price_unit, Crystalline::Nilable.new(Models::Shared::PriceUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_unit'), 'decoder': Utils.enum_from_string(Models::Shared::PriceUnit, true) } }
+        field :price_unit, Crystalline::Nilable.new(Models::Shared::PriceUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_unit'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PriceUnit, true) } }
         # Vendor project, team or app that groups the instance (reference to TaskProject)
         field :project_identifier, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('project_identifier') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The region the instance runs in
         field :region_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region_id') } }
         # The service (app) this instance runs for, on hosting platforms
@@ -78,25 +77,25 @@ module UnifiedRubySDK
         # SSH connection details
         field :ssh, Crystalline::Nilable.new(Models::Shared::PropertyComputeInstanceSsh), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ssh') } }
         # When the instance last started (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Normalized lifecycle status; set on update to start, stop, pause, resume, restart or terminate
-        field :status, Crystalline::Nilable.new(Models::Shared::ComputeInstanceStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeInstanceStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::ComputeInstanceStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeInstanceStatus, true) } }
         # Vendor explanation of the current status (eg. shutdown or failure reason)
         field :status_reason, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status_reason') } }
         # The template the instance was created from
         field :template_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('template_id') } }
         # When the instance was terminated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :terminated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('terminated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :terminated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('terminated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Seconds until the instance expires; set on update to extend it
         field :timeout_seconds, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timeout_seconds') } }
         # The kind of compute unit
-        field :type, Crystalline::Nilable.new(Models::Shared::ComputeInstanceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeInstanceType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ComputeInstanceType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeInstanceType, true) } }
         # When the instance was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Volumes mounted on the instance
         field :volume_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('volume_ids') } }
 
-        sig { params(allowed_actions: T.nilable(T::Array[Models::Shared::PropertyComputeInstanceAllowedActions]), architecture: T.nilable(Models::Shared::ComputeInstanceArchitecture), cpu_count: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), disk_mb: T.nilable(::Float), endpoints: T.nilable(T::Array[Models::Shared::ComputeEndpoint]), env: T.nilable(T::Array[Models::Shared::ComputeEnv]), expires_at: T.nilable(::DateTime), gpu_count: T.nilable(::Float), gpu_model: T.nilable(Models::Shared::ComputeInstanceGpuModel), gputype_id: T.nilable(::String), has_internet_access: T.nilable(T::Boolean), id: T.nilable(::String), idle_timeout_seconds: T.nilable(::Float), image: T.nilable(::String), market: T.nilable(Models::Shared::Market), memory_mb: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), on_expire: T.nilable(Models::Shared::OnExpire), on_idle: T.nilable(Models::Shared::OnIdle), parent_instance_id: T.nilable(::String), price_amount: T.nilable(::Float), price_unit: T.nilable(Models::Shared::PriceUnit), project_identifier: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), region_id: T.nilable(::String), service_id: T.nilable(::String), sku: T.nilable(::String), source_snapshot_id: T.nilable(::String), ssh: T.nilable(Models::Shared::PropertyComputeInstanceSsh), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::ComputeInstanceStatus), status_reason: T.nilable(::String), template_id: T.nilable(::String), terminated_at: T.nilable(::DateTime), timeout_seconds: T.nilable(::Float), type: T.nilable(Models::Shared::ComputeInstanceType), updated_at: T.nilable(::DateTime), volume_ids: T.nilable(T::Array[::String])).void }
+        sig { params(allowed_actions: T.nilable(T::Array[Models::Shared::PropertyComputeInstanceAllowedActions]), architecture: T.nilable(Models::Shared::ComputeInstanceArchitecture), cpu_count: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), disk_mb: T.nilable(::Float), endpoints: T.nilable(T::Array[Models::Shared::ComputeEndpoint]), env: T.nilable(T::Array[Models::Shared::ComputeEnv]), expires_at: T.nilable(::DateTime), gpu_count: T.nilable(::Float), gpu_model: T.nilable(Models::Shared::ComputeInstanceGpuModel), gputype_id: T.nilable(::String), has_internet_access: T.nilable(T::Boolean), id: T.nilable(::String), idle_timeout_seconds: T.nilable(::Float), image: T.nilable(::String), market: T.nilable(Models::Shared::Market), memory_mb: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), on_expire: T.nilable(Models::Shared::OnExpire), on_idle: T.nilable(Models::Shared::OnIdle), parent_instance_id: T.nilable(::String), price_amount: T.nilable(::Float), price_unit: T.nilable(Models::Shared::PriceUnit), project_identifier: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), region_id: T.nilable(::String), service_id: T.nilable(::String), sku: T.nilable(::String), source_snapshot_id: T.nilable(::String), ssh: T.nilable(Models::Shared::PropertyComputeInstanceSsh), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::ComputeInstanceStatus), status_reason: T.nilable(::String), template_id: T.nilable(::String), terminated_at: T.nilable(::DateTime), timeout_seconds: T.nilable(::Float), type: T.nilable(Models::Shared::ComputeInstanceType), updated_at: T.nilable(::DateTime), volume_ids: T.nilable(T::Array[::String])).void }
         def initialize(allowed_actions: nil, architecture: nil, cpu_count: nil, created_at: nil, currency: nil, disk_mb: nil, endpoints: nil, env: nil, expires_at: nil, gpu_count: nil, gpu_model: nil, gputype_id: nil, has_internet_access: nil, id: nil, idle_timeout_seconds: nil, image: nil, market: nil, memory_mb: nil, metadata: nil, name: nil, on_expire: nil, on_idle: nil, parent_instance_id: nil, price_amount: nil, price_unit: nil, project_identifier: nil, raw: nil, region_id: nil, service_id: nil, sku: nil, source_snapshot_id: nil, ssh: nil, started_at: nil, status: nil, status_reason: nil, template_id: nil, terminated_at: nil, timeout_seconds: nil, type: nil, updated_at: nil, volume_ids: nil)
           @allowed_actions = allowed_actions
           @architecture = architecture

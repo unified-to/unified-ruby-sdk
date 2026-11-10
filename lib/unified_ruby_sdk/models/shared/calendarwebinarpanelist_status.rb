@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CalendarWebinarPanelistStatus < T::Enum
-
-
+      class CalendarWebinarPanelistStatus
+        include ::Crystalline::Enum
         enums do
           ACCEPTED = new('ACCEPTED')
           REJECTED = new('REJECTED')
           TENTATIVE = new('TENTATIVE')
         end
+        open!
       end
     end
   end

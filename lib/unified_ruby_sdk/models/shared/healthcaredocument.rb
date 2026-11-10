@@ -7,18 +7,17 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareDocument
         extend T::Sig
         include Crystalline::MetadataFields
 
         # When the document was written (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :authored_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('authored_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :authored_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('authored_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Codings for the kind of document (e.g. LOINC document type)
         field :codes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('codes') } }
         # When the document record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Base64-encoded document content for create
         field :document_data, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('document_data') } }
         # Download link for the document content, expires after 1 hour
@@ -40,15 +39,15 @@ module UnifiedRubySDK
         # The practitioner who authored the document
         field :practitioner_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('practitioner_id') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Status of the document
-        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareDocumentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareDocumentStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareDocumentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareDocumentStatus, true) } }
         # Unified, normalized kind of clinical document (OTHER when unmappable)
-        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareDocumentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareDocumentType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareDocumentType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareDocumentType, true) } }
         # When the document record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(authored_at: T.nilable(::DateTime), codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), document_data: T.nilable(::String), document_url: T.nilable(::String), encounter_id: T.nilable(::String), filename: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), mime_type: T.nilable(::String), name: T.nilable(::String), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::HealthcareDocumentStatus), type: T.nilable(Models::Shared::HealthcareDocumentType), updated_at: T.nilable(::DateTime)).void }
+        sig { params(authored_at: T.nilable(::DateTime), codes: T.nilable(T::Array[Models::Shared::HealthcareCode]), created_at: T.nilable(::DateTime), document_data: T.nilable(::String), document_url: T.nilable(::String), encounter_id: T.nilable(::String), filename: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), mime_type: T.nilable(::String), name: T.nilable(::String), patient_id: T.nilable(::String), practitioner_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::HealthcareDocumentStatus), type: T.nilable(Models::Shared::HealthcareDocumentType), updated_at: T.nilable(::DateTime)).void }
         def initialize(authored_at: nil, codes: nil, created_at: nil, document_data: nil, document_url: nil, encounter_id: nil, filename: nil, id: nil, metadata: nil, mime_type: nil, name: nil, patient_id: nil, practitioner_id: nil, raw: nil, status: nil, type: nil, updated_at: nil)
           @authored_at = authored_at
           @codes = codes

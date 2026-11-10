@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # A part or document revised by a change
       class PlmAffectedItem
         extend T::Sig

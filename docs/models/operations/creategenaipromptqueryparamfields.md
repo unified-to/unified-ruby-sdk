@@ -1,5 +1,13 @@
 # CreateGenaiPromptQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateGenaiPromptQueryParamFields::MODEL_ID
+```
+
 
 ## Values
 

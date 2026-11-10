@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class UcCallType < T::Enum
-
-
+      class UcCallType
+        include ::Crystalline::Enum
         enums do
           INBOUND = new('INBOUND')
           OUTBOUND = new('OUTBOUND')
         end
+        open!
       end
     end
   end

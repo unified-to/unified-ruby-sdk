@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisBenefitType < T::Enum
-
-
+      class HrisBenefitType
+        include ::Crystalline::Enum
         enums do
           RETIREMENT = new('RETIREMENT')
           HEALTH = new('HEALTH')
@@ -34,6 +32,7 @@ module UnifiedRubySDK
           DEPENDENT_CARE = new('DEPENDENT_CARE')
           PENSION = new('PENSION')
         end
+        open!
       end
     end
   end

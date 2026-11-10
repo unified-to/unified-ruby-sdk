@@ -1,5 +1,16 @@
 # HrisPayslipType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HrisPayslipType::REGULAR
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HrisPayslipType.deserialize("custom_value")
+```
+
 
 ## Values
 

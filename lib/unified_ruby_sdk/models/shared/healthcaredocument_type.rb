@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareDocumentType - Unified, normalized kind of clinical document (OTHER when unmappable)
-      class HealthcareDocumentType < T::Enum
-
-
+      class HealthcareDocumentType
+        include ::Crystalline::Enum
         enums do
           PROGRESS_NOTE = new('PROGRESS_NOTE')
           CONSULTATION_NOTE = new('CONSULTATION_NOTE')
@@ -25,6 +23,7 @@ module UnifiedRubySDK
           CONSENT = new('CONSENT')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

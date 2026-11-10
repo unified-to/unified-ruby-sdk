@@ -1,5 +1,16 @@
 # PlmChangeType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PlmChangeType::REQUEST
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PlmChangeType.deserialize("custom_value")
+```
+
 
 ## Values
 

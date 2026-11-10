@@ -2,6 +2,17 @@
 
 For SUB_RESULT type
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AssessmentAttributeStatus::OPEN
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AssessmentAttributeStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

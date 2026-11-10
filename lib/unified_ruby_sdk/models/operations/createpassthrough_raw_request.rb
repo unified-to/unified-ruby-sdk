@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class CreatePassthroughRawRequest
         extend T::Sig
@@ -20,9 +19,9 @@ module UnifiedRubySDK
         # integration-specific payload
         field :request_body, Crystalline::Nilable.new(::String), { 'request': { 'media_type': 'text/plain' } }
 
-        field :query, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
+        field :query, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[Symbol, ::Object])).void }
+        sig { params(connection_id: ::String, path: ::String, request_body: T.nilable(::String), query: T.nilable(T::Hash[::Symbol, ::Object])).void }
         def initialize(connection_id:, path:, request_body: nil, query: nil)
           @connection_id = connection_id
           @path = path

@@ -1,5 +1,16 @@
 # NativeWebhookParentId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = NativeWebhookParentId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = NativeWebhookParentId.deserialize("custom_value")
+```
+
 
 ## Values
 

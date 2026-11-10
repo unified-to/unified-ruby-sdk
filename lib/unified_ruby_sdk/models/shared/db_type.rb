@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class DbType < T::Enum
-
-
+      class DbType
+        include ::Crystalline::Enum
         enums do
           MONGODB = new('mongodb')
           MYSQL = new('mysql')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           SUPABASE = new('supabase')
           SNOWFLAKE = new('snowflake')
         end
+        open!
       end
     end
   end

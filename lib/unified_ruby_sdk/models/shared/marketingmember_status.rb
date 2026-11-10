@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class MarketingMemberStatus < T::Enum
-
-
+      class MarketingMemberStatus
+        include ::Crystalline::Enum
         enums do
           SUBSCRIBED = new('SUBSCRIBED')
           UNSUBSCRIBED = new('UNSUBSCRIBED')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           PENDING = new('PENDING')
           TRANSACTIONAL = new('TRANSACTIONAL')
         end
+        open!
       end
     end
   end

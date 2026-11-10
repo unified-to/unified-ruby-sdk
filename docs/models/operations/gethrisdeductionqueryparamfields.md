@@ -1,5 +1,13 @@
 # GetHrisDeductionQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetHrisDeductionQueryParamFields::ID
+```
+
 
 ## Values
 

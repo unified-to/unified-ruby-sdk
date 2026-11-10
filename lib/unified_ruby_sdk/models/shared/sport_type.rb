@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # SportType - The primary sport of the group
-      class SportType < T::Enum
-
-
+      class SportType
+        include ::Crystalline::Enum
         enums do
           RUNNING = new('RUNNING')
           CYCLING = new('CYCLING')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           HIKING = new('HIKING')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

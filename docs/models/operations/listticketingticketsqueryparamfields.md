@@ -1,5 +1,13 @@
 # ListTicketingTicketsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListTicketingTicketsQueryParamFields::ID
+```
+
 
 ## Values
 

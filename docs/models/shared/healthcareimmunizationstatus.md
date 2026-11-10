@@ -2,6 +2,17 @@
 
 Status of the immunization
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HealthcareImmunizationStatus::COMPLETED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HealthcareImmunizationStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

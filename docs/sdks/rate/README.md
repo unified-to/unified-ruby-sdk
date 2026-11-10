@@ -1,5 +1,4 @@
 # Rate
-(*rate*)
 
 ## Overview
 
@@ -13,20 +12,19 @@ Creates a ShippingRate. Provide the unified ShippingRate fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="ruby" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" example="shipping_rate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.rate.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.new(
   currency: 'USD',
-  id: 'a69140a9-b989-4f01-bf9c-4f3c7f9dc135',
+  id: '966f7c7d-e771-4bf2-ac6a-dbeb4930c788',
   metadata: [],
   rates: [
     Models::Shared::ShippingRateRate.new(
@@ -40,9 +38,9 @@ res = s.rate.create_shipping_rate(shipping_rate: Models::Shared::ShippingRate.ne
       estimated_delivery_end_at: DateTime.iso8601('2021-09-03T01:03:36.021Z'),
       is_negotiated_rate: true,
       tax_amount: 3.31,
-      title: 'Express',
+      title: 'Express'
     ),
-  ],
+  ]
 ), connection_id: '<id>')
 
 unless res.shipping_rate.nil?

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HrisEmployeerelationship
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
 
@@ -30,11 +29,11 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HrisTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::HrisEmployeerelationshipType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisEmployeerelationshipType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisEmployeerelationshipType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisEmployeerelationshipType, true) } }
 
         sig { params(address: T.nilable(Models::Shared::PropertyHrisEmployeerelationshipAddress), emails: T.nilable(T::Array[Models::Shared::HrisEmail]), end_at: T.nilable(::DateTime), first_name: T.nilable(::String), is_beneficiary: T.nilable(T::Boolean), is_dependent: T.nilable(T::Boolean), last_name: T.nilable(::String), name: T.nilable(::String), start_at: T.nilable(::DateTime), telephones: T.nilable(T::Array[Models::Shared::HrisTelephone]), type: T.nilable(Models::Shared::HrisEmployeerelationshipType)).void }
         def initialize(address: nil, emails: nil, end_at: nil, first_name: nil, is_beneficiary: nil, is_dependent: nil, last_name: nil, name: nil, start_at: nil, telephones: nil, type: nil)

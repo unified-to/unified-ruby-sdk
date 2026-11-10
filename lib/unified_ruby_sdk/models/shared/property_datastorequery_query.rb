@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate)
       class PropertyDatastoreQueryQuery
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
 
         field :aggregate, Crystalline::Nilable.new(Models::Shared::PropertyDatastoreQueryQueryAggregate), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('aggregate') } }
 
-        field :expand, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, Models::Shared::DatastoreQueryExpand)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expand') } }
+        field :expand, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, Models::Shared::DatastoreQueryExpand)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expand') } }
 
         field :filter, Crystalline::Nilable.new(Models::Shared::PropertyDatastoreQueryQueryFilter), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filter') } }
 
@@ -30,11 +29,11 @@ module UnifiedRubySDK
 
         field :sort_fields, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sort_fields') } }
 
-        field :sort_order, Crystalline::Nilable.new(Models::Shared::SortOrder), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sort_order'), 'decoder': Utils.enum_from_string(Models::Shared::SortOrder, true) } }
+        field :sort_order, Crystalline::Nilable.new(Models::Shared::SortOrder), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sort_order'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::SortOrder, true) } }
         # Raw SQL – when set, executed directly (table_id optional)
         field :sql, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sql') } }
 
-        sig { params(aggregate: T.nilable(Models::Shared::PropertyDatastoreQueryQueryAggregate), expand: T.nilable(T::Hash[Symbol, Models::Shared::DatastoreQueryExpand]), filter: T.nilable(Models::Shared::PropertyDatastoreQueryQueryFilter), is_count_only: T.nilable(T::Boolean), limit: T.nilable(::Float), offset: T.nilable(::Float), select: T.nilable(T::Array[::String]), sort_fields: T.nilable(T::Array[::String]), sort_order: T.nilable(Models::Shared::SortOrder), sql: T.nilable(::String)).void }
+        sig { params(aggregate: T.nilable(Models::Shared::PropertyDatastoreQueryQueryAggregate), expand: T.nilable(T::Hash[::Symbol, Models::Shared::DatastoreQueryExpand]), filter: T.nilable(Models::Shared::PropertyDatastoreQueryQueryFilter), is_count_only: T.nilable(T::Boolean), limit: T.nilable(::Float), offset: T.nilable(::Float), select: T.nilable(T::Array[::String]), sort_fields: T.nilable(T::Array[::String]), sort_order: T.nilable(Models::Shared::SortOrder), sql: T.nilable(::String)).void }
         def initialize(aggregate: nil, expand: nil, filter: nil, is_count_only: nil, limit: nil, offset: nil, select: nil, sort_fields: nil, sort_order: nil, sql: nil)
           @aggregate = aggregate
           @expand = expand

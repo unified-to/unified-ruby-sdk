@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisCompensationType < T::Enum
-
-
+      class HrisCompensationType
+        include ::Crystalline::Enum
         enums do
           SALARY = new('SALARY')
           BONUS = new('BONUS')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           HOURLY = new('HOURLY')
           COMMISSION = new('COMMISSION')
         end
+        open!
       end
     end
   end

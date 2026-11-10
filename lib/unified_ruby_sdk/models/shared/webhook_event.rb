@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # WebhookEvent - The event to subscribe to. "deleted" is supported on native webhooks, and on virtual webhooks where the integration supports it. Check the integration's Feature Support tab.
-      class WebhookEvent < T::Enum
-
-
+      class WebhookEvent
+        include ::Crystalline::Enum
         enums do
           UPDATED = new('updated')
           CREATED = new('created')
           DELETED = new('deleted')
         end
+        open!
       end
     end
   end

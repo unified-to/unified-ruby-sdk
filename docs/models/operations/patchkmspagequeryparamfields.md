@@ -1,5 +1,13 @@
 # PatchKmsPageQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchKmsPageQueryParamFields::ID
+```
+
 
 ## Values
 

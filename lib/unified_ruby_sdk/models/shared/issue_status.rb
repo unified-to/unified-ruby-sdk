@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class IssueStatus < T::Enum
-
-
+      class IssueStatus
+        include ::Crystalline::Enum
         enums do
           COMPLETED = new('COMPLETED')
           NEW = new('NEW')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           VALIDATING = new('VALIDATING')
           REJECTED = new('REJECTED')
         end
+        open!
       end
     end
   end

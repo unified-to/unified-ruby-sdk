@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # "id" attribute of another User.
       class ScimManager
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
         # alias for value?
         field :manager_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('managerId') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::ScimManagerType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ScimManagerType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ScimManagerType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ScimManagerType, true) } }
         # The "id" of the SCIM resource representing the user's manager.  RECOMMENDED.
         field :value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 

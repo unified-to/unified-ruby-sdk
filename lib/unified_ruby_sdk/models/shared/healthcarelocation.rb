@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareLocation
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # Postal address of the location
         field :address, Crystalline::Nilable.new(Models::Shared::PropertyHealthcareLocationAddress), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('address') } }
         # When the location record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Description of the location
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # Email addresses for the location
@@ -40,13 +39,13 @@ module UnifiedRubySDK
         # The location this one is part of (e.g. a department within a hospital)
         field :parent_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('parent_id') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Phone and fax numbers for the location
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
         # When the location record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyHealthcareLocationAddress), created_at: T.nilable(::DateTime), description: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::HealthcareEmail]), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), is_active: T.nilable(T::Boolean), latitude: T.nilable(::Float), longitude: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), organization_name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::HealthcareTelephone]), updated_at: T.nilable(::DateTime)).void }
+        sig { params(address: T.nilable(Models::Shared::PropertyHealthcareLocationAddress), created_at: T.nilable(::DateTime), description: T.nilable(::String), emails: T.nilable(T::Array[Models::Shared::HealthcareEmail]), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), is_active: T.nilable(T::Boolean), latitude: T.nilable(::Float), longitude: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), organization_name: T.nilable(::String), parent_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::HealthcareTelephone]), updated_at: T.nilable(::DateTime)).void }
         def initialize(address: nil, created_at: nil, description: nil, emails: nil, id: nil, identifiers: nil, is_active: nil, latitude: nil, longitude: nil, metadata: nil, name: nil, organization_name: nil, parent_id: nil, raw: nil, telephones: nil, updated_at: nil)
           @address = address
           @created_at = created_at

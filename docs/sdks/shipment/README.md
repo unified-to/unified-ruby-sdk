@@ -1,5 +1,4 @@
 # Shipment
-(*shipment*)
 
 ## Overview
 
@@ -18,20 +17,19 @@ Creates a ShippingShipment. Provide the unified ShippingShipment fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="ruby" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" example="shipping_shipment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.shipment.create_shipping_shipment(shipping_shipment: Models::Shared::ShippingShipment.new(
   created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-  id: '0ab4d10a-ac5b-41d0-8192-dc8515a9a942',
+  id: '8be4b01c-1214-4fa0-a6a3-f574827de667',
   is_return: false,
   lineitems: [],
   metadata: [],
@@ -41,7 +39,7 @@ res = s.shipment.create_shipping_shipment(shipping_shipment: Models::Shared::Shi
   service_code: 'OVERNIGHT',
   shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
   status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-  updated_at: DateTime.iso8601('2022-11-16T02:16:53.694Z'),
+  updated_at: DateTime.iso8601('2022-11-16T04:01:28.142Z')
 ), connection_id: '<id>')
 
 unless res.shipping_shipment.nil?
@@ -81,11 +79,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.shipment.get_shipping_shipment(connection_id: '<id>', id: '<id>')
 
 unless res.shipping_shipment.nil?
@@ -125,15 +122,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListShippingShipmentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListShippingShipmentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.shipment.list_shipping_shipments(request: req)
 
 unless res.shipping_shipments.nil?
@@ -164,21 +160,21 @@ Updates the ShippingShipment identified by `id`. Provide the unified ShippingShi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchShippingShipmentRequest.new(
   shipping_shipment: Models::Shared::ShippingShipment.new(
     created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-    id: 'd64968c6-c779-476f-b547-5355a512a64c',
+    id: 'c335d062-9c01-408c-bcc3-fa08a3f22a75',
     is_return: false,
     lineitems: [],
     metadata: [],
@@ -188,12 +184,11 @@ req = Models::Operations::PatchShippingShipmentRequest.new(
     service_code: 'OVERNIGHT',
     shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
     status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-    updated_at: DateTime.iso8601('2022-11-16T02:16:53.699Z'),
+    updated_at: DateTime.iso8601('2022-11-16T04:01:28.146Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.shipment.patch_shipping_shipment(request: req)
 
 unless res.shipping_shipment.nil?
@@ -230,11 +225,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.shipment.remove_shipping_shipment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -266,21 +260,21 @@ Updates the ShippingShipment identified by `id`. Provide the unified ShippingShi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateShippingShipmentRequest.new(
   shipping_shipment: Models::Shared::ShippingShipment.new(
     created_at: DateTime.iso8601('2022-09-12T03:11:28.960Z'),
-    id: 'd64968c6-c779-476f-b547-5355a512a64c',
+    id: 'c335d062-9c01-408c-bcc3-fa08a3f22a75',
     is_return: false,
     lineitems: [],
     metadata: [],
@@ -290,12 +284,11 @@ req = Models::Operations::UpdateShippingShipmentRequest.new(
     service_code: 'OVERNIGHT',
     shipped_at: DateTime.iso8601('2022-09-12T07:26:48.479Z'),
     status: Models::Shared::ShippingShipmentStatus::DELIVERED,
-    updated_at: DateTime.iso8601('2022-11-16T02:16:53.699Z'),
+    updated_at: DateTime.iso8601('2022-11-16T04:01:28.146Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.shipment.update_shipping_shipment(request: req)
 
 unless res.shipping_shipment.nil?

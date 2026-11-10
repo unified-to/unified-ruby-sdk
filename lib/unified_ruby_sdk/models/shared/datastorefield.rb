@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class DatastoreField
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :original_type, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_type'), required: true } }
 
-        field :type, Models::Shared::DatastoreFieldType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::DatastoreFieldType, false) } }
+        field :type, Models::Shared::DatastoreFieldType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::DatastoreFieldType, false) } }
 
         field :default_value, Crystalline::Nilable.new(Models::Shared::PropertyDatastoreFieldDefaultValue), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('default_value') } }
 
@@ -40,11 +39,11 @@ module UnifiedRubySDK
 
         field :precision, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('precision') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :scale, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('scale') } }
 
-        sig { params(name: ::String, original_type: ::String, type: Models::Shared::DatastoreFieldType, default_value: T.nilable(Models::Shared::PropertyDatastoreFieldDefaultValue), description: T.nilable(::String), id: T.nilable(::String), is_indexed: T.nilable(T::Boolean), is_nullable: T.nilable(T::Boolean), is_primary_key: T.nilable(T::Boolean), is_required: T.nilable(T::Boolean), is_unique: T.nilable(T::Boolean), max_length: T.nilable(::Float), precision: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), scale: T.nilable(::Float)).void }
+        sig { params(name: ::String, original_type: ::String, type: Models::Shared::DatastoreFieldType, default_value: T.nilable(Models::Shared::PropertyDatastoreFieldDefaultValue), description: T.nilable(::String), id: T.nilable(::String), is_indexed: T.nilable(T::Boolean), is_nullable: T.nilable(T::Boolean), is_primary_key: T.nilable(T::Boolean), is_required: T.nilable(T::Boolean), is_unique: T.nilable(T::Boolean), max_length: T.nilable(::Float), precision: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), scale: T.nilable(::Float)).void }
         def initialize(name:, original_type:, type:, default_value: nil, description: nil, id: nil, is_indexed: nil, is_nullable: nil, is_primary_key: nil, is_required: nil, is_unique: nil, max_length: nil, precision: nil, raw: nil, scale: nil)
           @name = name
           @original_type = original_type

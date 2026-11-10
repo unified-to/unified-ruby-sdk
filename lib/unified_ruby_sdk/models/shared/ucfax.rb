@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # A fax sent or received through a phone number
       class UcFax
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # What the integration charged for the fax
         field :cost_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_amount') } }
         # The date that this fax object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # ISO 4217 currency of cost_amount
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # Why the fax failed
@@ -32,19 +31,19 @@ module UnifiedRubySDK
         # Number of pages in the fax
         field :pages, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('pages') } }
         # The raw data returned by the integration for this fax
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The current or final status of the fax
-        field :status, Crystalline::Nilable.new(Models::Shared::UcFaxStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::UcFaxStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::UcFaxStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::UcFaxStatus, true) } }
         # The E.164 phone number the fax was sent to
         field :to_telephone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to_telephone') } }
         # Whether the fax was received (INBOUND) or sent (OUTBOUND)
-        field :type, Crystalline::Nilable.new(Models::Shared::UcFaxType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::UcFaxType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::UcFaxType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::UcFaxType, true) } }
         # The last date that this fax object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The user that sent or owns the fax (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(cost_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), error_message: T.nilable(::String), from_telephone: T.nilable(::String), id: T.nilable(::String), media_url: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), pages: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::UcFaxStatus), to_telephone: T.nilable(::String), type: T.nilable(Models::Shared::UcFaxType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(cost_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), error_message: T.nilable(::String), from_telephone: T.nilable(::String), id: T.nilable(::String), media_url: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), pages: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::UcFaxStatus), to_telephone: T.nilable(::String), type: T.nilable(Models::Shared::UcFaxType), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
         def initialize(cost_amount: nil, created_at: nil, currency: nil, error_message: nil, from_telephone: nil, id: nil, media_url: nil, metadata: nil, pages: nil, raw: nil, status: nil, to_telephone: nil, type: nil, updated_at: nil, user_id: nil)
           @cost_amount = cost_amount
           @created_at = created_at

@@ -1,5 +1,13 @@
 # CreatePropertyConversationQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreatePropertyConversationQueryParamFields::ID
+```
+
 
 ## Values
 

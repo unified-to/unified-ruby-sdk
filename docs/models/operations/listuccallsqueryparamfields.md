@@ -1,5 +1,13 @@
 # ListUcCallsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListUcCallsQueryParamFields::ID
+```
+
 
 ## Values
 

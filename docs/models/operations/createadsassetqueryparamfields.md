@@ -1,5 +1,13 @@
 # CreateAdsAssetQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateAdsAssetQueryParamFields::ID
+```
+
 
 ## Values
 

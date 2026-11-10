@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Call-to-action button on the post
       class PropertySocialPostCallToAction
         extend T::Sig
         include Crystalline::MetadataFields
 
         # The call-to-action button type
-        field :type, Crystalline::Nilable.new(Models::Shared::PropertySocialPostCallToActionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PropertySocialPostCallToActionType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PropertySocialPostCallToActionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertySocialPostCallToActionType, true) } }
         # The URL the call-to-action points to
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
 

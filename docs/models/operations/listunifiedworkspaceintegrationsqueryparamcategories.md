@@ -1,5 +1,13 @@
 # ListUnifiedWorkspaceintegrationsQueryParamCategories
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListUnifiedWorkspaceintegrationsQueryParamCategories::PASSTHROUGH
+```
+
 
 ## Values
 

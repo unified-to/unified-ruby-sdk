@@ -1,5 +1,4 @@
 # Instance
-(*instance*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a ComputeInstance. Provide the unified ComputeInstance fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeInstance" method="post" path="/compute/{connection_id}/instance" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeInstance" method="post" path="/compute/{connection_id}/instance" example="compute_instance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.instance.create_compute_instance(compute_instance: Models::Shared::ComputeInstance.new(
   allowed_actions: [
     Models::Shared::PropertyComputeInstanceAllowedActions::TERMINATE,
@@ -43,12 +41,12 @@ res = s.instance.create_compute_instance(compute_instance: Models::Shared::Compu
       is_auth_required: true,
       port: 8080.0,
       protocol: Models::Shared::Protocol::HTTPS,
-      url: 'https://serene-shark.biz/',
+      url: 'https://serene-shark.biz/'
     ),
   ],
   gpu_count: 0.0,
   has_internet_access: true,
-  id: '2594cbcd-d185-46f5-afc4-83407080e79d',
+  id: 'bf84f0d0-e196-4d55-931e-ee7eb254e575',
   image: 'ubuntu:24.04',
   market: Models::Shared::Market::SPOT,
   memory_mb: 2048.0,
@@ -61,13 +59,13 @@ res = s.instance.create_compute_instance(compute_instance: Models::Shared::Compu
   ssh: Models::Shared::PropertyComputeInstanceSsh.new(
     host: '116.42.165.89',
     port: 22.0,
-    username: 'root',
+    username: 'root'
   ),
-  started_at: DateTime.iso8601('2025-04-04T13:14:09.930Z'),
+  started_at: DateTime.iso8601('2025-04-05T14:03:57.639Z'),
   status: Models::Shared::ComputeInstanceStatus::ERROR,
   status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
   type: Models::Shared::ComputeInstanceType::BAREMETAL,
-  updated_at: DateTime.iso8601('2025-06-28T20:50:15.265Z'),
+  updated_at: DateTime.iso8601('2025-06-29T23:59:43.901Z')
 ), connection_id: '<id>')
 
 unless res.compute_instance.nil?
@@ -107,11 +105,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.instance.get_compute_instance(connection_id: '<id>', id: '<id>')
 
 unless res.compute_instance.nil?
@@ -151,15 +148,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeInstancesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeInstancesRequest.new(
+  connection_id: '<id>'
+)
 res = s.instance.list_compute_instances(request: req)
 
 unless res.compute_instances.nil?
@@ -190,16 +186,16 @@ Updates the ComputeInstance identified by `id`. Provide the unified ComputeInsta
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeInstance" method="patch" path="/compute/{connection_id}/instance/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeInstance" method="patch" path="/compute/{connection_id}/instance/{id}" example="compute_instance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeInstanceRequest.new(
   compute_instance: Models::Shared::ComputeInstance.new(
@@ -216,12 +212,12 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
         is_auth_required: true,
         port: 8080.0,
         protocol: Models::Shared::Protocol::HTTPS,
-        url: 'https://serene-shark.biz/',
+        url: 'https://serene-shark.biz/'
       ),
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: 'ff304475-651c-4077-b261-a588fe1ec571',
+    id: 'f1a55274-d22b-4e1c-99ee-5394f3a6e0c9',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
@@ -234,18 +230,17 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
     ssh: Models::Shared::PropertyComputeInstanceSsh.new(
       host: '116.42.165.89',
       port: 22.0,
-      username: 'root',
+      username: 'root'
     ),
-    started_at: DateTime.iso8601('2025-04-04T13:14:09.957Z'),
+    started_at: DateTime.iso8601('2025-04-05T14:03:57.660Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
     status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-06-28T20:50:15.294Z'),
+    updated_at: DateTime.iso8601('2025-06-29T23:59:43.924Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.instance.patch_compute_instance(request: req)
 
 unless res.compute_instance.nil?
@@ -282,11 +277,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.instance.remove_compute_instance(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -318,16 +312,16 @@ Updates the ComputeInstance identified by `id`. Provide the unified ComputeInsta
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeInstance" method="put" path="/compute/{connection_id}/instance/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeInstance" method="put" path="/compute/{connection_id}/instance/{id}" example="compute_instance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeInstanceRequest.new(
   compute_instance: Models::Shared::ComputeInstance.new(
@@ -344,12 +338,12 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
         is_auth_required: true,
         port: 8080.0,
         protocol: Models::Shared::Protocol::HTTPS,
-        url: 'https://serene-shark.biz/',
+        url: 'https://serene-shark.biz/'
       ),
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: 'ff304475-651c-4077-b261-a588fe1ec571',
+    id: 'f1a55274-d22b-4e1c-99ee-5394f3a6e0c9',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
@@ -362,18 +356,17 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
     ssh: Models::Shared::PropertyComputeInstanceSsh.new(
       host: '116.42.165.89',
       port: 22.0,
-      username: 'root',
+      username: 'root'
     ),
-    started_at: DateTime.iso8601('2025-04-04T13:14:09.957Z'),
+    started_at: DateTime.iso8601('2025-04-05T14:03:57.660Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
     status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-06-28T20:50:15.294Z'),
+    updated_at: DateTime.iso8601('2025-06-29T23:59:43.924Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.instance.update_compute_instance(request: req)
 
 unless res.compute_instance.nil?

@@ -1,5 +1,4 @@
 # Snapshot
-(*snapshot*)
 
 ## Overview
 
@@ -16,26 +15,25 @@ Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeSnapshot" method="post" path="/compute/{connection_id}/snapshot" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeSnapshot" method="post" path="/compute/{connection_id}/snapshot" example="compute_snapshot" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.snapshot.create_compute_snapshot(compute_snapshot: Models::Shared::ComputeSnapshot.new(
   created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-  id: '982bbf1b-324a-4145-800a-69fa5fe6c66b',
+  id: 'b6e5c3c8-a046-4114-b192-93c7da3d4b27',
   metadata: [],
   name: 'snap-alius',
   size_mb: 169_984.0,
   status: Models::Shared::ComputeSnapshotStatus::DELETING,
   type: Models::Shared::ComputeSnapshotType::DISK,
-  updated_at: DateTime.iso8601('2026-04-16T19:17:13.064Z'),
+  updated_at: DateTime.iso8601('2026-04-18T07:32:50.425Z')
 ), connection_id: '<id>')
 
 unless res.compute_snapshot.nil?
@@ -75,11 +73,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.snapshot.get_compute_snapshot(connection_id: '<id>', id: '<id>')
 
 unless res.compute_snapshot.nil?
@@ -119,15 +116,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeSnapshotsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeSnapshotsRequest.new(
+  connection_id: '<id>'
+)
 res = s.snapshot.list_compute_snapshots(request: req)
 
 unless res.compute_snapshots.nil?
@@ -164,11 +160,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.snapshot.remove_compute_snapshot(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200

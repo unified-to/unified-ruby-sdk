@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class SigningDocument
         extend T::Sig
         include Crystalline::MetadataFields
 
         # When all signatures were collected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The date that this signing document was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # User who created the signing document
         field :creator_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creator_id') } }
         # Message to signers
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # URL to download the signed document
         field :download_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('download_url') } }
         # Signing deadline (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Unique identifier for this signing document
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -32,17 +31,17 @@ module UnifiedRubySDK
         # Document/envelope title
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # When sent for signature (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :sent_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sent_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :sent_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sent_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Current status of the signing document
-        field :status, Crystalline::Nilable.new(Models::Shared::SigningDocumentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::SigningDocumentStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::SigningDocumentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::SigningDocumentStatus, true) } }
         # If created from a template; points to SigningTemplate
         field :template_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('template_id') } }
         # The last date that this signing document was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_id: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), expires_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::SigningMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), sent_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::SigningDocumentStatus), template_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(completed_at: T.nilable(::DateTime), created_at: T.nilable(::DateTime), creator_id: T.nilable(::String), description: T.nilable(::String), download_url: T.nilable(::String), expires_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::SigningMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), sent_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::SigningDocumentStatus), template_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(completed_at: nil, created_at: nil, creator_id: nil, description: nil, download_url: nil, expires_at: nil, id: nil, metadata: nil, name: nil, raw: nil, sent_at: nil, status: nil, template_id: nil, updated_at: nil)
           @completed_at = completed_at
           @created_at = created_at

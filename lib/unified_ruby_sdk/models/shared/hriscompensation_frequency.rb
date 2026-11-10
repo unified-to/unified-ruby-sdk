@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisCompensationFrequency < T::Enum
-
-
+      class HrisCompensationFrequency
+        include ::Crystalline::Enum
         enums do
           ONE_TIME = new('ONE_TIME')
           DAY = new('DAY')
@@ -23,6 +21,7 @@ module UnifiedRubySDK
           BIWEEKLY = new('BIWEEKLY')
           SEMIMONTHLY = new('SEMIMONTHLY')
         end
+        open!
       end
     end
   end

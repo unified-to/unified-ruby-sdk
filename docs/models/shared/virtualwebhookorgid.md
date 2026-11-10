@@ -1,5 +1,16 @@
 # VirtualWebhookOrgId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = VirtualWebhookOrgId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = VirtualWebhookOrgId.deserialize("custom_value")
+```
+
 
 ## Values
 

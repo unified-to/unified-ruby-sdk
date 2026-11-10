@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HrisDocumentType - unified, normalized document type (OTHER when unmappable)
-      class HrisDocumentType < T::Enum
-
-
+      class HrisDocumentType
+        include ::Crystalline::Enum
         enums do
           CONTRACT = new('CONTRACT')
           OFFER_LETTER = new('OFFER_LETTER')
@@ -28,6 +26,7 @@ module UnifiedRubySDK
           MEDICAL = new('MEDICAL')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

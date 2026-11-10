@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PerformanceReviewQuestionType < T::Enum
-
-
+      class PerformanceReviewQuestionType
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           SINGLE_SELECT = new('SINGLE_SELECT')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           RATING = new('RATING')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

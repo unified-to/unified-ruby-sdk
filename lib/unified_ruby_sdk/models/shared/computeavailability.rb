@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeAvailability
         extend T::Sig
         include Crystalline::MetadataFields
 
         # Normalized stock level
-        field :level, Crystalline::Nilable.new(Models::Shared::Level), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('level'), 'decoder': Utils.enum_from_string(Models::Shared::Level, true) } }
+        field :level, Crystalline::Nilable.new(Models::Shared::Level), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('level'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Level, true) } }
         # Number of units available, when the vendor reports a count
         field :quantity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('quantity') } }
         # The region this availability applies to

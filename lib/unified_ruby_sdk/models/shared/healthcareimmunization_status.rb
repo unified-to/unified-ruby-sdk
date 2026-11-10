@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareImmunizationStatus - Status of the immunization
-      class HealthcareImmunizationStatus < T::Enum
-
-
+      class HealthcareImmunizationStatus
+        include ::Crystalline::Enum
         enums do
           COMPLETED = new('COMPLETED')
           NOT_DONE = new('NOT_DONE')
           ENTERED_IN_ERROR = new('ENTERED_IN_ERROR')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

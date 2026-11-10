@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PerformanceReviewQuestion
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::PerformanceReviewQuestionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PerformanceReviewQuestionType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PerformanceReviewQuestionType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PerformanceReviewQuestionType, true) } }
 
         sig { params(question: ::String, answers: T.nilable(T::Array[::String]), description: T.nilable(::String), type: T.nilable(Models::Shared::PerformanceReviewQuestionType)).void }
         def initialize(question:, answers: nil, description: nil, type: nil)

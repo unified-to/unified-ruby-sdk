@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class Issue
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :status, Models::Shared::IssueStatus, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::IssueStatus, false) } }
+        field :status, Models::Shared::IssueStatus, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::IssueStatus, false) } }
 
         field :ticket_ref, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ticket_ref'), required: true } }
 

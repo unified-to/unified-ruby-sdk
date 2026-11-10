@@ -1,5 +1,13 @@
 # UpdateDatastoreDatabaseQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateDatastoreDatabaseQueryParamFields::ID
+```
+
 
 ## Values
 

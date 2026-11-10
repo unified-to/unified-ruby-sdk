@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AdsAd
         extend T::Sig
@@ -16,13 +15,13 @@ module UnifiedRubySDK
 
         field :ad_copy, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ad_copy') } }
 
-        field :ad_type, Crystalline::Nilable.new(Models::Shared::AdType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ad_type'), 'decoder': Utils.enum_from_string(Models::Shared::AdType, true) } }
+        field :ad_type, Crystalline::Nilable.new(Models::Shared::AdType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ad_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AdType, true) } }
 
         field :advertiser_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('advertiser_name') } }
 
         field :campaign_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('campaign_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :creative_asset_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('creative_asset_url') } }
 
@@ -56,13 +55,13 @@ module UnifiedRubySDK
 
         field :promoted, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsPromoted)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('promoted') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::AdsAdStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AdsAdStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AdsAdStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AdsAdStatus, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(ad_copy: T.nilable(::String), ad_type: T.nilable(Models::Shared::AdType), advertiser_name: T.nilable(::String), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_asset_url: T.nilable(::String), creative_ids: T.nilable(T::Array[::String]), cta: T.nilable(::String), description: T.nilable(::String), display_url: T.nilable(::String), final_url: T.nilable(::String), group_id: T.nilable(::String), headline: T.nilable(::String), id: T.nilable(::String), logo_creative_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), path1: T.nilable(::String), path2: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AdsAdStatus), updated_at: T.nilable(::DateTime)).void }
+        sig { params(ad_copy: T.nilable(::String), ad_type: T.nilable(Models::Shared::AdType), advertiser_name: T.nilable(::String), campaign_id: T.nilable(::String), created_at: T.nilable(::DateTime), creative_asset_url: T.nilable(::String), creative_ids: T.nilable(T::Array[::String]), cta: T.nilable(::String), description: T.nilable(::String), display_url: T.nilable(::String), final_url: T.nilable(::String), group_id: T.nilable(::String), headline: T.nilable(::String), id: T.nilable(::String), logo_creative_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), path1: T.nilable(::String), path2: T.nilable(::String), promoted: T.nilable(T::Array[Models::Shared::AdsPromoted]), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::AdsAdStatus), updated_at: T.nilable(::DateTime)).void }
         def initialize(ad_copy: nil, ad_type: nil, advertiser_name: nil, campaign_id: nil, created_at: nil, creative_asset_url: nil, creative_ids: nil, cta: nil, description: nil, display_url: nil, final_url: nil, group_id: nil, headline: nil, id: nil, logo_creative_id: nil, metadata: nil, name: nil, organization_id: nil, path1: nil, path2: nil, promoted: nil, raw: nil, status: nil, updated_at: nil)
           @ad_copy = ad_copy
           @ad_type = ad_type

@@ -1,5 +1,4 @@
 # Database
-(*database*)
 
 ## Overview
 
@@ -18,28 +17,27 @@ Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="ruby" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" example="datastore_database" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.database.create_datastore_database(datastore_database: Models::Shared::DatastoreDatabase.new(
   created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
   description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
-  id: '2bb18abf-efcf-4994-a90a-0cffab0c77a6',
+  id: 'c5ef6222-314c-4727-b765-a8413875e6b0',
   is_active: true,
   metadata: [],
   name: 'Rau - O\'Reilly',
   password: 'iYLhYwOHm0NLDvI',
   region: 'France',
-  updated_at: DateTime.iso8601('2023-07-11T14:10:14.281Z'),
-  web_url: 'https://optimal-signature.name',
+  updated_at: DateTime.iso8601('2023-07-12T13:15:06.480Z'),
+  web_url: 'https://optimal-signature.name'
 ), connection_id: '<id>')
 
 unless res.datastore_database.nil?
@@ -79,11 +77,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.database.get_datastore_database(connection_id: '<id>', id: '<id>')
 
 unless res.datastore_database.nil?
@@ -123,15 +120,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListDatastoreDatabasesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListDatastoreDatabasesRequest.new(
+  connection_id: '<id>'
+)
 res = s.database.list_datastore_databases(request: req)
 
 unless res.datastore_databases.nil?
@@ -162,34 +158,33 @@ Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreD
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" example="datastore_database" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchDatastoreDatabaseRequest.new(
   datastore_database: Models::Shared::DatastoreDatabase.new(
     created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
     description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
-    id: 'efe70403-2410-4b20-be38-3268ba9fa11f',
+    id: 'bbf714fe-3bc9-4c55-ab54-28dd4767e01b',
     is_active: true,
     metadata: [],
     name: 'Rau - O\'Reilly',
     password: 'iYLhYwOHm0NLDvI',
     region: 'France',
-    updated_at: DateTime.iso8601('2023-07-11T14:10:14.291Z'),
-    web_url: 'https://optimal-signature.name',
+    updated_at: DateTime.iso8601('2023-07-12T13:15:06.487Z'),
+    web_url: 'https://optimal-signature.name'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.database.patch_datastore_database(request: req)
 
 unless res.datastore_database.nil?
@@ -226,11 +221,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.database.remove_datastore_database(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -262,34 +256,33 @@ Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreD
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" example="datastore_database" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateDatastoreDatabaseRequest.new(
   datastore_database: Models::Shared::DatastoreDatabase.new(
     created_at: DateTime.iso8601('2019-03-05T14:31:00.223Z'),
     description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
-    id: 'efe70403-2410-4b20-be38-3268ba9fa11f',
+    id: 'bbf714fe-3bc9-4c55-ab54-28dd4767e01b',
     is_active: true,
     metadata: [],
     name: 'Rau - O\'Reilly',
     password: 'iYLhYwOHm0NLDvI',
     region: 'France',
-    updated_at: DateTime.iso8601('2023-07-11T14:10:14.291Z'),
-    web_url: 'https://optimal-signature.name',
+    updated_at: DateTime.iso8601('2023-07-12T13:15:06.487Z'),
+    web_url: 'https://optimal-signature.name'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.database.update_datastore_database(request: req)
 
 unless res.datastore_database.nil?

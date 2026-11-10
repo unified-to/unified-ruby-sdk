@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingBalancesheet
         extend T::Sig
@@ -16,11 +15,11 @@ module UnifiedRubySDK
 
         field :assets, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingBalancesheetItem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('assets') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :equity, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingBalancesheetItem)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('equity') } }
 
@@ -34,13 +33,13 @@ module UnifiedRubySDK
 
         field :net_assets_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_assets_amount') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(assets: T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), equity: T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), id: T.nilable(::String), liabilities: T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), net_assets_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
+        sig { params(assets: T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), equity: T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), id: T.nilable(::String), liabilities: T.nilable(T::Array[Models::Shared::AccountingBalancesheetItem]), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), net_assets_amount: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
         def initialize(assets: nil, created_at: nil, currency: nil, end_at: nil, equity: nil, id: nil, liabilities: nil, metadata: nil, name: nil, net_assets_amount: nil, raw: nil, start_at: nil, updated_at: nil)
           @assets = assets
           @created_at = created_at

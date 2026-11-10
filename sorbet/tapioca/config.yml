@@ -5,6 +5,43 @@ gem:
   # - gem_name
   # doc: true
   # workers: 5
+  exclude:
+    # Runtime-unrelated tooling (exclude as a set)
+    - tapioca
+    - spoom
+    - yard
+    - yard-sorbet
+    - rbi
+    - rbs
+    - require-hooks
+    - thor
+    - rake
+    - uri
+
+    # Test/toolchain
+    - minitest
+    - minitest-focus
+    - minitest-reporters
+    - ansi
+    - builder
+    - prism
+
+    # Rubocop toolchain
+    - rubocop
+    - rubocop-ast
+    - rubocop-minitest
+    - lint_roller
+    - language_server-protocol
+    - parser
+    - ast
+    - regexp_parser
+    - rainbow
+    - ruby-progressbar
+    - unicode-display_width
+    - unicode-emoji
+annotations:
+  typed_overrides:
+    activesupport: "ignore"
 dsl:
   # Add your `dsl` command parameters here:
   #

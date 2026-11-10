@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeRegion
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # Country code
         field :country, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
         # When the region was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # GPU models offered in this region
         field :gpu_models, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::PropertyComputeRegionGpuModels)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_models') } }
         # Unique identifier for the region or data center
@@ -28,11 +27,11 @@ module UnifiedRubySDK
         # Display name of the region
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # When the region was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(country: T.nilable(::String), created_at: T.nilable(::DateTime), gpu_models: T.nilable(T::Array[Models::Shared::PropertyComputeRegionGpuModels]), id: T.nilable(::String), location: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        sig { params(country: T.nilable(::String), created_at: T.nilable(::DateTime), gpu_models: T.nilable(T::Array[Models::Shared::PropertyComputeRegionGpuModels]), id: T.nilable(::String), location: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
         def initialize(country: nil, created_at: nil, gpu_models: nil, id: nil, location: nil, metadata: nil, name: nil, raw: nil, updated_at: nil)
           @country = country
           @created_at = created_at

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class GenaiModel
         extend T::Sig
@@ -28,11 +27,11 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(description: T.nilable(::String), has_questions: T.nilable(T::Boolean), has_temperature: T.nilable(T::Boolean), has_vision: T.nilable(T::Boolean), id: T.nilable(::String), max_tokens: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), web_url: T.nilable(::String)).void }
+        sig { params(description: T.nilable(::String), has_questions: T.nilable(T::Boolean), has_temperature: T.nilable(T::Boolean), has_vision: T.nilable(T::Boolean), id: T.nilable(::String), max_tokens: T.nilable(::Float), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), web_url: T.nilable(::String)).void }
         def initialize(description: nil, has_questions: nil, has_temperature: nil, has_vision: nil, id: nil, max_tokens: nil, name: nil, raw: nil, web_url: nil)
           @description = description
           @has_questions = has_questions

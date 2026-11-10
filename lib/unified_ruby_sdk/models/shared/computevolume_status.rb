@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeVolumeStatus - Normalized volume status
-      class ComputeVolumeStatus < T::Enum
-
-
+      class ComputeVolumeStatus
+        include ::Crystalline::Enum
         enums do
           CREATING = new('CREATING')
           AVAILABLE = new('AVAILABLE')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           ERROR = new('ERROR')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

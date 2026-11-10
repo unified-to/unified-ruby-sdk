@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CommerceLocation
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :categories, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('categories') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
@@ -34,7 +33,7 @@ module UnifiedRubySDK
 
         field :latitude, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('latitude') } }
 
-        field :location_type, Crystalline::Nilable.new(Models::Shared::LocationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_type'), 'decoder': Utils.enum_from_string(Models::Shared::LocationType, true) } }
+        field :location_type, Crystalline::Nilable.new(Models::Shared::LocationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('location_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::LocationType, true) } }
 
         field :longitude, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('longitude') } }
 
@@ -50,17 +49,17 @@ module UnifiedRubySDK
 
         field :rating, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rating') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :review_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('review_count') } }
 
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CommerceTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :web_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('web_url') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyCommerceLocationAddress), categories: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), is_active: T.nilable(T::Boolean), language_locale: T.nilable(::String), latitude: T.nilable(::Float), location_type: T.nilable(Models::Shared::LocationType), longitude: T.nilable(::Float), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), price_level: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), review_count: T.nilable(::Float), telephones: T.nilable(T::Array[Models::Shared::CommerceTelephone]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
+        sig { params(address: T.nilable(Models::Shared::PropertyCommerceLocationAddress), categories: T.nilable(T::Array[::String]), created_at: T.nilable(::DateTime), currency: T.nilable(::String), description: T.nilable(::String), id: T.nilable(::String), image_url: T.nilable(::String), is_active: T.nilable(T::Boolean), language_locale: T.nilable(::String), latitude: T.nilable(::Float), location_type: T.nilable(Models::Shared::LocationType), longitude: T.nilable(::Float), media: T.nilable(T::Array[Models::Shared::CommerceItemMedia]), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), parent_id: T.nilable(::String), price_level: T.nilable(::String), rating: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), review_count: T.nilable(::Float), telephones: T.nilable(T::Array[Models::Shared::CommerceTelephone]), updated_at: T.nilable(::DateTime), web_url: T.nilable(::String)).void }
         def initialize(address: nil, categories: nil, created_at: nil, currency: nil, description: nil, id: nil, image_url: nil, is_active: nil, language_locale: nil, latitude: nil, location_type: nil, longitude: nil, media: nil, metadata: nil, name: nil, parent_id: nil, price_level: nil, rating: nil, raw: nil, review_count: nil, telephones: nil, updated_at: nil, web_url: nil)
           @address = address
           @categories = categories

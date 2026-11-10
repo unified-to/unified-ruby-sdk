@@ -1,5 +1,4 @@
 # Document
-(*document*)
 
 ## Overview
 
@@ -38,25 +37,24 @@ Creates a AtsDocument. Provide the unified AtsDocument fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" example="ats_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.create_ats_document(ats_document: Models::Shared::AtsDocument.new(
   created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
   document_url: 'https://vengeful-lashes.biz',
   filename: 'lonzo_schowalter_resume.pdf',
-  id: '381243a5-97a4-4040-9bf5-811a044c9fa3',
+  id: '02f1f988-7b60-47d4-8f17-27f0aa1452c5',
   metadata: [],
   type: Models::Shared::AtsDocumentType::COVER_LETTER,
-  updated_at: DateTime.iso8601('2022-12-11T23:30:24.114Z'),
+  updated_at: DateTime.iso8601('2022-12-12T09:44:12.099Z')
 ), connection_id: '<id>')
 
 unless res.ats_document.nil?
@@ -90,36 +88,35 @@ Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" -->
+<!-- UsageSnippet language="ruby" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" example="healthcare_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.create_healthcare_document(healthcare_document: Models::Shared::HealthcareDocument.new(
   authored_at: DateTime.iso8601('2023-07-16T04:00:25.853Z'),
   codes: [
     Models::Shared::HealthcareCode.new(
       code: '23671711',
       display: 'History and physical',
-      system: 'http://loinc.org',
+      system: 'http://loinc.org'
     ),
   ],
   created_at: DateTime.iso8601('2023-07-16T04:00:25.853Z'),
   document_url: 'https://overcooked-yogurt.org',
   filename: 'ugh_after.elc',
-  id: '9f5e818d-268c-46cd-881c-47122a30f369',
+  id: '91929771-04df-4c71-9ab5-3a0b6db9a81c',
   metadata: [],
   mime_type: 'application/pdf',
   name: 'History and physical',
   status: Models::Shared::HealthcareDocumentStatus::SUPERSEDED,
   type: Models::Shared::HealthcareDocumentType::CONSULTATION_NOTE,
-  updated_at: DateTime.iso8601('2025-01-04T05:02:15.281Z'),
+  updated_at: DateTime.iso8601('2025-01-04T23:07:49.508Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_document.nil?
@@ -153,25 +150,24 @@ Creates a HrisDocument. Provide the unified HrisDocument fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" example="hris_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.create_hris_document(hris_document: Models::Shared::HrisDocument.new(
   created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
   document_url: 'https://sore-decision.biz/',
   filename: 'ridge_forager.xsl',
-  id: 'd021991b-ee06-4479-bda5-8447a1c37df6',
+  id: '2e830c88-faf1-498a-b30c-dff5208a5c0f',
   metadata: [],
   type: Models::Shared::HrisDocumentType::POLICY,
-  updated_at: DateTime.iso8601('2025-10-25T16:49:29.060Z'),
+  updated_at: DateTime.iso8601('2025-10-26T23:05:08.736Z')
 ), connection_id: '<id>')
 
 unless res.hris_document.nil?
@@ -205,23 +201,22 @@ Creates a PlmDocument. Provide the unified PlmDocument fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPlmDocument" method="post" path="/plm/{connection_id}/document" -->
+<!-- UsageSnippet language="ruby" operationID="createPlmDocument" method="post" path="/plm/{connection_id}/document" example="plm_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.create_plm_document(plm_document: Models::Shared::PlmDocument.new(
   created_at: DateTime.iso8601('2020-10-16T01:44:30.293Z'),
   file_ids: [],
-  id: '957e1c12-76c1-450b-a2de-b2605ba4eb08',
+  id: 'b8e1e416-2836-4310-8f76-825109791090',
   lifecycle_state: 'Under Review',
-  master_identifier: 'e7eab32d-ea4b-4e23-864f-7d52745fa4f4',
+  master_identifier: 'db397c7e-9daf-4dfa-ae99-752c0079acab',
   metadata: [],
   name: 'Procedure taxicab',
   number: 'DOC-086886',
@@ -229,8 +224,8 @@ res = s.document.create_plm_document(plm_document: Models::Shared::PlmDocument.n
   revision: 'C',
   status: Models::Shared::PlmDocumentStatus::IN_REVIEW,
   type: Models::Shared::PlmDocumentType::PROCEDURE,
-  updated_at: DateTime.iso8601('2026-09-03T07:10:36.846Z'),
-  url: 'https://uncommon-guide.info/',
+  updated_at: DateTime.iso8601('2026-09-04T22:42:00.181Z'),
+  url: 'https://uncommon-guide.info/'
 ), connection_id: '<id>')
 
 unless res.plm_document.nil?
@@ -264,27 +259,26 @@ Creates a SigningDocument. Provide the unified SigningDocument fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" -->
+<!-- UsageSnippet language="ruby" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" example="signing_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.create_signing_document(signing_document: Models::Shared::SigningDocument.new(
   created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
   description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
   expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
-  id: '8139f991-c0ed-4b24-a094-6dd8f403fa7c',
+  id: 'f1c9fba0-bb57-448c-8b2c-cfb342113d8e',
   metadata: [],
   name: 'Denesik Group NDA',
-  sent_at: DateTime.iso8601('2022-07-03T12:42:46.557Z'),
+  sent_at: DateTime.iso8601('2022-07-03T21:20:38.976Z'),
   status: Models::Shared::SigningDocumentStatus::DRAFT,
-  updated_at: DateTime.iso8601('2025-09-18T00:17:58.073Z'),
+  updated_at: DateTime.iso8601('2025-09-19T08:37:25.051Z')
 ), connection_id: '<id>')
 
 unless res.signing_document.nil?
@@ -324,11 +318,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.get_ats_document(connection_id: '<id>', id: '<id>')
 
 unless res.ats_document.nil?
@@ -368,11 +361,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.get_healthcare_document(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_document.nil?
@@ -412,11 +404,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.get_hris_document(connection_id: '<id>', id: '<id>')
 
 unless res.hris_document.nil?
@@ -456,11 +447,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.get_plm_document(connection_id: '<id>', id: '<id>')
 
 unless res.plm_document.nil?
@@ -500,11 +490,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.get_signing_document(connection_id: '<id>', id: '<id>')
 
 unless res.signing_document.nil?
@@ -544,15 +533,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsDocumentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsDocumentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.document.list_ats_documents(request: req)
 
 unless res.ats_documents.nil?
@@ -589,15 +577,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareDocumentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareDocumentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.document.list_healthcare_documents(request: req)
 
 unless res.healthcare_documents.nil?
@@ -634,15 +621,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisDocumentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisDocumentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.document.list_hris_documents(request: req)
 
 unless res.hris_documents.nil?
@@ -679,15 +665,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPlmDocumentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPlmDocumentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.document.list_plm_documents(request: req)
 
 unless res.plm_documents.nil?
@@ -724,15 +709,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListSigningDocumentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListSigningDocumentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.document.list_signing_documents(request: req)
 
 unless res.signing_documents.nil?
@@ -763,31 +747,30 @@ Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsDocumentRequest.new(
   ats_document: Models::Shared::AtsDocument.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'lonzo_schowalter_resume.pdf',
-    id: '35cb7b32-f2a0-448c-91d9-6d5330abbfaa',
+    id: '4cf5594f-4208-462e-93fe-8f584456af55',
     metadata: [],
     type: Models::Shared::AtsDocumentType::COVER_LETTER,
-    updated_at: DateTime.iso8601('2022-12-11T23:30:24.118Z'),
+    updated_at: DateTime.iso8601('2022-12-12T09:44:12.102Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.document.patch_ats_document(request: req)
 
 unless res.ats_document.nil?
@@ -818,31 +801,30 @@ Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisDocumentRequest.new(
   hris_document: Models::Shared::HrisDocument.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: '4c74f69f-e1ba-4d03-9be0-88b2af17d160',
+    id: '827ca4ed-9fbf-4dd1-88e3-38182b6fde6d',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-25T16:49:29.077Z'),
+    updated_at: DateTime.iso8601('2025-10-26T23:05:08.746Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.document.patch_hris_document(request: req)
 
 unless res.hris_document.nil?
@@ -873,24 +855,24 @@ Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPlmDocument" method="patch" path="/plm/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPlmDocument" method="patch" path="/plm/{connection_id}/document/{id}" example="plm_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPlmDocumentRequest.new(
   plm_document: Models::Shared::PlmDocument.new(
     created_at: DateTime.iso8601('2020-10-16T01:44:30.293Z'),
     file_ids: [],
-    id: '448f97e2-9cc5-4bc9-a4c1-8e4f4d6eae99',
+    id: '7b0f2785-e094-43b6-a6af-f96b06ac1fff',
     lifecycle_state: 'Under Review',
-    master_identifier: '28f9f831-17e7-4671-af51-313a60433970',
+    master_identifier: 'af55eb0e-c361-4baf-b988-412f0287dff2',
     metadata: [],
     name: 'Procedure taxicab',
     number: 'DOC-086886',
@@ -898,13 +880,12 @@ req = Models::Operations::PatchPlmDocumentRequest.new(
     revision: 'C',
     status: Models::Shared::PlmDocumentStatus::IN_REVIEW,
     type: Models::Shared::PlmDocumentType::PROCEDURE,
-    updated_at: DateTime.iso8601('2026-09-03T07:10:36.865Z'),
-    url: 'https://uncommon-guide.info/',
+    updated_at: DateTime.iso8601('2026-09-04T22:42:00.200Z'),
+    url: 'https://uncommon-guide.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.document.patch_plm_document(request: req)
 
 unless res.plm_document.nil?
@@ -935,33 +916,32 @@ Updates the SigningDocument identified by `id`. Provide the unified SigningDocum
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchSigningDocumentRequest.new(
   signing_document: Models::Shared::SigningDocument.new(
     created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
     description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
     expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
-    id: '628b855a-b226-4914-8916-326a56986f97',
+    id: 'eb05349b-b780-49da-96aa-9b09826f681a',
     metadata: [],
     name: 'Denesik Group NDA',
-    sent_at: DateTime.iso8601('2022-07-03T12:42:46.559Z'),
+    sent_at: DateTime.iso8601('2022-07-03T21:20:38.979Z'),
     status: Models::Shared::SigningDocumentStatus::DRAFT,
-    updated_at: DateTime.iso8601('2025-09-18T00:17:58.081Z'),
+    updated_at: DateTime.iso8601('2025-09-19T08:37:25.063Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.document.patch_signing_document(request: req)
 
 unless res.signing_document.nil?
@@ -998,11 +978,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.remove_ats_document(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1040,11 +1019,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.remove_hris_document(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1082,11 +1060,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.document.remove_signing_document(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1118,31 +1095,30 @@ Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsDocumentRequest.new(
   ats_document: Models::Shared::AtsDocument.new(
     created_at: DateTime.iso8601('2021-08-20T08:00:27.437Z'),
     document_url: 'https://vengeful-lashes.biz',
     filename: 'lonzo_schowalter_resume.pdf',
-    id: '35cb7b32-f2a0-448c-91d9-6d5330abbfaa',
+    id: '4cf5594f-4208-462e-93fe-8f584456af55',
     metadata: [],
     type: Models::Shared::AtsDocumentType::COVER_LETTER,
-    updated_at: DateTime.iso8601('2022-12-11T23:30:24.118Z'),
+    updated_at: DateTime.iso8601('2022-12-12T09:44:12.102Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.document.update_ats_document(request: req)
 
 unless res.ats_document.nil?
@@ -1173,31 +1149,30 @@ Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisDocumentRequest.new(
   hris_document: Models::Shared::HrisDocument.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: '4c74f69f-e1ba-4d03-9be0-88b2af17d160',
+    id: '827ca4ed-9fbf-4dd1-88e3-38182b6fde6d',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-25T16:49:29.077Z'),
+    updated_at: DateTime.iso8601('2025-10-26T23:05:08.746Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.document.update_hris_document(request: req)
 
 unless res.hris_document.nil?
@@ -1228,24 +1203,24 @@ Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePlmDocument" method="put" path="/plm/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePlmDocument" method="put" path="/plm/{connection_id}/document/{id}" example="plm_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePlmDocumentRequest.new(
   plm_document: Models::Shared::PlmDocument.new(
     created_at: DateTime.iso8601('2020-10-16T01:44:30.293Z'),
     file_ids: [],
-    id: '448f97e2-9cc5-4bc9-a4c1-8e4f4d6eae99',
+    id: '7b0f2785-e094-43b6-a6af-f96b06ac1fff',
     lifecycle_state: 'Under Review',
-    master_identifier: '28f9f831-17e7-4671-af51-313a60433970',
+    master_identifier: 'af55eb0e-c361-4baf-b988-412f0287dff2',
     metadata: [],
     name: 'Procedure taxicab',
     number: 'DOC-086886',
@@ -1253,13 +1228,12 @@ req = Models::Operations::UpdatePlmDocumentRequest.new(
     revision: 'C',
     status: Models::Shared::PlmDocumentStatus::IN_REVIEW,
     type: Models::Shared::PlmDocumentType::PROCEDURE,
-    updated_at: DateTime.iso8601('2026-09-03T07:10:36.865Z'),
-    url: 'https://uncommon-guide.info/',
+    updated_at: DateTime.iso8601('2026-09-04T22:42:00.200Z'),
+    url: 'https://uncommon-guide.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.document.update_plm_document(request: req)
 
 unless res.plm_document.nil?
@@ -1290,33 +1264,32 @@ Updates the SigningDocument identified by `id`. Provide the unified SigningDocum
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateSigningDocumentRequest.new(
   signing_document: Models::Shared::SigningDocument.new(
     created_at: DateTime.iso8601('2021-05-02T09:35:23.679Z'),
     description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
     expires_at: DateTime.iso8601('2021-06-04T01:21:34.949Z'),
-    id: '628b855a-b226-4914-8916-326a56986f97',
+    id: 'eb05349b-b780-49da-96aa-9b09826f681a',
     metadata: [],
     name: 'Denesik Group NDA',
-    sent_at: DateTime.iso8601('2022-07-03T12:42:46.559Z'),
+    sent_at: DateTime.iso8601('2022-07-03T21:20:38.979Z'),
     status: Models::Shared::SigningDocumentStatus::DRAFT,
-    updated_at: DateTime.iso8601('2025-09-18T00:17:58.081Z'),
+    updated_at: DateTime.iso8601('2025-09-19T08:37:25.063Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.document.update_signing_document(request: req)
 
 unless res.signing_document.nil?

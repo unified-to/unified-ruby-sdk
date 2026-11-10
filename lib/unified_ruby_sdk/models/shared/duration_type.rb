@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class DurationType < T::Enum
-
-
+      class DurationType
+        include ::Crystalline::Enum
         enums do
           HOUR = new('HOUR')
           DAY = new('DAY')
         end
+        open!
       end
     end
   end

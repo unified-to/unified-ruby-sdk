@@ -1,5 +1,4 @@
 # Space
-(*space*)
 
 ## Overview
 
@@ -18,25 +17,24 @@ Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="ruby" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" example="kms_space" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.space.create_kms_space(kms_space: Models::Shared::KmsSpace.new(
   created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
   description: 'Acer.',
-  id: '211646ac-ca44-4c4e-9bec-4130a88a3b5b',
+  id: 'ca8e7a93-9187-4476-b950-41b7c438cf6b',
   is_active: false,
   metadata: [],
   name: 'into nor afore',
-  updated_at: DateTime.iso8601('2026-01-14T02:15:44.454Z'),
+  updated_at: DateTime.iso8601('2026-01-15T10:43:35.834Z')
 ), connection_id: '<id>')
 
 unless res.kms_space.nil?
@@ -76,11 +74,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.space.get_kms_space(connection_id: '<id>', id: '<id>')
 
 unless res.kms_space.nil?
@@ -120,15 +117,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListKmsSpacesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListKmsSpacesRequest.new(
+  connection_id: '<id>'
+)
 res = s.space.list_kms_spaces(request: req)
 
 unless res.kms_spaces.nil?
@@ -159,31 +155,30 @@ Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
     created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
     description: 'Acer.',
-    id: 'c410d478-0a5b-46ec-9d0e-b69d0a326565',
+    id: '89cfadf8-8098-47fe-ba8f-fd9422f38033',
     is_active: false,
     metadata: [],
     name: 'into nor afore',
-    updated_at: DateTime.iso8601('2026-01-14T02:15:44.467Z'),
+    updated_at: DateTime.iso8601('2026-01-15T10:43:35.844Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.space.patch_kms_space(request: req)
 
 unless res.kms_space.nil?
@@ -220,11 +215,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.space.remove_kms_space(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -256,31 +250,30 @@ Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateKmsSpaceRequest.new(
   kms_space: Models::Shared::KmsSpace.new(
     created_at: DateTime.iso8601('2022-10-31T00:56:54.246Z'),
     description: 'Acer.',
-    id: 'c410d478-0a5b-46ec-9d0e-b69d0a326565',
+    id: '89cfadf8-8098-47fe-ba8f-fd9422f38033',
     is_active: false,
     metadata: [],
     name: 'into nor afore',
-    updated_at: DateTime.iso8601('2026-01-14T02:15:44.467Z'),
+    updated_at: DateTime.iso8601('2026-01-15T10:43:35.844Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.space.update_kms_space(request: req)
 
 unless res.kms_space.nil?

@@ -1,5 +1,4 @@
 # Note
-(*note*)
 
 ## Overview
 
@@ -18,23 +17,22 @@ Creates a TicketingNote. Provide the unified TicketingNote fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="ruby" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" example="ticketing_note" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.note.create_ticketing_note(ticketing_note: Models::Shared::TicketingNote.new(
   created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
   description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-  id: '6ed291b3-0caf-4b38-9f64-bde5b3cafb9b',
+  id: '9e3645cd-567e-48b9-bcc9-51d130bfff82',
   metadata: [],
-  updated_at: DateTime.iso8601('2024-10-12T21:17:30.642Z'),
+  updated_at: DateTime.iso8601('2024-10-14T02:28:01.660Z')
 ), connection_id: '<id>')
 
 unless res.ticketing_note.nil?
@@ -74,11 +72,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.note.get_ticketing_note(connection_id: '<id>', id: '<id>')
 
 unless res.ticketing_note.nil?
@@ -118,15 +115,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListTicketingNotesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListTicketingNotesRequest.new(
+  connection_id: '<id>'
+)
 res = s.note.list_ticketing_notes(request: req)
 
 unless res.ticketing_notes.nil?
@@ -157,29 +153,28 @@ Updates the TicketingNote identified by `id`. Provide the unified TicketingNote 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
     description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-    id: '9c4a160b-3643-4782-8c52-0ce7006bea7e',
+    id: '68e3df79-7fb3-4b87-9d95-1867d1b91d9a',
     metadata: [],
-    updated_at: DateTime.iso8601('2024-10-12T21:17:30.650Z'),
+    updated_at: DateTime.iso8601('2024-10-14T02:28:01.667Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.note.patch_ticketing_note(request: req)
 
 unless res.ticketing_note.nil?
@@ -216,11 +211,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.note.remove_ticketing_note(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -252,29 +246,28 @@ Updates the TicketingNote identified by `id`. Provide the unified TicketingNote 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateTicketingNoteRequest.new(
   ticketing_note: Models::Shared::TicketingNote.new(
     created_at: DateTime.iso8601('2019-07-23T15:05:03.241Z'),
     description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-    id: '9c4a160b-3643-4782-8c52-0ce7006bea7e',
+    id: '68e3df79-7fb3-4b87-9d95-1867d1b91d9a',
     metadata: [],
-    updated_at: DateTime.iso8601('2024-10-12T21:17:30.650Z'),
+    updated_at: DateTime.iso8601('2024-10-14T02:28:01.667Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.note.update_ticketing_note(request: req)
 
 unless res.ticketing_note.nil?

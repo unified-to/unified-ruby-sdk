@@ -1,5 +1,13 @@
 # ListGenaiOrganizationsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListGenaiOrganizationsQueryParamFields::ID
+```
+
 
 ## Values
 

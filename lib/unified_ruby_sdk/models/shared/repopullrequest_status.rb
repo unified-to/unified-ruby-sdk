@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class RepoPullrequestStatus < T::Enum
-
-
+      class RepoPullrequestStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           APPROVED = new('APPROVED')
           REJECTED = new('REJECTED')
         end
+        open!
       end
     end
   end

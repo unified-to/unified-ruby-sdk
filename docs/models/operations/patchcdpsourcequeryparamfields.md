@@ -1,5 +1,13 @@
 # PatchCdpSourceQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchCdpSourceQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,4 @@
 # Source
-(*source*)
 
 ## Overview
 
@@ -24,12 +23,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.source.create_cdp_source(cdp_source: Models::Shared::CdpSource.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.source.create_cdp_source(cdp_source: Models::Shared::CdpSource.new, connection_id: '<id>')
 
 unless res.cdp_source.nil?
   # handle response
@@ -68,11 +66,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.source.get_cdp_source(connection_id: '<id>', id: '<id>')
 
 unless res.cdp_source.nil?
@@ -112,15 +109,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCdpSourcesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCdpSourcesRequest.new(
+  connection_id: '<id>'
+)
 res = s.source.list_cdp_sources(request: req)
 
 unless res.cdp_sources.nil?
@@ -157,17 +153,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCdpSourceRequest.new(
-  cdp_source: Models::Shared::CdpSource.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCdpSourceRequest.new(
+  cdp_source: Models::Shared::CdpSource.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.source.patch_cdp_source(request: req)
 
 unless res.cdp_source.nil?
@@ -204,11 +199,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.source.remove_cdp_source(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -246,17 +240,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCdpSourceRequest.new(
-  cdp_source: Models::Shared::CdpSource.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCdpSourceRequest.new(
+  cdp_source: Models::Shared::CdpSource.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.source.update_cdp_source(request: req)
 
 unless res.cdp_source.nil?

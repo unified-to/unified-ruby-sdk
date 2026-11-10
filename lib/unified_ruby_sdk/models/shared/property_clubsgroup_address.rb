@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # The group's address
       class PropertyClubsGroupAddress
         extend T::Sig

@@ -1,5 +1,13 @@
 # CreateAccountingTaxrateQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateAccountingTaxrateQueryParamFields::ID
+```
+
 
 ## Values
 

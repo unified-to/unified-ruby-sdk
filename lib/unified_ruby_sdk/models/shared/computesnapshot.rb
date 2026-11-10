@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeSnapshot
         extend T::Sig
         include Crystalline::MetadataFields
 
         # When the snapshot was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # When the snapshot will be deleted (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :expires_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expires_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the snapshot
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # The instance the snapshot was taken from
@@ -26,19 +25,19 @@ module UnifiedRubySDK
         # Display name of the snapshot
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Snapshot size in MiB
         field :size_mb, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('size_mb') } }
         # Normalized snapshot status
-        field :status, Crystalline::Nilable.new(Models::Shared::ComputeSnapshotStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeSnapshotStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::ComputeSnapshotStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeSnapshotStatus, true) } }
         # Whether memory state is included
-        field :type, Crystalline::Nilable.new(Models::Shared::ComputeSnapshotType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeSnapshotType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::ComputeSnapshotType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeSnapshotType, true) } }
         # When the snapshot was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The volume the snapshot was taken from
         field :volume_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('volume_id') } }
 
-        sig { params(created_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), id: T.nilable(::String), instance_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), size_mb: T.nilable(::Float), status: T.nilable(Models::Shared::ComputeSnapshotStatus), type: T.nilable(Models::Shared::ComputeSnapshotType), updated_at: T.nilable(::DateTime), volume_id: T.nilable(::String)).void }
+        sig { params(created_at: T.nilable(::DateTime), expires_at: T.nilable(::DateTime), id: T.nilable(::String), instance_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), size_mb: T.nilable(::Float), status: T.nilable(Models::Shared::ComputeSnapshotStatus), type: T.nilable(Models::Shared::ComputeSnapshotType), updated_at: T.nilable(::DateTime), volume_id: T.nilable(::String)).void }
         def initialize(created_at: nil, expires_at: nil, id: nil, instance_id: nil, metadata: nil, name: nil, raw: nil, size_mb: nil, status: nil, type: nil, updated_at: nil, volume_id: nil)
           @created_at = created_at
           @expires_at = expires_at

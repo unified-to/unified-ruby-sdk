@@ -1,5 +1,4 @@
 # Account
-(*account*)
 
 ## Overview
 
@@ -18,24 +17,23 @@ Creates a AccountingAccount. Provide the unified AccountingAccount fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" example="accounting_account" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.account.create_accounting_account(accounting_account: Models::Shared::AccountingAccount.new(
   balance: 12_092.0,
   created_at: DateTime.iso8601('2022-07-03T17:57:07.391Z'),
   currency: 'CAD',
   customer_defined_code: '6170',
   description: 'Voluptatibus valde spoliatio.',
-  id: 'ba69ff06-e2d3-4db2-a8ef-d3df011019a6',
+  id: 'a0f8bed1-00f2-460a-84ab-23bbe608ee1e',
   is_payable: false,
   metadata: [],
   name: 'Auto Loan Account',
@@ -44,11 +42,11 @@ res = s.account.create_accounting_account(accounting_account: Models::Shared::Ac
     Models::Shared::AccountingAccountTaxonomy.new(
       original_type: 'vilitas',
       type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-      value: 'comedo',
+      value: 'comedo'
     ),
   ],
   type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-  updated_at: DateTime.iso8601('2023-08-11T17:37:54.471Z'),
+  updated_at: DateTime.iso8601('2023-08-12T03:59:26.175Z')
 ), connection_id: '<id>')
 
 unless res.accounting_account.nil?
@@ -88,11 +86,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.account.get_accounting_account(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_account.nil?
@@ -132,15 +129,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingAccountsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingAccountsRequest.new(
+  connection_id: '<id>'
+)
 res = s.account.list_accounting_accounts(request: req)
 
 unless res.accounting_accounts.nil?
@@ -171,16 +167,16 @@ Updates the AccountingAccount identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingAccountRequest.new(
   accounting_account: Models::Shared::AccountingAccount.new(
@@ -189,7 +185,7 @@ req = Models::Operations::PatchAccountingAccountRequest.new(
     currency: 'CAD',
     customer_defined_code: '6170',
     description: 'Voluptatibus valde spoliatio.',
-    id: '8f8b4e9e-6c5f-46d5-9498-4b6f7aa6d0dc',
+    id: 'eb809ea9-25ed-420d-a51d-714d74492f08',
     is_payable: false,
     metadata: [],
     name: 'Auto Loan Account',
@@ -198,16 +194,15 @@ req = Models::Operations::PatchAccountingAccountRequest.new(
       Models::Shared::AccountingAccountTaxonomy.new(
         original_type: 'vilitas',
         type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-        value: 'comedo',
+        value: 'comedo'
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-11T17:37:54.477Z'),
+    updated_at: DateTime.iso8601('2023-08-12T03:59:26.179Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.account.patch_accounting_account(request: req)
 
 unless res.accounting_account.nil?
@@ -244,11 +239,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.account.remove_accounting_account(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -280,16 +274,16 @@ Updates the AccountingAccount identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingAccountRequest.new(
   accounting_account: Models::Shared::AccountingAccount.new(
@@ -298,7 +292,7 @@ req = Models::Operations::UpdateAccountingAccountRequest.new(
     currency: 'CAD',
     customer_defined_code: '6170',
     description: 'Voluptatibus valde spoliatio.',
-    id: '8f8b4e9e-6c5f-46d5-9498-4b6f7aa6d0dc',
+    id: 'eb809ea9-25ed-420d-a51d-714d74492f08',
     is_payable: false,
     metadata: [],
     name: 'Auto Loan Account',
@@ -307,16 +301,15 @@ req = Models::Operations::UpdateAccountingAccountRequest.new(
       Models::Shared::AccountingAccountTaxonomy.new(
         original_type: 'vilitas',
         type: Models::Shared::AccountingAccountTaxonomyType::SUBGROUP,
-        value: 'comedo',
+        value: 'comedo'
       ),
     ],
     type: Models::Shared::Type::ACCOUNTS_RECEIVABLE,
-    updated_at: DateTime.iso8601('2023-08-11T17:37:54.477Z'),
+    updated_at: DateTime.iso8601('2023-08-12T03:59:26.179Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.account.update_accounting_account(request: req)
 
 unless res.accounting_account.nil?

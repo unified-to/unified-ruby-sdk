@@ -1,5 +1,4 @@
 # Commerce
-(*commerce*)
 
 ## Overview
 
@@ -65,21 +64,20 @@ Creates a CommerceCollection. Provide the unified CommerceCollection fields in t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" example="commerce_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.create_commerce_collection(commerce_collection: Models::Shared::CommerceCollection.new(
   created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
   description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-  id: '91ec85f3-0aa4-441d-8cdf-0d62c8f943f4',
+  id: '6427f5bf-6966-4e54-ad25-ee1799d3eec2',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -88,25 +86,25 @@ res = s.commerce.create_commerce_collection(commerce_collection: Models::Shared:
     Models::Shared::CommerceItemMedia.new(
       alt: 'Defungo adopto thorax.',
       height: 759.0,
-      id: '5e768623-c424-496b-8546-4ba344bf49ac',
+      id: '9b2f7f84-00e2-441c-bbf3-a7b4bfa24052',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '3f98496d-4794-406f-a3fd-938775bf698d',
+          id: '8b93bb56-cb99-49ee-966e-dbd225ff445f',
           slug: 'censura',
-          value: 'toties',
+          value: 'toties'
         ),
       ],
       position: 80.0,
       type: Models::Shared::CommerceItemMediaType::VIDEO,
       url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
-      width: 40.0,
+      width: 40.0
     ),
   ],
   metadata: [
     Models::Shared::CommerceMetadata.new(
-      id: 'bf191248-0d68-4c82-a379-b013a7860e43',
+      id: 'fd5009f2-8064-4430-9f95-9e1e4b04482c',
       slug: 'aetas',
-      value: 'consuasor',
+      value: 'consuasor'
     ),
   ],
   name: 'Small Marble Chips',
@@ -118,7 +116,7 @@ res = s.commerce.create_commerce_collection(commerce_collection: Models::Shared:
     'contego',
   ],
   type: Models::Shared::CommerceCollectionType::COLLECTION,
-  updated_at: DateTime.iso8601('2025-03-24T18:09:48.158Z'),
+  updated_at: DateTime.iso8601('2025-03-25T14:57:59.200Z')
 ), connection_id: '<id>')
 
 unless res.commerce_collection.nil?
@@ -152,22 +150,21 @@ Creates a CommerceInventory. Provide the unified CommerceInventory fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" example="commerce_inventory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(
   available: 337.0,
-  id: '2f15a15e-a2b7-481d-a4d9-0ceef523fb04',
+  id: '4b3c4b7c-bfdf-401d-8f44-4f4580323f21',
   metadata: [],
-  updated_at: DateTime.iso8601('2025-12-05T17:20:16.906Z'),
+  updated_at: DateTime.iso8601('2025-12-07T02:10:20.091Z')
 ), connection_id: '<id>')
 
 unless res.commerce_inventory.nil?
@@ -201,24 +198,23 @@ Creates a CommerceItem. Provide the unified CommerceItem fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" example="commerce_item" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.create_commerce_item(commerce_item: Models::Shared::CommerceItem.new(
   collections: [],
   created_at: DateTime.iso8601('2019-06-21T20:16:18.628Z'),
   description: 'Decretum vulnero ustulo abeo.',
   duration: 104.0,
   global_code: '978-0-85270-680-0',
-  id: 'ff71edc6-fcdd-42eb-8fe0-172185eaebf3',
+  id: '0b6e360b-575a-4729-a96a-e455a077fe43',
   is_active: false,
   is_featured: false,
   is_taxable: true,
@@ -227,53 +223,53 @@ res = s.commerce.create_commerce_item(commerce_item: Models::Shared::CommerceIte
     Models::Shared::CommerceItemMedia.new(
       alt: 'Caterva eveniet acies candidus.',
       height: 876.0,
-      id: 'c9731fd7-3041-44ef-b45b-09067fccfbc3',
+      id: '622501f4-0207-4362-ba14-2d86de83a324',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '69a9924b-89c2-4499-8508-edc7a7c80290',
+          id: 'a63072b4-b74b-4600-8ac0-8b8338e608b8',
           slug: 'doloremque',
-          value: 'allatus',
+          value: 'allatus'
         ),
       ],
       position: 21.0,
       type: Models::Shared::CommerceItemMediaType::VIDEO,
       url: 'https://picsum.photos/seed/v73y0uzyK/3001/972',
-      width: 67.0,
+      width: 67.0
     ),
     Models::Shared::CommerceItemMedia.new(
       alt: 'Comedo.',
       height: 651.0,
-      id: 'f22ae6fa-12e6-42e7-b349-e7251e79f944',
+      id: '64abd315-fe49-438b-a071-207a72368b13',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '067df80d-0293-4203-9d1c-09659b32b3e7',
+          id: 'dd4d091d-2e02-4124-a289-4b8d6522f20c',
           slug: 'bis',
-          value: 'somniculosus',
+          value: 'somniculosus'
         ),
       ],
       position: 51.0,
       type: Models::Shared::CommerceItemMediaType::IMAGE,
       url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
-      width: 3.0,
+      width: 3.0
     ),
   ],
   metadata: [
     Models::Shared::CommerceMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '4cfe34a5-560a-4fda-9e96-3825a77f6eb5',
+      id: '2415befd-c520-4d3f-a181-eab0a1c05c1e',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'abstergo',
+      value: 'abstergo'
     ),
   ],
   name: 'Handcrafted Rubber Tuna',
   prices: [
     Models::Shared::CommerceItemPrice.new(
       currency: 'USD',
-      price: 78.11,
+      price: 78.11
     ),
   ],
   public_description: 'Custodia ventus solio compono.',
@@ -286,10 +282,10 @@ res = s.commerce.create_commerce_item(commerce_item: Models::Shared::CommerceIte
   ],
   total_stock: 682.0,
   type: 'SERVICE',
-  updated_at: DateTime.iso8601('2022-04-26T19:54:22.051Z'),
+  updated_at: DateTime.iso8601('2022-04-27T11:37:08.248Z'),
   vendor_name: 'Mayer - Flatley',
   weight: 37.0,
-  weight_unit: Models::Shared::WeightUnit::OZ,
+  weight_unit: Models::Shared::WeightUnit::OZ
 ), connection_id: '<id>')
 
 unless res.commerce_item.nil?
@@ -323,23 +319,22 @@ Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" example="commerce_itemvariant" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Shared::CommerceItemvariant.new(
   available_at: DateTime.iso8601('2022-02-06T18:14:41.644Z'),
   created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
   description: 'Stylish Salad designed to make you stand out with little looks',
   height: 54.0,
-  id: 'd4c5f685-a661-461c-99ab-47e3d1091c96',
+  id: '94a29f26-96bf-41f2-bc21-f9f4152abe3b',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -348,55 +343,55 @@ res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Share
     Models::Shared::CommerceItemMedia.new(
       alt: 'Hic desipio thorax.',
       height: 961.0,
-      id: '8b1917e5-f388-45a1-9083-4fc00fcbdf3c',
+      id: '7614d909-b306-48f1-8904-ff4d5e33df90',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'a235d624-1912-4c43-b8f9-53bbc74a55d7',
+          id: '6ee3e637-7782-4cd4-b941-940ac7fdfbe2',
           slug: 'ubi',
-          value: 'textus',
+          value: 'textus'
         ),
       ],
       position: 72.0,
       type: Models::Shared::CommerceItemMediaType::IMAGE,
       url: 'https://loremflickr.com/2126/721?lock=8820088623807162',
-      width: 35.0,
+      width: 35.0
     ),
   ],
   metadata: [
     Models::Shared::CommerceMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '415b383b-c168-4c10-838d-269be46601f3',
+      id: '1599934b-691d-49d7-8658-8165a7807f0d',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'absens',
+      value: 'absens'
     ),
   ],
   name: 'Chair',
   options: [
     Models::Shared::CommerceItemOption.new(
-      id: '8d3719f8-29ed-4e77-a24d-7705ca7a882b',
+      id: '53a95b1e-4472-4a57-95de-e788dfe9ce24',
       name: 'Color',
       position: 1.0,
       values: [
         'olive',
-      ],
+      ]
     ),
     Models::Shared::CommerceItemOption.new(
-      id: 'c52a3657-431c-4ee4-80c3-a98c9f4d7ffc',
+      id: 'e0f534a3-c96c-4717-978d-02ec0a44905e',
       name: 'Size',
       position: 2.0,
       values: [
         'S',
-      ],
+      ]
     ),
   ],
   prices: [
     Models::Shared::CommerceItemPrice.new(
       currency: 'USD',
-      price: 382.23,
+      price: 382.23
     ),
   ],
   public_description: 'Stylish Cheese designed to make you stand out with grave looks',
@@ -408,10 +403,10 @@ res = s.commerce.create_commerce_itemvariant(commerce_itemvariant: Models::Share
     'deserunt',
   ],
   total_stock: 436.0,
-  updated_at: DateTime.iso8601('2026-03-26T05:13:42.858Z'),
+  updated_at: DateTime.iso8601('2026-03-27T16:41:07.339Z'),
   weight: 46.0,
   weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
-  width: 40.0,
+  width: 40.0
 ), connection_id: '<id>')
 
 unless res.commerce_itemvariant.nil?
@@ -445,17 +440,16 @@ Creates a CommerceLocation. Provide the unified CommerceLocation fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" example="commerce_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.create_commerce_location(commerce_location: Models::Shared::CommerceLocation.new(
   address: Models::Shared::PropertyCommerceLocationAddress.new(
     address1: '29896 The Limes',
@@ -463,13 +457,13 @@ res = s.commerce.create_commerce_location(commerce_location: Models::Shared::Com
     country_code: 'US',
     postal_code: '14490-0609',
     region: 'Virginia',
-    region_code: 'MS',
+    region_code: 'MS'
   ),
   categories: [],
   created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
   currency: 'XCD',
   description: 'Adsidue audentia.',
-  id: 'af54d044-c1d7-464b-af67-e40f577a1f28',
+  id: 'd4f26ee6-a252-4992-ba5a-a3e8d0bcf24f',
   image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
   is_active: false,
   language_locale: 'vulgaris',
@@ -480,18 +474,18 @@ res = s.commerce.create_commerce_location(commerce_location: Models::Shared::Com
     Models::Shared::CommerceItemMedia.new(
       alt: 'Addo.',
       height: 283.0,
-      id: '2b1bd20d-39e2-4d51-86f5-a92707d3fdfe',
+      id: '94c31117-c6dd-4a8d-a95c-3444d458550c',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '0ad73eae-b40f-480f-8736-87b8204aba5d',
+          id: '415881f1-f68b-463e-9079-23b723e822db',
           slug: 'abutor',
-          value: 'damno',
+          value: 'damno'
         ),
       ],
       position: 40.0,
       type: Models::Shared::CommerceItemMediaType::IMAGE,
       url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
-      width: 1.0,
+      width: 1.0
     ),
   ],
   metadata: [],
@@ -502,15 +496,15 @@ res = s.commerce.create_commerce_location(commerce_location: Models::Shared::Com
   telephones: [
     Models::Shared::CommerceTelephone.new(
       telephone: '(872) 522-3201',
-      type: Models::Shared::CommerceTelephoneType::OTHER,
+      type: Models::Shared::CommerceTelephoneType::OTHER
     ),
     Models::Shared::CommerceTelephone.new(
       telephone: '(236) 274-2445',
-      type: Models::Shared::CommerceTelephoneType::MOBILE,
+      type: Models::Shared::CommerceTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2024-04-27T06:47:20.220Z'),
-  web_url: 'https://chilly-edge.info',
+  updated_at: DateTime.iso8601('2024-04-27T20:48:03.207Z'),
+  web_url: 'https://chilly-edge.info'
 ), connection_id: '<id>')
 
 unless res.commerce_location.nil?
@@ -544,31 +538,30 @@ Creates a CommerceReservation. Provide the unified CommerceReservation fields in
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" example="commerce_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.create_commerce_reservation(commerce_reservation: Models::Shared::CommerceReservation.new(
   created_at: DateTime.iso8601('2021-12-14T19:50:31.151Z'),
   end_at: DateTime.iso8601('2022-01-01T22:00:17.868Z'),
   guest_email: 'julien.bartoletti@icloud.com',
   guest_name: 'Julien Bartoletti',
   guest_phone: '(728) 596-2620',
-  id: 'cb58c812-059f-4fad-96ef-55e776815b00',
+  id: '7e86e720-e0f1-4e4f-b7c9-4a77520ffcc6',
   metadata: [],
   notes: 'Adsum textilis ipsum despecto.',
   size: 10.0,
   start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
   status: Models::Shared::CommerceReservationStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-01-08T00:33:54.429Z'),
-  url: 'https://expensive-gift.org',
+  updated_at: DateTime.iso8601('2023-01-08T09:25:28.546Z'),
+  url: 'https://expensive-gift.org'
 ), connection_id: '<id>')
 
 unless res.commerce_reservation.nil?
@@ -602,17 +595,16 @@ Creates a CommerceReview. Provide the unified CommerceReview fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" example="commerce_review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.create_commerce_review(commerce_review: Models::Shared::CommerceReview.new(
   author_avatar_url: 'https://loremflickr.com/7/2660?lock=4279109054086693',
   author_email: 'nyasia.macgyver@hotmail.com',
@@ -622,7 +614,7 @@ res = s.commerce.create_commerce_review(commerce_review: Models::Shared::Commerc
   content: 'Taedium thymum adipiscor amicitia cui.',
   created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
   helpful_votes: 66.0,
-  id: '0fe0ad98-e2f3-4718-9c53-a16b5ac9d588',
+  id: '6239ba5e-8862-4888-8e3f-086a37652100',
   is_featured: false,
   is_public: true,
   is_verified: false,
@@ -630,34 +622,34 @@ res = s.commerce.create_commerce_review(commerce_review: Models::Shared::Commerc
     Models::Shared::CommerceItemMedia.new(
       alt: 'Desipio carpo sol laudantium colo.',
       height: 749.0,
-      id: '1d7ac13a-e423-4725-ac45-8ff9340a769a',
+      id: 'bf95a2cf-37e6-473d-baaf-85ab0aa5b0e7',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'ab96c167-b584-4196-a1db-e306d3f5dc94',
+          id: '5aea5306-dad1-46af-b712-bc59c680d86e',
           slug: 'textor',
-          value: 'quos',
+          value: 'quos'
         ),
       ],
       position: 29.0,
       type: Models::Shared::CommerceItemMediaType::VIDEO,
       url: 'https://loremflickr.com/196/2041?lock=5845524773114807',
-      width: 72.0,
+      width: 72.0
     ),
     Models::Shared::CommerceItemMedia.new(
       alt: 'Adopto teneo numquam.',
       height: 957.0,
-      id: '1b7b6619-9956-4b70-a15f-bbdbea574dc2',
+      id: 'c94ec230-67c1-40f7-9882-d7b6123f77bb',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'becdf30e-1452-45af-9151-15b1f18ee6e1',
+          id: '7ab46668-00f0-4a13-b2cb-1a17a146a94a',
           slug: 'bos',
-          value: 'casso',
+          value: 'casso'
         ),
       ],
       position: 69.0,
       type: Models::Shared::CommerceItemMediaType::IMAGE,
       url: 'https://loremflickr.com/1178/2175?lock=5466640101053206',
-      width: 61.0,
+      width: 61.0
     ),
   ],
   metadata: [],
@@ -665,9 +657,9 @@ res = s.commerce.create_commerce_review(commerce_review: Models::Shared::Commerc
   status: Models::Shared::CommerceReviewStatus::APPROVED,
   title: 'Coepi adamo amicitia auxilium toties.',
   unhelpful_votes: 88.0,
-  updated_at: DateTime.iso8601('2025-09-06T03:19:15.142Z'),
+  updated_at: DateTime.iso8601('2025-09-07T13:08:42.968Z'),
   url: 'https://diligent-bandwidth.biz',
-  verified_purchase: true,
+  verified_purchase: true
 ), connection_id: '<id>')
 
 unless res.commerce_review.nil?
@@ -701,26 +693,25 @@ Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" example="commerce_saleschannel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.create_commerce_saleschannel(commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(
   collections: [],
   created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
   description: 'Utroque denuncio solutio.',
-  id: 'd228dbe8-c923-455c-9342-51df8e1daee2',
+  id: 'f4c1f87b-ba32-4960-9d00-915c429a20cc',
   is_active: false,
   metadata: [],
   slug: 'amiculum-congregatio-suspendo',
-  updated_at: DateTime.iso8601('2025-02-09T05:54:07.495Z'),
+  updated_at: DateTime.iso8601('2025-02-10T08:09:21.297Z')
 ), connection_id: '<id>')
 
 unless res.commerce_saleschannel.nil?
@@ -760,11 +751,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.get_commerce_collection(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_collection.nil?
@@ -804,11 +794,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.get_commerce_inventory(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_inventory.nil?
@@ -848,11 +837,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.get_commerce_item(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_item.nil?
@@ -892,11 +880,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.get_commerce_itemvariant(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_itemvariant.nil?
@@ -936,11 +923,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.get_commerce_location(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_location.nil?
@@ -980,11 +966,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.get_commerce_reservation(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_reservation.nil?
@@ -1024,11 +1009,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.get_commerce_return(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_return.nil?
@@ -1068,11 +1052,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.get_commerce_review(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_review.nil?
@@ -1112,11 +1095,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.get_commerce_saleschannel(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_saleschannel.nil?
@@ -1156,11 +1138,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.get_commerce_table(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_table.nil?
@@ -1200,15 +1181,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceAvailabilitiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceAvailabilitiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.commerce.list_commerce_availabilities(request: req)
 
 unless res.commerce_availabilities.nil?
@@ -1245,15 +1225,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceCollectionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceCollectionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.commerce.list_commerce_collections(request: req)
 
 unless res.commerce_collections.nil?
@@ -1290,15 +1269,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceInventoriesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceInventoriesRequest.new(
+  connection_id: '<id>'
+)
 res = s.commerce.list_commerce_inventories(request: req)
 
 unless res.commerce_inventories.nil?
@@ -1335,15 +1313,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceItemsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceItemsRequest.new(
+  connection_id: '<id>'
+)
 res = s.commerce.list_commerce_items(request: req)
 
 unless res.commerce_items.nil?
@@ -1380,15 +1357,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceItemvariantsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceItemvariantsRequest.new(
+  connection_id: '<id>'
+)
 res = s.commerce.list_commerce_itemvariants(request: req)
 
 unless res.commerce_itemvariants.nil?
@@ -1425,15 +1401,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceLocationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceLocationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.commerce.list_commerce_locations(request: req)
 
 unless res.commerce_locations.nil?
@@ -1470,15 +1445,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceReservationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceReservationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.commerce.list_commerce_reservations(request: req)
 
 unless res.commerce_reservations.nil?
@@ -1515,15 +1489,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceReturnsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceReturnsRequest.new(
+  connection_id: '<id>'
+)
 res = s.commerce.list_commerce_returns(request: req)
 
 unless res.commerce_returns.nil?
@@ -1560,15 +1533,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceReviewsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceReviewsRequest.new(
+  connection_id: '<id>'
+)
 res = s.commerce.list_commerce_reviews(request: req)
 
 unless res.commerce_reviews.nil?
@@ -1605,15 +1577,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceSaleschannelsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceSaleschannelsRequest.new(
+  connection_id: '<id>'
+)
 res = s.commerce.list_commerce_saleschannels(request: req)
 
 unless res.commerce_saleschannels.nil?
@@ -1650,15 +1621,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceTablesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceTablesRequest.new(
+  connection_id: '<id>'
+)
 res = s.commerce.list_commerce_tables(request: req)
 
 unless res.commerce_tables.nil?
@@ -1689,22 +1659,22 @@ Updates the CommerceCollection identified by `id`. Provide the unified CommerceC
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: '882b6899-8be1-4d79-8215-37f72f3cc579',
+    id: 'e62eb751-ba46-435d-af88-444f3326c507',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -1713,25 +1683,25 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Defungo adopto thorax.',
         height: 759.0,
-        id: 'be4b561d-4057-488c-80eb-077dd97bd554',
+        id: '6c61c319-aa7c-41b6-aacd-c833822f3df8',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '1d21a775-247b-451f-a437-7d8648ccf90f',
+            id: 'e5eba624-5ab9-42f8-bc34-2b3747148c67',
             slug: 'censura',
-            value: 'toties',
+            value: 'toties'
           ),
         ],
         position: 80.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
-        width: 40.0,
+        width: 40.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: '9a60077c-0c7b-449b-959b-b7e5be30a8d4',
+        id: '6d1093dd-71d8-4a0a-9101-d4a4ac60f08a',
         slug: 'aetas',
-        value: 'consuasor',
+        value: 'consuasor'
       ),
     ],
     name: 'Small Marble Chips',
@@ -1743,12 +1713,11 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       'contego',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-24T18:09:48.178Z'),
+    updated_at: DateTime.iso8601('2025-03-25T14:57:59.214Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.patch_commerce_collection(request: req)
 
 unless res.commerce_collection.nil?
@@ -1779,28 +1748,27 @@ Updates the CommerceInventory identified by `id`. Provide the unified CommerceIn
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: '515d99f3-a8bb-4cce-845a-77dfc8396374',
+    id: 'efd806e0-2bb8-4f51-95c8-f39966889844',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-12-05T17:20:16.922Z'),
+    updated_at: DateTime.iso8601('2025-12-07T02:10:20.101Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.patch_commerce_inventory(request: req)
 
 unless res.commerce_inventory.nil?
@@ -1831,16 +1799,16 @@ Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" example="commerce_item" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceItemRequest.new(
   commerce_item: Models::Shared::CommerceItem.new(
@@ -1849,7 +1817,7 @@ req = Models::Operations::PatchCommerceItemRequest.new(
     description: 'Decretum vulnero ustulo abeo.',
     duration: 104.0,
     global_code: '978-0-85270-680-0',
-    id: 'b06dc403-3e33-46a5-8287-f717c5d13495',
+    id: '0923c9de-1142-4477-bfba-77f504345eb9',
     is_active: false,
     is_featured: false,
     is_taxable: true,
@@ -1858,53 +1826,53 @@ req = Models::Operations::PatchCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Caterva eveniet acies candidus.',
         height: 876.0,
-        id: 'c8c211d2-ac3c-4847-9e71-e03a39c64ede',
+        id: '2176d437-bb0e-4b08-a921-bba193c9f258',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'bb18f563-ec0f-466d-bb7d-8b70ba3d7e29',
+            id: '727290c6-201d-4b27-8d2e-681b6285fe49',
             slug: 'doloremque',
-            value: 'allatus',
+            value: 'allatus'
           ),
         ],
         position: 21.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://picsum.photos/seed/v73y0uzyK/3001/972',
-        width: 67.0,
+        width: 67.0
       ),
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 651.0,
-        id: '91b09d5c-f47a-4850-9544-eb74cd1da76b',
+        id: '82dd8968-eb8c-425a-a147-270d438b55ab',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '070fb40c-dff7-4279-aa0f-56c476bed4ef',
+            id: 'fadb61e3-0e38-4837-8b50-45e9a8dcc8af',
             slug: 'bis',
-            value: 'somniculosus',
+            value: 'somniculosus'
           ),
         ],
         position: 51.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
-        width: 3.0,
+        width: 3.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '223c89d3-8106-4395-93e4-d917319e353b',
+        id: 'dc3af118-3387-4500-8027-46bd7a04a36c',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'abstergo',
+        value: 'abstergo'
       ),
     ],
     name: 'Handcrafted Rubber Tuna',
     prices: [
       Models::Shared::CommerceItemPrice.new(
         currency: 'USD',
-        price: 78.11,
+        price: 78.11
       ),
     ],
     public_description: 'Custodia ventus solio compono.',
@@ -1917,15 +1885,14 @@ req = Models::Operations::PatchCommerceItemRequest.new(
     ],
     total_stock: 682.0,
     type: 'SERVICE',
-    updated_at: DateTime.iso8601('2022-04-26T19:54:22.067Z'),
+    updated_at: DateTime.iso8601('2022-04-27T11:37:08.258Z'),
     vendor_name: 'Mayer - Flatley',
     weight: 37.0,
-    weight_unit: Models::Shared::WeightUnit::OZ,
+    weight_unit: Models::Shared::WeightUnit::OZ
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.patch_commerce_item(request: req)
 
 unless res.commerce_item.nil?
@@ -1956,16 +1923,16 @@ Updates the CommerceItemvariant identified by `id`. Provide the unified Commerce
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" example="commerce_itemvariant" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceItemvariantRequest.new(
   commerce_itemvariant: Models::Shared::CommerceItemvariant.new(
@@ -1973,7 +1940,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Stylish Salad designed to make you stand out with little looks',
     height: 54.0,
-    id: 'ce6fff1d-67e1-4840-94f5-e1a8fcd8d34b',
+    id: '7d405b1d-98b4-437e-a31a-9844825fd3f9',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -1982,55 +1949,55 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Hic desipio thorax.',
         height: 961.0,
-        id: '156c17d1-8af6-4edf-87d2-667031c45d26',
+        id: 'f8a8eaea-3f3d-43de-af5f-0765349d64f6',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'bcc1844f-b2ff-436c-a4f1-56141d6d13e0',
+            id: 'c77f3420-1596-468e-8895-9e76c484cfee',
             slug: 'ubi',
-            value: 'textus',
+            value: 'textus'
           ),
         ],
         position: 72.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://loremflickr.com/2126/721?lock=8820088623807162',
-        width: 35.0,
+        width: 35.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: 'bb7a2ce3-24cc-40c1-b528-5008882b04fa',
+        id: '762b2d50-6de1-4ff6-8686-fa54348e0fe9',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'absens',
+        value: 'absens'
       ),
     ],
     name: 'Chair',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '4c7c322d-7ea3-4905-8e81-369f8b00e8db',
+        id: '862b3eb2-2bd5-40a6-bf2e-cb22f5b7b1cd',
         name: 'Color',
         position: 1.0,
         values: [
           'olive',
-        ],
+        ]
       ),
       Models::Shared::CommerceItemOption.new(
-        id: 'ac8e74dd-dfd3-4eed-9bf4-ad407cc14d7a',
+        id: '808d10d9-c4c6-4183-a561-fb14cb3d5a52',
         name: 'Size',
         position: 2.0,
         values: [
           'S',
-        ],
+        ]
       ),
     ],
     prices: [
       Models::Shared::CommerceItemPrice.new(
         currency: 'USD',
-        price: 382.23,
+        price: 382.23
       ),
     ],
     public_description: 'Stylish Cheese designed to make you stand out with grave looks',
@@ -2042,15 +2009,14 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       'deserunt',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-03-26T05:13:42.897Z'),
+    updated_at: DateTime.iso8601('2026-03-27T16:41:07.379Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
-    width: 40.0,
+    width: 40.0
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.patch_commerce_itemvariant(request: req)
 
 unless res.commerce_itemvariant.nil?
@@ -2081,16 +2047,16 @@ Updates the CommerceLocation identified by `id`. Provide the unified CommerceLoc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceLocationRequest.new(
   commerce_location: Models::Shared::CommerceLocation.new(
@@ -2100,13 +2066,13 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
       country_code: 'US',
       postal_code: '14490-0609',
       region: 'Virginia',
-      region_code: 'MS',
+      region_code: 'MS'
     ),
     categories: [],
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: 'd29f72c2-4263-418d-905c-987c577bb93b',
+    id: '7ef85239-77f1-4b5d-8f93-30d356b1c9e4',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -2117,18 +2083,18 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '74076cd3-9a6f-448f-a290-d98c24791526',
+        id: 'caf308da-41bd-4826-8b3e-a7c9241142c0',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'ec741d18-a494-48a5-b574-8ca1b349a605',
+            id: 'a2401220-3576-4ff3-860c-b0a234906a90',
             slug: 'abutor',
-            value: 'damno',
+            value: 'damno'
           ),
         ],
         position: 40.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
-        width: 1.0,
+        width: 1.0
       ),
     ],
     metadata: [],
@@ -2139,20 +2105,19 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
     telephones: [
       Models::Shared::CommerceTelephone.new(
         telephone: '(872) 522-3201',
-        type: Models::Shared::CommerceTelephoneType::OTHER,
+        type: Models::Shared::CommerceTelephoneType::OTHER
       ),
       Models::Shared::CommerceTelephone.new(
         telephone: '(236) 274-2445',
-        type: Models::Shared::CommerceTelephoneType::MOBILE,
+        type: Models::Shared::CommerceTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-27T06:47:20.236Z'),
-    web_url: 'https://chilly-edge.info',
+    updated_at: DateTime.iso8601('2024-04-27T20:48:03.226Z'),
+    web_url: 'https://chilly-edge.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.patch_commerce_location(request: req)
 
 unless res.commerce_location.nil?
@@ -2183,16 +2148,16 @@ Updates the CommerceReservation identified by `id`. Provide the unified Commerce
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceReservationRequest.new(
   commerce_reservation: Models::Shared::CommerceReservation.new(
@@ -2201,19 +2166,18 @@ req = Models::Operations::PatchCommerceReservationRequest.new(
     guest_email: 'julien.bartoletti@icloud.com',
     guest_name: 'Julien Bartoletti',
     guest_phone: '(728) 596-2620',
-    id: 'f2633487-3097-4c62-93b7-16f6d05bae81',
+    id: '217b5b0d-d0ac-481f-b40e-a1a9c241b814',
     metadata: [],
     notes: 'Adsum textilis ipsum despecto.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-08T00:33:54.433Z'),
-    url: 'https://expensive-gift.org',
+    updated_at: DateTime.iso8601('2023-01-08T09:25:28.550Z'),
+    url: 'https://expensive-gift.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.patch_commerce_reservation(request: req)
 
 unless res.commerce_reservation.nil?
@@ -2244,16 +2208,16 @@ Updates the CommerceReview identified by `id`. Provide the unified CommerceRevie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" example="commerce_review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceReviewRequest.new(
   commerce_review: Models::Shared::CommerceReview.new(
@@ -2265,7 +2229,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '9c2b9993-0c2c-4f22-9da9-d821998b659e',
+    id: '2bd8c986-d357-4dc3-90bd-77505483ce05',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -2273,34 +2237,34 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '1616ce28-d81d-4421-993b-bd99af8294ef',
+        id: '1f6943d0-21db-4f91-bd3a-3d70b835b79c',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'f9be8b9b-1389-454e-b96d-011da32ec1d2',
+            id: 'c482f64f-618b-4924-9dbe-d83fbbf791f1',
             slug: 'textor',
-            value: 'quos',
+            value: 'quos'
           ),
         ],
         position: 29.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://loremflickr.com/196/2041?lock=5845524773114807',
-        width: 72.0,
+        width: 72.0
       ),
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: '30794e46-71b3-4743-8427-2fef47895996',
+        id: '1b8ca659-41cd-4c9f-9765-008263068661',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'd3213ec2-bd2e-429a-939e-2b4d20b5f5b1',
+            id: '9879640a-2839-4440-b5ac-536beb059d09',
             slug: 'bos',
-            value: 'casso',
+            value: 'casso'
           ),
         ],
         position: 69.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://loremflickr.com/1178/2175?lock=5466640101053206',
-        width: 61.0,
+        width: 61.0
       ),
     ],
     metadata: [],
@@ -2308,14 +2272,13 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-09-06T03:19:15.181Z'),
+    updated_at: DateTime.iso8601('2025-09-07T13:08:43.004Z'),
     url: 'https://diligent-bandwidth.biz',
-    verified_purchase: true,
+    verified_purchase: true
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.patch_commerce_review(request: req)
 
 unless res.commerce_review.nil?
@@ -2346,32 +2309,31 @@ Updates the CommerceSaleschannel identified by `id`. Provide the unified Commerc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceSaleschannelRequest.new(
   commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Utroque denuncio solutio.',
-    id: 'dd04dfa0-5411-44e4-9f13-1dc12f0bc6cb',
+    id: '4d7f661a-fac4-4471-85c1-5625d37f5c32',
     is_active: false,
     metadata: [],
     slug: 'amiculum-congregatio-suspendo',
-    updated_at: DateTime.iso8601('2025-02-09T05:54:07.508Z'),
+    updated_at: DateTime.iso8601('2025-02-10T08:09:21.306Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.patch_commerce_saleschannel(request: req)
 
 unless res.commerce_saleschannel.nil?
@@ -2408,11 +2370,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.remove_commerce_collection(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2450,11 +2411,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.remove_commerce_inventory(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2492,11 +2452,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.remove_commerce_item(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2534,11 +2493,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.remove_commerce_itemvariant(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2576,11 +2534,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.remove_commerce_location(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2618,11 +2575,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.remove_commerce_reservation(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2660,11 +2616,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.remove_commerce_review(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2702,11 +2657,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.commerce.remove_commerce_saleschannel(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2738,22 +2692,22 @@ Updates the CommerceCollection identified by `id`. Provide the unified CommerceC
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: '882b6899-8be1-4d79-8215-37f72f3cc579',
+    id: 'e62eb751-ba46-435d-af88-444f3326c507',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -2762,25 +2716,25 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Defungo adopto thorax.',
         height: 759.0,
-        id: 'be4b561d-4057-488c-80eb-077dd97bd554',
+        id: '6c61c319-aa7c-41b6-aacd-c833822f3df8',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '1d21a775-247b-451f-a437-7d8648ccf90f',
+            id: 'e5eba624-5ab9-42f8-bc34-2b3747148c67',
             slug: 'censura',
-            value: 'toties',
+            value: 'toties'
           ),
         ],
         position: 80.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
-        width: 40.0,
+        width: 40.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: '9a60077c-0c7b-449b-959b-b7e5be30a8d4',
+        id: '6d1093dd-71d8-4a0a-9101-d4a4ac60f08a',
         slug: 'aetas',
-        value: 'consuasor',
+        value: 'consuasor'
       ),
     ],
     name: 'Small Marble Chips',
@@ -2792,12 +2746,11 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       'contego',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-24T18:09:48.178Z'),
+    updated_at: DateTime.iso8601('2025-03-25T14:57:59.214Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.update_commerce_collection(request: req)
 
 unless res.commerce_collection.nil?
@@ -2828,28 +2781,27 @@ Updates the CommerceInventory identified by `id`. Provide the unified CommerceIn
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: '515d99f3-a8bb-4cce-845a-77dfc8396374',
+    id: 'efd806e0-2bb8-4f51-95c8-f39966889844',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-12-05T17:20:16.922Z'),
+    updated_at: DateTime.iso8601('2025-12-07T02:10:20.101Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.update_commerce_inventory(request: req)
 
 unless res.commerce_inventory.nil?
@@ -2880,16 +2832,16 @@ Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" example="commerce_item" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceItemRequest.new(
   commerce_item: Models::Shared::CommerceItem.new(
@@ -2898,7 +2850,7 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
     description: 'Decretum vulnero ustulo abeo.',
     duration: 104.0,
     global_code: '978-0-85270-680-0',
-    id: 'b06dc403-3e33-46a5-8287-f717c5d13495',
+    id: '0923c9de-1142-4477-bfba-77f504345eb9',
     is_active: false,
     is_featured: false,
     is_taxable: true,
@@ -2907,53 +2859,53 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Caterva eveniet acies candidus.',
         height: 876.0,
-        id: 'c8c211d2-ac3c-4847-9e71-e03a39c64ede',
+        id: '2176d437-bb0e-4b08-a921-bba193c9f258',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'bb18f563-ec0f-466d-bb7d-8b70ba3d7e29',
+            id: '727290c6-201d-4b27-8d2e-681b6285fe49',
             slug: 'doloremque',
-            value: 'allatus',
+            value: 'allatus'
           ),
         ],
         position: 21.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://picsum.photos/seed/v73y0uzyK/3001/972',
-        width: 67.0,
+        width: 67.0
       ),
       Models::Shared::CommerceItemMedia.new(
         alt: 'Comedo.',
         height: 651.0,
-        id: '91b09d5c-f47a-4850-9544-eb74cd1da76b',
+        id: '82dd8968-eb8c-425a-a147-270d438b55ab',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '070fb40c-dff7-4279-aa0f-56c476bed4ef',
+            id: 'fadb61e3-0e38-4837-8b50-45e9a8dcc8af',
             slug: 'bis',
-            value: 'somniculosus',
+            value: 'somniculosus'
           ),
         ],
         position: 51.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
-        width: 3.0,
+        width: 3.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: '223c89d3-8106-4395-93e4-d917319e353b',
+        id: 'dc3af118-3387-4500-8027-46bd7a04a36c',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'abstergo',
+        value: 'abstergo'
       ),
     ],
     name: 'Handcrafted Rubber Tuna',
     prices: [
       Models::Shared::CommerceItemPrice.new(
         currency: 'USD',
-        price: 78.11,
+        price: 78.11
       ),
     ],
     public_description: 'Custodia ventus solio compono.',
@@ -2966,15 +2918,14 @@ req = Models::Operations::UpdateCommerceItemRequest.new(
     ],
     total_stock: 682.0,
     type: 'SERVICE',
-    updated_at: DateTime.iso8601('2022-04-26T19:54:22.067Z'),
+    updated_at: DateTime.iso8601('2022-04-27T11:37:08.258Z'),
     vendor_name: 'Mayer - Flatley',
     weight: 37.0,
-    weight_unit: Models::Shared::WeightUnit::OZ,
+    weight_unit: Models::Shared::WeightUnit::OZ
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.update_commerce_item(request: req)
 
 unless res.commerce_item.nil?
@@ -3005,16 +2956,16 @@ Updates the CommerceItemvariant identified by `id`. Provide the unified Commerce
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" example="commerce_itemvariant" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceItemvariantRequest.new(
   commerce_itemvariant: Models::Shared::CommerceItemvariant.new(
@@ -3022,7 +2973,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Stylish Salad designed to make you stand out with little looks',
     height: 54.0,
-    id: 'ce6fff1d-67e1-4840-94f5-e1a8fcd8d34b',
+    id: '7d405b1d-98b4-437e-a31a-9844825fd3f9',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -3031,55 +2982,55 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Hic desipio thorax.',
         height: 961.0,
-        id: '156c17d1-8af6-4edf-87d2-667031c45d26',
+        id: 'f8a8eaea-3f3d-43de-af5f-0765349d64f6',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'bcc1844f-b2ff-436c-a4f1-56141d6d13e0',
+            id: 'c77f3420-1596-468e-8895-9e76c484cfee',
             slug: 'ubi',
-            value: 'textus',
+            value: 'textus'
           ),
         ],
         position: 72.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://loremflickr.com/2126/721?lock=8820088623807162',
-        width: 35.0,
+        width: 35.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: 'bb7a2ce3-24cc-40c1-b528-5008882b04fa',
+        id: '762b2d50-6de1-4ff6-8686-fa54348e0fe9',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'absens',
+        value: 'absens'
       ),
     ],
     name: 'Chair',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '4c7c322d-7ea3-4905-8e81-369f8b00e8db',
+        id: '862b3eb2-2bd5-40a6-bf2e-cb22f5b7b1cd',
         name: 'Color',
         position: 1.0,
         values: [
           'olive',
-        ],
+        ]
       ),
       Models::Shared::CommerceItemOption.new(
-        id: 'ac8e74dd-dfd3-4eed-9bf4-ad407cc14d7a',
+        id: '808d10d9-c4c6-4183-a561-fb14cb3d5a52',
         name: 'Size',
         position: 2.0,
         values: [
           'S',
-        ],
+        ]
       ),
     ],
     prices: [
       Models::Shared::CommerceItemPrice.new(
         currency: 'USD',
-        price: 382.23,
+        price: 382.23
       ),
     ],
     public_description: 'Stylish Cheese designed to make you stand out with grave looks',
@@ -3091,15 +3042,14 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       'deserunt',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-03-26T05:13:42.897Z'),
+    updated_at: DateTime.iso8601('2026-03-27T16:41:07.379Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
-    width: 40.0,
+    width: 40.0
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.update_commerce_itemvariant(request: req)
 
 unless res.commerce_itemvariant.nil?
@@ -3130,16 +3080,16 @@ Updates the CommerceLocation identified by `id`. Provide the unified CommerceLoc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceLocationRequest.new(
   commerce_location: Models::Shared::CommerceLocation.new(
@@ -3149,13 +3099,13 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
       country_code: 'US',
       postal_code: '14490-0609',
       region: 'Virginia',
-      region_code: 'MS',
+      region_code: 'MS'
     ),
     categories: [],
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: 'd29f72c2-4263-418d-905c-987c577bb93b',
+    id: '7ef85239-77f1-4b5d-8f93-30d356b1c9e4',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -3166,18 +3116,18 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '74076cd3-9a6f-448f-a290-d98c24791526',
+        id: 'caf308da-41bd-4826-8b3e-a7c9241142c0',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'ec741d18-a494-48a5-b574-8ca1b349a605',
+            id: 'a2401220-3576-4ff3-860c-b0a234906a90',
             slug: 'abutor',
-            value: 'damno',
+            value: 'damno'
           ),
         ],
         position: 40.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
-        width: 1.0,
+        width: 1.0
       ),
     ],
     metadata: [],
@@ -3188,20 +3138,19 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
     telephones: [
       Models::Shared::CommerceTelephone.new(
         telephone: '(872) 522-3201',
-        type: Models::Shared::CommerceTelephoneType::OTHER,
+        type: Models::Shared::CommerceTelephoneType::OTHER
       ),
       Models::Shared::CommerceTelephone.new(
         telephone: '(236) 274-2445',
-        type: Models::Shared::CommerceTelephoneType::MOBILE,
+        type: Models::Shared::CommerceTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-27T06:47:20.236Z'),
-    web_url: 'https://chilly-edge.info',
+    updated_at: DateTime.iso8601('2024-04-27T20:48:03.226Z'),
+    web_url: 'https://chilly-edge.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.update_commerce_location(request: req)
 
 unless res.commerce_location.nil?
@@ -3232,16 +3181,16 @@ Updates the CommerceReservation identified by `id`. Provide the unified Commerce
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceReservationRequest.new(
   commerce_reservation: Models::Shared::CommerceReservation.new(
@@ -3250,19 +3199,18 @@ req = Models::Operations::UpdateCommerceReservationRequest.new(
     guest_email: 'julien.bartoletti@icloud.com',
     guest_name: 'Julien Bartoletti',
     guest_phone: '(728) 596-2620',
-    id: 'f2633487-3097-4c62-93b7-16f6d05bae81',
+    id: '217b5b0d-d0ac-481f-b40e-a1a9c241b814',
     metadata: [],
     notes: 'Adsum textilis ipsum despecto.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-08T00:33:54.433Z'),
-    url: 'https://expensive-gift.org',
+    updated_at: DateTime.iso8601('2023-01-08T09:25:28.550Z'),
+    url: 'https://expensive-gift.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.update_commerce_reservation(request: req)
 
 unless res.commerce_reservation.nil?
@@ -3293,16 +3241,16 @@ Updates the CommerceReview identified by `id`. Provide the unified CommerceRevie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" example="commerce_review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceReviewRequest.new(
   commerce_review: Models::Shared::CommerceReview.new(
@@ -3314,7 +3262,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '9c2b9993-0c2c-4f22-9da9-d821998b659e',
+    id: '2bd8c986-d357-4dc3-90bd-77505483ce05',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -3322,34 +3270,34 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '1616ce28-d81d-4421-993b-bd99af8294ef',
+        id: '1f6943d0-21db-4f91-bd3a-3d70b835b79c',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'f9be8b9b-1389-454e-b96d-011da32ec1d2',
+            id: 'c482f64f-618b-4924-9dbe-d83fbbf791f1',
             slug: 'textor',
-            value: 'quos',
+            value: 'quos'
           ),
         ],
         position: 29.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://loremflickr.com/196/2041?lock=5845524773114807',
-        width: 72.0,
+        width: 72.0
       ),
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: '30794e46-71b3-4743-8427-2fef47895996',
+        id: '1b8ca659-41cd-4c9f-9765-008263068661',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'd3213ec2-bd2e-429a-939e-2b4d20b5f5b1',
+            id: '9879640a-2839-4440-b5ac-536beb059d09',
             slug: 'bos',
-            value: 'casso',
+            value: 'casso'
           ),
         ],
         position: 69.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://loremflickr.com/1178/2175?lock=5466640101053206',
-        width: 61.0,
+        width: 61.0
       ),
     ],
     metadata: [],
@@ -3357,14 +3305,13 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-09-06T03:19:15.181Z'),
+    updated_at: DateTime.iso8601('2025-09-07T13:08:43.004Z'),
     url: 'https://diligent-bandwidth.biz',
-    verified_purchase: true,
+    verified_purchase: true
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.update_commerce_review(request: req)
 
 unless res.commerce_review.nil?
@@ -3395,32 +3342,31 @@ Updates the CommerceSaleschannel identified by `id`. Provide the unified Commerc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceSaleschannelRequest.new(
   commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Utroque denuncio solutio.',
-    id: 'dd04dfa0-5411-44e4-9f13-1dc12f0bc6cb',
+    id: '4d7f661a-fac4-4471-85c1-5625d37f5c32',
     is_active: false,
     metadata: [],
     slug: 'amiculum-congregatio-suspendo',
-    updated_at: DateTime.iso8601('2025-02-09T05:54:07.508Z'),
+    updated_at: DateTime.iso8601('2025-02-10T08:09:21.306Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.commerce.update_commerce_saleschannel(request: req)
 
 unless res.commerce_saleschannel.nil?

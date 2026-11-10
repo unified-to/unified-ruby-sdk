@@ -1,5 +1,4 @@
 # Matter
-(*matter*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a LegalMatter. Provide the unified LegalMatter fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLegalMatter" method="post" path="/legal/{connection_id}/matter" -->
+<!-- UsageSnippet language="ruby" operationID="createLegalMatter" method="post" path="/legal/{connection_id}/matter" example="legal_matter" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.matter.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new(
   billing_method: Models::Shared::BillingMethod::OTHER,
   client_reference: 'qSrjIBAD',
@@ -37,21 +35,21 @@ res = s.matter.create_legal_matter(legal_matter: Models::Shared::LegalMatter.new
   created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
   currency: 'BOB',
   description: 'Speciosus cresco aut cotidie temeritas arma.',
-  id: '6c5dc57c-93ef-41a0-be59-7a66cd7f2051',
+  id: '68bf91bb-4625-48eb-84a7-ec434e23eba8',
   metadata: [],
   name: 'Walter v. Franecki - Spinka',
   number: '2023-3062',
-  opened_at: DateTime.iso8601('2023-07-05T20:18:09.922Z'),
+  opened_at: DateTime.iso8601('2023-07-05T21:33:09.537Z'),
   parties: [
     Models::Shared::LegalParty.new(
       description: 'Urban Walter',
-      role: Models::Shared::LegalPartyRole::EXPERT,
+      role: Models::Shared::LegalPartyRole::EXPERT
     ),
   ],
   stage: 'currus',
   status: Models::Shared::LegalMatterStatus::OPEN,
-  statute_of_limitations_at: DateTime.iso8601('2027-07-17T21:20:18.449Z'),
-  updated_at: DateTime.iso8601('2023-07-18T04:32:46.767Z'),
+  statute_of_limitations_at: DateTime.iso8601('2027-07-19T14:05:19.358Z'),
+  updated_at: DateTime.iso8601('2023-07-18T06:11:42.593Z')
 ), connection_id: '<id>')
 
 unless res.legal_matter.nil?
@@ -91,11 +89,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.matter.get_legal_matter(connection_id: '<id>', id: '<id>')
 
 unless res.legal_matter.nil?
@@ -135,15 +132,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLegalMattersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLegalMattersRequest.new(
+  connection_id: '<id>'
+)
 res = s.matter.list_legal_matters(request: req)
 
 unless res.legal_matters.nil?
@@ -174,16 +170,16 @@ Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLegalMatter" method="patch" path="/legal/{connection_id}/matter/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLegalMatter" method="patch" path="/legal/{connection_id}/matter/{id}" example="legal_matter" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLegalMatterRequest.new(
   legal_matter: Models::Shared::LegalMatter.new(
@@ -194,26 +190,25 @@ req = Models::Operations::PatchLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: '88822d4b-d984-4804-a431-93782184a28e',
+    id: '0bdc3a7d-987a-4b10-936d-10e341143e92',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T20:18:09.923Z'),
+    opened_at: DateTime.iso8601('2023-07-05T21:33:09.538Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
-        role: Models::Shared::LegalPartyRole::EXPERT,
+        role: Models::Shared::LegalPartyRole::EXPERT
       ),
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-07-17T21:20:18.477Z'),
-    updated_at: DateTime.iso8601('2023-07-18T04:32:46.768Z'),
+    statute_of_limitations_at: DateTime.iso8601('2027-07-19T14:05:19.382Z'),
+    updated_at: DateTime.iso8601('2023-07-18T06:11:42.594Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.matter.patch_legal_matter(request: req)
 
 unless res.legal_matter.nil?
@@ -250,11 +245,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.matter.remove_legal_matter(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -286,16 +280,16 @@ Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLegalMatter" method="put" path="/legal/{connection_id}/matter/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLegalMatter" method="put" path="/legal/{connection_id}/matter/{id}" example="legal_matter" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLegalMatterRequest.new(
   legal_matter: Models::Shared::LegalMatter.new(
@@ -306,26 +300,25 @@ req = Models::Operations::UpdateLegalMatterRequest.new(
     created_at: DateTime.iso8601('2023-05-28T04:10:42.375Z'),
     currency: 'BOB',
     description: 'Speciosus cresco aut cotidie temeritas arma.',
-    id: '88822d4b-d984-4804-a431-93782184a28e',
+    id: '0bdc3a7d-987a-4b10-936d-10e341143e92',
     metadata: [],
     name: 'Walter v. Franecki - Spinka',
     number: '2023-3062',
-    opened_at: DateTime.iso8601('2023-07-05T20:18:09.923Z'),
+    opened_at: DateTime.iso8601('2023-07-05T21:33:09.538Z'),
     parties: [
       Models::Shared::LegalParty.new(
         description: 'Urban Walter',
-        role: Models::Shared::LegalPartyRole::EXPERT,
+        role: Models::Shared::LegalPartyRole::EXPERT
       ),
     ],
     stage: 'currus',
     status: Models::Shared::LegalMatterStatus::OPEN,
-    statute_of_limitations_at: DateTime.iso8601('2027-07-17T21:20:18.477Z'),
-    updated_at: DateTime.iso8601('2023-07-18T04:32:46.768Z'),
+    statute_of_limitations_at: DateTime.iso8601('2027-07-19T14:05:19.382Z'),
+    updated_at: DateTime.iso8601('2023-07-18T06:11:42.594Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.matter.update_legal_matter(request: req)
 
 unless res.legal_matter.nil?

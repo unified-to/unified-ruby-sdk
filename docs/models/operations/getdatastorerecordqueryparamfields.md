@@ -1,5 +1,13 @@
 # GetDatastoreRecordQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetDatastoreRecordQueryParamFields::ID
+```
+
 
 ## Values
 

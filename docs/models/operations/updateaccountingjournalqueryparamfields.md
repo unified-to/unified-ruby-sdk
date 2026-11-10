@@ -1,5 +1,13 @@
 # UpdateAccountingJournalQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateAccountingJournalQueryParamFields::ID
+```
+
 
 ## Values
 

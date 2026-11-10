@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # SigningDocumentStatus - Current status of the signing document
-      class SigningDocumentStatus < T::Enum
-
-
+      class SigningDocumentStatus
+        include ::Crystalline::Enum
         enums do
           DRAFT = new('DRAFT')
           SENT = new('SENT')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           VOIDED = new('VOIDED')
           EXPIRED = new('EXPIRED')
         end
+        open!
       end
     end
   end

@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CommerceItemMediaType < T::Enum
-
-
+      class CommerceItemMediaType
+        include ::Crystalline::Enum
         enums do
           IMAGE = new('image')
           VIDEO = new('video')
         end
+        open!
       end
     end
   end

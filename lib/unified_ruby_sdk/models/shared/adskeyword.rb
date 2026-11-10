@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Content targeting (keywords, topics, placements, video)
       class AdsKeyword
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
 
         field :text, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('text'), required: true } }
 
-        field :match_type, Crystalline::Nilable.new(Models::Shared::MatchType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('match_type'), 'decoder': Utils.enum_from_string(Models::Shared::MatchType, true) } }
+        field :match_type, Crystalline::Nilable.new(Models::Shared::MatchType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('match_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::MatchType, true) } }
 
         sig { params(text: ::String, match_type: T.nilable(Models::Shared::MatchType)).void }
         def initialize(text:, match_type: nil)

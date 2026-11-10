@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Source - Whether a part is made in-house or bought
-      class Source < T::Enum
-
-
+      class Source
+        include ::Crystalline::Enum
         enums do
           MAKE = new('MAKE')
           BUY = new('BUY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

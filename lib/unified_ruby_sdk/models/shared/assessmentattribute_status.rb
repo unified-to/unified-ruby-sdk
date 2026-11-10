@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AssessmentAttributeStatus - For SUB_RESULT type
-      class AssessmentAttributeStatus < T::Enum
-
-
+      class AssessmentAttributeStatus
+        include ::Crystalline::Enum
         enums do
           OPEN = new('OPEN')
           IN_PROGRESS = new('IN_PROGRESS')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           FAILED = new('FAILED')
           REJECTED = new('REJECTED')
         end
+        open!
       end
     end
   end

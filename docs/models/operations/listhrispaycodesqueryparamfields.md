@@ -1,5 +1,13 @@
 # ListHrisPaycodesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListHrisPaycodesQueryParamFields::ID
+```
+
 
 ## Values
 

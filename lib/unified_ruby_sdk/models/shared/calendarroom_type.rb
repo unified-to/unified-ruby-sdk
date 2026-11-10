@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CalendarRoomType < T::Enum
-
-
+      class CalendarRoomType
+        include ::Crystalline::Enum
         enums do
           ROOM = new('ROOM')
           DESK = new('DESK')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

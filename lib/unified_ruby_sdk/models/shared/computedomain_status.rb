@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeDomainStatus - DNS/ownership verification status
-      class ComputeDomainStatus < T::Enum
-
-
+      class ComputeDomainStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           VERIFIED = new('VERIFIED')
           FAILED = new('FAILED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,4 @@
 # Memory
-(*memory*)
 
 ## Overview
 
@@ -18,21 +17,20 @@ Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiMemory" method="post" path="/genai/{connection_id}/memory" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiMemory" method="post" path="/genai/{connection_id}/memory" example="genai_memory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.memory.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
   content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
   created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-  id: 'bbe2e64f-55f7-45ef-b8ec-979cbc62f766',
+  id: '8acdf228-809f-40ad-b432-86f6be4a3093',
   metadata: [
     Models::Shared::GenaiMetadata.new(
       extra_data: {
@@ -42,13 +40,13 @@ res = s.memory.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new
       id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
       namespace: 'memory',
       slug: 'cribro',
-      value: 'aiunt',
+      value: 'aiunt'
     ),
   ],
   name: 'sponte.md',
   type: Models::Shared::GenaiMemoryType::MEMORY,
-  updated_at: DateTime.iso8601('2023-05-01T15:08:32.289Z'),
-  user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+  updated_at: DateTime.iso8601('2023-05-02T03:26:26.030Z'),
+  user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513'
 ), connection_id: '<id>')
 
 unless res.genai_memory.nil?
@@ -88,11 +86,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.memory.get_genai_memory(connection_id: '<id>', id: '<id>')
 
 unless res.genai_memory.nil?
@@ -132,15 +129,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListGenaiMemoriesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListGenaiMemoriesRequest.new(
+  connection_id: '<id>'
+)
 res = s.memory.list_genai_memories(request: req)
 
 unless res.genai_memories.nil?
@@ -171,22 +167,22 @@ Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchGenaiMemory" method="patch" path="/genai/{connection_id}/memory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchGenaiMemory" method="patch" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '47dd9c18-6dc1-4e23-85fa-38ebc849d801',
+    id: '4abfc269-55f8-4c98-9844-457b82ecee42',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -196,18 +192,17 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
         id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
         namespace: 'memory',
         slug: 'cribro',
-        value: 'aiunt',
+        value: 'aiunt'
       ),
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-05-01T15:08:32.294Z'),
-    user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+    updated_at: DateTime.iso8601('2023-05-02T03:26:26.034Z'),
+    user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.memory.patch_genai_memory(request: req)
 
 unless res.genai_memory.nil?
@@ -244,11 +239,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.memory.remove_genai_memory(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -280,22 +274,22 @@ Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateGenaiMemory" method="put" path="/genai/{connection_id}/memory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateGenaiMemory" method="put" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '47dd9c18-6dc1-4e23-85fa-38ebc849d801',
+    id: '4abfc269-55f8-4c98-9844-457b82ecee42',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -305,18 +299,17 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
         id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
         namespace: 'memory',
         slug: 'cribro',
-        value: 'aiunt',
+        value: 'aiunt'
       ),
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-05-01T15:08:32.294Z'),
-    user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+    updated_at: DateTime.iso8601('2023-05-02T03:26:26.034Z'),
+    user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.memory.update_genai_memory(request: req)
 
 unless res.genai_memory.nil?

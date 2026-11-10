@@ -1,5 +1,4 @@
 # Location
-(*location*)
 
 ## Overview
 
@@ -30,17 +29,16 @@ Creates a CommerceLocation. Provide the unified CommerceLocation fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" example="commerce_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.location.create_commerce_location(commerce_location: Models::Shared::CommerceLocation.new(
   address: Models::Shared::PropertyCommerceLocationAddress.new(
     address1: '29896 The Limes',
@@ -48,13 +46,13 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
     country_code: 'US',
     postal_code: '14490-0609',
     region: 'Virginia',
-    region_code: 'MS',
+    region_code: 'MS'
   ),
   categories: [],
   created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
   currency: 'XCD',
   description: 'Adsidue audentia.',
-  id: 'af54d044-c1d7-464b-af67-e40f577a1f28',
+  id: 'd4f26ee6-a252-4992-ba5a-a3e8d0bcf24f',
   image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
   is_active: false,
   language_locale: 'vulgaris',
@@ -65,18 +63,18 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
     Models::Shared::CommerceItemMedia.new(
       alt: 'Addo.',
       height: 283.0,
-      id: '2b1bd20d-39e2-4d51-86f5-a92707d3fdfe',
+      id: '94c31117-c6dd-4a8d-a95c-3444d458550c',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '0ad73eae-b40f-480f-8736-87b8204aba5d',
+          id: '415881f1-f68b-463e-9079-23b723e822db',
           slug: 'abutor',
-          value: 'damno',
+          value: 'damno'
         ),
       ],
       position: 40.0,
       type: Models::Shared::CommerceItemMediaType::IMAGE,
       url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
-      width: 1.0,
+      width: 1.0
     ),
   ],
   metadata: [],
@@ -87,15 +85,15 @@ res = s.location.create_commerce_location(commerce_location: Models::Shared::Com
   telephones: [
     Models::Shared::CommerceTelephone.new(
       telephone: '(872) 522-3201',
-      type: Models::Shared::CommerceTelephoneType::OTHER,
+      type: Models::Shared::CommerceTelephoneType::OTHER
     ),
     Models::Shared::CommerceTelephone.new(
       telephone: '(236) 274-2445',
-      type: Models::Shared::CommerceTelephoneType::MOBILE,
+      type: Models::Shared::CommerceTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2024-04-27T06:47:20.220Z'),
-  web_url: 'https://chilly-edge.info',
+  updated_at: DateTime.iso8601('2024-04-27T20:48:03.207Z'),
+  web_url: 'https://chilly-edge.info'
 ), connection_id: '<id>')
 
 unless res.commerce_location.nil?
@@ -129,17 +127,16 @@ Creates a HrisLocation. Provide the unified HrisLocation fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" example="hris_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocation.new(
   address: Models::Shared::PropertyHrisLocationAddress.new(
     address1: '4418 Daniella Mall',
@@ -148,12 +145,12 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
     country_code: 'US',
     postal_code: '54109',
     region: 'Ohio',
-    region_code: 'OR',
+    region_code: 'OR'
   ),
   created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
   currency: 'MNT',
   description: 'Commemoro acervus.',
-  id: 'd90cf325-2568-444f-a7e5-4a3939cd8b4a',
+  id: '8f169e33-5347-471f-9ba5-0b5e943ea13d',
   is_active: false,
   is_hq: true,
   language_locale: 'it',
@@ -162,19 +159,19 @@ res = s.location.create_hris_location(hris_location: Models::Shared::HrisLocatio
   telephones: [
     Models::Shared::HrisTelephone.new(
       telephone: '(371) 245-0699',
-      type: Models::Shared::HrisTelephoneType::FAX,
+      type: Models::Shared::HrisTelephoneType::FAX
     ),
     Models::Shared::HrisTelephone.new(
       telephone: '(700) 845-5854',
-      type: Models::Shared::HrisTelephoneType::FAX,
+      type: Models::Shared::HrisTelephoneType::FAX
     ),
     Models::Shared::HrisTelephone.new(
       telephone: '(461) 437-3548',
-      type: Models::Shared::HrisTelephoneType::HOME,
+      type: Models::Shared::HrisTelephoneType::HOME
     ),
   ],
   timezone: 'Asia/Jerusalem',
-  updated_at: DateTime.iso8601('2023-06-28T01:20:40.676Z'),
+  updated_at: DateTime.iso8601('2023-06-28T16:15:14.038Z')
 ), connection_id: '<id>')
 
 unless res.hris_location.nil?
@@ -214,11 +211,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.location.get_calendar_location(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_location.nil?
@@ -258,11 +254,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.location.get_clubs_location(connection_id: '<id>', id: '<id>')
 
 unless res.clubs_location.nil?
@@ -302,11 +297,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.location.get_commerce_location(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_location.nil?
@@ -346,11 +340,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.location.get_healthcare_location(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_location.nil?
@@ -390,11 +383,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.location.get_hris_location(connection_id: '<id>', id: '<id>')
 
 unless res.hris_location.nil?
@@ -434,15 +426,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarLocationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarLocationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.location.list_calendar_locations(request: req)
 
 unless res.calendar_locations.nil?
@@ -479,15 +470,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListClubsLocationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListClubsLocationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.location.list_clubs_locations(request: req)
 
 unless res.clubs_locations.nil?
@@ -524,15 +514,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceLocationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceLocationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.location.list_commerce_locations(request: req)
 
 unless res.commerce_locations.nil?
@@ -569,15 +558,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareLocationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareLocationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.location.list_healthcare_locations(request: req)
 
 unless res.healthcare_locations.nil?
@@ -614,15 +602,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisLocationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisLocationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.location.list_hris_locations(request: req)
 
 unless res.hris_locations.nil?
@@ -653,16 +640,16 @@ Updates the CommerceLocation identified by `id`. Provide the unified CommerceLoc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceLocationRequest.new(
   commerce_location: Models::Shared::CommerceLocation.new(
@@ -672,13 +659,13 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
       country_code: 'US',
       postal_code: '14490-0609',
       region: 'Virginia',
-      region_code: 'MS',
+      region_code: 'MS'
     ),
     categories: [],
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: 'd29f72c2-4263-418d-905c-987c577bb93b',
+    id: '7ef85239-77f1-4b5d-8f93-30d356b1c9e4',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -689,18 +676,18 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '74076cd3-9a6f-448f-a290-d98c24791526',
+        id: 'caf308da-41bd-4826-8b3e-a7c9241142c0',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'ec741d18-a494-48a5-b574-8ca1b349a605',
+            id: 'a2401220-3576-4ff3-860c-b0a234906a90',
             slug: 'abutor',
-            value: 'damno',
+            value: 'damno'
           ),
         ],
         position: 40.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
-        width: 1.0,
+        width: 1.0
       ),
     ],
     metadata: [],
@@ -711,20 +698,19 @@ req = Models::Operations::PatchCommerceLocationRequest.new(
     telephones: [
       Models::Shared::CommerceTelephone.new(
         telephone: '(872) 522-3201',
-        type: Models::Shared::CommerceTelephoneType::OTHER,
+        type: Models::Shared::CommerceTelephoneType::OTHER
       ),
       Models::Shared::CommerceTelephone.new(
         telephone: '(236) 274-2445',
-        type: Models::Shared::CommerceTelephoneType::MOBILE,
+        type: Models::Shared::CommerceTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-27T06:47:20.236Z'),
-    web_url: 'https://chilly-edge.info',
+    updated_at: DateTime.iso8601('2024-04-27T20:48:03.226Z'),
+    web_url: 'https://chilly-edge.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.location.patch_commerce_location(request: req)
 
 unless res.commerce_location.nil?
@@ -755,16 +741,16 @@ Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisLocationRequest.new(
   hris_location: Models::Shared::HrisLocation.new(
@@ -775,12 +761,12 @@ req = Models::Operations::PatchHrisLocationRequest.new(
       country_code: 'US',
       postal_code: '54109',
       region: 'Ohio',
-      region_code: 'OR',
+      region_code: 'OR'
     ),
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'cefadcdb-5408-48b1-9d86-a4483ae1ba41',
+    id: '722041ae-2eca-4aef-9b09-200077f1d98d',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -789,24 +775,23 @@ req = Models::Operations::PatchHrisLocationRequest.new(
     telephones: [
       Models::Shared::HrisTelephone.new(
         telephone: '(371) 245-0699',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(700) 845-5854',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(461) 437-3548',
-        type: Models::Shared::HrisTelephoneType::HOME,
+        type: Models::Shared::HrisTelephoneType::HOME
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-28T01:20:40.686Z'),
+    updated_at: DateTime.iso8601('2023-06-28T16:15:14.046Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.location.patch_hris_location(request: req)
 
 unless res.hris_location.nil?
@@ -843,11 +828,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.location.remove_commerce_location(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -885,11 +869,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.location.remove_hris_location(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -921,16 +904,16 @@ Updates the CommerceLocation identified by `id`. Provide the unified CommerceLoc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceLocationRequest.new(
   commerce_location: Models::Shared::CommerceLocation.new(
@@ -940,13 +923,13 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
       country_code: 'US',
       postal_code: '14490-0609',
       region: 'Virginia',
-      region_code: 'MS',
+      region_code: 'MS'
     ),
     categories: [],
     created_at: DateTime.iso8601('2022-12-29T04:15:21.195Z'),
     currency: 'XCD',
     description: 'Adsidue audentia.',
-    id: 'd29f72c2-4263-418d-905c-987c577bb93b',
+    id: '7ef85239-77f1-4b5d-8f93-30d356b1c9e4',
     image_url: 'https://picsum.photos/seed/hjFt1/1036/2220',
     is_active: false,
     language_locale: 'vulgaris',
@@ -957,18 +940,18 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Addo.',
         height: 283.0,
-        id: '74076cd3-9a6f-448f-a290-d98c24791526',
+        id: 'caf308da-41bd-4826-8b3e-a7c9241142c0',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'ec741d18-a494-48a5-b574-8ca1b349a605',
+            id: 'a2401220-3576-4ff3-860c-b0a234906a90',
             slug: 'abutor',
-            value: 'damno',
+            value: 'damno'
           ),
         ],
         position: 40.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
-        width: 1.0,
+        width: 1.0
       ),
     ],
     metadata: [],
@@ -979,20 +962,19 @@ req = Models::Operations::UpdateCommerceLocationRequest.new(
     telephones: [
       Models::Shared::CommerceTelephone.new(
         telephone: '(872) 522-3201',
-        type: Models::Shared::CommerceTelephoneType::OTHER,
+        type: Models::Shared::CommerceTelephoneType::OTHER
       ),
       Models::Shared::CommerceTelephone.new(
         telephone: '(236) 274-2445',
-        type: Models::Shared::CommerceTelephoneType::MOBILE,
+        type: Models::Shared::CommerceTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2024-04-27T06:47:20.236Z'),
-    web_url: 'https://chilly-edge.info',
+    updated_at: DateTime.iso8601('2024-04-27T20:48:03.226Z'),
+    web_url: 'https://chilly-edge.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.location.update_commerce_location(request: req)
 
 unless res.commerce_location.nil?
@@ -1023,16 +1005,16 @@ Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisLocationRequest.new(
   hris_location: Models::Shared::HrisLocation.new(
@@ -1043,12 +1025,12 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
       country_code: 'US',
       postal_code: '54109',
       region: 'Ohio',
-      region_code: 'OR',
+      region_code: 'OR'
     ),
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'cefadcdb-5408-48b1-9d86-a4483ae1ba41',
+    id: '722041ae-2eca-4aef-9b09-200077f1d98d',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -1057,24 +1039,23 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
     telephones: [
       Models::Shared::HrisTelephone.new(
         telephone: '(371) 245-0699',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(700) 845-5854',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(461) 437-3548',
-        type: Models::Shared::HrisTelephoneType::HOME,
+        type: Models::Shared::HrisTelephoneType::HOME
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-28T01:20:40.686Z'),
+    updated_at: DateTime.iso8601('2023-06-28T16:15:14.046Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.location.update_hris_location(request: req)
 
 unless res.hris_location.nil?

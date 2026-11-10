@@ -1,5 +1,4 @@
 # Deal
-(*deal*)
 
 ## Overview
 
@@ -18,35 +17,34 @@ Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="ruby" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" example="crm_deal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
   amount: 98_162.0,
-  closed_at: DateTime.iso8601('2024-03-14T08:44:40.079Z'),
-  closing_at: DateTime.iso8601('2025-09-12T23:25:47.756Z'),
+  closed_at: DateTime.iso8601('2024-03-14T17:11:56.359Z'),
+  closing_at: DateTime.iso8601('2025-09-14T02:07:27.036Z'),
   created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
   currency: 'USD',
   description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-  id: 'a8259a90-d4b7-4671-aea3-17c4a77bd60a',
+  id: '7995cb3f-a4ca-4a95-94f3-708a0e0d0ca6',
   metadata: [
     Models::Shared::CrmMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CrmMetadataFormat::TEXT,
-      id: 'f691ea61-afea-4af8-bc23-d62e931ee490',
+      id: 'c9e19cd0-a687-4ff6-9f28-306f65e0e0c9',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'conatus',
+      value: 'conatus'
     ),
   ],
   name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
@@ -56,8 +54,8 @@ res = s.deal.create_crm_deal(crm_deal: Models::Shared::CrmDeal.new(
     'causa',
     'suus',
   ],
-  updated_at: DateTime.iso8601('2024-10-19T05:26:54.252Z'),
-  won_reason: 'Usque libero soleo.',
+  updated_at: DateTime.iso8601('2024-10-19T21:11:33.897Z'),
+  won_reason: 'Usque libero soleo.'
 ), connection_id: '<id>')
 
 unless res.crm_deal.nil?
@@ -97,11 +95,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.deal.get_crm_deal(connection_id: '<id>', id: '<id>')
 
 unless res.crm_deal.nil?
@@ -141,15 +138,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCrmDealsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCrmDealsRequest.new(
+  connection_id: '<id>'
+)
 res = s.deal.list_crm_deals(request: req)
 
 unless res.crm_deals.nil?
@@ -180,36 +176,36 @@ Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-14T08:44:40.082Z'),
-    closing_at: DateTime.iso8601('2025-09-12T23:25:47.765Z'),
+    closed_at: DateTime.iso8601('2024-03-14T17:11:56.364Z'),
+    closing_at: DateTime.iso8601('2025-09-14T02:07:27.051Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '4e7206e7-34d4-4aa6-a4ef-6c18d9109cdf',
+    id: '691964a8-4238-46e3-9fba-5c1ae9708164',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8fe58af4-6174-49dd-9063-da1888be081d',
+        id: 'fe193e1b-aa94-4868-ae03-c8b064bf83f9',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'conatus',
+        value: 'conatus'
       ),
     ],
     name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
@@ -219,13 +215,12 @@ req = Models::Operations::PatchCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-19T05:26:54.258Z'),
-    won_reason: 'Usque libero soleo.',
+    updated_at: DateTime.iso8601('2024-10-19T21:11:33.907Z'),
+    won_reason: 'Usque libero soleo.'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.deal.patch_crm_deal(request: req)
 
 unless res.crm_deal.nil?
@@ -262,11 +257,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.deal.remove_crm_deal(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -298,36 +292,36 @@ Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCrmDealRequest.new(
   crm_deal: Models::Shared::CrmDeal.new(
     amount: 98_162.0,
-    closed_at: DateTime.iso8601('2024-03-14T08:44:40.082Z'),
-    closing_at: DateTime.iso8601('2025-09-12T23:25:47.765Z'),
+    closed_at: DateTime.iso8601('2024-03-14T17:11:56.364Z'),
+    closing_at: DateTime.iso8601('2025-09-14T02:07:27.051Z'),
     created_at: DateTime.iso8601('2023-07-04T12:48:48.470Z'),
     currency: 'USD',
     description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-    id: '4e7206e7-34d4-4aa6-a4ef-6c18d9109cdf',
+    id: '691964a8-4238-46e3-9fba-5c1ae9708164',
     metadata: [
       Models::Shared::CrmMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CrmMetadataFormat::TEXT,
-        id: '8fe58af4-6174-49dd-9063-da1888be081d',
+        id: 'fe193e1b-aa94-4868-ae03-c8b064bf83f9',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'conatus',
+        value: 'conatus'
       ),
     ],
     name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
@@ -337,13 +331,12 @@ req = Models::Operations::UpdateCrmDealRequest.new(
       'causa',
       'suus',
     ],
-    updated_at: DateTime.iso8601('2024-10-19T05:26:54.258Z'),
-    won_reason: 'Usque libero soleo.',
+    updated_at: DateTime.iso8601('2024-10-19T21:11:33.907Z'),
+    won_reason: 'Usque libero soleo.'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.deal.update_crm_deal(request: req)
 
 unless res.crm_deal.nil?

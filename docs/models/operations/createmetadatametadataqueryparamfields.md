@@ -1,5 +1,13 @@
 # CreateMetadataMetadataQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateMetadataMetadataQueryParamFields::ID
+```
+
 
 ## Values
 

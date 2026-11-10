@@ -1,5 +1,16 @@
 # MessagingEventType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = MessagingEventType::MESSAGE_RECEIVED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = MessagingEventType.deserialize("custom_value")
+```
+
 
 ## Values
 

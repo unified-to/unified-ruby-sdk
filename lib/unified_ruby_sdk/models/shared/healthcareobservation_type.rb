@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareObservationType - Category of the observation
-      class HealthcareObservationType < T::Enum
-
-
+      class HealthcareObservationType
+        include ::Crystalline::Enum
         enums do
           LABORATORY = new('LABORATORY')
           VITAL_SIGNS = new('VITAL_SIGNS')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           ACTIVITY = new('ACTIVITY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

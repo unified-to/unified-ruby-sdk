@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Operation - ONLY USED ON UPDATES
-      class Operation < T::Enum
-
-
+      class Operation
+        include ::Crystalline::Enum
         enums do
           ADD = new('add')
           DELETE = new('delete')
         end
+        open!
       end
     end
   end

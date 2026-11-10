@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class GetGenaiModelQueryParamFields < T::Enum
-
-
         enums do
           ID = new('id')
           NAME = new('name')

@@ -1,5 +1,13 @@
 # ListHealthcarePractitionersQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListHealthcarePractitionersQueryParamFields::ID
+```
+
 
 ## Values
 

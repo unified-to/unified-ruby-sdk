@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class VerificationPackageType < T::Enum
-
-
+      class VerificationPackageType
+        include ::Crystalline::Enum
         enums do
           IDENTITY_VERIFICATION = new('IDENTITY_VERIFICATION')
           SCREENING = new('SCREENING')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           FRAUD_PREVENTION = new('FRAUD_PREVENTION')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AtsGroup
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::AtsGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AtsGroupType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AtsGroupType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AtsGroupType, true) } }
 
         sig { params(id: T.nilable(::String), name: T.nilable(::String), type: T.nilable(Models::Shared::AtsGroupType)).void }
         def initialize(id: nil, name: nil, type: nil)

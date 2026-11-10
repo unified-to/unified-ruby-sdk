@@ -1,5 +1,13 @@
 # GetGenaiModelQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetGenaiModelQueryParamFields::ID
+```
+
 
 ## Values
 

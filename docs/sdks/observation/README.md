@@ -1,5 +1,4 @@
 # Observation
-(*observation*)
 
 ## Overview
 
@@ -15,23 +14,22 @@ Creates a HealthcareObservation. Provide the unified HealthcareObservation field
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHealthcareObservation" method="post" path="/healthcare/{connection_id}/observation" -->
+<!-- UsageSnippet language="ruby" operationID="createHealthcareObservation" method="post" path="/healthcare/{connection_id}/observation" example="healthcare_observation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.observation.create_healthcare_observation(healthcare_observation: Models::Shared::HealthcareObservation.new(
   codes: [
     Models::Shared::HealthcareCode.new(
       code: '85354-9',
       display: 'Blood pressure panel',
-      system: 'http://loinc.org',
+      system: 'http://loinc.org'
     ),
   ],
   components: [
@@ -39,35 +37,35 @@ res = s.observation.create_healthcare_observation(healthcare_observation: Models
       codes: [
         Models::Shared::HealthcareCode.new(
           code: '8480-6',
-          system: 'http://loinc.org',
+          system: 'http://loinc.org'
         ),
       ],
       name: 'Systolic blood pressure',
       value_number: 103.0,
-      value_unit: 'mm[Hg]',
+      value_unit: 'mm[Hg]'
     ),
     Models::Shared::HealthcareObservationComponent.new(
       codes: [
         Models::Shared::HealthcareCode.new(
           code: '8462-4',
-          system: 'http://loinc.org',
+          system: 'http://loinc.org'
         ),
       ],
       name: 'Diastolic blood pressure',
       value_number: 60.0,
-      value_unit: 'mm[Hg]',
+      value_unit: 'mm[Hg]'
     ),
   ],
   created_at: DateTime.iso8601('2022-12-06T21:34:04.293Z'),
-  id: '1511e7f9-a7d4-4736-9477-d603c74f7189',
+  id: 'e54f6e9a-98d7-460a-961f-1170d6ab84c2',
   interpretation: Models::Shared::Interpretation::CRITICAL_HIGH,
-  issued_at: DateTime.iso8601('2025-05-23T08:27:34.465Z'),
+  issued_at: DateTime.iso8601('2025-05-24T10:00:26.029Z'),
   metadata: [],
   name: 'Blood pressure panel',
-  observed_at: DateTime.iso8601('2025-01-30T14:04:50.846Z'),
+  observed_at: DateTime.iso8601('2025-01-31T12:25:18.973Z'),
   status: Models::Shared::HealthcareObservationStatus::CORRECTED,
   type: Models::Shared::HealthcareObservationType::VITAL_SIGNS,
-  updated_at: DateTime.iso8601('2026-04-09T10:34:40.269Z'),
+  updated_at: DateTime.iso8601('2026-04-10T21:15:20.512Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -107,11 +105,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.observation.get_healthcare_observation(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -151,15 +148,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareObservationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareObservationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.observation.list_healthcare_observations(request: req)
 
 unless res.healthcare_observations.nil?

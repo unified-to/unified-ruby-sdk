@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CalendarLink
         extend T::Sig
@@ -34,11 +33,11 @@ module UnifiedRubySDK
 
         field :price_currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('price_currency') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
         field :updated_at, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at') } }
 
-        sig { params(url: ::String, created_at: T.nilable(::String), description: T.nilable(::String), duration: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::CalendarMetadata]), name: T.nilable(::String), price_amount: T.nilable(::Float), price_currency: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::String)).void }
+        sig { params(url: ::String, created_at: T.nilable(::String), description: T.nilable(::String), duration: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::CalendarMetadata]), name: T.nilable(::String), price_amount: T.nilable(::Float), price_currency: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), updated_at: T.nilable(::String)).void }
         def initialize(url:, created_at: nil, description: nil, duration: nil, id: nil, is_active: nil, metadata: nil, name: nil, price_amount: nil, price_currency: nil, raw: nil, updated_at: nil)
           @url = url
           @created_at = created_at

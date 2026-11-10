@@ -2,6 +2,17 @@
 
 normalized tender category; the provider's original label stays in payment_method
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = TenderType::CARD
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = TenderType.deserialize("custom_value")
+```
+
 
 ## Values
 

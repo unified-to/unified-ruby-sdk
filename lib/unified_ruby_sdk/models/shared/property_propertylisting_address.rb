@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # postal address of the listing
       class PropertyPropertyListingAddress
         extend T::Sig

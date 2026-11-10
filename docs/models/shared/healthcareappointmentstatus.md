@@ -2,6 +2,17 @@
 
 Status of the appointment
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HealthcareAppointmentStatus::PROPOSED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HealthcareAppointmentStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

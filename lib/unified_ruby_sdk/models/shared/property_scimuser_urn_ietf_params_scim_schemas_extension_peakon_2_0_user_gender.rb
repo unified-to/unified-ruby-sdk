@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender < T::Enum
-
-
+      class PropertyScimUserUrnIetfParamsScimSchemasExtensionPeakon20UserGender
+        include ::Crystalline::Enum
         enums do
           FEMALE = new('Female')
           MALE = new('Male')
         end
+        open!
       end
     end
   end

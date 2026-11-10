@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AdsPromotedType - Promoted entity types for ads_promoted list endpoint
-      class AdsPromotedType < T::Enum
-
-
+      class AdsPromotedType
+        include ::Crystalline::Enum
         enums do
           PAGE_ID = new('PAGE_ID')
           APP_ID = new('APP_ID')
@@ -29,6 +27,7 @@ module UnifiedRubySDK
           TWEET_ID = new('TWEET_ID')
           AD_GROUP_TYPE = new('AD_GROUP_TYPE')
         end
+        open!
       end
     end
   end

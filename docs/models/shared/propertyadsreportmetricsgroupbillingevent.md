@@ -2,6 +2,17 @@
 
 Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyAdsReportMetricsGroupBillingEvent::IMPRESSIONS
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyAdsReportMetricsGroupBillingEvent.deserialize("custom_value")
+```
+
 
 ## Values
 

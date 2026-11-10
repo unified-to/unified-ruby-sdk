@@ -1,5 +1,13 @@
 # CreateGenaiAgentQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateGenaiAgentQueryParamFields::ID
+```
+
 
 ## Values
 

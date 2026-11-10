@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeMetadataFormat - The data type of the value
-      class ComputeMetadataFormat < T::Enum
-
-
+      class ComputeMetadataFormat
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           ARRAY = new('ARRAY')
           OBJECT = new('OBJECT')
         end
+        open!
       end
     end
   end

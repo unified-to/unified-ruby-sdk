@@ -1,5 +1,4 @@
 # Uc
-(*uc*)
 
 ## Overview
 
@@ -43,27 +42,26 @@ Creates a UcCall. Provide the unified UcCall fields in the request body; they ar
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcCall" method="post" path="/uc/{connection_id}/call" -->
+<!-- UsageSnippet language="ruby" operationID="createUcCall" method="post" path="/uc/{connection_id}/call" example="uc_call" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.create_uc_call(uc_call: Models::Shared::UcCall.new(
-  answer_at: DateTime.iso8601('2025-05-24T19:51:29.905Z'),
+  answer_at: DateTime.iso8601('2025-05-25T19:50:49.112Z'),
   contacts: [],
-  conversation_identifier: 'c462146b-b4aa-44e9-9340-6213a3edd0b7',
+  conversation_identifier: 'ee672646-5c24-4258-b4ba-84dc2595f1b1',
   cost_amount: 1.564,
   created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
   currency: 'USD',
   duration_seconds: 2556.0,
-  end_at: DateTime.iso8601('2024-06-05T01:36:21.959Z'),
-  id: 'c462146b-b4aa-44e9-9340-6213a3edd0b7',
+  end_at: DateTime.iso8601('2024-06-05T14:28:22.896Z'),
+  id: 'ee672646-5c24-4258-b4ba-84dc2595f1b1',
   is_private: false,
   metadata: [
     Models::Shared::UcMetadata.new(
@@ -71,21 +69,21 @@ res = s.uc.create_uc_call(uc_call: Models::Shared::UcCall.new(
 
       },
       format: Models::Shared::UcMetadataFormat::PRICE,
-      id: '157d753d-a933-4b5b-ba60-9a89f33f95e5',
+      id: '0d3fb4d1-605e-4f21-81cf-579cf286dc5e',
       namespace: 'custom',
       slug: 'custom_field',
-      value: 'tui',
+      value: 'tui'
     ),
   ],
-  start_at: DateTime.iso8601('2023-12-20T23:14:48.844Z'),
+  start_at: DateTime.iso8601('2023-12-21T06:51:37.757Z'),
   status: Models::Shared::UcCallStatus::IN_PROGRESS,
   telephone: Models::Shared::PropertyUcCallTelephone.new(
     telephone: '(493) 534-0768',
-    type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
+    type: Models::Shared::PropertyUcCallTelephoneType::MOBILE
   ),
   type: Models::Shared::UcCallType::INBOUND,
-  updated_at: DateTime.iso8601('2023-08-04T21:12:22.796Z'),
-  user_phone: '819-894-3317 x163',
+  updated_at: DateTime.iso8601('2023-08-05T00:28:43.381Z'),
+  user_phone: '819-894-3317 x163'
 ), connection_id: '<id>')
 
 unless res.uc_call.nil?
@@ -119,23 +117,22 @@ Creates a UcComment. Provide the unified UcComment fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="ruby" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" example="uc_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.create_uc_comment(uc_comment: Models::Shared::UcComment.new(
   content: 'Vociferor vitiosus.',
   created_at: '2023-04-02T23:42:31.571Z',
-  id: 'eb0f8d43-5568-4e4e-9f0a-dc9e12c44983',
+  id: 'fc65a480-46c1-4261-968f-1fb6a2446085',
   metadata: [],
-  updated_at: '2024-02-14T08:30:08.971Z',
+  updated_at: '2024-02-14T18:19:47.558Z'
 ), connection_id: '<id>')
 
 unless res.uc_comment.nil?
@@ -169,47 +166,46 @@ Creates a UcContact. Provide the unified UcContact fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="ruby" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" example="uc_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.create_uc_contact(uc_contact: Models::Shared::UcContact.new(
   company: 'Tillman Group',
   created_at: DateTime.iso8601('2019-10-28T11:06:56.460Z'),
   emails: [
     Models::Shared::UcEmail.new(
       email: 'Luther_Rogahn32@yahoo.com',
-      type: Models::Shared::UcEmailType::WORK,
+      type: Models::Shared::UcEmailType::WORK
     ),
   ],
   first_name: 'Luther',
-  id: 'd708c619-2c41-4602-b862-9055f6baea3e',
+  id: 'e42f5ffc-c9e9-4c3e-b637-6dda68e633b0',
   last_name: 'Rogahn',
   metadata: [],
   name: 'Luther Rogahn',
   telephones: [
     Models::Shared::UcTelephone.new(
       telephone: '(809) 992-1681',
-      type: Models::Shared::UcTelephoneType::FAX,
+      type: Models::Shared::UcTelephoneType::FAX
     ),
     Models::Shared::UcTelephone.new(
       telephone: '(868) 238-2746',
-      type: Models::Shared::UcTelephoneType::HOME,
+      type: Models::Shared::UcTelephoneType::HOME
     ),
     Models::Shared::UcTelephone.new(
       telephone: '(219) 736-0357',
-      type: Models::Shared::UcTelephoneType::MOBILE,
+      type: Models::Shared::UcTelephoneType::MOBILE
     ),
   ],
   title: 'Chief Optimization Executive',
-  updated_at: DateTime.iso8601('2023-12-19T13:49:10.415Z'),
+  updated_at: DateTime.iso8601('2023-12-20T13:49:32.276Z')
 ), connection_id: '<id>')
 
 unless res.uc_contact.nil?
@@ -243,30 +239,29 @@ Creates a UcFax. Provide the unified UcFax fields in the request body; they are 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcFax" method="post" path="/uc/{connection_id}/fax" -->
+<!-- UsageSnippet language="ruby" operationID="createUcFax" method="post" path="/uc/{connection_id}/fax" example="uc_fax" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.create_uc_fax(uc_fax: Models::Shared::UcFax.new(
-  cost_amount: 1.2_207,
+  cost_amount: 1.2207,
   created_at: DateTime.iso8601('2022-10-25T13:37:51.431Z'),
   currency: 'USD',
   from_telephone: '+13605107540',
-  id: 'f4830c6b-0584-41d9-a2d7-b698bc302971',
+  id: '2caa3f10-1271-48ae-b4da-51d080709b84',
   media_url: 'https://doting-jump.biz',
   metadata: [],
   pages: 20.0,
   status: Models::Shared::UcFaxStatus::DELIVERED,
   to_telephone: '+19083998866',
   type: Models::Shared::UcFaxType::INBOUND,
-  updated_at: DateTime.iso8601('2023-04-16T00:21:35.248Z'),
+  updated_at: DateTime.iso8601('2023-04-16T05:07:21.753Z')
 ), connection_id: '<id>')
 
 unless res.uc_fax.nil?
@@ -300,51 +295,50 @@ Creates a UcRecording. Provide the unified UcRecording fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="ruby" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" example="uc_recording" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.create_uc_recording(uc_recording: Models::Shared::UcRecording.new(
   contacts: [],
-  conversation_identifier: 'b1008485-b423-486c-991b-2e01ae71ec72',
+  conversation_identifier: '1b6746f4-2787-4a9f-98e9-9b0a3be865c1',
   created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-  end_at: DateTime.iso8601('2024-05-12T13:37:26.999Z'),
-  expires_at: DateTime.iso8601('2026-05-13T12:31:00.606Z'),
-  id: 'b1008485-b423-486c-991b-2e01ae71ec72',
+  end_at: DateTime.iso8601('2024-05-13T05:51:23.432Z'),
+  expires_at: DateTime.iso8601('2026-05-15T00:26:03.152Z'),
+  id: '1b6746f4-2787-4a9f-98e9-9b0a3be865c1',
   media: [
     Models::Shared::UcRecordingMedia.new(
-      end_at: DateTime.iso8601('2024-04-08T23:09:47.415Z'),
+      end_at: DateTime.iso8601('2024-04-09T14:29:26.075Z'),
       language: 'en',
       recording_download_url: 'https://parched-wasabi.com/',
-      start_at: DateTime.iso8601('2026-06-01T10:16:52.549Z'),
+      start_at: DateTime.iso8601('2026-06-02T22:42:28.118Z'),
       transcript_download_url: 'https://colossal-cuckoo.name',
       transcripts: [
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2026-03-12T11:38:18.921Z'),
-          start_at: DateTime.iso8601('2024-06-10T04:23:33.579Z'),
-          text: 'Turpis maiores ducimus tero speculum.',
+          end_at: DateTime.iso8601('2026-03-13T21:53:07.008Z'),
+          start_at: DateTime.iso8601('2024-06-10T21:23:44.276Z'),
+          text: 'Turpis maiores ducimus tero speculum.'
         ),
         Models::Shared::UcRecordingTranscript.new(
-          end_at: DateTime.iso8601('2024-10-22T03:55:02.351Z'),
-          start_at: DateTime.iso8601('2026-08-20T21:06:43.257Z'),
-          text: 'Magnam consuasor uxor tergiversatio subseco.',
+          end_at: DateTime.iso8601('2024-10-23T00:31:42.453Z'),
+          start_at: DateTime.iso8601('2026-08-22T11:42:18.592Z'),
+          text: 'Magnam consuasor uxor tergiversatio subseco.'
         ),
-      ],
+      ]
     ),
   ],
   metadata: [],
-  start_at: DateTime.iso8601('2023-04-30T13:49:22.249Z'),
+  start_at: DateTime.iso8601('2023-04-30T19:52:32.315Z'),
   type: Models::Shared::UcRecordingType::OUTBOUND,
-  updated_at: DateTime.iso8601('2025-03-28T01:08:18.622Z'),
+  updated_at: DateTime.iso8601('2025-03-29T01:58:28.677Z'),
   user_phone: '1-915-327-0429 x509',
-  web_url: 'https://spherical-comparison.org',
+  web_url: 'https://spherical-comparison.org'
 ), connection_id: '<id>')
 
 unless res.uc_recording.nil?
@@ -384,11 +378,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.get_uc_call(connection_id: '<id>', id: '<id>')
 
 unless res.uc_call.nil?
@@ -428,11 +421,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.get_uc_comment(connection_id: '<id>', id: '<id>')
 
 unless res.uc_comment.nil?
@@ -472,11 +464,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.get_uc_contact(connection_id: '<id>', id: '<id>')
 
 unless res.uc_contact.nil?
@@ -516,11 +507,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.get_uc_fax(connection_id: '<id>', id: '<id>')
 
 unless res.uc_fax.nil?
@@ -560,11 +550,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.get_uc_recording(connection_id: '<id>', id: '<id>')
 
 unless res.uc_recording.nil?
@@ -604,11 +593,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.get_uc_scorecard(connection_id: '<id>', id: '<id>')
 
 unless res.uc_scorecard.nil?
@@ -648,11 +636,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.get_uc_scorecardtemplate(connection_id: '<id>', id: '<id>')
 
 unless res.uc_scorecardtemplate.nil?
@@ -692,15 +679,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcCallsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcCallsRequest.new(
+  connection_id: '<id>'
+)
 res = s.uc.list_uc_calls(request: req)
 
 unless res.uc_calls.nil?
@@ -737,15 +723,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcCommentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcCommentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.uc.list_uc_comments(request: req)
 
 unless res.uc_comments.nil?
@@ -782,15 +767,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcContactsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcContactsRequest.new(
+  connection_id: '<id>'
+)
 res = s.uc.list_uc_contacts(request: req)
 
 unless res.uc_contacts.nil?
@@ -827,15 +811,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcFaxesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcFaxesRequest.new(
+  connection_id: '<id>'
+)
 res = s.uc.list_uc_faxes(request: req)
 
 unless res.uc_faxes.nil?
@@ -872,15 +855,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcRecordingsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcRecordingsRequest.new(
+  connection_id: '<id>'
+)
 res = s.uc.list_uc_recordings(request: req)
 
 unless res.uc_recordings.nil?
@@ -917,15 +899,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcScorecardsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcScorecardsRequest.new(
+  connection_id: '<id>'
+)
 res = s.uc.list_uc_scorecards(request: req)
 
 unless res.uc_scorecards.nil?
@@ -962,15 +943,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcScorecardtemplatesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcScorecardtemplatesRequest.new(
+  connection_id: '<id>'
+)
 res = s.uc.list_uc_scorecardtemplates(request: req)
 
 unless res.uc_scorecardtemplates.nil?
@@ -1001,28 +981,28 @@ Updates the UcCall identified by `id`. Provide the unified UcCall fields to chan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchUcCall" method="patch" path="/uc/{connection_id}/call/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchUcCall" method="patch" path="/uc/{connection_id}/call/{id}" example="uc_call" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchUcCallRequest.new(
   uc_call: Models::Shared::UcCall.new(
-    answer_at: DateTime.iso8601('2025-05-24T19:51:29.932Z'),
+    answer_at: DateTime.iso8601('2025-05-25T19:50:49.139Z'),
     contacts: [],
-    conversation_identifier: '8c50f735-7036-42eb-8888-0eaa34086963',
+    conversation_identifier: 'd712ab56-955e-467a-9999-8672e99ac1b2',
     cost_amount: 1.564,
     created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
     currency: 'USD',
     duration_seconds: 2556.0,
-    end_at: DateTime.iso8601('2024-06-05T01:36:21.973Z'),
-    id: '8c50f735-7036-42eb-8888-0eaa34086963',
+    end_at: DateTime.iso8601('2024-06-05T14:28:22.910Z'),
+    id: 'd712ab56-955e-467a-9999-8672e99ac1b2',
     is_private: false,
     metadata: [
       Models::Shared::UcMetadata.new(
@@ -1030,26 +1010,25 @@ req = Models::Operations::PatchUcCallRequest.new(
 
         },
         format: Models::Shared::UcMetadataFormat::PRICE,
-        id: '259a3d5f-70bf-4a37-9142-02398e5267e2',
+        id: '213bbec7-eef5-4854-8d30-992eb0def013',
         namespace: 'custom',
         slug: 'custom_field',
-        value: 'tui',
+        value: 'tui'
       ),
     ],
-    start_at: DateTime.iso8601('2023-12-20T23:14:48.852Z'),
+    start_at: DateTime.iso8601('2023-12-21T06:51:37.766Z'),
     status: Models::Shared::UcCallStatus::IN_PROGRESS,
     telephone: Models::Shared::PropertyUcCallTelephone.new(
       telephone: '(493) 534-0768',
-      type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
+      type: Models::Shared::PropertyUcCallTelephoneType::MOBILE
     ),
     type: Models::Shared::UcCallType::INBOUND,
-    updated_at: DateTime.iso8601('2023-08-04T21:12:22.799Z'),
-    user_phone: '819-894-3317 x163',
+    updated_at: DateTime.iso8601('2023-08-05T00:28:43.384Z'),
+    user_phone: '819-894-3317 x163'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.uc.patch_uc_call(request: req)
 
 unless res.uc_call.nil?
@@ -1080,29 +1059,28 @@ Updates the UcComment identified by `id`. Provide the unified UcComment fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: 'a184254b-2cdd-4761-a294-700b542930b6',
+    id: '042718d3-5055-49c3-87ac-6ca0261da68b',
     metadata: [],
-    updated_at: '2024-02-14T08:30:08.973Z',
+    updated_at: '2024-02-14T18:19:47.560Z'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.uc.patch_uc_comment(request: req)
 
 unless res.uc_comment.nil?
@@ -1133,16 +1111,16 @@ Updates the UcContact identified by `id`. Provide the unified UcContact fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchUcContactRequest.new(
   uc_contact: Models::Shared::UcContact.new(
@@ -1151,35 +1129,34 @@ req = Models::Operations::PatchUcContactRequest.new(
     emails: [
       Models::Shared::UcEmail.new(
         email: 'Luther_Rogahn32@yahoo.com',
-        type: Models::Shared::UcEmailType::WORK,
+        type: Models::Shared::UcEmailType::WORK
       ),
     ],
     first_name: 'Luther',
-    id: '8ec83ce6-8e90-45fd-bae4-725df8231833',
+    id: 'e98fbe61-60ae-4edf-88b6-8c6cf82ef173',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
     telephones: [
       Models::Shared::UcTelephone.new(
         telephone: '(809) 992-1681',
-        type: Models::Shared::UcTelephoneType::FAX,
+        type: Models::Shared::UcTelephoneType::FAX
       ),
       Models::Shared::UcTelephone.new(
         telephone: '(868) 238-2746',
-        type: Models::Shared::UcTelephoneType::HOME,
+        type: Models::Shared::UcTelephoneType::HOME
       ),
       Models::Shared::UcTelephone.new(
         telephone: '(219) 736-0357',
-        type: Models::Shared::UcTelephoneType::MOBILE,
+        type: Models::Shared::UcTelephoneType::MOBILE
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-19T13:49:10.430Z'),
+    updated_at: DateTime.iso8601('2023-12-20T13:49:32.288Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.uc.patch_uc_contact(request: req)
 
 unless res.uc_contact.nil?
@@ -1210,57 +1187,56 @@ Updates the UcRecording identified by `id`. Provide the unified UcRecording fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: 'bc0684eb-4e90-4aaa-ad9c-770384d9e89e',
+    conversation_identifier: '98cf867c-9fe7-4047-a902-06ba06dc0c5a',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-12T13:37:27.012Z'),
-    expires_at: DateTime.iso8601('2026-05-13T12:31:00.635Z'),
-    id: 'bc0684eb-4e90-4aaa-ad9c-770384d9e89e',
+    end_at: DateTime.iso8601('2024-05-13T05:51:23.446Z'),
+    expires_at: DateTime.iso8601('2026-05-15T00:26:03.183Z'),
+    id: '98cf867c-9fe7-4047-a902-06ba06dc0c5a',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-08T23:09:47.427Z'),
+        end_at: DateTime.iso8601('2024-04-09T14:29:26.089Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-06-01T10:16:52.579Z'),
+        start_at: DateTime.iso8601('2026-06-02T22:42:28.149Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-03-12T11:38:18.948Z'),
-            start_at: DateTime.iso8601('2024-06-10T04:23:33.593Z'),
-            text: 'Turpis maiores ducimus tero speculum.',
+            end_at: DateTime.iso8601('2026-03-13T21:53:07.037Z'),
+            start_at: DateTime.iso8601('2024-06-10T21:23:44.291Z'),
+            text: 'Turpis maiores ducimus tero speculum.'
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-22T03:55:02.367Z'),
-            start_at: DateTime.iso8601('2026-08-20T21:06:43.287Z'),
-            text: 'Magnam consuasor uxor tergiversatio subseco.',
+            end_at: DateTime.iso8601('2024-10-23T00:31:42.470Z'),
+            start_at: DateTime.iso8601('2026-08-22T11:42:18.625Z'),
+            text: 'Magnam consuasor uxor tergiversatio subseco.'
           ),
-        ],
+        ]
       ),
     ],
     metadata: [],
-    start_at: DateTime.iso8601('2023-04-30T13:49:22.254Z'),
+    start_at: DateTime.iso8601('2023-04-30T19:52:32.320Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-28T01:08:18.642Z'),
+    updated_at: DateTime.iso8601('2025-03-29T01:58:28.699Z'),
     user_phone: '1-915-327-0429 x509',
-    web_url: 'https://spherical-comparison.org',
+    web_url: 'https://spherical-comparison.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.uc.patch_uc_recording(request: req)
 
 unless res.uc_recording.nil?
@@ -1297,11 +1273,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.remove_uc_comment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1339,11 +1314,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.remove_uc_contact(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1381,11 +1355,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.remove_uc_fax(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1423,11 +1396,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.uc.remove_uc_recording(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1459,28 +1431,28 @@ Updates the UcCall identified by `id`. Provide the unified UcCall fields to chan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateUcCall" method="put" path="/uc/{connection_id}/call/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateUcCall" method="put" path="/uc/{connection_id}/call/{id}" example="uc_call" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateUcCallRequest.new(
   uc_call: Models::Shared::UcCall.new(
-    answer_at: DateTime.iso8601('2025-05-24T19:51:29.932Z'),
+    answer_at: DateTime.iso8601('2025-05-25T19:50:49.139Z'),
     contacts: [],
-    conversation_identifier: '8c50f735-7036-42eb-8888-0eaa34086963',
+    conversation_identifier: 'd712ab56-955e-467a-9999-8672e99ac1b2',
     cost_amount: 1.564,
     created_at: DateTime.iso8601('2023-04-22T19:05:34.882Z'),
     currency: 'USD',
     duration_seconds: 2556.0,
-    end_at: DateTime.iso8601('2024-06-05T01:36:21.973Z'),
-    id: '8c50f735-7036-42eb-8888-0eaa34086963',
+    end_at: DateTime.iso8601('2024-06-05T14:28:22.910Z'),
+    id: 'd712ab56-955e-467a-9999-8672e99ac1b2',
     is_private: false,
     metadata: [
       Models::Shared::UcMetadata.new(
@@ -1488,26 +1460,25 @@ req = Models::Operations::UpdateUcCallRequest.new(
 
         },
         format: Models::Shared::UcMetadataFormat::PRICE,
-        id: '259a3d5f-70bf-4a37-9142-02398e5267e2',
+        id: '213bbec7-eef5-4854-8d30-992eb0def013',
         namespace: 'custom',
         slug: 'custom_field',
-        value: 'tui',
+        value: 'tui'
       ),
     ],
-    start_at: DateTime.iso8601('2023-12-20T23:14:48.852Z'),
+    start_at: DateTime.iso8601('2023-12-21T06:51:37.766Z'),
     status: Models::Shared::UcCallStatus::IN_PROGRESS,
     telephone: Models::Shared::PropertyUcCallTelephone.new(
       telephone: '(493) 534-0768',
-      type: Models::Shared::PropertyUcCallTelephoneType::MOBILE,
+      type: Models::Shared::PropertyUcCallTelephoneType::MOBILE
     ),
     type: Models::Shared::UcCallType::INBOUND,
-    updated_at: DateTime.iso8601('2023-08-04T21:12:22.799Z'),
-    user_phone: '819-894-3317 x163',
+    updated_at: DateTime.iso8601('2023-08-05T00:28:43.384Z'),
+    user_phone: '819-894-3317 x163'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.uc.update_uc_call(request: req)
 
 unless res.uc_call.nil?
@@ -1538,29 +1509,28 @@ Updates the UcComment identified by `id`. Provide the unified UcComment fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateUcCommentRequest.new(
   uc_comment: Models::Shared::UcComment.new(
     content: 'Vociferor vitiosus.',
     created_at: '2023-04-02T23:42:31.571Z',
-    id: 'a184254b-2cdd-4761-a294-700b542930b6',
+    id: '042718d3-5055-49c3-87ac-6ca0261da68b',
     metadata: [],
-    updated_at: '2024-02-14T08:30:08.973Z',
+    updated_at: '2024-02-14T18:19:47.560Z'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.uc.update_uc_comment(request: req)
 
 unless res.uc_comment.nil?
@@ -1591,16 +1561,16 @@ Updates the UcContact identified by `id`. Provide the unified UcContact fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateUcContactRequest.new(
   uc_contact: Models::Shared::UcContact.new(
@@ -1609,35 +1579,34 @@ req = Models::Operations::UpdateUcContactRequest.new(
     emails: [
       Models::Shared::UcEmail.new(
         email: 'Luther_Rogahn32@yahoo.com',
-        type: Models::Shared::UcEmailType::WORK,
+        type: Models::Shared::UcEmailType::WORK
       ),
     ],
     first_name: 'Luther',
-    id: '8ec83ce6-8e90-45fd-bae4-725df8231833',
+    id: 'e98fbe61-60ae-4edf-88b6-8c6cf82ef173',
     last_name: 'Rogahn',
     metadata: [],
     name: 'Luther Rogahn',
     telephones: [
       Models::Shared::UcTelephone.new(
         telephone: '(809) 992-1681',
-        type: Models::Shared::UcTelephoneType::FAX,
+        type: Models::Shared::UcTelephoneType::FAX
       ),
       Models::Shared::UcTelephone.new(
         telephone: '(868) 238-2746',
-        type: Models::Shared::UcTelephoneType::HOME,
+        type: Models::Shared::UcTelephoneType::HOME
       ),
       Models::Shared::UcTelephone.new(
         telephone: '(219) 736-0357',
-        type: Models::Shared::UcTelephoneType::MOBILE,
+        type: Models::Shared::UcTelephoneType::MOBILE
       ),
     ],
     title: 'Chief Optimization Executive',
-    updated_at: DateTime.iso8601('2023-12-19T13:49:10.430Z'),
+    updated_at: DateTime.iso8601('2023-12-20T13:49:32.288Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.uc.update_uc_contact(request: req)
 
 unless res.uc_contact.nil?
@@ -1668,57 +1637,56 @@ Updates the UcRecording identified by `id`. Provide the unified UcRecording fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateUcRecordingRequest.new(
   uc_recording: Models::Shared::UcRecording.new(
     contacts: [],
-    conversation_identifier: 'bc0684eb-4e90-4aaa-ad9c-770384d9e89e',
+    conversation_identifier: '98cf867c-9fe7-4047-a902-06ba06dc0c5a',
     created_at: DateTime.iso8601('2022-09-17T19:41:46.956Z'),
-    end_at: DateTime.iso8601('2024-05-12T13:37:27.012Z'),
-    expires_at: DateTime.iso8601('2026-05-13T12:31:00.635Z'),
-    id: 'bc0684eb-4e90-4aaa-ad9c-770384d9e89e',
+    end_at: DateTime.iso8601('2024-05-13T05:51:23.446Z'),
+    expires_at: DateTime.iso8601('2026-05-15T00:26:03.183Z'),
+    id: '98cf867c-9fe7-4047-a902-06ba06dc0c5a',
     media: [
       Models::Shared::UcRecordingMedia.new(
-        end_at: DateTime.iso8601('2024-04-08T23:09:47.427Z'),
+        end_at: DateTime.iso8601('2024-04-09T14:29:26.089Z'),
         language: 'en',
         recording_download_url: 'https://parched-wasabi.com/',
-        start_at: DateTime.iso8601('2026-06-01T10:16:52.579Z'),
+        start_at: DateTime.iso8601('2026-06-02T22:42:28.149Z'),
         transcript_download_url: 'https://colossal-cuckoo.name',
         transcripts: [
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2026-03-12T11:38:18.948Z'),
-            start_at: DateTime.iso8601('2024-06-10T04:23:33.593Z'),
-            text: 'Turpis maiores ducimus tero speculum.',
+            end_at: DateTime.iso8601('2026-03-13T21:53:07.037Z'),
+            start_at: DateTime.iso8601('2024-06-10T21:23:44.291Z'),
+            text: 'Turpis maiores ducimus tero speculum.'
           ),
           Models::Shared::UcRecordingTranscript.new(
-            end_at: DateTime.iso8601('2024-10-22T03:55:02.367Z'),
-            start_at: DateTime.iso8601('2026-08-20T21:06:43.287Z'),
-            text: 'Magnam consuasor uxor tergiversatio subseco.',
+            end_at: DateTime.iso8601('2024-10-23T00:31:42.470Z'),
+            start_at: DateTime.iso8601('2026-08-22T11:42:18.625Z'),
+            text: 'Magnam consuasor uxor tergiversatio subseco.'
           ),
-        ],
+        ]
       ),
     ],
     metadata: [],
-    start_at: DateTime.iso8601('2023-04-30T13:49:22.254Z'),
+    start_at: DateTime.iso8601('2023-04-30T19:52:32.320Z'),
     type: Models::Shared::UcRecordingType::OUTBOUND,
-    updated_at: DateTime.iso8601('2025-03-28T01:08:18.642Z'),
+    updated_at: DateTime.iso8601('2025-03-29T01:58:28.699Z'),
     user_phone: '1-915-327-0429 x509',
-    web_url: 'https://spherical-comparison.org',
+    web_url: 'https://spherical-comparison.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.uc.update_uc_recording(request: req)
 
 unless res.uc_recording.nil?

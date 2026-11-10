@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CalendarWebinarPanelist
         extend T::Sig
@@ -24,7 +23,7 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::CalendarWebinarPanelistStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CalendarWebinarPanelistStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::CalendarWebinarPanelistStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CalendarWebinarPanelistStatus, true) } }
 
         sig { params(email: T.nilable(::String), is_required: T.nilable(T::Boolean), join_password: T.nilable(::String), join_url: T.nilable(::String), name: T.nilable(::String), status: T.nilable(Models::Shared::CalendarWebinarPanelistStatus)).void }
         def initialize(email: nil, is_required: nil, join_password: nil, join_url: nil, name: nil, status: nil)

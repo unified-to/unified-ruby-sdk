@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class EnrichEmail
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :is_verified, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_verified') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::EnrichEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::EnrichEmailType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::EnrichEmailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::EnrichEmailType, true) } }
 
         sig { params(email: ::String, is_verified: T.nilable(T::Boolean), type: T.nilable(Models::Shared::EnrichEmailType)).void }
         def initialize(email:, is_verified: nil, type: nil)

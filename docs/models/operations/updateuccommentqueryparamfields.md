@@ -1,5 +1,13 @@
 # UpdateUcCommentQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateUcCommentQueryParamFields::ID
+```
+
 
 ## Values
 

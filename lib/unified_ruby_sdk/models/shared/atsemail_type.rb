@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AtsEmailType < T::Enum
-
-
+      class AtsEmailType
+        include ::Crystalline::Enum
         enums do
           WORK = new('WORK')
           HOME = new('HOME')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

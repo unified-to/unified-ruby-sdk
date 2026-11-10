@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisPayrollType < T::Enum
-
-
+      class HrisPayrollType
+        include ::Crystalline::Enum
         enums do
           REGULAR = new('REGULAR')
           OFF_CYCLE = new('OFF_CYCLE')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           TERMINATION = new('TERMINATION')
           CONTRACTOR = new('CONTRACTOR')
         end
+        open!
       end
     end
   end

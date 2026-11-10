@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PaymentPaymentType < T::Enum
-
-
+      class PaymentPaymentType
+        include ::Crystalline::Enum
         enums do
           INVOICE = new('INVOICE')
           BILL = new('BILL')
         end
+        open!
       end
     end
   end

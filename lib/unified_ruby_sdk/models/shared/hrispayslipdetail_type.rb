@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisPayslipDetailType < T::Enum
-
-
+      class HrisPayslipDetailType
+        include ::Crystalline::Enum
         enums do
           EARNING_SALARY = new('EARNING_SALARY')
           EARNING_OVERTIME = new('EARNING_OVERTIME')
@@ -54,6 +52,7 @@ module UnifiedRubySDK
           PENSION = new('PENSION')
           EARNING_CASH_IN_LIEU = new('EARNING_CASH_IN_LIEU')
         end
+        open!
       end
     end
   end

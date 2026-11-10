@@ -1,5 +1,4 @@
 # Group
-(*group*)
 
 ## Overview
 
@@ -32,33 +31,32 @@ Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" example="ads_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.create_ads_group(ads_group: Models::Shared::AdsGroup.new(
   bid_amount: 26.16_030_164_062_977,
-  budget_amount: 5_099.175_239_447_504,
+  budget_amount: 5099.175_239_447_504,
   budget_period: Models::Shared::AdsGroupBudgetPeriod::MONTHLY,
   created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
   currency: 'USD',
   effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-  end_at: DateTime.iso8601('2026-07-13T05:06:12.253Z'),
-  id: 'a7d4c505-bd95-4598-99a1-0e378365967c',
+  end_at: DateTime.iso8601('2026-07-14T20:00:43.595Z'),
+  id: '511294fa-04ce-4471-a565-e586d69a2560',
   language_locale: 'fr-FR',
   metadata: [],
   name: 'Stark - Baumbach',
-  start_at: DateTime.iso8601('2026-01-26T05:11:09.514Z'),
+  start_at: DateTime.iso8601('2026-01-27T17:29:23.749Z'),
   status: Models::Shared::AdsGroupStatus::PROCESSING,
-  targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-  updated_at: DateTime.iso8601('2022-01-19T23:57:40.441Z'),
+  targeting: Models::Shared::PropertyAdsGroupTargeting.new,
+  updated_at: DateTime.iso8601('2022-01-20T13:30:58.603Z')
 ), connection_id: '<id>')
 
 unless res.ads_group.nil?
@@ -92,26 +90,25 @@ Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" example="hris_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.create_hris_group(hris_group: Models::Shared::HrisGroup.new(
   created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
   description: 'Absorbeo casso.',
-  id: 'a9771fcf-3d90-4535-81d7-da141c18004e',
+  id: 'a10053eb-dbf0-4485-8b9e-07a5c4e20956',
   is_active: false,
   metadata: [],
   name: 'Games',
   type: Models::Shared::HrisGroupType::BRANCH,
-  updated_at: DateTime.iso8601('2026-06-07T07:39:35.820Z'),
+  updated_at: DateTime.iso8601('2026-06-08T18:41:54.223Z')
 ), connection_id: '<id>')
 
 unless res.hris_group.nil?
@@ -151,13 +148,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.create_scim_groups(scim_group: Models::Shared::ScimGroup.new(
-  display_name: 'Nina.Tremblay',
+  display_name: 'Nina.Tremblay'
 ), connection_id: '<id>')
 
 unless res.scim_group.nil?
@@ -195,11 +191,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.get_ads_group(connection_id: '<id>', id: '<id>')
 
 unless res.ads_group.nil?
@@ -239,11 +234,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.get_clubs_group(connection_id: '<id>', id: '<id>')
 
 unless res.clubs_group.nil?
@@ -283,11 +277,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.get_hris_group(connection_id: '<id>', id: '<id>')
 
 unless res.hris_group.nil?
@@ -327,11 +320,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.get_scim_groups(connection_id: '<id>', id: '<id>')
 
 unless res.scim_group.nil?
@@ -369,15 +361,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsGroupsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsGroupsRequest.new(
+  connection_id: '<id>'
+)
 res = s.group.list_ads_groups(request: req)
 
 unless res.ads_groups.nil?
@@ -414,15 +405,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListClubsGroupsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListClubsGroupsRequest.new(
+  connection_id: '<id>'
+)
 res = s.group.list_clubs_groups(request: req)
 
 unless res.clubs_groups.nil?
@@ -459,15 +449,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisGroupsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisGroupsRequest.new(
+  connection_id: '<id>'
+)
 res = s.group.list_hris_groups(request: req)
 
 unless res.hris_groups.nil?
@@ -504,15 +493,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListScimGroupsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListScimGroupsRequest.new(
+  connection_id: '<id>'
+)
 res = s.group.list_scim_groups(request: req)
 
 unless res.scim_groups.nil?
@@ -543,39 +531,38 @@ Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAdsGroupRequest.new(
   ads_group: Models::Shared::AdsGroup.new(
     bid_amount: 26.16_030_164_062_977,
-    budget_amount: 5_099.175_239_447_504,
+    budget_amount: 5099.175_239_447_504,
     budget_period: Models::Shared::AdsGroupBudgetPeriod::MONTHLY,
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-13T05:06:12.442Z'),
-    id: '7794c549-33b6-4712-862f-9e9698c7e921',
+    end_at: DateTime.iso8601('2026-07-14T20:00:43.705Z'),
+    id: '482546e8-9e18-45dc-b72a-e3ca25da5f73',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-01-26T05:11:09.691Z'),
+    start_at: DateTime.iso8601('2026-01-27T17:29:23.851Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
-    targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-    updated_at: DateTime.iso8601('2022-01-19T23:57:40.507Z'),
+    targeting: Models::Shared::PropertyAdsGroupTargeting.new,
+    updated_at: DateTime.iso8601('2022-01-20T13:30:58.642Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.group.patch_ads_group(request: req)
 
 unless res.ads_group.nil?
@@ -606,32 +593,31 @@ Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: 'a8847752-5f51-4c8a-bc7e-a8389cbbf50e',
+    id: 'fcea6a6c-ad73-498c-a09d-7568c5b9bd93',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-07T07:39:35.837Z'),
+    updated_at: DateTime.iso8601('2026-06-08T18:41:54.236Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.group.patch_hris_group(request: req)
 
 unless res.hris_group.nil?
@@ -668,13 +654,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.patch_scim_groups(scim_group: Models::Shared::ScimGroup.new(
-  display_name: 'Newell.Hoeger',
+  display_name: 'Newell.Hoeger'
 ), connection_id: '<id>', id: '<id>')
 
 unless res.scim_group.nil?
@@ -713,11 +698,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.remove_ads_group(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -755,11 +739,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.remove_hris_group(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -797,11 +780,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.remove_scim_groups(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -833,39 +815,38 @@ Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAdsGroupRequest.new(
   ads_group: Models::Shared::AdsGroup.new(
     bid_amount: 26.16_030_164_062_977,
-    budget_amount: 5_099.175_239_447_504,
+    budget_amount: 5099.175_239_447_504,
     budget_period: Models::Shared::AdsGroupBudgetPeriod::MONTHLY,
     created_at: DateTime.iso8601('2019-08-29T17:59:41.045Z'),
     currency: 'USD',
     effective_status: Models::Shared::AdsGroupEffectiveStatus::PAUSED,
-    end_at: DateTime.iso8601('2026-07-13T05:06:12.442Z'),
-    id: '7794c549-33b6-4712-862f-9e9698c7e921',
+    end_at: DateTime.iso8601('2026-07-14T20:00:43.705Z'),
+    id: '482546e8-9e18-45dc-b72a-e3ca25da5f73',
     language_locale: 'fr-FR',
     metadata: [],
     name: 'Stark - Baumbach',
-    start_at: DateTime.iso8601('2026-01-26T05:11:09.691Z'),
+    start_at: DateTime.iso8601('2026-01-27T17:29:23.851Z'),
     status: Models::Shared::AdsGroupStatus::PROCESSING,
-    targeting: Models::Shared::PropertyAdsGroupTargeting.new(),
-    updated_at: DateTime.iso8601('2022-01-19T23:57:40.507Z'),
+    targeting: Models::Shared::PropertyAdsGroupTargeting.new,
+    updated_at: DateTime.iso8601('2022-01-20T13:30:58.642Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.group.update_ads_group(request: req)
 
 unless res.ads_group.nil?
@@ -896,32 +877,31 @@ Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: 'a8847752-5f51-4c8a-bc7e-a8389cbbf50e',
+    id: 'fcea6a6c-ad73-498c-a09d-7568c5b9bd93',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-07T07:39:35.837Z'),
+    updated_at: DateTime.iso8601('2026-06-08T18:41:54.236Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.group.update_hris_group(request: req)
 
 unless res.hris_group.nil?
@@ -958,13 +938,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.group.update_scim_groups(scim_group: Models::Shared::ScimGroup.new(
-  display_name: 'Reynold90',
+  display_name: 'Reynold90'
 ), connection_id: '<id>', id: '<id>')
 
 unless res.scim_group.nil?

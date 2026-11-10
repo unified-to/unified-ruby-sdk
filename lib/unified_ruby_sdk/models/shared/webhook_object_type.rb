@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # WebhookObjectType - The object to return (eg. CRM "contact")
-      class WebhookObjectType < T::Enum
-
-
+      class WebhookObjectType
+        include ::Crystalline::Enum
         enums do
           ACCOUNTING_ACCOUNT = new('accounting_account')
           ACCOUNTING_TRANSACTION = new('accounting_transaction')
@@ -206,6 +204,7 @@ module UnifiedRubySDK
           SOCIAL_PROFILE = new('social_profile')
           SOCIAL_REVIEW = new('social_review')
           SOCIAL_INSIGHT = new('social_insight')
+          SOCIAL_COMMENT = new('social_comment')
           LEGAL_MATTER = new('legal_matter')
           LEGAL_PRACTICEAREA = new('legal_practicearea')
           LEGAL_TIMEENTRY = new('legal_timeentry')
@@ -253,6 +252,7 @@ module UnifiedRubySDK
           PLM_CHANGE = new('plm_change')
           PLM_CATEGORY = new('plm_category')
         end
+        open!
       end
     end
   end

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class EventType < T::Enum
-
-
+      class EventType
+        include ::Crystalline::Enum
         enums do
           PAGE_VIEW = new('PAGE_VIEW')
           SCREEN_VIEW = new('SCREEN_VIEW')
@@ -30,6 +28,7 @@ module UnifiedRubySDK
           FIRST_VISIT = new('FIRST_VISIT')
           CUSTOM = new('CUSTOM')
         end
+        open!
       end
     end
   end

@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class KmsCommentType < T::Enum
-
-
+      class KmsCommentType
+        include ::Crystalline::Enum
         enums do
           PAGE_INLINE = new('PAGE_INLINE')
           PAGE = new('PAGE')
         end
+        open!
       end
     end
   end

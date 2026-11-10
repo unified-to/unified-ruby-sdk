@@ -1,5 +1,13 @@
 # ListHrisLocationsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListHrisLocationsQueryParamFields::ID
+```
+
 
 ## Values
 

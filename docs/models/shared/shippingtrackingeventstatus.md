@@ -2,6 +2,17 @@
 
 Status at the time of this event
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ShippingTrackingEventStatus::PENDING
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ShippingTrackingEventStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

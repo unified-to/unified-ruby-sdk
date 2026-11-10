@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Dimension < T::Enum
-
-
+      class Dimension
+        include ::Crystalline::Enum
         enums do
           DATE = new('DATE')
           PLATFORM = new('PLATFORM')
           PLATFORM_POSITION = new('PLATFORM_POSITION')
           DEVICE = new('DEVICE')
         end
+        open!
       end
     end
   end

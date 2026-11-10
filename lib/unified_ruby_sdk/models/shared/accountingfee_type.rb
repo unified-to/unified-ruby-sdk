@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AccountingFeeType - Unified fee category
-      class AccountingFeeType < T::Enum
-
-
+      class AccountingFeeType
+        include ::Crystalline::Enum
         enums do
           TAX = new('TAX')
           DISCOUNT = new('DISCOUNT')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           SERVICE_CHARGE = new('SERVICE_CHARGE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

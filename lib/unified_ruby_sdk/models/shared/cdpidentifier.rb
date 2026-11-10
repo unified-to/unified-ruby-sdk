@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CdpIdentifier
         extend T::Sig
@@ -22,7 +21,7 @@ module UnifiedRubySDK
         # The source that provided this identifier
         field :source, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source') } }
         # The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
-        field :type, Crystalline::Nilable.new(Models::Shared::CdpIdentifierType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::CdpIdentifierType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::CdpIdentifierType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CdpIdentifierType, true) } }
 
         sig { params(value: ::String, encoding: T.nilable(::String), is_primary: T.nilable(T::Boolean), source: T.nilable(::String), type: T.nilable(Models::Shared::CdpIdentifierType)).void }
         def initialize(value:, encoding: nil, is_primary: nil, source: nil, type: nil)

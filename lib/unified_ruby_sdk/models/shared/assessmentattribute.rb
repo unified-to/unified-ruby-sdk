@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AssessmentAttribute
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
 
         field :label, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('label'), required: true } }
 
-        field :type, Models::Shared::AssessmentAttributeType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AssessmentAttributeType, false) } }
+        field :type, Models::Shared::AssessmentAttributeType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AssessmentAttributeType, false) } }
         # For SUB_RESULT type
         field :reference, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reference') } }
 
@@ -24,7 +23,7 @@ module UnifiedRubySDK
 
         field :score_value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('score_value') } }
         # For SUB_RESULT type
-        field :status, Crystalline::Nilable.new(Models::Shared::AssessmentAttributeStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AssessmentAttributeStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AssessmentAttributeStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AssessmentAttributeStatus, true) } }
         # For TEXT and NUMBER types
         field :value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 

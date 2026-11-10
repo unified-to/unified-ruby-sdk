@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HrisCompensation
         extend T::Sig
@@ -18,13 +17,13 @@ module UnifiedRubySDK
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
-        field :frequency, Crystalline::Nilable.new(Models::Shared::HrisCompensationFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': Utils.enum_from_string(Models::Shared::HrisCompensationFrequency, true) } }
+        field :frequency, Crystalline::Nilable.new(Models::Shared::HrisCompensationFrequency), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('frequency'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisCompensationFrequency, true) } }
         # (reference to HrisGroup)
         field :group_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('group_id') } }
 
         field :notes, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('notes') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::HrisCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisCompensationType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisCompensationType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisCompensationType, true) } }
 
         sig { params(amount: T.nilable(::Float), currency: T.nilable(::String), frequency: T.nilable(Models::Shared::HrisCompensationFrequency), group_id: T.nilable(::String), notes: T.nilable(::String), type: T.nilable(Models::Shared::HrisCompensationType)).void }
         def initialize(amount: nil, currency: nil, frequency: nil, group_id: nil, notes: nil, type: nil)

@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # FlsaStatus - US Fair Labor Standards Act classification
-      class FlsaStatus < T::Enum
-
-
+      class FlsaStatus
+        include ::Crystalline::Enum
         enums do
           EXEMPT = new('EXEMPT')
           NON_EXEMPT = new('NON_EXEMPT')
           SALARIED_NONEXEMPT = new('SALARIED_NONEXEMPT')
           OWNER = new('OWNER')
         end
+        open!
       end
     end
   end

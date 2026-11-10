@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyScimUserMetaResourceType < T::Enum
-
-
+      class PropertyScimUserMetaResourceType
+        include ::Crystalline::Enum
         enums do
           USER = new('User')
           GROUP = new('Group')
         end
+        open!
       end
     end
   end

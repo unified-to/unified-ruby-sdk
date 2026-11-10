@@ -1,5 +1,16 @@
 # PropertyWorkspaceIntegrationCategories
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyWorkspaceIntegrationCategories::PASSTHROUGH
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyWorkspaceIntegrationCategories.deserialize("custom_value")
+```
+
 
 ## Values
 

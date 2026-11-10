@@ -1,5 +1,4 @@
 # Class
-(*class_*)
 
 ## Overview
 
@@ -18,21 +17,20 @@ Creates a LmsClass. Provide the unified LmsClass fields in the request body; the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" example="lms_class" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
   created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
   description: 'Anser sperno decerno.',
-  id: '1b308408-e40d-4d9a-9915-16e203e8ecf3',
+  id: 'f46788ba-e619-4a2b-9950-ad254c3b987a',
   instructors: [],
   languages: [
     'in',
@@ -48,13 +46,13 @@ res = s.class_.create_lms_class(lms_class: Models::Shared::LmsClass.new(
       name: 'illo',
       thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
       type: Models::Shared::LmsMediaType::VIDEO,
-      url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+      url: 'https://loremflickr.com/487/921?lock=5127962071241632'
     ),
   ],
   metadata: [],
   name: 'virtus',
   students: [],
-  updated_at: DateTime.iso8601('2025-08-19T10:37:32.484Z'),
+  updated_at: DateTime.iso8601('2025-08-20T19:57:31.849Z')
 ), connection_id: '<id>')
 
 unless res.lms_class.nil?
@@ -94,11 +92,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.class_.get_lms_class(connection_id: '<id>', id: '<id>')
 
 unless res.lms_class.nil?
@@ -138,15 +135,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsClassesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsClassesRequest.new(
+  connection_id: '<id>'
+)
 res = s.class_.list_lms_classes(request: req)
 
 unless res.lms_classes.nil?
@@ -177,22 +173,22 @@ Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: '8fc14122-7053-44a9-b738-dd639dffa2a6',
+    id: '3caa33b2-c82a-40da-ac65-b35e548c538b',
     instructors: [],
     languages: [
       'in',
@@ -208,18 +204,17 @@ req = Models::Operations::PatchLmsClassRequest.new(
         name: 'illo',
         thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
         type: Models::Shared::LmsMediaType::VIDEO,
-        url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+        url: 'https://loremflickr.com/487/921?lock=5127962071241632'
       ),
     ],
     metadata: [],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-19T10:37:32.503Z'),
+    updated_at: DateTime.iso8601('2025-08-20T19:57:31.866Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.class_.patch_lms_class(request: req)
 
 unless res.lms_class.nil?
@@ -256,11 +251,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.class_.remove_lms_class(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -292,22 +286,22 @@ Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsClassRequest.new(
   lms_class: Models::Shared::LmsClass.new(
     created_at: DateTime.iso8601('2020-02-20T14:48:51.845Z'),
     description: 'Anser sperno decerno.',
-    id: '8fc14122-7053-44a9-b738-dd639dffa2a6',
+    id: '3caa33b2-c82a-40da-ac65-b35e548c538b',
     instructors: [],
     languages: [
       'in',
@@ -323,18 +317,17 @@ req = Models::Operations::UpdateLmsClassRequest.new(
         name: 'illo',
         thumbnail_url: 'https://loremflickr.com/199/1934?lock=4323325966476891',
         type: Models::Shared::LmsMediaType::VIDEO,
-        url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+        url: 'https://loremflickr.com/487/921?lock=5127962071241632'
       ),
     ],
     metadata: [],
     name: 'virtus',
     students: [],
-    updated_at: DateTime.iso8601('2025-08-19T10:37:32.503Z'),
+    updated_at: DateTime.iso8601('2025-08-20T19:57:31.866Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.class_.update_lms_class(request: req)
 
 unless res.lms_class.nil?

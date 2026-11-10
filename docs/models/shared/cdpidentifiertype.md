@@ -2,6 +2,17 @@
 
 The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CdpIdentifierType::EMAIL
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = CdpIdentifierType.deserialize("custom_value")
+```
+
 
 ## Values
 

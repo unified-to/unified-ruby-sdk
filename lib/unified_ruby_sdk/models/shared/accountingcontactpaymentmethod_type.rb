@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AccountingContactPaymentMethodType < T::Enum
-
-
+      class AccountingContactPaymentMethodType
+        include ::Crystalline::Enum
         enums do
           ACH = new('ACH')
           ALIPAY = new('ALIPAY')
@@ -23,6 +21,7 @@ module UnifiedRubySDK
           WIRE = new('WIRE')
           CHECK = new('CHECK')
         end
+        open!
       end
     end
   end

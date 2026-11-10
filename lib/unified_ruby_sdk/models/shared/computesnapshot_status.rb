@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeSnapshotStatus - Normalized snapshot status
-      class ComputeSnapshotStatus < T::Enum
-
-
+      class ComputeSnapshotStatus
+        include ::Crystalline::Enum
         enums do
           CREATING = new('CREATING')
           READY = new('READY')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           DELETING = new('DELETING')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

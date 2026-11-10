@@ -1,5 +1,13 @@
 # CreateComputeVolumeQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateComputeVolumeQueryParamFields::ID
+```
+
 
 ## Values
 

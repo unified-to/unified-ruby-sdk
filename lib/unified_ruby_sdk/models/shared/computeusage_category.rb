@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeUsageCategory - What was consumed
-      class ComputeUsageCategory < T::Enum
-
-
+      class ComputeUsageCategory
+        include ::Crystalline::Enum
         enums do
           GPU = new('GPU')
           CPU = new('CPU')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           NETWORK = new('NETWORK')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

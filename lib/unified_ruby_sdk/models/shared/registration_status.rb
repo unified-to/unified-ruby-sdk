@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class RegistrationStatus < T::Enum
-
-
+      class RegistrationStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           APPROVED = new('APPROVED')
           REJECTED = new('REJECTED')
           CANCELLED = new('CANCELLED')
         end
+        open!
       end
     end
   end

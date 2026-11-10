@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PaymentAllocationObjectType - The type of object this payment was applied to
-      class PaymentAllocationObjectType < T::Enum
-
-
+      class PaymentAllocationObjectType
+        include ::Crystalline::Enum
         enums do
           INVOICE = new('INVOICE')
           BILL = new('BILL')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           SALESORDER = new('SALESORDER')
           PURCHASEORDER = new('PURCHASEORDER')
         end
+        open!
       end
     end
   end

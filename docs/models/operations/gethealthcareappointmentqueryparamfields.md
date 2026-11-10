@@ -1,5 +1,13 @@
 # GetHealthcareAppointmentQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetHealthcareAppointmentQueryParamFields::ID
+```
+
 
 ## Values
 

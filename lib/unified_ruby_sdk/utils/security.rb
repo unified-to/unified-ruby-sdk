@@ -12,31 +12,52 @@ module UnifiedRubySDK
   module Utils
     extend T::Sig
 
-    sig { params(req: Faraday::Request, security: Object).void }
-    def self.configure_request_security(req, security)
+    sig { params(req: Faraday::Request, security: ::Object, allowed_fields: T.nilable(T::Array[::Symbol])).void }
+    def self.configure_request_security(req, security, allowed_fields = nil)
       return if security.nil?
-      T.unsafe(security).fields.each do |sec_field|
+
+      sec_fields = if allowed_fields.nil?
+        T.unsafe(security).fields
+      else
+        allowed_fields.filter_map { |name| T.unsafe(security).fields.find { |f| f.name == name } }
+      end
+
+      sec_fields.each do |sec_field|
         value = security.send(sec_field.name)
         next if value.nil?
 
         metadata = sec_field.metadata[:security]
         next if metadata.nil?
 
-        _parse_security_option(req, value) if metadata[:option]
-
-        if metadata[:scheme]
-          # Special case for basic auth which could be a flattened struct
-          if metadata[:sub_type] == 'basic' && !value.respond_to?(:fields)
-            _parse_security_scheme(req, metadata, security)
-          else
-            _parse_security_scheme(req, metadata, value)
-          end
+        if metadata[:option]
+          _parse_security_option(req, value)
+          break unless metadata[:composite]
         end
+
+        next unless metadata[:scheme]
+
+        # Special case for basic auth which could be a flattened struct
+        if metadata[:sub_type] == 'basic' && !value.respond_to?(:fields)
+          _parse_security_scheme(req, metadata, security)
+        else
+          _parse_security_scheme(req, metadata, value)
+        end
+        break unless metadata[:composite]
       end
     end
 
-    sig { params(req: Faraday::Request, option: Object).void }
+    sig { params(req: Faraday::Request, option: ::Object).void }
     def self._parse_security_option(req, option)
+      # Check if this option uses basic auth (needs the whole object, not individual fields)
+      first_field = T.unsafe(option).fields.first
+      if first_field
+        first_meta = first_field.metadata[:security]
+        if first_meta && first_meta[:type] == 'http' && first_meta[:sub_type] == 'basic'
+          _parse_security_scheme(req, first_meta, option)
+          return
+        end
+      end
+
       T.unsafe(option).fields.each do |opt_field|
         metadata = opt_field.metadata[:security]
         next if metadata.nil? || !metadata.include?(:scheme)
@@ -45,7 +66,7 @@ module UnifiedRubySDK
       end
     end
 
-    sig { params(req: Faraday::Request, scheme_metadata: T::Hash[Symbol, String], scheme: Object).void }
+    sig { params(req: Faraday::Request, scheme_metadata: T::Hash[::Symbol, ::String], scheme: ::Object).void }
     def self._parse_security_scheme(req, scheme_metadata, scheme)
       scheme_type = scheme_metadata[:type]
       sub_type = scheme_metadata[:sub_type]
@@ -61,16 +82,16 @@ module UnifiedRubySDK
           next if metadata.nil? || metadata[:field_name].nil?
 
           value = scheme.send(field.name)
-          _parse_security_scheme_value(req, scheme_metadata, metadata, T.cast(value, String))
+          _parse_security_scheme_value(req, scheme_metadata, metadata, T.cast(value, ::String))
         end
       else
-        _parse_security_scheme_value(req, scheme_metadata, scheme_metadata, T.cast(scheme, String))
+        _parse_security_scheme_value(req, scheme_metadata, scheme_metadata, T.cast(scheme, ::String))
       end
     end
 
     sig do
-      params(req: Faraday::Request, scheme_metadata: T::Hash[Symbol, String],
-             security_metadata: T::Hash[Symbol, String], value: String).void
+      params(req: Faraday::Request, scheme_metadata: T::Hash[::Symbol, ::String],
+             security_metadata: T::Hash[::Symbol, ::String], value: ::String).void
     end
     def self._parse_security_scheme_value(req, scheme_metadata, security_metadata, value)
       scheme_type = scheme_metadata[:type]
@@ -88,7 +109,7 @@ module UnifiedRubySDK
         when 'cookie'
           req.headers['Cookie'][header_name] = value
         else
-          raise StandardError, 'not supported'
+          raise ::StandardError, 'not supported'
         end
       when 'openIdConnect'
         req.headers[header_name] = value.downcase.start_with?('bearer ') ? value : "Bearer #{value}"
@@ -98,17 +119,17 @@ module UnifiedRubySDK
         if sub_type == 'bearer'
           req.headers[header_name] = value.downcase.start_with?('bearer ') ? value : "Bearer #{value}"
         elsif sub_type != 'custom'
-          raise StandardError, 'not supported'
+          raise ::StandardError, 'not supported'
         end
       else
-        raise StandardError, 'not supported'
+        raise ::StandardError, 'not supported'
       end
     end
 
-    sig { params(req: Faraday::Request, scheme: Object).void }
+    sig { params(req: Faraday::Request, scheme: ::Object).void }
     def self._parse_basic_auth_scheme(req, scheme)
-      username = T.let('', String)
-      password = T.let('', String)
+      username = T.let('', ::String)
+      password = T.let('', ::String)
 
       T.unsafe(scheme).fields.each do |scheme_field|
         metadata = scheme_field.metadata[:security]
@@ -117,14 +138,14 @@ module UnifiedRubySDK
         field_name = metadata[:field_name]
         value = scheme.send(scheme_field.name)
 
-        username = T.let(value, String) if field_name == 'username'
-        password = T.let(value, String) if field_name == 'password'
+        username = T.let(value, ::String) if field_name == 'username'
+        password = T.let(value, ::String) if field_name == 'password'
       end
 
       data = "#{username}:#{password}".encode
       # Use strict_encode, because encode adds newlines after 60 chars
       # https://docs.ruby-lang.org/en/3.0/Base64.html#method-i-encode64
-      req.headers['Authorization'] = "Basic #{Base64.strict_encode64(data)}"
+      req.headers['Authorization'] = "Basic #{::Base64.strict_encode64(data)}"
     end
   end
 end

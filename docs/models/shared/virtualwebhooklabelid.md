@@ -1,5 +1,16 @@
 # VirtualWebhookLabelId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = VirtualWebhookLabelId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = VirtualWebhookLabelId.deserialize("custom_value")
+```
+
 
 ## Values
 

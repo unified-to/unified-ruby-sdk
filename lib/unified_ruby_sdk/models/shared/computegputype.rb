@@ -7,30 +7,29 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeGputype
         extend T::Sig
         include Crystalline::MetadataFields
 
         # CPU architecture
-        field :architecture, Crystalline::Nilable.new(Models::Shared::Architecture), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('architecture'), 'decoder': Utils.enum_from_string(Models::Shared::Architecture, true) } }
+        field :architecture, Crystalline::Nilable.new(Models::Shared::Architecture), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('architecture'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Architecture, true) } }
         # Availability by region
         field :availability, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ComputeAvailability)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('availability') } }
         # vCPUs included in one unit of this type
         field :cpu_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cpu_count') } }
         # When the GPU type was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Local disk in MiB
         field :disk_mb, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('disk_mb') } }
         # GPUs included in one unit of this type
         field :gpu_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_count') } }
         # GPU manufacturer
-        field :gpu_manufacturer, Crystalline::Nilable.new(Models::Shared::GpuManufacturer), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_manufacturer'), 'decoder': Utils.enum_from_string(Models::Shared::GpuManufacturer, true) } }
+        field :gpu_manufacturer, Crystalline::Nilable.new(Models::Shared::GpuManufacturer), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_manufacturer'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::GpuManufacturer, true) } }
         # Memory per GPU in MiB
         field :gpu_memory_mb, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_memory_mb') } }
         # Normalized GPU model
-        field :gpu_model, Crystalline::Nilable.new(Models::Shared::GpuModel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_model'), 'decoder': Utils.enum_from_string(Models::Shared::GpuModel, true) } }
+        field :gpu_model, Crystalline::Nilable.new(Models::Shared::GpuModel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gpu_model'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::GpuModel, true) } }
         # Unique identifier for the GPU or instance type (vendor SKU)
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # System memory in MiB
@@ -42,13 +41,13 @@ module UnifiedRubySDK
         # List prices by market and region
         field :prices, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ComputePrice)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('prices') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The vendor's own SKU or type name
         field :sku, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('sku') } }
         # When the GPU type was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(architecture: T.nilable(Models::Shared::Architecture), availability: T.nilable(T::Array[Models::Shared::ComputeAvailability]), cpu_count: T.nilable(::Float), created_at: T.nilable(::DateTime), disk_mb: T.nilable(::Float), gpu_count: T.nilable(::Float), gpu_manufacturer: T.nilable(Models::Shared::GpuManufacturer), gpu_memory_mb: T.nilable(::Float), gpu_model: T.nilable(Models::Shared::GpuModel), id: T.nilable(::String), memory_mb: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::ComputePrice]), raw: T.nilable(T::Hash[Symbol, ::Object]), sku: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(architecture: T.nilable(Models::Shared::Architecture), availability: T.nilable(T::Array[Models::Shared::ComputeAvailability]), cpu_count: T.nilable(::Float), created_at: T.nilable(::DateTime), disk_mb: T.nilable(::Float), gpu_count: T.nilable(::Float), gpu_manufacturer: T.nilable(Models::Shared::GpuManufacturer), gpu_memory_mb: T.nilable(::Float), gpu_model: T.nilable(Models::Shared::GpuModel), id: T.nilable(::String), memory_mb: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::ComputeMetadata]), name: T.nilable(::String), prices: T.nilable(T::Array[Models::Shared::ComputePrice]), raw: T.nilable(T::Hash[::Symbol, ::Object]), sku: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(architecture: nil, availability: nil, cpu_count: nil, created_at: nil, disk_mb: nil, gpu_count: nil, gpu_manufacturer: nil, gpu_memory_mb: nil, gpu_model: nil, id: nil, memory_mb: nil, metadata: nil, name: nil, prices: nil, raw: nil, sku: nil, updated_at: nil)
           @architecture = architecture
           @availability = availability

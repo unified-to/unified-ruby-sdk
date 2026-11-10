@@ -14,7 +14,7 @@ module Crystalline
 
   class Hash
     attr_accessor :key_type, :value_type
-    
+
     def initialize(key_type, value_type)
       @key_type = key_type
       @value_type = value_type
@@ -23,7 +23,7 @@ module Crystalline
 
   class Union
     attr_accessor :types
-    
+
     def initialize(*types)
       @types = types
     end
@@ -31,7 +31,7 @@ module Crystalline
 
   class Nilable
     attr_accessor :inner_type
-    
+
     def initialize(inner_type)
       @inner_type = inner_type
     end
@@ -40,26 +40,101 @@ module Crystalline
   class Boolean
   end
 
+  # Wraps an unrecognized payload from an open discriminated union.
+  # Produced when the discriminator value is missing, unknown, or schema validation fails.
+  class Unknown
+    attr_reader :raw
+
+    def initialize(raw:)
+      @raw = raw
+    end
+
+    def unknown?
+      true
+    end
+  end
+
+  # Forward-compatible discriminated union parser.
+  # Known discriminator values are deserialized to their mapped types.
+  # Unknown or invalid payloads are captured as Crystalline::Unknown.
+  class DiscriminatedUnion
+    attr_reader :discriminator, :variants
+
+    def initialize(discriminator, variants)
+      @discriminator = discriminator
+      @variants = variants
+    end
+
+    def parse(payload)
+      unless payload.is_a?(::Hash)
+        return Unknown.new(raw: payload)
+      end
+
+      disc_value = payload[@discriminator]
+      unless disc_value.is_a?(::String)
+        return Unknown.new(raw: payload)
+      end
+
+      variant_type = @variants[disc_value]
+      unless variant_type
+        return Unknown.new(raw: payload)
+      end
+
+      begin
+        Crystalline.unmarshal_json(payload, variant_type)
+      rescue StandardError
+        Unknown.new(raw: payload)
+      end
+    end
+  end
+
+  def self.unknown?(value)
+    value.is_a?(Unknown)
+  end
+
   module Enum
+    def self.included(base)
+      base.extend(ClassMethods)
+    end
+
     def initialize(val)
-      puts methods
-      if instance_methods(false).include?(:initialize)
+      if self.class.instance_methods(false).include?(:initialize)
         super(val)
       else
         @val = val
       end
     end
 
-    def self.enums(&blk)
-      @mapping = {}
+    module ClassMethods
+      def enums(&blk)
+        @mapping = {}
 
-      yield
-      constants(false).each do |const_name|
-        instance = const_get(const_name, false)
-        unless instance.is_a? self
-          raise 'Enum constants must be instances of the Enum class (e.g. `Foo = new`)'
+        yield
+        constants(false).each do |const_name|
+          instance = const_get(const_name, false)
+          unless instance.is_a? self
+            raise 'Enum constants must be instances of the Enum class (e.g. `Foo = new`)'
+          end
+          @mapping[instance.serialize] = instance
         end
-        @mapping[instance.serialize] = instance
+      end
+
+      def open!
+        @open = true
+      end
+
+      def open?
+        @open == true
+      end
+
+      def deserialize(val)
+        if @mapping.include? val
+          @mapping[val]
+        elsif open?
+          new(val)
+        else
+          raise "Invalid value for enum: #{val}"
+        end
       end
     end
 
@@ -67,12 +142,29 @@ module Crystalline
       @val
     end
 
-    def deserialize(val)
-      if @mapping.include? val
-        @mapping[val]
-      else
-        raise "Invalid value for enum: #{val}"
-      end
+    def to_s
+      serialize.to_s
+    end
+
+    def inspect
+      "#<#{self.class} #{serialize.inspect}>"
+    end
+
+    def known?
+      self.class.instance_variable_get(:@mapping)&.value?(self) || false
+    end
+
+    def ==(other)
+      other = other.serialize if other.is_a?(self.class)
+      @val == other
+    end
+
+    def eql?(other)
+      self == other
+    end
+
+    def hash
+      @val.hash
     end
   end
 end

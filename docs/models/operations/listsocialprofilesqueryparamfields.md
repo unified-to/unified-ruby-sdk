@@ -1,5 +1,13 @@
 # ListSocialProfilesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListSocialProfilesQueryParamFields::ID
+```
+
 
 ## Values
 

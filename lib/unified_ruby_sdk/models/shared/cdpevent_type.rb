@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # CdpEventType - The unified structural category of the event
-      class CdpEventType < T::Enum
-
-
+      class CdpEventType
+        include ::Crystalline::Enum
         enums do
           TRACK = new('TRACK')
           PAGE = new('PAGE')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           GROUP = new('GROUP')
           ALIAS = new('ALIAS')
         end
+        open!
       end
     end
   end

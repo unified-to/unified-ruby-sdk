@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsGroupTargetingContentVideoPositions < T::Enum
-
-
+      class PropertyAdsGroupTargetingContentVideoPositions
+        include ::Crystalline::Enum
         enums do
           PREROLL = new('PREROLL')
           MIDROLL = new('MIDROLL')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           INSTREAM = new('INSTREAM')
           OUTSTREAM = new('OUTSTREAM')
         end
+        open!
       end
     end
   end

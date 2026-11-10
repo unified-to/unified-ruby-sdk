@@ -1,5 +1,4 @@
 # Asset
-(*asset*)
 
 ## Overview
 
@@ -15,28 +14,27 @@ Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+<!-- UsageSnippet language="ruby" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" example="ads_asset" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.asset.create_ads_asset(ads_asset: Models::Shared::AdsAsset.new(
   created_at: DateTime.iso8601('2020-03-27T20:14:38.603Z'),
   height: 400.0,
-  id: '05ed7d70-2db6-4653-93d7-715ff13d0230',
+  id: 'faae8f57-f51d-47ca-86e7-2fdcbac080c8',
   metadata: [],
   mime_type: 'IMAGE_PNG',
   name: 'Lockman - DuBuque',
   type: Models::Shared::AdsAssetType::IMAGE,
-  updated_at: DateTime.iso8601('2022-03-30T22:59:46.091Z'),
+  updated_at: DateTime.iso8601('2022-03-31T11:21:20.201Z'),
   url: 'https://informal-perfection.com/',
-  width: 600.0,
+  width: 600.0
 ), connection_id: '<id>')
 
 unless res.ads_asset.nil?
@@ -76,11 +74,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.asset.get_ads_asset(connection_id: '<id>', id: '<id>')
 
 unless res.ads_asset.nil?
@@ -120,15 +117,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAdsAssetsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAdsAssetsRequest.new(
+  connection_id: '<id>'
+)
 res = s.asset.list_ads_assets(request: req)
 
 unless res.ads_assets.nil?

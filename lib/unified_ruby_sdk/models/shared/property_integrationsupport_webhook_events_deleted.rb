@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyIntegrationSupportWebhookEventsDeleted < T::Enum
-
-
+      class PropertyIntegrationSupportWebhookEventsDeleted
+        include ::Crystalline::Enum
         enums do
           VIRTUAL = new('virtual')
           NATIVE = new('native')
         end
+        open!
       end
     end
   end

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ShippingCustomsItem
         extend T::Sig
@@ -30,7 +29,7 @@ module UnifiedRubySDK
         # Weight per unit
         field :weight, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight') } }
 
-        field :weight_unit, Crystalline::Nilable.new(Models::Shared::ShippingCustomsItemWeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': Utils.enum_from_string(Models::Shared::ShippingCustomsItemWeightUnit, true) } }
+        field :weight_unit, Crystalline::Nilable.new(Models::Shared::ShippingCustomsItemWeightUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('weight_unit'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ShippingCustomsItemWeightUnit, true) } }
 
         sig { params(amount: T.nilable(::Float), country_of_origin: T.nilable(::String), currency: T.nilable(::String), description: T.nilable(::String), harmonized_tariff_code: T.nilable(::String), quantity: T.nilable(::Float), sku: T.nilable(::String), weight: T.nilable(::Float), weight_unit: T.nilable(Models::Shared::ShippingCustomsItemWeightUnit)).void }
         def initialize(amount: nil, country_of_origin: nil, currency: nil, description: nil, harmonized_tariff_code: nil, quantity: nil, sku: nil, weight: nil, weight_unit: nil)

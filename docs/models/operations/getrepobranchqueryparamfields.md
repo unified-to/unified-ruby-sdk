@@ -1,5 +1,13 @@
 # GetRepoBranchQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetRepoBranchQueryParamFields::ID
+```
+
 
 ## Values
 

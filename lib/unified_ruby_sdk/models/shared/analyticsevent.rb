@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AnalyticsEvent
         extend T::Sig
@@ -22,17 +21,17 @@ module UnifiedRubySDK
 
         field :country_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country_code') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
 
         field :device, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('device') } }
 
-        field :event_type, Crystalline::Nilable.new(Models::Shared::EventType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event_type'), 'decoder': Utils.enum_from_string(Models::Shared::EventType, true) } }
+        field :event_type, Crystalline::Nilable.new(Models::Shared::EventType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('event_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::EventType, true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
-        field :metadata, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, Models::Shared::PropertyAnalyticsEventMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
+        field :metadata, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, Models::Shared::PropertyAnalyticsEventMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
@@ -46,13 +45,13 @@ module UnifiedRubySDK
         # points to AnalyticsProperty
         field :property_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('property_id') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :region, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
         # points to AnalyticsSession
         field :session_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('session_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :utm_campaign, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('utm_campaign') } }
 
@@ -68,7 +67,7 @@ module UnifiedRubySDK
         # points to AnalyticsVisitor
         field :visitor_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('visitor_id') } }
 
-        sig { params(browser: T.nilable(::String), city: T.nilable(::String), country: T.nilable(::String), country_code: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), device: T.nilable(::String), event_type: T.nilable(Models::Shared::EventType), id: T.nilable(::String), metadata: T.nilable(T::Hash[Symbol, Models::Shared::PropertyAnalyticsEventMetadata]), name: T.nilable(::String), os: T.nilable(::String), page_referrer: T.nilable(::String), page_title: T.nilable(::String), page_url: T.nilable(::String), property_id: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), region: T.nilable(::String), session_id: T.nilable(::String), updated_at: T.nilable(::DateTime), utm_campaign: T.nilable(::String), utm_content: T.nilable(::String), utm_medium: T.nilable(::String), utm_source: T.nilable(::String), utm_term: T.nilable(::String), value: T.nilable(::Float), visitor_id: T.nilable(::String)).void }
+        sig { params(browser: T.nilable(::String), city: T.nilable(::String), country: T.nilable(::String), country_code: T.nilable(::String), created_at: T.nilable(::DateTime), currency: T.nilable(::String), device: T.nilable(::String), event_type: T.nilable(Models::Shared::EventType), id: T.nilable(::String), metadata: T.nilable(T::Hash[::Symbol, Models::Shared::PropertyAnalyticsEventMetadata]), name: T.nilable(::String), os: T.nilable(::String), page_referrer: T.nilable(::String), page_title: T.nilable(::String), page_url: T.nilable(::String), property_id: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), region: T.nilable(::String), session_id: T.nilable(::String), updated_at: T.nilable(::DateTime), utm_campaign: T.nilable(::String), utm_content: T.nilable(::String), utm_medium: T.nilable(::String), utm_source: T.nilable(::String), utm_term: T.nilable(::String), value: T.nilable(::Float), visitor_id: T.nilable(::String)).void }
         def initialize(browser: nil, city: nil, country: nil, country_code: nil, created_at: nil, currency: nil, device: nil, event_type: nil, id: nil, metadata: nil, name: nil, os: nil, page_referrer: nil, page_title: nil, page_url: nil, property_id: nil, raw: nil, region: nil, session_id: nil, updated_at: nil, utm_campaign: nil, utm_content: nil, utm_medium: nil, utm_source: nil, utm_term: nil, value: nil, visitor_id: nil)
           @browser = browser
           @city = city

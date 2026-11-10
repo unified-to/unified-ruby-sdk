@@ -13,9 +13,9 @@ module UnifiedRubySDK
     extend T::Sig
 
     sig do
-      params(field_name: String, explode: T::Boolean, obj: Object, delimiter: String,
-             get_field_name_lambda: T.proc.params(obj_field: ::Crystalline::MetadataFields::Field).returns(String))
-        .returns(T::Hash[String, T::Array[String]])
+      params(field_name: ::String, explode: T::Boolean, obj: ::Object, delimiter: ::String,
+             get_field_name_lambda: T.proc.params(obj_field: ::Crystalline::MetadataFields::Field).returns(::String))
+        .returns(T::Hash[::String, T::Array[::String]])
     end
     def self._populate_form(field_name, explode, obj, delimiter, &get_field_name_lambda)
       params = {}
@@ -39,7 +39,7 @@ module UnifiedRubySDK
         end
 
         params[field_name] = [items.join(delimiter)] if !items.empty?
-      elsif obj.is_a? Hash
+      elsif obj.is_a? ::Hash
         items = []
         obj.each do |key, value|
           next if value.nil?
@@ -52,7 +52,7 @@ module UnifiedRubySDK
         end
         params[field_name] = [items.join(delimiter)] if !items.empty?
 
-      elsif obj.is_a? Array
+      elsif obj.is_a? ::Array
         items = []
         obj.each do |value|
           next if value.nil?
@@ -73,7 +73,7 @@ module UnifiedRubySDK
       params
     end
 
-    sig { params(media_type: String, request: Object).returns([String, Object, T::Array[T::Array[T.any(T::Array[T.nilable(String)], String)]]]) }
+    sig { params(media_type: ::String, request: ::Object).returns([::String, ::Object, T::Array[T::Array[T.any(T::Array[T.nilable(::String)], ::String)]]]) }
     def self.serialize_multipart_form(media_type, request)
       form = []
       T.unsafe(request).fields.each do |field|
@@ -87,9 +87,9 @@ module UnifiedRubySDK
           field_name = field_metadata[:field_name]
           
           # Handle arrays of files
-          if val.is_a? Array
+          if val.is_a? ::Array
             val.each do |file_obj|
-              file_name = T.let('', String)
+              file_name = T.let('', ::String)
               content = nil
 
               T.must(file_obj).fields.each do |file_field|
@@ -97,18 +97,18 @@ module UnifiedRubySDK
                 next if file_metadata.nil?
 
                 if file_metadata[:content] == true
-                  content = T.let(file_obj.send(file_field.name), String)
+                  content = T.let(file_obj.send(file_field.name), ::String)
                 else
-                  file_name = T.let(file_obj.send(file_field.name), String)
+                  file_name = T.let(file_obj.send(file_field.name), ::String)
                 end
               end
-              raise StandardError, 'invalid multipart/form-data file' if T.unsafe(file_name) == '' || T.unsafe(content).nil?
+              raise ::StandardError, 'invalid multipart/form-data file' if T.unsafe(file_name) == '' || T.unsafe(content).nil?
 
-              form.append([field_name, [file_name, content]])
+              form.append(["#{field_name}[]", [file_name, content]])
             end
           else
             # Handle single file
-            file_name = T.let('', String)
+            file_name = T.let('', ::String)
             content = nil
 
             T.must(val).fields.each do |file_field|
@@ -116,12 +116,12 @@ module UnifiedRubySDK
               next if file_metadata.nil?
 
               if file_metadata[:content] == true
-                content = T.let(val.send(file_field.name), String)
+                content = T.let(val.send(file_field.name), ::String)
               else
-                file_name = T.let(val.send(file_field.name), String)
+                file_name = T.let(val.send(file_field.name), ::String)
               end
             end
-            raise StandardError, 'invalid multipart/form-data file' if T.unsafe(file_name) == '' || T.unsafe(content).nil?
+            raise ::StandardError, 'invalid multipart/form-data file' if T.unsafe(file_name) == '' || T.unsafe(content).nil?
 
             form.append([field_name, [file_name, content]])
           end
@@ -136,7 +136,7 @@ module UnifiedRubySDK
           field_name = field_metadata.fetch(
             :field_name, field.name
           )
-          if val.is_a? Array
+          if val.is_a? ::Array
             val.each do |value|
               next if value.nil?
 
@@ -154,19 +154,19 @@ module UnifiedRubySDK
 
 
     sig do
-      params(data: T.any(Object, T::Hash[String, String]))
-        .returns(T::Hash[T.any(String, Symbol), Object])
+      params(data: T.any(::Object, T::Hash[::String, ::String]))
+        .returns(T::Hash[T.any(::String, ::Symbol), ::Object])
     end
     def self.serialize_form_data(data)
       get_form_field_name = lambda do |obj_field|
         obj_param_metadata = obj_field.metadata[:form]
 
-        return T.let({}, T::Hash[T.any(String, Symbol), Object]) if obj_param_metadata.nil?
+        return T.let({}, T::Hash[T.any(::String, ::Symbol), ::Object]) if obj_param_metadata.nil?
 
         return obj_param_metadata.fetch(:field_name, obj_field.name)
       end
 
-      form = T.let({}, T::Hash[T.any(String, Symbol), Object])
+      form = T.let({}, T::Hash[T.any(::String, ::Symbol), ::Object])
       if data.respond_to? :fields
         T.unsafe(data).fields.each do |field|
           val = data.send(field.name)
@@ -188,16 +188,16 @@ module UnifiedRubySDK
                 )
               )
             else
-              raise StandardError, "Invalid form style for field #{field.name}"
+              raise ::StandardError, "Invalid form style for field #{field.name}"
             end
           end
         end
-      elsif data.is_a? Hash
+      elsif data.is_a? ::Hash
         data.each do |key, value|
           form[key] = [val_to_string(value)]
         end
       else
-        raise StandardError, "Invalid request body type #{data.class}"
+        raise ::StandardError, "Invalid request body type #{data.class}"
       end
 
       form

@@ -1,5 +1,4 @@
 # Healthcare
-(*healthcare*)
 
 ## Overview
 
@@ -55,22 +54,21 @@ Creates a HealthcareAppointment. Provide the unified HealthcareAppointment field
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHealthcareAppointment" method="post" path="/healthcare/{connection_id}/appointment" -->
+<!-- UsageSnippet language="ruby" operationID="createHealthcareAppointment" method="post" path="/healthcare/{connection_id}/appointment" example="healthcare_appointment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models::Shared::HealthcareAppointment.new(
   created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
   description: 'clarus aptus cetera',
   end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-  id: 'b52dea76-4eca-4482-a41a-4f7fb8814469',
+  id: 'c3dce127-5911-4a2a-9252-2125de723831',
   is_virtual: true,
   meeting_url: 'https://expensive-slipper.name/',
   metadata: [],
@@ -80,13 +78,13 @@ res = s.healthcare.create_healthcare_appointment(healthcare_appointment: Models:
     Models::Shared::HealthcareCode.new(
       code: '12762740',
       display: 'New patient visit',
-      system: 'http://snomed.info/sct',
+      system: 'http://snomed.info/sct'
     ),
   ],
   slot_ids: [],
   start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
   status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-  updated_at: DateTime.iso8601('2026-10-10T19:28:58.776Z'),
+  updated_at: DateTime.iso8601('2026-10-12T11:19:25.906Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -120,36 +118,35 @@ Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" -->
+<!-- UsageSnippet language="ruby" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" example="healthcare_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.create_healthcare_document(healthcare_document: Models::Shared::HealthcareDocument.new(
   authored_at: DateTime.iso8601('2023-07-16T04:00:25.853Z'),
   codes: [
     Models::Shared::HealthcareCode.new(
       code: '23671711',
       display: 'History and physical',
-      system: 'http://loinc.org',
+      system: 'http://loinc.org'
     ),
   ],
   created_at: DateTime.iso8601('2023-07-16T04:00:25.853Z'),
   document_url: 'https://overcooked-yogurt.org',
   filename: 'ugh_after.elc',
-  id: '9f5e818d-268c-46cd-881c-47122a30f369',
+  id: '91929771-04df-4c71-9ab5-3a0b6db9a81c',
   metadata: [],
   mime_type: 'application/pdf',
   name: 'History and physical',
   status: Models::Shared::HealthcareDocumentStatus::SUPERSEDED,
   type: Models::Shared::HealthcareDocumentType::CONSULTATION_NOTE,
-  updated_at: DateTime.iso8601('2025-01-04T05:02:15.281Z'),
+  updated_at: DateTime.iso8601('2025-01-04T23:07:49.508Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_document.nil?
@@ -183,23 +180,22 @@ Creates a HealthcareObservation. Provide the unified HealthcareObservation field
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHealthcareObservation" method="post" path="/healthcare/{connection_id}/observation" -->
+<!-- UsageSnippet language="ruby" operationID="createHealthcareObservation" method="post" path="/healthcare/{connection_id}/observation" example="healthcare_observation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.create_healthcare_observation(healthcare_observation: Models::Shared::HealthcareObservation.new(
   codes: [
     Models::Shared::HealthcareCode.new(
       code: '85354-9',
       display: 'Blood pressure panel',
-      system: 'http://loinc.org',
+      system: 'http://loinc.org'
     ),
   ],
   components: [
@@ -207,35 +203,35 @@ res = s.healthcare.create_healthcare_observation(healthcare_observation: Models:
       codes: [
         Models::Shared::HealthcareCode.new(
           code: '8480-6',
-          system: 'http://loinc.org',
+          system: 'http://loinc.org'
         ),
       ],
       name: 'Systolic blood pressure',
       value_number: 103.0,
-      value_unit: 'mm[Hg]',
+      value_unit: 'mm[Hg]'
     ),
     Models::Shared::HealthcareObservationComponent.new(
       codes: [
         Models::Shared::HealthcareCode.new(
           code: '8462-4',
-          system: 'http://loinc.org',
+          system: 'http://loinc.org'
         ),
       ],
       name: 'Diastolic blood pressure',
       value_number: 60.0,
-      value_unit: 'mm[Hg]',
+      value_unit: 'mm[Hg]'
     ),
   ],
   created_at: DateTime.iso8601('2022-12-06T21:34:04.293Z'),
-  id: '1511e7f9-a7d4-4736-9477-d603c74f7189',
+  id: 'e54f6e9a-98d7-460a-961f-1170d6ab84c2',
   interpretation: Models::Shared::Interpretation::CRITICAL_HIGH,
-  issued_at: DateTime.iso8601('2025-05-23T08:27:34.465Z'),
+  issued_at: DateTime.iso8601('2025-05-24T10:00:26.029Z'),
   metadata: [],
   name: 'Blood pressure panel',
-  observed_at: DateTime.iso8601('2025-01-30T14:04:50.846Z'),
+  observed_at: DateTime.iso8601('2025-01-31T12:25:18.973Z'),
   status: Models::Shared::HealthcareObservationStatus::CORRECTED,
   type: Models::Shared::HealthcareObservationType::VITAL_SIGNS,
-  updated_at: DateTime.iso8601('2026-04-09T10:34:40.269Z'),
+  updated_at: DateTime.iso8601('2026-04-10T21:15:20.512Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -269,26 +265,25 @@ Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHealthcarePatient" method="post" path="/healthcare/{connection_id}/patient" -->
+<!-- UsageSnippet language="ruby" operationID="createHealthcarePatient" method="post" path="/healthcare/{connection_id}/patient" example="healthcare_patient" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared::HealthcarePatient.new(
   address: Models::Shared::PropertyHealthcarePatientAddress.new(
     address1: '162 Kirlin Mall',
     city: 'Dickinsonborough',
     country: 'US',
     postal_code: '54031',
-    region: 'Nebraska',
+    region: 'Nebraska'
   ),
-  birthdate: '2025-03-03',
+  birthdate: '2025-03-04',
   contacts: [
     Models::Shared::HealthcarePatientContact.new(
       emails: [],
@@ -297,25 +292,25 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
       telephones: [
         Models::Shared::HealthcareTelephone.new(
           telephone: '(695) 328-7029 x4412',
-          type: Models::Shared::HealthcareTelephoneType::MOBILE,
+          type: Models::Shared::HealthcareTelephoneType::MOBILE
         ),
-      ],
+      ]
     ),
   ],
   created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
   emails: [
     Models::Shared::HealthcareEmail.new(
       email: 'alejandrin.parker@icloud.com',
-      type: Models::Shared::HealthcareEmailType::HOME,
+      type: Models::Shared::HealthcareEmailType::HOME
     ),
   ],
   first_name: 'Alejandrin',
   gender: Models::Shared::HealthcarePatientGender::FEMALE,
-  id: '8bb77c72-a877-4330-bf28-b6d3d8e94106',
+  id: '34605612-2788-4bc4-b6db-f9ba0a88edcc',
   identifiers: [
     Models::Shared::HealthcareIdentifier.new(
       type: Models::Shared::HealthcareIdentifierType::MRN,
-      value: '57992636',
+      value: '57992636'
     ),
   ],
   is_active: true,
@@ -328,10 +323,10 @@ res = s.healthcare.create_healthcare_patient(healthcare_patient: Models::Shared:
   telephones: [
     Models::Shared::HealthcareTelephone.new(
       telephone: '1-219-555-9023 x08295',
-      type: Models::Shared::HealthcareTelephoneType::MOBILE,
+      type: Models::Shared::HealthcareTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2026-07-10T16:31:51.696Z'),
+  updated_at: DateTime.iso8601('2026-07-12T06:47:14.555Z')
 ), connection_id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -371,11 +366,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_allergy(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_allergy.nil?
@@ -415,11 +409,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_appointment(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_appointment.nil?
@@ -459,11 +452,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_careplan(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_careplan.nil?
@@ -503,11 +495,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_condition(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_condition.nil?
@@ -547,11 +538,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_coverage(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_coverage.nil?
@@ -591,11 +581,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_document(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_document.nil?
@@ -635,11 +624,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_encounter(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_encounter.nil?
@@ -679,11 +667,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_goal(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_goal.nil?
@@ -723,11 +710,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_immunization(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_immunization.nil?
@@ -767,11 +753,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_location(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_location.nil?
@@ -811,11 +796,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_medication(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_medication.nil?
@@ -855,11 +839,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_observation(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_observation.nil?
@@ -899,11 +882,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_patient(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_patient.nil?
@@ -943,11 +925,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_practitioner(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_practitioner.nil?
@@ -987,11 +968,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_procedure(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_procedure.nil?
@@ -1031,11 +1011,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_report(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_report.nil?
@@ -1075,11 +1054,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.get_healthcare_slot(connection_id: '<id>', id: '<id>')
 
 unless res.healthcare_slot.nil?
@@ -1119,15 +1097,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareAllergiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareAllergiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_allergies(request: req)
 
 unless res.healthcare_allergies.nil?
@@ -1164,15 +1141,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareAppointmentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareAppointmentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_appointments(request: req)
 
 unless res.healthcare_appointments.nil?
@@ -1209,15 +1185,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareCareplansRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareCareplansRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_careplans(request: req)
 
 unless res.healthcare_careplans.nil?
@@ -1254,15 +1229,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareConditionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareConditionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_conditions(request: req)
 
 unless res.healthcare_conditions.nil?
@@ -1299,15 +1273,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareCoveragesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareCoveragesRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_coverages(request: req)
 
 unless res.healthcare_coverages.nil?
@@ -1344,15 +1317,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareDocumentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareDocumentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_documents(request: req)
 
 unless res.healthcare_documents.nil?
@@ -1389,15 +1361,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareEncountersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareEncountersRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_encounters(request: req)
 
 unless res.healthcare_encounters.nil?
@@ -1434,15 +1405,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareGoalsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareGoalsRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_goals(request: req)
 
 unless res.healthcare_goals.nil?
@@ -1479,15 +1449,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareImmunizationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareImmunizationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_immunizations(request: req)
 
 unless res.healthcare_immunizations.nil?
@@ -1524,15 +1493,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareLocationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareLocationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_locations(request: req)
 
 unless res.healthcare_locations.nil?
@@ -1569,15 +1537,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareMedicationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareMedicationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_medications(request: req)
 
 unless res.healthcare_medications.nil?
@@ -1614,15 +1581,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareObservationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareObservationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_observations(request: req)
 
 unless res.healthcare_observations.nil?
@@ -1659,15 +1625,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcarePatientsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcarePatientsRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_patients(request: req)
 
 unless res.healthcare_patients.nil?
@@ -1704,15 +1669,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcarePractitionersRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcarePractitionersRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_practitioners(request: req)
 
 unless res.healthcare_practitioners.nil?
@@ -1749,15 +1713,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareProceduresRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareProceduresRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_procedures(request: req)
 
 unless res.healthcare_procedures.nil?
@@ -1794,15 +1757,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareReportsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareReportsRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_reports(request: req)
 
 unless res.healthcare_reports.nil?
@@ -1839,15 +1801,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHealthcareSlotsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHealthcareSlotsRequest.new(
+  connection_id: '<id>'
+)
 res = s.healthcare.list_healthcare_slots(request: req)
 
 unless res.healthcare_slots.nil?
@@ -1878,23 +1839,23 @@ Updates the HealthcareAppointment identified by `id`. Provide the unified Health
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHealthcareAppointment" method="patch" path="/healthcare/{connection_id}/appointment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHealthcareAppointment" method="patch" path="/healthcare/{connection_id}/appointment/{id}" example="healthcare_appointment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHealthcareAppointmentRequest.new(
   healthcare_appointment: Models::Shared::HealthcareAppointment.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'c02cae83-a2ac-40e8-9cff-ecaeb1c3655a',
+    id: '61f80c16-336d-4d4b-b02f-6b9bdc6f965b',
     is_virtual: true,
     meeting_url: 'https://expensive-slipper.name/',
     metadata: [],
@@ -1904,18 +1865,17 @@ req = Models::Operations::PatchHealthcareAppointmentRequest.new(
       Models::Shared::HealthcareCode.new(
         code: '12762740',
         display: 'New patient visit',
-        system: 'http://snomed.info/sct',
+        system: 'http://snomed.info/sct'
       ),
     ],
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-10T19:28:58.805Z'),
+    updated_at: DateTime.iso8601('2026-10-12T11:19:25.926Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.healthcare.patch_healthcare_appointment(request: req)
 
 unless res.healthcare_appointment.nil?
@@ -1946,16 +1906,16 @@ Updates the HealthcarePatient identified by `id`. Provide the unified Healthcare
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHealthcarePatient" method="patch" path="/healthcare/{connection_id}/patient/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHealthcarePatient" method="patch" path="/healthcare/{connection_id}/patient/{id}" example="healthcare_patient" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHealthcarePatientRequest.new(
   healthcare_patient: Models::Shared::HealthcarePatient.new(
@@ -1964,9 +1924,9 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
       city: 'Dickinsonborough',
       country: 'US',
       postal_code: '54031',
-      region: 'Nebraska',
+      region: 'Nebraska'
     ),
-    birthdate: '2025-03-03',
+    birthdate: '2025-03-04',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -1975,25 +1935,25 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
         telephones: [
           Models::Shared::HealthcareTelephone.new(
             telephone: '(695) 328-7029 x4412',
-            type: Models::Shared::HealthcareTelephoneType::MOBILE,
+            type: Models::Shared::HealthcareTelephoneType::MOBILE
           ),
-        ],
+        ]
       ),
     ],
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
         email: 'alejandrin.parker@icloud.com',
-        type: Models::Shared::HealthcareEmailType::HOME,
+        type: Models::Shared::HealthcareEmailType::HOME
       ),
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'cc298c1b-97d3-4b69-91bb-b6f225331d4a',
+    id: '96c0a4c8-04d1-4542-a3c3-d77e3c2fc033',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
-        value: '57992636',
+        value: '57992636'
       ),
     ],
     is_active: true,
@@ -2006,15 +1966,14 @@ req = Models::Operations::PatchHealthcarePatientRequest.new(
     telephones: [
       Models::Shared::HealthcareTelephone.new(
         telephone: '1-219-555-9023 x08295',
-        type: Models::Shared::HealthcareTelephoneType::MOBILE,
+        type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-10T16:31:51.754Z'),
+    updated_at: DateTime.iso8601('2026-07-12T06:47:14.596Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.healthcare.patch_healthcare_patient(request: req)
 
 unless res.healthcare_patient.nil?
@@ -2051,11 +2010,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.healthcare.remove_healthcare_appointment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2087,23 +2045,23 @@ Updates the HealthcareAppointment identified by `id`. Provide the unified Health
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHealthcareAppointment" method="put" path="/healthcare/{connection_id}/appointment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHealthcareAppointment" method="put" path="/healthcare/{connection_id}/appointment/{id}" example="healthcare_appointment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
   healthcare_appointment: Models::Shared::HealthcareAppointment.new(
     created_at: DateTime.iso8601('2023-04-11T08:16:20.874Z'),
     description: 'clarus aptus cetera',
     end_at: DateTime.iso8601('2023-12-12T13:04:41.451Z'),
-    id: 'c02cae83-a2ac-40e8-9cff-ecaeb1c3655a',
+    id: '61f80c16-336d-4d4b-b02f-6b9bdc6f965b',
     is_virtual: true,
     meeting_url: 'https://expensive-slipper.name/',
     metadata: [],
@@ -2113,18 +2071,17 @@ req = Models::Operations::UpdateHealthcareAppointmentRequest.new(
       Models::Shared::HealthcareCode.new(
         code: '12762740',
         display: 'New patient visit',
-        system: 'http://snomed.info/sct',
+        system: 'http://snomed.info/sct'
       ),
     ],
     slot_ids: [],
     start_at: DateTime.iso8601('2023-12-12T12:34:41.451Z'),
     status: Models::Shared::HealthcareAppointmentStatus::BOOKED,
-    updated_at: DateTime.iso8601('2026-10-10T19:28:58.805Z'),
+    updated_at: DateTime.iso8601('2026-10-12T11:19:25.926Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.healthcare.update_healthcare_appointment(request: req)
 
 unless res.healthcare_appointment.nil?
@@ -2155,16 +2112,16 @@ Updates the HealthcarePatient identified by `id`. Provide the unified Healthcare
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHealthcarePatient" method="put" path="/healthcare/{connection_id}/patient/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHealthcarePatient" method="put" path="/healthcare/{connection_id}/patient/{id}" example="healthcare_patient" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHealthcarePatientRequest.new(
   healthcare_patient: Models::Shared::HealthcarePatient.new(
@@ -2173,9 +2130,9 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
       city: 'Dickinsonborough',
       country: 'US',
       postal_code: '54031',
-      region: 'Nebraska',
+      region: 'Nebraska'
     ),
-    birthdate: '2025-03-03',
+    birthdate: '2025-03-04',
     contacts: [
       Models::Shared::HealthcarePatientContact.new(
         emails: [],
@@ -2184,25 +2141,25 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
         telephones: [
           Models::Shared::HealthcareTelephone.new(
             telephone: '(695) 328-7029 x4412',
-            type: Models::Shared::HealthcareTelephoneType::MOBILE,
+            type: Models::Shared::HealthcareTelephoneType::MOBILE
           ),
-        ],
+        ]
       ),
     ],
     created_at: DateTime.iso8601('2021-06-05T21:08:04.917Z'),
     emails: [
       Models::Shared::HealthcareEmail.new(
         email: 'alejandrin.parker@icloud.com',
-        type: Models::Shared::HealthcareEmailType::HOME,
+        type: Models::Shared::HealthcareEmailType::HOME
       ),
     ],
     first_name: 'Alejandrin',
     gender: Models::Shared::HealthcarePatientGender::FEMALE,
-    id: 'cc298c1b-97d3-4b69-91bb-b6f225331d4a',
+    id: '96c0a4c8-04d1-4542-a3c3-d77e3c2fc033',
     identifiers: [
       Models::Shared::HealthcareIdentifier.new(
         type: Models::Shared::HealthcareIdentifierType::MRN,
-        value: '57992636',
+        value: '57992636'
       ),
     ],
     is_active: true,
@@ -2215,15 +2172,14 @@ req = Models::Operations::UpdateHealthcarePatientRequest.new(
     telephones: [
       Models::Shared::HealthcareTelephone.new(
         telephone: '1-219-555-9023 x08295',
-        type: Models::Shared::HealthcareTelephoneType::MOBILE,
+        type: Models::Shared::HealthcareTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2026-07-10T16:31:51.754Z'),
+    updated_at: DateTime.iso8601('2026-07-12T06:47:14.596Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.healthcare.update_healthcare_patient(request: req)
 
 unless res.healthcare_patient.nil?

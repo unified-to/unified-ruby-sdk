@@ -1,5 +1,16 @@
 # AccountingBillStatus
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AccountingBillStatus::DRAFT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AccountingBillStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

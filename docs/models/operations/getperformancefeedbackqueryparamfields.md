@@ -1,5 +1,13 @@
 # GetPerformanceFeedbackQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetPerformanceFeedbackQueryParamFields::ID
+```
+
 
 ## Values
 

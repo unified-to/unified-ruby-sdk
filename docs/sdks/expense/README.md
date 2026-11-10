@@ -1,5 +1,4 @@
 # Expense
-(*expense*)
 
 ## Overview
 
@@ -24,78 +23,77 @@ Creates a AccountingExpense. Provide the unified AccountingExpense fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" example="accounting_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::AccountingExpense.new(
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://rubbery-couch.biz/',
-      id: '24aaaf5d-d41a-4234-a31a-0caec588005d',
+      id: '4f5b7817-83fa-455e-a06c-7f642fddc1b4',
       mime_type: 'application/pdf',
-      name: 'receipt-9696.pdf',
+      name: 'receipt-9696.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://appropriate-smog.biz/',
-      id: '4e0927ce-069c-4f42-b04f-9baa37e8ed1a',
+      id: 'c135a190-5140-4e99-b790-9a532c963c53',
       mime_type: 'application/pdf',
-      name: 'receipt-9696-1.pdf',
+      name: 'receipt-9696-1.pdf'
     ),
   ],
   category_ids: [],
   created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
   currency: 'GBP',
   external_number: 'EXP-38303',
-  id: 'c0bb1223-7e7f-4094-af52-09cfd7644068',
+  id: 'e0c1aa2e-11b3-4606-bc1b-e1046caf5a7d',
   lineitems: [
     Models::Shared::AccountingLineitem.new(
-      id: '1aabf4b2-4bf1-48bc-b04c-0732b8a53090',
+      id: 'be7a2fc7-829e-465d-a0f1-9be0b48ba553',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 364.74,
       unit_amount: 364.74,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '8420fffb-bc23-4f02-82f9-3882eb7396db',
+      id: 'c49be331-05f6-44cc-89c8-fa10fcaf858b',
       item_name: 'Client dinner',
       tax_amount: 0.0,
       total_amount: 258.35,
       unit_amount: 258.35,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: '0f55239e-af47-46ef-8d70-4386306f37f3',
+      id: 'cc407126-d237-443d-844b-6902c7485672',
       item_name: 'Conference ticket',
       notes: 'Casus umquam conicio cinis demitto sint.',
       tax_amount: 0.0,
       total_amount: 28.14,
       unit_amount: 28.14,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'afff951c-8b6d-4ddf-b897-4c8adabc1007',
+      id: '47011df1-e882-4a78-a3f3-dbfc83c71e3d',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 157.04,
       unit_amount: 157.04,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
     Models::Shared::AccountingLineitem.new(
-      id: 'ca121c3b-4e12-4b02-96ff-41ad1dd9005f',
+      id: 'e595c13e-1360-4e2f-a68d-96d0e34ffa80',
       item_name: 'Hotel',
       tax_amount: 0.0,
       total_amount: 164.02,
       unit_amount: 164.02,
-      unit_quantity: 1.0,
+      unit_quantity: 1.0
     ),
   ],
   metadata: [],
@@ -106,7 +104,7 @@ res = s.expense.create_accounting_expense(accounting_expense: Models::Shared::Ac
   tax_amount: 0.0,
   total_amount: 972.29,
   type: Models::Shared::AccountingExpenseType::COMPANY,
-  updated_at: DateTime.iso8601('2020-09-02T23:36:54.508Z'),
+  updated_at: DateTime.iso8601('2020-09-03T01:04:26.026Z')
 ), connection_id: '<id>')
 
 unless res.accounting_expense.nil?
@@ -140,23 +138,22 @@ Creates a LegalExpense. Provide the unified LegalExpense fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLegalExpense" method="post" path="/legal/{connection_id}/expense" -->
+<!-- UsageSnippet language="ruby" operationID="createLegalExpense" method="post" path="/legal/{connection_id}/expense" example="legal_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.expense.create_legal_expense(legal_expense: Models::Shared::LegalExpense.new(
   category: 'Kids',
   created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   currency: 'MVR',
   description: 'Temporibus agnitio sui.',
-  id: 'd0d94662-ed1d-4c88-8dd8-f9d28ef48435',
+  id: 'f386f0fe-de37-4c5b-a7ac-0f75db9eabdd',
   incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
   is_billed: false,
   metadata: [],
@@ -164,7 +161,7 @@ res = s.expense.create_legal_expense(legal_expense: Models::Shared::LegalExpense
   quantity: 3.0,
   total_amount: 300.0,
   type: Models::Shared::LegalExpenseType::OTHER,
-  updated_at: DateTime.iso8601('2024-04-10T19:25:36.476Z'),
+  updated_at: DateTime.iso8601('2024-04-11T18:39:40.180Z')
 ), connection_id: '<id>')
 
 unless res.legal_expense.nil?
@@ -204,11 +201,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.expense.get_accounting_expense(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_expense.nil?
@@ -248,11 +244,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.expense.get_legal_expense(connection_id: '<id>', id: '<id>')
 
 unless res.legal_expense.nil?
@@ -292,15 +287,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingExpensesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingExpensesRequest.new(
+  connection_id: '<id>'
+)
 res = s.expense.list_accounting_expenses(request: req)
 
 unless res.accounting_expenses.nil?
@@ -337,15 +331,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLegalExpensesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLegalExpensesRequest.new(
+  connection_id: '<id>'
+)
 res = s.expense.list_legal_expenses(request: req)
 
 unless res.legal_expenses.nil?
@@ -376,79 +369,79 @@ Updates the AccountingExpense identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingExpenseRequest.new(
   accounting_expense: Models::Shared::AccountingExpense.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://rubbery-couch.biz/',
-        id: 'b9c8663d-05e2-41be-a192-10a279d1dbda',
+        id: 'b658557d-2b83-4b2e-88da-0b0fe4939a7b',
         mime_type: 'application/pdf',
-        name: 'receipt-9696.pdf',
+        name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://appropriate-smog.biz/',
-        id: 'b27920a1-ad04-4594-9832-a04e9798b5da',
+        id: '88557339-50b9-4191-9238-431d9afd860f',
         mime_type: 'application/pdf',
-        name: 'receipt-9696-1.pdf',
+        name: 'receipt-9696-1.pdf'
       ),
     ],
     category_ids: [],
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '788a524c-0813-4e69-92f1-648de1d467df',
+    id: '148b366a-8d40-411d-b128-82eee013d134',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '5841c129-a7e7-40c9-9e69-f50d15c42f94',
+        id: '9f33f08b-9829-421b-9e85-81a9a8af75a0',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
         unit_amount: 364.74,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'a83d9a46-764b-4cc7-a027-9ebdca665ff0',
+        id: '33966357-7a27-4cef-a7fc-7ce91b289386',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
         unit_amount: 258.35,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '2844bb2d-a157-4690-87bf-7fa680b1d4ce',
+        id: '80e8dcd6-92f5-46b9-b7f9-37d1d9f2e396',
         item_name: 'Conference ticket',
         notes: 'Casus umquam conicio cinis demitto sint.',
         tax_amount: 0.0,
         total_amount: 28.14,
         unit_amount: 28.14,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '8489bb33-bd3c-4851-a324-4bbc75792cd9',
+        id: '962292ea-c11c-4763-a6b5-26cae60d5074',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
         unit_amount: 157.04,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'aad2b7b3-5741-4893-937e-81c4b8b3018f',
+        id: '1d79738b-dfc9-4832-b2f3-ad5e60870652',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
         unit_amount: 164.02,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
     ],
     metadata: [],
@@ -459,12 +452,11 @@ req = Models::Operations::PatchAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-02T23:36:54.510Z'),
+    updated_at: DateTime.iso8601('2020-09-03T01:04:26.027Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.expense.patch_accounting_expense(request: req)
 
 unless res.accounting_expense.nil?
@@ -495,16 +487,16 @@ Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLegalExpense" method="patch" path="/legal/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLegalExpense" method="patch" path="/legal/{connection_id}/expense/{id}" example="legal_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLegalExpenseRequest.new(
   legal_expense: Models::Shared::LegalExpense.new(
@@ -512,7 +504,7 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '60d5f229-dcd5-433f-b286-910e8aea2789',
+    id: '0249fd68-d782-404c-a1d5-c3a9c10aa883',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -520,12 +512,11 @@ req = Models::Operations::PatchLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-10T19:25:36.489Z'),
+    updated_at: DateTime.iso8601('2024-04-11T18:39:40.189Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.expense.patch_legal_expense(request: req)
 
 unless res.legal_expense.nil?
@@ -562,11 +553,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.expense.remove_accounting_expense(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -604,11 +594,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.expense.remove_legal_expense(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -640,79 +629,79 @@ Updates the AccountingExpense identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingExpenseRequest.new(
   accounting_expense: Models::Shared::AccountingExpense.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://rubbery-couch.biz/',
-        id: 'b9c8663d-05e2-41be-a192-10a279d1dbda',
+        id: 'b658557d-2b83-4b2e-88da-0b0fe4939a7b',
         mime_type: 'application/pdf',
-        name: 'receipt-9696.pdf',
+        name: 'receipt-9696.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://appropriate-smog.biz/',
-        id: 'b27920a1-ad04-4594-9832-a04e9798b5da',
+        id: '88557339-50b9-4191-9238-431d9afd860f',
         mime_type: 'application/pdf',
-        name: 'receipt-9696-1.pdf',
+        name: 'receipt-9696-1.pdf'
       ),
     ],
     category_ids: [],
     created_at: DateTime.iso8601('2020-06-11T03:39:37.305Z'),
     currency: 'GBP',
     external_number: 'EXP-38303',
-    id: '788a524c-0813-4e69-92f1-648de1d467df',
+    id: '148b366a-8d40-411d-b128-82eee013d134',
     lineitems: [
       Models::Shared::AccountingLineitem.new(
-        id: '5841c129-a7e7-40c9-9e69-f50d15c42f94',
+        id: '9f33f08b-9829-421b-9e85-81a9a8af75a0',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 364.74,
         unit_amount: 364.74,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'a83d9a46-764b-4cc7-a027-9ebdca665ff0',
+        id: '33966357-7a27-4cef-a7fc-7ce91b289386',
         item_name: 'Client dinner',
         tax_amount: 0.0,
         total_amount: 258.35,
         unit_amount: 258.35,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '2844bb2d-a157-4690-87bf-7fa680b1d4ce',
+        id: '80e8dcd6-92f5-46b9-b7f9-37d1d9f2e396',
         item_name: 'Conference ticket',
         notes: 'Casus umquam conicio cinis demitto sint.',
         tax_amount: 0.0,
         total_amount: 28.14,
         unit_amount: 28.14,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: '8489bb33-bd3c-4851-a324-4bbc75792cd9',
+        id: '962292ea-c11c-4763-a6b5-26cae60d5074',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 157.04,
         unit_amount: 157.04,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
       Models::Shared::AccountingLineitem.new(
-        id: 'aad2b7b3-5741-4893-937e-81c4b8b3018f',
+        id: '1d79738b-dfc9-4832-b2f3-ad5e60870652',
         item_name: 'Hotel',
         tax_amount: 0.0,
         total_amount: 164.02,
         unit_amount: 164.02,
-        unit_quantity: 1.0,
+        unit_quantity: 1.0
       ),
     ],
     metadata: [],
@@ -723,12 +712,11 @@ req = Models::Operations::UpdateAccountingExpenseRequest.new(
     tax_amount: 0.0,
     total_amount: 972.29,
     type: Models::Shared::AccountingExpenseType::COMPANY,
-    updated_at: DateTime.iso8601('2020-09-02T23:36:54.510Z'),
+    updated_at: DateTime.iso8601('2020-09-03T01:04:26.027Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.expense.update_accounting_expense(request: req)
 
 unless res.accounting_expense.nil?
@@ -759,16 +747,16 @@ Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLegalExpense" method="put" path="/legal/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLegalExpense" method="put" path="/legal/{connection_id}/expense/{id}" example="legal_expense" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLegalExpenseRequest.new(
   legal_expense: Models::Shared::LegalExpense.new(
@@ -776,7 +764,7 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     created_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     currency: 'MVR',
     description: 'Temporibus agnitio sui.',
-    id: '60d5f229-dcd5-433f-b286-910e8aea2789',
+    id: '0249fd68-d782-404c-a1d5-c3a9c10aa883',
     incurred_at: DateTime.iso8601('2020-11-08T00:41:42.356Z'),
     is_billed: false,
     metadata: [],
@@ -784,12 +772,11 @@ req = Models::Operations::UpdateLegalExpenseRequest.new(
     quantity: 3.0,
     total_amount: 300.0,
     type: Models::Shared::LegalExpenseType::OTHER,
-    updated_at: DateTime.iso8601('2024-04-10T19:25:36.489Z'),
+    updated_at: DateTime.iso8601('2024-04-11T18:39:40.189Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.expense.update_legal_expense(request: req)
 
 unless res.legal_expense.nil?

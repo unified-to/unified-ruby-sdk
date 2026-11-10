@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ShippingRateRate
         extend T::Sig
@@ -32,9 +31,9 @@ module UnifiedRubySDK
         # Estimated delivery time in days
         field :estimated_days, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('estimated_days') } }
         # Specific delivery date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :estimated_delivery_end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('estimated_delivery_end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :estimated_delivery_end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('estimated_delivery_end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Time window (e.g., "10:00 AM - 2:00 PM") (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :estimated_delivery_start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('estimated_delivery_start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :estimated_delivery_start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('estimated_delivery_start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Whether rate is currently available
         field :is_active, Crystalline::Nilable.new(Crystalline::Boolean.new), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('is_active') } }
         # Whether delivery is guaranteed

@@ -1,5 +1,4 @@
 # Saleschannel
-(*saleschannel*)
 
 ## Overview
 
@@ -18,26 +17,25 @@ Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" example="commerce_saleschannel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.saleschannel.create_commerce_saleschannel(commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(
   collections: [],
   created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
   description: 'Utroque denuncio solutio.',
-  id: 'd228dbe8-c923-455c-9342-51df8e1daee2',
+  id: 'f4c1f87b-ba32-4960-9d00-915c429a20cc',
   is_active: false,
   metadata: [],
   slug: 'amiculum-congregatio-suspendo',
-  updated_at: DateTime.iso8601('2025-02-09T05:54:07.495Z'),
+  updated_at: DateTime.iso8601('2025-02-10T08:09:21.297Z')
 ), connection_id: '<id>')
 
 unless res.commerce_saleschannel.nil?
@@ -77,11 +75,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.saleschannel.get_commerce_saleschannel(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_saleschannel.nil?
@@ -121,15 +118,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceSaleschannelsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceSaleschannelsRequest.new(
+  connection_id: '<id>'
+)
 res = s.saleschannel.list_commerce_saleschannels(request: req)
 
 unless res.commerce_saleschannels.nil?
@@ -160,32 +156,31 @@ Updates the CommerceSaleschannel identified by `id`. Provide the unified Commerc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceSaleschannelRequest.new(
   commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Utroque denuncio solutio.',
-    id: 'dd04dfa0-5411-44e4-9f13-1dc12f0bc6cb',
+    id: '4d7f661a-fac4-4471-85c1-5625d37f5c32',
     is_active: false,
     metadata: [],
     slug: 'amiculum-congregatio-suspendo',
-    updated_at: DateTime.iso8601('2025-02-09T05:54:07.508Z'),
+    updated_at: DateTime.iso8601('2025-02-10T08:09:21.306Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.saleschannel.patch_commerce_saleschannel(request: req)
 
 unless res.commerce_saleschannel.nil?
@@ -222,11 +217,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.saleschannel.remove_commerce_saleschannel(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -258,32 +252,31 @@ Updates the CommerceSaleschannel identified by `id`. Provide the unified Commerc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceSaleschannelRequest.new(
   commerce_saleschannel: Models::Shared::CommerceSaleschannel.new(
     collections: [],
     created_at: DateTime.iso8601('2021-12-12T06:19:55.421Z'),
     description: 'Utroque denuncio solutio.',
-    id: 'dd04dfa0-5411-44e4-9f13-1dc12f0bc6cb',
+    id: '4d7f661a-fac4-4471-85c1-5625d37f5c32',
     is_active: false,
     metadata: [],
     slug: 'amiculum-congregatio-suspendo',
-    updated_at: DateTime.iso8601('2025-02-09T05:54:07.508Z'),
+    updated_at: DateTime.iso8601('2025-02-10T08:09:21.306Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.saleschannel.update_commerce_saleschannel(request: req)
 
 unless res.commerce_saleschannel.nil?

@@ -1,5 +1,13 @@
 # GetAccountingSalesreceiptQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetAccountingSalesreceiptQueryParamFields::ID
+```
+
 
 ## Values
 

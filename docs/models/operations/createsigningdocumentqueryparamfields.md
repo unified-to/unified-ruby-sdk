@@ -1,5 +1,13 @@
 # CreateSigningDocumentQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateSigningDocumentQueryParamFields::ID
+```
+
 
 ## Values
 

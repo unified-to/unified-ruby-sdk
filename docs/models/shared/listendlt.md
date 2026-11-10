@@ -1,5 +1,16 @@
 # ListEndLt
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListEndLt::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListEndLt.deserialize("custom_value")
+```
+
 
 ## Values
 

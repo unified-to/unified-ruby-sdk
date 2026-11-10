@@ -1,5 +1,16 @@
 # ShippingMetadataFormat
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ShippingMetadataFormat::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ShippingMetadataFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

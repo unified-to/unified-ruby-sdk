@@ -1,5 +1,13 @@
 # PatchLmsActivityQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchLmsActivityQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisAttendanceStatus < T::Enum
-
-
+      class HrisAttendanceStatus
+        include ::Crystalline::Enum
         enums do
           OPEN = new('OPEN')
           CLOSED = new('CLOSED')
           APPROVED = new('APPROVED')
         end
+        open!
       end
     end
   end

@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeSnapshotType - Whether memory state is included
-      class ComputeSnapshotType < T::Enum
-
-
+      class ComputeSnapshotType
+        include ::Crystalline::Enum
         enums do
           MEMORY = new('MEMORY')
           DISK = new('DISK')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

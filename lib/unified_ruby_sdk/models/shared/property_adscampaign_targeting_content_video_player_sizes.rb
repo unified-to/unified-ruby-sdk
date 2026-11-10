@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsCampaignTargetingContentVideoPlayerSizes < T::Enum
-
-
+      class PropertyAdsCampaignTargetingContentVideoPlayerSizes
+        include ::Crystalline::Enum
         enums do
           SMALL = new('SMALL')
           LARGE = new('LARGE')
           HD = new('HD')
         end
+        open!
       end
     end
   end

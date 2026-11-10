@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class DutiesPaidBy < T::Enum
-
-
+      class DutiesPaidBy
+        include ::Crystalline::Enum
         enums do
           SENDER = new('SENDER')
           RECIPIENT = new('RECIPIENT')
           THIRD_PARTY = new('THIRD_PARTY')
         end
+        open!
       end
     end
   end

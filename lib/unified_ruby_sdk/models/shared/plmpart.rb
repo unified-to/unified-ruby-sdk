@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # One revision of a part or item
       class PlmPart
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # The PlmCategory the part is filed under (reference to AccountingCategory)
         field :category_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # Related PlmDocument IDs
@@ -40,25 +39,25 @@ module UnifiedRubySDK
         # The vendor's own part type or category name
         field :original_type, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_type') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Revision label, e.g. B
         field :revision, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('revision') } }
         # Whether a part is made in-house or bought
-        field :source, Crystalline::Nilable.new(Models::Shared::Source), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source'), 'decoder': Utils.enum_from_string(Models::Shared::Source, true) } }
+        field :source, Crystalline::Nilable.new(Models::Shared::Source), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('source'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::Source, true) } }
         # Normalized lifecycle status
-        field :status, Crystalline::Nilable.new(Models::Shared::PlmPartStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::PlmPartStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::PlmPartStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PlmPartStatus, true) } }
         # Normalized part type
-        field :type, Crystalline::Nilable.new(Models::Shared::PlmPartType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::PlmPartType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::PlmPartType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PlmPartType, true) } }
 
         field :unit_of_measure, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unit_of_measure') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Deep link to the vendor UI
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
         # Owner or creator (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(category_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_ids: T.nilable(T::Array[::String]), file_ids: T.nilable(T::Array[::String]), id: T.nilable(::String), is_assembly: T.nilable(T::Boolean), lifecycle_state: T.nilable(::String), master_identifier: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PlmMetadata]), name: T.nilable(::String), number: T.nilable(::String), original_type: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), revision: T.nilable(::String), source: T.nilable(Models::Shared::Source), status: T.nilable(Models::Shared::PlmPartStatus), type: T.nilable(Models::Shared::PlmPartType), unit_of_measure: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
+        sig { params(category_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), document_ids: T.nilable(T::Array[::String]), file_ids: T.nilable(T::Array[::String]), id: T.nilable(::String), is_assembly: T.nilable(T::Boolean), lifecycle_state: T.nilable(::String), master_identifier: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::PlmMetadata]), name: T.nilable(::String), number: T.nilable(::String), original_type: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), revision: T.nilable(::String), source: T.nilable(Models::Shared::Source), status: T.nilable(Models::Shared::PlmPartStatus), type: T.nilable(Models::Shared::PlmPartType), unit_of_measure: T.nilable(::String), updated_at: T.nilable(::DateTime), url: T.nilable(::String), user_id: T.nilable(::String)).void }
         def initialize(category_id: nil, created_at: nil, description: nil, document_ids: nil, file_ids: nil, id: nil, is_assembly: nil, lifecycle_state: nil, master_identifier: nil, metadata: nil, name: nil, number: nil, original_type: nil, raw: nil, revision: nil, source: nil, status: nil, type: nil, unit_of_measure: nil, updated_at: nil, url: nil, user_id: nil)
           @category_id = category_id
           @created_at = created_at

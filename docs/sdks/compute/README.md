@@ -1,5 +1,4 @@
 # Compute
-(*compute*)
 
 ## Overview
 
@@ -69,31 +68,30 @@ Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeDeployment" method="post" path="/compute/{connection_id}/deployment" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeDeployment" method="post" path="/compute/{connection_id}/deployment" example="compute_deployment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.create_compute_deployment(compute_deployment: Models::Shared::ComputeDeployment.new(
   branch: 'develop',
   commit_identifier: 'fadfe54eefd8fea670bea6d58b4b15d406c4b02b',
   commit_message: 'copy primary pixel',
   created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
   environment: Models::Shared::Environment::PREVIEW,
-  finished_at: DateTime.iso8601('2025-09-12T16:00:55.398Z'),
-  id: 'cff2f602-d532-4932-b403-143aee27fa9a',
+  finished_at: DateTime.iso8601('2025-09-13T22:06:53.481Z'),
+  id: 'c7c5a57d-2c6d-46ad-94ae-36c8a2c92837',
   metadata: [],
-  started_at: DateTime.iso8601('2025-04-22T16:03:13.848Z'),
+  started_at: DateTime.iso8601('2025-04-23T18:32:49.147Z'),
   status: Models::Shared::ComputeDeploymentStatus::LIVE,
   trigger: Models::Shared::Trigger::API,
-  updated_at: DateTime.iso8601('2026-03-16T23:16:51.574Z'),
-  url: 'https://comfortable-petal.name',
+  updated_at: DateTime.iso8601('2026-03-18T10:03:13.239Z'),
+  url: 'https://comfortable-petal.name'
 ), connection_id: '<id>')
 
 unless res.compute_deployment.nil?
@@ -127,25 +125,24 @@ Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeDomain" method="post" path="/compute/{connection_id}/domain" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeDomain" method="post" path="/compute/{connection_id}/domain" example="compute_domain" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.create_compute_domain(compute_domain: Models::Shared::ComputeDomain.new(
   created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-  id: '122a3327-fcf3-404c-93ee-99c192052672',
+  id: '624d2138-415b-4e13-8edd-df99c29a1049',
   is_primary: false,
   metadata: [],
   name: 'mysterious-republican.usable-section.info',
   status: Models::Shared::ComputeDomainStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-11-14T11:45:15.076Z'),
+  updated_at: DateTime.iso8601('2023-11-15T11:01:54.284Z')
 ), connection_id: '<id>')
 
 unless res.compute_domain.nil?
@@ -179,27 +176,26 @@ Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeEnvvar" method="post" path="/compute/{connection_id}/envvar" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeEnvvar" method="post" path="/compute/{connection_id}/envvar" example="compute_envvar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.create_compute_envvar(compute_envvar: Models::Shared::ComputeEnvvar.new(
   created_at: DateTime.iso8601('2021-08-16T07:52:27.306Z'),
   environments: [
     Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
   ],
-  id: 'dddcc309-eb19-42f4-9eb3-29461eee831d',
+  id: '9262943f-d037-47f6-84d2-93b369da37ef',
   is_secret: true,
   metadata: [],
   name: 'AEGER_SUBSTANTIA',
-  updated_at: DateTime.iso8601('2025-07-17T20:06:57.685Z'),
+  updated_at: DateTime.iso8601('2025-07-19T02:38:49.053Z')
 ), connection_id: '<id>')
 
 unless res.compute_envvar.nil?
@@ -233,17 +229,16 @@ Creates a ComputeInstance. Provide the unified ComputeInstance fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeInstance" method="post" path="/compute/{connection_id}/instance" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeInstance" method="post" path="/compute/{connection_id}/instance" example="compute_instance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.create_compute_instance(compute_instance: Models::Shared::ComputeInstance.new(
   allowed_actions: [
     Models::Shared::PropertyComputeInstanceAllowedActions::TERMINATE,
@@ -258,12 +253,12 @@ res = s.compute.create_compute_instance(compute_instance: Models::Shared::Comput
       is_auth_required: true,
       port: 8080.0,
       protocol: Models::Shared::Protocol::HTTPS,
-      url: 'https://serene-shark.biz/',
+      url: 'https://serene-shark.biz/'
     ),
   ],
   gpu_count: 0.0,
   has_internet_access: true,
-  id: '2594cbcd-d185-46f5-afc4-83407080e79d',
+  id: 'bf84f0d0-e196-4d55-931e-ee7eb254e575',
   image: 'ubuntu:24.04',
   market: Models::Shared::Market::SPOT,
   memory_mb: 2048.0,
@@ -276,13 +271,13 @@ res = s.compute.create_compute_instance(compute_instance: Models::Shared::Comput
   ssh: Models::Shared::PropertyComputeInstanceSsh.new(
     host: '116.42.165.89',
     port: 22.0,
-    username: 'root',
+    username: 'root'
   ),
-  started_at: DateTime.iso8601('2025-04-04T13:14:09.930Z'),
+  started_at: DateTime.iso8601('2025-04-05T14:03:57.639Z'),
   status: Models::Shared::ComputeInstanceStatus::ERROR,
   status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
   type: Models::Shared::ComputeInstanceType::BAREMETAL,
-  updated_at: DateTime.iso8601('2025-06-28T20:50:15.265Z'),
+  updated_at: DateTime.iso8601('2025-06-29T23:59:43.901Z')
 ), connection_id: '<id>')
 
 unless res.compute_instance.nil?
@@ -316,24 +311,23 @@ Creates a ComputeKey. Provide the unified ComputeKey fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeKey" method="post" path="/compute/{connection_id}/key" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeKey" method="post" path="/compute/{connection_id}/key" example="compute_key" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.create_compute_key(compute_key: Models::Shared::ComputeKey.new(
   created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-  id: '2882c0e6-1265-4883-8662-bece73481a3c',
+  id: '12ad20da-2f72-4d3e-b5db-d6d4fb68a833',
   metadata: [],
   name: 'nienow-secret',
   type: Models::Shared::ComputeKeyType::SECRET,
-  updated_at: DateTime.iso8601('2024-10-13T18:30:41.150Z'),
+  updated_at: DateTime.iso8601('2024-10-14T09:05:17.871Z')
 ), connection_id: '<id>')
 
 unless res.compute_key.nil?
@@ -367,22 +361,21 @@ Creates a ComputeService. Provide the unified ComputeService fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeService" method="post" path="/compute/{connection_id}/service" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeService" method="post" path="/compute/{connection_id}/service" example="compute_service" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.create_compute_service(compute_service: Models::Shared::ComputeService.new(
   branch: 'main',
   build_command: 'npm run build',
   created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-  id: 'f9e67885-ab03-4e42-8a4d-721763cf1faa',
+  id: 'e4b15355-14fe-4474-9cef-5dbd5bbe2219',
   instance_count: 6.0,
   max_instance_count: 6.0,
   metadata: [],
@@ -393,8 +386,8 @@ res = s.compute.create_compute_service(compute_service: Models::Shared::ComputeS
   runtime: 'python',
   status: Models::Shared::ComputeServiceStatus::SUSPENDED,
   type: Models::Shared::ComputeServiceType::OTHER,
-  updated_at: DateTime.iso8601('2025-04-14T01:21:31.574Z'),
-  url: 'https://tame-sideboard.rotating-shoulder.biz',
+  updated_at: DateTime.iso8601('2025-04-14T21:26:47.308Z'),
+  url: 'https://tame-sideboard.rotating-shoulder.biz'
 ), connection_id: '<id>')
 
 unless res.compute_service.nil?
@@ -428,26 +421,25 @@ Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeSnapshot" method="post" path="/compute/{connection_id}/snapshot" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeSnapshot" method="post" path="/compute/{connection_id}/snapshot" example="compute_snapshot" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.create_compute_snapshot(compute_snapshot: Models::Shared::ComputeSnapshot.new(
   created_at: DateTime.iso8601('2021-09-24T14:40:06.110Z'),
-  id: '982bbf1b-324a-4145-800a-69fa5fe6c66b',
+  id: 'b6e5c3c8-a046-4114-b192-93c7da3d4b27',
   metadata: [],
   name: 'snap-alius',
   size_mb: 169_984.0,
   status: Models::Shared::ComputeSnapshotStatus::DELETING,
   type: Models::Shared::ComputeSnapshotType::DISK,
-  updated_at: DateTime.iso8601('2026-04-16T19:17:13.064Z'),
+  updated_at: DateTime.iso8601('2026-04-18T07:32:50.425Z')
 ), connection_id: '<id>')
 
 unless res.compute_snapshot.nil?
@@ -481,29 +473,27 @@ Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeTemplate" method="post" path="/compute/{connection_id}/template" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeTemplate" method="post" path="/compute/{connection_id}/template" example="compute_template" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.create_compute_template(compute_template: Models::Shared::ComputeTemplate.new(
   cpu_count: 4.0,
   created_at: DateTime.iso8601('2023-02-23T03:28:59.864Z'),
   disk_mb: 10_240.0,
-  dockerfile: 'FROM ubuntu:24.04\n" +
-  "RUN apt-get update',
+  dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
   gpu_count: 2.0,
   gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-  id: 'da6f8d0d-2c12-4843-b806-47222865700a',
+  id: '18a30d1e-d051-4d1c-a737-e315aae374b1',
   image: 'perfumed-molasses/cohibeo:5.2',
   is_public: false,
-  last_used_at: DateTime.iso8601('2026-04-08T20:29:50.356Z'),
+  last_used_at: DateTime.iso8601('2026-04-10T06:48:24.668Z'),
   memory_mb: 8192.0,
   metadata: [],
   name: 'multi-byte-card',
@@ -511,7 +501,7 @@ res = s.compute.create_compute_template(compute_template: Models::Shared::Comput
     8080.0,
   ],
   status: Models::Shared::ComputeTemplateStatus::OTHER,
-  updated_at: DateTime.iso8601('2025-02-23T00:42:53.258Z'),
+  updated_at: DateTime.iso8601('2025-02-23T22:41:52.390Z')
 ), connection_id: '<id>')
 
 unless res.compute_template.nil?
@@ -545,28 +535,27 @@ Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeVolume" method="post" path="/compute/{connection_id}/volume" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeVolume" method="post" path="/compute/{connection_id}/volume" example="compute_volume" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.create_compute_volume(compute_volume: Models::Shared::ComputeVolume.new(
   created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-  id: '2b27386c-ae7c-4ae1-962a-4dbf133fb488',
+  id: 'df7161f4-bfeb-4009-95e8-a1ec50e8ab12',
   instance_ids: [],
   metadata: [],
   name: 'vol-solum',
   size_mb: 1_024_000.0,
   status: Models::Shared::ComputeVolumeStatus::OTHER,
   type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-  updated_at: DateTime.iso8601('2024-02-15T21:15:48.876Z'),
-  used_mb: 524_986.0,
+  updated_at: DateTime.iso8601('2024-02-16T10:04:31.811Z'),
+  used_mb: 524_986.0
 ), connection_id: '<id>')
 
 unless res.compute_volume.nil?
@@ -606,11 +595,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.get_compute_deployment(connection_id: '<id>', id: '<id>')
 
 unless res.compute_deployment.nil?
@@ -650,11 +638,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.get_compute_domain(connection_id: '<id>', id: '<id>')
 
 unless res.compute_domain.nil?
@@ -694,11 +681,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.get_compute_envvar(connection_id: '<id>', id: '<id>')
 
 unless res.compute_envvar.nil?
@@ -738,11 +724,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.get_compute_gputype(connection_id: '<id>', id: '<id>')
 
 unless res.compute_gputype.nil?
@@ -782,11 +767,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.get_compute_instance(connection_id: '<id>', id: '<id>')
 
 unless res.compute_instance.nil?
@@ -826,11 +810,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.get_compute_key(connection_id: '<id>', id: '<id>')
 
 unless res.compute_key.nil?
@@ -870,11 +853,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.get_compute_region(connection_id: '<id>', id: '<id>')
 
 unless res.compute_region.nil?
@@ -914,11 +896,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.get_compute_service(connection_id: '<id>', id: '<id>')
 
 unless res.compute_service.nil?
@@ -958,11 +939,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.get_compute_snapshot(connection_id: '<id>', id: '<id>')
 
 unless res.compute_snapshot.nil?
@@ -1002,11 +982,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.get_compute_template(connection_id: '<id>', id: '<id>')
 
 unless res.compute_template.nil?
@@ -1046,11 +1025,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.get_compute_volume(connection_id: '<id>', id: '<id>')
 
 unless res.compute_volume.nil?
@@ -1090,15 +1068,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeDeploymentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeDeploymentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_deployments(request: req)
 
 unless res.compute_deployments.nil?
@@ -1135,15 +1112,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeDomainsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeDomainsRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_domains(request: req)
 
 unless res.compute_domains.nil?
@@ -1180,15 +1156,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeEnvvarsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeEnvvarsRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_envvars(request: req)
 
 unless res.compute_envvars.nil?
@@ -1225,15 +1200,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeGputypesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeGputypesRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_gputypes(request: req)
 
 unless res.compute_gputypes.nil?
@@ -1270,15 +1244,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeInstancesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeInstancesRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_instances(request: req)
 
 unless res.compute_instances.nil?
@@ -1315,15 +1288,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeKeysRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeKeysRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_keys(request: req)
 
 unless res.compute_keys.nil?
@@ -1360,15 +1332,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeRegionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeRegionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_regions(request: req)
 
 unless res.compute_regions.nil?
@@ -1405,15 +1376,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeServicesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeServicesRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_services(request: req)
 
 unless res.compute_services.nil?
@@ -1450,15 +1420,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeSnapshotsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeSnapshotsRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_snapshots(request: req)
 
 unless res.compute_snapshots.nil?
@@ -1495,15 +1464,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeTemplatesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeTemplatesRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_templates(request: req)
 
 unless res.compute_templates.nil?
@@ -1540,15 +1508,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeUsagesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeUsagesRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_usages(request: req)
 
 unless res.compute_usages.nil?
@@ -1585,15 +1552,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeVolumesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeVolumesRequest.new(
+  connection_id: '<id>'
+)
 res = s.compute.list_compute_volumes(request: req)
 
 unless res.compute_volumes.nil?
@@ -1624,16 +1590,16 @@ Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDep
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeDeployment" method="patch" path="/compute/{connection_id}/deployment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeDeployment" method="patch" path="/compute/{connection_id}/deployment/{id}" example="compute_deployment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeDeploymentRequest.new(
   compute_deployment: Models::Shared::ComputeDeployment.new(
@@ -1642,19 +1608,18 @@ req = Models::Operations::PatchComputeDeploymentRequest.new(
     commit_message: 'copy primary pixel',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-09-12T16:00:55.413Z'),
-    id: '32a574b6-25dd-4c61-928b-2055b4c16357',
+    finished_at: DateTime.iso8601('2025-09-13T22:06:53.493Z'),
+    id: '40d13c60-ba60-4eb0-ba42-0400f8b66a6a',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-22T16:03:13.861Z'),
+    started_at: DateTime.iso8601('2025-04-23T18:32:49.158Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-03-16T23:16:51.591Z'),
-    url: 'https://comfortable-petal.name',
+    updated_at: DateTime.iso8601('2026-03-18T10:03:13.253Z'),
+    url: 'https://comfortable-petal.name'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.patch_compute_deployment(request: req)
 
 unless res.compute_deployment.nil?
@@ -1685,31 +1650,30 @@ Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeDomain" method="patch" path="/compute/{connection_id}/domain/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeDomain" method="patch" path="/compute/{connection_id}/domain/{id}" example="compute_domain" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: '1eb2071c-484b-4950-8e3a-88afd9fa5da0',
+    id: 'cb0a3618-0301-4daf-b5d3-02d5f99f3aeb',
     is_primary: false,
     metadata: [],
     name: 'mysterious-republican.usable-section.info',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-14T11:45:15.084Z'),
+    updated_at: DateTime.iso8601('2023-11-15T11:01:54.290Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.patch_compute_domain(request: req)
 
 unless res.compute_domain.nil?
@@ -1740,16 +1704,16 @@ Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeEnvvar" method="patch" path="/compute/{connection_id}/envvar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeEnvvar" method="patch" path="/compute/{connection_id}/envvar/{id}" example="compute_envvar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeEnvvarRequest.new(
   compute_envvar: Models::Shared::ComputeEnvvar.new(
@@ -1757,16 +1721,15 @@ req = Models::Operations::PatchComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: 'd1ea2a28-1ca7-4383-846a-f73ae3db9451',
+    id: '449b214a-63a2-4524-967d-06225c77bcac',
     is_secret: true,
     metadata: [],
     name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-07-17T20:06:57.699Z'),
+    updated_at: DateTime.iso8601('2025-07-19T02:38:49.061Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.patch_compute_envvar(request: req)
 
 unless res.compute_envvar.nil?
@@ -1797,16 +1760,16 @@ Updates the ComputeInstance identified by `id`. Provide the unified ComputeInsta
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeInstance" method="patch" path="/compute/{connection_id}/instance/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeInstance" method="patch" path="/compute/{connection_id}/instance/{id}" example="compute_instance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeInstanceRequest.new(
   compute_instance: Models::Shared::ComputeInstance.new(
@@ -1823,12 +1786,12 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
         is_auth_required: true,
         port: 8080.0,
         protocol: Models::Shared::Protocol::HTTPS,
-        url: 'https://serene-shark.biz/',
+        url: 'https://serene-shark.biz/'
       ),
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: 'ff304475-651c-4077-b261-a588fe1ec571',
+    id: 'f1a55274-d22b-4e1c-99ee-5394f3a6e0c9',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
@@ -1841,18 +1804,17 @@ req = Models::Operations::PatchComputeInstanceRequest.new(
     ssh: Models::Shared::PropertyComputeInstanceSsh.new(
       host: '116.42.165.89',
       port: 22.0,
-      username: 'root',
+      username: 'root'
     ),
-    started_at: DateTime.iso8601('2025-04-04T13:14:09.957Z'),
+    started_at: DateTime.iso8601('2025-04-05T14:03:57.660Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
     status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-06-28T20:50:15.294Z'),
+    updated_at: DateTime.iso8601('2025-06-29T23:59:43.924Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.patch_compute_instance(request: req)
 
 unless res.compute_instance.nil?
@@ -1883,30 +1845,29 @@ Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeKey" method="patch" path="/compute/{connection_id}/key/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeKey" method="patch" path="/compute/{connection_id}/key/{id}" example="compute_key" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '21239a69-d1d7-4c76-9300-0186839c34ba',
+    id: 'dee3ba22-15fd-476b-91ae-4b60662508b3',
     metadata: [],
     name: 'nienow-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-13T18:30:41.156Z'),
+    updated_at: DateTime.iso8601('2024-10-14T09:05:17.876Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.patch_compute_key(request: req)
 
 unless res.compute_key.nil?
@@ -1937,23 +1898,23 @@ Updates the ComputeService identified by `id`. Provide the unified ComputeServic
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeService" method="patch" path="/compute/{connection_id}/service/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeService" method="patch" path="/compute/{connection_id}/service/{id}" example="compute_service" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeServiceRequest.new(
   compute_service: Models::Shared::ComputeService.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '4b0abc75-a4cd-47d9-92e1-1c92be9e9c77',
+    id: 'd844b066-b009-45eb-9004-371f88cbee8a',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -1964,13 +1925,12 @@ req = Models::Operations::PatchComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-14T01:21:31.587Z'),
-    url: 'https://tame-sideboard.rotating-shoulder.biz',
+    updated_at: DateTime.iso8601('2025-04-14T21:26:47.318Z'),
+    url: 'https://tame-sideboard.rotating-shoulder.biz'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.patch_compute_service(request: req)
 
 unless res.compute_service.nil?
@@ -2001,30 +1961,29 @@ Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTempl
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeTemplate" method="patch" path="/compute/{connection_id}/template/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeTemplate" method="patch" path="/compute/{connection_id}/template/{id}" example="compute_template" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeTemplateRequest.new(
   compute_template: Models::Shared::ComputeTemplate.new(
     cpu_count: 4.0,
     created_at: DateTime.iso8601('2023-02-23T03:28:59.864Z'),
     disk_mb: 10_240.0,
-    dockerfile: 'FROM ubuntu:24.04\n" +
-    "RUN apt-get update',
+    dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '0c561398-e692-45f7-ab65-f31fdca2e5ce',
+    id: '80fd7886-ceeb-4a27-a0c5-15fb60bc2e70',
     image: 'perfumed-molasses/cohibeo:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-08T20:29:50.378Z'),
+    last_used_at: DateTime.iso8601('2026-04-10T06:48:24.685Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'multi-byte-card',
@@ -2032,12 +1991,11 @@ req = Models::Operations::PatchComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-23T00:42:53.272Z'),
+    updated_at: DateTime.iso8601('2025-02-23T22:41:52.401Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.patch_compute_template(request: req)
 
 unless res.compute_template.nil?
@@ -2068,34 +2026,33 @@ Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeVolume" method="patch" path="/compute/{connection_id}/volume/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeVolume" method="patch" path="/compute/{connection_id}/volume/{id}" example="compute_volume" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'cba36509-03f5-40e7-9bce-1e80f4a50d6b',
+    id: '12200d6a-3aa6-4a79-a24c-17121107b056',
     instance_ids: [],
     metadata: [],
     name: 'vol-solum',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-15T21:15:48.882Z'),
-    used_mb: 524_986.0,
+    updated_at: DateTime.iso8601('2024-02-16T10:04:31.815Z'),
+    used_mb: 524_986.0
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.patch_compute_volume(request: req)
 
 unless res.compute_volume.nil?
@@ -2132,11 +2089,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.remove_compute_deployment(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2174,11 +2130,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.remove_compute_domain(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2216,11 +2171,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.remove_compute_envvar(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2258,11 +2212,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.remove_compute_instance(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2300,11 +2253,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.remove_compute_key(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2342,11 +2294,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.remove_compute_service(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2384,11 +2335,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.remove_compute_snapshot(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2426,11 +2376,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.remove_compute_template(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2468,11 +2417,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.compute.remove_compute_volume(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -2504,16 +2452,16 @@ Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDep
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeDeployment" method="put" path="/compute/{connection_id}/deployment/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeDeployment" method="put" path="/compute/{connection_id}/deployment/{id}" example="compute_deployment" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeDeploymentRequest.new(
   compute_deployment: Models::Shared::ComputeDeployment.new(
@@ -2522,19 +2470,18 @@ req = Models::Operations::UpdateComputeDeploymentRequest.new(
     commit_message: 'copy primary pixel',
     created_at: DateTime.iso8601('2022-06-07T03:52:04.613Z'),
     environment: Models::Shared::Environment::PREVIEW,
-    finished_at: DateTime.iso8601('2025-09-12T16:00:55.413Z'),
-    id: '32a574b6-25dd-4c61-928b-2055b4c16357',
+    finished_at: DateTime.iso8601('2025-09-13T22:06:53.493Z'),
+    id: '40d13c60-ba60-4eb0-ba42-0400f8b66a6a',
     metadata: [],
-    started_at: DateTime.iso8601('2025-04-22T16:03:13.861Z'),
+    started_at: DateTime.iso8601('2025-04-23T18:32:49.158Z'),
     status: Models::Shared::ComputeDeploymentStatus::LIVE,
     trigger: Models::Shared::Trigger::API,
-    updated_at: DateTime.iso8601('2026-03-16T23:16:51.591Z'),
-    url: 'https://comfortable-petal.name',
+    updated_at: DateTime.iso8601('2026-03-18T10:03:13.253Z'),
+    url: 'https://comfortable-petal.name'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.update_compute_deployment(request: req)
 
 unless res.compute_deployment.nil?
@@ -2565,31 +2512,30 @@ Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeDomain" method="put" path="/compute/{connection_id}/domain/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeDomain" method="put" path="/compute/{connection_id}/domain/{id}" example="compute_domain" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeDomainRequest.new(
   compute_domain: Models::Shared::ComputeDomain.new(
     created_at: DateTime.iso8601('2019-11-22T16:38:26.009Z'),
-    id: '1eb2071c-484b-4950-8e3a-88afd9fa5da0',
+    id: 'cb0a3618-0301-4daf-b5d3-02d5f99f3aeb',
     is_primary: false,
     metadata: [],
     name: 'mysterious-republican.usable-section.info',
     status: Models::Shared::ComputeDomainStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-11-14T11:45:15.084Z'),
+    updated_at: DateTime.iso8601('2023-11-15T11:01:54.290Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.update_compute_domain(request: req)
 
 unless res.compute_domain.nil?
@@ -2620,16 +2566,16 @@ Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeEnvvar" method="put" path="/compute/{connection_id}/envvar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeEnvvar" method="put" path="/compute/{connection_id}/envvar/{id}" example="compute_envvar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeEnvvarRequest.new(
   compute_envvar: Models::Shared::ComputeEnvvar.new(
@@ -2637,16 +2583,15 @@ req = Models::Operations::UpdateComputeEnvvarRequest.new(
     environments: [
       Models::Shared::PropertyComputeEnvvarEnvironments::PREVIEW,
     ],
-    id: 'd1ea2a28-1ca7-4383-846a-f73ae3db9451',
+    id: '449b214a-63a2-4524-967d-06225c77bcac',
     is_secret: true,
     metadata: [],
     name: 'AEGER_SUBSTANTIA',
-    updated_at: DateTime.iso8601('2025-07-17T20:06:57.699Z'),
+    updated_at: DateTime.iso8601('2025-07-19T02:38:49.061Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.update_compute_envvar(request: req)
 
 unless res.compute_envvar.nil?
@@ -2677,16 +2622,16 @@ Updates the ComputeInstance identified by `id`. Provide the unified ComputeInsta
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeInstance" method="put" path="/compute/{connection_id}/instance/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeInstance" method="put" path="/compute/{connection_id}/instance/{id}" example="compute_instance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeInstanceRequest.new(
   compute_instance: Models::Shared::ComputeInstance.new(
@@ -2703,12 +2648,12 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
         is_auth_required: true,
         port: 8080.0,
         protocol: Models::Shared::Protocol::HTTPS,
-        url: 'https://serene-shark.biz/',
+        url: 'https://serene-shark.biz/'
       ),
     ],
     gpu_count: 0.0,
     has_internet_access: true,
-    id: 'ff304475-651c-4077-b261-a588fe1ec571',
+    id: 'f1a55274-d22b-4e1c-99ee-5394f3a6e0c9',
     image: 'ubuntu:24.04',
     market: Models::Shared::Market::SPOT,
     memory_mb: 2048.0,
@@ -2721,18 +2666,17 @@ req = Models::Operations::UpdateComputeInstanceRequest.new(
     ssh: Models::Shared::PropertyComputeInstanceSsh.new(
       host: '116.42.165.89',
       port: 22.0,
-      username: 'root',
+      username: 'root'
     ),
-    started_at: DateTime.iso8601('2025-04-04T13:14:09.957Z'),
+    started_at: DateTime.iso8601('2025-04-05T14:03:57.660Z'),
     status: Models::Shared::ComputeInstanceStatus::ERROR,
     status_reason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
     type: Models::Shared::ComputeInstanceType::BAREMETAL,
-    updated_at: DateTime.iso8601('2025-06-28T20:50:15.294Z'),
+    updated_at: DateTime.iso8601('2025-06-29T23:59:43.924Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.update_compute_instance(request: req)
 
 unless res.compute_instance.nil?
@@ -2763,30 +2707,29 @@ Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeKey" method="put" path="/compute/{connection_id}/key/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeKey" method="put" path="/compute/{connection_id}/key/{id}" example="compute_key" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeKeyRequest.new(
   compute_key: Models::Shared::ComputeKey.new(
     created_at: DateTime.iso8601('2023-08-19T14:31:46.492Z'),
-    id: '21239a69-d1d7-4c76-9300-0186839c34ba',
+    id: 'dee3ba22-15fd-476b-91ae-4b60662508b3',
     metadata: [],
     name: 'nienow-secret',
     type: Models::Shared::ComputeKeyType::SECRET,
-    updated_at: DateTime.iso8601('2024-10-13T18:30:41.156Z'),
+    updated_at: DateTime.iso8601('2024-10-14T09:05:17.876Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.update_compute_key(request: req)
 
 unless res.compute_key.nil?
@@ -2817,23 +2760,23 @@ Updates the ComputeService identified by `id`. Provide the unified ComputeServic
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeService" method="put" path="/compute/{connection_id}/service/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeService" method="put" path="/compute/{connection_id}/service/{id}" example="compute_service" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeServiceRequest.new(
   compute_service: Models::Shared::ComputeService.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '4b0abc75-a4cd-47d9-92e1-1c92be9e9c77',
+    id: 'd844b066-b009-45eb-9004-371f88cbee8a',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -2844,13 +2787,12 @@ req = Models::Operations::UpdateComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-14T01:21:31.587Z'),
-    url: 'https://tame-sideboard.rotating-shoulder.biz',
+    updated_at: DateTime.iso8601('2025-04-14T21:26:47.318Z'),
+    url: 'https://tame-sideboard.rotating-shoulder.biz'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.update_compute_service(request: req)
 
 unless res.compute_service.nil?
@@ -2881,30 +2823,29 @@ Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTempl
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeTemplate" method="put" path="/compute/{connection_id}/template/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeTemplate" method="put" path="/compute/{connection_id}/template/{id}" example="compute_template" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeTemplateRequest.new(
   compute_template: Models::Shared::ComputeTemplate.new(
     cpu_count: 4.0,
     created_at: DateTime.iso8601('2023-02-23T03:28:59.864Z'),
     disk_mb: 10_240.0,
-    dockerfile: 'FROM ubuntu:24.04\n" +
-    "RUN apt-get update',
+    dockerfile: "FROM ubuntu:24.04\nRUN apt-get update",
     gpu_count: 2.0,
     gpu_model: Models::Shared::ComputeTemplateGpuModel::NVIDIA_GH200,
-    id: '0c561398-e692-45f7-ab65-f31fdca2e5ce',
+    id: '80fd7886-ceeb-4a27-a0c5-15fb60bc2e70',
     image: 'perfumed-molasses/cohibeo:5.2',
     is_public: false,
-    last_used_at: DateTime.iso8601('2026-04-08T20:29:50.378Z'),
+    last_used_at: DateTime.iso8601('2026-04-10T06:48:24.685Z'),
     memory_mb: 8192.0,
     metadata: [],
     name: 'multi-byte-card',
@@ -2912,12 +2853,11 @@ req = Models::Operations::UpdateComputeTemplateRequest.new(
       8080.0,
     ],
     status: Models::Shared::ComputeTemplateStatus::OTHER,
-    updated_at: DateTime.iso8601('2025-02-23T00:42:53.272Z'),
+    updated_at: DateTime.iso8601('2025-02-23T22:41:52.401Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.update_compute_template(request: req)
 
 unless res.compute_template.nil?
@@ -2948,34 +2888,33 @@ Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeVolume" method="put" path="/compute/{connection_id}/volume/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeVolume" method="put" path="/compute/{connection_id}/volume/{id}" example="compute_volume" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeVolumeRequest.new(
   compute_volume: Models::Shared::ComputeVolume.new(
     created_at: DateTime.iso8601('2022-11-15T15:12:48.055Z'),
-    id: 'cba36509-03f5-40e7-9bce-1e80f4a50d6b',
+    id: '12200d6a-3aa6-4a79-a24c-17121107b056',
     instance_ids: [],
     metadata: [],
     name: 'vol-solum',
     size_mb: 1_024_000.0,
     status: Models::Shared::ComputeVolumeStatus::OTHER,
     type: Models::Shared::ComputeVolumeType::HIGH_PERFORMANCE,
-    updated_at: DateTime.iso8601('2024-02-15T21:15:48.882Z'),
-    used_mb: 524_986.0,
+    updated_at: DateTime.iso8601('2024-02-16T10:04:31.815Z'),
+    used_mb: 524_986.0
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.compute.update_compute_volume(request: req)
 
 unless res.compute_volume.nil?

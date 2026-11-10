@@ -13,12 +13,11 @@ require_relative 'utils/retries'
 module UnifiedRubySDK
   extend T::Sig
 
-  SERVERS = [
+  SERVERS = T.let([
     'https://api.unified.to', # 1 - North American data region
     'https://api-eu.unified.to', # 1 - European data region
     'https://api-au.unified.to', # 1 - Australian data region
-  ].freeze
-  SERVERS = T.let(SERVERS, T::Array[String])
+  ].freeze, T::Array[::String])
   # Contains the list of servers available to the SDK
 
   class SDKConfiguration
@@ -33,7 +32,7 @@ module UnifiedRubySDK
     sig { returns(T.nilable(::UnifiedRubySDK::Utils::RetryConfig)) }
     attr_accessor :retry_config
 
-    sig { returns(T.nilable(Float)) }
+    sig { returns(T.nilable(::Float)) }
     attr_accessor :timeout
 
     
@@ -41,27 +40,27 @@ module UnifiedRubySDK
     attr_accessor :security_source
 
     
-    sig { returns(T.nilable(String)) }
+    sig { returns(T.nilable(::String)) }
     attr_accessor :server_url
 
     
-    sig { returns(T.nilable(Integer)) }
+    sig { returns(T.nilable(::Integer)) }
     attr_accessor :server_idx
 
     
-    sig { returns(String) }
+    sig { returns(::String) }
     attr_accessor :language
 
-    sig { returns(String) }
+    sig { returns(::String) }
     attr_accessor :openapi_doc_version
 
-    sig { returns(String) }
+    sig { returns(::String) }
     attr_accessor :sdk_version
 
-    sig { returns(String) }
+    sig { returns(::String) }
     attr_accessor :gen_version
 
-    sig { returns(String) }
+    sig { returns(::String) }
     attr_accessor :user_agent
 
     sig do
@@ -69,11 +68,11 @@ module UnifiedRubySDK
         client: T.nilable(Faraday::Connection),
         hooks: ::UnifiedRubySDK::SDKHooks::Hooks,
         retry_config: T.nilable(::UnifiedRubySDK::Utils::RetryConfig),
-        timeout_ms: T.nilable(Integer),
+        timeout_ms: T.nilable(::Integer),
         security: T.nilable(Models::Shared::Security),
         security_source: T.nilable(T.proc.returns(Models::Shared::Security)),
-        server_url: T.nilable(String),
-        server_idx: T.nilable(Integer)
+        server_url: T.nilable(::String),
+        server_idx: T.nilable(::Integer)
       ).void
     end
     def initialize(client, hooks, retry_config, timeout_ms, security, security_source, server_url, server_idx)
@@ -83,7 +82,7 @@ module UnifiedRubySDK
       @server_url = server_url
       @timeout = (timeout_ms.to_f / 1000) unless timeout_ms.nil?
       @server_idx = server_idx.nil? ? 0 : server_idx
-      raise StandardError, "Invalid server index #{server_idx}" if @server_idx.negative? || @server_idx >= SERVERS.length
+      raise ::StandardError, "Invalid server index #{server_idx}" if @server_idx.negative? || @server_idx >= SERVERS.length
       if !security_source.nil?
         @security_source = security_source
       elsif !security.nil?
@@ -91,12 +90,12 @@ module UnifiedRubySDK
       end
       @language = 'ruby'
       @openapi_doc_version = '1.0'
-      @sdk_version = '0.68.18'
-      @gen_version = '2.684.0'
-      @user_agent = 'speakeasy-sdk/ruby 0.68.18 2.684.0 1.0 unified_ruby_sdk'
+      @sdk_version = '0.70.0'
+      @gen_version = '2.960.8'
+      @user_agent = 'speakeasy-sdk/ruby 0.70.0 2.960.8 1.0 unified_ruby_sdk'
     end
 
-    sig { returns([String, T::Hash[Symbol, String]]) }
+    sig { returns([::String, T::Hash[::Symbol, ::String]]) }
     def get_server_details
       return [@server_url.delete_suffix('/'), {}] if !@server_url.nil?
       @server_idx = T.must(@server_idx)

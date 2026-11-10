@@ -1,5 +1,4 @@
 # Destination
-(*destination*)
 
 ## Overview
 
@@ -24,12 +23,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.destination.create_cdp_destination(cdp_destination: Models::Shared::CdpDestination.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.destination.create_cdp_destination(cdp_destination: Models::Shared::CdpDestination.new, connection_id: '<id>')
 
 unless res.cdp_destination.nil?
   # handle response
@@ -68,11 +66,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.destination.get_cdp_destination(connection_id: '<id>', id: '<id>')
 
 unless res.cdp_destination.nil?
@@ -112,15 +109,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCdpDestinationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCdpDestinationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.destination.list_cdp_destinations(request: req)
 
 unless res.cdp_destinations.nil?
@@ -157,17 +153,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchCdpDestinationRequest.new(
-  cdp_destination: Models::Shared::CdpDestination.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchCdpDestinationRequest.new(
+  cdp_destination: Models::Shared::CdpDestination.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.destination.patch_cdp_destination(request: req)
 
 unless res.cdp_destination.nil?
@@ -204,11 +199,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.destination.remove_cdp_destination(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -246,17 +240,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateCdpDestinationRequest.new(
-  cdp_destination: Models::Shared::CdpDestination.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateCdpDestinationRequest.new(
+  cdp_destination: Models::Shared::CdpDestination.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.destination.update_cdp_destination(request: req)
 
 unless res.cdp_destination.nil?

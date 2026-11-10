@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class CreateGenaiEmbeddingQueryParamFields < T::Enum
-
-
         enums do
           MODEL_ID = new('model_id')
           CONTENT = new('content')

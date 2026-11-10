@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingProfitloss
         extend T::Sig
@@ -20,11 +19,11 @@ module UnifiedRubySDK
 
         field :cost_of_goods_sold_total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cost_of_goods_sold_total_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :expenses_sections, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AccountingProfitlossSection)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expenses_sections') } }
 
@@ -42,13 +41,13 @@ module UnifiedRubySDK
 
         field :net_income_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('net_income_amount') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(category_ids: T.nilable(T::Array[::String]), cost_of_goods_sold_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), cost_of_goods_sold_total_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), expenses_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), expenses_total_amount: T.nilable(::Float), id: T.nilable(::String), income_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), income_total_amount: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), net_income_amount: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
+        sig { params(category_ids: T.nilable(T::Array[::String]), cost_of_goods_sold_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), cost_of_goods_sold_total_amount: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), end_at: T.nilable(::DateTime), expenses_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), expenses_total_amount: T.nilable(::Float), id: T.nilable(::String), income_sections: T.nilable(T::Array[Models::Shared::AccountingProfitlossSection]), income_total_amount: T.nilable(::Float), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), net_income_amount: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), updated_at: T.nilable(::DateTime)).void }
         def initialize(category_ids: nil, cost_of_goods_sold_sections: nil, cost_of_goods_sold_total_amount: nil, created_at: nil, currency: nil, end_at: nil, expenses_sections: nil, expenses_total_amount: nil, id: nil, income_sections: nil, income_total_amount: nil, metadata: nil, name: nil, net_income_amount: nil, raw: nil, start_at: nil, updated_at: nil)
           @category_ids = category_ids
           @cost_of_goods_sold_sections = cost_of_goods_sold_sections

@@ -1,5 +1,16 @@
 # CalendarMetadataFormat
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CalendarMetadataFormat::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = CalendarMetadataFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

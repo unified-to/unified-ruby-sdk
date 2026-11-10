@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyCalendarEventOrganizerStatus < T::Enum
-
-
+      class PropertyCalendarEventOrganizerStatus
+        include ::Crystalline::Enum
         enums do
           ACCEPTED = new('ACCEPTED')
           REJECTED = new('REJECTED')
           TENTATIVE = new('TENTATIVE')
         end
+        open!
       end
     end
   end

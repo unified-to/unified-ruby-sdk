@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class DatastoreQueryExpand
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :expand, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, Models::Shared::DatastoreQueryExpand)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expand') } }
+        field :expand, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, Models::Shared::DatastoreQueryExpand)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('expand') } }
 
         field :filter, Crystalline::Nilable.new(Models::Shared::PropertyDatastoreQueryExpandFilter), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('filter') } }
 
@@ -22,7 +21,7 @@ module UnifiedRubySDK
 
         field :select, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('select') } }
 
-        sig { params(expand: T.nilable(T::Hash[Symbol, Models::Shared::DatastoreQueryExpand]), filter: T.nilable(Models::Shared::PropertyDatastoreQueryExpandFilter), limit: T.nilable(::Float), select: T.nilable(T::Array[::String])).void }
+        sig { params(expand: T.nilable(T::Hash[::Symbol, Models::Shared::DatastoreQueryExpand]), filter: T.nilable(Models::Shared::PropertyDatastoreQueryExpandFilter), limit: T.nilable(::Float), select: T.nilable(T::Array[::String])).void }
         def initialize(expand: nil, filter: nil, limit: nil, select: nil)
           @expand = expand
           @filter = filter

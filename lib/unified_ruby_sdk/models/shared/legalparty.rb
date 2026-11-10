@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class LegalParty
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
         # the vendor's free-text relationship description
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # the party role on the matter
-        field :role, Crystalline::Nilable.new(Models::Shared::LegalPartyRole), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('role'), 'decoder': Utils.enum_from_string(Models::Shared::LegalPartyRole, true) } }
+        field :role, Crystalline::Nilable.new(Models::Shared::LegalPartyRole), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('role'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::LegalPartyRole, true) } }
 
         sig { params(company_id: T.nilable(::String), contact_id: T.nilable(::String), description: T.nilable(::String), role: T.nilable(Models::Shared::LegalPartyRole)).void }
         def initialize(company_id: nil, contact_id: nil, description: nil, role: nil)

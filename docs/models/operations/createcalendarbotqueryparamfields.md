@@ -1,5 +1,13 @@
 # CreateCalendarBotQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateCalendarBotQueryParamFields::ID
+```
+
 
 ## Values
 

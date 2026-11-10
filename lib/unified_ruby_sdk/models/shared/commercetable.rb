@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CommerceTable
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # number of seats/guests the table is set up for
         field :capacity, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('capacity') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # the provider's identifier of that floorplan/section
@@ -40,17 +39,17 @@ module UnifiedRubySDK
         # human-facing table number shown on the POS (string, as some systems use alphanumeric labels)
         field :number, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('number') } }
         # when the current party was seated (earliest open order) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :occupied_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('occupied_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :occupied_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('occupied_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # open orders/checks currently on the table; references accounting_salesorder
         field :salesorder_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('salesorder_ids') } }
         # current occupancy
-        field :status, Crystalline::Nilable.new(Models::Shared::CommerceTableStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::CommerceTableStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::CommerceTableStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CommerceTableStatus, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(capacity: T.nilable(::Float), created_at: T.nilable(::DateTime), description: T.nilable(::String), floorplan_identifier: T.nilable(::String), floorplan_name: T.nilable(::String), guest_count: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), layout: T.nilable(Models::Shared::PropertyCommerceTableLayout), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), number: T.nilable(::String), occupied_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[Symbol, ::Object]), salesorder_ids: T.nilable(T::Array[::String]), status: T.nilable(Models::Shared::CommerceTableStatus), updated_at: T.nilable(::DateTime)).void }
+        sig { params(capacity: T.nilable(::Float), created_at: T.nilable(::DateTime), description: T.nilable(::String), floorplan_identifier: T.nilable(::String), floorplan_name: T.nilable(::String), guest_count: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), layout: T.nilable(Models::Shared::PropertyCommerceTableLayout), location_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CommerceMetadata]), name: T.nilable(::String), number: T.nilable(::String), occupied_at: T.nilable(::DateTime), raw: T.nilable(T::Hash[::Symbol, ::Object]), salesorder_ids: T.nilable(T::Array[::String]), status: T.nilable(Models::Shared::CommerceTableStatus), updated_at: T.nilable(::DateTime)).void }
         def initialize(capacity: nil, created_at: nil, description: nil, floorplan_identifier: nil, floorplan_name: nil, guest_count: nil, id: nil, is_active: nil, layout: nil, location_id: nil, metadata: nil, name: nil, number: nil, occupied_at: nil, raw: nil, salesorder_ids: nil, status: nil, updated_at: nil)
           @capacity = capacity
           @created_at = created_at

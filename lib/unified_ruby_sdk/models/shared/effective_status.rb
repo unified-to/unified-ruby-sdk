@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # EffectiveStatus - read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status
-      class EffectiveStatus < T::Enum
-
-
+      class EffectiveStatus
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           SERVING = new('SERVING')
@@ -25,6 +23,7 @@ module UnifiedRubySDK
           ARCHIVED = new('ARCHIVED')
           REMOVED = new('REMOVED')
         end
+        open!
       end
     end
   end

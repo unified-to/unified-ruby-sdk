@@ -1,5 +1,16 @@
 # AdsMetadataFormat
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AdsMetadataFormat::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AdsMetadataFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

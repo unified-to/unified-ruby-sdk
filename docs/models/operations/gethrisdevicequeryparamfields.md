@@ -1,5 +1,13 @@
 # GetHrisDeviceQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetHrisDeviceQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,4 @@
 # Guest
-(*guest*)
 
 ## Overview
 
@@ -17,17 +16,16 @@ Creates a PropertyGuest. Provide the unified PropertyGuest fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPropertyGuest" method="post" path="/property/{connection_id}/guest" -->
+<!-- UsageSnippet language="ruby" operationID="createPropertyGuest" method="post" path="/property/{connection_id}/guest" example="property_guest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.guest.create_property_guest(property_guest: Models::Shared::PropertyGuest.new(
   address: Models::Shared::PropertyPropertyGuestAddress.new(
     address1: '874 Rice Trafficway',
@@ -35,18 +33,18 @@ res = s.guest.create_property_guest(property_guest: Models::Shared::PropertyGues
     country: 'Cameroon',
     country_code: 'MX',
     postal_code: '51113-4329',
-    region: 'Missouri',
+    region: 'Missouri'
   ),
   company_name: 'Kertzmann, Bednar and Bashirian',
   created_at: DateTime.iso8601('2021-10-17T05:59:05.070Z'),
   emails: [
     Models::Shared::PropertyEmail.new(
       email: 'melissa.green@icloud.com',
-      type: Models::Shared::PropertyEmailType::HOME,
+      type: Models::Shared::PropertyEmailType::HOME
     ),
   ],
   first_name: 'Melissa',
-  id: '6ebe9f7f-62f5-4cf8-baec-429b07835e68',
+  id: '1a21d247-4dfe-4d98-92ee-05f50d7bb2e1',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
   language: 'es',
   last_name: 'Green',
@@ -57,10 +55,10 @@ res = s.guest.create_property_guest(property_guest: Models::Shared::PropertyGues
   telephones: [
     Models::Shared::PropertyTelephone.new(
       telephone: '+14564841285',
-      type: Models::Shared::PropertyTelephoneType::MOBILE,
+      type: Models::Shared::PropertyTelephoneType::MOBILE
     ),
   ],
-  updated_at: DateTime.iso8601('2025-07-10T22:07:32.576Z'),
+  updated_at: DateTime.iso8601('2025-07-12T04:09:42.813Z')
 ), connection_id: '<id>')
 
 unless res.property_guest.nil?
@@ -100,11 +98,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.guest.get_property_guest(connection_id: '<id>', id: '<id>')
 
 unless res.property_guest.nil?
@@ -144,15 +141,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyGuestsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyGuestsRequest.new(
+  connection_id: '<id>'
+)
 res = s.guest.list_property_guests(request: req)
 
 unless res.property_guests.nil?
@@ -183,16 +179,16 @@ Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPropertyGuest" method="patch" path="/property/{connection_id}/guest/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPropertyGuest" method="patch" path="/property/{connection_id}/guest/{id}" example="property_guest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPropertyGuestRequest.new(
   property_guest: Models::Shared::PropertyGuest.new(
@@ -202,18 +198,18 @@ req = Models::Operations::PatchPropertyGuestRequest.new(
       country: 'Cameroon',
       country_code: 'MX',
       postal_code: '51113-4329',
-      region: 'Missouri',
+      region: 'Missouri'
     ),
     company_name: 'Kertzmann, Bednar and Bashirian',
     created_at: DateTime.iso8601('2021-10-17T05:59:05.070Z'),
     emails: [
       Models::Shared::PropertyEmail.new(
         email: 'melissa.green@icloud.com',
-        type: Models::Shared::PropertyEmailType::HOME,
+        type: Models::Shared::PropertyEmailType::HOME
       ),
     ],
     first_name: 'Melissa',
-    id: '2eb76b80-ea66-4e1d-b5e8-fb5b0665f296',
+    id: '7860b360-4cf7-4868-b7b9-32e0de562433',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
     language: 'es',
     last_name: 'Green',
@@ -224,15 +220,14 @@ req = Models::Operations::PatchPropertyGuestRequest.new(
     telephones: [
       Models::Shared::PropertyTelephone.new(
         telephone: '+14564841285',
-        type: Models::Shared::PropertyTelephoneType::MOBILE,
+        type: Models::Shared::PropertyTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2025-07-10T22:07:32.600Z'),
+    updated_at: DateTime.iso8601('2025-07-12T04:09:42.830Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.guest.patch_property_guest(request: req)
 
 unless res.property_guest.nil?
@@ -263,16 +258,16 @@ Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePropertyGuest" method="put" path="/property/{connection_id}/guest/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePropertyGuest" method="put" path="/property/{connection_id}/guest/{id}" example="property_guest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePropertyGuestRequest.new(
   property_guest: Models::Shared::PropertyGuest.new(
@@ -282,18 +277,18 @@ req = Models::Operations::UpdatePropertyGuestRequest.new(
       country: 'Cameroon',
       country_code: 'MX',
       postal_code: '51113-4329',
-      region: 'Missouri',
+      region: 'Missouri'
     ),
     company_name: 'Kertzmann, Bednar and Bashirian',
     created_at: DateTime.iso8601('2021-10-17T05:59:05.070Z'),
     emails: [
       Models::Shared::PropertyEmail.new(
         email: 'melissa.green@icloud.com',
-        type: Models::Shared::PropertyEmailType::HOME,
+        type: Models::Shared::PropertyEmailType::HOME
       ),
     ],
     first_name: 'Melissa',
-    id: '2eb76b80-ea66-4e1d-b5e8-fb5b0665f296',
+    id: '7860b360-4cf7-4868-b7b9-32e0de562433',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
     language: 'es',
     last_name: 'Green',
@@ -304,15 +299,14 @@ req = Models::Operations::UpdatePropertyGuestRequest.new(
     telephones: [
       Models::Shared::PropertyTelephone.new(
         telephone: '+14564841285',
-        type: Models::Shared::PropertyTelephoneType::MOBILE,
+        type: Models::Shared::PropertyTelephoneType::MOBILE
       ),
     ],
-    updated_at: DateTime.iso8601('2025-07-10T22:07:32.600Z'),
+    updated_at: DateTime.iso8601('2025-07-12T04:09:42.830Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.guest.update_property_guest(request: req)
 
 unless res.property_guest.nil?

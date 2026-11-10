@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class SecretsManagerInstructions
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
 
         field :instructions, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructions') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::SecretsManagerInstructionsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::SecretsManagerInstructionsType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::SecretsManagerInstructionsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::SecretsManagerInstructionsType, true) } }
 
         sig { params(key: ::String, label: ::String, instructions: T.nilable(::String), type: T.nilable(Models::Shared::SecretsManagerInstructionsType)).void }
         def initialize(key:, label:, instructions: nil, type: nil)

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AccountingCreditmemoStatus < T::Enum
-
-
+      class AccountingCreditmemoStatus
+        include ::Crystalline::Enum
         enums do
           DRAFT = new('DRAFT')
           VOIDED = new('VOIDED')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           DELETED = new('DELETED')
           OVERDUE = new('OVERDUE')
         end
+        open!
       end
     end
   end

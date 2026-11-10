@@ -2,6 +2,17 @@
 
 Format of the label (PDF, PNG, ZPL, EPL2)
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = LabelFormat::PDF
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = LabelFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

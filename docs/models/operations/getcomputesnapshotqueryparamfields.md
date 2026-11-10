@@ -1,5 +1,13 @@
 # GetComputeSnapshotQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetComputeSnapshotQueryParamFields::ID
+```
+
 
 ## Values
 

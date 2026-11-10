@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class MatchType < T::Enum
-
-
+      class MatchType
+        include ::Crystalline::Enum
         enums do
           BROAD = new('BROAD')
           PHRASE = new('PHRASE')
           EXACT = new('EXACT')
         end
+        open!
       end
     end
   end

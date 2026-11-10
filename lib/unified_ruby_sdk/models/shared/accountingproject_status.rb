@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AccountingProjectStatus < T::Enum
-
-
+      class AccountingProjectStatus
+        include ::Crystalline::Enum
         enums do
           NOT_STARTED = new('NOT_STARTED')
           IN_PROGRESS = new('IN_PROGRESS')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           CANCELLED = new('CANCELLED')
           CLOSED = new('CLOSED')
         end
+        open!
       end
     end
   end

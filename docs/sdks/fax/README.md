@@ -1,5 +1,4 @@
 # Fax
-(*fax*)
 
 ## Overview
 
@@ -16,30 +15,29 @@ Creates a UcFax. Provide the unified UcFax fields in the request body; they are 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createUcFax" method="post" path="/uc/{connection_id}/fax" -->
+<!-- UsageSnippet language="ruby" operationID="createUcFax" method="post" path="/uc/{connection_id}/fax" example="uc_fax" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.fax.create_uc_fax(uc_fax: Models::Shared::UcFax.new(
-  cost_amount: 1.2_207,
+  cost_amount: 1.2207,
   created_at: DateTime.iso8601('2022-10-25T13:37:51.431Z'),
   currency: 'USD',
   from_telephone: '+13605107540',
-  id: 'f4830c6b-0584-41d9-a2d7-b698bc302971',
+  id: '2caa3f10-1271-48ae-b4da-51d080709b84',
   media_url: 'https://doting-jump.biz',
   metadata: [],
   pages: 20.0,
   status: Models::Shared::UcFaxStatus::DELIVERED,
   to_telephone: '+19083998866',
   type: Models::Shared::UcFaxType::INBOUND,
-  updated_at: DateTime.iso8601('2023-04-16T00:21:35.248Z'),
+  updated_at: DateTime.iso8601('2023-04-16T05:07:21.753Z')
 ), connection_id: '<id>')
 
 unless res.uc_fax.nil?
@@ -79,11 +77,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.fax.get_uc_fax(connection_id: '<id>', id: '<id>')
 
 unless res.uc_fax.nil?
@@ -123,15 +120,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcFaxesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcFaxesRequest.new(
+  connection_id: '<id>'
+)
 res = s.fax.list_uc_faxes(request: req)
 
 unless res.uc_faxes.nil?
@@ -168,11 +164,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.fax.remove_uc_fax(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200

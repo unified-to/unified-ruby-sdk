@@ -1,5 +1,4 @@
 # Invoice
-(*invoice*)
 
 ## Overview
 
@@ -18,30 +17,29 @@ Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" example="accounting_invoice" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::AccountingInvoice.new(
   attachments: [
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://glossy-markup.net/',
-      id: '56bfc54b-5a36-469e-9723-478b2cd3fa88',
+      id: '5b10ff98-1d83-41a1-9abd-12f5ca2a1b17',
       mime_type: 'application/pdf',
-      name: 'INV-77705.pdf',
+      name: 'INV-77705.pdf'
     ),
     Models::Shared::AccountingAttachment.new(
       download_url: 'https://earnest-giggle.net',
-      id: 'd35ce8b1-5ecc-413a-85c0-06bd3520bde7',
+      id: '36744cd7-21ee-4f95-8793-374527c652df',
       mime_type: 'application/pdf',
-      name: 'INV-77705-1.pdf',
+      name: 'INV-77705-1.pdf'
     ),
   ],
   balance_amount: 0.0,
@@ -51,7 +49,7 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   discount_amount: 0.0,
   due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
   extended_notes: [],
-  id: '021b232e-b909-4aff-a4e0-40b266ece433',
+  id: '7d8747b7-2ca3-4a9f-b223-0b3c3c8bf1ba',
   invoice_number: 'INV-77705',
   is_inclusive_of_tax: false,
   lineitems: [],
@@ -69,8 +67,8 @@ res = s.invoice.create_accounting_invoice(accounting_invoice: Models::Shared::Ac
   term: Models::Shared::AccountingInvoiceTerm::NET_25,
   total_amount: 0.0,
   type: Models::Shared::AccountingInvoiceType::INVOICE,
-  updated_at: DateTime.iso8601('2026-05-10T04:10:31.659Z'),
-  url: 'https://gifted-yarmulke.info/invoices/INV-77705',
+  updated_at: DateTime.iso8601('2026-05-11T15:49:53.916Z'),
+  url: 'https://gifted-yarmulke.info/invoices/INV-77705'
 ), connection_id: '<id>')
 
 unless res.accounting_invoice.nil?
@@ -110,11 +108,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.invoice.get_accounting_invoice(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_invoice.nil?
@@ -154,15 +151,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingInvoicesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingInvoicesRequest.new(
+  connection_id: '<id>'
+)
 res = s.invoice.list_accounting_invoices(request: req)
 
 unless res.accounting_invoices.nil?
@@ -193,31 +189,31 @@ Updates the AccountingInvoice identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingInvoiceRequest.new(
   accounting_invoice: Models::Shared::AccountingInvoice.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://glossy-markup.net/',
-        id: 'feec3a7d-914a-430a-add2-bcfae16fa2ba',
+        id: '92f9ff57-0989-491f-84fb-2c317f66f44c',
         mime_type: 'application/pdf',
-        name: 'INV-77705.pdf',
+        name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://earnest-giggle.net',
-        id: '4459d855-919d-4327-9d7b-5a9ddcad7ffc',
+        id: '5120ee5d-fb1f-412e-9efd-09545ed3bf80',
         mime_type: 'application/pdf',
-        name: 'INV-77705-1.pdf',
+        name: 'INV-77705-1.pdf'
       ),
     ],
     balance_amount: 0.0,
@@ -227,7 +223,7 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '13558079-144b-42c1-a940-32b8f4e49a6a',
+    id: '0efe37eb-fdaf-4db7-90bb-1cc1730a616e',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -245,13 +241,12 @@ req = Models::Operations::PatchAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-10T04:10:31.716Z'),
-    url: 'https://gifted-yarmulke.info/invoices/INV-77705',
+    updated_at: DateTime.iso8601('2026-05-11T15:49:53.962Z'),
+    url: 'https://gifted-yarmulke.info/invoices/INV-77705'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.invoice.patch_accounting_invoice(request: req)
 
 unless res.accounting_invoice.nil?
@@ -288,11 +283,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.invoice.remove_accounting_invoice(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -324,31 +318,31 @@ Updates the AccountingInvoice identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingInvoiceRequest.new(
   accounting_invoice: Models::Shared::AccountingInvoice.new(
     attachments: [
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://glossy-markup.net/',
-        id: 'feec3a7d-914a-430a-add2-bcfae16fa2ba',
+        id: '92f9ff57-0989-491f-84fb-2c317f66f44c',
         mime_type: 'application/pdf',
-        name: 'INV-77705.pdf',
+        name: 'INV-77705.pdf'
       ),
       Models::Shared::AccountingAttachment.new(
         download_url: 'https://earnest-giggle.net',
-        id: '4459d855-919d-4327-9d7b-5a9ddcad7ffc',
+        id: '5120ee5d-fb1f-412e-9efd-09545ed3bf80',
         mime_type: 'application/pdf',
-        name: 'INV-77705-1.pdf',
+        name: 'INV-77705-1.pdf'
       ),
     ],
     balance_amount: 0.0,
@@ -358,7 +352,7 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     discount_amount: 0.0,
     due_at: DateTime.iso8601('2022-12-07T14:17:29.587Z'),
     extended_notes: [],
-    id: '13558079-144b-42c1-a940-32b8f4e49a6a',
+    id: '0efe37eb-fdaf-4db7-90bb-1cc1730a616e',
     invoice_number: 'INV-77705',
     is_inclusive_of_tax: false,
     lineitems: [],
@@ -376,13 +370,12 @@ req = Models::Operations::UpdateAccountingInvoiceRequest.new(
     term: Models::Shared::AccountingInvoiceTerm::NET_25,
     total_amount: 0.0,
     type: Models::Shared::AccountingInvoiceType::INVOICE,
-    updated_at: DateTime.iso8601('2026-05-10T04:10:31.716Z'),
-    url: 'https://gifted-yarmulke.info/invoices/INV-77705',
+    updated_at: DateTime.iso8601('2026-05-11T15:49:53.962Z'),
+    url: 'https://gifted-yarmulke.info/invoices/INV-77705'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.invoice.update_accounting_invoice(request: req)
 
 unless res.accounting_invoice.nil?

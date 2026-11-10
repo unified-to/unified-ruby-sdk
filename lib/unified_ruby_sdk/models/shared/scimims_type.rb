@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class ScimImsType < T::Enum
-
-
+      class ScimImsType
+        include ::Crystalline::Enum
         enums do
           AIM = new('aim')
           QTALK = new('qtalk')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           QQ = new('qq')
           YAHOO = new('yahoo')
         end
+        open!
       end
     end
   end

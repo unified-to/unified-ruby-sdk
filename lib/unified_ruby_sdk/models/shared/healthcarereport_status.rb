@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareReportStatus - Status of the report
-      class HealthcareReportStatus < T::Enum
-
-
+      class HealthcareReportStatus
+        include ::Crystalline::Enum
         enums do
           REGISTERED = new('REGISTERED')
           PARTIAL = new('PARTIAL')
@@ -25,6 +23,7 @@ module UnifiedRubySDK
           UNKNOWN = new('UNKNOWN')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

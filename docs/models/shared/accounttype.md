@@ -2,6 +2,17 @@
 
 CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AccountType::CHECKING
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AccountType.deserialize("custom_value")
+```
+
 
 ## Values
 

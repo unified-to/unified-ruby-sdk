@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AssessmentParameterType < T::Enum
-
-
+      class AssessmentParameterType
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           DATE = new('DATE')
           FILE = new('FILE')
         end
+        open!
       end
     end
   end

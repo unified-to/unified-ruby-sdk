@@ -1,5 +1,16 @@
 # ListServiceId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListServiceId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListServiceId.deserialize("custom_value")
+```
+
 
 ## Values
 

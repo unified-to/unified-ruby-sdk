@@ -1,5 +1,16 @@
 # PropertyAdsReportMetricsCampaignStatus
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyAdsReportMetricsCampaignStatus::UNSPECIFIED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyAdsReportMetricsCampaignStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsGroupBidStrategyType < T::Enum
-
-
+      class PropertyAdsGroupBidStrategyType
+        include ::Crystalline::Enum
         enums do
           FIXED_BID = new('FIXED_BID')
           MAXIMIZE_SPEND = new('MAXIMIZE_SPEND')
           PERFORMANCE_GOAL = new('PERFORMANCE_GOAL')
           YOUTUBE_AND_PARTNERS = new('YOUTUBE_AND_PARTNERS')
         end
+        open!
       end
     end
   end

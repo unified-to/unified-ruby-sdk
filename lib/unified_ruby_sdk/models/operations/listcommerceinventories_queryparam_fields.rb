@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class ListCommerceInventoriesQueryParamFields < T::Enum
-
-
         enums do
           ID = new('id')
           UPDATED_AT = new('updated_at')

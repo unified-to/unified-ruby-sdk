@@ -1,5 +1,16 @@
 # IssueStatus
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = IssueStatus::COMPLETED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = IssueStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

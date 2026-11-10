@@ -1,5 +1,4 @@
 # Webinar
-(*webinar*)
 
 ## Overview
 
@@ -18,24 +17,23 @@ Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCalendarWebinar" method="post" path="/calendar/{connection_id}/webinar" -->
+<!-- UsageSnippet language="ruby" operationID="createCalendarWebinar" method="post" path="/calendar/{connection_id}/webinar" example="calendar_webinar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webinar.create_calendar_webinar(calendar_webinar: Models::Shared::CalendarWebinar.new(
   conference: [],
   created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-  end_at: DateTime.iso8601('2025-11-12T09:32:13.184Z'),
+  end_at: DateTime.iso8601('2025-11-13T16:59:58.435Z'),
   has_polls: false,
   has_recording: false,
-  id: 'e6336abe-1075-4cb6-9511-1d3b086cce33',
+  id: '4cd47785-26dc-4c46-8e8e-af8c53f69b86',
   is_auto_approve: false,
   is_enabled: true,
   is_webcast: false,
@@ -45,13 +43,13 @@ res = s.webinar.create_calendar_webinar(calendar_webinar: Models::Shared::Calend
   recurrence: [
     Models::Shared::CalendarEventRecurrence.new(
       count: 10.0,
-      end_at: DateTime.iso8601('2023-09-05T17:21:17.045Z'),
+      end_at: DateTime.iso8601('2023-09-06T04:18:10.163Z'),
       excluded_dates: [
-        '2025-02-24T13:47:07.326Z',
+        '2025-02-25T14:32:54.693Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
       included_dates: [
-        '2024-05-06T07:22:11.012Z',
+        '2024-05-07T00:34:27.950Z',
       ],
       interval: 8.0,
       on_days: [
@@ -438,20 +436,20 @@ res = s.webinar.create_calendar_webinar(calendar_webinar: Models::Shared::Calend
         86.0,
       ],
       timezone: 'Africa/Abidjan',
-      week_start: Models::Shared::WeekStart::MO,
+      week_start: Models::Shared::WeekStart::MO
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 3.0,
-      end_at: DateTime.iso8601('2022-10-01T17:18:27.486Z'),
+      end_at: DateTime.iso8601('2022-10-01T19:32:53.634Z'),
       excluded_dates: [
-        '2024-09-11T07:29:17.811Z',
-        '2024-08-26T13:59:55.708Z',
+        '2024-09-12T03:58:51.162Z',
+        '2024-08-27T10:05:14.648Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
       included_dates: [
-        '2024-04-01T18:51:33.643Z',
-        '2026-01-29T00:10:16.415Z',
-        '2023-08-19T03:52:11.218Z',
+        '2024-04-02T11:10:38.455Z',
+        '2026-01-30T09:37:38.118Z',
+        '2023-08-19T14:22:00.418Z',
       ],
       interval: 1.0,
       on_days: [
@@ -591,20 +589,20 @@ res = s.webinar.create_calendar_webinar(calendar_webinar: Models::Shared::Calend
         -295.0,
       ],
       timezone: 'Asia/Choibalsan',
-      week_start: Models::Shared::WeekStart::TU,
+      week_start: Models::Shared::WeekStart::TU
     ),
     Models::Shared::CalendarEventRecurrence.new(
       count: 8.0,
-      end_at: DateTime.iso8601('2026-08-13T11:48:12.804Z'),
+      end_at: DateTime.iso8601('2026-08-15T02:18:23.132Z'),
       excluded_dates: [
-        '2023-06-22T19:30:03.021Z',
-        '2023-06-11T17:09:05.264Z',
+        '2023-06-23T04:31:29.278Z',
+        '2023-06-12T01:53:25.317Z',
       ],
       frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
       included_dates: [
-        '2024-04-09T22:04:11.325Z',
-        '2023-08-25T00:59:14.847Z',
-        '2024-10-06T19:36:12.352Z',
+        '2024-04-10T14:35:48.254Z',
+        '2023-08-25T11:38:07.752Z',
+        '2024-10-07T16:45:04.090Z',
       ],
       interval: 8.0,
       on_days: [
@@ -751,18 +749,18 @@ res = s.webinar.create_calendar_webinar(calendar_webinar: Models::Shared::Calend
         161.0,
       ],
       timezone: 'Asia/Krasnoyarsk',
-      week_start: Models::Shared::WeekStart::WE,
+      week_start: Models::Shared::WeekStart::WE
     ),
   ],
   registrant_password: 'W7J6DhkM',
   require_address: false,
   require_job_title: false,
-  start_at: DateTime.iso8601('2025-05-13T01:16:32.271Z'),
+  start_at: DateTime.iso8601('2025-05-14T04:01:43.975Z'),
   status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
   subject: 'Harum culpa decipio ex cubo ancilla cresco.',
   timezone: 'Europe/Kaliningrad',
-  updated_at: DateTime.iso8601('2026-10-19T06:16:12.696Z'),
-  web_url: 'https://quiet-permafrost.name',
+  updated_at: DateTime.iso8601('2026-10-20T22:29:17.088Z'),
+  web_url: 'https://quiet-permafrost.name'
 ), connection_id: '<id>')
 
 unless res.calendar_webinar.nil?
@@ -802,11 +800,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webinar.get_calendar_webinar(connection_id: '<id>', id: '<id>')
 
 unless res.calendar_webinar.nil?
@@ -846,15 +843,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCalendarWebinarsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCalendarWebinarsRequest.new(
+  connection_id: '<id>'
+)
 res = s.webinar.list_calendar_webinars(request: req)
 
 unless res.calendar_webinars.nil?
@@ -885,25 +881,25 @@ Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCalendarWebinar" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCalendarWebinar" method="patch" path="/calendar/{connection_id}/webinar/{id}" example="calendar_webinar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-11-12T09:32:13.228Z'),
+    end_at: DateTime.iso8601('2025-11-13T16:59:58.475Z'),
     has_polls: false,
     has_recording: false,
-    id: '249e65e1-f0e4-490b-b34b-66ab399bff9d',
+    id: 'd3a08622-ce72-4381-8a17-c0ce17deb610',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -913,13 +909,13 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-05T17:21:17.060Z'),
+        end_at: DateTime.iso8601('2023-09-06T04:18:10.177Z'),
         excluded_dates: [
-          '2025-02-24T13:47:07.360Z',
+          '2025-02-25T14:32:54.724Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-05-06T07:22:11.036Z',
+          '2024-05-07T00:34:27.972Z',
         ],
         interval: 8.0,
         on_days: [
@@ -1306,20 +1302,20 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
           86.0,
         ],
         timezone: 'Africa/Abidjan',
-        week_start: Models::Shared::WeekStart::MO,
+        week_start: Models::Shared::WeekStart::MO
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-10-01T17:18:27.489Z'),
+        end_at: DateTime.iso8601('2022-10-01T19:32:53.637Z'),
         excluded_dates: [
-          '2024-09-11T07:29:17.840Z',
-          '2024-08-26T13:59:55.736Z',
+          '2024-09-12T03:58:51.188Z',
+          '2024-08-27T10:05:14.673Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-04-01T18:51:33.666Z',
-          '2026-01-29T00:10:16.462Z',
-          '2023-08-19T03:52:11.233Z',
+          '2024-04-02T11:10:38.475Z',
+          '2026-01-30T09:37:38.160Z',
+          '2023-08-19T14:22:00.431Z',
         ],
         interval: 1.0,
         on_days: [
@@ -1459,20 +1455,20 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
           -295.0,
         ],
         timezone: 'Asia/Choibalsan',
-        week_start: Models::Shared::WeekStart::TU,
+        week_start: Models::Shared::WeekStart::TU
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-08-13T11:48:12.858Z'),
+        end_at: DateTime.iso8601('2026-08-15T02:18:23.180Z'),
         excluded_dates: [
-          '2023-06-22T19:30:03.034Z',
-          '2023-06-11T17:09:05.277Z',
+          '2023-06-23T04:31:29.290Z',
+          '2023-06-12T01:53:25.328Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-09T22:04:11.348Z',
-          '2023-08-25T00:59:14.862Z',
-          '2024-10-06T19:36:12.382Z',
+          '2024-04-10T14:35:48.274Z',
+          '2023-08-25T11:38:07.766Z',
+          '2024-10-07T16:45:04.117Z',
         ],
         interval: 8.0,
         on_days: [
@@ -1619,23 +1615,22 @@ req = Models::Operations::PatchCalendarWebinarRequest.new(
           161.0,
         ],
         timezone: 'Asia/Krasnoyarsk',
-        week_start: Models::Shared::WeekStart::WE,
+        week_start: Models::Shared::WeekStart::WE
       ),
     ],
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-13T01:16:32.309Z'),
+    start_at: DateTime.iso8601('2025-05-14T04:01:44.009Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-19T06:16:12.753Z'),
-    web_url: 'https://quiet-permafrost.name',
+    updated_at: DateTime.iso8601('2026-10-20T22:29:17.138Z'),
+    web_url: 'https://quiet-permafrost.name'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.webinar.patch_calendar_webinar(request: req)
 
 unless res.calendar_webinar.nil?
@@ -1672,11 +1667,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.webinar.remove_calendar_webinar(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1708,25 +1702,25 @@ Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCalendarWebinar" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCalendarWebinar" method="put" path="/calendar/{connection_id}/webinar/{id}" example="calendar_webinar" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCalendarWebinarRequest.new(
   calendar_webinar: Models::Shared::CalendarWebinar.new(
     conference: [],
     created_at: DateTime.iso8601('2022-07-06T11:45:14.631Z'),
-    end_at: DateTime.iso8601('2025-11-12T09:32:13.228Z'),
+    end_at: DateTime.iso8601('2025-11-13T16:59:58.475Z'),
     has_polls: false,
     has_recording: false,
-    id: '249e65e1-f0e4-490b-b34b-66ab399bff9d',
+    id: 'd3a08622-ce72-4381-8a17-c0ce17deb610',
     is_auto_approve: false,
     is_enabled: true,
     is_webcast: false,
@@ -1736,13 +1730,13 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
     recurrence: [
       Models::Shared::CalendarEventRecurrence.new(
         count: 10.0,
-        end_at: DateTime.iso8601('2023-09-05T17:21:17.060Z'),
+        end_at: DateTime.iso8601('2023-09-06T04:18:10.177Z'),
         excluded_dates: [
-          '2025-02-24T13:47:07.360Z',
+          '2025-02-25T14:32:54.724Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::MONTHLY,
         included_dates: [
-          '2024-05-06T07:22:11.036Z',
+          '2024-05-07T00:34:27.972Z',
         ],
         interval: 8.0,
         on_days: [
@@ -2129,20 +2123,20 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
           86.0,
         ],
         timezone: 'Africa/Abidjan',
-        week_start: Models::Shared::WeekStart::MO,
+        week_start: Models::Shared::WeekStart::MO
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 3.0,
-        end_at: DateTime.iso8601('2022-10-01T17:18:27.489Z'),
+        end_at: DateTime.iso8601('2022-10-01T19:32:53.637Z'),
         excluded_dates: [
-          '2024-09-11T07:29:17.840Z',
-          '2024-08-26T13:59:55.736Z',
+          '2024-09-12T03:58:51.188Z',
+          '2024-08-27T10:05:14.673Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::DAILY,
         included_dates: [
-          '2024-04-01T18:51:33.666Z',
-          '2026-01-29T00:10:16.462Z',
-          '2023-08-19T03:52:11.233Z',
+          '2024-04-02T11:10:38.475Z',
+          '2026-01-30T09:37:38.160Z',
+          '2023-08-19T14:22:00.431Z',
         ],
         interval: 1.0,
         on_days: [
@@ -2282,20 +2276,20 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
           -295.0,
         ],
         timezone: 'Asia/Choibalsan',
-        week_start: Models::Shared::WeekStart::TU,
+        week_start: Models::Shared::WeekStart::TU
       ),
       Models::Shared::CalendarEventRecurrence.new(
         count: 8.0,
-        end_at: DateTime.iso8601('2026-08-13T11:48:12.858Z'),
+        end_at: DateTime.iso8601('2026-08-15T02:18:23.180Z'),
         excluded_dates: [
-          '2023-06-22T19:30:03.034Z',
-          '2023-06-11T17:09:05.277Z',
+          '2023-06-23T04:31:29.290Z',
+          '2023-06-12T01:53:25.328Z',
         ],
         frequency: Models::Shared::CalendarEventRecurrenceFrequency::WEEKLY,
         included_dates: [
-          '2024-04-09T22:04:11.348Z',
-          '2023-08-25T00:59:14.862Z',
-          '2024-10-06T19:36:12.382Z',
+          '2024-04-10T14:35:48.274Z',
+          '2023-08-25T11:38:07.766Z',
+          '2024-10-07T16:45:04.117Z',
         ],
         interval: 8.0,
         on_days: [
@@ -2442,23 +2436,22 @@ req = Models::Operations::UpdateCalendarWebinarRequest.new(
           161.0,
         ],
         timezone: 'Asia/Krasnoyarsk',
-        week_start: Models::Shared::WeekStart::WE,
+        week_start: Models::Shared::WeekStart::WE
       ),
     ],
     registrant_password: 'W7J6DhkM',
     require_address: false,
     require_job_title: false,
-    start_at: DateTime.iso8601('2025-05-13T01:16:32.309Z'),
+    start_at: DateTime.iso8601('2025-05-14T04:01:44.009Z'),
     status: Models::Shared::CalendarWebinarStatus::TENTATIVE,
     subject: 'Harum culpa decipio ex cubo ancilla cresco.',
     timezone: 'Europe/Kaliningrad',
-    updated_at: DateTime.iso8601('2026-10-19T06:16:12.753Z'),
-    web_url: 'https://quiet-permafrost.name',
+    updated_at: DateTime.iso8601('2026-10-20T22:29:17.138Z'),
+    web_url: 'https://quiet-permafrost.name'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.webinar.update_calendar_webinar(request: req)
 
 unless res.calendar_webinar.nil?

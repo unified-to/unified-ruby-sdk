@@ -1,5 +1,16 @@
 # ListCycleId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListCycleId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListCycleId.deserialize("custom_value")
+```
+
 
 ## Values
 

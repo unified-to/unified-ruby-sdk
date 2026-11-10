@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class VirtualWebhookUserMentionedId < T::Enum
-
-
+      class VirtualWebhookUserMentionedId
+        include ::Crystalline::Enum
         enums do
           SUPPORTED_REQUIRED = new('supported-required')
           SUPPORTED = new('supported')
           NOT_SUPPORTED = new('not-supported')
         end
+        open!
       end
     end
   end

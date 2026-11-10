@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class ComputeMetadata
         extend T::Sig
         include Crystalline::MetadataFields
 
         # Additional data about the value
-        field :extra_data, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::ComputeMetadata1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
+        field :extra_data, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(::Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::ComputeMetadata1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
         # The data type of the value
-        field :format, Crystalline::Nilable.new(Models::Shared::ComputeMetadataFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::ComputeMetadataFormat, true) } }
+        field :format, Crystalline::Nilable.new(Models::Shared::ComputeMetadataFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ComputeMetadataFormat, true) } }
         # The label, tag or metadata identifier
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # The origin of the value (eg. labels, tags, metadata)
@@ -24,9 +23,9 @@ module UnifiedRubySDK
         # The label, tag or metadata key
         field :slug, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
         # The label, tag or metadata value
-        field :value, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::ComputeMetadataSchemas1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+        field :value, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(::Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::ComputeMetadataSchemas1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
-        sig { params(extra_data: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::ComputeMetadata1, ::String, ::Float, T::Boolean)])), format: T.nilable(Models::Shared::ComputeMetadataFormat), id: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), value: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::ComputeMetadataSchemas1, ::String, ::Float, T::Boolean)]))).void }
+        sig { params(extra_data: T.nilable(T.any(T::Hash[::Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::ComputeMetadata1, ::String, ::Float, T::Boolean)])), format: T.nilable(Models::Shared::ComputeMetadataFormat), id: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), value: T.nilable(T.any(T::Hash[::Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::ComputeMetadataSchemas1, ::String, ::Float, T::Boolean)]))).void }
         def initialize(extra_data: nil, format: nil, id: nil, namespace: nil, slug: nil, value: nil)
           @extra_data = extra_data
           @format = format

@@ -2,6 +2,17 @@
 
 the normalized payslip-line type this code produces
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = DetailType::EARNING_SALARY
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = DetailType.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # ListCalendarEventsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListCalendarEventsQueryParamFields::ID
+```
+
 
 ## Values
 

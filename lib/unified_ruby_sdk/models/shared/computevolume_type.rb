@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ComputeVolumeType - The kind of volume
-      class ComputeVolumeType < T::Enum
-
-
+      class ComputeVolumeType
+        include ::Crystalline::Enum
         enums do
           STANDARD = new('STANDARD')
           HIGH_PERFORMANCE = new('HIGH_PERFORMANCE')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           LOCAL = new('LOCAL')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

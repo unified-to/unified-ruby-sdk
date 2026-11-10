@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HrisEarningFrequency - ONE_TIME for a single addition to the next unprocessed pay run, otherwise recurring
-      class HrisEarningFrequency < T::Enum
-
-
+      class HrisEarningFrequency
+        include ::Crystalline::Enum
         enums do
           ONE_TIME = new('ONE_TIME')
           DAY = new('DAY')
@@ -23,6 +21,7 @@ module UnifiedRubySDK
           BIWEEKLY = new('BIWEEKLY')
           SEMIMONTHLY = new('SEMIMONTHLY')
         end
+        open!
       end
     end
   end

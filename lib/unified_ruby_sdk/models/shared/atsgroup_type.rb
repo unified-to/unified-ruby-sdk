@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AtsGroupType < T::Enum
-
-
+      class AtsGroupType
+        include ::Crystalline::Enum
         enums do
           TEAM = new('TEAM')
           GROUP = new('GROUP')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           BRANCH = new('BRANCH')
           SUB_DEPARTMENT = new('SUB_DEPARTMENT')
         end
+        open!
       end
     end
   end

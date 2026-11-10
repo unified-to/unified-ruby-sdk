@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class DatastoreRelationship
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
         # target Database Table ID
         field :table_id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('table_id'), required: true } }
 
-        field :type, Models::Shared::DatastoreRelationshipType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::DatastoreRelationshipType, false) } }
+        field :type, Models::Shared::DatastoreRelationshipType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::DatastoreRelationshipType, false) } }
 
         sig { params(field: ::String, name: ::String, table_id: ::String, type: Models::Shared::DatastoreRelationshipType).void }
         def initialize(field:, name:, table_id:, type:)

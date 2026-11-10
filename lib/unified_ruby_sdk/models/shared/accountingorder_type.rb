@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AccountingOrderType < T::Enum
-
-
+      class AccountingOrderType
+        include ::Crystalline::Enum
         enums do
           SALES = new('SALES')
           PURCHASE = new('PURCHASE')
         end
+        open!
       end
     end
   end

@@ -1,5 +1,4 @@
 # Taxrate
-(*taxrate*)
 
 ## Overview
 
@@ -18,30 +17,29 @@ Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" example="accounting_taxrate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.taxrate.create_accounting_taxrate(accounting_taxrate: Models::Shared::AccountingTaxrate.new(
   components: [
     Models::Shared::AccountingTaxrateComponent.new(
       is_compound: false,
       name: 'Exempt',
-      rate: 0.0,
+      rate: 0.0
     ),
   ],
   country: 'US',
   created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
   description: 'Exempt (0%)',
   effective_rate: 0.0,
-  id: 'c8e9e0e1-f2b3-464d-a2fa-59fe21da9913',
+  id: 'd4511328-a55d-4fd8-b258-a812f23e72ab',
   is_active: false,
   is_compound: false,
   metadata: [],
@@ -50,7 +48,7 @@ res = s.taxrate.create_accounting_taxrate(accounting_taxrate: Models::Shared::Ac
   region: 'KS',
   total_rate: 0.0,
   type: Models::Shared::AccountingTaxrateType::SALES,
-  updated_at: DateTime.iso8601('2020-02-13T12:28:29.271Z'),
+  updated_at: DateTime.iso8601('2020-02-13T13:07:40.487Z')
 ), connection_id: '<id>')
 
 unless res.accounting_taxrate.nil?
@@ -90,11 +88,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.taxrate.get_accounting_taxrate(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_taxrate.nil?
@@ -134,15 +131,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingTaxratesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingTaxratesRequest.new(
+  connection_id: '<id>'
+)
 res = s.taxrate.list_accounting_taxrates(request: req)
 
 unless res.accounting_taxrates.nil?
@@ -173,16 +169,16 @@ Updates the AccountingTaxrate identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingTaxrateRequest.new(
   accounting_taxrate: Models::Shared::AccountingTaxrate.new(
@@ -190,14 +186,14 @@ req = Models::Operations::PatchAccountingTaxrateRequest.new(
       Models::Shared::AccountingTaxrateComponent.new(
         is_compound: false,
         name: 'Exempt',
-        rate: 0.0,
+        rate: 0.0
       ),
     ],
     country: 'US',
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: 'b95ebbce-1d33-45bc-88f6-9a69118e040d',
+    id: '9d8d0698-1b76-4d6b-8e95-09dfd914dde5',
     is_active: false,
     is_compound: false,
     metadata: [],
@@ -206,12 +202,11 @@ req = Models::Operations::PatchAccountingTaxrateRequest.new(
     region: 'KS',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T12:28:29.271Z'),
+    updated_at: DateTime.iso8601('2020-02-13T13:07:40.487Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.taxrate.patch_accounting_taxrate(request: req)
 
 unless res.accounting_taxrate.nil?
@@ -248,11 +243,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.taxrate.remove_accounting_taxrate(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -284,16 +278,16 @@ Updates the AccountingTaxrate identified by `id`. Provide the unified Accounting
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingTaxrateRequest.new(
   accounting_taxrate: Models::Shared::AccountingTaxrate.new(
@@ -301,14 +295,14 @@ req = Models::Operations::UpdateAccountingTaxrateRequest.new(
       Models::Shared::AccountingTaxrateComponent.new(
         is_compound: false,
         name: 'Exempt',
-        rate: 0.0,
+        rate: 0.0
       ),
     ],
     country: 'US',
     created_at: DateTime.iso8601('2020-01-04T10:37:56.894Z'),
     description: 'Exempt (0%)',
     effective_rate: 0.0,
-    id: 'b95ebbce-1d33-45bc-88f6-9a69118e040d',
+    id: '9d8d0698-1b76-4d6b-8e95-09dfd914dde5',
     is_active: false,
     is_compound: false,
     metadata: [],
@@ -317,12 +311,11 @@ req = Models::Operations::UpdateAccountingTaxrateRequest.new(
     region: 'KS',
     total_rate: 0.0,
     type: Models::Shared::AccountingTaxrateType::SALES,
-    updated_at: DateTime.iso8601('2020-02-13T12:28:29.271Z'),
+    updated_at: DateTime.iso8601('2020-02-13T13:07:40.487Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.taxrate.update_accounting_taxrate(request: req)
 
 unless res.accounting_taxrate.nil?

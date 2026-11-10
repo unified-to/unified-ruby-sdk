@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PlmCategoryType - Which records the category classifies
-      class PlmCategoryType < T::Enum
-
-
+      class PlmCategoryType
+        include ::Crystalline::Enum
         enums do
           PART = new('PART')
           DOCUMENT = new('DOCUMENT')
           CHANGE = new('CHANGE')
         end
+        open!
       end
     end
   end

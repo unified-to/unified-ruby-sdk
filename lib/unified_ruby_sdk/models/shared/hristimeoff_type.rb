@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisTimeoffType < T::Enum
-
-
+      class HrisTimeoffType
+        include ::Crystalline::Enum
         enums do
           VACATION = new('VACATION')
           SICK = new('SICK')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           IN_LIEU = new('IN_LIEU')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

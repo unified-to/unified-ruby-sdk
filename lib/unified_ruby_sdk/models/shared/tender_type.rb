@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # TenderType - normalized tender category; the provider's original label stays in payment_method
-      class TenderType < T::Enum
-
-
+      class TenderType
+        include ::Crystalline::Enum
         enums do
           CARD = new('CARD')
           CASH = new('CASH')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           EXTERNAL = new('EXTERNAL')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

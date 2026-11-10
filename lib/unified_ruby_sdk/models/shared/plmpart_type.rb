@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PlmPartType - Normalized part type
-      class PlmPartType < T::Enum
-
-
+      class PlmPartType
+        include ::Crystalline::Enum
         enums do
           COMPONENT = new('COMPONENT')
           ASSEMBLY = new('ASSEMBLY')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           DOCUMENT_ONLY = new('DOCUMENT_ONLY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

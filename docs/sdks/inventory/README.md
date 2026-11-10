@@ -1,5 +1,4 @@
 # Inventory
-(*inventory*)
 
 ## Overview
 
@@ -18,22 +17,21 @@ Creates a CommerceInventory. Provide the unified CommerceInventory fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" example="commerce_inventory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.inventory.create_commerce_inventory(commerce_inventory: Models::Shared::CommerceInventory.new(
   available: 337.0,
-  id: '2f15a15e-a2b7-481d-a4d9-0ceef523fb04',
+  id: '4b3c4b7c-bfdf-401d-8f44-4f4580323f21',
   metadata: [],
-  updated_at: DateTime.iso8601('2025-12-05T17:20:16.906Z'),
+  updated_at: DateTime.iso8601('2025-12-07T02:10:20.091Z')
 ), connection_id: '<id>')
 
 unless res.commerce_inventory.nil?
@@ -73,11 +71,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.inventory.get_commerce_inventory(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_inventory.nil?
@@ -117,15 +114,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceInventoriesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceInventoriesRequest.new(
+  connection_id: '<id>'
+)
 res = s.inventory.list_commerce_inventories(request: req)
 
 unless res.commerce_inventories.nil?
@@ -156,28 +152,27 @@ Updates the CommerceInventory identified by `id`. Provide the unified CommerceIn
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: '515d99f3-a8bb-4cce-845a-77dfc8396374',
+    id: 'efd806e0-2bb8-4f51-95c8-f39966889844',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-12-05T17:20:16.922Z'),
+    updated_at: DateTime.iso8601('2025-12-07T02:10:20.101Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.inventory.patch_commerce_inventory(request: req)
 
 unless res.commerce_inventory.nil?
@@ -214,11 +209,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.inventory.remove_commerce_inventory(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -250,28 +244,27 @@ Updates the CommerceInventory identified by `id`. Provide the unified CommerceIn
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceInventoryRequest.new(
   commerce_inventory: Models::Shared::CommerceInventory.new(
     available: 337.0,
-    id: '515d99f3-a8bb-4cce-845a-77dfc8396374',
+    id: 'efd806e0-2bb8-4f51-95c8-f39966889844',
     metadata: [],
-    updated_at: DateTime.iso8601('2025-12-05T17:20:16.922Z'),
+    updated_at: DateTime.iso8601('2025-12-07T02:10:20.101Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.inventory.update_commerce_inventory(request: req)
 
 unless res.commerce_inventory.nil?

@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcarePractitionerGender - Administrative gender of the practitioner
-      class HealthcarePractitionerGender < T::Enum
-
-
+      class HealthcarePractitionerGender
+        include ::Crystalline::Enum
         enums do
           MALE = new('MALE')
           FEMALE = new('FEMALE')
           OTHER = new('OTHER')
           UNKNOWN = new('UNKNOWN')
         end
+        open!
       end
     end
   end

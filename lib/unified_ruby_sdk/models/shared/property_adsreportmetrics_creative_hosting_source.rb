@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsReportMetricsCreativeHostingSource < T::Enum
-
-
+      class PropertyAdsReportMetricsCreativeHostingSource
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           CM = new('CM')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           RICH_MEDIA = new('RICH_MEDIA')
           PUBLISHER_HOSTED = new('PUBLISHER_HOSTED')
         end
+        open!
       end
     end
   end

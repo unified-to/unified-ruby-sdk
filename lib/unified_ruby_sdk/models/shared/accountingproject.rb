@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingProject
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
 
         field :actual_cost_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('actual_cost_amount') } }
 
-        field :billing_type, Crystalline::Nilable.new(Models::Shared::BillingType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_type'), 'decoder': Utils.enum_from_string(Models::Shared::BillingType, true) } }
+        field :billing_type, Crystalline::Nilable.new(Models::Shared::BillingType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('billing_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::BillingType, true) } }
 
         field :category_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category_ids') } }
         # provider-side project code/number (e.g. NetSuite entityId, Intacct PROJECTID, BC jobNumber)
@@ -24,7 +23,7 @@ module UnifiedRubySDK
         # the customer the project is for (reference to AccountingContact)
         field :contact_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contact_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :credit_note_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('credit_note_amount') } }
 
@@ -36,9 +35,9 @@ module UnifiedRubySDK
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # planned/target end date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :due_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('due_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # actual completion (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :ended_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ended_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :ended_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('ended_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :estimate_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('estimate_amount') } }
 
@@ -72,17 +71,17 @@ module UnifiedRubySDK
         # 0-100
         field :percent_complete, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('percent_complete') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::AccountingProjectStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingProjectStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AccountingProjectStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingProjectStatus, true) } }
 
         field :to_be_invoiced_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('to_be_invoiced_amount') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(actual_cost_amount: T.nilable(::Float), billing_type: T.nilable(Models::Shared::BillingType), category_ids: T.nilable(T::Array[::String]), code: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), credit_note_amount: T.nilable(::Float), currency: T.nilable(::String), deposit_amount: T.nilable(::Float), deposit_applied_amount: T.nilable(::Float), description: T.nilable(::String), due_at: T.nilable(::DateTime), ended_at: T.nilable(::DateTime), estimate_amount: T.nilable(::Float), estimated_cost_amount: T.nilable(::Float), expense_amount: T.nilable(::Float), id: T.nilable(::String), invoiced_amount: T.nilable(::Float), is_active: T.nilable(T::Boolean), is_billable: T.nilable(T::Boolean), location_id: T.nilable(::String), manager_user_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), minutes_logged: T.nilable(::Float), minutes_to_be_invoiced: T.nilable(::Float), name: T.nilable(::String), organization_id: T.nilable(::String), parent_id: T.nilable(::String), percent_complete: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AccountingProjectStatus), to_be_invoiced_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
+        sig { params(actual_cost_amount: T.nilable(::Float), billing_type: T.nilable(Models::Shared::BillingType), category_ids: T.nilable(T::Array[::String]), code: T.nilable(::String), contact_id: T.nilable(::String), created_at: T.nilable(::DateTime), credit_note_amount: T.nilable(::Float), currency: T.nilable(::String), deposit_amount: T.nilable(::Float), deposit_applied_amount: T.nilable(::Float), description: T.nilable(::String), due_at: T.nilable(::DateTime), ended_at: T.nilable(::DateTime), estimate_amount: T.nilable(::Float), estimated_cost_amount: T.nilable(::Float), expense_amount: T.nilable(::Float), id: T.nilable(::String), invoiced_amount: T.nilable(::Float), is_active: T.nilable(T::Boolean), is_billable: T.nilable(T::Boolean), location_id: T.nilable(::String), manager_user_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), minutes_logged: T.nilable(::Float), minutes_to_be_invoiced: T.nilable(::Float), name: T.nilable(::String), organization_id: T.nilable(::String), parent_id: T.nilable(::String), percent_complete: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), started_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::AccountingProjectStatus), to_be_invoiced_amount: T.nilable(::Float), updated_at: T.nilable(::DateTime)).void }
         def initialize(actual_cost_amount: nil, billing_type: nil, category_ids: nil, code: nil, contact_id: nil, created_at: nil, credit_note_amount: nil, currency: nil, deposit_amount: nil, deposit_applied_amount: nil, description: nil, due_at: nil, ended_at: nil, estimate_amount: nil, estimated_cost_amount: nil, expense_amount: nil, id: nil, invoiced_amount: nil, is_active: nil, is_billable: nil, location_id: nil, manager_user_id: nil, metadata: nil, minutes_logged: nil, minutes_to_be_invoiced: nil, name: nil, organization_id: nil, parent_id: nil, percent_complete: nil, raw: nil, started_at: nil, status: nil, to_be_invoiced_amount: nil, updated_at: nil)
           @actual_cost_amount = actual_cost_amount
           @billing_type = billing_type

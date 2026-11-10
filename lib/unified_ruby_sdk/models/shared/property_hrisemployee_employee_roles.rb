@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyHrisEmployeeEmployeeRoles < T::Enum
-
-
+      class PropertyHrisEmployeeEmployeeRoles
+        include ::Crystalline::Enum
         enums do
           ADMIN = new('ADMIN')
           MANAGER = new('MANAGER')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           USER = new('USER')
           EMPLOYEE = new('EMPLOYEE')
         end
+        open!
       end
     end
   end

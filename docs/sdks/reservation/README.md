@@ -1,5 +1,4 @@
 # Reservation
-(*reservation*)
 
 ## Overview
 
@@ -23,31 +22,30 @@ Creates a CommerceReservation. Provide the unified CommerceReservation fields in
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" example="commerce_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.reservation.create_commerce_reservation(commerce_reservation: Models::Shared::CommerceReservation.new(
   created_at: DateTime.iso8601('2021-12-14T19:50:31.151Z'),
   end_at: DateTime.iso8601('2022-01-01T22:00:17.868Z'),
   guest_email: 'julien.bartoletti@icloud.com',
   guest_name: 'Julien Bartoletti',
   guest_phone: '(728) 596-2620',
-  id: 'cb58c812-059f-4fad-96ef-55e776815b00',
+  id: '7e86e720-e0f1-4e4f-b7c9-4a77520ffcc6',
   metadata: [],
   notes: 'Adsum textilis ipsum despecto.',
   size: 10.0,
   start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
   status: Models::Shared::CommerceReservationStatus::PENDING,
-  updated_at: DateTime.iso8601('2023-01-08T00:33:54.429Z'),
-  url: 'https://expensive-gift.org',
+  updated_at: DateTime.iso8601('2023-01-08T09:25:28.546Z'),
+  url: 'https://expensive-gift.org'
 ), connection_id: '<id>')
 
 unless res.commerce_reservation.nil?
@@ -81,20 +79,19 @@ Creates a PropertyReservation. Provide the unified PropertyReservation fields in
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPropertyReservation" method="post" path="/property/{connection_id}/reservation" -->
+<!-- UsageSnippet language="ruby" operationID="createPropertyReservation" method="post" path="/property/{connection_id}/reservation" example="property_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.reservation.create_property_reservation(property_reservation: Models::Shared::PropertyReservation.new(
   adults: 4.0,
-  balance_amount: 2_181.6,
+  balance_amount: 2181.6,
   children: 2.0,
   confirmation_code: 'GNLTDDQ88Z',
   created_at: DateTime.iso8601('2022-06-03T01:40:03.655Z'),
@@ -104,32 +101,32 @@ res = s.reservation.create_property_reservation(property_reservation: Models::Sh
   guest_email: 'anya.parisian@hotmail.com',
   guest_name: 'Anya Parisian',
   guests: 6.0,
-  id: '585195d4-b57c-410f-ba4a-171917cecc6f',
+  id: 'f89fcc90-8456-425a-8a5d-18a7d3374044',
   line_items: [
     Models::Shared::PropertyLineitem.new(
       amount: 1980.0,
       description: '11 nights',
       is_mandatory: true,
       name: 'Accommodation',
-      type: Models::Shared::PropertyLineitemType::BASE,
+      type: Models::Shared::PropertyLineitemType::BASE
     ),
     Models::Shared::PropertyLineitem.new(
       amount: 162.0,
       is_mandatory: true,
       name: 'Cleaning fee',
-      type: Models::Shared::PropertyLineitemType::FEE,
+      type: Models::Shared::PropertyLineitemType::FEE
     ),
     Models::Shared::PropertyLineitem.new(
       amount: 237.6,
       is_mandatory: true,
       name: 'Lodging tax',
-      type: Models::Shared::PropertyLineitemType::TAX,
+      type: Models::Shared::PropertyLineitemType::TAX
     ),
     Models::Shared::PropertyLineitem.new(
       amount: -198.0,
       is_mandatory: false,
       name: 'Weekly discount',
-      type: Models::Shared::PropertyLineitemType::DISCOUNT,
+      type: Models::Shared::PropertyLineitemType::DISCOUNT
     ),
   ],
   metadata: [],
@@ -140,9 +137,9 @@ res = s.reservation.create_property_reservation(property_reservation: Models::Sh
   source: 'Vrbo',
   start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
   status: Models::Shared::PropertyReservationStatus::PENDING,
-  total_amount: 2_181.6,
-  updated_at: DateTime.iso8601('2022-11-17T11:32:44.340Z'),
-  web_url: 'https://antique-tennis.biz/',
+  total_amount: 2181.6,
+  updated_at: DateTime.iso8601('2022-11-17T15:45:25.182Z'),
+  web_url: 'https://antique-tennis.biz/'
 ), connection_id: '<id>')
 
 unless res.property_reservation.nil?
@@ -182,11 +179,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.reservation.get_commerce_reservation(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_reservation.nil?
@@ -226,11 +222,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.reservation.get_property_reservation(connection_id: '<id>', id: '<id>')
 
 unless res.property_reservation.nil?
@@ -270,15 +265,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceReservationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceReservationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.reservation.list_commerce_reservations(request: req)
 
 unless res.commerce_reservations.nil?
@@ -315,15 +309,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyReservationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyReservationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.reservation.list_property_reservations(request: req)
 
 unless res.property_reservations.nil?
@@ -354,16 +347,16 @@ Updates the CommerceReservation identified by `id`. Provide the unified Commerce
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceReservationRequest.new(
   commerce_reservation: Models::Shared::CommerceReservation.new(
@@ -372,19 +365,18 @@ req = Models::Operations::PatchCommerceReservationRequest.new(
     guest_email: 'julien.bartoletti@icloud.com',
     guest_name: 'Julien Bartoletti',
     guest_phone: '(728) 596-2620',
-    id: 'f2633487-3097-4c62-93b7-16f6d05bae81',
+    id: '217b5b0d-d0ac-481f-b40e-a1a9c241b814',
     metadata: [],
     notes: 'Adsum textilis ipsum despecto.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-08T00:33:54.433Z'),
-    url: 'https://expensive-gift.org',
+    updated_at: DateTime.iso8601('2023-01-08T09:25:28.550Z'),
+    url: 'https://expensive-gift.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.reservation.patch_commerce_reservation(request: req)
 
 unless res.commerce_reservation.nil?
@@ -415,21 +407,21 @@ Updates the PropertyReservation identified by `id`. Provide the unified Property
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPropertyReservation" method="patch" path="/property/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPropertyReservation" method="patch" path="/property/{connection_id}/reservation/{id}" example="property_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPropertyReservationRequest.new(
   property_reservation: Models::Shared::PropertyReservation.new(
     adults: 4.0,
-    balance_amount: 2_181.6,
+    balance_amount: 2181.6,
     children: 2.0,
     confirmation_code: 'GNLTDDQ88Z',
     created_at: DateTime.iso8601('2022-06-03T01:40:03.655Z'),
@@ -439,32 +431,32 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     guest_email: 'anya.parisian@hotmail.com',
     guest_name: 'Anya Parisian',
     guests: 6.0,
-    id: 'ce1f5f90-e5d2-4cbe-aa04-59b58ccd96ee',
+    id: '79456f62-7d25-4778-a7bf-7c36d9e54609',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
         description: '11 nights',
         is_mandatory: true,
         name: 'Accommodation',
-        type: Models::Shared::PropertyLineitemType::BASE,
+        type: Models::Shared::PropertyLineitemType::BASE
       ),
       Models::Shared::PropertyLineitem.new(
         amount: 162.0,
         is_mandatory: true,
         name: 'Cleaning fee',
-        type: Models::Shared::PropertyLineitemType::FEE,
+        type: Models::Shared::PropertyLineitemType::FEE
       ),
       Models::Shared::PropertyLineitem.new(
         amount: 237.6,
         is_mandatory: true,
         name: 'Lodging tax',
-        type: Models::Shared::PropertyLineitemType::TAX,
+        type: Models::Shared::PropertyLineitemType::TAX
       ),
       Models::Shared::PropertyLineitem.new(
         amount: -198.0,
         is_mandatory: false,
         name: 'Weekly discount',
-        type: Models::Shared::PropertyLineitemType::DISCOUNT,
+        type: Models::Shared::PropertyLineitemType::DISCOUNT
       ),
     ],
     metadata: [],
@@ -475,14 +467,13 @@ req = Models::Operations::PatchPropertyReservationRequest.new(
     source: 'Vrbo',
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
-    total_amount: 2_181.6,
-    updated_at: DateTime.iso8601('2022-11-17T11:32:44.344Z'),
-    web_url: 'https://antique-tennis.biz/',
+    total_amount: 2181.6,
+    updated_at: DateTime.iso8601('2022-11-17T15:45:25.185Z'),
+    web_url: 'https://antique-tennis.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.reservation.patch_property_reservation(request: req)
 
 unless res.property_reservation.nil?
@@ -519,11 +510,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.reservation.remove_commerce_reservation(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -555,16 +545,16 @@ Updates the CommerceReservation identified by `id`. Provide the unified Commerce
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceReservationRequest.new(
   commerce_reservation: Models::Shared::CommerceReservation.new(
@@ -573,19 +563,18 @@ req = Models::Operations::UpdateCommerceReservationRequest.new(
     guest_email: 'julien.bartoletti@icloud.com',
     guest_name: 'Julien Bartoletti',
     guest_phone: '(728) 596-2620',
-    id: 'f2633487-3097-4c62-93b7-16f6d05bae81',
+    id: '217b5b0d-d0ac-481f-b40e-a1a9c241b814',
     metadata: [],
     notes: 'Adsum textilis ipsum despecto.',
     size: 10.0,
     start_at: DateTime.iso8601('2021-12-18T00:40:25.125Z'),
     status: Models::Shared::CommerceReservationStatus::PENDING,
-    updated_at: DateTime.iso8601('2023-01-08T00:33:54.433Z'),
-    url: 'https://expensive-gift.org',
+    updated_at: DateTime.iso8601('2023-01-08T09:25:28.550Z'),
+    url: 'https://expensive-gift.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.reservation.update_commerce_reservation(request: req)
 
 unless res.commerce_reservation.nil?
@@ -616,21 +605,21 @@ Updates the PropertyReservation identified by `id`. Provide the unified Property
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePropertyReservation" method="put" path="/property/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePropertyReservation" method="put" path="/property/{connection_id}/reservation/{id}" example="property_reservation" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePropertyReservationRequest.new(
   property_reservation: Models::Shared::PropertyReservation.new(
     adults: 4.0,
-    balance_amount: 2_181.6,
+    balance_amount: 2181.6,
     children: 2.0,
     confirmation_code: 'GNLTDDQ88Z',
     created_at: DateTime.iso8601('2022-06-03T01:40:03.655Z'),
@@ -640,32 +629,32 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     guest_email: 'anya.parisian@hotmail.com',
     guest_name: 'Anya Parisian',
     guests: 6.0,
-    id: 'ce1f5f90-e5d2-4cbe-aa04-59b58ccd96ee',
+    id: '79456f62-7d25-4778-a7bf-7c36d9e54609',
     line_items: [
       Models::Shared::PropertyLineitem.new(
         amount: 1980.0,
         description: '11 nights',
         is_mandatory: true,
         name: 'Accommodation',
-        type: Models::Shared::PropertyLineitemType::BASE,
+        type: Models::Shared::PropertyLineitemType::BASE
       ),
       Models::Shared::PropertyLineitem.new(
         amount: 162.0,
         is_mandatory: true,
         name: 'Cleaning fee',
-        type: Models::Shared::PropertyLineitemType::FEE,
+        type: Models::Shared::PropertyLineitemType::FEE
       ),
       Models::Shared::PropertyLineitem.new(
         amount: 237.6,
         is_mandatory: true,
         name: 'Lodging tax',
-        type: Models::Shared::PropertyLineitemType::TAX,
+        type: Models::Shared::PropertyLineitemType::TAX
       ),
       Models::Shared::PropertyLineitem.new(
         amount: -198.0,
         is_mandatory: false,
         name: 'Weekly discount',
-        type: Models::Shared::PropertyLineitemType::DISCOUNT,
+        type: Models::Shared::PropertyLineitemType::DISCOUNT
       ),
     ],
     metadata: [],
@@ -676,14 +665,13 @@ req = Models::Operations::UpdatePropertyReservationRequest.new(
     source: 'Vrbo',
     start_at: DateTime.iso8601('2022-09-25T17:17:08.838Z'),
     status: Models::Shared::PropertyReservationStatus::PENDING,
-    total_amount: 2_181.6,
-    updated_at: DateTime.iso8601('2022-11-17T11:32:44.344Z'),
-    web_url: 'https://antique-tennis.biz/',
+    total_amount: 2181.6,
+    updated_at: DateTime.iso8601('2022-11-17T15:45:25.185Z'),
+    web_url: 'https://antique-tennis.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.reservation.update_property_reservation(request: req)
 
 unless res.property_reservation.nil?

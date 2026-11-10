@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertyAdsReportMetricsGroupCreativeSelection - Creative rotation strategy (LinkedIn creativeSelection)
-      class PropertyAdsReportMetricsGroupCreativeSelection < T::Enum
-
-
+      class PropertyAdsReportMetricsGroupCreativeSelection
+        include ::Crystalline::Enum
         enums do
           OPTIMIZED = new('OPTIMIZED')
           ROUND_ROBIN = new('ROUND_ROBIN')
         end
+        open!
       end
     end
   end

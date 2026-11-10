@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcarePatient
         extend T::Sig
@@ -20,9 +19,9 @@ module UnifiedRubySDK
         # Emergency contacts, guardians and other contact persons for the patient
         field :contacts, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcarePatientContact)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('contacts') } }
         # When the patient record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # When the patient died (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :deceased_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deceased_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :deceased_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deceased_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Email addresses of the patient
         field :emails, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareEmail)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('emails') } }
         # Codings for the patient's ethnicity (e.g. CDC ethnicity codes)
@@ -30,7 +29,7 @@ module UnifiedRubySDK
         # Given name of the patient
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
         # Administrative gender of the patient
-        field :gender, Crystalline::Nilable.new(Models::Shared::HealthcarePatientGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcarePatientGender, true) } }
+        field :gender, Crystalline::Nilable.new(Models::Shared::HealthcarePatientGender), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('gender'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcarePatientGender, true) } }
         # Unique identifier for the patient
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Business identifiers (e.g. MRN)
@@ -44,7 +43,7 @@ module UnifiedRubySDK
         # Family name of the patient
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
         # Marital status of the patient
-        field :marital_status, Crystalline::Nilable.new(Models::Shared::MaritalStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('marital_status'), 'decoder': Utils.enum_from_string(Models::Shared::MaritalStatus, true) } }
+        field :marital_status, Crystalline::Nilable.new(Models::Shared::MaritalStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('marital_status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::MaritalStatus, true) } }
         # Custom field values
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # Full name of the patient
@@ -54,13 +53,13 @@ module UnifiedRubySDK
         # Codings for the patient's race (e.g. CDC race codes)
         field :races, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('races') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Phone numbers of the patient
         field :telephones, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareTelephone)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephones') } }
         # When the patient record was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertyHealthcarePatientAddress), birthdate: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::HealthcarePatientContact]), created_at: T.nilable(::DateTime), deceased_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HealthcareEmail]), ethnicities: T.nilable(T::Array[Models::Shared::HealthcareCode]), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::HealthcarePatientGender), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), is_active: T.nilable(T::Boolean), is_deceased: T.nilable(T::Boolean), language: T.nilable(::String), last_name: T.nilable(::String), marital_status: T.nilable(Models::Shared::MaritalStatus), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), races: T.nilable(T::Array[Models::Shared::HealthcareCode]), raw: T.nilable(T::Hash[Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::HealthcareTelephone]), updated_at: T.nilable(::DateTime)).void }
+        sig { params(address: T.nilable(Models::Shared::PropertyHealthcarePatientAddress), birthdate: T.nilable(::String), contacts: T.nilable(T::Array[Models::Shared::HealthcarePatientContact]), created_at: T.nilable(::DateTime), deceased_at: T.nilable(::DateTime), emails: T.nilable(T::Array[Models::Shared::HealthcareEmail]), ethnicities: T.nilable(T::Array[Models::Shared::HealthcareCode]), first_name: T.nilable(::String), gender: T.nilable(Models::Shared::HealthcarePatientGender), id: T.nilable(::String), identifiers: T.nilable(T::Array[Models::Shared::HealthcareIdentifier]), is_active: T.nilable(T::Boolean), is_deceased: T.nilable(T::Boolean), language: T.nilable(::String), last_name: T.nilable(::String), marital_status: T.nilable(Models::Shared::MaritalStatus), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), name: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), races: T.nilable(T::Array[Models::Shared::HealthcareCode]), raw: T.nilable(T::Hash[::Symbol, ::Object]), telephones: T.nilable(T::Array[Models::Shared::HealthcareTelephone]), updated_at: T.nilable(::DateTime)).void }
         def initialize(address: nil, birthdate: nil, contacts: nil, created_at: nil, deceased_at: nil, emails: nil, ethnicities: nil, first_name: nil, gender: nil, id: nil, identifiers: nil, is_active: nil, is_deceased: nil, language: nil, last_name: nil, marital_status: nil, metadata: nil, name: nil, practitioner_ids: nil, races: nil, raw: nil, telephones: nil, updated_at: nil)
           @address = address
           @birthdate = birthdate

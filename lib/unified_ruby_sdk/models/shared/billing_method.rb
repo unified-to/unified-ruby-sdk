@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # BillingMethod - how the matter is billed
-      class BillingMethod < T::Enum
-
-
+      class BillingMethod
+        include ::Crystalline::Enum
         enums do
           HOURLY = new('HOURLY')
           FLAT_FEE = new('FLAT_FEE')
           CONTINGENCY = new('CONTINGENCY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

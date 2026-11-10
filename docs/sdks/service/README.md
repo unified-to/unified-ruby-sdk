@@ -1,5 +1,4 @@
 # Service
-(*service*)
 
 ## Overview
 
@@ -18,22 +17,21 @@ Creates a ComputeService. Provide the unified ComputeService fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createComputeService" method="post" path="/compute/{connection_id}/service" -->
+<!-- UsageSnippet language="ruby" operationID="createComputeService" method="post" path="/compute/{connection_id}/service" example="compute_service" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.service.create_compute_service(compute_service: Models::Shared::ComputeService.new(
   branch: 'main',
   build_command: 'npm run build',
   created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-  id: 'f9e67885-ab03-4e42-8a4d-721763cf1faa',
+  id: 'e4b15355-14fe-4474-9cef-5dbd5bbe2219',
   instance_count: 6.0,
   max_instance_count: 6.0,
   metadata: [],
@@ -44,8 +42,8 @@ res = s.service.create_compute_service(compute_service: Models::Shared::ComputeS
   runtime: 'python',
   status: Models::Shared::ComputeServiceStatus::SUSPENDED,
   type: Models::Shared::ComputeServiceType::OTHER,
-  updated_at: DateTime.iso8601('2025-04-14T01:21:31.574Z'),
-  url: 'https://tame-sideboard.rotating-shoulder.biz',
+  updated_at: DateTime.iso8601('2025-04-14T21:26:47.308Z'),
+  url: 'https://tame-sideboard.rotating-shoulder.biz'
 ), connection_id: '<id>')
 
 unless res.compute_service.nil?
@@ -85,11 +83,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.service.get_compute_service(connection_id: '<id>', id: '<id>')
 
 unless res.compute_service.nil?
@@ -129,15 +126,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListComputeServicesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListComputeServicesRequest.new(
+  connection_id: '<id>'
+)
 res = s.service.list_compute_services(request: req)
 
 unless res.compute_services.nil?
@@ -168,23 +164,23 @@ Updates the ComputeService identified by `id`. Provide the unified ComputeServic
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchComputeService" method="patch" path="/compute/{connection_id}/service/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchComputeService" method="patch" path="/compute/{connection_id}/service/{id}" example="compute_service" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchComputeServiceRequest.new(
   compute_service: Models::Shared::ComputeService.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '4b0abc75-a4cd-47d9-92e1-1c92be9e9c77',
+    id: 'd844b066-b009-45eb-9004-371f88cbee8a',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -195,13 +191,12 @@ req = Models::Operations::PatchComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-14T01:21:31.587Z'),
-    url: 'https://tame-sideboard.rotating-shoulder.biz',
+    updated_at: DateTime.iso8601('2025-04-14T21:26:47.318Z'),
+    url: 'https://tame-sideboard.rotating-shoulder.biz'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.service.patch_compute_service(request: req)
 
 unless res.compute_service.nil?
@@ -238,11 +233,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.service.remove_compute_service(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -274,23 +268,23 @@ Updates the ComputeService identified by `id`. Provide the unified ComputeServic
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateComputeService" method="put" path="/compute/{connection_id}/service/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateComputeService" method="put" path="/compute/{connection_id}/service/{id}" example="compute_service" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateComputeServiceRequest.new(
   compute_service: Models::Shared::ComputeService.new(
     branch: 'main',
     build_command: 'npm run build',
     created_at: DateTime.iso8601('2023-10-04T02:06:29.391Z'),
-    id: '4b0abc75-a4cd-47d9-92e1-1c92be9e9c77',
+    id: 'd844b066-b009-45eb-9004-371f88cbee8a',
     instance_count: 6.0,
     max_instance_count: 6.0,
     metadata: [],
@@ -301,13 +295,12 @@ req = Models::Operations::UpdateComputeServiceRequest.new(
     runtime: 'python',
     status: Models::Shared::ComputeServiceStatus::SUSPENDED,
     type: Models::Shared::ComputeServiceType::OTHER,
-    updated_at: DateTime.iso8601('2025-04-14T01:21:31.587Z'),
-    url: 'https://tame-sideboard.rotating-shoulder.biz',
+    updated_at: DateTime.iso8601('2025-04-14T21:26:47.318Z'),
+    url: 'https://tame-sideboard.rotating-shoulder.biz'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.service.update_compute_service(request: req)
 
 unless res.compute_service.nil?

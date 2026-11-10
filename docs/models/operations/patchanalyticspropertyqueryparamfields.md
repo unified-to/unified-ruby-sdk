@@ -1,5 +1,13 @@
 # PatchAnalyticsPropertyQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchAnalyticsPropertyQueryParamFields::ID
+```
+
 
 ## Values
 

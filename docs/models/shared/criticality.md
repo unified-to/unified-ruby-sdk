@@ -2,6 +2,17 @@
 
 Potential severity of future reactions
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = Criticality::LOW
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = Criticality.deserialize("custom_value")
+```
+
 
 ## Values
 

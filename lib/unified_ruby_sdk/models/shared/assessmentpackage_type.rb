@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AssessmentPackageType < T::Enum
-
-
+      class AssessmentPackageType
+        include ::Crystalline::Enum
         enums do
           SKILLS_TEST = new('SKILLS_TEST')
           BEHAVIORAL_ASSESSMENT = new('BEHAVIORAL_ASSESSMENT')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           REFERENCE_CHECK = new('REFERENCE_CHECK')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -2,6 +2,17 @@
 
 Category of the observation
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = HealthcareObservationType::LABORATORY
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = HealthcareObservationType.deserialize("custom_value")
+```
+
 
 ## Values
 

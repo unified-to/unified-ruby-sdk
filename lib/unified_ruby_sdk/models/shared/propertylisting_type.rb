@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertyListingType - the normalized property type
-      class PropertyListingType < T::Enum
-
-
+      class PropertyListingType
+        include ::Crystalline::Enum
         enums do
           APARTMENT = new('APARTMENT')
           HOUSE = new('HOUSE')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           BED_AND_BREAKFAST = new('BED_AND_BREAKFAST')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

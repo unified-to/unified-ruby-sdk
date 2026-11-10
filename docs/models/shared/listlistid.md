@@ -1,5 +1,16 @@
 # ListListId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListListId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = ListListId.deserialize("custom_value")
+```
+
 
 ## Values
 

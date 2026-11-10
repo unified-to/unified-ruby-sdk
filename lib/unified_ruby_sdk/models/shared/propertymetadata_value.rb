@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # the custom field value
       class PropertyMetadataValue
         extend T::Sig

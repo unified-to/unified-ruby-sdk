@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyAdsInsertionorderFrequencyCap
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
 
         field :max_views, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('max_views') } }
 
-        field :time_unit, Crystalline::Nilable.new(Models::Shared::PropertyAdsInsertionorderFrequencyCapTimeUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('time_unit'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyAdsInsertionorderFrequencyCapTimeUnit, true) } }
+        field :time_unit, Crystalline::Nilable.new(Models::Shared::PropertyAdsInsertionorderFrequencyCapTimeUnit), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('time_unit'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyAdsInsertionorderFrequencyCapTimeUnit, true) } }
 
         field :time_unit_count, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('time_unit_count') } }
 

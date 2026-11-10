@@ -1,5 +1,16 @@
 # SearchTwitter
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = SearchTwitter::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = SearchTwitter.deserialize("custom_value")
+```
+
 
 ## Values
 

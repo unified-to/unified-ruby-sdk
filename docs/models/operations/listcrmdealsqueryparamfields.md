@@ -1,5 +1,13 @@
 # ListCrmDealsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListCrmDealsQueryParamFields::ID
+```
+
 
 ## Values
 

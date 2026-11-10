@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class SocialProfile
         extend T::Sig
@@ -20,7 +19,7 @@ module UnifiedRubySDK
         # Primary category of the profile
         field :category, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category') } }
         # When the profile was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Bio or description of the profile
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # Unique identifier for the profile
@@ -42,9 +41,9 @@ module UnifiedRubySDK
         # Contact phone number
         field :phone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('phone') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # When the profile was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Public URL of the profile
         field :url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('url') } }
         # Handle/username/store code
@@ -52,7 +51,7 @@ module UnifiedRubySDK
         # External website linked from the profile
         field :website_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('website_url') } }
 
-        sig { params(address: T.nilable(Models::Shared::PropertySocialProfileAddress), avatar_url: T.nilable(::String), category: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_private: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), location: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::SocialMetadata]), metrics: T.nilable(Models::Shared::PropertySocialProfileMetrics), name: T.nilable(::String), parent_id: T.nilable(::String), phone: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime), url: T.nilable(::String), username: T.nilable(::String), website_url: T.nilable(::String)).void }
+        sig { params(address: T.nilable(Models::Shared::PropertySocialProfileAddress), avatar_url: T.nilable(::String), category: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), id: T.nilable(::String), is_private: T.nilable(T::Boolean), is_verified: T.nilable(T::Boolean), location: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::SocialMetadata]), metrics: T.nilable(Models::Shared::PropertySocialProfileMetrics), name: T.nilable(::String), parent_id: T.nilable(::String), phone: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), updated_at: T.nilable(::DateTime), url: T.nilable(::String), username: T.nilable(::String), website_url: T.nilable(::String)).void }
         def initialize(address: nil, avatar_url: nil, category: nil, created_at: nil, description: nil, id: nil, is_private: nil, is_verified: nil, location: nil, metadata: nil, metrics: nil, name: nil, parent_id: nil, phone: nil, raw: nil, updated_at: nil, url: nil, username: nil, website_url: nil)
           @address = address
           @avatar_url = avatar_url

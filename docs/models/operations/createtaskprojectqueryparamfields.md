@@ -1,5 +1,13 @@
 # CreateTaskProjectQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateTaskProjectQueryParamFields::ID
+```
+
 
 ## Values
 

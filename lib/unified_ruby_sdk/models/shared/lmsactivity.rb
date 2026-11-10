@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class LmsActivity
         extend T::Sig
@@ -16,13 +15,13 @@ module UnifiedRubySDK
 
         field :assigned_grade, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('assigned_grade') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :completed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('completed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :content_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('content_id') } }
         # For providers that track at course level (e.g., Learnupon enrollments) (reference to Course)
         field :course_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('course_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :duration_minutes, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('duration_minutes') } }
 
@@ -34,15 +33,15 @@ module UnifiedRubySDK
 
         field :progress_percentage, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('progress_percentage') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :started_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('started_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # (reference to LmsStudent)
         field :student_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('student_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(assigned_grade: T.nilable(::String), completed_at: T.nilable(::DateTime), content_id: T.nilable(::String), course_id: T.nilable(::String), created_at: T.nilable(::DateTime), duration_minutes: T.nilable(::Float), id: T.nilable(::String), is_completed: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::LmsMetadata]), progress_percentage: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), started_at: T.nilable(::DateTime), student_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
+        sig { params(assigned_grade: T.nilable(::String), completed_at: T.nilable(::DateTime), content_id: T.nilable(::String), course_id: T.nilable(::String), created_at: T.nilable(::DateTime), duration_minutes: T.nilable(::Float), id: T.nilable(::String), is_completed: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::LmsMetadata]), progress_percentage: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), started_at: T.nilable(::DateTime), student_id: T.nilable(::String), updated_at: T.nilable(::DateTime)).void }
         def initialize(assigned_grade: nil, completed_at: nil, content_id: nil, course_id: nil, created_at: nil, duration_minutes: nil, id: nil, is_completed: nil, metadata: nil, progress_percentage: nil, raw: nil, started_at: nil, student_id: nil, updated_at: nil)
           @assigned_grade = assigned_grade
           @completed_at = completed_at

@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Architecture - CPU architecture
-      class Architecture < T::Enum
-
-
+      class Architecture
+        include ::Crystalline::Enum
         enums do
           X86_64 = new('X86_64')
           ARM64 = new('ARM64')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

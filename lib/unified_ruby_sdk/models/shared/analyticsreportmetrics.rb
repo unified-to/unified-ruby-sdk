@@ -7,18 +7,17 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AnalyticsReportMetrics
         extend T::Sig
         include Crystalline::MetadataFields
 
         # new vs returning
-        field :dimension, Crystalline::Nilable.new(Models::Shared::AnalyticsReportMetricsDimension), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension'), 'decoder': Utils.enum_from_string(Models::Shared::AnalyticsReportMetricsDimension, true) } }
+        field :dimension, Crystalline::Nilable.new(Models::Shared::AnalyticsReportMetricsDimension), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AnalyticsReportMetricsDimension, true) } }
 
         field :dimension_value, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('dimension_value') } }
         # Traffic metrics
-        field :type, Crystalline::Nilable.new(Models::Shared::AnalyticsReportMetricsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AnalyticsReportMetricsType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AnalyticsReportMetricsType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AnalyticsReportMetricsType, true) } }
 
         field :value, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 

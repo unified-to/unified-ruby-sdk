@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class CalendarBusy
         extend T::Sig
         include Crystalline::MetadataFields
 
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), required: true, 'decoder': Utils.datetime_from_iso_format(false) } }
+        field :end_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), required: true, 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(false) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), required: true, 'decoder': Utils.datetime_from_iso_format(false) } }
+        field :start_at, ::DateTime, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), required: true, 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(false) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
 
@@ -24,11 +23,11 @@ module UnifiedRubySDK
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::CalendarMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :timezone, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('timezone') } }
 
-        sig { params(end_at: ::DateTime, start_at: ::DateTime, description: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CalendarMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), timezone: T.nilable(::String)).void }
+        sig { params(end_at: ::DateTime, start_at: ::DateTime, description: T.nilable(::String), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::CalendarMetadata]), raw: T.nilable(T::Hash[::Symbol, ::Object]), timezone: T.nilable(::String)).void }
         def initialize(end_at:, start_at:, description: nil, id: nil, metadata: nil, raw: nil, timezone: nil)
           @end_at = end_at
           @start_at = start_at

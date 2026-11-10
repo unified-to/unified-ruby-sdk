@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyDatastoreQueryExpandFilterType < T::Enum
-
-
+      class PropertyDatastoreQueryExpandFilterType
+        include ::Crystalline::Enum
         enums do
           FILTER = new('FILTER')
           AND = new('AND')
           OR = new('OR')
         end
+        open!
       end
     end
   end

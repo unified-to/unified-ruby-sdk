@@ -1,5 +1,13 @@
 # CreateCommerceSaleschannelQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateCommerceSaleschannelQueryParamFields::ID
+```
+
 
 ## Values
 

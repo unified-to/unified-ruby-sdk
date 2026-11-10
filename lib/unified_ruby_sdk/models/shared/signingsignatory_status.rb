@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # SigningSignatoryStatus - Current status of this signatory
-      class SigningSignatoryStatus < T::Enum
-
-
+      class SigningSignatoryStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           SENT = new('SENT')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           DECLINED = new('DECLINED')
           ERROR = new('ERROR')
         end
+        open!
       end
     end
   end

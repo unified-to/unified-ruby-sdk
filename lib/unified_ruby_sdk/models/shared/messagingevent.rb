@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class MessagingEvent
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
 
         field :channel, Crystalline::Nilable.new(Models::Shared::PropertyMessagingEventChannel), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('channel') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # not used
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -28,13 +27,13 @@ module UnifiedRubySDK
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::MessagingMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::MessagingEventType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::MessagingEventType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::MessagingEventType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::MessagingEventType, true) } }
 
         field :user, Crystalline::Nilable.new(Models::Shared::PropertyMessagingEventUser), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user') } }
 
-        sig { params(button: T.nilable(Models::Shared::PropertyMessagingEventButton), channel: T.nilable(Models::Shared::PropertyMessagingEventChannel), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_replacing_original: T.nilable(T::Boolean), message: T.nilable(Models::Shared::PropertyMessagingEventMessage), metadata: T.nilable(T::Array[Models::Shared::MessagingMetadata]), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::MessagingEventType), user: T.nilable(Models::Shared::PropertyMessagingEventUser)).void }
+        sig { params(button: T.nilable(Models::Shared::PropertyMessagingEventButton), channel: T.nilable(Models::Shared::PropertyMessagingEventChannel), created_at: T.nilable(::DateTime), id: T.nilable(::String), is_replacing_original: T.nilable(T::Boolean), message: T.nilable(Models::Shared::PropertyMessagingEventMessage), metadata: T.nilable(T::Array[Models::Shared::MessagingMetadata]), raw: T.nilable(T::Hash[::Symbol, ::Object]), type: T.nilable(Models::Shared::MessagingEventType), user: T.nilable(Models::Shared::PropertyMessagingEventUser)).void }
         def initialize(button: nil, channel: nil, created_at: nil, id: nil, is_replacing_original: nil, message: nil, metadata: nil, raw: nil, type: nil, user: nil)
           @button = button
           @channel = channel

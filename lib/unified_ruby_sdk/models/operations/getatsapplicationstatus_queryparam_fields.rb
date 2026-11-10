@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class GetAtsApplicationstatusQueryParamFields < T::Enum
-
-
         enums do
           ID = new('id')
           JOB_ID = new('job_id')

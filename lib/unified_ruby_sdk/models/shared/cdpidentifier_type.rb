@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # CdpIdentifierType - The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
-      class CdpIdentifierType < T::Enum
-
-
+      class CdpIdentifierType
+        include ::Crystalline::Enum
         enums do
           EMAIL = new('EMAIL')
           USER_ID = new('USER_ID')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           LOYALTY_ID = new('LOYALTY_ID')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

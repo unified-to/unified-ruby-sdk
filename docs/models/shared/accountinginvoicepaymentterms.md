@@ -1,5 +1,16 @@
 # AccountingInvoicePaymentTerms
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AccountingInvoicePaymentTerms::ON_RECEIPT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AccountingInvoicePaymentTerms.deserialize("custom_value")
+```
+
 
 ## Values
 

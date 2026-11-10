@@ -1,5 +1,16 @@
 # AdsGroupBudgetPeriod
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AdsGroupBudgetPeriod::DAILY
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AdsGroupBudgetPeriod.deserialize("custom_value")
+```
+
 
 ## Values
 

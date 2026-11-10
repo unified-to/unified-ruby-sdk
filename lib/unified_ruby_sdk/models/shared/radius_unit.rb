@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class RadiusUnit < T::Enum
-
-
+      class RadiusUnit
+        include ::Crystalline::Enum
         enums do
           MILES = new('MILES')
           KILOMETERS = new('KILOMETERS')
         end
+        open!
       end
     end
   end

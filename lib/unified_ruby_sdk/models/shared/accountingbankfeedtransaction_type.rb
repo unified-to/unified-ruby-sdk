@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AccountingBankfeedtransactionType - direction: DEBIT, CREDIT
-      class AccountingBankfeedtransactionType < T::Enum
-
-
+      class AccountingBankfeedtransactionType
+        include ::Crystalline::Enum
         enums do
           DEBIT = new('DEBIT')
           CREDIT = new('CREDIT')
         end
+        open!
       end
     end
   end

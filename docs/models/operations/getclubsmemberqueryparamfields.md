@@ -1,5 +1,13 @@
 # GetClubsMemberQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetClubsMemberQueryParamFields::ID
+```
+
 
 ## Values
 

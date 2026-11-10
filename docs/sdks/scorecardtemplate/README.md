@@ -1,5 +1,4 @@
 # Scorecardtemplate
-(*scorecardtemplate*)
 
 ## Overview
 
@@ -20,11 +19,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.scorecardtemplate.get_uc_scorecardtemplate(connection_id: '<id>', id: '<id>')
 
 unless res.uc_scorecardtemplate.nil?
@@ -64,15 +62,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListUcScorecardtemplatesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListUcScorecardtemplatesRequest.new(
+  connection_id: '<id>'
+)
 res = s.scorecardtemplate.list_uc_scorecardtemplates(request: req)
 
 unless res.uc_scorecardtemplates.nil?

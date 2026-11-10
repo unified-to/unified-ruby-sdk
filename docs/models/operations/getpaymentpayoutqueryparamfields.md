@@ -1,5 +1,13 @@
 # GetPaymentPayoutQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetPaymentPayoutQueryParamFields::ID
+```
+
 
 ## Values
 

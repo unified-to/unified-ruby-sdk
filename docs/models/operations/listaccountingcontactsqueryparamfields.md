@@ -1,5 +1,13 @@
 # ListAccountingContactsQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListAccountingContactsQueryParamFields::ID
+```
+
 
 ## Values
 

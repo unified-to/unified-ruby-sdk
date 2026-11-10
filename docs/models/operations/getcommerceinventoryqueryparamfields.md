@@ -1,5 +1,13 @@
 # GetCommerceInventoryQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetCommerceInventoryQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # StorageFileType - Whether this is a file or a folder
-      class StorageFileType < T::Enum
-
-
+      class StorageFileType
+        include ::Crystalline::Enum
         enums do
           FILE = new('FILE')
           FOLDER = new('FOLDER')
         end
+        open!
       end
     end
   end

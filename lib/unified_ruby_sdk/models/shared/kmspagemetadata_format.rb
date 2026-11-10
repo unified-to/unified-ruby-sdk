@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # KmsPageMetadataFormat - The data type of the custom field, which determines how `value` is formatted.
-      class KmsPageMetadataFormat < T::Enum
-
-
+      class KmsPageMetadataFormat
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')
@@ -32,6 +30,7 @@ module UnifiedRubySDK
           REFERENCE = new('REFERENCE')
           TIME = new('TIME')
         end
+        open!
       end
     end
   end

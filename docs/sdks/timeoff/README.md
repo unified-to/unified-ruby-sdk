@@ -1,5 +1,4 @@
 # Timeoff
-(*timeoff*)
 
 ## Overview
 
@@ -18,43 +17,42 @@ Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" example="hris_timeoff" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.timeoff.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
-  approved_at: DateTime.iso8601('2022-02-24T19:45:14.932Z'),
+  approved_at: DateTime.iso8601('2022-02-24T22:50:46.174Z'),
   attachments: [
     Models::Shared::HrisAttachment.new(
       content_type: 'application/pdf',
       download_url: '',
       filename: 'nemo.pdf',
       id: '3f3418c2-fdad-4738-b630-4cb0d2f3fb16',
-      size: 709_170.0,
+      size: 709_170.0
     ),
   ],
   comments: 'Blandior ventus curiositas amplitudo.',
   created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
   duration: 4.0,
   duration_type: Models::Shared::DurationType::DAY,
-  end_at: DateTime.iso8601('2025-01-09T21:32:04.047Z'),
-  id: '5aa33e71-2568-4dcf-8662-d5ec6df5c38f',
+  end_at: DateTime.iso8601('2025-01-10T23:38:30.562Z'),
+  id: '2f7bb0f2-010a-4b5c-87da-301db3ad04d8',
   is_paid: true,
   metadata: [],
   original_type: 'acerbitas ut',
   reason: 'verto',
-  start_at: DateTime.iso8601('2023-09-12T00:25:57.802Z'),
+  start_at: DateTime.iso8601('2023-09-12T15:53:26.400Z'),
   status: Models::Shared::HrisTimeoffStatus::DENIED,
   type: Models::Shared::HrisTimeoffType::IN_LIEU,
-  updated_at: DateTime.iso8601('2022-07-15T16:52:22.499Z'),
-  user_id: '<id>',
+  updated_at: DateTime.iso8601('2022-07-15T23:03:09.762Z'),
+  user_id: '<id>'
 ), connection_id: '<id>')
 
 unless res.hris_timeoff.nil?
@@ -94,11 +92,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.timeoff.get_hris_timeoff(connection_id: '<id>', id: '<id>')
 
 unless res.hris_timeoff.nil?
@@ -138,15 +135,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisTimeoffsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisTimeoffsRequest.new(
+  connection_id: '<id>'
+)
 res = s.timeoff.list_hris_timeoffs(request: req)
 
 unless res.hris_timeoffs.nil?
@@ -177,49 +173,48 @@ Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-24T19:45:14.934Z'),
+    approved_at: DateTime.iso8601('2022-02-24T22:50:46.176Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
         download_url: '',
         filename: 'nemo.pdf',
         id: '3f3418c2-fdad-4738-b630-4cb0d2f3fb16',
-        size: 709_170.0,
+        size: 709_170.0
       ),
     ],
     comments: 'Blandior ventus curiositas amplitudo.',
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-09T21:32:04.063Z'),
-    id: 'd8c8ba86-3dbf-4dd4-bb5f-93129863168c',
+    end_at: DateTime.iso8601('2025-01-10T23:38:30.575Z'),
+    id: '986e071e-15d7-4f49-aee3-e65912d109e2',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-12T00:25:57.812Z'),
+    start_at: DateTime.iso8601('2023-09-12T15:53:26.408Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-15T16:52:22.503Z'),
-    user_id: '<id>',
+    updated_at: DateTime.iso8601('2022-07-15T23:03:09.765Z'),
+    user_id: '<id>'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.timeoff.patch_hris_timeoff(request: req)
 
 unless res.hris_timeoff.nil?
@@ -256,11 +251,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.timeoff.remove_hris_timeoff(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -292,49 +286,48 @@ Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-24T19:45:14.934Z'),
+    approved_at: DateTime.iso8601('2022-02-24T22:50:46.176Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
         download_url: '',
         filename: 'nemo.pdf',
         id: '3f3418c2-fdad-4738-b630-4cb0d2f3fb16',
-        size: 709_170.0,
+        size: 709_170.0
       ),
     ],
     comments: 'Blandior ventus curiositas amplitudo.',
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-09T21:32:04.063Z'),
-    id: 'd8c8ba86-3dbf-4dd4-bb5f-93129863168c',
+    end_at: DateTime.iso8601('2025-01-10T23:38:30.575Z'),
+    id: '986e071e-15d7-4f49-aee3-e65912d109e2',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-12T00:25:57.812Z'),
+    start_at: DateTime.iso8601('2023-09-12T15:53:26.408Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-15T16:52:22.503Z'),
-    user_id: '<id>',
+    updated_at: DateTime.iso8601('2022-07-15T23:03:09.765Z'),
+    user_id: '<id>'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.timeoff.update_hris_timeoff(request: req)
 
 unless res.hris_timeoff.nil?

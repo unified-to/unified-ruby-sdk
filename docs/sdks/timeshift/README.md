@@ -1,5 +1,4 @@
 # Timeshift
-(*timeshift*)
 
 ## Overview
 
@@ -18,37 +17,36 @@ Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" example="hris_timeshift" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.timeshift.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
-  approved_at: DateTime.iso8601('2022-07-25T23:58:48.822Z'),
+  approved_at: DateTime.iso8601('2022-07-26T16:57:57.674Z'),
   compensation: [
     Models::Shared::HrisCompensation.new(
       amount: 76_761.0,
       currency: 'GBP',
       frequency: Models::Shared::HrisCompensationFrequency::SEMIMONTHLY,
       notes: 'Vehemens annus adficio.',
-      type: Models::Shared::HrisCompensationType::COMMISSION,
+      type: Models::Shared::HrisCompensationType::COMMISSION
     ),
   ],
   created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2026-10-15T21:29:32.830Z'),
+  end_at: DateTime.iso8601('2026-10-17T13:52:39.197Z'),
   hours: 6.0,
-  id: '3d7bf33d-729a-4205-877e-b94216036774',
+  id: 'f08a5fc5-c29f-402a-ae37-e36600a6fde3',
   is_approved: false,
   metadata: [],
-  start_at: DateTime.iso8601('2023-07-23T12:10:36.468Z'),
-  updated_at: DateTime.iso8601('2021-07-07T02:50:44.436Z'),
+  start_at: DateTime.iso8601('2023-07-24T10:39:37.180Z'),
+  updated_at: DateTime.iso8601('2021-07-07T14:00:34.559Z')
 ), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -88,11 +86,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.timeshift.get_hris_timeshift(connection_id: '<id>', id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -132,15 +129,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisTimeshiftsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisTimeshiftsRequest.new(
+  connection_id: '<id>'
+)
 res = s.timeshift.list_hris_timeshifts(request: req)
 
 unless res.hris_timeshifts.nil?
@@ -171,43 +167,42 @@ Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-25T23:58:48.828Z'),
+    approved_at: DateTime.iso8601('2022-07-26T16:57:57.682Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
         currency: 'GBP',
         frequency: Models::Shared::HrisCompensationFrequency::SEMIMONTHLY,
         notes: 'Vehemens annus adficio.',
-        type: Models::Shared::HrisCompensationType::COMMISSION,
+        type: Models::Shared::HrisCompensationType::COMMISSION
       ),
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-10-15T21:29:32.845Z'),
+    end_at: DateTime.iso8601('2026-10-17T13:52:39.215Z'),
     hours: 6.0,
-    id: 'cf8f7d56-d759-47ba-b296-9d108e1201ab',
+    id: '81acf2d2-e5d2-4919-b0fe-e0e03c1ab153',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-23T12:10:36.476Z'),
-    updated_at: DateTime.iso8601('2021-07-07T02:50:44.441Z'),
+    start_at: DateTime.iso8601('2023-07-24T10:39:37.190Z'),
+    updated_at: DateTime.iso8601('2021-07-07T14:00:34.564Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.timeshift.patch_hris_timeshift(request: req)
 
 unless res.hris_timeshift.nil?
@@ -244,11 +239,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.timeshift.remove_hris_timeshift(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -280,43 +274,42 @@ Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-25T23:58:48.828Z'),
+    approved_at: DateTime.iso8601('2022-07-26T16:57:57.682Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
         currency: 'GBP',
         frequency: Models::Shared::HrisCompensationFrequency::SEMIMONTHLY,
         notes: 'Vehemens annus adficio.',
-        type: Models::Shared::HrisCompensationType::COMMISSION,
+        type: Models::Shared::HrisCompensationType::COMMISSION
       ),
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-10-15T21:29:32.845Z'),
+    end_at: DateTime.iso8601('2026-10-17T13:52:39.215Z'),
     hours: 6.0,
-    id: 'cf8f7d56-d759-47ba-b296-9d108e1201ab',
+    id: '81acf2d2-e5d2-4919-b0fe-e0e03c1ab153',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-23T12:10:36.476Z'),
-    updated_at: DateTime.iso8601('2021-07-07T02:50:44.441Z'),
+    start_at: DateTime.iso8601('2023-07-24T10:39:37.190Z'),
+    updated_at: DateTime.iso8601('2021-07-07T14:00:34.564Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.timeshift.update_hris_timeshift(request: req)
 
 unless res.hris_timeshift.nil?

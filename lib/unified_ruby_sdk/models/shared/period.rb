@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Period - The aggregation period of the value
-      class Period < T::Enum
-
-
+      class Period
+        include ::Crystalline::Enum
         enums do
           DAY = new('DAY')
           WEEK = new('WEEK')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           TOTAL = new('TOTAL')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

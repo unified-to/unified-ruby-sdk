@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType < T::Enum
-
-
+      class PropertyAdsReportMetricsInsertionorderBidStrategyYoutubeAndPartnersType
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           MANUAL_CPV = new('MANUAL_CPV')
@@ -25,6 +23,7 @@ module UnifiedRubySDK
           TARGET_ROAS = new('TARGET_ROAS')
           MAXIMIZE_CONVERSION_VALUE = new('MAXIMIZE_CONVERSION_VALUE')
         end
+        open!
       end
     end
   end

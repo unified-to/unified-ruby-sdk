@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # for email systems, this field represents the From value
       class PropertyMessagingEventMessageAuthorMember
         extend T::Sig

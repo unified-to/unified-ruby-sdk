@@ -1,5 +1,4 @@
 # Bankfeedaccount
-(*bankfeedaccount*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccou
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+<!-- UsageSnippet language="ruby" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" example="accounting_bankfeedaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bankfeedaccount.create_accounting_bankfeedaccount(accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
   account_number: '30369722',
   account_number_last4: '9722',
@@ -38,12 +36,12 @@ res = s.bankfeedaccount.create_accounting_bankfeedaccount(accounting_bankfeedacc
   created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
   currency: 'AUD',
   feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-  id: 'ec34cb94-3283-4792-aab7-75462f2ef326',
+  id: '0909415b-bf12-41a6-9f46-fc12a6425b58',
   metadata: [],
   name: 'Corwin, Donnelly and Connelly Checking',
   routing_number: '694667752',
   status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-  updated_at: DateTime.iso8601('2024-04-30T21:49:09.937Z'),
+  updated_at: DateTime.iso8601('2024-05-01T12:59:46.329Z')
 ), connection_id: '<id>')
 
 unless res.accounting_bankfeedaccount.nil?
@@ -83,11 +81,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bankfeedaccount.get_accounting_bankfeedaccount(connection_id: '<id>', id: '<id>')
 
 unless res.accounting_bankfeedaccount.nil?
@@ -127,15 +124,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAccountingBankfeedaccountsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAccountingBankfeedaccountsRequest.new(
+  connection_id: '<id>'
+)
 res = s.bankfeedaccount.list_accounting_bankfeedaccounts(request: req)
 
 unless res.accounting_bankfeedaccounts.nil?
@@ -166,16 +162,16 @@ Updates the AccountingBankfeedaccount identified by `id`. Provide the unified Ac
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAccountingBankfeedaccountRequest.new(
   accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
@@ -187,17 +183,16 @@ req = Models::Operations::PatchAccountingBankfeedaccountRequest.new(
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: 'c0462e67-6414-4edb-a3b5-605ecae69f7c',
+    id: '3de6765d-b60b-46a6-92b7-8416704975e6',
     metadata: [],
     name: 'Corwin, Donnelly and Connelly Checking',
     routing_number: '694667752',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-04-30T21:49:09.944Z'),
+    updated_at: DateTime.iso8601('2024-05-01T12:59:46.335Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.bankfeedaccount.patch_accounting_bankfeedaccount(request: req)
 
 unless res.accounting_bankfeedaccount.nil?
@@ -234,11 +229,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.bankfeedaccount.remove_accounting_bankfeedaccount(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -270,16 +264,16 @@ Updates the AccountingBankfeedaccount identified by `id`. Provide the unified Ac
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAccountingBankfeedaccountRequest.new(
   accounting_bankfeedaccount: Models::Shared::AccountingBankfeedaccount.new(
@@ -291,17 +285,16 @@ req = Models::Operations::UpdateAccountingBankfeedaccountRequest.new(
     created_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
     currency: 'AUD',
     feed_start_at: DateTime.iso8601('2022-10-31T16:42:19.277Z'),
-    id: 'c0462e67-6414-4edb-a3b5-605ecae69f7c',
+    id: '3de6765d-b60b-46a6-92b7-8416704975e6',
     metadata: [],
     name: 'Corwin, Donnelly and Connelly Checking',
     routing_number: '694667752',
     status: Models::Shared::AccountingBankfeedaccountStatus::ACTIVE,
-    updated_at: DateTime.iso8601('2024-04-30T21:49:09.944Z'),
+    updated_at: DateTime.iso8601('2024-05-01T12:59:46.335Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.bankfeedaccount.update_accounting_bankfeedaccount(request: req)
 
 unless res.accounting_bankfeedaccount.nil?

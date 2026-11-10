@@ -1,5 +1,13 @@
 # GetUcScorecardtemplateQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetUcScorecardtemplateQueryParamFields::ID
+```
+
 
 ## Values
 

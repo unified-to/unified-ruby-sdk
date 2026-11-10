@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareAllergyType - Category of the substance
-      class HealthcareAllergyType < T::Enum
-
-
+      class HealthcareAllergyType
+        include ::Crystalline::Enum
         enums do
           FOOD = new('FOOD')
           MEDICATION = new('MEDICATION')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           BIOLOGIC = new('BIOLOGIC')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

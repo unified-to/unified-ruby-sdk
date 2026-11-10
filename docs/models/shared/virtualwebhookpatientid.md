@@ -1,5 +1,16 @@
 # VirtualWebhookPatientId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = VirtualWebhookPatientId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = VirtualWebhookPatientId.deserialize("custom_value")
+```
+
 
 ## Values
 

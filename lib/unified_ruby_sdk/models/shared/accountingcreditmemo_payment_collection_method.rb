@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AccountingCreditmemoPaymentCollectionMethod - When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions.
-      class AccountingCreditmemoPaymentCollectionMethod < T::Enum
-
-
+      class AccountingCreditmemoPaymentCollectionMethod
+        include ::Crystalline::Enum
         enums do
           SEND_INVOICE = new('send_invoice')
           CHARGE_AUTOMATICALLY = new('charge_automatically')
         end
+        open!
       end
     end
   end

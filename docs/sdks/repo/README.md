@@ -1,5 +1,4 @@
 # Repo
-(*repo*)
 
 ## Overview
 
@@ -42,24 +41,23 @@ Creates a RepoBranch. Provide the unified RepoBranch fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="ruby" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" example="repo_branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.create_repo_branch(repo_branch: Models::Shared::RepoBranch.new(
   created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-  id: 'a9ea707c-27f4-4333-926b-d6866e7f86f2',
+  id: 'abaed42b-a0df-44d0-b6b9-83a66492a67e',
   metadata: [],
   name: 'transmitter-calculate',
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2020-01-09T11:45:40.638Z'),
+  updated_at: DateTime.iso8601('2020-01-09T16:22:52.188Z')
 ), connection_id: '<id>')
 
 unless res.repo_branch.nil?
@@ -93,27 +91,26 @@ Creates a RepoCommit. Provide the unified RepoCommit fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="ruby" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" example="repo_commit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.create_repo_commit(repo_commit: Models::Shared::RepoCommit.new(
   created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-  id: '0e6354ff-14c1-4e60-abb7-1acdb7f17b96',
+  id: '10fba5af-5adc-4591-a551-d78a3899b7f7',
   lines_added: 313.0,
   lines_changed: 659.0,
   lines_deleted: 482.0,
   message: 'quantify bluetooth bandwidth',
   metadata: [],
   repo_id: '<id>',
-  updated_at: DateTime.iso8601('2023-06-09T00:24:10.072Z'),
+  updated_at: DateTime.iso8601('2023-06-09T19:07:23.174Z')
 ), connection_id: '<id>')
 
 unless res.repo_commit.nil?
@@ -147,26 +144,25 @@ Creates a RepoOrganization. Provide the unified RepoOrganization fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="ruby" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" example="repo_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.create_repo_organization(repo_organization: Models::Shared::RepoOrganization.new(
   avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
   created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
   description: 'Trepide defendo supra testimonium ager.',
-  id: '94ff5b4e-8e01-4be4-a46d-51acffbfe156',
+  id: 'e2464723-cae0-4174-96fd-31ec3a673eb7',
   metadata: [],
   name: 'Denesik - Lemke',
-  updated_at: DateTime.iso8601('2023-08-26T14:40:01.516Z'),
-  web_url: 'https://turbulent-overheard.biz',
+  updated_at: DateTime.iso8601('2023-08-27T01:20:43.806Z'),
+  web_url: 'https://turbulent-overheard.biz'
 ), connection_id: '<id>')
 
 unless res.repo_organization.nil?
@@ -200,21 +196,20 @@ Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="ruby" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" example="repo_pullrequest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullrequest.new(
-  closed_at: DateTime.iso8601('2025-05-12T21:55:45.144Z'),
+  closed_at: DateTime.iso8601('2025-05-13T22:13:59.830Z'),
   created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-  id: '9b484684-194f-4556-90bc-ea53aefc37a6',
+  id: '00e19c69-38c4-4650-b58a-4e877d7eadd3',
   labels: [
     'creptio',
     'tutamen',
@@ -223,7 +218,7 @@ res = s.repo.create_repo_pullrequest(repo_pullrequest: Models::Shared::RepoPullr
   notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
   status: Models::Shared::RepoPullrequestStatus::APPROVED,
   title: 'reboot mobile application',
-  updated_at: DateTime.iso8601('2026-02-01T08:27:25.946Z'),
+  updated_at: DateTime.iso8601('2026-02-02T16:44:23.921Z')
 ), connection_id: '<id>')
 
 unless res.repo_pullrequest.nil?
@@ -257,26 +252,25 @@ Creates a RepoRepository. Provide the unified RepoRepository fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
+<!-- UsageSnippet language="ruby" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" example="repo_repository" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.create_repo_repository(repo_repository: Models::Shared::RepoRepository.new(
   created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
   description: 'Sed somnus crastinus armarium.',
-  id: 'd36db5b5-0556-4eb3-827e-70c34758010d',
+  id: '5b29ea47-36f4-43c1-800e-9ab951f01666',
   is_private: false,
   metadata: [],
   name: 'bah-bogus',
-  updated_at: DateTime.iso8601('2024-03-05T03:46:13.510Z'),
-  web_url: 'https://neat-birdbath.org',
+  updated_at: DateTime.iso8601('2024-03-05T12:29:50.743Z'),
+  web_url: 'https://neat-birdbath.org'
 ), connection_id: '<id>')
 
 unless res.repo_repository.nil?
@@ -316,11 +310,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.get_repo_branch(connection_id: '<id>', id: '<id>')
 
 unless res.repo_branch.nil?
@@ -360,11 +353,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.get_repo_commit(connection_id: '<id>', id: '<id>')
 
 unless res.repo_commit.nil?
@@ -404,11 +396,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.get_repo_organization(connection_id: '<id>', id: '<id>')
 
 unless res.repo_organization.nil?
@@ -448,11 +439,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.get_repo_pullrequest(connection_id: '<id>', id: '<id>')
 
 unless res.repo_pullrequest.nil?
@@ -492,11 +482,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.get_repo_repository(connection_id: '<id>', id: '<id>')
 
 unless res.repo_repository.nil?
@@ -536,15 +525,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListRepoBranchesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListRepoBranchesRequest.new(
+  connection_id: '<id>'
+)
 res = s.repo.list_repo_branches(request: req)
 
 unless res.repo_branches.nil?
@@ -581,15 +569,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListRepoCommitsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListRepoCommitsRequest.new(
+  connection_id: '<id>'
+)
 res = s.repo.list_repo_commits(request: req)
 
 unless res.repo_commits.nil?
@@ -626,15 +613,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListRepoOrganizationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListRepoOrganizationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.repo.list_repo_organizations(request: req)
 
 unless res.repo_organizations.nil?
@@ -671,15 +657,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListRepoPullrequestsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListRepoPullrequestsRequest.new(
+  connection_id: '<id>'
+)
 res = s.repo.list_repo_pullrequests(request: req)
 
 unless res.repo_pullrequests.nil?
@@ -716,15 +701,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListRepoRepositoriesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListRepoRepositoriesRequest.new(
+  connection_id: '<id>'
+)
 res = s.repo.list_repo_repositories(request: req)
 
 unless res.repo_repositories.nil?
@@ -755,30 +739,29 @@ Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
     created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-    id: '0483891c-0e1f-4dd3-b6d2-0e3a7bf95bc3',
+    id: '721a01fe-eb48-4b14-a3bb-e81e1eb9b655',
     metadata: [],
     name: 'transmitter-calculate',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2020-01-09T11:45:40.638Z'),
+    updated_at: DateTime.iso8601('2020-01-09T16:22:52.189Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repo.patch_repo_branch(request: req)
 
 unless res.repo_branch.nil?
@@ -809,33 +792,32 @@ Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: '4b08791a-c428-4e19-8197-d4ae4e4a1d6b',
+    id: 'd159a214-bc1d-451e-8348-c4d101fc4ca0',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'quantify bluetooth bandwidth',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-06-09T00:24:10.079Z'),
+    updated_at: DateTime.iso8601('2023-06-09T19:07:23.180Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repo.patch_repo_commit(request: req)
 
 unless res.repo_commit.nil?
@@ -866,32 +848,31 @@ Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganiz
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchRepoOrganizationRequest.new(
   repo_organization: Models::Shared::RepoOrganization.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: 'c5286224-31e1-49ba-824b-e181817a33ba',
+    id: '0623eca0-d633-4d73-a9e8-3faed59eb4d3',
     metadata: [],
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-26T14:40:01.519Z'),
-    web_url: 'https://turbulent-overheard.biz',
+    updated_at: DateTime.iso8601('2023-08-27T01:20:43.810Z'),
+    web_url: 'https://turbulent-overheard.biz'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repo.patch_repo_organization(request: req)
 
 unless res.repo_organization.nil?
@@ -922,22 +903,22 @@ Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequ
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-12T21:55:45.151Z'),
+    closed_at: DateTime.iso8601('2025-05-13T22:13:59.839Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: 'c8645a98-fff4-4129-a24a-f73bff35be50',
+    id: '00b2665e-69d6-4668-b114-0991324efa9f',
     labels: [
       'creptio',
       'tutamen',
@@ -946,12 +927,11 @@ req = Models::Operations::PatchRepoPullrequestRequest.new(
     notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-02-01T08:27:25.956Z'),
+    updated_at: DateTime.iso8601('2026-02-02T16:44:23.932Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repo.patch_repo_pullrequest(request: req)
 
 unless res.repo_pullrequest.nil?
@@ -982,32 +962,31 @@ Updates the RepoRepository identified by `id`. Provide the unified RepoRepositor
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
     description: 'Sed somnus crastinus armarium.',
-    id: '9f86acb0-f63b-4fdc-aad0-7cb35b2ce00e',
+    id: 'fd569b3f-6fac-4961-8b26-c54676413a2e',
     is_private: false,
     metadata: [],
     name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-05T03:46:13.513Z'),
-    web_url: 'https://neat-birdbath.org',
+    updated_at: DateTime.iso8601('2024-03-05T12:29:50.745Z'),
+    web_url: 'https://neat-birdbath.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repo.patch_repo_repository(request: req)
 
 unless res.repo_repository.nil?
@@ -1044,11 +1023,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.remove_repo_branch(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1086,11 +1064,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.remove_repo_commit(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1128,11 +1105,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.remove_repo_organization(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1170,11 +1146,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.remove_repo_pullrequest(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1212,11 +1187,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.repo.remove_repo_repository(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1248,30 +1222,29 @@ Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateRepoBranchRequest.new(
   repo_branch: Models::Shared::RepoBranch.new(
     created_at: DateTime.iso8601('2019-02-24T09:33:48.540Z'),
-    id: '0483891c-0e1f-4dd3-b6d2-0e3a7bf95bc3',
+    id: '721a01fe-eb48-4b14-a3bb-e81e1eb9b655',
     metadata: [],
     name: 'transmitter-calculate',
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2020-01-09T11:45:40.638Z'),
+    updated_at: DateTime.iso8601('2020-01-09T16:22:52.189Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repo.update_repo_branch(request: req)
 
 unless res.repo_branch.nil?
@@ -1302,33 +1275,32 @@ Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateRepoCommitRequest.new(
   repo_commit: Models::Shared::RepoCommit.new(
     created_at: DateTime.iso8601('2020-07-12T16:20:42.520Z'),
-    id: '4b08791a-c428-4e19-8197-d4ae4e4a1d6b',
+    id: 'd159a214-bc1d-451e-8348-c4d101fc4ca0',
     lines_added: 313.0,
     lines_changed: 659.0,
     lines_deleted: 482.0,
     message: 'quantify bluetooth bandwidth',
     metadata: [],
     repo_id: '<id>',
-    updated_at: DateTime.iso8601('2023-06-09T00:24:10.079Z'),
+    updated_at: DateTime.iso8601('2023-06-09T19:07:23.180Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repo.update_repo_commit(request: req)
 
 unless res.repo_commit.nil?
@@ -1359,32 +1331,31 @@ Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganiz
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateRepoOrganizationRequest.new(
   repo_organization: Models::Shared::RepoOrganization.new(
     avatar_url: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
     created_at: DateTime.iso8601('2022-07-07T00:18:40.748Z'),
     description: 'Trepide defendo supra testimonium ager.',
-    id: 'c5286224-31e1-49ba-824b-e181817a33ba',
+    id: '0623eca0-d633-4d73-a9e8-3faed59eb4d3',
     metadata: [],
     name: 'Denesik - Lemke',
-    updated_at: DateTime.iso8601('2023-08-26T14:40:01.519Z'),
-    web_url: 'https://turbulent-overheard.biz',
+    updated_at: DateTime.iso8601('2023-08-27T01:20:43.810Z'),
+    web_url: 'https://turbulent-overheard.biz'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repo.update_repo_organization(request: req)
 
 unless res.repo_organization.nil?
@@ -1415,22 +1386,22 @@ Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequ
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateRepoPullrequestRequest.new(
   repo_pullrequest: Models::Shared::RepoPullrequest.new(
-    closed_at: DateTime.iso8601('2025-05-12T21:55:45.151Z'),
+    closed_at: DateTime.iso8601('2025-05-13T22:13:59.839Z'),
     created_at: DateTime.iso8601('2023-02-27T09:37:13.663Z'),
-    id: 'c8645a98-fff4-4129-a24a-f73bff35be50',
+    id: '00b2665e-69d6-4668-b114-0991324efa9f',
     labels: [
       'creptio',
       'tutamen',
@@ -1439,12 +1410,11 @@ req = Models::Operations::UpdateRepoPullrequestRequest.new(
     notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
     status: Models::Shared::RepoPullrequestStatus::APPROVED,
     title: 'reboot mobile application',
-    updated_at: DateTime.iso8601('2026-02-01T08:27:25.956Z'),
+    updated_at: DateTime.iso8601('2026-02-02T16:44:23.932Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repo.update_repo_pullrequest(request: req)
 
 unless res.repo_pullrequest.nil?
@@ -1475,32 +1445,31 @@ Updates the RepoRepository identified by `id`. Provide the unified RepoRepositor
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateRepoRepositoryRequest.new(
   repo_repository: Models::Shared::RepoRepository.new(
     created_at: DateTime.iso8601('2023-06-12T09:42:00.080Z'),
     description: 'Sed somnus crastinus armarium.',
-    id: '9f86acb0-f63b-4fdc-aad0-7cb35b2ce00e',
+    id: 'fd569b3f-6fac-4961-8b26-c54676413a2e',
     is_private: false,
     metadata: [],
     name: 'bah-bogus',
-    updated_at: DateTime.iso8601('2024-03-05T03:46:13.513Z'),
-    web_url: 'https://neat-birdbath.org',
+    updated_at: DateTime.iso8601('2024-03-05T12:29:50.745Z'),
+    web_url: 'https://neat-birdbath.org'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.repo.update_repo_repository(request: req)
 
 unless res.repo_repository.nil?

@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class BudgetPeriod < T::Enum
-
-
+      class BudgetPeriod
+        include ::Crystalline::Enum
         enums do
           DAILY = new('DAILY')
           MONTHLY = new('MONTHLY')
           TOTAL = new('TOTAL')
           LIFETIME = new('LIFETIME')
         end
+        open!
       end
     end
   end

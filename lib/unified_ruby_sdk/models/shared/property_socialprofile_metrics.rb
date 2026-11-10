@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Audience metrics for the profile
       class PropertySocialProfileMetrics
         extend T::Sig

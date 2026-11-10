@@ -1,5 +1,16 @@
 # PropertyConnectionCategories
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyConnectionCategories::PASSTHROUGH
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyConnectionCategories.deserialize("custom_value")
+```
+
 
 ## Values
 

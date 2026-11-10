@@ -1,5 +1,4 @@
 # List
-(*list*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a MarketingList. Provide the unified MarketingList fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="ruby" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" example="martech_list" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.new(
   address: Models::Shared::PropertyMarketingListAddress.new(
     address1: '76564 Coronation Road',
@@ -36,11 +34,11 @@ res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.n
     city: 'West Jordon',
     country: 'Mexico',
     postal_code: '04183',
-    region: 'NC',
+    region: 'NC'
   ),
   created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
   description: 'Vilis.',
-  id: '487d7369-9e26-4f21-8a45-e0bbc45e1e50',
+  id: '5d5ea1b4-f402-4165-a3e2-943db5f5caad',
   is_active: true,
   language: 'ru',
   metadata: [],
@@ -50,7 +48,7 @@ res = s.list.create_martech_list(marketing_list: Models::Shared::MarketingList.n
   sender_name: 'Blake Kuhn',
   sender_phone: '359.305.7962 x28115',
   subject: 'Theca caecus copia crebro valeo ulciscor.',
-  updated_at: DateTime.iso8601('2022-09-21T10:21:10.871Z'),
+  updated_at: DateTime.iso8601('2022-09-22T03:31:28.584Z')
 ), connection_id: '<id>')
 
 unless res.marketing_list.nil?
@@ -90,11 +88,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.list.get_martech_list(connection_id: '<id>', id: '<id>')
 
 unless res.marketing_list.nil?
@@ -134,15 +131,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListMartechListsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListMartechListsRequest.new(
+  connection_id: '<id>'
+)
 res = s.list.list_martech_lists(request: req)
 
 unless res.marketing_lists.nil?
@@ -173,16 +169,16 @@ Updates the MarketingList identified by `id`. Provide the unified MarketingList 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchMartechListRequest.new(
   marketing_list: Models::Shared::MarketingList.new(
@@ -192,11 +188,11 @@ req = Models::Operations::PatchMartechListRequest.new(
       city: 'West Jordon',
       country: 'Mexico',
       postal_code: '04183',
-      region: 'NC',
+      region: 'NC'
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
     description: 'Vilis.',
-    id: 'df0600df-13b8-46e1-9357-9484b0b2a299',
+    id: '72eb3944-3c6f-4c50-bf69-ac3cce8ae666',
     is_active: true,
     language: 'ru',
     metadata: [],
@@ -206,12 +202,11 @@ req = Models::Operations::PatchMartechListRequest.new(
     sender_name: 'Blake Kuhn',
     sender_phone: '359.305.7962 x28115',
     subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-21T10:21:10.881Z'),
+    updated_at: DateTime.iso8601('2022-09-22T03:31:28.593Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.list.patch_martech_list(request: req)
 
 unless res.marketing_list.nil?
@@ -248,11 +243,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.list.remove_martech_list(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -284,16 +278,16 @@ Updates the MarketingList identified by `id`. Provide the unified MarketingList 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateMartechListRequest.new(
   marketing_list: Models::Shared::MarketingList.new(
@@ -303,11 +297,11 @@ req = Models::Operations::UpdateMartechListRequest.new(
       city: 'West Jordon',
       country: 'Mexico',
       postal_code: '04183',
-      region: 'NC',
+      region: 'NC'
     ),
     created_at: DateTime.iso8601('2019-09-18T02:01:36.950Z'),
     description: 'Vilis.',
-    id: 'df0600df-13b8-46e1-9357-9484b0b2a299',
+    id: '72eb3944-3c6f-4c50-bf69-ac3cce8ae666',
     is_active: true,
     language: 'ru',
     metadata: [],
@@ -317,12 +311,11 @@ req = Models::Operations::UpdateMartechListRequest.new(
     sender_name: 'Blake Kuhn',
     sender_phone: '359.305.7962 x28115',
     subject: 'Theca caecus copia crebro valeo ulciscor.',
-    updated_at: DateTime.iso8601('2022-09-21T10:21:10.881Z'),
+    updated_at: DateTime.iso8601('2022-09-22T03:31:28.593Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.list.update_martech_list(request: req)
 
 unless res.marketing_list.nil?

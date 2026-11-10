@@ -1,5 +1,16 @@
 # AdsGroupStatus
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AdsGroupStatus::UNSPECIFIED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AdsGroupStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

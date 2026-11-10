@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class ListMartechReportsQueryParamFields < T::Enum
-
-
         enums do
           ID = new('id')
           START_AT = new('start_at')

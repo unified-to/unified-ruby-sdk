@@ -1,5 +1,13 @@
 # CreateAccountingBillQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateAccountingBillQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # The note object, when type = note
       class PropertyCrmEventNote
         extend T::Sig

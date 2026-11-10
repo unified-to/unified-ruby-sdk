@@ -1,5 +1,4 @@
 # Change
-(*change*)
 
 ## Overview
 
@@ -19,30 +18,29 @@ Creates a PlmChange. Provide the unified PlmChange fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPlmChange" method="post" path="/plm/{connection_id}/change" -->
+<!-- UsageSnippet language="ruby" operationID="createPlmChange" method="post" path="/plm/{connection_id}/change" example="plm_change" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.change.create_plm_change(plm_change: Models::Shared::PlmChange.new(
   affected_items: [],
   created_at: DateTime.iso8601('2021-08-02T05:58:32.287Z'),
   description: 'Vorago spiculum avaritia adipiscor callide.',
-  id: '04eb5be5-94df-44f6-8b92-48efbcb81f91',
+  id: '45a9e47f-3cab-41d2-8ddf-6a181e8b7227',
   metadata: [],
   name: 'Update goodwill',
   number: 'ECO-6591',
   priority: 'Medium',
   status: Models::Shared::PlmChangeStatus::IN_REVIEW,
   type: Models::Shared::PlmChangeType::ORDER,
-  updated_at: DateTime.iso8601('2026-09-22T13:05:10.765Z'),
-  url: 'https://warmhearted-fraudster.biz/',
+  updated_at: DateTime.iso8601('2026-09-24T04:49:55.059Z'),
+  url: 'https://warmhearted-fraudster.biz/'
 ), connection_id: '<id>')
 
 unless res.plm_change.nil?
@@ -82,11 +80,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.change.get_plm_change(connection_id: '<id>', id: '<id>')
 
 unless res.plm_change.nil?
@@ -126,11 +123,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.change.get_task_change(connection_id: '<id>', id: '<id>')
 
 unless res.task_change.nil?
@@ -170,15 +166,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPlmChangesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPlmChangesRequest.new(
+  connection_id: '<id>'
+)
 res = s.change.list_plm_changes(request: req)
 
 unless res.plm_changes.nil?
@@ -215,15 +210,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListTaskChangesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListTaskChangesRequest.new(
+  connection_id: '<id>'
+)
 res = s.change.list_task_changes(request: req)
 
 unless res.task_changes.nil?
@@ -254,36 +248,35 @@ Updates the PlmChange identified by `id`. Provide the unified PlmChange fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPlmChange" method="patch" path="/plm/{connection_id}/change/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPlmChange" method="patch" path="/plm/{connection_id}/change/{id}" example="plm_change" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPlmChangeRequest.new(
   plm_change: Models::Shared::PlmChange.new(
     affected_items: [],
     created_at: DateTime.iso8601('2021-08-02T05:58:32.287Z'),
     description: 'Vorago spiculum avaritia adipiscor callide.',
-    id: 'e7093c1b-fe32-45af-9e17-55892a501274',
+    id: 'c3bec54d-decd-4d1f-886e-030c9c98bb26',
     metadata: [],
     name: 'Update goodwill',
     number: 'ECO-6591',
     priority: 'Medium',
     status: Models::Shared::PlmChangeStatus::IN_REVIEW,
     type: Models::Shared::PlmChangeType::ORDER,
-    updated_at: DateTime.iso8601('2026-09-22T13:05:10.794Z'),
-    url: 'https://warmhearted-fraudster.biz/',
+    updated_at: DateTime.iso8601('2026-09-24T04:49:55.071Z'),
+    url: 'https://warmhearted-fraudster.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.change.patch_plm_change(request: req)
 
 unless res.plm_change.nil?
@@ -314,36 +307,35 @@ Updates the PlmChange identified by `id`. Provide the unified PlmChange fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePlmChange" method="put" path="/plm/{connection_id}/change/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePlmChange" method="put" path="/plm/{connection_id}/change/{id}" example="plm_change" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePlmChangeRequest.new(
   plm_change: Models::Shared::PlmChange.new(
     affected_items: [],
     created_at: DateTime.iso8601('2021-08-02T05:58:32.287Z'),
     description: 'Vorago spiculum avaritia adipiscor callide.',
-    id: 'e7093c1b-fe32-45af-9e17-55892a501274',
+    id: 'c3bec54d-decd-4d1f-886e-030c9c98bb26',
     metadata: [],
     name: 'Update goodwill',
     number: 'ECO-6591',
     priority: 'Medium',
     status: Models::Shared::PlmChangeStatus::IN_REVIEW,
     type: Models::Shared::PlmChangeType::ORDER,
-    updated_at: DateTime.iso8601('2026-09-22T13:05:10.794Z'),
-    url: 'https://warmhearted-fraudster.biz/',
+    updated_at: DateTime.iso8601('2026-09-24T04:49:55.071Z'),
+    url: 'https://warmhearted-fraudster.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.change.update_plm_change(request: req)
 
 unless res.plm_change.nil?

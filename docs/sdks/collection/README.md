@@ -1,5 +1,4 @@
 # Collection
-(*collection*)
 
 ## Overview
 
@@ -24,21 +23,20 @@ Creates a CommerceCollection. Provide the unified CommerceCollection fields in t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" example="commerce_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.collection.create_commerce_collection(commerce_collection: Models::Shared::CommerceCollection.new(
   created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
   description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-  id: '91ec85f3-0aa4-441d-8cdf-0d62c8f943f4',
+  id: '6427f5bf-6966-4e54-ad25-ee1799d3eec2',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -47,25 +45,25 @@ res = s.collection.create_commerce_collection(commerce_collection: Models::Share
     Models::Shared::CommerceItemMedia.new(
       alt: 'Defungo adopto thorax.',
       height: 759.0,
-      id: '5e768623-c424-496b-8546-4ba344bf49ac',
+      id: '9b2f7f84-00e2-441c-bbf3-a7b4bfa24052',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: '3f98496d-4794-406f-a3fd-938775bf698d',
+          id: '8b93bb56-cb99-49ee-966e-dbd225ff445f',
           slug: 'censura',
-          value: 'toties',
+          value: 'toties'
         ),
       ],
       position: 80.0,
       type: Models::Shared::CommerceItemMediaType::VIDEO,
       url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
-      width: 40.0,
+      width: 40.0
     ),
   ],
   metadata: [
     Models::Shared::CommerceMetadata.new(
-      id: 'bf191248-0d68-4c82-a379-b013a7860e43',
+      id: 'fd5009f2-8064-4430-9f95-9e1e4b04482c',
       slug: 'aetas',
-      value: 'consuasor',
+      value: 'consuasor'
     ),
   ],
   name: 'Small Marble Chips',
@@ -77,7 +75,7 @@ res = s.collection.create_commerce_collection(commerce_collection: Models::Share
     'contego',
   ],
   type: Models::Shared::CommerceCollectionType::COLLECTION,
-  updated_at: DateTime.iso8601('2025-03-24T18:09:48.158Z'),
+  updated_at: DateTime.iso8601('2025-03-25T14:57:59.200Z')
 ), connection_id: '<id>')
 
 unless res.commerce_collection.nil?
@@ -111,21 +109,20 @@ Creates a LmsCollection. Provide the unified LmsCollection fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" example="lms_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.collection.create_lms_collection(lms_collection: Models::Shared::LmsCollection.new(
   created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
   description: 'Ab.',
-  id: 'b4d5fc6a-e3bc-4e8a-992d-04042d5371b9',
+  id: '6297e260-ab38-4693-b999-c797bc5a6905',
   is_active: true,
   media: [
     Models::Shared::LmsMedia.new(
@@ -137,12 +134,12 @@ res = s.collection.create_lms_collection(lms_collection: Models::Shared::LmsColl
       name: 'thymum',
       thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
       type: Models::Shared::LmsMediaType::HEADSHOT,
-      url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+      url: 'https://loremflickr.com/2679/70?lock=6078357625960554'
     ),
   ],
   metadata: [],
   name: 'ara',
-  updated_at: DateTime.iso8601('2026-08-17T16:49:10.997Z'),
+  updated_at: DateTime.iso8601('2026-08-19T08:17:00.798Z')
 ), connection_id: '<id>')
 
 unless res.lms_collection.nil?
@@ -182,11 +179,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.collection.get_commerce_collection(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_collection.nil?
@@ -226,11 +222,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.collection.get_lms_collection(connection_id: '<id>', id: '<id>')
 
 unless res.lms_collection.nil?
@@ -270,15 +265,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceCollectionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceCollectionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.collection.list_commerce_collections(request: req)
 
 unless res.commerce_collections.nil?
@@ -315,15 +309,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsCollectionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsCollectionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.collection.list_lms_collections(request: req)
 
 unless res.lms_collections.nil?
@@ -354,22 +347,22 @@ Updates the CommerceCollection identified by `id`. Provide the unified CommerceC
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: '882b6899-8be1-4d79-8215-37f72f3cc579',
+    id: 'e62eb751-ba46-435d-af88-444f3326c507',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -378,25 +371,25 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Defungo adopto thorax.',
         height: 759.0,
-        id: 'be4b561d-4057-488c-80eb-077dd97bd554',
+        id: '6c61c319-aa7c-41b6-aacd-c833822f3df8',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '1d21a775-247b-451f-a437-7d8648ccf90f',
+            id: 'e5eba624-5ab9-42f8-bc34-2b3747148c67',
             slug: 'censura',
-            value: 'toties',
+            value: 'toties'
           ),
         ],
         position: 80.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
-        width: 40.0,
+        width: 40.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: '9a60077c-0c7b-449b-959b-b7e5be30a8d4',
+        id: '6d1093dd-71d8-4a0a-9101-d4a4ac60f08a',
         slug: 'aetas',
-        value: 'consuasor',
+        value: 'consuasor'
       ),
     ],
     name: 'Small Marble Chips',
@@ -408,12 +401,11 @@ req = Models::Operations::PatchCommerceCollectionRequest.new(
       'contego',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-24T18:09:48.178Z'),
+    updated_at: DateTime.iso8601('2025-03-25T14:57:59.214Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.collection.patch_commerce_collection(request: req)
 
 unless res.commerce_collection.nil?
@@ -444,22 +436,22 @@ Updates the LmsCollection identified by `id`. Provide the unified LmsCollection 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Ab.',
-    id: '92aecda0-dae7-46d8-aa70-7e21095d79fa',
+    id: '8049bccd-7457-47e3-9fc0-7b7b68d914e0',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -471,17 +463,16 @@ req = Models::Operations::PatchLmsCollectionRequest.new(
         name: 'thymum',
         thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
         type: Models::Shared::LmsMediaType::HEADSHOT,
-        url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+        url: 'https://loremflickr.com/2679/70?lock=6078357625960554'
       ),
     ],
     metadata: [],
     name: 'ara',
-    updated_at: DateTime.iso8601('2026-08-17T16:49:11.018Z'),
+    updated_at: DateTime.iso8601('2026-08-19T08:17:00.818Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.collection.patch_lms_collection(request: req)
 
 unless res.lms_collection.nil?
@@ -518,11 +509,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.collection.remove_commerce_collection(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -560,11 +550,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.collection.remove_lms_collection(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -596,22 +585,22 @@ Updates the CommerceCollection identified by `id`. Provide the unified CommerceC
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceCollectionRequest.new(
   commerce_collection: Models::Shared::CommerceCollection.new(
     created_at: DateTime.iso8601('2023-07-14T00:42:54.742Z'),
     description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-    id: '882b6899-8be1-4d79-8215-37f72f3cc579',
+    id: 'e62eb751-ba46-435d-af88-444f3326c507',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -620,25 +609,25 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Defungo adopto thorax.',
         height: 759.0,
-        id: 'be4b561d-4057-488c-80eb-077dd97bd554',
+        id: '6c61c319-aa7c-41b6-aacd-c833822f3df8',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: '1d21a775-247b-451f-a437-7d8648ccf90f',
+            id: 'e5eba624-5ab9-42f8-bc34-2b3747148c67',
             slug: 'censura',
-            value: 'toties',
+            value: 'toties'
           ),
         ],
         position: 80.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
-        width: 40.0,
+        width: 40.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
-        id: '9a60077c-0c7b-449b-959b-b7e5be30a8d4',
+        id: '6d1093dd-71d8-4a0a-9101-d4a4ac60f08a',
         slug: 'aetas',
-        value: 'consuasor',
+        value: 'consuasor'
       ),
     ],
     name: 'Small Marble Chips',
@@ -650,12 +639,11 @@ req = Models::Operations::UpdateCommerceCollectionRequest.new(
       'contego',
     ],
     type: Models::Shared::CommerceCollectionType::COLLECTION,
-    updated_at: DateTime.iso8601('2025-03-24T18:09:48.178Z'),
+    updated_at: DateTime.iso8601('2025-03-25T14:57:59.214Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.collection.update_commerce_collection(request: req)
 
 unless res.commerce_collection.nil?
@@ -686,22 +674,22 @@ Updates the LmsCollection identified by `id`. Provide the unified LmsCollection 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsCollectionRequest.new(
   lms_collection: Models::Shared::LmsCollection.new(
     created_at: DateTime.iso8601('2019-08-19T14:40:29.227Z'),
     description: 'Ab.',
-    id: '92aecda0-dae7-46d8-aa70-7e21095d79fa',
+    id: '8049bccd-7457-47e3-9fc0-7b7b68d914e0',
     is_active: true,
     media: [
       Models::Shared::LmsMedia.new(
@@ -713,17 +701,16 @@ req = Models::Operations::UpdateLmsCollectionRequest.new(
         name: 'thymum',
         thumbnail_url: 'https://picsum.photos/seed/15O5EfV/2982/752',
         type: Models::Shared::LmsMediaType::HEADSHOT,
-        url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+        url: 'https://loremflickr.com/2679/70?lock=6078357625960554'
       ),
     ],
     metadata: [],
     name: 'ara',
-    updated_at: DateTime.iso8601('2026-08-17T16:49:11.018Z'),
+    updated_at: DateTime.iso8601('2026-08-19T08:17:00.818Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.collection.update_lms_collection(request: req)
 
 unless res.lms_collection.nil?

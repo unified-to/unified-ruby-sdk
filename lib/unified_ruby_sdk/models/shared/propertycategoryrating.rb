@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyCategoryrating
         extend T::Sig
         include Crystalline::MetadataFields
 
         # the rated category
-        field :category, Crystalline::Nilable.new(Models::Shared::PropertyCategoryratingCategory), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category'), 'decoder': Utils.enum_from_string(Models::Shared::PropertyCategoryratingCategory, true) } }
+        field :category, Crystalline::Nilable.new(Models::Shared::PropertyCategoryratingCategory), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('category'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyCategoryratingCategory, true) } }
         # the guest comment for this category
         field :comment, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('comment') } }
         # the category rating

@@ -1,5 +1,13 @@
 # CreateCrmEventQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateCrmEventQueryParamFields::ID
+```
+
 
 ## Values
 

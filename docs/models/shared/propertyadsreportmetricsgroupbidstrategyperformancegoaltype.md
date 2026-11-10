@@ -1,5 +1,16 @@
 # PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType::UNSPECIFIED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Category - STANDARD (days-based) or DATE_DRIVEN (month-based)
-      class Category < T::Enum
-
-
+      class Category
+        include ::Crystalline::Enum
         enums do
           STANDARD = new('STANDARD')
           DATE_DRIVEN = new('DATE_DRIVEN')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

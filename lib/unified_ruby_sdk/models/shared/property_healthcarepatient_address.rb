@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Home address of the patient
       class PropertyHealthcarePatientAddress
         extend T::Sig

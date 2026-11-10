@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertyTelephoneType - the kind of telephone number
-      class PropertyTelephoneType < T::Enum
-
-
+      class PropertyTelephoneType
+        include ::Crystalline::Enum
         enums do
           WORK = new('WORK')
           HOME = new('HOME')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           FAX = new('FAX')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # AccountingExpenseType - USER = employee spend; COMPANY = books/purchase expense
-      class AccountingExpenseType < T::Enum
-
-
+      class AccountingExpenseType
+        include ::Crystalline::Enum
         enums do
           USER = new('USER')
           COMPANY = new('COMPANY')
         end
+        open!
       end
     end
   end

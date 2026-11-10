@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # UcFaxType - Whether the fax was received (INBOUND) or sent (OUTBOUND)
-      class UcFaxType < T::Enum
-
-
+      class UcFaxType
+        include ::Crystalline::Enum
         enums do
           INBOUND = new('INBOUND')
           OUTBOUND = new('OUTBOUND')
         end
+        open!
       end
     end
   end

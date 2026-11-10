@@ -1,5 +1,13 @@
 # ListAccountingQuotesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListAccountingQuotesQueryParamFields::ID
+```
+
 
 ## Values
 

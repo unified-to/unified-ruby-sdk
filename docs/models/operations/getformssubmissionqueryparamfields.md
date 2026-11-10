@@ -1,5 +1,13 @@
 # GetFormsSubmissionQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetFormsSubmissionQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AdsCampaignStatus < T::Enum
-
-
+      class AdsCampaignStatus
+        include ::Crystalline::Enum
         enums do
           UNSPECIFIED = new('UNSPECIFIED')
           ACTIVE = new('ACTIVE')
@@ -22,6 +20,7 @@ module UnifiedRubySDK
           PROCESSING = new('PROCESSING')
           PROCESSING_FAILED = new('PROCESSING_FAILED')
         end
+        open!
       end
     end
   end

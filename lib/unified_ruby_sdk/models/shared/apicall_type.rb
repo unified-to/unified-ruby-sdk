@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ApiCallType - The type of API Call being logged
-      class ApiCallType < T::Enum
-
-
+      class ApiCallType
+        include ::Crystalline::Enum
         enums do
           LOGIN = new('login')
           WEBHOOK = new('webhook')
           INBOUND = new('inbound')
           MCP = new('mcp')
         end
+        open!
       end
     end
   end

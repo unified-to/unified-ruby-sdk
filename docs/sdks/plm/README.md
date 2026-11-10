@@ -1,5 +1,4 @@
 # Plm
-(*plm*)
 
 ## Overview
 
@@ -35,25 +34,24 @@ Creates a PlmBomline. Provide the unified PlmBomline fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPlmBomline" method="post" path="/plm/{connection_id}/bomline" -->
+<!-- UsageSnippet language="ruby" operationID="createPlmBomline" method="post" path="/plm/{connection_id}/bomline" example="plm_bomline" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.plm.create_plm_bomline(plm_bomline: Models::Shared::PlmBomline.new(
   created_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
   effective_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
-  id: 'db6bd650-525f-4e20-86ab-ad49f941dc54',
+  id: '255a0805-cb87-40f8-97d2-adaa349b5273',
   quantity: 7.0,
   reference_designators: [],
   unit_of_measure: 'EA',
-  updated_at: DateTime.iso8601('2023-04-18T20:07:32.791Z'),
+  updated_at: DateTime.iso8601('2023-04-19T05:22:16.020Z')
 ), connection_id: '<id>')
 
 unless res.plm_bomline.nil?
@@ -87,30 +85,29 @@ Creates a PlmChange. Provide the unified PlmChange fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPlmChange" method="post" path="/plm/{connection_id}/change" -->
+<!-- UsageSnippet language="ruby" operationID="createPlmChange" method="post" path="/plm/{connection_id}/change" example="plm_change" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.plm.create_plm_change(plm_change: Models::Shared::PlmChange.new(
   affected_items: [],
   created_at: DateTime.iso8601('2021-08-02T05:58:32.287Z'),
   description: 'Vorago spiculum avaritia adipiscor callide.',
-  id: '04eb5be5-94df-44f6-8b92-48efbcb81f91',
+  id: '45a9e47f-3cab-41d2-8ddf-6a181e8b7227',
   metadata: [],
   name: 'Update goodwill',
   number: 'ECO-6591',
   priority: 'Medium',
   status: Models::Shared::PlmChangeStatus::IN_REVIEW,
   type: Models::Shared::PlmChangeType::ORDER,
-  updated_at: DateTime.iso8601('2026-09-22T13:05:10.765Z'),
-  url: 'https://warmhearted-fraudster.biz/',
+  updated_at: DateTime.iso8601('2026-09-24T04:49:55.059Z'),
+  url: 'https://warmhearted-fraudster.biz/'
 ), connection_id: '<id>')
 
 unless res.plm_change.nil?
@@ -144,23 +141,22 @@ Creates a PlmDocument. Provide the unified PlmDocument fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPlmDocument" method="post" path="/plm/{connection_id}/document" -->
+<!-- UsageSnippet language="ruby" operationID="createPlmDocument" method="post" path="/plm/{connection_id}/document" example="plm_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.plm.create_plm_document(plm_document: Models::Shared::PlmDocument.new(
   created_at: DateTime.iso8601('2020-10-16T01:44:30.293Z'),
   file_ids: [],
-  id: '957e1c12-76c1-450b-a2de-b2605ba4eb08',
+  id: 'b8e1e416-2836-4310-8f76-825109791090',
   lifecycle_state: 'Under Review',
-  master_identifier: 'e7eab32d-ea4b-4e23-864f-7d52745fa4f4',
+  master_identifier: 'db397c7e-9daf-4dfa-ae99-752c0079acab',
   metadata: [],
   name: 'Procedure taxicab',
   number: 'DOC-086886',
@@ -168,8 +164,8 @@ res = s.plm.create_plm_document(plm_document: Models::Shared::PlmDocument.new(
   revision: 'C',
   status: Models::Shared::PlmDocumentStatus::IN_REVIEW,
   type: Models::Shared::PlmDocumentType::PROCEDURE,
-  updated_at: DateTime.iso8601('2026-09-03T07:10:36.846Z'),
-  url: 'https://uncommon-guide.info/',
+  updated_at: DateTime.iso8601('2026-09-04T22:42:00.181Z'),
+  url: 'https://uncommon-guide.info/'
 ), connection_id: '<id>')
 
 unless res.plm_document.nil?
@@ -203,26 +199,25 @@ Creates a PlmPart. Provide the unified PlmPart fields in the request body; they 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createPlmPart" method="post" path="/plm/{connection_id}/part" -->
+<!-- UsageSnippet language="ruby" operationID="createPlmPart" method="post" path="/plm/{connection_id}/part" example="plm_part" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.plm.create_plm_part(plm_part: Models::Shared::PlmPart.new(
   created_at: DateTime.iso8601('2019-04-13T06:25:34.770Z'),
   description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
   document_ids: [],
   file_ids: [],
-  id: '05d8cf7b-4113-45b8-8ec9-cbced7090ee3',
+  id: 'd0e429d9-9413-43bd-b8af-6f756c3d8309',
   is_assembly: false,
   lifecycle_state: 'Design',
-  master_identifier: '8e75c8bb-abce-427b-a8cc-60cd4f363d5b',
+  master_identifier: 'ae974b01-0d26-4eed-9855-f15eb64bb553',
   metadata: [],
   name: 'grumpy PCB',
   number: 'PRT-009154',
@@ -232,8 +227,8 @@ res = s.plm.create_plm_part(plm_part: Models::Shared::PlmPart.new(
   status: Models::Shared::PlmPartStatus::IN_WORK,
   type: Models::Shared::PlmPartType::SOFTWARE,
   unit_of_measure: 'EA',
-  updated_at: DateTime.iso8601('2021-04-11T02:40:21.078Z'),
-  url: 'https://inborn-independence.info',
+  updated_at: DateTime.iso8601('2021-04-11T13:24:26.712Z'),
+  url: 'https://inborn-independence.info'
 ), connection_id: '<id>')
 
 unless res.plm_part.nil?
@@ -273,11 +268,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.plm.get_plm_bomline(connection_id: '<id>', id: '<id>')
 
 unless res.plm_bomline.nil?
@@ -317,11 +311,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.plm.get_plm_category(connection_id: '<id>', id: '<id>')
 
 unless res.plm_category.nil?
@@ -361,11 +354,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.plm.get_plm_change(connection_id: '<id>', id: '<id>')
 
 unless res.plm_change.nil?
@@ -405,11 +397,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.plm.get_plm_document(connection_id: '<id>', id: '<id>')
 
 unless res.plm_document.nil?
@@ -449,11 +440,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.plm.get_plm_part(connection_id: '<id>', id: '<id>')
 
 unless res.plm_part.nil?
@@ -493,15 +483,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPlmBomlinesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPlmBomlinesRequest.new(
+  connection_id: '<id>'
+)
 res = s.plm.list_plm_bomlines(request: req)
 
 unless res.plm_bomlines.nil?
@@ -538,15 +527,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPlmCategoriesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPlmCategoriesRequest.new(
+  connection_id: '<id>'
+)
 res = s.plm.list_plm_categories(request: req)
 
 unless res.plm_categories.nil?
@@ -583,15 +571,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPlmChangesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPlmChangesRequest.new(
+  connection_id: '<id>'
+)
 res = s.plm.list_plm_changes(request: req)
 
 unless res.plm_changes.nil?
@@ -628,15 +615,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPlmDocumentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPlmDocumentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.plm.list_plm_documents(request: req)
 
 unless res.plm_documents.nil?
@@ -673,15 +659,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPlmPartsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPlmPartsRequest.new(
+  connection_id: '<id>'
+)
 res = s.plm.list_plm_parts(request: req)
 
 unless res.plm_parts.nil?
@@ -712,31 +697,30 @@ Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPlmBomline" method="patch" path="/plm/{connection_id}/bomline/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPlmBomline" method="patch" path="/plm/{connection_id}/bomline/{id}" example="plm_bomline" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPlmBomlineRequest.new(
   plm_bomline: Models::Shared::PlmBomline.new(
     created_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
     effective_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
-    id: '10b84695-678d-4879-8f95-3a2be6819616',
+    id: '6707753c-f07f-4037-a000-693e611b61a4',
     quantity: 7.0,
     reference_designators: [],
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2023-04-18T20:07:32.793Z'),
+    updated_at: DateTime.iso8601('2023-04-19T05:22:16.022Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.plm.patch_plm_bomline(request: req)
 
 unless res.plm_bomline.nil?
@@ -767,36 +751,35 @@ Updates the PlmChange identified by `id`. Provide the unified PlmChange fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPlmChange" method="patch" path="/plm/{connection_id}/change/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPlmChange" method="patch" path="/plm/{connection_id}/change/{id}" example="plm_change" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPlmChangeRequest.new(
   plm_change: Models::Shared::PlmChange.new(
     affected_items: [],
     created_at: DateTime.iso8601('2021-08-02T05:58:32.287Z'),
     description: 'Vorago spiculum avaritia adipiscor callide.',
-    id: 'e7093c1b-fe32-45af-9e17-55892a501274',
+    id: 'c3bec54d-decd-4d1f-886e-030c9c98bb26',
     metadata: [],
     name: 'Update goodwill',
     number: 'ECO-6591',
     priority: 'Medium',
     status: Models::Shared::PlmChangeStatus::IN_REVIEW,
     type: Models::Shared::PlmChangeType::ORDER,
-    updated_at: DateTime.iso8601('2026-09-22T13:05:10.794Z'),
-    url: 'https://warmhearted-fraudster.biz/',
+    updated_at: DateTime.iso8601('2026-09-24T04:49:55.071Z'),
+    url: 'https://warmhearted-fraudster.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.plm.patch_plm_change(request: req)
 
 unless res.plm_change.nil?
@@ -827,24 +810,24 @@ Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPlmDocument" method="patch" path="/plm/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPlmDocument" method="patch" path="/plm/{connection_id}/document/{id}" example="plm_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPlmDocumentRequest.new(
   plm_document: Models::Shared::PlmDocument.new(
     created_at: DateTime.iso8601('2020-10-16T01:44:30.293Z'),
     file_ids: [],
-    id: '448f97e2-9cc5-4bc9-a4c1-8e4f4d6eae99',
+    id: '7b0f2785-e094-43b6-a6af-f96b06ac1fff',
     lifecycle_state: 'Under Review',
-    master_identifier: '28f9f831-17e7-4671-af51-313a60433970',
+    master_identifier: 'af55eb0e-c361-4baf-b988-412f0287dff2',
     metadata: [],
     name: 'Procedure taxicab',
     number: 'DOC-086886',
@@ -852,13 +835,12 @@ req = Models::Operations::PatchPlmDocumentRequest.new(
     revision: 'C',
     status: Models::Shared::PlmDocumentStatus::IN_REVIEW,
     type: Models::Shared::PlmDocumentType::PROCEDURE,
-    updated_at: DateTime.iso8601('2026-09-03T07:10:36.865Z'),
-    url: 'https://uncommon-guide.info/',
+    updated_at: DateTime.iso8601('2026-09-04T22:42:00.200Z'),
+    url: 'https://uncommon-guide.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.plm.patch_plm_document(request: req)
 
 unless res.plm_document.nil?
@@ -889,16 +871,16 @@ Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPlmPart" method="patch" path="/plm/{connection_id}/part/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPlmPart" method="patch" path="/plm/{connection_id}/part/{id}" example="plm_part" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPlmPartRequest.new(
   plm_part: Models::Shared::PlmPart.new(
@@ -906,10 +888,10 @@ req = Models::Operations::PatchPlmPartRequest.new(
     description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
     document_ids: [],
     file_ids: [],
-    id: '042ea10d-3111-4b6c-8e08-8406d9ae810d',
+    id: 'd2e12f1a-8bd0-42e6-9e37-3cabe19fc9c1',
     is_assembly: false,
     lifecycle_state: 'Design',
-    master_identifier: '33e68ad9-4978-4fbb-b5c5-ff96d1783f45',
+    master_identifier: '2f0e3dda-4d40-4bd0-be27-f2a76a440736',
     metadata: [],
     name: 'grumpy PCB',
     number: 'PRT-009154',
@@ -919,13 +901,12 @@ req = Models::Operations::PatchPlmPartRequest.new(
     status: Models::Shared::PlmPartStatus::IN_WORK,
     type: Models::Shared::PlmPartType::SOFTWARE,
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2021-04-11T02:40:21.084Z'),
-    url: 'https://inborn-independence.info',
+    updated_at: DateTime.iso8601('2021-04-11T13:24:26.717Z'),
+    url: 'https://inborn-independence.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.plm.patch_plm_part(request: req)
 
 unless res.plm_part.nil?
@@ -962,11 +943,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.plm.remove_plm_bomline(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -998,31 +978,30 @@ Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePlmBomline" method="put" path="/plm/{connection_id}/bomline/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePlmBomline" method="put" path="/plm/{connection_id}/bomline/{id}" example="plm_bomline" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePlmBomlineRequest.new(
   plm_bomline: Models::Shared::PlmBomline.new(
     created_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
     effective_at: DateTime.iso8601('2022-04-02T07:09:29.598Z'),
-    id: '10b84695-678d-4879-8f95-3a2be6819616',
+    id: '6707753c-f07f-4037-a000-693e611b61a4',
     quantity: 7.0,
     reference_designators: [],
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2023-04-18T20:07:32.793Z'),
+    updated_at: DateTime.iso8601('2023-04-19T05:22:16.022Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.plm.update_plm_bomline(request: req)
 
 unless res.plm_bomline.nil?
@@ -1053,36 +1032,35 @@ Updates the PlmChange identified by `id`. Provide the unified PlmChange fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePlmChange" method="put" path="/plm/{connection_id}/change/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePlmChange" method="put" path="/plm/{connection_id}/change/{id}" example="plm_change" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePlmChangeRequest.new(
   plm_change: Models::Shared::PlmChange.new(
     affected_items: [],
     created_at: DateTime.iso8601('2021-08-02T05:58:32.287Z'),
     description: 'Vorago spiculum avaritia adipiscor callide.',
-    id: 'e7093c1b-fe32-45af-9e17-55892a501274',
+    id: 'c3bec54d-decd-4d1f-886e-030c9c98bb26',
     metadata: [],
     name: 'Update goodwill',
     number: 'ECO-6591',
     priority: 'Medium',
     status: Models::Shared::PlmChangeStatus::IN_REVIEW,
     type: Models::Shared::PlmChangeType::ORDER,
-    updated_at: DateTime.iso8601('2026-09-22T13:05:10.794Z'),
-    url: 'https://warmhearted-fraudster.biz/',
+    updated_at: DateTime.iso8601('2026-09-24T04:49:55.071Z'),
+    url: 'https://warmhearted-fraudster.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.plm.update_plm_change(request: req)
 
 unless res.plm_change.nil?
@@ -1113,24 +1091,24 @@ Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePlmDocument" method="put" path="/plm/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePlmDocument" method="put" path="/plm/{connection_id}/document/{id}" example="plm_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePlmDocumentRequest.new(
   plm_document: Models::Shared::PlmDocument.new(
     created_at: DateTime.iso8601('2020-10-16T01:44:30.293Z'),
     file_ids: [],
-    id: '448f97e2-9cc5-4bc9-a4c1-8e4f4d6eae99',
+    id: '7b0f2785-e094-43b6-a6af-f96b06ac1fff',
     lifecycle_state: 'Under Review',
-    master_identifier: '28f9f831-17e7-4671-af51-313a60433970',
+    master_identifier: 'af55eb0e-c361-4baf-b988-412f0287dff2',
     metadata: [],
     name: 'Procedure taxicab',
     number: 'DOC-086886',
@@ -1138,13 +1116,12 @@ req = Models::Operations::UpdatePlmDocumentRequest.new(
     revision: 'C',
     status: Models::Shared::PlmDocumentStatus::IN_REVIEW,
     type: Models::Shared::PlmDocumentType::PROCEDURE,
-    updated_at: DateTime.iso8601('2026-09-03T07:10:36.865Z'),
-    url: 'https://uncommon-guide.info/',
+    updated_at: DateTime.iso8601('2026-09-04T22:42:00.200Z'),
+    url: 'https://uncommon-guide.info/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.plm.update_plm_document(request: req)
 
 unless res.plm_document.nil?
@@ -1175,16 +1152,16 @@ Updates the PlmPart identified by `id`. Provide the unified PlmPart fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePlmPart" method="put" path="/plm/{connection_id}/part/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePlmPart" method="put" path="/plm/{connection_id}/part/{id}" example="plm_part" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePlmPartRequest.new(
   plm_part: Models::Shared::PlmPart.new(
@@ -1192,10 +1169,10 @@ req = Models::Operations::UpdatePlmPartRequest.new(
     description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
     document_ids: [],
     file_ids: [],
-    id: '042ea10d-3111-4b6c-8e08-8406d9ae810d',
+    id: 'd2e12f1a-8bd0-42e6-9e37-3cabe19fc9c1',
     is_assembly: false,
     lifecycle_state: 'Design',
-    master_identifier: '33e68ad9-4978-4fbb-b5c5-ff96d1783f45',
+    master_identifier: '2f0e3dda-4d40-4bd0-be27-f2a76a440736',
     metadata: [],
     name: 'grumpy PCB',
     number: 'PRT-009154',
@@ -1205,13 +1182,12 @@ req = Models::Operations::UpdatePlmPartRequest.new(
     status: Models::Shared::PlmPartStatus::IN_WORK,
     type: Models::Shared::PlmPartType::SOFTWARE,
     unit_of_measure: 'EA',
-    updated_at: DateTime.iso8601('2021-04-11T02:40:21.084Z'),
-    url: 'https://inborn-independence.info',
+    updated_at: DateTime.iso8601('2021-04-11T13:24:26.717Z'),
+    url: 'https://inborn-independence.info'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.plm.update_plm_part(request: req)
 
 unless res.plm_part.nil?

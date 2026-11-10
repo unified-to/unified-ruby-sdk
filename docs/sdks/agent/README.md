@@ -1,5 +1,4 @@
 # Agent
-(*agent*)
 
 ## Overview
 
@@ -18,25 +17,24 @@ Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiAgent" method="post" path="/genai/{connection_id}/agent" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiAgent" method="post" path="/genai/{connection_id}/agent" example="genai_agent" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.agent.create_genai_agent(genai_agent: Models::Shared::GenaiAgent.new(
   created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
   description: 'Assentator tero sequi.',
-  id: '2e62c759-bd1b-4ada-8b8d-dc3431edbb32',
+  id: '181c5169-1073-460e-90af-73d3e3afdc56',
   instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
   is_active: false,
   name: 'daughter with',
-  updated_at: DateTime.iso8601('2025-10-31T03:41:27.623Z'),
+  updated_at: DateTime.iso8601('2025-11-01T13:21:43.282Z')
 ), connection_id: '<id>')
 
 unless res.genai_agent.nil?
@@ -76,11 +74,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.agent.get_genai_agent(connection_id: '<id>', id: '<id>')
 
 unless res.genai_agent.nil?
@@ -120,15 +117,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListGenaiAgentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListGenaiAgentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.agent.list_genai_agents(request: req)
 
 unless res.genai_agents.nil?
@@ -159,31 +155,30 @@ Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchGenaiAgent" method="patch" path="/genai/{connection_id}/agent/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchGenaiAgent" method="patch" path="/genai/{connection_id}/agent/{id}" example="genai_agent" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: '20136aea-eaec-469d-988c-12055261d4cb',
+    id: 'bb143ef5-d89f-41d6-a20e-3034fe46ade6',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-10-31T03:41:27.630Z'),
+    updated_at: DateTime.iso8601('2025-11-01T13:21:43.288Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.agent.patch_genai_agent(request: req)
 
 unless res.genai_agent.nil?
@@ -220,11 +215,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.agent.remove_genai_agent(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -256,31 +250,30 @@ Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateGenaiAgent" method="put" path="/genai/{connection_id}/agent/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateGenaiAgent" method="put" path="/genai/{connection_id}/agent/{id}" example="genai_agent" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: '20136aea-eaec-469d-988c-12055261d4cb',
+    id: 'bb143ef5-d89f-41d6-a20e-3034fe46ade6',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-10-31T03:41:27.630Z'),
+    updated_at: DateTime.iso8601('2025-11-01T13:21:43.288Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.agent.update_genai_agent(request: req)
 
 unless res.genai_agent.nil?

@@ -1,5 +1,4 @@
 # Message
-(*message*)
 
 ## Overview
 
@@ -18,39 +17,38 @@ Creates a MessagingMessage. Provide the unified MessagingMessage fields in the r
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
+<!-- UsageSnippet language="ruby" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" example="messaging_message" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.message.create_messaging_message(messaging_message: Models::Shared::MessagingMessage.new(
   attachments: [
     Models::Shared::MessagingAttachment.new(
-      content_identifier: 'e0d21a8d-a616-414e-9b56-8aa607e6cb0c',
+      content_identifier: '8d14a1f9-e99e-4e1f-97cd-0c398a5d5417',
       content_type: 'coaegresco',
       download_url: 'https://rotating-advertisement.org',
       filename: 'super',
-      message_id: 'b7e597b1-1dbd-4277-8f5f-76f8fbb00677',
-      size: 327.0,
+      message_id: '89bd26eb-f65c-4d63-9b5c-2e1fac8df586',
+      size: 327.0
     ),
   ],
   buttons: [
     Models::Shared::MessagingButton.new(
-      id: 'e983aeeb-31c6-42a8-8a07-9f6c066c656c',
-      text: 'comparo',
+      id: 'ca7b6352-9f0b-45d3-823d-42f4cca2d771',
+      text: 'comparo'
     ),
   ],
   created_at: DateTime.iso8601('2021-11-26T09:26:33.973Z'),
   destination_members: [],
   has_children: true,
   hidden_members: [],
-  id: 'b7e597b1-1dbd-4277-8f5f-76f8fbb00677',
+  id: '89bd26eb-f65c-4d63-9b5c-2e1fac8df586',
   is_unread: false,
   mentioned_members: [],
   message: 'Sum utique aliquid.',
@@ -59,8 +57,8 @@ res = s.message.create_messaging_message(messaging_message: Models::Shared::Mess
   metadata: [],
   reactions: [],
   subject: 'Cernuus optio cohaero summisse in.',
-  updated_at: DateTime.iso8601('2023-07-23T20:23:22.302Z'),
-  web_url: 'https://grumpy-kit.net',
+  updated_at: DateTime.iso8601('2023-07-24T10:00:32.026Z'),
+  web_url: 'https://grumpy-kit.net'
 ), connection_id: '<id>')
 
 unless res.messaging_message.nil?
@@ -100,11 +98,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.message.get_messaging_message(connection_id: '<id>', id: '<id>')
 
 unless res.messaging_message.nil?
@@ -144,15 +141,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListMessagingMessagesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListMessagingMessagesRequest.new(
+  connection_id: '<id>'
+)
 res = s.message.list_messaging_messages(request: req)
 
 unless res.messaging_messages.nil?
@@ -183,40 +179,40 @@ Updates the MessagingMessage identified by `id`. Provide the unified MessagingMe
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: '6759141e-ec0b-4aa4-80f7-60543f7b5c58',
+        content_identifier: '4988eef4-2b19-416f-901f-ba13d6229997',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: 'f60a1572-2baf-4f05-9be7-942f850fddd3',
-        size: 327.0,
+        message_id: 'f6a5ecd5-ff3d-4b6a-bdca-dcbdfed683af',
+        size: 327.0
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: 'e913b87c-78a7-4585-83e1-c49b9f41a8e4',
-        text: 'comparo',
+        id: '175b0e8b-19d5-4097-a559-c48795d4f59d',
+        text: 'comparo'
       ),
     ],
     created_at: DateTime.iso8601('2021-11-26T09:26:33.973Z'),
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: 'f60a1572-2baf-4f05-9be7-942f850fddd3',
+    id: 'f6a5ecd5-ff3d-4b6a-bdca-dcbdfed683af',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -225,13 +221,12 @@ req = Models::Operations::PatchMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Cernuus optio cohaero summisse in.',
-    updated_at: DateTime.iso8601('2023-07-23T20:23:22.311Z'),
-    web_url: 'https://grumpy-kit.net',
+    updated_at: DateTime.iso8601('2023-07-24T10:00:32.037Z'),
+    web_url: 'https://grumpy-kit.net'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.message.patch_messaging_message(request: req)
 
 unless res.messaging_message.nil?
@@ -268,11 +263,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.message.remove_messaging_message(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -304,40 +298,40 @@ Updates the MessagingMessage identified by `id`. Provide the unified MessagingMe
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateMessagingMessageRequest.new(
   messaging_message: Models::Shared::MessagingMessage.new(
     attachments: [
       Models::Shared::MessagingAttachment.new(
-        content_identifier: '6759141e-ec0b-4aa4-80f7-60543f7b5c58',
+        content_identifier: '4988eef4-2b19-416f-901f-ba13d6229997',
         content_type: 'coaegresco',
         download_url: 'https://rotating-advertisement.org',
         filename: 'super',
-        message_id: 'f60a1572-2baf-4f05-9be7-942f850fddd3',
-        size: 327.0,
+        message_id: 'f6a5ecd5-ff3d-4b6a-bdca-dcbdfed683af',
+        size: 327.0
       ),
     ],
     buttons: [
       Models::Shared::MessagingButton.new(
-        id: 'e913b87c-78a7-4585-83e1-c49b9f41a8e4',
-        text: 'comparo',
+        id: '175b0e8b-19d5-4097-a559-c48795d4f59d',
+        text: 'comparo'
       ),
     ],
     created_at: DateTime.iso8601('2021-11-26T09:26:33.973Z'),
     destination_members: [],
     has_children: true,
     hidden_members: [],
-    id: 'f60a1572-2baf-4f05-9be7-942f850fddd3',
+    id: 'f6a5ecd5-ff3d-4b6a-bdca-dcbdfed683af',
     is_unread: false,
     mentioned_members: [],
     message: 'Sum utique aliquid.',
@@ -346,13 +340,12 @@ req = Models::Operations::UpdateMessagingMessageRequest.new(
     metadata: [],
     reactions: [],
     subject: 'Cernuus optio cohaero summisse in.',
-    updated_at: DateTime.iso8601('2023-07-23T20:23:22.311Z'),
-    web_url: 'https://grumpy-kit.net',
+    updated_at: DateTime.iso8601('2023-07-24T10:00:32.037Z'),
+    web_url: 'https://grumpy-kit.net'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.message.update_messaging_message(request: req)
 
 unless res.messaging_message.nil?

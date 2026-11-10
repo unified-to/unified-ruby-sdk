@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareObservationComponent
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # Codings for the component (e.g. LOINC)
         field :codes, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('codes') } }
         # Interpretation of the component value
-        field :interpretation, Crystalline::Nilable.new(Models::Shared::HealthcareObservationComponentInterpretation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interpretation'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareObservationComponentInterpretation, true) } }
+        field :interpretation, Crystalline::Nilable.new(Models::Shared::HealthcareObservationComponentInterpretation), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('interpretation'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareObservationComponentInterpretation, true) } }
         # Human-readable name of the component
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # Numeric component value

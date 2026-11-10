@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes < T::Enum
-
-
+      class PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes
+        include ::Crystalline::Enum
         enums do
           HOME = new('HOME')
           RECENT = new('RECENT')
           TRAVEL = new('TRAVEL')
         end
+        open!
       end
     end
   end

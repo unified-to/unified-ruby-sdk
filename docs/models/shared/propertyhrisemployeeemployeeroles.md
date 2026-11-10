@@ -1,5 +1,16 @@
 # PropertyHrisEmployeeEmployeeRoles
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyHrisEmployeeEmployeeRoles::ADMIN
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyHrisEmployeeEmployeeRoles.deserialize("custom_value")
+```
+
 
 ## Values
 

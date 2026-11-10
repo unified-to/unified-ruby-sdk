@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class GenaiAnswerType < T::Enum
-
-
+      class GenaiAnswerType
+        include ::Crystalline::Enum
         enums do
           BOOLEAN = new('BOOLEAN')
           CHOICE = new('CHOICE')
           SCORE = new('SCORE')
         end
+        open!
       end
     end
   end

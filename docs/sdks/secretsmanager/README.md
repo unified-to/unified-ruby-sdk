@@ -1,5 +1,4 @@
 # Secretsmanager
-(*secretsmanager*)
 
 ## Overview
 
@@ -24,20 +23,19 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Shared::SecretsManager.new(
   auth: {
-    "key": '<value>',
-    "key1": '<value>',
+    'key' => '<value>',
+    'key1' => '<value>',
   },
   name: '<value>',
-  type: Models::Shared::SecretsManagerType::AKEYLESS,
+  type: Models::Shared::SecretsManagerType::AKEYLESS
 )
-
 res = s.secretsmanager.create_unified_secretsmanager(request: req)
 
 unless res.secrets_manager.nil?
@@ -74,11 +72,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.secretsmanager.get_unified_secretsmanager(id: '<id>')
 
 unless res.secrets_manager.nil?
@@ -115,12 +112,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.secretsmanager.list_unified_secretsmanager_instructions()
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.secretsmanager.list_unified_secretsmanager_instructions
 
 unless res.secrets_manager_instructions_list.nil?
   # handle response
@@ -150,11 +146,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.secretsmanager.list_unified_secretsmanager_secrets(secretsmanager_id: '<id>')
 
 unless res.secrets_manager_secrets.nil?
@@ -194,13 +189,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedSecretsmanagersRequest.new()
-
+req = Models::Operations::ListUnifiedSecretsmanagersRequest.new
 res = s.secretsmanager.list_unified_secretsmanagers(request: req)
 
 unless res.secrets_managers.nil?
@@ -237,11 +231,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.secretsmanager.remove_unified_secretsmanager(id: '<id>')
 
 if res.status_code == 200

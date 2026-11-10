@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # GpuModel - Normalized GPU model
-      class GpuModel < T::Enum
-
-
+      class GpuModel
+        include ::Crystalline::Enum
         enums do
           NVIDIA_GB300 = new('NVIDIA_GB300')
           NVIDIA_B300 = new('NVIDIA_B300')
@@ -46,6 +44,7 @@ module UnifiedRubySDK
           AMD_MI250 = new('AMD_MI250')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

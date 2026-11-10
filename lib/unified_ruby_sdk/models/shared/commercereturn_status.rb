@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CommerceReturnStatus < T::Enum
-
-
+      class CommerceReturnStatus
+        include ::Crystalline::Enum
         enums do
           REQUESTED = new('REQUESTED')
           OPEN = new('OPEN')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           CANCELLED = new('CANCELLED')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

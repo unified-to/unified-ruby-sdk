@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # EnrichPersonGender - The gender of the person
-      class EnrichPersonGender < T::Enum
-
-
+      class EnrichPersonGender
+        include ::Crystalline::Enum
         enums do
           MALE = new('MALE')
           FEMALE = new('FEMALE')
         end
+        open!
       end
     end
   end

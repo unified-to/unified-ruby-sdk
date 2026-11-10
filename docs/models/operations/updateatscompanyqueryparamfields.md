@@ -1,5 +1,13 @@
 # UpdateAtsCompanyQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateAtsCompanyQueryParamFields::ID
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # VerificationPackageType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = VerificationPackageType::IDENTITY_VERIFICATION
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = VerificationPackageType.deserialize("custom_value")
+```
+
 
 ## Values
 

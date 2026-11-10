@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PayFrequency - how often the employee is paid (eg. BIWEEKLY)
-      class PayFrequency < T::Enum
-
-
+      class PayFrequency
+        include ::Crystalline::Enum
         enums do
           ONE_TIME = new('ONE_TIME')
           DAY = new('DAY')
@@ -23,6 +21,7 @@ module UnifiedRubySDK
           BIWEEKLY = new('BIWEEKLY')
           SEMIMONTHLY = new('SEMIMONTHLY')
         end
+        open!
       end
     end
   end

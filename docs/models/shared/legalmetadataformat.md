@@ -2,6 +2,17 @@
 
 the data type of the value
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = LegalMetadataFormat::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = LegalMetadataFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # Event
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = Event::USER_CREATED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = Event.deserialize("custom_value")
+```
+
 
 ## Values
 

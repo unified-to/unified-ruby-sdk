@@ -1,5 +1,16 @@
 # PropertyAdsReportMetricsCampaignGoal
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PropertyAdsReportMetricsCampaignGoal::UNSPECIFIED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PropertyAdsReportMetricsCampaignGoal.deserialize("custom_value")
+```
+
 
 ## Values
 

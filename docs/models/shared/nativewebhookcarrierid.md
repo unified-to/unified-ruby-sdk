@@ -1,5 +1,16 @@
 # NativeWebhookCarrierId
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = NativeWebhookCarrierId::SUPPORTED_REQUIRED
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = NativeWebhookCarrierId.deserialize("custom_value")
+```
+
 
 ## Values
 

@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class TicketingEmailType < T::Enum
-
-
+      class TicketingEmailType
+        include ::Crystalline::Enum
         enums do
           WORK = new('WORK')
           HOME = new('HOME')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

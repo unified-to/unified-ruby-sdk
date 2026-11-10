@@ -1,5 +1,4 @@
 # Form
-(*form*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a FormsForm. Provide the unified FormsForm fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createFormsForm" method="post" path="/forms/{connection_id}/form" -->
+<!-- UsageSnippet language="ruby" operationID="createFormsForm" method="post" path="/forms/{connection_id}/form" example="forms_form" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.form.create_forms_form(forms_form: Models::Shared::FormsForm.new(
   confirmation_message: 'Alo crebro vado utique.',
   created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
@@ -36,24 +34,24 @@ res = s.form.create_forms_form(forms_form: Models::Shared::FormsForm.new(
   fields_: [
     Models::Shared::FormField.new(
       created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-      id: '97e2ad52-8b35-4480-89b7-19bcfe592068',
+      id: 'a96fbef5-74d1-4588-bb37-7ea6b9caaa90',
       is_active: true,
       is_required: true,
       max_length: 146.0,
       name: 'cornu creta confugo',
       order: 0.0,
       type: Models::Shared::FormFieldType::TEXTAREA,
-      updated_at: DateTime.iso8601('2025-05-08T10:30:04.344Z'),
+      updated_at: DateTime.iso8601('2025-05-09T07:26:05.931Z')
     ),
     Models::Shared::FormField.new(
       created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-      id: 'f25c9492-4c24-4d7e-b061-b6f8ccc2f6ac',
+      id: 'a9ad867c-f4bd-41f8-b70e-5220e3d819c5',
       is_active: true,
       is_required: false,
       name: 'tracto nostrum desidero',
       order: 1.0,
       type: Models::Shared::FormFieldType::TEXTAREA,
-      updated_at: DateTime.iso8601('2024-09-07T20:26:30.597Z'),
+      updated_at: DateTime.iso8601('2024-09-08T08:37:41.338Z')
     ),
     Models::Shared::FormField.new(
       choices: [
@@ -65,36 +63,36 @@ res = s.form.create_forms_form(forms_form: Models::Shared::FormsForm.new(
       ],
       created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
       default_value: 'somniculosus',
-      id: 'f7ea0395-07fb-44b1-8ae6-c5cac560e874',
+      id: '574960a1-c892-408e-8cc8-0a8a05fb7254',
       is_active: true,
       is_required: false,
       name: 'officia supra consequatur',
       order: 2.0,
       type: Models::Shared::FormFieldType::MULTIPLE_SELECT,
-      updated_at: DateTime.iso8601('2024-02-28T19:24:00.778Z'),
+      updated_at: DateTime.iso8601('2024-02-29T00:39:41.747Z')
     ),
     Models::Shared::FormField.new(
       created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
       description: 'Antepono cursim aurum voluptatum placeat audax tripudio amo.',
-      id: '8c2d2536-964a-40df-91ba-f4a899a7c3a4',
+      id: 'e73295f5-46bd-4e45-a1d8-61d28a47f02e',
       is_active: true,
       is_required: false,
       name: 'curtus fugiat audentia',
       order: 3.0,
       type: Models::Shared::FormFieldType::TEXTAREA,
-      updated_at: DateTime.iso8601('2024-12-04T13:53:30.705Z'),
+      updated_at: DateTime.iso8601('2024-12-05T05:14:29.582Z')
     ),
   ],
   has_multiple_submissions: false,
   has_progress_bar: false,
   has_shuffle_questions: true,
-  id: '47cc9899-97e6-428c-8e3b-c0dd9a13743b',
+  id: '33588632-2c88-4cc9-92fb-ad65bc99c99b',
   is_active: false,
   metadata: [],
   name: 'tandem tracto vivo Form',
   published_url: 'https://massive-blowgun.info',
   response_count: 423.0,
-  updated_at: DateTime.iso8601('2024-08-30T08:16:08.078Z'),
+  updated_at: DateTime.iso8601('2024-08-30T20:08:54.471Z')
 ), connection_id: '<id>')
 
 unless res.forms_form.nil?
@@ -134,11 +132,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.form.get_forms_form(connection_id: '<id>', id: '<id>')
 
 unless res.forms_form.nil?
@@ -178,15 +175,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListFormsFormsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListFormsFormsRequest.new(
+  connection_id: '<id>'
+)
 res = s.form.list_forms_forms(request: req)
 
 unless res.forms_forms.nil?
@@ -217,16 +213,16 @@ Updates the FormsForm identified by `id`. Provide the unified FormsForm fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchFormsForm" method="patch" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchFormsForm" method="patch" path="/forms/{connection_id}/form/{id}" example="forms_form" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchFormsFormRequest.new(
   forms_form: Models::Shared::FormsForm.new(
@@ -236,24 +232,24 @@ req = Models::Operations::PatchFormsFormRequest.new(
     fields_: [
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-        id: 'e415417c-f0be-45c7-a92d-27b7a7ab376e',
+        id: '90f849a2-aed0-4aae-9866-5f252dc27d9c',
         is_active: true,
         is_required: true,
         max_length: 146.0,
         name: 'cornu creta confugo',
         order: 0.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2025-05-08T10:30:04.359Z'),
+        updated_at: DateTime.iso8601('2025-05-09T07:26:05.944Z')
       ),
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-        id: '450c04ee-55de-46d9-9c13-2361c1890ea0',
+        id: 'cc81c0e2-791e-41b1-8be4-1622e08aee61',
         is_active: true,
         is_required: false,
         name: 'tracto nostrum desidero',
         order: 1.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2024-09-07T20:26:30.605Z'),
+        updated_at: DateTime.iso8601('2024-09-08T08:37:41.345Z')
       ),
       Models::Shared::FormField.new(
         choices: [
@@ -265,41 +261,40 @@ req = Models::Operations::PatchFormsFormRequest.new(
         ],
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
         default_value: 'somniculosus',
-        id: 'b483a659-5fb3-4adf-b49a-9cdf30c18a94',
+        id: 'f233d009-7a5b-405b-a492-69a8ffdad8e5',
         is_active: true,
         is_required: false,
         name: 'officia supra consequatur',
         order: 2.0,
         type: Models::Shared::FormFieldType::MULTIPLE_SELECT,
-        updated_at: DateTime.iso8601('2024-02-28T19:24:00.782Z'),
+        updated_at: DateTime.iso8601('2024-02-29T00:39:41.750Z')
       ),
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
         description: 'Antepono cursim aurum voluptatum placeat audax tripudio amo.',
-        id: '01edd5f5-0ad4-4a6e-860f-9eee50871328',
+        id: '7f3a26ac-ecc0-41f9-8a8b-7c78f10db141',
         is_active: true,
         is_required: false,
         name: 'curtus fugiat audentia',
         order: 3.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2024-12-04T13:53:30.717Z'),
+        updated_at: DateTime.iso8601('2024-12-05T05:14:29.592Z')
       ),
     ],
     has_multiple_submissions: false,
     has_progress_bar: false,
     has_shuffle_questions: true,
-    id: '408b9dbf-885a-49fb-b9d3-9de9fcbdaffc',
+    id: 'ee64855f-9868-4288-b2b1-429508359e92',
     is_active: false,
     metadata: [],
     name: 'tandem tracto vivo Form',
     published_url: 'https://massive-blowgun.info',
     response_count: 423.0,
-    updated_at: DateTime.iso8601('2024-08-30T08:16:08.086Z'),
+    updated_at: DateTime.iso8601('2024-08-30T20:08:54.478Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.form.patch_forms_form(request: req)
 
 unless res.forms_form.nil?
@@ -336,11 +331,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.form.remove_forms_form(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -372,16 +366,16 @@ Updates the FormsForm identified by `id`. Provide the unified FormsForm fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateFormsForm" method="put" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateFormsForm" method="put" path="/forms/{connection_id}/form/{id}" example="forms_form" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateFormsFormRequest.new(
   forms_form: Models::Shared::FormsForm.new(
@@ -391,24 +385,24 @@ req = Models::Operations::UpdateFormsFormRequest.new(
     fields_: [
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-        id: 'e415417c-f0be-45c7-a92d-27b7a7ab376e',
+        id: '90f849a2-aed0-4aae-9866-5f252dc27d9c',
         is_active: true,
         is_required: true,
         max_length: 146.0,
         name: 'cornu creta confugo',
         order: 0.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2025-05-08T10:30:04.359Z'),
+        updated_at: DateTime.iso8601('2025-05-09T07:26:05.944Z')
       ),
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
-        id: '450c04ee-55de-46d9-9c13-2361c1890ea0',
+        id: 'cc81c0e2-791e-41b1-8be4-1622e08aee61',
         is_active: true,
         is_required: false,
         name: 'tracto nostrum desidero',
         order: 1.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2024-09-07T20:26:30.605Z'),
+        updated_at: DateTime.iso8601('2024-09-08T08:37:41.345Z')
       ),
       Models::Shared::FormField.new(
         choices: [
@@ -420,41 +414,40 @@ req = Models::Operations::UpdateFormsFormRequest.new(
         ],
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
         default_value: 'somniculosus',
-        id: 'b483a659-5fb3-4adf-b49a-9cdf30c18a94',
+        id: 'f233d009-7a5b-405b-a492-69a8ffdad8e5',
         is_active: true,
         is_required: false,
         name: 'officia supra consequatur',
         order: 2.0,
         type: Models::Shared::FormFieldType::MULTIPLE_SELECT,
-        updated_at: DateTime.iso8601('2024-02-28T19:24:00.782Z'),
+        updated_at: DateTime.iso8601('2024-02-29T00:39:41.750Z')
       ),
       Models::Shared::FormField.new(
         created_at: DateTime.iso8601('2023-10-05T21:34:29.094Z'),
         description: 'Antepono cursim aurum voluptatum placeat audax tripudio amo.',
-        id: '01edd5f5-0ad4-4a6e-860f-9eee50871328',
+        id: '7f3a26ac-ecc0-41f9-8a8b-7c78f10db141',
         is_active: true,
         is_required: false,
         name: 'curtus fugiat audentia',
         order: 3.0,
         type: Models::Shared::FormFieldType::TEXTAREA,
-        updated_at: DateTime.iso8601('2024-12-04T13:53:30.717Z'),
+        updated_at: DateTime.iso8601('2024-12-05T05:14:29.592Z')
       ),
     ],
     has_multiple_submissions: false,
     has_progress_bar: false,
     has_shuffle_questions: true,
-    id: '408b9dbf-885a-49fb-b9d3-9de9fcbdaffc',
+    id: 'ee64855f-9868-4288-b2b1-429508359e92',
     is_active: false,
     metadata: [],
     name: 'tandem tracto vivo Form',
     published_url: 'https://massive-blowgun.info',
     response_count: 423.0,
-    updated_at: DateTime.iso8601('2024-08-30T08:16:08.086Z'),
+    updated_at: DateTime.iso8601('2024-08-30T20:08:54.478Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.form.update_forms_form(request: req)
 
 unless res.forms_form.nil?

@@ -1,5 +1,13 @@
 # PatchHrisCompanyQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchHrisCompanyQueryParamFields::ID
+```
+
 
 ## Values
 

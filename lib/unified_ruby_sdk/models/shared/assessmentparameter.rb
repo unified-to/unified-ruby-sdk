@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AssessmentParameter
         extend T::Sig
@@ -26,7 +25,7 @@ module UnifiedRubySDK
         # Question to ask the candidateuser
         field :public_question, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('public_question') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::AssessmentParameterType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AssessmentParameterType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AssessmentParameterType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AssessmentParameterType, true) } }
         # Regions where this parameter is valid ({country}-{state} or {country})
         field :valid_regions, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('valid_regions') } }
 

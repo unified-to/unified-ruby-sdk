@@ -1,5 +1,13 @@
 # ListLegalTimeentriesQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = ListLegalTimeentriesQueryParamFields::ID
+```
+
 
 ## Values
 

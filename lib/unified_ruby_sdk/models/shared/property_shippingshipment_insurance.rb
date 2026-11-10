@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Insurance details
       class PropertyShippingShipmentInsurance
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # Coverage amount (may differ from insured_value)
         field :coverage_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('coverage_amount') } }
 
-        field :coverage_type, Crystalline::Nilable.new(Models::Shared::CoverageType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('coverage_type'), 'decoder': Utils.enum_from_string(Models::Shared::CoverageType, true) } }
+        field :coverage_type, Crystalline::Nilable.new(Models::Shared::CoverageType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('coverage_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::CoverageType, true) } }
 
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # Cost of insurance

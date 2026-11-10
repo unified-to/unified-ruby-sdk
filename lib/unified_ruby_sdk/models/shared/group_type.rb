@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # GroupType - The group type
-      class GroupType < T::Enum
-
-
+      class GroupType
+        include ::Crystalline::Enum
         enums do
           CASUAL_CLUB = new('CASUAL_CLUB')
           RACING_TEAM = new('RACING_TEAM')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           COMPANY = new('COMPANY')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

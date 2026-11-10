@@ -1,5 +1,13 @@
 # CreateHealthcarePatientQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateHealthcarePatientQueryParamFields::ID
+```
+
 
 ## Values
 

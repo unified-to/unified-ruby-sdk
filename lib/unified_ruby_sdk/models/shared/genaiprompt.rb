@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class GenaiPrompt
         extend T::Sig
@@ -30,7 +29,7 @@ module UnifiedRubySDK
         # Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
         field :questions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::GenaiQuestion)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
         field :responses, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('responses') } }
         # ids of the genai_skill objects (Agent Skills) to make available to the LLM while it answers.
@@ -40,7 +39,7 @@ module UnifiedRubySDK
 
         field :tokens_used, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('tokens_used') } }
 
-        sig { params(answers: T.nilable(T::Array[Models::Shared::GenaiAnswer]), max_tokens: T.nilable(::Float), mcp_authorization_token: T.nilable(::String), mcp_deferred_tools: T.nilable(T::Array[::String]), mcp_url: T.nilable(::String), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), questions: T.nilable(T::Array[Models::Shared::GenaiQuestion]), raw: T.nilable(T::Hash[Symbol, ::Object]), responses: T.nilable(T::Array[::String]), skill_ids: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
+        sig { params(answers: T.nilable(T::Array[Models::Shared::GenaiAnswer]), max_tokens: T.nilable(::Float), mcp_authorization_token: T.nilable(::String), mcp_deferred_tools: T.nilable(T::Array[::String]), mcp_url: T.nilable(::String), messages: T.nilable(T::Array[Models::Shared::GenaiContent]), model_id: T.nilable(::String), questions: T.nilable(T::Array[Models::Shared::GenaiQuestion]), raw: T.nilable(T::Hash[::Symbol, ::Object]), responses: T.nilable(T::Array[::String]), skill_ids: T.nilable(T::Array[::String]), temperature: T.nilable(::Float), tokens_used: T.nilable(::Float)).void }
         def initialize(answers: nil, max_tokens: nil, mcp_authorization_token: nil, mcp_deferred_tools: nil, mcp_url: nil, messages: nil, model_id: nil, questions: nil, raw: nil, responses: nil, skill_ids: nil, temperature: nil, tokens_used: nil)
           @answers = answers
           @max_tokens = max_tokens

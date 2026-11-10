@@ -1,5 +1,13 @@
 # Categories
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = Categories::PASSTHROUGH
+```
+
 
 ## Values
 

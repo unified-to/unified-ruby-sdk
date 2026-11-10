@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AtsStatus
         extend T::Sig
@@ -24,11 +23,11 @@ module UnifiedRubySDK
 
         field :original_status, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('original_status') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :status, Crystalline::Nilable.new(Models::Shared::AtsStatusStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::AtsStatusStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::AtsStatusStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AtsStatusStatus, true) } }
 
-        sig { params(description: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), original_status: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), status: T.nilable(Models::Shared::AtsStatusStatus)).void }
+        sig { params(description: T.nilable(::String), id: T.nilable(::String), job_id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::AtsMetadata]), original_status: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), status: T.nilable(Models::Shared::AtsStatusStatus)).void }
         def initialize(description: nil, id: nil, job_id: nil, metadata: nil, original_status: nil, raw: nil, status: nil)
           @description = description
           @id = id

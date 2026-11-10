@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class AccountingTaxrate
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # Jurisdiction country
         field :country, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('country') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # Net effective rate in %, where it differs from the nominal rate
@@ -38,17 +37,17 @@ module UnifiedRubySDK
         # %
         field :rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('rate') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Jurisdiction state / province
         field :region, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('region') } }
         # Sum of all components, in %
         field :total_rate, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_rate') } }
         # Whether the rate applies to sales, purchases, or both
-        field :type, Crystalline::Nilable.new(Models::Shared::AccountingTaxrateType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::AccountingTaxrateType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::AccountingTaxrateType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AccountingTaxrateType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(components: T.nilable(T::Array[Models::Shared::AccountingTaxrateComponent]), country: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), effective_rate: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_compound: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), rate: T.nilable(::Float), raw: T.nilable(T::Hash[Symbol, ::Object]), region: T.nilable(::String), total_rate: T.nilable(::Float), type: T.nilable(Models::Shared::AccountingTaxrateType), updated_at: T.nilable(::DateTime)).void }
+        sig { params(components: T.nilable(T::Array[Models::Shared::AccountingTaxrateComponent]), country: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), effective_rate: T.nilable(::Float), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_compound: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::AccountingMetadata]), name: T.nilable(::String), organization_id: T.nilable(::String), rate: T.nilable(::Float), raw: T.nilable(T::Hash[::Symbol, ::Object]), region: T.nilable(::String), total_rate: T.nilable(::Float), type: T.nilable(Models::Shared::AccountingTaxrateType), updated_at: T.nilable(::DateTime)).void }
         def initialize(components: nil, country: nil, created_at: nil, description: nil, effective_rate: nil, id: nil, is_active: nil, is_compound: nil, metadata: nil, name: nil, organization_id: nil, rate: nil, raw: nil, region: nil, total_rate: nil, type: nil, updated_at: nil)
           @components = components
           @country = country

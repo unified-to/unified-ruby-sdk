@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class RemovePassthroughRequest
         extend T::Sig
@@ -18,9 +17,9 @@ module UnifiedRubySDK
 
         field :path, ::String, { 'path_param': { 'field_name': 'path', 'style': 'simple', 'explode': false } }
 
-        field :query, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
+        field :query, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'query_param': { 'field_name': 'query', 'style': 'form', 'explode': true } }
 
-        sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[Symbol, ::Object])).void }
+        sig { params(connection_id: ::String, path: ::String, query: T.nilable(T::Hash[::Symbol, ::Object])).void }
         def initialize(connection_id:, path:, query: nil)
           @connection_id = connection_id
           @path = path

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertySocialPostCallToActionType - The call-to-action button type
-      class PropertySocialPostCallToActionType < T::Enum
-
-
+      class PropertySocialPostCallToActionType
+        include ::Crystalline::Enum
         enums do
           BOOK = new('BOOK')
           ORDER = new('ORDER')
@@ -21,6 +19,7 @@ module UnifiedRubySDK
           CALL = new('CALL')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

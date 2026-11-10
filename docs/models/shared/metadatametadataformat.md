@@ -2,6 +2,17 @@
 
 The data type of the custom field's values
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = MetadataMetadataFormat::TEXT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = MetadataMetadataFormat.deserialize("custom_value")
+```
+
 
 ## Values
 

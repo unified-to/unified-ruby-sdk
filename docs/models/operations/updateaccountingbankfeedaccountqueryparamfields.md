@@ -1,5 +1,13 @@
 # UpdateAccountingBankfeedaccountQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateAccountingBankfeedaccountQueryParamFields::ID
+```
+
 
 ## Values
 

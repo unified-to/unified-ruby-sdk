@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Promoted entity (e.g. page, app, product, tweet) for ads create
       class AdsPromoted
         extend T::Sig
@@ -16,15 +15,15 @@ module UnifiedRubySDK
 
         field :id, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id'), required: true } }
         # Promoted entity types for ads_promoted list endpoint
-        field :type, Models::Shared::AdsPromotedType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::AdsPromotedType, false) } }
+        field :type, Models::Shared::AdsPromotedType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::AdsPromotedType, false) } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::AdsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        sig { params(id: ::String, type: Models::Shared::AdsPromotedType, metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object])).void }
+        sig { params(id: ::String, type: Models::Shared::AdsPromotedType, metadata: T.nilable(T::Array[Models::Shared::AdsMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object])).void }
         def initialize(id:, type:, metadata: nil, name: nil, raw: nil)
           @id = id
           @type = type

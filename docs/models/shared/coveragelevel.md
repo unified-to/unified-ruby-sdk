@@ -1,5 +1,16 @@
 # CoverageLevel
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CoverageLevel::EMPLOYEE_ONLY
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = CoverageLevel.deserialize("custom_value")
+```
+
 
 ## Values
 

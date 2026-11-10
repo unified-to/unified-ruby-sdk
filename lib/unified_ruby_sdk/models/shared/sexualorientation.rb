@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class SexualOrientation < T::Enum
-
-
+      class SexualOrientation
+        include ::Crystalline::Enum
         enums do
           QUEER = new('Queer')
           HETEROSEXUAL = new('Heterosexual')
           STRAIGHT = new('Straight')
         end
+        open!
       end
     end
   end

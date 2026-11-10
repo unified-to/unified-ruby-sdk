@@ -1,5 +1,4 @@
 # Itemvariant
-(*itemvariant*)
 
 ## Overview
 
@@ -18,23 +17,22 @@ Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" example="commerce_itemvariant" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Shared::CommerceItemvariant.new(
   available_at: DateTime.iso8601('2022-02-06T18:14:41.644Z'),
   created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
   description: 'Stylish Salad designed to make you stand out with little looks',
   height: 54.0,
-  id: 'd4c5f685-a661-461c-99ab-47e3d1091c96',
+  id: '94a29f26-96bf-41f2-bc21-f9f4152abe3b',
   is_active: true,
   is_featured: false,
   is_visible: false,
@@ -43,55 +41,55 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
     Models::Shared::CommerceItemMedia.new(
       alt: 'Hic desipio thorax.',
       height: 961.0,
-      id: '8b1917e5-f388-45a1-9083-4fc00fcbdf3c',
+      id: '7614d909-b306-48f1-8904-ff4d5e33df90',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'a235d624-1912-4c43-b8f9-53bbc74a55d7',
+          id: '6ee3e637-7782-4cd4-b941-940ac7fdfbe2',
           slug: 'ubi',
-          value: 'textus',
+          value: 'textus'
         ),
       ],
       position: 72.0,
       type: Models::Shared::CommerceItemMediaType::IMAGE,
       url: 'https://loremflickr.com/2126/721?lock=8820088623807162',
-      width: 35.0,
+      width: 35.0
     ),
   ],
   metadata: [
     Models::Shared::CommerceMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::CommerceMetadataFormat::TEXT,
-      id: '415b383b-c168-4c10-838d-269be46601f3',
+      id: '1599934b-691d-49d7-8658-8165a7807f0d',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'absens',
+      value: 'absens'
     ),
   ],
   name: 'Chair',
   options: [
     Models::Shared::CommerceItemOption.new(
-      id: '8d3719f8-29ed-4e77-a24d-7705ca7a882b',
+      id: '53a95b1e-4472-4a57-95de-e788dfe9ce24',
       name: 'Color',
       position: 1.0,
       values: [
         'olive',
-      ],
+      ]
     ),
     Models::Shared::CommerceItemOption.new(
-      id: 'c52a3657-431c-4ee4-80c3-a98c9f4d7ffc',
+      id: 'e0f534a3-c96c-4717-978d-02ec0a44905e',
       name: 'Size',
       position: 2.0,
       values: [
         'S',
-      ],
+      ]
     ),
   ],
   prices: [
     Models::Shared::CommerceItemPrice.new(
       currency: 'USD',
-      price: 382.23,
+      price: 382.23
     ),
   ],
   public_description: 'Stylish Cheese designed to make you stand out with grave looks',
@@ -103,10 +101,10 @@ res = s.itemvariant.create_commerce_itemvariant(commerce_itemvariant: Models::Sh
     'deserunt',
   ],
   total_stock: 436.0,
-  updated_at: DateTime.iso8601('2026-03-26T05:13:42.858Z'),
+  updated_at: DateTime.iso8601('2026-03-27T16:41:07.339Z'),
   weight: 46.0,
   weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
-  width: 40.0,
+  width: 40.0
 ), connection_id: '<id>')
 
 unless res.commerce_itemvariant.nil?
@@ -146,11 +144,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.itemvariant.get_commerce_itemvariant(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_itemvariant.nil?
@@ -190,15 +187,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceItemvariantsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceItemvariantsRequest.new(
+  connection_id: '<id>'
+)
 res = s.itemvariant.list_commerce_itemvariants(request: req)
 
 unless res.commerce_itemvariants.nil?
@@ -229,16 +225,16 @@ Updates the CommerceItemvariant identified by `id`. Provide the unified Commerce
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" example="commerce_itemvariant" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceItemvariantRequest.new(
   commerce_itemvariant: Models::Shared::CommerceItemvariant.new(
@@ -246,7 +242,7 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Stylish Salad designed to make you stand out with little looks',
     height: 54.0,
-    id: 'ce6fff1d-67e1-4840-94f5-e1a8fcd8d34b',
+    id: '7d405b1d-98b4-437e-a31a-9844825fd3f9',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -255,55 +251,55 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Hic desipio thorax.',
         height: 961.0,
-        id: '156c17d1-8af6-4edf-87d2-667031c45d26',
+        id: 'f8a8eaea-3f3d-43de-af5f-0765349d64f6',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'bcc1844f-b2ff-436c-a4f1-56141d6d13e0',
+            id: 'c77f3420-1596-468e-8895-9e76c484cfee',
             slug: 'ubi',
-            value: 'textus',
+            value: 'textus'
           ),
         ],
         position: 72.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://loremflickr.com/2126/721?lock=8820088623807162',
-        width: 35.0,
+        width: 35.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: 'bb7a2ce3-24cc-40c1-b528-5008882b04fa',
+        id: '762b2d50-6de1-4ff6-8686-fa54348e0fe9',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'absens',
+        value: 'absens'
       ),
     ],
     name: 'Chair',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '4c7c322d-7ea3-4905-8e81-369f8b00e8db',
+        id: '862b3eb2-2bd5-40a6-bf2e-cb22f5b7b1cd',
         name: 'Color',
         position: 1.0,
         values: [
           'olive',
-        ],
+        ]
       ),
       Models::Shared::CommerceItemOption.new(
-        id: 'ac8e74dd-dfd3-4eed-9bf4-ad407cc14d7a',
+        id: '808d10d9-c4c6-4183-a561-fb14cb3d5a52',
         name: 'Size',
         position: 2.0,
         values: [
           'S',
-        ],
+        ]
       ),
     ],
     prices: [
       Models::Shared::CommerceItemPrice.new(
         currency: 'USD',
-        price: 382.23,
+        price: 382.23
       ),
     ],
     public_description: 'Stylish Cheese designed to make you stand out with grave looks',
@@ -315,15 +311,14 @@ req = Models::Operations::PatchCommerceItemvariantRequest.new(
       'deserunt',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-03-26T05:13:42.897Z'),
+    updated_at: DateTime.iso8601('2026-03-27T16:41:07.379Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
-    width: 40.0,
+    width: 40.0
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.itemvariant.patch_commerce_itemvariant(request: req)
 
 unless res.commerce_itemvariant.nil?
@@ -360,11 +355,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.itemvariant.remove_commerce_itemvariant(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -396,16 +390,16 @@ Updates the CommerceItemvariant identified by `id`. Provide the unified Commerce
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" example="commerce_itemvariant" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceItemvariantRequest.new(
   commerce_itemvariant: Models::Shared::CommerceItemvariant.new(
@@ -413,7 +407,7 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
     created_at: DateTime.iso8601('2022-01-20T13:49:12.968Z'),
     description: 'Stylish Salad designed to make you stand out with little looks',
     height: 54.0,
-    id: 'ce6fff1d-67e1-4840-94f5-e1a8fcd8d34b',
+    id: '7d405b1d-98b4-437e-a31a-9844825fd3f9',
     is_active: true,
     is_featured: false,
     is_visible: false,
@@ -422,55 +416,55 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Hic desipio thorax.',
         height: 961.0,
-        id: '156c17d1-8af6-4edf-87d2-667031c45d26',
+        id: 'f8a8eaea-3f3d-43de-af5f-0765349d64f6',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'bcc1844f-b2ff-436c-a4f1-56141d6d13e0',
+            id: 'c77f3420-1596-468e-8895-9e76c484cfee',
             slug: 'ubi',
-            value: 'textus',
+            value: 'textus'
           ),
         ],
         position: 72.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://loremflickr.com/2126/721?lock=8820088623807162',
-        width: 35.0,
+        width: 35.0
       ),
     ],
     metadata: [
       Models::Shared::CommerceMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::CommerceMetadataFormat::TEXT,
-        id: 'bb7a2ce3-24cc-40c1-b528-5008882b04fa',
+        id: '762b2d50-6de1-4ff6-8686-fa54348e0fe9',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'absens',
+        value: 'absens'
       ),
     ],
     name: 'Chair',
     options: [
       Models::Shared::CommerceItemOption.new(
-        id: '4c7c322d-7ea3-4905-8e81-369f8b00e8db',
+        id: '862b3eb2-2bd5-40a6-bf2e-cb22f5b7b1cd',
         name: 'Color',
         position: 1.0,
         values: [
           'olive',
-        ],
+        ]
       ),
       Models::Shared::CommerceItemOption.new(
-        id: 'ac8e74dd-dfd3-4eed-9bf4-ad407cc14d7a',
+        id: '808d10d9-c4c6-4183-a561-fb14cb3d5a52',
         name: 'Size',
         position: 2.0,
         values: [
           'S',
-        ],
+        ]
       ),
     ],
     prices: [
       Models::Shared::CommerceItemPrice.new(
         currency: 'USD',
-        price: 382.23,
+        price: 382.23
       ),
     ],
     public_description: 'Stylish Cheese designed to make you stand out with grave looks',
@@ -482,15 +476,14 @@ req = Models::Operations::UpdateCommerceItemvariantRequest.new(
       'deserunt',
     ],
     total_stock: 436.0,
-    updated_at: DateTime.iso8601('2026-03-26T05:13:42.897Z'),
+    updated_at: DateTime.iso8601('2026-03-27T16:41:07.379Z'),
     weight: 46.0,
     weight_unit: Models::Shared::CommerceItemvariantWeightUnit::OZ,
-    width: 40.0,
+    width: 40.0
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.itemvariant.update_commerce_itemvariant(request: req)
 
 unless res.commerce_itemvariant.nil?

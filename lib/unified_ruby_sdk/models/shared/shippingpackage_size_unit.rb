@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ShippingPackageSizeUnit - Unit for dimensions (cm, inch)
-      class ShippingPackageSizeUnit < T::Enum
-
-
+      class ShippingPackageSizeUnit
+        include ::Crystalline::Enum
         enums do
           CM = new('cm')
           INCH = new('inch')
         end
+        open!
       end
     end
   end

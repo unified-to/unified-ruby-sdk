@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyQuote
         extend T::Sig
@@ -18,13 +17,13 @@ module UnifiedRubySDK
         # number of children
         field :children, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('children') } }
         # when the quote was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # ISO 4217 currency code
         field :currency, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('currency') } }
         # the deposit due at booking
         field :deposit_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('deposit_amount') } }
         # the departure (check-out) date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # total number of guests
         field :guests, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('guests') } }
         # unique identifier for the quote
@@ -36,15 +35,15 @@ module UnifiedRubySDK
         # promotion or coupon code to apply
         field :promotion_code, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('promotion_code') } }
         # raw data from the integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # the arrival (check-in) date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the total price of the stay
         field :total_amount, Crystalline::Nilable.new(::Float), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('total_amount') } }
         # pointer to the Property Unittype (room type) to price
         field :unittype_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('unittype_id') } }
 
-        sig { params(adults: T.nilable(::Float), children: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deposit_amount: T.nilable(::Float), end_at: T.nilable(::DateTime), guests: T.nilable(::Float), id: T.nilable(::String), line_items: T.nilable(T::Array[Models::Shared::PropertyLineitem]), listing_id: T.nilable(::String), promotion_code: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), start_at: T.nilable(::DateTime), total_amount: T.nilable(::Float), unittype_id: T.nilable(::String)).void }
+        sig { params(adults: T.nilable(::Float), children: T.nilable(::Float), created_at: T.nilable(::DateTime), currency: T.nilable(::String), deposit_amount: T.nilable(::Float), end_at: T.nilable(::DateTime), guests: T.nilable(::Float), id: T.nilable(::String), line_items: T.nilable(T::Array[Models::Shared::PropertyLineitem]), listing_id: T.nilable(::String), promotion_code: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), start_at: T.nilable(::DateTime), total_amount: T.nilable(::Float), unittype_id: T.nilable(::String)).void }
         def initialize(adults: nil, children: nil, created_at: nil, currency: nil, deposit_amount: nil, end_at: nil, guests: nil, id: nil, line_items: nil, listing_id: nil, promotion_code: nil, raw: nil, start_at: nil, total_amount: nil, unittype_id: nil)
           @adults = adults
           @children = children

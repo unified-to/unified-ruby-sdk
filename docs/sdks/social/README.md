@@ -1,24 +1,72 @@
 # Social
-(*social*)
 
 ## Overview
 
 ### Available Operations
 
+* [create_social_comment](#create_social_comment) - Create a comment
 * [create_social_post](#create_social_post) - Create a post
+* [get_social_comment](#get_social_comment) - Retrieve a comment
 * [get_social_insight](#get_social_insight) - Retrieve an insight
 * [get_social_post](#get_social_post) - Retrieve a post
 * [get_social_profile](#get_social_profile) - Retrieve a profile
 * [get_social_review](#get_social_review) - Retrieve a review
+* [list_social_comments](#list_social_comments) - List all comments
 * [list_social_insights](#list_social_insights) - List all insights
 * [list_social_posts](#list_social_posts) - List all posts
 * [list_social_profiles](#list_social_profiles) - List all profiles
 * [list_social_reviews](#list_social_reviews) - List all reviews
+* [patch_social_comment](#patch_social_comment) - Update a comment
 * [patch_social_post](#patch_social_post) - Update a post
 * [patch_social_review](#patch_social_review) - Update a review
+* [remove_social_comment](#remove_social_comment) - Remove a comment
 * [remove_social_post](#remove_social_post) - Remove a post
+* [update_social_comment](#update_social_comment) - Update a comment
 * [update_social_post](#update_social_post) - Update a post
 * [update_social_review](#update_social_review) - Update a review
+
+## create_social_comment
+
+Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are mapped to the provider's API. Returns the created SocialComment.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="createSocialComment" method="post" path="/social/{connection_id}/comment" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.social.create_social_comment(social_comment: Models::Shared::SocialComment.new, connection_id: '<id>')
+
+unless res.social_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `social_comment`                                                                                                                                 | [Models::Shared::SocialComment](../../models/shared/socialcomment.md)                                                                            | :heavy_check_mark:                                                                                                                               | N/A                                                                                                                                              |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::CreateSocialCommentQueryParamFields](../../models/operations/createsocialcommentqueryparamfields.md)>              | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::CreateSocialCommentResponse)](../../models/operations/createsocialcommentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
 
 ## create_social_post
 
@@ -32,12 +80,11 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-res = s.social.create_social_post(social_post: Models::Shared::SocialPost.new(), connection_id: '<id>')
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.social.create_social_post(social_post: Models::Shared::SocialPost.new, connection_id: '<id>')
 
 unless res.social_post.nil?
   # handle response
@@ -64,6 +111,49 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## get_social_comment
+
+Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="getSocialComment" method="get" path="/social/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.social.get_social_comment(connection_id: '<id>', id: '<id>')
+
+unless res.social_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `connection_id`                                                                                                                                  | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the connection                                                                                                                             |
+| `id`                                                                                                                                             | *::String*                                                                                                                                       | :heavy_check_mark:                                                                                                                               | ID of the Comment                                                                                                                                |
+| `fields_`                                                                                                                                        | T::Array<[Models::Operations::GetSocialCommentQueryParamFields](../../models/operations/getsocialcommentqueryparamfields.md)>                    | :heavy_minus_sign:                                                                                                                               | Fields to return                                                                                                                                 |
+| `raw`                                                                                                                                            | *T.nilable(::String)*                                                                                                                            | :heavy_minus_sign:                                                                                                                               | Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg. raw parameters: foo=bar&zoo=bar -> raw=foo%3Dbar%26zoo%3Dbar |
+
+### Response
+
+**[T.nilable(Models::Operations::GetSocialCommentResponse)](../../models/operations/getsocialcommentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## get_social_insight
 
 Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -76,11 +166,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.social.get_social_insight(connection_id: '<id>', id: '<id>')
 
 unless res.social_insight.nil?
@@ -120,11 +209,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.social.get_social_post(connection_id: '<id>', id: '<id>')
 
 unless res.social_post.nil?
@@ -164,11 +252,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.social.get_social_profile(connection_id: '<id>', id: '<id>')
 
 unless res.social_profile.nil?
@@ -208,11 +295,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.social.get_social_review(connection_id: '<id>', id: '<id>')
 
 unless res.social_review.nil?
@@ -240,6 +326,50 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## list_social_comments
+
+Returns a list of SocialComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="listSocialComments" method="get" path="/social/{connection_id}/comment" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::ListSocialCommentsRequest.new(
+  connection_id: '<id>'
+)
+res = s.social.list_social_comments(request: req)
+
+unless res.social_comments.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::ListSocialCommentsRequest](../../models/operations/listsocialcommentsrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::ListSocialCommentsResponse)](../../models/operations/listsocialcommentsresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## list_social_insights
 
 Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -252,15 +382,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListSocialInsightsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListSocialInsightsRequest.new(
+  connection_id: '<id>'
+)
 res = s.social.list_social_insights(request: req)
 
 unless res.social_insights.nil?
@@ -297,15 +426,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListSocialPostsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListSocialPostsRequest.new(
+  connection_id: '<id>'
+)
 res = s.social.list_social_posts(request: req)
 
 unless res.social_posts.nil?
@@ -342,15 +470,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListSocialProfilesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListSocialProfilesRequest.new(
+  connection_id: '<id>'
+)
 res = s.social.list_social_profiles(request: req)
 
 unless res.social_profiles.nil?
@@ -387,15 +514,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListSocialReviewsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListSocialReviewsRequest.new(
+  connection_id: '<id>'
+)
 res = s.social.list_social_reviews(request: req)
 
 unless res.social_reviews.nil?
@@ -420,6 +546,52 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## patch_social_comment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="patchSocialComment" method="patch" path="/social/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::PatchSocialCommentRequest.new(
+  social_comment: Models::Shared::SocialComment.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
+res = s.social.patch_social_comment(request: req)
+
+unless res.social_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                             | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `request`                                                                                             | [Models::Operations::PatchSocialCommentRequest](../../models/operations/patchsocialcommentrequest.md) | :heavy_check_mark:                                                                                    | The request object to use for the request.                                                            |
+
+### Response
+
+**[T.nilable(Models::Operations::PatchSocialCommentResponse)](../../models/operations/patchsocialcommentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## patch_social_post
 
 Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
@@ -432,17 +604,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchSocialPostRequest.new(
-  social_post: Models::Shared::SocialPost.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchSocialPostRequest.new(
+  social_post: Models::Shared::SocialPost.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.social.patch_social_post(request: req)
 
 unless res.social_post.nil?
@@ -479,17 +650,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchSocialReviewRequest.new(
-  social_review: Models::Shared::SocialReview.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchSocialReviewRequest.new(
+  social_review: Models::Shared::SocialReview.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.social.patch_social_review(request: req)
 
 unless res.social_review.nil?
@@ -514,6 +684,47 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## remove_social_comment
+
+Deletes the SocialComment identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="removeSocialComment" method="delete" path="/social/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+res = s.social.remove_social_comment(connection_id: '<id>', id: '<id>')
+
+if res.status_code == 200
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter            | Type                 | Required             | Description          |
+| -------------------- | -------------------- | -------------------- | -------------------- |
+| `connection_id`      | *::String*           | :heavy_check_mark:   | ID of the connection |
+| `id`                 | *::String*           | :heavy_check_mark:   | ID of the Comment    |
+
+### Response
+
+**[T.nilable(Models::Operations::RemoveSocialCommentResponse)](../../models/operations/removesocialcommentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## remove_social_post
 
 Deletes the SocialPost identified by `id`.
@@ -526,11 +737,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.social.remove_social_post(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -556,6 +766,52 @@ end
 | ---------------- | ---------------- | ---------------- |
 | Errors::APIError | 4XX, 5XX         | \*/\*            |
 
+## update_social_comment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="ruby" operationID="updateSocialComment" method="put" path="/social/{connection_id}/comment/{id}" -->
+```ruby
+require 'unified_ruby_sdk'
+
+Models = ::UnifiedRubySDK::Models
+s = ::UnifiedRubySDK::UnifiedTo.new(
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
+
+req = Models::Operations::UpdateSocialCommentRequest.new(
+  social_comment: Models::Shared::SocialComment.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
+res = s.social.update_social_comment(request: req)
+
+unless res.social_comment.nil?
+  # handle response
+end
+
+```
+
+### Parameters
+
+| Parameter                                                                                               | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                               | [Models::Operations::UpdateSocialCommentRequest](../../models/operations/updatesocialcommentrequest.md) | :heavy_check_mark:                                                                                      | The request object to use for the request.                                                              |
+
+### Response
+
+**[T.nilable(Models::Operations::UpdateSocialCommentResponse)](../../models/operations/updatesocialcommentresponse.md)**
+
+### Errors
+
+| Error Type       | Status Code      | Content Type     |
+| ---------------- | ---------------- | ---------------- |
+| Errors::APIError | 4XX, 5XX         | \*/\*            |
+
 ## update_social_post
 
 Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
@@ -568,17 +824,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateSocialPostRequest.new(
-  social_post: Models::Shared::SocialPost.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateSocialPostRequest.new(
+  social_post: Models::Shared::SocialPost.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.social.update_social_post(request: req)
 
 unless res.social_post.nil?
@@ -615,17 +870,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateSocialReviewRequest.new(
-  social_review: Models::Shared::SocialReview.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateSocialReviewRequest.new(
+  social_review: Models::Shared::SocialReview.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.social.update_social_review(request: req)
 
 unless res.social_review.nil?

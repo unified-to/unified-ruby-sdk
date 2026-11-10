@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class ListFulltext < T::Enum
-
-
+      class ListFulltext
+        include ::Crystalline::Enum
         enums do
           SUPPORTED_REQUIRED = new('supported-required')
           SUPPORTED = new('supported')
           NOT_SUPPORTED = new('not-supported')
         end
+        open!
       end
     end
   end

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # HealthcareEncounterStatus - Status of the encounter
-      class HealthcareEncounterStatus < T::Enum
-
-
+      class HealthcareEncounterStatus
+        include ::Crystalline::Enum
         enums do
           PLANNED = new('PLANNED')
           ARRIVED = new('ARRIVED')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           UNKNOWN = new('UNKNOWN')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PaymentPayoutLineitemObjectType - What this payout line settles
-      class PaymentPayoutLineitemObjectType < T::Enum
-
-
+      class PaymentPayoutLineitemObjectType
+        include ::Crystalline::Enum
         enums do
           PAYMENT = new('PAYMENT')
           REFUND = new('REFUND')
@@ -20,6 +18,7 @@ module UnifiedRubySDK
           TRANSFER = new('TRANSFER')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

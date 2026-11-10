@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # Direction - DESTINATION, or BIDIRECTIONAL for import+export connectors
-      class Direction < T::Enum
-
-
+      class Direction
+        include ::Crystalline::Enum
         enums do
           SOURCE = new('SOURCE')
           DESTINATION = new('DESTINATION')
           BIDIRECTIONAL = new('BIDIRECTIONAL')
         end
+        open!
       end
     end
   end

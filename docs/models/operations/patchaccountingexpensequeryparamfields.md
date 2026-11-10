@@ -1,5 +1,13 @@
 # PatchAccountingExpenseQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchAccountingExpenseQueryParamFields::ID
+```
+
 
 ## Values
 

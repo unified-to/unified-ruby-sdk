@@ -1,5 +1,13 @@
 # CreateMartechListQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateMartechListQueryParamFields::ID
+```
+
 
 ## Values
 

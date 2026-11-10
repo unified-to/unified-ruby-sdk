@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CalendarEventRecurrenceFrequency < T::Enum
-
-
+      class CalendarEventRecurrenceFrequency
+        include ::Crystalline::Enum
         enums do
           DAILY = new('DAILY')
           WEEKLY = new('WEEKLY')
           MONTHLY = new('MONTHLY')
           YEARLY = new('YEARLY')
         end
+        open!
       end
     end
   end

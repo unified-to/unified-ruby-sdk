@@ -1,5 +1,4 @@
 # Genai
-(*genai*)
 
 ## Overview
 
@@ -43,25 +42,24 @@ Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiAgent" method="post" path="/genai/{connection_id}/agent" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiAgent" method="post" path="/genai/{connection_id}/agent" example="genai_agent" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.create_genai_agent(genai_agent: Models::Shared::GenaiAgent.new(
   created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
   description: 'Assentator tero sequi.',
-  id: '2e62c759-bd1b-4ada-8b8d-dc3431edbb32',
+  id: '181c5169-1073-460e-90af-73d3e3afdc56',
   instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
   is_active: false,
   name: 'daughter with',
-  updated_at: DateTime.iso8601('2025-10-31T03:41:27.623Z'),
+  updated_at: DateTime.iso8601('2025-11-01T13:21:43.282Z')
 ), connection_id: '<id>')
 
 unless res.genai_agent.nil?
@@ -95,30 +93,29 @@ Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiEmbedding" method="post" path="/genai/{connection_id}/embedding" example="genai_embedding" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.create_genai_embedding(genai_embedding: Models::Shared::GenaiEmbedding.new(
   content: [
     Models::Shared::GenaiEmbeddingContent.new(
-      text: 'Utrimque temptatio pecco demulceo.',
+      text: 'Utrimque temptatio pecco demulceo.'
     ),
   ],
   dimension: 423.0,
   embeddings: 'Est.',
   enconding_format: Models::Shared::EncondingFormat::FLOAT,
-  id: '2a4c5e30-952e-4981-a530-ddeedd22bda7',
+  id: '36aca5a4-63fd-41b9-a691-dd2c6da70df6',
   max_tokens: 223.0,
   tokens_used: 836.0,
-  type: 'classification',
+  type: 'classification'
 ), connection_id: '<id>')
 
 unless res.genai_embedding.nil?
@@ -152,21 +149,20 @@ Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiMemory" method="post" path="/genai/{connection_id}/memory" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiMemory" method="post" path="/genai/{connection_id}/memory" example="genai_memory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
   content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
   created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-  id: 'bbe2e64f-55f7-45ef-b8ec-979cbc62f766',
+  id: '8acdf228-809f-40ad-b432-86f6be4a3093',
   metadata: [
     Models::Shared::GenaiMetadata.new(
       extra_data: {
@@ -176,13 +172,13 @@ res = s.genai.create_genai_memory(genai_memory: Models::Shared::GenaiMemory.new(
       id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
       namespace: 'memory',
       slug: 'cribro',
-      value: 'aiunt',
+      value: 'aiunt'
     ),
   ],
   name: 'sponte.md',
   type: Models::Shared::GenaiMemoryType::MEMORY,
-  updated_at: DateTime.iso8601('2023-05-01T15:08:32.289Z'),
-  user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+  updated_at: DateTime.iso8601('2023-05-02T03:26:26.030Z'),
+  user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513'
 ), connection_id: '<id>')
 
 unless res.genai_memory.nil?
@@ -216,24 +212,23 @@ Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiOrganization" method="post" path="/genai/{connection_id}/organization" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiOrganization" method="post" path="/genai/{connection_id}/organization" example="genai_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.create_genai_organization(genai_organization: Models::Shared::GenaiOrganization.new(
   created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
   description: 'Voluptates abeo subseco.',
-  id: 'e96f7de1-ca23-4097-995b-83d6fd0db7b7',
+  id: '0f0c810f-2fd6-4c74-8bdf-b0ceed635579',
   is_active: false,
   name: 'officially about',
-  updated_at: DateTime.iso8601('2023-02-02T14:02:23.593Z'),
+  updated_at: DateTime.iso8601('2023-02-03T05:21:07.791Z')
 ), connection_id: '<id>')
 
 unless res.genai_organization.nil?
@@ -267,17 +262,16 @@ Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiPrompt" method="post" path="/genai/{connection_id}/prompt" example="genai_prompt" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(
   answers: [
     Models::Shared::GenaiAnswer.new(
@@ -286,16 +280,16 @@ res = s.genai.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(
       probabilities: [
         Models::Shared::GenaiAnswerProbability.new(
           option: 'veniam',
-          probability: 0.05_683_182_482_607_663,
+          probability: 0.05_683_182_482_607_663
         ),
         Models::Shared::GenaiAnswerProbability.new(
           option: 'comes',
-          probability: 0.1_404_057_613_108_307,
+          probability: 0.1_404_057_613_108_307
         ),
       ],
       score: 0.05_974_147_981_032_729,
       type: Models::Shared::GenaiAnswerType::CHOICE,
-      value: 'summisse',
+      value: 'summisse'
     ),
   ],
   max_tokens: 0.4_677_782_787_475_735,
@@ -306,12 +300,12 @@ res = s.genai.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(
     Models::Shared::GenaiContent.new(
       content: 'Aegre repudiandae verecundia facere statua.',
       images: [],
-      role: Models::Shared::Role::ASSISTANT,
+      role: Models::Shared::Role::ASSISTANT
     ),
     Models::Shared::GenaiContent.new(
       content: 'Speciosus xiphias soleo trepide crinis.',
       images: [],
-      role: Models::Shared::Role::SYSTEM,
+      role: Models::Shared::Role::SYSTEM
     ),
   ],
   questions: [
@@ -323,7 +317,7 @@ res = s.genai.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(
         'quasi',
         'tolero',
       ],
-      type: Models::Shared::GenaiQuestionType::BOOLEAN,
+      type: Models::Shared::GenaiQuestionType::BOOLEAN
     ),
     Models::Shared::GenaiQuestion.new(
       id: 'oV6IURtv',
@@ -333,7 +327,7 @@ res = s.genai.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(
         'aspicio',
         'tero',
       ],
-      type: Models::Shared::GenaiQuestionType::CHOICE,
+      type: Models::Shared::GenaiQuestionType::CHOICE
     ),
     Models::Shared::GenaiQuestion.new(
       id: '60dBZk2K',
@@ -343,14 +337,14 @@ res = s.genai.create_genai_prompt(genai_prompt: Models::Shared::GenaiPrompt.new(
         'civis',
         'alter',
       ],
-      type: Models::Shared::GenaiQuestionType::BOOLEAN,
+      type: Models::Shared::GenaiQuestionType::BOOLEAN
     ),
   ],
   responses: [
     'Balbus vobis circumvenio una.',
   ],
   temperature: 0.0,
-  tokens_used: 975.0,
+  tokens_used: 975.0
 ), connection_id: '<id>')
 
 unless res.genai_prompt.nil?
@@ -384,22 +378,21 @@ Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createGenaiTask" method="post" path="/genai/{connection_id}/task" -->
+<!-- UsageSnippet language="ruby" operationID="createGenaiTask" method="post" path="/genai/{connection_id}/task" example="genai_task" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
-  completed_at: DateTime.iso8601('2025-10-16T22:32:24.229Z'),
+  completed_at: DateTime.iso8601('2025-10-18T08:07:09.700Z'),
   created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
   files_changed: 19.0,
-  id: '21497b6e-6908-48ba-8b61-2a4d7f40fe4d',
+  id: '1348ef61-f95f-4191-888e-dfc717a0131f',
   instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
   lines_added: 244.0,
   lines_deleted: 118.0,
@@ -407,20 +400,20 @@ res = s.genai.create_genai_task(genai_task: Models::Shared::GenaiTask.new(
     Models::Shared::GenaiContent.new(
       content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
       images: [],
-      role: Models::Shared::Role::ASSISTANT,
+      role: Models::Shared::Role::ASSISTANT
     ),
   ],
   name: 'connect multi-byte port',
   pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
   repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
   source_branch_identifier: 'main',
-  started_at: DateTime.iso8601('2024-06-01T18:29:31.167Z'),
+  started_at: DateTime.iso8601('2024-06-02T18:47:28.925Z'),
   status: Models::Shared::GenaiTaskStatus::BLOCKED,
   summary: 'Cur aeternus cogito vesper.',
   target_branch_identifier: 'agent/joshingly-ignorance',
   tokens_used: 2165.0,
-  updated_at: DateTime.iso8601('2023-03-05T17:19:33.983Z'),
-  web_url: 'https://inexperienced-adrenalin.biz/',
+  updated_at: DateTime.iso8601('2023-03-06T09:14:05.308Z'),
+  web_url: 'https://inexperienced-adrenalin.biz/'
 ), connection_id: '<id>')
 
 unless res.genai_task.nil?
@@ -460,11 +453,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.get_genai_agent(connection_id: '<id>', id: '<id>')
 
 unless res.genai_agent.nil?
@@ -504,11 +496,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.get_genai_memory(connection_id: '<id>', id: '<id>')
 
 unless res.genai_memory.nil?
@@ -548,11 +539,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.get_genai_model(connection_id: '<id>', id: '<id>')
 
 unless res.genai_model.nil?
@@ -592,11 +582,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.get_genai_organization(connection_id: '<id>', id: '<id>')
 
 unless res.genai_organization.nil?
@@ -636,11 +625,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.get_genai_skill(connection_id: '<id>', id: '<id>')
 
 unless res.genai_skill.nil?
@@ -680,11 +668,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.get_genai_task(connection_id: '<id>', id: '<id>')
 
 unless res.genai_task.nil?
@@ -724,15 +711,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListGenaiAgentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListGenaiAgentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.genai.list_genai_agents(request: req)
 
 unless res.genai_agents.nil?
@@ -769,15 +755,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListGenaiMemoriesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListGenaiMemoriesRequest.new(
+  connection_id: '<id>'
+)
 res = s.genai.list_genai_memories(request: req)
 
 unless res.genai_memories.nil?
@@ -814,15 +799,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListGenaiModelsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListGenaiModelsRequest.new(
+  connection_id: '<id>'
+)
 res = s.genai.list_genai_models(request: req)
 
 unless res.genai_models.nil?
@@ -859,15 +843,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListGenaiOrganizationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListGenaiOrganizationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.genai.list_genai_organizations(request: req)
 
 unless res.genai_organizations.nil?
@@ -904,15 +887,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListGenaiSkillsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListGenaiSkillsRequest.new(
+  connection_id: '<id>'
+)
 res = s.genai.list_genai_skills(request: req)
 
 unless res.genai_skills.nil?
@@ -949,15 +931,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListGenaiTasksRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListGenaiTasksRequest.new(
+  connection_id: '<id>'
+)
 res = s.genai.list_genai_tasks(request: req)
 
 unless res.genai_tasks.nil?
@@ -988,31 +969,30 @@ Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchGenaiAgent" method="patch" path="/genai/{connection_id}/agent/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchGenaiAgent" method="patch" path="/genai/{connection_id}/agent/{id}" example="genai_agent" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: '20136aea-eaec-469d-988c-12055261d4cb',
+    id: 'bb143ef5-d89f-41d6-a20e-3034fe46ade6',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-10-31T03:41:27.630Z'),
+    updated_at: DateTime.iso8601('2025-11-01T13:21:43.288Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.genai.patch_genai_agent(request: req)
 
 unless res.genai_agent.nil?
@@ -1043,22 +1023,22 @@ Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchGenaiMemory" method="patch" path="/genai/{connection_id}/memory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchGenaiMemory" method="patch" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '47dd9c18-6dc1-4e23-85fa-38ebc849d801',
+    id: '4abfc269-55f8-4c98-9844-457b82ecee42',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -1068,18 +1048,17 @@ req = Models::Operations::PatchGenaiMemoryRequest.new(
         id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
         namespace: 'memory',
         slug: 'cribro',
-        value: 'aiunt',
+        value: 'aiunt'
       ),
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-05-01T15:08:32.294Z'),
-    user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+    updated_at: DateTime.iso8601('2023-05-02T03:26:26.034Z'),
+    user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.genai.patch_genai_memory(request: req)
 
 unless res.genai_memory.nil?
@@ -1110,30 +1089,29 @@ Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrgan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchGenaiOrganization" method="patch" path="/genai/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchGenaiOrganization" method="patch" path="/genai/{connection_id}/organization/{id}" example="genai_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: 'd111179b-2c07-43f7-b681-3276cb885761',
+    id: 'b23d7401-6ffa-4d5f-b294-e2adbcf99855',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-02-02T14:02:23.595Z'),
+    updated_at: DateTime.iso8601('2023-02-03T05:21:07.793Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.genai.patch_genai_organization(request: req)
 
 unless res.genai_organization.nil?
@@ -1164,23 +1142,23 @@ Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchGenaiTask" method="patch" path="/genai/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchGenaiTask" method="patch" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-16T22:32:24.247Z'),
+    completed_at: DateTime.iso8601('2025-10-18T08:07:09.715Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '5160e514-0fd3-41a1-aad0-dbd5a985e556',
+    id: 'd094273a-f887-4f5b-a605-77c5bfedb0b5',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1188,25 +1166,24 @@ req = Models::Operations::PatchGenaiTaskRequest.new(
       Models::Shared::GenaiContent.new(
         content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
         images: [],
-        role: Models::Shared::Role::ASSISTANT,
+        role: Models::Shared::Role::ASSISTANT
       ),
     ],
     name: 'connect multi-byte port',
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-06-01T18:29:31.180Z'),
+    started_at: DateTime.iso8601('2024-06-02T18:47:28.936Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-05T17:19:33.992Z'),
-    web_url: 'https://inexperienced-adrenalin.biz/',
+    updated_at: DateTime.iso8601('2023-03-06T09:14:05.315Z'),
+    web_url: 'https://inexperienced-adrenalin.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.genai.patch_genai_task(request: req)
 
 unless res.genai_task.nil?
@@ -1243,11 +1220,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.remove_genai_agent(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1285,11 +1261,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.remove_genai_memory(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1327,11 +1302,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.remove_genai_organization(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1369,11 +1343,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.remove_genai_skill(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1411,11 +1384,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.genai.remove_genai_task(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -1447,31 +1419,30 @@ Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateGenaiAgent" method="put" path="/genai/{connection_id}/agent/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateGenaiAgent" method="put" path="/genai/{connection_id}/agent/{id}" example="genai_agent" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateGenaiAgentRequest.new(
   genai_agent: Models::Shared::GenaiAgent.new(
     created_at: DateTime.iso8601('2020-12-18T02:23:33.723Z'),
     description: 'Assentator tero sequi.',
-    id: '20136aea-eaec-469d-988c-12055261d4cb',
+    id: 'bb143ef5-d89f-41d6-a20e-3034fe46ade6',
     instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
     is_active: false,
     name: 'daughter with',
-    updated_at: DateTime.iso8601('2025-10-31T03:41:27.630Z'),
+    updated_at: DateTime.iso8601('2025-11-01T13:21:43.288Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.genai.update_genai_agent(request: req)
 
 unless res.genai_agent.nil?
@@ -1502,22 +1473,22 @@ Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateGenaiMemory" method="put" path="/genai/{connection_id}/memory/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateGenaiMemory" method="put" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateGenaiMemoryRequest.new(
   genai_memory: Models::Shared::GenaiMemory.new(
     content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
     created_at: DateTime.iso8601('2021-10-22T04:14:41.668Z'),
-    id: '47dd9c18-6dc1-4e23-85fa-38ebc849d801',
+    id: '4abfc269-55f8-4c98-9844-457b82ecee42',
     metadata: [
       Models::Shared::GenaiMetadata.new(
         extra_data: {
@@ -1527,18 +1498,17 @@ req = Models::Operations::UpdateGenaiMemoryRequest.new(
         id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
         namespace: 'memory',
         slug: 'cribro',
-        value: 'aiunt',
+        value: 'aiunt'
       ),
     ],
     name: 'sponte.md',
     type: Models::Shared::GenaiMemoryType::MEMORY,
-    updated_at: DateTime.iso8601('2023-05-01T15:08:32.294Z'),
-    user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+    updated_at: DateTime.iso8601('2023-05-02T03:26:26.034Z'),
+    user_identifier: '9d170613-4338-447d-bdb6-8ea96a2d7513'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.genai.update_genai_memory(request: req)
 
 unless res.genai_memory.nil?
@@ -1569,30 +1539,29 @@ Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrgan
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateGenaiOrganization" method="put" path="/genai/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateGenaiOrganization" method="put" path="/genai/{connection_id}/organization/{id}" example="genai_organization" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateGenaiOrganizationRequest.new(
   genai_organization: Models::Shared::GenaiOrganization.new(
     created_at: DateTime.iso8601('2020-10-27T16:03:47.122Z'),
     description: 'Voluptates abeo subseco.',
-    id: 'd111179b-2c07-43f7-b681-3276cb885761',
+    id: 'b23d7401-6ffa-4d5f-b294-e2adbcf99855',
     is_active: false,
     name: 'officially about',
-    updated_at: DateTime.iso8601('2023-02-02T14:02:23.595Z'),
+    updated_at: DateTime.iso8601('2023-02-03T05:21:07.793Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.genai.update_genai_organization(request: req)
 
 unless res.genai_organization.nil?
@@ -1623,23 +1592,23 @@ Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateGenaiTask" method="put" path="/genai/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateGenaiTask" method="put" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateGenaiTaskRequest.new(
   genai_task: Models::Shared::GenaiTask.new(
-    completed_at: DateTime.iso8601('2025-10-16T22:32:24.247Z'),
+    completed_at: DateTime.iso8601('2025-10-18T08:07:09.715Z'),
     created_at: DateTime.iso8601('2020-10-25T20:19:33.247Z'),
     files_changed: 19.0,
-    id: '5160e514-0fd3-41a1-aad0-dbd5a985e556',
+    id: 'd094273a-f887-4f5b-a605-77c5bfedb0b5',
     instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
     lines_added: 244.0,
     lines_deleted: 118.0,
@@ -1647,25 +1616,24 @@ req = Models::Operations::UpdateGenaiTaskRequest.new(
       Models::Shared::GenaiContent.new(
         content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
         images: [],
-        role: Models::Shared::Role::ASSISTANT,
+        role: Models::Shared::Role::ASSISTANT
       ),
     ],
     name: 'connect multi-byte port',
     pullrequest_url: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
     repo_url: 'https://github.com/berenice.satterfield/joshingly-ignorance',
     source_branch_identifier: 'main',
-    started_at: DateTime.iso8601('2024-06-01T18:29:31.180Z'),
+    started_at: DateTime.iso8601('2024-06-02T18:47:28.936Z'),
     status: Models::Shared::GenaiTaskStatus::BLOCKED,
     summary: 'Cur aeternus cogito vesper.',
     target_branch_identifier: 'agent/joshingly-ignorance',
     tokens_used: 2165.0,
-    updated_at: DateTime.iso8601('2023-03-05T17:19:33.992Z'),
-    web_url: 'https://inexperienced-adrenalin.biz/',
+    updated_at: DateTime.iso8601('2023-03-06T09:14:05.315Z'),
+    web_url: 'https://inexperienced-adrenalin.biz/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.genai.update_genai_task(request: req)
 
 unless res.genai_task.nil?

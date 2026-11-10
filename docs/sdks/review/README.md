@@ -1,5 +1,4 @@
 # Review
-(*review*)
 
 ## Overview
 
@@ -28,17 +27,16 @@ Creates a CommerceReview. Provide the unified CommerceReview fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="ruby" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" example="commerce_review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceReview.new(
   author_avatar_url: 'https://loremflickr.com/7/2660?lock=4279109054086693',
   author_email: 'nyasia.macgyver@hotmail.com',
@@ -48,7 +46,7 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   content: 'Taedium thymum adipiscor amicitia cui.',
   created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
   helpful_votes: 66.0,
-  id: '0fe0ad98-e2f3-4718-9c53-a16b5ac9d588',
+  id: '6239ba5e-8862-4888-8e3f-086a37652100',
   is_featured: false,
   is_public: true,
   is_verified: false,
@@ -56,34 +54,34 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
     Models::Shared::CommerceItemMedia.new(
       alt: 'Desipio carpo sol laudantium colo.',
       height: 749.0,
-      id: '1d7ac13a-e423-4725-ac45-8ff9340a769a',
+      id: 'bf95a2cf-37e6-473d-baaf-85ab0aa5b0e7',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'ab96c167-b584-4196-a1db-e306d3f5dc94',
+          id: '5aea5306-dad1-46af-b712-bc59c680d86e',
           slug: 'textor',
-          value: 'quos',
+          value: 'quos'
         ),
       ],
       position: 29.0,
       type: Models::Shared::CommerceItemMediaType::VIDEO,
       url: 'https://loremflickr.com/196/2041?lock=5845524773114807',
-      width: 72.0,
+      width: 72.0
     ),
     Models::Shared::CommerceItemMedia.new(
       alt: 'Adopto teneo numquam.',
       height: 957.0,
-      id: '1b7b6619-9956-4b70-a15f-bbdbea574dc2',
+      id: 'c94ec230-67c1-40f7-9882-d7b6123f77bb',
       metadata: [
         Models::Shared::CommerceMetadata.new(
-          id: 'becdf30e-1452-45af-9151-15b1f18ee6e1',
+          id: '7ab46668-00f0-4a13-b2cb-1a17a146a94a',
           slug: 'bos',
-          value: 'casso',
+          value: 'casso'
         ),
       ],
       position: 69.0,
       type: Models::Shared::CommerceItemMediaType::IMAGE,
       url: 'https://loremflickr.com/1178/2175?lock=5466640101053206',
-      width: 61.0,
+      width: 61.0
     ),
   ],
   metadata: [],
@@ -91,9 +89,9 @@ res = s.review.create_commerce_review(commerce_review: Models::Shared::CommerceR
   status: Models::Shared::CommerceReviewStatus::APPROVED,
   title: 'Coepi adamo amicitia auxilium toties.',
   unhelpful_votes: 88.0,
-  updated_at: DateTime.iso8601('2025-09-06T03:19:15.142Z'),
+  updated_at: DateTime.iso8601('2025-09-07T13:08:42.968Z'),
   url: 'https://diligent-bandwidth.biz',
-  verified_purchase: true,
+  verified_purchase: true
 ), connection_id: '<id>')
 
 unless res.commerce_review.nil?
@@ -133,11 +131,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.review.get_commerce_review(connection_id: '<id>', id: '<id>')
 
 unless res.commerce_review.nil?
@@ -177,11 +174,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.review.get_performance_review(connection_id: '<id>', id: '<id>')
 
 unless res.performance_review.nil?
@@ -221,11 +217,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.review.get_property_review(connection_id: '<id>', id: '<id>')
 
 unless res.property_review.nil?
@@ -265,11 +260,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.review.get_social_review(connection_id: '<id>', id: '<id>')
 
 unless res.social_review.nil?
@@ -309,15 +303,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceReviewsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceReviewsRequest.new(
+  connection_id: '<id>'
+)
 res = s.review.list_commerce_reviews(request: req)
 
 unless res.commerce_reviews.nil?
@@ -354,15 +347,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPerformanceReviewsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPerformanceReviewsRequest.new(
+  connection_id: '<id>'
+)
 res = s.review.list_performance_reviews(request: req)
 
 unless res.performance_reviews.nil?
@@ -399,15 +391,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyReviewsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyReviewsRequest.new(
+  connection_id: '<id>'
+)
 res = s.review.list_property_reviews(request: req)
 
 unless res.property_reviews.nil?
@@ -444,15 +435,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListSocialReviewsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListSocialReviewsRequest.new(
+  connection_id: '<id>'
+)
 res = s.review.list_social_reviews(request: req)
 
 unless res.social_reviews.nil?
@@ -483,16 +473,16 @@ Updates the CommerceReview identified by `id`. Provide the unified CommerceRevie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" example="commerce_review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchCommerceReviewRequest.new(
   commerce_review: Models::Shared::CommerceReview.new(
@@ -504,7 +494,7 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '9c2b9993-0c2c-4f22-9da9-d821998b659e',
+    id: '2bd8c986-d357-4dc3-90bd-77505483ce05',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -512,34 +502,34 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '1616ce28-d81d-4421-993b-bd99af8294ef',
+        id: '1f6943d0-21db-4f91-bd3a-3d70b835b79c',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'f9be8b9b-1389-454e-b96d-011da32ec1d2',
+            id: 'c482f64f-618b-4924-9dbe-d83fbbf791f1',
             slug: 'textor',
-            value: 'quos',
+            value: 'quos'
           ),
         ],
         position: 29.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://loremflickr.com/196/2041?lock=5845524773114807',
-        width: 72.0,
+        width: 72.0
       ),
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: '30794e46-71b3-4743-8427-2fef47895996',
+        id: '1b8ca659-41cd-4c9f-9765-008263068661',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'd3213ec2-bd2e-429a-939e-2b4d20b5f5b1',
+            id: '9879640a-2839-4440-b5ac-536beb059d09',
             slug: 'bos',
-            value: 'casso',
+            value: 'casso'
           ),
         ],
         position: 69.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://loremflickr.com/1178/2175?lock=5466640101053206',
-        width: 61.0,
+        width: 61.0
       ),
     ],
     metadata: [],
@@ -547,14 +537,13 @@ req = Models::Operations::PatchCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-09-06T03:19:15.181Z'),
+    updated_at: DateTime.iso8601('2025-09-07T13:08:43.004Z'),
     url: 'https://diligent-bandwidth.biz',
-    verified_purchase: true,
+    verified_purchase: true
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.review.patch_commerce_review(request: req)
 
 unless res.commerce_review.nil?
@@ -585,16 +574,16 @@ Updates the PropertyReview identified by `id`. Provide the unified PropertyRevie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchPropertyReview" method="patch" path="/property/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchPropertyReview" method="patch" path="/property/{connection_id}/review/{id}" example="property_review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchPropertyReviewRequest.new(
   property_review: Models::Shared::PropertyReview.new(
@@ -603,45 +592,44 @@ req = Models::Operations::PatchPropertyReviewRequest.new(
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::CLEANLINESS,
         comment: 'Umquam perferendis amitto voluptas sum blanditiis terreo.',
-        rating: 5.0,
+        rating: 5.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::ACCURACY,
         comment: 'Capitulus dolorem verus.',
-        rating: 4.0,
+        rating: 4.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::COMMUNICATION,
-        rating: 1.0,
+        rating: 1.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::CHECKIN,
-        rating: 1.0,
+        rating: 1.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::LOCATION,
-        rating: 2.0,
+        rating: 2.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::VALUE,
         comment: 'Quos constans aperte tero sollers.',
-        rating: 5.0,
+        rating: 5.0
       ),
     ],
     content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
     created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
-    id: 'f4a7cdb4-5b3d-4b47-8c67-f7a8440e4c3b',
+    id: 'd723325e-cd9e-4f51-ba30-4b1438b9281f',
     is_public: true,
     metadata: [],
     private_feedback: 'Tripudio neque communis.',
     rating: 3.0,
     source: 'Airbnb',
-    updated_at: DateTime.iso8601('2026-02-26T15:52:30.710Z'),
+    updated_at: DateTime.iso8601('2026-02-28T01:36:42.543Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.review.patch_property_review(request: req)
 
 unless res.property_review.nil?
@@ -678,17 +666,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::PatchSocialReviewRequest.new(
-  social_review: Models::Shared::SocialReview.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::PatchSocialReviewRequest.new(
+  social_review: Models::Shared::SocialReview.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.review.patch_social_review(request: req)
 
 unless res.social_review.nil?
@@ -725,11 +712,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.review.remove_commerce_review(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -761,16 +747,16 @@ Updates the CommerceReview identified by `id`. Provide the unified CommerceRevie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" example="commerce_review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateCommerceReviewRequest.new(
   commerce_review: Models::Shared::CommerceReview.new(
@@ -782,7 +768,7 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     content: 'Taedium thymum adipiscor amicitia cui.',
     created_at: DateTime.iso8601('2019-12-12T18:10:22.988Z'),
     helpful_votes: 66.0,
-    id: '9c2b9993-0c2c-4f22-9da9-d821998b659e',
+    id: '2bd8c986-d357-4dc3-90bd-77505483ce05',
     is_featured: false,
     is_public: true,
     is_verified: false,
@@ -790,34 +776,34 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
       Models::Shared::CommerceItemMedia.new(
         alt: 'Desipio carpo sol laudantium colo.',
         height: 749.0,
-        id: '1616ce28-d81d-4421-993b-bd99af8294ef',
+        id: '1f6943d0-21db-4f91-bd3a-3d70b835b79c',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'f9be8b9b-1389-454e-b96d-011da32ec1d2',
+            id: 'c482f64f-618b-4924-9dbe-d83fbbf791f1',
             slug: 'textor',
-            value: 'quos',
+            value: 'quos'
           ),
         ],
         position: 29.0,
         type: Models::Shared::CommerceItemMediaType::VIDEO,
         url: 'https://loremflickr.com/196/2041?lock=5845524773114807',
-        width: 72.0,
+        width: 72.0
       ),
       Models::Shared::CommerceItemMedia.new(
         alt: 'Adopto teneo numquam.',
         height: 957.0,
-        id: '30794e46-71b3-4743-8427-2fef47895996',
+        id: '1b8ca659-41cd-4c9f-9765-008263068661',
         metadata: [
           Models::Shared::CommerceMetadata.new(
-            id: 'd3213ec2-bd2e-429a-939e-2b4d20b5f5b1',
+            id: '9879640a-2839-4440-b5ac-536beb059d09',
             slug: 'bos',
-            value: 'casso',
+            value: 'casso'
           ),
         ],
         position: 69.0,
         type: Models::Shared::CommerceItemMediaType::IMAGE,
         url: 'https://loremflickr.com/1178/2175?lock=5466640101053206',
-        width: 61.0,
+        width: 61.0
       ),
     ],
     metadata: [],
@@ -825,14 +811,13 @@ req = Models::Operations::UpdateCommerceReviewRequest.new(
     status: Models::Shared::CommerceReviewStatus::APPROVED,
     title: 'Coepi adamo amicitia auxilium toties.',
     unhelpful_votes: 88.0,
-    updated_at: DateTime.iso8601('2025-09-06T03:19:15.181Z'),
+    updated_at: DateTime.iso8601('2025-09-07T13:08:43.004Z'),
     url: 'https://diligent-bandwidth.biz',
-    verified_purchase: true,
+    verified_purchase: true
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.review.update_commerce_review(request: req)
 
 unless res.commerce_review.nil?
@@ -863,16 +848,16 @@ Updates the PropertyReview identified by `id`. Provide the unified PropertyRevie
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updatePropertyReview" method="put" path="/property/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updatePropertyReview" method="put" path="/property/{connection_id}/review/{id}" example="property_review" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdatePropertyReviewRequest.new(
   property_review: Models::Shared::PropertyReview.new(
@@ -881,45 +866,44 @@ req = Models::Operations::UpdatePropertyReviewRequest.new(
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::CLEANLINESS,
         comment: 'Umquam perferendis amitto voluptas sum blanditiis terreo.',
-        rating: 5.0,
+        rating: 5.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::ACCURACY,
         comment: 'Capitulus dolorem verus.',
-        rating: 4.0,
+        rating: 4.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::COMMUNICATION,
-        rating: 1.0,
+        rating: 1.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::CHECKIN,
-        rating: 1.0,
+        rating: 1.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::LOCATION,
-        rating: 2.0,
+        rating: 2.0
       ),
       Models::Shared::PropertyCategoryrating.new(
         category: Models::Shared::PropertyCategoryratingCategory::VALUE,
         comment: 'Quos constans aperte tero sollers.',
-        rating: 5.0,
+        rating: 5.0
       ),
     ],
     content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
     created_at: DateTime.iso8601('2022-10-17T11:17:07.682Z'),
-    id: 'f4a7cdb4-5b3d-4b47-8c67-f7a8440e4c3b',
+    id: 'd723325e-cd9e-4f51-ba30-4b1438b9281f',
     is_public: true,
     metadata: [],
     private_feedback: 'Tripudio neque communis.',
     rating: 3.0,
     source: 'Airbnb',
-    updated_at: DateTime.iso8601('2026-02-26T15:52:30.710Z'),
+    updated_at: DateTime.iso8601('2026-02-28T01:36:42.543Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.review.update_property_review(request: req)
 
 unless res.property_review.nil?
@@ -956,17 +940,16 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::UpdateSocialReviewRequest.new(
-  social_review: Models::Shared::SocialReview.new(),
-  connection_id: '<id>',
-  id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::UpdateSocialReviewRequest.new(
+  social_review: Models::Shared::SocialReview.new,
+  connection_id: '<id>',
+  id: '<id>'
+)
 res = s.review.update_social_review(request: req)
 
 unless res.social_review.nil?

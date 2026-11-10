@@ -1,5 +1,4 @@
 # Hris
-(*hris*)
 
 ## Overview
 
@@ -105,17 +104,16 @@ Creates a HrisAttendance. Provide the unified HrisAttendance fields in the reque
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" example="hris_attendance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_attendance(hris_attendance: Models::Shared::HrisAttendance.new(
   address: Models::Shared::PropertyHrisAttendanceAddress.new(
     address1: '14108 Allie Flats',
@@ -123,34 +121,34 @@ res = s.hris.create_hris_attendance(hris_attendance: Models::Shared::HrisAttenda
     country_code: 'US',
     postal_code: '23844-2344',
     region: 'Tennessee',
-    region_code: 'CA',
+    region_code: 'CA'
   ),
-  approved_at: DateTime.iso8601('2021-09-19T23:40:10.184Z'),
+  approved_at: DateTime.iso8601('2021-09-20T00:31:25.177Z'),
   breaks: [
     Models::Shared::HrisAttendanceBreak.new(
       duration_minutes: 51.0,
-      end_at: DateTime.iso8601('2024-02-23T17:55:02.666Z'),
-      id: '94e3b11b-d9b9-4c44-94df-7c99a93251c8',
+      end_at: DateTime.iso8601('2024-02-24T13:37:48.021Z'),
+      id: '1b2ce773-7540-4cdb-9b74-284a9afec8d7',
       is_paid: false,
       name: 'Lunch',
-      start_at: DateTime.iso8601('2023-11-07T01:49:55.961Z'),
+      start_at: DateTime.iso8601('2023-11-07T19:14:01.526Z')
     ),
   ],
   created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
   currency: 'EUR',
   declared_tips_amount: 54.0,
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2024-05-03T04:59:19.886Z'),
+  end_at: DateTime.iso8601('2024-05-04T02:10:43.198Z'),
   hourly_rate: 16.0,
   hours: 10.0,
-  id: 'f52932de-8df3-4f4d-9874-119a10f6317e',
+  id: 'daebc4fb-b284-448b-bee3-158bb220de8e',
   job_name: 'Human Accountability Administrator',
   metadata: [],
   non_cash_tips_amount: 167.0,
-  start_at: DateTime.iso8601('2021-11-11T23:06:20.407Z'),
+  start_at: DateTime.iso8601('2021-11-12T01:05:11.281Z'),
   status: Models::Shared::HrisAttendanceStatus::OPEN,
   timezone: 'America/Atikokan',
-  updated_at: DateTime.iso8601('2022-01-21T12:02:22.765Z'),
+  updated_at: DateTime.iso8601('2022-01-21T15:31:14.097Z')
 ), connection_id: '<id>')
 
 unless res.hris_attendance.nil?
@@ -184,17 +182,16 @@ Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" example="hris_bankaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBankaccount.new(
   account_number: '****3777',
   account_number_last4: '3777',
@@ -203,7 +200,7 @@ res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBanka
   country_code: 'US',
   created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
   currency: 'USD',
-  id: '6d408758-6447-40e9-b8bf-1d3536e95a2a',
+  id: 'da6ab065-378c-4e54-82bc-8d0951722f1d',
   is_primary: true,
   metadata: [],
   name: 'Granville Schumm - Checking',
@@ -211,7 +208,7 @@ res = s.hris.create_hris_bankaccount(hris_bankaccount: Models::Shared::HrisBanka
   routing_number: '448650724',
   split_amount: 98.0,
   split_type: Models::Shared::SplitType::PERCENTAGE,
-  updated_at: DateTime.iso8601('2025-07-16T16:33:11.591Z'),
+  updated_at: DateTime.iso8601('2025-07-18T01:37:34.022Z')
 ), connection_id: '<id>')
 
 unless res.hris_bankaccount.nil?
@@ -245,17 +242,16 @@ Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" example="hris_benefit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(
   coverage_level: Models::Shared::CoverageLevel::EMPLOYEE_SPOUSE,
   created_at: DateTime.iso8601('2020-06-11T01:24:05.654Z'),
@@ -265,13 +261,13 @@ res = s.hris.create_hris_benefit(hris_benefit: Models::Shared::HrisBenefit.new(
   employer_contribution_max_amount: 179_093.0,
   employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
   frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-  id: 'b771226b-0997-4e75-ac64-e4b1f603dc2c',
+  id: 'bb4b1b11-dde0-4ed5-874e-e0ffa254235d',
   is_active: false,
   metadata: [],
   name: 'Frozen Wooden Ball',
   tax: Models::Shared::Tax::PRE_TAX,
   type: Models::Shared::HrisBenefitType::OTHER,
-  updated_at: DateTime.iso8601('2023-03-29T03:13:27.939Z'),
+  updated_at: DateTime.iso8601('2023-03-29T20:59:29.555Z')
 ), connection_id: '<id>')
 
 unless res.hris_benefit.nil?
@@ -305,17 +301,16 @@ Creates a HrisCompany. Provide the unified HrisCompany fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" example="hris_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_company(hris_company: Models::Shared::HrisCompany.new(
   address: Models::Shared::PropertyHrisCompanyAddress.new(
     address1: '675 Lavinia Lights',
@@ -323,14 +318,14 @@ res = s.hris.create_hris_company(hris_company: Models::Shared::HrisCompany.new(
     country_code: 'US',
     postal_code: '67325',
     region: 'Kentucky',
-    region_code: 'MO',
+    region_code: 'MO'
   ),
   created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-  id: '8cde6079-3bca-488c-8a04-c1470d55baaa',
+  id: '0fe3c109-f3cd-4d7d-b2ba-0765da2931ab',
   legal_name: 'Gottlieb Group LLC',
   metadata: [],
   name: 'Gottlieb Group',
-  updated_at: DateTime.iso8601('2026-10-27T13:42:30.266Z'),
+  updated_at: DateTime.iso8601('2026-10-29T06:12:28.566Z')
 ), connection_id: '<id>')
 
 unless res.hris_company.nil?
@@ -364,17 +359,16 @@ Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" example="hris_deduction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction.new(
   amount: 564.0,
   coverage_level: Models::Shared::HrisDeductionCoverageLevel::EMPLOYEE_CHILD,
@@ -383,14 +377,14 @@ res = s.hris.create_hris_deduction(hris_deduction: Models::Shared::HrisDeduction
   employer_type: Models::Shared::EmployerType::PERCENTAGE,
   frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
   garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-  id: 'ffa9a1cc-9ecc-4143-8ad1-2721e8e28652',
+  id: 'ca0043c3-093a-43e4-953e-eedaf7a7d234',
   is_active: true,
   max_amount: 21_794.0,
   metadata: [],
   notes: 'Carmen desidero.',
-  start_at: DateTime.iso8601('2025-03-29T18:57:36.859Z'),
+  start_at: DateTime.iso8601('2025-03-31T01:59:08.712Z'),
   type: Models::Shared::HrisDeductionType::FIXED,
-  updated_at: DateTime.iso8601('2024-04-02T23:36:48.377Z'),
+  updated_at: DateTime.iso8601('2024-04-04T00:41:01.298Z')
 ), connection_id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -424,17 +418,16 @@ Creates a HrisDevice. Provide the unified HrisDevice fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" example="hris_device" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   admin_user_ids: [],
   asset_tag: 'fJNacaaoWi',
@@ -444,7 +437,7 @@ res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   has_hd_encrypted: true,
   has_password_manager: true,
   has_screenlock: false,
-  id: 'b08dcf72-4784-4908-9ae2-cfd3e215514f',
+  id: '6cdd481c-f003-4048-aa05-bbac0b5d35b7',
   is_missing: false,
   manufacturer: 'Hackett Inc',
   metadata: [],
@@ -452,8 +445,8 @@ res = s.hris.create_hris_device(hris_device: Models::Shared::HrisDevice.new(
   name: 'august-laptop',
   os: 'transmitter',
   os_version: '8.4.8',
-  updated_at: DateTime.iso8601('2023-06-18T19:49:11.772Z'),
-  version: '4.15.7',
+  updated_at: DateTime.iso8601('2023-06-19T18:22:31.007Z'),
+  version: '4.15.7'
 ), connection_id: '<id>')
 
 unless res.hris_device.nil?
@@ -487,25 +480,24 @@ Creates a HrisDocument. Provide the unified HrisDocument fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" example="hris_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_document(hris_document: Models::Shared::HrisDocument.new(
   created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
   document_url: 'https://sore-decision.biz/',
   filename: 'ridge_forager.xsl',
-  id: 'd021991b-ee06-4479-bda5-8447a1c37df6',
+  id: '2e830c88-faf1-498a-b30c-dff5208a5c0f',
   metadata: [],
   type: Models::Shared::HrisDocumentType::POLICY,
-  updated_at: DateTime.iso8601('2025-10-25T16:49:29.060Z'),
+  updated_at: DateTime.iso8601('2025-10-26T23:05:08.736Z')
 ), connection_id: '<id>')
 
 unless res.hris_document.nil?
@@ -539,28 +531,27 @@ Creates a HrisEarning. Provide the unified HrisEarning fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisEarning" method="post" path="/hris/{connection_id}/earning" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisEarning" method="post" path="/hris/{connection_id}/earning" example="hris_earning" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_earning(hris_earning: Models::Shared::HrisEarning.new(
   amount: 4026.0,
   created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
   currency: 'USD',
   frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-  id: '51d0f788-ab0d-49ff-8787-e47570060568',
+  id: 'bc40f409-da12-48e7-a5dd-e3610947e498',
   metadata: [],
   notes: 'Deporto truculenter vinum beatae.',
-  start_at: DateTime.iso8601('2022-08-03T01:52:30.746Z'),
+  start_at: DateTime.iso8601('2022-08-03T20:17:04.057Z'),
   status: Models::Shared::HrisEarningStatus::ENDED,
-  updated_at: DateTime.iso8601('2020-02-11T09:38:44.148Z'),
+  updated_at: DateTime.iso8601('2020-02-11T15:06:14.317Z')
 ), connection_id: '<id>')
 
 unless res.hris_earning.nil?
@@ -594,17 +585,16 @@ Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" example="hris_employee" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.new(
   address: Models::Shared::PropertyHrisEmployeeAddress.new(
     address1: '7431 Hintz Parkway',
@@ -613,7 +603,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
     country_code: 'US',
     postal_code: '01711',
     region: 'Missouri',
-    region_code: 'TN',
+    region_code: 'TN'
   ),
   bio: 'fun advocate  🇱🇻',
   compensation: [
@@ -622,7 +612,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
       currency: 'USD',
       frequency: Models::Shared::HrisCompensationFrequency::YEAR,
       notes: 'Eius.',
-      type: Models::Shared::HrisCompensationType::OTHER,
+      type: Models::Shared::HrisCompensationType::OTHER
     ),
   ],
   created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
@@ -631,7 +621,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
   emails: [
     Models::Shared::HrisEmail.new(
       email: 'zetta.prohaska@insidious-stump.net',
-      type: Models::Shared::HrisEmailType::WORK,
+      type: Models::Shared::HrisEmailType::WORK
     ),
   ],
   employee_number: 'uCk3qaL1ei',
@@ -642,7 +632,7 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
   gender: Models::Shared::HrisEmployeeGender::MALE,
   has_mfa: true,
   hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-  id: '113b2952-6e21-49ab-a9a6-51f0e062519a',
+  id: '0f81f2df-c93d-4195-af31-cf6959300afc',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
   language_locale: 'in',
   last_name: 'Prohaska',
@@ -651,13 +641,13 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
   metadata: [
     Models::Shared::HrisMetadata.new(
       extra_data: {
-        "display_name": 'Custom Property',
+        'display_name' => 'Custom Property',
       },
       format: Models::Shared::HrisMetadataFormat::TEXT,
-      id: 'ba44329d-b516-4ae8-a97a-e1fb0a0626d3',
+      id: 'f38b5295-8160-4e67-8422-a7c76ddb64bf',
       namespace: 'custom',
       slug: 'custom_property',
-      value: 'tutis',
+      value: 'tutis'
     ),
   ],
   name: 'Zetta Prohaska',
@@ -667,20 +657,20 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
     Models::Shared::HrisEmployeerelationship.new(
       emails: [
         Models::Shared::HrisEmail.new(
-          email: 'keith.prohaska@gmail.com',
+          email: 'keith.prohaska@gmail.com'
         ),
       ],
       name: 'Keith Prohaska',
-      type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+      type: Models::Shared::HrisEmployeerelationshipType::SIBLING
     ),
     Models::Shared::HrisEmployeerelationship.new(
       emails: [
         Models::Shared::HrisEmail.new(
-          email: 'keely.prohaska@icloud.com',
+          email: 'keely.prohaska@icloud.com'
         ),
       ],
       name: 'Keely Prohaska',
-      type: Models::Shared::HrisEmployeerelationshipType::OTHER,
+      type: Models::Shared::HrisEmployeerelationshipType::OTHER
     ),
   ],
   salutation: 'Ms.',
@@ -691,18 +681,18 @@ res = s.hris.create_hris_employee(hris_employee: Models::Shared::HrisEmployee.ne
   telephones: [
     Models::Shared::HrisTelephone.new(
       telephone: '(320) 980-1370',
-      type: Models::Shared::HrisTelephoneType::HOME,
+      type: Models::Shared::HrisTelephoneType::HOME
     ),
     Models::Shared::HrisTelephone.new(
       telephone: '(694) 840-0166',
-      type: Models::Shared::HrisTelephoneType::FAX,
+      type: Models::Shared::HrisTelephoneType::FAX
     ),
   ],
   timeoff_days_total: 17.0,
   timeoff_days_used: 9.0,
   timezone: 'Europe/Ljubljana',
   title: 'District Branding Specialist',
-  updated_at: DateTime.iso8601('2020-07-21T10:10:14.689Z'),
+  updated_at: DateTime.iso8601('2020-07-21T14:59:28.818Z')
 ), connection_id: '<id>')
 
 unless res.hris_employee.nil?
@@ -736,26 +726,25 @@ Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" example="hris_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_group(hris_group: Models::Shared::HrisGroup.new(
   created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
   description: 'Absorbeo casso.',
-  id: 'a9771fcf-3d90-4535-81d7-da141c18004e',
+  id: 'a10053eb-dbf0-4485-8b9e-07a5c4e20956',
   is_active: false,
   metadata: [],
   name: 'Games',
   type: Models::Shared::HrisGroupType::BRANCH,
-  updated_at: DateTime.iso8601('2026-06-07T07:39:35.820Z'),
+  updated_at: DateTime.iso8601('2026-06-08T18:41:54.223Z')
 ), connection_id: '<id>')
 
 unless res.hris_group.nil?
@@ -789,27 +778,26 @@ Creates a HrisJob. Provide the unified HrisJob fields in the request body; they 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisJob" method="post" path="/hris/{connection_id}/job" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisJob" method="post" path="/hris/{connection_id}/job" example="hris_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_job(hris_job: Models::Shared::HrisJob.new(
   code: 'P-05547',
   created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
   description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
   employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-  id: '0b025992-2101-4916-bc04-ac1d2ec34221',
+  id: '1ad20d85-9228-4aa7-9bea-d9d6d7d15214',
   is_active: false,
   metadata: [],
   name: 'Internal Integration Specialist',
-  updated_at: DateTime.iso8601('2023-02-06T09:26:50.569Z'),
+  updated_at: DateTime.iso8601('2023-02-07T00:49:32.785Z')
 ), connection_id: '<id>')
 
 unless res.hris_job.nil?
@@ -843,17 +831,16 @@ Creates a HrisLocation. Provide the unified HrisLocation fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" example="hris_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.new(
   address: Models::Shared::PropertyHrisLocationAddress.new(
     address1: '4418 Daniella Mall',
@@ -862,12 +849,12 @@ res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.ne
     country_code: 'US',
     postal_code: '54109',
     region: 'Ohio',
-    region_code: 'OR',
+    region_code: 'OR'
   ),
   created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
   currency: 'MNT',
   description: 'Commemoro acervus.',
-  id: 'd90cf325-2568-444f-a7e5-4a3939cd8b4a',
+  id: '8f169e33-5347-471f-9ba5-0b5e943ea13d',
   is_active: false,
   is_hq: true,
   language_locale: 'it',
@@ -876,19 +863,19 @@ res = s.hris.create_hris_location(hris_location: Models::Shared::HrisLocation.ne
   telephones: [
     Models::Shared::HrisTelephone.new(
       telephone: '(371) 245-0699',
-      type: Models::Shared::HrisTelephoneType::FAX,
+      type: Models::Shared::HrisTelephoneType::FAX
     ),
     Models::Shared::HrisTelephone.new(
       telephone: '(700) 845-5854',
-      type: Models::Shared::HrisTelephoneType::FAX,
+      type: Models::Shared::HrisTelephoneType::FAX
     ),
     Models::Shared::HrisTelephone.new(
       telephone: '(461) 437-3548',
-      type: Models::Shared::HrisTelephoneType::HOME,
+      type: Models::Shared::HrisTelephoneType::HOME
     ),
   ],
   timezone: 'Asia/Jerusalem',
-  updated_at: DateTime.iso8601('2023-06-28T01:20:40.676Z'),
+  updated_at: DateTime.iso8601('2023-06-28T16:15:14.038Z')
 ), connection_id: '<id>')
 
 unless res.hris_location.nil?
@@ -922,17 +909,16 @@ Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" example="hris_taxonomy" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.new(
   alternative_names: [
     'Facilitator',
@@ -941,14 +927,14 @@ res = s.hris.create_hris_taxonomy(hris_taxonomy: Models::Shared::HrisTaxonomy.ne
   created_at: DateTime.iso8601('2022-06-23T02:10:00.789Z'),
   description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
   domain: 'Health',
-  id: '0b020e4d-4ad6-4822-ace0-c9a7f3f1aab0',
+  id: '88f9ba49-f2fb-415e-829d-eb32a70519fe',
   is_active: false,
   metadata: [],
   name: 'International Functionality Architect',
   subcategory: 'Marble',
   type: Models::Shared::HrisTaxonomyType::KNOWLEDGE,
-  updated_at: DateTime.iso8601('2023-06-02T09:34:51.847Z'),
-  url: 'https://fixed-membership.biz/',
+  updated_at: DateTime.iso8601('2023-06-02T18:21:03.029Z'),
+  url: 'https://fixed-membership.biz/'
 ), connection_id: '<id>')
 
 unless res.hris_taxonomy.nil?
@@ -982,43 +968,42 @@ Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request bod
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" example="hris_timeoff" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_timeoff(hris_timeoff: Models::Shared::HrisTimeoff.new(
-  approved_at: DateTime.iso8601('2022-02-24T19:45:14.932Z'),
+  approved_at: DateTime.iso8601('2022-02-24T22:50:46.174Z'),
   attachments: [
     Models::Shared::HrisAttachment.new(
       content_type: 'application/pdf',
       download_url: '',
       filename: 'nemo.pdf',
       id: '3f3418c2-fdad-4738-b630-4cb0d2f3fb16',
-      size: 709_170.0,
+      size: 709_170.0
     ),
   ],
   comments: 'Blandior ventus curiositas amplitudo.',
   created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
   duration: 4.0,
   duration_type: Models::Shared::DurationType::DAY,
-  end_at: DateTime.iso8601('2025-01-09T21:32:04.047Z'),
-  id: '5aa33e71-2568-4dcf-8662-d5ec6df5c38f',
+  end_at: DateTime.iso8601('2025-01-10T23:38:30.562Z'),
+  id: '2f7bb0f2-010a-4b5c-87da-301db3ad04d8',
   is_paid: true,
   metadata: [],
   original_type: 'acerbitas ut',
   reason: 'verto',
-  start_at: DateTime.iso8601('2023-09-12T00:25:57.802Z'),
+  start_at: DateTime.iso8601('2023-09-12T15:53:26.400Z'),
   status: Models::Shared::HrisTimeoffStatus::DENIED,
   type: Models::Shared::HrisTimeoffType::IN_LIEU,
-  updated_at: DateTime.iso8601('2022-07-15T16:52:22.499Z'),
-  user_id: '<id>',
+  updated_at: DateTime.iso8601('2022-07-15T23:03:09.762Z'),
+  user_id: '<id>'
 ), connection_id: '<id>')
 
 unless res.hris_timeoff.nil?
@@ -1052,37 +1037,36 @@ Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="ruby" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" example="hris_timeshift" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.create_hris_timeshift(hris_timeshift: Models::Shared::HrisTimeshift.new(
-  approved_at: DateTime.iso8601('2022-07-25T23:58:48.822Z'),
+  approved_at: DateTime.iso8601('2022-07-26T16:57:57.674Z'),
   compensation: [
     Models::Shared::HrisCompensation.new(
       amount: 76_761.0,
       currency: 'GBP',
       frequency: Models::Shared::HrisCompensationFrequency::SEMIMONTHLY,
       notes: 'Vehemens annus adficio.',
-      type: Models::Shared::HrisCompensationType::COMMISSION,
+      type: Models::Shared::HrisCompensationType::COMMISSION
     ),
   ],
   created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
   employee_user_id: '<id>',
-  end_at: DateTime.iso8601('2026-10-15T21:29:32.830Z'),
+  end_at: DateTime.iso8601('2026-10-17T13:52:39.197Z'),
   hours: 6.0,
-  id: '3d7bf33d-729a-4205-877e-b94216036774',
+  id: 'f08a5fc5-c29f-402a-ae37-e36600a6fde3',
   is_approved: false,
   metadata: [],
-  start_at: DateTime.iso8601('2023-07-23T12:10:36.468Z'),
-  updated_at: DateTime.iso8601('2021-07-07T02:50:44.436Z'),
+  start_at: DateTime.iso8601('2023-07-24T10:39:37.180Z'),
+  updated_at: DateTime.iso8601('2021-07-07T14:00:34.559Z')
 ), connection_id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -1122,11 +1106,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_attendance(connection_id: '<id>', id: '<id>')
 
 unless res.hris_attendance.nil?
@@ -1166,11 +1149,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_bankaccount(connection_id: '<id>', id: '<id>')
 
 unless res.hris_bankaccount.nil?
@@ -1210,11 +1192,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_benefit(connection_id: '<id>', id: '<id>')
 
 unless res.hris_benefit.nil?
@@ -1254,11 +1235,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_company(connection_id: '<id>', id: '<id>')
 
 unless res.hris_company.nil?
@@ -1298,11 +1278,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_deduction(connection_id: '<id>', id: '<id>')
 
 unless res.hris_deduction.nil?
@@ -1342,11 +1321,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_device(connection_id: '<id>', id: '<id>')
 
 unless res.hris_device.nil?
@@ -1386,11 +1364,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_document(connection_id: '<id>', id: '<id>')
 
 unless res.hris_document.nil?
@@ -1430,11 +1407,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_earning(connection_id: '<id>', id: '<id>')
 
 unless res.hris_earning.nil?
@@ -1474,11 +1450,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_employee(connection_id: '<id>', id: '<id>')
 
 unless res.hris_employee.nil?
@@ -1518,11 +1493,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_group(connection_id: '<id>', id: '<id>')
 
 unless res.hris_group.nil?
@@ -1562,11 +1536,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_job(connection_id: '<id>', id: '<id>')
 
 unless res.hris_job.nil?
@@ -1606,11 +1579,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_location(connection_id: '<id>', id: '<id>')
 
 unless res.hris_location.nil?
@@ -1650,11 +1622,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_paycode(connection_id: '<id>', id: '<id>')
 
 unless res.hris_paycode.nil?
@@ -1694,11 +1665,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_payroll(connection_id: '<id>', id: '<id>')
 
 unless res.hris_payroll.nil?
@@ -1738,11 +1708,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_payslip(connection_id: '<id>', id: '<id>')
 
 unless res.hris_payslip.nil?
@@ -1782,11 +1751,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_taxonomy(connection_id: '<id>', id: '<id>')
 
 unless res.hris_taxonomy.nil?
@@ -1826,11 +1794,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_timeoff(connection_id: '<id>', id: '<id>')
 
 unless res.hris_timeoff.nil?
@@ -1870,11 +1837,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.get_hris_timeshift(connection_id: '<id>', id: '<id>')
 
 unless res.hris_timeshift.nil?
@@ -1914,15 +1880,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisAttendancesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisAttendancesRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_attendances(request: req)
 
 unless res.hris_attendances.nil?
@@ -1959,15 +1924,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisBankaccountsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisBankaccountsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_bankaccounts(request: req)
 
 unless res.hris_bankaccounts.nil?
@@ -2004,15 +1968,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisBenefitsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisBenefitsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_benefits(request: req)
 
 unless res.hris_benefits.nil?
@@ -2049,15 +2012,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisCompaniesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisCompaniesRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_companies(request: req)
 
 unless res.hris_companies.nil?
@@ -2094,15 +2056,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisDeductionsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisDeductionsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_deductions(request: req)
 
 unless res.hris_deductions.nil?
@@ -2139,15 +2100,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisDevicesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisDevicesRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_devices(request: req)
 
 unless res.hris_devices.nil?
@@ -2184,15 +2144,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisDocumentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisDocumentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_documents(request: req)
 
 unless res.hris_documents.nil?
@@ -2229,15 +2188,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisEarningsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisEarningsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_earnings(request: req)
 
 unless res.hris_earnings.nil?
@@ -2274,15 +2232,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisEmployeesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisEmployeesRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_employees(request: req)
 
 unless res.hris_employees.nil?
@@ -2319,15 +2276,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisGroupsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisGroupsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_groups(request: req)
 
 unless res.hris_groups.nil?
@@ -2364,15 +2320,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisJobsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisJobsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_jobs(request: req)
 
 unless res.hris_jobs.nil?
@@ -2409,15 +2364,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisLocationsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisLocationsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_locations(request: req)
 
 unless res.hris_locations.nil?
@@ -2454,15 +2408,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisPaycodesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisPaycodesRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_paycodes(request: req)
 
 unless res.hris_paycodes.nil?
@@ -2499,15 +2452,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisPayrollsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisPayrollsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_payrolls(request: req)
 
 unless res.hris_payrolls.nil?
@@ -2544,15 +2496,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisPayslipsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisPayslipsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_payslips(request: req)
 
 unless res.hris_payslips.nil?
@@ -2589,15 +2540,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisTaxonomiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisTaxonomiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_taxonomies(request: req)
 
 unless res.hris_taxonomies.nil?
@@ -2634,15 +2584,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisTimeoffsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisTimeoffsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_timeoffs(request: req)
 
 unless res.hris_timeoffs.nil?
@@ -2679,15 +2628,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListHrisTimeshiftsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListHrisTimeshiftsRequest.new(
+  connection_id: '<id>'
+)
 res = s.hris.list_hris_timeshifts(request: req)
 
 unless res.hris_timeshifts.nil?
@@ -2718,16 +2666,16 @@ Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendanc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisAttendanceRequest.new(
   hris_attendance: Models::Shared::HrisAttendance.new(
@@ -2737,39 +2685,38 @@ req = Models::Operations::PatchHrisAttendanceRequest.new(
       country_code: 'US',
       postal_code: '23844-2344',
       region: 'Tennessee',
-      region_code: 'CA',
+      region_code: 'CA'
     ),
-    approved_at: DateTime.iso8601('2021-09-19T23:40:10.185Z'),
+    approved_at: DateTime.iso8601('2021-09-20T00:31:25.178Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-23T17:55:02.677Z'),
-        id: 'd9d9b31b-832e-4396-8658-4a7b13442397',
+        end_at: DateTime.iso8601('2024-02-24T13:37:48.034Z'),
+        id: '6e2ed7f3-48ce-4e86-aa11-d921aa239370',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-07T01:49:55.971Z'),
+        start_at: DateTime.iso8601('2023-11-07T19:14:01.537Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-03T04:59:19.898Z'),
+    end_at: DateTime.iso8601('2024-05-04T02:10:43.212Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '5fdfc3d8-3f2a-4e02-9b03-c01fd801cc16',
+    id: '178fd0ab-fc1e-40a0-8c57-1a612df2692c',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-11T23:06:20.408Z'),
+    start_at: DateTime.iso8601('2021-11-12T01:05:11.282Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-21T12:02:22.767Z'),
+    updated_at: DateTime.iso8601('2022-01-21T15:31:14.099Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_attendance(request: req)
 
 unless res.hris_attendance.nil?
@@ -2800,16 +2747,16 @@ Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankacco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisBankaccountRequest.new(
   hris_bankaccount: Models::Shared::HrisBankaccount.new(
@@ -2820,7 +2767,7 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '0d28e4dd-5731-4c13-b1ac-2931a0103353',
+    id: 'c0221f26-6f69-408f-a1c9-d074ac4d7b5f',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -2828,12 +2775,11 @@ req = Models::Operations::PatchHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-16T16:33:11.609Z'),
+    updated_at: DateTime.iso8601('2025-07-18T01:37:34.036Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_bankaccount(request: req)
 
 unless res.hris_bankaccount.nil?
@@ -2864,16 +2810,16 @@ Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisBenefitRequest.new(
   hris_benefit: Models::Shared::HrisBenefit.new(
@@ -2885,18 +2831,17 @@ req = Models::Operations::PatchHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '2cabd030-33b6-467c-a591-792b9f726b2f',
+    id: '743e6959-a6f3-4480-a1f5-3178622b24cd',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-29T03:13:27.950Z'),
+    updated_at: DateTime.iso8601('2023-03-29T20:59:29.563Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_benefit(request: req)
 
 unless res.hris_benefit.nil?
@@ -2927,16 +2872,16 @@ Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisCompanyRequest.new(
   hris_company: Models::Shared::HrisCompany.new(
@@ -2946,19 +2891,18 @@ req = Models::Operations::PatchHrisCompanyRequest.new(
       country_code: 'US',
       postal_code: '67325',
       region: 'Kentucky',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '03c1c912-549c-43f7-b172-cd5f8a37dfd9',
+    id: 'f7d8d1c7-c382-4c85-b83a-242369effb80',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-27T13:42:30.285Z'),
+    updated_at: DateTime.iso8601('2026-10-29T06:12:28.583Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_company(request: req)
 
 unless res.hris_company.nil?
@@ -2989,16 +2933,16 @@ Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisDeductionRequest.new(
   hris_deduction: Models::Shared::HrisDeduction.new(
@@ -3009,19 +2953,18 @@ req = Models::Operations::PatchHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'f4b9dfb4-61a3-44f2-bc05-5de30e05ed43',
+    id: '432ccca6-746d-47f0-998d-e0091ba1858c',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-03-29T18:57:36.881Z'),
+    start_at: DateTime.iso8601('2025-03-31T01:59:08.726Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-02T23:36:48.395Z'),
+    updated_at: DateTime.iso8601('2024-04-04T00:41:01.310Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_deduction(request: req)
 
 unless res.hris_deduction.nil?
@@ -3052,16 +2995,16 @@ Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisDeviceRequest.new(
   hris_device: Models::Shared::HrisDevice.new(
@@ -3073,7 +3016,7 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '3f2bff73-c125-4af0-a0eb-962e234492f5',
+    id: '6748eb15-6b78-465c-b43f-a3d96c41f30e',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -3081,13 +3024,12 @@ req = Models::Operations::PatchHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-18T19:49:11.782Z'),
-    version: '4.15.7',
+    updated_at: DateTime.iso8601('2023-06-19T18:22:31.017Z'),
+    version: '4.15.7'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_device(request: req)
 
 unless res.hris_device.nil?
@@ -3118,31 +3060,30 @@ Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisDocumentRequest.new(
   hris_document: Models::Shared::HrisDocument.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: '4c74f69f-e1ba-4d03-9be0-88b2af17d160',
+    id: '827ca4ed-9fbf-4dd1-88e3-38182b6fde6d',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-25T16:49:29.077Z'),
+    updated_at: DateTime.iso8601('2025-10-26T23:05:08.746Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_document(request: req)
 
 unless res.hris_document.nil?
@@ -3173,16 +3114,16 @@ Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisEarning" method="patch" path="/hris/{connection_id}/earning/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisEarning" method="patch" path="/hris/{connection_id}/earning/{id}" example="hris_earning" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisEarningRequest.new(
   hris_earning: Models::Shared::HrisEarning.new(
@@ -3190,17 +3131,16 @@ req = Models::Operations::PatchHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: '596bdcc6-8b46-489c-98f0-1ffcf83f809a',
+    id: 'b556cb51-6539-49d6-b552-c37af24f2b79',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-03T01:52:30.756Z'),
+    start_at: DateTime.iso8601('2022-08-03T20:17:04.064Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-11T09:38:44.150Z'),
+    updated_at: DateTime.iso8601('2020-02-11T15:06:14.319Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_earning(request: req)
 
 unless res.hris_earning.nil?
@@ -3231,16 +3171,16 @@ Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisEmployeeRequest.new(
   hris_employee: Models::Shared::HrisEmployee.new(
@@ -3251,7 +3191,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
       country_code: 'US',
       postal_code: '01711',
       region: 'Missouri',
-      region_code: 'TN',
+      region_code: 'TN'
     ),
     bio: 'fun advocate  🇱🇻',
     compensation: [
@@ -3260,7 +3200,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
         currency: 'USD',
         frequency: Models::Shared::HrisCompensationFrequency::YEAR,
         notes: 'Eius.',
-        type: Models::Shared::HrisCompensationType::OTHER,
+        type: Models::Shared::HrisCompensationType::OTHER
       ),
     ],
     created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
@@ -3269,7 +3209,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     emails: [
       Models::Shared::HrisEmail.new(
         email: 'zetta.prohaska@insidious-stump.net',
-        type: Models::Shared::HrisEmailType::WORK,
+        type: Models::Shared::HrisEmailType::WORK
       ),
     ],
     employee_number: 'uCk3qaL1ei',
@@ -3280,7 +3220,7 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '388159cb-7232-481d-a701-64bd83f6f9cf',
+    id: '55c70939-3b65-4955-9f68-52fff74e27af',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -3289,13 +3229,13 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     metadata: [
       Models::Shared::HrisMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '815d115a-757b-46c6-b01d-59ccf3c0e19b',
+        id: 'fa6b7c4f-0570-4f11-a440-8d3258318f35',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'tutis',
+        value: 'tutis'
       ),
     ],
     name: 'Zetta Prohaska',
@@ -3305,20 +3245,20 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keith.prohaska@gmail.com',
+            email: 'keith.prohaska@gmail.com'
           ),
         ],
         name: 'Keith Prohaska',
-        type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+        type: Models::Shared::HrisEmployeerelationshipType::SIBLING
       ),
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keely.prohaska@icloud.com',
+            email: 'keely.prohaska@icloud.com'
           ),
         ],
         name: 'Keely Prohaska',
-        type: Models::Shared::HrisEmployeerelationshipType::OTHER,
+        type: Models::Shared::HrisEmployeerelationshipType::OTHER
       ),
     ],
     salutation: 'Ms.',
@@ -3329,23 +3269,22 @@ req = Models::Operations::PatchHrisEmployeeRequest.new(
     telephones: [
       Models::Shared::HrisTelephone.new(
         telephone: '(320) 980-1370',
-        type: Models::Shared::HrisTelephoneType::HOME,
+        type: Models::Shared::HrisTelephoneType::HOME
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(694) 840-0166',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
     ],
     timeoff_days_total: 17.0,
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-21T10:10:14.702Z'),
+    updated_at: DateTime.iso8601('2020-07-21T14:59:28.830Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_employee(request: req)
 
 unless res.hris_employee.nil?
@@ -3376,32 +3315,31 @@ Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: 'a8847752-5f51-4c8a-bc7e-a8389cbbf50e',
+    id: 'fcea6a6c-ad73-498c-a09d-7568c5b9bd93',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-07T07:39:35.837Z'),
+    updated_at: DateTime.iso8601('2026-06-08T18:41:54.236Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_group(request: req)
 
 unless res.hris_group.nil?
@@ -3432,16 +3370,16 @@ Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisJob" method="patch" path="/hris/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisJob" method="patch" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisJobRequest.new(
   hris_job: Models::Shared::HrisJob.new(
@@ -3449,16 +3387,15 @@ req = Models::Operations::PatchHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: 'b3733ce0-4541-4193-8f48-ddc4d6de547e',
+    id: '41f094b0-c4d7-4d7a-8cdb-f5656795d1f0',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-06T09:26:50.639Z'),
+    updated_at: DateTime.iso8601('2023-02-07T00:49:32.838Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_job(request: req)
 
 unless res.hris_job.nil?
@@ -3489,16 +3426,16 @@ Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisLocationRequest.new(
   hris_location: Models::Shared::HrisLocation.new(
@@ -3509,12 +3446,12 @@ req = Models::Operations::PatchHrisLocationRequest.new(
       country_code: 'US',
       postal_code: '54109',
       region: 'Ohio',
-      region_code: 'OR',
+      region_code: 'OR'
     ),
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'cefadcdb-5408-48b1-9d86-a4483ae1ba41',
+    id: '722041ae-2eca-4aef-9b09-200077f1d98d',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -3523,24 +3460,23 @@ req = Models::Operations::PatchHrisLocationRequest.new(
     telephones: [
       Models::Shared::HrisTelephone.new(
         telephone: '(371) 245-0699',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(700) 845-5854',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(461) 437-3548',
-        type: Models::Shared::HrisTelephoneType::HOME,
+        type: Models::Shared::HrisTelephoneType::HOME
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-28T01:20:40.686Z'),
+    updated_at: DateTime.iso8601('2023-06-28T16:15:14.046Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_location(request: req)
 
 unless res.hris_location.nil?
@@ -3571,49 +3507,48 @@ Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-24T19:45:14.934Z'),
+    approved_at: DateTime.iso8601('2022-02-24T22:50:46.176Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
         download_url: '',
         filename: 'nemo.pdf',
         id: '3f3418c2-fdad-4738-b630-4cb0d2f3fb16',
-        size: 709_170.0,
+        size: 709_170.0
       ),
     ],
     comments: 'Blandior ventus curiositas amplitudo.',
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-09T21:32:04.063Z'),
-    id: 'd8c8ba86-3dbf-4dd4-bb5f-93129863168c',
+    end_at: DateTime.iso8601('2025-01-10T23:38:30.575Z'),
+    id: '986e071e-15d7-4f49-aee3-e65912d109e2',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-12T00:25:57.812Z'),
+    start_at: DateTime.iso8601('2023-09-12T15:53:26.408Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-15T16:52:22.503Z'),
-    user_id: '<id>',
+    updated_at: DateTime.iso8601('2022-07-15T23:03:09.765Z'),
+    user_id: '<id>'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_timeoff(request: req)
 
 unless res.hris_timeoff.nil?
@@ -3644,43 +3579,42 @@ Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-25T23:58:48.828Z'),
+    approved_at: DateTime.iso8601('2022-07-26T16:57:57.682Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
         currency: 'GBP',
         frequency: Models::Shared::HrisCompensationFrequency::SEMIMONTHLY,
         notes: 'Vehemens annus adficio.',
-        type: Models::Shared::HrisCompensationType::COMMISSION,
+        type: Models::Shared::HrisCompensationType::COMMISSION
       ),
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-10-15T21:29:32.845Z'),
+    end_at: DateTime.iso8601('2026-10-17T13:52:39.215Z'),
     hours: 6.0,
-    id: 'cf8f7d56-d759-47ba-b296-9d108e1201ab',
+    id: '81acf2d2-e5d2-4919-b0fe-e0e03c1ab153',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-23T12:10:36.476Z'),
-    updated_at: DateTime.iso8601('2021-07-07T02:50:44.441Z'),
+    start_at: DateTime.iso8601('2023-07-24T10:39:37.190Z'),
+    updated_at: DateTime.iso8601('2021-07-07T14:00:34.564Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.patch_hris_timeshift(request: req)
 
 unless res.hris_timeshift.nil?
@@ -3717,11 +3651,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_attendance(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -3759,11 +3692,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_bankaccount(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -3801,11 +3733,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_benefit(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -3843,11 +3774,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_company(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -3885,11 +3815,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_deduction(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -3927,11 +3856,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_device(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -3969,11 +3897,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_document(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -4011,11 +3938,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_earning(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -4053,11 +3979,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_employee(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -4095,11 +4020,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_group(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -4137,11 +4061,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_job(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -4179,11 +4102,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_location(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -4221,11 +4143,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_timeoff(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -4263,11 +4184,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.hris.remove_hris_timeshift(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -4299,16 +4219,16 @@ Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendanc
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisAttendanceRequest.new(
   hris_attendance: Models::Shared::HrisAttendance.new(
@@ -4318,39 +4238,38 @@ req = Models::Operations::UpdateHrisAttendanceRequest.new(
       country_code: 'US',
       postal_code: '23844-2344',
       region: 'Tennessee',
-      region_code: 'CA',
+      region_code: 'CA'
     ),
-    approved_at: DateTime.iso8601('2021-09-19T23:40:10.185Z'),
+    approved_at: DateTime.iso8601('2021-09-20T00:31:25.178Z'),
     breaks: [
       Models::Shared::HrisAttendanceBreak.new(
         duration_minutes: 51.0,
-        end_at: DateTime.iso8601('2024-02-23T17:55:02.677Z'),
-        id: 'd9d9b31b-832e-4396-8658-4a7b13442397',
+        end_at: DateTime.iso8601('2024-02-24T13:37:48.034Z'),
+        id: '6e2ed7f3-48ce-4e86-aa11-d921aa239370',
         is_paid: false,
         name: 'Lunch',
-        start_at: DateTime.iso8601('2023-11-07T01:49:55.971Z'),
+        start_at: DateTime.iso8601('2023-11-07T19:14:01.537Z')
       ),
     ],
     created_at: DateTime.iso8601('2021-08-10T19:43:18.452Z'),
     currency: 'EUR',
     declared_tips_amount: 54.0,
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2024-05-03T04:59:19.898Z'),
+    end_at: DateTime.iso8601('2024-05-04T02:10:43.212Z'),
     hourly_rate: 16.0,
     hours: 10.0,
-    id: '5fdfc3d8-3f2a-4e02-9b03-c01fd801cc16',
+    id: '178fd0ab-fc1e-40a0-8c57-1a612df2692c',
     job_name: 'Human Accountability Administrator',
     metadata: [],
     non_cash_tips_amount: 167.0,
-    start_at: DateTime.iso8601('2021-11-11T23:06:20.408Z'),
+    start_at: DateTime.iso8601('2021-11-12T01:05:11.282Z'),
     status: Models::Shared::HrisAttendanceStatus::OPEN,
     timezone: 'America/Atikokan',
-    updated_at: DateTime.iso8601('2022-01-21T12:02:22.767Z'),
+    updated_at: DateTime.iso8601('2022-01-21T15:31:14.099Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_attendance(request: req)
 
 unless res.hris_attendance.nil?
@@ -4381,16 +4300,16 @@ Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankacco
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisBankaccountRequest.new(
   hris_bankaccount: Models::Shared::HrisBankaccount.new(
@@ -4401,7 +4320,7 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     country_code: 'US',
     created_at: DateTime.iso8601('2019-11-16T16:43:45.976Z'),
     currency: 'USD',
-    id: '0d28e4dd-5731-4c13-b1ac-2931a0103353',
+    id: 'c0221f26-6f69-408f-a1c9-d074ac4d7b5f',
     is_primary: true,
     metadata: [],
     name: 'Granville Schumm - Checking',
@@ -4409,12 +4328,11 @@ req = Models::Operations::UpdateHrisBankaccountRequest.new(
     routing_number: '448650724',
     split_amount: 98.0,
     split_type: Models::Shared::SplitType::PERCENTAGE,
-    updated_at: DateTime.iso8601('2025-07-16T16:33:11.609Z'),
+    updated_at: DateTime.iso8601('2025-07-18T01:37:34.036Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_bankaccount(request: req)
 
 unless res.hris_bankaccount.nil?
@@ -4445,16 +4363,16 @@ Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisBenefitRequest.new(
   hris_benefit: Models::Shared::HrisBenefit.new(
@@ -4466,18 +4384,17 @@ req = Models::Operations::UpdateHrisBenefitRequest.new(
     employer_contribution_max_amount: 179_093.0,
     employer_contribution_type: Models::Shared::EmployerContributionType::PERCENTAGE,
     frequency: Models::Shared::HrisBenefitFrequency::MONTH,
-    id: '2cabd030-33b6-467c-a591-792b9f726b2f',
+    id: '743e6959-a6f3-4480-a1f5-3178622b24cd',
     is_active: false,
     metadata: [],
     name: 'Frozen Wooden Ball',
     tax: Models::Shared::Tax::PRE_TAX,
     type: Models::Shared::HrisBenefitType::OTHER,
-    updated_at: DateTime.iso8601('2023-03-29T03:13:27.950Z'),
+    updated_at: DateTime.iso8601('2023-03-29T20:59:29.563Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_benefit(request: req)
 
 unless res.hris_benefit.nil?
@@ -4508,16 +4425,16 @@ Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisCompanyRequest.new(
   hris_company: Models::Shared::HrisCompany.new(
@@ -4527,19 +4444,18 @@ req = Models::Operations::UpdateHrisCompanyRequest.new(
       country_code: 'US',
       postal_code: '67325',
       region: 'Kentucky',
-      region_code: 'MO',
+      region_code: 'MO'
     ),
     created_at: DateTime.iso8601('2021-05-02T22:27:38.970Z'),
-    id: '03c1c912-549c-43f7-b172-cd5f8a37dfd9',
+    id: 'f7d8d1c7-c382-4c85-b83a-242369effb80',
     legal_name: 'Gottlieb Group LLC',
     metadata: [],
     name: 'Gottlieb Group',
-    updated_at: DateTime.iso8601('2026-10-27T13:42:30.285Z'),
+    updated_at: DateTime.iso8601('2026-10-29T06:12:28.583Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_company(request: req)
 
 unless res.hris_company.nil?
@@ -4570,16 +4486,16 @@ Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisDeductionRequest.new(
   hris_deduction: Models::Shared::HrisDeduction.new(
@@ -4590,19 +4506,18 @@ req = Models::Operations::UpdateHrisDeductionRequest.new(
     employer_type: Models::Shared::EmployerType::PERCENTAGE,
     frequency: Models::Shared::HrisDeductionFrequency::ONE_TIME,
     garnishment_type: Models::Shared::GarnishmentType::CHILD_SUPPORT,
-    id: 'f4b9dfb4-61a3-44f2-bc05-5de30e05ed43',
+    id: '432ccca6-746d-47f0-998d-e0091ba1858c',
     is_active: true,
     max_amount: 21_794.0,
     metadata: [],
     notes: 'Carmen desidero.',
-    start_at: DateTime.iso8601('2025-03-29T18:57:36.881Z'),
+    start_at: DateTime.iso8601('2025-03-31T01:59:08.726Z'),
     type: Models::Shared::HrisDeductionType::FIXED,
-    updated_at: DateTime.iso8601('2024-04-02T23:36:48.395Z'),
+    updated_at: DateTime.iso8601('2024-04-04T00:41:01.310Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_deduction(request: req)
 
 unless res.hris_deduction.nil?
@@ -4633,16 +4548,16 @@ Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisDeviceRequest.new(
   hris_device: Models::Shared::HrisDevice.new(
@@ -4654,7 +4569,7 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     has_hd_encrypted: true,
     has_password_manager: true,
     has_screenlock: false,
-    id: '3f2bff73-c125-4af0-a0eb-962e234492f5',
+    id: '6748eb15-6b78-465c-b43f-a3d96c41f30e',
     is_missing: false,
     manufacturer: 'Hackett Inc',
     metadata: [],
@@ -4662,13 +4577,12 @@ req = Models::Operations::UpdateHrisDeviceRequest.new(
     name: 'august-laptop',
     os: 'transmitter',
     os_version: '8.4.8',
-    updated_at: DateTime.iso8601('2023-06-18T19:49:11.782Z'),
-    version: '4.15.7',
+    updated_at: DateTime.iso8601('2023-06-19T18:22:31.017Z'),
+    version: '4.15.7'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_device(request: req)
 
 unless res.hris_device.nil?
@@ -4699,31 +4613,30 @@ Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisDocumentRequest.new(
   hris_document: Models::Shared::HrisDocument.new(
     created_at: DateTime.iso8601('2022-10-27T11:47:26.086Z'),
     document_url: 'https://sore-decision.biz/',
     filename: 'ridge_forager.xsl',
-    id: '4c74f69f-e1ba-4d03-9be0-88b2af17d160',
+    id: '827ca4ed-9fbf-4dd1-88e3-38182b6fde6d',
     metadata: [],
     type: Models::Shared::HrisDocumentType::POLICY,
-    updated_at: DateTime.iso8601('2025-10-25T16:49:29.077Z'),
+    updated_at: DateTime.iso8601('2025-10-26T23:05:08.746Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_document(request: req)
 
 unless res.hris_document.nil?
@@ -4754,16 +4667,16 @@ Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisEarning" method="put" path="/hris/{connection_id}/earning/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisEarning" method="put" path="/hris/{connection_id}/earning/{id}" example="hris_earning" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisEarningRequest.new(
   hris_earning: Models::Shared::HrisEarning.new(
@@ -4771,17 +4684,16 @@ req = Models::Operations::UpdateHrisEarningRequest.new(
     created_at: DateTime.iso8601('2019-01-26T12:44:52.326Z'),
     currency: 'USD',
     frequency: Models::Shared::HrisEarningFrequency::SEMIMONTHLY,
-    id: '596bdcc6-8b46-489c-98f0-1ffcf83f809a',
+    id: 'b556cb51-6539-49d6-b552-c37af24f2b79',
     metadata: [],
     notes: 'Deporto truculenter vinum beatae.',
-    start_at: DateTime.iso8601('2022-08-03T01:52:30.756Z'),
+    start_at: DateTime.iso8601('2022-08-03T20:17:04.064Z'),
     status: Models::Shared::HrisEarningStatus::ENDED,
-    updated_at: DateTime.iso8601('2020-02-11T09:38:44.150Z'),
+    updated_at: DateTime.iso8601('2020-02-11T15:06:14.319Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_earning(request: req)
 
 unless res.hris_earning.nil?
@@ -4812,16 +4724,16 @@ Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisEmployeeRequest.new(
   hris_employee: Models::Shared::HrisEmployee.new(
@@ -4832,7 +4744,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
       country_code: 'US',
       postal_code: '01711',
       region: 'Missouri',
-      region_code: 'TN',
+      region_code: 'TN'
     ),
     bio: 'fun advocate  🇱🇻',
     compensation: [
@@ -4841,7 +4753,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
         currency: 'USD',
         frequency: Models::Shared::HrisCompensationFrequency::YEAR,
         notes: 'Eius.',
-        type: Models::Shared::HrisCompensationType::OTHER,
+        type: Models::Shared::HrisCompensationType::OTHER
       ),
     ],
     created_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
@@ -4850,7 +4762,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     emails: [
       Models::Shared::HrisEmail.new(
         email: 'zetta.prohaska@insidious-stump.net',
-        type: Models::Shared::HrisEmailType::WORK,
+        type: Models::Shared::HrisEmailType::WORK
       ),
     ],
     employee_number: 'uCk3qaL1ei',
@@ -4861,7 +4773,7 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     gender: Models::Shared::HrisEmployeeGender::MALE,
     has_mfa: true,
     hired_at: DateTime.iso8601('2019-09-16T15:08:53.262Z'),
-    id: '388159cb-7232-481d-a701-64bd83f6f9cf',
+    id: '55c70939-3b65-4955-9f68-52fff74e27af',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
     language_locale: 'in',
     last_name: 'Prohaska',
@@ -4870,13 +4782,13 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     metadata: [
       Models::Shared::HrisMetadata.new(
         extra_data: {
-          "display_name": 'Custom Property',
+          'display_name' => 'Custom Property',
         },
         format: Models::Shared::HrisMetadataFormat::TEXT,
-        id: '815d115a-757b-46c6-b01d-59ccf3c0e19b',
+        id: 'fa6b7c4f-0570-4f11-a440-8d3258318f35',
         namespace: 'custom',
         slug: 'custom_property',
-        value: 'tutis',
+        value: 'tutis'
       ),
     ],
     name: 'Zetta Prohaska',
@@ -4886,20 +4798,20 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keith.prohaska@gmail.com',
+            email: 'keith.prohaska@gmail.com'
           ),
         ],
         name: 'Keith Prohaska',
-        type: Models::Shared::HrisEmployeerelationshipType::SIBLING,
+        type: Models::Shared::HrisEmployeerelationshipType::SIBLING
       ),
       Models::Shared::HrisEmployeerelationship.new(
         emails: [
           Models::Shared::HrisEmail.new(
-            email: 'keely.prohaska@icloud.com',
+            email: 'keely.prohaska@icloud.com'
           ),
         ],
         name: 'Keely Prohaska',
-        type: Models::Shared::HrisEmployeerelationshipType::OTHER,
+        type: Models::Shared::HrisEmployeerelationshipType::OTHER
       ),
     ],
     salutation: 'Ms.',
@@ -4910,23 +4822,22 @@ req = Models::Operations::UpdateHrisEmployeeRequest.new(
     telephones: [
       Models::Shared::HrisTelephone.new(
         telephone: '(320) 980-1370',
-        type: Models::Shared::HrisTelephoneType::HOME,
+        type: Models::Shared::HrisTelephoneType::HOME
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(694) 840-0166',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
     ],
     timeoff_days_total: 17.0,
     timeoff_days_used: 9.0,
     timezone: 'Europe/Ljubljana',
     title: 'District Branding Specialist',
-    updated_at: DateTime.iso8601('2020-07-21T10:10:14.702Z'),
+    updated_at: DateTime.iso8601('2020-07-21T14:59:28.830Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_employee(request: req)
 
 unless res.hris_employee.nil?
@@ -4957,32 +4868,31 @@ Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields t
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisGroupRequest.new(
   hris_group: Models::Shared::HrisGroup.new(
     created_at: DateTime.iso8601('2023-11-01T13:13:40.714Z'),
     description: 'Absorbeo casso.',
-    id: 'a8847752-5f51-4c8a-bc7e-a8389cbbf50e',
+    id: 'fcea6a6c-ad73-498c-a09d-7568c5b9bd93',
     is_active: false,
     metadata: [],
     name: 'Games',
     type: Models::Shared::HrisGroupType::BRANCH,
-    updated_at: DateTime.iso8601('2026-06-07T07:39:35.837Z'),
+    updated_at: DateTime.iso8601('2026-06-08T18:41:54.236Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_group(request: req)
 
 unless res.hris_group.nil?
@@ -5013,16 +4923,16 @@ Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to ch
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisJob" method="put" path="/hris/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisJob" method="put" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisJobRequest.new(
   hris_job: Models::Shared::HrisJob.new(
@@ -5030,16 +4940,15 @@ req = Models::Operations::UpdateHrisJobRequest.new(
     created_at: DateTime.iso8601('2020-10-28T01:13:19.491Z'),
     description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
     employment_type: Models::Shared::HrisJobEmploymentType::FREELANCE,
-    id: 'b3733ce0-4541-4193-8f48-ddc4d6de547e',
+    id: '41f094b0-c4d7-4d7a-8cdb-f5656795d1f0',
     is_active: false,
     metadata: [],
     name: 'Internal Integration Specialist',
-    updated_at: DateTime.iso8601('2023-02-06T09:26:50.639Z'),
+    updated_at: DateTime.iso8601('2023-02-07T00:49:32.838Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_job(request: req)
 
 unless res.hris_job.nil?
@@ -5070,16 +4979,16 @@ Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisLocationRequest.new(
   hris_location: Models::Shared::HrisLocation.new(
@@ -5090,12 +4999,12 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
       country_code: 'US',
       postal_code: '54109',
       region: 'Ohio',
-      region_code: 'OR',
+      region_code: 'OR'
     ),
     created_at: DateTime.iso8601('2021-07-18T10:32:01.414Z'),
     currency: 'MNT',
     description: 'Commemoro acervus.',
-    id: 'cefadcdb-5408-48b1-9d86-a4483ae1ba41',
+    id: '722041ae-2eca-4aef-9b09-200077f1d98d',
     is_active: false,
     is_hq: true,
     language_locale: 'it',
@@ -5104,24 +5013,23 @@ req = Models::Operations::UpdateHrisLocationRequest.new(
     telephones: [
       Models::Shared::HrisTelephone.new(
         telephone: '(371) 245-0699',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(700) 845-5854',
-        type: Models::Shared::HrisTelephoneType::FAX,
+        type: Models::Shared::HrisTelephoneType::FAX
       ),
       Models::Shared::HrisTelephone.new(
         telephone: '(461) 437-3548',
-        type: Models::Shared::HrisTelephoneType::HOME,
+        type: Models::Shared::HrisTelephoneType::HOME
       ),
     ],
     timezone: 'Asia/Jerusalem',
-    updated_at: DateTime.iso8601('2023-06-28T01:20:40.686Z'),
+    updated_at: DateTime.iso8601('2023-06-28T16:15:14.046Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_location(request: req)
 
 unless res.hris_location.nil?
@@ -5152,49 +5060,48 @@ Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fiel
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisTimeoffRequest.new(
   hris_timeoff: Models::Shared::HrisTimeoff.new(
-    approved_at: DateTime.iso8601('2022-02-24T19:45:14.934Z'),
+    approved_at: DateTime.iso8601('2022-02-24T22:50:46.176Z'),
     attachments: [
       Models::Shared::HrisAttachment.new(
         content_type: 'application/pdf',
         download_url: '',
         filename: 'nemo.pdf',
         id: '3f3418c2-fdad-4738-b630-4cb0d2f3fb16',
-        size: 709_170.0,
+        size: 709_170.0
       ),
     ],
     comments: 'Blandior ventus curiositas amplitudo.',
     created_at: DateTime.iso8601('2021-10-06T18:00:20.615Z'),
     duration: 4.0,
     duration_type: Models::Shared::DurationType::DAY,
-    end_at: DateTime.iso8601('2025-01-09T21:32:04.063Z'),
-    id: 'd8c8ba86-3dbf-4dd4-bb5f-93129863168c',
+    end_at: DateTime.iso8601('2025-01-10T23:38:30.575Z'),
+    id: '986e071e-15d7-4f49-aee3-e65912d109e2',
     is_paid: true,
     metadata: [],
     original_type: 'acerbitas ut',
     reason: 'verto',
-    start_at: DateTime.iso8601('2023-09-12T00:25:57.812Z'),
+    start_at: DateTime.iso8601('2023-09-12T15:53:26.408Z'),
     status: Models::Shared::HrisTimeoffStatus::DENIED,
     type: Models::Shared::HrisTimeoffType::IN_LIEU,
-    updated_at: DateTime.iso8601('2022-07-15T16:52:22.503Z'),
-    user_id: '<id>',
+    updated_at: DateTime.iso8601('2022-07-15T23:03:09.765Z'),
+    user_id: '<id>'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_timeoff(request: req)
 
 unless res.hris_timeoff.nil?
@@ -5225,43 +5132,42 @@ Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift 
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateHrisTimeshiftRequest.new(
   hris_timeshift: Models::Shared::HrisTimeshift.new(
-    approved_at: DateTime.iso8601('2022-07-25T23:58:48.828Z'),
+    approved_at: DateTime.iso8601('2022-07-26T16:57:57.682Z'),
     compensation: [
       Models::Shared::HrisCompensation.new(
         amount: 76_761.0,
         currency: 'GBP',
         frequency: Models::Shared::HrisCompensationFrequency::SEMIMONTHLY,
         notes: 'Vehemens annus adficio.',
-        type: Models::Shared::HrisCompensationType::COMMISSION,
+        type: Models::Shared::HrisCompensationType::COMMISSION
       ),
     ],
     created_at: DateTime.iso8601('2019-07-01T23:53:15.738Z'),
     employee_user_id: '<id>',
-    end_at: DateTime.iso8601('2026-10-15T21:29:32.845Z'),
+    end_at: DateTime.iso8601('2026-10-17T13:52:39.215Z'),
     hours: 6.0,
-    id: 'cf8f7d56-d759-47ba-b296-9d108e1201ab',
+    id: '81acf2d2-e5d2-4919-b0fe-e0e03c1ab153',
     is_approved: false,
     metadata: [],
-    start_at: DateTime.iso8601('2023-07-23T12:10:36.476Z'),
-    updated_at: DateTime.iso8601('2021-07-07T02:50:44.441Z'),
+    start_at: DateTime.iso8601('2023-07-24T10:39:37.190Z'),
+    updated_at: DateTime.iso8601('2021-07-07T14:00:34.564Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.hris.update_hris_timeshift(request: req)
 
 unless res.hris_timeshift.nil?

@@ -1,5 +1,13 @@
 # UpdateSocialPostQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = UpdateSocialPostQueryParamFields::ID
+```
+
 
 ## Values
 

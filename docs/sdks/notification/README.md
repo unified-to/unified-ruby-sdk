@@ -1,5 +1,4 @@
 # Notification
-(*notification*)
 
 ## Overview
 
@@ -19,13 +18,12 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
-req = Models::Operations::ListUnifiedNotificationsRequest.new()
-
+req = Models::Operations::ListUnifiedNotificationsRequest.new
 res = s.notification.list_unified_notifications(request: req)
 
 unless res.notifications.nil?

@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # PropertyEmailType - the kind of email address
-      class PropertyEmailType < T::Enum
-
-
+      class PropertyEmailType
+        include ::Crystalline::Enum
         enums do
           WORK = new('WORK')
           HOME = new('HOME')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

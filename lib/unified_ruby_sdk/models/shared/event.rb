@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Event < T::Enum
-
-
+      class Event
+        include ::Crystalline::Enum
         enums do
           USER_CREATED = new('USER_CREATED')
           USER_DELETED = new('USER_DELETED')
@@ -34,6 +32,7 @@ module UnifiedRubySDK
           WEBHOOK_PAUSED = new('WEBHOOK_PAUSED')
           WEBHOOK_UNPAUSED = new('WEBHOOK_UNPAUSED')
         end
+        open!
       end
     end
   end

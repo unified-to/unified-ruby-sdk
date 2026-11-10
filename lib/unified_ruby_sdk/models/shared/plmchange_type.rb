@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PlmChangeType < T::Enum
-
-
+      class PlmChangeType
+        include ::Crystalline::Enum
         enums do
           REQUEST = new('REQUEST')
           ORDER = new('ORDER')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           DEVIATION = new('DEVIATION')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

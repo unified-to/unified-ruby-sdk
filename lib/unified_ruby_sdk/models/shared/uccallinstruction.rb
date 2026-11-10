@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class UcCallInstruction
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :type, Models::Shared::UcCallInstructionType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::UcCallInstructionType, false) } }
+        field :type, Models::Shared::UcCallInstructionType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::UcCallInstructionType, false) } }
         # PLAY: public MP3 or WAV URL
         field :audio_url, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('audio_url') } }
         # SAY: BCP 47 language code (e.g. en-US), passed to the integration as-is

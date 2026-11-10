@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # LegalExpenseType - hard cost, soft cost or other
-      class LegalExpenseType < T::Enum
-
-
+      class LegalExpenseType
+        include ::Crystalline::Enum
         enums do
           HARD_COST = new('HARD_COST')
           SOFT_COST = new('SOFT_COST')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

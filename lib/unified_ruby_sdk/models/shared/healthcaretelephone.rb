@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareTelephone
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
         # The telephone number
         field :telephone, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('telephone'), required: true } }
         # The kind of telephone number (work, home, mobile, fax or other)
-        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareTelephoneType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareTelephoneType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareTelephoneType, true) } }
 
         sig { params(telephone: ::String, type: T.nilable(Models::Shared::HealthcareTelephoneType)).void }
         def initialize(telephone:, type: nil)

@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class CreateAtsApplicationQueryParamFields < T::Enum
-
-
         enums do
           ID = new('id')
           CANDIDATE_ID = new('candidate_id')

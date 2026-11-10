@@ -1,5 +1,13 @@
 # CreatePropertyGuestQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreatePropertyGuestQueryParamFields::ID
+```
+
 
 ## Values
 

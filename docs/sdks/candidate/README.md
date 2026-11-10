@@ -1,5 +1,4 @@
 # Candidate
-(*candidate*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request b
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
+<!-- UsageSnippet language="ruby" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" example="ats_candidate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandidate.new(
   address: Models::Shared::PropertyAtsCandidateAddress.new(
     address1: '6790 S 1st Street',
@@ -36,7 +34,7 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
     country_code: 'US',
     postal_code: '91605',
     region: 'Idaho',
-    region_code: 'HI',
+    region_code: 'HI'
   ),
   company_name: 'Lehner and Sons',
   created_at: DateTime.iso8601('2023-10-16T05:42:56.049Z'),
@@ -48,7 +46,7 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
       field_of_study: 'curtus',
       institution: 'Abbott - Batz',
       level: 'phd',
-      start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z'),
+      start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z')
     ),
     Models::Shared::AtsCandidateEducation.new(
       degree: 'blah cappelletti',
@@ -56,14 +54,14 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
       field_of_study: 'crustulum',
       institution: 'Herman, Franey and Lebsack',
       level: 'highschool',
-      start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z'),
+      start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z')
     ),
   ],
   emails: [
     Models::Shared::AtsEmail.new(
       email: 'ardith.beatty@outlook.com',
       name: 'Ardith Beatty',
-      type: Models::Shared::AtsEmailType::HOME,
+      type: Models::Shared::AtsEmailType::HOME
     ),
   ],
   experiences: [
@@ -71,18 +69,20 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
       company_name: 'Kutch, Lind and Marks',
       end_at: DateTime.iso8601('1974-03-01T17:02:58.824Z'),
       start_at: DateTime.iso8601('1999-09-21T22:12:51.663Z'),
-      title: 'Lead Security Technician',
+      title: 'Lead Security Technician'
     ),
     Models::Shared::AtsCandidateExperience.new(
       company_name: 'Trantow, Sipes and Witting',
       end_at: DateTime.iso8601('2004-10-14T14:01:00.717Z'),
       start_at: DateTime.iso8601('1996-12-15T04:12:04.582Z'),
-      title: 'Regional Applications Planner',
+      title: 'Regional Applications Planner'
     ),
   ],
   first_name: 'Ardith',
-  id: '62ac5338-df7c-4342-aff2-913242c267a6',
+  has_do_not_contact: false,
+  id: '354666e8-6b64-4940-b917-075c0ceefa40',
   image_url: 'https://avatars.githubusercontent.com/u/27464445',
+  is_private: true,
   job_ids: [],
   last_name: 'Beatty',
   link_urls: [
@@ -94,10 +94,10 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
 
       },
       format: Models::Shared::AtsMetadataFormat::TEXT,
-      id: 'df01ae86-8402-4bea-9821-a2b927fd8b6e',
+      id: '2793a105-60bb-44a9-95ea-5ddf409e244d',
       namespace: 'custom',
       slug: 'custom_field',
-      value: 'officia',
+      value: 'officia'
     ),
   ],
   name: 'Ardith Beatty',
@@ -117,12 +117,12 @@ res = s.candidate.create_ats_candidate(ats_candidate: Models::Shared::AtsCandida
   telephones: [
     Models::Shared::AtsTelephone.new(
       telephone: '(837) 251-3896',
-      type: Models::Shared::AtsTelephoneType::MOBILE,
+      type: Models::Shared::AtsTelephoneType::MOBILE
     ),
   ],
   title: 'Customer Division Producer',
-  updated_at: DateTime.iso8601('2024-05-02T02:48:23.164Z'),
-  web_url: 'https://fragrant-husband.net/',
+  updated_at: DateTime.iso8601('2024-05-02T10:02:38.858Z'),
+  web_url: 'https://fragrant-husband.net/'
 ), connection_id: '<id>')
 
 unless res.ats_candidate.nil?
@@ -162,11 +162,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.candidate.get_ats_candidate(connection_id: '<id>', id: '<id>')
 
 unless res.ats_candidate.nil?
@@ -206,15 +205,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListAtsCandidatesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListAtsCandidatesRequest.new(
+  connection_id: '<id>'
+)
 res = s.candidate.list_ats_candidates(request: req)
 
 unless res.ats_candidates.nil?
@@ -245,16 +243,16 @@ Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" example="ats_candidate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchAtsCandidateRequest.new(
   ats_candidate: Models::Shared::AtsCandidate.new(
@@ -264,7 +262,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
       country_code: 'US',
       postal_code: '91605',
       region: 'Idaho',
-      region_code: 'HI',
+      region_code: 'HI'
     ),
     company_name: 'Lehner and Sons',
     created_at: DateTime.iso8601('2023-10-16T05:42:56.049Z'),
@@ -276,7 +274,7 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
         field_of_study: 'curtus',
         institution: 'Abbott - Batz',
         level: 'phd',
-        start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z'),
+        start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z')
       ),
       Models::Shared::AtsCandidateEducation.new(
         degree: 'blah cappelletti',
@@ -284,14 +282,14 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
         field_of_study: 'crustulum',
         institution: 'Herman, Franey and Lebsack',
         level: 'highschool',
-        start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z'),
+        start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z')
       ),
     ],
     emails: [
       Models::Shared::AtsEmail.new(
         email: 'ardith.beatty@outlook.com',
         name: 'Ardith Beatty',
-        type: Models::Shared::AtsEmailType::HOME,
+        type: Models::Shared::AtsEmailType::HOME
       ),
     ],
     experiences: [
@@ -299,18 +297,20 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
         company_name: 'Kutch, Lind and Marks',
         end_at: DateTime.iso8601('1974-03-01T17:02:58.824Z'),
         start_at: DateTime.iso8601('1999-09-21T22:12:51.663Z'),
-        title: 'Lead Security Technician',
+        title: 'Lead Security Technician'
       ),
       Models::Shared::AtsCandidateExperience.new(
         company_name: 'Trantow, Sipes and Witting',
         end_at: DateTime.iso8601('2004-10-14T14:01:00.717Z'),
         start_at: DateTime.iso8601('1996-12-15T04:12:04.582Z'),
-        title: 'Regional Applications Planner',
+        title: 'Regional Applications Planner'
       ),
     ],
     first_name: 'Ardith',
-    id: '20bdeeca-e6ec-4a1b-aba3-27cd12045787',
+    has_do_not_contact: false,
+    id: '0737d064-946d-45ca-afb7-04ff978cfbf5',
     image_url: 'https://avatars.githubusercontent.com/u/27464445',
+    is_private: true,
     job_ids: [],
     last_name: 'Beatty',
     link_urls: [
@@ -322,10 +322,10 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '2162737a-65e8-465b-9d99-57c325894774',
+        id: '9e47ba68-67ed-4f60-9280-72e4e95fd917',
         namespace: 'custom',
         slug: 'custom_field',
-        value: 'officia',
+        value: 'officia'
       ),
     ],
     name: 'Ardith Beatty',
@@ -345,17 +345,16 @@ req = Models::Operations::PatchAtsCandidateRequest.new(
     telephones: [
       Models::Shared::AtsTelephone.new(
         telephone: '(837) 251-3896',
-        type: Models::Shared::AtsTelephoneType::MOBILE,
+        type: Models::Shared::AtsTelephoneType::MOBILE
       ),
     ],
     title: 'Customer Division Producer',
-    updated_at: DateTime.iso8601('2024-05-02T02:48:23.171Z'),
-    web_url: 'https://fragrant-husband.net/',
+    updated_at: DateTime.iso8601('2024-05-02T10:02:38.866Z'),
+    web_url: 'https://fragrant-husband.net/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.candidate.patch_ats_candidate(request: req)
 
 unless res.ats_candidate.nil?
@@ -392,11 +391,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.candidate.remove_ats_candidate(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -428,16 +426,16 @@ Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fi
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" example="ats_candidate" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateAtsCandidateRequest.new(
   ats_candidate: Models::Shared::AtsCandidate.new(
@@ -447,7 +445,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
       country_code: 'US',
       postal_code: '91605',
       region: 'Idaho',
-      region_code: 'HI',
+      region_code: 'HI'
     ),
     company_name: 'Lehner and Sons',
     created_at: DateTime.iso8601('2023-10-16T05:42:56.049Z'),
@@ -459,7 +457,7 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
         field_of_study: 'curtus',
         institution: 'Abbott - Batz',
         level: 'phd',
-        start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z'),
+        start_at: DateTime.iso8601('1994-06-09T13:31:39.059Z')
       ),
       Models::Shared::AtsCandidateEducation.new(
         degree: 'blah cappelletti',
@@ -467,14 +465,14 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
         field_of_study: 'crustulum',
         institution: 'Herman, Franey and Lebsack',
         level: 'highschool',
-        start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z'),
+        start_at: DateTime.iso8601('1992-11-28T20:23:20.311Z')
       ),
     ],
     emails: [
       Models::Shared::AtsEmail.new(
         email: 'ardith.beatty@outlook.com',
         name: 'Ardith Beatty',
-        type: Models::Shared::AtsEmailType::HOME,
+        type: Models::Shared::AtsEmailType::HOME
       ),
     ],
     experiences: [
@@ -482,18 +480,20 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
         company_name: 'Kutch, Lind and Marks',
         end_at: DateTime.iso8601('1974-03-01T17:02:58.824Z'),
         start_at: DateTime.iso8601('1999-09-21T22:12:51.663Z'),
-        title: 'Lead Security Technician',
+        title: 'Lead Security Technician'
       ),
       Models::Shared::AtsCandidateExperience.new(
         company_name: 'Trantow, Sipes and Witting',
         end_at: DateTime.iso8601('2004-10-14T14:01:00.717Z'),
         start_at: DateTime.iso8601('1996-12-15T04:12:04.582Z'),
-        title: 'Regional Applications Planner',
+        title: 'Regional Applications Planner'
       ),
     ],
     first_name: 'Ardith',
-    id: '20bdeeca-e6ec-4a1b-aba3-27cd12045787',
+    has_do_not_contact: false,
+    id: '0737d064-946d-45ca-afb7-04ff978cfbf5',
     image_url: 'https://avatars.githubusercontent.com/u/27464445',
+    is_private: true,
     job_ids: [],
     last_name: 'Beatty',
     link_urls: [
@@ -505,10 +505,10 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
 
         },
         format: Models::Shared::AtsMetadataFormat::TEXT,
-        id: '2162737a-65e8-465b-9d99-57c325894774',
+        id: '9e47ba68-67ed-4f60-9280-72e4e95fd917',
         namespace: 'custom',
         slug: 'custom_field',
-        value: 'officia',
+        value: 'officia'
       ),
     ],
     name: 'Ardith Beatty',
@@ -528,17 +528,16 @@ req = Models::Operations::UpdateAtsCandidateRequest.new(
     telephones: [
       Models::Shared::AtsTelephone.new(
         telephone: '(837) 251-3896',
-        type: Models::Shared::AtsTelephoneType::MOBILE,
+        type: Models::Shared::AtsTelephoneType::MOBILE
       ),
     ],
     title: 'Customer Division Producer',
-    updated_at: DateTime.iso8601('2024-05-02T02:48:23.171Z'),
-    web_url: 'https://fragrant-husband.net/',
+    updated_at: DateTime.iso8601('2024-05-02T10:02:38.866Z'),
+    web_url: 'https://fragrant-husband.net/'
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.candidate.update_ats_candidate(request: req)
 
 unless res.ats_candidate.nil?

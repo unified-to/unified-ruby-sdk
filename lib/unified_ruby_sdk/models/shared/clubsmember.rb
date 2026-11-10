@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # `lastname` is only a single initial. We do not synthesize an id, so `id` is typically absent.
       class ClubsMember
         extend T::Sig
         include Crystalline::MetadataFields
 
         # The date that this member was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # The member's first name
         field :first_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('first_name') } }
         # The group this member belongs to (reference to HrisGroup)
@@ -28,17 +27,17 @@ module UnifiedRubySDK
         # The member's last name (a single initial for Strava)
         field :last_name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('last_name') } }
         # The member's membership status
-        field :membership_status, Crystalline::Nilable.new(Models::Shared::ClubsMemberMembershipStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('membership_status'), 'decoder': Utils.enum_from_string(Models::Shared::ClubsMemberMembershipStatus, true) } }
+        field :membership_status, Crystalline::Nilable.new(Models::Shared::ClubsMemberMembershipStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('membership_status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::ClubsMemberMembershipStatus, true) } }
 
         field :metadata, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::ClubsMetadata)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('metadata') } }
         # The full name of the member (first name + last initial for Strava)
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
         # The raw data returned by the integration for this member
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # The last date that this member was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(created_at: T.nilable(::DateTime), first_name: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), is_admin: T.nilable(T::Boolean), is_owner: T.nilable(T::Boolean), last_name: T.nilable(::String), membership_status: T.nilable(Models::Shared::ClubsMemberMembershipStatus), metadata: T.nilable(T::Array[Models::Shared::ClubsMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
+        sig { params(created_at: T.nilable(::DateTime), first_name: T.nilable(::String), group_id: T.nilable(::String), id: T.nilable(::String), is_admin: T.nilable(T::Boolean), is_owner: T.nilable(T::Boolean), last_name: T.nilable(::String), membership_status: T.nilable(Models::Shared::ClubsMemberMembershipStatus), metadata: T.nilable(T::Array[Models::Shared::ClubsMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), updated_at: T.nilable(::DateTime)).void }
         def initialize(created_at: nil, first_name: nil, group_id: nil, id: nil, is_admin: nil, is_owner: nil, last_name: nil, membership_status: nil, metadata: nil, name: nil, raw: nil, updated_at: nil)
           @created_at = created_at
           @first_name = first_name

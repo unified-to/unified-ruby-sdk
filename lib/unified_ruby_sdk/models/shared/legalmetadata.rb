@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class LegalMetadata
         extend T::Sig
         include Crystalline::MetadataFields
 
         # additional data about the custom field
-        field :extra_data, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::LegalMetadata1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
+        field :extra_data, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(::Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::LegalMetadata1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('extra_data') } }
         # the data type of the value
-        field :format, Crystalline::Nilable.new(Models::Shared::LegalMetadataFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': Utils.enum_from_string(Models::Shared::LegalMetadataFormat, true) } }
+        field :format, Crystalline::Nilable.new(Models::Shared::LegalMetadataFormat), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('format'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::LegalMetadataFormat, true) } }
         # the custom field identifier
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # the scope or origin of the custom field
@@ -24,9 +23,9 @@ module UnifiedRubySDK
         # the custom field key
         field :slug, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slug') } }
         # the custom field value
-        field :value, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::LegalMetadataSchemas1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
+        field :value, Crystalline::Nilable.new(Crystalline::Union.new(Crystalline::Hash.new(::Symbol, ::Object), ::String, ::Float, Crystalline::Boolean.new, Crystalline::Array.new(Crystalline::Union.new(Models::Shared::LegalMetadataSchemas1, ::String, ::Float, Crystalline::Boolean.new)))), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('value') } }
 
-        sig { params(extra_data: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::LegalMetadata1, ::String, ::Float, T::Boolean)])), format: T.nilable(Models::Shared::LegalMetadataFormat), id: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), value: T.nilable(T.any(T::Hash[Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::LegalMetadataSchemas1, ::String, ::Float, T::Boolean)]))).void }
+        sig { params(extra_data: T.nilable(T.any(T::Hash[::Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::LegalMetadata1, ::String, ::Float, T::Boolean)])), format: T.nilable(Models::Shared::LegalMetadataFormat), id: T.nilable(::String), namespace: T.nilable(::String), slug: T.nilable(::String), value: T.nilable(T.any(T::Hash[::Symbol, ::Object], ::String, ::Float, T::Boolean, T::Array[T.any(Models::Shared::LegalMetadataSchemas1, ::String, ::Float, T::Boolean)]))).void }
         def initialize(extra_data: nil, format: nil, id: nil, namespace: nil, slug: nil, value: nil)
           @extra_data = extra_data
           @format = format

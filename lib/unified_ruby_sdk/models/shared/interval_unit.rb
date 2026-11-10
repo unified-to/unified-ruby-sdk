@@ -7,17 +7,16 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class IntervalUnit < T::Enum
-
-
+      class IntervalUnit
+        include ::Crystalline::Enum
         enums do
           YEAR = new('YEAR')
           MONTH = new('MONTH')
           WEEK = new('WEEK')
           DAY = new('DAY')
         end
+        open!
       end
     end
   end

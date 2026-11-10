@@ -7,11 +7,8 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class CreateHealthcareObservationQueryParamFields < T::Enum
-
-
         enums do
           ID = new('id')
           CREATED_AT = new('created_at')

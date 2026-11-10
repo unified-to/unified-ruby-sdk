@@ -1,5 +1,16 @@
 # LmsMediaType
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = LmsMediaType::IMAGE
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = LmsMediaType.deserialize("custom_value")
+```
+
 
 ## Values
 

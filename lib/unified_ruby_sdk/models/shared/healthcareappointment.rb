@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareAppointment
         extend T::Sig
@@ -16,11 +15,11 @@ module UnifiedRubySDK
         # Why the appointment was cancelled
         field :cancellation_reason, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('cancellation_reason') } }
         # When the appointment was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Short description shown on the appointment
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # When the appointment ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :end_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('end_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Unique identifier for the appointment
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
         # Whether the appointment is a telehealth/virtual visit
@@ -38,7 +37,7 @@ module UnifiedRubySDK
         # The practitioners participating in the appointment
         field :practitioner_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('practitioner_ids') } }
         # Raw data from integration
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # Codings for the reason for the visit
         field :reasons, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::HealthcareCode)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reasons') } }
         # Codings for the service/visit type being booked
@@ -46,13 +45,13 @@ module UnifiedRubySDK
         # The schedule slots this appointment occupies
         field :slot_ids, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('slot_ids') } }
         # When the appointment starts (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :start_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('start_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # Status of the appointment
-        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareAppointmentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareAppointmentStatus, true) } }
+        field :status, Crystalline::Nilable.new(Models::Shared::HealthcareAppointmentStatus), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('status'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareAppointmentStatus, true) } }
         # When the appointment was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(cancellation_reason: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_virtual: T.nilable(T::Boolean), location_id: T.nilable(::String), meeting_url: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), notes: T.nilable(::String), patient_id: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[Symbol, ::Object]), reasons: T.nilable(T::Array[Models::Shared::HealthcareCode]), service_types: T.nilable(T::Array[Models::Shared::HealthcareCode]), slot_ids: T.nilable(T::Array[::String]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareAppointmentStatus), updated_at: T.nilable(::DateTime)).void }
+        sig { params(cancellation_reason: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), end_at: T.nilable(::DateTime), id: T.nilable(::String), is_virtual: T.nilable(T::Boolean), location_id: T.nilable(::String), meeting_url: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::HealthcareMetadata]), notes: T.nilable(::String), patient_id: T.nilable(::String), practitioner_ids: T.nilable(T::Array[::String]), raw: T.nilable(T::Hash[::Symbol, ::Object]), reasons: T.nilable(T::Array[Models::Shared::HealthcareCode]), service_types: T.nilable(T::Array[Models::Shared::HealthcareCode]), slot_ids: T.nilable(T::Array[::String]), start_at: T.nilable(::DateTime), status: T.nilable(Models::Shared::HealthcareAppointmentStatus), updated_at: T.nilable(::DateTime)).void }
         def initialize(cancellation_reason: nil, created_at: nil, description: nil, end_at: nil, id: nil, is_virtual: nil, location_id: nil, meeting_url: nil, metadata: nil, notes: nil, patient_id: nil, practitioner_ids: nil, raw: nil, reasons: nil, service_types: nil, slot_ids: nil, start_at: nil, status: nil, updated_at: nil)
           @cancellation_reason = cancellation_reason
           @created_at = created_at

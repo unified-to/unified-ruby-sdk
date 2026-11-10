@@ -1,5 +1,13 @@
 # GetPerformanceCycleQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetPerformanceCycleQueryParamFields::ID
+```
+
 
 ## Values
 

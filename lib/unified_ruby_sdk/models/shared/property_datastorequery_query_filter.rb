@@ -7,14 +7,13 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class PropertyDatastoreQueryQueryFilter
         extend T::Sig
         include Crystalline::MetadataFields
 
 
-        field :type, Models::Shared::PropertyDatastoreQueryQueryFilterType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::PropertyDatastoreQueryQueryFilterType, false) } }
+        field :type, Models::Shared::PropertyDatastoreQueryQueryFilterType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::PropertyDatastoreQueryQueryFilterType, false) } }
 
         field :and_, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::DatastoreFilterGroup)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('and') } }
 

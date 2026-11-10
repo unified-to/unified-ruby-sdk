@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
       # ShippingLabelStatus - Status of the label
-      class ShippingLabelStatus < T::Enum
-
-
+      class ShippingLabelStatus
+        include ::Crystalline::Enum
         enums do
           PENDING = new('PENDING')
           PROCESSING = new('PROCESSING')
@@ -28,6 +26,7 @@ module UnifiedRubySDK
           CUSTOMS_CLEARANCE = new('CUSTOMS_CLEARANCE')
           EXCEPTION_RESOLVED = new('EXCEPTION_RESOLVED')
         end
+        open!
       end
     end
   end

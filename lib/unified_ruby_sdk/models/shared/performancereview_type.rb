@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class PerformanceReviewType < T::Enum
-
-
+      class PerformanceReviewType
+        include ::Crystalline::Enum
         enums do
           SELF = new('SELF')
           MANAGER = new('MANAGER')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           UPWARD = new('UPWARD')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

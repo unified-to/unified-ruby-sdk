@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class UcScorecard
         extend T::Sig
@@ -16,7 +15,7 @@ module UnifiedRubySDK
 
         field :call_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('call_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -26,9 +25,9 @@ module UnifiedRubySDK
 
         field :questions, Crystalline::Nilable.new(Crystalline::Array.new(Models::Shared::UcScorecardQuestion)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('questions') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :reviewed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reviewed_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :reviewed_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reviewed_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the user who filled in the scorecard; reference to HrisEmployee (reference to HrisEmployee)
         field :reviewer_user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('reviewer_user_id') } }
         # overall score
@@ -36,11 +35,11 @@ module UnifiedRubySDK
 
         field :scorecardtemplate_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('scorecardtemplate_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
         # the user being reviewed; reference to HrisEmployee (reference to HrisEmployee)
         field :user_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('user_id') } }
 
-        sig { params(call_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), name: T.nilable(::String), questions: T.nilable(T::Array[Models::Shared::UcScorecardQuestion]), raw: T.nilable(T::Hash[Symbol, ::Object]), reviewed_at: T.nilable(::DateTime), reviewer_user_id: T.nilable(::String), score: T.nilable(::Float), scorecardtemplate_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
+        sig { params(call_id: T.nilable(::String), created_at: T.nilable(::DateTime), id: T.nilable(::String), metadata: T.nilable(T::Array[Models::Shared::UcMetadata]), name: T.nilable(::String), questions: T.nilable(T::Array[Models::Shared::UcScorecardQuestion]), raw: T.nilable(T::Hash[::Symbol, ::Object]), reviewed_at: T.nilable(::DateTime), reviewer_user_id: T.nilable(::String), score: T.nilable(::Float), scorecardtemplate_id: T.nilable(::String), updated_at: T.nilable(::DateTime), user_id: T.nilable(::String)).void }
         def initialize(call_id: nil, created_at: nil, id: nil, metadata: nil, name: nil, questions: nil, raw: nil, reviewed_at: nil, reviewer_user_id: nil, score: nil, scorecardtemplate_id: nil, updated_at: nil, user_id: nil)
           @call_id = call_id
           @created_at = created_at

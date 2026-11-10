@@ -1,5 +1,16 @@
 # PlmChangeStatus
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PlmChangeStatus::OPEN
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PlmChangeStatus.deserialize("custom_value")
+```
+
 
 ## Values
 

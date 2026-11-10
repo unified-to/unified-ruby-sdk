@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Operations
-    
 
       class CreateUnifiedSecretsmanagerResponse
         extend T::Sig

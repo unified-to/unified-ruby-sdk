@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HrisPaycode
         extend T::Sig
@@ -18,11 +17,11 @@ module UnifiedRubySDK
         # (reference to HrisCompany)
         field :company_id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('company_id') } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :created_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('created_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
         field :description, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('description') } }
         # the normalized payslip-line type this code produces
-        field :detail_type, Crystalline::Nilable.new(Models::Shared::DetailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('detail_type'), 'decoder': Utils.enum_from_string(Models::Shared::DetailType, true) } }
+        field :detail_type, Crystalline::Nilable.new(Models::Shared::DetailType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('detail_type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::DetailType, true) } }
 
         field :id, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('id') } }
 
@@ -36,13 +35,13 @@ module UnifiedRubySDK
 
         field :name, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('name') } }
 
-        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
+        field :raw, Crystalline::Nilable.new(Crystalline::Hash.new(::Symbol, ::Object)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('raw') } }
 
-        field :type, Crystalline::Nilable.new(Models::Shared::HrisPaycodeType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HrisPaycodeType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HrisPaycodeType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HrisPaycodeType, true) } }
         # (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': Utils.datetime_from_iso_format(true) } }
+        field :updated_at, Crystalline::Nilable.new(::DateTime), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('updated_at'), 'decoder': ::UnifiedRubySDK::Utils.datetime_from_iso_format(true) } }
 
-        sig { params(code: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), detail_type: T.nilable(Models::Shared::DetailType), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_employer: T.nilable(T::Boolean), is_pre_tax: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[Symbol, ::Object]), type: T.nilable(Models::Shared::HrisPaycodeType), updated_at: T.nilable(::DateTime)).void }
+        sig { params(code: T.nilable(::String), company_id: T.nilable(::String), created_at: T.nilable(::DateTime), description: T.nilable(::String), detail_type: T.nilable(Models::Shared::DetailType), id: T.nilable(::String), is_active: T.nilable(T::Boolean), is_employer: T.nilable(T::Boolean), is_pre_tax: T.nilable(T::Boolean), metadata: T.nilable(T::Array[Models::Shared::HrisMetadata]), name: T.nilable(::String), raw: T.nilable(T::Hash[::Symbol, ::Object]), type: T.nilable(Models::Shared::HrisPaycodeType), updated_at: T.nilable(::DateTime)).void }
         def initialize(code: nil, company_id: nil, created_at: nil, description: nil, detail_type: nil, id: nil, is_active: nil, is_employer: nil, is_pre_tax: nil, metadata: nil, name: nil, raw: nil, type: nil, updated_at: nil)
           @code = code
           @company_id = company_id

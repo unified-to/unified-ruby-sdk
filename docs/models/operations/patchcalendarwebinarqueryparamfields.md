@@ -1,5 +1,13 @@
 # PatchCalendarWebinarQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PatchCalendarWebinarQueryParamFields::ID
+```
+
 
 ## Values
 

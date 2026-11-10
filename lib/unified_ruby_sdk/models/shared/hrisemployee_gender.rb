@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class HrisEmployeeGender < T::Enum
-
-
+      class HrisEmployeeGender
+        include ::Crystalline::Enum
         enums do
           MALE = new('MALE')
           FEMALE = new('FEMALE')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           TRANS = new('TRANS')
           NON_BINARY = new('NON_BINARY')
         end
+        open!
       end
     end
   end

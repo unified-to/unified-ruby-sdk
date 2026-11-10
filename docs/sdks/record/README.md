@@ -1,5 +1,4 @@
 # Record
-(*record*)
 
 ## Overview
 
@@ -18,26 +17,25 @@ Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the req
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" -->
+<!-- UsageSnippet language="ruby" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" example="datastore_record" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.record.create_datastore_record(datastore_record: Models::Shared::DatastoreRecord.new(
   created_at: DateTime.iso8601('2022-07-10T04:42:03.076Z'),
   fields_: {
 
   },
-  id: '261428eb-7636-4d85-a234-487135b38b0e',
+  id: '4185f536-1a26-4560-8183-e58b27a4279e',
   metadata: [],
   row_number: 33.0,
-  updated_at: DateTime.iso8601('2025-03-16T21:47:59.151Z'),
+  updated_at: DateTime.iso8601('2025-03-17T23:02:56.198Z')
 ), connection_id: '<id>')
 
 unless res.datastore_record.nil?
@@ -77,11 +75,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.record.get_datastore_record(connection_id: '<id>', id: '<id>')
 
 unless res.datastore_record.nil?
@@ -121,15 +118,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListDatastoreRecordsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListDatastoreRecordsRequest.new(
+  connection_id: '<id>'
+)
 res = s.record.list_datastore_records(request: req)
 
 unless res.datastore_records.nil?
@@ -160,16 +156,16 @@ Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRec
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" example="datastore_record" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchDatastoreRecordRequest.new(
   datastore_record: Models::Shared::DatastoreRecord.new(
@@ -177,15 +173,14 @@ req = Models::Operations::PatchDatastoreRecordRequest.new(
     fields_: {
 
     },
-    id: '7a72ee26-ef8a-4e70-b8fe-bc79cbec0992',
+    id: '17351412-c736-47bf-ad3b-87a7e69a090b',
     metadata: [],
     row_number: 33.0,
-    updated_at: DateTime.iso8601('2025-03-16T21:47:59.164Z'),
+    updated_at: DateTime.iso8601('2025-03-17T23:02:56.207Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.record.patch_datastore_record(request: req)
 
 unless res.datastore_record.nil?
@@ -222,11 +217,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.record.remove_datastore_record(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -258,16 +252,16 @@ Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRec
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" example="datastore_record" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateDatastoreRecordRequest.new(
   datastore_record: Models::Shared::DatastoreRecord.new(
@@ -275,15 +269,14 @@ req = Models::Operations::UpdateDatastoreRecordRequest.new(
     fields_: {
 
     },
-    id: '7a72ee26-ef8a-4e70-b8fe-bc79cbec0992',
+    id: '17351412-c736-47bf-ad3b-87a7e69a090b',
     metadata: [],
     row_number: 33.0,
-    updated_at: DateTime.iso8601('2025-03-16T21:47:59.164Z'),
+    updated_at: DateTime.iso8601('2025-03-17T23:02:56.207Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.record.update_datastore_record(request: req)
 
 unless res.datastore_record.nil?

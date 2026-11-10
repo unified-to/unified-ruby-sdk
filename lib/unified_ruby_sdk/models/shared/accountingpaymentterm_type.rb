@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AccountingPaymenttermType < T::Enum
-
-
+      class AccountingPaymenttermType
+        include ::Crystalline::Enum
         enums do
           ON_RECEIPT = new('ON_RECEIPT')
           NET_7 = new('NET_7')
@@ -25,6 +23,7 @@ module UnifiedRubySDK
           NET_90 = new('NET_90')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

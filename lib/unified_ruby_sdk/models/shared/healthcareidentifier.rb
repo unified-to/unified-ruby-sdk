@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class HealthcareIdentifier
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # The namespace/system URI that issued the identifier
         field :system, Crystalline::Nilable.new(::String), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('system') } }
         # The kind of identifier
-        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareIdentifierType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': Utils.enum_from_string(Models::Shared::HealthcareIdentifierType, true) } }
+        field :type, Crystalline::Nilable.new(Models::Shared::HealthcareIdentifierType), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::HealthcareIdentifierType, true) } }
 
         sig { params(value: ::String, system: T.nilable(::String), type: T.nilable(Models::Shared::HealthcareIdentifierType)).void }
         def initialize(value:, system: nil, type: nil)

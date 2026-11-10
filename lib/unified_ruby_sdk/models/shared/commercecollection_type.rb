@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CommerceCollectionType < T::Enum
-
-
+      class CommerceCollectionType
+        include ::Crystalline::Enum
         enums do
           COLLECTION = new('COLLECTION')
           SAVED_SEARCH = new('SAVED_SEARCH')
           CATEGORY = new('CATEGORY')
         end
+        open!
       end
     end
   end

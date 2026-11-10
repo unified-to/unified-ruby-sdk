@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class CommerceTelephoneType < T::Enum
-
-
+      class CommerceTelephoneType
+        include ::Crystalline::Enum
         enums do
           WORK = new('WORK')
           HOME = new('HOME')
@@ -19,6 +17,7 @@ module UnifiedRubySDK
           MOBILE = new('MOBILE')
           OTHER = new('OTHER')
         end
+        open!
       end
     end
   end

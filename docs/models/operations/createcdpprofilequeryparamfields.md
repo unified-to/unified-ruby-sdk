@@ -1,5 +1,13 @@
 # CreateCdpProfileQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = CreateCdpProfileQueryParamFields::ID
+```
+
 
 ## Values
 

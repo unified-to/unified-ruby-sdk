@@ -2,6 +2,17 @@
 
 Promoted entity types for ads_promoted list endpoint
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = AdsPromotedType::PAGE_ID
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = AdsPromotedType.deserialize("custom_value")
+```
+
 
 ## Values
 

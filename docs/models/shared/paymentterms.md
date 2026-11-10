@@ -1,5 +1,16 @@
 # PaymentTerms
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = PaymentTerms::ON_RECEIPT
+
+# Open enum: use .deserialize() to create instances from custom string values
+custom = PaymentTerms.deserialize("custom_value")
+```
+
 
 ## Values
 

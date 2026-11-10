@@ -7,15 +7,14 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class EmployerType < T::Enum
-
-
+      class EmployerType
+        include ::Crystalline::Enum
         enums do
           PERCENTAGE = new('PERCENTAGE')
           FIXED = new('FIXED')
         end
+        open!
       end
     end
   end

@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class TaskTaskStatus < T::Enum
-
-
+      class TaskTaskStatus
+        include ::Crystalline::Enum
         enums do
           OPENED = new('OPENED')
           IN_PROGRESS = new('IN_PROGRESS')
           COMPLETED = new('COMPLETED')
         end
+        open!
       end
     end
   end

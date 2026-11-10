@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class ScimAddressType < T::Enum
-
-
+      class ScimAddressType
+        include ::Crystalline::Enum
         enums do
           WORK = new('work')
           HOME = new('home')
           OTHER = new('other')
         end
+        open!
       end
     end
   end

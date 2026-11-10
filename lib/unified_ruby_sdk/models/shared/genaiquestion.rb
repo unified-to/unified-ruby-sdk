@@ -7,7 +7,6 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
       class GenaiQuestion
         extend T::Sig
@@ -18,7 +17,7 @@ module UnifiedRubySDK
         # The question to evaluate.
         field :instructions, ::String, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('instructions'), required: true } }
 
-        field :type, Models::Shared::GenaiQuestionType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': Utils.enum_from_string(Models::Shared::GenaiQuestionType, false) } }
+        field :type, Models::Shared::GenaiQuestionType, { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('type'), required: true, 'decoder': ::UnifiedRubySDK::Utils.open_enum_from_string(Models::Shared::GenaiQuestionType, false) } }
         # CHOICE: the options to select from; SCORE: the ordered levels (lowest first).
         field :options, Crystalline::Nilable.new(Crystalline::Array.new(::String)), { 'format_json': { 'letter_case': ::UnifiedRubySDK::Utils.field_name('options') } }
 

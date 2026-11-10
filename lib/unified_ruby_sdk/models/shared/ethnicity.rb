@@ -7,11 +7,9 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class Ethnicity < T::Enum
-
-
+      class Ethnicity
+        include ::Crystalline::Enum
         enums do
           CAUCASIAN = new('Caucasian')
           EAST_ASIAN = new('East Asian')
@@ -24,6 +22,7 @@ module UnifiedRubySDK
           WHITE = new('White')
           ASIAN = new('Asian')
         end
+        open!
       end
     end
   end

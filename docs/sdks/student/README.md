@@ -1,5 +1,4 @@
 # Student
-(*student*)
 
 ## Overview
 
@@ -18,17 +17,16 @@ Creates a LmsStudent. Provide the unified LmsStudent fields in the request body;
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="ruby" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" example="lms_student" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
   address: Models::Shared::PropertyLmsStudentAddress.new(
     address1: '15033 Corwin Circles',
@@ -36,14 +34,14 @@ res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
     country_code: 'US',
     postal_code: '73966',
     region: 'New Jersey',
-    region_code: 'TX',
+    region_code: 'TX'
   ),
   created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
   emails: [
-    Models::Shared::LmsEmail.new(),
+    Models::Shared::LmsEmail.new,
   ],
   first_name: 'Marcella',
-  id: '6a309a91-d51e-4c94-b54d-30a133199f69',
+  id: '400ab13e-5a59-4415-9fde-371effd5cae8',
   image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
   last_name: 'Murazik',
   metadata: [],
@@ -51,18 +49,18 @@ res = s.student.create_lms_student(lms_student: Models::Shared::LmsStudent.new(
   telephones: [
     Models::Shared::LmsTelephone.new(
       telephone: '(899) 827-6400',
-      type: Models::Shared::LmsTelephoneType::WORK,
+      type: Models::Shared::LmsTelephoneType::WORK
     ),
     Models::Shared::LmsTelephone.new(
       telephone: '(487) 213-8236',
-      type: Models::Shared::LmsTelephoneType::FAX,
+      type: Models::Shared::LmsTelephoneType::FAX
     ),
     Models::Shared::LmsTelephone.new(
       telephone: '(980) 775-2940',
-      type: Models::Shared::LmsTelephoneType::FAX,
+      type: Models::Shared::LmsTelephoneType::FAX
     ),
   ],
-  updated_at: DateTime.iso8601('2022-07-07T12:57:26.444Z'),
+  updated_at: DateTime.iso8601('2022-07-08T03:01:44.455Z')
 ), connection_id: '<id>')
 
 unless res.lms_student.nil?
@@ -102,11 +100,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.student.get_lms_student(connection_id: '<id>', id: '<id>')
 
 unless res.lms_student.nil?
@@ -146,15 +143,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListLmsStudentsRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListLmsStudentsRequest.new(
+  connection_id: '<id>'
+)
 res = s.student.list_lms_students(request: req)
 
 unless res.lms_students.nil?
@@ -185,16 +181,16 @@ Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::PatchLmsStudentRequest.new(
   lms_student: Models::Shared::LmsStudent.new(
@@ -204,14 +200,14 @@ req = Models::Operations::PatchLmsStudentRequest.new(
       country_code: 'US',
       postal_code: '73966',
       region: 'New Jersey',
-      region_code: 'TX',
+      region_code: 'TX'
     ),
     created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
     emails: [
-      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new,
     ],
     first_name: 'Marcella',
-    id: 'c4e91b7f-edf4-4038-9910-498e79005617',
+    id: '020240dc-8e6a-4230-8fb5-b5e9d2538d80',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
     metadata: [],
@@ -219,23 +215,22 @@ req = Models::Operations::PatchLmsStudentRequest.new(
     telephones: [
       Models::Shared::LmsTelephone.new(
         telephone: '(899) 827-6400',
-        type: Models::Shared::LmsTelephoneType::WORK,
+        type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(487) 213-8236',
-        type: Models::Shared::LmsTelephoneType::FAX,
+        type: Models::Shared::LmsTelephoneType::FAX
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(980) 775-2940',
-        type: Models::Shared::LmsTelephoneType::FAX,
+        type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-07T12:57:26.453Z'),
+    updated_at: DateTime.iso8601('2022-07-08T03:01:44.463Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.student.patch_lms_student(request: req)
 
 unless res.lms_student.nil?
@@ -272,11 +267,10 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 res = s.student.remove_lms_student(connection_id: '<id>', id: '<id>')
 
 if res.status_code == 200
@@ -308,16 +302,16 @@ Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields
 
 ### Example Usage
 
-<!-- UsageSnippet language="ruby" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="ruby" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```ruby
 require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
+)
 
 req = Models::Operations::UpdateLmsStudentRequest.new(
   lms_student: Models::Shared::LmsStudent.new(
@@ -327,14 +321,14 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
       country_code: 'US',
       postal_code: '73966',
       region: 'New Jersey',
-      region_code: 'TX',
+      region_code: 'TX'
     ),
     created_at: DateTime.iso8601('2020-03-23T06:59:29.777Z'),
     emails: [
-      Models::Shared::LmsEmail.new(),
+      Models::Shared::LmsEmail.new,
     ],
     first_name: 'Marcella',
-    id: 'c4e91b7f-edf4-4038-9910-498e79005617',
+    id: '020240dc-8e6a-4230-8fb5-b5e9d2538d80',
     image_url: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
     last_name: 'Murazik',
     metadata: [],
@@ -342,23 +336,22 @@ req = Models::Operations::UpdateLmsStudentRequest.new(
     telephones: [
       Models::Shared::LmsTelephone.new(
         telephone: '(899) 827-6400',
-        type: Models::Shared::LmsTelephoneType::WORK,
+        type: Models::Shared::LmsTelephoneType::WORK
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(487) 213-8236',
-        type: Models::Shared::LmsTelephoneType::FAX,
+        type: Models::Shared::LmsTelephoneType::FAX
       ),
       Models::Shared::LmsTelephone.new(
         telephone: '(980) 775-2940',
-        type: Models::Shared::LmsTelephoneType::FAX,
+        type: Models::Shared::LmsTelephoneType::FAX
       ),
     ],
-    updated_at: DateTime.iso8601('2022-07-07T12:57:26.453Z'),
+    updated_at: DateTime.iso8601('2022-07-08T03:01:44.463Z')
   ),
   connection_id: '<id>',
-  id: '<id>',
+  id: '<id>'
 )
-
 res = s.student.update_lms_student(request: req)
 
 unless res.lms_student.nil?

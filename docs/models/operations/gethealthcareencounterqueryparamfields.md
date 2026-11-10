@@ -1,5 +1,13 @@
 # GetHealthcareEncounterQueryParamFields
 
+## Example Usage
+
+```ruby
+require "unified_ruby_sdk"
+
+value = GetHealthcareEncounterQueryParamFields::ID
+```
+
 
 ## Values
 

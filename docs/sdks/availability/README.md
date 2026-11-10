@@ -1,5 +1,4 @@
 # Availability
-(*availability*)
 
 ## Overview
 
@@ -20,15 +19,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListCommerceAvailabilitiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListCommerceAvailabilitiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.availability.list_commerce_availabilities(request: req)
 
 unless res.commerce_availabilities.nil?
@@ -65,15 +63,14 @@ require 'unified_ruby_sdk'
 
 Models = ::UnifiedRubySDK::Models
 s = ::UnifiedRubySDK::UnifiedTo.new(
-      security: Models::Shared::Security.new(
-        jwt: '<YOUR_API_KEY_HERE>',
-      ),
-    )
-
-req = Models::Operations::ListPropertyAvailabilitiesRequest.new(
-  connection_id: '<id>',
+  security: Models::Shared::Security.new(
+    jwt: '<YOUR_API_KEY_HERE>'
+  )
 )
 
+req = Models::Operations::ListPropertyAvailabilitiesRequest.new(
+  connection_id: '<id>'
+)
 res = s.availability.list_property_availabilities(request: req)
 
 unless res.property_availabilities.nil?

@@ -7,16 +7,15 @@
 module UnifiedRubySDK
   module Models
     module Shared
-    
 
-      class AssessmentAttributeType < T::Enum
-
-
+      class AssessmentAttributeType
+        include ::Crystalline::Enum
         enums do
           TEXT = new('TEXT')
           NUMBER = new('NUMBER')
           SUB_RESULT = new('SUB_RESULT')
         end
+        open!
       end
     end
   end
